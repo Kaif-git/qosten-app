@@ -1,16 +1,2349 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Question Bank with Image Uploads</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 15px;
+            line-height: 1.5;
+            color: #333;
+            font-size: 16px;
+        }
+        .header {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        .panel {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        textarea, input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            transition: background-color 0.3s;
+            width: auto;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        button.danger {
+            background-color: #f44336;
+        }
+        button.secondary {
+            background-color: #2196F3;
+        }
+        .question {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            background-color: white;
+            position: relative;
+        }
+        .correct {
+            font-weight: bold;
+            color: #2e7d32;
+        }
+        .metadata {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .metadata span {
+            background: #e3f2fd;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+        }
+        .actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 15px;
+            justify-content: flex-end;
+        }
+        .actions button {
+            padding: 8px 12px;
+            font-size: 14px;
+        }
+        .options-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 10px;
+        }
+        .options-list li {
+            padding: 5px 0;
+        }
+        .search-filters {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+        .tab-container {
+            display: flex;
+            margin-bottom: 15px;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding-bottom: 5px;
+        }
+        .tab {
+            padding: 10px 15px;
+            cursor: pointer;
+            background: #e0e0e0;
+            border-radius: 5px;
+            margin-right: 5px;
+            display: inline-block;
+            font-size: 14px;
+        }
+        .tab.active {
+            background: #4CAF50;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            background: #e3f2fd;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .stat-item {
+            text-align: center;
+            min-width: 80px;
+        }
+        .stat-value {
+            font-size: 20px;
+            font-weight: bold;
+            color: #0d47a1;
+        }
+        .image-upload-container {
+            margin: 15px 0;
+        }
+        .image-preview {
+            max-width: 100%;
+            max-height: 200px;
+            margin-top: 10px;
+            display: none;
+        }
+        .option-image-upload {
+            display: flex;
+            flex-direction: column;
+            margin-top: 5px;
+        }
+        .option-image-preview {
+            max-width: 100%;
+            max-height: 150px;
+            margin-top: 5px;
+            display: none;
+        }
+        /* New classes for type-specific forms */
+        .cq-only, .sq-only {
+            display: none; /* Hidden by default */
+        }
+        .mcq-only {
+            display: block; /* Shown by default */
+        }
+
+        /* When editing/adding a CQ, show CQ-only fields and hide others */
+        .editing-cq .cq-only {
+            display: block;
+        }
+        .editing-cq .mcq-only,
+        .editing-cq .sq-only {
+            display: none;
+        }
+
+        /* When editing/adding an MCQ, show MCQ-only fields and hide others */
+        .editing-mcq .mcq-only {
+            display: block;
+        }
+        .editing-mcq .cq-only,
+        .editing-mcq .sq-only {
+            display: none;
+        }
+
+        /* When editing/adding an SQ, show SQ-only fields and hide others */
+        .editing-sq .sq-only {
+            display: block;
+        }
+        .editing-sq .mcq-only,
+        .editing-sq .cq-only {
+            display: none;
+        }
+
+        .option-fields div {
+            margin-bottom: 15px;
+        }
+        .part-marks {
+            width: 80px;
+            margin-top: 5px;
+        }
+        .part-answer {
+            min-height: 80px;
+            margin-top: 5px;
+        }
+        @media (min-width: 768px) {
+            body {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            .header {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .search-filters {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .search-filters > div {
+                flex: 1;
+                min-width: 150px;
+            }
+            .tab-container {
+                white-space: normal;
+                flex-wrap: wrap;
+            }
+        }
+        .format-example {
+            margin: 15px 0;
+            overflow: hidden;
+        }
+        .format-example pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow-x: auto;
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 4px;
+            max-height: 300px;
+            font-family: monospace;
+            line-height: 1.4;
+            border: 1px solid #ddd;
+        }
+        #cqInput, #sqInput {
+            width: 100%;
+            min-height: 200px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            resize: vertical;
+            margin-top: 10px;
+        }
+        .button-group {
+            margin: 15px 0;
+            display: flex;
+            gap: 10px;
+        }
+        @media (max-width: 768px) {
+            .format-example pre {
+                font-size: 14px;
+                padding: 10px;
+            }
+            #cqInput, #sqInput {
+                min-height: 150px;
+            }
+        }
+        .metadata-fields {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .metadata-fields div {
+            display: flex;
+            flex-direction: column;
+        }
+        .metadata-fields label {
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #555;
+        }
+        .metadata-fields input[type="text"] {
+            padding: 8px 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .metadata-fields input[type="checkbox"] {
+            width: auto;
+            margin-top: 5px;
+        }
+        .detailed-stats {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f0f4f7;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .detailed-stats h3 {
+            margin-top: 0;
+            color: #0d47a1;
+        }
+        .detailed-stats ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .detailed-stats li {
+            background: #e3f2fd;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .detailed-stats li strong {
+            color: #333;
+        }
+        /* New class for SQ specific answer textarea */
+        .sq-answer {
+            min-height: 100px;
+            margin-top: 5px;
+        }
+        /* Password Overlay Styles */
+        .password-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .password-prompt {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .password-prompt input {
+            margin: 15px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 200px;
+        }
+        .password-prompt button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
 </head>
-
 <body>
-  Hello world
-  <script src="script.js"></script>
-</body>
+    <div id="password-overlay" class="password-overlay">
+        <div class="password-prompt">
+            <h2>Enter Password</h2>
+            <input type="password" id="password-input" placeholder="Password">
+            <button id="password-submit">Submit</button>
+        </div>
+    </div>
 
+    <div class="header">
+        <h1>Advanced Question Bank with Images</h1>
+        <div>
+            <button id="exportBtn" class="secondary">Export All</button>
+            <button id="importBtn" class="secondary">Import JSON</button>
+        </div>
+    </div>
+
+    <div class="tab-container">
+        <div class="tab active" data-tab="import">Import Questions</div>
+        <div class="tab" data-tab="bank">Question Bank</div>
+        <div class="tab" data-tab="add">Add New Question</div>
+        <div class="tab" data-tab="cq">Import CQ</div>
+        <div class="tab" data-tab="sq">Import SQ</div>
+    </div>
+
+    <div class="tab-content active" id="import-tab">
+        <div class="panel">
+            <h2>Bulk Import Questions</h2>
+            <p>Format your questions like this:</p>
+            <pre>
+[Subject: Math]
+[Chapter: Algebra]
+[Lesson: Linear Equations]
+[Board: CBSE]
+[isQuizzable: true]
+[Tags: easy, calculation]
+1. What is the solution to 2x + 3 = 7?
+a) 1
+b) 2
+c) 3
+d) 4
+Correct: b
+            </pre>
+            <textarea id="mcqInput" placeholder="Paste your questions here..."></textarea>
+            <button id="parseBtn">Parse Questions</button>
+            <button id="clearImportBtn" class="danger">Clear</button>
+        </div>
+    </div>
+
+    <div class="tab-content" id="bank-tab">
+        <div class="panel">
+            <h2>Question Bank</h2>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-value" id="totalQuestions">0</div>
+                    <div>Total Questions</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="subjectsCount">0</div>
+                    <div>Subjects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="chaptersCount">0</div>
+                    <div>Chapters</div>
+                </div>
+            </div>
+
+            <div class="detailed-stats">
+                <h3>Detailed Counts</h3>
+                <div id="detailedStatsContent">
+                    </div>
+            </div>
+            <div class="search-filters">
+                <div>
+                    <label for="searchText">Search Text:</label>
+                    <input type="text" id="searchText" placeholder="Enter keywords...">
+                </div>
+                <div>
+                    <label for="filterSubject">Subject:</label>
+                    <select id="filterSubject">
+                        <option value="">All Subjects</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="filterChapter">Chapter:</label>
+                    <select id="filterChapter">
+                        <option value="">All Chapters</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="filterLesson">Lesson:</label>
+                    <select id="filterLesson">
+                        <option value="">All Lessons</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="filterType">Type:</label>
+                    <select id="filterType">
+                        <option value="">All Types</option>
+                        <option value="mcq">MCQ</option>
+                        <option value="cq">CQ</option>
+                        <option value="sq">SQ</option> </select>
+                </div>
+                <div>
+                    <label for="filterBoard">Board:</label>
+                    <select id="filterBoard">
+                        <option value="">All Boards</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="filterQuizzable">Quizzable:</label>
+                    <select id="filterQuizzable">
+                        <option value="">All</option>
+                        <option value="true">Quizzable</option>
+                        <option value="false">Non-Quizzable</option>
+                    </select>
+                </div>
+            </div>
+            <button id="applyFiltersBtn">Apply Filters</button>
+            <button id="resetFiltersBtn" class="secondary">Reset Filters</button>
+            <div id="questionsContainer"></div>
+        </div>
+    </div>
+
+    <div class="tab-content" id="add-tab">
+        <div class="panel">
+            <h2>Add/Edit Question</h2>
+            <input type="hidden" id="editQuestionId">
+            <div>
+                <label for="questionType">Question Type:</label>
+                <select id="questionType">
+                    <option value="mcq">MCQ</option>
+                    <option value="cq">CQ</option>
+                    <option value="sq">SQ</option> </select>
+            </div>
+            <div class="metadata-fields">
+                <div>
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" placeholder="e.g., Mathematics">
+                </div>
+                <div>
+                    <label for="chapter">Chapter:</label>
+                    <input type="text" id="chapter" placeholder="e.g., Algebra">
+                </div>
+                <div>
+                    <label for="lesson">Lesson:</label>
+                    <input type="text" id="lesson" placeholder="e.g., Linear Equations">
+                </div>
+                <div>
+                    <label for="board">Board:</label>
+                    <input type="text" id="board" placeholder="e.g., DB24, JB21, SB20">
+                </div>
+                <div>
+                    <label for="isQuizzable">Quizzable:</label>
+                    <input type="checkbox" id="isQuizzable" checked>
+                    <span style="margin-left: 5px; font-size: 0.9em;">(Include in quizzes?)</span>
+                </div>
+            </div>
+            <div>
+                <label for="questionText">Question:</label>
+                <textarea id="questionText" placeholder="Enter your question here..."></textarea>
+            </div>
+            <div class="image-upload-container">
+                <label for="questionImageUpload">Question Image:</label>
+                <input type="file" id="questionImageUpload" accept="image/*">
+                <img id="questionImagePreview" class="image-preview">
+                <button id="removeQuestionImageBtn" class="danger" style="display: none; margin-top: 5px;">Remove Image</button>
+            </div>
+
+            <div class="mcq-only">
+                <div>
+                    <label>Options:</label>
+                    <div class="option-fields">
+                        <div>
+                            <input type="text" class="option" placeholder="Option a)" data-option="a">
+                            <div class="option-image-upload">
+                                <label>Image for a:</label>
+                                <input type="file" class="option-image-upload-input" data-option="a" accept="image/*">
+                                <img class="option-image-preview" data-option="a">
+                                <button class="remove-option-image-btn danger" data-option="a" style="display: none; margin-top: 5px;">Remove</button>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="text" class="option" placeholder="Option b)" data-option="b">
+                            <div class="option-image-upload">
+                                <label>Image for b:</label>
+                                <input type="file" class="option-image-upload-input" data-option="b" accept="image/*">
+                                <img class="option-image-preview" data-option="b">
+                                <button class="remove-option-image-btn danger" data-option="b" style="display: none; margin-top: 5px;">Remove</button>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="text" class="option" placeholder="Option c)" data-option="c">
+                            <div class="option-image-upload">
+                                <label>Image for c:</label>
+                                <input type="file" class="option-image-upload-input" data-option="c" accept="image/*">
+                                <img class="option-image-preview" data-option="c">
+                                <button class="remove-option-image-btn danger" data-option="c" style="display: none; margin-top: 5px;">Remove</button>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="text" class="option" placeholder="Option d)" data-option="d">
+                            <div class="option-image-upload">
+                                <label>Image for d:</label>
+                                <input type="file" class="option-image-upload-input" data-option="d" accept="image/*">
+                                <img class="option-image-preview" data-option="d">
+                                <button class="remove-option-image-btn danger" data-option="d" style="display: none; margin-top: 5px;">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <label for="correctAnswer">Correct Answer:</label>
+                <select id="correctAnswer">
+                    <option value="">Select correct answer</option>
+                    <option value="a">Option a</option>
+                    <option value="b">Option b</option>
+                    <option value="c">Option c</option>
+                    <option value="d">Option d</option>
+                </select>
+            </div>
+
+            <div class="cq-only">
+                <div>
+                    <label>Parts:</label>
+                    <div class="option-fields">
+                        <div>
+                            <input type="text" class="option" placeholder="Part a) text" data-option="a">
+                            <input type="number" class="part-marks" placeholder="Marks" data-option="a" min="0">
+                            <textarea class="part-answer" placeholder="Answer for part a" data-option="a"></textarea>
+                            <div class="option-image-upload">
+                                <label>Image for a:</label>
+                                <input type="file" class="option-image-upload-input" data-option="a" accept="image/*">
+                                <img class="option-image-preview" data-option="a">
+                                <button class="remove-option-image-btn danger" data-option="a" style="display: none; margin-top: 5px;">Remove</button>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="text" class="option" placeholder="Part b) text" data-option="b">
+                            <input type="number" class="part-marks" placeholder="Marks" data-option="b" min="0">
+                            <textarea class="part-answer" placeholder="Answer for part b" data-option="b"></textarea>
+                            <div class="option-image-upload">
+                                <label>Image for b:</label>
+                                <input type="file" class="option-image-upload-input" data-option="b" accept="image/*">
+                                <img class="option-image-preview" data-option="b">
+                                <button class="remove-option-image-btn danger" data-option="b" style="display: none; margin-top: 5px;">Remove</button>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="text" class="option" placeholder="Part c) text" data-option="c">
+                            <input type="number" class="part-marks" placeholder="Marks" data-option="c" min="0">
+                            <textarea class="part-answer" placeholder="Answer for part c" data-option="c"></textarea>
+                            <div class="option-image-upload">
+                                <label>Image for c:</label>
+                                <input type="file" class="option-image-upload-input" data-option="c" accept="image/*">
+                                <img class="option-image-preview" data-option="c">
+                                <button class="remove-option-image-btn danger" data-option="c" style="display: none; margin-top: 5px;">Remove</button>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="text" class="option" placeholder="Part d) text" data-option="d">
+                            <input type="number" class="part-marks" placeholder="Marks" data-option="d" min="0">
+                            <textarea class="part-answer" placeholder="Answer for part d" data-option="d"></textarea>
+                            <div class="option-image-upload">
+                                <label>Image for d:</label>
+                                <input type="file" class="option-image-upload-input" data-option="d" accept="image/*">
+                                <img class="option-image-preview" data-option="d">
+                                <button class="remove-option-image-btn danger" data-option="d" style="display: none; margin-top: 5px;">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sq-only">
+                <div>
+                    <label for="sqAnswer">Answer:</label>
+                    <textarea id="sqAnswer" class="sq-answer" placeholder="Enter the answer to the short question here..."></textarea>
+                </div>
+            </div>
+
+            <div>
+                <label for="tags">Tags (comma separated):</label>
+                <input type="text" id="tags" placeholder="e.g., easy, formula, calculation">
+            </div>
+            <button id="saveQuestionBtn">Save Question</button>
+            <button id="cancelEditBtn" class="danger" style="display:none;">Cancel Edit</button>
+        </div>
+    </div>
+
+    <div class="tab-content" id="cq-tab">
+        <div class="panel">
+            <h2>Bulk Import Constructive Questions (CQ)</h2>
+            <p>Format your questions like this example:</p>
+            <div class="format-example">
+                <pre style="white-space: pre-wrap; word-wrap: break-word; overflow-x: auto; background: #f5f5f5; padding: 15px; border-radius: 4px; max-height: 300px;">
+Question 1
+[There is a picture]
+Organelle M and N are marked in the diagram.
+a. What is plasmalemma? (1)
+b. Why are plastids called colour forming organs? (2)
+c. Why is the organelle marked with N important for the living world? Explain. (3)
+d. What types of problem will appear in living bodies if the part marked with M is absent? Analyse it. (4)
+
+Answer:
+a. The protoplasm of the living cell remains surrounded by a bilayered selectively permeable membrane known as plasmalemma or cell membrane.
+b. The coloured organelles present within the cytoplasm of plant cells are known as plastids. They are responsible for the formation of colour of any plant part like leaves, flower and fruits. In absence of light plastids become colourless.
+c. The N marked organelle is the chloroplast. Plants trap light energy by the chloroplast to manufacture carbohydrate food, releasing oxygen. This maintains oxygen balance and provides energy for living organisms.
+d. The M-marked part is the centriole. If absent, cell division in animals would stop, halting growth and development as chromatids cannot separate during mitosis.
+Subject: Biology
+Chapter: Cell Structure and Function
+Lesson: Organelles and Their Roles
+Board: CBSE
+isQuizzable: true
+Tags: cell, organelle
+                </pre>
+            </div>
+            <textarea id="cqInput" placeholder="Paste your CQ questions here..."></textarea>
+            <div class="button-group">
+                <button id="parseCqBtn" style="margin-top: 10px;">Parse CQ Questions</button>
+                <button id="clearCqBtn" class="danger" style="margin-top: 10px;">Clear</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-content" id="sq-tab">
+        <div class="panel">
+            <h2>Bulk Import Short Questions (SQ)</h2>
+            <p>Format your questions like this example:</p>
+            <div class="format-example">
+                <pre style="white-space: pre-wrap; word-wrap: break-word; overflow-x: auto; background: #f5f5f5; padding: 15px; border-radius: 4px; max-height: 300px;">
+[Subject: Physics]  
+[Chapter: Laws of Motion]  
+[Lesson: Newton's First Law]  
+[isQuizzable: true]  
+[Board: DB24]
+[Tags: fundamental, theory]  
+
+1. What does Newton's First Law of Motion state?  
+Answer: Newton's First Law, also called the Law of Inertia, states that an object at rest will remain at rest, and an object in motion will continue moving at a constant velocity in a straight line, unless acted upon by an external unbalanced force. This law introduces the concept of inertia as a property of matter that resists changes to its state of motion.
+                </pre>
+            </div>
+            <textarea id="sqInput" placeholder="Paste your SQ questions here..."></textarea>
+            <div class="button-group">
+                <button id="parseSqBtn" style="margin-top: 10px;">Parse SQ Questions</button>
+                <button id="clearSqBtn" class="danger" style="margin-top: 10px;">Clear</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async function() {
+            const CORRECT_PASSWORD = 'EdVenture';
+            const passwordOverlay = document.getElementById('password-overlay');
+            const passwordInput = document.getElementById('password-input');
+            const passwordSubmit = document.getElementById('password-submit');
+
+            passwordSubmit.addEventListener('click', function() {
+                if (passwordInput.value === CORRECT_PASSWORD) {
+                    passwordOverlay.style.display = 'none';
+                    initializeApplication(); // Proceed with app initialization
+                } else {
+                    alert('Incorrect password. Please try again.');
+                    passwordInput.value = '';
+                }
+            });
+
+            passwordInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    passwordSubmit.click();
+                }
+            });
+
+            // ======================
+            // 1. SUPABASE INIT (MUST BE FIRST)
+            // Your Supabase init code here
+            const createClient = supabase.createClient;
+
+            // ✅ Use hardcoded keys in frontend (Replit doesn't support process.env in browser)
+            const supabaseUrl = 'https://idgogbisqacywbfnhdzy.supabase.co';  // Replace this with your Supabase URL
+            const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlkZ29nYmlzcWFjeXdiZm5oZHp5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTIzMjAxODMsImV4cCI6MjA2Nzg5NjE4M30.vPUQowhkQVLcQQziELxvLt3cz0QO8cBonxQwIYcjJHs';                        // Replace this with your Supabase Public Key (anon)
+            let supabaseClient = null;
+            const BUCKET_NAME = 'questionimages'; // <<<<<<<<<<<<<<<< MAKE SURE THIS MATCHES YOUR BUCKET NAME
+
+            async function initSupabase() {
+                try {
+                    console.log("Attempting to connect to Supabase...");
+                    supabaseClient = createClient(supabaseUrl, supabaseKey);
+
+                    // Simple test - just try to create client
+                    console.log("✅ Supabase client created successfully!");
+                    return true;
+                } catch (err) {
+                    console.warn("❌ Supabase connection failed, using localStorage:", err.message);
+                    supabaseClient = null;
+                    return false;
+                }
+            }
+
+            // ======================
+            // 2. ALL OTHER EXISTING CODE BELOW
+            // ======================
+
+            const tabs = document.querySelectorAll('.tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+            const mcqInput = document.getElementById('mcqInput');
+            const parseBtn = document.getElementById('parseBtn');
+            const clearImportBtn = document.getElementById('clearImportBtn');
+            const questionsContainer = document.getElementById('questionsContainer');
+            const searchText = document.getElementById('searchText');
+            const filterSubject = document.getElementById('filterSubject');
+            const filterChapter = document.getElementById('filterChapter');
+            const filterLesson = document.getElementById('filterLesson');
+            const filterType = document.getElementById('filterType');
+            const filterBoard = document.getElementById('filterBoard');
+            const filterQuizzable = document.getElementById('filterQuizzable');
+            const applyFiltersBtn = document.getElementById('applyFiltersBtn');
+            const resetFiltersBtn = document.getElementById('resetFiltersBtn');
+            const saveQuestionBtn = document.getElementById('saveQuestionBtn');
+            const cancelEditBtn = document.getElementById('cancelEditBtn');
+            const exportBtn = document.getElementById('exportBtn');
+            const importBtn = document.getElementById('importBtn');
+            const editQuestionId = document.getElementById('editQuestionId');
+            const questionType = document.getElementById('questionType');
+            const subjectInput = document.getElementById('subject');
+            const chapterInput = document.getElementById('chapter');
+            const lessonInput = document.getElementById('lesson');
+            const boardInput = document.getElementById('board');
+            const isQuizzableInput = document.getElementById('isQuizzable');
+            const questionTextInput = document.getElementById('questionText');
+            const optionInputs = document.querySelectorAll('.option');
+            const correctAnswerSelect = document.getElementById('correctAnswer');
+            const tagsInput = document.getElementById('tags');
+            const questionImageUpload = document.getElementById('questionImageUpload');
+            const questionImagePreview = document.getElementById('questionImagePreview');
+            const removeQuestionImageBtn = document.getElementById('removeQuestionImageBtn');
+            const optionImageUploadInputs = document.querySelectorAll('.option-image-upload-input');
+            const optionImagePreviews = document.querySelectorAll('.option-image-preview');
+            const removeOptionImageBtns = document.querySelectorAll('.remove-option-image-btn');
+            const totalQuestionsEl = document.getElementById('totalQuestions');
+            const subjectsCountEl = document.getElementById('subjectsCount');
+            const chaptersCountEl = document.getElementById('chaptersCount');
+            const cqInput = document.getElementById('cqInput');
+            const parseCqBtn = document.getElementById('parseCqBtn');
+            const clearCqBtn = document.getElementById('clearCqBtn');
+            const detailedStatsContent = document.getElementById('detailedStatsContent'); // New element
+
+            // New SQ elements
+            const sqInput = document.getElementById('sqInput');
+            const parseSqBtn = document.getElementById('parseSqBtn');
+            const clearSqBtn = document.getElementById('clearSqBtn');
+            const sqAnswerInput = document.getElementById('sqAnswer');
+
+
+            let questionBank = [];
+            let currentFilters = {};
+
+            function initializeApplication() {
+                // Check if critical elements exist
+                const criticalElements = [
+                    'mcqInput', 'parseBtn', 'questionsContainer', 'saveQuestionBtn',
+                    'questionType', 'questionText', 'totalQuestions', 'board', 'isQuizzable',
+                    'detailedStatsContent', 'sqInput', 'parseSqBtn', 'sqAnswer'
+                ];
+
+                for (const elementId of criticalElements) {
+                    if (!document.getElementById(elementId)) {
+                        console.error(`Critical element missing: ${elementId}`);
+                        alert(`Error: Missing element with ID '${elementId}'. Please check your HTML.`);
+                        return;
+                    }
+                }
+
+                // Set form type (MCQ, CQ or SQ)
+                function setFormType(type) {
+                    const panel = document.querySelector('#add-tab .panel');
+                    panel.classList.remove('editing-mcq', 'editing-cq', 'editing-sq');
+                    panel.classList.add(`editing-${type}`);
+                }
+
+                tabs.forEach(tab => {
+                    tab.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const tabName = tab.dataset.tab;
+
+                        // Remove active class from all tabs and contents
+                        tabs.forEach(t => t.classList.remove('active'));
+                        tabContents.forEach(content => content.classList.remove('active'));
+
+                        // Add active class to clicked tab and corresponding content
+                        tab.classList.add('active');
+                        const targetContent = document.getElementById(`${tabName}-tab`);
+                        if (targetContent) {
+                            targetContent.classList.add('active');
+                        }
+                    });
+                });
+
+                async function loadQuestions() {
+                    console.log('🔍 loadQuestions called');
+                    console.log('🔍 supabaseClient exists:', !!supabaseClient);
+
+                    if (supabaseClient) {
+                        try {
+                            console.log('🔍 Attempting to load from Supabase...');
+
+                            const { data, error } = await supabaseClient
+                                .from('questions')
+                                .select('*')
+                                .order('created_at', { ascending: false });
+
+                            if (error) {
+                                console.error('❌ Error loading from Supabase:', error);
+                                throw error;
+                            }
+
+                            console.log('✅ Raw data from Supabase:', data);
+                            console.log('✅ Number of questions loaded:', data?.length || 0);
+
+                            // Convert Supabase data back to our format
+                            const convertedData = (data || []).map(q => {
+                                const converted = {
+                                    id: q.id,
+                                    type: q.type,
+                                    subject: q.subject,
+                                    chapter: q.chapter,
+                                    lesson: q.lesson,
+                                    board: q.board,
+                                    isQuizzable: q.is_quizzable,
+                                    tags: q.tags || [],
+                                    image: q.image,
+                                    answerimage1: q.answerimage1, // New field for CQ part c image
+                                    answerimage2: q.answerimage2, // New field for CQ part d image
+                                    question: q.question,
+                                    questionText: q.question_text,
+                                    options: q.options,
+                                    correctAnswer: q.correct_answer,
+                                    parts: q.parts,
+                                    answer: q.answer
+                                };
+                                return converted;
+                            });
+
+                            console.log(`✅ Loaded ${convertedData.length} questions from Supabase`);
+                            return convertedData;
+
+                        } catch (error) {
+                            console.error('❌ Error loading questions from Supabase:', error);
+                            console.log('📱 Falling back to localStorage');
+                            return loadFromLocalStorage();
+                        }
+                    } else {
+                        console.log('📱 No Supabase client, loading from localStorage');
+                        return loadFromLocalStorage();
+                    }
+                }
+
+                function loadFromLocalStorage() {
+                    try {
+                        const stored = localStorage.getItem('questionBank');
+                        const questions = stored ? JSON.parse(stored) : [];
+                        // Ensure answerimage1 and answerimage2 are included
+                        return questions.map(q => ({
+                            ...q,
+                            answerimage1: q.answerimage1 || null,
+                            answerimage2: q.answerimage2 || null
+                        }));
+                    } catch (e) {
+                        console.error('Error loading from localStorage:', e);
+                        return [];
+                    }
+                }
+
+                // Save questions (to Supabase if available, else localStorage)
+                async function saveQuestions() {
+                    console.log('🔍 saveQuestions called with:', questionBank.length, 'questions');
+                    console.log('🔍 supabaseClient exists:', !!supabaseClient);
+
+                    if (supabaseClient) {
+                        try {
+                            console.log('🔍 Attempting to save to Supabase...');
+
+                            // Prepare data for Supabase, ensuring correct field names and types
+                            const dataToUpsert = questionBank.map(question => ({
+                                id: question.id,
+                                type: question.type,
+                                subject: question.subject || '',
+                                chapter: question.chapter || '',
+                                lesson: question.lesson || '',
+                                board: question.board || '',
+                                is_quizzable: question.isQuizzable !== false, // Use is_quizzable for Supabase
+                                tags: question.tags || [],
+                                image: question.image || null,
+                                answerimage1: question.answerimage1 || null, // New field for CQ part c image
+                                answerimage2: question.answerimage2 || null, // New field for CQ part d image
+
+                                // Type-specific fields
+                                question: (question.type === 'mcq' || question.type === 'sq') ? question.question || null : null,
+                                question_text: question.type === 'cq' ? question.questionText || null : null,
+                                options: question.type === 'mcq' ? question.options || null : null,
+                                correct_answer: question.type === 'mcq' ? question.correctAnswer || null : null,
+                                parts: question.type === 'cq' ? question.parts || null : null,
+                                answer: question.type === 'sq' ? question.answer || null : null
+                            }));
+
+                            console.log('🔍 Prepared data for Supabase upsert:', dataToUpsert);
+
+                            const { data, error } = await supabaseClient
+                                .from('questions')
+                                .upsert(dataToUpsert, {
+                                    onConflict: 'id', // Use 'id' as the conflict key for upsert
+                                    returning: 'minimal' // No need to return full data
+                                });
+
+                            if (error) {
+                                console.error('❌ Error saving to Supabase:', error);
+                                throw error;
+                            } else {
+                                console.log('✅ All questions upserted to Supabase successfully!');
+                            }
+
+                        } catch (error) {
+                            console.error('❌ Error saving to Supabase:', error);
+                            console.log('Falling back to localStorage...');
+                            saveToLocalStorage();
+                        }
+                    } else {
+                        console.log('📱 No Supabase client, saving to localStorage');
+                        saveToLocalStorage();
+                    }
+                    // Update stats after saving
+                    updateStats();
+                    updateDetailedStats();
+                }
+
+                function saveToLocalStorage() {
+                    try {
+                        localStorage.setItem('questionBank', JSON.stringify(questionBank));
+                    } catch (e) {
+                        console.error('Error saving to localStorage:', e);
+                    }
+                }
+
+                // --- Supabase Image Upload Function ---
+                async function uploadImage(file, path) {
+                    if (!supabaseClient) {
+                        console.warn('Supabase client not initialized. Cannot upload image.');
+                        return null;
+                    }
+
+                    const fileName = `${Date.now()}-${file.name.replace(/\s/g, '_')}`;
+                    const filePath = `${path}/${fileName}`;
+
+                    try {
+                        const { data, error } = await supabaseClient.storage
+                            .from(BUCKET_NAME)
+                            .upload(filePath, file, {
+                                cacheControl: '3600',
+                                upsert: false // Set to true if you want to overwrite existing files with the same name
+                            });
+
+                        if (error) {
+                            console.error('Error uploading image:', error);
+                            throw error;
+                        }
+
+                        // Get public URL
+                        const { data: publicUrlData } = supabaseClient.storage
+                            .from(BUCKET_NAME)
+                            .getPublicUrl(filePath);
+
+                        if (publicUrlData && publicUrlData.publicUrl) {
+                            console.log('Image uploaded successfully:', publicUrlData.publicUrl);
+                            return publicUrlData.publicUrl;
+                        } else {
+                            console.error('Failed to get public URL:', publicUrlData);
+                            throw new Error('Failed to retrieve public URL after upload.');
+                        }
+                    } catch (error) {
+                        console.error('Supabase Storage upload error:', error.message);
+                        alert(`Error uploading image: ${error.message}`);
+                        return null;
+                    }
+                }
+
+                // --- Supabase Image Deletion Function ---
+                async function deleteImage(url) {
+                    if (!supabaseClient || !url || !url.includes(BUCKET_NAME)) {
+                        console.warn('Supabase client not initialized or invalid URL for deletion.');
+                        return;
+                    }
+
+                    try {
+                        // Extract the path within the bucket from the public URL
+                        const pathParts = url.split(BUCKET_NAME + '/public/');
+                        if (pathParts.length < 2) {
+                            console.warn('Could not extract valid path from image URL for deletion:', url);
+                            return;
+                        }
+                        const filePath = pathParts[1];
+
+                        const { data, error } = await supabaseClient.storage
+                            .from(BUCKET_NAME)
+                            .remove([filePath]);
+
+                        if (error) {
+                            console.error('Error deleting image from Supabase Storage:', error);
+                            throw error;
+                        }
+                        console.log('Image deleted from Supabase Storage:', filePath, data);
+                    } catch (error) {
+                        console.error('Supabase Storage deletion error:', error.message);
+                        // alert(`Error deleting image: ${error.message}`); // Don't block UI for deletion errors
+                    }
+                }
+
+
+                // Parse MCQs
+                async function parseMCQs() {
+                    const text = mcqInput.value.trim();
+                    if (!text) {
+                        alert('Please enter questions to import.');
+                        return;
+                    }
+
+                    const blocks = text.split(/(?=\n*\[Subject:|\n*\d+\.\s)/).filter(b => b.trim());
+                    const newQuestions = [];
+                    let currentMetadata = {
+                        subject: '',
+                        chapter: '',
+                        lesson: '',
+                        board: '',
+                        isQuizzable: true,
+                        tags: ['mcq']
+                    };
+
+                    for (const block of blocks) {
+                        const lines = block.split('\n').map(l => l.trim()).filter(l => l);
+                        if (!lines.length) continue;
+
+                        if (lines[0].startsWith('[')) {
+                            lines.forEach(line => {
+                                if (line.startsWith('[Subject:')) currentMetadata.subject = line.replace('[Subject:', '').replace(']', '').trim();
+                                else if (line.startsWith('[Chapter:')) currentMetadata.chapter = line.replace('[Chapter:', '').replace(']', '').trim();
+                                else if (line.startsWith('[Lesson:')) currentMetadata.lesson = line.replace('[Lesson:', '').replace(']', '').trim();
+                                else if (line.startsWith('[Board:')) currentMetadata.board = line.replace('[Board:', '').replace(']', '').trim();
+                                else if (line.startsWith('[isQuizzable:')) currentMetadata.isQuizzable = line.replace('[isQuizzable:', '').replace(']', '').trim().toLowerCase() === 'true';
+                                else if (line.startsWith('[Tags:')) {
+                                    const tags = line.replace('[Tags:', '').replace(']', '').trim();
+                                    currentMetadata.tags = ['mcq', ...tags.split(',').map(t => t.trim()).filter(t => t && t !== 'mcq')];
+                                }
+                            });
+                            continue;
+                        }
+
+                        const question = {
+                            ...currentMetadata,
+                            id: Date.now() + Math.floor(Math.random() * 1000),
+                            type: 'mcq',
+                            question: '',
+                            options: [],
+                            correctAnswer: '',
+                            image: null
+                        };
+
+                        let questionTextLines = [];
+                        let parsingOptions = false;
+                        let parsingCorrectAnswer = false;
+
+                        for (const line of lines) {
+                            if (/^\d+\.\s/.test(line) && !parsingOptions) {
+                                questionTextLines.push(line.replace(/^\d+\.\s/, '').trim());
+                            } else if (/^\s*([a-dA-D])[\).\s]\s*(.*)/i.test(line)) {
+                                parsingOptions = true;
+                                const match = line.match(/^\s*([a-dA-D])[\).\s]\s*(.*)/i);
+                                if (match) {
+                                    const label = match[1].toLowerCase();
+                                    const text = match[2].trim();
+                                    question.options.push({ label, text: `${label}) ${text}`, image: null });
+                                }
+                            } else if (/^Correct:\s*([a-dA-D])/i.test(line)) {
+                                parsingCorrectAnswer = true;
+                                const match = line.match(/^Correct:\s*([a-dA-D])/i);
+                                if (match) question.correctAnswer = match[1].toLowerCase();
+                            } else if (!parsingOptions && !parsingCorrectAnswer && line.trim()) {
+                                questionTextLines.push(line);
+                            }
+                        }
+
+                        question.question = questionTextLines.join('\n').trim();
+                        if (question.question && question.options.length >= 2 && question.correctAnswer) {
+                            newQuestions.push(question);
+                        }
+                    }
+
+                    if (newQuestions.length > 0) {
+                        console.log('🔍 About to save parsed MCQs:', newQuestions);
+                        questionBank = [...questionBank, ...newQuestions];
+                        console.log('🔍 Updated questionBank length:', questionBank.length);
+                        await saveQuestions();
+                        resetFilters();
+                        renderQuestionBank();
+                        mcqInput.value = '';
+                        alert(`Imported ${newQuestions.length} MCQ questions successfully!`);
+                        document.querySelector('.tab[data-tab="bank"]').click();
+                    } else {
+                        alert('No valid MCQ questions found. Please check your format.');
+                    }
+                }
+
+                // Parse CQs
+                async function parseCQs() {
+                    const text = cqInput.value.trim();
+                    if (!text) {
+                        alert('Please enter constructive questions to import.');
+                        return;
+                    }
+
+                    const lines = text.split('\n').map(l => l.trim());
+                    const newQuestions = [];
+                    let currentQuestion = null;
+                    let globalMetadata = { subject: '', chapter: '', lesson: '', board: '', isQuizzable: true, tags: ['cq'] };
+                    let inAnswerSection = false;
+                    let currentPartLetter = null;
+                    let currentPartAnswerBuffer = [];
+                    let questionTextBuffer = [];
+
+                    for (let i = 0; i < lines.length; i++) {
+                        const line = lines[i];
+                        if (line.length === 0 && !inAnswerSection) continue; // Skip empty lines outside answer section
+
+                        const metadataMatch = line.match(/^(Subject|Chapter|Lesson|Board|isQuizzable|Tags):\s*(.*)$/i) || line.match(/^\[(Subject|Chapter|Lesson|Board|isQuizzable|Tags):\s*(.*?)\]$/i);
+                        if (metadataMatch) {
+                            const key = metadataMatch[1].toLowerCase();
+                            let value = metadataMatch[2].trim();
+                            if (key === 'isquizzable') value = value.toLowerCase() === 'true';
+                            else if (key === 'tags') value = ['cq', ...value.split(',').map(t => t.trim()).filter(t => t && t !== 'cq')];
+
+                            if (currentQuestion) {
+                                currentQuestion[key] = value;
+                            } else {
+                                globalMetadata[key] = value;
+                            }
+                            continue;
+                        }
+
+                        if (/^Question\s+\d+/i.test(line)) {
+                            // Save the previous question if it exists and is valid
+                            if (currentQuestion) {
+                                if (inAnswerSection && currentPartLetter && currentPartAnswerBuffer.length) {
+                                    const part = currentQuestion.parts.find(p => p.letter === currentPartLetter);
+                                    if (part) part.answer = currentPartAnswerBuffer.join('\n').trim();
+                                }
+                                if (currentQuestion.questionText && currentQuestion.parts.length > 0 && currentQuestion.parts.every(p => p.answer)) {
+                                    newQuestions.push(currentQuestion);
+                                } else {
+                                    console.warn("Skipping incomplete question:", currentQuestion);
+                                }
+                            }
+                            // Start a new question
+                            currentQuestion = {
+                                ...globalMetadata,
+                                id: Date.now() + Math.floor(Math.random() * 1000),
+                                type: 'cq',
+                                questionText: '',
+                                image: null,
+                                answerimage1: null, // Initialize for part c
+                                answerimage2: null, // Initialize for part d
+                                parts: []
+                            };
+                            inAnswerSection = false;
+                            currentPartLetter = null;
+                            currentPartAnswerBuffer = [];
+                            questionTextBuffer = [];
+                            continue;
+                        }
+
+                        if (line.toLowerCase() === 'answer:') {
+                            inAnswerSection = true;
+                            currentQuestion.questionText = questionTextBuffer.join('\n').trim();
+                            questionTextBuffer = [];
+                            continue;
+                        }
+
+                        if (!inAnswerSection) {
+                            const partMatch = line.match(/^([a-d])\.\s*(.*?)\s*\((\d+)\)\s*$/i);
+                            if (partMatch) {
+                                if (!currentQuestion) {
+                                    currentQuestion = { ...globalMetadata, id: Date.now() + Math.floor(Math.random() * 1000), type: 'cq', questionText: '', image: null, answerimage1: null, answerimage2: null, parts: [] };
+                                }
+                                const partLetter = partMatch[1].toLowerCase();
+                                currentQuestion.parts.push({ letter: partMatch[1].toLowerCase(), text: partMatch[2].trim(), marks: parseInt(partMatch[3]), answer: '', image: null });
+                                // Check next line for image placeholder
+                                if (i + 1 < lines.length && lines[i + 1].trim() === `[There is a picture for part ${partLetter}]`) {
+                                    if (partLetter === 'c') {
+                                        currentQuestion.answerimage1 = '[There is a picture for part c]'; // Placeholder
+                                    } else if (partLetter === 'd') {
+                                        currentQuestion.answerimage2 = '[There is a picture for part d]'; // Placeholder
+                                    }
+                                    i++; // Skip the placeholder line
+                                }
+                            } else if (!line.startsWith('[There is a picture]')) {
+                                questionTextBuffer.push(line);
+                            }
+                        } else {
+                            const answerPartMatch = line.match(/^([a-d])\.\s*(.*)$/i);
+                            if (answerPartMatch) {
+                                // Save previous part's answer if any
+                                if (currentPartLetter && currentPartAnswerBuffer.length) {
+                                    const part = currentQuestion.parts.find(p => p.letter === currentPartLetter);
+                                    if (part) part.answer = currentPartAnswerBuffer.join('\n').trim();
+                                }
+                                currentPartLetter = answerPartMatch[1].toLowerCase();
+                                currentPartAnswerBuffer = [answerPartMatch[2]];
+                            } else if (currentPartLetter && line.trim() !== "") {
+                                currentPartAnswerBuffer.push(line);
+                            } else if (line.trim() === "" && currentPartLetter) {
+                                currentPartAnswerBuffer.push(line);
+                            }
+                        }
+                    }
+
+                    // Handle the last question after the loop finishes
+                    if (currentQuestion) {
+                        if (inAnswerSection && currentPartLetter && currentPartAnswerBuffer.length) {
+                            const part = currentQuestion.parts.find(p => p.letter === currentPartLetter);
+                            if (part) part.answer = currentPartAnswerBuffer.join('\n').trim();
+                        }
+                        if (!currentQuestion.questionText && questionTextBuffer.length) {
+                            currentQuestion.questionText = questionTextBuffer.join('\n').trim();
+                        }
+                        if (currentQuestion.questionText && currentQuestion.parts.length > 0 && currentQuestion.parts.every(p => p.answer)) {
+                            newQuestions.push(currentQuestion);
+                        } else {
+                            console.warn("Skipping incomplete last question:", currentQuestion);
+                        }
+                    }
+
+                    if (newQuestions.length > 0) {
+                        questionBank = [...questionBank, ...newQuestions];
+                        await saveQuestions();
+                        resetFilters();
+                        renderQuestionBank();
+                        cqInput.value = '';
+                        alert(`Imported ${newQuestions.length} CQ question(s) successfully!`);
+                        document.querySelector('.tab[data-tab="bank"]').click();
+                    } else {
+                        alert('No valid CQ questions found. Please check your format.');
+                    }
+                }
+
+                // New: Parse SQ Questions
+                async function parseSQs() {
+                    const text = sqInput.value.trim();
+                    if (!text) {
+                        alert('Please enter short questions to import.');
+                        return;
+                    }
+
+                    const blocks = text.split(/(?=\n*\[Subject:|\n*\d+\.\s)/).filter(b => b.trim());
+                    const newQuestions = [];
+                    let currentMetadata = {
+                        subject: '',
+                        chapter: '',
+                        lesson: '',
+                        board: '',
+                        isQuizzable: true,
+                        tags: ['sq']
+                    };
+
+                    for (const block of blocks) {
+                        const lines = block.split('\n').map(l => l.trim()).filter(l => l);
+                        if (!lines.length) continue;
+
+                        if (lines[0].startsWith('[')) {
+                            lines.forEach(line => {
+                                if (line.startsWith('[Subject:')) currentMetadata.subject = line.replace('[Subject:', '').replace(']', '').trim();
+                                else if (line.startsWith('[Chapter:')) currentMetadata.chapter = line.replace('[Chapter:', '').replace(']', '').trim();
+                                else if (line.startsWith('[Lesson:')) currentMetadata.lesson = line.replace('[Lesson:', '').replace(']', '').trim();
+                                else if (line.startsWith('[Board:')) currentMetadata.board = line.replace('[Board:', '').replace(']', '').trim();
+                                else if (line.startsWith('[isQuizzable:')) currentMetadata.isQuizzable = line.replace('[isQuizzable:', '').replace(']', '').trim().toLowerCase() === 'true';
+                                else if (line.startsWith('[Tags:')) {
+                                    const tags = line.replace('[Tags:', '').replace(']', '').trim();
+                                    currentMetadata.tags = ['sq', ...tags.split(',').map(t => t.trim()).filter(t => t && t !== 'sq')];
+                                }
+                            });
+                            continue;
+                        }
+
+                        const question = {
+                            ...currentMetadata,
+                            id: Date.now() + Math.floor(Math.random() * 1000),
+                            type: 'sq',
+                            question: '',
+                            answer: '',
+                            image: null
+                        };
+
+                        let questionTextBuffer = [];
+                        let answerTextBuffer = [];
+                        let inAnswerSection = false;
+
+                        for (const line of lines) {
+                            if (/^\d+\.\s/.test(line) && !inAnswerSection) {
+                                questionTextBuffer.push(line.replace(/^\d+\.\s/, '').trim());
+                            } else if (line.toLowerCase().startsWith('answer:')) {
+                                inAnswerSection = true;
+                                answerTextBuffer.push(line.replace(/^Answer:/i, '').trim());
+                            } else if (inAnswerSection) {
+                                answerTextBuffer.push(line);
+                            } else if (!inAnswerSection && line.trim()) {
+                                questionTextBuffer.push(line);
+                            }
+                        }
+
+                        question.question = questionTextBuffer.join('\n').trim();
+                        question.answer = answerTextBuffer.join('\n').trim();
+
+                        if (question.question && question.answer) {
+                            newQuestions.push(question);
+                        } else {
+                            console.warn('Skipping incomplete SQ question:', question);
+                        }
+                    }
+
+                    if (newQuestions.length > 0) {
+                        console.log('🔍 About to save parsed SQs:', newQuestions);
+                        questionBank = [...questionBank, ...newQuestions];
+                        console.log('🔍 Updated questionBank length:', questionBank.length);
+                        await saveQuestions();
+                        resetFilters();
+                        renderQuestionBank();
+                        sqInput.value = '';
+                        alert(`Imported ${newQuestions.length} SQ questions successfully!`);
+                        document.querySelector('.tab[data-tab="bank"]').click();
+                    } else {
+                        alert('No valid SQ questions found. Please check your format.');
+                    }
+                }
+
+
+                // Render questions in the bank
+                function renderQuestionBank() {
+                    questionsContainer.innerHTML = '';
+                    let filteredQuestions = questionBank.filter(q => {
+                        const matchesSearchText = !currentFilters.searchText ||
+                            (q.question?.toLowerCase().includes(currentFilters.searchText.toLowerCase())) ||
+                            (q.questionText?.toLowerCase().includes(currentFilters.searchText.toLowerCase())) ||
+                            (q.answer?.toLowerCase().includes(currentFilters.searchText.toLowerCase())) ||
+                            (q.parts?.some(p => (p.text?.toLowerCase().includes(currentFilters.searchText.toLowerCase())) || (p.answer?.toLowerCase().includes(currentFilters.searchText.toLowerCase())))) ||
+                            q.tags.some(tag => tag.toLowerCase().includes(currentFilters.searchText.toLowerCase()));
+                        const matchesSubject = !currentFilters.subject || q.subject === currentFilters.subject;
+                        const matchesChapter = !currentFilters.chapter || q.chapter === currentFilters.chapter;
+                        const matchesLesson = !currentFilters.lesson || q.lesson === currentFilters.lesson;
+                        const matchesType = !currentFilters.type || q.type === currentFilters.type;
+                        const matchesBoard = !currentFilters.board || q.board === currentFilters.board;
+                        const matchesQuizzable = currentFilters.isQuizzable === '' || q.isQuizzable === (currentFilters.isQuizzable === 'true');
+                        return matchesSearchText && matchesSubject && matchesChapter && matchesLesson && matchesType && matchesBoard && matchesQuizzable;
+                    });
+
+                    if (filteredQuestions.length === 0) {
+                        questionsContainer.innerHTML = '<p>No questions found matching your criteria.</p>';
+                        return;
+                    }
+
+                    filteredQuestions.forEach(q => {
+                        const questionEl = document.createElement('div');
+                        questionEl.classList.add('question');
+                        let contentHtml = '';
+
+                        if (q.type === 'mcq') {
+                            contentHtml += `<p><strong>Question:</strong> ${q.question}</p>`;
+                            if (q.image) contentHtml += `<img src="${q.image}" style="max-width: 200px; max-height: 200px; margin-bottom: 10px;">`;
+                            contentHtml += '<ul class="options-list">';
+                            q.options.forEach(option => {
+                                contentHtml += `<li ${q.correctAnswer && option.label === q.correctAnswer ? 'class="correct"' : ''}>
+                                    ${option.text}
+                                    ${option.image ? `<img src="${option.image}" style="max-width: 100px; max-height: 100px; display: block; margin-top: 5px;">` : ''}
+                                </li>`;
+                            });
+                            contentHtml += '</ul>';
+                            contentHtml += `<p><strong>Correct Answer:</strong> ${q.correctAnswer ? q.correctAnswer.toUpperCase() : 'N/A'}</p>`;
+                        } else if (q.type === 'cq') {
+                            contentHtml += `<p><strong>Question:</strong> ${q.questionText}</p>`;
+                            if (q.image) contentHtml += `<img src="${q.image}" style="max-width: 200px; max-height: 200px; margin-bottom: 10px;">`;
+                            contentHtml += '<ul class="options-list">';
+                            q.parts.forEach(part => {
+                                let partImage = part.image;
+                                if (part.letter === 'c' && q.answerimage1) {
+                                    partImage = q.answerimage1;
+                                } else if (part.letter === 'd' && q.answerimage2) {
+                                    partImage = q.answerimage2;
+                                }
+                                contentHtml += `<li>
+                                    <strong>Part ${part.letter.toUpperCase()}:</strong> ${part.text} (Marks: ${part.marks})<br>
+                                    <strong>Answer:</strong> ${part.answer}
+                                    ${partImage ? `<img src="${partImage}" style="max-width: 100px; max-height: 100px; display: block; margin-top: 5px;">` : ''}
+                                </li>`;
+                            });
+                            contentHtml += '</ul>';
+                        } else if (q.type === 'sq') {
+                            contentHtml += `<p><strong>Question:</strong> ${q.question}</p>`;
+                            if (q.image) contentHtml += `<img src="${q.image}" style="max-width: 200px; max-height: 200px; margin-bottom: 10px;">`;
+                            contentHtml += `<p><strong>Answer:</strong> ${q.answer}</p>`;
+                        }
+
+                        questionEl.innerHTML = `
+                            <div class="metadata">
+                                <span>Subject: ${q.subject || 'N/A'}</span>
+                                <span>Chapter: ${q.chapter || 'N/A'}</span>
+                                <span>Lesson: ${q.lesson || 'N/A'}</span>
+                                <span>Board: ${q.board || 'N/A'}</span>
+                                <span>Type: ${q.type ? q.type.toUpperCase() : 'N/A'}</span>
+                                <span>Quizzable: ${q.isQuizzable ? 'Yes' : 'No'}</span>
+                                <span>Tags: ${q.tags?.length ? q.tags.join(', ') : 'N/A'}</span>
+                            </div>
+                            ${contentHtml}
+                            <div class="actions">
+                                <button class="edit-btn" data-id="${q.id}">Edit</button>
+                                <button class="danger delete-btn" data-id="${q.id}">Delete</button>
+                            </div>
+                        `;
+                        questionsContainer.appendChild(questionEl);
+                    });
+                    updateStats();
+                }
+
+                // Edit question
+                function editQuestion(id) {
+                    const question = questionBank.find(q => q.id == id);
+                    if (!question) return;
+
+                    editQuestionId.value = question.id;
+                    questionType.value = question.type || 'mcq';
+                    questionType.disabled = true; // Disable type change during edit
+                    setFormType(question.type);
+                    subjectInput.value = question.subject || '';
+                    chapterInput.value = question.chapter || '';
+                    lessonInput.value = question.lesson || '';
+                    boardInput.value = question.board || '';
+                    isQuizzableInput.checked = question.isQuizzable !== false;
+
+                    // Set question text based on type
+                    if (question.type === 'cq') {
+                        questionTextInput.value = question.questionText || '';
+                    } else { // MCQ or SQ
+                        questionTextInput.value = question.question || '';
+                    }
+
+                    if (question.image) {
+                        questionImagePreview.src = question.image;
+                        questionImagePreview.style.display = 'block';
+                        removeQuestionImageBtn.style.display = 'inline-block';
+                    } else {
+                        questionImagePreview.src = '';
+                        questionImagePreview.style.display = 'none';
+                        removeQuestionImageBtn.style.display = 'none';
+                    }
+
+                    // Clear all option/part/SQ fields and images first
+                    optionInputs.forEach(input => {
+                        const optionLetter = input.dataset.option;
+                        input.value = '';
+                        const marksInput = document.querySelector(`.part-marks[data-option="${optionLetter}"]`);
+                        const answerTextarea = document.querySelector(`.part-answer[data-option="${optionLetter}"]`);
+                        const imagePreview = document.querySelector(`.option-image-preview[data-option="${optionLetter}"]`);
+                        const removeBtn = document.querySelector(`.remove-option-image-btn[data-option="${optionLetter}"]`);
+                        const imageUploadInput = document.querySelector(`.option-image-upload-input[data-option="${optionLetter}"]`);
+
+                        if (marksInput) marksInput.value = '';
+                        if (answerTextarea) answerTextarea.value = '';
+
+                        imagePreview.src = '';
+                        imagePreview.style.display = 'none';
+                        removeBtn.style.display = 'none';
+                        imageUploadInput.value = ''; // Clear file input
+                    });
+                    sqAnswerInput.value = ''; // Clear SQ answer
+
+                    if (question.type === 'mcq') {
+                        question.options.forEach(option => {
+                            const input = document.querySelector(`.option[data-option="${option.label}"]`);
+                            if (input) {
+                                input.value = option.text;
+                                const imagePreview = document.querySelector(`.option-image-preview[data-option="${option.label}"]`);
+                                const removeBtn = document.querySelector(`.remove-option-image-btn[data-option="${option.label}"]`);
+                                if (option.image) {
+                                    imagePreview.src = option.image;
+                                    imagePreview.style.display = 'block';
+                                    removeBtn.style.display = 'inline-block';
+                                }
+                            }
+                        });
+                        correctAnswerSelect.value = question.correctAnswer || '';
+                    } else if (question.type === 'cq') {
+                        (question.parts || []).forEach(part => {
+                            const textInput = document.querySelector(`.option[data-option="${part.letter}"]`);
+                            const marksInput = document.querySelector(`.part-marks[data-option="${part.letter}"]`);
+                            const answerTextarea = document.querySelector(`.part-answer[data-option="${part.letter}"]`);
+                            const imagePreview = document.querySelector(`.option-image-preview[data-option="${part.letter}"]`);
+                            const removeBtn = document.querySelector(`.remove-option-image-btn[data-option="${part.letter}"]`);
+                            if (textInput) textInput.value = part.text || '';
+                            if (marksInput) marksInput.value = part.marks || '';
+                            if (answerTextarea) answerTextarea.value = part.answer || '';
+                            if (part.letter === 'c' && question.answerimage1) {
+                                imagePreview.src = question.answerimage1;
+                                imagePreview.style.display = 'block';
+                                removeBtn.style.display = 'inline-block';
+                            } else if (part.letter === 'd' && question.answerimage2) {
+                                imagePreview.src = question.answerimage2;
+                                imagePreview.style.display = 'block';
+                                removeBtn.style.display = 'inline-block';
+                            } else if (part.image) {
+                                imagePreview.src = part.image;
+                                imagePreview.style.display = 'block';
+                                removeBtn.style.display = 'inline-block';
+                            }
+                        });
+                    } else if (question.type === 'sq') {
+                        sqAnswerInput.value = question.answer || '';
+                    }
+
+                    tagsInput.value = question.tags ? question.tags.join(', ') : '';
+                    cancelEditBtn.style.display = 'inline-block';
+                    document.querySelector('.tab[data-tab="add"]').click();
+                }
+
+                // Delete question
+                async function deleteQuestion(id) {
+                    if (confirm('Are you sure you want to delete this question?')) {
+                        const questionToDelete = questionBank.find(q => q.id == id);
+                        if (!questionToDelete) return;
+
+                        // Delete associated images first
+                        if (questionToDelete.image) {
+                            await deleteImage(questionToDelete.image);
+                        }
+                        if (questionToDelete.answerimage1) {
+                            await deleteImage(questionToDelete.answerimage1); // Delete part c image
+                        }
+                        if (questionToDelete.answerimage2) {
+                            await deleteImage(questionToDelete.answerimage2); // Delete part d image
+                        }
+                        if (questionToDelete.type === 'mcq' && questionToDelete.options) {
+                            for (const opt of questionToDelete.options) {
+                                if (opt.image) await deleteImage(opt.image);
+                            }
+                        } else if (questionToDelete.type === 'cq' && questionToDelete.parts) {
+                            for (const part of questionToDelete.parts) {
+                                if (part.image) await deleteImage(part.image);
+                            }
+                        }
+
+                        // Filter out the question from the local questionBank
+                        questionBank = questionBank.filter(q => q.id != id);
+
+                        // Attempt to delete from Supabase
+                        if (supabaseClient) {
+                            try {
+                                const { error } = await supabaseClient
+                                    .from('questions')
+                                    .delete()
+                                    .eq('id', id);
+
+                                if (error) {
+                                    console.error('❌ Error deleting question from Supabase:', error);
+                                    alert('Error deleting question from cloud. It might still be deleted locally.');
+                                } else {
+                                    console.log(`✅ Question ${id} deleted from Supabase.`);
+                                }
+                            } catch (supabaseError) {
+                                console.error('❌ Supabase delete operation failed:', supabaseError);
+                                alert('Could not delete question from cloud. Deleting locally.');
+                            }
+                        } else {
+                            console.log('📱 No Supabase client, deleting only from localStorage.');
+                        }
+
+                        // Save the updated questionBank (to localStorage, or re-attempt Supabase save)
+                        await saveQuestions();
+                        renderQuestionBank();
+                    }
+                }
+
+                // Save question
+                async function saveQuestion() {
+                    const type = questionType.value;
+                    if (!type || !questionTextInput.value.trim()) {
+                        alert('Please enter a question and select a type.');
+                        return;
+                    }
+
+                    // Get existing question for checking old images
+                    const existingQuestion = editQuestionId.value ? questionBank.find(q => q.id == editQuestionId.value) : null;
+
+                    const question = {
+                        id: editQuestionId.value ? parseInt(editQuestionId.value) : Date.now() + Math.floor(Math.random() * 1000),
+                        type,
+                        subject: subjectInput.value.trim(),
+                        chapter: chapterInput.value.trim(),
+                        lesson: lessonInput.value.trim(),
+                        board: boardInput.value.trim(),
+                        isQuizzable: isQuizzableInput.checked,
+                        tags: tagsInput.value.split(',').map(t => t.trim()).filter(t => t),
+                        image: null, // Will be updated after upload
+                        answerimage1: null, // New field for CQ part c image
+                        answerimage2: null // New field for CQ part d image
+                    };
+
+                    if (!question.tags.includes(type)) question.tags.push(type);
+
+                    // Handle question image upload
+                    if (questionImageUpload.files.length > 0) {
+                        const oldImageUrl = existingQuestion?.image;
+                        if (oldImageUrl) await deleteImage(oldImageUrl); // Delete old image if new one is uploaded
+                        questionImagePreview.src = 'Uploading...'; // Basic feedback
+                        const imageUrl = await uploadImage(questionImageUpload.files[0], 'questions');
+                        if (imageUrl) {
+                            question.image = imageUrl;
+                        } else {
+                            alert('Failed to upload question image. Please try again.');
+                            questionImagePreview.src = ''; // Clear preview on failure
+                            return; // Stop saving if image upload fails
+                        }
+                    } else if (questionImagePreview.src && questionImagePreview.style.display === 'block') {
+                        question.image = questionImagePreview.src; // Keep existing image if not changed
+                    } else {
+                        // If there was an old image but it was removed, delete it
+                        const oldImageUrl = existingQuestion?.image;
+                        if (oldImageUrl) await deleteImage(oldImageUrl);
+                        question.image = null;
+                    }
+
+                    if (type === 'mcq') {
+                        question.question = questionTextInput.value.trim();
+                        const options = [];
+                        for (const input of optionInputs) {
+                            const optionLetter = input.dataset.option;
+                            const text = input.value.trim();
+                            const imageUploadInput = document.querySelector(`.option-image-upload-input[data-option="${optionLetter}"]`);
+                            const imagePreview = document.querySelector(`.option-image-preview[data-option="${optionLetter}"]`);
+
+                            let optionImage = null;
+                            const existingOption = existingQuestion?.options?.find(opt => opt.label === optionLetter);
+
+                            if (imageUploadInput.files.length > 0) {
+                                if (existingOption?.image) await deleteImage(existingOption.image);
+                                imagePreview.src = 'Uploading...'; // Basic feedback
+                                optionImage = await uploadImage(imageUploadInput.files[0], `options/${question.id}`);
+                                if (!optionImage) {
+                                    alert(`Failed to upload image for option ${optionLetter}. Please try again.`);
+                                    return; // Stop saving
+                                }
+                            } else if (imagePreview.src && imagePreview.style.display === 'block') {
+                                optionImage = imagePreview.src; // Keep existing image
+                            } else {
+                                // If there was an old option image but it was removed, delete it
+                                if (existingOption?.image) await deleteImage(existingOption.image);
+                            }
+
+                            if (text || optionImage) {
+                                options.push({
+                                    label: optionLetter,
+                                    text: text,
+                                    image: optionImage
+                                });
+                            }
+                        }
+                        if (options.length < 2 || !correctAnswerSelect.value) {
+                            alert('Please provide at least 2 options and select a correct answer.');
+                            return;
+                        }
+                        question.options = options;
+                        question.correctAnswer = correctAnswerSelect.value;
+                        delete question.questionText; // Clear CQ specific
+                        delete question.parts;      // Clear CQ specific
+                        delete question.answer;     // Clear SQ specific
+                    } else if (type === 'cq') {
+                        question.questionText = questionTextInput.value.trim();
+                        const parts = [];
+                        for (const letter of ['a', 'b', 'c', 'd']) {
+                            const textInput = document.querySelector(`.option[data-option="${letter}"]`);
+                            const marksInput = document.querySelector(`.part-marks[data-option="${letter}"]`);
+                            const answerTextarea = document.querySelector(`.part-answer[data-option="${letter}"]`);
+                            const imageUploadInput = document.querySelector(`.option-image-upload-input[data-option="${letter}"]`);
+                            const imagePreview = document.querySelector(`.option-image-preview[data-option="${letter}"]`);
+
+                            const text = textInput.value.trim();
+                            const marks = marksInput.value.trim();
+                            const answer = answerTextarea.value.trim();
+
+                            let partImage = null;
+                            const existingPart = existingQuestion?.parts?.find(p => p.letter === letter);
+
+                            if (imageUploadInput.files.length > 0) {
+                                if (existingPart?.image) await deleteImage(existingPart.image);
+                                imagePreview.src = 'Uploading...'; // Basic feedback
+                                partImage = await uploadImage(imageUploadInput.files[0], `parts/${question.id}`);
+                                if (!partImage) {
+                                    alert(`Failed to upload image for part ${letter}. Please try again.`);
+                                    return; // Stop saving
+                                }
+                            } else if (imagePreview.src && imagePreview.style.display === 'block') {
+                                partImage = imagePreview.src; // Keep existing image
+                            } else {
+                                // If there was an old part image but it was removed, delete it
+                                if (existingPart?.image) await deleteImage(existingPart.image);
+                            }
+
+                            // Assign images to answerimage1 and answerimage2 for parts c and d
+                            if (letter === 'c' && partImage) {
+                                // Delete old answerimage1 if it exists and is different
+                                if (existingQuestion?.answerimage1 && existingQuestion.answerimage1 !== partImage) {
+                                    await deleteImage(existingQuestion.answerimage1);
+                                }
+                                question.answerimage1 = partImage;
+                            } else if (letter === 'c' && !partImage && existingQuestion?.answerimage1) {
+                                await deleteImage(existingQuestion.answerimage1);
+                                question.answerimage1 = null;
+                            }
+
+                            if (letter === 'd' && partImage) {
+                                // Delete old answerimage2 if it exists and is different
+                                if (existingQuestion?.answerimage2 && existingQuestion.answerimage2 !== partImage) {
+                                    await deleteImage(existingQuestion.answerimage2);
+                                }
+                                question.answerimage2 = partImage;
+                            } else if (letter === 'd' && !partImage && existingQuestion?.answerimage2) {
+                                await deleteImage(existingQuestion.answerimage2);
+                                question.answerimage2 = null;
+                            }
+
+                            if (text && marks && answer) {
+                                parts.push({ letter, text, marks: parseInt(marks), answer, image: partImage });
+                            }
+                        }
+                        if (parts.length === 0) {
+                            alert('Please provide at least one part with question, marks, and answer.');
+                            return;
+                        }
+                        question.parts = parts;
+                        delete question.question;    // Clear MCQ & SQ specific
+                        delete question.options;     // Clear MCQ specific
+                        delete question.correctAnswer; // Clear MCQ specific
+                        delete question.answer;      // Clear SQ specific
+                    } else if (type === 'sq') {
+                        question.question = questionTextInput.value.trim();
+                        question.answer = sqAnswerInput.value.trim();
+                        if (!question.question || !question.answer) {
+                            alert('Please provide both a question and an answer for Short Questions.');
+                            return;
+                        }
+                        delete question.questionText; // Clear CQ specific
+                        delete question.options;     // Clear MCQ specific
+                        delete question.correctAnswer; // Clear MCQ specific
+                        delete question.parts;       // Clear CQ specific
+                    }
+
+                    const index = questionBank.findIndex(q => q.id == editQuestionId.value);
+                    if (index !== -1) {
+                        questionBank[index] = question;
+                        console.log('Updated existing question:', question.id);
+                    } else {
+                        questionBank.push(question);
+                        console.log('Added new question:', question.id);
+                    }
+
+                    try {
+                        await saveQuestions();
+                        alert('Question saved successfully!');
+                    } catch (error) {
+                        console.error('Error saving question:', error);
+                        alert('Error saving question. Please try again.');
+                        return;
+                    }
+                    resetQuestionForm();
+                    renderQuestionBank();
+                    document.querySelector('.tab[data-tab="bank"]').click();
+                }
+
+                // Reset question form
+                function resetQuestionForm() {
+                    editQuestionId.value = '';
+                    questionType.value = 'mcq';
+                    questionType.disabled = false;
+                    setFormType('mcq');
+                    subjectInput.value = '';
+                    chapterInput.value = '';
+                    lessonInput.value = '';
+                    boardInput.value = '';
+                    isQuizzableInput.checked = true;
+                    questionTextInput.value = '';
+                    questionImagePreview.src = '';
+                    questionImagePreview.style.display = 'none';
+                    removeQuestionImageBtn.style.display = 'none';
+                    questionImageUpload.value = '';
+                    optionInputs.forEach(input => {
+                        const optionLetter = input.dataset.option;
+                        input.value = '';
+                        const imagePreview = document.querySelector(`.option-image-preview[data-option="${optionLetter}"]`);
+                        const removeBtn = document.querySelector(`.remove-option-image-btn[data-option="${optionLetter}"]`);
+                        const marksInput = document.querySelector(`.part-marks[data-option="${optionLetter}"]`);
+                        const answerTextarea = document.querySelector(`.part-answer[data-option="${optionLetter}"]`);
+                        const optionImageInput = document.querySelector(`.option-image-upload-input[data-option="${optionLetter}"]`);
+
+                        imagePreview.src = '';
+                        imagePreview.style.display = 'none';
+                        removeBtn.style.display = 'none';
+                        if (marksInput) marksInput.value = '';
+                        if (answerTextarea) answerTextarea.value = '';
+                        if (optionImageInput) optionImageInput.value = '';
+                    });
+                    correctAnswerSelect.value = '';
+                    sqAnswerInput.value = ''; // Clear SQ answer field
+                    tagsInput.value = '';
+                    cancelEditBtn.style.display = 'none';
+                }
+
+                // Apply filters
+                function applyFilters() {
+                    currentFilters = {
+                        searchText: searchText.value.trim(),
+                        subject: filterSubject.value,
+                        chapter: filterChapter.value,
+                        lesson: filterLesson.value,
+                        type: filterType.value,
+                        board: filterBoard.value,
+                        isQuizzable: filterQuizzable.value
+                    };
+                    renderQuestionBank();
+                }
+
+                // Reset filters
+                function resetFilters() {
+                    searchText.value = '';
+                    filterSubject.value = '';
+                    filterChapter.value = '';
+                    filterLesson.value = '';
+                    filterType.value = '';
+                    filterBoard.value = '';
+                    filterQuizzable.value = '';
+                    currentFilters = {};
+                    updateFilters();
+                    renderQuestionBank();
+                }
+
+                // Update general statistics
+                function updateStats() {
+                    totalQuestionsEl.textContent = questionBank.length;
+                    const subjects = new Set(questionBank.map(q => q.subject).filter(s => s));
+                    subjectsCountEl.textContent = subjects.size;
+                    const chapters = new Set(questionBank.map(q => q.chapter).filter(c => c));
+                    chaptersCountEl.textContent = chapters.size;
+                    updateDetailedStats(); // Call detailed stats
+                }
+
+                // NEW: Update Detailed Statistics
+                function updateDetailedStats() {
+                    const stats = {};
+
+                    questionBank.forEach(q => {
+                        const subject = q.subject || 'Uncategorized Subject';
+                        const chapter = q.chapter || 'Uncategorized Chapter';
+                        const type = q.type || 'unknown'; // 'mcq', 'cq', 'sq'
+
+                        // Initialize subject if not exists
+                        if (!stats[subject]) {
+                            stats[subject] = { mcq: {}, cq: {}, sq: {}, total: 0 };
+                        }
+
+                        // Increment total for subject
+                        stats[subject].total++;
+
+                        // Handle question type
+                        if (type === 'mcq') {
+                            if (!stats[subject].mcq[chapter]) {
+                                stats[subject].mcq[chapter] = 0;
+                            }
+                            stats[subject].mcq[chapter]++;
+                        } else if (type === 'cq') {
+                            if (!stats[subject].cq[chapter]) {
+                                stats[subject].cq[chapter] = 0;
+                            }
+                            stats[subject].cq[chapter]++;
+                        } else if (type === 'sq') { // New SQ stat
+                            if (!stats[subject].sq[chapter]) {
+                                stats[subject].sq[chapter] = 0;
+                            }
+                            stats[subject].sq[chapter]++;
+                        }
+                    });
+
+                    let detailedHtml = '<ul>';
+                    const sortedSubjects = Object.keys(stats).sort();
+
+                    sortedSubjects.forEach(subject => {
+                        detailedHtml += `<li><strong>${subject}:</strong> Total Questions: ${stats[subject].total}`;
+
+                        const sortedChaptersMCQ = Object.keys(stats[subject].mcq).sort();
+                        if (sortedChaptersMCQ.length > 0) {
+                            detailedHtml += ` (MCQ: `;
+                            sortedChaptersMCQ.forEach((chapter, index) => {
+                                detailedHtml += `${chapter}: ${stats[subject].mcq[chapter]}`;
+                                if (index < sortedChaptersMCQ.length - 1) detailedHtml += ', ';
+                            });
+                            detailedHtml += `)`;
+                        }
+
+                        const sortedChaptersCQ = Object.keys(stats[subject].cq).sort();
+                        if (sortedChaptersCQ.length > 0) {
+                            detailedHtml += ` (CQ: `;
+                            sortedChaptersCQ.forEach((chapter, index) => {
+                                detailedHtml += `${chapter}: ${stats[subject].cq[chapter]}`;
+                                if (index < sortedChaptersCQ.length - 1) detailedHtml += ', ';
+                            });
+                            detailedHtml += `)`;
+                        }
+
+                        const sortedChaptersSQ = Object.keys(stats[subject].sq).sort(); // New SQ stat display
+                        if (sortedChaptersSQ.length > 0) {
+                            detailedHtml += ` (SQ: `;
+                            sortedChaptersSQ.forEach((chapter, index) => {
+                                detailedHtml += `${chapter}: ${stats[subject].sq[chapter]}`;
+                                if (index < sortedChaptersSQ.length - 1) detailedHtml += ', ';
+                            });
+                            detailedHtml += `)`;
+                        }
+
+                        detailedHtml += `</li>`;
+                    });
+
+                    detailedHtml += '</ul>';
+                    detailedStatsContent.innerHTML = detailedHtml;
+                }
+
+
+                // Update filter dropdowns
+                function updateFilters() {
+                    const subjects = ['', ...new Set(questionBank.map(q => q.subject).filter(s => s))].sort();
+                    filterSubject.innerHTML = subjects.map(s => `<option value="${s}" ${currentFilters.subject === s ? 'selected' : ''}>${s || 'All Subjects'}</option>`).join('');
+
+                    let chaptersFilteredBySubject = currentFilters.subject ? questionBank.filter(q => q.subject === currentFilters.subject) : questionBank;
+                    const chapters = ['', ...new Set(chaptersFilteredBySubject.map(q => q.chapter).filter(c => c))].sort();
+                    filterChapter.innerHTML = chapters.map(c => `<option value="${c}" ${currentFilters.chapter === c ? 'selected' : ''}>${c || 'All Chapters'}</option>`).join('');
+
+                    let lessonsFiltered = questionBank;
+                    if (currentFilters.subject) lessonsFiltered = lessonsFiltered.filter(q => q.subject === currentFilters.subject);
+                    if (currentFilters.chapter) lessonsFiltered = lessonsFiltered.filter(q => q.chapter === currentFilters.chapter);
+                    const lessons = ['', ...new Set(lessonsFiltered.map(q => q.lesson).filter(l => l))].sort();
+                    filterLesson.innerHTML = lessons.map(l => `<option value="${l}" ${currentFilters.lesson === l ? 'selected' : ''}>${l || 'All Lessons'}</option>`).join('');
+
+                    const boards = ['', ...new Set(questionBank.map(q => q.board).filter(b => b))].sort();
+                    filterBoard.innerHTML = boards.map(b => `<option value="${b}" ${currentFilters.board === b ? 'selected' : ''}>${b || 'All Boards'}</option>`).join('');
+                    filterQuizzable.value = currentFilters.isQuizzable || '';
+                }
+
+                // Export questions
+                function exportQuestions() {
+                    const dataStr = JSON.stringify(questionBank, null, 2);
+                    const blob = new Blob([dataStr], { type: 'application/json' });
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'questions-export.json';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                }
+
+                // Import questions
+                function importQuestions() {
+                    const input = document.createElement('input');
+                    input.type = 'file';
+                    input.accept = '.json';
+                    input.onchange = async e => {
+                        const file = e.target.files[0];
+                        if (!file) return;
+                        const reader = new FileReader();
+                        reader.onload = async event => {
+                            try {
+                                const importedQuestions = JSON.parse(event.target.result);
+                                if (Array.isArray(importedQuestions) && importedQuestions.length) {
+                                    if (confirm(`Import ${importedQuestions.length} questions? This will add them to your existing bank.`)) {
+                                        // Ensure imported questions have unique IDs to prevent conflicts during upsert
+                                        const processedImportedQuestions = importedQuestions.map(q => ({
+                                            ...q,
+                                            id: q.id || (Date.now() + Math.floor(Math.random() * 1000)) // Assign new ID if missing
+                                        }));
+
+                                        // Add only new questions or update existing ones if IDs match
+                                        processedImportedQuestions.forEach(newQ => {
+                                            const existingIndex = questionBank.findIndex(q => q.id === newQ.id);
+                                            if (existingIndex !== -1) {
+                                                // Update existing question
+                                                questionBank[existingIndex] = newQ;
+                                            } else {
+                                                // Add new question
+                                                questionBank.push(newQ);
+                                            }
+                                        });
+
+                                        await saveQuestions();
+                                        resetFilters();
+                                        renderQuestionBank();
+                                        alert('Questions imported successfully!');
+                                    }
+                                } else {
+                                    alert('No valid questions found in the file.');
+                                }
+                            } catch (error) {
+                                console.error('Error importing questions:', error);
+                                alert('Error importing questions. Check the file format.');
+                            }
+                        };
+                        reader.readAsText(file);
+                    };
+                    input.click();
+                }
+
+                // Image upload handlers
+                questionImageUpload.addEventListener('click', function() { this.value = ''; });
+                questionImageUpload.addEventListener('change', function(e) {
+                    const file = e.target.files[0];
+                    if (file) {
+                        if (!file.type.match('image.*')) {
+                            alert('Please select an image file.');
+                            this.value = '';
+                            return;
+                        }
+                        if (file.size > 2 * 1024 * 1024) { // 2MB limit
+                            alert('Image size should be less than 2MB.');
+                            this.value = '';
+                            return;
+                        }
+                        const reader = new FileReader();
+                        reader.onload = event => {
+                            questionImagePreview.src = event.target.result; // Temporarily display
+                            questionImagePreview.style.display = 'block';
+                            removeQuestionImageBtn.style.display = 'inline-block';
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                });
+
+                removeQuestionImageBtn.addEventListener('click', async function() {
+                    const currentQuestionId = editQuestionId.value;
+                    const existingQuestion = questionBank.find(q => q.id == currentQuestionId);
+                    if (existingQuestion && existingQuestion.image) {
+                        await deleteImage(existingQuestion.image);
+                        existingQuestion.image = null; // Clear image URL in the object
+                    }
+                    questionImagePreview.src = '';
+                    questionImagePreview.style.display = 'none';
+                    this.style.display = 'none';
+                    questionImageUpload.value = '';
+                });
+
+                optionImageUploadInputs.forEach(input => {
+                    input.addEventListener('click', function() { this.value = ''; });
+                    input.addEventListener('change', function(e) {
+                        const file = e.target.files[0];
+                        const optionLetter = this.dataset.option;
+                        const preview = document.querySelector(`.option-image-preview[data-option="${optionLetter}"]`);
+                        const removeBtn = document.querySelector(`.remove-option-image-btn[data-option="${optionLetter}"]`);
+                        if (file) {
+                            if (!file.type.match('image.*')) {
+                                alert('Please select an image file.');
+                                this.value = '';
+                                return;
+                            }
+                            if (file.size > 2 * 1024 * 1024) { // 2MB limit
+                                alert('Image size should be less than 2MB.');
+                                this.value = '';
+                                return;
+                            }
+                            const reader = new FileReader();
+                            reader.onload = event => {
+                                preview.src = event.target.result; // Temporarily display
+                                preview.style.display = 'block';
+                                removeBtn.style.display = 'inline-block';
+                            };
+                            reader.readAsDataURL(file);
+                        }
+                    });
+                });
+
+                removeOptionImageBtns.forEach(btn => {
+                    btn.addEventListener('click', async function() {
+                        const optionLetter = this.dataset.option;
+                        const preview = document.querySelector(`.option-image-preview[data-option="${optionLetter}"]`);
+                        const input = document.querySelector(`.option-image-upload-input[data-option="${optionLetter}"]`);
+
+                        const currentQuestionId = editQuestionId.value;
+                        const existingQuestion = questionBank.find(q => q.id == currentQuestionId);
+
+                        if (existingQuestion) {
+                            if (existingQuestion.type === 'mcq') {
+                                const existingOption = existingQuestion.options?.find(opt => opt.label === optionLetter);
+                                if (existingOption && existingOption.image) {
+                                    await deleteImage(existingOption.image);
+                                    existingOption.image = null;
+                                }
+                            } else if (existingQuestion.type === 'cq') {
+                                const existingPart = existingQuestion.parts?.find(p => p.letter === optionLetter);
+                                if (existingPart && existingPart.image) {
+                                    await deleteImage(existingPart.image);
+                                    existingPart.image = null;
+                                }
+                            }
+                        }
+
+                        preview.src = '';
+                        preview.style.display = 'none';
+                        this.style.display = 'none';
+                        input.value = '';
+                    });
+                });
+
+                // Attach event listeners
+                function attachEventListeners() {
+                    console.log("🔄 Attaching event listeners...");
+
+                    if (parseBtn) {
+                        parseBtn.addEventListener('click', parseMCQs);
+                        console.log("✅ Parse MCQ button listener attached");
+                    } else {
+                        console.error("❌ Parse MCQ button not found");
+                    }
+
+                    if (clearImportBtn) {
+                        clearImportBtn.addEventListener('click', () => mcqInput.value = '');
+                        console.log("✅ Clear import button listener attached");
+                    } else {
+                        console.error("❌ Clear import button not found");
+                    }
+
+                    if (parseCqBtn) {
+                        parseCqBtn.addEventListener('click', parseCQs);
+                        console.log("✅ Parse CQ button listener attached");
+                    } else {
+                        console.error("❌ Parse CQ button not found");
+                    }
+
+                    if (clearCqBtn) {
+                        clearCqBtn.addEventListener('click', () => cqInput.value = '');
+                        console.log("✅ Clear CQ button listener attached");
+                    } else {
+                        console.error("❌ Clear CQ button not found");
+                    }
+
+                    if (parseSqBtn) { // New SQ parse listener
+                        parseSqBtn.addEventListener('click', parseSQs);
+                        console.log("✅ Parse SQ button listener attached");
+                    } else {
+                        console.error("❌ Parse SQ button not found");
+                    }
+
+                    if (clearSqBtn) { // New SQ clear listener
+                        clearSqBtn.addEventListener('click', () => sqInput.value = '');
+                        console.log("✅ Clear SQ button listener attached");
+                    } else {
+                        console.error("❌ Clear SQ button not found");
+                    }
+
+                    if (saveQuestionBtn) {
+                        saveQuestionBtn.addEventListener('click', saveQuestion);
+                        console.log("✅ Save question button listener attached");
+                    } else {
+                        console.error("❌ Save question button not found");
+                    }
+
+                    if (cancelEditBtn) {
+                        cancelEditBtn.addEventListener('click', resetQuestionForm);
+                        console.log("✅ Cancel edit button listener attached");
+                    } else {
+                        console.error("❌ Cancel edit button not found");
+                    }
+
+                    if (applyFiltersBtn) applyFiltersBtn.addEventListener('click', applyFilters);
+                    if (resetFiltersBtn) resetFiltersBtn.addEventListener('click', resetFilters);
+                    if (exportBtn) exportBtn.addEventListener('click', exportQuestions);
+                    if (importBtn) importBtn.addEventListener('click', importQuestions);
+
+                    if (filterSubject) filterSubject.addEventListener('change', () => {
+                        currentFilters.subject = filterSubject.value;
+                        currentFilters.chapter = '';
+                        currentFilters.lesson = '';
+                        updateFilters();
+                        renderQuestionBank();
+                    });
+
+                    if (filterChapter) filterChapter.addEventListener('change', () => {
+                        currentFilters.chapter = filterChapter.value;
+                        currentFilters.lesson = '';
+                        updateFilters();
+                        renderQuestionBank();
+                    });
+
+                    if (filterLesson) filterLesson.addEventListener('change', () => {
+                        currentFilters.lesson = filterLesson.value;
+                        renderQuestionBank();
+                    });
+
+                    if (filterType) filterType.addEventListener('change', () => {
+                        currentFilters.type = filterType.value;
+                        renderQuestionBank();
+                    });
+
+                    if (filterBoard) filterBoard.addEventListener('change', () => {
+                            currentFilters.board = filterBoard.value;
+                            renderQuestionBank();
+                        });
+
+                    if (filterQuizzable) filterQuizzable.addEventListener('change', () => {
+                        currentFilters.isQuizzable = filterQuizzable.value;
+                        renderQuestionBank();
+                    });
+
+                    if (questionType) questionType.addEventListener('change', () => setFormType(questionType.value));
+
+                    if (questionsContainer) questionsContainer.addEventListener('click', e => {
+                        if (e.target.classList.contains('edit-btn')) {
+                            e.preventDefault();
+                            editQuestion(e.target.dataset.id);
+                        } else if (e.target.classList.contains('delete-btn')) {
+                            e.preventDefault();
+                            deleteQuestion(e.target.dataset.id);
+                        }
+                    });
+
+                    console.log("✅ All event listeners attached successfully");
+                }
+
+                // Initialize the app
+                async function init() {
+                    try {
+                        console.log("🔄 Starting app initialization...");
+                        await initSupabase(); // Initialize Supabase first
+                        console.log("🔄 Loading questions...");
+                        questionBank = await loadQuestions(); // Then load questions
+                        console.log("🔄 Rendering question bank...");
+                        renderQuestionBank();
+                        console.log("🔄 Updating stats...");
+                        updateStats(); // This now calls updateDetailedStats
+                        console.log("🔄 Updating filters...");
+                        updateFilters();
+                        console.log("🔄 Attaching event listeners...");
+                        attachEventListeners();
+                        console.log("🔄 Setting form type...");
+                        setFormType('mcq'); // Default to MCQ form
+                        console.log("✅ App initialized successfully!");
+                    } catch (error) {
+                        console.error("❌ Error initializing app:", error);
+                        alert("Error initializing the application. Please check the console for details.");
+                    }
+                }
+
+                init().catch(console.error);
+            }
+        });
+    </script>
+</body>
 </html>

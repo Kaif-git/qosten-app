@@ -382,6 +382,18 @@
             border-radius: 4px;
             cursor: pointer;
         }
+        .mcq-example {
+            white-space: pre-wrap; /* Ensures text wraps to the next line */
+            word-wrap: break-word; /* Breaks long words to prevent overflow */
+            max-width: 100%; /* Keeps content within the parent container */
+            overflow-x: auto; /* Adds horizontal scrollbar if needed */
+            background-color: #f8f8f8; /* Light background for readability */
+            padding: 15px; /* Matches existing panel padding */
+            border-radius: 5px; /* Matches existing panel styling */
+            font-size: 14px; /* Matches input field font size */
+            line-height: 1.5; /* Improves readability */
+        }
+        
     </style>
 </head>
 <body>
@@ -413,12 +425,12 @@
         <div class="panel">
             <h2>Bulk Import Questions</h2>
             <p>Format your questions like this:</p>
-            <pre>
+          <pre class="mcq-example">
 [Subject: Math]
 [Chapter: Algebra]
 [Lesson: Linear Equations]
 [Board: CBSE]
-[isQuizzable: true]
+[isQuizzable: true
 [Tags: easy, calculation]
 1. What is the solution to 2x + 3 = 7?
 a) 1
@@ -426,7 +438,9 @@ b) 2
 c) 3
 d) 4
 Correct: b
-            </pre>
+Explanation: To solve 2x + 3 = 7, subtract 3 from both sides to get 2x = 4, then divide by 2 to find x = 2. Thus, the correct answer is option b.
+                        </pre>
+
             <textarea id="mcqInput" placeholder="Paste your questions here..."></textarea>
             <button id="parseBtn">Parse Questions</button>
             <button id="clearImportBtn" class="danger">Clear</button>
@@ -603,6 +617,10 @@ Correct: b
                     <option value="c">Option c</option>
                     <option value="d">Option d</option>
                 </select>
+                <div>
+                    <label for="explanation">Explanation:</label>
+                    <textarea id="explanation" placeholder="Enter the explanation for the correct answer..."></textarea>
+                </div>
             </div>
 
             <div class="cq-only">
@@ -828,14 +846,12 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
             const cqInput = document.getElementById('cqInput');
             const parseCqBtn = document.getElementById('parseCqBtn');
             const clearCqBtn = document.getElementById('clearCqBtn');
-            const detailedStatsContent = document.getElementById('detailedStatsContent'); // New element
-
-            // New SQ elements
+            const detailedStatsContent = document.getElementById('detailedStatsContent');
             const sqInput = document.getElementById('sqInput');
             const parseSqBtn = document.getElementById('parseSqBtn');
             const clearSqBtn = document.getElementById('clearSqBtn');
             const sqAnswerInput = document.getElementById('sqAnswer');
-
+            const explanationInput = document.getElementById('explanation');
 
             let questionBank = [];
             let currentFilters = {};
@@ -914,14 +930,15 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
                                     isQuizzable: q.is_quizzable,
                                     tags: q.tags || [],
                                     image: q.image,
-                                    answerimage1: q.answerimage1, // New field for CQ part c image
-                                    answerimage2: q.answerimage2, // New field for CQ part d image
+                                    answerimage1: q.answerimage1,
+                                    answerimage2: q.answerimage2,
                                     question: q.question,
                                     questionText: q.question_text,
                                     options: q.options,
                                     correctAnswer: q.correct_answer,
                                     parts: q.parts,
-                                    answer: q.answer
+                                    answer: q.answer,
+                                    explanation: q.explanation
                                 };
                                 return converted;
                             });
@@ -944,11 +961,12 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
                     try {
                         const stored = localStorage.getItem('questionBank');
                         const questions = stored ? JSON.parse(stored) : [];
-                        // Ensure answerimage1 and answerimage2 are included
+                        // Ensure answerimage1, answerimage2, and explanation are included
                         return questions.map(q => ({
                             ...q,
                             answerimage1: q.answerimage1 || null,
-                            answerimage2: q.answerimage2 || null
+                            answerimage2: q.answerimage2 || null,
+                            explanation: q.explanation || ''
                         }));
                     } catch (e) {
                         console.error('Error loading from localStorage:', e);
@@ -973,19 +991,18 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
                                 chapter: question.chapter || '',
                                 lesson: question.lesson || '',
                                 board: question.board || '',
-                                is_quizzable: question.isQuizzable !== false, // Use is_quizzable for Supabase
+                                is_quizzable: question.isQuizzable !== false,
                                 tags: question.tags || [],
                                 image: question.image || null,
-                                answerimage1: question.answerimage1 || null, // New field for CQ part c image
-                                answerimage2: question.answerimage2 || null, // New field for CQ part d image
-
-                                // Type-specific fields
+                                answerimage1: question.answerimage1 || null,
+                                answerimage2: question.answerimage2 || null,
                                 question: (question.type === 'mcq' || question.type === 'sq') ? question.question || null : null,
                                 question_text: question.type === 'cq' ? question.questionText || null : null,
                                 options: question.type === 'mcq' ? question.options || null : null,
                                 correct_answer: question.type === 'mcq' ? question.correctAnswer || null : null,
                                 parts: question.type === 'cq' ? question.parts || null : null,
-                                answer: question.type === 'sq' ? question.answer || null : null
+                                answer: question.type === 'sq' ? question.answer || null : null,
+                                explanation: question.type === 'mcq' ? question.explanation || null : null
                             }));
 
                             console.log('🔍 Prepared data for Supabase upsert:', dataToUpsert);
@@ -993,8 +1010,8 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
                             const { data, error } = await supabaseClient
                                 .from('questions')
                                 .upsert(dataToUpsert, {
-                                    onConflict: 'id', // Use 'id' as the conflict key for upsert
-                                    returning: 'minimal' // No need to return full data
+                                    onConflict: 'id',
+                                    returning: 'minimal'
                                 });
 
                             if (error) {
@@ -1145,17 +1162,20 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
                             question: '',
                             options: [],
                             correctAnswer: '',
+                            explanation: '',
                             image: null
                         };
 
                         let questionTextLines = [];
                         let parsingOptions = false;
                         let parsingCorrectAnswer = false;
+                        let parsingExplanation = false;
+                        let explanationLines = [];
 
                         for (const line of lines) {
-                            if (/^\d+\.\s/.test(line) && !parsingOptions) {
+                            if (/^\d+\.\s/.test(line) && !parsingOptions && !parsingCorrectAnswer && !parsingExplanation) {
                                 questionTextLines.push(line.replace(/^\d+\.\s/, '').trim());
-                            } else if (/^\s*([a-dA-D])[\).\s]\s*(.*)/i.test(line)) {
+                            } else if (/^\s*([a-dA-D])[\).\s]\s*(.*)/i.test(line) && !parsingCorrectAnswer && !parsingExplanation) {
                                 parsingOptions = true;
                                 const match = line.match(/^\s*([a-dA-D])[\).\s]\s*(.*)/i);
                                 if (match) {
@@ -1163,16 +1183,25 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
                                     const text = match[2].trim();
                                     question.options.push({ label, text: `${label}) ${text}`, image: null });
                                 }
-                            } else if (/^Correct:\s*([a-dA-D])/i.test(line)) {
+                            } else if (/^Correct:\s*([a-dA-D])/i.test(line) && !parsingExplanation) {
+                                parsingOptions = false;
                                 parsingCorrectAnswer = true;
                                 const match = line.match(/^Correct:\s*([a-dA-D])/i);
                                 if (match) question.correctAnswer = match[1].toLowerCase();
-                            } else if (!parsingOptions && !parsingCorrectAnswer && line.trim()) {
+                            } else if (/^Explanation:/i.test(line)) {
+                                parsingCorrectAnswer = false;
+                                parsingExplanation = true;
+                                explanationLines.push(line.replace(/^Explanation:/i, '').trim());
+                            } else if (parsingExplanation && line.trim()) {
+                                explanationLines.push(line);
+                            } else if (!parsingOptions && !parsingCorrectAnswer && !parsingExplanation && line.trim()) {
                                 questionTextLines.push(line);
                             }
                         }
 
                         question.question = questionTextLines.join('\n').trim();
+                        question.explanation = explanationLines.join('\n').trim();
+
                         if (question.question && question.options.length >= 2 && question.correctAnswer) {
                             newQuestions.push(question);
                         }
@@ -1192,7 +1221,6 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
                         alert('No valid MCQ questions found. Please check your format.');
                     }
                 }
-
                 // Parse CQs
                 async function parseCQs() {
                     const text = cqInput.value.trim();
@@ -1432,6 +1460,7 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
                             (q.question?.toLowerCase().includes(currentFilters.searchText.toLowerCase())) ||
                             (q.questionText?.toLowerCase().includes(currentFilters.searchText.toLowerCase())) ||
                             (q.answer?.toLowerCase().includes(currentFilters.searchText.toLowerCase())) ||
+                            (q.explanation?.toLowerCase().includes(currentFilters.searchText.toLowerCase())) ||
                             (q.parts?.some(p => (p.text?.toLowerCase().includes(currentFilters.searchText.toLowerCase())) || (p.answer?.toLowerCase().includes(currentFilters.searchText.toLowerCase())))) ||
                             q.tags.some(tag => tag.toLowerCase().includes(currentFilters.searchText.toLowerCase()));
                         const matchesSubject = !currentFilters.subject || q.subject === currentFilters.subject;
@@ -1465,6 +1494,7 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
                             });
                             contentHtml += '</ul>';
                             contentHtml += `<p><strong>Correct Answer:</strong> ${q.correctAnswer ? q.correctAnswer.toUpperCase() : 'N/A'}</p>`;
+                            if (q.explanation) contentHtml += `<p><strong>Explanation:</strong> ${q.explanation}</p>`;
                         } else if (q.type === 'cq') {
                             contentHtml += `<p><strong>Question:</strong> ${q.questionText}</p>`;
                             if (q.image) contentHtml += `<img src="${q.image}" style="max-width: 200px; max-height: 200px; margin-bottom: 10px;">`;
@@ -1517,7 +1547,7 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
 
                     editQuestionId.value = question.id;
                     questionType.value = question.type || 'mcq';
-                    questionType.disabled = true; // Disable type change during edit
+                    questionType.disabled = true;
                     setFormType(question.type);
                     subjectInput.value = question.subject || '';
                     chapterInput.value = question.chapter || '';
@@ -1525,10 +1555,9 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
                     boardInput.value = question.board || '';
                     isQuizzableInput.checked = question.isQuizzable !== false;
 
-                    // Set question text based on type
                     if (question.type === 'cq') {
                         questionTextInput.value = question.questionText || '';
-                    } else { // MCQ or SQ
+                    } else {
                         questionTextInput.value = question.question || '';
                     }
 
@@ -1542,7 +1571,6 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
                         removeQuestionImageBtn.style.display = 'none';
                     }
 
-                    // Clear all option/part/SQ fields and images first
                     optionInputs.forEach(input => {
                         const optionLetter = input.dataset.option;
                         input.value = '';
@@ -1558,9 +1586,10 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
                         imagePreview.src = '';
                         imagePreview.style.display = 'none';
                         removeBtn.style.display = 'none';
-                        imageUploadInput.value = ''; // Clear file input
+                        imageUploadInput.value = '';
                     });
-                    sqAnswerInput.value = ''; // Clear SQ answer
+                    sqAnswerInput.value = '';
+                    explanationInput.value = '';
 
                     if (question.type === 'mcq') {
                         question.options.forEach(option => {
@@ -1577,6 +1606,7 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
                             }
                         });
                         correctAnswerSelect.value = question.correctAnswer || '';
+                        explanationInput.value = question.explanation || '';
                     } else if (question.type === 'cq') {
                         (question.parts || []).forEach(part => {
                             const textInput = document.querySelector(`.option[data-option="${part.letter}"]`);
@@ -1667,7 +1697,6 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
                     }
                 }
 
-                // Save question
                 async function saveQuestion() {
                     const type = questionType.value;
                     if (!type || !questionTextInput.value.trim()) {
@@ -1675,7 +1704,6 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
                         return;
                     }
 
-                    // Get existing question for checking old images
                     const existingQuestion = editQuestionId.value ? questionBank.find(q => q.id == editQuestionId.value) : null;
 
                     const question = {
@@ -1687,30 +1715,29 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
                         board: boardInput.value.trim(),
                         isQuizzable: isQuizzableInput.checked,
                         tags: tagsInput.value.split(',').map(t => t.trim()).filter(t => t),
-                        image: null, // Will be updated after upload
-                        answerimage1: null, // New field for CQ part c image
-                        answerimage2: null // New field for CQ part d image
+                        image: null,
+                        answerimage1: null,
+                        answerimage2: null,
+                        explanation: null
                     };
 
                     if (!question.tags.includes(type)) question.tags.push(type);
 
-                    // Handle question image upload
                     if (questionImageUpload.files.length > 0) {
                         const oldImageUrl = existingQuestion?.image;
-                        if (oldImageUrl) await deleteImage(oldImageUrl); // Delete old image if new one is uploaded
-                        questionImagePreview.src = 'Uploading...'; // Basic feedback
+                        if (oldImageUrl) await deleteImage(oldImageUrl);
+                        questionImagePreview.src = 'Uploading...';
                         const imageUrl = await uploadImage(questionImageUpload.files[0], 'questions');
                         if (imageUrl) {
                             question.image = imageUrl;
                         } else {
                             alert('Failed to upload question image. Please try again.');
-                            questionImagePreview.src = ''; // Clear preview on failure
-                            return; // Stop saving if image upload fails
+                            questionImagePreview.src = '';
+                            return;
                         }
                     } else if (questionImagePreview.src && questionImagePreview.style.display === 'block') {
-                        question.image = questionImagePreview.src; // Keep existing image if not changed
+                        question.image = questionImagePreview.src;
                     } else {
-                        // If there was an old image but it was removed, delete it
                         const oldImageUrl = existingQuestion?.image;
                         if (oldImageUrl) await deleteImage(oldImageUrl);
                         question.image = null;
@@ -1718,6 +1745,7 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
 
                     if (type === 'mcq') {
                         question.question = questionTextInput.value.trim();
+                        question.explanation = explanationInput.value.trim();
                         const options = [];
                         for (const input of optionInputs) {
                             const optionLetter = input.dataset.option;
@@ -1730,16 +1758,15 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
 
                             if (imageUploadInput.files.length > 0) {
                                 if (existingOption?.image) await deleteImage(existingOption.image);
-                                imagePreview.src = 'Uploading...'; // Basic feedback
+                                imagePreview.src = 'Uploading...';
                                 optionImage = await uploadImage(imageUploadInput.files[0], `options/${question.id}`);
                                 if (!optionImage) {
                                     alert(`Failed to upload image for option ${optionLetter}. Please try again.`);
-                                    return; // Stop saving
+                                    return;
                                 }
                             } else if (imagePreview.src && imagePreview.style.display === 'block') {
-                                optionImage = imagePreview.src; // Keep existing image
+                                optionImage = imagePreview.src;
                             } else {
-                                // If there was an old option image but it was removed, delete it
                                 if (existingOption?.image) await deleteImage(existingOption.image);
                             }
 
@@ -1757,9 +1784,9 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
                         }
                         question.options = options;
                         question.correctAnswer = correctAnswerSelect.value;
-                        delete question.questionText; // Clear CQ specific
-                        delete question.parts;      // Clear CQ specific
-                        delete question.answer;     // Clear SQ specific
+                        delete question.questionText;
+                        delete question.parts;
+                        delete question.answer;
                     } else if (type === 'cq') {
                         question.questionText = questionTextInput.value.trim();
                         const parts = [];
@@ -1779,22 +1806,19 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
 
                             if (imageUploadInput.files.length > 0) {
                                 if (existingPart?.image) await deleteImage(existingPart.image);
-                                imagePreview.src = 'Uploading...'; // Basic feedback
+                                imagePreview.src = 'Uploading...';
                                 partImage = await uploadImage(imageUploadInput.files[0], `parts/${question.id}`);
                                 if (!partImage) {
                                     alert(`Failed to upload image for part ${letter}. Please try again.`);
-                                    return; // Stop saving
+                                    return;
                                 }
                             } else if (imagePreview.src && imagePreview.style.display === 'block') {
-                                partImage = imagePreview.src; // Keep existing image
+                                partImage = imagePreview.src;
                             } else {
-                                // If there was an old part image but it was removed, delete it
                                 if (existingPart?.image) await deleteImage(existingPart.image);
                             }
 
-                            // Assign images to answerimage1 and answerimage2 for parts c and d
                             if (letter === 'c' && partImage) {
-                                // Delete old answerimage1 if it exists and is different
                                 if (existingQuestion?.answerimage1 && existingQuestion.answerimage1 !== partImage) {
                                     await deleteImage(existingQuestion.answerimage1);
                                 }
@@ -1805,7 +1829,6 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
                             }
 
                             if (letter === 'd' && partImage) {
-                                // Delete old answerimage2 if it exists and is different
                                 if (existingQuestion?.answerimage2 && existingQuestion.answerimage2 !== partImage) {
                                     await deleteImage(existingQuestion.answerimage2);
                                 }
@@ -1824,10 +1847,11 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
                             return;
                         }
                         question.parts = parts;
-                        delete question.question;    // Clear MCQ & SQ specific
-                        delete question.options;     // Clear MCQ specific
-                        delete question.correctAnswer; // Clear MCQ specific
-                        delete question.answer;      // Clear SQ specific
+                        delete question.question;
+                        delete question.options;
+                        delete question.correctAnswer;
+                        delete question.answer;
+                        delete question.explanation;
                     } else if (type === 'sq') {
                         question.question = questionTextInput.value.trim();
                         question.answer = sqAnswerInput.value.trim();
@@ -1835,10 +1859,11 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
                             alert('Please provide both a question and an answer for Short Questions.');
                             return;
                         }
-                        delete question.questionText; // Clear CQ specific
-                        delete question.options;     // Clear MCQ specific
-                        delete question.correctAnswer; // Clear MCQ specific
-                        delete question.parts;       // Clear CQ specific
+                        delete question.questionText;
+                        delete question.options;
+                        delete question.correctAnswer;
+                        delete question.parts;
+                        delete question.explanation;
                     }
 
                     const index = questionBank.findIndex(q => q.id == editQuestionId.value);
@@ -1863,7 +1888,6 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
                     document.querySelector('.tab[data-tab="bank"]').click();
                 }
 
-                // Reset question form
                 function resetQuestionForm() {
                     editQuestionId.value = '';
                     questionType.value = 'mcq';
@@ -1896,7 +1920,8 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
                         if (optionImageInput) optionImageInput.value = '';
                     });
                     correctAnswerSelect.value = '';
-                    sqAnswerInput.value = ''; // Clear SQ answer field
+                    sqAnswerInput.value = '';
+                    explanationInput.value = '';
                     tagsInput.value = '';
                     cancelEditBtn.style.display = 'none';
                 }

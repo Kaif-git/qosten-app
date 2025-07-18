@@ -902,6 +902,8 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
                 });
 
                 // Load questions (Supabase only)
+
+                // Save questions (Supabase only)
                 async function loadQuestions() {
                     if (!supabaseClient) {
                         console.error('Supabase client not available. Cannot load questions.');
@@ -915,82 +917,32 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
                             .select('*')
                             .order('created_at', { ascending: false });
                         if (error) throw error;
-                        const loadedQuestions = data.map(q => ({ ...q, synced: true }));
+
+                        // Map Supabase fields to local question object structure
+                        const loadedQuestions = data.map(q => ({
+                            ...q,
+                            synced: true,
+                            // Map snake_case to camelCase for consistency
+                            correctAnswer: q.correct_answer || null, // Map correct_answer to correctAnswer
+                            question: q.type === 'cq' ? q.question_text : q.question, // Handle CQ question_text
+                            questionText: q.type === 'cq' ? q.question_text : null,
+                            isQuizzable: q.is_quizzable !== false,
+                            options: q.options || null,
+                            parts: q.parts || null,
+                            answer: q.answer || null,
+                            explanation: q.explanation || null,
+                            image: q.image || null,
+                            answerimage1: q.answerimage1 || null,
+                            answerimage2: q.answerimage2 || null,
+                            tags: q.tags || []
+                        }));
+
                         console.log('Loaded questions from Supabase:', loadedQuestions.length);
                         return loadedQuestions;
                     } catch (error) {
                         console.error('Error loading from Supabase:', error);
                         alert('Failed to load questions from Supabase. Please check your network connection or Supabase configuration.');
                         return [];
-                    }
-                }
-
-                // Save questions (Supabase only)
-                async function saveQuestions() {
-                    if (!supabaseClient) {
-                        console.error('Supabase client not available. Cannot save questions.');
-                        alert('Supabase is not connected. Cannot save questions to the database.');
-                        return;
-                    }
-
-                    const unsyncedQuestions = questionBank.filter(q => !q.synced);
-                    if (unsyncedQuestions.length === 0) {
-                        console.log('No unsynced questions to save to Supabase.');
-                        return;
-                    }
-
-                    try {
-                        console.log('Attempting to save', unsyncedQuestions.length, 'questions to Supabase...');
-                        const dataToUpsert = unsyncedQuestions.map(question => ({
-                            id: question.id,
-                            type: question.type,
-                            subject: question.subject || '',
-                            chapter: question.chapter || '',
-                            lesson: question.lesson || '',
-                            board: question.board || '',
-                            is_quizzable: question.isQuizzable !== false,
-                            tags: question.tags || [],
-                            image: question.image || null,
-                            answerimage1: question.answerimage1 || null,
-                            answerimage2: question.answerimage2 || null,
-                            question: (question.type === 'mcq' || question.type === 'sq') ? question.question || null : null,
-                            question_text: question.type === 'cq' ? question.questionText || null : null,
-                            options: question.type === 'mcq' ? question.options || null : null,
-                            correct_answer: question.type === 'mcq' ? question.correctAnswer || null : null,
-                            parts: question.type === 'cq' ? question.parts || null : null,
-                            answer: question.type === 'sq' ? question.answer || null : null,
-                            explanation: question.type === 'mcq' ? question.explanation || null : null
-                        }));
-
-                        const chunkSize = 20;
-                        const chunks = [];
-                        for (let i = 0; i < dataToUpsert.length; i += chunkSize) {
-                            chunks.push(dataToUpsert.slice(i, i + chunkSize));
-                        }
-
-                        for (const chunk of chunks) {
-                            const { error } = await supabaseClient
-                                .from('questions')
-                                .upsert(chunk, {
-                                    onConflict: 'id',
-                                    returning: 'minimal'
-                                });
-                            if (error) {
-                                throw error;
-                            }
-                            const savedIds = chunk.map(q => q.id);
-                            questionBank.forEach(q => {
-                                if (savedIds.includes(q.id)) {
-                                    q.synced = true;
-                                }
-                            });
-                        }
-                        console.log('Successfully saved all unsynced questions to Supabase.');
-                    } catch (error) {
-                        console.error('Error saving to Supabase:', error);
-                        alert('Failed to save some questions to Supabase. Please try again.');
-                        // Do not clear the synced flag here, as it means data might be lost if user closes
-                        // Instead, the user needs to manually trigger save or fix connection
                     }
                 }
 
@@ -1729,6 +1681,91 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
                     }
                 }
 
+                async function saveQuestions() {
+                    if (!supabaseClient) {
+                        console.error('Supabase client not available. Cannot save questions.');
+                        alert('Supabase is not connected. Cannot save questions to the database.');
+                        return;
+                    }
+
+                    const questionsToSync = questionBank.filter(q => !q.synced);
+
+                    if (questionsToSync.length === 0) {
+                        console.log('No questions to sync.');
+                        return;
+                    }
+
+                    try {
+                        const formattedQuestions = questionsToSync.map(q => {
+                            const base = {
+                                id: q.id,
+                                type: q.type,
+                                subject: q.subject || null,
+                                chapter: q.chapter || null,
+                                lesson: q.lesson || null,
+                                board: q.board || null,
+                                is_quizzable: q.isQuizzable,
+                                tags: q.tags || [],
+                                image: q.image || null,
+                                answerimage1: q.answerimage1 || null,
+                                answerimage2: q.answerimage2 || null,
+                            };
+
+                            if (q.type === 'mcq') {
+                                return {
+                                    ...base,
+                                    question: q.question,
+                                    options: q.options,
+                                    correct_answer: q.correctAnswer,
+                                    explanation: q.explanation || null,
+                                    question_text: null,
+                                    parts: null,
+                                    answer: null,
+                                };
+                            } else if (q.type === 'cq') {
+                                return {
+                                    ...base,
+                                    question_text: q.questionText,
+                                    parts: q.parts,
+                                    question: null,
+                                    options: null,
+                                    correct_answer: null,
+                                    explanation: null,
+                                    answer: null,
+                                };
+                            } else if (q.type === 'sq') {
+                                return {
+                                    ...base,
+                                    question: q.question,
+                                    answer: q.answer,
+                                    question_text: null,
+                                    options: null,
+                                    correct_answer: null,
+                                    explanation: null,
+                                    parts: null,
+                                };
+                            }
+                        });
+
+                        const { data, error } = await supabaseClient
+                            .from('questions')
+                            .upsert(formattedQuestions, { onConflict: 'id' });
+
+                        if (error) {
+                            console.error('Error saving questions to Supabase:', error);
+                            alert('Failed to save questions to Supabase. Please try again.');
+                        } else {
+                            console.log('Questions saved successfully:', data);
+                            // Mark the questions as synced in the local questionBank
+                            questionsToSync.forEach(q => (q.synced = true));
+                        }
+                    } catch (error) {
+                        console.error('Error during saveQuestions:', error);
+                        alert('An error occurred while saving questions. Please check the console for details.');
+                    }
+                }
+
+                
                 async function saveQuestion() {
                     if (!supabaseClient) {
                         alert('Supabase is not connected. Cannot save question.');

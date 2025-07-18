@@ -1508,7 +1508,13 @@ Answer: Newton's First Law, also called the Law of Inertia, states that an objec
                             .from('questions')
                             .upsert([formatted]);
 
-                        if (error) throw error;
+                        if (error) {
+                            if (error.code === '23505') { // Unique violation error code
+                                console.log('Duplicate question skipped:', question.question);
+                                return false; // Treat as skipped, not failed
+                            }
+                            throw error;
+                        }
 
                         question.synced = true;
                         return true;

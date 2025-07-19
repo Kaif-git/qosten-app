@@ -1661,6 +1661,17 @@ Answer: নিউটনের প্রথম গতিসূত্র, যা �
                 }
             }
 
+            // Utility function to convert Bangla digits to English numbers
+            function banglaToNumber(banglaStr) {
+                const banglaDigits = '০১২৩৪৫৬৭৮৯';
+                const englishDigits = '0123456789';
+                return parseInt(banglaStr.split('').map(char => {
+                    const index = banglaDigits.indexOf(char);
+                    return index !== -1 ? englishDigits[index] : char;
+                }).join(''));
+            }
+
+            // Updated parseCQsBn function to handle multiple questions
             async function parseCQsBn() {
                 const text = cqInputBn.value.trim();
                 if (!text) {
@@ -1682,13 +1693,14 @@ Answer: নিউটনের প্রথম গতিসূত্র, যা �
                     const line = lines[i];
                     if (line.length === 0 && !inAnswerSection) continue;
 
-                    const metadataMatch = line.match(/^(Subject|Chapter|Lesson|Board|isQuizzable|Tags):\s*(.*)$/i) || line.match(/^\[(Subject|Chapter|Lesson|Board|isQuizzable|Tags):\s*(.*?)\]$/i);
+                    // Handle metadata
+                    const metadataMatch = line.match(/^(Subject|Chapter|Lesson|Board|isQuizzable|Tags):\s*(.*)$/i) || 
+                                         line.match(/^\[(Subject|Chapter|Lesson|Board|isQuizzable|Tags):\s*(.*?)\]$/i);
                     if (metadataMatch) {
                         const key = metadataMatch[1].toLowerCase();
                         let value = metadataMatch[2].trim();
                         if (key === 'isquizzable') value = value.toLowerCase() === 'true';
                         else if (key === 'tags') value = ['cq', 'bn', ...value.split(',').map(t => t.trim()).filter(t => t && t !== 'cq' && t !== 'bn')];
-
                         if (currentQuestion) {
                             currentQuestion[key] = value;
                         } else {
@@ -1697,7 +1709,8 @@ Answer: নিউটনের প্রথম গতিসূত্র, যা �
                         continue;
                     }
 
-                    if (/^প্রশ্ন\s+\d+/i.test(line)) {
+                    // Detect new question with English or Bangla digits
+                    if (/^প্রশ্ন\s+[\d০-৯]+/i.test(line)) {
                         if (currentQuestion) {
                             if (inAnswerSection && currentPartLetter && currentPartAnswerBuffer.length) {
                                 const part = currentQuestion.parts.find(p => p.letter === currentPartLetter);
@@ -1717,6 +1730,7 @@ Answer: নিউটনের প্রথম গতিসূত্র, যা �
                             ...globalMetadata,
                             id: Date.now() + Math.floor(Math.random() * 1000),
                             type: 'cq',
+                            language: 'bn',
                             questionText: '',
                             image: null,
                             answerimage1: null,
@@ -1731,6 +1745,7 @@ Answer: নিউটনের প্রথম গতিসূত্র, যা �
                         continue;
                     }
 
+                    // Start of answer section
                     if (line.toLowerCase() === 'উত্তর:') {
                         inAnswerSection = true;
                         currentQuestion.questionText = questionTextBuffer.join('\n').trim();
@@ -1739,13 +1754,15 @@ Answer: নিউটনের প্রথম গতিসূত্র, যা �
                     }
 
                     if (!inAnswerSection) {
-                        const partMatch = line.match(/^([a-d])\.\s*(.*?)\s*\((\d+)\)\s*$/i);
+                        // Parse parts with flexible separators and Bangla/English digits
+                        const partMatch = line.match(/^([a-d])\s*[\).\s]\s*(.*?)\s*\(([\d০-৯]+)\)\s*$/i);
                         if (partMatch) {
                             if (!currentQuestion) {
                                 currentQuestion = {
                                     ...globalMetadata,
                                     id: Date.now() + Math.floor(Math.random() * 1000),
                                     type: 'cq',
+                                    language: 'bn',
                                     questionText: '',
                                     image: null,
                                     answerimage1: null,
@@ -1755,7 +1772,14 @@ Answer: নিউটনের প্রথম গতিসূত্র, যা �
                                 };
                             }
                             const partLetter = partMatch[1].toLowerCase();
-                            currentQuestion.parts.push({ letter: partMatch[1].toLowerCase(), text: partMatch[2].trim(), marks: parseInt(partMatch[3]), answer: '', image: null });
+                            const marks = banglaToNumber(partMatch[3]);
+                            currentQuestion.parts.push({ 
+                                letter: partLetter, 
+                                text: partMatch[2].trim(), 
+                                marks: marks, 
+                                answer: '', 
+                                image: null 
+                            });
                             if (i + 1 < lines.length && lines[i + 1].trim() === `[ছবি আছে জন্য অংশ ${partLetter}]`) {
                                 if (partLetter === 'c') {
                                     currentQuestion.answerimage1 = '[ছবি আছে জন্য অংশ c]';
@@ -1768,7 +1792,8 @@ Answer: নিউটনের প্রথম গতিসূত্র, যা �
                             questionTextBuffer.push(line);
                         }
                     } else {
-                        const answerPartMatch = line.match(/^([a-d])\.\s*(.*)$/i);
+                        // Parse answer parts with flexible separators
+                        const answerPartMatch = line.match(/^([a-d])\s*[\).\s]\s*(.*)/i);
                         if (answerPartMatch) {
                             if (currentPartLetter && currentPartAnswerBuffer.length) {
                                 const part = currentQuestion.parts.find(p => p.letter === currentPartLetter);
@@ -1784,6 +1809,7 @@ Answer: নিউটনের প্রথম গতিসূত্র, যা �
                     }
                 }
 
+                // Finalize the last question
                 if (currentQuestion) {
                     if (inAnswerSection && currentPartLetter && currentPartAnswerBuffer.length) {
                         const part = currentQuestion.parts.find(p => p.letter === currentPartLetter);
@@ -1803,6 +1829,7 @@ Answer: নিউটনের প্রথম গতিসূত্র, যা �
                     }
                 }
 
+                // Process and upload questions
                 if (newQuestions.length > 0) {
                     let successfulUploads = 0;
                     let skippedCount = skippedQuestions.length;
@@ -1811,7 +1838,6 @@ Answer: নিউটনের প্রথম গতিসূত্র, যা �
                     for (let i = 0; i < newQuestions.length; i += CHUNK_SIZE) {
                         const chunk = newQuestions.slice(i, i + CHUNK_SIZE);
                         const chunkResults = await processChunk(chunk);
-
                         successfulUploads += chunkResults.successful;
                         skippedCount += chunkResults.skipped;
                         failedUploads += chunkResults.failed;

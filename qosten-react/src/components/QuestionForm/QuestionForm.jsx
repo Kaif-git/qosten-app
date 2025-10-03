@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useQuestions } from '../../context/QuestionContext';
 import { useNavigate } from 'react-router-dom';
+import QuestionPreview from '../QuestionPreview/QuestionPreview';
 
 export default function QuestionForm() {
   const { editingQuestion, addQuestion, updateQuestion, setEditingQuestion } = useQuestions();
   const navigate = useNavigate();
+  const [showPreview, setShowPreview] = useState(false);
+  const [previewQuestion, setPreviewQuestion] = useState(null);
   
   const [formData, setFormData] = useState({
     type: 'mcq',
@@ -12,7 +15,6 @@ export default function QuestionForm() {
     chapter: '',
     lesson: '',
     board: '',
-    isQuizzable: true,
     language: 'en',
     questionText: '',
     options: [
@@ -30,7 +32,6 @@ export default function QuestionForm() {
       { letter: 'd', text: '', marks: 0, answer: '' }
     ],
     sqAnswer: '',
-    tags: '',
     image: null
   });
   
@@ -43,7 +44,6 @@ export default function QuestionForm() {
         chapter: editingQuestion.chapter || '',
         lesson: editingQuestion.lesson || '',
         board: editingQuestion.board || '',
-        isQuizzable: editingQuestion.isQuizzable !== false,
         language: editingQuestion.language || 'en',
         questionText: editingQuestion.questionText || editingQuestion.question || '',
         options: editingQuestion.options || [
@@ -61,7 +61,6 @@ export default function QuestionForm() {
           { letter: 'd', text: '', marks: 0, answer: '' }
         ],
         sqAnswer: editingQuestion.answer || '',
-        tags: editingQuestion.tags ? editingQuestion.tags.join(', ') : '',
         image: editingQuestion.image
       });
     }
@@ -89,6 +88,20 @@ export default function QuestionForm() {
     }));
   };
   
+  const handleImageUpload = (file) => {
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setFormData(prev => ({ ...prev, image: reader.result }));
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+  
+  const removeImage = () => {
+    setFormData(prev => ({ ...prev, image: null }));
+  };
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     
@@ -97,16 +110,25 @@ export default function QuestionForm() {
       return;
     }
     
-    // Prepare question object based on type
+    // Prepare question data for preview
+    const questionData = prepareQuestionData();
+    if (!questionData) {
+      return; // Validation failed in prepareQuestionData
+    }
+    
+    // Show preview
+    setPreviewQuestion(questionData);
+    setShowPreview(true);
+  };
+  
+  const prepareQuestionData = () => {
     let questionData = {
       type: formData.type,
       subject: formData.subject,
       chapter: formData.chapter,
       lesson: formData.lesson,
       board: formData.board,
-      isQuizzable: formData.isQuizzable,
       language: formData.language,
-      tags: formData.tags.split(',').map(t => t.trim()).filter(t => t),
       image: formData.image
     };
     
@@ -121,7 +143,7 @@ export default function QuestionForm() {
       
       if (!formData.correctAnswer) {
         alert('Please select the correct answer.');
-        return;
+        return null;
       }
     } else if (formData.type === 'cq') {
       questionData = {
@@ -138,21 +160,40 @@ export default function QuestionForm() {
       
       if (!formData.sqAnswer.trim()) {
         alert('Please enter an answer for the short question.');
+        return null;
+      }
+    }
+    
+    return questionData;
+  };
+  
+  const confirmAddQuestion = (editedQuestions) => {
+    // Get the first (and only) question from the array
+    const editedQuestion = editedQuestions[0];
+    
+    if (editingQuestion) {
+      updateQuestion({ ...editedQuestion, id: editingQuestion.id });
+      alert('Question updated successfully!');
+    } else {
+      try {
+        addQuestion(editedQuestion);
+        alert('Question added successfully!');
+      } catch (error) {
+        alert(error.message);
+        setShowPreview(false);
         return;
       }
     }
     
-    if (editingQuestion) {
-      updateQuestion({ ...questionData, id: editingQuestion.id });
-      alert('Question updated successfully!');
-    } else {
-      addQuestion(questionData);
-      alert('Question added successfully!');
-    }
-    
     // Reset form and navigate back
+    setShowPreview(false);
     resetForm();
     navigate('/bank');
+  };
+  
+  const cancelPreview = () => {
+    setShowPreview(false);
+    setPreviewQuestion(null);
   };
   
   const resetForm = () => {
@@ -162,7 +203,6 @@ export default function QuestionForm() {
       chapter: '',
       lesson: '',
       board: '',
-      isQuizzable: true,
       language: 'en',
       questionText: '',
       options: [
@@ -180,7 +220,6 @@ export default function QuestionForm() {
         { letter: 'd', text: '', marks: 0, answer: '' }
       ],
       sqAnswer: '',
-      tags: '',
       image: null
     });
     setEditingQuestion(null);
@@ -192,8 +231,17 @@ export default function QuestionForm() {
   };
 
   return (
-    <div className={`panel editing-${formData.type}`}>
-      <h2>{editingQuestion ? 'Edit Question' : 'Add New Question'}</h2>
+    <>
+      {showPreview && previewQuestion && (
+        <QuestionPreview
+          questions={[previewQuestion]}
+          onConfirm={confirmAddQuestion}
+          onCancel={cancelPreview}
+        />
+      )}
+      
+      <div className={`panel editing-${formData.type}`}>
+        <h2>{editingQuestion ? 'Edit Question' : 'Add New Question'}</h2>
       
       <form onSubmit={handleSubmit}>
         <div>
@@ -250,16 +298,35 @@ export default function QuestionForm() {
               onChange={(e) => handleInputChange('board', e.target.value)}
             />
           </div>
-          <div>
-            <label htmlFor="isQuizzable">Quizzable:</label>
-            <input 
-              type="checkbox" 
-              id="isQuizzable" 
-              checked={formData.isQuizzable}
-              onChange={(e) => handleInputChange('isQuizzable', e.target.checked)}
-            />
-            <span style={{marginLeft: '5px', fontSize: '0.9em'}}>(Include in quizzes?)</span>
-          </div>
+        </div>
+        
+        <div style={{ marginTop: '15px', padding: '15px', backgroundColor: '#f0f8ff', border: '2px dashed #007bff', borderRadius: '6px' }}>
+          <label htmlFor="questionImage" style={{ display: 'block', fontWeight: '600', color: '#007bff', marginBottom: '10px' }}>
+            {formData.type === 'cq' ? 'Question Stem Image (Optional):' : 'Question Image (Optional):'}
+          </label>
+          <input 
+            type="file" 
+            id="questionImage"
+            accept="image/*"
+            onChange={(e) => handleImageUpload(e.target.files[0])}
+            style={{ display: 'block', width: '100%', padding: '8px', fontSize: '14px', cursor: 'pointer' }}
+          />
+          {formData.image && (
+            <div style={{ marginTop: '15px' }}>
+              <img 
+                src={formData.image} 
+                alt="Question" 
+                style={{ maxWidth: '100%', maxHeight: '400px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'block', marginBottom: '10px' }}
+              />
+              <button 
+                type="button" 
+                onClick={removeImage}
+                style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '8px 16px', borderRadius: '4px', cursor: 'pointer' }}
+              >
+                ✕ Remove Image
+              </button>
+            </div>
+          )}
         </div>
         
         <div>
@@ -362,16 +429,6 @@ export default function QuestionForm() {
           </div>
         </div>
         
-        <div>
-          <label htmlFor="tags">Tags (comma separated):</label>
-          <input 
-            type="text" 
-            id="tags" 
-            placeholder="e.g., easy, formula, calculation"
-            value={formData.tags}
-            onChange={(e) => handleInputChange('tags', e.target.value)}
-          />
-        </div>
         
         <div style={{marginTop: '20px'}}>
           <button type="submit">{editingQuestion ? 'Update Question' : 'Save Question'}</button>
@@ -380,6 +437,7 @@ export default function QuestionForm() {
           )}
         </div>
       </form>
-    </div>
+      </div>
+    </>
   );
 }

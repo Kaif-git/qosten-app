@@ -18,6 +18,7 @@ export default function TabContainer() {
       <NavLink to="/import" style={({isActive}) => ({...tabStyle, background: isActive ? '#4CAF50' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>Import Questions</NavLink>
       <NavLink to="/bank" style={({isActive}) => ({...tabStyle, background: isActive ? '#4CAF50' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>Question Bank</NavLink>
       <NavLink to="/add" style={({isActive}) => ({...tabStyle, background: isActive ? '#4CAF50' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>Add New Question</NavLink>
+      <NavLink to="/prompts" style={({isActive}) => ({...tabStyle, background: isActive ? '#2196F3' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>🤖 AI Prompts</NavLink>
       <NavLink to="/import-cq" style={({isActive}) => ({...tabStyle, background: isActive ? '#4CAF50' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>Import CQ</NavLink>
       <NavLink to="/import-sq" style={({isActive}) => ({...tabStyle, background: isActive ? '#4CAF50' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>Import SQ</NavLink>
       <NavLink to="/import-bn" style={({isActive}) => ({...tabStyle, background: isActive ? '#4CAF50' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>Import Bangla Questions</NavLink>

@@ -22,7 +22,6 @@ export default function SearchFilters() {
       lesson: '',
       type: '',
       board: '',
-      isQuizzable: '',
       language: ''
     });
   };
@@ -110,18 +109,6 @@ export default function SearchFilters() {
         </select>
       </div>
       
-      <div>
-        <label htmlFor="filterQuizzable">Quizzable:</label>
-        <select
-          id="filterQuizzable"
-          value={currentFilters.isQuizzable}
-          onChange={(e) => handleFilterChange('isQuizzable', e.target.value)}
-        >
-          <option value="">All</option>
-          <option value="true">Quizzable</option>
-          <option value="false">Non-Quizzable</option>
-        </select>
-      </div>
       
       <div>
         <label htmlFor="filterLanguage">Language:</label>

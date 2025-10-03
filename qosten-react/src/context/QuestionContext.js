@@ -16,7 +16,6 @@ const initialState = {
     lesson: '',
     type: '',
     board: '',
-    isQuizzable: '',
     language: ''
   },
   editingQuestion: null,
@@ -86,9 +85,33 @@ export function QuestionProvider({ children }) {
   };
 
   const addQuestion = (question) => {
+    // Check for duplicate questions
+    const isDuplicate = checkDuplicate(question);
+    if (isDuplicate) {
+      throw new Error('Duplicate question detected. This question already exists in the question bank.');
+    }
+    
     const newQuestion = { ...question, id: Date.now().toString() };
     dispatch({ type: ACTIONS.ADD_QUESTION, payload: newQuestion });
     return newQuestion;
+  };
+
+  const checkDuplicate = (newQuestion) => {
+    // Get the question text based on question type
+    const newQuestionText = (newQuestion.questionText || newQuestion.question || '').trim().toLowerCase();
+    
+    if (!newQuestionText) {
+      return false;
+    }
+
+    // Check if a similar question already exists
+    return state.questions.some(existingQuestion => {
+      const existingQuestionText = (existingQuestion.questionText || existingQuestion.question || '').trim().toLowerCase();
+      
+      // Check if question text matches and type matches
+      return existingQuestionText === newQuestionText && 
+             existingQuestion.type === newQuestion.type;
+    });
   };
 
   const updateQuestion = (question) => {

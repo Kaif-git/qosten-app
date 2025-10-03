@@ -54,7 +54,7 @@ export default function Header() {
         }
         
         // Ask user if they want to replace or merge
-        const shouldReplace = confirm(
+        const shouldReplace = window.confirm(
           `Found ${validQuestions.length} valid questions.\n\n` +
           'Choose OK to REPLACE all existing questions, or Cancel to MERGE with existing questions.'
         );

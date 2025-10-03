@@ -2,9 +2,15 @@ import React from 'react';
 import { useQuestions } from '../../context/QuestionContext';
 import { useNavigate } from 'react-router-dom';
 
-export default function QuestionCard({ question }) {
+export default function QuestionCard({ question, selectionMode, isSelected, onToggleSelect }) {
   const { deleteQuestion, setEditingQuestion } = useQuestions();
   const navigate = useNavigate();
+  
+  const handleCardClick = () => {
+    if (selectionMode) {
+      onToggleSelect(question.id);
+    }
+  };
   
   const handleEdit = () => {
     setEditingQuestion(question);
@@ -118,23 +124,54 @@ export default function QuestionCard({ question }) {
   };
 
   return (
-    <div className="question">
+    <div 
+      className={`question ${selectionMode ? 'selection-mode' : ''} ${isSelected ? 'selected' : ''}`}
+      onClick={handleCardClick}
+      style={{
+        cursor: selectionMode ? 'pointer' : 'default',
+        border: isSelected ? '3px solid #007bff' : undefined,
+        backgroundColor: isSelected ? '#e7f3ff' : undefined,
+        position: 'relative'
+      }}
+    >
+      {selectionMode && (
+        <div style={{
+          position: 'absolute',
+          top: '10px',
+          right: '10px',
+          width: '30px',
+          height: '30px',
+          borderRadius: '50%',
+          backgroundColor: isSelected ? '#007bff' : '#fff',
+          border: '2px solid #007bff',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          fontWeight: 'bold',
+          color: isSelected ? '#fff' : '#007bff',
+          fontSize: '18px',
+          zIndex: 10
+        }}>
+          {isSelected ? '✓' : ''}
+        </div>
+      )}
+      
       <div className="metadata">
         <span>Subject: {question.subject || 'N/A'}</span>
         <span>Chapter: {question.chapter || 'N/A'}</span>
         <span>Lesson: {question.lesson || 'N/A'}</span>
         <span>Board: {question.board || 'N/A'}</span>
         <span>Type: {question.type ? question.type.toUpperCase() : 'N/A'}</span>
-        <span>Quizzable: {question.isQuizzable ? 'Yes' : 'No'}</span>
-        <span>Tags: {question.tags?.length ? question.tags.join(', ') : 'N/A'}</span>
       </div>
       
       {renderQuestionContent()}
       
-      <div className="actions">
-        <button onClick={handleEdit}>Edit</button>
-        <button className="danger" onClick={handleDelete}>Delete</button>
-      </div>
+      {!selectionMode && (
+        <div className="actions">
+          <button onClick={handleEdit}>Edit</button>
+          <button className="danger" onClick={handleDelete}>Delete</button>
+        </div>
+      )}
     </div>
   );
 }

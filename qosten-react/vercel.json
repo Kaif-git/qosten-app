@@ -1,4 +1,6 @@
 {
+  "buildCommand": "npm install && npx react-scripts build",
+  "outputDirectory": "build",
   "rewrites": [
     {
       "source": "/(.*)",

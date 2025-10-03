@@ -452,3 +452,274 @@
 .remove-image-btn:hover {
   background-color: #c82333;
 }
+
+/* Source Document Section */
+.source-document-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f0f8ff;
+  border-radius: 8px;
+  border: 2px solid #007bff;
+}
+
+.source-document-section h3 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.source-upload-buttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.source-upload-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.source-upload-btn:hover {
+  background-color: #0056b3;
+}
+
+.source-uploaded-indicator {
+  padding: 8px 16px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.source-document-viewer {
+  margin-top: 20px;
+  max-height: 400px;
+  overflow: auto;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+  padding: 10px;
+}
+
+.source-document-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.source-document-pdf {
+  width: 100%;
+  height: 500px;
+  border: none;
+}
+
+/* Image buttons group */
+.image-buttons-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.crop-from-source-btn {
+  padding: 8px 16px;
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.crop-from-source-btn:hover {
+  background-color: #138496;
+}
+
+/* Cropper Modal */
+.cropper-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.cropper-modal {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 1000px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.cropper-modal h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.cropper-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+}
+
+.cropper-controls button {
+  padding: 8px 16px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.3s ease;
+}
+
+.cropper-controls button:hover {
+  background-color: #5a6268;
+}
+
+.cropper-container {
+  position: relative;
+  max-height: 60vh;
+  overflow: auto;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin: 15px 0;
+  cursor: crosshair;
+}
+
+.cropper-image {
+  max-width: 100%;
+  display: block;
+  user-select: none;
+}
+
+.crop-box {
+  position: absolute;
+  border: 3px dashed #007bff;
+  background-color: rgba(0, 123, 255, 0.1);
+  cursor: move;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+}
+
+.crop-handle {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #007bff;
+  border: 2px solid white;
+  border-radius: 50%;
+  right: -6px;
+  bottom: -6px;
+  cursor: nwse-resize;
+}
+
+.cropper-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 2px solid #e0e0e0;
+}
+
+.crop-confirm-btn {
+  padding: 12px 30px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.crop-confirm-btn:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+.crop-cancel-btn {
+  padding: 12px 30px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.crop-cancel-btn:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .preview-modal {
+    padding: 20px 15px;
+    max-height: 95vh;
+  }
+  
+  .source-upload-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .source-upload-btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .cropper-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .cropper-controls button {
+    width: 100%;
+  }
+  
+  .cropper-modal {
+    padding: 15px;
+  }
+  
+  .preview-modal-actions,
+  .cropper-actions {
+    flex-direction: column;
+  }
+  
+  .preview-modal-actions button,
+  .cropper-actions button {
+    width: 100%;
+  }
+}

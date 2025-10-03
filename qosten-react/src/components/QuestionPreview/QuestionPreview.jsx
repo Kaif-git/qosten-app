@@ -1,8 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './QuestionPreview.css';
 
 export default function QuestionPreview({ questions, onConfirm, onCancel }) {
   const [editableQuestions, setEditableQuestions] = useState(questions);
+  const [sourceDocument, setSourceDocument] = useState(null);
+  const [sourceDocType, setSourceDocType] = useState(null); // 'image' or 'pdf'
+  const [showCropper, setShowCropper] = useState(false);
+  const [currentCroppingIndex, setCurrentCroppingIndex] = useState(null);
+  const [cropArea, setCropArea] = useState({ x: 0, y: 0, width: 100, height: 100 });
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const canvasRef = useRef(null);
+  const imageRef = useRef(null);
   
   if (!questions || questions.length === 0) return null;
   
@@ -34,6 +43,24 @@ export default function QuestionPreview({ questions, onConfirm, onCancel }) {
     });
   };
   
+  const handleSourceDocumentUpload = (file) => {
+    if (!file) return;
+    
+    const fileType = file.type;
+    const reader = new FileReader();
+    
+    reader.onloadend = () => {
+      setSourceDocument(reader.result);
+      if (fileType.includes('pdf')) {
+        setSourceDocType('pdf');
+      } else if (fileType.includes('image')) {
+        setSourceDocType('image');
+      }
+    };
+    
+    reader.readAsDataURL(file);
+  };
+
   const handleImageUpload = (index, file) => {
     if (file) {
       const reader = new FileReader();
@@ -42,6 +69,87 @@ export default function QuestionPreview({ questions, onConfirm, onCancel }) {
       };
       reader.readAsDataURL(file);
     }
+  };
+  
+  const openCropper = (index) => {
+    if (!sourceDocument) {
+      alert('Please upload a source document first!');
+      return;
+    }
+    if (sourceDocType === 'pdf') {
+      alert('PDF cropping coming soon! Please convert PDF page to image first.');
+      return;
+    }
+    setCurrentCroppingIndex(index);
+    setShowCropper(true);
+    setCropArea({ x: 10, y: 10, width: 200, height: 200 });
+  };
+  
+  const handleCropImage = () => {
+    if (!imageRef.current || currentCroppingIndex === null) return;
+    
+    const img = imageRef.current;
+    const canvas = document.createElement('canvas');
+    const scaleX = img.naturalWidth / img.width;
+    const scaleY = img.naturalHeight / img.height;
+    
+    canvas.width = cropArea.width * scaleX;
+    canvas.height = cropArea.height * scaleY;
+    
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(
+      img,
+      cropArea.x * scaleX,
+      cropArea.y * scaleY,
+      cropArea.width * scaleX,
+      cropArea.height * scaleY,
+      0,
+      0,
+      canvas.width,
+      canvas.height
+    );
+    
+    const croppedImage = canvas.toDataURL('image/png');
+    updateQuestion(currentCroppingIndex, 'image', croppedImage);
+    setShowCropper(false);
+    setCurrentCroppingIndex(null);
+  };
+  
+  const handleMouseDown = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    setIsDragging(true);
+    setDragStart({ x: x - cropArea.x, y: y - cropArea.y });
+  };
+  
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    setCropArea(prev => ({
+      ...prev,
+      x: Math.max(0, Math.min(x - dragStart.x, rect.width - prev.width)),
+      y: Math.max(0, Math.min(y - dragStart.y, rect.height - prev.height))
+    }));
+  };
+  
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+  
+  const adjustCropSize = (dimension, delta) => {
+    setCropArea(prev => {
+      const newArea = { ...prev };
+      if (dimension === 'width') {
+        newArea.width = Math.max(50, prev.width + delta);
+      } else if (dimension === 'height') {
+        newArea.height = Math.max(50, prev.height + delta);
+      }
+      return newArea;
+    });
   };
   
   const removeImage = (index) => {
@@ -80,12 +188,23 @@ export default function QuestionPreview({ questions, onConfirm, onCancel }) {
       <div className="preview-content">
         <div className="image-upload-section">
           <label className="image-upload-label">Question Image (Optional):</label>
-          <input
-            type="file"
-            accept="image/*"
-            onChange={(e) => handleImageUpload(index, e.target.files[0])}
-            className="image-upload-input"
-          />
+          <div className="image-buttons-group">
+            <input
+              type="file"
+              accept="image/*"
+              onChange={(e) => handleImageUpload(index, e.target.files[0])}
+              className="image-upload-input"
+            />
+            {sourceDocument && (
+              <button 
+                type="button"
+                onClick={() => openCropper(index)}
+                className="crop-from-source-btn"
+              >
+                ✂️ Crop from Source
+              </button>
+            )}
+          </div>
           {question.image && (
             <div className="image-preview-container">
               <img src={question.image} alt="Question" className="preview-uploaded-image" />
@@ -175,12 +294,23 @@ export default function QuestionPreview({ questions, onConfirm, onCancel }) {
       <div className="preview-content">
         <div className="image-upload-section">
           <label className="image-upload-label">Stem Image (Optional):</label>
-          <input
-            type="file"
-            accept="image/*"
-            onChange={(e) => handleImageUpload(index, e.target.files[0])}
-            className="image-upload-input"
-          />
+          <div className="image-buttons-group">
+            <input
+              type="file"
+              accept="image/*"
+              onChange={(e) => handleImageUpload(index, e.target.files[0])}
+              className="image-upload-input"
+            />
+            {sourceDocument && (
+              <button 
+                type="button"
+                onClick={() => openCropper(index)}
+                className="crop-from-source-btn"
+              >
+                ✂️ Crop from Source
+              </button>
+            )}
+          </div>
           {question.image && (
             <div className="image-preview-container">
               <img src={question.image} alt="Question Stem" className="preview-uploaded-image" />
@@ -306,24 +436,131 @@ export default function QuestionPreview({ questions, onConfirm, onCancel }) {
   };
 
   return (
-    <div className="preview-modal-overlay">
-      <div className="preview-modal">
-        <h2>Preview & Edit Questions</h2>
-        <p className="preview-count">
-          Review and edit <strong>{editableQuestions.length}</strong> question{editableQuestions.length !== 1 ? 's' : ''} before adding to the question bank.
-        </p>
-        <div className="preview-questions-container">
-          {editableQuestions.map((question, index) => renderQuestionPreview(question, index))}
-        </div>
-        <div className="preview-modal-actions">
-          <button className="confirm-btn" onClick={() => onConfirm(editableQuestions)}>
-            Confirm & Add to Question Bank
-          </button>
-          <button className="cancel-btn" onClick={onCancel}>
-            Cancel
-          </button>
+    <>
+      <div className="preview-modal-overlay">
+        <div className="preview-modal">
+          <h2>Preview & Edit Questions</h2>
+          <p className="preview-count">
+            Review and edit <strong>{editableQuestions.length}</strong> question{editableQuestions.length !== 1 ? 's' : ''} before adding to the question bank.
+          </p>
+          
+          {/* Source Document Upload Section */}
+          <div className="source-document-section">
+            <h3>📄 Source Document (Optional)</h3>
+            <p style={{fontSize: '14px', color: '#666', margin: '5px 0 10px 0'}}>
+              Upload the original PDF or image to compare and crop from
+            </p>
+            <div className="source-upload-buttons">
+              <label className="source-upload-btn">
+                📷 Upload Image
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={(e) => handleSourceDocumentUpload(e.target.files[0])}
+                  style={{display: 'none'}}
+                />
+              </label>
+              <label className="source-upload-btn">
+                📄 Upload PDF
+                <input
+                  type="file"
+                  accept="application/pdf"
+                  onChange={(e) => handleSourceDocumentUpload(e.target.files[0])}
+                  style={{display: 'none'}}
+                />
+              </label>
+              {sourceDocument && (
+                <span className="source-uploaded-indicator">
+                  ✓ Source {sourceDocType} uploaded
+                </span>
+              )}
+            </div>
+            
+            {/* Source Document Viewer */}
+            {sourceDocument && (
+              <div className="source-document-viewer">
+                {sourceDocType === 'image' && (
+                  <img src={sourceDocument} alt="Source" className="source-document-image" />
+                )}
+                {sourceDocType === 'pdf' && (
+                  <iframe
+                    src={sourceDocument}
+                    className="source-document-pdf"
+                    title="Source PDF"
+                  />
+                )}
+              </div>
+            )}
+          </div>
+          
+          <div className="preview-questions-container">
+            {editableQuestions.map((question, index) => renderQuestionPreview(question, index))}
+          </div>
+          <div className="preview-modal-actions">
+            <button className="confirm-btn" onClick={() => onConfirm(editableQuestions)}>
+              Confirm & Add to Question Bank
+            </button>
+            <button className="cancel-btn" onClick={onCancel}>
+              Cancel
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+      
+      {/* Image Cropper Modal */}
+      {showCropper && sourceDocument && (
+        <div className="cropper-modal-overlay">
+          <div className="cropper-modal">
+            <h3>Crop Image from Source</h3>
+            <p style={{fontSize: '14px', color: '#666', margin: '5px 0 15px 0'}}>
+              Drag the box to select the area you want to crop
+            </p>
+            
+            <div className="cropper-controls">
+              <button type="button" onClick={() => adjustCropSize('width', -20)}>Width -</button>
+              <button type="button" onClick={() => adjustCropSize('width', 20)}>Width +</button>
+              <button type="button" onClick={() => adjustCropSize('height', -20)}>Height -</button>
+              <button type="button" onClick={() => adjustCropSize('height', 20)}>Height +</button>
+              <span style={{marginLeft: 'auto'}}>Size: {Math.round(cropArea.width)} × {Math.round(cropArea.height)}px</span>
+            </div>
+            
+            <div 
+              className="cropper-container"
+              onMouseDown={handleMouseDown}
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUp}
+              onMouseLeave={handleMouseUp}
+            >
+              <img 
+                ref={imageRef}
+                src={sourceDocument} 
+                alt="Crop source" 
+                className="cropper-image"
+              />
+              <div 
+                className="crop-box"
+                style={{
+                  left: `${cropArea.x}px`,
+                  top: `${cropArea.y}px`,
+                  width: `${cropArea.width}px`,
+                  height: `${cropArea.height}px`
+                }}
+              >
+                <div className="crop-handle" />
+              </div>
+            </div>
+            
+            <div className="cropper-actions">
+              <button className="crop-confirm-btn" onClick={handleCropImage}>
+                ✂️ Crop & Apply
+              </button>
+              <button className="crop-cancel-btn" onClick={() => setShowCropper(false)}>
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }

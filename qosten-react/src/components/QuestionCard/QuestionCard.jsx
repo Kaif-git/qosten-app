@@ -1,0 +1,140 @@
+import React from 'react';
+import { useQuestions } from '../../context/QuestionContext';
+import { useNavigate } from 'react-router-dom';
+
+export default function QuestionCard({ question }) {
+  const { deleteQuestion, setEditingQuestion } = useQuestions();
+  const navigate = useNavigate();
+  
+  const handleEdit = () => {
+    setEditingQuestion(question);
+    navigate('/add');
+  };
+  
+  const handleDelete = () => {
+    if (window.confirm('Are you sure you want to delete this question?')) {
+      deleteQuestion(question.id);
+    }
+  };
+  
+  const renderQuestionContent = () => {
+    if (question.type === 'mcq') {
+      return (
+        <>
+          <p><strong>Question:</strong> {question.question || 'N/A'}</p>
+          {question.image && (
+            <img 
+              src={question.image} 
+              alt="Question" 
+              style={{maxWidth: '200px', maxHeight: '200px', marginBottom: '10px'}} 
+            />
+          )}
+          {question.options && Array.isArray(question.options) ? (
+            <ul className="options-list">
+              {question.options.map((option, index) => (
+                <li 
+                  key={index} 
+                  className={question.correctAnswer && option.label === question.correctAnswer ? 'correct' : ''}
+                >
+                  {option.text || 'N/A'}
+                  {option.image && (
+                    <img 
+                      src={option.image} 
+                      alt={`Option ${option.label}`}
+                      style={{maxWidth: '100px', maxHeight: '100px', display: 'block', marginTop: '5px'}} 
+                    />
+                  )}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p>No options available</p>
+          )}
+          <p><strong>Correct Answer:</strong> {question.correctAnswer ? question.correctAnswer.toUpperCase() : 'N/A'}</p>
+          {question.explanation && <p><strong>Explanation:</strong> {question.explanation}</p>}
+        </>
+      );
+    } else if (question.type === 'cq') {
+      return (
+        <>
+          <p><strong>Question:</strong> {question.questionText || 'N/A'}</p>
+          {question.image && (
+            <img 
+              src={question.image} 
+              alt="Question" 
+              style={{maxWidth: '200px', maxHeight: '200px', marginBottom: '10px'}} 
+            />
+          )}
+          {question.parts && Array.isArray(question.parts) ? (
+            <ul className="options-list">
+              {question.parts.map((part, index) => {
+                let partImage = part.image;
+                if (part.letter === 'c' && question.answerimage1 && 
+                    question.answerimage1 !== '[There is a picture for part c]' && 
+                    question.answerimage1 !== '[ছবি আছে জন্য অংশ c]') {
+                  partImage = question.answerimage1;
+                } else if (part.letter === 'd' && question.answerimage2 && 
+                           question.answerimage2 !== '[There is a picture for part d]' && 
+                           question.answerimage2 !== '[ছবি আছে জন্য অংশ d]') {
+                  partImage = question.answerimage2;
+                }
+                
+                return (
+                  <li key={index}>
+                    <strong>Part {part.letter?.toUpperCase() || 'N/A'}:</strong> {part.text || 'N/A'} (Marks: {part.marks || 'N/A'})<br/>
+                    <strong>Answer:</strong> {part.answer || 'N/A'}
+                    {partImage && (
+                      <img 
+                        src={partImage} 
+                        alt={`Part ${part.letter} answer`}
+                        style={{maxWidth: '100px', maxHeight: '100px', display: 'block', marginTop: '5px'}} 
+                      />
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+          ) : (
+            <p>No parts available</p>
+          )}
+        </>
+      );
+    } else if (question.type === 'sq') {
+      return (
+        <>
+          <p><strong>Question:</strong> {question.question || 'N/A'}</p>
+          {question.image && (
+            <img 
+              src={question.image} 
+              alt="Question" 
+              style={{maxWidth: '200px', maxHeight: '200px', marginBottom: '10px'}} 
+            />
+          )}
+          <p><strong>Answer:</strong> {question.answer || 'N/A'}</p>
+        </>
+      );
+    }
+    return null;
+  };
+
+  return (
+    <div className="question">
+      <div className="metadata">
+        <span>Subject: {question.subject || 'N/A'}</span>
+        <span>Chapter: {question.chapter || 'N/A'}</span>
+        <span>Lesson: {question.lesson || 'N/A'}</span>
+        <span>Board: {question.board || 'N/A'}</span>
+        <span>Type: {question.type ? question.type.toUpperCase() : 'N/A'}</span>
+        <span>Quizzable: {question.isQuizzable ? 'Yes' : 'No'}</span>
+        <span>Tags: {question.tags?.length ? question.tags.join(', ') : 'N/A'}</span>
+      </div>
+      
+      {renderQuestionContent()}
+      
+      <div className="actions">
+        <button onClick={handleEdit}>Edit</button>
+        <button className="danger" onClick={handleDelete}>Delete</button>
+      </div>
+    </div>
+  );
+}

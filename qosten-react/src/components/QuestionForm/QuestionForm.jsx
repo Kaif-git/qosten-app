@@ -167,22 +167,22 @@ export default function QuestionForm() {
     return questionData;
   };
   
-  const confirmAddQuestion = (editedQuestions) => {
+  const confirmAddQuestion = async (editedQuestions) => {
     // Get the first (and only) question from the array
     const editedQuestion = editedQuestions[0];
     
-    if (editingQuestion) {
-      updateQuestion({ ...editedQuestion, id: editingQuestion.id });
-      alert('Question updated successfully!');
-    } else {
-      try {
-        addQuestion(editedQuestion);
+    try {
+      if (editingQuestion) {
+        await updateQuestion({ ...editedQuestion, id: editingQuestion.id });
+        alert('Question updated successfully!');
+      } else {
+        await addQuestion(editedQuestion);
         alert('Question added successfully!');
-      } catch (error) {
-        alert(error.message);
-        setShowPreview(false);
-        return;
       }
+    } catch (error) {
+      alert(error.message);
+      setShowPreview(false);
+      return;
     }
     
     // Reset form and navigate back

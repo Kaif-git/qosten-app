@@ -1,15 +1,24 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './QuestionPreview.css';
+import LatexRenderer from '../LatexRenderer/LatexRenderer';
+import * as pdfjsLib from 'pdfjs-dist';
+
+// Set up PDF.js worker using unpkg CDN with matching version
+pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.mjs`;
 
 export default function QuestionPreview({ questions, onConfirm, onCancel }) {
   const [editableQuestions, setEditableQuestions] = useState(questions);
   const [sourceDocument, setSourceDocument] = useState(null);
   const [sourceDocType, setSourceDocType] = useState(null); // 'image' or 'pdf'
+  const [pdfPages, setPdfPages] = useState([]);
+  const [currentPdfPage, setCurrentPdfPage] = useState(0);
+  const [pdfAsImage, setPdfAsImage] = useState(null);
   const [showCropper, setShowCropper] = useState(false);
   const [currentCroppingIndex, setCurrentCroppingIndex] = useState(null);
   const [cropArea, setCropArea] = useState({ x: 0, y: 0, width: 100, height: 100 });
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const [pdfArrayBuffer, setPdfArrayBuffer] = useState(null); // Store PDF data
   const canvasRef = useRef(null);
   const imageRef = useRef(null);
   
@@ -43,22 +52,97 @@ export default function QuestionPreview({ questions, onConfirm, onCancel }) {
     });
   };
   
-  const handleSourceDocumentUpload = (file) => {
+  const convertPdfPageToImage = async (pdfData, pageNumber) => {
+    try {
+      const loadingTask = pdfjsLib.getDocument({ data: pdfData });
+      const pdf = await loadingTask.promise;
+      const page = await pdf.getPage(pageNumber);
+      
+      const viewport = page.getViewport({ scale: 2.0 });
+      const canvas = document.createElement('canvas');
+      const context = canvas.getContext('2d');
+      canvas.height = viewport.height;
+      canvas.width = viewport.width;
+      
+      await page.render({
+        canvasContext: context,
+        viewport: viewport
+      }).promise;
+      
+      return canvas.toDataURL('image/png');
+    } catch (error) {
+      console.error('Error converting PDF to image:', error);
+      return null;
+    }
+  };
+
+  const handleSourceDocumentUpload = async (file) => {
     if (!file) return;
     
     const fileType = file.type;
-    const reader = new FileReader();
     
-    reader.onloadend = () => {
-      setSourceDocument(reader.result);
-      if (fileType.includes('pdf')) {
-        setSourceDocType('pdf');
-      } else if (fileType.includes('image')) {
-        setSourceDocType('image');
-      }
-    };
+    if (fileType.includes('pdf')) {
+      setSourceDocType('pdf');
+      // Convert PDF to images using FileReader
+      const reader = new FileReader();
+      
+      reader.onloadend = async () => {
+        try {
+          // FileReader gives us an ArrayBuffer that we can use
+          const arrayBuffer = reader.result;
+          // Create a Uint8Array copy that we can safely store
+          const uint8Array = new Uint8Array(arrayBuffer);
+          // Store a copy for later use
+          setPdfArrayBuffer(uint8Array.slice());
+          
+          // Load PDF with a separate copy (pdfjsLib will transfer/detach this one)
+          const loadingTask = pdfjsLib.getDocument({ data: uint8Array.slice() });
+          const pdf = await loadingTask.promise;
+          const numPages = pdf.numPages;
+          
+          const pages = [];
+          for (let i = 1; i <= numPages; i++) {
+            pages.push(i);
+          }
+          setPdfPages(pages);
+          setCurrentPdfPage(1);
+          
+          // Convert first page to image with another copy
+          const imageData = await convertPdfPageToImage(uint8Array.slice(), 1);
+          setPdfAsImage(imageData);
+          setSourceDocument(imageData); // Store first page as source
+        } catch (error) {
+          console.error('Error processing PDF:', error);
+          alert('Error processing PDF file. Please try again.');
+        }
+      };
+      
+      reader.readAsArrayBuffer(file);
+    } else if (fileType.includes('image')) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setSourceDocument(reader.result);
+      };
+      reader.readAsDataURL(file);
+      
+      setSourceDocType('image');
+      setPdfAsImage(null);
+      setPdfPages([]);
+      setPdfArrayBuffer(null);
+    }
+  };
+  
+  const handlePdfPageChange = async (pageNumber) => {
+    if (!pdfArrayBuffer) {
+      console.error('PDF data not available');
+      return;
+    }
     
-    reader.readAsDataURL(file);
+    setCurrentPdfPage(pageNumber);
+    // Convert selected PDF page to image using a fresh copy of the Uint8Array
+    const imageData = await convertPdfPageToImage(pdfArrayBuffer.slice(), pageNumber);
+    setPdfAsImage(imageData);
+    setSourceDocument(imageData); // Update source document with new page
   };
 
   const handleImageUpload = (index, file) => {
@@ -74,10 +158,6 @@ export default function QuestionPreview({ questions, onConfirm, onCancel }) {
   const openCropper = (index) => {
     if (!sourceDocument) {
       alert('Please upload a source document first!');
-      return;
-    }
-    if (sourceDocType === 'pdf') {
-      alert('PDF cropping coming soon! Please convert PDF page to image first.');
       return;
     }
     setCurrentCroppingIndex(index);
@@ -220,44 +300,68 @@ export default function QuestionPreview({ questions, onConfirm, onCancel }) {
         </div>
         
         <label className="edit-label">Question Text:</label>
-        <textarea
-          className="preview-question-edit"
-          value={question.question || question.questionText || ''}
-          onChange={(e) => updateQuestion(index, question.question ? 'question' : 'questionText', e.target.value)}
-          rows={3}
-        />
+        <div className="edit-with-preview">
+          <textarea
+            className="preview-question-edit"
+            value={question.question || question.questionText || ''}
+            onChange={(e) => updateQuestion(index, question.question ? 'question' : 'questionText', e.target.value)}
+            rows={3}
+          />
+          {(question.question || question.questionText) && (
+            <div className="latex-preview-box">
+              <strong>Preview:</strong>
+              <LatexRenderer text={question.question || question.questionText || ''} />
+            </div>
+          )}
+        </div>
         
         {question.options && question.options.length > 0 && (
           <div className="preview-options-edit">
             <label className="edit-label">Options:</label>
             {question.options.map((opt, i) => (
-              <div key={i} className="option-edit-row">
-                <input
-                  type="radio"
-                  name={`correct-${index}`}
-                  checked={opt.label === question.correctAnswer}
-                  onChange={() => updateQuestion(index, 'correctAnswer', opt.label)}
-                />
-                <strong>{opt.label.toUpperCase()})</strong>
-                <input
-                  type="text"
-                  value={opt.text}
-                  onChange={(e) => updateQuestionOption(index, i, 'text', e.target.value)}
-                  className="option-text-input"
-                />
+              <div key={i} className="option-edit-container">
+                <div className="option-edit-row">
+                  <input
+                    type="radio"
+                    name={`correct-${index}`}
+                    checked={opt.label === question.correctAnswer}
+                    onChange={() => updateQuestion(index, 'correctAnswer', opt.label)}
+                  />
+                  <strong>{opt.label.toUpperCase()})</strong>
+                  <input
+                    type="text"
+                    value={opt.text}
+                    onChange={(e) => updateQuestionOption(index, i, 'text', e.target.value)}
+                    className="option-text-input"
+                  />
+                </div>
+                {opt.text && (
+                  <div className="latex-preview-box" style={{marginTop: '5px', marginLeft: '45px'}}>
+                    <strong>Preview:</strong>
+                    <LatexRenderer text={opt.text} />
+                  </div>
+                )}
               </div>
             ))}
           </div>
         )}
         
         <label className="edit-label">Explanation (Optional):</label>
-        <textarea
-          className="preview-explanation-edit"
-          value={question.explanation || ''}
-          onChange={(e) => updateQuestion(index, 'explanation', e.target.value)}
-          rows={2}
-          placeholder="Enter explanation..."
-        />
+        <div className="edit-with-preview">
+          <textarea
+            className="preview-explanation-edit"
+            value={question.explanation || ''}
+            onChange={(e) => updateQuestion(index, 'explanation', e.target.value)}
+            rows={2}
+            placeholder="Enter explanation..."
+          />
+          {question.explanation && (
+            <div className="latex-preview-box">
+              <strong>Preview:</strong>
+              <LatexRenderer text={question.explanation} />
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -326,12 +430,20 @@ export default function QuestionPreview({ questions, onConfirm, onCancel }) {
         </div>
         
         <label className="edit-label">Question Stem:</label>
-        <textarea
-          className="preview-question-edit"
-          value={question.questionText || ''}
-          onChange={(e) => updateQuestion(index, 'questionText', e.target.value)}
-          rows={3}
-        />
+        <div className="edit-with-preview">
+          <textarea
+            className="preview-question-edit"
+            value={question.questionText || ''}
+            onChange={(e) => updateQuestion(index, 'questionText', e.target.value)}
+            rows={3}
+          />
+          {question.questionText && (
+            <div className="latex-preview-box">
+              <strong>Preview:</strong>
+              <LatexRenderer text={question.questionText} />
+            </div>
+          )}
+        </div>
         
         {question.parts && question.parts.length > 0 && (
           <div className="preview-parts-edit">
@@ -339,31 +451,38 @@ export default function QuestionPreview({ questions, onConfirm, onCancel }) {
             {question.parts.map((part, i) => (
               <div key={i} className="preview-part-edit">
                 <div className="part-header">
-                  <strong>{part.letter})</strong>
-                  <input
-                    type="number"
-                    value={part.marks || 0}
-                    onChange={(e) => updateQuestionPart(index, i, 'marks', parseInt(e.target.value) || 0)}
-                    className="marks-input"
-                    min="0"
-                    placeholder="Marks"
-                  />
-                  <span className="marks-label">marks</span>
+                  <strong>Part {part.letter})</strong>
                 </div>
-                <textarea
-                  value={part.text || ''}
-                  onChange={(e) => updateQuestionPart(index, i, 'text', e.target.value)}
-                  className="part-text-input"
-                  rows={2}
-                  placeholder="Part text..."
-                />
-                <textarea
-                  value={part.answer || ''}
-                  onChange={(e) => updateQuestionPart(index, i, 'answer', e.target.value)}
-                  className="part-answer-input"
-                  rows={2}
-                  placeholder="Answer..."
-                />
+                <div className="edit-with-preview">
+                  <textarea
+                    value={part.text || ''}
+                    onChange={(e) => updateQuestionPart(index, i, 'text', e.target.value)}
+                    className="part-text-input"
+                    rows={2}
+                    placeholder="Part text..."
+                  />
+                  {part.text && (
+                    <div className="latex-preview-box">
+                      <strong>Question Preview:</strong>
+                      <LatexRenderer text={part.text} />
+                    </div>
+                  )}
+                </div>
+                <div className="edit-with-preview">
+                  <textarea
+                    value={part.answer || ''}
+                    onChange={(e) => updateQuestionPart(index, i, 'answer', e.target.value)}
+                    className="part-answer-input"
+                    rows={5}
+                    placeholder="Answer..."
+                  />
+                  {part.answer && (
+                    <div className="latex-preview-box">
+                      <strong>Answer Preview:</strong>
+                      <LatexRenderer text={part.answer} />
+                    </div>
+                  )}
+                </div>
               </div>
             ))}
           </div>
@@ -403,21 +522,37 @@ export default function QuestionPreview({ questions, onConfirm, onCancel }) {
       </div>
       <div className="preview-content">
         <label className="edit-label">Question Text:</label>
-        <textarea
-          className="preview-question-edit"
-          value={question.question || question.questionText || ''}
-          onChange={(e) => updateQuestion(index, question.question ? 'question' : 'questionText', e.target.value)}
-          rows={3}
-        />
+        <div className="edit-with-preview">
+          <textarea
+            className="preview-question-edit"
+            value={question.question || question.questionText || ''}
+            onChange={(e) => updateQuestion(index, question.question ? 'question' : 'questionText', e.target.value)}
+            rows={3}
+          />
+          {(question.question || question.questionText) && (
+            <div className="latex-preview-box">
+              <strong>Preview:</strong>
+              <LatexRenderer text={question.question || question.questionText || ''} />
+            </div>
+          )}
+        </div>
         
         <label className="edit-label">Answer:</label>
-        <textarea
-          className="preview-answer-edit"
-          value={question.answer || ''}
-          onChange={(e) => updateQuestion(index, 'answer', e.target.value)}
-          rows={3}
-          placeholder="Enter answer..."
-        />
+        <div className="edit-with-preview">
+          <textarea
+            className="preview-answer-edit"
+            value={question.answer || ''}
+            onChange={(e) => updateQuestion(index, 'answer', e.target.value)}
+            rows={3}
+            placeholder="Enter answer..."
+          />
+          {question.answer && (
+            <div className="latex-preview-box">
+              <strong>Preview:</strong>
+              <LatexRenderer text={question.answer} />
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -476,18 +611,30 @@ export default function QuestionPreview({ questions, onConfirm, onCancel }) {
               )}
             </div>
             
+            {/* PDF Page Selector */}
+            {sourceDocType === 'pdf' && pdfPages.length > 0 && (
+              <div className="pdf-page-selector">
+                <label style={{fontWeight: '600', marginRight: '10px'}}>Select Page to Crop:</label>
+                <select 
+                  value={currentPdfPage} 
+                  onChange={(e) => handlePdfPageChange(parseInt(e.target.value))}
+                  style={{padding: '8px 12px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '14px'}}
+                >
+                  {pdfPages.map(pageNum => (
+                    <option key={pageNum} value={pageNum}>Page {pageNum}</option>
+                  ))}
+                </select>
+              </div>
+            )}
+            
             {/* Source Document Viewer */}
             {sourceDocument && (
               <div className="source-document-viewer">
                 {sourceDocType === 'image' && (
                   <img src={sourceDocument} alt="Source" className="source-document-image" />
                 )}
-                {sourceDocType === 'pdf' && (
-                  <iframe
-                    src={sourceDocument}
-                    className="source-document-pdf"
-                    title="Source PDF"
-                  />
+                {sourceDocType === 'pdf' && pdfAsImage && (
+                  <img src={pdfAsImage} alt="PDF Preview" className="source-document-image" />
                 )}
               </div>
             )}
@@ -516,6 +663,22 @@ export default function QuestionPreview({ questions, onConfirm, onCancel }) {
               Drag the box to select the area you want to crop
             </p>
             
+            {/* PDF Page Selector in Cropper */}
+            {sourceDocType === 'pdf' && pdfPages.length > 0 && (
+              <div className="pdf-page-selector" style={{marginBottom: '15px'}}>
+                <label style={{fontWeight: '600', marginRight: '10px'}}>Select Page:</label>
+                <select 
+                  value={currentPdfPage} 
+                  onChange={(e) => handlePdfPageChange(parseInt(e.target.value))}
+                  style={{padding: '8px 12px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '14px'}}
+                >
+                  {pdfPages.map(pageNum => (
+                    <option key={pageNum} value={pageNum}>Page {pageNum}</option>
+                  ))}
+                </select>
+              </div>
+            )}
+            
             <div className="cropper-controls">
               <button type="button" onClick={() => adjustCropSize('width', -20)}>Width -</button>
               <button type="button" onClick={() => adjustCropSize('width', 20)}>Width +</button>
@@ -533,7 +696,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel }) {
             >
               <img 
                 ref={imageRef}
-                src={sourceDocument} 
+                src={sourceDocType === 'pdf' && pdfAsImage ? pdfAsImage : sourceDocument} 
                 alt="Crop source" 
                 className="cropper-image"
               />

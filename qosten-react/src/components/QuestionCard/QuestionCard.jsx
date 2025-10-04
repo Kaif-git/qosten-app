@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuestions } from '../../context/QuestionContext';
 import { useNavigate } from 'react-router-dom';
+import LatexRenderer from '../LatexRenderer/LatexRenderer';
 
 export default function QuestionCard({ question, selectionMode, isSelected, onToggleSelect }) {
   const { deleteQuestion, setEditingQuestion } = useQuestions();
@@ -17,9 +18,9 @@ export default function QuestionCard({ question, selectionMode, isSelected, onTo
     navigate('/add');
   };
   
-  const handleDelete = () => {
+  const handleDelete = async () => {
     if (window.confirm('Are you sure you want to delete this question?')) {
-      deleteQuestion(question.id);
+      await deleteQuestion(question.id);
     }
   };
   
@@ -27,7 +28,7 @@ export default function QuestionCard({ question, selectionMode, isSelected, onTo
     if (question.type === 'mcq') {
       return (
         <>
-          <p><strong>Question:</strong> {question.question || 'N/A'}</p>
+          <p><strong>Question:</strong> <LatexRenderer text={question.question || 'N/A'} /></p>
           {question.image && (
             <img 
               src={question.image} 
@@ -42,7 +43,7 @@ export default function QuestionCard({ question, selectionMode, isSelected, onTo
                   key={index} 
                   className={question.correctAnswer && option.label === question.correctAnswer ? 'correct' : ''}
                 >
-                  {option.text || 'N/A'}
+                  <LatexRenderer text={option.text || 'N/A'} />
                   {option.image && (
                     <img 
                       src={option.image} 
@@ -57,13 +58,13 @@ export default function QuestionCard({ question, selectionMode, isSelected, onTo
             <p>No options available</p>
           )}
           <p><strong>Correct Answer:</strong> {question.correctAnswer ? question.correctAnswer.toUpperCase() : 'N/A'}</p>
-          {question.explanation && <p><strong>Explanation:</strong> {question.explanation}</p>}
+          {question.explanation && <p><strong>Explanation:</strong> <LatexRenderer text={question.explanation} /></p>}
         </>
       );
     } else if (question.type === 'cq') {
       return (
         <>
-          <p><strong>Question:</strong> {question.questionText || 'N/A'}</p>
+          <p><strong>Question:</strong> <LatexRenderer text={question.questionText || 'N/A'} /></p>
           {question.image && (
             <img 
               src={question.image} 
@@ -87,8 +88,8 @@ export default function QuestionCard({ question, selectionMode, isSelected, onTo
                 
                 return (
                   <li key={index}>
-                    <strong>Part {part.letter?.toUpperCase() || 'N/A'}:</strong> {part.text || 'N/A'} (Marks: {part.marks || 'N/A'})<br/>
-                    <strong>Answer:</strong> {part.answer || 'N/A'}
+                    <strong>Part {part.letter?.toUpperCase() || 'N/A'}:</strong> <LatexRenderer text={part.text || 'N/A'} /><br/>
+                    <strong>Answer:</strong> <LatexRenderer text={part.answer || 'N/A'} />
                     {partImage && (
                       <img 
                         src={partImage} 
@@ -108,7 +109,7 @@ export default function QuestionCard({ question, selectionMode, isSelected, onTo
     } else if (question.type === 'sq') {
       return (
         <>
-          <p><strong>Question:</strong> {question.question || 'N/A'}</p>
+          <p><strong>Question:</strong> <LatexRenderer text={question.question || 'N/A'} /></p>
           {question.image && (
             <img 
               src={question.image} 
@@ -116,7 +117,7 @@ export default function QuestionCard({ question, selectionMode, isSelected, onTo
               style={{maxWidth: '200px', maxHeight: '200px', marginBottom: '10px'}} 
             />
           )}
-          <p><strong>Answer:</strong> {question.answer || 'N/A'}</p>
+          <p><strong>Answer:</strong> <LatexRenderer text={question.answer || 'N/A'} /></p>
         </>
       );
     }

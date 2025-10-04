@@ -1,0 +1,27 @@
+.latex-inline {
+  display: inline;
+}
+
+.latex-block {
+  display: block;
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* KaTeX styling adjustments */
+.katex {
+  font-size: 1.1em;
+}
+
+.katex-display {
+  margin: 1em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .katex {
+    font-size: 1em;
+  }
+}

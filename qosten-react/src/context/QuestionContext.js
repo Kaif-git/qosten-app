@@ -84,16 +84,46 @@ export function QuestionProvider({ children }) {
     updateStats(questions);
   };
 
-  const addQuestion = (question) => {
+  const addQuestion = async (question) => {
     // Check for duplicate questions
     const isDuplicate = checkDuplicate(question);
     if (isDuplicate) {
       throw new Error('Duplicate question detected. This question already exists in the question bank.');
     }
     
-    const newQuestion = { ...question, id: Date.now().toString() };
-    dispatch({ type: ACTIONS.ADD_QUESTION, payload: newQuestion });
-    return newQuestion;
+    if (!supabaseClient) {
+      // Fallback to local storage
+      const newQuestion = { ...question, id: Date.now().toString() };
+      dispatch({ type: ACTIONS.ADD_QUESTION, payload: newQuestion });
+      return newQuestion;
+    }
+
+    try {
+      // Map to database format and insert
+      const dbQuestion = mapAppToDatabase(question);
+      delete dbQuestion.id; // Let database generate ID
+      
+      const { data, error } = await supabaseClient
+        .from('questions')
+        .insert([dbQuestion])
+        .select();
+
+      if (error) {
+        console.error('Error adding question to database:', error);
+        throw new Error('Failed to add question to database');
+      }
+
+      if (data && data[0]) {
+        const newQuestion = mapDatabaseToApp(data[0]);
+        dispatch({ type: ACTIONS.ADD_QUESTION, payload: newQuestion });
+        clearCache(); // Invalidate cache when a new question is added
+        console.log('Question added to database:', newQuestion.id);
+        return newQuestion;
+      }
+    } catch (error) {
+      console.error('Error in addQuestion:', error);
+      throw error;
+    }
   };
 
   const checkDuplicate = (newQuestion) => {
@@ -114,12 +144,63 @@ export function QuestionProvider({ children }) {
     });
   };
 
-  const updateQuestion = (question) => {
-    dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
+  const updateQuestion = async (question) => {
+    if (!supabaseClient) {
+      // Fallback to local state only
+      dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
+      return;
+    }
+
+    try {
+      const dbQuestion = mapAppToDatabase(question);
+      const questionId = parseInt(question.id);
+
+      const { error } = await supabaseClient
+        .from('questions')
+        .update(dbQuestion)
+        .eq('id', questionId);
+
+      if (error) {
+        console.error('Error updating question in database:', error);
+        throw new Error('Failed to update question in database');
+      }
+
+      dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
+      clearCache(); // Invalidate cache when a question is updated
+      console.log('Question updated in database:', question.id);
+    } catch (error) {
+      console.error('Error in updateQuestion:', error);
+      throw error;
+    }
   };
 
-  const deleteQuestion = (id) => {
-    dispatch({ type: ACTIONS.DELETE_QUESTION, payload: id });
+  const deleteQuestion = async (id) => {
+    if (!supabaseClient) {
+      // Fallback to local state only
+      dispatch({ type: ACTIONS.DELETE_QUESTION, payload: id });
+      return;
+    }
+
+    try {
+      const questionId = parseInt(id);
+
+      const { error } = await supabaseClient
+        .from('questions')
+        .delete()
+        .eq('id', questionId);
+
+      if (error) {
+        console.error('Error deleting question from database:', error);
+        throw new Error('Failed to delete question from database');
+      }
+
+      dispatch({ type: ACTIONS.DELETE_QUESTION, payload: id });
+      clearCache(); // Invalidate cache when a question is deleted
+      console.log('Question deleted from database:', id);
+    } catch (error) {
+      console.error('Error in deleteQuestion:', error);
+      throw error;
+    }
   };
 
   const setFilters = (filters) => {
@@ -145,25 +226,232 @@ export function QuestionProvider({ children }) {
     }});
   };
 
-  // Load questions from localStorage on mount
-  useEffect(() => {
-    const savedQuestions = localStorage.getItem('questionBank');
-    if (savedQuestions) {
-      try {
-        const questions = JSON.parse(savedQuestions);
-        setQuestions(questions);
-      } catch (error) {
-        console.error('Error parsing saved questions:', error);
-      }
+  // Helper function to map database question to app format
+  const mapDatabaseToApp = (dbQuestion) => {
+    return {
+      id: dbQuestion.id?.toString() || Date.now().toString(),
+      type: dbQuestion.type,
+      subject: dbQuestion.subject,
+      chapter: dbQuestion.chapter,
+      lesson: dbQuestion.lesson,
+      board: dbQuestion.board,
+      language: dbQuestion.language || 'en',
+      question: dbQuestion.question,
+      questionText: dbQuestion.question_text || dbQuestion.question,
+      options: dbQuestion.options,
+      correctAnswer: dbQuestion.correct_answer,
+      answer: dbQuestion.answer,
+      parts: dbQuestion.parts,
+      image: dbQuestion.image,
+      answerimage1: dbQuestion.answerimage1,
+      answerimage2: dbQuestion.answerimage2,
+      explanation: dbQuestion.explanation,
+      tags: dbQuestion.tags || [],
+      isQuizzable: dbQuestion.is_quizzable !== undefined ? dbQuestion.is_quizzable : true,
+      createdAt: dbQuestion.created_at
+    };
+  };
+
+  // Helper function to map app question to database format
+  const mapAppToDatabase = (appQuestion) => {
+    return {
+      id: appQuestion.id ? parseInt(appQuestion.id) : undefined,
+      type: appQuestion.type,
+      subject: appQuestion.subject,
+      chapter: appQuestion.chapter,
+      lesson: appQuestion.lesson || 'N/A',
+      board: appQuestion.board || 'N/A',
+      language: appQuestion.language || 'en',
+      question: appQuestion.question || appQuestion.questionText,
+      question_text: appQuestion.questionText || appQuestion.question,
+      options: appQuestion.options,
+      correct_answer: appQuestion.correctAnswer,
+      answer: appQuestion.answer,
+      parts: appQuestion.parts,
+      image: appQuestion.image,
+      answerimage1: appQuestion.answerimage1,
+      answerimage2: appQuestion.answerimage2,
+      explanation: appQuestion.explanation,
+      tags: appQuestion.tags || [],
+      is_quizzable: appQuestion.isQuizzable !== undefined ? appQuestion.isQuizzable : true,
+      synced: false
+    };
+  };
+
+  // Cache management constants
+  const CACHE_KEY = 'questions_cache';
+  const CACHE_TIMESTAMP_KEY = 'questions_cache_timestamp';
+  const CACHE_DURATION = 1000 * 60 * 60; // 1 hour in milliseconds
+
+  // Save questions to cache
+  const saveCacheToLocalStorage = (questions) => {
+    try {
+      localStorage.setItem(CACHE_KEY, JSON.stringify(questions));
+      localStorage.setItem(CACHE_TIMESTAMP_KEY, Date.now().toString());
+      console.log(`Cached ${questions.length} questions to localStorage`);
+    } catch (error) {
+      console.error('Error saving cache to localStorage:', error);
     }
+  };
+
+  // Load questions from cache
+  const loadCacheFromLocalStorage = () => {
+    try {
+      const cachedQuestions = localStorage.getItem(CACHE_KEY);
+      const cacheTimestamp = localStorage.getItem(CACHE_TIMESTAMP_KEY);
+
+      if (!cachedQuestions || !cacheTimestamp) {
+        return null;
+      }
+
+      const cacheAge = Date.now() - parseInt(cacheTimestamp);
+      
+      // Check if cache is still valid
+      if (cacheAge > CACHE_DURATION) {
+        console.log('Cache expired, will fetch fresh data');
+        return null;
+      }
+
+      const questions = JSON.parse(cachedQuestions);
+      console.log(`Loaded ${questions.length} questions from cache (age: ${Math.round(cacheAge / 1000 / 60)} minutes)`);
+      return questions;
+    } catch (error) {
+      console.error('Error loading cache from localStorage:', error);
+      return null;
+    }
+  };
+
+  // Clear cache
+  const clearCache = () => {
+    try {
+      localStorage.removeItem(CACHE_KEY);
+      localStorage.removeItem(CACHE_TIMESTAMP_KEY);
+      console.log('Cache cleared');
+    } catch (error) {
+      console.error('Error clearing cache:', error);
+    }
+  };
+
+  // Load questions from Supabase on mount
+  useEffect(() => {
+    const loadQuestionsFromDatabase = async () => {
+      if (!supabaseClient) {
+        console.warn('Supabase client not initialized. Falling back to localStorage.');
+        // Fallback to localStorage if Supabase is not configured
+        const savedQuestions = localStorage.getItem('questionBank');
+        if (savedQuestions) {
+          try {
+            const questions = JSON.parse(savedQuestions);
+            setQuestions(questions);
+          } catch (error) {
+            console.error('Error parsing saved questions:', error);
+          }
+        }
+        return;
+      }
+
+      // Try to load from cache first
+      const cachedQuestions = loadCacheFromLocalStorage();
+      if (cachedQuestions) {
+        setQuestions(cachedQuestions);
+        console.log('Using cached questions');
+        return;
+      }
+
+      // If no valid cache, fetch from database
+      try {
+        console.log('Starting to fetch all questions from database...');
+        let allQuestions = [];
+        let from = 0;
+        const batchSize = 1000;
+        let hasMore = true;
+
+        // Fetch questions in batches to overcome the 1000 row limit
+        while (hasMore) {
+          const { data, error, count } = await supabaseClient
+            .from('questions')
+            .select('*', { count: 'exact' })
+            .order('created_at', { ascending: false })
+            .range(from, from + batchSize - 1);
+
+          if (error) {
+            console.error('Error fetching questions from database:', error);
+            break;
+          }
+
+          if (data) {
+            allQuestions = [...allQuestions, ...data];
+            console.log(`Fetched batch: ${data.length} questions (total so far: ${allQuestions.length})`);
+            
+            // Check if there are more questions to fetch
+            from += batchSize;
+            hasMore = data.length === batchSize;
+          } else {
+            hasMore = false;
+          }
+        }
+
+        if (allQuestions.length > 0) {
+          const mappedQuestions = allQuestions.map(mapDatabaseToApp);
+          setQuestions(mappedQuestions);
+          // Save to cache after successful fetch
+          saveCacheToLocalStorage(mappedQuestions);
+          console.log(`Successfully loaded ${mappedQuestions.length} questions from database`);
+        } else {
+          console.log('No questions found in database');
+        }
+      } catch (error) {
+        console.error('Error loading questions:', error);
+      }
+    };
+
+    loadQuestionsFromDatabase();
   }, []);
 
-  // Save questions to localStorage whenever questions change
-  useEffect(() => {
-    if (state.questions.length > 0) {
-      localStorage.setItem('questionBank', JSON.stringify(state.questions));
+  // Function to manually refresh questions from database
+  const refreshQuestions = async () => {
+    clearCache();
+    if (!supabaseClient) return;
+
+    try {
+      console.log('Manually refreshing questions from database...');
+      let allQuestions = [];
+      let from = 0;
+      const batchSize = 1000;
+      let hasMore = true;
+
+      while (hasMore) {
+        const { data, error } = await supabaseClient
+          .from('questions')
+          .select('*', { count: 'exact' })
+          .order('created_at', { ascending: false })
+          .range(from, from + batchSize - 1);
+
+        if (error) {
+          console.error('Error fetching questions from database:', error);
+          break;
+        }
+
+        if (data) {
+          allQuestions = [...allQuestions, ...data];
+          console.log(`Fetched batch: ${data.length} questions (total so far: ${allQuestions.length})`);
+          from += batchSize;
+          hasMore = data.length === batchSize;
+        } else {
+          hasMore = false;
+        }
+      }
+
+      if (allQuestions.length > 0) {
+        const mappedQuestions = allQuestions.map(mapDatabaseToApp);
+        setQuestions(mappedQuestions);
+        saveCacheToLocalStorage(mappedQuestions);
+        console.log(`Successfully refreshed ${mappedQuestions.length} questions`);
+      }
+    } catch (error) {
+      console.error('Error refreshing questions:', error);
     }
-  }, [state.questions]);
+  };
 
   const value = {
     ...state,
@@ -175,7 +463,9 @@ export function QuestionProvider({ children }) {
     setFilters,
     setEditingQuestion,
     setAuthenticated,
-    updateStats
+    updateStats,
+    refreshQuestions,
+    clearCache
   };
 
   return (

@@ -9,6 +9,7 @@ import PasswordOverlay from './components/PasswordOverlay/PasswordOverlay';
 import { QuestionProvider } from './context/QuestionContext';
 import { PromptProvider } from './context/SimplePromptContext';
 import SimplePromptManager from './components/SimplePromptManager/SimplePromptManager';
+import MathQuestionImport from './components/MathQuestionImport/MathQuestionImport';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
               <Route path="/import-bn" element={<ImportTabs type="mcq" language="bn" />} />
               <Route path="/import-cq-bn" element={<ImportTabs type="cq" language="bn" />} />
               <Route path="/import-sq-bn" element={<ImportTabs type="sq" language="bn" />} />
+              <Route path="/import-math" element={<MathQuestionImport />} />
               <Route path="/prompts" element={<SimplePromptManager />} />
             </Routes>
           </div>

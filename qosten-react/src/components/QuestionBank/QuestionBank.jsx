@@ -49,7 +49,7 @@ export default function QuestionBank() {
     setSelectedQuestions([]);
   };
   
-  const bulkDelete = () => {
+  const bulkDelete = async () => {
     if (selectedQuestions.length === 0) {
       alert('Please select at least one question to delete.');
       return;
@@ -57,7 +57,9 @@ export default function QuestionBank() {
     
     const confirmMessage = `Are you sure you want to delete ${selectedQuestions.length} question(s)? This action cannot be undone.`;
     if (window.confirm(confirmMessage)) {
-      selectedQuestions.forEach(id => deleteQuestion(id));
+      for (const id of selectedQuestions) {
+        await deleteQuestion(id);
+      }
       setSelectedQuestions([]);
       setSelectionMode(false);
       alert(`Successfully deleted ${selectedQuestions.length} question(s).`);

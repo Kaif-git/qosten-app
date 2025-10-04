@@ -563,15 +563,16 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
     }
   };
   
-  const confirmAddQuestions = (editedQuestions) => {
+  const confirmAddQuestions = async (editedQuestions) => {
     // Add edited questions to the bank, tracking duplicates
     let addedCount = 0;
     let duplicateCount = 0;
     const duplicateQuestions = [];
     
-    editedQuestions.forEach((question, index) => {
+    for (let index = 0; index < editedQuestions.length; index++) {
+      const question = editedQuestions[index];
       try {
-        addQuestion(question);
+        await addQuestion(question);
         addedCount++;
       } catch (error) {
         if (error.message.includes('Duplicate')) {
@@ -582,7 +583,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
           console.error('Error adding question:', error);
         }
       }
-    });
+    }
     
     // Show summary message
     let message = `Successfully added ${addedCount} question(s)!`;

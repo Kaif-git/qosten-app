@@ -299,6 +299,10 @@
   margin: 15px 0;
 }
 
+.option-edit-container {
+  margin: 8px 0;
+}
+
 .option-edit-row {
   display: flex;
   align-items: center;
@@ -681,6 +685,69 @@
   background-color: #5a6268;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3);
+}
+
+/* PDF Page Selector */
+.pdf-page-selector {
+  margin: 15px 0;
+  padding: 12px 15px;
+  background-color: #fff;
+  border: 1px solid #007bff;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pdf-page-selector label {
+  color: #007bff;
+  font-size: 14px;
+}
+
+.pdf-page-selector select {
+  flex: 0 0 auto;
+  min-width: 120px;
+  cursor: pointer;
+}
+
+.pdf-page-selector select:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+/* LaTeX Preview Boxes */
+.edit-with-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.latex-preview-box {
+  padding: 15px;
+  background-color: #f8f9fa;
+  border: 2px solid #28a745;
+  border-radius: 6px;
+  min-height: 50px;
+  overflow-x: auto;
+}
+
+.latex-preview-box strong {
+  display: block;
+  color: #28a745;
+  font-size: 13px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.latex-preview-box .katex {
+  font-size: 1.05em;
+}
+
+.latex-preview-box .katex-display {
+  margin: 0.5em 0;
 }
 
 /* Responsive adjustments */

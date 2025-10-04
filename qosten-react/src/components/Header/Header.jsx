@@ -2,8 +2,9 @@ import React, { useRef } from 'react';
 import { useQuestions } from '../../context/QuestionContext';
 
 export default function Header() {
-  const { questions, setQuestions } = useQuestions();
+  const { questions, setQuestions, refreshQuestions } = useQuestions();
   const fileInputRef = useRef(null);
+  const [isRefreshing, setIsRefreshing] = React.useState(false);
   
   const exportQuestions = () => {
     if (questions.length === 0) {
@@ -87,6 +88,21 @@ export default function Header() {
     reader.readAsText(file);
     event.target.value = ''; // Reset file input
   };
+
+  const handleRefresh = async () => {
+    if (isRefreshing) return;
+    
+    setIsRefreshing(true);
+    try {
+      await refreshQuestions();
+      alert('Questions refreshed successfully from database!');
+    } catch (error) {
+      console.error('Error refreshing questions:', error);
+      alert('Failed to refresh questions. Please try again.');
+    } finally {
+      setIsRefreshing(false);
+    }
+  };
   
   return (
     <div className="header" style={{display:'flex', flexDirection:'column', marginBottom:20}}>
@@ -94,6 +110,17 @@ export default function Header() {
       <div>
         <button className="secondary" onClick={exportQuestions}>Export All</button>
         <button className="secondary" onClick={handleImportClick}>Import JSON</button>
+        <button 
+          className="secondary" 
+          onClick={handleRefresh}
+          disabled={isRefreshing}
+          style={{
+            opacity: isRefreshing ? 0.6 : 1,
+            cursor: isRefreshing ? 'not-allowed' : 'pointer'
+          }}
+        >
+          {isRefreshing ? '🔄 Refreshing...' : '🔄 Refresh from DB'}
+        </button>
         <input
           ref={fileInputRef}
           type="file"

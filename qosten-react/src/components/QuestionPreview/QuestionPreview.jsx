@@ -6,7 +6,7 @@ import * as pdfjsLib from 'pdfjs-dist';
 // Set up PDF.js worker using unpkg CDN with matching version
 pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.mjs`;
 
-export default function QuestionPreview({ questions, onConfirm, onCancel }) {
+export default function QuestionPreview({ questions, onConfirm, onCancel, title, isEditMode = false }) {
   const [editableQuestions, setEditableQuestions] = useState(questions);
   const [sourceDocument, setSourceDocument] = useState(null);
   const [sourceDocType, setSourceDocType] = useState(null); // 'image' or 'pdf'
@@ -19,8 +19,25 @@ export default function QuestionPreview({ questions, onConfirm, onCancel }) {
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
   const [pdfArrayBuffer, setPdfArrayBuffer] = useState(null); // Store PDF data
+  const [selectedQuestions, setSelectedQuestions] = useState(new Set());
+  const [showBulkEditor, setShowBulkEditor] = useState(false);
+  const [bulkMetadata, setBulkMetadata] = useState({ subject: '', chapter: '', lesson: '', board: '' });
   const canvasRef = useRef(null);
   const imageRef = useRef(null);
+  
+  // Get unique metadata values from all questions in preview
+  const getUniqueValues = (field) => {
+    const values = editableQuestions
+      .map(q => q[field])
+      .filter(val => val && val.trim() !== '' && val !== 'N/A')
+      .filter((value, index, self) => self.indexOf(value) === index);
+    return values.sort();
+  };
+  
+  const uniqueSubjects = getUniqueValues('subject');
+  const uniqueChapters = getUniqueValues('chapter');
+  const uniqueLessons = getUniqueValues('lesson');
+  const uniqueBoards = getUniqueValues('board');
   
   if (!questions || questions.length === 0) return null;
   
@@ -236,9 +253,76 @@ export default function QuestionPreview({ questions, onConfirm, onCancel }) {
     updateQuestion(index, 'image', null);
   };
 
+  const toggleQuestionSelection = (index) => {
+    setSelectedQuestions(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(index)) {
+        newSet.delete(index);
+      } else {
+        newSet.add(index);
+      }
+      return newSet;
+    });
+  };
+
+  const selectAllQuestions = () => {
+    const allIndices = editableQuestions.map((_, idx) => idx);
+    setSelectedQuestions(new Set(allIndices));
+  };
+
+  const deselectAllQuestions = () => {
+    setSelectedQuestions(new Set());
+  };
+
+  const applyBulkMetadata = () => {
+    if (selectedQuestions.size === 0) {
+      alert('Please select at least one question.');
+      return;
+    }
+
+    setEditableQuestions(prev => {
+      const updated = [...prev];
+      selectedQuestions.forEach(index => {
+        if (bulkMetadata.subject) {
+          updated[index] = { ...updated[index], subject: bulkMetadata.subject };
+        }
+        if (bulkMetadata.chapter) {
+          updated[index] = { ...updated[index], chapter: bulkMetadata.chapter };
+        }
+        if (bulkMetadata.lesson) {
+          updated[index] = { ...updated[index], lesson: bulkMetadata.lesson };
+        }
+        if (bulkMetadata.board) {
+          updated[index] = { ...updated[index], board: bulkMetadata.board };
+        }
+      });
+      return updated;
+    });
+
+    // Reset and close
+    setBulkMetadata({ subject: '', chapter: '', lesson: '', board: '' });
+    setShowBulkEditor(false);
+    setSelectedQuestions(new Set());
+    alert(`✅ Metadata updated for ${selectedQuestions.size} question(s)!`);
+  };
+
   const renderMCQPreview = (question, index) => (
-    <div key={index} className="question-preview-item">
-      <h4>Question {index + 1} - MCQ</h4>
+    <div key={index} className="question-preview-item" style={{
+      border: selectedQuestions.has(index) ? '3px solid #3498db' : undefined,
+      backgroundColor: selectedQuestions.has(index) ? '#f0f8ff' : undefined
+    }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+        <h4 style={{ margin: 0 }}>Question {index + 1} - MCQ</h4>
+        <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', fontSize: '14px', fontWeight: 'normal' }}>
+          <input
+            type="checkbox"
+            checked={selectedQuestions.has(index)}
+            onChange={() => toggleQuestionSelection(index)}
+            style={{ marginRight: '5px', cursor: 'pointer', width: '18px', height: '18px' }}
+          />
+          <span>Select for bulk edit</span>
+        </label>
+      </div>
       <div className="preview-metadata-edit">
         <input
           type="text"
@@ -367,8 +451,22 @@ export default function QuestionPreview({ questions, onConfirm, onCancel }) {
   );
 
   const renderCQPreview = (question, index) => (
-    <div key={index} className="question-preview-item">
-      <h4>Question {index + 1} - CQ</h4>
+    <div key={index} className="question-preview-item" style={{
+      border: selectedQuestions.has(index) ? '3px solid #3498db' : undefined,
+      backgroundColor: selectedQuestions.has(index) ? '#f0f8ff' : undefined
+    }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+        <h4 style={{ margin: 0 }}>Question {index + 1} - CQ</h4>
+        <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', fontSize: '14px', fontWeight: 'normal' }}>
+          <input
+            type="checkbox"
+            checked={selectedQuestions.has(index)}
+            onChange={() => toggleQuestionSelection(index)}
+            style={{ marginRight: '5px', cursor: 'pointer', width: '18px', height: '18px' }}
+          />
+          <span>Select for bulk edit</span>
+        </label>
+      </div>
       <div className="preview-metadata-edit">
         <input
           type="text"
@@ -492,8 +590,22 @@ export default function QuestionPreview({ questions, onConfirm, onCancel }) {
   );
 
   const renderSQPreview = (question, index) => (
-    <div key={index} className="question-preview-item">
-      <h4>Question {index + 1} - SQ</h4>
+    <div key={index} className="question-preview-item" style={{
+      border: selectedQuestions.has(index) ? '3px solid #3498db' : undefined,
+      backgroundColor: selectedQuestions.has(index) ? '#f0f8ff' : undefined
+    }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+        <h4 style={{ margin: 0 }}>Question {index + 1} - SQ</h4>
+        <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', fontSize: '14px', fontWeight: 'normal' }}>
+          <input
+            type="checkbox"
+            checked={selectedQuestions.has(index)}
+            onChange={() => toggleQuestionSelection(index)}
+            style={{ marginRight: '5px', cursor: 'pointer', width: '18px', height: '18px' }}
+          />
+          <span>Select for bulk edit</span>
+        </label>
+      </div>
       <div className="preview-metadata-edit">
         <input
           type="text"
@@ -574,10 +686,226 @@ export default function QuestionPreview({ questions, onConfirm, onCancel }) {
     <>
       <div className="preview-modal-overlay">
         <div className="preview-modal">
-          <h2>Preview & Edit Questions</h2>
+          <h2>{title || 'Preview & Edit Questions'}</h2>
           <p className="preview-count">
-            Review and edit <strong>{editableQuestions.length}</strong> question{editableQuestions.length !== 1 ? 's' : ''} before adding to the question bank.
+            {isEditMode 
+              ? `Review and edit ${editableQuestions.length} question${editableQuestions.length !== 1 ? 's' : ''} from the batch.`
+              : `Review and edit <strong>${editableQuestions.length}</strong> question${editableQuestions.length !== 1 ? 's' : ''} before adding to the question bank.`
+            }
           </p>
+          
+          {/* Bulk Metadata Editor Section */}
+          <div style={{
+            backgroundColor: '#f8f9fa',
+            padding: '15px',
+            borderRadius: '8px',
+            marginBottom: '20px',
+            border: '2px solid #3498db'
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+              <h3 style={{ margin: 0, color: '#3498db' }}>📦 Bulk Metadata Editor</h3>
+              <div>
+                <button 
+                  onClick={selectAllQuestions}
+                  style={{
+                    backgroundColor: '#3498db',
+                    color: 'white',
+                    border: 'none',
+                    padding: '8px 15px',
+                    borderRadius: '5px',
+                    cursor: 'pointer',
+                    marginRight: '5px',
+                    fontSize: '14px'
+                  }}
+                >
+                  Select All
+                </button>
+                <button 
+                  onClick={deselectAllQuestions}
+                  style={{
+                    backgroundColor: '#95a5a6',
+                    color: 'white',
+                    border: 'none',
+                    padding: '8px 15px',
+                    borderRadius: '5px',
+                    cursor: 'pointer',
+                    fontSize: '14px'
+                  }}
+                >
+                  Deselect All
+                </button>
+              </div>
+            </div>
+            <p style={{ fontSize: '14px', color: '#666', margin: '5px 0 15px 0' }}>
+              Select questions using the checkboxes, then update metadata for all selected questions at once. Selected: <strong>{selectedQuestions.size}</strong>
+            </p>
+            
+            {showBulkEditor ? (
+              <div style={{ backgroundColor: 'white', padding: '15px', borderRadius: '5px', border: '1px solid #ddd' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px', marginBottom: '15px' }}>
+                  <div>
+                    <label style={{ fontSize: '13px', fontWeight: '600', display: 'block', marginBottom: '5px' }}>
+                      Subject:
+                      {uniqueSubjects.length > 0 && <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#666', marginLeft: '5px' }}>({uniqueSubjects.length} existing)</span>}
+                    </label>
+                    <div style={{ display: 'flex', gap: '8px' }}>
+                      <input
+                        list="preview-subjects-list"
+                        type="text"
+                        placeholder="Type or select"
+                        value={bulkMetadata.subject}
+                        onChange={(e) => setBulkMetadata(prev => ({ ...prev, subject: e.target.value }))}
+                        style={{ flex: 1, padding: '8px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '13px' }}
+                      />
+                      <datalist id="preview-subjects-list">
+                        {uniqueSubjects.map((subject, idx) => <option key={idx} value={subject} />)}
+                      </datalist>
+                      <select
+                        value={bulkMetadata.subject}
+                        onChange={(e) => setBulkMetadata(prev => ({ ...prev, subject: e.target.value }))}
+                        style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '13px', minWidth: '120px' }}
+                      >
+                        <option value="">-- Select --</option>
+                        {uniqueSubjects.map((subject, idx) => <option key={idx} value={subject}>{subject}</option>)}
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label style={{ fontSize: '13px', fontWeight: '600', display: 'block', marginBottom: '5px' }}>
+                      Chapter:
+                      {uniqueChapters.length > 0 && <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#666', marginLeft: '5px' }}>({uniqueChapters.length} existing)</span>}
+                    </label>
+                    <div style={{ display: 'flex', gap: '8px' }}>
+                      <input
+                        list="preview-chapters-list"
+                        type="text"
+                        placeholder="Type or select"
+                        value={bulkMetadata.chapter}
+                        onChange={(e) => setBulkMetadata(prev => ({ ...prev, chapter: e.target.value }))}
+                        style={{ flex: 1, padding: '8px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '13px' }}
+                      />
+                      <datalist id="preview-chapters-list">
+                        {uniqueChapters.map((chapter, idx) => <option key={idx} value={chapter} />)}
+                      </datalist>
+                      <select
+                        value={bulkMetadata.chapter}
+                        onChange={(e) => setBulkMetadata(prev => ({ ...prev, chapter: e.target.value }))}
+                        style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '13px', minWidth: '120px' }}
+                      >
+                        <option value="">-- Select --</option>
+                        {uniqueChapters.map((chapter, idx) => <option key={idx} value={chapter}>{chapter}</option>)}
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label style={{ fontSize: '13px', fontWeight: '600', display: 'block', marginBottom: '5px' }}>
+                      Lesson:
+                      {uniqueLessons.length > 0 && <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#666', marginLeft: '5px' }}>({uniqueLessons.length} existing)</span>}
+                    </label>
+                    <div style={{ display: 'flex', gap: '8px' }}>
+                      <input
+                        list="preview-lessons-list"
+                        type="text"
+                        placeholder="Type or select"
+                        value={bulkMetadata.lesson}
+                        onChange={(e) => setBulkMetadata(prev => ({ ...prev, lesson: e.target.value }))}
+                        style={{ flex: 1, padding: '8px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '13px' }}
+                      />
+                      <datalist id="preview-lessons-list">
+                        {uniqueLessons.map((lesson, idx) => <option key={idx} value={lesson} />)}
+                      </datalist>
+                      <select
+                        value={bulkMetadata.lesson}
+                        onChange={(e) => setBulkMetadata(prev => ({ ...prev, lesson: e.target.value }))}
+                        style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '13px', minWidth: '120px' }}
+                      >
+                        <option value="">-- Select --</option>
+                        {uniqueLessons.map((lesson, idx) => <option key={idx} value={lesson}>{lesson}</option>)}
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label style={{ fontSize: '13px', fontWeight: '600', display: 'block', marginBottom: '5px' }}>
+                      Board:
+                      {uniqueBoards.length > 0 && <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#666', marginLeft: '5px' }}>({uniqueBoards.length} existing)</span>}
+                    </label>
+                    <div style={{ display: 'flex', gap: '8px' }}>
+                      <input
+                        list="preview-boards-list"
+                        type="text"
+                        placeholder="Type or select"
+                        value={bulkMetadata.board}
+                        onChange={(e) => setBulkMetadata(prev => ({ ...prev, board: e.target.value }))}
+                        style={{ flex: 1, padding: '8px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '13px' }}
+                      />
+                      <datalist id="preview-boards-list">
+                        {uniqueBoards.map((board, idx) => <option key={idx} value={board} />)}
+                      </datalist>
+                      <select
+                        value={bulkMetadata.board}
+                        onChange={(e) => setBulkMetadata(prev => ({ ...prev, board: e.target.value }))}
+                        style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '13px', minWidth: '120px' }}
+                      >
+                        <option value="">-- Select --</option>
+                        {uniqueBoards.map((board, idx) => <option key={idx} value={board}>{board}</option>)}
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div style={{ display: 'flex', gap: '10px' }}>
+                  <button 
+                    onClick={applyBulkMetadata}
+                    style={{
+                      backgroundColor: '#27ae60',
+                      color: 'white',
+                      border: 'none',
+                      padding: '10px 20px',
+                      borderRadius: '5px',
+                      cursor: 'pointer',
+                      fontSize: '14px',
+                      fontWeight: '600'
+                    }}
+                  >
+                    ✓ Apply to Selected ({selectedQuestions.size})
+                  </button>
+                  <button 
+                    onClick={() => {
+                      setShowBulkEditor(false);
+                      setBulkMetadata({ subject: '', chapter: '', lesson: '', board: '' });
+                    }}
+                    style={{
+                      backgroundColor: '#e74c3c',
+                      color: 'white',
+                      border: 'none',
+                      padding: '10px 20px',
+                      borderRadius: '5px',
+                      cursor: 'pointer',
+                      fontSize: '14px'
+                    }}
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <button 
+                onClick={() => setShowBulkEditor(true)}
+                disabled={selectedQuestions.size === 0}
+                style={{
+                  backgroundColor: selectedQuestions.size === 0 ? '#bdc3c7' : '#3498db',
+                  color: 'white',
+                  border: 'none',
+                  padding: '10px 20px',
+                  borderRadius: '5px',
+                  cursor: selectedQuestions.size === 0 ? 'not-allowed' : 'pointer',
+                  fontSize: '14px',
+                  fontWeight: '600'
+                }}
+              >
+                ✏️ Edit Metadata for Selected Questions ({selectedQuestions.size})
+              </button>
+            )}
+          </div>
           
           {/* Source Document Upload Section */}
           <div className="source-document-section">
@@ -645,10 +973,10 @@ export default function QuestionPreview({ questions, onConfirm, onCancel }) {
           </div>
           <div className="preview-modal-actions">
             <button className="confirm-btn" onClick={() => onConfirm(editableQuestions)}>
-              Confirm & Add to Question Bank
+              {isEditMode ? 'Save Changes' : 'Confirm & Add to Question Bank'}
             </button>
             <button className="cancel-btn" onClick={onCancel}>
-              Cancel
+              {isEditMode ? 'Close' : 'Cancel'}
             </button>
           </div>
         </div>

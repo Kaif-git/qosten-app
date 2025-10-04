@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useQuestions } from '../../context/QuestionContext';
 import QuestionPreview from '../QuestionPreview/QuestionPreview';
-import { parseMathQuestions, getMathQuestionExample } from '../../utils/mathQuestionParser';
+import { parseMCQQuestions, getMCQQuestionExample } from '../../utils/mcqQuestionParser';
 
-export default function MathQuestionImport() {
+export default function MCQImport() {
   const { addQuestion, setLastBatch, getLastBatchQuestions, lastBatch, updateQuestion } = useQuestions();
   const [inputText, setInputText] = useState('');
   const [parsedQuestions, setParsedQuestions] = useState([]);
@@ -21,7 +21,7 @@ export default function MathQuestionImport() {
     }
 
     try {
-      const questions = parseMathQuestions(inputText);
+      const questions = parseMCQQuestions(inputText);
       
       if (questions.length === 0) {
         alert('No valid questions found. Please check the format.');
@@ -85,7 +85,7 @@ export default function MathQuestionImport() {
     }
     
     // Show success/summary message
-    let message = `✅ Successfully added ${addedCount} math question(s) to the question bank!`;
+    let message = `✅ Successfully added ${addedCount} MCQ question(s) to the question bank!`;
     if (duplicateCount > 0) {
       message += `\n⚠️ ${duplicateCount} duplicate question(s) were skipped.`;
     }
@@ -165,7 +165,7 @@ export default function MathQuestionImport() {
               fontSize: '24px',
               fontWeight: 'bold',
               marginBottom: '15px',
-              color: '#e67e22'
+              color: '#9b59b6'
             }}>
               {progress.current} / {progress.total}
             </div>
@@ -180,7 +180,7 @@ export default function MathQuestionImport() {
               <div style={{
                 width: `${(progress.current / progress.total) * 100}%`,
                 height: '100%',
-                backgroundColor: '#e67e22',
+                backgroundColor: '#9b59b6',
                 transition: 'width 0.3s ease'
               }} />
             </div>
@@ -289,7 +289,7 @@ export default function MathQuestionImport() {
               <button 
                 onClick={() => setShowErrorModal(false)}
                 style={{
-                  backgroundColor: '#e67e22',
+                  backgroundColor: '#9b59b6',
                   color: 'white',
                   border: 'none',
                   padding: '10px 30px',
@@ -329,13 +329,13 @@ export default function MathQuestionImport() {
       )}
       
       <div className="panel">
-        <h2>📐 Bulk Import Math Questions with LaTeX</h2>
-        <p>Format your math questions like this:</p>
-        <pre className="mcq-example">{getMathQuestionExample()}</pre>
+        <h2>📝 Bulk Import MCQ Questions with LaTeX</h2>
+        <p>Format your MCQ questions like this:</p>
+        <pre className="mcq-example">{getMCQQuestionExample()}</pre>
         <textarea 
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
-          placeholder="Paste your math questions with LaTeX here..."
+          placeholder="Paste your MCQ questions with LaTeX here..."
           style={{ minHeight: '200px' }}
         />
         <button onClick={parseQuestions}>Parse Questions</button>

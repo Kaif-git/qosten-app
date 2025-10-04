@@ -24,6 +24,11 @@ const initialState = {
     total: 0,
     subjects: 0,
     chapters: 0
+  },
+  lastBatch: {
+    questionIds: [],
+    timestamp: null,
+    count: 0
   }
 };
 
@@ -36,7 +41,8 @@ const ACTIONS = {
   SET_FILTERS: 'SET_FILTERS',
   SET_EDITING_QUESTION: 'SET_EDITING_QUESTION',
   SET_AUTHENTICATED: 'SET_AUTHENTICATED',
-  UPDATE_STATS: 'UPDATE_STATS'
+  UPDATE_STATS: 'UPDATE_STATS',
+  SET_LAST_BATCH: 'SET_LAST_BATCH'
 };
 
 // Reducer function
@@ -66,6 +72,8 @@ function questionReducer(state, action) {
       return { ...state, isAuthenticated: action.payload };
     case ACTIONS.UPDATE_STATS:
       return { ...state, stats: action.payload };
+    case ACTIONS.SET_LAST_BATCH:
+      return { ...state, lastBatch: action.payload };
     default:
       return state;
   }
@@ -99,12 +107,27 @@ export function QuestionProvider({ children }) {
     }
 
     try {
-      // Map to database format and insert
+      // Get the max ID from questions_duplicate table to generate a new one
+      const { data: maxData, error: maxError } = await supabaseClient
+        .from('questions_duplicate')
+        .select('id')
+        .order('id', { ascending: false })
+        .limit(1);
+      
+      if (maxError) {
+        console.error('Error fetching max ID:', maxError);
+        throw new Error('Failed to generate ID for new question');
+      }
+      
+      // Generate new ID (max ID + 1, or 1 if table is empty)
+      const newId = maxData && maxData.length > 0 ? maxData[0].id + 1 : 1;
+      
+      // Map to database format and insert with generated ID
       const dbQuestion = mapAppToDatabase(question);
-      delete dbQuestion.id; // Let database generate ID
+      dbQuestion.id = newId;
       
       const { data, error } = await supabaseClient
-        .from('questions')
+        .from('questions_duplicate')
         .insert([dbQuestion])
         .select();
 
@@ -156,7 +179,7 @@ export function QuestionProvider({ children }) {
       const questionId = parseInt(question.id);
 
       const { error } = await supabaseClient
-        .from('questions')
+        .from('questions_duplicate')
         .update(dbQuestion)
         .eq('id', questionId);
 
@@ -185,7 +208,7 @@ export function QuestionProvider({ children }) {
       const questionId = parseInt(id);
 
       const { error } = await supabaseClient
-        .from('questions')
+        .from('questions_duplicate')
         .delete()
         .eq('id', questionId);
 
@@ -226,6 +249,21 @@ export function QuestionProvider({ children }) {
     }});
   };
 
+  const setLastBatch = (questionIds) => {
+    dispatch({ type: ACTIONS.SET_LAST_BATCH, payload: {
+      questionIds,
+      timestamp: Date.now(),
+      count: questionIds.length
+    }});
+  };
+
+  const getLastBatchQuestions = () => {
+    if (!state.lastBatch.questionIds || state.lastBatch.questionIds.length === 0) {
+      return [];
+    }
+    return state.questions.filter(q => state.lastBatch.questionIds.includes(q.id));
+  };
+
   // Helper function to map database question to app format
   const mapDatabaseToApp = (dbQuestion) => {
     return {
@@ -254,8 +292,7 @@ export function QuestionProvider({ children }) {
 
   // Helper function to map app question to database format
   const mapAppToDatabase = (appQuestion) => {
-    return {
-      id: appQuestion.id ? parseInt(appQuestion.id) : undefined,
+    const dbQuestion = {
       type: appQuestion.type,
       subject: appQuestion.subject,
       chapter: appQuestion.chapter,
@@ -276,11 +313,18 @@ export function QuestionProvider({ children }) {
       is_quizzable: appQuestion.isQuizzable !== undefined ? appQuestion.isQuizzable : true,
       synced: false
     };
+    
+    // Only include id if it exists (for updates), exclude it for inserts
+    if (appQuestion.id) {
+      dbQuestion.id = parseInt(appQuestion.id);
+    }
+    
+    return dbQuestion;
   };
 
   // Cache management constants
-  const CACHE_KEY = 'questions_cache';
-  const CACHE_TIMESTAMP_KEY = 'questions_cache_timestamp';
+  const CACHE_KEY = 'questions_duplicate_cache';
+  const CACHE_TIMESTAMP_KEY = 'questions_duplicate_cache_timestamp';
   const CACHE_DURATION = 1000 * 60 * 60; // 1 hour in milliseconds
 
   // Save questions to cache
@@ -369,7 +413,7 @@ export function QuestionProvider({ children }) {
         // Fetch questions in batches to overcome the 1000 row limit
         while (hasMore) {
           const { data, error, count } = await supabaseClient
-            .from('questions')
+            .from('questions_duplicate')
             .select('*', { count: 'exact' })
             .order('created_at', { ascending: false })
             .range(from, from + batchSize - 1);
@@ -422,7 +466,7 @@ export function QuestionProvider({ children }) {
 
       while (hasMore) {
         const { data, error } = await supabaseClient
-          .from('questions')
+          .from('questions_duplicate')
           .select('*', { count: 'exact' })
           .order('created_at', { ascending: false })
           .range(from, from + batchSize - 1);
@@ -465,7 +509,9 @@ export function QuestionProvider({ children }) {
     setAuthenticated,
     updateStats,
     refreshQuestions,
-    clearCache
+    clearCache,
+    setLastBatch,
+    getLastBatchQuestions
   };
 
   return (

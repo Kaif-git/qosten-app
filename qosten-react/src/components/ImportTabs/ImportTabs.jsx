@@ -321,16 +321,24 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
   };
   
   const parseCQQuestions = (text, lang = 'en') => {
-    // Clean up the text: remove markdown bold ** and separator lines
-    const cleanedText = text.replace(/\*\*/g, '').replace(/---+/g, '');
+    console.log('🔍 parseCQQuestions: Starting...');
+    console.log('📄 Input length:', text.length);
     
-    // More flexible section splitting - handle various question indicators
-    const sections = cleanedText.split(/(?=(?:Question|প্রশ্ন|Q\.?|\d+\.)\s*\d*)/).filter(section => section.trim());
+    // Clean up the text: remove markdown bold ** but keep separator lines for splitting
+    const cleanedText = text.replace(/\*\*/g, '');
+    
+    // Split by horizontal rule (---) to separate questions
+    const sections = cleanedText.split(/\n---+\n/).filter(section => section.trim());
+    console.log('📦 Question sections found:', sections.length);
+    
     const questions = [];
     
-    sections.forEach(section => {
+    for (let sectionIdx = 0; sectionIdx < sections.length; sectionIdx++) {
+      const section = sections[sectionIdx];
+      console.log(`\n📋 Processing section ${sectionIdx + 1}/${sections.length}`);
+      
       const lines = section.split('\n').map(line => line.trim()).filter(line => line);
-      if (lines.length === 0) return;
+      if (lines.length === 0) continue;
       
       const question = {
         type: 'cq',
@@ -346,40 +354,19 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
       
       let inAnswerSection = false;
       let questionTextLines = [];
+      let currentAnswerPart = null;
+      let useBulletPointFormat = false; // Flag for bullet-point answer format
       
       for (let i = 0; i < lines.length; i++) {
         let line = lines[i];
-        
-        // Skip separator lines and informational text
-        if (line.match(/^[-=]+$/)) {
-          continue;
-        }
         
         // Skip informational lines
         if (line.toLowerCase().includes('alternate') || line.toLowerCase().includes('also supported')) {
           continue;
         }
         
-        // Skip question headers - more flexible matching
-        if (/^(Question|প্রশ্ন|Q\.?)\s*\d*/i.test(line)) {
-          continue;
-        }
-        
-        // Handle image indicators
-        if (line.includes('picture') || line.includes('image') || line.includes('ছবি') || 
-            line.includes('[There is a picture]') || line.includes('[ছবি আছে]')) {
-          question.image = '[There is a picture]';
-          continue;
-        }
-        
-        // Answer section indicators - more flexible
-        if (/^(answer|উত্তর|ans)\s*[:=]?\s*$/i.test(line)) {
-          inAnswerSection = true;
-          question.questionText = questionTextLines.join('\n').trim();
-          continue;
-        }
-        
-        // Metadata parsing - handle both bracket format and colon format
+        // Parse metadata - handle both [Field: Value] format with optional brackets
+        // Support both English and Bengali field names
         if ((line.startsWith('[') && line.endsWith(']')) || (line.includes('[') && line.includes(']'))) {
           const bracketMatch = line.match(/\[([^\]]+)\]/);
           if (bracketMatch) {
@@ -389,44 +376,96 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
               const key = metaContent.substring(0, colonIndex).trim().toLowerCase();
               const value = metaContent.substring(colonIndex + 1).trim();
               
-              if (['subject', 'chapter', 'lesson', 'board'].includes(key)) {
-                question[key] = value;
+              // Map Bengali keys to English
+              const keyMap = {
+                'subject': 'subject',
+                'বিষয়': 'subject',
+                'chapter': 'chapter',
+                'অধ্যায়': 'chapter',
+                'lesson': 'lesson',
+                'পাঠ': 'lesson',
+                'board': 'board',
+                'বোর্ড': 'board'
+              };
+              
+              const mappedKey = keyMap[key];
+              if (mappedKey) {
+                question[mappedKey] = value;
+                console.log(`  ✅ Metadata ${mappedKey}:`, value);
               }
             }
           }
           continue;
         }
         
-        // Also handle non-bracket metadata format
-        const metadataMatch = line.match(/^(subject|chapter|lesson|board)\s*[:=]\s*(.+)$/i);
-        if (metadataMatch) {
-          const key = metadataMatch[1].toLowerCase();
-          const value = metadataMatch[2].trim();
-          question[key] = value;
+        // Handle "বোর্ড: X" format (board metadata without brackets)
+        if (/^(board|বোর্ড)\s*:/i.test(line)) {
+          const boardMatch = line.match(/^(?:board|বোর্ড)\s*:\s*(.+)$/i);
+          if (boardMatch) {
+            question.board = boardMatch[1].trim();
+            console.log(`  ✅ Metadata board:`, question.board);
+          }
           continue;
         }
         
-        // Skip removed properties (isquizzable, tags)
-        if (/^(isquizzable|tags)\s*[:=]/i.test(line)) {
+        // Skip "Question X" or "প্রশ্ন X" headers
+        if (/^(Question|প্রশ্ন|Q\.?)\s*[\d০-৯]*/i.test(line) && line.length < 20) {
+          continue;
+        }
+        
+        // Handle image indicators
+        if (line.includes('picture') || line.includes('image') || line.includes('ছবি') || 
+            line.includes('[There is a picture]') || line.includes('[ছবি আছে]')) {
+          question.image = '[There is a picture]';
+          questionTextLines.push(line);
+          continue;
+        }
+        
+        // Answer section indicators
+        if (/^(answer|উত্তর|ans)\s*[:=]?\s*$/i.test(line)) {
+          inAnswerSection = true;
+          question.questionText = questionTextLines.join('\n').trim();
+          console.log(`  ✅ Found Answer section. Stem length: ${question.questionText.length}`);
           continue;
         }
         
         if (!inAnswerSection) {
-          // Parse question parts - more flexible
-          const partMatch = line.match(/^([a-d])[.)\s]*(.+)$/i);
+          // Parse question parts (a., b., c., d. or ক., খ., গ., ঘ.)
+          const partMatch = line.match(/^([a-dক-ঘ])[.)\s]+(.+)$/i);
           if (partMatch) {
-            const partLetter = partMatch[1].toLowerCase();
+            let partLetter = partMatch[1].toLowerCase();
             let partText = partMatch[2].trim();
             
-            // Extract marks more flexibly
-            const marksMatch = partText.match(/[(\[]\s*(\d+)\s*[)\]]/g);
+            // Convert Bengali letters to English
+            const bengaliToEnglish = { 'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd' };
+            if (bengaliToEnglish[partLetter]) {
+              partLetter = bengaliToEnglish[partLetter];
+            }
+            
+            // Extract marks - look for (1), (2), (3), (4) or Bengali numerals at the end
+            // Also remove standalone Bengali numerals like ১, ২, ৩, ৪ at the end
+            const marksMatch = partText.match(/[(\[]\s*([\d০-৯]+)\s*[)\]]\s*$/);  
             let marks = 0;
             if (marksMatch) {
-              const lastMarkMatch = marksMatch[marksMatch.length - 1];
-              const markNumber = lastMarkMatch.match(/\d+/);
-              if (markNumber) {
-                marks = parseInt(markNumber[0]);
-                partText = partText.replace(lastMarkMatch, '').trim();
+              // Convert Bengali numerals to English
+              const bengaliNumerals = { '০': '0', '১': '1', '২': '2', '৩': '3', '৪': '4', '৫': '5', '৬': '6', '৭': '7', '৮': '8', '৯': '9' };
+              let marksStr = marksMatch[1];
+              for (const [bn, en] of Object.entries(bengaliNumerals)) {
+                marksStr = marksStr.replace(new RegExp(bn, 'g'), en);
+              }
+              marks = parseInt(marksStr);
+              partText = partText.replace(marksMatch[0], '').trim();
+            } else {
+              // Also check for standalone Bengali numeral at the end (without parentheses)
+              const standaloneMatch = partText.match(/\s+([০-৯]+)\s*$/);
+              if (standaloneMatch) {
+                const bengaliNumerals = { '০': '0', '১': '1', '২': '2', '৩': '3', '৪': '4', '৫': '5', '৬': '6', '৭': '7', '৮': '8', '৯': '9' };
+                let marksStr = standaloneMatch[1];
+                for (const [bn, en] of Object.entries(bengaliNumerals)) {
+                  marksStr = marksStr.replace(new RegExp(bn, 'g'), en);
+                }
+                marks = parseInt(marksStr);
+                partText = partText.replace(standaloneMatch[0], '').trim();
               }
             }
             
@@ -436,32 +475,65 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
               marks: marks,
               answer: ''
             });
+            console.log(`  ✅ Part ${partLetter}: ${partText.substring(0, 50)}... (${marks} marks)`);
           } else {
-            // Add to question text if it doesn't look like metadata
-            if (!line.includes(':') || !line.match(/^[a-z]+\s*:/i)) {
+            // Add to question text/stem if it doesn't look like metadata
+            if (!line.match(/^\[.*\]$/) && !line.match(/^[a-z]+\s*:/i) && !line.match(/^(board|বোর্ড)\s*:/i)) {
               questionTextLines.push(line);
             }
           }
         } else {
-          // Parse answers - more flexible
-          const answerMatch = line.match(/^([a-d])[.)\s]*(.+)$/i);
-          if (answerMatch && question.parts.length > 0) {
-            const partLetter = answerMatch[1].toLowerCase();
-            const answerText = answerMatch[2].trim();
-            const part = question.parts.find(p => p.letter === partLetter);
-            if (part) {
-              part.answer = answerText;
+          // In answer section - check for bullet-point format (·)
+          if (line.startsWith('·')) {
+            useBulletPointFormat = true;
+            const bulletAnswer = line.substring(1).trim();
+            
+            // Find the next available part without an answer
+            const nextEmptyPart = question.parts.find(p => !p.answer || p.answer === '');
+            if (nextEmptyPart) {
+              nextEmptyPart.answer = bulletAnswer;
+              currentAnswerPart = nextEmptyPart;
+              console.log(`  ✅ Bullet Answer ${nextEmptyPart.letter}: ${bulletAnswer.substring(0, 50)}...`);
             }
-          } else if (question.parts.length > 0) {
-            // This might be a continuation of the last answer
-            // Find the last part that has an answer or create answer for the last part
-            const lastPart = question.parts[question.parts.length - 1];
-            if (lastPart) {
-              if (lastPart.answer) {
-                lastPart.answer += ' ' + line;
-              } else {
-                // If last part doesn't have an answer yet, this line might be the start
-                lastPart.answer = line;
+          } else if (useBulletPointFormat && currentAnswerPart && !line.startsWith('·') && !line.match(/^(board|বোর্ড)\s*:/i)) {
+            // Continuation of bullet-point answer
+            if (currentAnswerPart.answer) {
+              currentAnswerPart.answer += ' ' + line;
+            }
+          } else {
+            // Standard format: parse answers (a., b., c., d. or ক., খ., গ., ঘ.)
+            const answerMatch = line.match(/^([a-dক-ঘ])[.)\s]+(.+)$/i);
+            if (answerMatch) {
+              let partLetter = answerMatch[1].toLowerCase();
+              const answerText = answerMatch[2].trim();
+              
+              // Convert Bengali letters to English
+              const bengaliToEnglish = { 'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd' };
+              if (bengaliToEnglish[partLetter]) {
+                partLetter = bengaliToEnglish[partLetter];
+              }
+              
+              const part = question.parts.find(p => p.letter === partLetter);
+              if (part) {
+                part.answer = answerText;
+                currentAnswerPart = part;
+                console.log(`  ✅ Answer ${partLetter}: ${answerText.substring(0, 50)}...`);
+              }
+            } else if (!line.match(/^(board|বোর্ড)\s*:/i)) {
+              // Multi-line answer continuation (not board metadata)
+              if (currentAnswerPart && currentAnswerPart.answer) {
+                currentAnswerPart.answer += ' ' + line;
+              } else if (question.parts.length > 0 && !useBulletPointFormat) {
+                // If no current answer part, append to the last part
+                const lastPart = question.parts[question.parts.length - 1];
+                if (lastPart) {
+                  if (lastPart.answer) {
+                    lastPart.answer += ' ' + line;
+                  } else {
+                    lastPart.answer = line;
+                  }
+                  currentAnswerPart = lastPart;
+                }
               }
             }
           }
@@ -474,13 +546,21 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
       }
       
       // Only add question if it has meaningful content
-      if ((question.questionText && question.questionText.trim()) || question.parts.length > 0) {
+      // Accept questions with either subject metadata OR board metadata (for Bangla format)
+      const hasMetadata = question.subject || question.board;
+      const hasContent = (question.questionText && question.questionText.trim()) || question.parts.length > 0;
+      
+      if (hasMetadata && hasContent) {
         // Clean up empty parts
-        question.parts = question.parts.filter(part => part.text.trim() || part.answer.trim());
+        question.parts = question.parts.filter(part => part.text.trim());
         questions.push(question);
+        console.log(`  💾 Question saved with ${question.parts.length} parts`);
+      } else {
+        console.log(`  ⚠️ Question incomplete - not saved (hasMetadata: ${hasMetadata}, hasContent: ${hasContent})`);
       }
-    });
+    }
     
+    console.log(`\n✅ Total CQ questions parsed: ${questions.length}`);
     return questions;
   };
   
@@ -490,13 +570,15 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
     const lines = cleanedText.split('\n').map(line => line.trim()).filter(line => line);
     const questions = [];
     let currentQuestion = null;
-    let currentMetadata = {
+    // Global metadata that applies to all questions
+    let globalMetadata = {
       language: lang,
       subject: '',
       chapter: '',
-      lesson: '',
-      board: ''
+      lesson: ''
     };
+    // Per-question board metadata
+    let nextQuestionBoard = '';
     
     for (let i = 0; i < lines.length; i++) {
       let line = lines[i];
@@ -512,6 +594,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
       }
       
       // Parse metadata - more flexible bracket matching
+      // Support both English and Bengali field names
       if ((line.startsWith('[') && line.endsWith(']')) || (line.includes('[') && line.includes(']'))) {
         const bracketMatch = line.match(/\[([^\]]+)\]/);
         if (bracketMatch) {
@@ -521,54 +604,66 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
             const key = metaContent.substring(0, colonIndex).trim().toLowerCase();
             const value = metaContent.substring(colonIndex + 1).trim();
             
-            switch (key) {
-              case 'subject':
-                currentMetadata.subject = value;
-                break;
-              case 'chapter':
-                currentMetadata.chapter = value;
-                break;
-              case 'lesson':
-                currentMetadata.lesson = value;
-                break;
-              case 'board':
-                currentMetadata.board = value;
-                break;
-              default:
-                // Ignore removed properties
-                break;
+            // Map Bengali keys to English
+            const keyMap = {
+              'subject': 'subject',
+              'বিষয়': 'subject',
+              'chapter': 'chapter',
+              'অধ্যায়': 'chapter',
+              'lesson': 'lesson',
+              'পাঠ': 'lesson',
+              'board': 'board',
+              'বোর্ড': 'board'
+            };
+            
+            const mappedKey = keyMap[key];
+            if (mappedKey) {
+              if (mappedKey === 'board') {
+                // Board metadata is per-question, not global
+                // Store it for the next question that will be parsed
+                nextQuestionBoard = value;
+              } else {
+                // Subject, chapter, lesson are global metadata
+                globalMetadata[mappedKey] = value;
+              }
             }
           }
         }
         continue;
       }
       
-      // Parse questions - more flexible numbering
-      if (/^\d+[.)\s]/.test(line) || /^Q\d*[.)\s]/.test(line)) {
+      // Parse questions - support both English (0-9) and Bengali (০-৯) numerals
+      if (/^[\d০-৯]+[.)\s]/.test(line) || /^Q[\d০-৯]*[.)\s]/.test(line)) {
         if (currentQuestion) {
           questions.push(currentQuestion);
         }
         
         let questionText = line;
-        // Remove various question prefixes flexibly
-        questionText = questionText.replace(/^\d+[.)\s]*/, '');
-        questionText = questionText.replace(/^Q\d*[.)\s]*/, '');
-        questionText = questionText.replace(/^Question\s*\d*[.)\s]*/, '');
+        // Remove various question prefixes flexibly (handle Bengali numerals)
+        questionText = questionText.replace(/^[\d০-৯]+[.)\s]*/, '');
+        questionText = questionText.replace(/^Q[\d০-৯]*[.)\s]*/, '');
+        questionText = questionText.replace(/^Question\s*[\d০-৯]*[.)\s]*/, '');
         
         currentQuestion = {
-          ...currentMetadata,
+          ...globalMetadata,
           type: 'sq',
           question: questionText.trim(),
-          answer: ''
+          answer: '',
+          board: nextQuestionBoard  // Use the board set by previous [বোর্ড:] tag
         };
+        // Reset the per-question board metadata after using it
+        nextQuestionBoard = '';
         continue;
       }
       
-      // Parse answer - more flexible
+      // Parse answer - more flexible (handle inline answers with উত্তর:)
       if (/^(answer|ans|উত্তর)\s*[:=]\s*/i.test(line) && currentQuestion) {
         const answerMatch = line.match(/^(?:answer|ans|উত্তর)\s*[:=]\s*(.+)$/i);
         if (answerMatch) {
           currentQuestion.answer = answerMatch[1].trim();
+        } else {
+          // Answer marker without text (answer on next line)
+          currentQuestion.answer = '';
         }
         continue;
       }

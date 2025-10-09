@@ -107,24 +107,12 @@ export function QuestionProvider({ children }) {
     }
 
     try {
-      // Get the max ID from questions_duplicate table to generate a new one
-      const { data: maxData, error: maxError } = await supabaseClient
-        .from('questions_duplicate')
-        .select('id')
-        .order('id', { ascending: false })
-        .limit(1);
+      // Generate a unique ID using timestamp + random number
+      // This avoids race conditions when inserting multiple questions in parallel
+      const uniqueId = Date.now() + Math.floor(Math.random() * 10000);
       
-      if (maxError) {
-        console.error('Error fetching max ID:', maxError);
-        throw new Error('Failed to generate ID for new question');
-      }
-      
-      // Generate new ID (max ID + 1, or 1 if table is empty)
-      const newId = maxData && maxData.length > 0 ? maxData[0].id + 1 : 1;
-      
-      // Map to database format and insert with generated ID
-      const dbQuestion = mapAppToDatabase(question);
-      dbQuestion.id = newId;
+      // Map to database format with the generated ID
+      const dbQuestion = mapAppToDatabase({ ...question, id: uniqueId });
       
       const { data, error } = await supabaseClient
         .from('questions_duplicate')

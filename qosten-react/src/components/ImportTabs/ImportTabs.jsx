@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useQuestions } from '../../context/QuestionContext';
 import QuestionPreview from '../QuestionPreview/QuestionPreview';
+import { translateEnglishWordsToBangla } from '../../utils/translateToBangla';
 
 const examples = {
   mcq: {
@@ -30,17 +31,31 @@ c) 3
 d) 4
 Correct: b
 Explanation: To solve 2x + 3 = 7, subtract 3 from both sides to get 2x = 4, then divide by 2 to find x = 2.`,
-    bn: `**[Subject: পদার্থবিজ্ঞান]**
-**[Chapter: ভৌত রাশি এবং তাদের পরিমাপ]**
-**[Lesson: পদার্থবিজ্ঞানের ভূমিকা]**
-**[Board: ডি.বি.-24]**
-**1.** কোয়ান্টাম তত্ত্ব এবং আপেক্ষিকতার তত্ত্বের সমন্বয়ে কে প্রতিকণার অস্তিত্ব ঘোষণা করেছিলেন?
-a) ডিরাক
-b) রন্টজেন
-c) বেকেরেল
-d) মেরি কুরি
-**Correct: a**
-**Explanation:** পল ডিরাক কোয়ান্টাম মেকানিক্স এবং বিশেষ আপেক্ষিকতা একত্রিত করে প্রতিপদার্থের অস্তিত্বের পূর্বাভাস দিয়েছিলেন।`
+    bn: `*[বিষয়: বাংলাদেশ ও বিশ্বপরিচয়]*  
+*[অধ্যায়: বাংলাদেশের স্বাধীনতা]*  
+*[পাঠ: মুক্তিযুদ্ধের প্রস্তুতি, সশস্ত্র সংগ্রাম ও সার্বভৌম বাংলাদেশের উদ্ভব]*  
+*[বোর্ড: ডি.বি.-২৪]*  
+*৩.* "অপারেশন সার্চলাইট"-এর মূল পরিকল্পনাকারী কে ছিলেন?  
+ক) ইয়াহিয়া খান  
+খ) আইয়ুব খান  
+গ) রাও ফরমান আলী  
+ঘ) জুলফিকার আলী ভুট্টো  
+*সঠিক:* গ  
+*ব্যাখ্যা:* মেজর জেনারেল রাও ফরমান আলী পাকিস্তান সেনাবাহিনীর একজন উচ্চপদস্থ কর্মকর্তা ছিলেন এবং তিনি ১৯৭১ সালের মুক্তিযুদ্ধ গণহত্যার মূল পরিকল্পনাকারী হিসেবে বিবেচিত হন।
+
+---
+
+*[বিষয়: বাংলাদেশ ও বিশ্বপরিচয়]*  
+*[অধ্যায়: বাংলাদেশের স্বাধীনতা]*  
+*[পাঠ: মুক্তিযুদ্ধের প্রস্তুতি, সশস্ত্র সংগ্রাম ও সার্বভৌম বাংলাদেশের উদ্ভব]*  
+*[বোর্ড: এম.বি.-২৪; বি.বি.-২৪]*  
+*৪.* অস্থায়ী সরকারের অর্থমন্ত্রী কে ছিলেন?  
+ক) তাজউদ্দীন আহমেদ  
+খ) এ.এইচ.এম. কামারুজ্জামান  
+গ) খন্দকার মোশতাক আহমেদ  
+ঘ) এম. মনসুর আলী  
+*সঠিক:* ঘ  
+*ব্যাখ্যা:* মুজিবনগর সরকারে এম. মনসুর আলী অর্থমন্ত্রীর দায়িত্ব পালন করেন।`
   },
   cq: {
     en: `**[Subject: Biology]**
@@ -127,15 +142,26 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
   const [inputText, setInputText] = useState('');
   const [parsedQuestions, setParsedQuestions] = useState([]);
   const [showPreview, setShowPreview] = useState(false);
+  const [isUploading, setIsUploading] = useState(false);
+  const [isTranslating, setIsTranslating] = useState(false);
+  const [progress, setProgress] = useState({ current: 0, total: 0, status: '' });
   const { addQuestion } = useQuestions();
   
   const example = examples[type][language];
   const title = titles[type][language];
   
   const parseMCQQuestions = (text, lang = 'en') => {
-    // Clean up the text: remove markdown bold ** and extra whitespace
-    const cleanedText = text.replace(/\*\*/g, '').replace(/---+/g, '');
+    console.log('🔍 ImportTabs parseMCQQuestions: Starting...');
+    console.log('📄 Input length:', text.length);
+    console.log('📄 First 100 chars:', text.substring(0, 100));
+    
+    // Clean up the text: remove markdown bold * and ** (both single and double asterisks)
+    const cleanedText = text.replace(/\*+/g, '').replace(/---+/g, '');
+    console.log('🧽 Cleaned text length:', cleanedText.length);
+    
     const lines = cleanedText.split('\n').map(line => line.trim()).filter(line => line);
+    console.log('📝 Total lines:', lines.length);
+    
     const questions = [];
     let currentQuestion = null;
     let currentMetadata = {
@@ -160,6 +186,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
       }
       
       // Parse metadata - handle both [Field: Value] and **[Field: Value]** formats
+      // Also handle Bengali field names: বিষয়, অধ্যায়, পাঠ, বোর্ড
       if ((line.startsWith('[') && line.endsWith(']')) || (line.includes('[') && line.includes(']'))) {
         const bracketMatch = line.match(/\[([^\]]+)\]/);
         if (bracketMatch) {
@@ -169,44 +196,53 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
             const key = metaContent.substring(0, colonIndex).trim().toLowerCase();
             const value = metaContent.substring(colonIndex + 1).trim();
             
-            switch (key) {
-              case 'subject':
-                currentMetadata.subject = value;
-                break;
-              case 'chapter':
-                currentMetadata.chapter = value;
-                break;
-              case 'lesson':
-                currentMetadata.lesson = value;
-                break;
-              case 'board':
-                currentMetadata.board = value;
-                break;
-              default:
-                // Ignore other properties
-                break;
+            // Map Bengali keys to English equivalents
+            const keyMap = {
+              'subject': 'subject',
+              'বিষয়': 'subject',
+              'chapter': 'chapter',
+              'অধ্যায়': 'chapter',
+              'lesson': 'lesson',
+              'পাঠ': 'lesson',
+              'board': 'board',
+              'বোর্ড': 'board'
+            };
+            
+            const mappedKey = keyMap[key];
+            if (mappedKey) {
+              console.log(`  ✅ Found ${mappedKey}:`, value);
+              // Save previous question if starting new one
+              if (mappedKey === 'subject' && currentQuestion && currentQuestion.questionText && currentQuestion.options.length > 0) {
+                console.log('    💾 Saving previous question');
+                questions.push(currentQuestion);
+                currentQuestion = null;
+                currentMetadata = { language: lang, subject: '', chapter: '', lesson: '', board: '' };
+              }
+              currentMetadata[mappedKey] = value;
             }
           }
         }
         continue;
       }
       
-      // Parse questions - more flexible numbering (handles both 1. and **1.**)  
-      if (/^\d+[.)\s]/.test(line) || /^Q\d*[.)\s]/.test(line)) {
+      // Parse questions - handle English (0-9) and Bengali (০-৯) numerals
+      if (/^[\d০-৯]+[.)\s]/.test(line) || /^Q[\d০-৯]*[.)\s]/.test(line)) {
         if (currentQuestion) {
           questions.push(currentQuestion);
         }
         
         let questionText = line;
-        // Remove various question prefixes flexibly
-        questionText = questionText.replace(/^\d+[.)\s]*/, '');
-        questionText = questionText.replace(/^Q\d*[.)\s]*/, '');
-        questionText = questionText.replace(/^Question\s*\d*[.)\s]*/, '');
+        // Remove various question prefixes flexibly (handle Bengali numerals)
+        questionText = questionText.replace(/^[\d০-৯]+[.)\s]*/, '');
+        questionText = questionText.replace(/^Q[\d০-৯]*[.)\s]*/, '');
+        questionText = questionText.replace(/^Question\s*[\d০-৯]*[.)\s]*/, '');
+        
+        console.log('  ✅ Found Question:', questionText.substring(0, 60) + '...');
         
         currentQuestion = {
           ...currentMetadata,
           type: 'mcq',
-          question: questionText.trim(),
+          questionText: questionText.trim(),
           options: [],
           correctAnswer: '',
           explanation: ''
@@ -214,12 +250,19 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
         continue;
       }
       
-      // Parse options - more flexible option matching
-      if (/^[a-d][.)\s]/i.test(line) && currentQuestion) {
-        const optionMatch = line.match(/^([a-d])[.)\s]*(.+)$/i);
+      // Parse options - more flexible option matching (handle both English a-d and Bengali ক-ঘ)
+      if (/^[a-dক-ঘ][.)\s]/i.test(line) && currentQuestion) {
+        const optionMatch = line.match(/^([a-dক-ঘ])[.)\s]*(.+)$/i);
         if (optionMatch) {
-          const optionLetter = optionMatch[1].toLowerCase();
+          let optionLetter = optionMatch[1].toLowerCase();
           const optionText = optionMatch[2].trim();
+          
+          // Convert Bengali letters to English for consistency
+          const bengaliToEnglish = { 'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd' };
+          if (bengaliToEnglish[optionLetter]) {
+            optionLetter = bengaliToEnglish[optionLetter];
+          }
+          
           currentQuestion.options.push({
             label: optionLetter,
             text: optionText
@@ -228,19 +271,29 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
         continue;
       }
       
-      // Parse correct answer - more flexible
-      if (/^(correct|answer|ans)\s*[:=]\s*/i.test(line) && currentQuestion) {
-        const answerMatch = line.match(/^(?:correct|answer|ans)\s*[:=]\s*([a-d])\b/i);
+      // Parse correct answer - more flexible (handle both English and Bengali)
+      if (/^(correct|answer|ans|সঠিক)\s*[:=]\s*/i.test(line) && currentQuestion) {
+        const answerMatch = line.match(/^(?:correct|answer|ans|সঠিক)\s*[:=]\s*([a-dক-ঘ])\s*$/i);
         if (answerMatch) {
-          currentQuestion.correctAnswer = answerMatch[1].toLowerCase();
+          let answer = answerMatch[1].toLowerCase();
+          console.log('  ✅ Found Correct answer:', answer);
+          // Convert Bengali letters to English
+          const bengaliToEnglish = { 'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd' };
+          if (bengaliToEnglish[answer]) {
+            answer = bengaliToEnglish[answer];
+          }
+          currentQuestion.correctAnswer = answer;
+        } else {
+          console.log('  ⚠️ Failed to match correct answer in line:', line);
         }
         continue;
       }
       
-      // Parse explanation - more flexible
-      if (/^(explanation|explain|exp)\s*[:=]\s*/i.test(line) && currentQuestion) {
-        const explanationMatch = line.match(/^(?:explanation|explain|exp)\s*[:=]\s*(.+)$/i);
+      // Parse explanation - more flexible (handle both English and Bengali ব্যাখ্যা)
+      if (/^(explanation|explain|exp|ব্যাখ্যা)\s*[:=]\s*/i.test(line) && currentQuestion) {
+        const explanationMatch = line.match(/^(?:explanation|explain|exp|ব্যাখ্যা)\s*[:=]\s*(.+)$/i);
         if (explanationMatch) {
+          console.log('  ✅ Found Explanation:', explanationMatch[1].substring(0, 50) + '...');
           currentQuestion.explanation = explanationMatch[1].trim();
         }
         continue;
@@ -248,10 +301,10 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
       
       // If we have a current question and this line doesn't match any pattern,
       // it might be a continuation of the question text or explanation
-      if (currentQuestion && !line.match(/^[a-d][.)\s]/i) && !line.includes('[')) {
+      if (currentQuestion && !line.match(/^[a-dক-ঘ][.)\s]/i) && !line.includes('[')) {
         // If the line looks like it could be part of the question
-        if (currentQuestion.question && !currentQuestion.options.length) {
-          currentQuestion.question += ' ' + line;
+        if (currentQuestion.questionText && !currentQuestion.options.length) {
+          currentQuestion.questionText += ' ' + line;
         } else if (currentQuestion.explanation) {
           currentQuestion.explanation += ' ' + line;
         }
@@ -259,9 +312,11 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
     }
     
     if (currentQuestion) {
+      console.log('  💾 Saving last question');
       questions.push(currentQuestion);
     }
     
+    console.log(`\n✅ ImportTabs: Total questions parsed: ${questions.length}`);
     return questions;
   };
   
@@ -399,12 +454,23 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
             }
           } else if (question.parts.length > 0) {
             // This might be a continuation of the last answer
+            // Find the last part that has an answer or create answer for the last part
             const lastPart = question.parts[question.parts.length - 1];
-            if (lastPart && lastPart.answer) {
-              lastPart.answer += ' ' + line;
+            if (lastPart) {
+              if (lastPart.answer) {
+                lastPart.answer += ' ' + line;
+              } else {
+                // If last part doesn't have an answer yet, this line might be the start
+                lastPart.answer = line;
+              }
             }
           }
         }
+      }
+      
+      // If questionText is still empty and we have collected lines, set it
+      if (!question.questionText && questionTextLines.length > 0) {
+        question.questionText = questionTextLines.join('\n').trim();
       }
       
       // Only add question if it has meaningful content
@@ -533,57 +599,101 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
       return;
     }
     
-    let parsed = [];
-    try {
-      switch (type) {
-        case 'mcq':
-          parsed = parseMCQQuestions(inputText, language);
-          break;
-        case 'cq':
-          parsed = parseCQQuestions(inputText, language);
-          break;
-        case 'sq':
-          parsed = parseSQQuestions(inputText, language);
-          break;
-        default:
-          parsed = parseMCQQuestions(inputText, language);
+    setIsUploading(true);
+    setProgress({ current: 0, total: 1, status: 'Parsing questions...' });
+    
+    // Use setTimeout to allow UI to update
+    setTimeout(() => {
+      let parsed = [];
+      try {
+        switch (type) {
+          case 'mcq':
+            parsed = parseMCQQuestions(inputText, language);
+            break;
+          case 'cq':
+            parsed = parseCQQuestions(inputText, language);
+            break;
+          case 'sq':
+            parsed = parseSQQuestions(inputText, language);
+            break;
+          default:
+            parsed = parseMCQQuestions(inputText, language);
+        }
+        
+        setIsUploading(false);
+        
+        console.log('✅ Parsing complete! Found', parsed.length, 'questions');
+        
+        if (parsed.length === 0) {
+          alert('❌ No questions could be parsed. Please check your format and see console logs for details.');
+          return;
+        }
+        
+        alert(`✅ Successfully parsed ${parsed.length} ${language === 'bn' ? 'Bangla' : 'English'} question(s)!\n\nClick OK to preview and confirm.`);
+        
+        setParsedQuestions(parsed);
+        setShowPreview(true);
+        
+      } catch (error) {
+        console.error('Error parsing questions:', error);
+        setIsUploading(false);
+        alert('Error parsing questions. Please check your format.');
       }
-      
-      if (parsed.length === 0) {
-        alert('No questions could be parsed. Please check your format.');
-        return;
-      }
-      
-      setParsedQuestions(parsed);
-      setShowPreview(true);
-      
-    } catch (error) {
-      console.error('Error parsing questions:', error);
-      alert('Error parsing questions. Please check your format.');
-    }
+    }, 100);
   };
   
   const confirmAddQuestions = async (editedQuestions) => {
+    setIsUploading(true);
+    setProgress({ current: 0, total: editedQuestions.length, status: 'Uploading questions...' });
+    
     // Add edited questions to the bank, tracking duplicates
     let addedCount = 0;
     let duplicateCount = 0;
     const duplicateQuestions = [];
     
-    for (let index = 0; index < editedQuestions.length; index++) {
-      const question = editedQuestions[index];
-      try {
-        await addQuestion(question);
-        addedCount++;
-      } catch (error) {
-        if (error.message.includes('Duplicate')) {
-          duplicateCount++;
-          const questionPreview = (question.questionText || question.question || '').substring(0, 50);
-          duplicateQuestions.push(`${index + 1}. ${questionPreview}...`);
+    // Upload in batches of 20 for better performance
+    const BATCH_SIZE = 20;
+    
+    for (let i = 0; i < editedQuestions.length; i += BATCH_SIZE) {
+      const batch = editedQuestions.slice(i, i + BATCH_SIZE);
+      
+      // Upload batch in parallel
+      const results = await Promise.allSettled(
+        batch.map((question, batchIndex) => 
+          addQuestion(question)
+            .then(() => ({ success: true, index: i + batchIndex, question }))
+            .catch(error => ({ success: false, error, index: i + batchIndex, question }))
+        )
+      );
+      
+      // Process results
+      results.forEach(result => {
+        if (result.status === 'fulfilled' && result.value.success) {
+          addedCount++;
         } else {
-          console.error('Error adding question:', error);
+          const errorData = result.value || {};
+          const error = errorData.error;
+          const question = errorData.question;
+          
+          if (error && error.message && error.message.includes('Duplicate')) {
+            duplicateCount++;
+            const questionPreview = (question?.questionText || question?.question || '').substring(0, 50);
+            duplicateQuestions.push(`${errorData.index + 1}. ${questionPreview}...`);
+          } else {
+            console.error('Error adding question:', error);
+          }
         }
-      }
+      });
+      
+      // Update progress after each batch
+      setProgress({ 
+        current: Math.min(i + BATCH_SIZE, editedQuestions.length), 
+        total: editedQuestions.length, 
+        status: 'Uploading questions...' 
+      });
     }
+    
+    setIsUploading(false);
     
     // Show summary message
     let message = `Successfully added ${addedCount} question(s)!`;
@@ -611,6 +721,25 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
     setInputText('');
     setParsedQuestions([]);
   };
+  
+  const translateText = async () => {
+    if (!inputText.trim()) {
+      alert('Please enter some text to translate.');
+      return;
+    }
+    
+    setIsTranslating(true);
+    try {
+      const translated = await translateEnglishWordsToBangla(inputText);
+      setInputText(translated);
+      alert('✅ Translation complete!');
+    } catch (error) {
+      console.error('Translation error:', error);
+      alert('❌ Translation failed. Please try again.');
+    } finally {
+      setIsTranslating(false);
+    }
+  };
 
   return (
     <>
@@ -620,6 +749,67 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
           onConfirm={confirmAddQuestions}
           onCancel={cancelPreview}
         />
+      )}
+      
+      {isUploading && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.7)',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          zIndex: 10000
+        }}>
+          <div style={{
+            backgroundColor: 'white',
+            padding: '30px',
+            borderRadius: '10px',
+            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+            minWidth: '400px',
+            textAlign: 'center'
+          }}>
+            <h3 style={{ marginBottom: '20px' }}>{progress.status}</h3>
+            {progress.total > 0 && (
+              <>
+                <div style={{
+                  fontSize: '24px',
+                  fontWeight: 'bold',
+                  marginBottom: '15px',
+                  color: '#9b59b6'
+                }}>
+                  {progress.current} / {progress.total}
+                </div>
+                <div style={{
+                  width: '100%',
+                  height: '30px',
+                  backgroundColor: '#e0e0e0',
+                  borderRadius: '15px',
+                  overflow: 'hidden',
+                  marginBottom: '10px'
+                }}>
+                  <div style={{
+                    width: `${(progress.current / progress.total) * 100}%`,
+                    height: '100%',
+                    backgroundColor: '#9b59b6',
+                    transition: 'width 0.3s ease'
+                  }} />
+                </div>
+                <div style={{ color: '#666', fontSize: '14px' }}>
+                  {Math.round((progress.current / progress.total) * 100)}% Complete
+                </div>
+              </>
+            )}
+            {progress.total === 0 && (
+              <div style={{ fontSize: '16px', color: '#666' }}>
+                Please wait...
+              </div>
+            )}
+          </div>
+        </div>
       )}
       
       <div className="panel">
@@ -632,8 +822,19 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
           placeholder={`Paste your ${type.toUpperCase()} questions here...`}
           style={{ minHeight: '200px' }}
         />
-        <button onClick={parseQuestions}>Parse Questions</button>
-        <button className="danger" onClick={clearInput}>Clear</button>
+        <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+          {language === 'bn' && (
+            <button 
+              onClick={translateText} 
+              disabled={isTranslating || !inputText.trim()}
+              style={{ backgroundColor: '#28a745', color: 'white' }}
+            >
+              {isTranslating ? 'Translating...' : '🌐 Translate English → Bangla'}
+            </button>
+          )}
+          <button onClick={parseQuestions}>Parse Questions</button>
+          <button className="danger" onClick={clearInput}>Clear</button>
+        </div>
         
         {parsedQuestions.length > 0 && !showPreview && (
           <div style={{ marginTop: '20px' }}>

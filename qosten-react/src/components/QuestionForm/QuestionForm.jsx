@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { useQuestions } from '../../context/QuestionContext';
 import { useNavigate } from 'react-router-dom';
 import QuestionPreview from '../QuestionPreview/QuestionPreview';
+import { translateEnglishWordsToBangla } from '../../utils/translateToBangla';
 
 export default function QuestionForm() {
   const { editingQuestion, addQuestion, updateQuestion, setEditingQuestion } = useQuestions();
   const navigate = useNavigate();
   const [showPreview, setShowPreview] = useState(false);
   const [previewQuestion, setPreviewQuestion] = useState(null);
+  const [isTranslating, setIsTranslating] = useState(false);
   
   const [formData, setFormData] = useState({
     type: 'mcq',
@@ -229,6 +231,59 @@ export default function QuestionForm() {
     resetForm();
     navigate('/bank');
   };
+  
+  const translateField = async (fieldName) => {
+    const fieldValue = formData[fieldName];
+    if (!fieldValue || !fieldValue.trim()) {
+      alert('Field is empty. Nothing to translate.');
+      return;
+    }
+    
+    setIsTranslating(true);
+    try {
+      const translated = await translateEnglishWordsToBangla(fieldValue);
+      handleInputChange(fieldName, translated);
+    } catch (error) {
+      console.error('Translation error:', error);
+      alert('❌ Translation failed. Please try again.');
+    } finally {
+      setIsTranslating(false);
+    }
+  };
+  
+  const translateOption = async (index) => {
+    const optionText = formData.options[index].text;
+    if (!optionText || !optionText.trim()) {
+      return;
+    }
+    
+    setIsTranslating(true);
+    try {
+      const translated = await translateEnglishWordsToBangla(optionText);
+      handleOptionChange(index, 'text', translated);
+    } catch (error) {
+      console.error('Translation error:', error);
+    } finally {
+      setIsTranslating(false);
+    }
+  };
+  
+  const translatePart = async (index, field) => {
+    const partValue = formData.parts[index][field];
+    if (!partValue || !partValue.trim()) {
+      return;
+    }
+    
+    setIsTranslating(true);
+    try {
+      const translated = await translateEnglishWordsToBangla(partValue);
+      handlePartChange(index, field, translated);
+    } catch (error) {
+      console.error('Translation error:', error);
+    } finally {
+      setIsTranslating(false);
+    }
+  };
 
   return (
     <>
@@ -338,6 +393,22 @@ export default function QuestionForm() {
             onChange={(e) => handleInputChange('questionText', e.target.value)}
             required
           />
+          {formData.language === 'bn' && (
+            <button 
+              type="button"
+              onClick={() => translateField('questionText')}
+              disabled={isTranslating || !formData.questionText.trim()}
+              style={{ 
+                backgroundColor: '#28a745', 
+                color: 'white',
+                marginTop: '5px',
+                padding: '5px 10px',
+                fontSize: '12px'
+              }}
+            >
+              {isTranslating ? 'Translating...' : '🌐 Translate to Bangla'}
+            </button>
+          )}
         </div>
         
         {/* MCQ Options */}
@@ -353,6 +424,22 @@ export default function QuestionForm() {
                     value={option.text}
                     onChange={(e) => handleOptionChange(index, 'text', e.target.value)}
                   />
+                  {formData.language === 'bn' && option.text.trim() && (
+                    <button 
+                      type="button"
+                      onClick={() => translateOption(index)}
+                      disabled={isTranslating}
+                      style={{ 
+                        backgroundColor: '#28a745', 
+                        color: 'white',
+                        marginLeft: '5px',
+                        padding: '3px 8px',
+                        fontSize: '11px'
+                      }}
+                    >
+                      🌐
+                    </button>
+                  )}
                 </div>
               ))}
             </div>
@@ -379,6 +466,22 @@ export default function QuestionForm() {
               value={formData.explanation}
               onChange={(e) => handleInputChange('explanation', e.target.value)}
             />
+            {formData.language === 'bn' && formData.explanation.trim() && (
+              <button 
+                type="button"
+                onClick={() => translateField('explanation')}
+                disabled={isTranslating}
+                style={{ 
+                  backgroundColor: '#28a745', 
+                  color: 'white',
+                  marginTop: '5px',
+                  padding: '5px 10px',
+                  fontSize: '12px'
+                }}
+              >
+                {isTranslating ? 'Translating...' : '🌐 Translate to Bangla'}
+              </button>
+            )}
           </div>
         </div>
         
@@ -389,12 +492,30 @@ export default function QuestionForm() {
             <div className="option-fields">
               {formData.parts.map((part, index) => (
                 <div key={part.letter}>
-                  <input 
-                    type="text" 
-                    placeholder={`Part ${part.letter}) text`} 
-                    value={part.text}
-                    onChange={(e) => handlePartChange(index, 'text', e.target.value)}
-                  />
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                    <input 
+                      type="text" 
+                      placeholder={`Part ${part.letter}) text`} 
+                      value={part.text}
+                      onChange={(e) => handlePartChange(index, 'text', e.target.value)}
+                      style={{ flex: 1 }}
+                    />
+                    {formData.language === 'bn' && part.text.trim() && (
+                      <button 
+                        type="button"
+                        onClick={() => translatePart(index, 'text')}
+                        disabled={isTranslating}
+                        style={{ 
+                          backgroundColor: '#28a745', 
+                          color: 'white',
+                          padding: '3px 8px',
+                          fontSize: '11px'
+                        }}
+                      >
+                        🌐
+                      </button>
+                    )}
+                  </div>
                   <input 
                     type="number" 
                     placeholder="Marks" 
@@ -403,12 +524,30 @@ export default function QuestionForm() {
                     onChange={(e) => handlePartChange(index, 'marks', parseInt(e.target.value) || 0)}
                     style={{width: '80px', marginTop: '5px'}}
                   />
-                  <textarea 
-                    placeholder={`Answer for part ${part.letter}`} 
-                    value={part.answer}
-                    onChange={(e) => handlePartChange(index, 'answer', e.target.value)}
-                    style={{minHeight: '80px', marginTop: '5px'}}
-                  />
+                  <div style={{ position: 'relative' }}>
+                    <textarea 
+                      placeholder={`Answer for part ${part.letter}`} 
+                      value={part.answer}
+                      onChange={(e) => handlePartChange(index, 'answer', e.target.value)}
+                      style={{minHeight: '80px', marginTop: '5px', width: '100%'}}
+                    />
+                    {formData.language === 'bn' && part.answer.trim() && (
+                      <button 
+                        type="button"
+                        onClick={() => translatePart(index, 'answer')}
+                        disabled={isTranslating}
+                        style={{ 
+                          backgroundColor: '#28a745', 
+                          color: 'white',
+                          marginTop: '5px',
+                          padding: '3px 8px',
+                          fontSize: '11px'
+                        }}
+                      >
+                        🌐 Translate Answer
+                      </button>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
@@ -426,6 +565,22 @@ export default function QuestionForm() {
               value={formData.sqAnswer}
               onChange={(e) => handleInputChange('sqAnswer', e.target.value)}
             />
+            {formData.language === 'bn' && formData.sqAnswer.trim() && (
+              <button 
+                type="button"
+                onClick={() => translateField('sqAnswer')}
+                disabled={isTranslating}
+                style={{ 
+                  backgroundColor: '#28a745', 
+                  color: 'white',
+                  marginTop: '5px',
+                  padding: '5px 10px',
+                  fontSize: '12px'
+                }}
+              >
+                {isTranslating ? 'Translating...' : '🌐 Translate to Bangla'}
+              </button>
+            )}
           </div>
         </div>
         

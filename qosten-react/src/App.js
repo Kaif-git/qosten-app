@@ -14,6 +14,8 @@ import MathQuestionImport from './components/MathQuestionImport/MathQuestionImpo
 import MCQImport from './components/MCQImport/MCQImport';
 import Shop from './components/Shop/Shop';
 import Roadmap from './components/Roadmap/Roadmap';
+import BatchSizeTest from './components/BatchSizeTest/BatchSizeTest';
+import TranslationTest from './components/TranslationTest/TranslationTest';
 
 function App() {
   return (
@@ -40,6 +42,8 @@ function App() {
                 <Route path="/prompts" element={<SimplePromptManager />} />
                 <Route path="/shop" element={<Shop />} />
                 <Route path="/roadmap" element={<Roadmap />} />
+                <Route path="/batch-test" element={<BatchSizeTest />} />
+                <Route path="/translate-test" element={<TranslationTest />} />
               </Routes>
             </div>
           </BrowserRouter>

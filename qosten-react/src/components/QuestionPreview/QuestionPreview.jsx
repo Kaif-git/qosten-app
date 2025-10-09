@@ -1,12 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './QuestionPreview.css';
 import LatexRenderer from '../LatexRenderer/LatexRenderer';
+import { useQuestions } from '../../context/QuestionContext';
 import * as pdfjsLib from 'pdfjs-dist';
 
 // Set up PDF.js worker using unpkg CDN with matching version
 pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.mjs`;
 
 export default function QuestionPreview({ questions, onConfirm, onCancel, title, isEditMode = false }) {
+  const { questions: dbQuestions } = useQuestions();
   const [editableQuestions, setEditableQuestions] = useState(questions);
   const [sourceDocument, setSourceDocument] = useState(null);
   const [sourceDocType, setSourceDocType] = useState(null); // 'image' or 'pdf'
@@ -25,9 +27,11 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   const canvasRef = useRef(null);
   const imageRef = useRef(null);
   
-  // Get unique metadata values from all questions in preview
+  // Get unique metadata values from both preview questions AND existing database questions
   const getUniqueValues = (field) => {
-    const values = editableQuestions
+    // Combine preview questions and database questions
+    const allQuestions = [...editableQuestions, ...dbQuestions];
+    const values = allQuestions
       .map(q => q[field])
       .filter(val => val && val.trim() !== '' && val !== 'N/A')
       .filter((value, index, self) => self.indexOf(value) === index);
@@ -746,13 +750,13 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                   <div>
                     <label style={{ fontSize: '13px', fontWeight: '600', display: 'block', marginBottom: '5px' }}>
                       Subject:
-                      {uniqueSubjects.length > 0 && <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#666', marginLeft: '5px' }}>({uniqueSubjects.length} existing)</span>}
+                      {uniqueSubjects.length > 0 && <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#666', marginLeft: '5px' }}>({uniqueSubjects.length} from database)</span>}
                     </label>
                     <div style={{ display: 'flex', gap: '8px' }}>
                       <input
                         list="preview-subjects-list"
                         type="text"
-                        placeholder="Type or select"
+                        placeholder="Type new or select existing"
                         value={bulkMetadata.subject}
                         onChange={(e) => setBulkMetadata(prev => ({ ...prev, subject: e.target.value }))}
                         style={{ flex: 1, padding: '8px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '13px' }}
@@ -773,13 +777,13 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                   <div>
                     <label style={{ fontSize: '13px', fontWeight: '600', display: 'block', marginBottom: '5px' }}>
                       Chapter:
-                      {uniqueChapters.length > 0 && <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#666', marginLeft: '5px' }}>({uniqueChapters.length} existing)</span>}
+                      {uniqueChapters.length > 0 && <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#666', marginLeft: '5px' }}>({uniqueChapters.length} from database)</span>}
                     </label>
                     <div style={{ display: 'flex', gap: '8px' }}>
                       <input
                         list="preview-chapters-list"
                         type="text"
-                        placeholder="Type or select"
+                        placeholder="Type new or select existing"
                         value={bulkMetadata.chapter}
                         onChange={(e) => setBulkMetadata(prev => ({ ...prev, chapter: e.target.value }))}
                         style={{ flex: 1, padding: '8px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '13px' }}
@@ -800,13 +804,13 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                   <div>
                     <label style={{ fontSize: '13px', fontWeight: '600', display: 'block', marginBottom: '5px' }}>
                       Lesson:
-                      {uniqueLessons.length > 0 && <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#666', marginLeft: '5px' }}>({uniqueLessons.length} existing)</span>}
+                      {uniqueLessons.length > 0 && <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#666', marginLeft: '5px' }}>({uniqueLessons.length} from database)</span>}
                     </label>
                     <div style={{ display: 'flex', gap: '8px' }}>
                       <input
                         list="preview-lessons-list"
                         type="text"
-                        placeholder="Type or select"
+                        placeholder="Type new or select existing"
                         value={bulkMetadata.lesson}
                         onChange={(e) => setBulkMetadata(prev => ({ ...prev, lesson: e.target.value }))}
                         style={{ flex: 1, padding: '8px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '13px' }}
@@ -827,13 +831,13 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                   <div>
                     <label style={{ fontSize: '13px', fontWeight: '600', display: 'block', marginBottom: '5px' }}>
                       Board:
-                      {uniqueBoards.length > 0 && <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#666', marginLeft: '5px' }}>({uniqueBoards.length} existing)</span>}
+                      {uniqueBoards.length > 0 && <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#666', marginLeft: '5px' }}>({uniqueBoards.length} from database)</span>}
                     </label>
                     <div style={{ display: 'flex', gap: '8px' }}>
                       <input
                         list="preview-boards-list"
                         type="text"
-                        placeholder="Type or select"
+                        placeholder="Type new or select existing"
                         value={bulkMetadata.board}
                         onChange={(e) => setBulkMetadata(prev => ({ ...prev, board: e.target.value }))}
                         style={{ flex: 1, padding: '8px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '13px' }}

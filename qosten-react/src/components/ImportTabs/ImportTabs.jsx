@@ -624,7 +624,9 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
                 nextQuestionBoard = value;
               } else {
                 // Subject, chapter, lesson are global metadata
+                // These apply to ALL questions in the batch
                 globalMetadata[mappedKey] = value;
+                console.log(`  ✅ Global metadata ${mappedKey}:`, value);
               }
             }
           }

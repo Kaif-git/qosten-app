@@ -189,6 +189,71 @@ export function QuestionProvider({ children }) {
     }
   };
 
+  const bulkUpdateQuestions = async (questions) => {
+    if (!supabaseClient) {
+      // Fallback to local state only
+      questions.forEach(question => {
+        dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
+      });
+      return { successCount: questions.length, failedCount: 0 };
+    }
+
+    try {
+      console.log(`🔄 Starting bulk update of ${questions.length} questions...`);
+      
+      // Process in batches of 50 for optimal performance
+      const BATCH_SIZE = 50;
+      let successCount = 0;
+      let failedCount = 0;
+      
+      for (let i = 0; i < questions.length; i += BATCH_SIZE) {
+        const batch = questions.slice(i, i + BATCH_SIZE);
+        
+        // Prepare batch update operations
+        const updatePromises = batch.map(async (question) => {
+          const dbQuestion = mapAppToDatabase(question);
+          const questionId = parseInt(question.id);
+          
+          const { error } = await supabaseClient
+            .from('questions_duplicate')
+            .update(dbQuestion)
+            .eq('id', questionId);
+          
+          if (error) {
+            console.error(`Error updating question ${questionId}:`, error);
+            return { success: false, error, questionId };
+          }
+          
+          return { success: true, questionId };
+        });
+        
+        // Execute batch in parallel
+        const results = await Promise.allSettled(updatePromises);
+        
+        // Process results
+        results.forEach((result, idx) => {
+          if (result.status === 'fulfilled' && result.value.success) {
+            successCount++;
+            const question = batch[idx];
+            dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
+          } else {
+            failedCount++;
+          }
+        });
+        
+        console.log(`  ✅ Batch ${Math.floor(i / BATCH_SIZE) + 1}: ${successCount} succeeded, ${failedCount} failed`);
+      }
+      
+      clearCache(); // Invalidate cache after bulk update
+      console.log(`✅ Bulk update complete: ${successCount} succeeded, ${failedCount} failed`);
+      
+      return { successCount, failedCount };
+    } catch (error) {
+      console.error('Error in bulkUpdateQuestions:', error);
+      throw error;
+    }
+  };
+
   const deleteQuestion = async (id) => {
     if (!supabaseClient) {
       // Fallback to local state only
@@ -495,6 +560,7 @@ export function QuestionProvider({ children }) {
     setQuestions,
     addQuestion,
     updateQuestion,
+    bulkUpdateQuestions,
     deleteQuestion,
     setFilters,
     setEditingQuestion,

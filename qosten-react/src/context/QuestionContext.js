@@ -121,6 +121,10 @@ export function QuestionProvider({ children }) {
 
       if (error) {
         console.error('Error adding question to database:', error);
+        // Check if it's a duplicate key constraint violation
+        if (error.code === '23505' || error.message?.includes('duplicate key')) {
+          throw new Error('Duplicate question detected in database');
+        }
         throw new Error('Failed to add question to database');
       }
 

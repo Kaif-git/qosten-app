@@ -770,7 +770,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
           const error = errorData.error;
           const question = errorData.question;
           
-          if (error && error.message && error.message.includes('Duplicate')) {
+          if (error && error.message && (error.message.includes('Duplicate') || error.message.includes('duplicate'))) {
             duplicateCount++;
             const questionPreview = (question?.questionText || question?.question || '').substring(0, 50);
             duplicateQuestions.push(`${errorData.index + 1}. ${questionPreview}...`);

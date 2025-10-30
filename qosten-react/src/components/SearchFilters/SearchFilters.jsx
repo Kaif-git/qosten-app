@@ -22,7 +22,8 @@ export default function SearchFilters() {
       lesson: '',
       type: '',
       board: '',
-      language: ''
+      language: '',
+      flaggedStatus: ''
     });
   };
 
@@ -120,6 +121,23 @@ export default function SearchFilters() {
           <option value="">All Languages</option>
           <option value="en">English</option>
           <option value="bn">Bangla</option>
+        </select>
+      </div>
+      
+      <div>
+        <label htmlFor="filterFlagged">🚩 Flagged Status:</label>
+        <select
+          id="filterFlagged"
+          value={currentFilters.flaggedStatus || ''}
+          onChange={(e) => handleFilterChange('flaggedStatus', e.target.value)}
+          style={{ 
+            borderColor: currentFilters.flaggedStatus === 'flagged' ? '#e74c3c' : undefined,
+            fontWeight: currentFilters.flaggedStatus === 'flagged' ? 'bold' : 'normal'
+          }}
+        >
+          <option value="">All Questions</option>
+          <option value="flagged">🚩 Flagged Only</option>
+          <option value="unflagged">✓ Unflagged Only</option>
         </select>
       </div>
       

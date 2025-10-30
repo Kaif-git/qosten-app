@@ -5,7 +5,7 @@ import SearchFilters from '../SearchFilters/SearchFilters';
 import QuestionCard from '../QuestionCard/QuestionCard';
 
 export default function QuestionBank() {
-  const { questions, currentFilters, deleteQuestion, updateQuestion } = useQuestions();
+  const { questions, currentFilters, deleteQuestion, updateQuestion, bulkFlagQuestions } = useQuestions();
   const [selectedQuestions, setSelectedQuestions] = useState([]);
   const [selectionMode, setSelectionMode] = useState(false);
   const [showBulkMetadataEditor, setShowBulkMetadataEditor] = useState(false);
@@ -39,7 +39,10 @@ export default function QuestionBank() {
     const matchesType = !currentFilters.type || q.type === currentFilters.type;
     const matchesBoard = !currentFilters.board || q.board === currentFilters.board;
     const matchesLanguage = !currentFilters.language || q.language === currentFilters.language;
-    return matchesSearchText && matchesSubject && matchesChapter && matchesLesson && matchesType && matchesBoard && matchesLanguage;
+    const matchesFlaggedStatus = !currentFilters.flaggedStatus || 
+      (currentFilters.flaggedStatus === 'flagged' && q.isFlagged) ||
+      (currentFilters.flaggedStatus === 'unflagged' && !q.isFlagged);
+    return matchesSearchText && matchesSubject && matchesChapter && matchesLesson && matchesType && matchesBoard && matchesLanguage && matchesFlaggedStatus;
   });
   
   const toggleSelectionMode = () => {
@@ -123,6 +126,40 @@ export default function QuestionBank() {
     setSelectedQuestions([]);
     setSelectionMode(false);
     alert(`✅ Metadata updated for ${updatedCount} question(s)!`);
+  };
+
+  const bulkFlag = async () => {
+    if (selectedQuestions.length === 0) {
+      alert('Please select at least one question to flag.');
+      return;
+    }
+    
+    try {
+      const result = await bulkFlagQuestions(selectedQuestions, true);
+      setSelectedQuestions([]);
+      setSelectionMode(false);
+      alert(`🚩 Flagged ${result.successCount} question(s) for review!`);
+    } catch (error) {
+      console.error('Error flagging questions:', error);
+      alert('Error flagging questions. Please try again.');
+    }
+  };
+
+  const bulkUnflag = async () => {
+    if (selectedQuestions.length === 0) {
+      alert('Please select at least one question to unflag.');
+      return;
+    }
+    
+    try {
+      const result = await bulkFlagQuestions(selectedQuestions, false);
+      setSelectedQuestions([]);
+      setSelectionMode(false);
+      alert(`✓ Unflagged ${result.successCount} question(s)!`);
+    } catch (error) {
+      console.error('Error unflagging questions:', error);
+      alert('Error unflagging questions. Please try again.');
+    }
   };
 
   return (
@@ -410,6 +447,38 @@ export default function QuestionBank() {
                 }}
               >
                 ✏️ Edit Metadata ({selectedQuestions.length})
+              </button>
+              
+              <button 
+                onClick={bulkFlag}
+                disabled={selectedQuestions.length === 0}
+                style={{
+                  backgroundColor: selectedQuestions.length > 0 ? '#e74c3c' : '#ccc',
+                  color: 'white',
+                  padding: '10px 20px',
+                  borderRadius: '6px',
+                  border: 'none',
+                  cursor: selectedQuestions.length > 0 ? 'pointer' : 'not-allowed',
+                  fontWeight: '600'
+                }}
+              >
+                🚩 Flag ({selectedQuestions.length})
+              </button>
+              
+              <button 
+                onClick={bulkUnflag}
+                disabled={selectedQuestions.length === 0}
+                style={{
+                  backgroundColor: selectedQuestions.length > 0 ? '#27ae60' : '#ccc',
+                  color: 'white',
+                  padding: '10px 20px',
+                  borderRadius: '6px',
+                  border: 'none',
+                  cursor: selectedQuestions.length > 0 ? 'pointer' : 'not-allowed',
+                  fontWeight: '600'
+                }}
+              >
+                ✓ Unflag ({selectedQuestions.length})
               </button>
               
               <button 

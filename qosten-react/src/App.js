@@ -16,6 +16,8 @@ import Shop from './components/Shop/Shop';
 import Roadmap from './components/Roadmap/Roadmap';
 import BatchSizeTest from './components/BatchSizeTest/BatchSizeTest';
 import TranslationTest from './components/TranslationTest/TranslationTest';
+import ChapterOverview from './components/ChapterOverview/ChapterOverview';
+import OverviewUpload from './components/OverviewUpload/OverviewUpload';
 
 function App() {
   return (
@@ -44,6 +46,8 @@ function App() {
                 <Route path="/roadmap" element={<Roadmap />} />
                 <Route path="/batch-test" element={<BatchSizeTest />} />
                 <Route path="/translate-test" element={<TranslationTest />} />
+                <Route path="/overview" element={<ChapterOverview />} />
+                <Route path="/overview-upload" element={<OverviewUpload />} />
               </Routes>
             </div>
           </BrowserRouter>

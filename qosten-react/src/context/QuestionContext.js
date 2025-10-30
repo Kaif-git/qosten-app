@@ -16,7 +16,8 @@ const initialState = {
     lesson: '',
     type: '',
     board: '',
-    language: ''
+    language: '',
+    flaggedStatus: '' // 'all', 'flagged', 'unflagged'
   },
   editingQuestion: null,
   isAuthenticated: false,
@@ -343,6 +344,7 @@ export function QuestionProvider({ children }) {
       explanation: dbQuestion.explanation,
       tags: dbQuestion.tags || [],
       isQuizzable: dbQuestion.is_quizzable !== undefined ? dbQuestion.is_quizzable : true,
+      isFlagged: dbQuestion.is_flagged || false,
       createdAt: dbQuestion.created_at
     };
   };
@@ -368,6 +370,7 @@ export function QuestionProvider({ children }) {
       explanation: appQuestion.explanation,
       tags: appQuestion.tags || [],
       is_quizzable: appQuestion.isQuizzable !== undefined ? appQuestion.isQuizzable : true,
+      is_flagged: appQuestion.isFlagged || false,
       synced: false
     };
     
@@ -554,6 +557,20 @@ export function QuestionProvider({ children }) {
     }
   };
 
+  const toggleQuestionFlag = async (questionId) => {
+    const question = state.questions.find(q => q.id === questionId);
+    if (!question) return;
+    
+    const updatedQuestion = { ...question, isFlagged: !question.isFlagged };
+    await updateQuestion(updatedQuestion);
+  };
+
+  const bulkFlagQuestions = async (questionIds, flagged) => {
+    const questionsToUpdate = state.questions.filter(q => questionIds.includes(q.id));
+    const updatedQuestions = questionsToUpdate.map(q => ({ ...q, isFlagged: flagged }));
+    return await bulkUpdateQuestions(updatedQuestions);
+  };
+
   const value = {
     ...state,
     supabaseClient,
@@ -569,7 +586,9 @@ export function QuestionProvider({ children }) {
     refreshQuestions,
     clearCache,
     setLastBatch,
-    getLastBatchQuestions
+    getLastBatchQuestions,
+    toggleQuestionFlag,
+    bulkFlagQuestions
   };
 
   return (

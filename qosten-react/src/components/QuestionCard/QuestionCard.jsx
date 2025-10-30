@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import LatexRenderer from '../LatexRenderer/LatexRenderer';
 
 export default function QuestionCard({ question, selectionMode, isSelected, onToggleSelect }) {
-  const { deleteQuestion, setEditingQuestion } = useQuestions();
+  const { deleteQuestion, setEditingQuestion, toggleQuestionFlag } = useQuestions();
   const navigate = useNavigate();
   
   const handleCardClick = () => {
@@ -22,6 +22,11 @@ export default function QuestionCard({ question, selectionMode, isSelected, onTo
     if (window.confirm('Are you sure you want to delete this question?')) {
       await deleteQuestion(question.id);
     }
+  };
+  
+  const handleToggleFlag = async (e) => {
+    e.stopPropagation(); // Prevent card click when toggling flag
+    await toggleQuestionFlag(question.id);
   };
   
   const renderQuestionContent = () => {
@@ -126,12 +131,12 @@ export default function QuestionCard({ question, selectionMode, isSelected, onTo
 
   return (
     <div 
-      className={`question ${selectionMode ? 'selection-mode' : ''} ${isSelected ? 'selected' : ''}`}
+      className={`question ${selectionMode ? 'selection-mode' : ''} ${isSelected ? 'selected' : ''} ${question.isFlagged ? 'flagged' : ''}`}
       onClick={handleCardClick}
       style={{
         cursor: selectionMode ? 'pointer' : 'default',
-        border: isSelected ? '3px solid #007bff' : undefined,
-        backgroundColor: isSelected ? '#e7f3ff' : undefined,
+        border: isSelected ? '3px solid #007bff' : (question.isFlagged ? '2px solid #e74c3c' : undefined),
+        backgroundColor: isSelected ? '#e7f3ff' : (question.isFlagged ? '#fff5f5' : undefined),
         position: 'relative'
       }}
     >
@@ -163,12 +168,33 @@ export default function QuestionCard({ question, selectionMode, isSelected, onTo
         <span>Lesson: {question.lesson || 'N/A'}</span>
         <span>Board: {question.board || 'N/A'}</span>
         <span>Type: {question.type ? question.type.toUpperCase() : 'N/A'}</span>
+        {question.isFlagged && (
+          <span style={{ 
+            backgroundColor: '#e74c3c', 
+            color: 'white', 
+            padding: '2px 8px', 
+            borderRadius: '4px',
+            fontWeight: 'bold'
+          }}>
+            🚩 FLAGGED
+          </span>
+        )}
       </div>
       
       {renderQuestionContent()}
       
       {!selectionMode && (
         <div className="actions">
+          <button 
+            onClick={handleToggleFlag}
+            style={{
+              backgroundColor: question.isFlagged ? '#27ae60' : '#e74c3c',
+              color: 'white',
+              border: 'none'
+            }}
+          >
+            {question.isFlagged ? '✓ Unflag' : '🚩 Flag'}
+          </button>
           <button onClick={handleEdit}>Edit</button>
           <button className="danger" onClick={handleDelete}>Delete</button>
         </div>

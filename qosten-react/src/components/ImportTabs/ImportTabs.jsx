@@ -337,7 +337,21 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
       const section = sections[sectionIdx];
       console.log(`\n📋 Processing section ${sectionIdx + 1}/${sections.length}`);
       
-      const lines = section.split('\n').map(line => line.trim()).filter(line => line);
+      // Split lines but preserve empty lines for proper formatting
+      const allLines = section.split('\n');
+      console.log(`📝 Raw lines in section: ${allLines.length}`);
+      allLines.forEach((line, idx) => {
+        if (idx < 10 || line === '') {
+          console.log(`   Line ${idx}: "${line}" (empty: ${line.trim() === ''})`);
+        }
+      });
+      
+      // Keep empty lines but still trim whitespace from non-empty lines
+      const lines = allLines.map((line) => {
+        const trimmed = line.trim();
+        return trimmed === '' ? '___EMPTY_LINE___' : trimmed;
+      });
+      
       if (lines.length === 0) continue;
       
       const question = {
@@ -359,6 +373,25 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
       
       for (let i = 0; i < lines.length; i++) {
         let line = lines[i];
+        
+        // Handle empty line markers - skip them but use them as markers for line break preservation
+        if (line === '___EMPTY_LINE___') {
+          console.log(`  🔲 Empty line detected. inAnswerSection: ${inAnswerSection}, hasCurrentAnswerPart: ${!!currentAnswerPart}`);
+          // Preserve gaps in answers by marking with newline
+          if (inAnswerSection && currentAnswerPart) {
+            // Even if answer is empty, mark that we had a gap
+            if (!currentAnswerPart.answer) {
+              currentAnswerPart._hadGap = true;
+            } else {
+              console.log(`    → Adding newline to answer part ${currentAnswerPart.letter}`);
+              currentAnswerPart.answer += '\n';
+            }
+          } else if (!inAnswerSection) {
+            console.log(`    → Marking gap in question text`);
+            // Mark gap but don't break the question text collection
+          }
+          continue;
+        }
         
         // Skip informational lines
         if (line.toLowerCase().includes('alternate') || line.toLowerCase().includes('also supported')) {
@@ -430,8 +463,8 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
         }
         
         if (!inAnswerSection) {
-          // Parse question parts (a., b., c., d. or ক., খ., গ., ঘ.)
-          const partMatch = line.match(/^([a-dক-ঘ])[.)\s]+(.+)$/i);
+          // Parse question parts (a., b., c., d. or ক., খ., গ., ঘ.) - lowercase only
+          const partMatch = line.match(/^([a-dа-ғ])[.)\s]+(.+)$/);
           if (partMatch) {
             let partLetter = partMatch[1].toLowerCase();
             let partText = partMatch[2].trim();
@@ -502,7 +535,8 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
             }
           } else {
             // Standard format: parse answers (a., b., c., d. or ক., খ., গ., ঘ.)
-            const answerMatch = line.match(/^([a-dক-ঘ])[.)\s]+(.+)$/i);
+            // Must be lowercase letter followed by . or ) to avoid matching LaTeX like A = ...
+            const answerMatch = line.match(/^([a-dк-ґ])[.)\s]+(.+)$/);
             if (answerMatch) {
               let partLetter = answerMatch[1].toLowerCase();
               const answerText = answerMatch[2].trim();
@@ -521,16 +555,44 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
               }
             } else if (!line.match(/^(board|বোর্ড)\s*:/i)) {
               // Multi-line answer continuation (not board metadata)
-              if (currentAnswerPart && currentAnswerPart.answer) {
-                currentAnswerPart.answer += ' ' + line;
+              console.log(`  📝 Continuation line: "${line.substring(0, 50)}..."`);
+              
+              // First try to append to currentAnswerPart if it exists
+              if (currentAnswerPart) {
+                console.log(`    → Appending to current part (${currentAnswerPart.letter})`);
+                const endsWithNewline = currentAnswerPart.answer && currentAnswerPart.answer.endsWith('\n');
+                console.log(`       Current answer exists: ${!!currentAnswerPart.answer}, ends with newline: ${endsWithNewline}`);
+                
+                if (!currentAnswerPart.answer) {
+                  // First content for this part
+                  currentAnswerPart.answer = line;
+                  console.log(`       Setting initial answer`);
+                } else if (endsWithNewline) {
+                  // Previous line was empty/gap, append directly on new line
+                  currentAnswerPart.answer += line;
+                  console.log(`       Appending after gap (no space)`);
+                } else {
+                  // Normal continuation with space
+                  currentAnswerPart.answer += ' ' + line;
+                  console.log(`       Appending with space`);
+                }
               } else if (question.parts.length > 0 && !useBulletPointFormat) {
                 // If no current answer part, append to the last part
                 const lastPart = question.parts[question.parts.length - 1];
                 if (lastPart) {
-                  if (lastPart.answer) {
-                    lastPart.answer += ' ' + line;
-                  } else {
+                  console.log(`    → Appending to last part (${lastPart.letter})`);
+                  const endsWithNewline = lastPart.answer && lastPart.answer.endsWith('\n');
+                  console.log(`       Current answer exists: ${!!lastPart.answer}, ends with newline: ${endsWithNewline}`);
+                  
+                  if (!lastPart.answer) {
                     lastPart.answer = line;
+                    console.log(`       Setting initial answer`);
+                  } else if (endsWithNewline) {
+                    lastPart.answer += line;
+                    console.log(`       Appending after gap (no space)`);
+                  } else {
+                    lastPart.answer += ' ' + line;
+                    console.log(`       Appending with space`);
                   }
                   currentAnswerPart = lastPart;
                 }
@@ -545,6 +607,8 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
         question.questionText = questionTextLines.join('\n').trim();
       }
       
+      // Don't clean up - preserve the line breaks we added
+      
       // Only add question if it has meaningful content
       // Accept questions with either subject metadata OR board metadata (for Bangla format)
       const hasMetadata = question.subject || question.board;
@@ -555,6 +619,11 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
         question.parts = question.parts.filter(part => part.text.trim());
         questions.push(question);
         console.log(`  💾 Question saved with ${question.parts.length} parts`);
+        
+        // Log final answers to verify line breaks
+        question.parts.forEach(part => {
+          console.log(`    Part ${part.letter} answer preview: "${part.answer.substring(0, 80).replace(/\n/g, '\\n')}..."`);
+        });
       } else {
         console.log(`  ⚠️ Question incomplete - not saved (hasMetadata: ${hasMetadata}, hasContent: ${hasContent})`);
       }

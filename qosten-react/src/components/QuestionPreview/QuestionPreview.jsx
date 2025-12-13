@@ -276,9 +276,9 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     setCropArea(prev => {
       const newArea = { ...prev };
       if (dimension === 'width') {
-        newArea.width = Math.max(50, prev.width + delta);
+        newArea.width = Math.max(1, prev.width + delta);
       } else if (dimension === 'height') {
-        newArea.height = Math.max(50, prev.height + delta);
+        newArea.height = Math.max(1, prev.height + delta);
       }
       return newArea;
     });

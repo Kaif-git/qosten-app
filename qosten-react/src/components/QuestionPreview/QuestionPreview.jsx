@@ -76,6 +76,44 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       return updated;
     });
   };
+
+  // Upload/remove answer images for CQ parts
+  const handlePartImageUpload = (qIndex, partIndex, file) => {
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const dataUrl = reader.result;
+        // Save to the part
+        updateQuestionPart(qIndex, partIndex, 'answerImage', dataUrl);
+        // Also map to top-level columns if part is c or d
+        setEditableQuestions(prev => {
+          const updated = [...prev];
+          const partLetter = updated[qIndex]?.parts?.[partIndex]?.letter?.toLowerCase();
+          if (partLetter === 'c') {
+            updated[qIndex] = { ...updated[qIndex], answerimage1: dataUrl };
+          } else if (partLetter === 'd') {
+            updated[qIndex] = { ...updated[qIndex], answerimage2: dataUrl };
+          }
+          return updated;
+        });
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const removePartImage = (qIndex, partIndex) => {
+    updateQuestionPart(qIndex, partIndex, 'answerImage', null);
+    setEditableQuestions(prev => {
+      const updated = [...prev];
+      const partLetter = updated[qIndex]?.parts?.[partIndex]?.letter?.toLowerCase();
+      if (partLetter === 'c') {
+        updated[qIndex] = { ...updated[qIndex], answerimage1: null };
+      } else if (partLetter === 'd') {
+        updated[qIndex] = { ...updated[qIndex], answerimage2: null };
+      }
+      return updated;
+    });
+  };
   
   const convertPdfPageToImage = async (pdfData, pageNumber) => {
     try {
@@ -225,7 +263,25 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     );
     
     const croppedImage = canvas.toDataURL('image/png');
-    updateQuestion(currentCroppingIndex, 'image', croppedImage);
+
+    // If cropping for a part, save to that part and map to top-level columns; otherwise save as stem image
+    if (typeof currentCroppingIndex === 'object' && currentCroppingIndex !== null && currentCroppingIndex.type === 'part') {
+      const { qIndex, partIndex } = currentCroppingIndex;
+      updateQuestionPart(qIndex, partIndex, 'answerImage', croppedImage);
+      setEditableQuestions(prev => {
+        const updated = [...prev];
+        const partLetter = updated[qIndex]?.parts?.[partIndex]?.letter?.toLowerCase();
+        if (partLetter === 'c') {
+          updated[qIndex] = { ...updated[qIndex], answerimage1: croppedImage };
+        } else if (partLetter === 'd') {
+          updated[qIndex] = { ...updated[qIndex], answerimage2: croppedImage };
+        }
+        return updated;
+      });
+    } else {
+      updateQuestion(currentCroppingIndex, 'image', croppedImage);
+    }
+
     setShowCropper(false);
     setCurrentCroppingIndex(null);
   };
@@ -668,6 +724,52 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                     </div>
                   )}
                 </div>
+
+                {(part.letter?.toLowerCase() === 'c' || part.letter?.toLowerCase() === 'd') && (
+                  <div style={{ marginTop: '10px' }}>
+                    <label className="image-upload-label">
+                      {part.letter?.toLowerCase() === 'c' ? 'Answer Image 1 (answerimage1)' : 'Answer Image 2 (answerimage2)'}
+                    </label>
+                    <div className="image-buttons-group">
+                      <input
+                        type="file"
+                        accept="image/*"
+                        onChange={(e) => handlePartImageUpload(index, i, e.target.files[0])}
+                        className="image-upload-input"
+                        style={{ marginBottom: '10px' }}
+                      />
+                      {sourceDocument && (
+                        <button 
+                          type="button"
+                          onClick={() => {
+                            setCurrentCroppingIndex({ type: 'part', qIndex: index, partIndex: i });
+                            setShowCropper(true);
+                            setCropArea({ x: 10, y: 10, width: 200, height: 200 });
+                            setZoomLevel(1);
+                            setPanX(0);
+                            setPanY(0);
+                          }}
+                          className="crop-from-source-btn"
+                          style={{ marginBottom: '10px' }}
+                        >
+                          ✂️ Crop from Source
+                        </button>
+                      )}
+                    </div>
+                    {part.answerImage && (
+                      <div className="image-preview-container">
+                        <img src={part.answerImage} alt="Answer" className="preview-uploaded-image" />
+                        <button 
+                          className="remove-image-btn" 
+                          onClick={() => removePartImage(index, i)}
+                          type="button"
+                        >
+                          ✕ Remove Image
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
             ))}
           </div>

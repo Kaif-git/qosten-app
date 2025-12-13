@@ -593,8 +593,9 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
         }
         
         if (!inAnswerSection) {
-          // Parse question parts (a., b., c., d. or ক., খ., গ., ঘ.) - lowercase only
-          const partMatch = line.match(/^([a-dক-ঘ])[.)]\s]+(.+)$/);
+          // Parse question parts (a., b., c., d. or ک., খ., গ., ઘ.) - lowercase only
+          // Allow optional spaces after dot/paren to handle both "a. text" and "a.text" formats
+          const partMatch = line.match(/^([a-dک-ઘ])[.)]\s*(.+)$/);
           if (partMatch) {
             let partLetter = partMatch[1].toLowerCase();
             let partText = partMatch[2].trim();
@@ -667,9 +668,10 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
               currentAnswerPart.answer += ' ' + line;
             }
           } else {
-            // Standard format: parse answers (a., b., c., d. or ক., খ., গ., ঘ.)
+            // Standard format: parse answers (a., b., c., d. or ک., খ., গ., ઘ.)
             // Must be lowercase letter followed by . or ) to avoid matching LaTeX like A = ...
-            const answerMatch = line.match(/^([a-dক-ঘ])[.)\s]+(.+)$/);
+            // Allow optional spaces after dot/paren to handle both "a. text" and "a.text" formats
+            const answerMatch = line.match(/^([a-dک-ઘ])[.)]\s*(.+)$/);
             if (answerMatch) {
               let partLetter = answerMatch[1].toLowerCase();
               const answerText = answerMatch[2].trim();

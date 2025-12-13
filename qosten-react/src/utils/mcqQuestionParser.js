@@ -133,6 +133,10 @@ export function parseMCQQuestions(text) {
       // Parse question number and text (e.g., **6.** or *6.* or 6. or **৩.** Question text)
       // Supports both English (0-9) and Bengali (০-৯) numerals
       else if (line.match(/^\*{0,2}[\d০-৯]+\.\*{0,2}/)) {
+        // Save previous question if we were in question mode
+        if (inQuestion && questionBuffer.length > 0) {
+          currentQuestion.questionText = questionBuffer.join(' ').trim();
+        }
         inQuestion = true;
         questionBuffer = [];
         // Remove the question number marker (handles 0, 1, or 2 asterisks and Bengali numerals)
@@ -147,7 +151,7 @@ export function parseMCQQuestions(text) {
         console.log('  ✅ Found Option:', line.substring(0, 50));
         // Save question text if we were collecting it
         if (inQuestion && questionBuffer.length > 0) {
-          currentQuestion.questionText = questionBuffer.join(' ').trim();
+          currentQuestion.questionText = questionBuffer.join('\n').trim();
           questionBuffer = [];
           inQuestion = false;
         }
@@ -185,6 +189,12 @@ export function parseMCQQuestions(text) {
         line.match(/^(Explanation|ব্যাখ্যা|Bekkha):\s*$/i)
       ) {
         console.log('  ✅ Found Explanation line');
+        // Save question text if we were collecting it
+        if (inQuestion && questionBuffer.length > 0) {
+          currentQuestion.questionText = questionBuffer.join('\n').trim();
+          questionBuffer = [];
+          inQuestion = false;
+        }
         inExplanation = true;
         explanationBuffer = [];
         // Check if explanation starts on same line
@@ -233,6 +243,7 @@ export function parseMCQQuestions(text) {
         explanationBuffer.push(line);
       }
       // Continue collecting question text if in question mode
+      // This includes multi-line questions and descriptive content (e.g., roman numerals)
       else if (inQuestion && !line.match(/^[a-dক-ঘ]\)/)) {
         questionBuffer.push(line);
       }

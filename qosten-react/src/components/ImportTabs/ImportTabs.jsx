@@ -197,6 +197,12 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
         continue;
       }
       
+      // Skip "Question Set X" headers (English and Bangla)
+      if (line.match(/^Question\s+Set\s+\d+$/i) || line.match(/^প্রশ্ন\s*সেট\s*[\d০-৯]+$/)) {
+        console.log('  ⏭️ Skipping Question Set header');
+        continue;
+      }
+      
       // Parse metadata - handle both [Field: Value] and **[Field: Value]** formats
       // Also handle Bengali field names: বিষয়, অধ্যায়, পাঠ, বোর্ড
       if ((line.startsWith('[') && line.endsWith(']')) || (line.includes('[') && line.includes(']'))) {
@@ -237,19 +243,20 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
         continue;
       }
       
-      // Parse questions - handle English (0-9) and Bengali (০-৯) numerals
-      if (/^[\\d০-৯]+[.) \\s]/.test(line) || /^Q[\\d০-৯]*[.) \\s]/.test(line)) {
+      // Parse questions - handle English (0-9) and Bengali (०-९) numerals
+      if (/^[\d০-৯]+[।.)\s]/.test(line) || /^Q[\d০-৯]*[।.)\s]/.test(line)) {
         if (currentQuestion) {
           // Clean up internal flags before saving
           delete currentQuestion._collectingExplanation;
+          delete currentQuestion._collectingQuestion;
           questions.push(currentQuestion);
         }
         
         let questionText = line;
-        // Remove various question prefixes flexibly (handle Bengali numerals)
-        questionText = questionText.replace(/^[\d০-৯]+[.)\s]*/, '');
-        questionText = questionText.replace(/^Q[\d০-৯]*[.)\s]*/, '');
-        questionText = questionText.replace(/^Question\s*[\d০-৯]*[.)\s]*/, '');
+        // Remove various question prefixes flexibly (handle Bengali numerals and Bangla danda)
+        questionText = questionText.replace(/^[\d০-৯]+[।.)\s]*/, '');
+        questionText = questionText.replace(/^Q[\d০-৯]*[।.)\s]*/, '');
+        questionText = questionText.replace(/^(?:Question|প্রশ্ন)\s*[\d০-৯]*[।.)\s]*/, '');
         
         console.log('  ✅ Found Question:', questionText.substring(0, 60) + '...');
         
@@ -259,13 +266,19 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
           questionText: questionText.trim(),
           options: [],
           correctAnswer: '',
-          explanation: ''
+          explanation: '',
+          _collectingQuestion: true
         };
         continue;
       }
       
       // Parse options - more flexible option matching (handle both English a-d and Bengali ক-ঘ)
       if (/^[a-dক-ঘ][.)\s]/i.test(line) && currentQuestion) {
+        // Mark that we've stopped collecting question text once we see the first option
+        if (currentQuestion._collectingQuestion) {
+          currentQuestion._collectingQuestion = false;
+        }
+        
         const optionMatch = line.match(/^([a-dক-ঘ])[.)\s]*(.+)$/i);
         if (optionMatch) {
           let optionLetter = optionMatch[1].toLowerCase();
@@ -286,17 +299,34 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
       }
       
       // Parse correct answer - more flexible (handle both English and Bengali)
-      if (/^(correct|answer|ans|সঠিক)\s*[:=]\s*/i.test(line) && currentQuestion) {
-        const answerMatch = line.match(/^(?:correct|answer|ans|সঠিক)\s*[:=]\s*([a-dক-ঘ])\s*$/i);
-        if (answerMatch) {
-          let answer = answerMatch[1].toLowerCase();
-          console.log('  ✅ Found Correct answer:', answer);
-          // Convert Bengali letters to English
-          const bengaliToEnglish = { 'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd' };
-          if (bengaliToEnglish[answer]) {
-            answer = bengaliToEnglish[answer];
+      if (/^(correct|answer|ans|সঠিক(?:\s*উত্তর)?)\s*[:=ঃ：]/i.test(line) && currentQuestion) {
+        // Capture whatever comes after the marker; we'll normalize if it's a/b/c/d or ক/খ/গ/ঘ
+        const answerTextMatch = line.match(/^(?:correct|answer|ans|সঠিক(?:\s*উত্তর)?)\s*[:=ঃ：]\s*(.+)$/i);
+        if (answerTextMatch) {
+          const raw = answerTextMatch[1].trim();
+          // Only keep the first token (in case of extra words)
+          const token = raw.split(/\s+/)[0];
+          const letterMatch = token.match(/^([a-dক-ঘ])$/i);
+          if (letterMatch) {
+            let answer = letterMatch[1].toLowerCase();
+            console.log('  ✅ Found Correct answer:', answer);
+            // Convert Bengali letters to English
+            const bengaliToEnglish = { 'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd' };
+            if (bengaliToEnglish[answer]) {
+              answer = bengaliToEnglish[answer];
+            }
+            currentQuestion.correctAnswer = answer;
+          } else {
+            // Free-text answer provided; store it in explanation prefix if no explanation exists
+            console.log('  ℹ️ Non-letter correct answer text found, treating as note:', raw.substring(0, 50) + '...');
+            if (raw) {
+              if (currentQuestion.explanation) {
+                currentQuestion.explanation = `${raw}\n${currentQuestion.explanation}`;
+              } else {
+                currentQuestion.explanation = raw;
+              }
+            }
           }
-          currentQuestion.correctAnswer = answer;
 
           // NEW: Try to capture explanation from the next line(s)
           const nextLine = lines[i + 1] || '';
@@ -322,7 +352,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
             }
           }
         } else {
-          console.log('  ⚠️ Failed to match correct answer in line:', line);
+          console.log('  ⚠️ Failed to parse correct answer line:', line);
         }
         continue;
       }
@@ -356,6 +386,13 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
       
       // Collect multi-line explanation text
       if (currentQuestion && currentQuestion._collectingExplanation && line && !line.includes('[')) {
+        // Stop collecting if we hit a Question Set header (English or Bangla) or metadata
+        if (line.match(/^Question\s+Set\s+\d+$/i) || line.match(/^প্রশ্ন\s*সেট\s*[\d০-৯]+$/) || line.match(/^\[/) || line.match(/^(subject|chapter|lesson|board|বিষয়|অধ্যায়|পাঠ|বোর্ড)\s*:/i)) {
+          currentQuestion._collectingExplanation = false;
+          // Process this line again as it might be metadata
+          i--;
+          continue;
+        }
         if (currentQuestion.explanation) {
           currentQuestion.explanation += ' ' + line;
         } else {
@@ -363,14 +400,17 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
         }
         continue;
       }
-      
       // If we have a current question and this line doesn't match any pattern,
       // it might be a continuation of the question text or explanation
-      if (currentQuestion && !line.match(/^[a-dক-ঘ][.) \s]/i) && !line.includes('[')) {
-        // If the line looks like it could be part of the question
-        if (currentQuestion.questionText && !currentQuestion.options.length) {
+      if (currentQuestion && !line.match(/^[a-dক-ঘ][.)\s]/i) && !line.includes('[')) {
+        // If we're still collecting question text (haven't seen options yet)
+        if (currentQuestion._collectingQuestion) {
+          console.log('  📐 Adding to question text (roman/descriptive):', line.substring(0, 40));
+          currentQuestion.questionText += '\n' + line;
+        } else if (currentQuestion.questionText && !currentQuestion.options.length) {
+          // No options yet, still part of question
           console.log('  📐 Adding to question text:', line.substring(0, 40));
-          currentQuestion.questionText += ' ' + line;
+          currentQuestion.questionText += '\n' + line;
         } else if (currentQuestion.explanation) {
           console.log('  📐 Adding to explanation:', line.substring(0, 40));
           currentQuestion.explanation += ' ' + line;
@@ -387,6 +427,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
       console.log('  💾 Saving last question');
       // Clean up internal flags before saving
       delete currentQuestion._collectingExplanation;
+      delete currentQuestion._collectingQuestion;
       questions.push(currentQuestion);
     }
     

@@ -8,8 +8,24 @@ import * as pdfjsLib from 'pdfjs-dist';
 pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.mjs`;
 
 export default function QuestionPreview({ questions, onConfirm, onCancel, title, isEditMode = false }) {
-  const { questions: dbQuestions } = useQuestions();
-  const [editableQuestions, setEditableQuestions] = useState(questions);
+  const { questions: dbQuestions, addQuestion } = useQuestions();
+  const CACHE_KEY = 'qosten_preview_cache';
+
+  const getInitialQuestions = () => {
+    try {
+      const cached = localStorage.getItem(CACHE_KEY);
+      if (cached) {
+        const parsed = JSON.parse(cached);
+        console.log('📦 Restored', parsed.length, 'preview question(s) from cache');
+        return parsed;
+      }
+    } catch (e) {
+      console.error('Error reading preview cache', e);
+    }
+    return questions;
+  };
+
+  const [editableQuestions, setEditableQuestions] = useState(getInitialQuestions());
   const [sourceDocument, setSourceDocument] = useState(null);
   const [sourceDocType, setSourceDocType] = useState(null); // 'image' or 'pdf'
   const [pdfPages, setPdfPages] = useState([]);
@@ -30,6 +46,24 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   const canvasRef = useRef(null);
   const imageRef = useRef(null);
   const cropperContainerRef = useRef(null);
+  
+  // Autosave preview questions to cache
+  useEffect(() => {
+    try {
+      localStorage.setItem(CACHE_KEY, JSON.stringify(editableQuestions));
+    } catch (e) {
+      console.error('Error saving preview cache', e);
+    }
+  }, [editableQuestions, CACHE_KEY]);
+
+  const clearPreviewCache = () => {
+    try {
+      localStorage.removeItem(CACHE_KEY);
+      alert('🧹 Cleared local preview cache');
+    } catch (e) {
+      console.error('Error clearing preview cache', e);
+    }
+  };
   
   // Get unique metadata values from both preview questions AND existing database questions
   const getUniqueValues = (field) => {
@@ -219,6 +253,8 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   };
   
   const openCropper = (index) => {
+    console.log('📸 Opening cropper with index:', index);
+    console.log('📄 Source document available:', !!sourceDocument);
     if (!sourceDocument) {
       alert('Please upload a source document first!');
       return;
@@ -229,6 +265,17 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     setZoomLevel(1);
     setPanX(0);
     setPanY(0);
+    
+    // Auto-scroll to the top of cropper modal when opened
+    setTimeout(() => {
+      const overlay = document.querySelector('.cropper-modal-overlay');
+      if (overlay) {
+        overlay.scrollTop = 0;
+        console.log('⬆️ Scrolled overlay to top (scrollTop: 0)');
+      }
+    }, 100);
+    
+    console.log('✅ Cropper state updated, showCropper should be true');
   };
   
   const handleCropImage = () => {
@@ -391,9 +438,49 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     setPanX(0);
     setPanY(0);
   };
+
+  const moveCropBox = (direction, amount = 10) => {
+    if (!imageRef.current) return;
+
+    const img = imageRef.current;
+    const maxX = Math.max(0, img.width - cropArea.width);
+    const maxY = Math.max(0, img.height - cropArea.height);
+
+    switch (direction) {
+      case 'left':
+        setCropArea(prev => ({ ...prev, x: Math.max(0, prev.x - amount) }));
+        break;
+      case 'right':
+        setCropArea(prev => ({ ...prev, x: Math.min(maxX, prev.x + amount) }));
+        break;
+      case 'up':
+        setCropArea(prev => ({ ...prev, y: Math.max(0, prev.y - amount) }));
+        break;
+      case 'down':
+        setCropArea(prev => ({ ...prev, y: Math.min(maxY, prev.y + amount) }));
+        break;
+      default:
+        break;
+    }
+  };
   
   const removeImage = (index) => {
     updateQuestion(index, 'image', null);
+  };
+
+  const uploadSingleQuestion = async (index) => {
+    const q = editableQuestions[index];
+    if (!q) return;
+    try {
+      console.log('📑 Uploading single question:', index + 1);
+      await addQuestion(q);
+      alert(`✅ Uploaded question #${index + 1}`);
+      // Remove from preview after successful upload
+      setEditableQuestions(prev => prev.filter((_, i) => i !== index));
+    } catch (e) {
+      console.error('Error uploading single question', e);
+      alert('❌ Failed to upload this question: ' + e.message);
+    }
   };
 
   const toggleQuestionSelection = (index) => {
@@ -454,17 +541,20 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       border: selectedQuestions.has(index) ? '3px solid #3498db' : undefined,
       backgroundColor: selectedQuestions.has(index) ? '#f0f8ff' : undefined
     }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px', gap: '10px' }}>
         <h4 style={{ margin: 0 }}>Question {index + 1} - MCQ</h4>
-        <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', fontSize: '14px', fontWeight: 'normal' }}>
-          <input
-            type="checkbox"
-            checked={selectedQuestions.has(index)}
-            onChange={() => toggleQuestionSelection(index)}
-            style={{ marginRight: '5px', cursor: 'pointer', width: '18px', height: '18px' }}
-          />
-          <span>Select for bulk edit</span>
-        </label>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', fontSize: '14px', fontWeight: 'normal' }}>
+            <input
+              type="checkbox"
+              checked={selectedQuestions.has(index)}
+              onChange={() => toggleQuestionSelection(index)}
+              style={{ marginRight: '5px', cursor: 'pointer', width: '18px', height: '18px' }}
+            />
+            <span>Select</span>
+          </label>
+          <button type="button" onClick={() => uploadSingleQuestion(index)} style={{ backgroundColor: '#8e44ad', color: 'white', border: 'none', padding: '6px 12px', borderRadius: '4px', cursor: 'pointer', fontSize: '13px', fontWeight: '500' }}>Upload this</button>
+        </div>
       </div>
       <div className="preview-metadata-edit">
         <input
@@ -598,17 +688,20 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       border: selectedQuestions.has(index) ? '3px solid #3498db' : undefined,
       backgroundColor: selectedQuestions.has(index) ? '#f0f8ff' : undefined
     }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px', gap: '10px' }}>
         <h4 style={{ margin: 0 }}>Question {index + 1} - CQ</h4>
-        <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', fontSize: '14px', fontWeight: 'normal' }}>
-          <input
-            type="checkbox"
-            checked={selectedQuestions.has(index)}
-            onChange={() => toggleQuestionSelection(index)}
-            style={{ marginRight: '5px', cursor: 'pointer', width: '18px', height: '18px' }}
-          />
-          <span>Select for bulk edit</span>
-        </label>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', fontSize: '14px', fontWeight: 'normal' }}>
+            <input
+              type="checkbox"
+              checked={selectedQuestions.has(index)}
+              onChange={() => toggleQuestionSelection(index)}
+              style={{ marginRight: '5px', cursor: 'pointer', width: '18px', height: '18px' }}
+            />
+            <span>Select</span>
+          </label>
+          <button type="button" onClick={() => uploadSingleQuestion(index)} style={{ backgroundColor: '#8e44ad', color: 'white', border: 'none', padding: '6px 12px', borderRadius: '4px', cursor: 'pointer', fontSize: '13px', fontWeight: '500' }}>Upload this</button>
+        </div>
       </div>
       <div className="preview-metadata-edit">
         <input
@@ -783,17 +876,20 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       border: selectedQuestions.has(index) ? '3px solid #3498db' : undefined,
       backgroundColor: selectedQuestions.has(index) ? '#f0f8ff' : undefined
     }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px', gap: '10px' }}>
         <h4 style={{ margin: 0 }}>Question {index + 1} - SQ</h4>
-        <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', fontSize: '14px', fontWeight: 'normal' }}>
-          <input
-            type="checkbox"
-            checked={selectedQuestions.has(index)}
-            onChange={() => toggleQuestionSelection(index)}
-            style={{ marginRight: '5px', cursor: 'pointer', width: '18px', height: '18px' }}
-          />
-          <span>Select for bulk edit</span>
-        </label>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', fontSize: '14px', fontWeight: 'normal' }}>
+            <input
+              type="checkbox"
+              checked={selectedQuestions.has(index)}
+              onChange={() => toggleQuestionSelection(index)}
+              style={{ marginRight: '5px', cursor: 'pointer', width: '18px', height: '18px' }}
+            />
+            <span>Select</span>
+          </label>
+          <button type="button" onClick={() => uploadSingleQuestion(index)} style={{ backgroundColor: '#8e44ad', color: 'white', border: 'none', padding: '6px 12px', borderRadius: '4px', cursor: 'pointer', fontSize: '13px', fontWeight: '500' }}>Upload this</button>
+        </div>
       </div>
       <div className="preview-metadata-edit">
         <input
@@ -875,7 +971,10 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     <>
       <div className="preview-modal-overlay">
         <div className="preview-modal">
-          <h2>{title || 'Preview & Edit Questions'}</h2>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
+            <h2 style={{ margin: 0 }}>{title || 'Preview & Edit Questions'}</h2>
+            <button type="button" onClick={clearPreviewCache} style={{ backgroundColor: '#e67e22', color: 'white', border: 'none', padding: '8px 15px', borderRadius: '4px', fontSize: '13px', cursor: 'pointer', fontWeight: '500' }}>🧹 Clear cache</button>
+          </div>
           <p className="preview-count">
             {isEditMode 
               ? `Review and edit ${editableQuestions.length} question${editableQuestions.length !== 1 ? 's' : ''} from the batch.`
@@ -1173,9 +1272,45 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       
       {/* Image Cropper Modal */}
       {showCropper && sourceDocument && (
-        <div className="cropper-modal-overlay">
-          <div className="cropper-modal">
-            <h3>Crop Image from Source</h3>
+        <div 
+          className="cropper-modal-overlay"
+          onMouseEnter={() => console.log('🎬 Cropper modal overlay mounted')}
+          style={{ display: showCropper ? 'flex' : 'none' }}
+        >
+          <div 
+            className="cropper-modal" 
+            style={{ position: 'relative' }}
+            onMouseEnter={() => {
+              console.log('📊 MODAL MEASUREMENTS:');
+              const elem = document.querySelector('.cropper-modal');
+              const overlay = document.querySelector('.cropper-modal-overlay');
+              if (elem) {
+                console.log('  Modal height:', elem.offsetHeight);
+                console.log('  Modal scrollTop:', elem.scrollTop);
+                console.log('  Modal clientHeight:', elem.clientHeight);
+              }
+              if (overlay) {
+                console.log('  Overlay height:', overlay.offsetHeight);
+                console.log('  Overlay scrollHeight:', overlay.scrollHeight);
+                console.log('  Overlay scrollTop:', overlay.scrollTop);
+                console.log('  Overlay clientHeight:', overlay.clientHeight);
+              }
+            }}
+          >
+            <h3 style={{ marginBottom: '15px' }}>Crop Image from Source (Zoom: {Math.round(zoomLevel * 100)}%, Pan: {panX}x{panY})</h3>
+            <p style={{fontSize: '12px', color: '#999', margin: '5px 0 15px 0', backgroundColor: '#f0f0f0', padding: '8px', borderRadius: '4px' }}>
+              Drag the box to select the area you want to crop. <br/>
+              💡 Overlay scrollHeight: <span id="scroll-height">loading...</span> | ScrollTop: <span id="scroll-top">0</span>
+            </p>
+            <script>{`
+              document.addEventListener('scroll', function() {
+                const overlay = document.querySelector('.cropper-modal-overlay');
+                if (overlay) {
+                  document.getElementById('scroll-height').textContent = overlay.scrollHeight;
+                  document.getElementById('scroll-top').textContent = overlay.scrollTop;
+                }
+              }, true);
+            `}</script>
             <p style={{fontSize: '14px', color: '#666', margin: '5px 0 15px 0'}}>
               Drag the box to select the area you want to crop
             </p>
@@ -1203,16 +1338,34 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
               <button type="button" onClick={() => adjustCropSize('height', 20)}>Height +</button>
               <button type="button" onClick={() => adjustZoom(-0.25)}>Zoom -</button>
               <button type="button" onClick={() => adjustZoom(0.25)}>Zoom +</button>
-              <div style={{ display: 'flex', gap: '5px', marginLeft: '10px' }}>
-                <button type="button" onClick={() => pan('up')} style={{ padding: '6px 10px' }}>↑</button>
-                <div style={{ display: 'flex', gap: '5px' }}>
-                  <button type="button" onClick={() => pan('left')} style={{ padding: '6px 10px' }}>←</button>
-                  <button type="button" onClick={() => pan('down')} style={{ padding: '6px 10px' }}>↓</button>
-                  <button type="button" onClick={() => pan('right')} style={{ padding: '6px 10px' }}>→</button>
+              <div style={{ display: 'flex', gap: '5px', marginLeft: '10px', alignItems: 'center' }}>
+                <div>
+                  <label style={{ fontSize: '11px', fontWeight: '600', color: '#666', display: 'block', marginBottom: '3px' }}>Pan Image:</label>
+                  <div style={{ display: 'flex', gap: '5px' }}>
+                    <button type="button" onClick={() => pan('up')} style={{ padding: '6px 10px' }}>↑</button>
+                    <div style={{ display: 'flex', gap: '5px' }}>
+                      <button type="button" onClick={() => pan('left')} style={{ padding: '6px 10px' }}>←</button>
+                      <button type="button" onClick={() => pan('down')} style={{ padding: '6px 10px' }}>↓</button>
+                      <button type="button" onClick={() => pan('right')} style={{ padding: '6px 10px' }}>→</button>
+                    </div>
+                    <button type="button" onClick={resetPan} style={{ fontSize: '12px', padding: '6px 10px' }}>Reset</button>
+                  </div>
                 </div>
-                <button type="button" onClick={resetPan} style={{ fontSize: '12px', padding: '6px 10px' }}>Reset Pan</button>
               </div>
-              <span style={{marginLeft: 'auto'}}>Zoom: {Math.round(zoomLevel * 100)}% • Size: {Math.round(cropArea.width)} × {Math.round(cropArea.height)}px</span>
+              <div style={{ display: 'flex', gap: '5px', marginLeft: '10px', alignItems: 'center' }}>
+                <div>
+                  <label style={{ fontSize: '11px', fontWeight: '600', color: '#666', display: 'block', marginBottom: '3px' }}>Move Box:</label>
+                  <div style={{ display: 'flex', gap: '5px' }}>
+                    <button type="button" onClick={() => moveCropBox('up')} style={{ padding: '6px 10px' }}>↑</button>
+                    <div style={{ display: 'flex', gap: '5px' }}>
+                      <button type="button" onClick={() => moveCropBox('left')} style={{ padding: '6px 10px' }}>←</button>
+                      <button type="button" onClick={() => moveCropBox('down')} style={{ padding: '6px 10px' }}>↓</button>
+                      <button type="button" onClick={() => moveCropBox('right')} style={{ padding: '6px 10px' }}>→</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span style={{marginLeft: 'auto'}}>Zoom: {Math.round(zoomLevel * 100)}% • Pos: {Math.round(cropArea.x)}x{Math.round(cropArea.y)} • Size: {Math.round(cropArea.width)} × {Math.round(cropArea.height)}px</span>
             </div>
             
             <div 

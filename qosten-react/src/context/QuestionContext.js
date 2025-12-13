@@ -86,12 +86,6 @@ export function QuestionProvider({ children }) {
   };
 
   const addQuestion = async (question) => {
-    // Check for duplicate questions
-    const isDuplicate = checkDuplicate(question);
-    if (isDuplicate) {
-      throw new Error('Duplicate question detected. This question already exists in the question bank.');
-    }
-    
     if (!supabaseClient) {
       // Fallback to local storage
       const newQuestion = { ...question, id: Date.now().toString() };
@@ -133,23 +127,6 @@ export function QuestionProvider({ children }) {
     }
   };
 
-  const checkDuplicate = (newQuestion) => {
-    // Get the question text based on question type
-    const newQuestionText = (newQuestion.questionText || newQuestion.question || '').trim().toLowerCase();
-    
-    if (!newQuestionText) {
-      return false;
-    }
-
-    // Check if a similar question already exists
-    return state.questions.some(existingQuestion => {
-      const existingQuestionText = (existingQuestion.questionText || existingQuestion.question || '').trim().toLowerCase();
-      
-      // Check if question text matches and type matches
-      return existingQuestionText === newQuestionText && 
-             existingQuestion.type === newQuestion.type;
-    });
-  };
 
   const updateQuestion = async (question) => {
     if (!supabaseClient) {
@@ -319,7 +296,6 @@ export function QuestionProvider({ children }) {
       tags: dbQuestion.tags || [],
       isQuizzable: dbQuestion.is_quizzable !== undefined ? dbQuestion.is_quizzable : true,
       isFlagged: dbQuestion.is_flagged || false,
-      linkedImageParentId: dbQuestion.linked_image_parent_id,
       createdAt: dbQuestion.created_at
     };
   };
@@ -346,7 +322,6 @@ export function QuestionProvider({ children }) {
       tags: appQuestion.tags || [],
       is_quizzable: appQuestion.isQuizzable !== undefined ? appQuestion.isQuizzable : true,
       is_flagged: appQuestion.isFlagged || false,
-      linked_image_parent_id: appQuestion.linkedImageParentId,
       synced: false
     };
     

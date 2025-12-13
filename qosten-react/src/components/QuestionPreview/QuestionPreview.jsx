@@ -9,23 +9,8 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLi
 
 export default function QuestionPreview({ questions, onConfirm, onCancel, title, isEditMode = false }) {
   const { questions: dbQuestions, addQuestion } = useQuestions();
-  const CACHE_KEY = 'qosten_preview_cache';
 
-  const getInitialQuestions = () => {
-    try {
-      const cached = localStorage.getItem(CACHE_KEY);
-      if (cached) {
-        const parsed = JSON.parse(cached);
-        console.log('📦 Restored', parsed.length, 'preview question(s) from cache');
-        return parsed;
-      }
-    } catch (e) {
-      console.error('Error reading preview cache', e);
-    }
-    return questions;
-  };
-
-  const [editableQuestions, setEditableQuestions] = useState(getInitialQuestions());
+  const [editableQuestions, setEditableQuestions] = useState(questions);
   const [sourceDocument, setSourceDocument] = useState(null);
   const [sourceDocType, setSourceDocType] = useState(null); // 'image' or 'pdf'
   const [pdfPages, setPdfPages] = useState([]);
@@ -46,24 +31,6 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   const canvasRef = useRef(null);
   const imageRef = useRef(null);
   const cropperContainerRef = useRef(null);
-  
-  // Autosave preview questions to cache
-  useEffect(() => {
-    try {
-      localStorage.setItem(CACHE_KEY, JSON.stringify(editableQuestions));
-    } catch (e) {
-      console.error('Error saving preview cache', e);
-    }
-  }, [editableQuestions, CACHE_KEY]);
-
-  const clearPreviewCache = () => {
-    try {
-      localStorage.removeItem(CACHE_KEY);
-      alert('🧹 Cleared local preview cache');
-    } catch (e) {
-      console.error('Error clearing preview cache', e);
-    }
-  };
   
   // Get unique metadata values from both preview questions AND existing database questions
   const getUniqueValues = (field) => {
@@ -973,7 +940,6 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
         <div className="preview-modal">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
             <h2 style={{ margin: 0 }}>{title || 'Preview & Edit Questions'}</h2>
-            <button type="button" onClick={clearPreviewCache} style={{ backgroundColor: '#e67e22', color: 'white', border: 'none', padding: '8px 15px', borderRadius: '4px', fontSize: '13px', cursor: 'pointer', fontWeight: '500' }}>🧹 Clear cache</button>
           </div>
           <p className="preview-count">
             {isEditMode 
@@ -1034,110 +1000,70 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                   <div>
                     <label style={{ fontSize: '13px', fontWeight: '600', display: 'block', marginBottom: '5px' }}>
                       Subject:
-                      {uniqueSubjects.length > 0 && <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#666', marginLeft: '5px' }}>({uniqueSubjects.length} from database)</span>}
+                      {uniqueSubjects.length > 0 && <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#666', marginLeft: '5px' }}>({uniqueSubjects.length} existing)</span>}
                     </label>
-                    <div style={{ display: 'flex', gap: '8px' }}>
-                      <input
-                        list="preview-subjects-list"
-                        type="text"
-                        placeholder="Type new or select existing"
-                        value={bulkMetadata.subject}
-                        onChange={(e) => setBulkMetadata(prev => ({ ...prev, subject: e.target.value }))}
-                        style={{ flex: 1, padding: '8px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '13px' }}
-                      />
-                      <datalist id="preview-subjects-list">
-                        {uniqueSubjects.map((subject, idx) => <option key={idx} value={subject} />)}
-                      </datalist>
-                      <select
-                        value={bulkMetadata.subject}
-                        onChange={(e) => setBulkMetadata(prev => ({ ...prev, subject: e.target.value }))}
-                        style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '13px', minWidth: '120px' }}
-                      >
-                        <option value="">-- Select --</option>
-                        {uniqueSubjects.map((subject, idx) => <option key={idx} value={subject}>{subject}</option>)}
-                      </select>
-                    </div>
+                    <input
+                      list="preview-subjects-list"
+                      type="text"
+                      placeholder="Type to create new or select existing"
+                      value={bulkMetadata.subject}
+                      onChange={(e) => setBulkMetadata(prev => ({ ...prev, subject: e.target.value }))}
+                      style={{ width: '100%', padding: '8px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '13px', boxSizing: 'border-box' }}
+                    />
+                    <datalist id="preview-subjects-list">
+                      {uniqueSubjects.map((subject, idx) => <option key={idx} value={subject} />)}
+                    </datalist>
                   </div>
                   <div>
                     <label style={{ fontSize: '13px', fontWeight: '600', display: 'block', marginBottom: '5px' }}>
                       Chapter:
-                      {uniqueChapters.length > 0 && <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#666', marginLeft: '5px' }}>({uniqueChapters.length} from database)</span>}
+                      {uniqueChapters.length > 0 && <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#666', marginLeft: '5px' }}>({uniqueChapters.length} existing)</span>}
                     </label>
-                    <div style={{ display: 'flex', gap: '8px' }}>
-                      <input
-                        list="preview-chapters-list"
-                        type="text"
-                        placeholder="Type new or select existing"
-                        value={bulkMetadata.chapter}
-                        onChange={(e) => setBulkMetadata(prev => ({ ...prev, chapter: e.target.value }))}
-                        style={{ flex: 1, padding: '8px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '13px' }}
-                      />
-                      <datalist id="preview-chapters-list">
-                        {uniqueChapters.map((chapter, idx) => <option key={idx} value={chapter} />)}
-                      </datalist>
-                      <select
-                        value={bulkMetadata.chapter}
-                        onChange={(e) => setBulkMetadata(prev => ({ ...prev, chapter: e.target.value }))}
-                        style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '13px', minWidth: '120px' }}
-                      >
-                        <option value="">-- Select --</option>
-                        {uniqueChapters.map((chapter, idx) => <option key={idx} value={chapter}>{chapter}</option>)}
-                      </select>
-                    </div>
+                    <input
+                      list="preview-chapters-list"
+                      type="text"
+                      placeholder="Type to create new or select existing"
+                      value={bulkMetadata.chapter}
+                      onChange={(e) => setBulkMetadata(prev => ({ ...prev, chapter: e.target.value }))}
+                      style={{ width: '100%', padding: '8px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '13px', boxSizing: 'border-box' }}
+                    />
+                    <datalist id="preview-chapters-list">
+                      {uniqueChapters.map((chapter, idx) => <option key={idx} value={chapter} />)}
+                    </datalist>
                   </div>
                   <div>
                     <label style={{ fontSize: '13px', fontWeight: '600', display: 'block', marginBottom: '5px' }}>
                       Lesson:
-                      {uniqueLessons.length > 0 && <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#666', marginLeft: '5px' }}>({uniqueLessons.length} from database)</span>}
+                      {uniqueLessons.length > 0 && <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#666', marginLeft: '5px' }}>({uniqueLessons.length} existing)</span>}
                     </label>
-                    <div style={{ display: 'flex', gap: '8px' }}>
-                      <input
-                        list="preview-lessons-list"
-                        type="text"
-                        placeholder="Type new or select existing"
-                        value={bulkMetadata.lesson}
-                        onChange={(e) => setBulkMetadata(prev => ({ ...prev, lesson: e.target.value }))}
-                        style={{ flex: 1, padding: '8px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '13px' }}
-                      />
-                      <datalist id="preview-lessons-list">
-                        {uniqueLessons.map((lesson, idx) => <option key={idx} value={lesson} />)}
-                      </datalist>
-                      <select
-                        value={bulkMetadata.lesson}
-                        onChange={(e) => setBulkMetadata(prev => ({ ...prev, lesson: e.target.value }))}
-                        style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '13px', minWidth: '120px' }}
-                      >
-                        <option value="">-- Select --</option>
-                        {uniqueLessons.map((lesson, idx) => <option key={idx} value={lesson}>{lesson}</option>)}
-                      </select>
-                    </div>
+                    <input
+                      list="preview-lessons-list"
+                      type="text"
+                      placeholder="Type to create new or select existing"
+                      value={bulkMetadata.lesson}
+                      onChange={(e) => setBulkMetadata(prev => ({ ...prev, lesson: e.target.value }))}
+                      style={{ width: '100%', padding: '8px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '13px', boxSizing: 'border-box' }}
+                    />
+                    <datalist id="preview-lessons-list">
+                      {uniqueLessons.map((lesson, idx) => <option key={idx} value={lesson} />)}
+                    </datalist>
                   </div>
                   <div>
                     <label style={{ fontSize: '13px', fontWeight: '600', display: 'block', marginBottom: '5px' }}>
                       Board:
-                      {uniqueBoards.length > 0 && <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#666', marginLeft: '5px' }}>({uniqueBoards.length} from database)</span>}
+                      {uniqueBoards.length > 0 && <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#666', marginLeft: '5px' }}>({uniqueBoards.length} existing)</span>}
                     </label>
-                    <div style={{ display: 'flex', gap: '8px' }}>
-                      <input
-                        list="preview-boards-list"
-                        type="text"
-                        placeholder="Type new or select existing"
-                        value={bulkMetadata.board}
-                        onChange={(e) => setBulkMetadata(prev => ({ ...prev, board: e.target.value }))}
-                        style={{ flex: 1, padding: '8px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '13px' }}
-                      />
-                      <datalist id="preview-boards-list">
-                        {uniqueBoards.map((board, idx) => <option key={idx} value={board} />)}
-                      </datalist>
-                      <select
-                        value={bulkMetadata.board}
-                        onChange={(e) => setBulkMetadata(prev => ({ ...prev, board: e.target.value }))}
-                        style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '13px', minWidth: '120px' }}
-                      >
-                        <option value="">-- Select --</option>
-                        {uniqueBoards.map((board, idx) => <option key={idx} value={board}>{board}</option>)}
-                      </select>
-                    </div>
+                    <input
+                      list="preview-boards-list"
+                      type="text"
+                      placeholder="Type to create new or select existing"
+                      value={bulkMetadata.board}
+                      onChange={(e) => setBulkMetadata(prev => ({ ...prev, board: e.target.value }))}
+                      style={{ width: '100%', padding: '8px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '13px', boxSizing: 'border-box' }}
+                    />
+                    <datalist id="preview-boards-list">
+                      {uniqueBoards.map((board, idx) => <option key={idx} value={board} />)}
+                    </datalist>
                   </div>
                 </div>
                 <div style={{ display: 'flex', gap: '10px' }}>

@@ -37,13 +37,27 @@ export default function QuestionCard({ question, selectionMode, isSelected, onTo
         ...question,
         image: imageData.image,
         answerimage1: imageData.answerimage1,
-        answerimage2: imageData.answerimage2,
-        linkedImageParentId: imageData.linkedParentId
+        answerimage2: imageData.answerimage2
       };
       await updateQuestion(updatedQuestion);
     } catch (error) {
       console.error('Error linking images:', error);
       alert('Error linking images. Please try again.');
+    }
+  };
+
+  const handleUnlinkImages = async () => {
+    try {
+      const updatedQuestion = {
+        ...question,
+        image: null,
+        answerimage1: null,
+        answerimage2: null
+      };
+      await updateQuestion(updatedQuestion);
+    } catch (error) {
+      console.error('Error unlinking images:', error);
+      alert('Error unlinking images. Please try again.');
     }
   };
   
@@ -235,6 +249,7 @@ export default function QuestionCard({ question, selectionMode, isSelected, onTo
           question={question}
           onClose={() => setShowImageLinkingModal(false)}
           onLink={handleLinkImages}
+          onUnlink={handleUnlinkImages}
         />
       )}
     </div>

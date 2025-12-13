@@ -28,8 +28,9 @@ export function parseBanglaCQQuestions(text) {
 
   const questions = [];
 
-  // Split by "সৃজনশীল প্রশ্ন" to get individual creative questions
-  const questionBlocks = text.split(/সৃজনশীল\s+প্রশ্ন\s+\d+/i).filter(block => block.trim());
+  // Split by "সৃজনশীল প্রশ্ন" using lookahead to keep the number
+  // Match "সৃজনশীল প্রশ্ন ১" pattern and split before it
+  const questionBlocks = text.split(/(?=সৃজনশীল\s+প্রশ্ন\s+\d+)/i).filter(block => block.trim());
   console.log('📦 Creative question blocks found:', questionBlocks.length);
 
   for (let blockIdx = 0; blockIdx < questionBlocks.length; blockIdx++) {

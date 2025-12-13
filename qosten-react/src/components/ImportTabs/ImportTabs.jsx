@@ -401,9 +401,18 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
     // Clean up the text: remove markdown bold ** but keep separator lines for splitting
     const cleanedText = text.replace(/\*\*/g, '');
     
-    // Split by horizontal rule (---) to separate questions
-    const sections = cleanedText.split(/\n---+\n/).filter(section => section.trim());
-    console.log('📦 Question sections found:', sections.length);
+    // Split by "সৃজনশীল প্রশ্ন" or horizontal rule (---) to separate questions
+    // Use lookahead to keep the header in each section
+    let sections;
+    if (cleanedText.includes('সৃজনশীল প্রশ্ন')) {
+      // For Bangla CQ format, split by "সৃজনশীল প্রশ্ন" headers
+      sections = cleanedText.split(/(?=সৃজনশীল\s+প্রশ্ন)/i).filter(section => section.trim());
+      console.log('📦 Bangla CQ sections found:', sections.length);
+    } else {
+      // For English format, split by horizontal rule (---)
+      sections = cleanedText.split(/\n---+\n/).filter(section => section.trim());
+      console.log('📦 English CQ sections found:', sections.length);
+    }
     
     const questions = [];
     
@@ -441,7 +450,10 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
       };
       
       let inAnswerSection = false;
+      let inStimulusSection = false; // For Bangla CQ format
+      let inQuestionSection = false; // For Bangla CQ format
       let questionTextLines = [];
+      let stimulusLines = []; // For Bangla stimulus
       let currentAnswerPart = null;
       let useBulletPointFormat = false; // Flag for bullet-point answer format
       
@@ -513,8 +525,43 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
           continue;
         }
         
-        // Skip "Question X" or "প্রশ্ন X" headers
-        if (/^(Question|প্রশ্ন|Q\.?)\s*[\d০-৯]*/i.test(line) && line.length < 20) {
+        // Handle Bangla stimulus section header (উদ্দীপক:)
+        if (/^উদ্দীপক\s*:/i.test(line)) {
+          inStimulusSection = true;
+          inQuestionSection = false;
+          inAnswerSection = false;
+          stimulusLines = [];
+          console.log(`  📖 Found stimulus section`);
+          continue;
+        }
+        
+        // Handle Bangla question section header (প্রশ্ন:)
+        if (/^প্রশ্ন\s*:/i.test(line)) {
+          if (stimulusLines.length > 0) {
+            question.questionText = stimulusLines.join('\n').replace(/^>\s*/gm, '').trim();
+            console.log(`  📝 Stimulus saved, length: ${question.questionText.length}`);
+          }
+          inStimulusSection = false;
+          inQuestionSection = true;
+          inAnswerSection = false;
+          stimulusLines = [];
+          questionTextLines = [];
+          console.log(`  ❓ Found questions section`);
+          continue;
+        }
+        
+        // Handle Bangla answer section header (উত্তর:)
+        if (/^উত্তর\s*:/i.test(line)) {
+          inStimulusSection = false;
+          inQuestionSection = false;
+          inAnswerSection = true;
+          console.log(`  ✅ Found answers section`);
+          continue;
+        }
+        
+        // Skip "Question X", "প্রশ্ন X", or "সৃজনশীল প্রশ্ন X" headers
+        if (/^(Question|প্রশ্ন|Q\.?|সৃজনশীল\s+প্রশ্ন)\s*[\d०-९ে]*/i.test(line) && line.length < 50) {
+          console.log(`  ⏭️  Skipping header: ${line}`);
           continue;
         }
         
@@ -534,9 +581,20 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
           continue;
         }
         
+        // Handle stimulus section lines
+        if (inStimulusSection) {
+          if (line.startsWith('>')) {
+            // Remove leading > and optional spaces
+            stimulusLines.push(line.replace(/^>\s*/, '').trim());
+          } else if (line) {
+            stimulusLines.push(line);
+          }
+          continue;
+        }
+        
         if (!inAnswerSection) {
           // Parse question parts (a., b., c., d. or ক., খ., গ., ঘ.) - lowercase only
-          const partMatch = line.match(/^([a-dক-ঘ])[.)\s]+(.+)$/);
+          const partMatch = line.match(/^([a-dক-ঘ])[.)]\s]+(.+)$/);
           if (partMatch) {
             let partLetter = partMatch[1].toLowerCase();
             let partText = partMatch[2].trim();

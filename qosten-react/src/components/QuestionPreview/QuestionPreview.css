@@ -614,6 +614,9 @@
   background-color: #f9f9f9;
   margin: 15px 0;
   cursor: crosshair;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .cropper-image {
@@ -628,6 +631,9 @@
   background-color: rgba(0, 123, 255, 0.1);
   cursor: move;
   box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .crop-handle {
@@ -788,5 +794,23 @@
   .preview-modal-actions button,
   .cropper-actions button {
     width: 100%;
+  }
+  
+  /* Make crop box easier to interact with on mobile */
+  .crop-box {
+    border-width: 4px;
+    min-width: 80px;
+    min-height: 80px;
+  }
+  
+  .crop-handle {
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    bottom: -10px;
+  }
+  
+  .cropper-container {
+    max-height: 50vh;
   }
 }

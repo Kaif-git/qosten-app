@@ -241,6 +241,37 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     setIsDragging(false);
   };
   
+  // Touch event handlers for mobile support
+  const handleTouchStart = (e) => {
+    e.preventDefault();
+    const touch = e.touches[0];
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = touch.clientX - rect.left;
+    const y = touch.clientY - rect.top;
+    setIsDragging(true);
+    setDragStart({ x: x - cropArea.x, y: y - cropArea.y });
+  };
+  
+  const handleTouchMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const touch = e.touches[0];
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = touch.clientX - rect.left;
+    const y = touch.clientY - rect.top;
+    
+    setCropArea(prev => ({
+      ...prev,
+      x: Math.max(0, Math.min(x - dragStart.x, rect.width - prev.width)),
+      y: Math.max(0, Math.min(y - dragStart.y, rect.height - prev.height))
+    }));
+  };
+  
+  const handleTouchEnd = (e) => {
+    e.preventDefault();
+    setIsDragging(false);
+  };
+  
   const adjustCropSize = (dimension, delta) => {
     setCropArea(prev => {
       const newArea = { ...prev };
@@ -1025,6 +1056,9 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
               onMouseMove={handleMouseMove}
               onMouseUp={handleMouseUp}
               onMouseLeave={handleMouseUp}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
             >
               <img 
                 ref={imageRef}

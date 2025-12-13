@@ -25,11 +25,6 @@ const initialState = {
     total: 0,
     subjects: 0,
     chapters: 0
-  },
-  lastBatch: {
-    questionIds: [],
-    timestamp: null,
-    count: 0
   }
 };
 
@@ -42,8 +37,7 @@ const ACTIONS = {
   SET_FILTERS: 'SET_FILTERS',
   SET_EDITING_QUESTION: 'SET_EDITING_QUESTION',
   SET_AUTHENTICATED: 'SET_AUTHENTICATED',
-  UPDATE_STATS: 'UPDATE_STATS',
-  SET_LAST_BATCH: 'SET_LAST_BATCH'
+  UPDATE_STATS: 'UPDATE_STATS'
 };
 
 // Reducer function
@@ -73,8 +67,6 @@ function questionReducer(state, action) {
       return { ...state, isAuthenticated: action.payload };
     case ACTIONS.UPDATE_STATS:
       return { ...state, stats: action.payload };
-    case ACTIONS.SET_LAST_BATCH:
-      return { ...state, lastBatch: action.payload };
     default:
       return state;
   }
@@ -132,7 +124,6 @@ export function QuestionProvider({ children }) {
       if (data && data[0]) {
         const newQuestion = mapDatabaseToApp(data[0]);
         dispatch({ type: ACTIONS.ADD_QUESTION, payload: newQuestion });
-        clearCache(); // Invalidate cache when a new question is added
         console.log('Question added to database:', newQuestion.id);
         return newQuestion;
       }
@@ -182,7 +173,6 @@ export function QuestionProvider({ children }) {
       }
 
       dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
-      clearCache(); // Invalidate cache when a question is updated
       console.log('Question updated in database:', question.id);
     } catch (error) {
       console.error('Error in updateQuestion:', error);
@@ -245,7 +235,6 @@ export function QuestionProvider({ children }) {
         console.log(`  ✅ Batch ${Math.floor(i / BATCH_SIZE) + 1}: ${successCount} succeeded, ${failedCount} failed`);
       }
       
-      clearCache(); // Invalidate cache after bulk update
       console.log(`✅ Bulk update complete: ${successCount} succeeded, ${failedCount} failed`);
       
       return { successCount, failedCount };
@@ -276,7 +265,6 @@ export function QuestionProvider({ children }) {
       }
 
       dispatch({ type: ACTIONS.DELETE_QUESTION, payload: id });
-      clearCache(); // Invalidate cache when a question is deleted
       console.log('Question deleted from database:', id);
     } catch (error) {
       console.error('Error in deleteQuestion:', error);
@@ -307,20 +295,6 @@ export function QuestionProvider({ children }) {
     }});
   };
 
-  const setLastBatch = (questionIds) => {
-    dispatch({ type: ACTIONS.SET_LAST_BATCH, payload: {
-      questionIds,
-      timestamp: Date.now(),
-      count: questionIds.length
-    }});
-  };
-
-  const getLastBatchQuestions = () => {
-    if (!state.lastBatch.questionIds || state.lastBatch.questionIds.length === 0) {
-      return [];
-    }
-    return state.questions.filter(q => state.lastBatch.questionIds.includes(q.id));
-  };
 
   // Helper function to map database question to app format
   const mapDatabaseToApp = (dbQuestion) => {
@@ -345,6 +319,7 @@ export function QuestionProvider({ children }) {
       tags: dbQuestion.tags || [],
       isQuizzable: dbQuestion.is_quizzable !== undefined ? dbQuestion.is_quizzable : true,
       isFlagged: dbQuestion.is_flagged || false,
+      linkedImageParentId: dbQuestion.linked_image_parent_id,
       createdAt: dbQuestion.created_at
     };
   };
@@ -371,6 +346,7 @@ export function QuestionProvider({ children }) {
       tags: appQuestion.tags || [],
       is_quizzable: appQuestion.isQuizzable !== undefined ? appQuestion.isQuizzable : true,
       is_flagged: appQuestion.isFlagged || false,
+      linked_image_parent_id: appQuestion.linkedImageParentId,
       synced: false
     };
     
@@ -382,59 +358,6 @@ export function QuestionProvider({ children }) {
     return dbQuestion;
   };
 
-  // Cache management constants
-  const CACHE_KEY = 'questions_duplicate_cache';
-  const CACHE_TIMESTAMP_KEY = 'questions_duplicate_cache_timestamp';
-  const CACHE_DURATION = 1000 * 60 * 60; // 1 hour in milliseconds
-
-  // Save questions to cache
-  const saveCacheToLocalStorage = (questions) => {
-    try {
-      localStorage.setItem(CACHE_KEY, JSON.stringify(questions));
-      localStorage.setItem(CACHE_TIMESTAMP_KEY, Date.now().toString());
-      console.log(`Cached ${questions.length} questions to localStorage`);
-    } catch (error) {
-      console.error('Error saving cache to localStorage:', error);
-    }
-  };
-
-  // Load questions from cache
-  const loadCacheFromLocalStorage = () => {
-    try {
-      const cachedQuestions = localStorage.getItem(CACHE_KEY);
-      const cacheTimestamp = localStorage.getItem(CACHE_TIMESTAMP_KEY);
-
-      if (!cachedQuestions || !cacheTimestamp) {
-        return null;
-      }
-
-      const cacheAge = Date.now() - parseInt(cacheTimestamp);
-      
-      // Check if cache is still valid
-      if (cacheAge > CACHE_DURATION) {
-        console.log('Cache expired, will fetch fresh data');
-        return null;
-      }
-
-      const questions = JSON.parse(cachedQuestions);
-      console.log(`Loaded ${questions.length} questions from cache (age: ${Math.round(cacheAge / 1000 / 60)} minutes)`);
-      return questions;
-    } catch (error) {
-      console.error('Error loading cache from localStorage:', error);
-      return null;
-    }
-  };
-
-  // Clear cache
-  const clearCache = () => {
-    try {
-      localStorage.removeItem(CACHE_KEY);
-      localStorage.removeItem(CACHE_TIMESTAMP_KEY);
-      console.log('Cache cleared');
-    } catch (error) {
-      console.error('Error clearing cache:', error);
-    }
-  };
 
   // Load questions from Supabase on mount
   useEffect(() => {
@@ -454,15 +377,6 @@ export function QuestionProvider({ children }) {
         return;
       }
 
-      // Try to load from cache first
-      const cachedQuestions = loadCacheFromLocalStorage();
-      if (cachedQuestions) {
-        setQuestions(cachedQuestions);
-        console.log('Using cached questions');
-        return;
-      }
-
-      // If no valid cache, fetch from database
       try {
         console.log('Starting to fetch all questions from database...');
         let allQuestions = [];
@@ -498,8 +412,6 @@ export function QuestionProvider({ children }) {
         if (allQuestions.length > 0) {
           const mappedQuestions = allQuestions.map(mapDatabaseToApp);
           setQuestions(mappedQuestions);
-          // Save to cache after successful fetch
-          saveCacheToLocalStorage(mappedQuestions);
           console.log(`Successfully loaded ${mappedQuestions.length} questions from database`);
         } else {
           console.log('No questions found in database');
@@ -514,7 +426,6 @@ export function QuestionProvider({ children }) {
 
   // Function to manually refresh questions from database
   const refreshQuestions = async () => {
-    clearCache();
     if (!supabaseClient) return;
 
     try {
@@ -549,7 +460,6 @@ export function QuestionProvider({ children }) {
       if (allQuestions.length > 0) {
         const mappedQuestions = allQuestions.map(mapDatabaseToApp);
         setQuestions(mappedQuestions);
-        saveCacheToLocalStorage(mappedQuestions);
         console.log(`Successfully refreshed ${mappedQuestions.length} questions`);
       }
     } catch (error) {
@@ -584,9 +494,6 @@ export function QuestionProvider({ children }) {
     setAuthenticated,
     updateStats,
     refreshQuestions,
-    clearCache,
-    setLastBatch,
-    getLastBatchQuestions,
     toggleQuestionFlag,
     bulkFlagQuestions
   };

@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useQuestions } from '../../context/QuestionContext';
 import { useNavigate } from 'react-router-dom';
 import LatexRenderer from '../LatexRenderer/LatexRenderer';
+import ImageLinkingModal from '../ImageLinkingModal/ImageLinkingModal';
 
 export default function QuestionCard({ question, selectionMode, isSelected, onToggleSelect }) {
-  const { deleteQuestion, setEditingQuestion, toggleQuestionFlag } = useQuestions();
+  const { deleteQuestion, setEditingQuestion, toggleQuestionFlag, updateQuestion } = useQuestions();
   const navigate = useNavigate();
+  const [showImageLinkingModal, setShowImageLinkingModal] = useState(false);
   
   const handleCardClick = () => {
     if (selectionMode) {
@@ -27,6 +29,22 @@ export default function QuestionCard({ question, selectionMode, isSelected, onTo
   const handleToggleFlag = async (e) => {
     e.stopPropagation(); // Prevent card click when toggling flag
     await toggleQuestionFlag(question.id);
+  };
+  
+  const handleLinkImages = async (imageData) => {
+    try {
+      const updatedQuestion = {
+        ...question,
+        image: imageData.image,
+        answerimage1: imageData.answerimage1,
+        answerimage2: imageData.answerimage2,
+        linkedImageParentId: imageData.linkedParentId
+      };
+      await updateQuestion(updatedQuestion);
+    } catch (error) {
+      console.error('Error linking images:', error);
+      alert('Error linking images. Please try again.');
+    }
   };
   
   const renderQuestionContent = () => {
@@ -195,9 +213,29 @@ export default function QuestionCard({ question, selectionMode, isSelected, onTo
           >
             {question.isFlagged ? '✓ Unflag' : '🚩 Flag'}
           </button>
+          {question.type === 'cq' && (
+            <button 
+              onClick={() => setShowImageLinkingModal(true)}
+              style={{
+                backgroundColor: '#17a2b8',
+                color: 'white',
+                border: 'none'
+              }}
+            >
+              🔗 Link Image
+            </button>
+          )}
           <button onClick={handleEdit}>Edit</button>
           <button className="danger" onClick={handleDelete}>Delete</button>
         </div>
+      )}
+      
+      {showImageLinkingModal && (
+        <ImageLinkingModal
+          question={question}
+          onClose={() => setShowImageLinkingModal(false)}
+          onLink={handleLinkImages}
+        />
       )}
     </div>
   );

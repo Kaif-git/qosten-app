@@ -34,7 +34,10 @@ export default function QuestionForm() {
       { letter: 'd', text: '', marks: 0, answer: '' }
     ],
     sqAnswer: '',
-    image: null
+    image: null,
+    answerimage1: null,
+    answerimage2: null,
+    linkedImageParentId: null
   });
   
   // Load editing question data on mount
@@ -63,7 +66,10 @@ export default function QuestionForm() {
           { letter: 'd', text: '', marks: 0, answer: '' }
         ],
         sqAnswer: editingQuestion.answer || '',
-        image: editingQuestion.image
+        image: editingQuestion.image,
+        answerimage1: editingQuestion.answerimage1 || null,
+        answerimage2: editingQuestion.answerimage2 || null,
+        linkedImageParentId: editingQuestion.linkedImageParentId || null
       });
     }
   }, [editingQuestion]);
@@ -104,6 +110,34 @@ export default function QuestionForm() {
     setFormData(prev => ({ ...prev, image: null }));
   };
   
+  const handleAnswerImage1Upload = (file) => {
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setFormData(prev => ({ ...prev, answerimage1: reader.result }));
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+  
+  const removeAnswerImage1 = () => {
+    setFormData(prev => ({ ...prev, answerimage1: null }));
+  };
+  
+  const handleAnswerImage2Upload = (file) => {
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setFormData(prev => ({ ...prev, answerimage2: reader.result }));
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+  
+  const removeAnswerImage2 = () => {
+    setFormData(prev => ({ ...prev, answerimage2: null }));
+  };
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     
@@ -131,7 +165,10 @@ export default function QuestionForm() {
       lesson: formData.lesson,
       board: formData.board,
       language: formData.language,
-      image: formData.image
+      image: formData.image,
+      answerimage1: formData.answerimage1,
+      answerimage2: formData.answerimage2,
+      linkedImageParentId: formData.linkedImageParentId
     };
     
     if (formData.type === 'mcq') {
@@ -222,7 +259,10 @@ export default function QuestionForm() {
         { letter: 'd', text: '', marks: 0, answer: '' }
       ],
       sqAnswer: '',
-      image: null
+      image: null,
+      answerimage1: null,
+      answerimage2: null,
+      linkedImageParentId: null
     });
     setEditingQuestion(null);
   };
@@ -487,6 +527,76 @@ export default function QuestionForm() {
         
         {/* CQ Parts */}
         <div className="cq-only">
+          {/* Answer Image 1 (for part c) */}
+          <div style={{ marginTop: '15px', padding: '15px', backgroundColor: formData.linkedImageParentId ? '#e8f5e9' : '#fff3cd', border: `2px dashed ${formData.linkedImageParentId ? '#4caf50' : '#ffc107'}`, borderRadius: '6px' }}>
+            <label htmlFor="answerImage1" style={{ display: 'block', fontWeight: '600', color: formData.linkedImageParentId ? '#2e7d32' : '#856404', marginBottom: '10px' }}>
+              Answer Image 1 (for part c):
+              {formData.linkedImageParentId && <span style={{ marginLeft: '10px', fontSize: '12px' }}>🔗 Linked from Question #{formData.linkedImageParentId}</span>}
+            </label>
+            {!formData.linkedImageParentId && (
+              <input 
+                type="file" 
+                id="answerImage1"
+                accept="image/*"
+                onChange={(e) => handleAnswerImage1Upload(e.target.files[0])}
+                style={{ display: 'block', width: '100%', padding: '8px', fontSize: '14px', cursor: 'pointer' }}
+              />
+            )}
+            {formData.answerimage1 && (
+              <div style={{ marginTop: '15px' }}>
+                <img 
+                  src={formData.answerimage1} 
+                  alt="Answer Image 1" 
+                  style={{ maxWidth: '100%', maxHeight: '300px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'block', marginBottom: '10px' }}
+                />
+                {!formData.linkedImageParentId && (
+                  <button 
+                    type="button" 
+                    onClick={removeAnswerImage1}
+                    style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '8px 16px', borderRadius: '4px', cursor: 'pointer' }}
+                  >
+                    ✕ Remove Image
+                  </button>
+                )}
+              </div>
+            )}
+          </div>
+          
+          {/* Answer Image 2 (for part d) */}
+          <div style={{ marginTop: '15px', padding: '15px', backgroundColor: formData.linkedImageParentId ? '#e8f5e9' : '#d1ecf1', border: `2px dashed ${formData.linkedImageParentId ? '#4caf50' : '#0c5460'}`, borderRadius: '6px' }}>
+            <label htmlFor="answerImage2" style={{ display: 'block', fontWeight: '600', color: formData.linkedImageParentId ? '#2e7d32' : '#0c5460', marginBottom: '10px' }}>
+              Answer Image 2 (for part d):
+              {formData.linkedImageParentId && <span style={{ marginLeft: '10px', fontSize: '12px' }}>🔗 Linked from Question #{formData.linkedImageParentId}</span>}
+            </label>
+            {!formData.linkedImageParentId && (
+              <input 
+                type="file" 
+                id="answerImage2"
+                accept="image/*"
+                onChange={(e) => handleAnswerImage2Upload(e.target.files[0])}
+                style={{ display: 'block', width: '100%', padding: '8px', fontSize: '14px', cursor: 'pointer' }}
+              />
+            )}
+            {formData.answerimage2 && (
+              <div style={{ marginTop: '15px' }}>
+                <img 
+                  src={formData.answerimage2} 
+                  alt="Answer Image 2" 
+                  style={{ maxWidth: '100%', maxHeight: '300px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'block', marginBottom: '10px' }}
+                />
+                {!formData.linkedImageParentId && (
+                  <button 
+                    type="button" 
+                    onClick={removeAnswerImage2}
+                    style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '8px 16px', borderRadius: '4px', cursor: 'pointer' }}
+                  >
+                    ✕ Remove Image
+                  </button>
+                )}
+              </div>
+            )}
+          </div>
+          
           <div>
             <label>Question Parts:</label>
             <div className="option-fields">

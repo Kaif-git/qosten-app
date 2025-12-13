@@ -24,8 +24,12 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   const [selectedQuestions, setSelectedQuestions] = useState(new Set());
   const [showBulkEditor, setShowBulkEditor] = useState(false);
   const [bulkMetadata, setBulkMetadata] = useState({ subject: '', chapter: '', lesson: '', board: '' });
+  const [zoomLevel, setZoomLevel] = useState(1); // Zoom level for cropper display
+  const [panX, setPanX] = useState(0); // Pan offset X
+  const [panY, setPanY] = useState(0); // Pan offset Y
   const canvasRef = useRef(null);
   const imageRef = useRef(null);
+  const cropperContainerRef = useRef(null);
   
   // Get unique metadata values from both preview questions AND existing database questions
   const getUniqueValues = (field) => {
@@ -184,6 +188,9 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     setCurrentCroppingIndex(index);
     setShowCropper(true);
     setCropArea({ x: 10, y: 10, width: 200, height: 200 });
+    setZoomLevel(1);
+    setPanX(0);
+    setPanY(0);
   };
   
   const handleCropImage = () => {
@@ -191,8 +198,15 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     
     const img = imageRef.current;
     const canvas = document.createElement('canvas');
-    const scaleX = img.naturalWidth / img.width;
-    const scaleY = img.naturalHeight / img.height;
+    // Account for zoom: displayed size is layout size times zoomLevel
+    const displayedWidth = img.width * zoomLevel;
+    const displayedHeight = img.height * zoomLevel;
+    const scaleX = img.naturalWidth / displayedWidth;
+    const scaleY = img.naturalHeight / displayedHeight;
+    
+    // Account for pan offset when cropping
+    const adjustedX = (cropArea.x + panX) * scaleX;
+    const adjustedY = (cropArea.y + panY) * scaleY;
     
     canvas.width = cropArea.width * scaleX;
     canvas.height = cropArea.height * scaleY;
@@ -200,8 +214,8 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     const ctx = canvas.getContext('2d');
     ctx.drawImage(
       img,
-      cropArea.x * scaleX,
-      cropArea.y * scaleY,
+      adjustedX,
+      adjustedY,
       cropArea.width * scaleX,
       cropArea.height * scaleY,
       0,
@@ -282,6 +296,44 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       }
       return newArea;
     });
+  };
+
+  const adjustZoom = (delta) => {
+    setZoomLevel(prev => {
+      const next = prev + delta;
+      // Keep a reasonable range but allow strong zoom-in
+      return Math.min(20, Math.max(0.1, next));
+    });
+  };
+
+  const pan = (direction, amount = 20) => {
+    if (!imageRef.current) return;
+
+    const img = imageRef.current;
+    const maxPanX = Math.max(0, img.width * zoomLevel - img.width);
+    const maxPanY = Math.max(0, img.height * zoomLevel - img.height);
+
+    switch (direction) {
+      case 'left':
+        setPanX(prev => Math.max(0, prev - amount));
+        break;
+      case 'right':
+        setPanX(prev => Math.min(maxPanX, prev + amount));
+        break;
+      case 'up':
+        setPanY(prev => Math.max(0, prev - amount));
+        break;
+      case 'down':
+        setPanY(prev => Math.min(maxPanY, prev + amount));
+        break;
+      default:
+        break;
+    }
+  };
+
+  const resetPan = () => {
+    setPanX(0);
+    setPanY(0);
   };
   
   const removeImage = (index) => {
@@ -1047,7 +1099,18 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
               <button type="button" onClick={() => adjustCropSize('width', 20)}>Width +</button>
               <button type="button" onClick={() => adjustCropSize('height', -20)}>Height -</button>
               <button type="button" onClick={() => adjustCropSize('height', 20)}>Height +</button>
-              <span style={{marginLeft: 'auto'}}>Size: {Math.round(cropArea.width)} × {Math.round(cropArea.height)}px</span>
+              <button type="button" onClick={() => adjustZoom(-0.25)}>Zoom -</button>
+              <button type="button" onClick={() => adjustZoom(0.25)}>Zoom +</button>
+              <div style={{ display: 'flex', gap: '5px', marginLeft: '10px' }}>
+                <button type="button" onClick={() => pan('up')} style={{ padding: '6px 10px' }}>↑</button>
+                <div style={{ display: 'flex', gap: '5px' }}>
+                  <button type="button" onClick={() => pan('left')} style={{ padding: '6px 10px' }}>←</button>
+                  <button type="button" onClick={() => pan('down')} style={{ padding: '6px 10px' }}>↓</button>
+                  <button type="button" onClick={() => pan('right')} style={{ padding: '6px 10px' }}>→</button>
+                </div>
+                <button type="button" onClick={resetPan} style={{ fontSize: '12px', padding: '6px 10px' }}>Reset Pan</button>
+              </div>
+              <span style={{marginLeft: 'auto'}}>Zoom: {Math.round(zoomLevel * 100)}% • Size: {Math.round(cropArea.width)} × {Math.round(cropArea.height)}px</span>
             </div>
             
             <div 
@@ -1065,6 +1128,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                 src={sourceDocType === 'pdf' && pdfAsImage ? pdfAsImage : sourceDocument} 
                 alt="Crop source" 
                 className="cropper-image"
+                style={{ transform: `translate(${-panX}px, ${-panY}px) scale(${zoomLevel})`, transformOrigin: 'top left' }}
               />
               <div 
                 className="crop-box"

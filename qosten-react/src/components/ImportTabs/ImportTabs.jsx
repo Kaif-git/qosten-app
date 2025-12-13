@@ -161,6 +161,10 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
     
     const lines = cleanedText.split('\n').map(line => line.trim()).filter(line => line);
     console.log('📝 Total lines:', lines.length);
+    console.log('📋 All lines:');
+    lines.forEach((line, idx) => {
+      console.log(`  Line ${idx}: "${line}"`);
+    });
     
     const questions = [];
     let currentQuestion = null;
@@ -174,6 +178,14 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
     
     for (let i = 0; i < lines.length; i++) {
       let line = lines[i];
+      console.log(`  📍 Processing line ${i}: "${line.substring(0, 50)}${line.length > 50 ? '...' : ''}"`);
+      console.log(`     Full line: "${line}"`);
+      const firstChar = line?.charAt(0);
+      console.log(`     First char code: ${firstChar ? firstChar.charCodeAt(0) : 'n/a'}`);
+      console.log(`     Contains ব্যাখ্যা: ${line.includes('ব্যাখ্যা')}`);
+      console.log(
+        `     Explanation match? ${/^[\s\uFEFF\u200B]*ব্যাখ্যা\s*[:=ঃ：]/.test(line)} | Starts with ব্যাখ্যা:: ${line.startsWith('ব্যাখ্যা:')}`
+      );
       
       // Skip separator lines and informational text
       if (line.match(/^[-=]+$/)) {
@@ -226,8 +238,10 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
       }
       
       // Parse questions - handle English (0-9) and Bengali (০-৯) numerals
-      if (/^[\d০-৯]+[.)\s]/.test(line) || /^Q[\d০-৯]*[.)\s]/.test(line)) {
+      if (/^[\\d০-৯]+[.) \\s]/.test(line) || /^Q[\\d০-৯]*[.) \\s]/.test(line)) {
         if (currentQuestion) {
+          // Clean up internal flags before saving
+          delete currentQuestion._collectingExplanation;
           questions.push(currentQuestion);
         }
         
@@ -283,6 +297,30 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
             answer = bengaliToEnglish[answer];
           }
           currentQuestion.correctAnswer = answer;
+
+          // NEW: Try to capture explanation from the next line(s)
+          const nextLine = lines[i + 1] || '';
+          if (nextLine) {
+            console.log('  🔎 Peek next line after Correct:', nextLine);
+            // If next line is an explanation marker with optional text
+            const explMarker = nextLine.match(/^(?:explanation|explain|exp|bekkha|ব্যাখ্যা)\s*[:=ঃ：]?\s*(.*)$/i);
+            if (explMarker) {
+              const possibleText = (explMarker[1] || '').trim();
+              if (possibleText) {
+                currentQuestion.explanation = possibleText;
+                console.log('  ✅ Explanation captured from next line (marker):', possibleText.substring(0, 50) + '...');
+                i++; // consume next line
+              } else {
+                console.log('  🧩 Explanation marker with no text, will collect subsequent lines');
+                currentQuestion._collectingExplanation = true;
+                i++; // consume marker line
+              }
+            } else if (!/^[a-dক-ঘ][.)\s]/i.test(nextLine) && !nextLine.includes('[') && !/^(subject|chapter|lesson|board|বিষয়|অধ্যায়|পাঠ|বোর্ড)\s*[:=]/i.test(nextLine)) {
+              currentQuestion.explanation = nextLine;
+              console.log('  ✅ Explanation inferred from next line:', nextLine.substring(0, 50) + '...');
+              i++; // consume next line
+            }
+          }
         } else {
           console.log('  ⚠️ Failed to match correct answer in line:', line);
         }
@@ -290,29 +328,65 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
       }
       
       // Parse explanation - more flexible (handle both English and Bengali ব্যাখ্যা)
-      if (/^(explanation|explain|exp|ব্যাখ্যা)\s*[:=]\s*/i.test(line) && currentQuestion) {
-        const explanationMatch = line.match(/^(?:explanation|explain|exp|ব্যাখ্যা)\s*[:=]\s*(.+)$/i);
-        if (explanationMatch) {
-          console.log('  ✅ Found Explanation:', explanationMatch[1].substring(0, 50) + '...');
-          currentQuestion.explanation = explanationMatch[1].trim();
+      // Handle both "ব্যাখ্যা: text", "Bekkha:", and standalone "ব্যাখ্যা:" patterns
+      const isBanglaExplanationMarker = /^[\s\uFEFF\u200B]*ব্যাখ্যা\s*[:=ঃ：]/.test(line);
+      if (line.toLowerCase().startsWith('explanation') || line.toLowerCase().startsWith('explain') || 
+          line.toLowerCase().startsWith('exp') || line.toLowerCase().startsWith('bekkha') ||
+          isBanglaExplanationMarker) {
+        console.log('  🔍 Explanation marker check passed:', { line, isBanglaExplanationMarker, hasCurrentQuestion: !!currentQuestion });
+        // Check if this line contains a colon
+        if (line.includes(':') || line.includes('=')) {
+          console.log('  🔍 Explanation line detected:', line);
+          if (currentQuestion) {
+            const colonIndex = line.indexOf(':') > -1 ? line.indexOf(':') : line.indexOf('=');
+            const explanationText = line.substring(colonIndex + 1).trim();
+            if (explanationText) {
+              console.log('  ✅ Found Explanation:', explanationText.substring(0, 50) + '...');
+              currentQuestion.explanation = explanationText;
+              currentQuestion._collectingExplanation = false;
+            } else {
+              // Explanation is on next lines, mark that we're collecting it
+              console.log('  ✅ Found Explanation (multi-line)');
+              currentQuestion._collectingExplanation = true;
+            }
+          }
+          continue;
+        }
+      }
+      
+      // Collect multi-line explanation text
+      if (currentQuestion && currentQuestion._collectingExplanation && line && !line.includes('[')) {
+        if (currentQuestion.explanation) {
+          currentQuestion.explanation += ' ' + line;
+        } else {
+          currentQuestion.explanation = line;
         }
         continue;
       }
       
       // If we have a current question and this line doesn't match any pattern,
       // it might be a continuation of the question text or explanation
-      if (currentQuestion && !line.match(/^[a-dক-ঘ][.)\s]/i) && !line.includes('[')) {
+      if (currentQuestion && !line.match(/^[a-dক-ঘ][.) \s]/i) && !line.includes('[')) {
         // If the line looks like it could be part of the question
         if (currentQuestion.questionText && !currentQuestion.options.length) {
+          console.log('  📐 Adding to question text:', line.substring(0, 40));
           currentQuestion.questionText += ' ' + line;
         } else if (currentQuestion.explanation) {
+          console.log('  📐 Adding to explanation:', line.substring(0, 40));
           currentQuestion.explanation += ' ' + line;
+        } else if (currentQuestion.correctAnswer) {
+          // If we have an answer but no explanation yet, this is likely explanation text
+          console.log('  📐 Starting explanation from unmatched line:', line.substring(0, 40));
+          currentQuestion.explanation = line;
+          currentQuestion._collectingExplanation = false;
         }
       }
     }
     
     if (currentQuestion) {
       console.log('  💾 Saving last question');
+      // Clean up internal flags before saving
+      delete currentQuestion._collectingExplanation;
       questions.push(currentQuestion);
     }
     
@@ -377,19 +451,17 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
         // Handle empty line markers - skip them but use them as markers for line break preservation
         if (line === '___EMPTY_LINE___') {
           console.log(`  🔲 Empty line detected. inAnswerSection: ${inAnswerSection}, hasCurrentAnswerPart: ${!!currentAnswerPart}`);
-          // Preserve gaps in answers by marking with newline
+          // Only add newlines in answer section, not in question text
           if (inAnswerSection && currentAnswerPart) {
-            // Even if answer is empty, mark that we had a gap
+            // Preserve gaps in answers by marking with newline
             if (!currentAnswerPart.answer) {
               currentAnswerPart._hadGap = true;
             } else {
               console.log(`    → Adding newline to answer part ${currentAnswerPart.letter}`);
               currentAnswerPart.answer += '\n';
             }
-          } else if (!inAnswerSection) {
-            console.log(`    → Marking gap in question text`);
-            // Mark gap but don't break the question text collection
           }
+          // Don't add empty lines to question text - just skip them
           continue;
         }
         
@@ -464,14 +536,16 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
         
         if (!inAnswerSection) {
           // Parse question parts (a., b., c., d. or ক., খ., গ., ঘ.) - lowercase only
-          const partMatch = line.match(/^([a-dа-ғ])[.)\s]+(.+)$/);
+          const partMatch = line.match(/^([a-dক-ঘ])[.)\s]+(.+)$/);
           if (partMatch) {
             let partLetter = partMatch[1].toLowerCase();
             let partText = partMatch[2].trim();
             
             // Convert Bengali letters to English
             const bengaliToEnglish = { 'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd' };
+            console.log(`    🔤 Part letter: '${partLetter}' (code: ${partLetter.charCodeAt(0)})`);
             if (bengaliToEnglish[partLetter]) {
+              console.log(`    → Converting to English: ${bengaliToEnglish[partLetter]}`);
               partLetter = bengaliToEnglish[partLetter];
             }
             
@@ -512,6 +586,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
           } else {
             // Add to question text/stem if it doesn't look like metadata
             if (!line.match(/^\[.*\]$/) && !line.match(/^[a-z]+\s*:/i) && !line.match(/^(board|বোর্ড)\s*:/i)) {
+              console.log(`    📋 Adding to question text: "${line.substring(0, 40)}..."`);
               questionTextLines.push(line);
             }
           }
@@ -536,14 +611,16 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
           } else {
             // Standard format: parse answers (a., b., c., d. or ক., খ., গ., ঘ.)
             // Must be lowercase letter followed by . or ) to avoid matching LaTeX like A = ...
-            const answerMatch = line.match(/^([a-dк-ґ])[.)\s]+(.+)$/);
+            const answerMatch = line.match(/^([a-dক-ঘ])[.)\s]+(.+)$/);
             if (answerMatch) {
               let partLetter = answerMatch[1].toLowerCase();
               const answerText = answerMatch[2].trim();
               
               // Convert Bengali letters to English
               const bengaliToEnglish = { 'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd' };
+              console.log(`    🔤 Answer letter: '${partLetter}' (code: ${partLetter.charCodeAt(0)})`);
               if (bengaliToEnglish[partLetter]) {
+                console.log(`    → Converting to English: ${bengaliToEnglish[partLetter]}`);
                 partLetter = bengaliToEnglish[partLetter];
               }
               
@@ -572,9 +649,9 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
                   currentAnswerPart.answer += line;
                   console.log(`       Appending after gap (no space)`);
                 } else {
-                  // Normal continuation with space
-                  currentAnswerPart.answer += ' ' + line;
-                  console.log(`       Appending with space`);
+                  // Preserve line breaks - each line should be on its own line, not merged with space
+                  currentAnswerPart.answer += '\n' + line;
+                  console.log(`       Appending with newline`);
                 }
               } else if (question.parts.length > 0 && !useBulletPointFormat) {
                 // If no current answer part, append to the last part
@@ -591,8 +668,8 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
                     lastPart.answer += line;
                     console.log(`       Appending after gap (no space)`);
                   } else {
-                    lastPart.answer += ' ' + line;
-                    console.log(`       Appending with space`);
+                    lastPart.answer += '\n' + line;
+                    console.log(`       Appending with newline`);
                   }
                   currentAnswerPart = lastPart;
                 }
@@ -611,7 +688,8 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
       
       // Only add question if it has meaningful content
       // Accept questions with either subject metadata OR board metadata (for Bangla format)
-      const hasMetadata = question.subject || question.board;
+      // For Bangla, be more lenient - accept if we have question parts or substantial question text
+      const hasMetadata = question.subject || question.board || (question.questionText && question.questionText.length > 50);
       const hasContent = (question.questionText && question.questionText.trim()) || question.parts.length > 0;
       
       if (hasMetadata && hasContent) {

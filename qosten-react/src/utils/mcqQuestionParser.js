@@ -167,9 +167,9 @@ export function parseMCQQuestions(text) {
           });
         }
       }
-      // Parse correct answer (handle 0, 1, or 2 asterisks and Bengali সঠিক)
-      else if (line.match(/^\*{0,2}(Correct|সঠিক):\*{0,2}\s*([a-dক-ঘ])\s*\*{0,2}$/i)) {
-        const match = line.match(/^\*{0,2}(Correct|সঠিক):\*{0,2}\s*([a-dক-ঘ])\s*\*{0,2}$/i);
+      // Parse correct answer (handle 0, 1, or 2 asterisks and Bengali সঠিক, including format without spaces like সঠিক:ক)
+      else if (line.match(/^\*{0,2}(Correct|সঠিক):\*{0,2}\s*([a-dক-ঘ])\s*\*{0,2}$/i) || line.match(/^(Correct|সঠিক):\s*([a-dক-ঘ])\s*$/i)) {
+        const match = line.match(/^\*{0,2}(Correct|সঠিক):\*{0,2}\s*([a-dক-ঘ])\s*\*{0,2}$/i) || line.match(/^(Correct|সঠিক):\s*([a-dক-ঘ])\s*$/i);
         let answer = match[2].toLowerCase();
         console.log('  ✅ Found Correct answer:', answer);
         // Convert Bengali letters to English
@@ -179,13 +179,19 @@ export function parseMCQQuestions(text) {
         }
         currentQuestion.correctAnswer = answer;
       }
-      // Parse explanation (handle 0, 1, or 2 asterisks and Bengali ব্যাখ্যা)
-      else if (line.match(/^\*{0,2}(Explanation|ব্যাখ্যা):\*{0,2}/i)) {
+      // Parse explanation (handle 0, 1, or 2 asterisks and Bengali ব্যাখ্যা, plus transliteration "Bekkha")
+      else if (
+        line.match(/^\*{0,2}(Explanation|ব্যাখ্যা|Bekkha):\*{0,2}/i) ||
+        line.match(/^(Explanation|ব্যাখ্যা|Bekkha):\s*$/i)
+      ) {
         console.log('  ✅ Found Explanation line');
         inExplanation = true;
         explanationBuffer = [];
         // Check if explanation starts on same line
-        const explanationText = line.replace(/^\*{0,2}(Explanation|ব্যাখ্যা):\*{0,2}/i, '').trim();
+        const explanationText = line
+          .replace(/^\*{0,2}(Explanation|ব্যাখ্যা|Bekkha):\*{0,2}/i, '')
+          .replace(/^(Explanation|ব্যাখ্যা|Bekkha):\s*/i, '')
+          .trim();
         if (explanationText) {
           explanationBuffer.push(explanationText);
         }

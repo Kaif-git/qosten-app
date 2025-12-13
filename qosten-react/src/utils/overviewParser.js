@@ -20,27 +20,44 @@ export function parseOverviewText(text) {
   let currentTopic = null;
   let currentContent = [];
 
+  console.log('=== PARSING START ===');
+  console.log('Total lines:', lines.length);
+  console.log('First 5 lines:', lines.slice(0, 5).map((l, i) => `[${i}] "${l.substring(0, 50)}"`));
+
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
     const trimmed = line.trim();
 
-    // Topic header: ### T-01: Topic Title
+    // Topic header: ### T-01: Topic Title or ### T-০১: Topic Title (Bangla)
     if (trimmed.startsWith('###')) {
+      console.log(`Line ${i}: Found ### header: "${trimmed.substring(0, 80)}"`);
+      
+      // Log character codes to debug
+      const headerPart = trimmed.substring(0, 15);
+      console.log(`  Character codes:`, Array.from(headerPart).map((c, i) => `[${i}]=${c}(${c.charCodeAt(0)})`).join(' '));
+      
+      // Parse topic - matches English digits (0-9) and Bangla digits (০-৯, U+09E6–U+09EF)
+      const topicMatch = trimmed.match(/^###\s+(T-[\d\u09E6-\u09EF]+):\s+(.+)$/);
+      console.log(`  Regex test result:`, topicMatch);
+      
       // Save previous topic if exists
       if (currentTopic && currentContent.length > 0) {
         currentTopic.content = currentContent.join('\n');
         topics.push(currentTopic);
+        console.log(`  Saved topic: ${currentTopic.id} with ${currentContent.length} content lines`);
         currentContent = [];
       }
 
-      // Parse topic
-      const topicMatch = trimmed.match(/^###\s+(T-\d+):\s+(.+)$/);
       if (topicMatch) {
         currentTopic = {
           id: topicMatch[1],
           title: topicMatch[2].trim(),
           content: ''
         };
+        console.log(`  Created new topic: ID="${currentTopic.id}" Title="${currentTopic.title.substring(0, 50)}"`);
+      } else {
+        console.log(`  WARNING: ### header found but regex didn't match!`);
+        currentTopic = null;
       }
       continue;
     }
@@ -55,7 +72,12 @@ export function parseOverviewText(text) {
   if (currentTopic) {
     currentTopic.content = currentContent.join('\n');
     topics.push(currentTopic);
+    console.log(`Final: Saved last topic: ${currentTopic.id} with ${currentContent.length} content lines`);
   }
+
+  console.log('=== PARSING COMPLETE ===');
+  console.log('Total topics found:', topics.length);
+  console.log('Topics:', topics.map(t => ({ id: t.id, title: t.title.substring(0, 40) })));
 
   return { topics };
 }

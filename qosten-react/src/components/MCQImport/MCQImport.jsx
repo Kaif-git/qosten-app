@@ -42,7 +42,6 @@ export default function MCQImport() {
     setFailedQuestions([]);
     
     let addedCount = 0;
-    let duplicateCount = 0;
     const errors = [];
     const addedQuestionIds = [];
 
@@ -55,17 +54,13 @@ export default function MCQImport() {
         }
         addedCount++;
       } catch (error) {
-        if (error.message.includes('Duplicate') || error.message.includes('duplicate key')) {
-          duplicateCount++;
-        } else {
-          console.error('Error adding question:', error);
-          errors.push({
-            index: i + 1,
-            question: question.question?.substring(0, 100) + (question.question?.length > 100 ? '...' : ''),
-            error: error.message || 'Unknown error',
-            metadata: `${question.subject || 'N/A'} - ${question.chapter || 'N/A'}`
-          });
-        }
+        console.error('Error adding question:', error);
+        errors.push({
+          index: i + 1,
+          question: question.question?.substring(0, 100) + (question.question?.length > 100 ? '...' : ''),
+          error: error.message || 'Unknown error',
+          metadata: `${question.subject || 'N/A'} - ${question.chapter || 'N/A'}`
+        });
       }
       setProgress({ current: i + 1, total: editedQuestions.length });
     }
@@ -86,9 +81,6 @@ export default function MCQImport() {
     
     // Show success/summary message
     let message = `✅ Successfully added ${addedCount} MCQ question(s) to the question bank!`;
-    if (duplicateCount > 0) {
-      message += `\n⚠️ ${duplicateCount} duplicate question(s) were skipped.`;
-    }
     if (errors.length > 0) {
       message += `\n❌ ${errors.length} question(s) failed to upload. See details in the notification.`;
     }

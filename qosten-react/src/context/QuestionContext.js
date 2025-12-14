@@ -99,19 +99,40 @@ export function QuestionProvider({ children }) {
       const uniqueId = Date.now() + Math.floor(Math.random() * 10000);
       
       // Map to database format with the generated ID
-      const dbQuestion = mapAppToDatabase({ ...question, id: uniqueId });
+      let dbQuestion = mapAppToDatabase({ ...question, id: uniqueId });
       
-      const { data, error } = await supabaseClient
+      let { data, error } = await supabaseClient
         .from('questions_duplicate')
         .insert([dbQuestion])
         .select();
 
+      // Handle duplicate key constraint violation by appending a unique suffix
+      if (error && (error.code === '23505' || error.message?.includes('duplicate key'))) {
+        console.warn('Duplicate question detected, appending unique suffix:', error.details);
+        // Append a unique suffix to both question and question_text fields to make them unique
+        const suffix = ` [${uniqueId}]`;
+        dbQuestion.question = dbQuestion.question + suffix;
+        if (dbQuestion.question_text) {
+          dbQuestion.question_text = dbQuestion.question_text + suffix;
+        }
+        
+        // Retry with the modified fields
+        const retryResult = await supabaseClient
+          .from('questions_duplicate')
+          .insert([dbQuestion])
+          .select();
+        
+        if (retryResult.error) {
+          console.error('Error adding question after retry:', retryResult.error);
+          throw new Error('Failed to add question to database');
+        }
+        
+        data = retryResult.data;
+        error = null;
+      }
+
       if (error) {
         console.error('Error adding question to database:', error);
-        // Check if it's a duplicate key constraint violation
-        if (error.code === '23505' || error.message?.includes('duplicate key')) {
-          throw new Error('Duplicate question detected in database');
-        }
         throw new Error('Failed to add question to database');
       }
 
@@ -302,6 +323,21 @@ export function QuestionProvider({ children }) {
 
   // Helper function to map app question to database format
   const mapAppToDatabase = (appQuestion) => {
+    // Ensure question field is never empty - it's used as a unique constraint key
+    // For CQ questions with parts, use the first part text as the question field
+    let questionField = appQuestion.question || appQuestion.questionText || '';
+    
+    if (!questionField && appQuestion.parts && appQuestion.parts.length > 0) {
+      // Use first part's text for CQ questions
+      questionField = appQuestion.parts[0].text || appQuestion.questionText || '';
+    }
+    
+    // If still empty, use a timestamp-based unique identifier to prevent duplicates
+    if (!questionField) {
+      console.warn('Warning: question field is empty, using fallback identifier');
+      questionField = `CQ_${appQuestion.id || Date.now()}`;
+    }
+    
     const dbQuestion = {
       type: appQuestion.type,
       subject: appQuestion.subject,
@@ -309,7 +345,7 @@ export function QuestionProvider({ children }) {
       lesson: appQuestion.lesson || 'N/A',
       board: appQuestion.board || 'N/A',
       language: appQuestion.language || 'en',
-      question: appQuestion.question || appQuestion.questionText,
+      question: questionField,
       question_text: appQuestion.questionText || appQuestion.question,
       options: appQuestion.options,
       correct_answer: appQuestion.correctAnswer,

@@ -991,10 +991,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
     setIsUploading(true);
     setProgress({ current: 0, total: editedQuestions.length, status: 'Uploading questions...' });
     
-    // Add edited questions to the bank, tracking duplicates
     let addedCount = 0;
-    let duplicateCount = 0;
-    const duplicateQuestions = [];
     
     // Upload in batches of 20 for better performance
     const BATCH_SIZE = 20;
@@ -1018,15 +1015,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
         } else {
           const errorData = result.value || {};
           const error = errorData.error;
-          const question = errorData.question;
-          
-          if (error && error.message && (error.message.includes('Duplicate') || error.message.includes('duplicate'))) {
-            duplicateCount++;
-            const questionPreview = (question?.questionText || question?.question || '').substring(0, 50);
-            duplicateQuestions.push(`${errorData.index + 1}. ${questionPreview}...`);
-          } else {
-            console.error('Error adding question:', error);
-          }
+          console.error('Error adding question:', error);
         }
       });
       
@@ -1042,12 +1031,6 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
     
     // Show summary message
     let message = `Successfully added ${addedCount} question(s)!`;
-    if (duplicateCount > 0) {
-      message += `\n${duplicateCount} duplicate question(s) were skipped.`;
-      if (duplicateQuestions.length > 0 && duplicateQuestions.length <= 5) {
-        message += '\n\nSkipped questions:\n' + duplicateQuestions.join('\n');
-      }
-    }
     alert(message);
     setShowPreview(false);
     

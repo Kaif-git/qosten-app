@@ -33,8 +33,15 @@ export default function QuestionBank() {
       (q.answer?.toLowerCase().includes(currentFilters.searchText.toLowerCase())) ||
       (q.explanation?.toLowerCase().includes(currentFilters.searchText.toLowerCase())) ||
       (q.parts?.some(p => (p.text?.toLowerCase().includes(currentFilters.searchText.toLowerCase())) || (p.answer?.toLowerCase().includes(currentFilters.searchText.toLowerCase()))));
-    const matchesSubject = !currentFilters.subject || q.subject === currentFilters.subject;
-    const matchesChapter = !currentFilters.chapter || q.chapter === currentFilters.chapter;
+    
+    const matchesSubject = currentFilters.subject === 'none'
+      ? !q.subject
+      : !currentFilters.subject || q.subject === currentFilters.subject;
+      
+    const matchesChapter = currentFilters.chapter === 'none'
+      ? !q.chapter
+      : !currentFilters.chapter || q.chapter === currentFilters.chapter;
+
     const matchesLesson = !currentFilters.lesson || q.lesson === currentFilters.lesson;
     const matchesType = !currentFilters.type || q.type === currentFilters.type;
     const matchesBoard = !currentFilters.board || q.board === currentFilters.board;

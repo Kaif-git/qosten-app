@@ -48,6 +48,7 @@ export default function SearchFilters() {
           onChange={(e) => handleFilterChange('subject', e.target.value)}
         >
           <option value="">All Subjects</option>
+          <option value="none">None</option>
           {uniqueSubjects.map(subject => (
             <option key={subject} value={subject}>{subject}</option>
           ))}
@@ -62,6 +63,7 @@ export default function SearchFilters() {
           onChange={(e) => handleFilterChange('chapter', e.target.value)}
         >
           <option value="">All Chapters</option>
+          <option value="none">None</option>
           {uniqueChapters.map(chapter => (
             <option key={chapter} value={chapter}>{chapter}</option>
           ))}

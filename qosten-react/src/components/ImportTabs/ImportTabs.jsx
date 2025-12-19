@@ -888,44 +888,62 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
           questions.push(currentQuestion);
         }
         
-        let questionText = line;
+        let fullLineText = line;
         // Remove various question prefixes flexibly (handle Bengali numerals)
-        questionText = questionText.replace(/^[\d০-৯]+[.)\s]*/, '');
-        questionText = questionText.replace(/^Q[\d০-৯]*[.)\s]*/, '');
-        questionText = questionText.replace(/^Question\s*[\d০-৯]*[.)\s]*/, '');
+        fullLineText = fullLineText.replace(/^[\d০-৯]+[.)\s]*/, '');
+        fullLineText = fullLineText.replace(/^Q[\d০-৯]*[.)\s]*/, '');
+        fullLineText = fullLineText.replace(/^Question\s*[\d০-৯]*[.)\s]*/, '');
+        
+        let questionPart = fullLineText.trim();
+        let answerPart = '';
+
+        const inlineAnswerMatch = questionPart.match(/(answer|ans|উত্তর)\s*[:=]\s*(.*)/i);
+        if (inlineAnswerMatch) {
+          questionPart = questionPart.substring(0, inlineAnswerMatch.index).trim();
+          answerPart = inlineAnswerMatch[2].trim();
+        }
         
         currentQuestion = {
           ...globalMetadata,
           type: 'sq',
-          question: questionText.trim(),
-          answer: '',
-          board: nextQuestionBoard  // Use the board set by previous [বোর্ড:] tag
+          question: questionPart,
+          answer: answerPart,
+          board: nextQuestionBoard
         };
-        // Reset the per-question board metadata after using it
         nextQuestionBoard = '';
         continue;
       }
       
       // Parse answer - more flexible (handle inline answers with উত্তর:)
-      if (/^(answer|ans|উত্তর)\s*[:=]\s*/i.test(line) && currentQuestion) {
+      // Only process if currentQuestion.answer is not already populated by inline parsing
+      if (/^(answer|ans|উত্তর)\s*[:=]\s*/i.test(line) && currentQuestion && !currentQuestion.answer) {
         const answerMatch = line.match(/^(?:answer|ans|উত্তর)\s*[:=]\s*(.+)$/i);
         if (answerMatch) {
           currentQuestion.answer = answerMatch[1].trim();
         } else {
-          // Answer marker without text (answer on next line)
           currentQuestion.answer = '';
+          currentQuestion._collectingAnswer = true; // Flag to collect multi-line answer
+        }
+        continue;
+      }
+      
+      // Handle multi-line answer continuation
+      if (currentQuestion && currentQuestion._collectingAnswer && !line.includes('[')) {
+        if (currentQuestion.answer) {
+          currentQuestion.answer += ' ' + line;
+        } else {
+          currentQuestion.answer = line;
         }
         continue;
       }
       
       // If we have a current question and this line doesn't match any pattern,
-      // it might be a continuation of the question or answer
+      // it might be a continuation of the question (if no answer yet and not collecting multi-line answer)
+      // or continuation of answer (if answer started)
       if (currentQuestion && !line.includes('[')) {
-        if (currentQuestion.answer) {
-          // Continuation of answer
+        if (currentQuestion.answer || currentQuestion._collectingAnswer) { // If answer has started or we are collecting
           currentQuestion.answer += ' ' + line;
-        } else if (currentQuestion.question && !line.match(/^(answer|ans|উত্তর)\s*[:=]/i)) {
-          // Continuation of question
+        } else if (currentQuestion.question) { // No answer yet, so it's a question continuation
           currentQuestion.question += ' ' + line;
         }
       }

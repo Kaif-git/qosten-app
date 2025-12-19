@@ -450,9 +450,14 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
       sections = cleanedText.split(/(?=সৃজনশীল\s+প্রশ্ন)/i).filter(section => section.trim());
       console.log('📦 Bangla CQ sections found:', sections.length);
     } else {
-      // For English format, split by horizontal rule (---)
-      sections = cleanedText.split(/\n---+\n/).filter(section => section.trim());
-      console.log('📦 English CQ sections found:', sections.length);
+      // For English format, split by horizontal rule (---) or by [Subject:]
+      if (cleanedText.match(/\[Subject:/gi) && cleanedText.match(/\[Subject:/gi).length > 1) {
+        sections = cleanedText.split(/(?=\[Subject:)/i).filter(section => section.trim());
+        console.log('📦 English CQ sections found (split by [Subject:]):', sections.length);
+      } else {
+        sections = cleanedText.split(/\n---+\n/).filter(section => section.trim());
+        console.log('📦 English CQ sections found (split by ---):', sections.length);
+      }
     }
     
     const questions = [];

@@ -151,289 +151,103 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
   const title = titles[type][language];
   
   const parseMCQQuestions = (text, lang = 'en') => {
-    console.log('🔍 ImportTabs parseMCQQuestions: Starting...');
-    console.log('📄 Input length:', text.length);
-    console.log('📄 First 100 chars:', text.substring(0, 100));
-    
-    // Clean up the text: remove markdown bold * and ** (both single and double asterisks)
-    const cleanedText = text.replace(/\u200b/g, '').replace(/\*+/g, '').replace(/---+/g, '');
-    console.log('🧽 Cleaned text length:', cleanedText.length);
-    
-    const lines = cleanedText.split('\n').map(line => line.trim()).filter(line => line);
-    console.log('📝 Total lines:', lines.length);
-    console.log('📋 All lines:');
-    lines.forEach((line, idx) => {
-      console.log(`  Line ${idx}: "${line}"`);
-    });
-    
+    const cleanedText = text.replace(/\u200b/g, '').replace(/\*+/g, '');
+    const sections = cleanedText.split(/\n---+\n/);
     const questions = [];
-    let currentQuestion = null;
-    let currentMetadata = {
-      language: lang,
-      subject: '',
-      chapter: '',
-      lesson: '',
-      board: ''
-    };
-    
-    for (let i = 0; i < lines.length; i++) {
-      let line = lines[i];
-      console.log(`  📍 Processing line ${i}: "${line.substring(0, 50)}${line.length > 50 ? '...' : ''}"`);
-      console.log(`     Full line: "${line}"`);
-      const firstChar = line?.charAt(0);
-      console.log(`     First char code: ${firstChar ? firstChar.charCodeAt(0) : 'n/a'}`);
-      console.log(`     Contains ব্যাখ্যা: ${line.includes('ব্যাখ্যা')}`);
-      console.log(
-        `     Explanation match? ${/^[\s\uFEFF\u200B]*ব্যাখ্যা\s*[:=ঃ：]/.test(line)} | Starts with ব্যাখ্যা:: ${line.startsWith('ব্যাখ্যা:')}`
-      );
-      
-      // Skip separator lines and informational text
-      if (line.match(/^[-=]+$/)) {
-        continue;
-      }
-      
-      // Skip informational lines like "Alternate format"
-      if (line.toLowerCase().includes('alternate') || line.toLowerCase().includes('also supported')) {
-        continue;
-      }
-      
-      // Skip "Question Set X" headers (English and Bangla)
-      if (line.match(/^Question\s+Set\s+\d+$/i) || line.match(/^প্রশ্ন\s*সেট\s*[\d০-৯]+$/)) {
-        console.log('  ⏭️ Skipping Question Set header');
-        continue;
-      }
-      
-      // Parse metadata - handle both [Field: Value] and **[Field: Value]** formats
-      // Also handle Bengali field names: বিষয়, অধ্যায়, পাঠ, বোর্ড
-      if ((line.startsWith('[') && line.endsWith(']')) || (line.includes('[') && line.includes(']'))) {
-        const bracketMatch = line.match(/\[([^\]]+)\]/);
-        if (bracketMatch) {
-          const metaContent = bracketMatch[1];
-          if (metaContent.includes(':')) {
-            const colonIndex = metaContent.indexOf(':');
-            const key = metaContent.substring(0, colonIndex).trim().toLowerCase();
-            const value = metaContent.substring(colonIndex + 1).trim();
-            
-            // Map Bengali keys to English equivalents
-            const keyMap = {
-              'subject': 'subject',
-              'বিষয়': 'subject',
-              'chapter': 'chapter',
-              'অধ্যায়': 'chapter',
-              'lesson': 'lesson',
-              'পাঠ': 'lesson',
-              'board': 'board',
-              'বোর্ড': 'board'
-            };
-            
-            const mappedKey = keyMap[key];
-            if (mappedKey) {
-              console.log(`  ✅ Found ${mappedKey}:`, value);
-              // Save previous question if starting new one
-              if (mappedKey === 'subject' && currentQuestion && currentQuestion.questionText && currentQuestion.options.length > 0) {
-                console.log('    💾 Saving previous question');
+
+    for (const section of sections) {
+        if (!section.trim()) continue;
+
+        const lines = section.split('\n').map(line => line.trim()).filter(line => line);
+        let currentQuestion = null;
+        let currentMetadata = { language: lang };
+        let inExplanation = false;
+
+        const saveCurrentQuestion = () => {
+            if (currentQuestion) {
                 questions.push(currentQuestion);
                 currentQuestion = null;
-                currentMetadata = { language: lang, subject: '', chapter: '', lesson: '', board: '' };
-              }
-              currentMetadata[mappedKey] = value;
             }
-          }
-        }
-        continue;
-      }
-      
-      // Parse questions - handle English (0-9) and Bengali (०-९) numerals
-      if (/^[\d০-৯]+[।.)\s]/.test(line) || /^Q[\d০-৯]*[।.)\s]/.test(line)) {
-        if (currentQuestion) {
-          // Clean up internal flags before saving
-          delete currentQuestion._collectingExplanation;
-          delete currentQuestion._collectingQuestion;
-          questions.push(currentQuestion);
-        }
-        
-        let questionText = line;
-        // Remove various question prefixes flexibly (handle Bengali numerals and Bangla danda)
-        questionText = questionText.replace(/^[\d০-৯]+[।.)\s]*/, '');
-        questionText = questionText.replace(/^Q[\d০-৯]*[।.)\s]*/, '');
-        questionText = questionText.replace(/^(?:Question|প্রশ্ন)\s*[\d০-৯]*[।.)\s]*/, '');
-        
-        console.log('  ✅ Found Question:', questionText.substring(0, 60) + '...');
-        
-        currentQuestion = {
-          ...currentMetadata,
-          type: 'mcq',
-          questionText: questionText.trim(),
-          options: [],
-          correctAnswer: '',
-          explanation: '',
-          _collectingQuestion: true
         };
-        continue;
-      }
-      
-      // Parse options - more flexible option matching (handle both English a-d and Bengali ক-ঘ)
-      if (/^[a-dক-ঘ][.)\s]/i.test(line) && currentQuestion) {
-        // Mark that we've stopped collecting question text once we see the first option
-        if (currentQuestion._collectingQuestion) {
-          currentQuestion._collectingQuestion = false;
-        }
-        
-        const optionMatch = line.match(/^([a-dক-ঘ])[.)\s]*(.+)$/i);
-        if (optionMatch) {
-          let optionLetter = optionMatch[1].toLowerCase();
-          const optionText = optionMatch[2].trim();
-          
-          // Convert Bengali letters to English for consistency
-          const bengaliToEnglish = { 'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd' };
-          if (bengaliToEnglish[optionLetter]) {
-            optionLetter = bengaliToEnglish[optionLetter];
-          }
-          
-          currentQuestion.options.push({
-            label: optionLetter,
-            text: optionText
-          });
-        }
-        continue;
-      }
-      
-      // Parse correct answer - more flexible (handle both English and Bengali)
-      if (/^(correct|answer|ans|সঠিক(?:\s*উত্তর)?)\s*[:=ঃ：]/i.test(line) && currentQuestion) {
-        // Capture whatever comes after the marker; we'll normalize if it's a/b/c/d or ক/খ/গ/ঘ
-        const answerTextMatch = line.match(/^(?:correct|answer|ans|সঠিক(?:\s*উত্তর)?)\s*[:=ঃ：]\s*(.+)$/i);
-        if (answerTextMatch) {
-          const raw = answerTextMatch[1].trim();
-          // Only keep the first token (in case of extra words)
-          const token = raw.split(/\s+/)[0];
-          const letterMatch = token.match(/^([a-dক-ঘ])$/i);
-          if (letterMatch) {
-            let answer = letterMatch[1].toLowerCase();
-            console.log('  ✅ Found Correct answer:', answer);
-            // Convert Bengali letters to English
-            const bengaliToEnglish = { 'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd' };
-            if (bengaliToEnglish[answer]) {
-              answer = bengaliToEnglish[answer];
-            }
-            currentQuestion.correctAnswer = answer;
-          } else {
-            // Free-text answer provided; store it in explanation prefix if no explanation exists
-            console.log('  ℹ️ Non-letter correct answer text found, treating as note:', raw.substring(0, 50) + '...');
-            if (raw) {
-              if (currentQuestion.explanation) {
-                currentQuestion.explanation = `${raw}\n${currentQuestion.explanation}`;
-              } else {
-                currentQuestion.explanation = raw;
-              }
-            }
-          }
 
-          // NEW: Try to capture explanation from the next line(s)
-          const nextLine = lines[i + 1] || '';
-          if (nextLine) {
-            console.log('  🔎 Peek next line after Correct:', nextLine);
-            // If next line is an explanation marker with optional text
-            const explMarker = nextLine.match(/^(?:explanation|explain|exp|bekkha|ব্যাখ্যা)\s*[:=ঃ：]?\s*(.*)$/i);
-            if (explMarker) {
-              const possibleText = (explMarker[1] || '').trim();
-              if (possibleText) {
-                currentQuestion.explanation = possibleText;
-                console.log('  ✅ Explanation captured from next line (marker):', possibleText.substring(0, 50) + '...');
-                i++; // consume next line
-              } else {
-                console.log('  🧩 Explanation marker with no text, will collect subsequent lines');
-                currentQuestion._collectingExplanation = true;
-                i++; // consume marker line
-              }
-            } else if (!/^[a-dক-ঘ][.)\s]/i.test(nextLine) && !nextLine.includes('[') && !/^(subject|chapter|lesson|board|বিষয়|অধ্যায়|পাঠ|বোর্ড)\s*[:=]/i.test(nextLine)) {
-              currentQuestion.explanation = nextLine;
-              console.log('  ✅ Explanation inferred from next line:', nextLine.substring(0, 50) + '...');
-              i++; // consume next line
+        for (const line of lines) {
+            if (/^(Question\s+Set|প্রশ্ন\s*সেট)\s*[\d০-৯]+$/i.test(line)) continue;
+            if (line.toLowerCase().includes('alternate') || line.toLowerCase().includes('also supported')) continue;
+
+            if (line.startsWith('[') && line.endsWith(']')) {
+                const match = line.match(/\[([^:ঃ]+)[:ঃ]\s*([^\]]*)\]/);
+                if (match) {
+                    const key = match[1].trim().toLowerCase();
+                    const value = match[2].trim();
+                    const keyMap = {'subject': 'subject', 'বিষয়': 'subject', 'chapter': 'chapter', 'অধ্যায়': 'chapter', 'lesson': 'lesson', 'পাঠ': 'lesson', 'board': 'board', 'বোর্ড': 'board'};
+                    if (keyMap[key]) currentMetadata[keyMap[key]] = value;
+                }
+                inExplanation = false;
+                continue;
             }
-          }
-        } else {
-          console.log('  ⚠️ Failed to parse correct answer line:', line);
-        }
-        continue;
-      }
-      
-      // Parse explanation - more flexible (handle both English and Bengali ব্যাখ্যা)
-      // Handle both "ব্যাখ্যা: text", "Bekkha:", and standalone "ব্যাখ্যা:" patterns
-      const isBanglaExplanationMarker = /^[\s\uFEFF\u200B]*ব্যাখ্যা\s*[:=ঃ：]/.test(line);
-      if (line.toLowerCase().startsWith('explanation') || line.toLowerCase().startsWith('explain') || 
-          line.toLowerCase().startsWith('exp') || line.toLowerCase().startsWith('bekkha') ||
-          isBanglaExplanationMarker) {
-        console.log('  🔍 Explanation marker check passed:', { line, isBanglaExplanationMarker, hasCurrentQuestion: !!currentQuestion });
-        // Check if this line contains a colon
-        if (line.includes(':') || line.includes('=')) {
-          console.log('  🔍 Explanation line detected:', line);
-          if (currentQuestion) {
-            const colonIndex = line.indexOf(':') > -1 ? line.indexOf(':') : line.indexOf('=');
-            const explanationText = line.substring(colonIndex + 1).trim();
-            if (explanationText) {
-              console.log('  ✅ Found Explanation:', explanationText.substring(0, 50) + '...');
-              currentQuestion.explanation = explanationText;
-              currentQuestion._collectingExplanation = false;
-            } else {
-              // Explanation is on next lines, mark that we're collecting it
-              console.log('  ✅ Found Explanation (multi-line)');
-              currentQuestion._collectingExplanation = true;
+
+            if (/^[\d০-৯]+[।.)\s]/.test(line)) {
+                saveCurrentQuestion();
+                currentQuestion = {
+                    ...currentMetadata,
+                    type: 'mcq',
+                    questionText: line.replace(/^[\d০-৯]+[।.)\s]*/, '').trim(),
+                    options: [], correctAnswer: '', explanation: ''
+                };
+                inExplanation = false;
+                continue;
             }
-          }
-          continue;
+
+            if (!currentQuestion) continue;
+
+            if (/^[a-dক-ঘ][.)\s]/i.test(line)) {
+                 const optionMatch = line.match(/^([a-dক-ঘ])[.)\s]*(.+)$/i);
+                 if (optionMatch) {
+                    let letter = optionMatch[1].toLowerCase();
+                    const text = optionMatch[2].trim();
+                    const bengaliToEnglish = { 'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd' };
+                    if (bengaliToEnglish[letter]) letter = bengaliToEnglish[letter];
+                    currentQuestion.options.push({ label: letter, text: text });
+                 }
+                 inExplanation = false;
+                 continue;
+            }
+
+            if (/^(correct|answer|ans|সঠিক(?:\s*উত্তর)?)\s*[:=ঃ：]/i.test(line)) {
+                const answerMatch = line.match(/^(?:correct|answer|ans|সঠিক(?:\s*উত্তর)?)\s*[:=ঃ：]\s*(.+)$/i);
+                if (answerMatch) {
+                    let answer = answerMatch[1].trim().split(/\s+/)[0].toLowerCase();
+                     const bengaliToEnglish = { 'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd' };
+                    if (bengaliToEnglish[answer]) answer = bengaliToEnglish[answer];
+                    currentQuestion.correctAnswer = answer;
+                }
+                inExplanation = false; // reset, in case explanation is on next line
+                continue;
+            }
+
+            const explanationMarker = /^(explanation|explain|exp|bekkha|ব্যাখ্যা)\s*[:=ঃ：]/i;
+            if (explanationMarker.test(line)) {
+                currentQuestion.explanation = line.replace(explanationMarker, '').trim();
+                inExplanation = true;
+                if(!currentQuestion.explanation) { // text is on the next line
+                  continue;
+                }
+            }
+
+            if (inExplanation) {
+                currentQuestion.explanation += (currentQuestion.explanation ? '\n' : '') + line;
+            } else if (currentQuestion.correctAnswer && !currentQuestion.explanation) {
+                // If we have a correct answer, any subsequent text is likely explanation
+                currentQuestion.explanation = (currentQuestion.explanation ? currentQuestion.explanation + '\n' : '') + line;
+                inExplanation = true;
+            } else if (currentQuestion.questionText && currentQuestion.options.length === 0) { // Continuation of question text (before options)
+                 currentQuestion.questionText += '\n' + line;
+            }
         }
-      }
-      
-      // Collect multi-line explanation text
-      if (currentQuestion && currentQuestion._collectingExplanation && line && !line.includes('[')) {
-        // Stop collecting if we hit a Question Set header (English or Bangla) or metadata
-        if (line.match(/^Question\s+Set\s+\d+$/i) || line.match(/^প্রশ্ন\s*সেট\s*[\d০-৯]+$/) || line.match(/^\[/) || line.match(/^(subject|chapter|lesson|board|বিষয়|অধ্যায়|পাঠ|বোর্ড)\s*:/i)) {
-          currentQuestion._collectingExplanation = false;
-          // Process this line again as it might be metadata
-          i--;
-          continue;
-        }
-        if (currentQuestion.explanation) {
-          currentQuestion.explanation += ' ' + line;
-        } else {
-          currentQuestion.explanation = line;
-        }
-        continue;
-      }
-      // If we have a current question and this line doesn't match any pattern,
-      // it might be a continuation of the question text or explanation
-      if (currentQuestion && !line.match(/^[a-dক-ঘ][.)\s]/i) && !line.includes('[')) {
-        // If we're still collecting question text (haven't seen options yet)
-        if (currentQuestion._collectingQuestion) {
-          console.log('  📐 Adding to question text (roman/descriptive):', line.substring(0, 40));
-          currentQuestion.questionText += '\n' + line;
-        } else if (currentQuestion.questionText && !currentQuestion.options.length) {
-          // No options yet, still part of question
-          console.log('  📐 Adding to question text:', line.substring(0, 40));
-          currentQuestion.questionText += '\n' + line;
-        } else if (currentQuestion.explanation) {
-          console.log('  📐 Adding to explanation:', line.substring(0, 40));
-          currentQuestion.explanation += ' ' + line;
-        } else if (currentQuestion.correctAnswer) {
-          // If we have an answer but no explanation yet, this is likely explanation text
-          console.log('  📐 Starting explanation from unmatched line:', line.substring(0, 40));
-          currentQuestion.explanation = line;
-          currentQuestion._collectingExplanation = false;
-        }
-      }
+        saveCurrentQuestion();
     }
-    
-    if (currentQuestion) {
-      console.log('  💾 Saving last question');
-      // Clean up internal flags before saving
-      delete currentQuestion._collectingExplanation;
-      delete currentQuestion._collectingQuestion;
-      questions.push(currentQuestion);
-    }
-    
-    console.log(`\n✅ ImportTabs: Total questions parsed: ${questions.length}`);
     return questions;
-  };
+};
   
   const parseCQQuestions = (text, lang = 'en') => {
     console.log('🔍 parseCQQuestions: Starting...');
@@ -536,31 +350,21 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
         // Parse metadata - handle both [Field: Value] format with optional brackets
         // Support both English and Bengali field names
         if ((line.startsWith('[') && line.endsWith(']')) || (line.includes('[') && line.includes(']'))) {
-          const bracketMatch = line.match(/\[([^\]]+)\]/);
-          if (bracketMatch) {
-            const metaContent = bracketMatch[1];
-            if (metaContent.includes(':')) {
-              const colonIndex = metaContent.indexOf(':');
-              const key = metaContent.substring(0, colonIndex).trim().toLowerCase();
-              const value = metaContent.substring(colonIndex + 1).trim();
-              
-              // Map Bengali keys to English
-              const keyMap = {
-                'subject': 'subject',
-                'বিষয়': 'subject',
-                'chapter': 'chapter',
-                'অধ্যায়': 'chapter',
-                'lesson': 'lesson',
-                'পাঠ': 'lesson',
-                'board': 'board',
-                'বোর্ড': 'board'
-              };
-              
-              const mappedKey = keyMap[key];
-              if (mappedKey) {
-                question[mappedKey] = value;
-                console.log(`  ✅ Metadata ${mappedKey}:`, value);
-              }
+          const match = line.match(/\[([^:ঃ]+)[:ঃ]\s*([^\]]*)\]/);
+          if (match) {
+            const key = match[1].trim().toLowerCase();
+            const value = match[2].trim();
+            // Map Bengali keys to English
+            const keyMap = {
+              'subject': 'subject', 'বিষয়': 'subject',
+              'chapter': 'chapter', 'অধ্যায়': 'chapter',
+              'lesson': 'lesson', 'পাঠ': 'lesson',
+              'board': 'board', 'বোর্ড': 'board'
+            };
+            const mappedKey = keyMap[key];
+            if (mappedKey) {
+              question[mappedKey] = value;
+              console.log(`  ✅ Metadata ${mappedKey}:`, value);
             }
           }
           continue;
@@ -840,7 +644,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
         if (line.toLowerCase().includes('alternate') || line.toLowerCase().includes('also supported')) continue;
 
         if (line.startsWith('[') && line.endsWith(']')) {
-            const match = line.match(/\[([^:]+):\s*([^\]]*)\]/);
+            const match = line.match(/\[([^:ঃ]+)[:ঃ]\s*([^\]]*)\]/);
             if (match) {
                 const key = match[1].trim().toLowerCase();
                 const value = match[2].trim();

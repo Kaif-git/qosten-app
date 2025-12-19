@@ -445,10 +445,15 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
     // Split by "সৃজনশীল প্রশ্ন" or horizontal rule (---) to separate questions
     // Use lookahead to keep the header in each section
     let sections;
-    if (cleanedText.includes('সৃজনশীল প্রশ্ন')) {
-      // For Bangla CQ format, split by "সৃজনশীল প্রশ্ন" headers
-      sections = cleanedText.split(/(?=সৃজনশীল\s+প্রশ্ন)/i).filter(section => section.trim());
-      console.log('📦 Bangla CQ sections found:', sections.length);
+    if (cleanedText.includes('সৃজনশীল প্রশ্ন') || cleanedText.includes('[বিষয়:')) {
+      // For Bangla CQ format, split by "সৃজনশীল প্রশ্ন" headers or by [বিষয়:]
+      if (cleanedText.match(/\[বিষয়:/g) && cleanedText.match(/\[বিষয়:/g).length > 1) {
+        sections = cleanedText.split(/(?=\[বিষয়:)/i).filter(section => section.trim());
+        console.log('📦 Bangla CQ sections found (split by [বিষয়:]):', sections.length);
+      } else {
+        sections = cleanedText.split(/(?=সৃজনশীল\s+প্রশ্ন)/i).filter(section => section.trim());
+        console.log('📦 Bangla CQ sections found (split by সৃজনশীল প্রশ্ন):', sections.length);
+      }
     } else {
       // For English format, split by horizontal rule (---) or by [Subject:]
       if (cleanedText.match(/\[Subject:/gi) && cleanedText.match(/\[Subject:/gi).length > 1) {

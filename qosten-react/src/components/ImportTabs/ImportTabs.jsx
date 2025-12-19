@@ -156,7 +156,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
     console.log('📄 First 100 chars:', text.substring(0, 100));
     
     // Clean up the text: remove markdown bold * and ** (both single and double asterisks)
-    const cleanedText = text.replace(/\*+/g, '').replace(/---+/g, '');
+    const cleanedText = text.replace(/\u200b/g, '').replace(/\*+/g, '').replace(/---+/g, '');
     console.log('🧽 Cleaned text length:', cleanedText.length);
     
     const lines = cleanedText.split('\n').map(line => line.trim()).filter(line => line);
@@ -440,7 +440,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
     console.log('📄 Input length:', text.length);
     
     // Clean up the text: remove markdown bold ** but keep separator lines for splitting
-    const cleanedText = text.replace(/\*\*/g, '');
+    const cleanedText = text.replace(/\u200b/g, '').replace(/\*\*/g, '');
     
     // Split by "সৃজনশীল প্রশ্ন" or horizontal rule (---) to separate questions
     // Use lookahead to keep the header in each section
@@ -814,7 +814,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
   
   const parseSQQuestions = (text, lang = 'en') => {
     // Clean up the text: remove markdown bold ** and separator lines
-    const cleanedText = text.replace(/\*\*/g, '').replace(/---+/g, '');
+    const cleanedText = text.replace(/\u200b/g, '').replace(/\*\*/g, '').replace(/---+/g, '');
     const lines = cleanedText.split('\n').map(line => line.trim()).filter(line => line);
     const questions = [];
     let currentQuestion = null;

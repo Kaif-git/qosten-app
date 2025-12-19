@@ -823,148 +823,77 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
   };
   
   const parseSQQuestions = (text, lang = 'en') => {
-    // Clean up the text: remove markdown bold ** and separator lines
     const cleanedText = text.replace(/\u200b/g, '').replace(/\*\*/g, '').replace(/---+/g, '');
     const lines = cleanedText.split('\n').map(line => line.trim()).filter(line => line);
     const questions = [];
     let currentQuestion = null;
-    // Global metadata that applies to all questions
-    let globalMetadata = {
-      language: lang,
-      subject: '',
-      chapter: '',
-      lesson: ''
-    };
-    // Per-question board metadata
-    let nextQuestionBoard = '';
-    
-    for (let i = 0; i < lines.length; i++) {
-      let line = lines[i];
-      
-      // Skip separator lines and informational text
-      if (line.match(/^[-=]+$/)) {
-        continue;
-      }
-      
-      // Skip informational lines
-      if (line.toLowerCase().includes('alternate') || line.toLowerCase().includes('also supported')) {
-        continue;
-      }
-      
-      // Parse metadata - more flexible bracket matching
-      // Support both English and Bengali field names
-      if ((line.startsWith('[') && line.endsWith(']')) || (line.includes('[') && line.includes(']'))) {
-        const bracketMatch = line.match(/\[([^\]]+)\]/);
-        if (bracketMatch) {
-          const metaContent = bracketMatch[1];
-          if (metaContent.includes(':')) {
-            const colonIndex = metaContent.indexOf(':');
-            const key = metaContent.substring(0, colonIndex).trim().toLowerCase();
-            const value = metaContent.substring(colonIndex + 1).trim();
-            
-            // Map Bengali keys to English
-            const keyMap = {
-              'subject': 'subject',
-              'বিষয়': 'subject',
-              'chapter': 'chapter',
-              'অধ্যায়': 'chapter',
-              'lesson': 'lesson',
-              'পাঠ': 'lesson',
-              'board': 'board',
-              'বোর্ড': 'board'
-            };
-            
-            const mappedKey = keyMap[key];
-            if (mappedKey) {
-              if (mappedKey === 'board') {
-                // Board metadata is per-question, not global
-                // Store it for the next question that will be parsed
-                nextQuestionBoard = value;
-              } else {
-                // Subject, chapter, lesson are global metadata
-                // These apply to ALL questions in the batch
-                globalMetadata[mappedKey] = value;
-                console.log(`  ✅ Global metadata ${mappedKey}:`, value);
-              }
-            }
-          }
-        }
-        continue;
-      }
-      
-      // Parse questions - support both English (0-9) and Bengali (০-৯) numerals
-      if (/^[\d০-৯]+[.)\s]/.test(line) || /^Q[\d০-৯]*[.)\s]/.test(line)) {
-        if (currentQuestion) {
-          questions.push(currentQuestion);
-        }
-        
-        let fullLineText = line;
-        // Remove various question prefixes flexibly (handle Bengali numerals)
-        fullLineText = fullLineText.replace(/^[\d০-৯]+[.)\s]*/, '');
-        fullLineText = fullLineText.replace(/^Q[\d০-৯]*[.)\s]*/, '');
-        fullLineText = fullLineText.replace(/^Question\s*[\d০-৯]*[.)\s]*/, '');
-        
-        let questionPart = fullLineText.trim();
-        let answerPart = '';
 
-        const inlineAnswerMatch = questionPart.match(/(answer|ans|উত্তর)\s*[:=]\s*(.*)/i);
-        if (inlineAnswerMatch) {
-          questionPart = questionPart.substring(0, inlineAnswerMatch.index).trim();
-          answerPart = inlineAnswerMatch[2].trim();
+    const saveCurrentQuestion = () => {
+        if (currentQuestion && currentQuestion.question) {
+            questions.push(currentQuestion);
         }
-        
-        currentQuestion = {
-          ...globalMetadata,
-          type: 'sq',
-          question: questionPart,
-          answer: answerPart,
-          board: nextQuestionBoard
-        };
-        nextQuestionBoard = '';
-        continue;
-      }
-      
-      // Parse answer - more flexible (handle inline answers with উত্তর:)
-      // Only process if currentQuestion.answer is not already populated by inline parsing
-      if (/^(answer|ans|উত্তর)\s*[:=]\s*/i.test(line) && currentQuestion && !currentQuestion.answer) {
-        const answerMatch = line.match(/^(?:answer|ans|উত্তর)\s*[:=]\s*(.+)$/i);
-        if (answerMatch) {
-          currentQuestion.answer = answerMatch[1].trim();
-        } else {
-          currentQuestion.answer = '';
-          currentQuestion._collectingAnswer = true; // Flag to collect multi-line answer
+    };
+
+    let metadataForNext = { type: 'sq', language: lang };
+
+    for (const line of lines) {
+        if (line.toLowerCase().includes('alternate') || line.toLowerCase().includes('also supported')) continue;
+
+        if (line.startsWith('[') && line.endsWith(']')) {
+            const match = line.match(/\[([^:]+):\s*([^\]]*)\]/);
+            if (match) {
+                const key = match[1].trim().toLowerCase();
+                const value = match[2].trim();
+                const keyMap = {'subject': 'subject', 'বিষয়': 'subject', 'chapter': 'chapter', 'অধ্যায়': 'chapter', 'lesson': 'lesson', 'পাঠ': 'lesson', 'board': 'board', 'বোর্ড': 'board'};
+                const mappedKey = keyMap[key];
+
+                if (mappedKey) {
+                    if (mappedKey === 'subject') {
+                        saveCurrentQuestion();
+                        currentQuestion = null; // Signal to create a new question
+                        metadataForNext = { type: 'sq', language: lang }; // Reset metadata
+                    }
+                    metadataForNext[mappedKey] = value;
+                }
+            }
+            continue;
         }
-        continue;
-      }
-      
-      // Handle multi-line answer continuation
-      if (currentQuestion && currentQuestion._collectingAnswer && !line.includes('[')) {
-        if (currentQuestion.answer) {
-          currentQuestion.answer += ' ' + line;
-        } else {
-          currentQuestion.answer = line;
+
+        if (/^[\d০-৯]+[।.)\s]/.test(line)) {
+            if (!currentQuestion) {
+                currentQuestion = { ...metadataForNext, question: '', answer: '' };
+            }
+            let text = line.replace(/^[\d০-৯]+[।.)\s]*/, '').trim();
+            const inlineAnswerMatch = text.match(/(answer|ans|উত্তর)\s*[:=]\s*(.*)/i);
+            if (inlineAnswerMatch) {
+                currentQuestion.question = text.substring(0, inlineAnswerMatch.index).trim();
+                currentQuestion.answer = inlineAnswerMatch[2].trim();
+            } else {
+                currentQuestion.question = text;
+            }
+            continue;
         }
-        continue;
-      }
-      
-      // If we have a current question and this line doesn't match any pattern,
-      // it might be a continuation of the question (if no answer yet and not collecting multi-line answer)
-      // or continuation of answer (if answer started)
-      if (currentQuestion && !line.includes('[')) {
-        if (currentQuestion.answer || currentQuestion._collectingAnswer) { // If answer has started or we are collecting
-          currentQuestion.answer += ' ' + line;
-        } else if (currentQuestion.question) { // No answer yet, so it's a question continuation
-          currentQuestion.question += ' ' + line;
+
+        if (/^(answer|ans|উত্তর)\s*[:=]\s*/i.test(line) && currentQuestion) {
+            const answerMatch = line.match(/^(?:answer|ans|উত্তর)\s*[:=]\s*(.+)$/i);
+            if (answerMatch) {
+                currentQuestion.answer = (currentQuestion.answer ? currentQuestion.answer + ' ' : '') + answerMatch[1].trim();
+            }
+            continue;
         }
-      }
+
+        if (currentQuestion) {
+            if (currentQuestion.answer) {
+                currentQuestion.answer += ' ' + line;
+            } else if (currentQuestion.question) {
+                currentQuestion.question += ' ' + line;
+            }
+        }
     }
-    
-    if (currentQuestion) {
-      questions.push(currentQuestion);
-    }
-    
+
+    saveCurrentQuestion();
     return questions;
-  };
+};
   
   const parseQuestions = () => {
     if (!inputText.trim()) {

@@ -256,34 +256,45 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
     // Clean up the text: remove markdown bold ** but keep separator lines for splitting
     const cleanedText = text.replace(/\u200b/g, '').replace(/\*\*/g, '');
     
-    // Split by "সৃজনশীল প্রশ্ন" or horizontal rule (---) to separate questions
+    // Split by "সৃজনশীল প্রশ্ন", horizontal rule (---), or metadata blocks
     // Use lookahead to keep the header in each section
     let sections;
-    if (cleanedText.includes('সৃজনশীল প্রশ্ন') || cleanedText.includes('[বিষয়:')) {
-      // For Bangla CQ format, split by "সৃজনশীল প্রশ্ন" headers or by [বিষয়:]
-      if (cleanedText.match(/\[বিষয়:/g) && cleanedText.match(/\[বিষয়:/g).length > 1) {
-        sections = cleanedText.split(/(?=\[বিষয়:)/i).filter(section => section.trim());
-        console.log('📦 Bangla CQ sections found (split by [বিষয়:]):', sections.length);
-      } else {
-        sections = cleanedText.split(/(?=সৃজনশীল\s+প্রশ্ন)/i).filter(section => section.trim());
-        console.log('📦 Bangla CQ sections found (split by সৃজনশীল প্রশ্ন):', sections.length);
-      }
+    
+    // Robust splitting strategy:
+    // Split at ANY valid start of a question block.
+    // 1. [Subject: ...] or [Topic: ...] or [বিষয়: ...] or [বিষয়: ...] (Main Metadata start)
+    // 2. সৃজনশীল প্রশ্ন X (Creative Question Header)
+    // 3. প্রশ্ন X (Question X) at start of line
+    // 4. --- (Horizontal Rule)
+    
+    const splitRegex = /(?=(?:\[(?:Subject|Topic|বিষয়|বিষয়)[^\]]*\]|সৃজনশীল\s+প্রশ্ন|^প্রশ্ন\s*[\d০-৯]+|^Question\s*\d+|\n---+\n))/im;
+    
+    // Check if we have multiple potential sections
+    const matches = cleanedText.split(splitRegex);
+    
+    if (matches.length > 1) {
+      sections = matches.filter(section => section.trim());
+      console.log('📦 Sections found using combined splitter:', sections.length);
     } else {
-      // For English format, split by horizontal rule (---) or by [Subject:]
-      if (cleanedText.match(/\[Subject:/gi) && cleanedText.match(/\[Subject:/gi).length > 1) {
-        sections = cleanedText.split(/(?=\[Subject:)/i).filter(section => section.trim());
-        console.log('📦 English CQ sections found (split by [Subject:]):', sections.length);
-      } else {
+      // Fallback to simple splitters if combined one fails or returns 1 block
+      if (cleanedText.includes('---')) {
         sections = cleanedText.split(/\n---+\n/).filter(section => section.trim());
-        console.log('📦 English CQ sections found (split by ---):', sections.length);
+        console.log('📦 Sections found (split by ---):', sections.length);
+      } else {
+        // Just treat as one section
+        sections = [cleanedText];
+        console.log('📦 Treated as single section');
       }
     }
     
     const questions = [];
+    let pendingMetadata = {}; // Persist metadata across sections to handle split headers
     
     for (let sectionIdx = 0; sectionIdx < sections.length; sectionIdx++) {
       const section = sections[sectionIdx];
       console.log(`\n📋 Processing section ${sectionIdx + 1}/${sections.length}`);
+      
+      // ... (existing parsing logic remains the same until the check at the end) ...
       
       // Split lines but preserve empty lines for proper formatting
       const allLines = section.split('\n');
@@ -347,16 +358,19 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
           continue;
         }
         
-        // Parse metadata - handle both [Field: Value] format with optional brackets
+        // Parse metadata - handle both [Field: Value] format and unbracketed Field: Value format
         // Support both English and Bengali field names
-        if ((line.startsWith('[') && line.endsWith(']')) || (line.includes('[') && line.includes(']'))) {
-          const match = line.match(/\[([^:ঃ]+)[:ঃ]\s*([^\]]*)\]/);
+        // Regex: Optional [, Key (English/Bangla), Colon, Value, Optional ]
+        const metadataRegex = /^(?:\[)?(Subject|Topic|Chapter|Lesson|Board|বিষয়|বিষয়|অধ্যায়|পাঠ|বোর্ড)[:ঃ]\s*([^\]\n]+?)(?:\])?$/i;
+        
+        if (metadataRegex.test(line)) {
+          const match = line.match(metadataRegex);
           if (match) {
             const key = match[1].trim().toLowerCase();
             const value = match[2].trim();
             // Map Bengali keys to English
             const keyMap = {
-              'subject': 'subject', 'বিষয়': 'subject',
+              'subject': 'subject', 'topic': 'subject', 'বিষয়': 'subject', 'বিষয়': 'subject',
               'chapter': 'chapter', 'অধ্যায়': 'chapter',
               'lesson': 'lesson', 'পাঠ': 'lesson',
               'board': 'board', 'বোর্ড': 'board'
@@ -599,26 +613,46 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
         question.questionText = questionTextLines.join('\n').trim();
       }
       
-      // Don't clean up - preserve the line breaks we added
-      
-      // Only add question if it has meaningful content
-      // Accept questions with either subject metadata OR board metadata (for Bangla format)
-      // For Bangla, be more lenient - accept if we have question parts or substantial question text
-      const hasMetadata = question.subject || question.board || (question.questionText && question.questionText.length > 50);
+      // Logic to handle metadata splitting and inheritance
       const hasContent = (question.questionText && question.questionText.trim()) || question.parts.length > 0;
       
-      if (hasMetadata && hasContent) {
+      if (!hasContent) {
+        // This section is likely just a header/metadata block
+        // Update pendingMetadata to be used by the next question section
+        if (question.subject) pendingMetadata.subject = question.subject;
+        if (question.chapter) pendingMetadata.chapter = question.chapter;
+        if (question.lesson) pendingMetadata.lesson = question.lesson;
+        if (question.board) pendingMetadata.board = question.board;
+        
+        console.log('  📌 Metadata block stored for next section:', JSON.stringify(pendingMetadata));
+      } else {
+        // This section has content. Apply pending metadata if current is missing.
+        if (!question.subject && pendingMetadata.subject) question.subject = pendingMetadata.subject;
+        if (!question.chapter && pendingMetadata.chapter) question.chapter = pendingMetadata.chapter;
+        if (!question.lesson && pendingMetadata.lesson) question.lesson = pendingMetadata.lesson;
+        if (!question.board && pendingMetadata.board) question.board = pendingMetadata.board;
+        
+        // Update pending metadata with current question's metadata (inheritance for subsequent questions)
+        if (question.subject) pendingMetadata.subject = question.subject;
+        if (question.chapter) pendingMetadata.chapter = question.chapter;
+        if (question.lesson) pendingMetadata.lesson = question.lesson;
+        if (question.board) pendingMetadata.board = question.board;
+        
         // Clean up empty parts
         question.parts = question.parts.filter(part => part.text.trim());
-        questions.push(question);
-        console.log(`  💾 Question saved with ${question.parts.length} parts`);
         
-        // Log final answers to verify line breaks
-        question.parts.forEach(part => {
-          console.log(`    Part ${part.letter} answer preview: "${part.answer.substring(0, 80).replace(/\n/g, '\\n')}..."`);
-        });
-      } else {
-        console.log(`  ⚠️ Question incomplete - not saved (hasMetadata: ${hasMetadata}, hasContent: ${hasContent})`);
+        // Save valid question
+        if (question.parts.length > 0) {
+          questions.push(question);
+          console.log(`  💾 Question saved with ${question.parts.length} parts. Subject: ${question.subject}, Board: ${question.board}`);
+          
+          // Log final answers to verify line breaks
+          question.parts.forEach(part => {
+            console.log(`    Part ${part.letter} answer preview: "${part.answer.substring(0, 80).replace(/\n/g, '\\n')}..."`);
+          });
+        } else {
+           console.log(`  ⚠️ Question has text but no parts - skipping.`);
+        }
       }
     }
     

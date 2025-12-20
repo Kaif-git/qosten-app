@@ -10,6 +10,8 @@ export default function QuestionBank() {
   const [selectionMode, setSelectionMode] = useState(false);
   const [showBulkMetadataEditor, setShowBulkMetadataEditor] = useState(false);
   const [bulkMetadata, setBulkMetadata] = useState({ subject: '', chapter: '', lesson: '', board: '' });
+  const [showDuplicateModal, setShowDuplicateModal] = useState(false);
+  const [duplicateGroups, setDuplicateGroups] = useState([]);
   
   // Get unique metadata values from all questions
   const getUniqueValues = (field) => {
@@ -75,6 +77,90 @@ export default function QuestionBank() {
     setSelectedQuestions([]);
   };
   
+  const findDuplicates = () => {
+    const groups = [];
+    const originalsMap = new Map();
+    const potentialDuplicates = [];
+
+    // 1. Identify base texts and potential duplicates
+    questions.forEach(q => {
+      const text = q.questionText || q.question || '';
+      // Regex to find suffix like [1234567890] at the end
+      const match = text.match(/^(.*)\s*\[(\d+)\]$/);
+      
+      if (match) {
+        // It's a potential duplicate with a suffix
+        const baseText = match[1].trim();
+        potentialDuplicates.push({ question: q, baseText });
+      } else {
+        // It's a potential original (no suffix)
+        // Store only if not already stored (first one wins or handle multiples?)
+        // Assuming unique original text for now.
+        originalsMap.set(text.trim(), q);
+      }
+    });
+
+    // 2. Match duplicates to originals
+    potentialDuplicates.forEach(pd => {
+      const original = originalsMap.get(pd.baseText);
+      if (original) {
+        // We found a pair!
+        let group = groups.find(g => g.original.id === original.id);
+        if (!group) {
+          group = { original: original, duplicates: [] };
+          groups.push(group);
+        }
+        group.duplicates.push(pd.question);
+      }
+    });
+
+    if (groups.length === 0) {
+      alert('No duplicates with [number] suffix patterns found.');
+      return;
+    }
+
+    setDuplicateGroups(groups);
+    setShowDuplicateModal(true);
+  };
+
+  const deleteDuplicateQuestion = async (questionId) => {
+    if (window.confirm('Are you sure you want to delete this duplicate?')) {
+      await deleteQuestion(questionId);
+      // Update local state to remove the deleted question from the UI
+      setDuplicateGroups(prevGroups => {
+        return prevGroups.map(group => ({
+          ...group,
+          duplicates: group.duplicates.filter(d => d.id !== questionId)
+        })).filter(group => group.duplicates.length > 0); // Remove group if no duplicates left
+      });
+    }
+  };
+
+  const deleteAllDuplicates = async () => {
+    // Collect all duplicate IDs
+    const allDuplicateIds = duplicateGroups.flatMap(group => group.duplicates.map(d => d.id));
+    
+    if (allDuplicateIds.length === 0) return;
+
+    if (window.confirm(`Are you sure you want to delete ALL ${allDuplicateIds.length} duplicates?`)) {
+      try {
+        // Delete in batches to avoid overwhelming the server
+        const BATCH_SIZE = 20;
+        for (let i = 0; i < allDuplicateIds.length; i += BATCH_SIZE) {
+          const batch = allDuplicateIds.slice(i, i + BATCH_SIZE);
+          await Promise.all(batch.map(id => deleteQuestion(id)));
+        }
+        
+        setDuplicateGroups([]);
+        setShowDuplicateModal(false);
+        alert(`Successfully deleted ${allDuplicateIds.length} duplicates.`);
+      } catch (error) {
+        console.error("Error deleting duplicates:", error);
+        alert("An error occurred while deleting some duplicates.");
+      }
+    }
+  };
+
   const bulkDelete = async () => {
     if (selectedQuestions.length === 0) {
       alert('Please select at least one question to delete.');
@@ -83,12 +169,21 @@ export default function QuestionBank() {
     
     const confirmMessage = `Are you sure you want to delete ${selectedQuestions.length} question(s)? This action cannot be undone.`;
     if (window.confirm(confirmMessage)) {
-      for (const id of selectedQuestions) {
-        await deleteQuestion(id);
+      try {
+        // Delete in batches to avoid overwhelming the server
+        const BATCH_SIZE = 20;
+        for (let i = 0; i < selectedQuestions.length; i += BATCH_SIZE) {
+          const batch = selectedQuestions.slice(i, i + BATCH_SIZE);
+          await Promise.all(batch.map(id => deleteQuestion(id)));
+        }
+        
+        setSelectedQuestions([]);
+        setSelectionMode(false);
+        alert(`Successfully deleted ${selectedQuestions.length} question(s).`);
+      } catch (error) {
+        console.error("Error deleting questions:", error);
+        alert("An error occurred while deleting some questions.");
       }
-      setSelectedQuestions([]);
-      setSelectionMode(false);
-      alert(`Successfully deleted ${selectedQuestions.length} question(s).`);
     }
   };
 
@@ -381,10 +476,146 @@ export default function QuestionBank() {
         </div>
       )}
       
+      {/* Duplicate Detector Modal */}
+      {showDuplicateModal && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          zIndex: 10000
+        }}>
+          <div style={{
+            backgroundColor: 'white',
+            padding: '30px',
+            borderRadius: '10px',
+            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+            maxWidth: '900px',
+            width: '95%',
+            maxHeight: '90vh',
+            overflowY: 'auto',
+            display: 'flex',
+            flexDirection: 'column'
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+              <h3 style={{ margin: 0, color: '#6f42c1' }}>🔍 Duplicate Detector Results</h3>
+              <div style={{ display: 'flex', gap: '10px' }}>
+                <button
+                  onClick={deleteAllDuplicates}
+                  style={{
+                    backgroundColor: '#dc3545',
+                    color: 'white',
+                    border: 'none',
+                    padding: '8px 16px',
+                    borderRadius: '4px',
+                    cursor: 'pointer',
+                    fontWeight: 'bold'
+                  }}
+                >
+                  🗑 Delete ALL Duplicates
+                </button>
+                <button
+                  onClick={() => setShowDuplicateModal(false)}
+                  style={{
+                    backgroundColor: '#6c757d',
+                    color: 'white',
+                    border: 'none',
+                    padding: '8px 16px',
+                    borderRadius: '4px',
+                    cursor: 'pointer'
+                  }}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+
+            <p style={{ color: '#666', marginBottom: '20px' }}>
+              Found <strong>{duplicateGroups.reduce((acc, g) => acc + g.duplicates.length, 0)}</strong> duplicates across <strong>{duplicateGroups.length}</strong> unique questions.
+            </p>
+
+            <div style={{ flex: 1, overflowY: 'auto' }}>
+              {duplicateGroups.map((group, idx) => (
+                <div key={idx} style={{ 
+                  border: '1px solid #ddd', 
+                  borderRadius: '8px', 
+                  marginBottom: '20px',
+                  overflow: 'hidden'
+                }}>
+                  <div style={{ 
+                    backgroundColor: '#f8f9fa', 
+                    padding: '10px 15px', 
+                    fontWeight: 'bold',
+                    borderBottom: '1px solid #ddd',
+                    display: 'flex',
+                    justifyContent: 'space-between'
+                  }}>
+                    <span>Original Question (ID: {group.original.id})</span>
+                    <span style={{ fontSize: '12px', color: '#28a745' }}>Keep this</span>
+                  </div>
+                  <div style={{ padding: '15px', borderBottom: '1px solid #eee' }}>
+                    <p style={{ margin: 0, whiteSpace: 'pre-wrap' }}>
+                      {group.original.questionText || group.original.question}
+                    </p>
+                  </div>
+
+                  <div style={{ 
+                    backgroundColor: '#fff3cd', 
+                    padding: '10px 15px', 
+                    fontWeight: 'bold',
+                    borderBottom: '1px solid #ddd',
+                    color: '#856404'
+                  }}>
+                    <span>Duplicates found ({group.duplicates.length})</span>
+                  </div>
+                  
+                  {group.duplicates.map(dup => (
+                    <div key={dup.id} style={{ 
+                      padding: '15px', 
+                      borderBottom: '1px solid #eee',
+                      display: 'flex', 
+                      justifyContent: 'space-between',
+                      alignItems: 'start',
+                      backgroundColor: '#fffdf5'
+                    }}>
+                      <div style={{ flex: 1, marginRight: '15px' }}>
+                        <p style={{ margin: '0 0 5px 0', whiteSpace: 'pre-wrap' }}>
+                          {dup.questionText || dup.question}
+                        </p>
+                        <span style={{ fontSize: '12px', color: '#999' }}>ID: {dup.id}</span>
+                      </div>
+                      <button
+                        onClick={() => deleteDuplicateQuestion(dup.id)}
+                        style={{
+                          backgroundColor: '#dc3545',
+                          color: 'white',
+                          border: 'none',
+                          padding: '5px 10px',
+                          borderRadius: '4px',
+                          cursor: 'pointer',
+                          whiteSpace: 'nowrap'
+                        }}
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+      
       <div className="panel">
         <h2>Question Bank</h2>
-      <Statistics questions={filteredQuestions} />
       <SearchFilters />
+      <Statistics questions={filteredQuestions} />
       
       {/* Selection Mode Controls */}
       <div className="selection-controls" style={{ 
@@ -395,6 +626,22 @@ export default function QuestionBank() {
         border: selectionMode ? '2px solid #007bff' : '1px solid #ddd'
       }}>
         <div style={{ display: 'flex', gap: '10px', alignItems: 'center', flexWrap: 'wrap' }}>
+          <button
+            onClick={findDuplicates}
+            style={{
+              backgroundColor: '#6f42c1',
+              color: 'white',
+              padding: '10px 20px',
+              borderRadius: '6px',
+              border: 'none',
+              cursor: 'pointer',
+              fontWeight: '600',
+              marginRight: '10px'
+            }}
+          >
+            🔍 Duplicate Detector
+          </button>
+
           <button 
             onClick={toggleSelectionMode}
             style={{

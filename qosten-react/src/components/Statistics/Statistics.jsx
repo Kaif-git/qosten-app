@@ -66,19 +66,6 @@ export default function Statistics({ questions }) {
               </ul>
             </div>
           )}
-          
-          {Object.keys(detailedCounts.boards).length > 0 && (
-            <div>
-              <h4>By Board:</h4>
-              <ul>
-                {Object.entries(detailedCounts.boards).map(([board, count]) => (
-                  <li key={board}>
-                    <strong>{board}:</strong> {count}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
         </div>
       </div>
     </>

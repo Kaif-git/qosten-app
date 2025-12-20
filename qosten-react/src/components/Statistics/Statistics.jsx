@@ -14,9 +14,19 @@ export default function Statistics({ questions }) {
     boards: {}
   };
   
+  const chapterTypeBreakdown = {};
+  
   questions.forEach(q => {
     if (q.subject) detailedCounts.subjects[q.subject] = (detailedCounts.subjects[q.subject] || 0) + 1;
-    if (q.chapter) detailedCounts.chapters[q.chapter] = (detailedCounts.chapters[q.chapter] || 0) + 1;
+    if (q.chapter) {
+      detailedCounts.chapters[q.chapter] = (detailedCounts.chapters[q.chapter] || 0) + 1;
+      
+      if (!chapterTypeBreakdown[q.chapter]) {
+        chapterTypeBreakdown[q.chapter] = {};
+      }
+      const type = q.type || 'unknown';
+      chapterTypeBreakdown[q.chapter][type] = (chapterTypeBreakdown[q.chapter][type] || 0) + 1;
+    }
     if (q.type) detailedCounts.types[q.type] = (detailedCounts.types[q.type] || 0) + 1;
     if (q.board) detailedCounts.boards[q.board] = (detailedCounts.boards[q.board] || 0) + 1;
   });
@@ -50,6 +60,28 @@ export default function Statistics({ questions }) {
                     <strong>{subject}:</strong> {count}
                   </li>
                 ))}
+              </ul>
+            </div>
+          )}
+
+          {Object.keys(detailedCounts.chapters).length > 0 && (
+            <div>
+              <h4>By Chapter:</h4>
+              <ul>
+                {Object.entries(detailedCounts.chapters).map(([chapter, count]) => {
+                  const breakdown = chapterTypeBreakdown[chapter];
+                  const breakdownString = breakdown 
+                    ? Object.entries(breakdown)
+                        .map(([type, typeCount]) => `${type.toUpperCase()}: ${typeCount}`)
+                        .join(', ')
+                    : '';
+                  
+                  return (
+                    <li key={chapter}>
+                      <strong>{chapter}:</strong> {count} {breakdownString && <span style={{fontSize: '0.85em', color: '#666'}}>({breakdownString})</span>}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           )}

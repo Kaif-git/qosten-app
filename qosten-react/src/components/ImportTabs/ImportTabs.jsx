@@ -254,7 +254,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
     console.log('📄 Input length:', text.length);
     
     // Clean up the text: remove markdown bold ** but keep separator lines for splitting
-    const cleanedText = text.replace(/\u200b/g, '').replace(/\*\*/g, '');
+    const cleanedText = text.replace(/\u200b/g, '').replace(/\*+/g, '');
     
     // Split by "সৃজনশীল প্রশ্ন", horizontal rule (---), or metadata blocks
     // Use lookahead to keep the header in each section
@@ -661,7 +661,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
   };
   
   const parseSQQuestions = (text, lang = 'en') => {
-    const cleanedText = text.replace(/\u200b/g, '').replace(/\*\*/g, '');
+    const cleanedText = text.replace(/\u200b/g, '').replace(/\*+/g, '');
     const sections = cleanedText.split(/\n---+\n/);
     const questions = [];
 
@@ -670,7 +670,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
 
         const lines = section.split('\n').map(line => line.trim()).filter(line => line);
         let currentQuestion = null;
-        let metadataForSection = { type: 'sq', language: lang };
+        let currentMetadata = { type: 'sq', language: lang };
 
         const saveCurrentQuestion = () => {
             if (currentQuestion && currentQuestion.question) {
@@ -679,7 +679,6 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
             currentQuestion = null;
         };
 
-        // First pass to get metadata for the section
         for (const line of lines) {
             if (line.startsWith('[') && line.endsWith(']')) {
                  const match = line.match(/\[([^:ঃ]+)[:ঃ]\s*([^\]]*)\]/);
@@ -688,20 +687,17 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
                     const value = match[2].trim();
                     const keyMap = {'subject': 'subject', 'বিষয়': 'subject', 'chapter': 'chapter', 'অধ্যায়': 'chapter', 'lesson': 'lesson', 'পাঠ': 'lesson', 'board': 'board', 'বোর্ড': 'board'};
                     if (keyMap[key]) {
-                        metadataForSection[keyMap[key]] = value;
+                        currentMetadata[keyMap[key]] = value;
                     }
                  }
+                 continue;
             }
-        }
 
-        for (const line of lines) {
-            // Skip headers and metadata lines as metadata is already processed
-            if (line.startsWith('[') && line.endsWith(']')) continue;
             if (/^(প্রয়োগী|জ্ঞানমূলক|বোধমূলক)/.test(line)) continue;
 
             if (/^[\d০-৯]+[।.)\s]/.test(line)) {
                 saveCurrentQuestion(); // Save previous question
-                currentQuestion = { ...metadataForSection, question: '', answer: '' };
+                currentQuestion = { ...currentMetadata, question: '', answer: '' };
 
                 let text = line.replace(/^[\d০-৯]+[।.)\s]*/, '').trim();
                 const inlineAnswerMatch = text.match(/(answer|ans|উত্তর)\s*[:=]\s*(.*)/i);

@@ -1,8 +1,13 @@
 import React from 'react';
 import { useQuestions } from '../../context/QuestionContext';
 
-export default function SearchFilters() {
-  const { questions, currentFilters, setFilters } = useQuestions();
+export default function SearchFilters({ filters, onFilterChange }) {
+  const context = useQuestions();
+  
+  // Determine source of truth: props (controlled) or context (uncontrolled)
+  const isControlled = !!filters && !!onFilterChange;
+  const activeFilters = isControlled ? filters : context.currentFilters;
+  const questions = context.questions; // Always get questions from context for options
   
   // Get unique values for dropdown options
   const uniqueSubjects = [...new Set(questions.map(q => q.subject).filter(Boolean))];
@@ -11,11 +16,15 @@ export default function SearchFilters() {
   const uniqueBoards = [...new Set(questions.map(q => q.board).filter(Boolean))];
   
   const handleFilterChange = (key, value) => {
-    setFilters({ [key]: value });
+    if (isControlled) {
+      onFilterChange({ [key]: value });
+    } else {
+      context.setFilters({ [key]: value });
+    }
   };
   
   const resetFilters = () => {
-    setFilters({
+    const resetState = {
       searchText: '',
       subject: '',
       chapter: '',
@@ -24,7 +33,25 @@ export default function SearchFilters() {
       board: '',
       language: '',
       flaggedStatus: ''
-    });
+    };
+    
+    if (isControlled) {
+      // For controlled mode, we need to pass the full object if the parent expects a merge, 
+      // or just call onFilterChange multiple times? 
+      // Usually setFilters in context does a merge.
+      // Let's assume onFilterChange handles the merge or we pass the full object if it expects full state?
+      // Based on typical React patterns, onFilterChange usually updates specific fields.
+      // But for a "Reset", we want to set all.
+      // Let's iterate or pass a special "reset" object if the parent supports it.
+      // Or better: The parent's handler `handleFilterChange` (which we will write) should handle merging.
+      // But here we want to replace multiple fields.
+      // Let's pass the full reset object and let the parent handle it.
+      // Actually, my proposed QuestionBank handler will probably just do `setFilters(prev => ({...prev, ...changes}))`.
+      // So passing the full object works.
+      onFilterChange(resetState);
+    } else {
+      context.setFilters(resetState);
+    }
   };
 
   return (
@@ -35,7 +62,7 @@ export default function SearchFilters() {
           type="text"
           id="searchText"
           placeholder="Enter keywords..."
-          value={currentFilters.searchText}
+          value={activeFilters.searchText || ''}
           onChange={(e) => handleFilterChange('searchText', e.target.value)}
         />
       </div>
@@ -44,7 +71,7 @@ export default function SearchFilters() {
         <label htmlFor="filterSubject">Subject:</label>
         <select
           id="filterSubject"
-          value={currentFilters.subject}
+          value={activeFilters.subject || ''}
           onChange={(e) => handleFilterChange('subject', e.target.value)}
         >
           <option value="">All Subjects</option>
@@ -59,7 +86,7 @@ export default function SearchFilters() {
         <label htmlFor="filterChapter">Chapter:</label>
         <select
           id="filterChapter"
-          value={currentFilters.chapter}
+          value={activeFilters.chapter || ''}
           onChange={(e) => handleFilterChange('chapter', e.target.value)}
         >
           <option value="">All Chapters</option>
@@ -74,7 +101,7 @@ export default function SearchFilters() {
         <label htmlFor="filterLesson">Lesson:</label>
         <select
           id="filterLesson"
-          value={currentFilters.lesson}
+          value={activeFilters.lesson || ''}
           onChange={(e) => handleFilterChange('lesson', e.target.value)}
         >
           <option value="">All Lessons</option>
@@ -88,7 +115,7 @@ export default function SearchFilters() {
         <label htmlFor="filterType">Type:</label>
         <select
           id="filterType"
-          value={currentFilters.type}
+          value={activeFilters.type || ''}
           onChange={(e) => handleFilterChange('type', e.target.value)}
         >
           <option value="">All Types</option>
@@ -102,7 +129,7 @@ export default function SearchFilters() {
         <label htmlFor="filterBoard">Board:</label>
         <select
           id="filterBoard"
-          value={currentFilters.board}
+          value={activeFilters.board || ''}
           onChange={(e) => handleFilterChange('board', e.target.value)}
         >
           <option value="">All Boards</option>
@@ -117,7 +144,7 @@ export default function SearchFilters() {
         <label htmlFor="filterLanguage">Language:</label>
         <select
           id="filterLanguage"
-          value={currentFilters.language}
+          value={activeFilters.language || ''}
           onChange={(e) => handleFilterChange('language', e.target.value)}
         >
           <option value="">All Languages</option>
@@ -130,11 +157,11 @@ export default function SearchFilters() {
         <label htmlFor="filterFlagged">🚩 Flagged Status:</label>
         <select
           id="filterFlagged"
-          value={currentFilters.flaggedStatus || ''}
+          value={activeFilters.flaggedStatus || ''}
           onChange={(e) => handleFilterChange('flaggedStatus', e.target.value)}
           style={{ 
-            borderColor: currentFilters.flaggedStatus === 'flagged' ? '#e74c3c' : undefined,
-            fontWeight: currentFilters.flaggedStatus === 'flagged' ? 'bold' : 'normal'
+            borderColor: activeFilters.flaggedStatus === 'flagged' ? '#e74c3c' : undefined,
+            fontWeight: activeFilters.flaggedStatus === 'flagged' ? 'bold' : 'normal'
           }}
         >
           <option value="">All Questions</option>

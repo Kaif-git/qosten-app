@@ -4,6 +4,34 @@ import Statistics from '../Statistics/Statistics';
 import SearchFilters from '../SearchFilters/SearchFilters';
 import QuestionCard from '../QuestionCard/QuestionCard';
 
+const getFilteredQuestions = (questions, filters) => {
+  return questions.filter(q => {
+    const matchesSearchText = !filters.searchText ||
+      (q.question?.toLowerCase().includes(filters.searchText.toLowerCase())) ||
+      (q.questionText?.toLowerCase().includes(filters.searchText.toLowerCase())) ||
+      (q.answer?.toLowerCase().includes(filters.searchText.toLowerCase())) ||
+      (q.explanation?.toLowerCase().includes(filters.searchText.toLowerCase())) ||
+      (q.parts?.some(p => (p.text?.toLowerCase().includes(filters.searchText.toLowerCase())) || (p.answer?.toLowerCase().includes(filters.searchText.toLowerCase()))));
+    
+    const matchesSubject = filters.subject === 'none'
+      ? !q.subject
+      : !filters.subject || q.subject === filters.subject;
+      
+    const matchesChapter = filters.chapter === 'none'
+      ? !q.chapter
+      : !filters.chapter || q.chapter === filters.chapter;
+
+    const matchesLesson = !filters.lesson || q.lesson === filters.lesson;
+    const matchesType = !filters.type || q.type === filters.type;
+    const matchesBoard = !filters.board || q.board === filters.board;
+    const matchesLanguage = !filters.language || q.language === filters.language;
+    const matchesFlaggedStatus = !filters.flaggedStatus || 
+      (filters.flaggedStatus === 'flagged' && q.isFlagged) ||
+      (filters.flaggedStatus === 'unflagged' && !q.isFlagged);
+    return matchesSearchText && matchesSubject && matchesChapter && matchesLesson && matchesType && matchesBoard && matchesLanguage && matchesFlaggedStatus;
+  });
+};
+
 export default function QuestionBank() {
   const { questions, currentFilters, deleteQuestion, updateQuestion, bulkFlagQuestions } = useQuestions();
   const [selectedQuestions, setSelectedQuestions] = useState([]);
@@ -12,6 +40,11 @@ export default function QuestionBank() {
   const [bulkMetadata, setBulkMetadata] = useState({ subject: '', chapter: '', lesson: '', board: '' });
   const [showDuplicateModal, setShowDuplicateModal] = useState(false);
   const [duplicateGroups, setDuplicateGroups] = useState([]);
+
+  // Split View State
+  const [isSplitView, setIsSplitView] = useState(false);
+  const [leftFilters, setLeftFilters] = useState({});
+  const [rightFilters, setRightFilters] = useState({});
   
   // Get unique metadata values from all questions
   const getUniqueValues = (field) => {
@@ -26,33 +59,23 @@ export default function QuestionBank() {
   const uniqueChapters = getUniqueValues('chapter');
   const uniqueLessons = getUniqueValues('lesson');
   const uniqueBoards = getUniqueValues('board');
-  
-  // Filter questions based on current filters
-  const filteredQuestions = questions.filter(q => {
-    const matchesSearchText = !currentFilters.searchText ||
-      (q.question?.toLowerCase().includes(currentFilters.searchText.toLowerCase())) ||
-      (q.questionText?.toLowerCase().includes(currentFilters.searchText.toLowerCase())) ||
-      (q.answer?.toLowerCase().includes(currentFilters.searchText.toLowerCase())) ||
-      (q.explanation?.toLowerCase().includes(currentFilters.searchText.toLowerCase())) ||
-      (q.parts?.some(p => (p.text?.toLowerCase().includes(currentFilters.searchText.toLowerCase())) || (p.answer?.toLowerCase().includes(currentFilters.searchText.toLowerCase()))));
-    
-    const matchesSubject = currentFilters.subject === 'none'
-      ? !q.subject
-      : !currentFilters.subject || q.subject === currentFilters.subject;
-      
-    const matchesChapter = currentFilters.chapter === 'none'
-      ? !q.chapter
-      : !currentFilters.chapter || q.chapter === currentFilters.chapter;
 
-    const matchesLesson = !currentFilters.lesson || q.lesson === currentFilters.lesson;
-    const matchesType = !currentFilters.type || q.type === currentFilters.type;
-    const matchesBoard = !currentFilters.board || q.board === currentFilters.board;
-    const matchesLanguage = !currentFilters.language || q.language === currentFilters.language;
-    const matchesFlaggedStatus = !currentFilters.flaggedStatus || 
-      (currentFilters.flaggedStatus === 'flagged' && q.isFlagged) ||
-      (currentFilters.flaggedStatus === 'unflagged' && !q.isFlagged);
-    return matchesSearchText && matchesSubject && matchesChapter && matchesLesson && matchesType && matchesBoard && matchesLanguage && matchesFlaggedStatus;
-  });
+  // Computed questions based on view mode
+  const filteredQuestionsSingle = getFilteredQuestions(questions, currentFilters);
+  const filteredQuestionsLeft = getFilteredQuestions(questions, { ...currentFilters, ...leftFilters });
+  const filteredQuestionsRight = getFilteredQuestions(questions, { ...currentFilters, ...rightFilters });
+  
+  // For selection actions, we need to know which set of questions we are operating on?
+  // No, selection actions operate on `selectedQuestions` IDs which are global.
+  // The list of "filtered questions" is just for display.
+  // However, "Select All" needs to know which list to select.
+  // In Split View, "Select All" is ambiguous. It should probably select all from BOTH lists? Or maybe we disable global "Select All" in split view?
+  // Or render a "Select All" button in each pane?
+  // For now, let's make global "Select All" select from the currently visible questions.
+  
+  const currentVisibleQuestions = isSplitView 
+    ? [...new Set([...filteredQuestionsLeft, ...filteredQuestionsRight])] 
+    : filteredQuestionsSingle;
   
   const toggleSelectionMode = () => {
     setSelectionMode(!selectionMode);
@@ -70,11 +93,20 @@ export default function QuestionBank() {
   };
   
   const selectAll = () => {
-    setSelectedQuestions(filteredQuestions.map(q => q.id));
+    setSelectedQuestions(currentVisibleQuestions.map(q => q.id));
   };
   
   const deselectAll = () => {
     setSelectedQuestions([]);
+  };
+
+  const toggleSplitView = () => {
+    if (!isSplitView) {
+        // When entering split view, initialize both sides with current context filters
+        setLeftFilters({ ...currentFilters });
+        setRightFilters({ ...currentFilters });
+    }
+    setIsSplitView(!isSplitView);
   };
   
   const findDuplicates = () => {
@@ -263,6 +295,24 @@ export default function QuestionBank() {
       alert('Error unflagging questions. Please try again.');
     }
   };
+
+  const renderQuestionList = (qList) => (
+    <div className="questionsContainer">
+        {qList.length === 0 ? (
+          <p>No questions found matching your criteria.</p>
+        ) : (
+            qList.map(question => (
+            <QuestionCard 
+              key={question.id} 
+              question={question}
+              selectionMode={selectionMode}
+              isSelected={selectedQuestions.includes(question.id)}
+              onToggleSelect={toggleQuestionSelection}
+            />
+          ))
+        )}
+    </div>
+  );
 
   return (
     <>
@@ -613,11 +663,25 @@ export default function QuestionBank() {
       )}
       
       <div className="panel">
-        <h2>Question Bank</h2>
-      <SearchFilters />
-      <Statistics questions={filteredQuestions} />
+        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+            <h2>Question Bank</h2>
+            <button 
+                onClick={toggleSplitView}
+                style={{
+                    backgroundColor: '#3498db',
+                    color: 'white',
+                    padding: '8px 16px',
+                    borderRadius: '4px',
+                    border: 'none',
+                    cursor: 'pointer',
+                    fontWeight: 'bold'
+                }}
+            >
+                {isSplitView ? "Show Single View" : "Show Split View"}
+            </button>
+        </div>
       
-      {/* Selection Mode Controls */}
+      {/* Selection Mode Controls - Always Visible */}
       <div className="selection-controls" style={{ 
         margin: '20px 0', 
         padding: '15px', 
@@ -670,7 +734,7 @@ export default function QuestionBank() {
                   cursor: 'pointer'
                 }}
               >
-                Select All ({filteredQuestions.length})
+                Select All ({currentVisibleQuestions.length})
               </button>
               
               <button 
@@ -756,28 +820,45 @@ export default function QuestionBank() {
                 fontWeight: '600', 
                 color: selectedQuestions.length > 0 ? '#007bff' : '#666'
               }}>
-                {selectedQuestions.length} of {filteredQuestions.length} selected
+                {selectedQuestions.length} selected
               </span>
             </>
           )}
         </div>
       </div>
       
-      <div className="questionsContainer">
-        {filteredQuestions.length === 0 ? (
-          <p>No questions found matching your criteria.</p>
-        ) : (
-          filteredQuestions.map(question => (
-            <QuestionCard 
-              key={question.id} 
-              question={question}
-              selectionMode={selectionMode}
-              isSelected={selectedQuestions.includes(question.id)}
-              onToggleSelect={toggleQuestionSelection}
-            />
-          ))
-        )}
-      </div>
+      {!isSplitView ? (
+          <>
+            <SearchFilters />
+            <Statistics questions={filteredQuestionsSingle} />
+            {renderQuestionList(filteredQuestionsSingle)}
+          </>
+      ) : (
+          <div style={{ display: 'flex', gap: '20px', width: '100%' }}>
+              {/* Left Pane */}
+              <div style={{ flex: 1, border: '1px solid #ddd', padding: '15px', borderRadius: '8px' }}>
+                  <h3 style={{marginTop: 0, borderBottom: '1px solid #eee', paddingBottom: '10px'}}>Left View</h3>
+                  <SearchFilters 
+                    filters={leftFilters} 
+                    onFilterChange={(newFilters) => setLeftFilters(prev => ({ ...prev, ...newFilters }))} 
+                  />
+                  <Statistics questions={filteredQuestionsLeft} />
+                  {renderQuestionList(filteredQuestionsLeft)}
+              </div>
+              
+              {/* Right Pane */}
+              <div style={{ flex: 1, border: '1px solid #ddd', padding: '15px', borderRadius: '8px' }}>
+                  <h3 style={{marginTop: 0, borderBottom: '1px solid #eee', paddingBottom: '10px'}}>Right View</h3>
+                   <SearchFilters 
+                    filters={rightFilters} 
+                    onFilterChange={(newFilters) => setRightFilters(prev => ({ ...prev, ...newFilters }))} 
+                  />
+                  <Statistics questions={filteredQuestionsRight} />
+                  {renderQuestionList(filteredQuestionsRight)}
+              </div>
+          </div>
+      )}
+      
     </div>
     </>
   );

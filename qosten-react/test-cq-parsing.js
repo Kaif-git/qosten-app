@@ -117,9 +117,12 @@ function parseCQQuestions(text, lang = 'en') {
         continue;
       }
       
-      // Handle image indicators
-      if (line.includes('picture') || line.includes('image') || line.includes('ছবি') || 
-          line.includes('[There is a picture]') || line.includes('[ছবি আছে]')) {
+      // Handle image indicators - only match if it looks like a placeholder, not part of a sentence
+      const isImagePlaceholder = 
+        (line.startsWith('[') && line.endsWith(']') && (line.toLowerCase().includes('picture') || line.toLowerCase().includes('image') || line.includes('ছবি'))) ||
+        (line.toLowerCase() === 'picture' || line.toLowerCase() === 'image' || line === 'ছবি');
+      
+      if (isImagePlaceholder) {
         question.image = '[There is a picture]';
         questionTextLines.push(line);
         continue;

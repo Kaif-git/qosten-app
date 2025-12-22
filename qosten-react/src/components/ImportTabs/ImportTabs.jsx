@@ -186,12 +186,13 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
                 continue;
             }
 
-            if (/^[\d০-৯]+[।.)\s]/.test(line)) {
+            // Start of a new question (must have dot or danda, NOT paren to distinguish from numeric options)
+            if (/^[\d০-৯]+[।.]\s/.test(line)) {
                 saveCurrentQuestion();
                 currentQuestion = {
                     ...currentMetadata,
                     type: 'mcq',
-                    questionText: line.replace(/^[\d০-৯]+[।.)\s]*/, '').trim(),
+                    questionText: line.replace(/^[\d০-৯]+[।.]\s*/, '').trim(),
                     options: [], correctAnswer: '', explanation: ''
                 };
                 inExplanation = false;
@@ -200,13 +201,20 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
 
             if (!currentQuestion) continue;
 
-            if (/^[a-dক-ঘ][.)\s]/i.test(line)) {
-                 const optionMatch = line.match(/^([a-dক-ঘ])[.)\s]*(.+)$/i);
+            // Updated regex to support Bengali numerals 1-4 (১-৪)
+            if (/^(?:[a-dক-ঘ]|[1-4১-৪])[.)\s]/i.test(line)) {
+                 const optionMatch = line.match(/^([a-dক-ঘ1-4১-৪])[.)\s]*(.+)$/i);
                  if (optionMatch) {
                     let letter = optionMatch[1].toLowerCase();
                     const text = optionMatch[2].trim();
                     const bengaliToEnglish = { 'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd' };
+                    const numToChar = { '1': 'a', '2': 'b', '3': 'c', '4': 'd' };
+                    const bengaliNumToChar = { '১': 'a', '২': 'b', '৩': 'c', '৪': 'd' };
+                    
                     if (bengaliToEnglish[letter]) letter = bengaliToEnglish[letter];
+                    if (numToChar[letter]) letter = numToChar[letter];
+                    if (bengaliNumToChar[letter]) letter = bengaliNumToChar[letter];
+                    
                     currentQuestion.options.push({ label: letter, text: text });
                  }
                  inExplanation = false;
@@ -218,7 +226,13 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
                 if (answerMatch) {
                     let answer = answerMatch[1].trim().split(/\s+/)[0].toLowerCase();
                      const bengaliToEnglish = { 'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd' };
+                     const numToChar = { '1': 'a', '2': 'b', '3': 'c', '4': 'd' };
+                     const bengaliNumToChar = { '১': 'a', '২': 'b', '৩': 'c', '৪': 'd' };
+                     
                     if (bengaliToEnglish[answer]) answer = bengaliToEnglish[answer];
+                    if (numToChar[answer]) answer = numToChar[answer];
+                    if (bengaliNumToChar[answer]) answer = bengaliNumToChar[answer];
+                    
                     currentQuestion.correctAnswer = answer;
                 }
                 inExplanation = false; // reset, in case explanation is on next line
@@ -232,6 +246,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
                 if(!currentQuestion.explanation) { // text is on the next line
                   continue;
                 }
+                continue; // Processed explanation on this line
             }
 
             if (inExplanation) {
@@ -434,9 +449,12 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
           continue;
         }
         
-        // Handle image indicators
-        if (line.includes('picture') || line.includes('image') || line.includes('ছবি') || 
-            line.includes('[There is a picture]') || line.includes('[ছবি আছে]')) {
+        // Handle image indicators - only match if it looks like a placeholder, not part of a sentence
+        const isImagePlaceholder = 
+          (line.startsWith('[') && line.endsWith(']') && (line.toLowerCase().includes('picture') || line.toLowerCase().includes('image') || line.includes('ছবি'))) ||
+          (line.toLowerCase() === 'picture' || line.toLowerCase() === 'image' || line === 'ছবি');
+        
+        if (isImagePlaceholder) {
           question.image = '[There is a picture]';
           questionTextLines.push(line);
           continue;
@@ -462,9 +480,9 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
         }
         
         if (!inAnswerSection) {
-          // Parse question parts (a., b., c., d. or ک., খ., গ., ઘ.) - lowercase only
+          // Parse question parts (a., b., c., d. or ক., খ., গ., ঘ.) - lowercase only
           // Allow optional spaces after dot/paren to handle both "a. text" and "a.text" formats
-          const partMatch = line.match(/^([a-dک-ઘ])[.)]\s*(.+)$/);
+          const partMatch = line.match(/^([a-dক-ঘ])[.)]\s*(.+)$/);
           if (partMatch) {
             let partLetter = partMatch[1].toLowerCase();
             let partText = partMatch[2].trim();
@@ -537,10 +555,10 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
               currentAnswerPart.answer += ' ' + line;
             }
           } else {
-            // Standard format: parse answers (a., b., c., d. or ک., খ., গ., ઘ.)
+            // Standard format: parse answers (a., b., c., d. or ক., খ., গ., ঘ.)
             // Must be lowercase letter followed by . or ) to avoid matching LaTeX like A = ...
             // Allow optional spaces after dot/paren to handle both "a. text" and "a.text" formats
-            const answerMatch = line.match(/^([a-dک-ઘ])[.)]\s*(.+)$/);
+            const answerMatch = line.match(/^([a-dক-ঘ])[.)]\s*(.+)$/);
             if (answerMatch) {
               let partLetter = answerMatch[1].toLowerCase();
               const answerText = answerMatch[2].trim();

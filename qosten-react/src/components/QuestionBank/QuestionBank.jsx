@@ -3,6 +3,7 @@ import { useQuestions } from '../../context/QuestionContext';
 import Statistics from '../Statistics/Statistics';
 import SearchFilters from '../SearchFilters/SearchFilters';
 import QuestionCard from '../QuestionCard/QuestionCard';
+import FullQuestionContent from '../FullQuestionContent/FullQuestionContent';
 
 const getFilteredQuestions = (questions, filters) => {
   return questions.filter(q => {
@@ -114,27 +115,51 @@ export default function QuestionBank() {
     const originalsMap = new Map();
     const potentialDuplicates = [];
 
-    // 1. Identify base texts and potential duplicates
+    // 1. Identify base keys and potential duplicates
     questions.forEach(q => {
-      const text = q.questionText || q.question || '';
+      // Use the 'question' field as it's our unique constraint field
+      const uniqueKey = q.question || '';
+      const type = q.type || '';
+      
+      // Skip common placeholders that shouldn't be treated as duplicates
+      const isPlaceholder = (key) => {
+        const k = key.trim().toLowerCase();
+        return k === '[there is a picture]' || 
+               k === '[ছবি আছে]' || 
+               k === 'picture' || 
+               k === 'image' || 
+               k === 'ছবি' ||
+               k.includes('[there is a picture for part');
+      };
+
       // Regex to find suffix like [1234567890] at the end
-      const match = text.match(/^(.*)\s*\[(\d+)\]$/);
+      const match = uniqueKey.match(/^(.*)\s*\[(\d+)\]$/);
       
       if (match) {
         // It's a potential duplicate with a suffix
-        const baseText = match[1].trim();
-        potentialDuplicates.push({ question: q, baseText });
+        const baseKey = match[1].trim();
+        
+        // Skip if the base content is just a placeholder
+        if (!isPlaceholder(baseKey)) {
+          potentialDuplicates.push({ question: q, baseKey, type });
+        }
       } else {
         // It's a potential original (no suffix)
-        // Store only if not already stored (first one wins or handle multiples?)
-        // Assuming unique original text for now.
-        originalsMap.set(text.trim(), q);
+        // Skip if it's just a placeholder
+        if (!isPlaceholder(uniqueKey)) {
+          // Use type-aware key to prevent cross-type matching
+          const lookupKey = `${type}:${uniqueKey.trim()}`;
+          if (!originalsMap.has(lookupKey)) {
+            originalsMap.set(lookupKey, q);
+          }
+        }
       }
     });
 
     // 2. Match duplicates to originals
     potentialDuplicates.forEach(pd => {
-      const original = originalsMap.get(pd.baseText);
+      const lookupKey = `${pd.type}:${pd.baseKey}`;
+      const original = originalsMap.get(lookupKey);
       if (original) {
         // We found a pair!
         let group = groups.find(g => g.original.id === original.id);
@@ -589,76 +614,106 @@ export default function QuestionBank() {
               Found <strong>{duplicateGroups.reduce((acc, g) => acc + g.duplicates.length, 0)}</strong> duplicates across <strong>{duplicateGroups.length}</strong> unique questions.
             </p>
 
-            <div style={{ flex: 1, overflowY: 'auto' }}>
-              {duplicateGroups.map((group, idx) => (
-                <div key={idx} style={{ 
-                  border: '1px solid #ddd', 
-                  borderRadius: '8px', 
-                  marginBottom: '20px',
-                  overflow: 'hidden'
-                }}>
-                  <div style={{ 
-                    backgroundColor: '#f8f9fa', 
-                    padding: '10px 15px', 
-                    fontWeight: 'bold',
-                    borderBottom: '1px solid #ddd',
-                    display: 'flex',
-                    justifyContent: 'space-between'
-                  }}>
-                    <span>Original Question (ID: {group.original.id})</span>
-                    <span style={{ fontSize: '12px', color: '#28a745' }}>Keep this</span>
-                  </div>
-                  <div style={{ padding: '15px', borderBottom: '1px solid #eee' }}>
-                    <p style={{ margin: 0, whiteSpace: 'pre-wrap' }}>
-                      {group.original.questionText || group.original.question}
-                    </p>
-                  </div>
-
-                  <div style={{ 
-                    backgroundColor: '#fff3cd', 
-                    padding: '10px 15px', 
-                    fontWeight: 'bold',
-                    borderBottom: '1px solid #ddd',
-                    color: '#856404'
-                  }}>
-                    <span>Duplicates found ({group.duplicates.length})</span>
-                  </div>
-                  
-                  {group.duplicates.map(dup => (
-                    <div key={dup.id} style={{ 
-                      padding: '15px', 
-                      borderBottom: '1px solid #eee',
-                      display: 'flex', 
-                      justifyContent: 'space-between',
-                      alignItems: 'start',
-                      backgroundColor: '#fffdf5'
-                    }}>
-                      <div style={{ flex: 1, marginRight: '15px' }}>
-                        <p style={{ margin: '0 0 5px 0', whiteSpace: 'pre-wrap' }}>
-                          {dup.questionText || dup.question}
-                        </p>
-                        <span style={{ fontSize: '12px', color: '#999' }}>ID: {dup.id}</span>
-                      </div>
-                      <button
-                        onClick={() => deleteDuplicateQuestion(dup.id)}
-                        style={{
-                          backgroundColor: '#dc3545',
-                          color: 'white',
-                          border: 'none',
-                          padding: '5px 10px',
-                          borderRadius: '4px',
-                          cursor: 'pointer',
-                          whiteSpace: 'nowrap'
-                        }}
-                      >
-                        Delete
-                      </button>
-                    </div>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div>
+                        <div style={{ flex: 1, overflowY: 'auto' }}>
+                          {duplicateGroups.map((group, idx) => (
+                            <div key={idx} style={{ 
+                              border: '2px solid #6f42c1', 
+                              borderRadius: '12px', 
+                              marginBottom: '30px',
+                              overflow: 'hidden',
+                              backgroundColor: '#fdfdfd'
+                            }}>
+                              <div style={{ 
+                                backgroundColor: '#6f42c1', 
+                                padding: '12px 20px', 
+                                fontWeight: 'bold',
+                                color: 'white',
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                                alignItems: 'center'
+                              }}>
+                                <span style={{ fontSize: '1.1em' }}>Duplicate Group #{idx + 1}</span>
+                                <span style={{ backgroundColor: 'rgba(255,255,255,0.2)', padding: '4px 12px', borderRadius: '20px', fontSize: '0.9em' }}>
+                                  {group.duplicates.length} duplicate(s) found
+                                </span>
+                              </div>
+                              
+                              <div style={{ display: 'flex', borderBottom: '1px solid #ddd', minHeight: '400px' }}>
+                                {/* Original Column */}
+                                <div style={{ flex: 1, borderRight: '1px solid #eee', display: 'flex', flexDirection: 'column' }}>
+                                  <div style={{ 
+                                    padding: '10px 15px', 
+                                    backgroundColor: '#e8f5e9', 
+                                    color: '#2e7d32', 
+                                    fontWeight: 'bold',
+                                    borderBottom: '1px solid #c8e6c9',
+                                    display: 'flex',
+                                    justifyContent: 'space-between'
+                                  }}>
+                                    <span>ORIGINAL (ID: {group.original.id})</span>
+                                    <span>Keep This</span>
+                                  </div>
+                                                        <div style={{ padding: '20px', overflowY: 'auto', flex: 1 }}>
+                                                          <div style={{ marginBottom: '10px', fontSize: '0.85em', color: '#666' }}>
+                                                            <span style={{ backgroundColor: '#6f42c1', color: 'white', padding: '2px 6px', borderRadius: '4px', fontWeight: 'bold', marginRight: '8px' }}>
+                                                              {group.original.type?.toUpperCase()}
+                                                            </span>
+                                                            <strong>Metadata:</strong> {group.original.subject} | {group.original.chapter} | {group.original.board}
+                                                          </div>
+                                                          <FullQuestionContent question={group.original} />
+                                                        </div>                                </div>
+            
+                                {/* Duplicates Column(s) */}
+                                <div style={{ flex: 1, display: 'flex', flexDirection: 'column', backgroundColor: '#fff9f9' }}>
+                                  {group.duplicates.map((dup, dIdx) => (
+                                    <div key={dup.id} style={{ 
+                                      display: 'flex', 
+                                      flexDirection: 'column', 
+                                      flex: 1,
+                                      borderBottom: dIdx < group.duplicates.length - 1 ? '4px solid #dee2e6' : 'none'
+                                    }}>
+                                      <div style={{ 
+                                        padding: '10px 15px', 
+                                        backgroundColor: '#ffebee', 
+                                        color: '#c62828', 
+                                        fontWeight: 'bold',
+                                        borderBottom: '1px solid #ffcdd2',
+                                        display: 'flex',
+                                        justifyContent: 'space-between',
+                                        alignItems: 'center'
+                                      }}>
+                                        <span>DUPLICATE #{dIdx + 1} (ID: {dup.id})</span>
+                                        <button
+                                          onClick={() => deleteDuplicateQuestion(dup.id)}
+                                          style={{
+                                            backgroundColor: '#dc3545',
+                                            color: 'white',
+                                            border: 'none',
+                                            padding: '5px 15px',
+                                            borderRadius: '4px',
+                                            cursor: 'pointer',
+                                            fontWeight: 'bold',
+                                            fontSize: '0.85em'
+                                          }}
+                                        >
+                                          🗑 DELETE DUPLICATE
+                                        </button>
+                                      </div>
+                                                                <div style={{ padding: '20px', overflowY: 'auto', flex: 1 }}>
+                                                                  <div style={{ marginBottom: '10px', fontSize: '0.85em', color: '#666' }}>
+                                                                    <span style={{ backgroundColor: '#6f42c1', color: 'white', padding: '2px 6px', borderRadius: '4px', fontWeight: 'bold', marginRight: '8px' }}>
+                                                                      {dup.type?.toUpperCase()}
+                                                                    </span>
+                                                                    <strong>Metadata:</strong> {dup.subject} | {dup.chapter} | {dup.board}
+                                                                  </div>
+                                                                  <FullQuestionContent question={dup} />
+                                                                </div>                                    </div>
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>          </div>
         </div>
       )}
       

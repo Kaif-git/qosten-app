@@ -376,7 +376,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
         // Parse metadata - handle both [Field: Value] format and unbracketed Field: Value format
         // Support both English and Bengali field names
         // Regex: Optional [, Key (English/Bangla), Colon, Value, Optional ]
-        const metadataRegex = /^(?:\[)?(Subject|Topic|Chapter|Lesson|Board|বিষয়|বিষয়|অধ্যায়|পাঠ|বোর্ড)[:ঃ]\s*([^\]\n]+?)(?:\])?$/i;
+        const metadataRegex = /^(?:\[)?(Subject|Topic|Chapter|Lesson|Board|বিষয়|বিষয়|অধ্যায়|পাঠ|বোর্ড)[:ঃ]\s*([^\]\n]*?)(?:\])?$/i;
         
         if (metadataRegex.test(line)) {
           const match = line.match(metadataRegex);
@@ -400,8 +400,8 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
         }
         
         // Handle "বোর্ড: X" format (board metadata without brackets)
-        if (/^(board|বোর্ড)\s*:/i.test(line)) {
-          const boardMatch = line.match(/^(?:board|বোর্ড)\s*:\s*(.+)$/i);
+        if (/^(board|বোর্ড)\s*[:ঃ]/i.test(line)) {
+          const boardMatch = line.match(/^(?:board|বোর্ড)\s*[:ঃ]\s*(.*)$/i);
           if (boardMatch) {
             question.board = boardMatch[1].trim();
             console.log(`  ✅ Metadata board:`, question.board);
@@ -680,16 +680,120 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
   
   const parseSQQuestions = (text, lang = 'en') => {
     const cleanedText = text.replace(/\u200b/g, '').replace(/\*+/g, '');
-    const sections = cleanedText.split(/\n---+\n/);
+    const sections = cleanedText.split(/\n---+|###/).filter(s => s.trim());
     const questions = [];
 
     for (const section of sections) {
         if (!section.trim()) continue;
 
-        const lines = section.split('\n').map(line => line.trim()).filter(line => line);
-        let currentQuestion = null;
-        let currentMetadata = { type: 'sq', language: lang };
+        const allLines = section.split('\n');
+        
+        // 1. Extract metadata and clean up lines
+        let sectionMetadata = { type: 'sq', language: lang };
+        let cleanLines = [];
+        
+        // Robust metadata regex supporting both [Key: Value] and Key: Value formats
+        const metadataRegex = /^(?:\[)?(Subject|Topic|Chapter|Lesson|Board|বিষয়|বিষয়|অধ্যায়|পাঠ|বোর্ড)[:ঃ]\s*([^\]\n]*?)(?:\])?$/i;
+        
+        for (const line of allLines) {
+            const trimmed = line.trim();
+            if (!trimmed) continue;
+            
+            const metaMatch = trimmed.match(metadataRegex);
+            if (metaMatch) {
+                const key = metaMatch[1].toLowerCase();
+                const value = metaMatch[2].trim();
+                const keyMap = {
+                    'subject': 'subject', 'topic': 'subject', 'বিষয়': 'subject', 'বিষয়': 'subject',
+                    'chapter': 'chapter', 'অধ্যায়': 'chapter',
+                    'lesson': 'lesson', 'পাঠ': 'lesson',
+                    'board': 'board', 'বোর্ড': 'board'
+                };
+                if (keyMap[key]) sectionMetadata[keyMap[key]] = value;
+            } else {
+                cleanLines.push(trimmed);
+            }
+        }
+        
+        // 2. Look for Answer section separator
+        let answerDividerIndex = -1;
+        for (let i = 0; i < cleanLines.length; i++) {
+            // Match "Answer:", "উত্তর:", "Ans:", etc.
+            if (/^(answer|ans|উত্তর)\s*[:=ঃ]?\s*$/i.test(cleanLines[i])) {
+                answerDividerIndex = i;
+                break;
+            }
+        }
+        
+        if (answerDividerIndex !== -1) {
+            const questionPool = cleanLines.slice(0, answerDividerIndex);
+            const answerPool = cleanLines.slice(answerDividerIndex + 1);
+            
+            // 3. Check for grouped markers (a., b., ... or ক., খ., ...)
+            const groupedMarkerRegex = /^([a-dক-ঘ])[.)]\s*/;
+            const hasQuestionMarkers = questionPool.some(l => groupedMarkerRegex.test(l));
+            const hasAnswerMarkers = answerPool.some(l => groupedMarkerRegex.test(l));
+            
+            if (hasQuestionMarkers && hasAnswerMarkers) {
+                console.log("🔍 Grouped SQ format detected, splitting into individual questions...");
+                
+                // Parse Question Pool
+                let subQuestions = [];
+                let currentSub = null;
+                for (const line of questionPool) {
+                    const match = line.match(/^([a-dক-ঘ])[.)]\s*(.+)$/);
+                    if (match) {
+                        if (currentSub) subQuestions.push(currentSub);
+                        currentSub = { label: match[1], question: match[2], answer: '' };
+                    } else if (currentSub && !/^(Question|প্রশ্ন|Q\.?|সৃজনশীল\s+প্রশ্ন)\s*[\d০-৯টে]*/i.test(line)) {
+                        // Avoid adding "Question X" or metadata as part of question text
+                        currentSub.question += '\n' + line;
+                    }
+                }
+                if (currentSub) subQuestions.push(currentSub);
+                
+                // Parse Answer Pool
+                let currentAnsLabel = null;
+                let currentAnsText = [];
+                for (const line of answerPool) {
+                    const match = line.match(/^([a-dক-ঘ])[.)]\s*(.+)$/);
+                    if (match) {
+                        if (currentAnsLabel) {
+                            const sub = subQuestions.find(s => s.label === currentAnsLabel);
+                            if (sub) sub.answer = currentAnsText.join('\n').trim();
+                        }
+                        currentAnsLabel = match[1];
+                        currentAnsText = [match[2]];
+                    } else {
+                        currentAnsText.push(line);
+                    }
+                }
+                // Save last answer
+                if (currentAnsLabel) {
+                    const sub = subQuestions.find(s => s.label === currentAnsLabel);
+                    if (sub) sub.answer = currentAnsText.join('\n').trim();
+                }
+                
+                // Add to results
+                for (const sub of subQuestions) {
+                    if (sub.question && sub.answer) {
+                        // Clean up marks from question text if present like (৩)
+                        let qText = sub.question.trim();
+                        qText = qText.replace(/\s*[(\[]\s*[\d০-৯]+\s*[)\]]\s*$/, '');
+                        
+                        questions.push({
+                            ...sectionMetadata,
+                            question: qText,
+                            answer: sub.answer.trim()
+                        });
+                    }
+                }
+                continue; // Skip standard parser for this section
+            }
+        }
 
+        // Standard format fallback (1. Question ... Answer: ...)
+        let currentQuestion = null;
         const saveCurrentQuestion = () => {
             if (currentQuestion && currentQuestion.question) {
                 questions.push(currentQuestion);
@@ -697,25 +801,14 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
             currentQuestion = null;
         };
 
-        for (const line of lines) {
-            if (line.startsWith('[') && line.endsWith(']')) {
-                 const match = line.match(/\[([^:ঃ]+)[:ঃ]\s*([^\]]*)\]/);
-                 if (match) {
-                    const key = match[1].trim().toLowerCase();
-                    const value = match[2].trim();
-                    const keyMap = {'subject': 'subject', 'বিষয়': 'subject', 'chapter': 'chapter', 'অধ্যায়': 'chapter', 'lesson': 'lesson', 'পাঠ': 'lesson', 'board': 'board', 'বোর্ড': 'board'};
-                    if (keyMap[key]) {
-                        currentMetadata[keyMap[key]] = value;
-                    }
-                 }
-                 continue;
-            }
+        for (const line of cleanLines) {
+            // Skip headers
+            if (/^(Question|প্রশ্ন|Q\.?|সৃজনশীল\s+প্রশ্ন)\s*[\d০-৯টে]*/i.test(line) && line.length < 20) continue;
 
-            if (/^(প্রয়োগী|জ্ঞানমূলক|বোধমূলক)/.test(line)) continue;
-
+            // Detect new question start (digit followed by separator)
             if (/^[\d০-৯]+[।.)\s]/.test(line)) {
-                saveCurrentQuestion(); // Save previous question
-                currentQuestion = { ...currentMetadata, question: '', answer: '' };
+                saveCurrentQuestion();
+                currentQuestion = { ...sectionMetadata, question: '', answer: '' };
 
                 let text = line.replace(/^[\d০-৯]+[।.)\s]*/, '').trim();
                 const inlineAnswerMatch = text.match(/(answer|ans|উত্তর)\s*[:=]\s*(.*)/i);
@@ -730,10 +823,13 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
 
             if (!currentQuestion) continue;
 
-            if (/^(answer|ans|উত্তর)\s*[:=]\s*/i.test(line)) {
-                const answerMatch = line.match(/^(?:answer|ans|উত্তর)\s*[:=]\s*(.+)$/i);
-                if (answerMatch) {
-                    currentQuestion.answer = (currentQuestion.answer ? currentQuestion.answer + ' ' : '') + answerMatch[1].trim();
+            // Detect answer marker
+            const answerMatch = line.match(/^(?:answer|ans|উত্তর)\s*[:=ঃ]\s*(.+)$/i) || 
+                                (line.match(/^(answer|ans|উত্তর)\s*[:=ঃ]?\s*$/i) ? [line, ""] : null);
+            
+            if (answerMatch) {
+                if (answerMatch[1]) {
+                    currentQuestion.answer = (currentQuestion.answer ? currentQuestion.answer + '\n' : '') + answerMatch[1].trim();
                 }
                 continue;
             }
@@ -744,7 +840,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
                 currentQuestion.question += '\n' + line;
             }
         }
-        saveCurrentQuestion(); // Save the last question in the section
+        saveCurrentQuestion();
     }
     return questions;
 };

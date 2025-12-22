@@ -324,18 +324,41 @@ export function QuestionProvider({ children }) {
   // Helper function to map app question to database format
   const mapAppToDatabase = (appQuestion) => {
     // Ensure question field is never empty - it's used as a unique constraint key
-    // For CQ questions with parts, use the first part text as the question field
-    let questionField = appQuestion.question || appQuestion.questionText || '';
+    // We create a unique representation based on the entire content
+    let questionField = (appQuestion.question || '').trim();
+    const type = appQuestion.type || 'mcq';
     
-    if (!questionField && appQuestion.parts && appQuestion.parts.length > 0) {
-      // Use first part's text for CQ questions
+    if (type === 'cq') {
+      // For CQ, create a unique representation of the entire question + parts + answers
+      const stimulus = (appQuestion.questionText || appQuestion.question || '').trim();
+      const partsContent = (appQuestion.parts || []).map(p => 
+        `${p.letter || ''}:${(p.text || '').trim()}:${(p.answer || '').trim()}`
+      ).sort().join('|');
+      questionField = `CQ:${stimulus}|${partsContent}`;
+    } else if (type === 'mcq') {
+      // For MCQ, include question text + sorted options + correct answer
+      const qText = (appQuestion.questionText || appQuestion.question || '').trim();
+      const options = (appQuestion.options || []).map(o => 
+        `${o.label || ''}:${(o.text || '').trim()}`
+      ).sort().join('|');
+      const correct = (appQuestion.correctAnswer || '').trim();
+      questionField = `MCQ:${qText}|${options}|Ans:${correct}`;
+    } else if (type === 'sq') {
+      // For SQ, include question text + answer
+      const qText = (appQuestion.questionText || appQuestion.question || '').trim();
+      const answer = (appQuestion.answer || '').trim();
+      questionField = `SQ:${qText}|Ans:${answer}`;
+    } else if (!questionField && appQuestion.parts && appQuestion.parts.length > 0) {
+      // Fallback for other types with parts
       questionField = appQuestion.parts[0].text || appQuestion.questionText || '';
+    } else if (!questionField) {
+      questionField = appQuestion.questionText || '';
     }
     
     // If still empty, use a timestamp-based unique identifier to prevent duplicates
     if (!questionField) {
       console.warn('Warning: question field is empty, using fallback identifier');
-      questionField = `CQ_${appQuestion.id || Date.now()}`;
+      questionField = `ID_${appQuestion.id || Date.now()}`;
     }
     
     const dbQuestion = {

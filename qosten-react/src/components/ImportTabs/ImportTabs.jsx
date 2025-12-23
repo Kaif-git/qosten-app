@@ -188,15 +188,61 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
 
             // Start of a new question (must have dot or danda, NOT paren to distinguish from numeric options)
             if (/^[\d০-৯]+[।.]\s/.test(line)) {
-                saveCurrentQuestion();
-                currentQuestion = {
-                    ...currentMetadata,
-                    type: 'mcq',
-                    questionText: line.replace(/^[\d০-৯]+[।.]\s*/, '').trim(),
-                    options: [], correctAnswer: '', explanation: ''
-                };
-                inExplanation = false;
-                continue;
+                // Robust heuristic to distinguish "1. Question" from "1. Option"
+                const isSmallNum = /^[1-4১-৪][।.]\s/.test(line);
+                let isOption = false;
+
+                if (currentQuestion) {
+                    // 1. If Question is already "closed" (has answer/explanation), any number is a New Question
+                    if (currentQuestion.correctAnswer || currentQuestion.explanation) {
+                        isOption = false;
+                        console.log(`    🚫 Line "${line.substring(0,15)}..." -> New Question (Previous closed)`);
+                    }
+                    // 2. Roman Context - "Which is correct?" always expects options
+                    else if (currentQuestion.questionText && (
+                             currentQuestion.questionText.includes('কোনটি সঠিক') || 
+                             currentQuestion.questionText.includes('Which is correct') ||
+                             currentQuestion.questionText.includes('নিচের কোনটি'))) {
+                        if (isSmallNum) {
+                            isOption = true;
+                            console.log(`    ✅ Line "${line.substring(0,15)}..." -> Option (Roman Context)`);
+                        }
+                    }
+                    // 3. Sequential Option Check
+                    // If we see "1." and have 0 options, it's Option 1.
+                    // If we see "2." and have 1 option, it's Option 2.
+                    // If we see "2." and have 4 options, it's New Question 2.
+                    else if (isSmallNum) {
+                        const numMatch = line.match(/^([1-4১-৪])[।.]/);
+                        if (numMatch) {
+                            const numStr = numMatch[1];
+                            const bengaliMap = {'১':1, '২':2, '৩':3, '৪':4};
+                            const numVal = bengaliMap[numStr] || parseInt(numStr);
+                            
+                            // It is an option ONLY if it follows the sequence (current options + 1)
+                            // Allow strict sequential (1->2->3) or if it's 1 and we have none.
+                            if (numVal === currentQuestion.options.length + 1) {
+                                isOption = true;
+                                console.log(`    ✅ Line "${line.substring(0,15)}..." -> Option ${numVal} (Sequential match)`);
+                            } else {
+                                console.log(`    🚫 Line "${line.substring(0,15)}..." -> New Question (Sequence mismatch: ${numVal} vs next ${currentQuestion.options.length + 1})`);
+                            }
+                        }
+                    }
+                }
+                
+                if (!isOption) {
+                    saveCurrentQuestion();
+                    currentQuestion = {
+                        ...currentMetadata,
+                        type: 'mcq',
+                        questionText: line.replace(/^[\d০-৯]+[।.]\s*/, '').trim(),
+                        options: [], correctAnswer: '', explanation: ''
+                    };
+                    console.log(`    🆕 New Question Started: ${line.substring(0, 20)}...`);
+                    inExplanation = false;
+                    continue;
+                }
             }
 
             if (!currentQuestion) continue;
@@ -343,6 +389,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
       let inAnswerSection = false;
       let inStimulusSection = false; // For Bangla CQ format
       let inQuestionSection = false; // For Bangla CQ format
+      let hasStartedParts = false; // Track if we've started parsing parts to lock stem
       let questionTextLines = [];
       let stimulusLines = []; // For Bangla stimulus
       let currentAnswerPart = null;
@@ -451,8 +498,8 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
         
         // Handle image indicators - only match if it looks like a placeholder, not part of a sentence
         const isImagePlaceholder = 
-          (line.startsWith('[') && line.endsWith(']') && (line.toLowerCase().includes('picture') || line.toLowerCase().includes('image') || line.includes('ছবি'))) ||
-          (line.toLowerCase() === 'picture' || line.toLowerCase() === 'image' || line === 'ছবি');
+          (line.startsWith('[') && line.endsWith(']') && (line.toLowerCase().includes('picture') || line.toLowerCase().includes('image') || line.includes('ছবি') || line.includes('চিত্র'))) ||
+          (line.toLowerCase() === 'picture' || line.toLowerCase() === 'image' || line === 'ছবি' || line === 'চিত্র');
         
         if (isImagePlaceholder) {
           question.image = '[There is a picture]';
@@ -495,6 +542,8 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
               partLetter = bengaliToEnglish[partLetter];
             }
             
+            hasStartedParts = true; // Lock stem parsing
+            
             // Extract marks - look for (1), (2), (3), (4) or Bengali numerals at the end
             // Also remove standalone Bengali numerals like ১, ২, ৩, ৪ at the end
             const marksMatch = partText.match(/[(\[]\s*([\d০-৯]+)\s*[)\]]\s*$/);  
@@ -532,8 +581,12 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
           } else {
             // Add to question text/stem if it doesn't look like metadata
             if (!line.match(/^\[.*\]$/) && !line.match(/^[a-z]+\s*:/i) && !line.match(/^(board|বোর্ড)\s*:/i)) {
-              console.log(`    📋 Adding to question text: "${line.substring(0, 40)}..."`);
-              questionTextLines.push(line);
+              if (!hasStartedParts) {
+                  console.log(`    📋 Adding to question text: "${line.substring(0, 40)}..."`);
+                  questionTextLines.push(line);
+              } else {
+                  console.log(`    ⏭️ Skipping line after parts started (protecting stem): "${line.substring(0, 40)}..."`);
+              }
             }
           }
         } else {

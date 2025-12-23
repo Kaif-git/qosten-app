@@ -422,7 +422,7 @@ export function QuestionProvider({ children }) {
         while (hasMore) {
           const { data, error, count } = await supabaseClient
             .from('questions_duplicate')
-            .select('*', { count: 'exact' })
+            .select('id, type, subject, chapter, lesson, board, language, is_flagged, created_at, question', { count: 'exact' })
             .order('created_at', { ascending: false })
             .range(from, from + batchSize - 1);
 
@@ -472,7 +472,7 @@ export function QuestionProvider({ children }) {
       while (hasMore) {
         const { data, error } = await supabaseClient
           .from('questions_duplicate')
-          .select('*', { count: 'exact' })
+          .select('id, type, subject, chapter, lesson, board, language, is_flagged, created_at, question', { count: 'exact' })
           .order('created_at', { ascending: false })
           .range(from, from + batchSize - 1);
 
@@ -515,6 +515,37 @@ export function QuestionProvider({ children }) {
     return await bulkUpdateQuestions(updatedQuestions);
   };
 
+  const fetchQuestionsByIds = async (ids) => {
+    if (!supabaseClient || ids.length === 0) return [];
+
+    try {
+      // Fetch in batches
+      const BATCH_SIZE = 200;
+      let allData = [];
+
+      for (let i = 0; i < ids.length; i += BATCH_SIZE) {
+        const batchIds = ids.slice(i, i + BATCH_SIZE);
+        const { data, error } = await supabaseClient
+          .from('questions_duplicate')
+          .select('*')
+          .in('id', batchIds);
+
+        if (error) {
+          console.error('Error fetching batch:', error);
+          continue;
+        }
+        if (data) {
+          allData = [...allData, ...data];
+        }
+      }
+
+      return allData.map(mapDatabaseToApp);
+    } catch (error) {
+      console.error('Error in fetchQuestionsByIds:', error);
+      return [];
+    }
+  };
+
   const value = {
     ...state,
     supabaseClient,
@@ -523,6 +554,7 @@ export function QuestionProvider({ children }) {
     updateQuestion,
     bulkUpdateQuestions,
     deleteQuestion,
+    fetchQuestionsByIds,
     setFilters,
     setEditingQuestion,
     setAuthenticated,

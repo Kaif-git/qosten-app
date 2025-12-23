@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Statistics({ questions }) {
+export default function Statistics({ questions, onFilterSelect }) {
   const subjects = new Set(questions.map(q => q.subject).filter(Boolean));
   const chapters = new Set(questions.map(q => q.chapter).filter(Boolean));
   const types = new Set(questions.map(q => q.type).filter(Boolean));
@@ -10,8 +10,7 @@ export default function Statistics({ questions }) {
   const detailedCounts = {
     subjects: {},
     chapters: {},
-    types: {},
-    boards: {}
+    types: {}
   };
   
   const chapterTypeBreakdown = {};
@@ -28,8 +27,57 @@ export default function Statistics({ questions }) {
       chapterTypeBreakdown[q.chapter][type] = (chapterTypeBreakdown[q.chapter][type] || 0) + 1;
     }
     if (q.type) detailedCounts.types[q.type] = (detailedCounts.types[q.type] || 0) + 1;
-    if (q.board) detailedCounts.boards[q.board] = (detailedCounts.boards[q.board] || 0) + 1;
   });
+
+  const renderClickableList = (items, type) => {
+    return (
+      <ul className="clickable-stats-list">
+        {Object.entries(items).map(([key, count]) => {
+          let content = null;
+          
+          if (type === 'chapter') {
+             const breakdown = chapterTypeBreakdown[key];
+             const breakdownString = breakdown 
+               ? Object.entries(breakdown)
+                   .map(([t, typeCount]) => `${t.toUpperCase()}: ${typeCount}`)
+                   .join(', ')
+               : '';
+             content = (
+                <>
+                   <strong>{key}:</strong> {count} {breakdownString && <span style={{fontSize: '0.85em', color: '#666'}}>({breakdownString})</span>}
+                </>
+             );
+          } else if (type === 'type') {
+             content = <><strong>{key.toUpperCase()}:</strong> {count}</>;
+          } else {
+             content = <><strong>{key}:</strong> {count}</>;
+          }
+
+          return (
+            <li 
+              key={key} 
+              onClick={() => onFilterSelect && onFilterSelect(type, key)}
+              title={`Click to filter by ${type}: ${key}`}
+              style={{
+                cursor: onFilterSelect ? 'pointer' : 'default',
+                padding: '2px 5px',
+                borderRadius: '3px',
+                transition: 'background-color 0.2s'
+              }}
+              onMouseEnter={(e) => {
+                  if (onFilterSelect) e.currentTarget.style.backgroundColor = '#e9ecef';
+              }}
+              onMouseLeave={(e) => {
+                  if (onFilterSelect) e.currentTarget.style.backgroundColor = 'transparent';
+              }}
+            >
+              {content}
+            </li>
+          );
+        })}
+      </ul>
+    );
+  };
 
   return (
     <>
@@ -54,48 +102,21 @@ export default function Statistics({ questions }) {
           {Object.keys(detailedCounts.subjects).length > 0 && (
             <div>
               <h4>By Subject:</h4>
-              <ul>
-                {Object.entries(detailedCounts.subjects).map(([subject, count]) => (
-                  <li key={subject}>
-                    <strong>{subject}:</strong> {count}
-                  </li>
-                ))}
-              </ul>
+              {renderClickableList(detailedCounts.subjects, 'subject')}
             </div>
           )}
 
           {Object.keys(detailedCounts.chapters).length > 0 && (
             <div>
               <h4>By Chapter:</h4>
-              <ul>
-                {Object.entries(detailedCounts.chapters).map(([chapter, count]) => {
-                  const breakdown = chapterTypeBreakdown[chapter];
-                  const breakdownString = breakdown 
-                    ? Object.entries(breakdown)
-                        .map(([type, typeCount]) => `${type.toUpperCase()}: ${typeCount}`)
-                        .join(', ')
-                    : '';
-                  
-                  return (
-                    <li key={chapter}>
-                      <strong>{chapter}:</strong> {count} {breakdownString && <span style={{fontSize: '0.85em', color: '#666'}}>({breakdownString})</span>}
-                    </li>
-                  );
-                })}
-              </ul>
+              {renderClickableList(detailedCounts.chapters, 'chapter')}
             </div>
           )}
           
           {Object.keys(detailedCounts.types).length > 0 && (
             <div>
               <h4>By Type:</h4>
-              <ul>
-                {Object.entries(detailedCounts.types).map(([type, count]) => (
-                  <li key={type}>
-                    <strong>{type.toUpperCase()}:</strong> {count}
-                  </li>
-                ))}
-              </ul>
+              {renderClickableList(detailedCounts.types, 'type')}
             </div>
           )}
         </div>

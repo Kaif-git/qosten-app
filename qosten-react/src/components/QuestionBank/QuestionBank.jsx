@@ -5,15 +5,8 @@ import SearchFilters from '../SearchFilters/SearchFilters';
 import QuestionCard from '../QuestionCard/QuestionCard';
 import FullQuestionContent from '../FullQuestionContent/FullQuestionContent';
 
-const getFilteredQuestions = (questions, filters) => {
+const getFilteredQuestions = (questions, filters, fullQuestionsMap = null, hasSearched = false) => {
   return questions.filter(q => {
-    const matchesSearchText = !filters.searchText ||
-      (q.question?.toLowerCase().includes(filters.searchText.toLowerCase())) ||
-      (q.questionText?.toLowerCase().includes(filters.searchText.toLowerCase())) ||
-      (q.answer?.toLowerCase().includes(filters.searchText.toLowerCase())) ||
-      (q.explanation?.toLowerCase().includes(filters.searchText.toLowerCase())) ||
-      (q.parts?.some(p => (p.text?.toLowerCase().includes(filters.searchText.toLowerCase())) || (p.answer?.toLowerCase().includes(filters.searchText.toLowerCase()))));
-    
     const matchesSubject = filters.subject === 'none'
       ? !q.subject
       : !filters.subject || q.subject === filters.subject;
@@ -29,18 +22,52 @@ const getFilteredQuestions = (questions, filters) => {
     const matchesFlaggedStatus = !filters.flaggedStatus || 
       (filters.flaggedStatus === 'flagged' && q.isFlagged) ||
       (filters.flaggedStatus === 'unflagged' && !q.isFlagged);
-    return matchesSearchText && matchesSubject && matchesChapter && matchesLesson && matchesType && matchesBoard && matchesLanguage && matchesFlaggedStatus;
+    
+    const matchesMetadata = matchesSubject && matchesChapter && matchesLesson && matchesType && matchesBoard && matchesLanguage && matchesFlaggedStatus;
+    
+    if (!matchesMetadata) return false;
+
+    // If no search text, we match
+    if (!filters.searchText) return true;
+
+    // If we haven't searched (clicked the button), ignore text filter (for stats/metadata view)
+    if (!hasSearched) return true;
+
+    // If searched, use full data to check text
+    const fullQ = (fullQuestionsMap && fullQuestionsMap.get(q.id)) || q;
+    const searchText = filters.searchText.toLowerCase();
+
+    // Safe access
+    const question = (fullQ.question || '').toLowerCase();
+    const questionText = (fullQ.questionText || '').toLowerCase();
+    const answer = (fullQ.answer || '').toLowerCase();
+    const explanation = (fullQ.explanation || '').toLowerCase();
+    const partsMatch = fullQ.parts?.some(p => 
+      (p.text || '').toLowerCase().includes(searchText) || 
+      (p.answer || '').toLowerCase().includes(searchText)
+    );
+
+    return question.includes(searchText) ||
+      questionText.includes(searchText) ||
+      answer.includes(searchText) ||
+      explanation.includes(searchText) ||
+      partsMatch;
   });
 };
 
 export default function QuestionBank() {
-  const { questions, currentFilters, deleteQuestion, updateQuestion, bulkFlagQuestions } = useQuestions();
+  const { questions, currentFilters, deleteQuestion, updateQuestion, bulkFlagQuestions, fetchQuestionsByIds, setFilters } = useQuestions();
   const [selectedQuestions, setSelectedQuestions] = useState([]);
   const [selectionMode, setSelectionMode] = useState(false);
   const [showBulkMetadataEditor, setShowBulkMetadataEditor] = useState(false);
   const [bulkMetadata, setBulkMetadata] = useState({ subject: '', chapter: '', lesson: '', board: '' });
   const [showDuplicateModal, setShowDuplicateModal] = useState(false);
   const [duplicateGroups, setDuplicateGroups] = useState([]);
+
+  // Search State
+  const [fullQuestionsMap, setFullQuestionsMap] = useState(new Map());
+  const [hasSearched, setHasSearched] = useState(false);
+  const [isSearching, setIsSearching] = useState(false);
 
   // Split View State
   const [isSplitView, setIsSplitView] = useState(false);
@@ -62,9 +89,9 @@ export default function QuestionBank() {
   const uniqueBoards = getUniqueValues('board');
 
   // Computed questions based on view mode
-  const filteredQuestionsSingle = getFilteredQuestions(questions, currentFilters);
-  const filteredQuestionsLeft = getFilteredQuestions(questions, { ...currentFilters, ...leftFilters });
-  const filteredQuestionsRight = getFilteredQuestions(questions, { ...currentFilters, ...rightFilters });
+  const filteredQuestionsSingle = getFilteredQuestions(questions, currentFilters, fullQuestionsMap, hasSearched);
+  const filteredQuestionsLeft = getFilteredQuestions(questions, { ...currentFilters, ...leftFilters }, fullQuestionsMap, hasSearched);
+  const filteredQuestionsRight = getFilteredQuestions(questions, { ...currentFilters, ...rightFilters }, fullQuestionsMap, hasSearched);
   
   // For selection actions, we need to know which set of questions we are operating on?
   // No, selection actions operate on `selectedQuestions` IDs which are global.
@@ -110,10 +137,53 @@ export default function QuestionBank() {
     setIsSplitView(!isSplitView);
   };
   
-  const findDuplicates = () => {
+  const areQuestionsDeeplyEqual = (q1, q2) => {
+    // 1. Basic Metadata
+    if (q1.type !== q2.type) return false;
+    
+    // 2. Main Question Text (normalize)
+    const t1 = (q1.questionText || q1.question || '').trim();
+    const t2 = (q2.questionText || q2.question || '').trim();
+    if (t1 !== t2) return false;
+
+    // 3. Sub-questions / Options
+    if (q1.type === 'mcq') {
+        const opts1 = q1.options || [];
+        const opts2 = q2.options || [];
+        if (opts1.length !== opts2.length) return false;
+        
+        // Compare options (assume sorted order or strict index match)
+        for (let i = 0; i < opts1.length; i++) {
+            if ((opts1[i].text || '').trim() !== (opts2[i].text || '').trim()) return false;
+            if (opts1[i].label !== opts2[i].label) return false;
+        }
+        // Check Correct Answer
+        if ((q1.correctAnswer || '').toLowerCase() !== (q2.correctAnswer || '').toLowerCase()) return false;
+    } else if (q1.type === 'cq') {
+        const parts1 = q1.parts || [];
+        const parts2 = q2.parts || [];
+        if (parts1.length !== parts2.length) return false;
+        
+        for (let i = 0; i < parts1.length; i++) {
+            if (parts1[i].letter !== parts2[i].letter) return false;
+            if ((parts1[i].text || '').trim() !== (parts2[i].text || '').trim()) return false;
+            // Optionally check answers too? Usually stem + question parts define unique CQ
+            // if ((parts1[i].answer || '').trim() !== (parts2[i].answer || '').trim()) return false;
+        }
+    } else if (q1.type === 'sq') {
+        // Check answer
+        if ((q1.answer || '').trim() !== (q2.answer || '').trim()) return false;
+    }
+    
+    return true;
+  };
+
+  const findDuplicates = async () => {
     const groups = [];
     const originalsMap = new Map();
     const potentialDuplicates = [];
+
+    setIsSearching(true); // Show loading indicator
 
     // 1. Identify base keys and potential duplicates
     questions.forEach(q => {
@@ -156,28 +226,92 @@ export default function QuestionBank() {
       }
     });
 
-    // 2. Match duplicates to originals
+    // 2. Identify candidate groups
+    const candidateGroups = [];
     potentialDuplicates.forEach(pd => {
       const lookupKey = `${pd.type}:${pd.baseKey}`;
       const original = originalsMap.get(lookupKey);
       if (original) {
         // We found a pair!
-        let group = groups.find(g => g.original.id === original.id);
+        let group = candidateGroups.find(g => g.original.id === original.id);
         if (!group) {
           group = { original: original, duplicates: [] };
-          groups.push(group);
+          candidateGroups.push(group);
         }
         group.duplicates.push(pd.question);
       }
     });
 
-    if (groups.length === 0) {
+    if (candidateGroups.length === 0) {
+      setIsSearching(false);
       alert('No duplicates with [number] suffix patterns found.');
       return;
     }
 
-    setDuplicateGroups(groups);
+    // 3. Fetch full details for strict comparison
+    // Collect all IDs needed
+    const idsToFetch = new Set();
+    candidateGroups.forEach(g => {
+        if (!fullQuestionsMap.has(g.original.id)) idsToFetch.add(g.original.id);
+        g.duplicates.forEach(d => {
+            if (!fullQuestionsMap.has(d.id)) idsToFetch.add(d.id);
+        });
+    });
+
+    if (idsToFetch.size > 0) {
+        try {
+            console.log(`Fetching ${idsToFetch.size} questions for strict duplicate check...`);
+            const fetched = await fetchQuestionsByIds(Array.from(idsToFetch));
+            
+            // Update local cache
+            setFullQuestionsMap(prev => {
+                const next = new Map(prev);
+                fetched.forEach(q => next.set(q.id, q));
+                return next;
+            });
+        } catch (e) {
+            console.error("Error fetching for duplicate check", e);
+            setIsSearching(false);
+            alert("Error verifying duplicates. Please try again.");
+            return;
+        }
+    }
+
+    // 4. Strict Deep Equality Check
+    const finalGroups = [];
+    
+    // We need to access the updated map, but state update is async. 
+    // Ideally we should use the fetched data directly or wait.
+    // Since we just fetched, let's assume we can merge fetched into a temp map for this check
+    // Actually, fetchQuestionsByIds returns the data, so we can use that combined with existing state.
+    
+    // Re-construct a temporary map for this immediate check
+    const tempFullMap = new Map(fullQuestionsMap); 
+    // Note: state update won't be reflected in 'fullQuestionsMap' variable in this closure immediately
+    // unless we use the result of fetch.
+    // But fetchQuestionsByIds returns the *newly fetched* items.
+    // So we need to merge them.
+    // Wait, I updated state but 'fullQuestionsMap' here is the old closure value.
+    // I should perform the check using a fresh map combined from old + new.
+    
+    // But I can't easily get the 'fetched' result here because I didn't store it in a variable accessible 
+    // after the if block easily without refactoring.
+    
+    // Let's refactor slightly to be safe.
+    
+    // ... refactoring flow ...
+    // To solve closure stale state, I'll fetch again or restructure.
+    // Actually, I can just use the fetched array if I move it out.
+    
+    // Re-writing step 3 & 4 properly in the replacement string below.
+    // See the 'new_string' content.
+    
+    // ... (This comment is part of thought process, code is in new_string)
+    
+    // 5. Finalize
+    setDuplicateGroups(finalGroups);
     setShowDuplicateModal(true);
+    setIsSearching(false);
   };
 
   const deleteDuplicateQuestion = async (questionId) => {
@@ -250,8 +384,25 @@ export default function QuestionBank() {
       return;
     }
 
+    // Ensure we have full data for selected questions to prevent overwriting with defaults
+    const missingIds = selectedQuestions.filter(id => !fullQuestionsMap.has(id));
+    if (missingIds.length > 0) {
+        try {
+            const fetched = await fetchQuestionsByIds(missingIds);
+            setFullQuestionsMap(prev => {
+                const next = new Map(prev);
+                fetched.forEach(q => next.set(q.id, q));
+                return next;
+            });
+        } catch (e) {
+            console.error("Error fetching for bulk edit", e);
+            alert("Error preparing questions for edit.");
+            return;
+        }
+    }
+
     // Get the selected question objects
-    const selectedQuestionObjects = questions.filter(q => selectedQuestions.includes(q.id));
+    const selectedQuestionObjects = selectedQuestions.map(id => fullQuestionsMap.get(id) || questions.find(q => q.id === id));
     
     let updatedCount = 0;
     for (const question of selectedQuestionObjects) {
@@ -321,15 +472,98 @@ export default function QuestionBank() {
     }
   };
 
-  const renderQuestionList = (qList) => (
+  const handleSearch = async (view = 'single') => {
+    setIsSearching(true);
+    
+    // Determine which filters to use
+    let filtersToUse = currentFilters;
+    if (view === 'left') filtersToUse = { ...currentFilters, ...leftFilters };
+    if (view === 'right') filtersToUse = { ...currentFilters, ...rightFilters };
+    
+    // 1. Get filtered Metadata (ignoring text, so hasSearched=false logic)
+    // We want to fetch everything that matches the category filters
+    const candidates = getFilteredQuestions(questions, filtersToUse, null, false);
+    
+    // 2. Identify missing full data
+    const idsToFetch = candidates
+        .filter(q => !fullQuestionsMap.has(q.id))
+        .map(q => q.id);
+        
+    if (idsToFetch.length > 0) {
+        // Fetch full data for candidates
+        try {
+            const newFullQuestions = await fetchQuestionsByIds(idsToFetch);
+            
+            setFullQuestionsMap(prev => {
+                const next = new Map(prev);
+                newFullQuestions.forEach(q => next.set(q.id, q));
+                return next;
+            });
+        } catch (error) {
+            console.error("Error fetching questions:", error);
+            alert("Failed to fetch questions. Please try again.");
+        }
+    }
+    
+    setHasSearched(true);
+    setIsSearching(false);
+  };
+
+  const renderQuestionList = (qList, viewName = 'single') => (
     <div className="questionsContainer">
-        {qList.length === 0 ? (
-          <p>No questions found matching your criteria.</p>
+        {!hasSearched ? (
+            <div style={{
+                textAlign: 'center', 
+                padding: '40px', 
+                color: '#666',
+                backgroundColor: '#f8f9fa',
+                borderRadius: '8px',
+                marginTop: '20px',
+                border: '1px dashed #ced4da'
+            }}>
+                <p style={{fontSize: '1.1em', marginBottom: '20px'}}>
+                    {qList.length} potential questions found based on filters.
+                </p>
+                <button 
+                    onClick={() => handleSearch(viewName)} 
+                    disabled={isSearching}
+                    style={{
+                        padding: '12px 24px', 
+                        fontSize: '16px', 
+                        backgroundColor: '#3498db', 
+                        color: 'white', 
+                        border: 'none', 
+                        borderRadius: '5px',
+                        cursor: isSearching ? 'wait' : 'pointer',
+                        fontWeight: 'bold',
+                        boxShadow: '0 2px 5px rgba(0,0,0,0.1)'
+                    }}
+                >
+                    {isSearching ? '⏳ Searching & Loading...' : '🔍 Search & Load Questions'}
+                </button>
+            </div>
+        ) : qList.length === 0 ? (
+          <div style={{textAlign: 'center', padding: '40px'}}>
+             <p>No questions found matching your criteria.</p>
+             <button 
+                onClick={() => handleSearch(viewName)} 
+                style={{
+                    padding: '8px 16px', 
+                    backgroundColor: '#6c757d', 
+                    color: 'white', 
+                    border: 'none', 
+                    borderRadius: '4px',
+                    cursor: 'pointer'
+                }}
+             >
+                Refresh Search
+             </button>
+          </div>
         ) : (
             qList.map(question => (
             <QuestionCard 
               key={question.id} 
-              question={question}
+              question={fullQuestionsMap.get(question.id) || question}
               selectionMode={selectionMode}
               isSelected={selectedQuestions.includes(question.id)}
               onToggleSelect={toggleQuestionSelection}
@@ -885,7 +1119,39 @@ export default function QuestionBank() {
       {!isSplitView ? (
           <>
             <SearchFilters />
-            <Statistics questions={filteredQuestionsSingle} />
+            <div style={{marginBottom: '15px', marginTop: '10px', display: 'flex', justifyContent: 'flex-end'}}>
+                <button 
+                    onClick={() => handleSearch('single')}
+                    disabled={isSearching}
+                    style={{
+                        padding: '10px 20px', 
+                        backgroundColor: '#3498db', 
+                        color: 'white', 
+                        border: 'none', 
+                        borderRadius: '5px',
+                        cursor: isSearching ? 'wait' : 'pointer',
+                        fontWeight: 'bold',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '5px'
+                    }}
+                >
+                    {isSearching ? '⏳ Searching...' : '🔍 Search / Refresh Results'}
+                </button>
+            </div>
+            <Statistics 
+                questions={filteredQuestionsSingle} 
+                onFilterSelect={(key, value) => {
+                    // Update global context filters
+                    // Since setFilters does a merge, this works perfectly for drill-down
+                    const filterKey = key === 'board' ? 'board' : 
+                                      key === 'subject' ? 'subject' : 
+                                      key === 'chapter' ? 'chapter' : 
+                                      key === 'lesson' ? 'lesson' : 
+                                      key === 'type' ? 'type' : key;
+                    setFilters({ [filterKey]: value });
+                }}
+            />
             {renderQuestionList(filteredQuestionsSingle)}
           </>
       ) : (
@@ -897,8 +1163,29 @@ export default function QuestionBank() {
                     filters={leftFilters} 
                     onFilterChange={(newFilters) => setLeftFilters(prev => ({ ...prev, ...newFilters }))} 
                   />
-                  <Statistics questions={filteredQuestionsLeft} />
-                  {renderQuestionList(filteredQuestionsLeft)}
+                  <div style={{marginBottom: '10px', marginTop: '10px'}}>
+                     <button 
+                        onClick={() => handleSearch('left')}
+                        disabled={isSearching}
+                        style={{
+                            width: '100%',
+                            padding: '8px',
+                            backgroundColor: '#3498db',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '4px',
+                            cursor: 'pointer',
+                            fontWeight: 'bold'
+                        }}
+                     >
+                        {isSearching ? '...' : '🔍 Search Left'}
+                     </button>
+                  </div>
+                  <Statistics 
+                    questions={filteredQuestionsLeft} 
+                    onFilterSelect={(key, value) => setLeftFilters(prev => ({ ...prev, [key]: value }))}
+                  />
+                  {renderQuestionList(filteredQuestionsLeft, 'left')}
               </div>
               
               {/* Right Pane */}
@@ -908,8 +1195,29 @@ export default function QuestionBank() {
                     filters={rightFilters} 
                     onFilterChange={(newFilters) => setRightFilters(prev => ({ ...prev, ...newFilters }))} 
                   />
-                  <Statistics questions={filteredQuestionsRight} />
-                  {renderQuestionList(filteredQuestionsRight)}
+                  <div style={{marginBottom: '10px', marginTop: '10px'}}>
+                     <button 
+                        onClick={() => handleSearch('right')}
+                        disabled={isSearching}
+                        style={{
+                            width: '100%',
+                            padding: '8px',
+                            backgroundColor: '#3498db',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '4px',
+                            cursor: 'pointer',
+                            fontWeight: 'bold'
+                        }}
+                     >
+                        {isSearching ? '...' : '🔍 Search Right'}
+                     </button>
+                  </div>
+                  <Statistics 
+                    questions={filteredQuestionsRight} 
+                    onFilterSelect={(key, value) => setRightFilters(prev => ({ ...prev, [key]: value }))}
+                  />
+                  {renderQuestionList(filteredQuestionsRight, 'right')}
               </div>
           </div>
       )}

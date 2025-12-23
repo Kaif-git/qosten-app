@@ -9,7 +9,9 @@ import * as pdfjsLib from 'pdfjs-dist';
 pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.mjs`;
 
 // Memoized item to prevent re-renders during cropper interaction
-const CompactQuestionItem = React.memo(({ question, index, onCropAndAssign }) => {
+const CompactQuestionItem = React.memo(({ question, index, onCropAndAssign, onUpdate }) => {
+  const [isExpanded, setIsExpanded] = React.useState(false);
+
   return (
     <div className="question-preview-item compact-view" style={{ padding: '10px', fontSize: '14px', backgroundColor: 'white', borderRadius: '5px', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '5px'}}>
@@ -17,11 +19,39 @@ const CompactQuestionItem = React.memo(({ question, index, onCropAndAssign }) =>
             Q{index + 1} ({question.type ? question.type.toUpperCase() : '?'})
             {question.board && <span style={{fontSize: '11px', fontWeight: 'normal', color: '#666', marginLeft: '5px'}}>- {question.board}</span>}
           </strong>
-          {question.image && <span style={{color: 'green', fontSize: '12px', fontWeight: 'bold'}}>✓ Stem Img</span>}
+          <div style={{ display: 'flex', gap: '5px', alignItems: 'center' }}>
+            {question.type === 'cq' && (
+              <button
+                onClick={() => setIsExpanded(!isExpanded)}
+                style={{
+                  padding: '2px 6px',
+                  fontSize: '10px',
+                  backgroundColor: isExpanded ? '#6c757d' : '#f8f9fa',
+                  color: isExpanded ? 'white' : '#666',
+                  border: '1px solid #ddd',
+                  borderRadius: '4px',
+                  cursor: 'pointer'
+                }}
+              >
+                {isExpanded ? 'Collapse' : 'Expand Sub'}
+              </button>
+            )}
+            {question.image && <span style={{color: 'green', fontSize: '12px', fontWeight: 'bold'}}>✓ Stem Img</span>}
+          </div>
        </div>
-       <p style={{ margin: '0 0 8px 0', fontSize: '12px', color: '#555', maxHeight: '40px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+       <p style={{ margin: '0 0 8px 0', fontSize: '12px', color: '#555', maxHeight: isExpanded ? 'none' : '40px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: isExpanded ? 'normal' : 'nowrap' }}>
           {question.questionText || question.question || 'No text'}
        </p>
+
+       {isExpanded && question.parts && Array.isArray(question.parts) && (
+         <div style={{ marginBottom: '10px', paddingLeft: '8px', borderLeft: '2px solid #eee', fontSize: '11px', color: '#666' }}>
+            {question.parts.map((part, pIdx) => (
+              <div key={pIdx} style={{ marginBottom: '4px' }}>
+                <strong style={{ color: '#444' }}>{part.letter?.toUpperCase()}.</strong> {part.text?.substring(0, 80)}{part.text?.length > 80 ? '...' : ''}
+              </div>
+            ))}
+         </div>
+       )}
        
        <div style={{display: 'flex', gap: '5px', flexWrap: 'wrap'}}>
           <button 
@@ -29,6 +59,15 @@ const CompactQuestionItem = React.memo(({ question, index, onCropAndAssign }) =>
               style={{fontSize: '11px', padding: '6px 10px', backgroundColor: '#3498db', color: 'white', border: 'none', borderRadius: '3px', cursor: 'pointer', flex: 1}}
           >
              Set Stem Img
+          </button>
+          <button 
+              onClick={() => {
+                  const newBoard = prompt(`Edit Board for Q${index + 1}:`, question.board || '');
+                  if (newBoard !== null) onUpdate(index, 'board', newBoard);
+              }}
+              style={{fontSize: '11px', padding: '6px 10px', backgroundColor: '#7f8c8d', color: 'white', border: 'none', borderRadius: '3px', cursor: 'pointer'}}
+          >
+             Edit Board
           </button>
        </div>
 
@@ -70,6 +109,13 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   const [showCropper, setShowCropper] = useState(false);
   const [currentCroppingIndex, setCurrentCroppingIndex] = useState(null);
   const [cropArea, setCropArea] = useState({ x: 0, y: 0, width: 100, height: 100 });
+  const cropAreaRef = useRef(cropArea);
+  
+  // Keep ref in sync with state for use in stable callbacks
+  useEffect(() => {
+    cropAreaRef.current = cropArea;
+  }, [cropArea]);
+
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
   const [pdfArrayBuffer, setPdfArrayBuffer] = useState(null); // Store PDF data
@@ -87,6 +133,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   const canvasRef = useRef(null);
   const imageRef = useRef(null);
   const cropperContainerRef = useRef(null);
+  const frameId = useRef(null);
   
   // Get unique metadata values
   const getUniqueValues = (field, listType = 'english') => {
@@ -224,15 +271,17 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     const scaleX = img.naturalWidth / displayedWidth;
     const scaleY = img.naturalHeight / displayedHeight;
     
+    const currentCropArea = cropAreaRef.current;
+    
     console.log(`✂️ Cropping: Displayed ${displayedWidth}x${displayedHeight}, Natural ${img.naturalWidth}x${img.naturalHeight}, Scale ${scaleX.toFixed(2)}x${scaleY.toFixed(2)}`);
     
     const canvas = document.createElement('canvas');
     
     // Calculate actual crop coordinates on the natural image
-    const actualX = cropArea.x * scaleX;
-    const actualY = cropArea.y * scaleY;
-    const actualWidth = cropArea.width * scaleX;
-    const actualHeight = cropArea.height * scaleY;
+    const actualX = currentCropArea.x * scaleX;
+    const actualY = currentCropArea.y * scaleY;
+    const actualWidth = currentCropArea.width * scaleX;
+    const actualHeight = currentCropArea.height * scaleY;
 
     canvas.width = actualWidth;
     canvas.height = actualHeight;
@@ -267,7 +316,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
           return updated;
         });
     }
-  }, [cropArea, updateQuestion, updateQuestionPart]);
+  }, [updateQuestion, updateQuestionPart]);
   
   if (!questions || questions.length === 0) return null;
   
@@ -422,17 +471,18 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     const displayedWidth = rect.width;
     const displayedHeight = rect.height;
     
-    if (displayedWidth === 0 || displayedHeight === 0) return;
-
     const scaleX = img.naturalWidth / displayedWidth;
     const scaleY = img.naturalHeight / displayedHeight;
     
+    if (displayedWidth === 0 || displayedHeight === 0) return;
+
+    const currentCropArea = cropAreaRef.current;
     const canvas = document.createElement('canvas');
     
-    const actualX = cropArea.x * scaleX;
-    const actualY = cropArea.y * scaleY;
-    const actualWidth = cropArea.width * scaleX;
-    const actualHeight = cropArea.height * scaleY;
+    const actualX = currentCropArea.x * scaleX;
+    const actualY = currentCropArea.y * scaleY;
+    const actualWidth = currentCropArea.width * scaleX;
+    const actualHeight = currentCropArea.height * scaleY;
 
     canvas.width = actualWidth;
     canvas.height = actualHeight;
@@ -483,19 +533,29 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   
   const handleMouseMove = (e) => {
     if (!isDragging) return;
+    
+    if (frameId.current) return;
+
     const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
     
-    setCropArea(prev => ({
-      ...prev,
-      x: Math.max(0, Math.min(x - dragStart.x, rect.width - prev.width)),
-      y: Math.max(0, Math.min(y - dragStart.y, rect.height - prev.height))
-    }));
+    frameId.current = requestAnimationFrame(() => {
+      setCropArea(prev => ({
+        ...prev,
+        x: Math.max(0, Math.min(x - dragStart.x, rect.width - prev.width)),
+        y: Math.max(0, Math.min(y - dragStart.y, rect.height - prev.height))
+      }));
+      frameId.current = null;
+    });
   };
   
   const handleMouseUp = () => {
     setIsDragging(false);
+    if (frameId.current) {
+      cancelAnimationFrame(frameId.current);
+      frameId.current = null;
+    }
   };
   
   const handleTouchStart = (e) => {
@@ -511,16 +571,22 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   const handleTouchMove = (e) => {
     if (!isDragging) return;
     e.preventDefault();
+    
+    if (frameId.current) return;
+
     const touch = e.touches[0];
     const rect = e.currentTarget.getBoundingClientRect();
     const x = touch.clientX - rect.left;
     const y = touch.clientY - rect.top;
     
-    setCropArea(prev => ({
-      ...prev,
-      x: Math.max(0, Math.min(x - dragStart.x, rect.width - prev.width)),
-      y: Math.max(0, Math.min(y - dragStart.y, rect.height - prev.height))
-    }));
+    frameId.current = requestAnimationFrame(() => {
+      setCropArea(prev => ({
+        ...prev,
+        x: Math.max(0, Math.min(x - dragStart.x, rect.width - prev.width)),
+        y: Math.max(0, Math.min(y - dragStart.y, rect.height - prev.height))
+      }));
+      frameId.current = null;
+    });
   };
   
   const handleTouchEnd = (e) => {
@@ -1208,7 +1274,21 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     }
   };
 
-  if (isEasyImageMode) {
+    const memoizedQuestionList = useMemo(() => (
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '15px' }}>
+            {editableQuestions.map((q, idx) => (
+                <CompactQuestionItem 
+                    key={idx} 
+                    question={q} 
+                    index={idx} 
+                    onCropAndAssign={handleCropAndAssign} 
+                    onUpdate={updateQuestion}
+                />
+            ))}
+        </div>
+    ), [editableQuestions, handleCropAndAssign, updateQuestion]);
+
+    if (isEasyImageMode) {
       return (
         <div className="preview-modal-overlay">
           <div className="preview-modal" style={{ width: '95vw', maxWidth: '95vw', height: '95vh', display: 'flex', flexDirection: 'column', padding: 0, overflow: 'hidden' }}>
@@ -1364,11 +1444,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                             Align the crop box on the left, then click the corresponding button below to assign the image.
                         </p>
                     </div>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '15px' }}>
-                        {editableQuestions.map((q, idx) => (
-                            <CompactQuestionItem key={idx} question={q} index={idx} onCropAndAssign={handleCropAndAssign} />
-                        ))}
-                    </div>
+                    {memoizedQuestionList}
                 </div>
              </div>
           </div>

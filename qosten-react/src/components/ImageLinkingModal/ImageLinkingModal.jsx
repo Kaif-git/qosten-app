@@ -11,9 +11,18 @@ export default function ImageLinkingModal({ question, onClose, onLink, onUnlink 
   const [boardSearch, setBoardSearch] = useState('');
   const [filteredQuestions, setFilteredQuestions] = useState([]);
   const [selectedQuestion, setSelectedQuestion] = useState(null);
+  const [expandedQuestions, setExpandedQuestions] = useState({});
 
   const [targetLanguage, setTargetLanguage] = useState(question.language === 'bn' ? 'en' : 'bn');
   const [showAutoSuggest, setShowAutoSuggest] = useState(question.language === 'bn');
+
+  const toggleExpand = (e, qId) => {
+    e.stopPropagation();
+    setExpandedQuestions(prev => ({
+      ...prev,
+      [qId]: !prev[qId]
+    }));
+  };
 
   // Get available CQ questions for linking
   const linkableQuestions = questions.filter(q => 
@@ -269,13 +278,48 @@ export default function ImageLinkingModal({ question, onClose, onLink, onUnlink 
                       transition: 'background-color 0.2s'
                     }}
                   >
-                    <div style={{ marginBottom: '5px' }}>
-                      <strong style={{ color: '#007bff' }}>ID: {q.id}</strong>
-                      <span style={{ marginLeft: '10px', fontSize: '11px', color: '#666' }}>{q.board}</span>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '5px' }}>
+                      <div>
+                        <strong style={{ color: '#007bff' }}>ID: {q.id}</strong>
+                        <span style={{ marginLeft: '10px', fontSize: '11px', color: '#666' }}>{q.board}</span>
+                      </div>
+                      {q.type === 'cq' && (
+                        <button
+                          onClick={(e) => toggleExpand(e, q.id)}
+                          style={{
+                            padding: '2px 8px',
+                            fontSize: '10px',
+                            backgroundColor: expandedQuestions[q.id] ? '#6c757d' : '#f8f9fa',
+                            color: expandedQuestions[q.id] ? 'white' : '#666',
+                            border: '1px solid #ddd',
+                            borderRadius: '4px',
+                            cursor: 'pointer'
+                          }}
+                        >
+                          {expandedQuestions[q.id] ? 'Collapse' : 'Expand Sub'}
+                        </button>
+                      )}
                     </div>
-                    <div style={{ fontSize: '13px', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>
+                    <div style={{ 
+                      fontSize: '13px', 
+                      overflow: 'hidden', 
+                      textOverflow: 'ellipsis', 
+                      display: '-webkit-box', 
+                      WebkitLineClamp: expandedQuestions[q.id] ? 'unset' : 2, 
+                      WebkitBoxOrient: 'vertical' 
+                    }}>
                       {q.questionText || q.question}
                     </div>
+                    
+                    {expandedQuestions[q.id] && q.parts && Array.isArray(q.parts) && (
+                      <div style={{ marginTop: '10px', paddingLeft: '10px', borderLeft: '2px solid #ddd', fontSize: '12px', color: '#555' }}>
+                        {q.parts.map((part, idx) => (
+                          <div key={idx} style={{ marginBottom: '6px' }}>
+                            <strong style={{ color: '#333' }}>{part.letter?.toUpperCase()}.</strong> {part.text?.substring(0, 100)}{part.text?.length > 100 ? '...' : ''}
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 ))
               )}

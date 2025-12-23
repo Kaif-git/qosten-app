@@ -257,6 +257,30 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     });
   }, [updateQuestionPart]);
 
+  const clearAllImages = () => {
+    if (!window.confirm('Are you sure you want to clear ALL images from ALL questions in this batch? This cannot be undone.')) {
+      return;
+    }
+
+    setEditableQuestions(prev => prev.map(q => {
+      const updated = { ...q, image: null, answerimage1: null, answerimage2: null };
+      if (updated.parts) {
+        updated.parts = updated.parts.map(p => ({ ...p, answerImage: null }));
+      }
+      return updated;
+    }));
+
+    setBanglaQuestions(prev => prev.map(q => {
+      const updated = { ...q, image: null, answerimage1: null, answerimage2: null };
+      if (updated.parts) {
+        updated.parts = updated.parts.map(p => ({ ...p, answerImage: null }));
+      }
+      return updated;
+    }));
+    
+    alert('✓ All images cleared from current batch.');
+  };
+
   const handleCropAndAssign = useCallback((qIndex, targetType, partIndex = null) => {
     if (!imageRef.current) return;
     
@@ -318,6 +342,20 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     }
   }, [updateQuestion, updateQuestionPart]);
   
+  const memoizedQuestionList = useMemo(() => (
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '15px' }}>
+        {editableQuestions.map((q, idx) => (
+            <CompactQuestionItem 
+                key={idx} 
+                question={q} 
+                index={idx} 
+                onCropAndAssign={handleCropAndAssign} 
+                onUpdate={updateQuestion}
+            />
+        ))}
+    </div>
+  ), [editableQuestions, handleCropAndAssign, updateQuestion]);
+
   if (!questions || questions.length === 0) return null;
   
   const convertPdfPageToImage = async (pdfData, pageNumber, rot = 0) => {
@@ -1274,21 +1312,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     }
   };
 
-    const memoizedQuestionList = useMemo(() => (
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '15px' }}>
-            {editableQuestions.map((q, idx) => (
-                <CompactQuestionItem 
-                    key={idx} 
-                    question={q} 
-                    index={idx} 
-                    onCropAndAssign={handleCropAndAssign} 
-                    onUpdate={updateQuestion}
-                />
-            ))}
-        </div>
-    ), [editableQuestions, handleCropAndAssign, updateQuestion]);
-
-    if (isEasyImageMode) {
+  if (isEasyImageMode) {
       return (
         <div className="preview-modal-overlay">
           <div className="preview-modal" style={{ width: '95vw', maxWidth: '95vw', height: '95vh', display: 'flex', flexDirection: 'column', padding: 0, overflow: 'hidden' }}>
@@ -1346,6 +1370,12 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                 </div>
 
                 <div style={{ display: 'flex', gap: '10px' }}>
+                    <button 
+                        onClick={clearAllImages}
+                        style={{ padding: '6px 12px', backgroundColor: '#e74c3c', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer', fontSize: '13px', fontWeight: 'bold' }}
+                    >
+                        🗑️ Clear All Images
+                    </button>
                     <button 
                         onClick={() => setIsEasyImageMode(false)}
                         style={{ padding: '6px 12px', backgroundColor: '#7f8c8d', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer', fontSize: '13px' }}

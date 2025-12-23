@@ -65,7 +65,7 @@ export default function QuestionCard({ question, selectionMode, isSelected, onTo
     if (question.type === 'mcq') {
       return (
         <>
-          <p><strong>Question:</strong> <LatexRenderer text={question.questionText || question.question || 'N/A'} /></p>
+          <p><strong>Question:</strong> {question.board && <span style={{color: '#666', fontSize: '0.9em', fontWeight: 'normal'}}>({question.board})</span>} <LatexRenderer text={question.questionText || question.question || 'N/A'} /></p>
           {question.image && (
             <img 
               src={question.image} 
@@ -101,7 +101,7 @@ export default function QuestionCard({ question, selectionMode, isSelected, onTo
     } else if (question.type === 'cq') {
       return (
         <>
-          <p><strong>Question:</strong> <LatexRenderer text={question.questionText || 'N/A'} /></p>
+          <p><strong>Question:</strong> {question.board && <span style={{color: '#666', fontSize: '0.9em', fontWeight: 'normal'}}>({question.board})</span>} <LatexRenderer text={question.questionText || 'N/A'} /></p>
           {question.image && (
             <img 
               src={question.image} 
@@ -146,7 +146,7 @@ export default function QuestionCard({ question, selectionMode, isSelected, onTo
     } else if (question.type === 'sq') {
       return (
         <>
-          <p><strong>Question:</strong> <LatexRenderer text={question.questionText || question.question || 'N/A'} /></p>
+          <p><strong>Question:</strong> {question.board && <span style={{color: '#666', fontSize: '0.9em', fontWeight: 'normal'}}>({question.board})</span>} <LatexRenderer text={question.questionText || question.question || 'N/A'} /></p>
           {question.image && (
             <img 
               src={question.image} 

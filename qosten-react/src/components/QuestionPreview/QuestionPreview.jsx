@@ -12,7 +12,10 @@ const CompactQuestionItem = React.memo(({ question, index, onCropAndAssign }) =>
   return (
     <div className="question-preview-item compact-view" style={{ padding: '10px', fontSize: '14px', backgroundColor: 'white', borderRadius: '5px', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '5px'}}>
-          <strong style={{color: '#2c3e50'}}>Q{index + 1} ({question.type ? question.type.toUpperCase() : '?'})</strong>
+          <strong style={{color: '#2c3e50'}}>
+            Q{index + 1} ({question.type ? question.type.toUpperCase() : '?'})
+            {question.board && <span style={{fontSize: '11px', fontWeight: 'normal', color: '#666', marginLeft: '5px'}}>- {question.board}</span>}
+          </strong>
           {question.image && <span style={{color: 'green', fontSize: '12px', fontWeight: 'bold'}}>✓ Stem Img</span>}
        </div>
        <p style={{ margin: '0 0 8px 0', fontSize: '12px', color: '#555', maxHeight: '40px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
@@ -82,7 +85,6 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   
   // Get unique metadata values from both preview questions AND existing database questions
   const getUniqueValues = (field) => {
-    // Combine preview questions and database questions
     const allQuestions = [...editableQuestions, ...dbQuestions];
     const values = allQuestions
       .map(q => q[field])
@@ -95,22 +97,80 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   const uniqueChapters = getUniqueValues('chapter');
   const uniqueLessons = getUniqueValues('lesson');
   const uniqueBoards = getUniqueValues('board');
-  
-  if (!questions || questions.length === 0) return null;
 
-  // New function for Easy Image Mode cropping
+  const updateQuestion = useCallback((index, field, value) => {
+    setEditableQuestions(prev => {
+      const updated = [...prev];
+      updated[index] = { ...updated[index], [field]: value };
+      return updated;
+    });
+  }, []);
+  
+  const updateQuestionOption = useCallback((qIndex, optIndex, field, value) => {
+    setEditableQuestions(prev => {
+      const updated = [...prev];
+      const options = [...updated[qIndex].options];
+      options[optIndex] = { ...options[optIndex], [field]: value };
+      updated[qIndex] = { ...updated[qIndex], options };
+      return updated;
+    });
+  }, []);
+  
+  const updateQuestionPart = useCallback((qIndex, partIndex, field, value) => {
+    setEditableQuestions(prev => {
+      const updated = [...prev];
+      const parts = [...updated[qIndex].parts];
+      parts[partIndex] = { ...parts[partIndex], [field]: value };
+      updated[qIndex] = { ...updated[qIndex], parts };
+      return updated;
+    });
+  }, []);
+
+  const handlePartImageUpload = useCallback((qIndex, partIndex, file) => {
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const dataUrl = reader.result;
+        updateQuestionPart(qIndex, partIndex, 'answerImage', dataUrl);
+        setEditableQuestions(prev => {
+          const updated = [...prev];
+          const partLetter = updated[qIndex]?.parts?.[partIndex]?.letter?.toLowerCase();
+          if (partLetter === 'c') {
+            updated[qIndex] = { ...updated[qIndex], answerimage1: dataUrl };
+          } else if (partLetter === 'd') {
+            updated[qIndex] = { ...updated[qIndex], answerimage2: dataUrl };
+          }
+          return updated;
+        });
+      };
+      reader.readAsDataURL(file);
+    }
+  }, [updateQuestionPart]);
+
+  const removePartImage = useCallback((qIndex, partIndex) => {
+    updateQuestionPart(qIndex, partIndex, 'answerImage', null);
+    setEditableQuestions(prev => {
+      const updated = [...prev];
+      const partLetter = updated[qIndex]?.parts?.[partIndex]?.letter?.toLowerCase();
+      if (partLetter === 'c') {
+        updated[qIndex] = { ...updated[qIndex], answerimage1: null };
+      } else if (partLetter === 'd') {
+        updated[qIndex] = { ...updated[qIndex], answerimage2: null };
+      }
+      return updated;
+    });
+  }, [updateQuestionPart]);
+
   const handleCropAndAssign = useCallback((qIndex, targetType, partIndex = null) => {
     if (!imageRef.current) return;
     
     const img = imageRef.current;
     const canvas = document.createElement('canvas');
-    // Account for zoom: displayed size is layout size times zoomLevel
     const displayedWidth = img.width * zoomLevel;
     const displayedHeight = img.height * zoomLevel;
     const scaleX = img.naturalWidth / displayedWidth;
     const scaleY = img.naturalHeight / displayedHeight;
     
-    // Account for pan offset when cropping
     const adjustedX = (cropArea.x + panX) * scaleX;
     const adjustedY = (cropArea.y + panY) * scaleY;
     
@@ -136,7 +196,6 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
         updateQuestion(qIndex, 'image', croppedImage);
     } else if (targetType === 'part' && partIndex !== null) {
         updateQuestionPart(qIndex, partIndex, 'answerImage', croppedImage);
-        // Also map to top-level columns if part is c or d
         setEditableQuestions(prev => {
           const updated = [...prev];
           const partLetter = updated[qIndex]?.parts?.[partIndex]?.letter?.toLowerCase();
@@ -148,74 +207,9 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
           return updated;
         });
     }
-    // Do NOT close the cropper or mode, allowing rapid assignment
-  }, [zoomLevel, cropArea, panX, panY]);
+  }, [zoomLevel, cropArea, panX, panY, updateQuestion, updateQuestionPart]);
   
-  const updateQuestion = (index, field, value) => {
-    setEditableQuestions(prev => {
-      const updated = [...prev];
-      updated[index] = { ...updated[index], [field]: value };
-      return updated;
-    });
-  };
-  
-  const updateQuestionOption = (qIndex, optIndex, field, value) => {
-    setEditableQuestions(prev => {
-      const updated = [...prev];
-      const options = [...updated[qIndex].options];
-      options[optIndex] = { ...options[optIndex], [field]: value };
-      updated[qIndex] = { ...updated[qIndex], options };
-      return updated;
-    });
-  };
-  
-  const updateQuestionPart = (qIndex, partIndex, field, value) => {
-    setEditableQuestions(prev => {
-      const updated = [...prev];
-      const parts = [...updated[qIndex].parts];
-      parts[partIndex] = { ...parts[partIndex], [field]: value };
-      updated[qIndex] = { ...updated[qIndex], parts };
-      return updated;
-    });
-  };
-
-  // Upload/remove answer images for CQ parts
-  const handlePartImageUpload = (qIndex, partIndex, file) => {
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        const dataUrl = reader.result;
-        // Save to the part
-        updateQuestionPart(qIndex, partIndex, 'answerImage', dataUrl);
-        // Also map to top-level columns if part is c or d
-        setEditableQuestions(prev => {
-          const updated = [...prev];
-          const partLetter = updated[qIndex]?.parts?.[partIndex]?.letter?.toLowerCase();
-          if (partLetter === 'c') {
-            updated[qIndex] = { ...updated[qIndex], answerimage1: dataUrl };
-          } else if (partLetter === 'd') {
-            updated[qIndex] = { ...updated[qIndex], answerimage2: dataUrl };
-          }
-          return updated;
-        });
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-  const removePartImage = (qIndex, partIndex) => {
-    updateQuestionPart(qIndex, partIndex, 'answerImage', null);
-    setEditableQuestions(prev => {
-      const updated = [...prev];
-      const partLetter = updated[qIndex]?.parts?.[partIndex]?.letter?.toLowerCase();
-      if (partLetter === 'c') {
-        updated[qIndex] = { ...updated[qIndex], answerimage1: null };
-      } else if (partLetter === 'd') {
-        updated[qIndex] = { ...updated[qIndex], answerimage2: null };
-      }
-      return updated;
-    });
-  };
+  if (!questions || questions.length === 0) return null;
   
   const convertPdfPageToImage = async (pdfData, pageNumber, rot = 0) => {
     try {
@@ -248,15 +242,13 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   const rotateSource = async (direction) => {
     if (sourceDocType !== 'pdf' || !pdfArrayBuffer) return;
     
-    // Calculate new rotation
     let newRotation = (rotation + (direction === 'left' ? -90 : 90)) % 360;
     if (newRotation < 0) newRotation += 360;
     
     setRotation(newRotation);
-    setPanX(0); // Reset pan on rotation
+    setPanX(0);
     setPanY(0);
     
-    // Cleanup old URL
     if (sourceDocument && sourceDocument.startsWith('blob:')) {
         URL.revokeObjectURL(sourceDocument);
     }
@@ -270,25 +262,20 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     if (!file) return;
     
     const fileType = file.type;
-    setRotation(0); // Reset rotation on new file
+    setRotation(0);
     setPanX(0);
     setPanY(0);
     
     if (fileType.includes('pdf')) {
       setSourceDocType('pdf');
-      // Convert PDF to images using FileReader
       const reader = new FileReader();
       
       reader.onloadend = async () => {
         try {
-          // FileReader gives us an ArrayBuffer that we can use
           const arrayBuffer = reader.result;
-          // Create a Uint8Array copy that we can safely store
           const uint8Array = new Uint8Array(arrayBuffer);
-          // Store a copy for later use
           setPdfArrayBuffer(uint8Array.slice());
           
-          // Load PDF with a separate copy (pdfjsLib will transfer/detach this one)
           const loadingTask = pdfjsLib.getDocument({ data: uint8Array.slice() });
           const pdf = await loadingTask.promise;
           const numPages = pdf.numPages;
@@ -300,15 +287,13 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
           setPdfPages(pages);
           setCurrentPdfPage(1);
           
-          // Cleanup old URL
           if (sourceDocument && sourceDocument.startsWith('blob:')) {
               URL.revokeObjectURL(sourceDocument);
           }
           
-          // Convert first page to image with another copy
           const imageData = await convertPdfPageToImage(uint8Array.slice(), 1, 0);
           setPdfAsImage(imageData);
-          setSourceDocument(imageData); // Store first page as source
+          setSourceDocument(imageData);
         } catch (error) {
           console.error('Error processing PDF:', error);
           alert('Error processing PDF file. Please try again.');
@@ -337,14 +322,12 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     }
     
     setCurrentPdfPage(pageNumber);
-    // Cleanup old URL
     if (sourceDocument && sourceDocument.startsWith('blob:')) {
         URL.revokeObjectURL(sourceDocument);
     }
-    // Convert selected PDF page to image using a fresh copy of the Uint8Array
     const imageData = await convertPdfPageToImage(pdfArrayBuffer.slice(), pageNumber, rotation);
     setPdfAsImage(imageData);
-    setSourceDocument(imageData); // Update source document with new page
+    setSourceDocument(imageData);
   };
 
   const handleImageUpload = (index, file) => {
@@ -358,8 +341,6 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   };
   
   const openCropper = (index) => {
-    console.log('📸 Opening cropper with index:', index);
-    console.log('📄 Source document available:', !!sourceDocument);
     if (!sourceDocument) {
       alert('Please upload a source document first!');
       return;
@@ -371,16 +352,12 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     setPanX(0);
     setPanY(0);
     
-    // Auto-scroll to the top of cropper modal when opened
     setTimeout(() => {
       const overlay = document.querySelector('.cropper-modal-overlay');
       if (overlay) {
         overlay.scrollTop = 0;
-        console.log('⬆️ Scrolled overlay to top (scrollTop: 0)');
       }
     }, 100);
-    
-    console.log('✅ Cropper state updated, showCropper should be true');
   };
   
   const handleCropImage = () => {
@@ -388,13 +365,11 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     
     const img = imageRef.current;
     const canvas = document.createElement('canvas');
-    // Account for zoom: displayed size is layout size times zoomLevel
     const displayedWidth = img.width * zoomLevel;
     const displayedHeight = img.height * zoomLevel;
     const scaleX = img.naturalWidth / displayedWidth;
     const scaleY = img.naturalHeight / displayedHeight;
     
-    // Account for pan offset when cropping
     const adjustedX = (cropArea.x + panX) * scaleX;
     const adjustedY = (cropArea.y + panY) * scaleY;
     
@@ -416,7 +391,6 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     
     const croppedImage = canvas.toDataURL('image/png');
 
-    // If cropping for a part, save to that part and map to top-level columns; otherwise save as stem image
     if (typeof currentCroppingIndex === 'object' && currentCroppingIndex !== null && currentCroppingIndex.type === 'part') {
       const { qIndex, partIndex } = currentCroppingIndex;
       updateQuestionPart(qIndex, partIndex, 'answerImage', croppedImage);
@@ -463,7 +437,6 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     setIsDragging(false);
   };
   
-  // Touch event handlers for mobile support
   const handleTouchStart = (e) => {
     e.preventDefault();
     const touch = e.touches[0];
@@ -509,36 +482,23 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   const adjustZoom = (delta) => {
     setZoomLevel(prev => {
       const next = prev + delta;
-      // Keep a reasonable range but allow strong zoom-in
       return Math.min(20, Math.max(0.1, next));
     });
   };
 
   const pan = (direction, amount = 50) => {
-    // Need image and container to calculate limits
-    // Note: cropperContainerRef needs to be attached to the scrolling container
-    // or the parent of the image.
     if (!imageRef.current) return;
 
     const img = imageRef.current;
-    // For Easy Mode, use the container ref. For Modal Cropper, we might need a fallback or use the same ref logic if we update it.
-    // In this file, I've added cropperContainerRef usage.
     const container = cropperContainerRef.current || img.parentElement;
     
     if (!container) return;
 
-    // Dimensions of the transformed image
     const scaledWidth = img.naturalWidth * zoomLevel;
     const scaledHeight = img.naturalHeight * zoomLevel;
-    
-    // Container dimensions
     const containerWidth = container.clientWidth;
     const containerHeight = container.clientHeight;
 
-    // Maximum pan values (positive). 
-    // If scaled image > container, we can pan.
-    // Panning translates the image negatively (-panX, -panY).
-    // So maxPan is the amount we can shift left/up.
     const maxPanX = Math.max(0, scaledWidth - containerWidth);
     const maxPanY = Math.max(0, scaledHeight - containerHeight);
 
@@ -601,7 +561,6 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       console.log('📑 Uploading single question:', index + 1);
       await addQuestion(q);
       alert(`✅ Uploaded question #${index + 1}`);
-      // Remove from preview after successful upload
       setEditableQuestions(prev => prev.filter((_, i) => i !== index));
     } catch (e) {
       console.error('Error uploading single question', e);
@@ -655,7 +614,6 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       return updated;
     });
 
-    // Reset and close
     setBulkMetadata({ subject: '', chapter: '', lesson: '', board: '' });
     setShowBulkEditor(false);
     setSelectedQuestions(new Set());
@@ -1080,51 +1038,6 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     </div>
   );
 
-  const renderCompactCQPreview = (question, index) => {
-    return (
-      <div key={index} className="question-preview-item compact-view" style={{ padding: '10px', fontSize: '14px', backgroundColor: 'white', borderRadius: '5px', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
-         <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '5px'}}>
-            <strong style={{color: '#2c3e50'}}>Q{index + 1} ({question.type ? question.type.toUpperCase() : '?'})</strong>
-            {question.image && <span style={{color: 'green', fontSize: '12px', fontWeight: 'bold'}}>✓ Stem Img</span>}
-         </div>
-         <p style={{ margin: '0 0 8px 0', fontSize: '12px', color: '#555', maxHeight: '40px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-            {question.questionText || question.question || 'No text'}
-         </p>
-         
-         <div style={{display: 'flex', gap: '5px', flexWrap: 'wrap'}}>
-            <button 
-                onClick={() => handleCropAndAssign(index, 'stem')}
-                style={{fontSize: '11px', padding: '6px 10px', backgroundColor: '#3498db', color: 'white', border: 'none', borderRadius: '3px', cursor: 'pointer', flex: 1}}
-            >
-               Set Stem Img
-            </button>
-         </div>
-
-         {question.parts && question.parts.map((part, pIdx) => {
-             const letter = part.letter?.toLowerCase();
-             if (letter === 'c' || letter === 'd') {
-                 const hasImg = (letter === 'c' && question.answerimage1) || (letter === 'd' && question.answerimage2);
-                 return (
-                     <div key={pIdx} style={{marginTop: '8px', borderTop: '1px solid #eee', paddingTop: '8px'}}>
-                        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3px'}}>
-                           <span style={{fontSize: '12px', fontWeight: 'bold'}}>Part {part.letter.toUpperCase()})</span>
-                           {hasImg && <span style={{color: 'green', fontSize: '10px', fontWeight: 'bold'}}>✓ Img</span>}
-                        </div>
-                        <button 
-                            onClick={() => handleCropAndAssign(index, 'part', pIdx)}
-                            style={{fontSize: '11px', padding: '6px 10px', backgroundColor: '#8e44ad', color: 'white', border: 'none', borderRadius: '3px', cursor: 'pointer', marginTop: '2px', width: '100%'}}
-                        >
-                           Set {part.letter.toUpperCase()} Image
-                        </button>
-                     </div>
-                 );
-             }
-             return null;
-         })}
-      </div>
-    );
-  };
-
   const renderQuestionPreview = (question, index) => {
     switch (question.type) {
       case 'mcq':
@@ -1142,29 +1055,82 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       return (
         <div className="preview-modal-overlay">
           <div className="preview-modal" style={{ width: '95vw', maxWidth: '95vw', height: '95vh', display: 'flex', flexDirection: 'column', padding: 0, overflow: 'hidden' }}>
-             {/* Header */}
-             <div style={{ padding: '15px', borderBottom: '1px solid #ddd', display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#f8f9fa' }}>
-                <h2 style={{margin: 0, fontSize: '1.2rem'}}>📷 Easy Image Upload Mode</h2>
-                <div>
+             {/* Header with Merged Controls */}
+             <div style={{ padding: '10px 15px', borderBottom: '1px solid #ddd', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#f8f9fa', gap: '10px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
+                    <h2 style={{margin: 0, fontSize: '1.1rem', whiteSpace: 'nowrap'}}>📷 Easy Upload</h2>
+                    
+                    {/* Compact Controls in Header */}
+                    {sourceDocument && (
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '5px', flexWrap: 'wrap' }}>
+                            {sourceDocType === 'pdf' && pdfPages.length > 0 && (
+                                <div className="pdf-page-selector" style={{margin: 0, padding: '2px 5px', border: '1px solid #ccc'}}>
+                                    <label style={{marginRight: '5px', fontSize: '12px'}}>Pg:</label>
+                                    <select 
+                                      value={currentPdfPage} 
+                                      onChange={(e) => handlePdfPageChange(parseInt(e.target.value))}
+                                      style={{padding: '2px', fontSize: '12px'}}
+                                    >
+                                      {pdfPages.map(pageNum => (
+                                        <option key={pageNum} value={pageNum}>{pageNum}</option>
+                                      ))}
+                                    </select>
+                                </div>
+                            )}
+                            
+                            {sourceDocType === 'pdf' && (
+                                <>
+                                    <button type="button" onClick={() => rotateSource('left')} title="Rotate Left" style={{ padding: '4px 8px', fontSize: '12px', cursor: 'pointer' }}>↶</button>
+                                    <button type="button" onClick={() => rotateSource('right')} title="Rotate Right" style={{ padding: '4px 8px', fontSize: '12px', cursor: 'pointer' }}>↷</button>
+                                </>
+                            )}
+                            
+                            <div style={{height: '15px', width: '1px', backgroundColor: '#ccc', margin: '0 2px'}}></div>
+                            <button type="button" onClick={() => adjustZoom(-0.25)} style={{ padding: '4px 8px', fontSize: '12px', cursor: 'pointer' }}>🔍-</button>
+                            <button type="button" onClick={() => adjustZoom(0.25)} style={{ padding: '4px 8px', fontSize: '12px', cursor: 'pointer' }}>🔍+</button>
+                            
+                            <div style={{height: '15px', width: '1px', backgroundColor: '#ccc', margin: '0 2px'}}></div>
+                            {/* Width/Height Controls */}
+                            <button type="button" onClick={() => adjustCropSize('width', -20)} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }} title="Width -">W-</button>
+                            <button type="button" onClick={() => adjustCropSize('width', 20)} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }} title="Width +">W+</button>
+                            <button type="button" onClick={() => adjustCropSize('height', -20)} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }} title="Height -">H-</button>
+                            <button type="button" onClick={() => adjustCropSize('height', 20)} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }} title="Height +">H+</button>
+
+                            <div style={{height: '15px', width: '1px', backgroundColor: '#ccc', margin: '0 2px'}}></div>
+                            {/* Move Box Controls */}
+                            <div style={{display: 'flex', gap: '1px'}}>
+                                <button type="button" onClick={() => moveCropBox('left')} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }}>←</button>
+                                <button type="button" onClick={() => moveCropBox('down')} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }}>↓</button>
+                                <button type="button" onClick={() => moveCropBox('up')} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }}>↑</button>
+                                <button type="button" onClick={() => moveCropBox('right')} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }}>→</button>
+                            </div>
+
+                            <div style={{height: '15px', width: '1px', backgroundColor: '#ccc', margin: '0 2px'}}></div>
+                            <button type="button" onClick={resetPan} style={{ padding: '4px 8px', fontSize: '12px', cursor: 'pointer' }}>Reset</button>
+                        </div>
+                    )}
+                </div>
+
+                <div style={{ display: 'flex', gap: '10px' }}>
                     <button 
                         onClick={() => setIsEasyImageMode(false)}
-                        style={{ padding: '8px 15px', backgroundColor: '#7f8c8d', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer', marginRight: '10px' }}
+                        style={{ padding: '6px 12px', backgroundColor: '#7f8c8d', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer', fontSize: '13px' }}
                     >
-                        Exit Mode
+                        Exit
                     </button>
                     <button 
                         className="confirm-btn" 
                         onClick={() => onConfirm(editableQuestions)}
-                        style={{ padding: '8px 15px' }}
+                        style={{ padding: '6px 12px', fontSize: '13px' }}
                     >
-                        Confirm All & Upload
+                        Confirm All
                     </button>
                 </div>
              </div>
              
-             <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
+             <div className="easy-mode-container">
                 {/* Left Side: Cropper */}
-                <div style={{ flex: 2, display: 'flex', flexDirection: 'column', borderRight: '1px solid #ddd', backgroundColor: '#333' }}>
+                <div className="easy-mode-cropper-section">
                     {!sourceDocument ? (
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', color: 'white' }}>
                             <h3>Start by Uploading a Source Document</h3>
@@ -1192,57 +1158,11 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                         </div>
                     ) : (
                         <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-                           {/* Controls Bar */}
-                           <div style={{ padding: '10px', backgroundColor: 'white', borderBottom: '1px solid #ddd', display: 'flex', flexWrap: 'wrap', gap: '10px', alignItems: 'center' }}>
-                                {/* PDF Page Selector */}
-                                {sourceDocType === 'pdf' && pdfPages.length > 0 && (
-                                  <div className="pdf-page-selector" style={{margin: 0}}>
-                                    <label style={{marginRight: '5px', fontSize: '13px', fontWeight: 'bold'}}>Page:</label>
-                                    <select 
-                                      value={currentPdfPage} 
-                                      onChange={(e) => handlePdfPageChange(parseInt(e.target.value))}
-                                      style={{padding: '5px', borderRadius: '4px'}}
-                                    >
-                                      {pdfPages.map(pageNum => (
-                                        <option key={pageNum} value={pageNum}>Page {pageNum}</option>
-                                      ))}
-                                    </select>
-                                  </div>
-                                )}
-                                
-                                {sourceDocType === 'pdf' && (
-                                    <>
-                                        <div style={{height: '20px', width: '1px', backgroundColor: '#ccc', margin: '0 5px'}}></div>
-                                        <button type="button" onClick={() => rotateSource('left')} title="Rotate Left" style={{ padding: '6px 12px', backgroundColor: '#f39c12', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer', fontWeight: 'bold' }}>↶ Rotate L</button>
-                                        <button type="button" onClick={() => rotateSource('right')} title="Rotate Right" style={{ padding: '6px 12px', backgroundColor: '#f39c12', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer', fontWeight: 'bold' }}>↷ Rotate R</button>
-                                    </>
-                                )}
-
-                                <div style={{height: '20px', width: '1px', backgroundColor: '#ccc', margin: '0 5px'}}></div>
-                                <button type="button" onClick={() => adjustCropSize('width', -20)} title="Width -">W-</button>
-                                <button type="button" onClick={() => adjustCropSize('width', 20)} title="Width +">W+</button>
-                                <button type="button" onClick={() => adjustCropSize('height', -20)} title="Height -">H-</button>
-                                <button type="button" onClick={() => adjustCropSize('height', 20)} title="Height +">H+</button>
-                                <div style={{height: '20px', width: '1px', backgroundColor: '#ccc', margin: '0 5px'}}></div>
-                                <button type="button" onClick={() => adjustZoom(-0.25)}>Zoom -</button>
-                                <button type="button" onClick={() => adjustZoom(0.25)}>Zoom +</button>
-                                <div style={{height: '20px', width: '1px', backgroundColor: '#ccc', margin: '0 5px'}}></div>
-                                <div style={{ display: 'flex', gap: '2px' }}>
-                                    <button type="button" onClick={() => pan('left')} style={{ padding: '4px 8px' }}>←</button>
-                                    <button type="button" onClick={() => pan('up')} style={{ padding: '4px 8px' }}>↑</button>
-                                    <button type="button" onClick={() => pan('down')} style={{ padding: '4px 8px' }}>↓</button>
-                                    <button type="button" onClick={() => pan('right')} style={{ padding: '4px 8px' }}>→</button>
-                                </div>
-                                <span style={{fontSize: '11px', marginLeft: 'auto', color: '#666'}}>
-                                    Pos: {Math.round(cropArea.x)}x{Math.round(cropArea.y)} | Size: {Math.round(cropArea.width)}x{Math.round(cropArea.height)}
-                                </span>
-                           </div>
-                           
-                           {/* Cropper Area */}
+                           {/* Cropper Area - Takes full remaining height */}
                            <div 
                               ref={cropperContainerRef}
                               className="cropper-container"
-                              style={{ flex: 1, backgroundColor: '#555', overflow: 'hidden', cursor: 'crosshair', position: 'relative', height: 'auto', maxHeight: 'none' }}
+                              style={{ flex: 1, backgroundColor: '#555', overflow: 'hidden', cursor: 'crosshair', position: 'relative', height: '100%', maxHeight: 'none', margin: 0, border: 'none', borderRadius: 0 }}
                               onMouseDown={handleMouseDown}
                               onMouseMove={handleMouseMove}
                               onMouseUp={handleMouseUp}
@@ -1279,7 +1199,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                 </div>
 
                 {/* Right Side: Question List */}
-                <div style={{ flex: 1, overflowY: 'auto', padding: '15px', backgroundColor: '#ecf0f1' }}>
+                <div className="easy-mode-list-section" style={{ minWidth: '300px' }}>
                     <div style={{marginBottom: '10px'}}>
                         <h3 style={{ margin: 0, color: '#2c3e50' }}>Questions List</h3>
                         <p style={{fontSize: '12px', color: '#7f8c8d', margin: '5px 0 0 0'}}>
@@ -1287,7 +1207,9 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                         </p>
                     </div>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '15px' }}>
-                        {editableQuestions.map((q, idx) => renderCompactCQPreview(q, idx))}
+                        {editableQuestions.map((q, idx) => (
+                            <CompactQuestionItem key={idx} question={q} index={idx} onCropAndAssign={handleCropAndAssign} />
+                        ))}
                     </div>
                 </div>
              </div>

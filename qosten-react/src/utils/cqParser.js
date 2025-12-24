@@ -24,13 +24,33 @@ export const parseCQQuestions = (text, lang = 'en') => {
     // Helper to save the current question and reset
     const saveCurrentQuestion = () => {
         if (currentQuestion) {
+            // Finalize stimulus lines if any
+            if (currentQuestion._state.stimulusLines.length > 0) {
+                const stimText = currentQuestion._state.stimulusLines.join('\n').replace(/^>\s*/gm, '').trim();
+                if (stimText) {
+                    if (currentQuestion.questionText) {
+                        // Avoid adding the same text again if it's already there
+                        if (!currentQuestion.questionText.includes(stimText)) {
+                            currentQuestion.questionText += '\n' + stimText;
+                        }
+                    } else {
+                        currentQuestion.questionText = stimText;
+                    }
+                }
+                currentQuestion._state.stimulusLines = [];
+            }
+
             // Finalize question text from lines if not set
             if (currentQuestion._state.questionTextLines.length > 0) {
                 const newText = currentQuestion._state.questionTextLines.join('\n').trim();
-                if (currentQuestion.questionText) {
-                    currentQuestion.questionText += '\n' + newText;
-                } else {
-                    currentQuestion.questionText = newText;
+                if (newText) {
+                    if (currentQuestion.questionText) {
+                        if (!currentQuestion.questionText.includes(newText)) {
+                            currentQuestion.questionText += '\n' + newText;
+                        }
+                    } else {
+                        currentQuestion.questionText = newText;
+                    }
                 }
                 currentQuestion._state.questionTextLines = [];
             }
@@ -55,6 +75,8 @@ export const parseCQQuestions = (text, lang = 'en') => {
                 if (currentQuestion.parts.length > 0) {
                     questions.push(currentQuestion);
                     console.log(`  💾 Question saved. Subject: ${currentQuestion.subject}, Board: ${currentQuestion.board}, Parts: ${currentQuestion.parts.length}`);
+                    // RESET pendingStem when we successfully save a full question with parts
+                    pendingStem = '';
                 } else if (currentQuestion.questionText) {
                     // It was just a stem/text block, update pendingStem
                     pendingStem = currentQuestion.questionText;
@@ -113,7 +135,8 @@ export const parseCQQuestions = (text, lang = 'en') => {
         // Header: "Question X" or "সৃজনশীল প্রশ্ন X" or "প্রশ্ন X"
         // Only if line is short (to avoid matching inside a sentence)
         // Updated: Strictly require digits to avoid matching "প্রশ্ন শুরু" etc.
-        const isQuestionHeader = /^(Question|প্রশ্ন|Q\.?|সৃজনশীল\s+প্রশ্ন)\s*[\d\u09E6-\u09EF\u0982]+/i.test(line) && line.length < 50;
+        // Also support board info in the header line: Question: (বোর্ড)
+        const isQuestionHeader = /^(Question|প্রশ্ন|Q\.?|সৃজনশীল\s+প্রশ্ন)[:ঃ]?\s*([\d\u09E6-\u09EF\u0982]+|[\s(]*[\d\u09E6-\u09EF\u0982]+|[\s(]+(?:বোর্ড|Board))/i.test(line) && line.length < 60;
         
         // Separator: "---"
         const isSeparator = /^---+$/.test(line);
@@ -132,7 +155,15 @@ export const parseCQQuestions = (text, lang = 'en') => {
         
         if (isQuestionHeader) {
             console.log(`  🆕 Question Header detected: ${line}`);
+            // Try to extract board from header if present like "Question: (Dhaka Board-2024)"
+            const boardMatch = line.match(/\(([^)]*(?:বোর্ড|Board)[^)]*)\)/i);
+            const extractedBoard = boardMatch ? boardMatch[1].trim() : '';
+            
             startNewQuestion();
+            if (extractedBoard) {
+                currentQuestion.board = extractedBoard;
+                console.log(`    ✅ Extracted board from header: ${extractedBoard}`);
+            }
             continue; // Skip the header line itself
         }
         
@@ -179,7 +210,9 @@ export const parseCQQuestions = (text, lang = 'en') => {
         }
 
         // Handle Stimulus section header (Stem: or উদ্দীপক:)
-        if (/^(Stem|উদ্দীপক)\s*[:ঃ]/i.test(line)) {
+        // Matches "Stem:", "Stem (English):", "স্টেম:", "স্টেম (ইংরেজি):", "উদ্দীপক:", etc.
+        const stemHeaderRegex = /^(Stem(\s*\(.*?\))?|স্টেম(\s*\(.*?\))?|উদ্দীপক)\s*[:ঃ]/i;
+        if (stemHeaderRegex.test(line)) {
             // If current question has parts or substantial text, this starts a new one
             if (currentQuestion.parts.length > 0 || currentQuestion._state.inAnswerSection) {
                 startNewQuestion();
@@ -190,9 +223,19 @@ export const parseCQQuestions = (text, lang = 'en') => {
             state.stimulusLines = [];
             
             // Check for inline content (e.g. "Stem: here is content")
-            const inlineContent = line.replace(/^(Stem|উদ্দীপক)\s*[:ঃ]\s*/i, '').trim();
+            const inlineContent = line.replace(stemHeaderRegex, '').trim();
             if (inlineContent) {
                 state.stimulusLines.push(inlineContent);
+            }
+            continue;
+        }
+
+        // Handle "অধ্যায় ৯ ও ১০ সংযুক্ত" lines - treat as metadata or just skip
+        if (/অধ্যায়\s*[\d\u09E6-\u09EF\sও,]+সংযুক্ত/i.test(line)) {
+            console.log(`    ✅ Skipping connected chapters line: ${line}`);
+            // Optionally save to chapter if not already set
+            if (!currentQuestion.chapter) {
+                currentQuestion.chapter = line.trim();
             }
             continue;
         }
@@ -243,9 +286,9 @@ export const parseCQQuestions = (text, lang = 'en') => {
         }
 
         // Answer section detection
-        // Updated: Allow inline content (remove $ anchor)
         if (/^(answer|উত্তর|ans)\s*[:=ঃ]?/i.test(line) && !state.inAnswerSection) {
             state.inAnswerSection = true;
+            state.currentAnswerPart = null; // Reset current answer part on new Answer: header
             if (!currentQuestion.questionText && state.questionTextLines.length > 0) {
                 currentQuestion.questionText = state.questionTextLines.join('\n').trim();
             }
@@ -254,7 +297,19 @@ export const parseCQQuestions = (text, lang = 'en') => {
             // Handle inline content
             const inlineContent = line.replace(/^(answer|উত্তর|ans)\s*[:=ঃ]?\s*/i, '').trim();
             if (inlineContent) {
-                line = inlineContent;
+                // If it's "Answer: a. something", we want to process "a. something" as a part answer
+                if (inlineContent.match(/^(?:Part\s+)?([a-dক-ঘ])[.:)]/i)) {
+                    line = inlineContent; 
+                    // Fall through to handle content in the answer section loop below
+                } else {
+                    // It's just generic answer text, assign to last part if we have one
+                    const lastPart = currentQuestion.parts[currentQuestion.parts.length - 1];
+                    if (lastPart) {
+                        lastPart.answer = inlineContent;
+                        state.currentAnswerPart = lastPart;
+                    }
+                    continue;
+                }
             } else {
                 continue;
             }
@@ -272,7 +327,8 @@ export const parseCQQuestions = (text, lang = 'en') => {
 
         if (!state.inAnswerSection) {
             // Parse question parts (a., b., c., d. or ক., খ., গ., ঘ.)
-            const partMatch = line.match(/^([a-dক-ঘ])[.)]\s*(.+)/);
+            // Support "a.", "Part a:", "Part a."
+            const partMatch = line.match(/^(?:Part\s+)?([a-dক-ঘ])[:.)]\s*(.+)/i);
             if (partMatch) {
                 let partLetter = partMatch[1].toLowerCase();
                 let partText = partMatch[2].trim();
@@ -366,22 +422,74 @@ export const parseCQQuestions = (text, lang = 'en') => {
                 }
             } else {
                 // Standard a. b. c. d.
-                const answerMatch = line.match(/^([a-dক-ঘ])[.)]\s*(.+)/);
-                if (answerMatch) {
-                    let partLetter = answerMatch[1].toLowerCase();
-                    const answerText = answerMatch[2].trim();
-                    const bengaliToEnglish = { 'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd' };
-                    if (bengaliToEnglish[partLetter]) partLetter = bengaliToEnglish[partLetter];
+                // Support "a.", "Part a:", "Part a."
+                const partRegex = /^(?:Part\s+)?([a-dক-ঘ])[:.)]\s*(.*)/i;
+                const partMatch = line.match(partRegex);
+                
+                const splitAndAssign = (text, startLetter) => {
+                    const multiPartRegex = /\s+([a-dক-ঘ])[.:)]\s+/gi;
+                    let lastIndex = 0;
+                    let currentLetter = startLetter;
+                    let match;
                     
-                    const part = currentQuestion.parts.find(p => p.letter === partLetter);
-                    if (part) {
-                        part.answer = answerText;
-                        state.currentAnswerPart = part;
+                    // Helper to find and assign
+                    const assign = (letter, content) => {
+                        const bengaliToEnglish = { 'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd' };
+                        const enLetter = bengaliToEnglish[letter] || letter.toLowerCase();
+                        const targetPart = currentQuestion.parts.find(p => p.letter === enLetter);
+                        if (targetPart) {
+                            targetPart.answer = content.trim();
+                            state.currentAnswerPart = targetPart;
+                        }
+                    };
+
+                    while ((match = multiPartRegex.exec(text)) !== null) {
+                        const content = text.substring(lastIndex, match.index);
+                        assign(currentLetter, content);
+                        currentLetter = match[1];
+                        lastIndex = multiPartRegex.lastIndex;
+                    }
+                    // Assign the remainder
+                    assign(currentLetter, text.substring(lastIndex));
+                };
+
+                if (partMatch) {
+                    let partLetter = partMatch[1].toLowerCase();
+                    const partContent = partMatch[2].trim();
+                    
+                    // Check if this line contains more parts
+                    if (/\s+([a-dক-ঘ])[.:)]\s+/i.test(partContent)) {
+                        splitAndAssign(partContent, partLetter);
+                    } else {
+                        const bengaliToEnglish = { 'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd' };
+                        if (bengaliToEnglish[partLetter]) partLetter = bengaliToEnglish[partLetter];
+                        
+                        const part = currentQuestion.parts.find(p => p.letter === partLetter);
+                        if (part) {
+                            part.answer = partContent;
+                            state.currentAnswerPart = part;
+                        } else {
+                            // It's a new part! Exit answer section.
+                            state.inAnswerSection = false;
+                            state.currentAnswerPart = null;
+                            
+                            // Process as a new part
+                            state.hasStartedParts = true;
+                            currentQuestion.parts.push({
+                                letter: partLetter,
+                                text: partContent,
+                                marks: 0,
+                                answer: ''
+                            });
+                        }
                     }
                 } else {
-                    // Continuation line
-                    // First try to append to currentAnswerPart
-                    if (state.currentAnswerPart) {
+                    // Split the line if it contains multiple answers like "a. ... b. ... c. ..."
+                    const multiPartRegex = /\s+([b-dক-ঘ])[.:)]\s+/i;
+                    if (multiPartRegex.test(line) && state.currentAnswerPart) {
+                        splitAndAssign(line, state.currentAnswerPart.letter);
+                    } else if (state.currentAnswerPart) {
+                        // Continuation line
                         const endsWithNewline = state.currentAnswerPart.answer.endsWith('\n');
                         if (!state.currentAnswerPart.answer) {
                             state.currentAnswerPart.answer = line;

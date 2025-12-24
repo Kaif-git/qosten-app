@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import { useQuestions } from '../../context/QuestionContext';
 import Statistics from '../Statistics/Statistics';
 import SearchFilters from '../SearchFilters/SearchFilters';
@@ -167,40 +166,9 @@ const getFilteredQuestions = (questions, filters, fullQuestionsMap = null, hasSe
 
 export default function QuestionBank() {
   const { questions, currentFilters, deleteQuestion, updateQuestion, bulkUpdateQuestions, bulkFlagQuestions, fetchQuestionsByIds, setFilters } = useQuestions();
-  const location = useLocation();
   const [selectedQuestions, setSelectedQuestions] = useState([]);
   const [selectionMode, setSelectionMode] = useState(false);
   const [lastSelectedId, setLastSelectedId] = useState(null); // Track last selected for shift-click
-  
-  // Highlighting State (for new batch review)
-  const [highlightedBatchIds, setHighlightedBatchIds] = useState(null);
-
-  useEffect(() => {
-    if (location.state && location.state.highlightIds) {
-        console.log("📍 Detected batch highlight request for IDs:", location.state.highlightIds);
-        const ids = location.state.highlightIds;
-        setHighlightedBatchIds(ids);
-        
-        // Auto-load full data for these IDs
-        const loadBatch = async () => {
-            try {
-                const fullQuestions = await fetchQuestionsByIds(ids);
-                setFullQuestionsMap(prev => {
-                    const next = new Map(prev);
-                    fullQuestions.forEach(q => next.set(q.id, q));
-                    return next;
-                });
-                setHasSearched(true);
-            } catch (e) {
-                console.error("Error loading highlighted batch", e);
-            }
-        };
-        loadBatch();
-        
-        // Clean up state so it doesn't re-trigger on refresh if possible
-        // Note: window.history.replaceState could work but we can just use the local state check
-    }
-  }, [location.state, fetchQuestionsByIds]);
 
   const [showBulkMetadataEditor, setShowBulkMetadataEditor] = useState(false);
   const [bulkMetadata, setBulkMetadata] = useState({ subject: '', chapter: '', lesson: '', board: '' });
@@ -245,21 +213,9 @@ export default function QuestionBank() {
   const uniqueBoards = getUniqueValues('board');
 
   // Computed questions based on view mode
-  const filteredQuestionsSingleBase = getFilteredQuestions(questions, currentFilters, fullQuestionsMap, hasSearched);
-  const filteredQuestionsLeftBase = getFilteredQuestions(questions, { ...currentFilters, ...leftFilters }, fullQuestionsMap, hasSearched);
-  const filteredQuestionsRightBase = getFilteredQuestions(questions, { ...currentFilters, ...rightFilters }, fullQuestionsMap, hasSearched);
-  
-  const filteredQuestionsSingle = highlightedBatchIds 
-    ? filteredQuestionsSingleBase.filter(q => highlightedBatchIds.includes(q.id))
-    : filteredQuestionsSingleBase;
-    
-  const filteredQuestionsLeft = highlightedBatchIds
-    ? filteredQuestionsLeftBase.filter(q => highlightedBatchIds.includes(q.id))
-    : filteredQuestionsLeftBase;
-    
-  const filteredQuestionsRight = highlightedBatchIds
-    ? filteredQuestionsRightBase.filter(q => highlightedBatchIds.includes(q.id))
-    : filteredQuestionsRightBase;
+  const filteredQuestionsSingle = getFilteredQuestions(questions, currentFilters, fullQuestionsMap, hasSearched);
+  const filteredQuestionsLeft = getFilteredQuestions(questions, { ...currentFilters, ...leftFilters }, fullQuestionsMap, hasSearched);
+  const filteredQuestionsRight = getFilteredQuestions(questions, { ...currentFilters, ...rightFilters }, fullQuestionsMap, hasSearched);
   
   const currentVisibleQuestions = isSplitView 
     ? [...new Set([...filteredQuestionsLeft, ...filteredQuestionsRight])] 
@@ -1774,35 +1730,6 @@ export default function QuestionBank() {
       )}
       
       <div className="panel">
-        {highlightedBatchIds && (
-            <div style={{
-                backgroundColor: '#fff3cd',
-                color: '#856404',
-                padding: '15px',
-                borderRadius: '8px',
-                marginBottom: '20px',
-                border: '1px solid #ffeeba',
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center'
-            }}>
-                <span><strong>Review Mode:</strong> Showing only the {highlightedBatchIds.length} questions from your last upload.</span>
-                <button 
-                    onClick={() => setHighlightedBatchIds(null)}
-                    style={{
-                        backgroundColor: '#856404',
-                        color: 'white',
-                        border: 'none',
-                        padding: '5px 15px',
-                        borderRadius: '4px',
-                        cursor: 'pointer',
-                        fontWeight: 'bold'
-                    }}
-                >
-                    Show All Questions
-                </button>
-            </div>
-        )}
         <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
             <h2>Question Bank</h2>
             <button 

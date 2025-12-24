@@ -19,13 +19,20 @@ export const parseCQQuestions = (text, lang = 'en') => {
     // State variables
     let currentQuestion = null;
     let pendingMetadata = {}; // Persist metadata across questions
+    let pendingStem = ''; // Persist stem across questions
     
     // Helper to save the current question and reset
     const saveCurrentQuestion = () => {
         if (currentQuestion) {
             // Finalize question text from lines if not set
-            if (!currentQuestion.questionText && currentQuestion._state.questionTextLines.length > 0) {
-                currentQuestion.questionText = currentQuestion._state.questionTextLines.join('\n').trim();
+            if (currentQuestion._state.questionTextLines.length > 0) {
+                const newText = currentQuestion._state.questionTextLines.join('\n').trim();
+                if (currentQuestion.questionText) {
+                    currentQuestion.questionText += '\n' + newText;
+                } else {
+                    currentQuestion.questionText = newText;
+                }
+                currentQuestion._state.questionTextLines = [];
             }
 
             // If the question has content (text or parts), save it
@@ -48,8 +55,10 @@ export const parseCQQuestions = (text, lang = 'en') => {
                 if (currentQuestion.parts.length > 0) {
                     questions.push(currentQuestion);
                     console.log(`  💾 Question saved. Subject: ${currentQuestion.subject}, Board: ${currentQuestion.board}, Parts: ${currentQuestion.parts.length}`);
-                } else {
-                    console.log(`  ⚠️ Question skipped (no parts). Text length: ${currentQuestion.questionText.length}`);
+                } else if (currentQuestion.questionText) {
+                    // It was just a stem/text block, update pendingStem
+                    pendingStem = currentQuestion.questionText;
+                    console.log('  📌 Pending stem updated:', pendingStem.substring(0, 50) + '...');
                 }
             } else if (currentQuestion.subject || currentQuestion.chapter || currentQuestion.lesson || currentQuestion.board) {
                 // It was just a metadata block, update pendingMetadata
@@ -69,7 +78,7 @@ export const parseCQQuestions = (text, lang = 'en') => {
         currentQuestion = {
             type: 'cq',
             language: lang,
-            questionText: '',
+            questionText: pendingStem, // Inherit stem
             parts: [],
             subject: '',
             chapter: '',
@@ -169,12 +178,22 @@ export const parseCQQuestions = (text, lang = 'en') => {
             continue;
         }
 
-        // Handle Bangla stimulus section header (উদ্দীপক:)
-        if (/^উদ্দীপক\s*:/i.test(line)) {
+        // Handle Stimulus section header (Stem: or উদ্দীপক:)
+        if (/^(Stem|উদ্দীপক)\s*[:ঃ]/i.test(line)) {
+            // If current question has parts or substantial text, this starts a new one
+            if (currentQuestion.parts.length > 0 || currentQuestion._state.inAnswerSection) {
+                startNewQuestion();
+            }
             state.inStimulusSection = true;
             state.inQuestionSection = false;
             state.inAnswerSection = false;
             state.stimulusLines = [];
+            
+            // Check for inline content (e.g. "Stem: here is content")
+            const inlineContent = line.replace(/^(Stem|উদ্দীপক)\s*[:ঃ]\s*/i, '').trim();
+            if (inlineContent) {
+                state.stimulusLines.push(inlineContent);
+            }
             continue;
         }
 
@@ -253,7 +272,7 @@ export const parseCQQuestions = (text, lang = 'en') => {
 
         if (!state.inAnswerSection) {
             // Parse question parts (a., b., c., d. or ক., খ., গ., ঘ.)
-            const partMatch = line.match(/^([a-dক-ঘ])[.)]\s*(.+)$/);
+            const partMatch = line.match(/^([a-dক-ঘ])[.)]\s*(.+)/);
             if (partMatch) {
                 let partLetter = partMatch[1].toLowerCase();
                 let partText = partMatch[2].trim();
@@ -274,7 +293,8 @@ export const parseCQQuestions = (text, lang = 'en') => {
                         marksStr = marksStr.replace(new RegExp(bn, 'g'), en);
                     }
                     marks = parseInt(marksStr);
-                    partText = partText.replace(marksMatch[0], '').trim();
+                    // Use slice to remove from end instead of replace which might hit earlier matches
+                    partText = partText.slice(0, -marksMatch[0].length).trim();
                 } else {
                     const standaloneMatch = partText.match(/\s+([\d\u09E6-\u09EF]+)\s*$/);
                     if (standaloneMatch) {
@@ -284,7 +304,8 @@ export const parseCQQuestions = (text, lang = 'en') => {
                             marksStr = marksStr.replace(new RegExp(bn, 'g'), en);
                         }
                         marks = parseInt(marksStr);
-                        partText = partText.replace(standaloneMatch[0], '').trim();
+                        // Use slice to remove from end instead of replace which might hit earlier matches
+                        partText = partText.slice(0, -standaloneMatch[0].length).trim();
                     }
                 }
                 
@@ -345,7 +366,7 @@ export const parseCQQuestions = (text, lang = 'en') => {
                 }
             } else {
                 // Standard a. b. c. d.
-                const answerMatch = line.match(/^([a-dক-ঘ])[.)]\s*(.+)$/);
+                const answerMatch = line.match(/^([a-dক-ঘ])[.)]\s*(.+)/);
                 if (answerMatch) {
                     let partLetter = answerMatch[1].toLowerCase();
                     const answerText = answerMatch[2].trim();

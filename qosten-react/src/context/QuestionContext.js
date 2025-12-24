@@ -203,11 +203,31 @@ export function QuestionProvider({ children }) {
           const dbQuestion = mapAppToDatabase(question);
           const questionId = parseInt(question.id);
           
-          const { error } = await supabaseClient
+          let { error } = await supabaseClient
             .from('questions_duplicate')
             .update(dbQuestion)
             .eq('id', questionId);
           
+          // Handle duplicate key constraint violation by appending a unique suffix
+          if (error && (error.code === '23505' || error.message?.includes('duplicate key'))) {
+            console.warn(`Duplicate key error for question ${questionId}, retrying with suffix...`);
+            const uniqueSuffix = ` [${Date.now() + Math.floor(Math.random() * 1000)}]`;
+            
+            // Append suffix to unique fields
+            dbQuestion.question = dbQuestion.question + uniqueSuffix;
+            if (dbQuestion.question_text) {
+                dbQuestion.question_text = dbQuestion.question_text + uniqueSuffix;
+            }
+            
+            // Retry update
+            const retryResult = await supabaseClient
+                .from('questions_duplicate')
+                .update(dbQuestion)
+                .eq('id', questionId);
+                
+            error = retryResult.error;
+          }
+
           if (error) {
             console.error(`Error updating question ${questionId}:`, error);
             return { success: false, error, questionId };

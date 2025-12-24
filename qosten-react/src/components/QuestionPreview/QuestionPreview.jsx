@@ -133,7 +133,24 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   const canvasRef = useRef(null);
   const imageRef = useRef(null);
   const cropperContainerRef = useRef(null);
+  const cropBoxRef = useRef(null); // Ref for the crop box DOM element
   const frameId = useRef(null);
+  const isDraggingRef = useRef(false); // Use ref for dragging state to avoid re-renders
+  const dragStartRef = useRef({ x: 0, y: 0 }); // Use ref for drag start to avoid re-renders
+
+  const updateCropBoxDOM = useCallback((x, y, w, h) => {
+    if (cropBoxRef.current) {
+      cropBoxRef.current.style.left = `${x}px`;
+      cropBoxRef.current.style.top = `${y}px`;
+      cropBoxRef.current.style.width = `${w}px`;
+      cropBoxRef.current.style.height = `${h}px`;
+    }
+  }, []);
+
+  // Synchronize DOM with state when state changes (e.g. from buttons)
+  useEffect(() => {
+    updateCropBoxDOM(cropArea.x, cropArea.y, cropArea.width, cropArea.height);
+  }, [cropArea, updateCropBoxDOM]);
   
   // Get unique metadata values
   const getUniqueValues = (field, listType = 'english') => {
@@ -562,74 +579,92 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   };
   
   const handleMouseDown = (e) => {
+    if (e.target.className === 'crop-handle') return;
+    
     const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
+    
+    isDraggingRef.current = true;
+    dragStartRef.current = { x: x - cropAreaRef.current.x, y: y - cropAreaRef.current.y };
     setIsDragging(true);
-    setDragStart({ x: x - cropArea.x, y: y - cropArea.y });
   };
   
   const handleMouseMove = (e) => {
-    if (!isDragging) return;
+    if (!isDraggingRef.current) return;
     
     if (frameId.current) return;
 
-    const rect = e.currentTarget.getBoundingClientRect();
+    const container = e.currentTarget;
+    const rect = container.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
     
     frameId.current = requestAnimationFrame(() => {
-      setCropArea(prev => ({
-        ...prev,
-        x: Math.max(0, Math.min(x - dragStart.x, rect.width - prev.width)),
-        y: Math.max(0, Math.min(y - dragStart.y, rect.height - prev.height))
-      }));
+      const newX = Math.max(0, Math.min(x - dragStartRef.current.x, rect.width - cropAreaRef.current.width));
+      const newY = Math.max(0, Math.min(y - dragStartRef.current.y, rect.height - cropAreaRef.current.height));
+      
+      // Update the Ref immediately for logic
+      cropAreaRef.current = { ...cropAreaRef.current, x: newX, y: newY };
+      
+      // Update the DOM directly for smoothness (no re-render!)
+      updateCropBoxDOM(newX, newY, cropAreaRef.current.width, cropAreaRef.current.height);
+      
       frameId.current = null;
     });
   };
   
   const handleMouseUp = () => {
+    if (!isDraggingRef.current) return;
+    
+    isDraggingRef.current = false;
     setIsDragging(false);
+    
     if (frameId.current) {
       cancelAnimationFrame(frameId.current);
       frameId.current = null;
     }
+    
+    // FINALLY update state once drag is done to keep React in sync
+    setCropArea({ ...cropAreaRef.current });
   };
   
   const handleTouchStart = (e) => {
-    e.preventDefault();
+    if (e.target.className === 'crop-handle') return;
     const touch = e.touches[0];
     const rect = e.currentTarget.getBoundingClientRect();
     const x = touch.clientX - rect.left;
     const y = touch.clientY - rect.top;
+    
+    isDraggingRef.current = true;
+    dragStartRef.current = { x: x - cropAreaRef.current.x, y: y - cropAreaRef.current.y };
     setIsDragging(true);
-    setDragStart({ x: x - cropArea.x, y: y - cropArea.y });
   };
   
   const handleTouchMove = (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
+    if (!isDraggingRef.current) return;
     
     if (frameId.current) return;
 
     const touch = e.touches[0];
-    const rect = e.currentTarget.getBoundingClientRect();
+    const container = e.currentTarget;
+    const rect = container.getBoundingClientRect();
     const x = touch.clientX - rect.left;
     const y = touch.clientY - rect.top;
     
     frameId.current = requestAnimationFrame(() => {
-      setCropArea(prev => ({
-        ...prev,
-        x: Math.max(0, Math.min(x - dragStart.x, rect.width - prev.width)),
-        y: Math.max(0, Math.min(y - dragStart.y, rect.height - prev.height))
-      }));
+      const newX = Math.max(0, Math.min(x - dragStartRef.current.x, rect.width - cropAreaRef.current.width));
+      const newY = Math.max(0, Math.min(y - dragStartRef.current.y, rect.height - cropAreaRef.current.height));
+      
+      cropAreaRef.current = { ...cropAreaRef.current, x: newX, y: newY };
+      updateCropBoxDOM(newX, newY, cropAreaRef.current.width, cropAreaRef.current.height);
+      
       frameId.current = null;
     });
   };
   
-  const handleTouchEnd = (e) => {
-    e.preventDefault();
-    setIsDragging(false);
+  const handleTouchEnd = () => {
+    handleMouseUp();
   };
   
   const adjustCropSize = (dimension, delta) => {
@@ -1445,20 +1480,20 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                                   className="cropper-image"
                                   style={{ width: '100%', display: 'block', userSelect: 'none' }}
                                 />
-                                <div 
-                                  className="crop-box"
-                                  style={{
-                                    left: `${cropArea.x}px`,
-                                    top: `${cropArea.y}px`,
-                                    width: `${cropArea.width}px`,
-                                    height: `${cropArea.height}px`,
-                                    position: 'absolute',
-                                    border: '2px solid #3498db',
-                                    boxShadow: '0 0 0 4000px rgba(0, 0, 0, 0.5)',
-                                    willChange: 'left, top, width, height'
-                                  }}
-                                >
-                                  <div className="crop-handle" style={{ width: '10px', height: '10px', background: '#3498db', position: 'absolute', bottom: '0', right: '0', cursor: 'se-resize' }} />
+                                                                <div 
+                                                                  ref={cropBoxRef}
+                                                                  className="crop-box"
+                                                                  style={{
+                                                                    left: `${cropArea.x}px`,
+                                                                    top: `${cropArea.y}px`,
+                                                                    width: `${cropArea.width}px`,
+                                                                    height: `${cropArea.height}px`,
+                                                                    position: 'absolute',
+                                                                    border: '2px solid #3498db',
+                                                                    boxShadow: '0 0 0 4000px rgba(0, 0, 0, 0.5)',
+                                                                    willChange: 'left, top, width, height'
+                                                                  }}
+                                                                >                                  <div className="crop-handle" style={{ width: '10px', height: '10px', background: '#3498db', position: 'absolute', bottom: '0', right: '0', cursor: 'se-resize' }} />
                                 </div>
                               </div>
                             </div>
@@ -2006,20 +2041,20 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                   className="cropper-image"
                   style={{ width: `${zoomLevel * 100}%`, maxWidth: 'none', display: 'block', userSelect: 'none' }}
                 />
-                <div 
-                  className="crop-box"
-                  style={{
-                    left: `${cropArea.x}px`,
-                    top: `${cropArea.y}px`,
-                    width: `${cropArea.width}px`,
-                    height: `${cropArea.height}px`,
-                    position: 'absolute',
-                    border: '2px solid #3498db',
-                    boxShadow: '0 0 0 4000px rgba(0, 0, 0, 0.5)',
-                    willChange: 'left, top, width, height'
-                  }}
-                >
-                  <div className="crop-handle" />
+                                                <div 
+                                                  ref={cropBoxRef}
+                                                  className="crop-box"
+                                                  style={{
+                                                    left: `${cropArea.x}px`,
+                                                    top: `${cropArea.y}px`,
+                                                    width: `${cropArea.width}px`,
+                                                    height: `${cropArea.height}px`,
+                                                    position: 'absolute',
+                                                    border: '2px solid #3498db',
+                                                    boxShadow: '0 0 0 4000px rgba(0, 0, 0, 0.5)',
+                                                    willChange: 'left, top, width, height'
+                                                  }}
+                                                >                  <div className="crop-handle" />
                 </div>
               </div>
             </div>

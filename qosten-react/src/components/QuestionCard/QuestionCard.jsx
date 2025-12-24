@@ -9,9 +9,9 @@ export default function QuestionCard({ question, selectionMode, isSelected, onTo
   const navigate = useNavigate();
   const [showImageLinkingModal, setShowImageLinkingModal] = useState(false);
   
-  const handleCardClick = () => {
+  const handleCardClick = (e) => {
     if (selectionMode) {
-      onToggleSelect(question.id);
+      onToggleSelect(question.id, e);
     }
   };
   

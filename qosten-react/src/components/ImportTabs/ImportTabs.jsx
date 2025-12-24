@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useQuestions } from '../../context/QuestionContext';
 import QuestionPreview from '../QuestionPreview/QuestionPreview';
 import { translateEnglishWordsToBangla } from '../../utils/translateToBangla';
@@ -11,10 +12,10 @@ const examples = {
 **[Lesson: Introduction to Physics]**
 **[Board: D.B.-24; B.B.-23]**
 **1.** By the combination of quantum theory and the theory of relativity, who declared hypothesised existence of an anti particle?
-a) Dirac
-b) Roentgen
-c) Becquerel
-d) Marie Curie
+ a) Dirac
+ b) Roentgen
+ c) Becquerel
+ d) Marie Curie
 **Correct: a**
 **Explanation:** Paul Dirac combined quantum mechanics and special relativity, predicting the existence of antimatter.
 
@@ -26,10 +27,10 @@ Alternate format (also supported):
 [Lesson: Linear Equations]
 [Board: CBSE]
 1. What is the solution to 2x + 3 = 7?
-a) 1
-b) 2
-c) 3
-d) 4
+ a) 1
+ b) 2
+ c) 3
+ d) 4
 Correct: b
 Explanation: To solve 2x + 3 = 7, subtract 3 from both sides to get 2x = 4, then divide by 2 to find x = 2.`,
     bn: `*[বিষয়: বাংলাদেশ ও বিশ্বপরিচয়]*  
@@ -66,16 +67,16 @@ Explanation: To solve 2x + 3 = 7, subtract 3 from both sides to get 2x = 4, then
 **Question 1**
 [There is a picture]
 Organelle M and N are marked in the diagram.
-a. What is plasmalemma? (1)
-b. Why are plastids called colour forming organs? (2)
-c. Why is the organelle marked with N important for the living world? Explain. (3)
-d. What types of problem will appear in living bodies if the part marked with M is absent? Analyse it. (4)
+ a. What is plasmalemma? (1)
+ b. Why are plastids called colour forming organs? (2)
+ c. Why is the organelle marked with N important for the living world? Explain. (3)
+ d. What types of problem will appear in living bodies if the part marked with M is absent? Analyse it. (4)
 
 **Answer:**
-a. The protoplasm of the living cell remains surrounded by a bilayered selectively permeable membrane known as plasmalemma or cell membrane.
-b. The coloured organelles present within the cytoplasm of plant cells are known as plastids. They are responsible for the formation of colour of any plant part like leaves, flower and fruits. In absence of light plastids become colourless.
-c. The N marked organelle is the chloroplast. Plants trap light energy by the chloroplast to manufacture carbohydrate food, releasing oxygen. This maintains oxygen balance and provides energy for living organisms.
-d. The M-marked part is the centriole. If absent, cell division in animals would stop, halting growth and development as chromatids cannot separate during mitosis.
+ a. The protoplasm of the living cell remains surrounded by a bilayered selectively permeable membrane known as plasmalemma or cell membrane.
+ b. The coloured organelles present within the cytoplasm of plant cells are known as plastids. They are responsible for the formation of colour of any plant part like leaves, flower and fruits. In absence of light plastids become colourless.
+ c. The N marked organelle is the chloroplast. Plants trap light energy by the chloroplast to manufacture carbohydrate food, releasing oxygen. This maintains oxygen balance and provides energy for living organisms.
+ d. The M-marked part is the centriole. If absent, cell division in animals would stop, halting growth and development as chromatids cannot separate during mitosis.
 
 ---
 
@@ -85,23 +86,23 @@ Subject: Biology
 Chapter: Cell Structure
 Lesson: Organelles
 Board: CBSE
-a. Question part (1)
-b. Question part (2)
+ a. Question part (1)
+ b. Question part (2)
 Answer:
-a. Answer text
-b. Answer text`,
+ a. Answer text
+ b. Answer text`,
     bn: `প্রশ্ন 1
 ডায়াগ্রামে অর্গানেল M এবং N চিহ্নিত করা হয়েছে।
-a. প্লাজমালেমা কী? (1)
-b. প্লাস্টিডগুলিকে কেন রঙ গঠনকারী অঙ্গ বলা হয়? (2)
-c. N চিহ্নিত অর্গানেলটি জীবজগতের জন্য কেন গুরুত্বপূর্ণ? ব্যাখ্যা করুন। (3)
-d. M চিহ্নিত অংশ অনুপস্থিত থাকলে জীবদেহে কী ধরনের সমস্যা দেখা দেবে? বিশ্লেষণ করুন। (4)
+ a. প্লাজমালেমা কী? (1)
+ b. প্লাস্টিডগুলিকে কেন রঙ গঠনকারী অঙ্গ বলা হয়? (2)
+ c. N চিহ্নিত অর্গানেলটি জীবজগতের জন্য কেন গুরুত্বপূর্ণ? ব্যাখ্যা করুন। (3)
+ d. M চিহ্নিত অংশ অনুপস্থিত থাকলে জীবদেহে কী ধরনের সমস্যা দেখা দেবে? বিশ্লেষণ করুন। (4)
 
 উত্তর:
-a. জীবকোষের প্রোটোপ্লাজম একটি দ্বিস্তরীয় নির্বাচনীভাবে প্রবেশযোগ্য ঝিল্লি দ্বারা ঘেরা থাকে, যা প্লাজমালেমা বা কোষঝিল্লি নামে পরিচিত।
-b. উদ্ভিদ কোষের সাইটোপ্লাজমে উপস্থিত রঙিন অর্গানেলগুলি প্লাস্টিড নামে পরিচিত। এগুলি উদ্ভিদের পাতা, ফুল এবং ফলের রঙ গঠনের জন্য দায়ী।
-c. N চিহ্নিত অর্গানেলটি হল ক্লোরোপ্লাস্ট। উদ্ভিদ ক্লোরোপ্লাস্ট দ্বারা আলোক শক্তি ধরে রাখে এবং অক্সিজেন নির্গত করে।
-d. M চিহ্নিত অংশটি হল সেন্ট্রিওল। এটি অনুপস্থিত থাকলে প্রাণীকোষে কোষ বিভাজন বন্ধ হয়ে যাবে।
+ a. জীবকোষের প্রোটোপ্লাজম একটি দ্বিস্তরীয় নির্বাচনীভাবে প্রবেশযোগ্য ঝিল্লি দ্বারা ঘেরা থাকে, যা প্লাজমালেমা বা কোষঝিল্লি নামে পরিচিত।
+ b. উদ্ভিদ কোষের সাইটোপ্লাজমে উপস্থিত রঙিন অর্গানেলগুলি প্লাস্টিড নামে পরিচিত। এগুলি উদ্ভিদের পাতা, ফুল এবং ফলের রঙ গঠনের জন্য দায়ী।
+ c. N চিহ্নিত অর্গানেলটি হল ক্লোরোপ্লাস্ট। উদ্ভিদ ক্লোরোপ্লাস্ট দ্বারা আলোক শক্তি ধরে রাখে এবং অক্সিজেন নির্গত করে।
+ d. M চিহ্নিত অংশটি হল সেন্ট্রিওল। এটি অনুপস্থিত থাকলে প্রাণীকোষে কোষ বিভাজন বন্ধ হয়ে যাবে।
 Subject: Biology
 Chapter: Cell Structure and Function
 Lesson: Organelles and Their Roles
@@ -147,13 +148,14 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
   const [isTranslating, setIsTranslating] = useState(false);
   const [progress, setProgress] = useState({ current: 0, total: 0, status: '' });
   const { addQuestion } = useQuestions();
+  const navigate = useNavigate();
   
   const example = examples[type][language];
   const title = titles[type][language];
   
   const parseMCQQuestions = (text, lang = 'en') => {
     const cleanedText = text.replace(/\u200b/g, '').replace(/\*+/g, '');
-    const sections = cleanedText.split(/\n---+\n/);
+    const sections = cleanedText.split(/\n---\+\n/);
     const questions = [];
 
     for (const section of sections) {
@@ -199,7 +201,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
                     // 1. If Question is already "closed" (has answer/explanation), any number is a New Question
                     if (currentQuestion.correctAnswer || currentQuestion.explanation) {
                         isOption = false;
-                        console.log(`    🚫 Line "${line.substring(0,15)}..." -> New Question (Previous closed)`);
+                        console.log(`    🚫 Line "${line.substring(0,15)}"..." -> New Question (Previous closed)`);
                     }
                     // 2. Roman Context - "Which is correct?" always expects options
                     else if (currentQuestion.questionText && (
@@ -208,7 +210,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
                              currentQuestion.questionText.includes('নিচের কোনটি'))) {
                         if (isSmallNum) {
                             isOption = true;
-                            console.log(`    ✅ Line "${line.substring(0,15)}..." -> Option (Roman Context)`);
+                            console.log(`    ✅ Line "${line.substring(0,15)}"..." -> Option (Roman Context)`);
                         }
                     }
                     // 3. Sequential Option Check
@@ -226,9 +228,9 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
                             // Allow strict sequential (1->2->3) or if it's 1 and we have none.
                             if (numVal === currentQuestion.options.length + 1) {
                                 isOption = true;
-                                console.log(`    ✅ Line "${line.substring(0,15)}..." -> Option ${numVal} (Sequential match)`);
+                                console.log(`    ✅ Line "${line.substring(0,15)}"..." -> Option ${numVal} (Sequential match)`);
                             } else {
-                                console.log(`    🚫 Line "${line.substring(0,15)}..." -> New Question (Sequence mismatch: ${numVal} vs next ${currentQuestion.options.length + 1})`);
+                                console.log(`    🚫 Line "${line.substring(0,15)}"..." -> New Question (Sequence mismatch: ${numVal} vs next ${currentQuestion.options.length + 1})`);
                             }
                         }
                     }
@@ -240,7 +242,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
                         ...currentMetadata,
                         type: 'mcq',
                         // Handle potential lack of space after dot
-                        questionText: line.replace(/^[\d০-৯]+[।.]\s*/, '').trim(),
+                        questionText: line.replace(/^[\[\d০-৯]+[।.]\s*/, '').trim(),
                         options: [], correctAnswer: '', explanation: ''
                     };
                     console.log(`    🆕 New Question Started: ${line.substring(0, 20)}...`);
@@ -449,7 +451,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
                 saveCurrentQuestion();
                 currentQuestion = { ...sectionMetadata, question: '', answer: '' };
 
-                let text = line.replace(/^[\d০-৯]+[।.)\s]*/, '').trim();
+                let text = line.replace(/^[\[\d০-৯]+[।.)\s]*/, '').trim();
                 const inlineAnswerMatch = text.match(/(answer|ans|উত্তর)\s*[:=]\s*(.*)/i);
                 if (inlineAnswerMatch) {
                     currentQuestion.question = text.substring(0, inlineAnswerMatch.index).trim();
@@ -538,6 +540,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
     setProgress({ current: 0, total: editedQuestions.length, status: 'Uploading questions...' });
     
     let addedCount = 0;
+    const addedIds = [];
     
     // Upload in batches of 20 for better performance
     const BATCH_SIZE = 20;
@@ -549,7 +552,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
       const results = await Promise.allSettled(
         batch.map((question, batchIndex) => 
           addQuestion(question)
-            .then(() => ({ success: true, index: i + batchIndex, question }))
+            .then((newQ) => ({ success: true, index: i + batchIndex, question: newQ }))
             .catch(error => ({ success: false, error, index: i + batchIndex, question }))
         )
       );
@@ -558,6 +561,9 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
       results.forEach(result => {
         if (result.status === 'fulfilled' && result.value.success) {
           addedCount++;
+          if (result.value.question && result.value.question.id) {
+              addedIds.push(result.value.question.id);
+          }
         } else {
           const errorData = result.value || {};
           const error = errorData.error;
@@ -576,7 +582,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
     setIsUploading(false);
     
     // Show summary message
-    let message = `Successfully added ${addedCount} question(s)!`;
+    let message = `Successfully added ${addedCount} question(s)! Redirecting to review...`;
     alert(message);
     setShowPreview(false);
     
@@ -584,6 +590,9 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
     if (addedCount > 0) {
       setInputText('');
       setParsedQuestions([]);
+      
+      // Redirect to bank with the specific IDs
+      navigate('/bank', { state: { highlightIds: addedIds } });
     }
   };
   

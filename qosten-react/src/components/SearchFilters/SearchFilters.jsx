@@ -7,13 +7,39 @@ export default function SearchFilters({ filters, onFilterChange }) {
   // Determine source of truth: props (controlled) or context (uncontrolled)
   const isControlled = !!filters && !!onFilterChange;
   const activeFilters = isControlled ? filters : context.currentFilters;
-  const questions = context.questions; // Always get questions from context for options
+  const allQuestions = context.questions; // Always get questions from context for options
   
-  // Get unique values for dropdown options
-  const uniqueSubjects = [...new Set(questions.map(q => q.subject).filter(Boolean))];
-  const uniqueChapters = [...new Set(questions.map(q => q.chapter).filter(Boolean))];
-  const uniqueLessons = [...new Set(questions.map(q => q.lesson).filter(Boolean))];
-  const uniqueBoards = [...new Set(questions.map(q => q.board).filter(Boolean))];
+  // Helper to filter questions based on ACTIVE filters, but excluding the key being generated
+  // This allows the user to see all options for a specific filter if they haven't selected it yet,
+  // but restricts other filters based on selections.
+  // Actually, standard drill-down usually means:
+  // - Subject dropdown shows ALL subjects (unless maybe board is selected?)
+  // - Chapter dropdown shows chapters for Selected Subject (and Board/Type etc)
+  // - Lesson dropdown shows lessons for Selected Chapter (and Subject/Board/Type)
+  // - Board dropdown shows boards for Selected Subject/Chapter... or maybe all boards?
+  
+  // Let's implement strict drill-down:
+  // 1. Filter the base list of questions by *other* active filters.
+  
+  const getFilteredFor = (excludeKey) => {
+      return allQuestions.filter(q => {
+          if (excludeKey !== 'subject' && activeFilters.subject && activeFilters.subject !== 'none' && q.subject !== activeFilters.subject) return false;
+          if (excludeKey !== 'chapter' && activeFilters.chapter && activeFilters.chapter !== 'none' && q.chapter !== activeFilters.chapter) return false;
+          // Lesson usually depends on chapter, so we filter by chapter. 
+          // If we are populating 'lesson', we respect 'chapter' filter.
+          if (excludeKey !== 'lesson' && activeFilters.lesson && q.lesson !== activeFilters.lesson) return false;
+          if (excludeKey !== 'board' && activeFilters.board && q.board !== activeFilters.board) return false;
+          if (excludeKey !== 'type' && activeFilters.type && q.type !== activeFilters.type) return false;
+          if (excludeKey !== 'language' && activeFilters.language && q.language !== activeFilters.language) return false;
+          return true;
+      });
+  };
+
+  // Get unique values for dropdown options based on filtered sets
+  const uniqueSubjects = [...new Set(getFilteredFor('subject').map(q => q.subject).filter(Boolean))].sort();
+  const uniqueChapters = [...new Set(getFilteredFor('chapter').map(q => q.chapter).filter(Boolean))].sort();
+  const uniqueLessons = [...new Set(getFilteredFor('lesson').map(q => q.lesson).filter(Boolean))].sort();
+  const uniqueBoards = [...new Set(getFilteredFor('board').map(q => q.board).filter(Boolean))].sort();
   
   const handleFilterChange = (key, value) => {
     if (isControlled) {

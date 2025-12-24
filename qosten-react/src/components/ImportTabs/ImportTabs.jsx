@@ -188,9 +188,11 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
             }
 
             // Start of a new question (must have dot or danda, NOT paren to distinguish from numeric options)
-            if (/^[\d০-৯]+[।.]\s/.test(line)) {
+            // Updated to allow optional space after dot/danda (e.g., "15.What")
+            if (/^[\d০-৯]+[।.]/.test(line)) {
                 // Robust heuristic to distinguish "1. Question" from "1. Option"
-                const isSmallNum = /^[1-4১-৪][।.]\s/.test(line);
+                // Updated to allow optional space
+                const isSmallNum = /^[1-4১-৪][।.]/.test(line);
                 let isOption = false;
 
                 if (currentQuestion) {
@@ -237,6 +239,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
                     currentQuestion = {
                         ...currentMetadata,
                         type: 'mcq',
+                        // Handle potential lack of space after dot
                         questionText: line.replace(/^[\d০-৯]+[।.]\s*/, '').trim(),
                         options: [], correctAnswer: '', explanation: ''
                     };
@@ -271,7 +274,8 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
             if (/^(correct|answer|ans|সঠিক(?:\s*উত্তর)?)\s*[:=ঃ：]/i.test(line)) {
                 const answerMatch = line.match(/^(?:correct|answer|ans|সঠিক(?:\s*উত্তর)?)\s*[:=ঃ：]\s*(.+)$/i);
                 if (answerMatch) {
-                    let answer = answerMatch[1].trim().split(/\s+/)[0].toLowerCase();
+                    // Clean up answer: remove trailing paren if present (e.g. "a)" -> "a")
+                    let answer = answerMatch[1].trim().split(/\s+/)[0].replace(/[).]+$/, '').toLowerCase();
                      const bengaliToEnglish = { 'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd' };
                      const numToChar = { '1': 'a', '2': 'b', '3': 'c', '4': 'd' };
                      const bengaliNumToChar = { '১': 'a', '২': 'b', '৩': 'c', '৪': 'd' };

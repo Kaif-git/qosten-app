@@ -82,7 +82,7 @@ export function parseMCQQuestions(text) {
       
       // Parse metadata fields (handle 0, 1 (*), or 2 (**) asterisks and Bengali field names)
       // Subject/বিষয় - If we encounter a new subject, save the current question first
-      if (line.match(/^\*{0,2}\[(Subject|বিষয়):\s*(.+?)\]\*{0,2}$/i)) {
+      if (line.match(/^\*{0,2}\[\s*(Subject|বিষয়)\s*:\s*(.+?)\s*\]\*{0,2}$/i)) {
         console.log('  ✅ Found Subject line:', line.substring(0, 80));
         // Save previous question if it exists and is valid
         if (currentQuestion.subject && currentQuestion.questionText && currentQuestion.options.length > 0) {
@@ -111,23 +111,23 @@ export function parseMCQQuestions(text) {
         explanationBuffer = [];
         questionBuffer = [];
         
-        const match = line.match(/^\*{0,2}\[(Subject|বিষয়):\s*(.+?)\]\*{0,2}$/i);
+        const match = line.match(/^\*{0,2}\[\s*(Subject|বিষয়)\s*:\s*(.+?)\s*\]\*{0,2}$/i);
         currentQuestion.subject = match[2].trim();
       }
       // Chapter/অধ্যায়
-      else if (line.match(/^\*{0,2}\[(Chapter|অধ্যায়):\s*(.+?)\]\*{0,2}$/i)) {
-        const match = line.match(/^\*{0,2}\[(Chapter|অধ্যায়):\s*(.+?)\]\*{0,2}$/i);
+      else if (line.match(/^\*{0,2}\[\s*(Chapter|অধ্যায়)\s*:\s*(.+?)\s*\]\*{0,2}$/i)) {
+        const match = line.match(/^\*{0,2}\[\s*(Chapter|অধ্যায়)\s*:\s*(.+?)\s*\]\*{0,2}$/i);
         currentQuestion.chapter = match[2].trim();
         console.log('  ✅ Found Chapter:', match[2].trim());
       }
       // Lesson/পাঠ
-      else if (line.match(/^\*{0,2}\[(Lesson|পাঠ):\s*(.+?)\]\*{0,2}$/i)) {
-        const match = line.match(/^\*{0,2}\[(Lesson|পাঠ):\s*(.+?)\]\*{0,2}$/i);
+      else if (line.match(/^\*{0,2}\[\s*(Lesson|পাঠ)\s*:\s*(.+?)\s*\]\*{0,2}$/i)) {
+        const match = line.match(/^\*{0,2}\[\s*(Lesson|পাঠ)\s*:\s*(.+?)\s*\]\*{0,2}$/i);
         currentQuestion.lesson = match[2].trim();
       } 
       // Board/বোর্ড
-      else if (line.match(/^\*{0,2}\[(Board|বোর্ড):\s*(.+?)\]\*{0,2}$/i)) {
-        const match = line.match(/^\*{0,2}\[(Board|বোর্ড):\s*(.+?)\]\*{0,2}$/i);
+      else if (line.match(/^\*{0,2}\[\s*(Board|বোর্ড)\s*:\s*(.+?)\s*\]\*{0,2}$/i)) {
+        const match = line.match(/^\*{0,2}\[\s*(Board|বোর্ড)\s*:\s*(.+?)\s*\]\*{0,2}$/i);
         currentQuestion.board = match[2].trim();
       }
       // Parse question number and text (e.g., **6.** or *6.* or 6. or **৩.** Question text)
@@ -172,8 +172,8 @@ export function parseMCQQuestions(text) {
         }
       }
       // Parse correct answer (handle 0, 1, or 2 asterisks and Bengali সঠিক, including format without spaces like সঠিক:ক)
-      else if (line.match(/^\*{0,2}(Correct|সঠিক):\*{0,2}\s*([a-dক-ঘ])\s*\*{0,2}$/i) || line.match(/^(Correct|সঠিক):\s*([a-dক-ঘ])\s*$/i)) {
-        const match = line.match(/^\*{0,2}(Correct|সঠিক):\*{0,2}\s*([a-dক-ঘ])\s*\*{0,2}$/i) || line.match(/^(Correct|সঠিক):\s*([a-dক-ঘ])\s*$/i);
+      else if (line.match(/^\*{0,2}(Correct|সঠিক):\*{0,2}\s*([a-dক-ঘ])(?:\)|\s+|$)\s*\*{0,2}/i) || line.match(/^(Correct|সঠিক):\s*([a-dক-ঘ])\s*$/i)) {
+        const match = line.match(/^\*{0,2}(Correct|সঠিক):\*{0,2}\s*([a-dক-ঘ])(?:\)|\s+|$)\s*\*{0,2}/i) || line.match(/^(Correct|সঠিক):\s*([a-dক-ঘ])\s*$/i);
         let answer = match[2].toLowerCase();
         console.log('  ✅ Found Correct answer:', answer);
         // Convert Bengali letters to English
@@ -209,7 +209,7 @@ export function parseMCQQuestions(text) {
       // Collect explanation lines
       else if (inExplanation) {
         // Stop at next question set marker or metadata (handle both English and Bengali)
-        if (line.match(/^\*{0,2}\[(Subject|বিষয়):/i) || line.match(/^\*{0,2}Question Set/i)) {
+        if (line.match(/^\*{0,2}\[\s*(Subject|বিষয়)\s*:/i) || line.match(/^\*{0,2}Question Set/i)) {
           // This is the start of next question, process current one
           if (explanationBuffer.length > 0) {
             currentQuestion.explanation = explanationBuffer.join('\n').trim();
@@ -323,6 +323,21 @@ d) \\( \\frac{17}{2} \\)
 \\[
 x^2 + y^2 = \\frac{(x+y)^2 + (x-y)^2}{2} = \\frac{7 + 6}{2} = \\frac{13}{2}
 \\]
+
+---
+
+### **Bracketed Metadata Format (No Asterisks)**
+[Subject: Chemistry]
+[Chapter: Concept of Mole and Chemical Counting]
+[Lesson: Mole and Avogadro's Number]
+[Board: SCHOLAISHOME, Sylhet]
+15.What is the number of molecule found in 1 g CaCO_3?
+a) 6.02 \\times 10^{21}
+b) 6.02 \\times 10^{22}
+c) 6.02 \\times 10^{23}
+d) 6.02 \\times 10^{24}
+Correct: a
+Explanation: Molar mass of calcium carbonate is 100 g/mol which means 100 g calcium carbonate has 6.02 \\times 10^{23} molecules.
 
 ---
 

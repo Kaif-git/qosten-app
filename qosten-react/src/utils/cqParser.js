@@ -103,15 +103,16 @@ export const parseCQQuestions = (text, lang = 'en') => {
         
         // Header: "Question X" or "সৃজনশীল প্রশ্ন X" or "প্রশ্ন X"
         // Only if line is short (to avoid matching inside a sentence)
-        const isQuestionHeader = /^(Question|প্রশ্ন|Q\. |সৃজনশীল\s+প্রশ্ন)\s*[\d\u09E6-\u09EF\u0982]*/i.test(line) && line.length < 50;
+        // Updated: Strictly require digits to avoid matching "প্রশ্ন শুরু" etc.
+        const isQuestionHeader = /^(Question|প্রশ্ন|Q\.?|সৃজনশীল\s+প্রশ্ন)\s*[\d\u09E6-\u09EF\u0982]+/i.test(line) && line.length < 50;
         
         // Separator: "---"
         const isSeparator = /^---+$/.test(line);
         
         // Metadata Block Start: [Subject: ...]
-        // If we are already deep in a question (have parts/answers), a metadata block usually means a NEW question.
-        // If we are just starting (no stem/parts), it's just metadata for current.
-        const metadataRegex = /^(?:\[)?(Subject|Topic|Chapter|Lesson|Board|বিষয়|বিষয়|অধ্যায়|পাঠ|বোর্ড)[:ঃ]\s*([^\]\n]*?)(?:\])?$/i;
+        // Updated: Allow optional spaces around brackets and keys (e.g. [ Subject: ... ])
+        // Added alternative spelling for 'Chapter' (অধ্যায় vs অধ্যায়) to handle unicode differences
+        const metadataRegex = /^(?:\[)?\s*(Subject|Topic|Chapter|Lesson|Board|বিষয়|বিষয়|অধ্যায়|অধ্যায়|পাঠ|বোর্ড)\s*[:ঃ]\s*([^\]\n]*?)(?:\])?$/i;
         const isMetadataLine = metadataRegex.test(line);
         
         if (isSeparator) {
@@ -141,7 +142,7 @@ export const parseCQQuestions = (text, lang = 'en') => {
                 const value = match[2].trim();
                 const keyMap = {
                     'subject': 'subject', 'topic': 'subject', 'বিষয়': 'subject', 'বিষয়': 'subject',
-                    'chapter': 'chapter', 'অধ্যায়': 'chapter',
+                    'chapter': 'chapter', 'অধ্যায়': 'chapter', 'অধ্যায়': 'chapter',
                     'lesson': 'lesson', 'পাঠ': 'lesson',
                     'board': 'board', 'বোর্ড': 'board'
                 };
@@ -195,7 +196,16 @@ export const parseCQQuestions = (text, lang = 'en') => {
             state.inStimulusSection = false;
             state.inQuestionSection = false;
             state.inAnswerSection = true;
-            continue;
+            
+            // Check for inline content (e.g. "উত্তর: এখানে উত্তর")
+            const inlineContent = line.replace(/^উত্তর\s*[:ঃ]\s*/i, '').trim();
+            if (inlineContent) {
+                // Process as answer line
+                line = inlineContent; 
+                // Fall through to handle content
+            } else {
+                continue;
+            }
         }
 
         // Image placeholder detection
@@ -214,13 +224,21 @@ export const parseCQQuestions = (text, lang = 'en') => {
         }
 
         // Answer section detection
-        if (/^(answer|উত্তর|ans)\s*[:=]?\s*$/i.test(line)) {
+        // Updated: Allow inline content (remove $ anchor)
+        if (/^(answer|উত্তর|ans)\s*[:=ঃ]?/i.test(line) && !state.inAnswerSection) {
             state.inAnswerSection = true;
             if (!currentQuestion.questionText && state.questionTextLines.length > 0) {
                 currentQuestion.questionText = state.questionTextLines.join('\n').trim();
             }
             console.log(`    ✅ Found Answer section.`);
-            continue;
+            
+            // Handle inline content
+            const inlineContent = line.replace(/^(answer|উত্তর|ans)\s*[:=ঃ]?\s*/i, '').trim();
+            if (inlineContent) {
+                line = inlineContent;
+            } else {
+                continue;
+            }
         }
 
         // Handle content based on sections

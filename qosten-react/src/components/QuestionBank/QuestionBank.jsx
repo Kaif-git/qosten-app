@@ -9,10 +9,15 @@ import FullQuestionContent from '../FullQuestionContent/FullQuestionContent';
 const fixCorruptedMCQ = (text) => {
   if (!text) return null;
   
-  // Clean up prefix if present
-  let cleanText = text.replace(/^Question:\s*/i, '');
+  // Clean up prefixes
+  // Remove "Question:", "(N/A) MCQ:", and numbers like "1." if they appear at the very start weirdly
+  let cleanText = text
+    .replace(/^Question:\s*/i, '')
+    .replace(/^\(N\/A\)\s*MCQ:\s*/i, '')
+    .trim();
   
-  // Find where options start (assume options start with |a: or |A:)
+  // Find where options start
+  // Pattern: |a: or |A:
   const optionsStartIndex = cleanText.search(/\|[a-d]:/i);
   
   if (optionsStartIndex === -1) return null; // Not a corrupted format we recognize
@@ -28,13 +33,15 @@ const fixCorruptedMCQ = (text) => {
   let correctAnswer = null;
   
   parts.forEach(part => {
-    const match = part.match(/^([a-d]):\s*(.*)/i);
+    // Match option: a: val
+    const optMatch = part.match(/^([a-d]):\s*(.*)/i);
+    // Match answer: Ans: d or Ans:d
     const ansMatch = part.match(/^Ans:\s*([a-d])/i);
     
-    if (match) {
+    if (optMatch) {
       options.push({
-        label: match[1].toLowerCase(),
-        text: match[2].trim()
+        label: optMatch[1].toLowerCase(),
+        text: optMatch[2].trim()
       });
     } else if (ansMatch) {
       correctAnswer = ansMatch[1].toLowerCase();
@@ -139,14 +146,6 @@ export default function QuestionBank() {
   const filteredQuestionsSingle = getFilteredQuestions(questions, currentFilters, fullQuestionsMap, hasSearched);
   const filteredQuestionsLeft = getFilteredQuestions(questions, { ...currentFilters, ...leftFilters }, fullQuestionsMap, hasSearched);
   const filteredQuestionsRight = getFilteredQuestions(questions, { ...currentFilters, ...rightFilters }, fullQuestionsMap, hasSearched);
-  
-  // For selection actions, we need to know which set of questions we are operating on?
-  // No, selection actions operate on `selectedQuestions` IDs which are global.
-  // The list of "filtered questions" is just for display.
-  // However, "Select All" needs to know which list to select.
-  // In Split View, "Select All" is ambiguous. It should probably select all from BOTH lists? Or maybe we disable global "Select All" in split view?
-  // Or render a "Select All" button in each pane?
-  // For now, let's make global "Select All" select from the currently visible questions.
   
   const currentVisibleQuestions = isSplitView 
     ? [...new Set([...filteredQuestionsLeft, ...filteredQuestionsRight])] 
@@ -282,7 +281,6 @@ export default function QuestionBank() {
   };
 
   const findDuplicates = async () => {
-    const groups = [];
     const originalsMap = new Map();
     const potentialDuplicates = [];
 
@@ -361,12 +359,18 @@ export default function QuestionBank() {
         });
     });
 
+    // Create a local map for verification that includes current state + newly fetched
+    const verificationMap = new Map(fullQuestionsMap);
+
     if (idsToFetch.size > 0) {
         try {
             console.log(`Fetching ${idsToFetch.size} questions for strict duplicate check...`);
             const fetched = await fetchQuestionsByIds(Array.from(idsToFetch));
             
-            // Update local cache
+            // Update local verification map
+            fetched.forEach(q => verificationMap.set(q.id, q));
+
+            // Update local state cache
             setFullQuestionsMap(prev => {
                 const next = new Map(prev);
                 fetched.forEach(q => next.set(q.id, q));
@@ -383,34 +387,32 @@ export default function QuestionBank() {
     // 4. Strict Deep Equality Check
     const finalGroups = [];
     
-    // We need to access the updated map, but state update is async. 
-    // Ideally we should use the fetched data directly or wait.
-    // Since we just fetched, let's assume we can merge fetched into a temp map for this check
-    // Actually, fetchQuestionsByIds returns the data, so we can use that combined with existing state.
+    candidateGroups.forEach(group => {
+        const originalFull = verificationMap.get(group.original.id) || group.original;
+        const confirmedDuplicates = [];
+        
+        group.duplicates.forEach(dup => {
+            const dupFull = verificationMap.get(dup.id) || dup;
+            // Check if they are actually duplicates
+            if (areQuestionsDeeplyEqual(originalFull, dupFull)) {
+                confirmedDuplicates.push(dupFull);
+            }
+        });
+        
+        if (confirmedDuplicates.length > 0) {
+            finalGroups.push({
+                original: originalFull,
+                duplicates: confirmedDuplicates
+            });
+        }
+    });
     
-    // Re-construct a temporary map for this immediate check
-    const tempFullMap = new Map(fullQuestionsMap); 
-    // Note: state update won't be reflected in 'fullQuestionsMap' variable in this closure immediately
-    // unless we use the result of fetch.
-    // But fetchQuestionsByIds returns the *newly fetched* items.
-    // So we need to merge them.
-    // Wait, I updated state but 'fullQuestionsMap' here is the old closure value.
-    // I should perform the check using a fresh map combined from old + new.
-    
-    // But I can't easily get the 'fetched' result here because I didn't store it in a variable accessible 
-    // after the if block easily without refactoring.
-    
-    // Let's refactor slightly to be safe.
-    
-    // ... refactoring flow ...
-    // To solve closure stale state, I'll fetch again or restructure.
-    // Actually, I can just use the fetched array if I move it out.
-    
-    // Re-writing step 3 & 4 properly in the replacement string below.
-    // See the 'new_string' content.
-    
-    // ... (This comment is part of thought process, code is in new_string)
-    
+    if (finalGroups.length === 0) {
+        setIsSearching(false);
+        alert("No exact duplicates found after deep inspection.");
+        return;
+    }
+
     // 5. Finalize
     setDuplicateGroups(finalGroups);
     setShowDuplicateModal(true);

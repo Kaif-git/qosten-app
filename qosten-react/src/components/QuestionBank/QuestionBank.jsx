@@ -5,6 +5,52 @@ import SearchFilters from '../SearchFilters/SearchFilters';
 import QuestionCard from '../QuestionCard/QuestionCard';
 import FullQuestionContent from '../FullQuestionContent/FullQuestionContent';
 
+// Helper to fix corrupted MCQ format
+const fixCorruptedMCQ = (text) => {
+  if (!text) return null;
+  
+  // Clean up prefix if present
+  let cleanText = text.replace(/^Question:\s*/i, '');
+  
+  // Find where options start (assume options start with |a: or |A:)
+  const optionsStartIndex = cleanText.search(/\|[a-d]:/i);
+  
+  if (optionsStartIndex === -1) return null; // Not a corrupted format we recognize
+  
+  const questionText = cleanText.substring(0, optionsStartIndex).trim();
+  const remainder = cleanText.substring(optionsStartIndex);
+  
+  // Split remainder by |
+  // expected structure: |a:val|b:val|c:val|d:val|Ans:val
+  const parts = remainder.split('|').filter(p => p.trim());
+  
+  const options = [];
+  let correctAnswer = null;
+  
+  parts.forEach(part => {
+    const match = part.match(/^([a-d]):\s*(.*)/i);
+    const ansMatch = part.match(/^Ans:\s*([a-d])/i);
+    
+    if (match) {
+      options.push({
+        label: match[1].toLowerCase(),
+        text: match[2].trim()
+      });
+    } else if (ansMatch) {
+      correctAnswer = ansMatch[1].toLowerCase();
+    }
+  });
+  
+  // Only return if we actually extracted options
+  if (options.length === 0) return null;
+
+  return {
+    questionText,
+    options,
+    correctAnswer
+  };
+};
+
 const getFilteredQuestions = (questions, filters, fullQuestionsMap = null, hasSearched = false) => {
   return questions.filter(q => {
     const matchesSubject = filters.subject === 'none'
@@ -68,6 +114,7 @@ export default function QuestionBank() {
   const [fullQuestionsMap, setFullQuestionsMap] = useState(new Map());
   const [hasSearched, setHasSearched] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
+  const [isFixing, setIsFixing] = useState(false);
 
   // Split View State
   const [isSplitView, setIsSplitView] = useState(false);
@@ -135,6 +182,62 @@ export default function QuestionBank() {
         setRightFilters({ ...currentFilters });
     }
     setIsSplitView(!isSplitView);
+  };
+
+  const handleFixCorruptedMCQs = async () => {
+    if (!window.confirm("This will scan ALL displayed questions for corrupted MCQ formatting and attempt to fix them. Continue?")) return;
+    
+    setIsFixing(true);
+    let fixedCount = 0;
+    
+    try {
+      // 1. Identify candidates from CURRENT VIEW
+      const candidates = currentVisibleQuestions.filter(q => 
+        q.type === 'mcq' && 
+        (q.question || '').includes('|a:') && 
+        (!q.options || q.options.length === 0)
+      );
+
+      if (candidates.length === 0) {
+        alert("No corrupted MCQ candidates found in current view.");
+        setIsFixing(false);
+        return;
+      }
+
+      console.log(`Found ${candidates.length} candidates. Fetching full data...`);
+
+      // 2. Fetch full data for candidates
+      const idsToFetch = candidates.map(c => c.id);
+      const fullCandidates = await fetchQuestionsByIds(idsToFetch);
+      
+      // 3. Process and fix
+      for (const q of fullCandidates) {
+        // Use question field as source of truth for corrupted text if questionText is missing or same
+        const sourceText = q.question || q.questionText;
+        const fixedData = fixCorruptedMCQ(sourceText);
+        
+        if (fixedData) {
+            const updatedQuestion = {
+                ...q,
+                questionText: fixedData.questionText, // Clean question text
+                question: fixedData.questionText, // Update main field too to avoid re-matching
+                options: fixedData.options,
+                correctAnswer: fixedData.correctAnswer
+            };
+            
+            await updateQuestion(updatedQuestion);
+            fixedCount++;
+        }
+      }
+      
+      alert(`Successfully fixed ${fixedCount} corrupted MCQs out of ${candidates.length} candidates.`);
+      
+    } catch (error) {
+      console.error("Error fixing MCQs:", error);
+      alert("An error occurred while fixing MCQs.");
+    } finally {
+      setIsFixing(false);
+    }
   };
   
   const areQuestionsDeeplyEqual = (q1, q2) => {
@@ -993,6 +1096,23 @@ export default function QuestionBank() {
             }}
           >
             🔍 Duplicate Detector
+          </button>
+
+          <button
+            onClick={handleFixCorruptedMCQs}
+            disabled={isFixing}
+            style={{
+              backgroundColor: '#e67e22',
+              color: 'white',
+              padding: '10px 20px',
+              borderRadius: '6px',
+              border: 'none',
+              cursor: isFixing ? 'wait' : 'pointer',
+              fontWeight: '600',
+              marginRight: '10px'
+            }}
+          >
+            {isFixing ? '🛠 Fixing...' : '🛠 Fix Corrupted MCQs'}
           </button>
 
           <button 

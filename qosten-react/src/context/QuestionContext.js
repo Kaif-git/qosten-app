@@ -75,9 +75,43 @@ function questionReducer(state, action) {
 // Create context
 const QuestionContext = createContext();
 
+// Global memory cache to persist across component remounts during the session
+let memoryCache = {
+  questions: null,
+  timestamp: null,
+  expiresAt: null
+};
+
+const CACHE_KEY = 'qosten_questions_cache';
+const CACHE_TTL = 1000 * 60 * 60 * 24; // 24 hours
+
 // Context provider component
 export function QuestionProvider({ children }) {
   const [state, dispatch] = useReducer(questionReducer, initialState);
+
+  // Helper to save to both memory and persistent cache
+  const saveToCache = (questions) => {
+    const timestamp = Date.now();
+    const cacheData = {
+      questions,
+      timestamp,
+      count: questions.length
+    };
+    
+    // Update Memory Cache
+    memoryCache = {
+      questions,
+      timestamp,
+      expiresAt: timestamp + CACHE_TTL
+    };
+    
+    // Update Persistent Cache
+    try {
+      localStorage.setItem(CACHE_KEY, JSON.stringify(cacheData));
+    } catch (e) {
+      console.warn('Failed to save to localStorage cache:', e);
+    }
+  };
 
   // Actions
   const setQuestions = (questions) => {
@@ -140,6 +174,10 @@ export function QuestionProvider({ children }) {
         const newQuestion = mapDatabaseToApp(data[0]);
         dispatch({ type: ACTIONS.ADD_QUESTION, payload: newQuestion });
         console.log('Question added to database:', newQuestion.id);
+        
+        // Invalidate memory cache so next load fetches fresh data or we'd need to update it
+        memoryCache.questions = null; 
+        
         return newQuestion;
       }
     } catch (error) {
@@ -172,6 +210,9 @@ export function QuestionProvider({ children }) {
 
       dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
       console.log('Question updated in database:', question.id);
+      
+      // Invalidate memory cache
+      memoryCache.questions = null;
     } catch (error) {
       console.error('Error in updateQuestion:', error);
       throw error;
@@ -255,6 +296,9 @@ export function QuestionProvider({ children }) {
       
       console.log(`✅ Bulk update complete: ${successCount} succeeded, ${failedCount} failed`);
       
+      // Invalidate memory cache
+      memoryCache.questions = null;
+      
       return { successCount, failedCount };
     } catch (error) {
       console.error('Error in bulkUpdateQuestions:', error);
@@ -284,6 +328,9 @@ export function QuestionProvider({ children }) {
 
       dispatch({ type: ACTIONS.DELETE_QUESTION, payload: id });
       console.log('Question deleted from database:', id);
+      
+      // Invalidate memory cache
+      memoryCache.questions = null;
     } catch (error) {
       console.error('Error in deleteQuestion:', error);
       throw error;
@@ -325,7 +372,7 @@ export function QuestionProvider({ children }) {
       board: dbQuestion.board,
       language: dbQuestion.language || 'en',
       question: dbQuestion.question,
-      questionText: dbQuestion.question_text || dbQuestion.question,
+      questionText: dbQuestion.question_text, // Removed fallback to dbQuestion.question
       options: dbQuestion.options,
       correctAnswer: dbQuestion.correct_answer,
       answer: dbQuestion.answer,
@@ -343,21 +390,28 @@ export function QuestionProvider({ children }) {
 
   // Helper function to map app question to database format
   const mapAppToDatabase = (appQuestion) => {
-    // Ensure question field is never empty - it's used as a unique constraint key
-    // We create a unique representation based on the entire content
-    let questionField = (appQuestion.question || '').trim();
+    // Helper to strip serialization prefixes for clean indexing/storage
+    const cleanText = (text) => {
+      if (!text) return '';
+      return text
+        .replace(/^(MCQ|CQ|SQ|Question):\s*/i, '')
+        .split('|')[0] // Only take the text part if it was already serialized
+        .trim();
+    };
+
     const type = appQuestion.type || 'mcq';
+    let qText = cleanText(appQuestion.questionText || appQuestion.question || '');
+    let questionField = (appQuestion.question || '').trim();
     
     if (type === 'cq') {
       // For CQ, create a unique representation of the entire question + parts + answers
-      const stimulus = (appQuestion.questionText || appQuestion.question || '').trim();
+      const stimulus = qText;
       const partsContent = (appQuestion.parts || []).map(p => 
         `${p.letter || ''}:${(p.text || '').trim()}:${(p.answer || '').trim()}`
       ).sort().join('|');
       questionField = `CQ:${stimulus}|${partsContent}`;
     } else if (type === 'mcq') {
       // For MCQ, include question text + sorted options + correct answer
-      const qText = (appQuestion.questionText || appQuestion.question || '').trim();
       const options = (appQuestion.options || []).map(o => 
         `${o.label || ''}:${(o.text || '').trim()}`
       ).sort().join('|');
@@ -365,19 +419,12 @@ export function QuestionProvider({ children }) {
       questionField = `MCQ:${qText}|${options}|Ans:${correct}`;
     } else if (type === 'sq') {
       // For SQ, include question text + answer
-      const qText = (appQuestion.questionText || appQuestion.question || '').trim();
       const answer = (appQuestion.answer || '').trim();
       questionField = `SQ:${qText}|Ans:${answer}`;
-    } else if (!questionField && appQuestion.parts && appQuestion.parts.length > 0) {
-      // Fallback for other types with parts
-      questionField = appQuestion.parts[0].text || appQuestion.questionText || '';
-    } else if (!questionField) {
-      questionField = appQuestion.questionText || '';
     }
     
-    // If still empty, use a timestamp-based unique identifier to prevent duplicates
-    if (!questionField) {
-      console.warn('Warning: question field is empty, using fallback identifier');
+    // Final safety check for empty question field
+    if (!questionField || questionField === 'MCQ:' || questionField === 'CQ:' || questionField === 'SQ:') {
       questionField = `ID_${appQuestion.id || Date.now()}`;
     }
     
@@ -389,7 +436,7 @@ export function QuestionProvider({ children }) {
       board: appQuestion.board || 'N/A',
       language: appQuestion.language || 'en',
       question: questionField,
-      question_text: appQuestion.questionText || appQuestion.question,
+      question_text: qText, // Always use cleaned text for question_text column
       options: appQuestion.options,
       correct_answer: appQuestion.correctAnswer,
       answer: appQuestion.answer,
@@ -399,7 +446,6 @@ export function QuestionProvider({ children }) {
       answerimage2: appQuestion.answerimage2,
       explanation: appQuestion.explanation,
       tags: appQuestion.tags || [],
-      is_quizzable: appQuestion.isQuizzable !== undefined ? appQuestion.isQuizzable : true,
       is_flagged: appQuestion.isFlagged || false,
       synced: false
     };
@@ -416,23 +462,42 @@ export function QuestionProvider({ children }) {
   // Load questions from Supabase on mount
   useEffect(() => {
     const loadQuestionsFromDatabase = async () => {
-      if (!supabaseClient) {
-        console.warn('Supabase client not initialized. Falling back to localStorage.');
-        // Fallback to localStorage if Supabase is not configured
-        const savedQuestions = localStorage.getItem('questionBank');
-        if (savedQuestions) {
-          try {
-            const questions = JSON.parse(savedQuestions);
+      // 1. Try Memory Cache first (Instant)
+      if (memoryCache.questions) {
+        const age = Math.round((Date.now() - memoryCache.timestamp) / 1000);
+        console.log(`⚡ Memory cache HIT! ${memoryCache.questions.length} questions (age: ${age}s)`);
+        setQuestions(memoryCache.questions);
+        return;
+      }
+
+      // 2. Try Persistent Cache (localStorage)
+      const cached = localStorage.getItem(CACHE_KEY);
+      if (cached) {
+        try {
+          const { questions, timestamp } = JSON.parse(cached);
+          const age = Math.round((Date.now() - timestamp) / 1000);
+          
+          if (Date.now() - timestamp < CACHE_TTL) {
+            console.log(`💾 Persistent cache HIT! ${questions.length} questions (age: ${age}s)`);
+            // Update memory cache for next time
+            memoryCache = { questions, timestamp, expiresAt: timestamp + CACHE_TTL };
             setQuestions(questions);
-          } catch (error) {
-            console.error('Error parsing saved questions:', error);
+            return;
+          } else {
+            console.log('⏳ Persistent cache EXPIRED, fetching fresh data...');
           }
+        } catch (e) {
+          console.error('Error parsing cache:', e);
         }
+      }
+
+      if (!supabaseClient) {
+        console.warn('Supabase client not initialized.');
         return;
       }
 
       try {
-        console.log('Starting to fetch all questions from database...');
+        console.log('📡 Cache MISS. Starting to fetch all questions from database...');
         let allQuestions = [];
         let from = 0;
         const batchSize = 1000;
@@ -440,7 +505,7 @@ export function QuestionProvider({ children }) {
 
         // Fetch questions in batches to overcome the 1000 row limit
         while (hasMore) {
-          const { data, error, count } = await supabaseClient
+          const { data, error } = await supabaseClient
             .from('questions_duplicate')
             .select('id, type, subject, chapter, lesson, board, language, is_flagged, created_at, question', { count: 'exact' })
             .order('created_at', { ascending: false })
@@ -455,7 +520,6 @@ export function QuestionProvider({ children }) {
             allQuestions = [...allQuestions, ...data];
             console.log(`Fetched batch: ${data.length} questions (total so far: ${allQuestions.length})`);
             
-            // Check if there are more questions to fetch
             from += batchSize;
             hasMore = data.length === batchSize;
           } else {
@@ -466,9 +530,8 @@ export function QuestionProvider({ children }) {
         if (allQuestions.length > 0) {
           const mappedQuestions = allQuestions.map(mapDatabaseToApp);
           setQuestions(mappedQuestions);
-          console.log(`Successfully loaded ${mappedQuestions.length} questions from database`);
-        } else {
-          console.log('No questions found in database');
+          saveToCache(mappedQuestions); // Save to cache
+          console.log(`✅ Successfully loaded ${mappedQuestions.length} questions and updated cache`);
         }
       } catch (error) {
         console.error('Error loading questions:', error);
@@ -483,7 +546,7 @@ export function QuestionProvider({ children }) {
     if (!supabaseClient) return;
 
     try {
-      console.log('Manually refreshing questions from database...');
+      console.log('🔄 Manually refreshing questions (Bypassing cache)...');
       let allQuestions = [];
       let from = 0;
       const batchSize = 1000;
@@ -503,7 +566,6 @@ export function QuestionProvider({ children }) {
 
         if (data) {
           allQuestions = [...allQuestions, ...data];
-          console.log(`Fetched batch: ${data.length} questions (total so far: ${allQuestions.length})`);
           from += batchSize;
           hasMore = data.length === batchSize;
         } else {
@@ -514,7 +576,8 @@ export function QuestionProvider({ children }) {
       if (allQuestions.length > 0) {
         const mappedQuestions = allQuestions.map(mapDatabaseToApp);
         setQuestions(mappedQuestions);
-        console.log(`Successfully refreshed ${mappedQuestions.length} questions`);
+        saveToCache(mappedQuestions); // Update cache with fresh data
+        console.log(`✅ Successfully refreshed ${mappedQuestions.length} questions`);
       }
     } catch (error) {
       console.error('Error refreshing questions:', error);

@@ -114,6 +114,48 @@ const fixCorruptedMCQ = (text) => {
   return null;
 };
 
+// Helper to fix corrupted SQ format
+const fixCorruptedSQ = (text) => {
+  if (!text) return null;
+  
+  let cleanText = text.trim();
+  
+  // 1. Extract Board if present (e.g., "(Monipur High School and College, Dhaka)")
+  let board = '';
+  const boardMatch = cleanText.match(/^\(([^)]+)\)/);
+  if (boardMatch) {
+    board = boardMatch[1].trim();
+    cleanText = cleanText.replace(/^\([^)]+\)\s*/, '').trim();
+  }
+
+  // 2. Remove Prefixes
+  cleanText = cleanText
+    .replace(/^Question:\s*/i, '')
+    .replace(/^SQ:\s*/i, '')
+    .trim();
+
+  // 3. Split Question and Answer (e.g., "What is...?|Ans:Haji...")
+  if (cleanText.includes('|Ans:')) {
+    const parts = cleanText.split('|Ans:');
+    const questionText = parts[0].trim();
+    const answer = parts[1].trim();
+    
+    return { questionText, answer, board };
+  }
+  
+  // Bengali Support (সঠিক: or উত্তর:)
+  if (cleanText.includes('উত্তর:') || cleanText.includes('সঠিক:')) {
+    const marker = cleanText.includes('উত্তর:') ? 'উত্তর:' : 'সঠিক:';
+    const parts = cleanText.split(marker);
+    const questionText = parts[0].trim();
+    const answer = parts[1].trim();
+    
+    return { questionText, answer, board };
+  }
+
+  return null;
+};
+
 const getFilteredQuestions = (questions, filters, fullQuestionsMap = null, hasSearched = false) => {
   return questions.filter(q => {
     const matchesSubject = filters.subject === 'none'
@@ -180,14 +222,25 @@ export default function QuestionBank() {
   const [hasSearched, setHasSearched] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
   const [isFixing, setIsFixing] = useState(false);
+  const [showStats, setShowStats] = useState(true);
+  const [selectedCategories, setSelectedCategories] = useState([]); // [{type, key}]
+  const [lastSelectedCategory, setLastSelectedCategory] = useState(null); // {type, key}
   
   // CQ Fixing State
   const [showCQFixModal, setShowCQFixModal] = useState(false);
   const [cqFixCandidates, setCqFixCandidates] = useState([]);
 
+  // SQ Fixing State
+  const [showSQFixModal, setShowSQFixModal] = useState(false);
+  const [sqFixCandidates, setSqFixCandidates] = useState([]);
+
   // MCQ Fixing State
   const [showMCQFixModal, setShowMCQFixModal] = useState(false);
   const [mcqFixCandidates, setMcqFixCandidates] = useState([]);
+
+  // MCQ Sync State
+  const [showMCQSyncModal, setShowMCQSyncModal] = useState(false);
+  const [mcqSyncCandidates, setMcqSyncCandidates] = useState([]);
 
   // Unanswered MCQ State
   const [showUnansweredMCQModal, setShowUnansweredMCQModal] = useState(false);
@@ -224,6 +277,7 @@ export default function QuestionBank() {
   const toggleSelectionMode = () => {
     setSelectionMode(!selectionMode);
     setSelectedQuestions([]);
+    setSelectedCategories([]);
     setLastSelectedId(null);
   };
   
@@ -434,12 +488,87 @@ export default function QuestionBank() {
       console.error("Error detecting corrupted MCQs:", error);
       alert("An error occurred while scanning MCQs.");
     } finally {
-      setIsFixing(false);
-    }
-  };
-
-  const applyMCQFixes = async () => {
-      if (!window.confirm(`Are you sure you want to fix ${mcqFixCandidates.length} questions? This action cannot be undone.`)) return;
+              setIsFixing(false);
+          }
+        };
+      
+        const handleFixCorruptedSQs = async () => {
+          if (!window.confirm("This will scan all SQ questions in view for corrupted formatting (e.g., embedded answers and boards) and attempt to fix them. Continue?")) return;
+      
+          setIsFixing(true);
+          try {
+              const candidates = currentVisibleQuestions.filter(q => q.type === 'sq');
+              
+              if (candidates.length === 0) {
+                  alert("No SQ questions found in current view.");
+                  setIsFixing(false);
+                  return;
+              }
+      
+              const idsToFetch = candidates.map(c => c.id);
+              const fullCandidates = await fetchQuestionsByIds(idsToFetch);
+      
+              const fixableSQs = [];
+              for (const q of fullCandidates) {
+                  const sourceText = q.question || q.questionText;
+                  const fixedData = fixCorruptedSQ(sourceText);
+                  
+                  if (fixedData) {
+                      fixableSQs.push({
+                          original: q,
+                          fixed: {
+                              ...q,
+                              questionText: fixedData.questionText,
+                              question: fixedData.questionText, // Update main field
+                              answer: fixedData.answer,
+                              board: fixedData.board || q.board
+                          }
+                      });
+                  }
+              }
+      
+              if (fixableSQs.length === 0) {
+                  alert("No corrupted SQs detected.");
+              } else {
+                  setSqFixCandidates(fixableSQs);
+                  setShowSQFixModal(true);
+              }
+      
+          } catch (error) {
+              console.error("Error scanning SQs:", error);
+              alert("An error occurred while scanning.");
+          } finally {
+              setIsFixing(false);
+          }
+        };
+      
+        const applySQFixes = async () => {
+          if (!window.confirm(`Are you sure you want to fix ${sqFixCandidates.length} SQ questions?`)) return;
+      
+          setIsFixing(true);
+          try {
+              const updates = sqFixCandidates.map(item => item.fixed);
+              const result = await bulkUpdateQuestions(updates);
+              
+              alert(`Successfully fixed ${result.successCount} SQs!`);
+              setShowSQFixModal(false);
+              setSqFixCandidates([]);
+              
+              setFullQuestionsMap(prev => {
+                  const next = new Map(prev);
+                  sqFixCandidates.forEach(item => next.set(item.fixed.id, item.fixed));
+                  return next;
+              });
+      
+          } catch (error) {
+              console.error("Error applying SQ fixes:", error);
+              alert("An error occurred while applying fixes.");
+          } finally {
+              setIsFixing(false);
+          }
+        };
+      
+        const applyMCQFixes = async () => {      if (!window.confirm(`Are you sure you want to fix ${mcqFixCandidates.length} questions? This action cannot be undone.`)) return;
 
       setIsFixing(true);
 
@@ -465,6 +594,92 @@ export default function QuestionBank() {
       } finally {
           setIsFixing(false);
       }
+  };
+
+  const handleSyncMCQFields = async () => {
+    setIsFixing(true);
+    try {
+        // 1. Get MCQs from current view
+        const mcqs = currentVisibleQuestions.filter(q => q.type === 'mcq');
+        
+        if (mcqs.length === 0) {
+            alert("No MCQs found in current view.");
+            setIsFixing(false);
+            return;
+        }
+
+        console.log(`Scanning ${mcqs.length} MCQs for field sync...`);
+
+        // 2. Fetch full data
+        const idsToFetch = mcqs.map(m => m.id);
+        const fullMCQs = await fetchQuestionsByIds(idsToFetch);
+
+        // 3. Identify candidates where both are set
+        // In the app object: 
+        // questionText corresponds to db.question_text
+        // question corresponds to db.question
+        const candidates = [];
+        for (const q of fullMCQs) {
+            // Check if BOTH are present and non-empty
+            const hasQuestionText = q.questionText && q.questionText.trim() !== '';
+            const hasQuestion = q.question && q.question.trim() !== '';
+            
+            // The user wants to find those that have BOTH set
+            if (hasQuestionText && hasQuestion) {
+                // If they are different (or we just want to ensure sync), add to candidates
+                // We show the change from current 'question' to 'questionText'
+                candidates.push({
+                    original: q,
+                    fixed: {
+                        ...q,
+                        question: q.questionText // Overwrite question with questionText
+                    }
+                });
+            }
+        }
+
+        if (candidates.length === 0) {
+            alert("No MCQs found with both fields set.");
+        } else {
+            setMcqSyncCandidates(candidates);
+            setShowMCQSyncModal(true);
+        }
+
+    } catch (error) {
+        console.error("Error scanning MCQs for sync:", error);
+        alert("An error occurred while scanning.");
+    } finally {
+        setIsFixing(false);
+    }
+  };
+
+  const applyMCQSync = async () => {
+    if (!window.confirm(`Are you sure you want to sync fields for ${mcqSyncCandidates.length} questions? This will overwrite the "question" field with "question_text".`)) return;
+
+    setIsFixing(true);
+    try {
+        const updates = mcqSyncCandidates.map(item => item.fixed);
+        const result = await bulkUpdateQuestions(updates);
+        
+        alert(`Successfully synced ${result.successCount} MCQs!${result.failedCount > 0 ? ` (${result.failedCount} failed)` : ''}`);
+        setShowMCQSyncModal(false);
+        setMcqSyncCandidates([]);
+        
+        // Refresh full map with new data
+        setFullQuestionsMap(prev => {
+            const next = new Map(prev);
+            mcqSyncCandidates.forEach(item => {
+                next.set(item.fixed.id, item.fixed);
+            });
+            return next;
+        });
+
+    } catch (error) {
+        console.error("Error applying MCQ sync:", error);
+        alert("An error occurred while applying sync.");
+    } finally {
+        setIsFixing(false);
+    }
   };
 
   const handleFindUnansweredMCQs = async () => {
@@ -907,6 +1122,60 @@ export default function QuestionBank() {
     } catch (error) {
       console.error('Error unflagging questions:', error);
       alert('Error unflagging questions. Please try again.');
+    }
+  };
+
+  const handleSelectAllQuestionsInCategory = (category, value, event) => {
+    let categoriesToProcess = [{ type: category, key: value }];
+
+    // Handle Range Selection with Shift Key
+    if (event && event.shiftKey && lastSelectedCategory && lastSelectedCategory.type === category) {
+      // Get all unique values for this category from current visible questions, sorted
+      const allValues = [...new Set(currentVisibleQuestions
+        .map(q => q[category])
+        .filter(Boolean))]
+        .sort((a, b) => a.localeCompare(b));
+      
+      const startIdx = allValues.indexOf(lastSelectedCategory.key);
+      const endIdx = allValues.indexOf(value);
+
+      if (startIdx !== -1 && endIdx !== -1) {
+        const minIdx = Math.min(startIdx, endIdx);
+        const maxIdx = Math.max(startIdx, endIdx);
+        const rangeValues = allValues.slice(minIdx, maxIdx + 1);
+        
+        categoriesToProcess = rangeValues.map(v => ({ type: category, key: v }));
+      }
+    }
+
+    setLastSelectedCategory({ type: category, key: value });
+
+    // Determine all question IDs to be toggled/selected
+    const allMatchingIds = currentVisibleQuestions.filter(q => {
+      return categoriesToProcess.some(cat => q[cat.type] === cat.key);
+    }).map(q => q.id);
+
+    const isAlreadySelected = selectedCategories.some(cat => cat.type === category && cat.key === value);
+
+    // Toggle logic (only if single selection, or forced select if range)
+    if (categoriesToProcess.length === 1 && isAlreadySelected) {
+      // Unselect single
+      setSelectedQuestions(prev => prev.filter(id => !allMatchingIds.includes(id)));
+      setSelectedCategories(prev => prev.filter(cat => !(cat.type === category && cat.key === value)));
+    } else {
+      // Select range or single
+      if (!selectionMode) setSelectionMode(true);
+      
+      setSelectedQuestions(prev => [...new Set([...prev, ...allMatchingIds])]);
+      setSelectedCategories(prev => {
+        const newCats = [...prev];
+        categoriesToProcess.forEach(newCat => {
+          if (!newCats.some(c => c.type === newCat.type && c.key === newCat.key)) {
+            newCats.push(newCat);
+          }
+        });
+        return newCats;
+      });
     }
   };
 
@@ -1385,12 +1654,128 @@ export default function QuestionBank() {
                               </div>
                             </div>
                           ))}
-                        </div>          </div>
-        </div>
-      )}
-
-      {/* CQ Fix Confirmation Modal */}
-      {showCQFixModal && (
+                                    </div>
+                                  </div>
+                                </div>
+                              )}
+                        
+                              {/* SQ Fix Confirmation Modal */}
+                              {showSQFixModal && (
+                                <div style={{
+                                  position: 'fixed',
+                                  top: 0,
+                                  left: 0,
+                                  right: 0,
+                                  bottom: 0,
+                                  backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                                  display: 'flex',
+                                  justifyContent: 'center',
+                                  alignItems: 'center',
+                                  zIndex: 10000
+                                }}>
+                                  <div style={{
+                                    backgroundColor: 'white',
+                                    padding: '30px',
+                                    borderRadius: '10px',
+                                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                                    maxWidth: '900px',
+                                    width: '95%',
+                                    maxHeight: '90vh',
+                                    overflowY: 'auto',
+                                    display: 'flex',
+                                    flexDirection: 'column'
+                                  }}>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+                                      <h3 style={{ margin: 0, color: '#e67e22' }}>🛠 Fix Corrupted SQs</h3>
+                                      <div style={{ display: 'flex', gap: '10px' }}>
+                                        <button
+                                          onClick={applySQFixes}
+                                          style={{
+                                            backgroundColor: '#27ae60',
+                                            color: 'white',
+                                            border: 'none',
+                                            padding: '8px 16px',
+                                            borderRadius: '4px',
+                                            cursor: 'pointer',
+                                            fontWeight: 'bold'
+                                          }}
+                                        >
+                                          ✅ Fix All ({sqFixCandidates.length})
+                                        </button>
+                                        <button
+                                          onClick={() => setShowSQFixModal(false)}
+                                          style={{
+                                            backgroundColor: '#6c757d',
+                                            color: 'white',
+                                            border: 'none',
+                                            padding: '8px 16px',
+                                            borderRadius: '4px',
+                                            cursor: 'pointer'
+                                          }}
+                                        >
+                                          Close
+                                        </button>
+                                      </div>
+                                    </div>
+                        
+                                    <p style={{ color: '#666', marginBottom: '20px' }}>
+                                      Found <strong>{sqFixCandidates.length}</strong> SQ questions with corrupted text (e.g. embedded answers and board names).
+                                      Review the changes below before applying.
+                                    </p>
+                        
+                                    <div style={{ flex: 1, overflowY: 'auto' }}>
+                                      {sqFixCandidates.map((item, idx) => (
+                                        <div key={idx} style={{ 
+                                          border: '1px solid #ddd', 
+                                          borderRadius: '8px', 
+                                          marginBottom: '20px',
+                                          overflow: 'hidden',
+                                          backgroundColor: '#fdfdfd'
+                                        }}>
+                                          <div style={{ 
+                                            padding: '10px 15px', 
+                                            backgroundColor: '#eee', 
+                                            borderBottom: '1px solid #ddd',
+                                            fontWeight: 'bold',
+                                            fontSize: '0.9em'
+                                          }}>
+                                            Question ID: {item.original.id}
+                                          </div>
+                                          
+                                          <div style={{ display: 'flex', minHeight: '150px' }}>
+                                            {/* Before */}
+                                            <div style={{ flex: 1, padding: '15px', borderRight: '1px solid #eee' }}>
+                                              <strong style={{ display: 'block', color: '#c0392b', marginBottom: '5px' }}>Before (Corrupted):</strong>
+                                              <div style={{ whiteSpace: 'pre-wrap', fontFamily: 'monospace', fontSize: '12px', color: '#555' }}>
+                                                {item.original.question || item.original.questionText}
+                                              </div>
+                                              <div style={{ marginTop: '5px', fontSize: '11px', color: '#999' }}>Current Board: {item.original.board}</div>
+                                              <div style={{ marginTop: '5px', fontSize: '11px', color: '#999' }}>Current Answer: {item.original.answer}</div>
+                                            </div>
+                        
+                                            {/* After */}
+                                            <div style={{ flex: 1, padding: '15px', backgroundColor: '#e8f8f5' }}>
+                                              <strong style={{ display: 'block', color: '#27ae60', marginBottom: '5px' }}>After (Fixed):</strong>
+                                              <div style={{ whiteSpace: 'pre-wrap', fontFamily: 'monospace', fontSize: '12px', color: '#333' }}>
+                                                {item.fixed.question}
+                                              </div>
+                                              <div style={{ marginTop: '10px', fontSize: '12px' }}>
+                                                 <strong>Extracted Answer:</strong> {item.fixed.answer}
+                                              </div>
+                                              <div style={{ marginTop: '5px', fontSize: '12px' }}>
+                                                 <strong>Extracted Board:</strong> {item.fixed.board}
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      ))}
+                                    </div>
+                                  </div>
+                                </div>
+                              )}
+                        
+                              {/* CQ Fix Confirmation Modal */}
+                              {showCQFixModal && (
         <div style={{
           position: 'fixed',
           top: 0,
@@ -1621,6 +2006,113 @@ export default function QuestionBank() {
         </div>
       )}
 
+      {/* MCQ Field Sync Modal */}
+      {showMCQSyncModal && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          zIndex: 10000
+        }}>
+          <div style={{
+            backgroundColor: 'white',
+            padding: '30px',
+            borderRadius: '10px',
+            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+            maxWidth: '900px',
+            width: '95%',
+            maxHeight: '90vh',
+            overflowY: 'auto',
+            display: 'flex',
+            flexDirection: 'column'
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+              <h3 style={{ margin: 0, color: '#3498db' }}>🔄 Sync MCQ Question Fields</h3>
+              <div style={{ display: 'flex', gap: '10px' }}>
+                <button
+                  onClick={applyMCQSync}
+                  style={{
+                    backgroundColor: '#27ae60',
+                    color: 'white',
+                    border: 'none',
+                    padding: '8px 16px',
+                    borderRadius: '4px',
+                    cursor: 'pointer',
+                    fontWeight: 'bold'
+                  }}
+                >
+                  ✅ Sync All ({mcqSyncCandidates.length})
+                </button>
+                <button
+                  onClick={() => setShowMCQSyncModal(false)}
+                  style={{
+                    backgroundColor: '#6c757d',
+                    color: 'white',
+                    border: 'none',
+                    padding: '8px 16px',
+                    borderRadius: '4px',
+                    cursor: 'pointer'
+                  }}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+
+            <p style={{ color: '#666', marginBottom: '20px' }}>
+              Found <strong>{mcqSyncCandidates.length}</strong> MCQs with both <code>question_text</code> and <code>question</code> fields set.
+              This will overwrite the <code>question</code> field with content from <code>question_text</code>.
+            </p>
+
+            <div style={{ flex: 1, overflowY: 'auto' }}>
+              {mcqSyncCandidates.map((item, idx) => (
+                <div key={idx} style={{ 
+                  border: '1px solid #ddd', 
+                  borderRadius: '8px', 
+                  marginBottom: '20px',
+                  overflow: 'hidden',
+                  backgroundColor: '#fdfdfd'
+                }}>
+                  <div style={{ 
+                    padding: '10px 15px', 
+                    backgroundColor: '#eee', 
+                    borderBottom: '1px solid #ddd',
+                    fontWeight: 'bold',
+                    fontSize: '0.9em'
+                  }}>
+                    Question ID: {item.original.id}
+                  </div>
+                  
+                  <div style={{ display: 'flex', minHeight: '100px' }}>
+                    {/* Before (Current Question Column) */}
+                    <div style={{ flex: 1, padding: '15px', borderRight: '1px solid #eee' }}>
+                      <strong style={{ display: 'block', color: '#c0392b', marginBottom: '5px' }}>Current "question":</strong>
+                      <div style={{ whiteSpace: 'pre-wrap', fontFamily: 'monospace', fontSize: '12px', color: '#555' }}>
+                        {item.original.question}
+                      </div>
+                    </div>
+
+                    {/* After (Current Question Text Column) */}
+                    <div style={{ flex: 1, padding: '15px', backgroundColor: '#e8f8f5' }}>
+                      <strong style={{ display: 'block', color: '#27ae60', marginBottom: '5px' }}>New "question" (from "question_text"):</strong>
+                      <div style={{ whiteSpace: 'pre-wrap', fontFamily: 'monospace', fontSize: '12px', color: '#333' }}>
+                        {item.original.questionText}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Unanswered MCQ Detector Modal */}
       {showUnansweredMCQModal && (
         <div style={{
@@ -1791,6 +2283,23 @@ export default function QuestionBank() {
           </button>
 
           <button
+            onClick={handleSyncMCQFields}
+            disabled={isFixing}
+            style={{
+              backgroundColor: '#3498db',
+              color: 'white',
+              padding: '10px 20px',
+              borderRadius: '6px',
+              border: 'none',
+              cursor: isFixing ? 'wait' : 'pointer',
+              fontWeight: '600',
+              marginRight: '10px'
+            }}
+          >
+            {isFixing ? '🔄 Syncing...' : '🔄 Sync MCQ Fields'}
+          </button>
+
+          <button
             onClick={handleScanCorruptedCQs}
             disabled={isFixing}
             style={{
@@ -1805,6 +2314,23 @@ export default function QuestionBank() {
             }}
           >
             {isFixing ? '🛠 Fixing...' : '🛠 Fix Corrupted CQs'}
+          </button>
+
+          <button
+            onClick={handleFixCorruptedSQs}
+            disabled={isFixing}
+            style={{
+              backgroundColor: '#e67e22',
+              color: 'white',
+              padding: '10px 20px',
+              borderRadius: '6px',
+              border: 'none',
+              cursor: isFixing ? 'wait' : 'pointer',
+              fontWeight: '600',
+              marginRight: '10px'
+            }}
+          >
+            {isFixing ? '🛠 Fixing...' : '🛠 Fix Corrupted SQs'}
           </button>
 
           <button
@@ -1968,19 +2494,39 @@ export default function QuestionBank() {
                     {isSearching ? '⏳ Searching...' : '🔍 Search / Refresh Results'}
                 </button>
             </div>
-            <Statistics 
-                questions={filteredQuestionsSingle} 
-                onFilterSelect={(key, value) => {
-                    // Update global context filters
-                    // Since setFilters does a merge, this works perfectly for drill-down
-                    const filterKey = key === 'board' ? 'board' : 
-                                      key === 'subject' ? 'subject' : 
-                                      key === 'chapter' ? 'chapter' : 
-                                      key === 'lesson' ? 'lesson' : 
-                                      key === 'type' ? 'type' : key;
-                    setFilters({ [filterKey]: value });
-                }}
-            />
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+                <h3 style={{ margin: 0 }}>Statistics Breakdown</h3>
+                <button 
+                  onClick={() => setShowStats(!showStats)}
+                  style={{
+                    padding: '5px 10px',
+                    fontSize: '12px',
+                    backgroundColor: '#f8f9fa',
+                    border: '1px solid #ddd',
+                    borderRadius: '4px',
+                    cursor: 'pointer'
+                  }}
+                >
+                  {showStats ? 'Hide Stats' : 'Show Stats'}
+                </button>
+            </div>
+            {showStats && (
+              <Statistics 
+                  questions={filteredQuestionsSingle} 
+                  onFilterSelect={(key, value) => {
+                      // Update global context filters
+                      // Since setFilters does a merge, this works perfectly for drill-down
+                      const filterKey = key === 'board' ? 'board' : 
+                                        key === 'subject' ? 'subject' : 
+                                        key === 'chapter' ? 'chapter' : 
+                                        key === 'lesson' ? 'lesson' : 
+                                        key === 'type' ? 'type' : key;
+                      setFilters({ [filterKey]: value });
+                  }}
+                  onSelectAll={handleSelectAllQuestionsInCategory}
+                  selectedCategories={selectedCategories}
+              />
+            )}
             {renderQuestionList(filteredQuestionsSingle)}
           </>
       ) : (

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useQuestions } from '../../context/QuestionContext';
+import { useQuestions, cleanText } from '../../context/QuestionContext';
 import Statistics from '../Statistics/Statistics';
 import SearchFilters from '../SearchFilters/SearchFilters';
 import QuestionCard from '../QuestionCard/QuestionCard';
@@ -222,6 +222,8 @@ export default function QuestionBank() {
   const [hasSearched, setHasSearched] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
   const [isFixing, setIsFixing] = useState(false);
+  const [isAutoSyncing, setIsAutoSyncing] = useState(false);
+  const [syncProgress, setSyncProgress] = useState({ current: 0, total: 0 });
   const [showStats, setShowStats] = useState(true);
   const [selectedCategories, setSelectedCategories] = useState([]); // [{type, key}]
   const [lastSelectedCategory, setLastSelectedCategory] = useState(null); // {type, key}
@@ -241,6 +243,14 @@ export default function QuestionBank() {
   // MCQ Sync State
   const [showMCQSyncModal, setShowMCQSyncModal] = useState(false);
   const [mcqSyncCandidates, setMcqSyncCandidates] = useState([]);
+
+  // SQ Sync State
+  const [showSQSyncModal, setShowSQSyncModal] = useState(false);
+  const [sqSyncCandidates, setSqSyncCandidates] = useState([]);
+
+  // CQ Sync State
+  const [showCQSyncModal, setShowCQSyncModal] = useState(false);
+  const [cqSyncCandidates, setCqSyncCandidates] = useState([]);
 
   // Unanswered MCQ State
   const [showUnansweredMCQModal, setShowUnansweredMCQModal] = useState(false);
@@ -332,6 +342,144 @@ export default function QuestionBank() {
     setIsSplitView(!isSplitView);
   };
 
+  const handleSyncCQFields = async () => {
+    setIsFixing(true);
+    try {
+        console.log("🚀 Starting CQ Field Sync Scan...");
+        const cqs = currentVisibleQuestions.filter(q => q.type === 'cq');
+        
+        if (cqs.length === 0) {
+            alert("No CQs found in current view.");
+            setIsFixing(false);
+            return;
+        }
+
+        const idsToFetch = cqs.map(s => s.id);
+        const fullCQs = await fetchQuestionsByIds(idsToFetch);
+
+        const getCQAnswerStatus = (q) => {
+            // Check if any parts have answers
+            const partsWithAnswers = (q.parts || []).filter(p => p.answer && p.answer.trim() !== '' && p.answer !== 'N/A');
+            const hasFieldAnswer = partsWithAnswers.length > 0;
+            const textToSearch = (q.question || q.questionText || '');
+            const hasEmbeddedAnswer = textToSearch.includes('|Ans:') || 
+                                      textToSearch.includes('|a:') ||
+                                      textToSearch.includes('সঠিক:');
+            return {
+                hasAnswer: hasFieldAnswer || hasEmbeddedAnswer,
+                source: hasFieldAnswer ? `Field (${partsWithAnswers.length} parts)` : (hasEmbeddedAnswer ? 'Text' : 'Missing')
+            };
+        };
+
+        const candidates = [];
+        for (const q of fullCQs) {
+            const currentQText = (q.questionText || '').trim();
+            const currentQuestionCol = (q.question || '').trim();
+            
+            const needsSync = currentQText !== '' && currentQuestionCol !== currentQText;
+            
+            if (needsSync) {
+                candidates.push({
+                    original: { ...q },
+                    fixed: { ...q, question: q.questionText },
+                    originalAnswer: getCQAnswerStatus(q),
+                    fixedAnswer: getCQAnswerStatus({ ...q, question: q.questionText })
+                });
+            }
+        }
+
+        console.log(`✅ Found ${candidates.length} CQ candidates for sync`);
+
+        if (candidates.length === 0) {
+            alert("No CQs found that need syncing.");
+        } else {
+            setCqSyncCandidates(candidates);
+            setShowCQSyncModal(true);
+        }
+
+    } catch (error) {
+        console.error("❌ Error scanning CQs for sync:", error);
+        alert("An error occurred while scanning CQs.");
+    } finally {
+        setIsFixing(false);
+    }
+  };
+
+  const applyCQSync = async (batchLimit = null) => {
+    const candidatesToSync = batchLimit ? cqSyncCandidates.slice(0, batchLimit) : cqSyncCandidates;
+    const count = candidatesToSync.length;
+
+    if (count === 0) return;
+    if (!window.confirm(`Are you sure you want to sync fields for ${count} Creative Questions?`)) return;
+
+    setIsFixing(true);
+    try {
+        const updates = candidatesToSync.map(item => item.fixed);
+        const result = await bulkUpdateQuestions(updates);
+        
+        const syncedIds = new Set(candidatesToSync.map(item => item.original.id));
+        setCqSyncCandidates(prev => prev.filter(item => !syncedIds.has(item.original.id)));
+        
+        if (cqSyncCandidates.length <= count) {
+            setShowCQSyncModal(false);
+        }
+
+        setFullQuestionsMap(prev => {
+            const next = new Map(prev);
+            candidatesToSync.forEach(item => next.set(item.fixed.id, item.fixed));
+            return next;
+        });
+
+        alert(`Successfully synced ${result.successCount} CQs!`);
+    } catch (error) {
+        console.error("❌ Error applying CQ sync:", error);
+        alert("An error occurred while applying CQ sync.");
+    } finally {
+        setIsFixing(false);
+    }
+  };
+
+  const applyCQSyncAllBatched = async () => {
+    const totalCount = cqSyncCandidates.length;
+    if (totalCount === 0) return;
+    
+    if (!window.confirm(`Auto-sync all ${totalCount} CQs in batches of 100?`)) return;
+
+    setIsAutoSyncing(true);
+    setSyncProgress({ current: 0, total: totalCount });
+
+    try {
+        let currentCandidates = [...cqSyncCandidates];
+        while (currentCandidates.length > 0) {
+            const batch = currentCandidates.slice(0, 100);
+            const updates = batch.map(item => item.fixed);
+            
+            const result = await bulkUpdateQuestions(updates);
+            
+            const syncedIds = new Set(batch.map(item => item.original.id));
+            currentCandidates = currentCandidates.filter(item => !syncedIds.has(item.original.id));
+            
+            setCqSyncCandidates([...currentCandidates]);
+            setSyncProgress(prev => ({ ...prev, current: prev.current + batch.length }));
+
+            setFullQuestionsMap(prev => {
+                const next = new Map(prev);
+                batch.forEach(item => next.set(item.fixed.id, item.fixed));
+                return next;
+            });
+            await new Promise(resolve => setTimeout(resolve, 100));
+        }
+        alert("CQ Auto-sync complete!");
+        setShowCQSyncModal(false);
+    } catch (error) {
+        console.error("❌ Error during CQ auto-sync:", error);
+        alert("An error occurred during CQ auto-sync.");
+    } finally {
+        setIsAutoSyncing(false);
+        setSyncProgress({ current: 0, total: 0 });
+    }
+  };
+
   const handleScanCorruptedCQs = async () => {
     setIsFixing(true);
     try {
@@ -405,6 +553,142 @@ export default function QuestionBank() {
         alert("An error occurred while applying fixes.");
     } finally {
         setIsFixing(false);
+    }
+  };
+
+  const handleSyncSQFields = async () => {
+    setIsFixing(true);
+    try {
+        console.log("🚀 Starting SQ Field Sync Scan...");
+        const sqs = currentVisibleQuestions.filter(q => q.type === 'sq');
+        
+        if (sqs.length === 0) {
+            alert("No SQs found in current view.");
+            setIsFixing(false);
+            return;
+        }
+
+        const idsToFetch = sqs.map(s => s.id);
+        const fullSQs = await fetchQuestionsByIds(idsToFetch);
+
+        const getSQAnswerStatus = (q) => {
+            const hasFieldAnswer = q.answer && q.answer.trim() !== '' && q.answer !== 'N/A';
+            const textToSearch = (q.question || q.questionText || '');
+            const hasEmbeddedAnswer = textToSearch.includes('|Ans:') || 
+                                      textToSearch.includes('|Ans :') ||
+                                      textToSearch.includes('উত্তর:');
+            return {
+                hasAnswer: hasFieldAnswer || hasEmbeddedAnswer,
+                source: hasFieldAnswer ? 'Field' : (hasEmbeddedAnswer ? 'Text' : 'Missing')
+            };
+        };
+
+        const candidates = [];
+        for (const q of fullSQs) {
+            const currentQText = (q.questionText || '').trim();
+            const currentQuestionCol = (q.question || '').trim();
+            
+            const needsSync = currentQText !== '' && currentQuestionCol !== currentQText;
+            
+            if (needsSync) {
+                candidates.push({
+                    original: { ...q },
+                    fixed: { ...q, question: q.questionText },
+                    originalAnswer: getSQAnswerStatus(q),
+                    fixedAnswer: getSQAnswerStatus({ ...q, question: q.questionText })
+                });
+            }
+        }
+
+        console.log(`✅ Found ${candidates.length} SQ candidates for sync`);
+
+        if (candidates.length === 0) {
+            alert("No SQs found that need syncing.");
+        } else {
+            setSqSyncCandidates(candidates);
+            setShowSQSyncModal(true);
+        }
+
+    } catch (error) {
+        console.error("❌ Error scanning SQs for sync:", error);
+        alert("An error occurred while scanning SQs.");
+    } finally {
+        setIsFixing(false);
+    }
+  };
+
+  const applySQSync = async (batchLimit = null) => {
+    const candidatesToSync = batchLimit ? sqSyncCandidates.slice(0, batchLimit) : sqSyncCandidates;
+    const count = candidatesToSync.length;
+
+    if (count === 0) return;
+    if (!window.confirm(`Are you sure you want to sync fields for ${count} Short Questions?`)) return;
+
+    setIsFixing(true);
+    try {
+        const updates = candidatesToSync.map(item => item.fixed);
+        const result = await bulkUpdateQuestions(updates);
+        
+        const syncedIds = new Set(candidatesToSync.map(item => item.original.id));
+        setSqSyncCandidates(prev => prev.filter(item => !syncedIds.has(item.original.id)));
+        
+        if (sqSyncCandidates.length <= count) {
+            setShowSQSyncModal(false);
+        }
+
+        setFullQuestionsMap(prev => {
+            const next = new Map(prev);
+            candidatesToSync.forEach(item => next.set(item.fixed.id, item.fixed));
+            return next;
+        });
+
+        alert(`Successfully synced ${result.successCount} SQs!`);
+    } catch (error) {
+        console.error("❌ Error applying SQ sync:", error);
+        alert("An error occurred while applying SQ sync.");
+    } finally {
+        setIsFixing(false);
+    }
+  };
+
+  const applySQSyncAllBatched = async () => {
+    const totalCount = sqSyncCandidates.length;
+    if (totalCount === 0) return;
+    
+    if (!window.confirm(`Auto-sync all ${totalCount} SQs in batches of 100?`)) return;
+
+    setIsAutoSyncing(true);
+    setSyncProgress({ current: 0, total: totalCount });
+
+    try {
+        let currentCandidates = [...sqSyncCandidates];
+        while (currentCandidates.length > 0) {
+            const batch = currentCandidates.slice(0, 100);
+            const updates = batch.map(item => item.fixed);
+            
+            const result = await bulkUpdateQuestions(updates);
+            
+            const syncedIds = new Set(batch.map(item => item.original.id));
+            currentCandidates = currentCandidates.filter(item => !syncedIds.has(item.original.id));
+            
+            setSqSyncCandidates([...currentCandidates]);
+            setSyncProgress(prev => ({ ...prev, current: prev.current + batch.length }));
+
+            setFullQuestionsMap(prev => {
+                const next = new Map(prev);
+                batch.forEach(item => next.set(item.fixed.id, item.fixed));
+                return next;
+            });
+            await new Promise(resolve => setTimeout(resolve, 100));
+        }
+        alert("SQ Auto-sync complete!");
+        setShowSQSyncModal(false);
+    } catch (error) {
+        console.error("❌ Error during SQ auto-sync:", error);
+        alert("An error occurred during SQ auto-sync.");
+    } finally {
+        setIsAutoSyncing(false);
+        setSyncProgress({ current: 0, total: 0 });
     }
   };
 
@@ -596,89 +880,198 @@ export default function QuestionBank() {
       }
   };
 
-  const handleSyncMCQFields = async () => {
+  const handleSyncMCQFields = async (targetId = null) => {
     setIsFixing(true);
     try {
+        console.log("🚀 Starting MCQ Field Sync...");
         // 1. Get MCQs from current view
-        const mcqs = currentVisibleQuestions.filter(q => q.type === 'mcq');
+        let mcqs = currentVisibleQuestions.filter(q => q.type === 'mcq');
         
+        // Target specific ID if requested (for testing)
+        if (targetId) {
+            console.log(`🎯 Targeting specific ID: ${targetId}`);
+            mcqs = mcqs.filter(q => q.id === targetId || q.id.toString() === targetId.toString());
+        } else {
+            // If no ID provided, maybe we want to target a specific one for testing as requested by user
+            // Check if there is a query param or something? No, let's just use what we have.
+            console.log(`🔍 Scanning all ${mcqs.length} MCQs in view...`);
+        }
+
         if (mcqs.length === 0) {
-            alert("No MCQs found in current view.");
+            alert(targetId ? `Question with ID ${targetId} not found in current view.` : "No MCQs found in current view.");
             setIsFixing(false);
             return;
         }
 
-        console.log(`Scanning ${mcqs.length} MCQs for field sync...`);
-
         // 2. Fetch full data
         const idsToFetch = mcqs.map(m => m.id);
         const fullMCQs = await fetchQuestionsByIds(idsToFetch);
+        console.log(`📥 Fetched full data for ${fullMCQs.length} questions`);
 
-        // 3. Identify candidates where both are set
-        // In the app object: 
-        // questionText corresponds to db.question_text
-        // question corresponds to db.question
+        // 3. Identify candidates
         const candidates = [];
+        
+        // Helper to detect if an answer exists (either in field or embedded in text)
+        const getAnswerStatus = (q) => {
+            const hasFieldAnswer = q.correctAnswer && q.correctAnswer.trim() !== '' && q.correctAnswer !== 'N/A';
+            const textToSearch = (q.question || q.questionText || '');
+            const hasEmbeddedAnswer = textToSearch.includes('|Ans:') || 
+                                      textToSearch.includes('|Ans :') ||
+                                      textToSearch.includes('সঠিক:') ||
+                                      textToSearch.includes('উত্তর:');
+            return {
+                hasAnswer: hasFieldAnswer || hasEmbeddedAnswer,
+                source: hasFieldAnswer ? 'Field' : (hasEmbeddedAnswer ? 'Text' : 'Missing'),
+                value: hasFieldAnswer ? q.correctAnswer : '?'
+            };
+        };
+
         for (const q of fullMCQs) {
-            // Check if BOTH are present and non-empty
             const hasQuestionText = q.questionText && q.questionText.trim() !== '';
             const hasQuestion = q.question && q.question.trim() !== '';
             
-            // The user wants to find those that have BOTH set
-            if (hasQuestionText && hasQuestion) {
-                // If they are different (or we just want to ensure sync), add to candidates
-                // We show the change from current 'question' to 'questionText'
+            const currentQText = hasQuestionText ? q.questionText.trim() : '';
+            const currentQuestionCol = hasQuestion ? q.question.trim() : '';
+            
+            // Sync is needed if the "question" column does not exactly match "question_text"
+            const needsSync = hasQuestionText && (currentQuestionCol !== currentQText);
+            
+            if (needsSync || targetId) {
+                const originalStatus = getAnswerStatus(q);
+                // The "fixed" version will have the question text from questionText
+                const fixedObj = { ...q, question: q.questionText };
+                const fixedStatus = getAnswerStatus(fixedObj);
+
                 candidates.push({
-                    original: q,
-                    fixed: {
-                        ...q,
-                        question: q.questionText // Overwrite question with questionText
-                    }
+                    original: { ...q },
+                    fixed: fixedObj,
+                    originalAnswer: originalStatus,
+                    fixedAnswer: fixedStatus,
+                    reason: needsSync ? "Column mismatch" : "Targeted sync"
                 });
             }
         }
 
+        console.log(`✅ Found ${candidates.length} candidates for sync`);
+
         if (candidates.length === 0) {
-            alert("No MCQs found with both fields set.");
+            if (window.confirm("No sync issues detected automatically. Would you like to see the first 10 MCQs anyway for manual selection?")) {
+                const sample = fullMCQs.slice(0, 10).map(q => ({
+                    original: { ...q },
+                    fixed: { ...q, question: q.questionText },
+                    reason: "Manual inspection sample"
+                }));
+                setMcqSyncCandidates(sample);
+                setShowMCQSyncModal(true);
+            }
         } else {
             setMcqSyncCandidates(candidates);
             setShowMCQSyncModal(true);
         }
 
     } catch (error) {
-        console.error("Error scanning MCQs for sync:", error);
+        console.error("❌ Error scanning MCQs for sync:", error);
         alert("An error occurred while scanning.");
     } finally {
         setIsFixing(false);
     }
   };
 
-  const applyMCQSync = async () => {
-    if (!window.confirm(`Are you sure you want to sync fields for ${mcqSyncCandidates.length} questions? This will overwrite the "question" field with "question_text".`)) return;
+  const applyMCQSync = async (batchLimit = null) => {
+    const candidatesToSync = batchLimit ? mcqSyncCandidates.slice(0, batchLimit) : mcqSyncCandidates;
+    const count = candidatesToSync.length;
+
+    if (count === 0) return;
+    if (!window.confirm(`Are you sure you want to sync fields for ${count} questions? This will overwrite the "question" field with "question_text".`)) return;
 
     setIsFixing(true);
+    console.log(`📤 Applying MCQ sync to ${count} questions...`);
     try {
-        const updates = mcqSyncCandidates.map(item => item.fixed);
+        const updates = candidatesToSync.map(item => item.fixed);
         const result = await bulkUpdateQuestions(updates);
+        console.log("📥 Sync result:", result);
         
         alert(`Successfully synced ${result.successCount} MCQs!${result.failedCount > 0 ? ` (${result.failedCount} failed)` : ''}`);
-        setShowMCQSyncModal(false);
-        setMcqSyncCandidates([]);
+        
+        // Remove ONLY the synced items from the candidates list
+        const syncedIds = new Set(candidatesToSync.map(item => item.original.id));
+        setMcqSyncCandidates(prev => prev.filter(item => !syncedIds.has(item.original.id)));
+        
+        if (mcqSyncCandidates.length <= count) {
+            setShowMCQSyncModal(false);
+        }
         
         // Refresh full map with new data
         setFullQuestionsMap(prev => {
             const next = new Map(prev);
-            mcqSyncCandidates.forEach(item => {
+            candidatesToSync.forEach(item => {
                 next.set(item.fixed.id, item.fixed);
             });
             return next;
         });
 
     } catch (error) {
-        console.error("Error applying MCQ sync:", error);
+        console.error("❌ Error applying MCQ sync:", error);
         alert("An error occurred while applying sync.");
     } finally {
         setIsFixing(false);
+    }
+  };
+
+  const applyMCQSyncAllBatched = async () => {
+    const totalCount = mcqSyncCandidates.length;
+    if (totalCount === 0) return;
+    
+    if (!window.confirm(`Are you sure you want to automatically sync all ${totalCount} questions in batches of 100?`)) return;
+
+    setIsAutoSyncing(true);
+    setSyncProgress({ current: 0, total: totalCount });
+
+    try {
+        let currentCandidates = [...mcqSyncCandidates];
+        let totalSuccess = 0;
+        let totalFailed = 0;
+
+        while (currentCandidates.length > 0) {
+            const batch = currentCandidates.slice(0, 100);
+            const updates = batch.map(item => item.fixed);
+            
+            console.log(`🚀 Auto-Syncing batch of ${batch.length} (Remaining: ${currentCandidates.length})...`);
+            const result = await bulkUpdateQuestions(updates);
+            
+            totalSuccess += result.successCount;
+            totalFailed += result.failedCount;
+
+            // Remove synced items
+            const syncedIds = new Set(batch.map(item => item.original.id));
+            currentCandidates = currentCandidates.filter(item => !syncedIds.has(item.original.id));
+            
+            // Update UI state
+            setMcqSyncCandidates([...currentCandidates]);
+            setSyncProgress(prev => ({ ...prev, current: prev.current + batch.length }));
+
+            // Refresh full map
+            setFullQuestionsMap(prev => {
+                const next = new Map(prev);
+                batch.forEach(item => {
+                    next.set(item.fixed.id, item.fixed);
+                });
+                return next;
+            });
+
+            // Brief pause to allow UI to breathe
+            await new Promise(resolve => setTimeout(resolve, 100));
+        }
+
+        alert(`Auto-sync complete!\nTotal Success: ${totalSuccess}\nTotal Failed: ${totalFailed}`);
+        setShowMCQSyncModal(false);
+
+    } catch (error) {
+        console.error("❌ Error during auto-sync:", error);
+        alert("An error occurred during auto-sync. Progress saved up to last successful batch.");
+    } finally {
+        setIsAutoSyncing(false);
+        setSyncProgress({ current: 0, total: 0 });
     }
   };
 
@@ -2020,6 +2413,7 @@ export default function QuestionBank() {
           alignItems: 'center',
           zIndex: 10000
         }}>
+          {/* ... existing MCQ modal content ... */}
           <div style={{
             backgroundColor: 'white',
             padding: '30px',
@@ -2036,14 +2430,30 @@ export default function QuestionBank() {
               <h3 style={{ margin: 0, color: '#3498db' }}>🔄 Sync MCQ Question Fields</h3>
               <div style={{ display: 'flex', gap: '10px' }}>
                 <button
-                  onClick={applyMCQSync}
+                  onClick={applyMCQSyncAllBatched}
+                  disabled={isAutoSyncing || isFixing}
+                  style={{
+                    backgroundColor: '#e67e22',
+                    color: 'white',
+                    border: 'none',
+                    padding: '8px 16px',
+                    borderRadius: '4px',
+                    cursor: (isAutoSyncing || isFixing) ? 'wait' : 'pointer',
+                    fontWeight: 'bold'
+                  }}
+                >
+                  {isAutoSyncing ? '🚀 Auto-Syncing...' : '🚀 Auto-Sync All (100/batch)'}
+                </button>
+                <button
+                  onClick={() => applyMCQSync()}
+                  disabled={isAutoSyncing || isFixing}
                   style={{
                     backgroundColor: '#27ae60',
                     color: 'white',
                     border: 'none',
                     padding: '8px 16px',
                     borderRadius: '4px',
-                    cursor: 'pointer',
+                    cursor: (isAutoSyncing || isFixing) ? 'wait' : 'pointer',
                     fontWeight: 'bold'
                   }}
                 >
@@ -2051,19 +2461,37 @@ export default function QuestionBank() {
                 </button>
                 <button
                   onClick={() => setShowMCQSyncModal(false)}
+                  disabled={isAutoSyncing}
                   style={{
                     backgroundColor: '#6c757d',
                     color: 'white',
                     border: 'none',
                     padding: '8px 16px',
                     borderRadius: '4px',
-                    cursor: 'pointer'
+                    cursor: isAutoSyncing ? 'not-allowed' : 'pointer'
                   }}
                 >
                   Close
                 </button>
               </div>
             </div>
+
+            {isAutoSyncing && (
+                <div style={{ marginBottom: '20px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', marginBottom: '5px' }}>
+                        <span>Progress: {syncProgress.current} / {syncProgress.total}</span>
+                        <span>{Math.round((syncProgress.current / syncProgress.total) * 100)}%</span>
+                    </div>
+                    <div style={{ width: '100%', height: '10px', backgroundColor: '#eee', borderRadius: '5px', overflow: 'hidden' }}>
+                        <div style={{ 
+                            width: `${(syncProgress.current / syncProgress.total) * 100}%`, 
+                            height: '100%', 
+                            backgroundColor: '#3498db',
+                            transition: 'width 0.3s ease'
+                        }} />
+                    </div>
+                </div>
+            )}
 
             <p style={{ color: '#666', marginBottom: '20px' }}>
               Found <strong>{mcqSyncCandidates.length}</strong> MCQs with both <code>question_text</code> and <code>question</code> fields set.
@@ -2084,15 +2512,72 @@ export default function QuestionBank() {
                     backgroundColor: '#eee', 
                     borderBottom: '1px solid #ddd',
                     fontWeight: 'bold',
-                    fontSize: '0.9em'
+                    fontSize: '0.9em',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center'
                   }}>
-                    Question ID: {item.original.id}
+                    <span>Question ID: {item.original.id}</span>
+                    <button
+                      onClick={async () => {
+                        setIsFixing(true);
+                        try {
+                          console.log(`📤 Applying MCQ sync to single question ID ${item.fixed.id}...`);
+                          const result = await bulkUpdateQuestions([item.fixed]);
+                          console.log("📥 Sync result:", result);
+                          
+                          if (result.successCount > 0) {
+                            alert(`Successfully synced MCQ ID ${item.fixed.id}!`);
+                            // Remove from candidates
+                            setMcqSyncCandidates(prev => prev.filter(c => c.original.id !== item.original.id));
+                            
+                            // Refresh full map
+                            setFullQuestionsMap(prev => {
+                                const next = new Map(prev);
+                                next.set(item.fixed.id, item.fixed);
+                                return next;
+                            });
+                          } else {
+                            alert("Sync failed for this question.");
+                          }
+                        } catch (err) {
+                          console.error("Error syncing question:", err);
+                          alert("Error syncing question.");
+                        } finally {
+                          setIsFixing(false);
+                        }
+                      }}
+                      disabled={isFixing}
+                      style={{
+                        backgroundColor: '#3498db',
+                        color: 'white',
+                        border: 'none',
+                        padding: '4px 8px',
+                        borderRadius: '4px',
+                        cursor: 'pointer',
+                        fontSize: '11px'
+                      }}
+                    >
+                      {isFixing ? 'Syncing...' : 'Sync This Question'}
+                    </button>
                   </div>
                   
                   <div style={{ display: 'flex', minHeight: '100px' }}>
                     {/* Before (Current Question Column) */}
                     <div style={{ flex: 1, padding: '15px', borderRight: '1px solid #eee' }}>
-                      <strong style={{ display: 'block', color: '#c0392b', marginBottom: '5px' }}>Current "question":</strong>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '5px' }}>
+                        <strong style={{ color: '#c0392b' }}>Current "question":</strong>
+                        <span style={{ 
+                            fontSize: '10px', 
+                            padding: '2px 6px', 
+                            borderRadius: '10px', 
+                            backgroundColor: item.originalAnswer.hasAnswer ? '#e8f8f5' : '#f9ebea',
+                            color: item.originalAnswer.hasAnswer ? '#27ae60' : '#c0392b',
+                            fontWeight: 'bold'
+                        }}>
+                           {item.originalAnswer.hasAnswer ? `✓ Ans (${item.originalAnswer.source})` : '✗ No Ans'}
+                        </span>
+                      </div>
                       <div style={{ whiteSpace: 'pre-wrap', fontFamily: 'monospace', fontSize: '12px', color: '#555' }}>
                         {item.original.question}
                       </div>
@@ -2100,7 +2585,418 @@ export default function QuestionBank() {
 
                     {/* After (Current Question Text Column) */}
                     <div style={{ flex: 1, padding: '15px', backgroundColor: '#e8f8f5' }}>
-                      <strong style={{ display: 'block', color: '#27ae60', marginBottom: '5px' }}>New "question" (from "question_text"):</strong>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '5px' }}>
+                        <strong style={{ color: '#27ae60' }}>New "question":</strong>
+                        <span style={{ 
+                            fontSize: '10px', 
+                            padding: '2px 6px', 
+                            borderRadius: '10px', 
+                            backgroundColor: item.fixedAnswer.hasAnswer ? '#e8f8f5' : '#f9ebea',
+                            color: item.fixedAnswer.hasAnswer ? '#27ae60' : '#c0392b',
+                            fontWeight: 'bold'
+                        }}>
+                           {item.fixedAnswer.hasAnswer ? `✓ Ans (${item.fixedAnswer.source})` : '✗ No Ans'}
+                        </span>
+                      </div>
+                      <div style={{ whiteSpace: 'pre-wrap', fontFamily: 'monospace', fontSize: '12px', color: '#333' }}>
+                        {item.original.questionText}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* SQ Field Sync Modal */}
+      {showSQSyncModal && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          zIndex: 10000
+        }}>
+          {/* ... Content previously added for SQ ... */}
+          <div style={{
+            backgroundColor: 'white',
+            padding: '30px',
+            borderRadius: '10px',
+            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+            maxWidth: '900px',
+            width: '95%',
+            maxHeight: '90vh',
+            overflowY: 'auto',
+            display: 'flex',
+            flexDirection: 'column'
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+              <h3 style={{ margin: 0, color: '#9b59b6' }}>🔄 Sync SQ Question Fields</h3>
+              <div style={{ display: 'flex', gap: '10px' }}>
+                <button
+                  onClick={applySQSyncAllBatched}
+                  disabled={isAutoSyncing || isFixing}
+                  style={{
+                    backgroundColor: '#e67e22',
+                    color: 'white',
+                    border: 'none',
+                    padding: '8px 16px',
+                    borderRadius: '4px',
+                    cursor: (isAutoSyncing || isFixing) ? 'wait' : 'pointer',
+                    fontWeight: 'bold'
+                  }}
+                >
+                  {isAutoSyncing ? '🚀 Auto-Syncing...' : '🚀 Auto-Sync All (100/batch)'}
+                </button>
+                <button
+                  onClick={() => applySQSync()}
+                  disabled={isAutoSyncing || isFixing}
+                  style={{
+                    backgroundColor: '#27ae60',
+                    color: 'white',
+                    border: 'none',
+                    padding: '8px 16px',
+                    borderRadius: '4px',
+                    cursor: (isAutoSyncing || isFixing) ? 'wait' : 'pointer',
+                    fontWeight: 'bold'
+                  }}
+                >
+                  ✅ Sync All ({sqSyncCandidates.length})
+                </button>
+                <button
+                  onClick={() => setShowSQSyncModal(false)}
+                  disabled={isAutoSyncing}
+                  style={{
+                    backgroundColor: '#6c757d',
+                    color: 'white',
+                    border: 'none',
+                    padding: '8px 16px',
+                    borderRadius: '4px',
+                    cursor: isAutoSyncing ? 'not-allowed' : 'pointer'
+                  }}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+
+            {isAutoSyncing && (
+                <div style={{ marginBottom: '20px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', marginBottom: '5px' }}>
+                        <span>Progress: {syncProgress.current} / {syncProgress.total}</span>
+                        <span>{Math.round((syncProgress.current / syncProgress.total) * 100)}%</span>
+                    </div>
+                    <div style={{ width: '100%', height: '10px', backgroundColor: '#eee', borderRadius: '5px', overflow: 'hidden' }}>
+                        <div style={{ 
+                            width: `${(syncProgress.current / syncProgress.total) * 100}%`, 
+                            height: '100%', 
+                            backgroundColor: '#9b59b6',
+                            transition: 'width 0.3s ease'
+                        }} />
+                    </div>
+                </div>
+            )}
+
+            <p style={{ color: '#666', marginBottom: '20px' }}>
+              Found <strong>{sqSyncCandidates.length}</strong> Short Questions where <code>question</code> column does not match <code>question_text</code>.
+            </p>
+
+            <div style={{ flex: 1, overflowY: 'auto' }}>
+              {sqSyncCandidates.map((item, idx) => (
+                <div key={idx} style={{ 
+                  border: '1px solid #ddd', 
+                  borderRadius: '8px', 
+                  marginBottom: '20px',
+                  overflow: 'hidden',
+                  backgroundColor: '#fdfdfd'
+                }}>
+                  <div style={{ 
+                    padding: '10px 15px', 
+                    backgroundColor: '#eee', 
+                    borderBottom: '1px solid #ddd',
+                    fontWeight: 'bold',
+                    fontSize: '0.9em',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center'
+                  }}>
+                    <span>Question ID: {item.original.id}</span>
+                    <button
+                      onClick={async () => {
+                        setIsFixing(true);
+                        try {
+                          const result = await bulkUpdateQuestions([item.fixed]);
+                          if (result.successCount > 0) {
+                            alert(`Synced SQ ID ${item.fixed.id}!`);
+                            setSqSyncCandidates(prev => prev.filter(c => c.original.id !== item.original.id));
+                            setFullQuestionsMap(prev => {
+                                const next = new Map(prev);
+                                next.set(item.fixed.id, item.fixed);
+                                return next;
+                            });
+                          }
+                        } catch (err) {
+                          console.error(err);
+                          alert("Error syncing SQ.");
+                        } finally {
+                          setIsFixing(false);
+                        }
+                      }}
+                      disabled={isFixing}
+                      style={{
+                        backgroundColor: '#3498db',
+                        color: 'white',
+                        border: 'none',
+                        padding: '4px 8px',
+                        borderRadius: '4px',
+                        cursor: 'pointer',
+                        fontSize: '11px'
+                      }}
+                    >
+                      {isFixing ? 'Syncing...' : 'Sync This SQ'}
+                    </button>
+                  </div>
+                  
+                  <div style={{ display: 'flex', minHeight: '100px' }}>
+                    <div style={{ flex: 1, padding: '15px', borderRight: '1px solid #eee' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '5px' }}>
+                        <strong style={{ color: '#c0392b' }}>Current "question":</strong>
+                        <span style={{ 
+                            fontSize: '10px', 
+                            padding: '2px 6px', 
+                            borderRadius: '10px', 
+                            backgroundColor: item.originalAnswer.hasAnswer ? '#e8f8f5' : '#f9ebea',
+                            color: item.originalAnswer.hasAnswer ? '#27ae60' : '#c0392b',
+                            fontWeight: 'bold'
+                        }}>
+                           {item.originalAnswer.hasAnswer ? `✓ Ans (${item.originalAnswer.source})` : '✗ No Ans'}
+                        </span>
+                      </div>
+                      <div style={{ whiteSpace: 'pre-wrap', fontFamily: 'monospace', fontSize: '12px', color: '#555' }}>
+                        {item.original.question}
+                      </div>
+                    </div>
+
+                    <div style={{ flex: 1, padding: '15px', backgroundColor: '#f5eef8' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '5px' }}>
+                        <strong style={{ color: '#8e44ad' }}>New "question":</strong>
+                        <span style={{ 
+                            fontSize: '10px', 
+                            padding: '2px 6px', 
+                            borderRadius: '10px', 
+                            backgroundColor: item.fixedAnswer.hasAnswer ? '#e8f8f5' : '#f9ebea',
+                            color: item.fixedAnswer.hasAnswer ? '#27ae60' : '#c0392b',
+                            fontWeight: 'bold'
+                        }}>
+                           {item.fixedAnswer.hasAnswer ? `✓ Ans (${item.fixedAnswer.source})` : '✗ No Ans'}
+                        </span>
+                      </div>
+                      <div style={{ whiteSpace: 'pre-wrap', fontFamily: 'monospace', fontSize: '12px', color: '#333' }}>
+                        {item.original.questionText}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* CQ Field Sync Modal */}
+      {showCQSyncModal && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          zIndex: 10000
+        }}>
+          <div style={{
+            backgroundColor: 'white',
+            padding: '30px',
+            borderRadius: '10px',
+            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+            maxWidth: '900px',
+            width: '95%',
+            maxHeight: '90vh',
+            overflowY: 'auto',
+            display: 'flex',
+            flexDirection: 'column'
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+              <h3 style={{ margin: 0, color: '#e74c3c' }}>🔄 Sync CQ Question Fields</h3>
+              <div style={{ display: 'flex', gap: '10px' }}>
+                <button
+                  onClick={applyCQSyncAllBatched}
+                  disabled={isAutoSyncing || isFixing}
+                  style={{
+                    backgroundColor: '#e67e22',
+                    color: 'white',
+                    border: 'none',
+                    padding: '8px 16px',
+                    borderRadius: '4px',
+                    cursor: (isAutoSyncing || isFixing) ? 'wait' : 'pointer',
+                    fontWeight: 'bold'
+                  }}
+                >
+                  {isAutoSyncing ? '🚀 Auto-Syncing...' : '🚀 Auto-Sync All (100/batch)'}
+                </button>
+                <button
+                  onClick={() => applyCQSync()}
+                  disabled={isAutoSyncing || isFixing}
+                  style={{
+                    backgroundColor: '#27ae60',
+                    color: 'white',
+                    border: 'none',
+                    padding: '8px 16px',
+                    borderRadius: '4px',
+                    cursor: (isAutoSyncing || isFixing) ? 'wait' : 'pointer',
+                    fontWeight: 'bold'
+                  }}
+                >
+                  ✅ Sync All ({cqSyncCandidates.length})
+                </button>
+                <button
+                  onClick={() => setShowCQSyncModal(false)}
+                  disabled={isAutoSyncing}
+                  style={{
+                    backgroundColor: '#6c757d',
+                    color: 'white',
+                    border: 'none',
+                    padding: '8px 16px',
+                    borderRadius: '4px',
+                    cursor: isAutoSyncing ? 'not-allowed' : 'pointer'
+                  }}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+
+            {isAutoSyncing && (
+                <div style={{ marginBottom: '20px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', marginBottom: '5px' }}>
+                        <span>Progress: {syncProgress.current} / {syncProgress.total}</span>
+                        <span>{Math.round((syncProgress.current / syncProgress.total) * 100)}%</span>
+                    </div>
+                    <div style={{ width: '100%', height: '10px', backgroundColor: '#eee', borderRadius: '5px', overflow: 'hidden' }}>
+                        <div style={{ 
+                            width: `${(syncProgress.current / syncProgress.total) * 100}%`, 
+                            height: '100%', 
+                            backgroundColor: '#e74c3c',
+                            transition: 'width 0.3s ease'
+                        }} />
+                    </div>
+                </div>
+            )}
+
+            <p style={{ color: '#666', marginBottom: '20px' }}>
+              Found <strong>{cqSyncCandidates.length}</strong> Creative Questions where <code>question</code> column does not match <code>question_text</code>.
+            </p>
+
+            <div style={{ flex: 1, overflowY: 'auto' }}>
+              {cqSyncCandidates.map((item, idx) => (
+                <div key={idx} style={{ 
+                  border: '1px solid #ddd', 
+                  borderRadius: '8px', 
+                  marginBottom: '20px',
+                  overflow: 'hidden',
+                  backgroundColor: '#fdfdfd'
+                }}>
+                  <div style={{ 
+                    padding: '10px 15px', 
+                    backgroundColor: '#eee', 
+                    borderBottom: '1px solid #ddd',
+                    fontWeight: 'bold',
+                    fontSize: '0.9em',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center'
+                  }}>
+                    <span>Question ID: {item.original.id}</span>
+                    <button
+                      onClick={async () => {
+                        setIsFixing(true);
+                        try {
+                          const result = await bulkUpdateQuestions([item.fixed]);
+                          if (result.successCount > 0) {
+                            alert(`Synced CQ ID ${item.fixed.id}!`);
+                            setCqSyncCandidates(prev => prev.filter(c => c.original.id !== item.original.id));
+                            setFullQuestionsMap(prev => {
+                                const next = new Map(prev);
+                                next.set(item.fixed.id, item.fixed);
+                                return next;
+                            });
+                          }
+                        } catch (err) {
+                          console.error(err);
+                          alert("Error syncing CQ.");
+                        } finally {
+                          setIsFixing(false);
+                        }
+                      }}
+                      disabled={isFixing}
+                      style={{
+                        backgroundColor: '#3498db',
+                        color: 'white',
+                        border: 'none',
+                        padding: '4px 8px',
+                        borderRadius: '4px',
+                        cursor: 'pointer',
+                        fontSize: '11px'
+                      }}
+                    >
+                      {isFixing ? 'Syncing...' : 'Sync This CQ'}
+                    </button>
+                  </div>
+                  
+                  <div style={{ display: 'flex', minHeight: '100px' }}>
+                    <div style={{ flex: 1, padding: '15px', borderRight: '1px solid #eee' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '5px' }}>
+                        <strong style={{ color: '#c0392b' }}>Current "question":</strong>
+                        <span style={{ 
+                            fontSize: '10px', 
+                            padding: '2px 6px', 
+                            borderRadius: '10px', 
+                            backgroundColor: item.originalAnswer.hasAnswer ? '#e8f8f5' : '#f9ebea',
+                            color: item.originalAnswer.hasAnswer ? '#27ae60' : '#c0392b',
+                            fontWeight: 'bold'
+                        }}>
+                           {item.originalAnswer.hasAnswer ? `✓ Ans (${item.originalAnswer.source})` : '✗ No Ans'}
+                        </span>
+                      </div>
+                      <div style={{ whiteSpace: 'pre-wrap', fontFamily: 'monospace', fontSize: '12px', color: '#555' }}>
+                        {item.original.question}
+                      </div>
+                    </div>
+
+                    <div style={{ flex: 1, padding: '15px', backgroundColor: '#fdedec' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '5px' }}>
+                        <strong style={{ color: '#e74c3c' }}>New "question":</strong>
+                        <span style={{ 
+                            fontSize: '10px', 
+                            padding: '2px 6px', 
+                            borderRadius: '10px', 
+                            backgroundColor: item.fixedAnswer.hasAnswer ? '#e8f8f5' : '#f9ebea',
+                            color: item.fixedAnswer.hasAnswer ? '#27ae60' : '#c0392b',
+                            fontWeight: 'bold'
+                        }}>
+                           {item.fixedAnswer.hasAnswer ? `✓ Ans (${item.fixedAnswer.source})` : '✗ No Ans'}
+                        </span>
+                      </div>
                       <div style={{ whiteSpace: 'pre-wrap', fontFamily: 'monospace', fontSize: '12px', color: '#333' }}>
                         {item.original.questionText}
                       </div>
@@ -2283,7 +3179,7 @@ export default function QuestionBank() {
           </button>
 
           <button
-            onClick={handleSyncMCQFields}
+            onClick={() => handleSyncMCQFields(null)}
             disabled={isFixing}
             style={{
               backgroundColor: '#3498db',
@@ -2297,6 +3193,40 @@ export default function QuestionBank() {
             }}
           >
             {isFixing ? '🔄 Syncing...' : '🔄 Sync MCQ Fields'}
+          </button>
+
+          <button
+            onClick={handleSyncSQFields}
+            disabled={isFixing}
+            style={{
+              backgroundColor: '#9b59b6',
+              color: 'white',
+              padding: '10px 20px',
+              borderRadius: '6px',
+              border: 'none',
+              cursor: isFixing ? 'wait' : 'pointer',
+              fontWeight: '600',
+              marginRight: '10px'
+            }}
+          >
+            {isFixing ? '🔄 Syncing...' : '🔄 Sync SQ Fields'}
+          </button>
+
+          <button
+            onClick={handleSyncCQFields}
+            disabled={isFixing}
+            style={{
+              backgroundColor: '#e74c3c',
+              color: 'white',
+              padding: '10px 20px',
+              borderRadius: '6px',
+              border: 'none',
+              cursor: isFixing ? 'wait' : 'pointer',
+              fontWeight: '600',
+              marginRight: '10px'
+            }}
+          >
+            {isFixing ? '🔄 Syncing...' : '🔄 Sync CQ Fields'}
           </button>
 
           <button

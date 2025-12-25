@@ -85,6 +85,19 @@ let memoryCache = {
 const CACHE_KEY = 'qosten_questions_cache';
 const CACHE_TTL = 1000 * 60 * 60 * 24; // 24 hours
 
+// Helper to strip serialization prefixes for clean indexing/storage
+export const cleanText = (text) => {
+  if (!text) return '';
+  // If it's already a composite string, extract the text part
+  if (typeof text === 'string' && (text.startsWith('MCQ:') || text.startsWith('CQ:') || text.startsWith('SQ:') || text.startsWith('Question:'))) {
+      return text
+        .replace(/^(MCQ|CQ|SQ|Question):\s*/i, '')
+        .split('|')[0] // Only take the text part
+        .trim();
+  }
+  return typeof text === 'string' ? text.trim() : '';
+};
+
 // Context provider component
 export function QuestionProvider({ children }) {
   const [state, dispatch] = useReducer(questionReducer, initialState);
@@ -390,37 +403,29 @@ export function QuestionProvider({ children }) {
 
   // Helper function to map app question to database format
   const mapAppToDatabase = (appQuestion) => {
-    // Helper to strip serialization prefixes for clean indexing/storage
-    const cleanText = (text) => {
-      if (!text) return '';
-      return text
-        .replace(/^(MCQ|CQ|SQ|Question):\s*/i, '')
-        .split('|')[0] // Only take the text part if it was already serialized
-        .trim();
-    };
-
     const type = appQuestion.type || 'mcq';
-    let qText = cleanText(appQuestion.questionText || appQuestion.question || '');
+    
+    // Ensure we have clean text for question_text column
+    // Priority: appQuestion.questionText > appQuestion.question (cleaned)
+    let qText = appQuestion.questionText ? appQuestion.questionText.trim() : '';
+    if (!qText && appQuestion.question) {
+        qText = cleanText(appQuestion.question);
+    }
+    
     let questionField = (appQuestion.question || '').trim();
     
     if (type === 'cq') {
-      // For CQ, create a unique representation of the entire question + parts + answers
-      const stimulus = qText;
-      const partsContent = (appQuestion.parts || []).map(p => 
-        `${p.letter || ''}:${(p.text || '').trim()}:${(p.answer || '').trim()}`
-      ).sort().join('|');
-      questionField = `CQ:${stimulus}|${partsContent}`;
+      // For CQ, we now use the clean text for the question field as well
+      // to match the question_text column.
+      questionField = qText;
     } else if (type === 'mcq') {
-      // For MCQ, include question text + sorted options + correct answer
-      const options = (appQuestion.options || []).map(o => 
-        `${o.label || ''}:${(o.text || '').trim()}`
-      ).sort().join('|');
-      const correct = (appQuestion.correctAnswer || '').trim();
-      questionField = `MCQ:${qText}|${options}|Ans:${correct}`;
+      // For MCQ, we now use the clean text for the question field as well
+      // to satisfy the requirement of syncing both columns to be identical.
+      questionField = qText;
     } else if (type === 'sq') {
-      // For SQ, include question text + answer
-      const answer = (appQuestion.answer || '').trim();
-      questionField = `SQ:${qText}|Ans:${answer}`;
+      // For SQ, we now use the clean text for the question field as well
+      // to match the question_text column.
+      questionField = qText;
     }
     
     // Final safety check for empty question field
@@ -428,6 +433,10 @@ export function QuestionProvider({ children }) {
       questionField = `ID_${appQuestion.id || Date.now()}`;
     }
     
+    console.log(`🛠 mapAppToDatabase for ID ${appQuestion.id}: type=${type}`);
+    console.log(`   - DB question column will be: "${questionField.substring(0, 50)}${questionField.length > 50 ? '...' : ''}"`);
+    console.log(`   - DB question_text column will be: "${qText.substring(0, 50)}${qText.length > 50 ? '...' : ''}"`);
+
     const dbQuestion = {
       type: appQuestion.type,
       subject: appQuestion.subject,

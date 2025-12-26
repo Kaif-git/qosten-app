@@ -8,6 +8,281 @@ import * as pdfjsLib from 'pdfjs-dist';
 // Set up PDF.js worker using unpkg CDN with matching version
 pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.mjs`;
 
+// --- EASY CROPPER COMPONENT (Isolated State) ---
+const EasyCropper = ({ 
+    sourceDocument, 
+    sourceDocType, 
+    pdfAsImage, 
+    pdfPages, 
+    currentPdfPage, 
+    onPdfPageChange, 
+    onRotate, 
+    imageRef,     // MutableRefObject from parent
+    cropAreaRef   // MutableRefObject from parent
+}) => {
+    // Local state for rendering - isolated from expensive parent
+    const [cropArea, setCropArea] = useState({ x: 10, y: 10, width: 200, height: 200 });
+    const [zoomLevel, setZoomLevel] = useState(1);
+    
+    // Internal refs for performance
+    const cropBoxRef = useRef(null);
+    const zoomContainerRef = useRef(null);
+    const debounceTimer = useRef(null);
+    const zoomDebounceTimer = useRef(null);
+    const zoomLevelRef = useRef(zoomLevel);
+    
+    // Dragging state
+    const isDraggingRef = useRef(false);
+    const dragStartRef = useRef({ x: 0, y: 0 });
+    const frameId = useRef(null);
+
+    // Sync zoom ref
+    useEffect(() => {
+        zoomLevelRef.current = zoomLevel;
+    }, [zoomLevel]);
+
+    // Initial sync with parent ref
+    useEffect(() => {
+        cropAreaRef.current = cropArea;
+    }, []);
+
+    const updateCropBoxDOM = useCallback((x, y, w, h) => {
+        if (cropBoxRef.current) {
+            cropBoxRef.current.style.left = `${x}px`;
+            cropBoxRef.current.style.top = `${y}px`;
+            cropBoxRef.current.style.width = `${w}px`;
+            cropBoxRef.current.style.height = `${h}px`;
+        }
+    }, []);
+
+    // Ensure DOM is synced when component mounts/updates normally
+    useEffect(() => {
+        updateCropBoxDOM(cropArea.x, cropArea.y, cropArea.width, cropArea.height);
+    }, [cropArea, updateCropBoxDOM]);
+
+    const adjustCropSize = (dimension, delta) => {
+        const start = performance.now();
+        const prev = cropAreaRef.current || cropArea;
+        
+        let newWidth = prev.width;
+        let newHeight = prev.height;
+
+        if (dimension === 'width') {
+            newWidth = Math.max(1, prev.width + delta);
+        } else if (dimension === 'height') {
+            newHeight = Math.max(1, prev.height + delta);
+        }
+        
+        const newArea = { ...prev, width: newWidth, height: newHeight };
+        
+        // 1. Update Parent Ref immediately (critical for capture)
+        cropAreaRef.current = newArea;
+
+        // 2. Direct DOM update
+        updateCropBoxDOM(newArea.x, newArea.y, newArea.width, newArea.height);
+
+        // 3. Debounced State Update
+        if (debounceTimer.current) clearTimeout(debounceTimer.current);
+        debounceTimer.current = setTimeout(() => {
+            setCropArea(newArea);
+        }, 300);
+    };
+
+    const moveCropBox = (direction, amount = 10) => {
+        if (!imageRef.current) return;
+        const img = imageRef.current;
+        const prev = cropAreaRef.current || cropArea;
+        
+        const maxX = Math.max(0, img.width - prev.width);
+        const maxY = Math.max(0, img.height - prev.height);
+        
+        let newX = prev.x;
+        let newY = prev.y;
+
+        switch (direction) {
+            case 'left': newX = Math.max(0, prev.x - amount); break;
+            case 'right': newX = Math.min(maxX, prev.x + amount); break;
+            case 'up': newY = Math.max(0, prev.y - amount); break;
+            case 'down': newY = Math.min(maxY, prev.y + amount); break;
+            default: break;
+        }
+
+        const newArea = { ...prev, x: newX, y: newY };
+        
+        cropAreaRef.current = newArea;
+        updateCropBoxDOM(newArea.x, newArea.y, newArea.width, newArea.height);
+
+        if (debounceTimer.current) clearTimeout(debounceTimer.current);
+        debounceTimer.current = setTimeout(() => {
+            setCropArea(newArea);
+        }, 300);
+    };
+
+    const adjustZoom = (delta) => {
+        const prevZoom = zoomLevelRef.current || zoomLevel;
+        const next = prevZoom + delta;
+        const result = Math.min(20, Math.max(0.1, next));
+        
+        zoomLevelRef.current = result;
+
+        if (zoomContainerRef.current) {
+            zoomContainerRef.current.style.width = `${result * 100}%`;
+        }
+
+        if (zoomDebounceTimer.current) clearTimeout(zoomDebounceTimer.current);
+        zoomDebounceTimer.current = setTimeout(() => {
+            setZoomLevel(result);
+        }, 300);
+    };
+
+    // --- Mouse/Touch Event Handlers ---
+    const handleMouseDown = (e) => {
+        if (e.target.className === 'crop-handle') return;
+        const rect = e.currentTarget.getBoundingClientRect();
+        isDraggingRef.current = true;
+        dragStartRef.current = { 
+            x: (e.clientX - rect.left) - (cropAreaRef.current?.x || 0), 
+            y: (e.clientY - rect.top) - (cropAreaRef.current?.y || 0) 
+        };
+    };
+    
+    const handleMouseMove = (e) => {
+        if (!isDraggingRef.current) return;
+        if (frameId.current) return;
+
+        const container = e.currentTarget;
+        const rect = container.getBoundingClientRect();
+        const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+        const clientY = e.clientY || (e.touches && e.touches[0].clientY);
+        
+        if (!clientX || !clientY) return;
+
+        const x = clientX - rect.left;
+        const y = clientY - rect.top;
+        
+        frameId.current = requestAnimationFrame(() => {
+            const currentW = cropAreaRef.current?.width || 200;
+            const currentH = cropAreaRef.current?.height || 200;
+
+            const newX = Math.max(0, Math.min(x - dragStartRef.current.x, rect.width - currentW));
+            const newY = Math.max(0, Math.min(y - dragStartRef.current.y, rect.height - currentH));
+            
+            const newArea = { ...cropAreaRef.current, x: newX, y: newY, width: currentW, height: currentH };
+            cropAreaRef.current = newArea;
+            updateCropBoxDOM(newX, newY, currentW, currentH);
+            
+            frameId.current = null;
+        });
+    };
+    
+    const handleMouseUp = () => {
+        if (!isDraggingRef.current) return;
+        isDraggingRef.current = false;
+        if (frameId.current) {
+            cancelAnimationFrame(frameId.current);
+            frameId.current = null;
+        }
+        if (cropAreaRef.current) {
+            setCropArea({ ...cropAreaRef.current });
+        }
+    };
+
+    return (
+        <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+            {/* --- CONTROLS BAR (Moved inside) --- */}
+            <div style={{ padding: '5px', backgroundColor: '#ecf0f1', borderBottom: '1px solid #bdc3c7', display: 'flex', flexWrap: 'wrap', gap: '5px', alignItems: 'center', justifyContent: 'center' }}>
+                {sourceDocType === 'pdf' && pdfPages.length > 0 && (
+                    <div className="pdf-page-selector" style={{margin: 0, padding: '2px 5px', border: '1px solid #ccc', backgroundColor: 'white'}}>
+                        <label style={{marginRight: '5px', fontSize: '12px'}}>Pg:</label>
+                        <select 
+                            value={currentPdfPage} 
+                            onChange={(e) => onPdfPageChange(parseInt(e.target.value))}
+                            style={{padding: '2px', fontSize: '12px', border: 'none'}}
+                        >
+                            {pdfPages.map(pageNum => (
+                                <option key={pageNum} value={pageNum}>{pageNum}</option>
+                            ))}
+                        </select>
+                    </div>
+                )}
+                
+                {sourceDocType === 'pdf' && (
+                    <>
+                        <button type="button" onClick={() => onRotate('left')} title="Rotate Left" style={{ padding: '4px 8px', fontSize: '12px', cursor: 'pointer' }}>↶</button>
+                        <button type="button" onClick={() => onRotate('right')} title="Rotate Right" style={{ padding: '4px 8px', fontSize: '12px', cursor: 'pointer' }}>↷</button>
+                    </>
+                )}
+                
+                <div style={{height: '15px', width: '1px', backgroundColor: '#ccc', margin: '0 2px'}}></div>
+                <button type="button" onClick={() => adjustZoom(-0.25)} style={{ padding: '4px 8px', fontSize: '12px', cursor: 'pointer' }}>🔍-</button>
+                <button type="button" onClick={() => adjustZoom(0.25)} style={{ padding: '4px 8px', fontSize: '12px', cursor: 'pointer' }}>🔍+</button>
+                
+                <div style={{height: '15px', width: '1px', backgroundColor: '#ccc', margin: '0 2px'}}></div>
+                {/* Width/Height Controls */}
+                <button type="button" onClick={() => adjustCropSize('width', -20)} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer', fontWeight: 'bold' }} title="Width -">W-</button>
+                <button type="button" onClick={() => adjustCropSize('width', 20)} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer', fontWeight: 'bold' }} title="Width +">W+</button>
+                <button type="button" onClick={() => adjustCropSize('height', -20)} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer', fontWeight: 'bold' }} title="Height -">H-</button>
+                <button type="button" onClick={() => adjustCropSize('height', 20)} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer', fontWeight: 'bold' }} title="Height +">H+</button>
+
+                <div style={{height: '15px', width: '1px', backgroundColor: '#ccc', margin: '0 2px'}}></div>
+                {/* Move Box Controls */}
+                <div style={{display: 'flex', gap: '1px'}}>
+                    <button type="button" onClick={() => moveCropBox('left')} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }}>←</button>
+                    <button type="button" onClick={() => moveCropBox('down')} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }}>↓</button>
+                    <button type="button" onClick={() => moveCropBox('up')} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }}>↑</button>
+                    <button type="button" onClick={() => moveCropBox('right')} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }}>→</button>
+                </div>
+            </div>
+
+            {/* Cropper Area */}
+            <div 
+                className="cropper-container"
+                style={{ flex: 1, backgroundColor: '#555', overflow: 'auto', position: 'relative', height: '100%', maxHeight: 'none', margin: 0, border: 'none', borderRadius: 0 }}
+            >
+                <div 
+                    ref={zoomContainerRef}
+                    style={{ position: 'relative', width: `${zoomLevel * 100}%`, minWidth: '100%' }}
+                    onMouseDown={handleMouseDown}
+                    onMouseMove={handleMouseMove}
+                    onMouseUp={handleMouseUp}
+                    onMouseLeave={handleMouseUp}
+                    onTouchStart={handleMouseDown}
+                    onTouchMove={handleMouseMove}
+                    onTouchEnd={handleMouseUp}
+                >
+                    <img 
+                        ref={imageRef}
+                        src={sourceDocType === 'pdf' && pdfAsImage ? pdfAsImage : sourceDocument} 
+                        alt="Crop source" 
+                        className="cropper-image"
+                        style={{ width: '100%', display: 'block', userSelect: 'none' }}
+                        draggable={false}
+                    />
+                    <div 
+                        ref={cropBoxRef}
+                        className="crop-box"
+                        style={{
+                            left: `${cropArea.x}px`,
+                            top: `${cropArea.y}px`,
+                            width: `${cropArea.width}px`,
+                            height: `${cropArea.height}px`,
+                            position: 'absolute',
+                            border: '2px solid #3498db',
+                            boxShadow: '0 0 0 4000px rgba(0, 0, 0, 0.5)',
+                            willChange: 'left, top, width, height',
+                            pointerEvents: 'none' // Important to let clicks pass to container if needed, but usually we want to drag box
+                        }}
+                    >   
+                        {/* Interactive overlay for the box itself to allow dragging */}
+                         <div style={{width: '100%', height: '100%', pointerEvents: 'auto', cursor: 'move'}}></div>
+                         <div className="crop-handle" style={{ width: '10px', height: '10px', background: '#3498db', position: 'absolute', bottom: '0', right: '0', cursor: 'se-resize', pointerEvents: 'auto' }} />
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
 // Memoized item to prevent re-renders during cropper interaction
 const CompactQuestionItem = React.memo(({ question, index, onCropAndAssign, onUpdate }) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
@@ -137,6 +412,17 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   const frameId = useRef(null);
   const isDraggingRef = useRef(false); // Use ref for dragging state to avoid re-renders
   const dragStartRef = useRef({ x: 0, y: 0 }); // Use ref for drag start to avoid re-renders
+  
+  // Performance Optimization Refs
+  const debounceTimer = useRef(null);
+  const zoomDebounceTimer = useRef(null);
+  const zoomLevelRef = useRef(zoomLevel);
+  const zoomContainerRef = useRef(null);
+
+  // Sync zoom ref with state
+  useEffect(() => {
+      zoomLevelRef.current = zoomLevel;
+  }, [zoomLevel]);
 
   const updateCropBoxDOM = useCallback((x, y, w, h) => {
     if (cropBoxRef.current) {
@@ -314,7 +600,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     
     const currentCropArea = cropAreaRef.current;
     
-    console.log(`✂️ Cropping: Displayed ${displayedWidth}x${displayedHeight}, Natural ${img.naturalWidth}x${img.naturalHeight}, Scale ${scaleX.toFixed(2)}x${scaleY.toFixed(2)}`);
+    // console.log(`✂️ Cropping: Displayed ${displayedWidth}x${displayedHeight}, Natural ${img.naturalWidth}x${img.naturalHeight}, Scale ${scaleX.toFixed(2)}x${scaleY.toFixed(2)}`);
     
     const canvas = document.createElement('canvas');
     
@@ -340,7 +626,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       actualHeight
     );
     
-    const croppedImage = canvas.toDataURL('image/png');
+    const croppedImage = canvas.toDataURL('image/jpeg', 0.7);
 
     if (targetType === 'stem') {
         updateQuestion(qIndex, 'image', croppedImage);
@@ -358,8 +644,12 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
         });
     }
   }, [updateQuestion, updateQuestionPart]);
-  
-  const memoizedQuestionList = useMemo(() => (
+
+  console.log('[Performance] QuestionPreview Render Start');
+
+  const memoizedQuestionList = useMemo(() => {
+    console.log('[Performance] Recalculating memoizedQuestionList');
+    return (
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '15px' }}>
         {editableQuestions.map((q, idx) => (
             <CompactQuestionItem 
@@ -371,7 +661,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
             />
         ))}
     </div>
-  ), [editableQuestions, handleCropAndAssign, updateQuestion]);
+  )}, [editableQuestions, handleCropAndAssign, updateQuestion]);
 
   if (!questions || questions.length === 0) return null;
   
@@ -404,6 +694,8 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   };
 
   const rotateSource = async (direction) => {
+    console.log(`[Performance] rotateSource triggered: ${direction}`);
+    const start = performance.now();
     if (sourceDocType !== 'pdf' || !pdfArrayBuffer) return;
     
     let newRotation = (rotation + (direction === 'left' ? -90 : 90)) % 360;
@@ -415,9 +707,11 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
         URL.revokeObjectURL(sourceDocument);
     }
     
+    console.log(`[Performance] Generating rotated PDF page...`);
     const imageData = await convertPdfPageToImage(pdfArrayBuffer.slice(), currentPdfPage, newRotation);
     setPdfAsImage(imageData);
     setSourceDocument(imageData);
+    console.log(`[Performance] rotateSource completed in ${performance.now() - start}ms`);
   };
 
   const handleSourceDocumentUpload = async (file) => {
@@ -476,6 +770,8 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   };
   
   const handlePdfPageChange = async (pageNumber) => {
+    console.log(`[Performance] handlePdfPageChange triggered: Page ${pageNumber}`);
+    const start = performance.now();
     if (!pdfArrayBuffer) {
       console.error('PDF data not available');
       return;
@@ -488,6 +784,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     const imageData = await convertPdfPageToImage(pdfArrayBuffer.slice(), pageNumber, rotation);
     setPdfAsImage(imageData);
     setSourceDocument(imageData);
+    console.log(`[Performance] handlePdfPageChange completed in ${performance.now() - start}ms`);
   };
 
   const handleImageUpload = (index, file) => {
@@ -555,7 +852,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       actualHeight
     );
     
-    const croppedImage = canvas.toDataURL('image/png');
+    const croppedImage = canvas.toDataURL('image/jpeg', 0.7);
 
     if (typeof currentCroppingIndex === 'object' && currentCroppingIndex !== null && currentCroppingIndex.type === 'part') {
       const { qIndex, partIndex } = currentCroppingIndex;
@@ -668,47 +965,108 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   };
   
   const adjustCropSize = (dimension, delta) => {
-    setCropArea(prev => {
-      const newArea = { ...prev };
-      if (dimension === 'width') {
-        newArea.width = Math.max(1, prev.width + delta);
-      } else if (dimension === 'height') {
-        newArea.height = Math.max(1, prev.height + delta);
-      }
-      return newArea;
-    });
+    console.log(`[Performance] adjustCropSize triggered: ${dimension} ${delta}`);
+    const start = performance.now();
+
+    // 1. Calculate new values based on REF (current truth) to allow rapid updates
+    const prev = cropAreaRef.current;
+    let newWidth = prev.width;
+    let newHeight = prev.height;
+
+    if (dimension === 'width') {
+      newWidth = Math.max(1, prev.width + delta);
+    } else if (dimension === 'height') {
+      newHeight = Math.max(1, prev.height + delta);
+    }
+    
+    // 2. Update Ref immediately
+    const newArea = { ...prev, width: newWidth, height: newHeight };
+    cropAreaRef.current = newArea;
+
+    // 3. Direct DOM update for instant feedback (bypassing React render lag)
+    updateCropBoxDOM(newArea.x, newArea.y, newArea.width, newArea.height);
+
+    // 4. Schedule Debounced React State Update
+    if (debounceTimer.current) clearTimeout(debounceTimer.current);
+    debounceTimer.current = setTimeout(() => {
+        console.log('[Performance] Syncing cropArea state after debounce');
+        setCropArea(newArea);
+    }, 300);
+    
+    console.log(`[Performance] adjustCropSize calculation took ${performance.now() - start}ms`);
   };
 
   const adjustZoom = (delta) => {
-    setZoomLevel(prev => {
-      const next = prev + delta;
-      return Math.min(20, Math.max(0.1, next));
-    });
+    console.log(`[Performance] adjustZoom triggered: delta ${delta}`);
+    
+    // 1. Calculate new zoom based on Ref
+    const prevZoom = zoomLevelRef.current || zoomLevel;
+    const next = prevZoom + delta;
+    const result = Math.min(20, Math.max(0.1, next));
+    
+    // 2. Update Ref immediately
+    zoomLevelRef.current = result;
+    console.log(`[Performance] New Zoom Level (Ref): ${result}`);
+
+    // 3. Direct DOM Update
+    if (zoomContainerRef.current) {
+        zoomContainerRef.current.style.width = `${result * 100}%`;
+    }
+
+    // 4. Schedule Debounced React State Update
+    if (zoomDebounceTimer.current) clearTimeout(zoomDebounceTimer.current);
+    zoomDebounceTimer.current = setTimeout(() => {
+        console.log('[Performance] Syncing zoomLevel state after debounce');
+        setZoomLevel(result);
+    }, 300);
   };
 
   const moveCropBox = (direction, amount = 10) => {
     if (!imageRef.current) return;
+    console.log(`[Performance] moveCropBox triggered: ${direction}`);
+    const start = performance.now();
 
     const img = imageRef.current;
-    const maxX = Math.max(0, img.width - cropArea.width);
-    const maxY = Math.max(0, img.height - cropArea.height);
+    // Use Ref for current state
+    const prev = cropAreaRef.current;
+    const maxX = Math.max(0, img.width - prev.width);
+    const maxY = Math.max(0, img.height - prev.height);
+    
+    let newX = prev.x;
+    let newY = prev.y;
 
     switch (direction) {
       case 'left':
-        setCropArea(prev => ({ ...prev, x: Math.max(0, prev.x - amount) }));
+        newX = Math.max(0, prev.x - amount);
         break;
       case 'right':
-        setCropArea(prev => ({ ...prev, x: Math.min(maxX, prev.x + amount) }));
+        newX = Math.min(maxX, prev.x + amount);
         break;
       case 'up':
-        setCropArea(prev => ({ ...prev, y: Math.max(0, prev.y - amount) }));
+        newY = Math.max(0, prev.y - amount);
         break;
       case 'down':
-        setCropArea(prev => ({ ...prev, y: Math.min(maxY, prev.y + amount) }));
+        newY = Math.min(maxY, prev.y + amount);
         break;
       default:
         break;
     }
+
+    // 1. Update Ref
+    const newArea = { ...prev, x: newX, y: newY };
+    cropAreaRef.current = newArea;
+
+    // 2. Direct DOM update
+    updateCropBoxDOM(newArea.x, newArea.y, newArea.width, newArea.height);
+
+    // 3. Schedule Debounced React State Update
+    if (debounceTimer.current) clearTimeout(debounceTimer.current);
+    debounceTimer.current = setTimeout(() => {
+        console.log('[Performance] Syncing cropArea state after debounce');
+        setCropArea(newArea);
+    }, 300);
+    
+    console.log(`[Performance] moveCropBox took ${performance.now() - start}ms`);
   };
   
   const removeImage = (index) => {
@@ -1355,53 +1713,6 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
              <div style={{ padding: '10px 15px', borderBottom: '1px solid #ddd', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#f8f9fa', gap: '10px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
                     <h2 style={{margin: 0, fontSize: '1.1rem', whiteSpace: 'nowrap'}}>📷 Easy Upload</h2>
-                    
-                    {/* Compact Controls in Header */}
-                    {sourceDocument && (
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '5px', flexWrap: 'wrap' }}>
-                            {sourceDocType === 'pdf' && pdfPages.length > 0 && (
-                                <div className="pdf-page-selector" style={{margin: 0, padding: '2px 5px', border: '1px solid #ccc'}}>
-                                    <label style={{marginRight: '5px', fontSize: '12px'}}>Pg:</label>
-                                    <select 
-                                      value={currentPdfPage} 
-                                      onChange={(e) => handlePdfPageChange(parseInt(e.target.value))}
-                                      style={{padding: '2px', fontSize: '12px'}}
-                                    >
-                                      {pdfPages.map(pageNum => (
-                                        <option key={pageNum} value={pageNum}>{pageNum}</option>
-                                      ))}
-                                    </select>
-                                </div>
-                            )}
-                            
-                            {sourceDocType === 'pdf' && (
-                                <>
-                                    <button type="button" onClick={() => rotateSource('left')} title="Rotate Left" style={{ padding: '4px 8px', fontSize: '12px', cursor: 'pointer' }}>↶</button>
-                                    <button type="button" onClick={() => rotateSource('right')} title="Rotate Right" style={{ padding: '4px 8px', fontSize: '12px', cursor: 'pointer' }}>↷</button>
-                                </>
-                            )}
-                            
-                            <div style={{height: '15px', width: '1px', backgroundColor: '#ccc', margin: '0 2px'}}></div>
-                            <button type="button" onClick={() => adjustZoom(-0.25)} style={{ padding: '4px 8px', fontSize: '12px', cursor: 'pointer' }}>🔍-</button>
-                            <button type="button" onClick={() => adjustZoom(0.25)} style={{ padding: '4px 8px', fontSize: '12px', cursor: 'pointer' }}>🔍+</button>
-                            
-                            <div style={{height: '15px', width: '1px', backgroundColor: '#ccc', margin: '0 2px'}}></div>
-                            {/* Width/Height Controls */}
-                            <button type="button" onClick={() => adjustCropSize('width', -20)} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }} title="Width -">W-</button>
-                            <button type="button" onClick={() => adjustCropSize('width', 20)} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }} title="Width +">W+</button>
-                            <button type="button" onClick={() => adjustCropSize('height', -20)} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }} title="Height -">H-</button>
-                            <button type="button" onClick={() => adjustCropSize('height', 20)} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }} title="Height +">H+</button>
-
-                            <div style={{height: '15px', width: '1px', backgroundColor: '#ccc', margin: '0 2px'}}></div>
-                            {/* Move Box Controls */}
-                            <div style={{display: 'flex', gap: '1px'}}>
-                                <button type="button" onClick={() => moveCropBox('left')} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }}>←</button>
-                                <button type="button" onClick={() => moveCropBox('down')} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }}>↓</button>
-                                <button type="button" onClick={() => moveCropBox('up')} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }}>↑</button>
-                                <button type="button" onClick={() => moveCropBox('right')} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }}>→</button>
-                            </div>
-                        </div>
-                    )}
                 </div>
 
                 <div style={{ display: 'flex', gap: '10px' }}>
@@ -1456,48 +1767,17 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                             </div>
                         </div>
                     ) : (
-                        <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-                           {/* Cropper Area - Takes full remaining height */}
-                           <div 
-                              ref={cropperContainerRef}
-                              className="cropper-container"
-                              style={{ flex: 1, backgroundColor: '#555', overflow: 'auto', position: 'relative', height: '100%', maxHeight: 'none', margin: 0, border: 'none', borderRadius: 0 }}
-                            >
-                              <div 
-                                style={{ position: 'relative', width: `${zoomLevel * 100}%`, minWidth: '100%' }}
-                                onMouseDown={handleMouseDown}
-                                onMouseMove={handleMouseMove}
-                                onMouseUp={handleMouseUp}
-                                onMouseLeave={handleMouseUp}
-                                onTouchStart={handleTouchStart}
-                                onTouchMove={handleTouchMove}
-                                onTouchEnd={handleTouchEnd}
-                              >
-                                <img 
-                                  ref={imageRef}
-                                  src={sourceDocType === 'pdf' && pdfAsImage ? pdfAsImage : sourceDocument} 
-                                  alt="Crop source" 
-                                  className="cropper-image"
-                                  style={{ width: '100%', display: 'block', userSelect: 'none' }}
-                                />
-                                                                <div 
-                                                                  ref={cropBoxRef}
-                                                                  className="crop-box"
-                                                                  style={{
-                                                                    left: `${cropArea.x}px`,
-                                                                    top: `${cropArea.y}px`,
-                                                                    width: `${cropArea.width}px`,
-                                                                    height: `${cropArea.height}px`,
-                                                                    position: 'absolute',
-                                                                    border: '2px solid #3498db',
-                                                                    boxShadow: '0 0 0 4000px rgba(0, 0, 0, 0.5)',
-                                                                    willChange: 'left, top, width, height'
-                                                                  }}
-                                                                >                                  <div className="crop-handle" style={{ width: '10px', height: '10px', background: '#3498db', position: 'absolute', bottom: '0', right: '0', cursor: 'se-resize' }} />
-                                </div>
-                              </div>
-                            </div>
-                        </div>
+                        <EasyCropper 
+                            sourceDocument={sourceDocument}
+                            sourceDocType={sourceDocType}
+                            pdfAsImage={pdfAsImage}
+                            pdfPages={pdfPages}
+                            currentPdfPage={currentPdfPage}
+                            onPdfPageChange={handlePdfPageChange}
+                            onRotate={rotateSource}
+                            imageRef={imageRef}
+                            cropAreaRef={cropAreaRef}
+                        />
                     )}
                 </div>
 

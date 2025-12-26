@@ -27,6 +27,7 @@ const EasyCropper = ({
     // Internal refs for performance
     const cropBoxRef = useRef(null);
     const zoomContainerRef = useRef(null);
+    const scrollContainerRef = useRef(null); // Ref for scrolling
     const debounceTimer = useRef(null);
     const zoomDebounceTimer = useRef(null);
     const zoomLevelRef = useRef(zoomLevel);
@@ -34,6 +35,11 @@ const EasyCropper = ({
     // Dragging state
     const isDraggingRef = useRef(false);
     const dragStartRef = useRef({ x: 0, y: 0 });
+    
+    // Resizing state
+    const isResizingRef = useRef(false);
+    const resizeStartRef = useRef({ x: 0, y: 0, width: 0, height: 0 });
+    
     const frameId = useRef(null);
 
     // Sync zoom ref
@@ -88,34 +94,26 @@ const EasyCropper = ({
         }, 300);
     };
 
-    const moveCropBox = (direction, amount = 10) => {
-        if (!imageRef.current) return;
-        const img = imageRef.current;
-        const prev = cropAreaRef.current || cropArea;
+    const scrollContainer = (direction, amount = 50) => {
+        if (!scrollContainerRef.current) return;
         
-        const maxX = Math.max(0, img.width - prev.width);
-        const maxY = Math.max(0, img.height - prev.height);
-        
-        let newX = prev.x;
-        let newY = prev.y;
-
+        const container = scrollContainerRef.current;
         switch (direction) {
-            case 'left': newX = Math.max(0, prev.x - amount); break;
-            case 'right': newX = Math.min(maxX, prev.x + amount); break;
-            case 'up': newY = Math.max(0, prev.y - amount); break;
-            case 'down': newY = Math.min(maxY, prev.y + amount); break;
-            default: break;
+            case 'left':
+                container.scrollLeft -= amount;
+                break;
+            case 'right':
+                container.scrollLeft += amount;
+                break;
+            case 'up':
+                container.scrollTop -= amount;
+                break;
+            case 'down':
+                container.scrollTop += amount;
+                break;
+            default:
+                break;
         }
-
-        const newArea = { ...prev, x: newX, y: newY };
-        
-        cropAreaRef.current = newArea;
-        updateCropBoxDOM(newArea.x, newArea.y, newArea.width, newArea.height);
-
-        if (debounceTimer.current) clearTimeout(debounceTimer.current);
-        debounceTimer.current = setTimeout(() => {
-            setCropArea(newArea);
-        }, 300);
     };
 
     const adjustZoom = (delta) => {
@@ -136,18 +134,42 @@ const EasyCropper = ({
     };
 
     // --- Mouse/Touch Event Handlers ---
+    
+    // Start Resizing
+    const handleResizeStart = (e) => {
+        e.stopPropagation(); // Prevent dragging
+        const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+        const clientY = e.clientY || (e.touches && e.touches[0].clientY);
+        
+        isResizingRef.current = true;
+        resizeStartRef.current = {
+            x: clientX,
+            y: clientY,
+            width: cropAreaRef.current?.width || 200,
+            height: cropAreaRef.current?.height || 200
+        };
+    };
+
+    // Start Dragging
     const handleMouseDown = (e) => {
-        if (e.target.className === 'crop-handle') return;
+        if (e.target.className.includes('crop-handle')) return; // Extra safety
+        
         const rect = e.currentTarget.getBoundingClientRect();
+        // Calculate click position relative to the box's top-left corner
+        const clickX = e.clientX || (e.touches && e.touches[0].clientX);
+        const clickY = e.clientY || (e.touches && e.touches[0].clientY);
+        
+        if (!clickX || !clickY) return;
+
         isDraggingRef.current = true;
         dragStartRef.current = { 
-            x: (e.clientX - rect.left) - (cropAreaRef.current?.x || 0), 
-            y: (e.clientY - rect.top) - (cropAreaRef.current?.y || 0) 
+            x: (clickX - rect.left) - (cropAreaRef.current?.x || 0), 
+            y: (clickY - rect.top) - (cropAreaRef.current?.y || 0) 
         };
     };
     
     const handleMouseMove = (e) => {
-        if (!isDraggingRef.current) return;
+        if (!isDraggingRef.current && !isResizingRef.current) return;
         if (frameId.current) return;
 
         const container = e.currentTarget;
@@ -157,27 +179,46 @@ const EasyCropper = ({
         
         if (!clientX || !clientY) return;
 
-        const x = clientX - rect.left;
-        const y = clientY - rect.top;
-        
         frameId.current = requestAnimationFrame(() => {
-            const currentW = cropAreaRef.current?.width || 200;
-            const currentH = cropAreaRef.current?.height || 200;
+            if (isResizingRef.current) {
+                // RESIZING LOGIC
+                const deltaX = clientX - resizeStartRef.current.x;
+                const deltaY = clientY - resizeStartRef.current.y;
+                
+                const newWidth = Math.max(20, resizeStartRef.current.width + deltaX);
+                const newHeight = Math.max(20, resizeStartRef.current.height + deltaY);
+                
+                // Update refs and DOM
+                const newArea = { ...cropAreaRef.current, width: newWidth, height: newHeight };
+                cropAreaRef.current = newArea;
+                updateCropBoxDOM(newArea.x, newArea.y, newWidth, newHeight);
+                
+            } else if (isDraggingRef.current) {
+                // DRAGGING LOGIC
+                const x = clientX - rect.left;
+                const y = clientY - rect.top;
+                
+                const currentW = cropAreaRef.current?.width || 200;
+                const currentH = cropAreaRef.current?.height || 200;
 
-            const newX = Math.max(0, Math.min(x - dragStartRef.current.x, rect.width - currentW));
-            const newY = Math.max(0, Math.min(y - dragStartRef.current.y, rect.height - currentH));
-            
-            const newArea = { ...cropAreaRef.current, x: newX, y: newY, width: currentW, height: currentH };
-            cropAreaRef.current = newArea;
-            updateCropBoxDOM(newX, newY, currentW, currentH);
+                const newX = Math.max(0, Math.min(x - dragStartRef.current.x, rect.width - currentW));
+                const newY = Math.max(0, Math.min(y - dragStartRef.current.y, rect.height - currentH));
+                
+                const newArea = { ...cropAreaRef.current, x: newX, y: newY, width: currentW, height: currentH };
+                cropAreaRef.current = newArea;
+                updateCropBoxDOM(newX, newY, currentW, currentH);
+            }
             
             frameId.current = null;
         });
     };
     
     const handleMouseUp = () => {
-        if (!isDraggingRef.current) return;
+        if (!isDraggingRef.current && !isResizingRef.current) return;
+        
         isDraggingRef.current = false;
+        isResizingRef.current = false;
+        
         if (frameId.current) {
             cancelAnimationFrame(frameId.current);
             frameId.current = null;
@@ -227,15 +268,16 @@ const EasyCropper = ({
                 <div style={{height: '15px', width: '1px', backgroundColor: '#ccc', margin: '0 2px'}}></div>
                 {/* Move Box Controls */}
                 <div style={{display: 'flex', gap: '1px'}}>
-                    <button type="button" onClick={() => moveCropBox('left')} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }}>←</button>
-                    <button type="button" onClick={() => moveCropBox('down')} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }}>↓</button>
-                    <button type="button" onClick={() => moveCropBox('up')} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }}>↑</button>
-                    <button type="button" onClick={() => moveCropBox('right')} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }}>→</button>
+                    <button type="button" onClick={() => scrollContainer('left')} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }}>←</button>
+                    <button type="button" onClick={() => scrollContainer('down')} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }}>↓</button>
+                    <button type="button" onClick={() => scrollContainer('up')} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }}>↑</button>
+                    <button type="button" onClick={() => scrollContainer('right')} style={{ padding: '4px 6px', fontSize: '12px', cursor: 'pointer' }}>→</button>
                 </div>
             </div>
 
             {/* Cropper Area */}
             <div 
+                ref={scrollContainerRef}
                 className="cropper-container"
                 style={{ flex: 1, backgroundColor: '#555', overflow: 'auto', position: 'relative', height: '100%', maxHeight: 'none', margin: 0, border: 'none', borderRadius: 0 }}
             >
@@ -275,7 +317,12 @@ const EasyCropper = ({
                     >   
                         {/* Interactive overlay for the box itself to allow dragging */}
                          <div style={{width: '100%', height: '100%', pointerEvents: 'auto', cursor: 'move'}}></div>
-                         <div className="crop-handle" style={{ width: '10px', height: '10px', background: '#3498db', position: 'absolute', bottom: '0', right: '0', cursor: 'se-resize', pointerEvents: 'auto' }} />
+                         <div 
+                            className="crop-handle" 
+                            style={{ width: '20px', height: '20px', background: '#3498db', position: 'absolute', bottom: '-5px', right: '-5px', cursor: 'se-resize', pointerEvents: 'auto', borderRadius: '50%', border: '2px solid white', zIndex: 10 }} 
+                            onMouseDown={handleResizeStart}
+                            onTouchStart={handleResizeStart}
+                         />
                     </div>
                 </div>
             </div>

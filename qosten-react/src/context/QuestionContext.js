@@ -158,9 +158,11 @@ export function QuestionProvider({ children }) {
         console.warn('Duplicate question detected, appending unique suffix:', error.details);
         // Append a unique suffix to both question and question_text fields to make them unique
         const suffix = ` [${uniqueId}]`;
-        dbQuestion.question = dbQuestion.question + suffix;
-        if (dbQuestion.question_text) {
-          dbQuestion.question_text = dbQuestion.question_text + suffix;
+        dbQuestion.question = (dbQuestion.question || '') + suffix;
+        
+        // Ensure we append to question_text even if it's an empty string
+        if (dbQuestion.hasOwnProperty('question_text')) {
+          dbQuestion.question_text = (dbQuestion.question_text || '') + suffix;
         }
         
         // Retry with the modified fields
@@ -429,8 +431,14 @@ export function QuestionProvider({ children }) {
     }
     
     // Final safety check for empty question field
+    // For CQ, we now allow the question field to be empty (null stem support)
     if (!questionField || questionField === 'MCQ:' || questionField === 'CQ:' || questionField === 'SQ:') {
-      questionField = `ID_${appQuestion.id || Date.now()}`;
+      if (type !== 'cq') {
+        questionField = `ID_${appQuestion.id || Date.now()}`;
+      } else {
+        // For CQ, if it's strictly just the prefix or empty, let it be empty
+        questionField = (questionField === 'CQ:') ? '' : questionField;
+      }
     }
     
     console.log(`🛠 mapAppToDatabase for ID ${appQuestion.id}: type=${type}`);
@@ -597,14 +605,90 @@ export function QuestionProvider({ children }) {
     const question = state.questions.find(q => q.id === questionId);
     if (!question) return;
     
-    const updatedQuestion = { ...question, isFlagged: !question.isFlagged };
-    await updateQuestion(updatedQuestion);
+    const newFlaggedStatus = !question.isFlagged;
+
+    // 1. Optimistic UI Update
+    const updatedQuestion = { ...question, isFlagged: newFlaggedStatus };
+    dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: updatedQuestion });
+
+    if (!supabaseClient) return;
+
+    try {
+      // 2. Partial Update in DB
+      const { error } = await supabaseClient
+        .from('questions_duplicate')
+        .update({ is_flagged: newFlaggedStatus })
+        .eq('id', parseInt(questionId));
+
+      if (error) {
+        console.error('Error toggling flag:', error);
+        // Revert on error
+        dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
+        alert('Failed to update flag status.');
+      } else {
+        // Update cache to reflect the change
+        if (memoryCache.questions) {
+             memoryCache.questions = memoryCache.questions.map(q => 
+                 q.id === questionId ? updatedQuestion : q
+             );
+        }
+      }
+    } catch (err) {
+      console.error('Exception toggling flag:', err);
+      // Revert on error
+      dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
+    }
   };
 
   const bulkFlagQuestions = async (questionIds, flagged) => {
-    const questionsToUpdate = state.questions.filter(q => questionIds.includes(q.id));
-    const updatedQuestions = questionsToUpdate.map(q => ({ ...q, isFlagged: flagged }));
-    return await bulkUpdateQuestions(updatedQuestions);
+    // 1. Optimistic Local Update
+    const numericIds = questionIds.map(id => parseInt(id));
+    
+    // Create map for fast lookup/update
+    const idSet = new Set(questionIds.map(String));
+    
+    const updatedQuestionsForState = state.questions.map(q => 
+        idSet.has(String(q.id)) ? { ...q, isFlagged: flagged } : q
+    );
+    
+    // Only dispatch if something actually changed (optimization)
+    // Actually, dispatching replace is cleaner for now
+    dispatch({ type: ACTIONS.SET_QUESTIONS, payload: updatedQuestionsForState });
+
+    if (!supabaseClient) return { successCount: questionIds.length, failedCount: 0 };
+
+    try {
+      console.log(`🚩 Bulk flagging ${questionIds.length} questions to ${flagged}...`);
+      
+      // 2. Efficient Batch Update in DB
+      const { data, error, count } = await supabaseClient
+        .from('questions_duplicate')
+        .update({ is_flagged: flagged })
+        .in('id', numericIds)
+        .select('id', { count: 'exact' });
+
+      if (error) {
+        console.error('Error in bulk flag update:', error);
+        // Revert local state if needed, or just alert. 
+        // Re-fetching might be safer than complex revert logic here.
+        alert('Failed to update some flags on server.');
+        return { successCount: 0, failedCount: questionIds.length };
+      }
+
+      console.log(`✅ Bulk flag update successful. Affected rows: ${data?.length || 0}`);
+      
+      // Update memory cache
+      if (memoryCache.questions) {
+          memoryCache.questions = memoryCache.questions.map(q => 
+              idSet.has(String(q.id)) ? { ...q, isFlagged: flagged } : q
+          );
+      }
+
+      return { successCount: data?.length || 0, failedCount: questionIds.length - (data?.length || 0) };
+    } catch (err) {
+      console.error('Exception in bulkFlagQuestions:', err);
+      return { successCount: 0, failedCount: questionIds.length };
+    }
   };
 
   const fetchQuestionsByIds = async (ids) => {

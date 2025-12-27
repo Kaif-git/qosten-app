@@ -228,9 +228,139 @@ export default function QuestionBank() {
   const [selectedCategories, setSelectedCategories] = useState([]); // [{type, key}]
   const [lastSelectedCategory, setLastSelectedCategory] = useState(null); // {type, key}
   
-  // CQ Fixing State
+  // Bulk Fix Flagged Questions State
+  const [showBulkFixModal, setShowBulkFixModal] = useState(false);
+  const [bulkFixType, setBulkFixType] = useState('mcq'); // 'mcq', 'cq', 'sq'
+  const [bulkFixInputText, setBulkFixInputText] = useState('');
+
+  // Restoring missing state for existing CQ Fixing logic
   const [showCQFixModal, setShowCQFixModal] = useState(false);
   const [cqFixCandidates, setCqFixCandidates] = useState([]);
+
+  const generateBulkFixText = (type) => {
+    const flagged = questions.filter(q => q.isFlagged && q.type === type);
+    if (flagged.length === 0) return '';
+
+    return flagged.map((q, idx) => {
+      const fullQ = fullQuestionsMap.get(q.id) || q;
+      let text = `Question ${idx + 1}:\n`;
+      text += `[Subject: ${fullQ.subject || ''}]\n[Chapter: ${fullQ.chapter || ''}]\n[Lesson: ${fullQ.lesson || ''}]\n[Board: ${fullQ.board || ''}]\n`;
+      
+      if (type === 'mcq') {
+        text += `${idx + 1}. ${fullQ.questionText || fullQ.question || ''}\n`;
+        if (fullQ.options && Array.isArray(fullQ.options)) {
+          fullQ.options.forEach(opt => {
+            text += `${opt.label}) ${opt.text}\n`;
+          });
+        }
+        text += `Correct: ${fullQ.correctAnswer || ''}\n`;
+        if (fullQ.explanation) text += `Explanation: ${fullQ.explanation}\n`;
+      } else if (type === 'cq') {
+        text += `Stem: ${fullQ.questionText || fullQ.question || ''}\n`;
+        if (fullQ.parts && Array.isArray(fullQ.parts)) {
+          fullQ.parts.forEach(part => {
+            text += `${part.letter}. ${part.text} (${part.marks || 0})\n`;
+          });
+          text += `Answer:\n`;
+          fullQ.parts.forEach(part => {
+            text += `${part.letter}. ${part.answer || ''}\n`;
+          });
+        }
+      } else if (type === 'sq') {
+        text += `${idx + 1}. ${fullQ.questionText || fullQ.question || ''}\n`;
+        text += `Answer: ${fullQ.answer || ''}\n`;
+      }
+      
+      return text;
+    }).join('\n---\n\n');
+  };
+
+  const handleBulkReplace = async () => {
+    if (!bulkFixInputText.trim()) {
+      alert('Please paste the improved questions first.');
+      return;
+    }
+
+    const flagged = questions.filter(q => q.isFlagged && q.type === bulkFixType);
+    if (flagged.length === 0) {
+      alert('No flagged questions of this type found.');
+      return;
+    }
+
+    try {
+      setIsFixing(true);
+      let parsedQuestions = [];
+      
+      if (bulkFixType === 'mcq') {
+        const { parseMCQQuestions } = await import('../../utils/mcqQuestionParser');
+        parsedQuestions = parseMCQQuestions(bulkFixInputText);
+      } else if (bulkFixType === 'cq') {
+        const { parseCQQuestions } = await import('../../utils/cqParser');
+        parsedQuestions = parseCQQuestions(bulkFixInputText);
+      } else if (bulkFixType === 'sq') {
+        // Simple SQ parsing logic for bulk fix
+        const blocks = bulkFixInputText.split(/---+/).filter(b => b.trim());
+        parsedQuestions = blocks.map(block => {
+          const lines = block.split('\n').map(l => l.trim()).filter(l => l);
+          const q = { type: 'sq', subject: '', chapter: '', lesson: '', board: '', questionText: '', answer: '' };
+          
+          lines.forEach(line => {
+            if (line.includes('[Subject:')) q.subject = line.match(/\[Subject:\s*(.*?)\]/)?.[1] || '';
+            else if (line.includes('[Chapter:')) q.chapter = line.match(/\[Chapter:\s*(.*?)\]/)?.[1] || '';
+            else if (line.includes('[Lesson:')) q.lesson = line.match(/\[Lesson:\s*(.*?)\]/)?.[1] || '';
+            else if (line.includes('[Board:')) q.board = line.match(/\[Board:\s*(.*?)\]/)?.[1] || '';
+            else if (line.match(/^\d+\./)) q.questionText = line.replace(/^\d+\.\s*/, '');
+            else if (line.toLowerCase().startsWith('answer:')) q.answer = line.replace(/^answer:\s*/i, '');
+          });
+          return q;
+        });
+      }
+
+      if (parsedQuestions.length === 0) {
+        alert('Could not parse any questions. Please check the format.');
+        return;
+      }
+
+      if (parsedQuestions.length !== flagged.length) {
+        if (!window.confirm(`Count mismatch! Found ${flagged.length} flagged questions but parsed ${parsedQuestions.length} from text. Proceed anyway? (Matched by order)`)) {
+          return;
+        }
+      }
+
+      const updates = [];
+      const count = Math.min(flagged.length, parsedQuestions.length);
+      
+      for (let i = 0; i < count; i++) {
+        const original = flagged[i];
+        const improved = parsedQuestions[i];
+        
+        updates.push({
+          ...original,
+          ...improved,
+          id: original.id,
+          isFlagged: false // Unflag after successful fix
+        });
+      }
+
+      const result = await bulkUpdateQuestions(updates);
+      alert(`✅ Successfully updated and unflagged ${result.successCount} questions!`);
+      
+      // Update local map
+      setFullQuestionsMap(prev => {
+        const next = new Map(prev);
+        updates.forEach(q => next.set(q.id, q));
+        return next;
+      });
+
+      setShowBulkFixModal(false);
+      setBulkFixInputText('');
+    } catch (error) {
+      console.error('Error in bulk replace:', error);
+      alert('Error replacing questions: ' + error.message);
+    } finally {
+      setIsFixing(false);
+    }
+  };
 
   // SQ Fixing State
   const [showSQFixModal, setShowSQFixModal] = useState(false);
@@ -261,6 +391,9 @@ export default function QuestionBank() {
   const [leftFilters, setLeftFilters] = useState({});
   const [rightFilters, setRightFilters] = useState({});
   
+  // Performance Optimization: Visible Count (Limit rendering)
+  const [visibleCount, setVisibleCount] = useState(50);
+
   // Get unique metadata values from all questions
   const getUniqueValues = (field) => {
     const values = questions
@@ -275,15 +408,29 @@ export default function QuestionBank() {
   const uniqueLessons = getUniqueValues('lesson');
   const uniqueBoards = getUniqueValues('board');
 
-  // Computed questions based on view mode
-  const filteredQuestionsSingle = getFilteredQuestions(questions, currentFilters, fullQuestionsMap, hasSearched);
-  const filteredQuestionsLeft = getFilteredQuestions(questions, { ...currentFilters, ...leftFilters }, fullQuestionsMap, hasSearched);
-  const filteredQuestionsRight = getFilteredQuestions(questions, { ...currentFilters, ...rightFilters }, fullQuestionsMap, hasSearched);
+  // Computed questions based on view mode - MEMOIZED to prevent lag on every click
+  const filteredQuestionsSingle = React.useMemo(() => 
+    getFilteredQuestions(questions, currentFilters, fullQuestionsMap, hasSearched),
+    [questions, currentFilters, fullQuestionsMap, hasSearched]
+  );
+
+  const filteredQuestionsLeft = React.useMemo(() => 
+    getFilteredQuestions(questions, { ...currentFilters, ...leftFilters }, fullQuestionsMap, hasSearched),
+    [questions, currentFilters, leftFilters, fullQuestionsMap, hasSearched]
+  );
+
+  const filteredQuestionsRight = React.useMemo(() => 
+    getFilteredQuestions(questions, { ...currentFilters, ...rightFilters }, fullQuestionsMap, hasSearched),
+    [questions, currentFilters, rightFilters, fullQuestionsMap, hasSearched]
+  );
   
   const currentVisibleQuestions = isSplitView 
     ? [...new Set([...filteredQuestionsLeft, ...filteredQuestionsRight])] 
     : filteredQuestionsSingle;
   
+  // Convert selectedQuestions to Set for O(1) rendering performance
+  const selectedSet = React.useMemo(() => new Set(selectedQuestions), [selectedQuestions]);
+
   const toggleSelectionMode = () => {
     setSelectionMode(!selectionMode);
     setSelectedQuestions([]);
@@ -323,6 +470,21 @@ export default function QuestionBank() {
       }
     });
   };
+
+  // Optimization: Stable reference for QuestionCard to prevent re-renders
+  const toggleQuestionSelectionRef = React.useRef(toggleQuestionSelection);
+  useEffect(() => {
+      toggleQuestionSelectionRef.current = toggleQuestionSelection;
+  });
+  const stableToggleQuestionSelection = React.useCallback((...args) => {
+      return toggleQuestionSelectionRef.current(...args);
+  }, []);
+
+  // Reset hasSearched when global or split-view filters change
+  // This ensures we always load full content for the current results set
+  useEffect(() => {
+    setHasSearched(false);
+  }, [currentFilters, isSplitView, leftFilters, rightFilters]);
   
   const selectAll = () => {
     setSelectedQuestions(currentVisibleQuestions.map(q => q.id));
@@ -1609,7 +1771,11 @@ export default function QuestionBank() {
     setIsSearching(false);
   };
 
-  const renderQuestionList = (qList, viewName = 'single') => (
+  const renderQuestionList = (qList, viewName = 'single') => {
+    const displayList = qList.slice(0, visibleCount);
+    const hasMore = qList.length > visibleCount;
+
+    return (
     <div className="questionsContainer">
         {!hasSearched ? (
             <div style={{
@@ -1660,18 +1826,47 @@ export default function QuestionBank() {
              </button>
           </div>
         ) : (
-            qList.map(question => (
-            <QuestionCard 
-              key={question.id} 
-              question={fullQuestionsMap.get(question.id) || question}
-              selectionMode={selectionMode}
-              isSelected={selectedQuestions.includes(question.id)}
-              onToggleSelect={(id, e) => toggleQuestionSelection(id, e)}
-            />
-          ))
+            <>
+              {displayList.map(question => {
+                const fullQ = fullQuestionsMap.get(question.id);
+                const displayQ = (fullQ && fullQ.isFlagged !== question.isFlagged) 
+                    ? { ...fullQ, isFlagged: question.isFlagged } 
+                    : (fullQ || question);
+
+                return (
+                  <QuestionCard 
+                    key={question.id} 
+                    question={displayQ}
+                    selectionMode={selectionMode}
+                    isSelected={selectedSet.has(question.id)}
+                    onToggleSelect={stableToggleQuestionSelection}
+                  />
+                );
+              })}
+              
+              {hasMore && (
+                <div style={{ textAlign: 'center', padding: '20px', gridColumn: '1 / -1' }}>
+                  <button 
+                    onClick={() => setVisibleCount(prev => prev + 50)}
+                    style={{
+                      padding: '10px 30px',
+                      backgroundColor: '#3498db',
+                      color: 'white',
+                      border: 'none',
+                      borderRadius: '5px',
+                      cursor: 'pointer',
+                      fontWeight: 'bold',
+                      boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+                    }}
+                  >
+                    ⏬ Show More Questions ({qList.length - visibleCount} remaining)
+                  </button>
+                </div>
+              )}
+            </>
         )}
     </div>
-  );
+  )};
 
   return (
     <>
@@ -3280,6 +3475,25 @@ export default function QuestionBank() {
             {isSearching ? '🔍 Searching...' : '🔍 Find Unanswered MCQs'}
           </button>
 
+          <button
+            onClick={() => {
+              setBulkFixType('mcq');
+              setShowBulkFixModal(true);
+            }}
+            style={{
+              backgroundColor: '#e67e22',
+              color: 'white',
+              padding: '10px 20px',
+              borderRadius: '6px',
+              border: 'none',
+              cursor: 'pointer',
+              fontWeight: '600',
+              marginRight: '10px'
+            }}
+          >
+            🚩 Bulk Fix Flagged
+          </button>
+
           <button 
             onClick={toggleSelectionMode}
             style={{
@@ -3528,6 +3742,173 @@ export default function QuestionBank() {
       )}
       
     </div>
+      {/* Bulk Fix Flagged Questions Modal */}
+      {showBulkFixModal && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          zIndex: 10000,
+          padding: '20px'
+        }}>
+          <div style={{
+            backgroundColor: 'white',
+            padding: '30px',
+            borderRadius: '12px',
+            boxShadow: '0 10px 25px rgba(0,0,0,0.2)',
+            width: '100%',
+            maxWidth: '1000px',
+            maxHeight: '90vh',
+            display: 'flex',
+            flexDirection: 'column'
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+              <h2 style={{ margin: 0, color: '#e67e22' }}>🚩 Bulk Fix Flagged Questions</h2>
+              <button 
+                onClick={() => setShowBulkFixModal(false)}
+                style={{ background: 'none', border: 'none', fontSize: '24px', cursor: 'pointer', color: '#666' }}
+              >✕</button>
+            </div>
+
+            <div style={{ display: 'flex', gap: '10px', marginBottom: '20px' }}>
+              {['mcq', 'cq', 'sq'].map(type => {
+                const count = questions.filter(q => q.isFlagged && q.type === type).length;
+                return (
+                  <button
+                    key={type}
+                    onClick={() => {
+                      setBulkFixType(type);
+                      setBulkFixInputText('');
+                    }}
+                    style={{
+                      flex: 1,
+                      padding: '12px',
+                      borderRadius: '8px',
+                      border: '2px solid',
+                      borderColor: bulkFixType === type ? '#e67e22' : '#eee',
+                      backgroundColor: bulkFixType === type ? '#fff3e0' : 'white',
+                      color: bulkFixType === type ? '#e67e22' : '#666',
+                      fontWeight: 'bold',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    {type.toUpperCase()} ({count})
+                  </button>
+                );
+              })}
+            </div>
+
+            <div style={{ flex: 1, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', minHeight: 0 }}>
+              {/* Left Side: Instructions & Preview/Action */}
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <div style={{ backgroundColor: '#f8f9fa', padding: '15px', borderRadius: '8px', marginBottom: '15px', border: '1px solid #eee' }}>
+                  <h4 style={{ marginTop: 0 }}>Step 1: Export Flagged</h4>
+                  <p style={{ fontSize: '13px', color: '#666' }}>
+                    Copy all currently flagged <strong>{bulkFixType.toUpperCase()}</strong> questions. 
+                    They will be formatted so you can easily improve them in an editor.
+                  </p>
+                  <button
+                    onClick={() => {
+                      const text = generateBulkFixText(bulkFixType);
+                      navigator.clipboard.writeText(text);
+                      alert('📋 Copied to clipboard! Improve them and paste in Step 2.');
+                    }}
+                    disabled={questions.filter(q => q.isFlagged && q.type === bulkFixType).length === 0}
+                    style={{
+                      width: '100%',
+                      padding: '10px',
+                      backgroundColor: '#3498db',
+                      color: 'white',
+                      border: 'none',
+                      borderRadius: '6px',
+                      cursor: 'pointer',
+                      fontWeight: 'bold'
+                    }}
+                  >
+                    📋 Copy Flagged {bulkFixType.toUpperCase()}
+                  </button>
+                </div>
+
+                <div style={{ backgroundColor: '#fff3e0', padding: '15px', borderRadius: '8px', flex: 1, border: '1px solid #ffe0b2' }}>
+                  <h4 style={{ marginTop: 0 }}>Step 2: Replace & Sync</h4>
+                  <p style={{ fontSize: '13px', color: '#666' }}>
+                    Paste the <strong>IMPROVED</strong> questions here. The system will parse them and update the flagged questions in the <strong>SAME ORDER</strong>.
+                  </p>
+                  <textarea
+                    value={bulkFixInputText}
+                    onChange={(e) => setBulkFixInputText(e.target.value)}
+                    placeholder={`Paste improved ${bulkFixType.toUpperCase()} here...`}
+                    style={{
+                      width: '100%',
+                      flex: 1,
+                      minHeight: '200px',
+                      padding: '10px',
+                      borderRadius: '6px',
+                      border: '1px solid #ffe0b2',
+                      fontFamily: 'monospace',
+                      fontSize: '12px'
+                    }}
+                  />
+                </div>
+              </div>
+
+              {/* Right Side: Current Content Preview */}
+              <div style={{ display: 'flex', flexDirection: 'column', border: '1px solid #eee', borderRadius: '8px', overflow: 'hidden' }}>
+                <div style={{ padding: '10px 15px', backgroundColor: '#eee', fontWeight: 'bold', fontSize: '14px' }}>
+                  Current Flagged Content Preview
+                </div>
+                <div style={{ flex: 1, overflowY: 'auto', padding: '15px', backgroundColor: '#fafafa' }}>
+                  {questions.filter(q => q.isFlagged && q.type === bulkFixType).length === 0 ? (
+                    <div style={{ textAlign: 'center', color: '#999', marginTop: '50px' }}>No flagged questions of this type.</div>
+                  ) : (
+                    questions.filter(q => q.isFlagged && q.type === bulkFixType).map((q, i) => (
+                      <div key={q.id} style={{ marginBottom: '15px', borderBottom: '1px solid #eee', paddingBottom: '10px', fontSize: '12px' }}>
+                        <strong>#{i+1} (ID: {q.id})</strong>
+                        <div style={{ color: '#666', marginTop: '5px', maxHeight: '100px', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                          {q.questionText || q.question}
+                        </div>
+                      </div>
+                    ))
+                  )}
+                </div>
+              </div>
+            </div>
+
+            <div style={{ marginTop: '20px', display: 'flex', gap: '10px' }}>
+              <button
+                onClick={() => setShowBulkFixModal(false)}
+                style={{ padding: '12px 24px', borderRadius: '8px', border: '1px solid #ccc', backgroundColor: 'white', cursor: 'pointer' }}
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleBulkReplace}
+                disabled={isFixing || !bulkFixInputText.trim()}
+                style={{
+                  flex: 1,
+                  padding: '12px 24px',
+                  borderRadius: '8px',
+                  border: 'none',
+                  backgroundColor: '#e67e22',
+                  color: 'white',
+                  fontWeight: 'bold',
+                  fontSize: '16px',
+                  cursor: (isFixing || !bulkFixInputText.trim()) ? 'not-allowed' : 'pointer',
+                  boxShadow: '0 4px 6px rgba(230, 126, 34, 0.2)'
+                }}
+              >
+                {isFixing ? '⏳ Syncing Changes...' : `🚀 Replace All Flagged ${bulkFixType.toUpperCase()}`}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

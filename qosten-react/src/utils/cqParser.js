@@ -317,12 +317,21 @@ export const parseCQQuestions = (text, lang = 'en') => {
 
         // Handle content based on sections
         if (state.inStimulusSection) {
-            if (line.startsWith('>')) {
-                state.stimulusLines.push(line.replace(/^>\s*/, '').trim());
-            } else if (line) {
-                state.stimulusLines.push(line);
+            // Optimization: Check if this line looks like a part (a., b., c., d.)
+            // If it does, we should exit stimulus mode and let it be parsed as a part
+            const isPartLine = /^(?:Part\s+)?([a-dক-ঘ])[:.)]\s*(.+)/i.test(line);
+            
+            if (isPartLine) {
+                state.inStimulusSection = false;
+                // Don't continue, let it fall through to the part parsing logic below
+            } else {
+                if (line.startsWith('>')) {
+                    state.stimulusLines.push(line.replace(/^>\s*/, '').trim());
+                } else if (line) {
+                    state.stimulusLines.push(line);
+                }
+                continue;
             }
-            continue;
         }
 
         if (!state.inAnswerSection) {

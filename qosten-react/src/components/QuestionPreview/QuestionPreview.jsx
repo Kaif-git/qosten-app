@@ -18,7 +18,8 @@ const EasyCropper = ({
     onPdfPageChange, 
     onRotate, 
     imageRef,     // MutableRefObject from parent
-    cropAreaRef   // MutableRefObject from parent
+    cropAreaRef,  // MutableRefObject from parent
+    isRenderingPage = false
 }) => {
     // Local state for rendering - isolated from expensive parent
     const [cropArea, setCropArea] = useState({ x: 10, y: 10, width: 200, height: 200 });
@@ -281,6 +282,39 @@ const EasyCropper = ({
                 className="cropper-container"
                 style={{ flex: 1, backgroundColor: '#555', overflow: 'auto', position: 'relative', height: '100%', maxHeight: 'none', margin: 0, border: 'none', borderRadius: 0 }}
             >
+                {isRenderingPage && (
+                    <div style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        backgroundColor: 'rgba(0,0,0,0.5)',
+                        zIndex: 100,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        color: 'white'
+                    }}>
+                        <div className="rendering-spinner" style={{
+                            width: '40px',
+                            height: '40px',
+                            border: '4px solid #f3f3f3',
+                            borderTop: '4px solid #3498db',
+                            borderRadius: '50%',
+                            animation: 'spin 1s linear infinite',
+                            marginBottom: '10px'
+                        }}></div>
+                        <style>{`
+                            @keyframes spin {
+                                0% { transform: rotate(0deg); }
+                                100% { transform: rotate(360deg); }
+                            }
+                        `}</style>
+                        <strong>Rendering PDF Page...</strong>
+                    </div>
+                )}
                 <div 
                     ref={zoomContainerRef}
                     style={{ position: 'relative', width: `${zoomLevel * 100}%`, minWidth: '100%' }}
@@ -332,8 +366,6 @@ const EasyCropper = ({
 
 // Memoized item to prevent re-renders during cropper interaction
 const CompactQuestionItem = React.memo(({ question, index, onCropAndAssign, onUpdate }) => {
-  const [isExpanded, setIsExpanded] = React.useState(false);
-
   return (
     <div className="question-preview-item compact-view" style={{ padding: '10px', fontSize: '14px', backgroundColor: 'white', borderRadius: '5px', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '5px'}}>
@@ -342,30 +374,14 @@ const CompactQuestionItem = React.memo(({ question, index, onCropAndAssign, onUp
             {question.board && <span style={{fontSize: '11px', fontWeight: 'normal', color: '#666', marginLeft: '5px'}}>- {question.board}</span>}
           </strong>
           <div style={{ display: 'flex', gap: '5px', alignItems: 'center' }}>
-            {question.type === 'cq' && (
-              <button
-                onClick={() => setIsExpanded(!isExpanded)}
-                style={{
-                  padding: '2px 6px',
-                  fontSize: '10px',
-                  backgroundColor: isExpanded ? '#6c757d' : '#f8f9fa',
-                  color: isExpanded ? 'white' : '#666',
-                  border: '1px solid #ddd',
-                  borderRadius: '4px',
-                  cursor: 'pointer'
-                }}
-              >
-                {isExpanded ? 'Collapse' : 'Expand Sub'}
-              </button>
-            )}
             {question.image && <span style={{color: 'green', fontSize: '12px', fontWeight: 'bold'}}>✓ Stem Img</span>}
           </div>
        </div>
-       <p style={{ margin: '0 0 8px 0', fontSize: '12px', color: '#555', maxHeight: isExpanded ? 'none' : '40px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: isExpanded ? 'normal' : 'nowrap' }}>
+       <p style={{ margin: '0 0 8px 0', fontSize: '12px', color: '#555', maxHeight: 'none', overflow: 'hidden' }}>
           {question.questionText || question.question || 'No text'}
        </p>
 
-       {isExpanded && question.parts && Array.isArray(question.parts) && (
+       {question.parts && Array.isArray(question.parts) && (
          <div style={{ marginBottom: '10px', paddingLeft: '8px', borderLeft: '2px solid #eee', fontSize: '11px', color: '#666' }}>
             {question.parts.map((part, pIdx) => (
               <div key={pIdx} style={{ marginBottom: '4px' }}>
@@ -380,8 +396,17 @@ const CompactQuestionItem = React.memo(({ question, index, onCropAndAssign, onUp
               onClick={() => onCropAndAssign(index, 'stem')}
               style={{fontSize: '11px', padding: '6px 10px', backgroundColor: '#3498db', color: 'white', border: 'none', borderRadius: '3px', cursor: 'pointer', flex: 1}}
           >
-             Set Stem Img
+             {question.image ? 'Replace Stem' : 'Set Stem Img'}
           </button>
+          {question.image && (
+            <button 
+                onClick={() => onUpdate(index, 'image', null)}
+                style={{fontSize: '11px', padding: '6px 10px', backgroundColor: '#e74c3c', color: 'white', border: 'none', borderRadius: '3px', cursor: 'pointer'}}
+                title="Remove Stem Image"
+            >
+               ✕
+            </button>
+          )}
           <button 
               onClick={() => {
                   const newBoard = prompt(`Edit Board for Q${index + 1}:`, question.board || '');
@@ -396,19 +421,34 @@ const CompactQuestionItem = React.memo(({ question, index, onCropAndAssign, onUp
        {question.parts && question.parts.map((part, pIdx) => {
            const letter = part.letter?.toLowerCase();
            if (letter === 'c' || letter === 'd') {
-               const hasImg = (letter === 'c' && question.answerimage1) || (letter === 'd' && question.answerimage2);
+               const hasImg = (letter === 'c' && question.answerimage1) || (letter === 'd' && question.answerimage2) || part.answerImage;
                return (
                    <div key={pIdx} style={{marginTop: '8px', borderTop: '1px solid #eee', paddingTop: '8px'}}>
                       <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3px'}}>
                          <span style={{fontSize: '12px', fontWeight: 'bold'}}>Part {part.letter.toUpperCase()})</span>
                          {hasImg && <span style={{color: 'green', fontSize: '10px', fontWeight: 'bold'}}>✓ Img</span>}
                       </div>
-                      <button 
-                          onClick={() => onCropAndAssign(index, 'part', pIdx)}
-                          style={{fontSize: '11px', padding: '6px 10px', backgroundColor: '#8e44ad', color: 'white', border: 'none', borderRadius: '3px', cursor: 'pointer', marginTop: '2px', width: '100%'}}
-                      >
-                         Set {part.letter.toUpperCase()} Image
-                      </button>
+                      <div style={{display: 'flex', gap: '5px'}}>
+                        <button 
+                            onClick={() => onCropAndAssign(index, 'part', pIdx)}
+                            style={{fontSize: '11px', padding: '6px 10px', backgroundColor: '#8e44ad', color: 'white', border: 'none', borderRadius: '3px', cursor: 'pointer', flex: 1}}
+                        >
+                           {hasImg ? `Replace ${part.letter.toUpperCase()}` : `Set ${part.letter.toUpperCase()} Image`}
+                        </button>
+                        {hasImg && (
+                          <button 
+                              onClick={() => {
+                                // Find the specific update method for parts in context or via props
+                                // We'll assume updateQuestion works for field answerImage if we handle it correctly
+                                onUpdate(index, 'part_image_remove', pIdx);
+                              }}
+                              style={{fontSize: '11px', padding: '6px 10px', backgroundColor: '#e74c3c', color: 'white', border: 'none', borderRadius: '3px', cursor: 'pointer'}}
+                              title={`Remove ${part.letter.toUpperCase()} Image`}
+                          >
+                             ✕
+                          </button>
+                        )}
+                      </div>
                    </div>
                );
            }
@@ -452,6 +492,8 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   const [zoomLevel, setZoomLevel] = useState(1); // Zoom level for cropper display
   const [rotation, setRotation] = useState(0); // Rotation in degrees (0, 90, 180, 270)
   const [isEasyImageMode, setIsEasyImageMode] = useState(false); // New Easy Image Mode
+  const [isRenderingPage, setIsRenderingPage] = useState(false); // PDF render loading state
+  const pdfDocumentRef = useRef(null); // Cache for PDF document object
   const canvasRef = useRef(null);
   const imageRef = useRef(null);
   const cropperContainerRef = useRef(null);
@@ -508,25 +550,6 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   const uniqueBanglaLessons = getUniqueValues('lesson', 'bangla');
   const uniqueBanglaBoards = getUniqueValues('board', 'bangla');
 
-  const updateQuestion = useCallback((index, field, value, listType = 'english') => {
-    const setter = listType === 'english' ? setEditableQuestions : setBanglaQuestions;
-    setter(prev => {
-      const updated = [...prev];
-      updated[index] = { ...updated[index], [field]: value };
-      return updated;
-    });
-
-    // Auto-sync images from English to Bangla
-    if (listType === 'english' && (field === 'image' || field === 'answerimage1' || field === 'answerimage2')) {
-      setBanglaQuestions(prev => {
-        if (index >= prev.length) return prev;
-        const updated = [...prev];
-        updated[index] = { ...updated[index], [field]: value };
-        return updated;
-      });
-    }
-  }, []);
-  
   const updateQuestionOption = useCallback((qIndex, optIndex, field, value, listType = 'english') => {
     const setter = listType === 'english' ? setEditableQuestions : setBanglaQuestions;
     setter(prev => {
@@ -571,6 +594,58 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       });
     }
   }, []);
+
+  const updateQuestion = useCallback((index, field, value, listType = 'english') => {
+    // Special handling for removing part images from Easy Upload mode
+    if (field === 'part_image_remove') {
+        const partIndex = value;
+        updateQuestionPart(index, partIndex, 'answerImage', null);
+        
+        // Sync English changes to Bangla and handle legacy fields (answerimage1/2)
+        const setter = listType === 'english' ? setEditableQuestions : setBanglaQuestions;
+        setter(prev => {
+            const updated = [...prev];
+            const partLetter = updated[index]?.parts?.[partIndex]?.letter?.toLowerCase();
+            if (partLetter === 'c') updated[index].answerimage1 = null;
+            else if (partLetter === 'd') updated[index].answerimage2 = null;
+            return updated;
+        });
+
+        if (listType === 'english') {
+            setBanglaQuestions(prev => {
+                if (index >= prev.length) return prev;
+                const updated = [...prev];
+                const parts = [...updated[index].parts];
+                if (partIndex < parts.length) {
+                    parts[partIndex] = { ...parts[partIndex], answerImage: null };
+                    updated[index] = { ...updated[index], parts };
+                    const partLetter = parts[partIndex]?.letter?.toLowerCase();
+                    if (partLetter === 'c') updated[index].answerimage1 = null;
+                    else if (partLetter === 'd') updated[index].answerimage2 = null;
+                }
+                return updated;
+            });
+        }
+        return;
+    }
+
+    const setter = listType === 'english' ? setEditableQuestions : setBanglaQuestions;
+    setter(prev => {
+      const updated = [...prev];
+      updated[index] = { ...updated[index], [field]: value };
+      return updated;
+    });
+
+    // Auto-sync images from English to Bangla
+    if (listType === 'english' && (field === 'image' || field === 'answerimage1' || field === 'answerimage2')) {
+      setBanglaQuestions(prev => {
+        if (index >= prev.length) return prev;
+        const updated = [...prev];
+        updated[index] = { ...updated[index], [field]: value };
+        return updated;
+      });
+    }
+  }, [updateQuestionPart]);
 
   const handlePartImageUpload = useCallback((qIndex, partIndex, file) => {
     if (file) {
@@ -712,11 +787,10 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
 
   if (!questions || questions.length === 0) return null;
   
-  const convertPdfPageToImage = async (pdfData, pageNumber, rot = 0) => {
+  const convertPdfPageToImage = async (pdfDocument, pageNumber, rot = 0) => {
     try {
-      const loadingTask = pdfjsLib.getDocument({ data: pdfData });
-      const pdf = await loadingTask.promise;
-      const page = await pdf.getPage(pageNumber);
+      if (!pdfDocument) return null;
+      const page = await pdfDocument.getPage(pageNumber);
       
       const viewport = page.getViewport({ scale: 1.5, rotation: rot });
       const canvas = document.createElement('canvas');
@@ -732,7 +806,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       return new Promise((resolve) => {
         canvas.toBlob((blob) => {
           resolve(URL.createObjectURL(blob));
-        }, 'image/png');
+        }, 'image/jpeg', 0.8); // Use JPEG for smaller blobs and faster processing
       });
     } catch (error) {
       console.error('Error converting PDF to image:', error);
@@ -743,11 +817,12 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   const rotateSource = async (direction) => {
     console.log(`[Performance] rotateSource triggered: ${direction}`);
     const start = performance.now();
-    if (sourceDocType !== 'pdf' || !pdfArrayBuffer) return;
+    if (sourceDocType !== 'pdf' || !pdfDocumentRef.current) return;
     
     let newRotation = (rotation + (direction === 'left' ? -90 : 90)) % 360;
     if (newRotation < 0) newRotation += 360;
     
+    setIsRenderingPage(true);
     setRotation(newRotation);
     
     if (sourceDocument && sourceDocument.startsWith('blob:')) {
@@ -755,9 +830,10 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     }
     
     console.log(`[Performance] Generating rotated PDF page...`);
-    const imageData = await convertPdfPageToImage(pdfArrayBuffer.slice(), currentPdfPage, newRotation);
+    const imageData = await convertPdfPageToImage(pdfDocumentRef.current, currentPdfPage, newRotation);
     setPdfAsImage(imageData);
     setSourceDocument(imageData);
+    setIsRenderingPage(false);
     console.log(`[Performance] rotateSource completed in ${performance.now() - start}ms`);
   };
 
@@ -766,6 +842,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     
     const fileType = file.type;
     setRotation(0);
+    setIsRenderingPage(true);
     
     if (fileType.includes('pdf')) {
       setSourceDocType('pdf');
@@ -779,6 +856,8 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
           
           const loadingTask = pdfjsLib.getDocument({ data: uint8Array.slice() });
           const pdf = await loadingTask.promise;
+          pdfDocumentRef.current = pdf; // Cache the document
+          
           const numPages = pdf.numPages;
           
           const pages = [];
@@ -792,12 +871,14 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
               URL.revokeObjectURL(sourceDocument);
           }
           
-          const imageData = await convertPdfPageToImage(uint8Array.slice(), 1, 0);
+          const imageData = await convertPdfPageToImage(pdf, 1, 0);
           setPdfAsImage(imageData);
           setSourceDocument(imageData);
         } catch (error) {
           console.error('Error processing PDF:', error);
           alert('Error processing PDF file. Please try again.');
+        } finally {
+          setIsRenderingPage(false);
         }
       };
       
@@ -806,6 +887,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       const reader = new FileReader();
       reader.onloadend = () => {
         setSourceDocument(reader.result);
+        setIsRenderingPage(false);
       };
       reader.readAsDataURL(file);
       
@@ -813,24 +895,27 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       setPdfAsImage(null);
       setPdfPages([]);
       setPdfArrayBuffer(null);
+      pdfDocumentRef.current = null;
     }
   };
   
   const handlePdfPageChange = async (pageNumber) => {
     console.log(`[Performance] handlePdfPageChange triggered: Page ${pageNumber}`);
     const start = performance.now();
-    if (!pdfArrayBuffer) {
-      console.error('PDF data not available');
+    if (!pdfDocumentRef.current) {
+      console.error('PDF document not loaded');
       return;
     }
     
+    setIsRenderingPage(true);
     setCurrentPdfPage(pageNumber);
     if (sourceDocument && sourceDocument.startsWith('blob:')) {
         URL.revokeObjectURL(sourceDocument);
     }
-    const imageData = await convertPdfPageToImage(pdfArrayBuffer.slice(), pageNumber, rotation);
+    const imageData = await convertPdfPageToImage(pdfDocumentRef.current, pageNumber, rotation);
     setPdfAsImage(imageData);
     setSourceDocument(imageData);
+    setIsRenderingPage(false);
     console.log(`[Performance] handlePdfPageChange completed in ${performance.now() - start}ms`);
   };
 
@@ -1824,6 +1909,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                             onRotate={rotateSource}
                             imageRef={imageRef}
                             cropAreaRef={cropAreaRef}
+                            isRenderingPage={isRenderingPage}
                         />
                     )}
                 </div>

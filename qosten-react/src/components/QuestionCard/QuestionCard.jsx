@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import LatexRenderer from '../LatexRenderer/LatexRenderer';
 import ImageLinkingModal from '../ImageLinkingModal/ImageLinkingModal';
 
-export default function QuestionCard({ question, selectionMode, isSelected, onToggleSelect }) {
+function QuestionCard({ question, selectionMode, isSelected, onToggleSelect }) {
   const { deleteQuestion, setEditingQuestion, toggleQuestionFlag, updateQuestion } = useQuestions();
   const navigate = useNavigate();
   const [showImageLinkingModal, setShowImageLinkingModal] = useState(false);
@@ -255,3 +255,5 @@ export default function QuestionCard({ question, selectionMode, isSelected, onTo
     </div>
   );
 }
+
+export default React.memo(QuestionCard);

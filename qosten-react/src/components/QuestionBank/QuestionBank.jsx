@@ -173,8 +173,12 @@ const getFilteredQuestions = (questions, filters, fullQuestionsMap = null, hasSe
     const matchesFlaggedStatus = !filters.flaggedStatus || 
       (filters.flaggedStatus === 'flagged' && q.isFlagged) ||
       (filters.flaggedStatus === 'unflagged' && !q.isFlagged);
+
+    const matchesVerifiedStatus = !filters.verifiedStatus || filters.verifiedStatus === 'all' ||
+      (filters.verifiedStatus === 'verified' && q.isVerified) ||
+      (filters.verifiedStatus === 'unverified' && !q.isVerified);
     
-    const matchesMetadata = matchesSubject && matchesChapter && matchesLesson && matchesType && matchesBoard && matchesLanguage && matchesFlaggedStatus;
+    const matchesMetadata = matchesSubject && matchesChapter && matchesLesson && matchesType && matchesBoard && matchesLanguage && matchesFlaggedStatus && matchesVerifiedStatus;
     
     if (!matchesMetadata) return false;
 
@@ -233,6 +237,11 @@ export default function QuestionBank() {
   const [bulkFixType, setBulkFixType] = useState('mcq'); // 'mcq', 'cq', 'sq'
   const [bulkFixInputText, setBulkFixInputText] = useState('');
 
+  // Review Queue State
+  const [showReviewQueueModal, setShowReviewQueueModal] = useState(false);
+  const [reviewQueueType, setReviewQueueType] = useState('mcq');
+  const [reviewQueueInputText, setReviewQueueInputText] = useState('');
+
   // Restoring missing state for existing CQ Fixing logic
   const [showCQFixModal, setShowCQFixModal] = useState(false);
   const [cqFixCandidates, setCqFixCandidates] = useState([]);
@@ -273,6 +282,124 @@ export default function QuestionBank() {
       
       return text;
     }).join('\n---\n\n');
+  };
+
+  const generateReviewQueueText = (type) => {
+    const queued = questions.filter(q => q.inReviewQueue && q.type === type);
+    if (queued.length === 0) return '';
+
+    return queued.map((q, idx) => {
+      const fullQ = fullQuestionsMap.get(q.id) || q;
+      let text = `Question ${idx + 1}:\n`;
+      text += `[Subject: ${fullQ.subject || ''}]\n[Chapter: ${fullQ.chapter || ''}]\n[Lesson: ${fullQ.lesson || ''}]\n[Board: ${fullQ.board || ''}]\n`;
+      
+      if (type === 'mcq') {
+        text += `${idx + 1}. ${fullQ.questionText || fullQ.question || ''}\n`;
+        if (fullQ.options && Array.isArray(fullQ.options)) {
+          fullQ.options.forEach(opt => {
+            text += `${opt.label}) ${opt.text}\n`;
+          });
+        }
+        text += `Correct: ${fullQ.correctAnswer || ''}\n`;
+        if (fullQ.explanation) text += `Explanation: ${fullQ.explanation}\n`;
+      } else if (type === 'cq') {
+        text += `Stem: ${fullQ.questionText || fullQ.question || ''}\n`;
+        if (fullQ.parts && Array.isArray(fullQ.parts)) {
+          fullQ.parts.forEach(part => {
+            text += `${part.letter}. ${part.text} (${part.marks || 0})\n`;
+          });
+          text += `Answer:\n`;
+          fullQ.parts.forEach(part => {
+            text += `${part.letter}. ${part.answer || ''}\n`;
+          });
+        }
+      } else if (type === 'sq') {
+        text += `${idx + 1}. ${fullQ.questionText || fullQ.question || ''}\n`;
+        text += `Answer: ${fullQ.answer || ''}\n`;
+      }
+      
+      return text;
+    }).join('\n---\n\n');
+  };
+
+  const handleReviewQueueApply = async () => {
+    if (!reviewQueueInputText.trim()) {
+      alert('Please paste the verified questions first.');
+      return;
+    }
+
+    const queued = questions.filter(q => q.inReviewQueue && q.type === reviewQueueType);
+    if (queued.length === 0) {
+      alert('No queued questions of this type found.');
+      return;
+    }
+
+    try {
+      setIsFixing(true);
+      let parsedQuestions = [];
+      
+      if (reviewQueueType === 'mcq') {
+        const { parseMCQQuestions } = await import('../../utils/mcqQuestionParser');
+        parsedQuestions = parseMCQQuestions(reviewQueueInputText);
+      } else if (reviewQueueType === 'cq') {
+        const { parseCQQuestions } = await import('../../utils/cqParser');
+        parsedQuestions = parseCQQuestions(reviewQueueInputText);
+      } else if (reviewQueueType === 'sq') {
+        const blocks = reviewQueueInputText.split(/---+/).filter(b => b.trim());
+        parsedQuestions = blocks.map(block => {
+          const lines = block.split('\n').map(l => l.trim()).filter(l => l);
+          const q = { type: 'sq', subject: '', chapter: '', lesson: '', board: '', questionText: '', answer: '' };
+          
+          lines.forEach(line => {
+            if (line.includes('[Subject:')) q.subject = line.match(/\[Subject:\s*(.*?)\]/)?.[1] || '';
+            else if (line.includes('[Chapter:')) q.chapter = line.match(/\[Chapter:\s*(.*?)\]/)?.[1] || '';
+            else if (line.includes('[Lesson:')) q.lesson = line.match(/\[Lesson:\s*(.*?)\]/)?.[1] || '';
+            else if (line.includes('[Board:')) q.board = line.match(/\[Board:\s*(.*?)\]/)?.[1] || '';
+            else if (line.match(/^\d+\./)) q.questionText = line.replace(/^\d+\.\s*/, '');
+            else if (line.toLowerCase().startsWith('answer:')) q.answer = line.replace(/^answer:\s*/i, '');
+          });
+          return q;
+        });
+      }
+
+      if (parsedQuestions.length === 0) {
+        alert('Could not parse any questions. Please check the format.');
+        return;
+      }
+
+      const updates = [];
+      const count = Math.min(queued.length, parsedQuestions.length);
+      
+      for (let i = 0; i < count; i++) {
+        const original = queued[i];
+        const improved = parsedQuestions[i];
+        
+        updates.push({
+          ...original,
+          ...improved,
+          id: original.id,
+          isVerified: true, // Verify after successful update
+          inReviewQueue: false // Remove from queue
+        });
+      }
+
+      const result = await bulkUpdateQuestions(updates);
+      alert(`✅ Successfully updated, verified, and de-queued ${result.successCount} questions!`);
+      
+      setFullQuestionsMap(prev => {
+        const next = new Map(prev);
+        updates.forEach(q => next.set(q.id, q));
+        return next;
+      });
+
+      setShowReviewQueueModal(false);
+      setReviewQueueInputText('');
+    } catch (error) {
+      console.error('Error in review queue apply:', error);
+      alert('Error updating questions: ' + error.message);
+    } finally {
+      setIsFixing(false);
+    }
   };
 
   const handleBulkReplace = async () => {
@@ -1677,6 +1804,76 @@ export default function QuestionBank() {
     } catch (error) {
       console.error('Error unflagging questions:', error);
       alert('Error unflagging questions. Please try again.');
+    }
+  };
+
+  const { bulkVerifyQuestions, bulkReviewQueue } = useQuestions();
+
+  const bulkVerify = async () => {
+    if (selectedQuestions.length === 0) {
+      alert('Please select at least one question to verify.');
+      return;
+    }
+    
+    try {
+      const result = await bulkVerifyQuestions(selectedQuestions, true);
+      setSelectedQuestions([]);
+      setSelectionMode(false);
+      alert(`✅ Verified ${result.successCount} question(s)!`);
+    } catch (error) {
+      console.error('Error verifying questions:', error);
+      alert('Error verifying questions. Please try again.');
+    }
+  };
+
+  const bulkUnverify = async () => {
+    if (selectedQuestions.length === 0) {
+      alert('Please select at least one question to unverify.');
+      return;
+    }
+    
+    try {
+      const result = await bulkVerifyQuestions(selectedQuestions, false);
+      setSelectedQuestions([]);
+      setSelectionMode(false);
+      alert(`❌ Unverified ${result.successCount} question(s)!`);
+    } catch (error) {
+      console.error('Error unverifying questions:', error);
+      alert('Error unverifying questions. Please try again.');
+    }
+  };
+
+  const bulkQueue = async () => {
+    if (selectedQuestions.length === 0) {
+      alert('Please select at least one question to add to queue.');
+      return;
+    }
+    
+    try {
+      const result = await bulkReviewQueue(selectedQuestions, true);
+      setSelectedQuestions([]);
+      setSelectionMode(false);
+      alert(`📋 Added ${result.successCount} question(s) to review queue!`);
+    } catch (error) {
+      console.error('Error adding to queue:', error);
+      alert('Error adding to queue. Please try again.');
+    }
+  };
+
+  const bulkDequeue = async () => {
+    if (selectedQuestions.length === 0) {
+      alert('Please select at least one question to remove from queue.');
+      return;
+    }
+    
+    try {
+      const result = await bulkReviewQueue(selectedQuestions, false);
+      setSelectedQuestions([]);
+      setSelectionMode(false);
+      alert(`✓ Removed ${result.successCount} question(s) from review queue!`);
+    } catch (error) {
+      console.error('Error removing from queue:', error);
+      alert('Error removing from queue. Please try again.');
     }
   };
 
@@ -3494,6 +3691,25 @@ export default function QuestionBank() {
             🚩 Bulk Fix Flagged
           </button>
 
+          <button
+            onClick={() => {
+              setReviewQueueType('mcq');
+              setShowReviewQueueModal(true);
+            }}
+            style={{
+              backgroundColor: '#3498db',
+              color: 'white',
+              padding: '10px 20px',
+              borderRadius: '6px',
+              border: 'none',
+              cursor: 'pointer',
+              fontWeight: '600',
+              marginRight: '10px'
+            }}
+          >
+            📋 Review Queue
+          </button>
+
           <button 
             onClick={toggleSelectionMode}
             style={{
@@ -3585,6 +3801,70 @@ export default function QuestionBank() {
                 }}
               >
                 ✓ Unflag ({selectedQuestions.length})
+              </button>
+
+              <button 
+                onClick={bulkVerify}
+                disabled={selectedQuestions.length === 0}
+                style={{
+                  backgroundColor: selectedQuestions.length > 0 ? '#2ecc71' : '#ccc',
+                  color: 'white',
+                  padding: '10px 20px',
+                  borderRadius: '6px',
+                  border: 'none',
+                  cursor: selectedQuestions.length > 0 ? 'pointer' : 'not-allowed',
+                  fontWeight: '600'
+                }}
+              >
+                ✅ Verify ({selectedQuestions.length})
+              </button>
+
+              <button 
+                onClick={bulkUnverify}
+                disabled={selectedQuestions.length === 0}
+                style={{
+                  backgroundColor: selectedQuestions.length > 0 ? '#f39c12' : '#ccc',
+                  color: 'white',
+                  padding: '10px 20px',
+                  borderRadius: '6px',
+                  border: 'none',
+                  cursor: selectedQuestions.length > 0 ? 'pointer' : 'not-allowed',
+                  fontWeight: '600'
+                }}
+              >
+                ❌ Unverify ({selectedQuestions.length})
+              </button>
+
+              <button 
+                onClick={bulkQueue}
+                disabled={selectedQuestions.length === 0}
+                style={{
+                  backgroundColor: selectedQuestions.length > 0 ? '#3498db' : '#ccc',
+                  color: 'white',
+                  padding: '10px 20px',
+                  borderRadius: '6px',
+                  border: 'none',
+                  cursor: selectedQuestions.length > 0 ? 'pointer' : 'not-allowed',
+                  fontWeight: '600'
+                }}
+              >
+                📋 Queue ({selectedQuestions.length})
+              </button>
+
+              <button 
+                onClick={bulkDequeue}
+                disabled={selectedQuestions.length === 0}
+                style={{
+                  backgroundColor: selectedQuestions.length > 0 ? '#5dade2' : '#ccc',
+                  color: 'white',
+                  padding: '10px 20px',
+                  borderRadius: '6px',
+                  border: 'none',
+                  cursor: selectedQuestions.length > 0 ? 'pointer' : 'not-allowed',
+                  fontWeight: '600'
+                }}
+              >
+                ✓ De-queue ({selectedQuestions.length})
               </button>
               
               <button 
@@ -3904,6 +4184,174 @@ export default function QuestionBank() {
                 }}
               >
                 {isFixing ? '⏳ Syncing Changes...' : `🚀 Replace All Flagged ${bulkFixType.toUpperCase()}`}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Review Queue Modal */}
+      {showReviewQueueModal && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          zIndex: 10000,
+          padding: '20px'
+        }}>
+          <div style={{
+            backgroundColor: 'white',
+            padding: '30px',
+            borderRadius: '12px',
+            boxShadow: '0 10px 25px rgba(0,0,0,0.2)',
+            width: '100%',
+            maxWidth: '1000px',
+            maxHeight: '90vh',
+            display: 'flex',
+            flexDirection: 'column'
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+              <h2 style={{ margin: 0, color: '#3498db' }}>📋 Review & Verify Queue</h2>
+              <button 
+                onClick={() => setShowReviewQueueModal(false)}
+                style={{ background: 'none', border: 'none', fontSize: '24px', cursor: 'pointer', color: '#666' }}
+              >✕</button>
+            </div>
+
+            <div style={{ display: 'flex', gap: '10px', marginBottom: '20px' }}>
+              {['mcq', 'cq', 'sq'].map(type => {
+                const count = questions.filter(q => q.inReviewQueue && q.type === type).length;
+                return (
+                  <button
+                    key={type}
+                    onClick={() => {
+                      setReviewQueueType(type);
+                      setReviewQueueInputText('');
+                    }}
+                    style={{
+                      flex: 1,
+                      padding: '12px',
+                      borderRadius: '8px',
+                      border: '2px solid',
+                      borderColor: reviewQueueType === type ? '#3498db' : '#eee',
+                      backgroundColor: reviewQueueType === type ? '#ebf5fb' : 'white',
+                      color: reviewQueueType === type ? '#3498db' : '#666',
+                      fontWeight: 'bold',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    {type.toUpperCase()} ({count})
+                  </button>
+                );
+              })}
+            </div>
+
+            <div style={{ flex: 1, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', minHeight: 0 }}>
+              {/* Left Side: Instructions & Paste Area */}
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <div style={{ backgroundColor: '#f8f9fa', padding: '15px', borderRadius: '8px', marginBottom: '15px', border: '1px solid #eee' }}>
+                  <h4 style={{ marginTop: 0 }}>Step 1: Export Queue</h4>
+                  <p style={{ fontSize: '13px', color: '#666' }}>
+                    Copy all queued <strong>{reviewQueueType.toUpperCase()}</strong> questions. 
+                    Format them in an external editor, then paste back in Step 2.
+                  </p>
+                  <button
+                    onClick={() => {
+                      const text = generateReviewQueueText(reviewQueueType);
+                      navigator.clipboard.writeText(text);
+                      alert('📋 Copied to clipboard! Verify content and paste in Step 2.');
+                    }}
+                    disabled={questions.filter(q => q.inReviewQueue && q.type === reviewQueueType).length === 0}
+                    style={{
+                      width: '100%',
+                      padding: '10px',
+                      backgroundColor: '#3498db',
+                      color: 'white',
+                      border: 'none',
+                      borderRadius: '6px',
+                      cursor: 'pointer',
+                      fontWeight: 'bold'
+                    }}
+                  >
+                    📋 Copy Queued {reviewQueueType.toUpperCase()}
+                  </button>
+                </div>
+
+                <div style={{ backgroundColor: '#ebf5fb', padding: '15px', borderRadius: '8px', flex: 1, border: '1px solid #d6eaf8' }}>
+                  <h4 style={{ marginTop: 0 }}>Step 2: Paste & Verify</h4>
+                  <p style={{ fontSize: '13px', color: '#666' }}>
+                    Paste the <strong>VERIFIED</strong> content here. This will update the questions AND mark them as verified.
+                  </p>
+                  <textarea
+                    value={reviewQueueInputText}
+                    onChange={(e) => setReviewQueueInputText(e.target.value)}
+                    placeholder={`Paste verified ${reviewQueueType.toUpperCase()} here...`}
+                    style={{
+                      width: '100%',
+                      flex: 1,
+                      minHeight: '200px',
+                      padding: '10px',
+                      borderRadius: '6px',
+                      border: '1px solid #d6eaf8',
+                      fontFamily: 'monospace',
+                      fontSize: '12px'
+                    }}
+                  />
+                </div>
+              </div>
+
+              {/* Right Side: Current Queue Preview */}
+              <div style={{ display: 'flex', flexDirection: 'column', border: '1px solid #eee', borderRadius: '8px', overflow: 'hidden' }}>
+                <div style={{ padding: '10px 15px', backgroundColor: '#eee', fontWeight: 'bold', fontSize: '14px' }}>
+                  Current Queue Preview
+                </div>
+                <div style={{ flex: 1, overflowY: 'auto', padding: '15px', backgroundColor: '#fafafa' }}>
+                  {questions.filter(q => q.inReviewQueue && q.type === reviewQueueType).length === 0 ? (
+                    <div style={{ textAlign: 'center', color: '#999', marginTop: '50px' }}>No queued questions of this type.</div>
+                  ) : (
+                    questions.filter(q => q.inReviewQueue && q.type === reviewQueueType).map((q, i) => (
+                      <div key={q.id} style={{ marginBottom: '15px', borderBottom: '1px solid #eee', paddingBottom: '10px', fontSize: '12px' }}>
+                        <strong>#{i+1} (ID: {q.id})</strong>
+                        <div style={{ color: '#666', marginTop: '5px', maxHeight: '100px', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                          {q.questionText || q.question}
+                        </div>
+                      </div>
+                    ))
+                  )}
+                </div>
+              </div>
+            </div>
+
+            <div style={{ marginTop: '20px', display: 'flex', gap: '10px' }}>
+              <button
+                onClick={() => setShowReviewQueueModal(false)}
+                style={{ padding: '12px 24px', borderRadius: '8px', border: '1px solid #ccc', backgroundColor: 'white', cursor: 'pointer' }}
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleReviewQueueApply}
+                disabled={isFixing || !reviewQueueInputText.trim()}
+                style={{
+                  flex: 1,
+                  padding: '12px 24px',
+                  borderRadius: '8px',
+                  border: 'none',
+                  backgroundColor: '#3498db',
+                  color: 'white',
+                  fontWeight: 'bold',
+                  fontSize: '16px',
+                  cursor: (isFixing || !reviewQueueInputText.trim()) ? 'not-allowed' : 'pointer',
+                  boxShadow: '0 4px 6px rgba(52, 152, 219, 0.2)'
+                }}
+              >
+                {isFixing ? '⏳ Processing...' : `🚀 Apply & Verify All ${reviewQueueType.toUpperCase()}`}
               </button>
             </div>
           </div>

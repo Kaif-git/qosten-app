@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
 import { createClient } from '@supabase/supabase-js';
+import { questionApi } from '../services/questionApi';
 
 // Initialize Supabase client
 const supabaseUrl = process.env.REACT_APP_SUPABASE_URL || '';
@@ -17,7 +18,8 @@ const initialState = {
     type: '',
     board: '',
     language: '',
-    flaggedStatus: '' // 'all', 'flagged', 'unflagged'
+    flaggedStatus: '', // 'all', 'flagged', 'unflagged'
+    verifiedStatus: 'all' // 'all', 'verified', 'unverified'
   },
   editingQuestion: null,
   isAuthenticated: false,
@@ -98,6 +100,12 @@ export const cleanText = (text) => {
   return typeof text === 'string' ? text.trim() : '';
 };
 
+// Helper to convert base64 to Blob
+const base64ToBlob = async (base64Data) => {
+  const res = await fetch(base64Data);
+  return await res.blob();
+};
+
 // Context provider component
 export function QuestionProvider({ children }) {
   const [state, dispatch] = useReducer(questionReducer, initialState);
@@ -126,6 +134,75 @@ export function QuestionProvider({ children }) {
     }
   };
 
+  const uploadImageToSupabase = async (fileOrBase64) => {
+    if (!supabaseClient || !fileOrBase64) return null;
+    
+    // If it's already a URL, return it
+    if (typeof fileOrBase64 === 'string' && fileOrBase64.startsWith('http')) {
+        return fileOrBase64;
+    }
+
+    try {
+        let fileToUpload = fileOrBase64;
+        let mimeType = 'image/jpeg'; // Default
+        
+        if (typeof fileOrBase64 === 'string' && fileOrBase64.startsWith('data:')) {
+            // Extract mime type
+            const matches = fileOrBase64.match(/^data:(.+);base64,/);
+            if (matches && matches[1]) {
+                mimeType = matches[1];
+            }
+            fileToUpload = await base64ToBlob(fileOrBase64);
+        }
+        
+        const ext = mimeType.split('/')[1] || 'jpg';
+        const fileName = `${Date.now()}_${Math.random().toString(36).substring(7)}.${ext}`;
+        const filePath = `${fileName}`; 
+
+        const { data, error } = await supabaseClient
+            .storage
+            .from('question-images')
+            .upload(filePath, fileToUpload);
+
+        if (error) {
+            console.error('Error uploading image to Supabase:', error);
+            throw error;
+        }
+
+        const { data: { publicUrl } } = supabaseClient
+            .storage
+            .from('question-images')
+            .getPublicUrl(filePath);
+
+        return publicUrl;
+    } catch (error) {
+        console.error('Image upload failed:', error);
+        // Fallback: return original if upload fails, or throw? 
+        // For now, let's allow it to proceed potentially broken or retry logic should be higher up.
+        // But better to throw so user knows.
+        throw error;
+    }
+  };
+
+  const processQuestionImages = async (question) => {
+      const q = { ...question };
+      
+      if (q.image) q.image = await uploadImageToSupabase(q.image);
+      if (q.answerimage1) q.answerimage1 = await uploadImageToSupabase(q.answerimage1);
+      if (q.answerimage2) q.answerimage2 = await uploadImageToSupabase(q.answerimage2);
+      
+      if (q.parts && Array.isArray(q.parts)) {
+          q.parts = await Promise.all(q.parts.map(async p => {
+              if (p.answerImage) {
+                  return { ...p, answerImage: await uploadImageToSupabase(p.answerImage) };
+              }
+              return p;
+          }));
+      }
+      
+      return q;
+  };
+
   // Actions
   const setQuestions = (questions) => {
     dispatch({ type: ACTIONS.SET_QUESTIONS, payload: questions });
@@ -133,68 +210,29 @@ export function QuestionProvider({ children }) {
   };
 
   const addQuestion = async (question) => {
-    if (!supabaseClient) {
-      // Fallback to local storage
-      const newQuestion = { ...question, id: Date.now().toString() };
-      dispatch({ type: ACTIONS.ADD_QUESTION, payload: newQuestion });
-      return newQuestion;
-    }
-
     try {
-      // Generate a unique ID using timestamp + random number
-      // This avoids race conditions when inserting multiple questions in parallel
-      const uniqueId = Date.now() + Math.floor(Math.random() * 10000);
+      // 1. Process Images (Upload to Supabase Bucket)
+      const questionWithImages = await processQuestionImages(question);
       
-      // Map to database format with the generated ID
-      let dbQuestion = mapAppToDatabase({ ...question, id: uniqueId });
+      // 2. Map to API/DB format
+      // Note: We assume the API expects the same structure as the DB, or flexible JSON.
+      // We'll use mapAppToDatabase to keep consistent field names (snake_case) expected by the legacy DB structure
+      // that the API likely interfaces with.
+      const dbQuestion = mapAppToDatabase({ ...questionWithImages, id: Date.now() + Math.floor(Math.random() * 10000) });
       
-      let { data, error } = await supabaseClient
-        .from('questions_duplicate')
-        .insert([dbQuestion])
-        .select();
-
-      // Handle duplicate key constraint violation by appending a unique suffix
-      if (error && (error.code === '23505' || error.message?.includes('duplicate key'))) {
-        console.warn('Duplicate question detected, appending unique suffix:', error.details);
-        // Append a unique suffix to both question and question_text fields to make them unique
-        const suffix = ` [${uniqueId}]`;
-        dbQuestion.question = (dbQuestion.question || '') + suffix;
-        
-        // Ensure we append to question_text even if it's an empty string
-        if (dbQuestion.hasOwnProperty('question_text')) {
-          dbQuestion.question_text = (dbQuestion.question_text || '') + suffix;
-        }
-        
-        // Retry with the modified fields
-        const retryResult = await supabaseClient
-          .from('questions_duplicate')
-          .insert([dbQuestion])
-          .select();
-        
-        if (retryResult.error) {
-          console.error('Error adding question after retry:', retryResult.error);
-          throw new Error('Failed to add question to database');
-        }
-        
-        data = retryResult.data;
-        error = null;
-      }
-
-      if (error) {
-        console.error('Error adding question to database:', error);
-        throw new Error('Failed to add question to database');
-      }
-
-      if (data && data[0]) {
-        const newQuestion = mapDatabaseToApp(data[0]);
-        dispatch({ type: ACTIONS.ADD_QUESTION, payload: newQuestion });
-        console.log('Question added to database:', newQuestion.id);
-        
-        // Invalidate memory cache so next load fetches fresh data or we'd need to update it
-        memoryCache.questions = null; 
-        
-        return newQuestion;
-      }
+      // 3. Call API
+      const responseData = await questionApi.createQuestion(dbQuestion);
+      
+      // 4. Update State
+      // The API should return the created question.
+      const newQuestion = mapDatabaseToApp(responseData.data || responseData); // Handle {data: ...} or direct object
+      dispatch({ type: ACTIONS.ADD_QUESTION, payload: newQuestion });
+      console.log('Question added via API:', newQuestion.id);
+      
+      // Invalidate memory cache
+      memoryCache.questions = null; 
+      
+      return newQuestion;
     } catch (error) {
       console.error('Error in addQuestion:', error);
       throw error;
@@ -203,28 +241,20 @@ export function QuestionProvider({ children }) {
 
 
   const updateQuestion = async (question) => {
-    if (!supabaseClient) {
-      // Fallback to local state only
-      dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
-      return;
-    }
-
     try {
-      const dbQuestion = mapAppToDatabase(question);
+      // 1. Process Images
+      const questionWithImages = await processQuestionImages(question);
+      
+      // 2. Map to API/DB format
+      const dbQuestion = mapAppToDatabase(questionWithImages);
       const questionId = parseInt(question.id);
 
-      const { error } = await supabaseClient
-        .from('questions_duplicate')
-        .update(dbQuestion)
-        .eq('id', questionId);
+      // 3. Call API
+      await questionApi.updateQuestion(questionId, dbQuestion);
 
-      if (error) {
-        console.error('Error updating question in database:', error);
-        throw new Error('Failed to update question in database');
-      }
-
-      dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
-      console.log('Question updated in database:', question.id);
+      // 4. Update State
+      dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: questionWithImages });
+      console.log('Question updated via API:', question.id);
       
       // Invalidate memory cache
       memoryCache.questions = null;
@@ -235,79 +265,25 @@ export function QuestionProvider({ children }) {
   };
 
   const bulkUpdateQuestions = async (questions) => {
-    if (!supabaseClient) {
-      // Fallback to local state only
-      questions.forEach(question => {
-        dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
-      });
-      return { successCount: questions.length, failedCount: 0 };
-    }
-
     try {
       console.log(`🔄 Starting bulk update of ${questions.length} questions...`);
       
-      // Process in batches of 50 for optimal performance
-      const BATCH_SIZE = 50;
-      let successCount = 0;
-      let failedCount = 0;
+      // Note: Bulk update logic in API service might fallback to parallel requests.
+      // We assume bulk updates don't introduce *new* images usually (just metadata changes),
+      // but if they do, we should process them. For performance, we skip image processing check 
+      // unless we know images are involved. For now, assuming metadata updates.
       
-      for (let i = 0; i < questions.length; i += BATCH_SIZE) {
-        const batch = questions.slice(i, i + BATCH_SIZE);
-        
-        // Prepare batch update operations
-        const updatePromises = batch.map(async (question) => {
-          const dbQuestion = mapAppToDatabase(question);
-          const questionId = parseInt(question.id);
-          
-          let { error } = await supabaseClient
-            .from('questions_duplicate')
-            .update(dbQuestion)
-            .eq('id', questionId);
-          
-          // Handle duplicate key constraint violation by appending a unique suffix
-          if (error && (error.code === '23505' || error.message?.includes('duplicate key'))) {
-            console.warn(`Duplicate key error for question ${questionId}, retrying with suffix...`);
-            const uniqueSuffix = ` [${Date.now() + Math.floor(Math.random() * 1000)}]`;
-            
-            // Append suffix to unique fields
-            dbQuestion.question = dbQuestion.question + uniqueSuffix;
-            if (dbQuestion.question_text) {
-                dbQuestion.question_text = dbQuestion.question_text + uniqueSuffix;
-            }
-            
-            // Retry update
-            const retryResult = await supabaseClient
-                .from('questions_duplicate')
-                .update(dbQuestion)
-                .eq('id', questionId);
-                
-            error = retryResult.error;
-          }
-
-          if (error) {
-            console.error(`Error updating question ${questionId}:`, error);
-            return { success: false, error, questionId };
-          }
-          
-          return { success: true, questionId };
-        });
-        
-        // Execute batch in parallel
-        const results = await Promise.allSettled(updatePromises);
-        
-        // Process results
-        results.forEach((result, idx) => {
-          if (result.status === 'fulfilled' && result.value.success) {
-            successCount++;
-            const question = batch[idx];
-            dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
-          } else {
-            failedCount++;
-          }
-        });
-        
-        console.log(`  ✅ Batch ${Math.floor(i / BATCH_SIZE) + 1}: ${successCount} succeeded, ${failedCount} failed`);
-      }
+      // Map all to DB format
+      const dbQuestions = questions.map(q => mapAppToDatabase(q));
+      
+      const { successCount, failedCount } = await questionApi.bulkUpdateQuestions(dbQuestions);
+      
+      // Optimistically update local state for all (or rely on API result to determine)
+      // Since we don't get individual results easily from the simple parallel implementation without more logic,
+      // we'll update all in state.
+      questions.forEach(question => {
+        dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
+      });
       
       console.log(`✅ Bulk update complete: ${successCount} succeeded, ${failedCount} failed`);
       
@@ -322,27 +298,12 @@ export function QuestionProvider({ children }) {
   };
 
   const deleteQuestion = async (id) => {
-    if (!supabaseClient) {
-      // Fallback to local state only
-      dispatch({ type: ACTIONS.DELETE_QUESTION, payload: id });
-      return;
-    }
-
     try {
       const questionId = parseInt(id);
-
-      const { error } = await supabaseClient
-        .from('questions_duplicate')
-        .delete()
-        .eq('id', questionId);
-
-      if (error) {
-        console.error('Error deleting question from database:', error);
-        throw new Error('Failed to delete question from database');
-      }
+      await questionApi.deleteQuestion(questionId);
 
       dispatch({ type: ACTIONS.DELETE_QUESTION, payload: id });
-      console.log('Question deleted from database:', id);
+      console.log('Question deleted via API:', id);
       
       // Invalidate memory cache
       memoryCache.questions = null;
@@ -378,6 +339,19 @@ export function QuestionProvider({ children }) {
 
   // Helper function to map database question to app format
   const mapDatabaseToApp = (dbQuestion) => {
+    // Helper to parse JSON safely
+    const safeParse = (val, fallback = []) => {
+        if (typeof val === 'string') {
+            try {
+                return JSON.parse(val);
+            } catch (e) {
+                console.warn('Failed to parse JSON field:', e);
+                return fallback;
+            }
+        }
+        return val || fallback;
+    };
+
     return {
       id: dbQuestion.id?.toString() || Date.now().toString(),
       type: dbQuestion.type,
@@ -388,17 +362,19 @@ export function QuestionProvider({ children }) {
       language: dbQuestion.language || 'en',
       question: dbQuestion.question,
       questionText: dbQuestion.question_text, // Removed fallback to dbQuestion.question
-      options: dbQuestion.options,
+      options: safeParse(dbQuestion.options),
       correctAnswer: dbQuestion.correct_answer,
       answer: dbQuestion.answer,
-      parts: dbQuestion.parts,
+      parts: safeParse(dbQuestion.parts),
       image: dbQuestion.image,
       answerimage1: dbQuestion.answerimage1,
       answerimage2: dbQuestion.answerimage2,
       explanation: dbQuestion.explanation,
-      tags: dbQuestion.tags || [],
+      tags: safeParse(dbQuestion.tags),
       isQuizzable: dbQuestion.is_quizzable !== undefined ? dbQuestion.is_quizzable : true,
       isFlagged: dbQuestion.is_flagged || false,
+      isVerified: dbQuestion.is_verified || false,
+      inReviewQueue: dbQuestion.in_review_queue || false,
       createdAt: dbQuestion.created_at
     };
   };
@@ -417,34 +393,21 @@ export function QuestionProvider({ children }) {
     let questionField = (appQuestion.question || '').trim();
     
     if (type === 'cq') {
-      // For CQ, we now use the clean text for the question field as well
-      // to match the question_text column.
       questionField = qText;
     } else if (type === 'mcq') {
-      // For MCQ, we now use the clean text for the question field as well
-      // to satisfy the requirement of syncing both columns to be identical.
       questionField = qText;
     } else if (type === 'sq') {
-      // For SQ, we now use the clean text for the question field as well
-      // to match the question_text column.
       questionField = qText;
     }
     
-    // Final safety check for empty question field
-    // For CQ, we now allow the question field to be empty (null stem support)
     if (!questionField || questionField === 'MCQ:' || questionField === 'CQ:' || questionField === 'SQ:') {
       if (type !== 'cq') {
         questionField = `ID_${appQuestion.id || Date.now()}`;
       } else {
-        // For CQ, if it's strictly just the prefix or empty, let it be empty
         questionField = (questionField === 'CQ:') ? '' : questionField;
       }
     }
     
-    console.log(`🛠 mapAppToDatabase for ID ${appQuestion.id}: type=${type}`);
-    console.log(`   - DB question column will be: "${questionField.substring(0, 50)}${questionField.length > 50 ? '...' : ''}"`);
-    console.log(`   - DB question_text column will be: "${qText.substring(0, 50)}${qText.length > 50 ? '...' : ''}"`);
-
     const dbQuestion = {
       type: appQuestion.type,
       subject: appQuestion.subject,
@@ -453,17 +416,20 @@ export function QuestionProvider({ children }) {
       board: appQuestion.board || 'N/A',
       language: appQuestion.language || 'en',
       question: questionField,
-      question_text: qText, // Always use cleaned text for question_text column
-      options: appQuestion.options,
+      question_text: qText,
+      // Stringify complex objects for D1/SQLite compatibility
+      options: appQuestion.options ? JSON.stringify(appQuestion.options) : null,
       correct_answer: appQuestion.correctAnswer,
       answer: appQuestion.answer,
-      parts: appQuestion.parts,
+      parts: appQuestion.parts ? JSON.stringify(appQuestion.parts) : null,
       image: appQuestion.image,
       answerimage1: appQuestion.answerimage1,
       answerimage2: appQuestion.answerimage2,
       explanation: appQuestion.explanation,
-      tags: appQuestion.tags || [],
+      tags: appQuestion.tags ? JSON.stringify(appQuestion.tags) : JSON.stringify([]),
       is_flagged: appQuestion.isFlagged || false,
+      is_verified: appQuestion.isVerified || false,
+      in_review_queue: appQuestion.inReviewQueue || false,
       synced: false
     };
     
@@ -476,7 +442,7 @@ export function QuestionProvider({ children }) {
   };
 
 
-  // Load questions from Supabase on mount
+  // Load questions from API on mount
   useEffect(() => {
     const loadQuestionsFromDatabase = async () => {
       // 1. Try Memory Cache first (Instant)
@@ -508,87 +474,30 @@ export function QuestionProvider({ children }) {
         }
       }
 
-      if (!supabaseClient) {
-        console.warn('Supabase client not initialized.');
-        return;
-      }
-
       try {
-        console.log('📡 Cache MISS. Starting to fetch all questions from database...');
-        let allQuestions = [];
-        let from = 0;
-        const batchSize = 1000;
-        let hasMore = true;
-
-        // Fetch questions in batches to overcome the 1000 row limit
-        while (hasMore) {
-          const { data, error } = await supabaseClient
-            .from('questions_duplicate')
-            .select('id, type, subject, chapter, lesson, board, language, is_flagged, created_at, question', { count: 'exact' })
-            .order('created_at', { ascending: false })
-            .range(from, from + batchSize - 1);
-
-          if (error) {
-            console.error('Error fetching questions from database:', error);
-            break;
-          }
-
-          if (data) {
-            allQuestions = [...allQuestions, ...data];
-            console.log(`Fetched batch: ${data.length} questions (total so far: ${allQuestions.length})`);
-            
-            from += batchSize;
-            hasMore = data.length === batchSize;
-          } else {
-            hasMore = false;
-          }
-        }
+        console.log('📡 Fetching questions from API...');
+        // We fetch all questions via the API now
+        const allQuestions = await questionApi.fetchAllQuestions();
 
         if (allQuestions.length > 0) {
           const mappedQuestions = allQuestions.map(mapDatabaseToApp);
           setQuestions(mappedQuestions);
           saveToCache(mappedQuestions); // Save to cache
-          console.log(`✅ Successfully loaded ${mappedQuestions.length} questions and updated cache`);
+          console.log(`✅ Successfully loaded ${mappedQuestions.length} questions from API`);
         }
       } catch (error) {
-        console.error('Error loading questions:', error);
+        console.error('Error loading questions from API:', error);
       }
     };
 
     loadQuestionsFromDatabase();
   }, []);
 
-  // Function to manually refresh questions from database
+  // Function to manually refresh questions from API
   const refreshQuestions = async () => {
-    if (!supabaseClient) return;
-
     try {
-      console.log('🔄 Manually refreshing questions (Bypassing cache)...');
-      let allQuestions = [];
-      let from = 0;
-      const batchSize = 1000;
-      let hasMore = true;
-
-      while (hasMore) {
-        const { data, error } = await supabaseClient
-          .from('questions_duplicate')
-          .select('id, type, subject, chapter, lesson, board, language, is_flagged, created_at, question', { count: 'exact' })
-          .order('created_at', { ascending: false })
-          .range(from, from + batchSize - 1);
-
-        if (error) {
-          console.error('Error fetching questions from database:', error);
-          break;
-        }
-
-        if (data) {
-          allQuestions = [...allQuestions, ...data];
-          from += batchSize;
-          hasMore = data.length === batchSize;
-        } else {
-          hasMore = false;
-        }
-      }
+      console.log('🔄 Manually refreshing questions (API)...');
+      const allQuestions = await questionApi.fetchAllQuestions();
 
       if (allQuestions.length > 0) {
         const mappedQuestions = allQuestions.map(mapDatabaseToApp);
@@ -611,27 +520,14 @@ export function QuestionProvider({ children }) {
     const updatedQuestion = { ...question, isFlagged: newFlaggedStatus };
     dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: updatedQuestion });
 
-    if (!supabaseClient) return;
-
     try {
-      // 2. Partial Update in DB
-      const { error } = await supabaseClient
-        .from('questions_duplicate')
-        .update({ is_flagged: newFlaggedStatus })
-        .eq('id', parseInt(questionId));
-
-      if (error) {
-        console.error('Error toggling flag:', error);
-        // Revert on error
-        dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
-        alert('Failed to update flag status.');
-      } else {
-        // Update cache to reflect the change
-        if (memoryCache.questions) {
+      await questionApi.updateQuestion(parseInt(questionId), { is_flagged: newFlaggedStatus });
+      
+      // Update cache
+      if (memoryCache.questions) {
              memoryCache.questions = memoryCache.questions.map(q => 
                  q.id === questionId ? updatedQuestion : q
              );
-        }
       }
     } catch (err) {
       console.error('Exception toggling flag:', err);
@@ -640,82 +536,153 @@ export function QuestionProvider({ children }) {
     }
   };
 
+  const toggleQuestionVerification = async (questionId) => {
+    const question = state.questions.find(q => q.id === questionId);
+    if (!question) return;
+    
+    const newVerifiedStatus = !question.isVerified;
+
+    // 1. Optimistic UI Update
+    const updatedQuestion = { ...question, isVerified: newVerifiedStatus };
+    dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: updatedQuestion });
+
+    try {
+      await questionApi.updateQuestion(parseInt(questionId), { is_verified: newVerifiedStatus });
+      
+      if (memoryCache.questions) {
+             memoryCache.questions = memoryCache.questions.map(q => 
+                 q.id === questionId ? updatedQuestion : q
+             );
+      }
+    } catch (err) {
+      console.error('Exception toggling verification:', err);
+      // Revert on error
+      dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
+    }
+  };
+
+  const toggleReviewQueue = async (questionId) => {
+    const question = state.questions.find(q => q.id === questionId);
+    if (!question) return;
+    
+    const newQueueStatus = !question.inReviewQueue;
+
+    // 1. Optimistic UI Update
+    const updatedQuestion = { ...question, inReviewQueue: newQueueStatus };
+    dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: updatedQuestion });
+
+    try {
+      await questionApi.updateQuestion(parseInt(questionId), { in_review_queue: newQueueStatus });
+      
+      if (memoryCache.questions) {
+             memoryCache.questions = memoryCache.questions.map(q => 
+                 q.id === questionId ? updatedQuestion : q
+             );
+      }
+    } catch (err) {
+      console.error('Exception toggling review queue:', err);
+      // Revert on error
+      dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
+    }
+  };
+
+  const bulkReviewQueue = async (questionIds, inQueue) => {
+    // 1. Optimistic Local Update
+    const numericIds = questionIds.map(id => parseInt(id));
+    const idSet = new Set(questionIds.map(String));
+    
+    const updatedQuestionsForState = state.questions.map(q => 
+        idSet.has(String(q.id)) ? { ...q, inReviewQueue: inQueue } : q
+    );
+    
+    dispatch({ type: ACTIONS.SET_QUESTIONS, payload: updatedQuestionsForState });
+
+    try {
+      console.log(`📋 Bulk setting review queue to ${inQueue} for ${questionIds.length} questions...`);
+      
+      // Update in API using bulk update logic (fallback to loop in service)
+      const updates = numericIds.map(id => ({ id, in_review_queue: inQueue }));
+      const { successCount, failedCount } = await questionApi.bulkUpdateQuestions(updates);
+      
+      if (memoryCache.questions) {
+          memoryCache.questions = memoryCache.questions.map(q => 
+              idSet.has(String(q.id)) ? { ...q, inReviewQueue: inQueue } : q
+          );
+      }
+
+      return { successCount, failedCount };
+    } catch (err) {
+      console.error('Exception in bulkReviewQueue:', err);
+      return { successCount: 0, failedCount: questionIds.length };
+    }
+  };
+
   const bulkFlagQuestions = async (questionIds, flagged) => {
     // 1. Optimistic Local Update
     const numericIds = questionIds.map(id => parseInt(id));
-    
-    // Create map for fast lookup/update
     const idSet = new Set(questionIds.map(String));
     
     const updatedQuestionsForState = state.questions.map(q => 
         idSet.has(String(q.id)) ? { ...q, isFlagged: flagged } : q
     );
     
-    // Only dispatch if something actually changed (optimization)
-    // Actually, dispatching replace is cleaner for now
     dispatch({ type: ACTIONS.SET_QUESTIONS, payload: updatedQuestionsForState });
-
-    if (!supabaseClient) return { successCount: questionIds.length, failedCount: 0 };
 
     try {
       console.log(`🚩 Bulk flagging ${questionIds.length} questions to ${flagged}...`);
       
-      // 2. Efficient Batch Update in DB
-      const { data, error, count } = await supabaseClient
-        .from('questions_duplicate')
-        .update({ is_flagged: flagged })
-        .in('id', numericIds)
-        .select('id', { count: 'exact' });
-
-      if (error) {
-        console.error('Error in bulk flag update:', error);
-        // Revert local state if needed, or just alert. 
-        // Re-fetching might be safer than complex revert logic here.
-        alert('Failed to update some flags on server.');
-        return { successCount: 0, failedCount: questionIds.length };
-      }
-
-      console.log(`✅ Bulk flag update successful. Affected rows: ${data?.length || 0}`);
+      const updates = numericIds.map(id => ({ id, is_flagged: flagged }));
+      const { successCount, failedCount } = await questionApi.bulkUpdateQuestions(updates);
       
-      // Update memory cache
       if (memoryCache.questions) {
           memoryCache.questions = memoryCache.questions.map(q => 
               idSet.has(String(q.id)) ? { ...q, isFlagged: flagged } : q
           );
       }
 
-      return { successCount: data?.length || 0, failedCount: questionIds.length - (data?.length || 0) };
+      return { successCount, failedCount };
     } catch (err) {
       console.error('Exception in bulkFlagQuestions:', err);
       return { successCount: 0, failedCount: questionIds.length };
     }
   };
 
-  const fetchQuestionsByIds = async (ids) => {
-    if (!supabaseClient || ids.length === 0) return [];
+  const bulkVerifyQuestions = async (questionIds, verified) => {
+    // 1. Optimistic Local Update
+    const numericIds = questionIds.map(id => parseInt(id));
+    const idSet = new Set(questionIds.map(String));
+    
+    const updatedQuestionsForState = state.questions.map(q => 
+        idSet.has(String(q.id)) ? { ...q, isVerified: verified } : q
+    );
+    
+    dispatch({ type: ACTIONS.SET_QUESTIONS, payload: updatedQuestionsForState });
 
     try {
-      // Fetch in batches
-      const BATCH_SIZE = 200;
-      let allData = [];
-
-      for (let i = 0; i < ids.length; i += BATCH_SIZE) {
-        const batchIds = ids.slice(i, i + BATCH_SIZE);
-        const { data, error } = await supabaseClient
-          .from('questions_duplicate')
-          .select('*')
-          .in('id', batchIds);
-
-        if (error) {
-          console.error('Error fetching batch:', error);
-          continue;
-        }
-        if (data) {
-          allData = [...allData, ...data];
-        }
+      console.log(`✅ Bulk verifying ${questionIds.length} questions to ${verified}...`);
+      
+      const updates = numericIds.map(id => ({ id, is_verified: verified }));
+      const { successCount, failedCount } = await questionApi.bulkUpdateQuestions(updates);
+      
+      if (memoryCache.questions) {
+          memoryCache.questions = memoryCache.questions.map(q => 
+              idSet.has(String(q.id)) ? { ...q, isVerified: verified } : q
+          );
       }
 
-      return allData.map(mapDatabaseToApp);
+      return { successCount, failedCount };
+    } catch (err) {
+      console.error('Exception in bulkVerifyQuestions:', err);
+      return { successCount: 0, failedCount: questionIds.length };
+    }
+  };
+
+  const fetchQuestionsByIds = async (ids) => {
+    if (ids.length === 0) return [];
+
+    try {
+      const data = await questionApi.fetchQuestionsByIds(ids);
+      return data.map(mapDatabaseToApp);
     } catch (error) {
       console.error('Error in fetchQuestionsByIds:', error);
       return [];
@@ -724,7 +691,7 @@ export function QuestionProvider({ children }) {
 
   const value = {
     ...state,
-    supabaseClient,
+    supabaseClient, // Exposed for direct storage access if needed elsewhere
     setQuestions,
     addQuestion,
     updateQuestion,
@@ -737,7 +704,11 @@ export function QuestionProvider({ children }) {
     updateStats,
     refreshQuestions,
     toggleQuestionFlag,
-    bulkFlagQuestions
+    bulkFlagQuestions,
+    toggleQuestionVerification,
+    bulkVerifyQuestions,
+    toggleReviewQueue,
+    bulkReviewQueue
   };
 
   return (

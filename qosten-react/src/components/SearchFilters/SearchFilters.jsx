@@ -58,7 +58,8 @@ export default function SearchFilters({ filters, onFilterChange }) {
       type: '',
       board: '',
       language: '',
-      flaggedStatus: ''
+      flaggedStatus: '',
+      verifiedStatus: 'all'
     };
     
     if (isControlled) {
@@ -193,6 +194,23 @@ export default function SearchFilters({ filters, onFilterChange }) {
           <option value="">All Questions</option>
           <option value="flagged">🚩 Flagged Only</option>
           <option value="unflagged">✓ Unflagged Only</option>
+        </select>
+      </div>
+
+      <div>
+        <label htmlFor="filterVerified">✅ Verified Status:</label>
+        <select
+          id="filterVerified"
+          value={activeFilters.verifiedStatus || ''}
+          onChange={(e) => handleFilterChange('verifiedStatus', e.target.value)}
+          style={{ 
+            borderColor: activeFilters.verifiedStatus === 'verified' ? '#27ae60' : undefined,
+            fontWeight: activeFilters.verifiedStatus === 'verified' ? 'bold' : 'normal'
+          }}
+        >
+          <option value="all">All Questions</option>
+          <option value="verified">✅ Verified Only</option>
+          <option value="unverified">❌ Unverified Only</option>
         </select>
       </div>
       

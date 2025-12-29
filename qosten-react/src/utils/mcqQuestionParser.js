@@ -3,7 +3,6 @@
  * Supports both English and Bengali (Bangla) formats:
  * 
  * English format:
- * ### *Question Set X*
  * *[Subject: ...]*
  * *[Chapter: ...]*
  * *[Lesson: ...]*
@@ -75,8 +74,9 @@ export function parseMCQQuestions(text) {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      // Skip "Question Set X" header
-      if (line.match(/^\*+Question Set\s+\d+\*+/i)) {
+      // Skip "Question Set X" header or horizontal rules
+      if (line.match(/^[#*\s\-\/]*(Question\s*Set|প্রশ্ন\s*সেট)\s*[\d০-৯]+/i) || line.match(/^[\s\-]*---[\s\-]*$/)) {
+        inExplanation = false; // CRITICAL: Stop explanation mode immediately
         continue;
       }
       
@@ -172,8 +172,8 @@ export function parseMCQQuestions(text) {
         }
       }
       // Parse correct answer (handle 0, 1, or 2 asterisks and Bengali সঠিক, including format without spaces like সঠিক:ক)
-      else if (line.match(/^\*{0,2}(Correct|সঠিক):\*{0,2}\s*([a-dক-ঘ])(?:\)|\s+|$)\s*\*{0,2}/i) || line.match(/^(Correct|সঠিক):\s*([a-dক-ঘ])\s*$/i)) {
-        const match = line.match(/^\*{0,2}(Correct|সঠিক):\*{0,2}\s*([a-dক-ঘ])(?:\)|\s+|$)\s*\*{0,2}/i) || line.match(/^(Correct|সঠিক):\s*([a-dক-ঘ])\s*$/i);
+      else if (line.match(/^\*{0,2}(Correct|সঠিক(?:\s*উত্তর)?):\*{0,2}\s*([a-dক-ঘ])(?:\)|\s+|$)\s*\*{0,2}/i) || line.match(/^(Correct|সঠিক(?:\s*উত্তর)?):\s*([a-dক-ঘ])\s*$/i)) {
+        const match = line.match(/^\*{0,2}(Correct|সঠিক(?:\s*উত্তর)?):\*{0,2}\s*([a-dক-ঘ])(?:\)|\s+|$)\s*\*{0,2}/i) || line.match(/^(Correct|সঠিক(?:\s*উত্তর)?):\s*([a-dক-ঘ])\s*$/i);
         let answer = match[2].toLowerCase();
         console.log('  ✅ Found Correct answer:', answer);
         // Convert Bengali letters to English
@@ -185,8 +185,8 @@ export function parseMCQQuestions(text) {
       }
       // Parse explanation (handle 0, 1, or 2 asterisks and Bengali ব্যাখ্যা, plus transliteration "Bekkha")
       else if (
-        line.match(/^\*{0,2}(Explanation|ব্যাখ্যা|Bekkha):\*{0,2}/i) ||
-        line.match(/^(Explanation|ব্যাখ্যা|Bekkha):\s*$/i)
+        line.match(/^\*{0,2}(Explanation|ব্যাখ্যা|Bekkha)[\s:=ঃ：]*\*{0,2}/i) ||
+        line.match(/^(Explanation|ব্যাখ্যা|Bekkha)\s*$/i)
       ) {
         console.log('  ✅ Found Explanation line');
         // Save question text if we were collecting it
@@ -199,8 +199,7 @@ export function parseMCQQuestions(text) {
         explanationBuffer = [];
         // Check if explanation starts on same line
         const explanationText = line
-          .replace(/^\*{0,2}(Explanation|ব্যাখ্যা|Bekkha):\*{0,2}/i, '')
-          .replace(/^(Explanation|ব্যাখ্যা|Bekkha):\s*/i, '')
+          .replace(/^\*{0,2}(Explanation|ব্যাখ্যা|Bekkha)[\s:=ঃ：]*\*{0,2}/i, '')
           .trim();
         if (explanationText) {
           explanationBuffer.push(explanationText);
@@ -209,7 +208,7 @@ export function parseMCQQuestions(text) {
       // Collect explanation lines
       else if (inExplanation) {
         // Stop at next question set marker or metadata (handle both English and Bengali)
-        if (line.match(/^\*{0,2}\[\s*(Subject|বিষয়)\s*:/i) || line.match(/^\*{0,2}Question Set/i)) {
+        if (line.match(/^\*{0,2}\[\s*(Subject|বিষয়)\s*:/i) || line.match(/^[#*\s\-\/]*(Question\s*Set|প্রশ্ন\s*সেট)\s*[\d০-৯]+/i) || line.match(/^[\s\-]*---[\s\-]*$/)) {
           // This is the start of next question, process current one
           if (explanationBuffer.length > 0) {
             currentQuestion.explanation = explanationBuffer.join('\n').trim();
@@ -236,6 +235,11 @@ export function parseMCQQuestions(text) {
           inExplanation = false;
           explanationBuffer = [];
           
+          // If it was just a "Question Set" marker or horizontal rule, we don't want to re-process it as metadata
+          if (line.match(/^[#*\s\-\/]*(Question\s*Set|প্রশ্ন\s*সেট)\s*[\d০-৯]+/i) || line.match(/^[\s\-]*---[\s\-]*$/)) {
+             continue;
+          }
+
           // Process this line as metadata
           i--;
           continue;
@@ -307,9 +311,7 @@ export function validateMCQQuestion(question) {
  * Format example text for the MCQ import interface
  */
 export function getMCQQuestionExample() {
-  return `### **Question Set 13**
-
-**[Subject: Math]**  
+  return `**[Subject: Math]**  
 **[Chapter: Algebraic Expressions]**  
 **[Lesson: Algebraic Identities]**  
 **[Board: D.B.-23]**  

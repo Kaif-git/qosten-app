@@ -155,7 +155,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
   
   const parseMCQQuestions = (text, lang = 'en') => {
     const cleanedText = text.replace(/\u200b/g, '').replace(/\*+/g, '');
-    const sections = cleanedText.split(/\n---\+\n/);
+    const sections = cleanedText.split(/\n---+|###/).filter(s => s.trim());
     const questions = [];
 
     for (const section of sections) {
@@ -174,7 +174,11 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
         };
 
         for (const line of lines) {
-            if (/^(Question\s+Set|প্রশ্ন\s*সেট)\s*[\d০-৯]+$/i.test(line)) continue;
+            // Explicitly skip "Question Set" headers and horizontal rules
+            if (/^[#*\s\-\/]*(Question\s*Set|প্রশ্ন\s*সেট)\s*[\d০-৯]+/i.test(line) || /^[\s\-]*---[\s\-]*$/.test(line)) {
+                inExplanation = false; // CRITICAL: Stop explanation mode immediately
+                continue;
+            }
             if (line.toLowerCase().includes('alternate') || line.toLowerCase().includes('also supported')) continue;
 
             if (line.startsWith('[') && line.endsWith(']')) {
@@ -292,7 +296,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
                 continue;
             }
 
-            const explanationMarker = /^(explanation|explain|exp|bekkha|ব্যাখ্যা)\s*[:=ঃ：]/i;
+            const explanationMarker = /^(explanation|explain|exp|bekkha|ব্যাখ্যা)\s*[:=ঃ：]?/i;
             if (explanationMarker.test(line)) {
                 currentQuestion.explanation = line.replace(explanationMarker, '').trim();
                 inExplanation = true;
@@ -303,13 +307,18 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
             }
 
             if (inExplanation) {
+                // If we encounter a Question Set marker while in explanation, stop explanation mode
+                if (/^[#*\s\-\/]*(Question\s*Set|প্রশ্ন\s*সেট)\s*[\d০-৯]+/i.test(line) || /^[\s\-]*---[\s\-]*$/.test(line)) {
+                    inExplanation = false;
+                    continue;
+                }
                 currentQuestion.explanation += (currentQuestion.explanation ? '\n' : '') + line;
             } else if (currentQuestion.correctAnswer && !currentQuestion.explanation) {
                 // If we have a correct answer, any subsequent text is likely explanation
                 currentQuestion.explanation = (currentQuestion.explanation ? currentQuestion.explanation + '\n' : '') + line;
                 inExplanation = true;
-            } else if (currentQuestion.questionText && currentQuestion.options.length === 0) { // Continuation of question text (before options)
-                 currentQuestion.questionText += '\n' + line;
+            } else if (currentQuestion && currentQuestion.questionText !== undefined && currentQuestion.options.length === 0) { // Continuation of question text (before options)
+                 currentQuestion.questionText += (currentQuestion.questionText ? '\n' : '') + line;
             }
         }
         saveCurrentQuestion();

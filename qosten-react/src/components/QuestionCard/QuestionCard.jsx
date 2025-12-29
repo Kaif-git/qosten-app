@@ -5,7 +5,7 @@ import LatexRenderer from '../LatexRenderer/LatexRenderer';
 import ImageLinkingModal from '../ImageLinkingModal/ImageLinkingModal';
 
 function QuestionCard({ question, selectionMode, isSelected, onToggleSelect }) {
-  const { deleteQuestion, setEditingQuestion, toggleQuestionFlag, updateQuestion } = useQuestions();
+  const { deleteQuestion, setEditingQuestion, toggleQuestionFlag, toggleReviewQueue, updateQuestion } = useQuestions();
   const navigate = useNavigate();
   const [showImageLinkingModal, setShowImageLinkingModal] = useState(false);
   
@@ -29,6 +29,11 @@ function QuestionCard({ question, selectionMode, isSelected, onToggleSelect }) {
   const handleToggleFlag = async (e) => {
     e.stopPropagation(); // Prevent card click when toggling flag
     await toggleQuestionFlag(question.id);
+  };
+
+  const handleToggleQueue = async (e) => {
+    e.stopPropagation();
+    await toggleReviewQueue(question.id);
   };
   
   const handleLinkImages = async (imageData) => {
@@ -211,6 +216,29 @@ function QuestionCard({ question, selectionMode, isSelected, onToggleSelect }) {
             🚩 FLAGGED
           </span>
         )}
+        {question.isVerified && (
+          <span style={{ 
+            backgroundColor: '#27ae60', 
+            color: 'white', 
+            padding: '2px 8px', 
+            borderRadius: '4px',
+            fontWeight: 'bold'
+          }}>
+            ✅ VERIFIED
+          </span>
+        )}
+        {question.inReviewQueue && (
+          <span style={{ 
+            backgroundColor: '#3498db', 
+            color: 'white', 
+            padding: '2px 8px', 
+            borderRadius: '4px',
+            fontWeight: 'bold',
+            marginLeft: '5px'
+          }}>
+            📋 QUEUED
+          </span>
+        )}
       </div>
       
       {renderQuestionContent()}
@@ -226,6 +254,16 @@ function QuestionCard({ question, selectionMode, isSelected, onToggleSelect }) {
             }}
           >
             {question.isFlagged ? '✓ Unflag' : '🚩 Flag'}
+          </button>
+          <button 
+            onClick={handleToggleQueue}
+            style={{
+              backgroundColor: question.inReviewQueue ? '#e67e22' : '#3498db',
+              color: 'white',
+              border: 'none'
+            }}
+          >
+            {question.inReviewQueue ? '📋 De-queue' : '📋 Queue'}
           </button>
           {question.type === 'cq' && (
             <button 

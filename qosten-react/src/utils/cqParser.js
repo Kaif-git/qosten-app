@@ -336,8 +336,8 @@ export const parseCQQuestions = (text, lang = 'en') => {
 
         if (!state.inAnswerSection) {
             // Parse question parts (a., b., c., d. or ক., খ., গ., ঘ.)
-            // Support "a.", "Part a:", "Part a."
-            const partMatch = line.match(/^(?:Part\s+)?([a-dক-ঘ])[:.)]\s*(.+)/i);
+            // Support "a.", "Part a:", "Part a.", "ক।"
+            const partMatch = line.match(/^(?:Part\s+)?([a-dক-ঘ])[:.)।]\s*(.+)/i);
             if (partMatch) {
                 let partLetter = partMatch[1].toLowerCase();
                 let partText = partMatch[2].trim();
@@ -431,12 +431,12 @@ export const parseCQQuestions = (text, lang = 'en') => {
                 }
             } else {
                 // Standard a. b. c. d.
-                // Support "a.", "Part a:", "Part a."
-                const partRegex = /^(?:Part\s+)?([a-dক-ঘ])[:.)]\s*(.*)/i;
+                // Support "a.", "Part a:", "Part a.", "ক।"
+                const partRegex = /^(?:Part\s+)?([a-dক-ঘ])[:.)।]\s*(.*)/i;
                 const partMatch = line.match(partRegex);
                 
                 const splitAndAssign = (text, startLetter) => {
-                    const multiPartRegex = /\s+([a-dক-ঘ])[.:)]\s+/gi;
+                    const multiPartRegex = /\s+([a-dক-ঘ])[.:)।]\s+/gi;
                     let lastIndex = 0;
                     let currentLetter = startLetter;
                     let match;
@@ -467,7 +467,7 @@ export const parseCQQuestions = (text, lang = 'en') => {
                     const partContent = partMatch[2].trim();
                     
                     // Check if this line contains more parts
-                    if (/\s+([a-dক-ঘ])[.:)]\s+/i.test(partContent)) {
+                    if (/\s+([a-dক-ঘ])[.:)।]\s+/i.test(partContent)) {
                         splitAndAssign(partContent, partLetter);
                     } else {
                         const bengaliToEnglish = { 'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd' };
@@ -494,7 +494,7 @@ export const parseCQQuestions = (text, lang = 'en') => {
                     }
                 } else {
                     // Split the line if it contains multiple answers like "a. ... b. ... c. ..."
-                    const multiPartRegex = /\s+([b-dক-ঘ])[.:)]\s+/i;
+                    const multiPartRegex = /\s+([b-dক-ঘ])[.:)।]\s+/i;
                     if (multiPartRegex.test(line) && state.currentAnswerPart) {
                         splitAndAssign(line, state.currentAnswerPart.letter);
                     } else if (state.currentAnswerPart) {

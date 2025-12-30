@@ -3,24 +3,17 @@ import { useQuestions } from '../../context/QuestionContext';
 
 export default function SearchFilters({ filters, onFilterChange }) {
   const context = useQuestions();
+  const { hierarchy } = context; // Access hierarchy data
   
+  // Debugging hierarchy
+  console.log('SearchFilters render. Hierarchy:', hierarchy?.length, hierarchy);
+
   // Determine source of truth: props (controlled) or context (uncontrolled)
   const isControlled = !!filters && !!onFilterChange;
   const activeFilters = isControlled ? filters : context.currentFilters;
   const allQuestions = context.questions; // Always get questions from context for options
   
   // Helper to filter questions based on ACTIVE filters, but excluding the key being generated
-  // This allows the user to see all options for a specific filter if they haven't selected it yet,
-  // but restricts other filters based on selections.
-  // Actually, standard drill-down usually means:
-  // - Subject dropdown shows ALL subjects (unless maybe board is selected?)
-  // - Chapter dropdown shows chapters for Selected Subject (and Board/Type etc)
-  // - Lesson dropdown shows lessons for Selected Chapter (and Subject/Board/Type)
-  // - Board dropdown shows boards for Selected Subject/Chapter... or maybe all boards?
-  
-  // Let's implement strict drill-down:
-  // 1. Filter the base list of questions by *other* active filters.
-  
   const getFilteredFor = (excludeKey) => {
       return allQuestions.filter(q => {
           if (excludeKey !== 'subject' && activeFilters.subject && activeFilters.subject !== 'none' && q.subject !== activeFilters.subject) return false;
@@ -35,17 +28,72 @@ export default function SearchFilters({ filters, onFilterChange }) {
       });
   };
 
-  // Get unique values for dropdown options based on filtered sets
-  const uniqueSubjects = [...new Set(getFilteredFor('subject').map(q => q.subject).filter(Boolean))].sort();
-  const uniqueChapters = [...new Set(getFilteredFor('chapter').map(q => q.chapter).filter(Boolean))].sort();
+  // 1. Subjects: Use Hierarchy if available, else fallback to loaded questions
+  const uniqueSubjects = React.useMemo(() => {
+    console.log('Calculating uniqueSubjects. Hierarchy length:', hierarchy?.length);
+    if (hierarchy && hierarchy.length > 0) {
+      return hierarchy.map(h => ({
+        name: h.name,
+        // Calculate total from chapters if not present on subject
+        count: h.total !== undefined ? h.total : (h.chapters || []).reduce((sum, c) => sum + (c.total || 0), 0)
+      })).sort((a, b) => a.name.localeCompare(b.name));
+    }
+    // Fallback
+    const subjects = [...new Set(getFilteredFor('subject').map(q => q.subject).filter(Boolean))].sort();
+    return subjects.map(s => ({ name: s, count: null }));
+  }, [hierarchy, allQuestions, activeFilters]); // Re-calc if activeFilters changes (for fallback)
+
+  // 2. Chapters: Use Hierarchy based on selected Subject
+  const uniqueChapters = React.useMemo(() => {
+    console.log('Calculating uniqueChapters. Subject:', activeFilters.subject);
+    if (hierarchy && hierarchy.length > 0) {
+      if (activeFilters.subject && activeFilters.subject !== 'none') {
+        const subjectNode = hierarchy.find(h => h.name === activeFilters.subject);
+        if (subjectNode && subjectNode.chapters) {
+          return subjectNode.chapters.map(c => ({
+            name: c.name,
+            count: c.total || 0
+          })).sort((a, b) => a.name.localeCompare(b.name));
+        }
+      } else {
+        // All chapters from all subjects
+        return hierarchy.flatMap(h => h.chapters || []).map(c => ({
+           name: c.name,
+           count: c.total || 0
+        })).sort((a, b) => a.name.localeCompare(b.name));
+      }
+    }
+    // Fallback
+    const chapters = [...new Set(getFilteredFor('chapter').map(q => q.chapter).filter(Boolean))].sort();
+    return chapters.map(c => ({ name: c, count: null }));
+  }, [hierarchy, activeFilters.subject, allQuestions]);
+
+
+  // For deeper levels (Lesson, Board) we still rely on loaded questions as Hierarchy might not go that deep yet
   const uniqueLessons = [...new Set(getFilteredFor('lesson').map(q => q.lesson).filter(Boolean))].sort();
   const uniqueBoards = [...new Set(getFilteredFor('board').map(q => q.board).filter(Boolean))].sort();
   
   const handleFilterChange = (key, value) => {
+    const newFilters = { [key]: value };
+    // Reset dependent filters
+    if (key === 'subject') {
+       newFilters.chapter = ''; 
+       newFilters.lesson = '';
+    }
+    if (key === 'chapter') {
+       newFilters.lesson = '';
+    }
+
     if (isControlled) {
-      onFilterChange({ [key]: value });
+      // Merge with existing filters for the parent callback? 
+      // Usually parent expects just the change or the full new state.
+      // We'll pass the change and let parent handle merge, 
+      // OR we merge locally if we are supposed to pass full state.
+      // SearchFilters usually passes just the change based on previous code: onFilterChange({ [key]: value });
+      // But since we want to clear dependents, we pass multiple.
+      onFilterChange(newFilters);
     } else {
-      context.setFilters({ [key]: value });
+      context.setFilters(newFilters);
     }
   };
   
@@ -63,18 +111,6 @@ export default function SearchFilters({ filters, onFilterChange }) {
     };
     
     if (isControlled) {
-      // For controlled mode, we need to pass the full object if the parent expects a merge, 
-      // or just call onFilterChange multiple times? 
-      // Usually setFilters in context does a merge.
-      // Let's assume onFilterChange handles the merge or we pass the full object if it expects full state?
-      // Based on typical React patterns, onFilterChange usually updates specific fields.
-      // But for a "Reset", we want to set all.
-      // Let's iterate or pass a special "reset" object if the parent supports it.
-      // Or better: The parent's handler `handleFilterChange` (which we will write) should handle merging.
-      // But here we want to replace multiple fields.
-      // Let's pass the full reset object and let the parent handle it.
-      // Actually, my proposed QuestionBank handler will probably just do `setFilters(prev => ({...prev, ...changes}))`.
-      // So passing the full object works.
       onFilterChange(resetState);
     } else {
       context.setFilters(resetState);
@@ -103,8 +139,10 @@ export default function SearchFilters({ filters, onFilterChange }) {
         >
           <option value="">All Subjects</option>
           <option value="none">None</option>
-          {uniqueSubjects.map(subject => (
-            <option key={subject} value={subject}>{subject}</option>
+          {uniqueSubjects.map((sub, index) => (
+            <option key={`${sub.name}-${index}`} value={sub.name}>
+              {sub.name} {sub.count !== null ? `(${sub.count})` : ''}
+            </option>
           ))}
         </select>
       </div>
@@ -118,8 +156,10 @@ export default function SearchFilters({ filters, onFilterChange }) {
         >
           <option value="">All Chapters</option>
           <option value="none">None</option>
-          {uniqueChapters.map(chapter => (
-            <option key={chapter} value={chapter}>{chapter}</option>
+          {uniqueChapters.map((chap, index) => (
+            <option key={`${chap.name}-${index}`} value={chap.name}>
+              {chap.name} {chap.count !== null ? `(${chap.count})` : ''}
+            </option>
           ))}
         </select>
       </div>

@@ -5,6 +5,7 @@ import { questionApi } from '../services/questionApi';
 // Initial state
 const initialState = {
   questions: [],
+  hierarchy: [], // Stores subject/chapter structure and counts
   currentFilters: {
     searchText: '',
     subject: '',
@@ -28,6 +29,7 @@ const initialState = {
 // Action types
 const ACTIONS = {
   SET_QUESTIONS: 'SET_QUESTIONS',
+  SET_HIERARCHY: 'SET_HIERARCHY',
   ADD_QUESTION: 'ADD_QUESTION',
   UPDATE_QUESTION: 'UPDATE_QUESTION',
   DELETE_QUESTION: 'DELETE_QUESTION',
@@ -46,6 +48,8 @@ function questionReducer(state, action) {
         : action.payload;
       return { ...state, questions: newQuestions };
     }
+    case ACTIONS.SET_HIERARCHY:
+      return { ...state, hierarchy: action.payload };
     case ACTIONS.ADD_QUESTION:
       return { ...state, questions: [...state.questions, action.payload] };
     case ACTIONS.UPDATE_QUESTION:
@@ -538,57 +542,62 @@ export function QuestionProvider({ children }) {
     const loadQuestionsFromDatabase = async () => {
       if (isFetchingRef.current) return;
       
+      let initialCount = 0;
+      let startPage = 0;
+
       // 1. Try Memory Cache first (Instant)
       if (memoryCache.questions) {
         const age = Math.round((Date.now() - memoryCache.timestamp) / 1000);
         console.log(`⚡ Memory cache HIT! ${memoryCache.questions.length} questions (age: ${age}s)`);
         setQuestions(memoryCache.questions);
-        return;
-      }
-
-      // 2. Try Persistent Cache (localStorage)
-      const cached = localStorage.getItem(CACHE_KEY);
-      if (cached) {
-        try {
-          const { questions, timestamp } = JSON.parse(cached);
-          const age = Math.round((Date.now() - timestamp) / 1000);
-          
-          if (Date.now() - timestamp < CACHE_TTL) {
-            console.log(`💾 Persistent cache HIT! ${questions.length} questions (age: ${age}s)`);
-            // Update memory cache for next time
-            memoryCache = { questions, timestamp, expiresAt: timestamp + CACHE_TTL };
-            setQuestions(questions);
-            return;
-          } else {
-            console.log('⏳ Persistent cache EXPIRED, fetching fresh data...');
+        initialCount = memoryCache.questions.length;
+      } else {
+        // 2. Try Persistent Cache (localStorage)
+        const cached = localStorage.getItem(CACHE_KEY);
+        if (cached) {
+          try {
+            const { questions, timestamp } = JSON.parse(cached);
+            const age = Math.round((Date.now() - timestamp) / 1000);
+            
+            if (Date.now() - timestamp < CACHE_TTL) {
+              console.log(`💾 Persistent cache HIT! ${questions.length} questions (age: ${age}s)`);
+              // Update memory cache for next time
+              memoryCache = { questions, timestamp, expiresAt: timestamp + CACHE_TTL };
+              setQuestions(questions);
+              initialCount = questions.length;
+            } else {
+              console.log('⏳ Persistent cache EXPIRED, fetching fresh data...');
+            }
+          } catch (e) {
+            console.error('Error parsing cache:', e);
           }
-        } catch (e) {
-          console.error('Error parsing cache:', e);
         }
       }
 
+      // 3. Fetch Hierarchy & Initial Questions
       try {
         isFetchingRef.current = true;
-        console.log('📡 Fetching questions from API...');
         
-        let accumulatedQuestions = [];
-        
-        // We fetch questions via the API with a callback for incremental updates
-        const allQuestions = await questionApi.fetchAllQuestions((batch) => {
-          if (batch && batch.length > 0) {
-            const mappedBatch = batch.map(mapDatabaseToApp);
-            accumulatedQuestions = [...accumulatedQuestions, ...mappedBatch];
-            
-            // Update state incrementally so user sees questions immediately
-            dispatch({ type: ACTIONS.SET_QUESTIONS, payload: [...accumulatedQuestions] });
-            updateStats(accumulatedQuestions);
-          }
-        });
-
-        if (accumulatedQuestions.length > 0) {
-          saveToCache(accumulatedQuestions);
-          console.log(`✅ Successfully loaded ${accumulatedQuestions.length} questions from API`);
+        // Fetch Hierarchy First (Fast)
+        console.log('📡 Fetching question hierarchy...');
+        try {
+            const hierarchyData = await questionApi.fetchHierarchy();
+            dispatch({ type: ACTIONS.SET_HIERARCHY, payload: hierarchyData });
+            console.log(`✅ Loaded hierarchy for ${hierarchyData.length} subjects`);
+        } catch (hErr) {
+            console.error('Failed to load hierarchy:', hErr);
         }
+
+        // If we have no questions from cache, fetch the first page so the UI isn't empty
+        if (initialCount === 0) {
+            console.log('📡 Fetching initial page of questions...');
+            const BATCH_SIZE = 500;
+            const batchSizeReceived = await fetchMoreQuestions(0);
+            console.log(`✅ Initial load complete. Received ${batchSizeReceived} questions.`);
+        } else {
+             console.log(`✅ Skipping initial fetch, using ${initialCount} cached questions.`);
+        }
+        
       } catch (error) {
         console.error('Error loading questions from API:', error);
       } finally {
@@ -647,8 +656,8 @@ export function QuestionProvider({ children }) {
           
           if (addedCount > 0) {
             const updated = [...prevQuestions, ...uniqueNewBatch];
-            // We can't call saveToCache here easily as it's a side effect in reducer-like logic
-            // But we'll handle cache update outside or via a separate mechanism
+            // Update cache with the new full list
+            saveToCache(updated);
             return updated;
           }
           return prevQuestions;
@@ -894,6 +903,7 @@ export function QuestionProvider({ children }) {
   const value = {
     ...state,
     supabaseClient: supabase, // Exposed for direct storage access if needed elsewhere
+    hierarchy: state.hierarchy,
     setQuestions,
     addQuestion,
     bulkAddQuestions,

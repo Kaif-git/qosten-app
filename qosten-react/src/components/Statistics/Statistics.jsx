@@ -1,11 +1,14 @@
 import React from 'react';
+import { useQuestions } from '../../context/QuestionContext';
 
 export default function Statistics({ questions, onFilterSelect, onSelectAll, selectedCategories = [] }) {
-  const subjects = new Set(questions.map(q => q.subject).filter(Boolean));
-  const chapters = new Set(questions.map(q => q.chapter).filter(Boolean));
-  const types = new Set(questions.map(q => q.type).filter(Boolean));
+  const { hierarchy } = useQuestions();
+
+  // 1. Calculate stats from loaded questions (Default / Fallback)
+  const loadedSubjects = new Set(questions.map(q => q.subject).filter(Boolean));
+  const loadedChapters = new Set(questions.map(q => q.chapter).filter(Boolean));
+  const loadedTypes = new Set(questions.map(q => q.type).filter(Boolean));
   
-  // Detailed counts
   const detailedCounts = {
     subjects: {},
     chapters: {},
@@ -14,6 +17,7 @@ export default function Statistics({ questions, onFilterSelect, onSelectAll, sel
   
   const chapterTypeBreakdown = {};
   
+  // Populate from loaded questions
   questions.forEach(q => {
     if (q.subject) detailedCounts.subjects[q.subject] = (detailedCounts.subjects[q.subject] || 0) + 1;
     if (q.chapter) {
@@ -27,6 +31,50 @@ export default function Statistics({ questions, onFilterSelect, onSelectAll, sel
     }
     if (q.type) detailedCounts.types[q.type] = (detailedCounts.types[q.type] || 0) + 1;
   });
+
+  // 2. Override with Hierarchy data if available (for Subjects and Chapters)
+  let totalQuestionsCount = questions.length;
+  let subjectCount = loadedSubjects.size;
+  let chapterCount = loadedChapters.size;
+
+  if (hierarchy && hierarchy.length > 0) {
+      const hierarchySubjects = {};
+      const hierarchyChapters = {};
+      let hierarchyTotal = 0;
+
+      hierarchy.forEach(sub => {
+          const subTotal = sub.total !== undefined ? sub.total : (sub.chapters || []).reduce((sum, c) => sum + (c.total || 0), 0);
+          hierarchySubjects[sub.name] = subTotal;
+          hierarchyTotal += subTotal;
+
+          if (sub.chapters) {
+              sub.chapters.forEach(chap => {
+                  hierarchyChapters[chap.name] = chap.total || 0;
+                  
+                  // Try to merge type breakdown if available in hierarchy (it is based on user input earlier)
+                  // The earlier input showed: "types": [{ "name": "mcq", "total": 25 }, ...]
+                  // If 'types' array exists on chapter node, use it.
+                  if (chap.types && Array.isArray(chap.types)) {
+                       if (!chapterTypeBreakdown[chap.name]) chapterTypeBreakdown[chap.name] = {};
+                       chap.types.forEach(t => {
+                           chapterTypeBreakdown[chap.name][t.name] = t.total;
+                       });
+                  }
+              });
+          }
+      });
+
+      // Override display data
+      detailedCounts.subjects = hierarchySubjects;
+      detailedCounts.chapters = hierarchyChapters;
+      
+      // Update summary counts
+      // We show "Loaded / Total" if they differ
+      // Actually, simple is better. Show Available (Hierarchy) counts.
+      totalQuestionsCount = hierarchyTotal;
+      subjectCount = Object.keys(hierarchySubjects).length;
+      chapterCount = Object.keys(hierarchyChapters).length;
+  }
 
   const isSelected = (type, key) => {
     return selectedCategories.some(cat => cat.type === type && cat.key === key);
@@ -133,21 +181,21 @@ export default function Statistics({ questions, onFilterSelect, onSelectAll, sel
     <>
       <div className="stats">
         <div className="stat-item">
-          <div className="stat-value">{questions.length}</div>
-          <div>Total Questions</div>
+          <div className="stat-value">{totalQuestionsCount}</div>
+          <div>Total Questions {hierarchy?.length > 0 && <span style={{fontSize: '0.6em', color: '#666'}}>(Available)</span>}</div>
         </div>
         <div className="stat-item">
-          <div className="stat-value">{subjects.size}</div>
+          <div className="stat-value">{subjectCount}</div>
           <div>Subjects</div>
         </div>
         <div className="stat-item">
-          <div className="stat-value">{chapters.size}</div>
+          <div className="stat-value">{chapterCount}</div>
           <div>Chapters</div>
         </div>
       </div>
 
       <div className="detailed-stats">
-        <h3>Detailed Counts</h3>
+        <h3>Detailed Counts {hierarchy?.length > 0 && <span style={{fontSize: '0.6em', color: '#666'}}>(Server Data)</span>}</h3>
         <div className="detailed-stats-content">
           {Object.keys(detailedCounts.subjects).length > 0 && (
             <div>
@@ -165,7 +213,7 @@ export default function Statistics({ questions, onFilterSelect, onSelectAll, sel
           
           {Object.keys(detailedCounts.types).length > 0 && (
             <div>
-              <h4>By Type:</h4>
+              <h4>By Type (Loaded):</h4>
               {renderClickableList(detailedCounts.types, 'type')}
             </div>
           )}

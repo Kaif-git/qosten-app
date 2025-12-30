@@ -1,21 +1,56 @@
 const API_BASE_URL = 'https://questions-api.edventure.workers.dev';
 
+// Helper for fetch with retry
+const fetchWithRetry = async (url, options = {}, retries = 3, backoff = 1000) => {
+  try {
+    const response = await fetch(url, options);
+    // Retry on Service Unavailable (503) or Too Many Requests (429)
+    if (response.status === 503 || response.status === 429) {
+      if (retries > 0) {
+        console.warn(`⚠️ ${response.status} received from ${url}. Retrying in ${backoff}ms... (${retries} retries left)`);
+        await new Promise(resolve => setTimeout(resolve, backoff));
+        return fetchWithRetry(url, options, retries - 1, backoff * 2);
+      }
+    }
+    return response;
+  } catch (error) {
+    // Retry on network errors (e.g. Failed to fetch)
+    if (retries > 0) {
+      console.warn(`⚠️ Network error fetching ${url}. Retrying in ${backoff}ms... (${retries} retries left)`, error);
+      await new Promise(resolve => setTimeout(resolve, backoff));
+      return fetchWithRetry(url, options, retries - 1, backoff * 2);
+    }
+    throw error;
+  }
+};
+
 export const questionApi = {
   // Fetch questions with optional pagination/filtering
   async fetchQuestions(params = {}) {
     const searchParams = new URLSearchParams();
-    if (params.page) searchParams.append('page', params.page);
-    if (params.limit) searchParams.append('limit', params.limit);
-    if (params.offset) searchParams.append('offset', params.offset);
+    if (params.page !== undefined) searchParams.append('page', params.page);
+    if (params.limit !== undefined) searchParams.append('limit', params.limit);
+    if (params.offset !== undefined) searchParams.append('offset', params.offset);
     
     // Pass other filters if needed
     if (params.type) searchParams.append('type', params.type);
     if (params.subject) searchParams.append('subject', params.subject);
     
-    const response = await fetch(`${API_BASE_URL}/questions?${searchParams.toString()}`);
+    const url = `${API_BASE_URL}/questions?${searchParams.toString()}`;
+    const response = await fetchWithRetry(url);
+    
     if (!response.ok) {
         const errorText = await response.text();
         throw new Error(`Failed to fetch questions: ${response.status} ${errorText}`);
+    }
+    return await response.json();
+  },
+
+  async fetchHierarchy() {
+    const response = await fetchWithRetry(`${API_BASE_URL}/hierarchy`);
+    if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Failed to fetch hierarchy: ${response.status} ${errorText}`);
     }
     return await response.json();
   },
@@ -25,51 +60,30 @@ export const questionApi = {
     const BATCH_SIZE = 500;
     const LIMIT_TOTAL = 100000;
     let allQuestions = [];
-    const MAX_RETRIES = 3;
 
     // Helper for delay
     const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-    // Helper for fetch with retry
-    const fetchBatch = async (page, retryCount = 0) => {
-      try {
-        const url = `${API_BASE_URL}/questions?limit=${BATCH_SIZE}&page=${page}`;
-        const response = await fetch(url);
-        
-        if (response.status === 503 || response.status === 429) {
-           if (retryCount < MAX_RETRIES) {
-             const delay = Math.pow(2, retryCount) * 1000;
-             console.warn(`⚠️ ${response.status} at page ${page}, retrying in ${delay}ms... (Attempt ${retryCount + 1})`);
-             await sleep(delay);
-             return fetchBatch(page, retryCount + 1);
-           }
-        }
-
+    console.log('📡 Fetching initial batch to determine total count...');
+    
+    // Initial fetch using the helper
+    let firstBatchData, firstBatchHeaders;
+    try {
+        const url = `${API_BASE_URL}/questions?limit=${BATCH_SIZE}&page=0`;
+        const response = await fetchWithRetry(url);
         if (!response.ok) {
           const errorText = await response.text();
-          throw new Error(`Failed to fetch page ${page}: ${response.status} ${errorText}`);
+          throw new Error(`Failed to fetch page 0: ${response.status} ${errorText}`);
         }
-        
-        return {
-          data: await response.json(),
-          totalCount: parseInt(response.headers.get('X-Total-Count') || '0')
-        };
-      } catch (error) {
-        if (retryCount < MAX_RETRIES) {
-          const delay = Math.pow(2, retryCount) * 1000;
-          console.warn(`⚠️ Network error at page ${page}, retrying in ${delay}ms... (Attempt ${retryCount + 1})`);
-          await sleep(delay);
-          return fetchBatch(page, retryCount + 1);
-        }
-        throw error;
-      }
-    };
+        firstBatchData = await response.json();
+        firstBatchHeaders = response.headers;
+    } catch (error) {
+        console.error("Failed to fetch initial batch:", error);
+        return [];
+    }
 
-    console.log('📡 Fetching initial batch to determine total count...');
-    const firstBatch = await fetchBatch(0);
-    let totalCount = firstBatch.totalCount;
-    
-    const initialBatch = Array.isArray(firstBatch.data) ? firstBatch.data : (firstBatch.data.data || []);
+    let totalCount = parseInt(firstBatchHeaders.get('X-Total-Count') || '0');
+    const initialBatch = Array.isArray(firstBatchData) ? firstBatchData : (firstBatchData.data || []);
     
     // If header is missing but we got data, we might need to continue fetching
     if (totalCount === 0 && initialBatch.length > 0) {
@@ -113,8 +127,15 @@ export const questionApi = {
     // Loop through the remaining pages
     for (let page = 1; page < totalPages || (totalCount === LIMIT_TOTAL); page++) {
       try {
-        const result = await fetchBatch(page);
-        const batch = Array.isArray(result.data) ? result.data : (result.data.data || []);
+        const url = `${API_BASE_URL}/questions?limit=${BATCH_SIZE}&page=${page}`;
+        const response = await fetchWithRetry(url);
+        
+        if (!response.ok) {
+           throw new Error(`Failed to fetch page ${page}: ${response.status}`);
+        }
+
+        const resultData = await response.json();
+        const batch = Array.isArray(resultData) ? resultData : (resultData.data || []);
         
         if (batch.length === 0) break;
 

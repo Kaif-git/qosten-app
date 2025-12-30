@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useQuestions, cleanText } from '../../context/QuestionContext';
+import { questionApi } from '../../services/questionApi';
 import Statistics from '../Statistics/Statistics';
 import SearchFilters from '../SearchFilters/SearchFilters';
 import QuestionCard from '../QuestionCard/QuestionCard';
@@ -211,7 +212,7 @@ const getFilteredQuestions = (questions, filters, fullQuestionsMap = null, hasSe
 };
 
 export default function QuestionBank() {
-  const { questions, currentFilters, deleteQuestion, updateQuestion, bulkUpdateQuestions, bulkFlagQuestions, fetchQuestionsByIds, setFilters, fetchMoreQuestions, fetchAllRemaining } = useQuestions();
+  const { questions, setQuestions, currentFilters, deleteQuestion, updateQuestion, bulkUpdateQuestions, bulkFlagQuestions, fetchQuestionsByIds, setFilters, fetchMoreQuestions, fetchAllRemaining } = useQuestions();
   const [selectedQuestions, setSelectedQuestions] = useState([]);
   const [selectionMode, setSelectionMode] = useState(false);
   const [lastSelectedId, setLastSelectedId] = useState(null); // Track last selected for shift-click
@@ -523,7 +524,93 @@ export default function QuestionBank() {
   
   // Performance Optimization: Visible Count (Limit rendering)
   const [visibleCount, setVisibleCount] = useState(50);
+  
+  // On-Demand Fetching for Selected Subject
+  useEffect(() => {
+    const fetchSubjectData = async () => {
+      const subject = currentFilters.subject;
+      if (!subject || subject === 'none') return;
+      
+      // Check if we already have questions for this subject
+      // Heuristic: If we have > 0 questions for this subject, we *might* have them all or partially.
+      // But if the user selects a subject not in cache, count will be 0.
+      const hasQuestions = questions.some(q => q.subject === subject);
+      
+      // We should probably check against hierarchy count to know if we have *all*?
+      // For now, simpler: if 0, definitely fetch.
+      if (!hasQuestions) {
+        setFetchStatus(`Fetching questions for ${subject}...`);
+        setIsFetchingMore(true);
+        try {
+           // We fetch without pagination limit (or high limit) to get all for the subject
+           // Note: API needs to support 'subject' filter
+           const response = await questionApi.fetchQuestions({ subject, limit: 1000 });
+           const newQuestions = Array.isArray(response) ? response : (response.data || []);
+           
+           if (newQuestions.length > 0) {
+             const mapped = newQuestions.map(q => {
+                 // Map to app format (duplicating mapDatabaseToApp logic locally or importing it? 
+                 // Context doesn't expose mapDatabaseToApp. 
+                 // I'll rely on the fact that I can just add them via bulk mechanism or better:
+                 // Use `addQuestion`? No, too slow.
+                 // I need to dispatch SET_QUESTIONS with merge.
+                 // I'll assume raw data matches what context expects, but context does mapping.
+                 // Actually, QuestionContext exports `useQuestions` but the mapper is internal.
+                 // I should move mapper to utils or duplicate it. 
+                 // For now, let's assume raw data needs mapping.
+                 // I'll check if I can access the mapper or just reproduce it briefly.
+                 // Reproducing basic mapping:
+                 return {
+                    id: q.id,
+                    type: q.type,
+                    subject: q.subject,
+                    chapter: q.chapter,
+                    lesson: q.lesson,
+                    board: q.board,
+                    language: q.language,
+                    question: q.question,
+                    questionText: q.question_text,
+                    options: typeof q.options === 'string' ? JSON.parse(q.options) : q.options,
+                    correctAnswer: q.correct_answer,
+                    answer: q.answer,
+                    parts: typeof q.parts === 'string' ? JSON.parse(q.parts) : q.parts,
+                    image: q.image,
+                    answerimage1: q.answerimage1,
+                    answerimage2: q.answerimage2,
+                    explanation: q.explanation,
+                    tags: typeof q.tags === 'string' ? JSON.parse(q.tags) : q.tags,
+                    isFlagged: q.is_flagged,
+                    isVerified: q.is_verified,
+                    inReviewQueue: q.in_review_queue
+                 };
+             });
 
+             // Merge into context
+             // We can use setQuestions with a functional update
+             setQuestions(prev => {
+                const existing = new Set(prev.map(p => p.id));
+                const uniqueNew = mapped.filter(m => !existing.has(m.id));
+                return [...prev, ...uniqueNew];
+             });
+             
+             setFetchStatus(`Loaded ${mapped.length} questions for ${subject}`);
+           } else {
+             setFetchStatus(`No questions found for ${subject}`);
+           }
+        } catch (e) {
+           console.error("Error fetching subject data", e);
+           setFetchStatus("Error loading subject data");
+        } finally {
+           setIsFetchingMore(false);
+           setTimeout(() => setFetchStatus(''), 2000);
+        }
+      }
+    };
+    
+    fetchSubjectData();
+  }, [currentFilters.subject]); // We can't easily include 'questions' dependency or it loops. 
+  // But we need to ensure we don't refetch if already fetched. The `hasQuestions` check handles the initial case.
+  
   // Get unique metadata values from all questions
   const getUniqueValues = (field) => {
     const values = questions

@@ -1,11 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { createClient } from '@supabase/supabase-js';
+import React, { useState, useEffect, useCallback } from 'react';
+import { supabase } from '../../services/supabaseClient';
 import MarkdownContent from '../MarkdownContent/MarkdownContent';
-
-// Initialize Supabase client
-const supabaseUrl = process.env.REACT_APP_SUPABASE_URL || '';
-const supabaseKey = process.env.REACT_APP_SUPABASE_ANON_KEY || '';
-const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
+import './ChapterOverview.css';
 
 export default function ChapterOverview() {
   const [overviews, setOverviews] = useState([]);

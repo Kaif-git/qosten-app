@@ -211,7 +211,7 @@ const getFilteredQuestions = (questions, filters, fullQuestionsMap = null, hasSe
 };
 
 export default function QuestionBank() {
-  const { questions, currentFilters, deleteQuestion, updateQuestion, bulkUpdateQuestions, bulkFlagQuestions, fetchQuestionsByIds, setFilters } = useQuestions();
+  const { questions, currentFilters, deleteQuestion, updateQuestion, bulkUpdateQuestions, bulkFlagQuestions, fetchQuestionsByIds, setFilters, fetchMoreQuestions, fetchAllRemaining } = useQuestions();
   const [selectedQuestions, setSelectedQuestions] = useState([]);
   const [selectionMode, setSelectionMode] = useState(false);
   const [lastSelectedId, setLastSelectedId] = useState(null); // Track last selected for shift-click
@@ -226,6 +226,9 @@ export default function QuestionBank() {
   const [hasSearched, setHasSearched] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
   const [isFixing, setIsFixing] = useState(false);
+  const [isFetchingMore, setIsFetchingMore] = useState(false);
+  const [isFetchingAll, setIsFetchingAll] = useState(false);
+  const [fetchStatus, setFetchStatus] = useState('');
   const [isAutoSyncing, setIsAutoSyncing] = useState(false);
   const [syncProgress, setSyncProgress] = useState({ current: 0, total: 0 });
   const [showStats, setShowStats] = useState(true);
@@ -1968,6 +1971,42 @@ export default function QuestionBank() {
     setIsSearching(false);
   };
 
+  const handleFetchMore = async () => {
+    setIsFetchingMore(true);
+    setFetchStatus('Fetching...');
+    try {
+      const added = await fetchMoreQuestions();
+      if (added > 0) {
+        setFetchStatus(`Successfully added ${added} questions!`);
+      } else {
+        setFetchStatus('No more questions found.');
+      }
+      setTimeout(() => setFetchStatus(''), 3000);
+    } catch (error) {
+      setFetchStatus('Error fetching questions.');
+    } finally {
+      setIsFetchingMore(false);
+    }
+  };
+
+  const handleFetchAll = async () => {
+    if (!window.confirm("This will keep fetching questions until the entire database is downloaded. Continue?")) return;
+    
+    setIsFetchingAll(true);
+    setFetchStatus('Starting full fetch...');
+    try {
+      const totalAdded = await fetchAllRemaining((progress) => {
+        setFetchStatus(`Downloaded ${progress} more... (Total: ${questions.length + progress})`);
+      });
+      setFetchStatus(`Successfully finished! Added ${totalAdded} total questions.`);
+      setTimeout(() => setFetchStatus(''), 5000);
+    } catch (error) {
+      setFetchStatus('Error during full fetch.');
+    } finally {
+      setIsFetchingAll(false);
+    }
+  };
+
   const renderQuestionList = (qList, viewName = 'single') => {
     const displayList = qList.slice(0, visibleCount);
     const hasMore = qList.length > visibleCount;
@@ -2095,146 +2134,101 @@ export default function QuestionBank() {
               Leave fields empty to keep existing values.
             </p>
             
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '15px', marginBottom: '25px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '20px', marginBottom: '25px' }}>
               <div>
-                <label style={{ fontSize: '14px', fontWeight: '600', display: 'block', marginBottom: '5px' }}>
+                <label style={{ fontSize: '14px', fontWeight: '600', display: 'block', marginBottom: '8px', color: '#444' }}>
                   Subject:
                   {uniqueSubjects.length > 0 && (
-                    <span style={{ fontSize: '12px', fontWeight: 'normal', color: '#666', marginLeft: '5px' }}>
-                      ({uniqueSubjects.length} existing)
+                    <span style={{ fontSize: '12px', fontWeight: 'normal', color: '#888', marginLeft: '8px' }}>
+                      ({uniqueSubjects.length} existing values available)
                     </span>
                   )}
                 </label>
-                <div style={{ display: 'flex', gap: '10px' }}>
-                  <input
-                    list="subjects-list"
-                    type="text"
-                    placeholder="Type or select from existing"
-                    value={bulkMetadata.subject}
-                    onChange={(e) => setBulkMetadata(prev => ({ ...prev, subject: e.target.value }))}
-                    style={{ flex: 1, padding: '10px', borderRadius: '5px', border: '1px solid #ccc', fontSize: '14px' }}
-                  />
-                  <datalist id="subjects-list">
-                    {uniqueSubjects.map((subject, idx) => (
-                      <option key={idx} value={subject} />
-                    ))}
-                  </datalist>
-                  <select
-                    value={bulkMetadata.subject}
-                    onChange={(e) => setBulkMetadata(prev => ({ ...prev, subject: e.target.value }))}
-                    style={{ padding: '10px', borderRadius: '5px', border: '1px solid #ccc', fontSize: '14px', minWidth: '150px' }}
-                  >
-                    <option value="">-- Select --</option>
-                    {uniqueSubjects.map((subject, idx) => (
-                      <option key={idx} value={subject}>{subject}</option>
-                    ))}
-                  </select>
-                </div>
+                <input
+                  list="subjects-list"
+                  type="text"
+                  placeholder="Type new subject or select existing..."
+                  value={bulkMetadata.subject}
+                  onChange={(e) => setBulkMetadata(prev => ({ ...prev, subject: e.target.value }))}
+                  style={{ width: '100%', padding: '12px', borderRadius: '6px', border: '1px solid #ccc', fontSize: '14px', boxSizing: 'border-box' }}
+                />
+                <datalist id="subjects-list">
+                  {uniqueSubjects.map((subject, idx) => (
+                    <option key={idx} value={subject} />
+                  ))}
+                </datalist>
               </div>
+
               <div>
-                <label style={{ fontSize: '14px', fontWeight: '600', display: 'block', marginBottom: '5px' }}>
+                <label style={{ fontSize: '14px', fontWeight: '600', display: 'block', marginBottom: '8px', color: '#444' }}>
                   Chapter:
                   {uniqueChapters.length > 0 && (
-                    <span style={{ fontSize: '12px', fontWeight: 'normal', color: '#666', marginLeft: '5px' }}>
-                      ({uniqueChapters.length} existing)
+                    <span style={{ fontSize: '12px', fontWeight: 'normal', color: '#888', marginLeft: '8px' }}>
+                      ({uniqueChapters.length} existing values available)
                     </span>
                   )}
                 </label>
-                <div style={{ display: 'flex', gap: '10px' }}>
-                  <input
-                    list="chapters-list"
-                    type="text"
-                    placeholder="Type or select from existing"
-                    value={bulkMetadata.chapter}
-                    onChange={(e) => setBulkMetadata(prev => ({ ...prev, chapter: e.target.value }))}
-                    style={{ flex: 1, padding: '10px', borderRadius: '5px', border: '1px solid #ccc', fontSize: '14px' }}
-                  />
-                  <datalist id="chapters-list">
-                    {uniqueChapters.map((chapter, idx) => (
-                      <option key={idx} value={chapter} />
-                    ))}
-                  </datalist>
-                  <select
-                    value={bulkMetadata.chapter}
-                    onChange={(e) => setBulkMetadata(prev => ({ ...prev, chapter: e.target.value }))}
-                    style={{ padding: '10px', borderRadius: '5px', border: '1px solid #ccc', fontSize: '14px', minWidth: '150px' }}
-                  >
-                    <option value="">-- Select --</option>
-                    {uniqueChapters.map((chapter, idx) => (
-                      <option key={idx} value={chapter}>{chapter}</option>
-                    ))}
-                  </select>
-                </div>
+                <input
+                  list="chapters-list"
+                  type="text"
+                  placeholder="Type new chapter or select existing..."
+                  value={bulkMetadata.chapter}
+                  onChange={(e) => setBulkMetadata(prev => ({ ...prev, chapter: e.target.value }))}
+                  style={{ width: '100%', padding: '12px', borderRadius: '6px', border: '1px solid #ccc', fontSize: '14px', boxSizing: 'border-box' }}
+                />
+                <datalist id="chapters-list">
+                  {uniqueChapters.map((chapter, idx) => (
+                    <option key={idx} value={chapter} />
+                  ))}
+                </datalist>
               </div>
+
               <div>
-                <label style={{ fontSize: '14px', fontWeight: '600', display: 'block', marginBottom: '5px' }}>
+                <label style={{ fontSize: '14px', fontWeight: '600', display: 'block', marginBottom: '8px', color: '#444' }}>
                   Lesson:
                   {uniqueLessons.length > 0 && (
-                    <span style={{ fontSize: '12px', fontWeight: 'normal', color: '#666', marginLeft: '5px' }}>
-                      ({uniqueLessons.length} existing)
+                    <span style={{ fontSize: '12px', fontWeight: 'normal', color: '#888', marginLeft: '8px' }}>
+                      ({uniqueLessons.length} existing values available)
                     </span>
                   )}
                 </label>
-                <div style={{ display: 'flex', gap: '10px' }}>
-                  <input
-                    list="lessons-list"
-                    type="text"
-                    placeholder="Type or select from existing"
-                    value={bulkMetadata.lesson}
-                    onChange={(e) => setBulkMetadata(prev => ({ ...prev, lesson: e.target.value }))}
-                    style={{ flex: 1, padding: '10px', borderRadius: '5px', border: '1px solid #ccc', fontSize: '14px' }}
-                  />
-                  <datalist id="lessons-list">
-                    {uniqueLessons.map((lesson, idx) => (
-                      <option key={idx} value={lesson} />
-                    ))}
-                  </datalist>
-                  <select
-                    value={bulkMetadata.lesson}
-                    onChange={(e) => setBulkMetadata(prev => ({ ...prev, lesson: e.target.value }))}
-                    style={{ padding: '10px', borderRadius: '5px', border: '1px solid #ccc', fontSize: '14px', minWidth: '150px' }}
-                  >
-                    <option value="">-- Select --</option>
-                    {uniqueLessons.map((lesson, idx) => (
-                      <option key={idx} value={lesson}>{lesson}</option>
-                    ))}
-                  </select>
-                </div>
+                <input
+                  list="lessons-list"
+                  type="text"
+                  placeholder="Type new lesson or select existing..."
+                  value={bulkMetadata.lesson}
+                  onChange={(e) => setBulkMetadata(prev => ({ ...prev, lesson: e.target.value }))}
+                  style={{ width: '100%', padding: '12px', borderRadius: '6px', border: '1px solid #ccc', fontSize: '14px', boxSizing: 'border-box' }}
+                />
+                <datalist id="lessons-list">
+                  {uniqueLessons.map((lesson, idx) => (
+                    <option key={idx} value={lesson} />
+                  ))}
+                </datalist>
               </div>
+
               <div>
-                <label style={{ fontSize: '14px', fontWeight: '600', display: 'block', marginBottom: '5px' }}>
+                <label style={{ fontSize: '14px', fontWeight: '600', display: 'block', marginBottom: '8px', color: '#444' }}>
                   Board:
                   {uniqueBoards.length > 0 && (
-                    <span style={{ fontSize: '12px', fontWeight: 'normal', color: '#666', marginLeft: '5px' }}>
-                      ({uniqueBoards.length} existing)
+                    <span style={{ fontSize: '12px', fontWeight: 'normal', color: '#888', marginLeft: '8px' }}>
+                      ({uniqueBoards.length} existing values available)
                     </span>
                   )}
                 </label>
-                <div style={{ display: 'flex', gap: '10px' }}>
-                  <input
-                    list="boards-list"
-                    type="text"
-                    placeholder="Type or select from existing"
-                    value={bulkMetadata.board}
-                    onChange={(e) => setBulkMetadata(prev => ({ ...prev, board: e.target.value }))}
-                    style={{ flex: 1, padding: '10px', borderRadius: '5px', border: '1px solid #ccc', fontSize: '14px' }}
-                  />
-                  <datalist id="boards-list">
-                    {uniqueBoards.map((board, idx) => (
-                      <option key={idx} value={board} />
-                    ))}
-                  </datalist>
-                  <select
-                    value={bulkMetadata.board}
-                    onChange={(e) => setBulkMetadata(prev => ({ ...prev, board: e.target.value }))}
-                    style={{ padding: '10px', borderRadius: '5px', border: '1px solid #ccc', fontSize: '14px', minWidth: '150px' }}
-                  >
-                    <option value="">-- Select --</option>
-                    {uniqueBoards.map((board, idx) => (
-                      <option key={idx} value={board}>{board}</option>
-                    ))}
-                  </select>
-                </div>
+                <input
+                  list="boards-list"
+                  type="text"
+                  placeholder="Type new board or select existing..."
+                  value={bulkMetadata.board}
+                  onChange={(e) => setBulkMetadata(prev => ({ ...prev, board: e.target.value }))}
+                  style={{ width: '100%', padding: '12px', borderRadius: '6px', border: '1px solid #ccc', fontSize: '14px', boxSizing: 'border-box' }}
+                />
+                <datalist id="boards-list">
+                  {uniqueBoards.map((board, idx) => (
+                    <option key={idx} value={board} />
+                  ))}
+                </datalist>
               </div>
             </div>
             
@@ -3898,7 +3892,44 @@ export default function QuestionBank() {
       {!isSplitView ? (
           <>
             <SearchFilters />
-            <div style={{marginBottom: '15px', marginTop: '10px', display: 'flex', justifyContent: 'flex-end'}}>
+            <div style={{marginBottom: '15px', marginTop: '10px', display: 'flex', justifyContent: 'flex-end', gap: '10px', alignItems: 'center'}}>
+                {fetchStatus && <span style={{fontSize: '12px', color: '#666'}}>{fetchStatus}</span>}
+                <button 
+                    onClick={handleFetchAll}
+                    disabled={isFetchingAll || isFetchingMore}
+                    style={{
+                        padding: '10px 20px', 
+                        backgroundColor: '#e67e22', 
+                        color: 'white', 
+                        border: 'none', 
+                        borderRadius: '5px',
+                        cursor: (isFetchingAll || isFetchingMore) ? 'wait' : 'pointer',
+                        fontWeight: 'bold',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '5px'
+                    }}
+                >
+                    {isFetchingAll ? '⏳ Fetching All...' : '📥 Fetch All (Remaining)'}
+                </button>
+                <button 
+                    onClick={handleFetchMore}
+                    disabled={isFetchingAll || isFetchingMore}
+                    style={{
+                        padding: '10px 20px', 
+                        backgroundColor: '#27ae60', 
+                        color: 'white', 
+                        border: 'none', 
+                        borderRadius: '5px',
+                        cursor: (isFetchingAll || isFetchingMore) ? 'wait' : 'pointer',
+                        fontWeight: 'bold',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '5px'
+                    }}
+                >
+                    {isFetchingMore ? '⏳ Fetching...' : '➕ Fetch More (500)'}
+                </button>
                 <button 
                     onClick={() => handleSearch('single')}
                     disabled={isSearching}
@@ -3962,19 +3993,54 @@ export default function QuestionBank() {
                     filters={leftFilters} 
                     onFilterChange={(newFilters) => setLeftFilters(prev => ({ ...prev, ...newFilters }))} 
                   />
-                  <div style={{marginBottom: '10px', marginTop: '10px'}}>
+                  <div style={{marginBottom: '10px', marginTop: '10px', display: 'flex', gap: '5px', flexWrap: 'wrap'}}>
+                     <button 
+                        onClick={handleFetchAll}
+                        disabled={isFetchingAll || isFetchingMore}
+                        style={{
+                            flex: 1,
+                            padding: '8px',
+                            backgroundColor: '#e67e22',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '4px',
+                            cursor: 'pointer',
+                            fontWeight: 'bold',
+                            fontSize: '11px'
+                        }}
+                     >
+                        {isFetchingAll ? '...' : '📥 Fetch All'}
+                     </button>
+                     <button 
+                        onClick={handleFetchMore}
+                        disabled={isFetchingAll || isFetchingMore}
+                        style={{
+                            flex: 1,
+                            padding: '8px',
+                            backgroundColor: '#27ae60',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '4px',
+                            cursor: 'pointer',
+                            fontWeight: 'bold',
+                            fontSize: '11px'
+                        }}
+                     >
+                        {isFetchingMore ? '...' : '➕ Fetch More'}
+                     </button>
                      <button 
                         onClick={() => handleSearch('left')}
                         disabled={isSearching}
                         style={{
-                            width: '100%',
+                            flex: 1,
                             padding: '8px',
                             backgroundColor: '#3498db',
                             color: 'white',
                             border: 'none',
                             borderRadius: '4px',
                             cursor: 'pointer',
-                            fontWeight: 'bold'
+                            fontWeight: 'bold',
+                            fontSize: '11px'
                         }}
                      >
                         {isSearching ? '...' : '🔍 Search Left'}
@@ -3994,19 +4060,54 @@ export default function QuestionBank() {
                     filters={rightFilters} 
                     onFilterChange={(newFilters) => setRightFilters(prev => ({ ...prev, ...newFilters }))} 
                   />
-                  <div style={{marginBottom: '10px', marginTop: '10px'}}>
+                  <div style={{marginBottom: '10px', marginTop: '10px', display: 'flex', gap: '5px', flexWrap: 'wrap'}}>
+                     <button 
+                        onClick={handleFetchAll}
+                        disabled={isFetchingAll || isFetchingMore}
+                        style={{
+                            flex: 1,
+                            padding: '8px',
+                            backgroundColor: '#e67e22',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '4px',
+                            cursor: 'pointer',
+                            fontWeight: 'bold',
+                            fontSize: '11px'
+                        }}
+                     >
+                        {isFetchingAll ? '...' : '📥 Fetch All'}
+                     </button>
+                     <button 
+                        onClick={handleFetchMore}
+                        disabled={isFetchingAll || isFetchingMore}
+                        style={{
+                            flex: 1,
+                            padding: '8px',
+                            backgroundColor: '#27ae60',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '4px',
+                            cursor: 'pointer',
+                            fontWeight: 'bold',
+                            fontSize: '11px'
+                        }}
+                     >
+                        {isFetchingMore ? '...' : '➕ Fetch More'}
+                     </button>
                      <button 
                         onClick={() => handleSearch('right')}
                         disabled={isSearching}
                         style={{
-                            width: '100%',
+                            flex: 1,
                             padding: '8px',
                             backgroundColor: '#3498db',
                             color: 'white',
                             border: 'none',
                             borderRadius: '4px',
                             cursor: 'pointer',
-                            fontWeight: 'bold'
+                            fontWeight: 'bold',
+                            fontSize: '11px'
                         }}
                      >
                         {isSearching ? '...' : '🔍 Search Right'}

@@ -12,6 +12,7 @@ import { ShopProvider } from './context/ShopContext';
 import SimplePromptManager from './components/SimplePromptManager/SimplePromptManager';
 import MathQuestionImport from './components/MathQuestionImport/MathQuestionImport';
 import MCQImport from './components/MCQImport/MCQImport';
+import CQJSONImport from './components/CQJSONImport/CQJSONImport';
 import Shop from './components/Shop/Shop';
 import Roadmap from './components/Roadmap/Roadmap';
 import BatchSizeTest from './components/BatchSizeTest/BatchSizeTest';
@@ -41,6 +42,7 @@ function App() {
                 <Route path="/import-sq-bn" element={<ImportTabs type="sq" language="bn" />} />
                 <Route path="/import-math" element={<MathQuestionImport />} />
                 <Route path="/import-mcq" element={<MCQImport />} />
+                <Route path="/import-json" element={<CQJSONImport />} />
                 <Route path="/prompts" element={<SimplePromptManager />} />
                 <Route path="/shop" element={<Shop />} />
                 <Route path="/roadmap" element={<Roadmap />} />

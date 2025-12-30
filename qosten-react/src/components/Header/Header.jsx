@@ -3,10 +3,12 @@ import { useQuestions } from '../../context/QuestionContext';
 import { questionApi } from '../../services/questionApi';
 
 export default function Header() {
-  const { questions, setQuestions, refreshQuestions } = useQuestions();
+  const { questions, setQuestions, refreshQuestions, bulkAddQuestions } = useQuestions();
   const fileInputRef = useRef(null);
   const [isRefreshing, setIsRefreshing] = React.useState(false);
   const [isExporting, setIsExporting] = React.useState(false);
+  const [isImporting, setIsImporting] = React.useState(false);
+  const [importProgress, setImportProgress] = React.useState({ current: 0, total: 0 });
 
   const fetchFullQuestionsData = async () => {
     console.log('Fetching full data for export...');
@@ -177,12 +179,12 @@ export default function Header() {
     fileInputRef.current?.click();
   };
   
-  const importQuestions = (event) => {
+  const importQuestions = async (event) => {
     const file = event.target.files?.[0];
     if (!file) return;
     
     const reader = new FileReader();
-    reader.onload = (e) => {
+    reader.onload = async (e) => {
       try {
         const importedQuestions = JSON.parse(e.target.result);
         if (!Array.isArray(importedQuestions)) {
@@ -191,48 +193,61 @@ export default function Header() {
         }
         
         // Validate question structure
-        const validQuestions = importedQuestions.filter(q => 
+        const allValidQuestions = importedQuestions.filter(q => 
           q && typeof q === 'object' && q.type && (q.question || q.questionText)
         );
         
-        if (validQuestions.length === 0) {
+        if (allValidQuestions.length === 0) {
           alert('No valid questions found in the imported file.');
           return;
         }
-        
-        // Ask user if they want to replace or merge
-        const shouldReplace = window.confirm(
-          `Found ${validQuestions.length} valid questions.\n\n` +
-          'Choose OK to REPLACE all existing questions, or Cancel to MERGE with existing questions.'
-        );
-        
-        if (shouldReplace) {
-          setQuestions(validQuestions);
-          alert(`Replaced question bank with ${validQuestions.length} questions.`);
-        } else {
-          // Merge - add unique questions
-          const existingIds = new Set(questions.map(q => q.id));
-          let addedCount = 0;
-          
-          validQuestions.forEach(importedQ => {
-            if (!existingIds.has(importedQ.id)) {
-              questions.push({ ...importedQ, id: importedQ.id || Date.now().toString() + Math.random() });
-              addedCount++;
-            }
-          });
-          
-          setQuestions([...questions]);
-          alert(`Added ${addedCount} new questions to the existing bank.`);
+
+        console.log(`📁 Processing ${allValidQuestions.length} imported questions...`);
+
+        // Check for duplicates based on ID
+        const existingIds = new Set(questions.map(q => String(q.id)));
+        const newQuestions = allValidQuestions.filter(q => !existingIds.has(String(q.id)));
+        const duplicateCount = allValidQuestions.length - newQuestions.length;
+
+        if (newQuestions.length === 0) {
+          alert(`Import canceled: All ${allValidQuestions.length} questions already exist in the database.`);
+          return;
         }
+
+        const confirmMsg = `Found ${allValidQuestions.length} questions in file.\n` +
+          `- ${newQuestions.length} new questions to upload.\n` +
+          `- ${duplicateCount} questions already exist (will be skipped).\n\n` +
+          `Proceed with uploading ${newQuestions.length} questions in batches of 100?`;
+
+        if (!window.confirm(confirmMsg)) return;
+
+        setIsImporting(true);
+        setImportProgress({ current: 0, total: newQuestions.length });
+
+        console.log(`🚀 Starting upload of ${newQuestions.length} questions...`);
+
+        const result = await bulkAddQuestions(newQuestions, (current, total) => {
+          setImportProgress({ current, total });
+          console.log(`📊 Progress: ${current}/${total} questions processed.`);
+        });
+
+        alert(`✅ Import Complete!\n- Successfully uploaded: ${result.successCount}\n- Failed: ${result.failedCount}\n- Skipped (existing): ${duplicateCount}`);
         
+        console.log('🏁 Import process finished.', result);
+        
+        // Refresh the list
+        await refreshQuestions();
+
       } catch (error) {
         console.error('Error importing questions:', error);
         alert('Error reading file. Please ensure it\'s a valid JSON file.');
+      } finally {
+        setIsImporting(false);
+        event.target.value = ''; // Reset file input
       }
     };
     
     reader.readAsText(file);
-    event.target.value = ''; // Reset file input
   };
 
   const handleRefresh = async () => {
@@ -270,14 +285,21 @@ export default function Header() {
         >
           {isExporting ? '⌛ Exporting CSV...' : 'Export CSV'}
         </button>
-        <button className="secondary" onClick={handleImportClick}>Import JSON</button>
+        <button 
+          className="secondary" 
+          onClick={handleImportClick}
+          disabled={isImporting}
+          style={{ opacity: isImporting ? 0.6 : 1 }}
+        >
+          {isImporting ? `⌛ Importing (${importProgress.current}/${importProgress.total})...` : 'Import JSON'}
+        </button>
         <button 
           className="secondary" 
           onClick={handleRefresh}
-          disabled={isRefreshing}
+          disabled={isRefreshing || isImporting}
           style={{
-            opacity: isRefreshing ? 0.6 : 1,
-            cursor: isRefreshing ? 'not-allowed' : 'pointer'
+            opacity: (isRefreshing || isImporting) ? 0.6 : 1,
+            cursor: (isRefreshing || isImporting) ? 'not-allowed' : 'pointer'
           }}
         >
           {isRefreshing ? '🔄 Refreshing...' : '🔄 Refresh from DB'}

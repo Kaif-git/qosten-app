@@ -1,11 +1,6 @@
-import React, { createContext, useContext, useReducer, useEffect } from 'react';
-import { createClient } from '@supabase/supabase-js';
+import React, { createContext, useContext, useReducer, useEffect, useRef } from 'react';
+import { supabase } from '../services/supabaseClient';
 import { questionApi } from '../services/questionApi';
-
-// Initialize Supabase client
-const supabaseUrl = process.env.REACT_APP_SUPABASE_URL || '';
-const supabaseKey = process.env.REACT_APP_SUPABASE_ANON_KEY || '';
-const supabaseClient = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
 
 // Initial state
 const initialState = {
@@ -45,8 +40,12 @@ const ACTIONS = {
 // Reducer function
 function questionReducer(state, action) {
   switch (action.type) {
-    case ACTIONS.SET_QUESTIONS:
-      return { ...state, questions: action.payload };
+    case ACTIONS.SET_QUESTIONS: {
+      const newQuestions = typeof action.payload === 'function' 
+        ? action.payload(state.questions) 
+        : action.payload;
+      return { ...state, questions: newQuestions };
+    }
     case ACTIONS.ADD_QUESTION:
       return { ...state, questions: [...state.questions, action.payload] };
     case ACTIONS.UPDATE_QUESTION:
@@ -67,8 +66,12 @@ function questionReducer(state, action) {
       return { ...state, editingQuestion: action.payload };
     case ACTIONS.SET_AUTHENTICATED:
       return { ...state, isAuthenticated: action.payload };
-    case ACTIONS.UPDATE_STATS:
-      return { ...state, stats: action.payload };
+    case ACTIONS.UPDATE_STATS: {
+      const newStats = typeof action.payload === 'function'
+        ? action.payload(state.stats)
+        : action.payload;
+      return { ...state, stats: newStats };
+    }
     default:
       return state;
   }
@@ -109,6 +112,7 @@ const base64ToBlob = async (base64Data) => {
 // Context provider component
 export function QuestionProvider({ children }) {
   const [state, dispatch] = useReducer(questionReducer, initialState);
+  const isFetchingRef = useRef(false);
 
   // Helper to save to both memory and persistent cache
   const saveToCache = (questions) => {
@@ -135,7 +139,7 @@ export function QuestionProvider({ children }) {
   };
 
   const uploadImageToSupabase = async (fileOrBase64) => {
-    if (!supabaseClient || !fileOrBase64) return null;
+    if (!supabase || !fileOrBase64) return null;
     
     // If it's already a URL, return it
     if (typeof fileOrBase64 === 'string' && fileOrBase64.startsWith('http')) {
@@ -159,7 +163,7 @@ export function QuestionProvider({ children }) {
         const fileName = `${Date.now()}_${Math.random().toString(36).substring(7)}.${ext}`;
         const filePath = `${fileName}`; 
 
-        const { data, error } = await supabaseClient
+        const { data, error } = await supabase
             .storage
             .from('question-images')
             .upload(filePath, fileToUpload);
@@ -169,7 +173,7 @@ export function QuestionProvider({ children }) {
             throw error;
         }
 
-        const { data: { publicUrl } } = supabaseClient
+        const { data: { publicUrl } } = supabase
             .storage
             .from('question-images')
             .getPublicUrl(filePath);
@@ -206,7 +210,9 @@ export function QuestionProvider({ children }) {
   // Actions
   const setQuestions = (questions) => {
     dispatch({ type: ACTIONS.SET_QUESTIONS, payload: questions });
-    updateStats(questions);
+    if (typeof questions !== 'function') {
+      updateStats(questions);
+    }
   };
 
   const addQuestion = async (question) => {
@@ -235,6 +241,80 @@ export function QuestionProvider({ children }) {
       return newQuestion;
     } catch (error) {
       console.error('Error in addQuestion:', error);
+      throw error;
+    }
+  };
+
+  const bulkAddQuestions = async (questions, onProgress) => {
+    try {
+      console.log(`🚀 Starting bulk add of ${questions.length} questions...`);
+      
+      // Process images for all questions first? 
+      // That might be too slow if thousands of base64s.
+      // We'll process them in the same chunks as the API calls.
+      
+      const results = {
+        successCount: 0,
+        failedCount: 0,
+        errors: []
+      };
+
+      const CHUNK_SIZE = 100;
+      const total = questions.length;
+
+      for (let i = 0; i < total; i += CHUNK_SIZE) {
+        const chunk = questions.slice(i, i + CHUNK_SIZE);
+        
+        // 1. Process Images for this chunk
+        const processedChunk = await Promise.all(chunk.map(async q => {
+          try {
+            // Process images (upload to Supabase if base64)
+            const withImages = await processQuestionImages(q);
+            // Map to DB format
+            return mapAppToDatabase(withImages);
+          } catch (e) {
+            console.error(`Error processing images for question ${q.id}:`, e);
+            return mapAppToDatabase(q); // Fallback to original
+          }
+        }));
+
+        // 2. Call API for this chunk
+        const batchResults = await questionApi.bulkCreateQuestions(processedChunk);
+        
+        results.successCount += batchResults.successCount;
+        results.failedCount += batchResults.failedCount;
+        results.errors.push(...batchResults.errors);
+
+        if (onProgress) {
+          onProgress(Math.min(i + CHUNK_SIZE, total), total);
+        }
+      }
+
+      // Invalidate memory cache
+      memoryCache.questions = null;
+      
+      return results;
+    } catch (error) {
+      console.error('Error in bulkAddQuestions:', error);
+      throw error;
+    }
+  };
+
+  const batchAddQuestions = async (questions, onProgress) => {
+    try {
+      console.log(`🚀 Starting batch add of ${questions.length} questions...`);
+      
+      // Map to DB format first (assuming no base64 images in JSON for now, or handle them)
+      const dbQuestions = questions.map(q => mapAppToDatabase(q));
+      
+      const result = await questionApi.batchCreateQuestions(dbQuestions, onProgress);
+      
+      // Invalidate memory cache
+      memoryCache.questions = null;
+      
+      return result;
+    } catch (error) {
+      console.error('Error in batchAddQuestions:', error);
       throw error;
     }
   };
@@ -326,6 +406,17 @@ export function QuestionProvider({ children }) {
   };
 
   const updateStats = (questions) => {
+    if (typeof questions === 'function') {
+        // If it's a function, we can't easily calculate stats here without the current state
+        // The reducer now handles UPDATE_STATS if we want to dispatch a function there
+        dispatch({ type: ACTIONS.UPDATE_STATS, payload: (prevStats) => {
+            // This is complex because we need the questions.
+            // For now, let's just ignore functional updates for stats or handle them in reducer.
+            return prevStats;
+        }});
+        return;
+    }
+
     const subjects = new Set(questions.map(q => q.subject).filter(Boolean));
     const chapters = new Set(questions.map(q => q.chapter).filter(Boolean));
     
@@ -445,6 +536,8 @@ export function QuestionProvider({ children }) {
   // Load questions from API on mount
   useEffect(() => {
     const loadQuestionsFromDatabase = async () => {
+      if (isFetchingRef.current) return;
+      
       // 1. Try Memory Cache first (Instant)
       if (memoryCache.questions) {
         const age = Math.round((Date.now() - memoryCache.timestamp) / 1000);
@@ -475,18 +568,31 @@ export function QuestionProvider({ children }) {
       }
 
       try {
+        isFetchingRef.current = true;
         console.log('📡 Fetching questions from API...');
-        // We fetch all questions via the API now
-        const allQuestions = await questionApi.fetchAllQuestions();
+        
+        let accumulatedQuestions = [];
+        
+        // We fetch questions via the API with a callback for incremental updates
+        const allQuestions = await questionApi.fetchAllQuestions((batch) => {
+          if (batch && batch.length > 0) {
+            const mappedBatch = batch.map(mapDatabaseToApp);
+            accumulatedQuestions = [...accumulatedQuestions, ...mappedBatch];
+            
+            // Update state incrementally so user sees questions immediately
+            dispatch({ type: ACTIONS.SET_QUESTIONS, payload: [...accumulatedQuestions] });
+            updateStats(accumulatedQuestions);
+          }
+        });
 
-        if (allQuestions.length > 0) {
-          const mappedQuestions = allQuestions.map(mapDatabaseToApp);
-          setQuestions(mappedQuestions);
-          saveToCache(mappedQuestions); // Save to cache
-          console.log(`✅ Successfully loaded ${mappedQuestions.length} questions from API`);
+        if (accumulatedQuestions.length > 0) {
+          saveToCache(accumulatedQuestions);
+          console.log(`✅ Successfully loaded ${accumulatedQuestions.length} questions from API`);
         }
       } catch (error) {
         console.error('Error loading questions from API:', error);
+      } finally {
+        isFetchingRef.current = false;
       }
     };
 
@@ -508,6 +614,102 @@ export function QuestionProvider({ children }) {
     } catch (error) {
       console.error('Error refreshing questions:', error);
     }
+  };
+
+  const fetchMoreQuestions = async (forcedPage = null) => {
+    if (isFetchingRef.current && forcedPage === null) return;
+    
+    try {
+      if (forcedPage === null) isFetchingRef.current = true;
+      
+      const BATCH_SIZE = 500;
+      // Use forcedPage if provided (for Fetch All loop), otherwise calculate from current state
+      const nextPage = forcedPage !== null ? forcedPage : Math.floor(state.questions.length / BATCH_SIZE);
+      
+      console.log(`📡 Fetching Page ${nextPage}...`);
+      
+      const response = await questionApi.fetchQuestions({
+        limit: BATCH_SIZE,
+        page: nextPage
+      });
+      
+      const batch = Array.isArray(response) ? response : (response.data || []);
+      
+      if (batch.length > 0) {
+        const mappedBatch = batch.map(mapDatabaseToApp);
+        
+        // Use functional update to ensure we always have the latest questions
+        let addedCount = 0;
+        dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
+          const existingIds = new Set(prevQuestions.map(q => q.id.toString()));
+          const uniqueNewBatch = mappedBatch.filter(q => !existingIds.has(q.id.toString()));
+          addedCount = uniqueNewBatch.length;
+          
+          if (addedCount > 0) {
+            const updated = [...prevQuestions, ...uniqueNewBatch];
+            // We can't call saveToCache here easily as it's a side effect in reducer-like logic
+            // But we'll handle cache update outside or via a separate mechanism
+            return updated;
+          }
+          return prevQuestions;
+        }});
+
+        // Since dispatch is async in terms of state availability, 
+        // we'll return the length of the batch we tried to add
+        return batch.length; 
+      }
+      return 0;
+    } catch (error) {
+      console.error('Error fetching more questions:', error);
+      throw error;
+    } finally {
+      if (forcedPage === null) isFetchingRef.current = false;
+    }
+  };
+
+  const fetchAllRemaining = async (onProgress) => {
+    if (isFetchingRef.current) return;
+    
+    isFetchingRef.current = true;
+    let totalAdded = 0;
+    let hasMore = true;
+    const BATCH_SIZE = 500;
+    // Start from the next page based on current count
+    let currentPage = Math.floor(state.questions.length / BATCH_SIZE);
+    
+    console.log(`🚀 Starting "Fetch All" from Page ${currentPage}...`);
+    
+    try {
+      while (hasMore) {
+        const batchSizeReceived = await fetchMoreQuestions(currentPage);
+        
+        if (batchSizeReceived > 0) {
+          totalAdded += batchSizeReceived;
+          if (onProgress) onProgress(totalAdded);
+          
+          currentPage++;
+          
+          // Stop if we received a partial batch (reached end of DB)
+          if (batchSizeReceived < BATCH_SIZE) {
+            hasMore = false;
+          }
+          
+          await new Promise(resolve => setTimeout(resolve, 100));
+        } else {
+          hasMore = false;
+        }
+      }
+      
+      // Update cache one final time with the full set
+      // We'll get questions from the value object which should be updated by now
+      // Or just refresh questions manually to sync everything
+    } catch (error) {
+      console.error('Error during Fetch All:', error);
+    } finally {
+      isFetchingRef.current = false;
+      console.log(`🏁 "Fetch All" complete. Total records processed: ${totalAdded}`);
+    }
+    return totalAdded;
   };
 
   const toggleQuestionFlag = async (questionId) => {
@@ -691,9 +893,11 @@ export function QuestionProvider({ children }) {
 
   const value = {
     ...state,
-    supabaseClient, // Exposed for direct storage access if needed elsewhere
+    supabaseClient: supabase, // Exposed for direct storage access if needed elsewhere
     setQuestions,
     addQuestion,
+    bulkAddQuestions,
+    batchAddQuestions,
     updateQuestion,
     bulkUpdateQuestions,
     deleteQuestion,
@@ -703,6 +907,8 @@ export function QuestionProvider({ children }) {
     setAuthenticated,
     updateStats,
     refreshQuestions,
+    fetchMoreQuestions,
+    fetchAllRemaining,
     toggleQuestionFlag,
     bulkFlagQuestions,
     toggleQuestionVerification,

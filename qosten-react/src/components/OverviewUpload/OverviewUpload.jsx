@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { createClient } from '@supabase/supabase-js';
-import { parseOverviewText, validateOverview, overviewToJSON, EXAMPLE_FORMAT } from '../../utils/overviewParser';
+import { supabase } from '../../services/supabaseClient';
+import { 
+  parseOverviewText, 
+  validateOverview, 
+  overviewToJSON, 
+  EXAMPLE_FORMAT 
+} from '../../utils/overviewParser';
 import MarkdownContent from '../MarkdownContent/MarkdownContent';
-
-// Initialize Supabase client
-const supabaseUrl = process.env.REACT_APP_SUPABASE_URL || '';
-const supabaseKey = process.env.REACT_APP_SUPABASE_ANON_KEY || '';
-const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
 
 export default function OverviewUpload() {
   const [inputText, setInputText] = useState('');

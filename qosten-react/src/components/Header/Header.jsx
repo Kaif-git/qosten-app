@@ -234,10 +234,6 @@ export default function Header() {
         alert(`✅ Import Complete!\n- Successfully uploaded: ${result.successCount}\n- Failed: ${result.failedCount}\n- Skipped (existing): ${duplicateCount}`);
         
         console.log('🏁 Import process finished.', result);
-        
-        // Refresh the list
-        await refreshQuestions();
-
       } catch (error) {
         console.error('Error importing questions:', error);
         alert('Error reading file. Please ensure it\'s a valid JSON file.');

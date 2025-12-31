@@ -51,7 +51,7 @@ function questionReducer(state, action) {
     case ACTIONS.SET_HIERARCHY:
       return { ...state, hierarchy: action.payload };
     case ACTIONS.ADD_QUESTION:
-      return { ...state, questions: [...state.questions, action.payload] };
+      return { ...state, questions: [action.payload, ...state.questions] };
     case ACTIONS.UPDATE_QUESTION:
       return {
         ...state,
@@ -219,28 +219,45 @@ export function QuestionProvider({ children }) {
     }
   };
 
+  const clearCache = () => {
+    memoryCache = { questions: null, timestamp: null, expiresAt: null };
+    localStorage.removeItem(CACHE_KEY);
+    console.log('🗑️ Cache cleared');
+  };
+
+  const refreshHierarchy = async () => {
+    try {
+      console.log('📡 Refreshing question hierarchy...');
+      const hierarchyData = await questionApi.fetchHierarchy();
+      dispatch({ type: ACTIONS.SET_HIERARCHY, payload: hierarchyData });
+      console.log(`✅ Hierarchy refreshed for ${hierarchyData.length} subjects`);
+    } catch (hErr) {
+      console.error('Failed to refresh hierarchy:', hErr);
+    }
+  };
+
   const addQuestion = async (question) => {
     try {
       // 1. Process Images (Upload to Supabase Bucket)
       const questionWithImages = await processQuestionImages(question);
       
-      // 2. Map to API/DB format
-      // Note: We assume the API expects the same structure as the DB, or flexible JSON.
-      // We'll use mapAppToDatabase to keep consistent field names (snake_case) expected by the legacy DB structure
-      // that the API likely interfaces with.
       const dbQuestion = mapAppToDatabase({ ...questionWithImages, id: Date.now() + Math.floor(Math.random() * 10000) });
       
       // 3. Call API
       const responseData = await questionApi.createQuestion(dbQuestion);
       
       // 4. Update State
-      // The API should return the created question.
-      const newQuestion = mapDatabaseToApp(responseData.data || responseData); // Handle {data: ...} or direct object
-      dispatch({ type: ACTIONS.ADD_QUESTION, payload: newQuestion });
-      console.log('Question added via API:', newQuestion.id);
+      const newQuestion = mapDatabaseToApp(responseData.data || responseData);
       
-      // Invalidate memory cache
-      memoryCache.questions = null; 
+      // Update State & Cache together
+      dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
+          const updated = [newQuestion, ...prevQuestions];
+          saveToCache(updated);
+          return updated;
+      }});
+      
+      // Refresh hierarchy in background
+      refreshHierarchy();
       
       return newQuestion;
     } catch (error) {
@@ -252,10 +269,6 @@ export function QuestionProvider({ children }) {
   const bulkAddQuestions = async (questions, onProgress) => {
     try {
       console.log(`🚀 Starting bulk add of ${questions.length} questions...`);
-      
-      // Process images for all questions first? 
-      // That might be too slow if thousands of base64s.
-      // We'll process them in the same chunks as the API calls.
       
       const results = {
         successCount: 0,
@@ -269,20 +282,16 @@ export function QuestionProvider({ children }) {
       for (let i = 0; i < total; i += CHUNK_SIZE) {
         const chunk = questions.slice(i, i + CHUNK_SIZE);
         
-        // 1. Process Images for this chunk
         const processedChunk = await Promise.all(chunk.map(async q => {
           try {
-            // Process images (upload to Supabase if base64)
             const withImages = await processQuestionImages(q);
-            // Map to DB format
             return mapAppToDatabase(withImages);
           } catch (e) {
             console.error(`Error processing images for question ${q.id}:`, e);
-            return mapAppToDatabase(q); // Fallback to original
+            return mapAppToDatabase(q);
           }
         }));
 
-        // 2. Call API for this chunk
         const batchResults = await questionApi.bulkCreateQuestions(processedChunk);
         
         results.successCount += batchResults.successCount;
@@ -294,8 +303,9 @@ export function QuestionProvider({ children }) {
         }
       }
 
-      // Invalidate memory cache
-      memoryCache.questions = null;
+      // Refresh everything to ensure UI is in sync
+      await refreshQuestions();
+      refreshHierarchy();
       
       return results;
     } catch (error) {
@@ -308,13 +318,13 @@ export function QuestionProvider({ children }) {
     try {
       console.log(`🚀 Starting batch add of ${questions.length} questions...`);
       
-      // Map to DB format first (assuming no base64 images in JSON for now, or handle them)
       const dbQuestions = questions.map(q => mapAppToDatabase(q));
       
       const result = await questionApi.batchCreateQuestions(dbQuestions, onProgress);
       
-      // Invalidate memory cache
-      memoryCache.questions = null;
+      // Refresh everything
+      await refreshQuestions();
+      refreshHierarchy();
       
       return result;
     } catch (error) {
@@ -336,12 +346,17 @@ export function QuestionProvider({ children }) {
       // 3. Call API
       await questionApi.updateQuestion(questionId, dbQuestion);
 
-      // 4. Update State
+      // 4. Update State & Cache
       dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: questionWithImages });
-      console.log('Question updated via API:', question.id);
       
-      // Invalidate memory cache
-      memoryCache.questions = null;
+      // Sync cache
+      dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
+          const updated = prevQuestions.map(q => q.id === question.id ? questionWithImages : q);
+          saveToCache(updated);
+          return updated;
+      }});
+
+      console.log('Question updated via API:', question.id);
     } catch (error) {
       console.error('Error in updateQuestion:', error);
       throw error;
@@ -352,28 +367,23 @@ export function QuestionProvider({ children }) {
     try {
       console.log(`🔄 Starting bulk update of ${questions.length} questions...`);
       
-      // Note: Bulk update logic in API service might fallback to parallel requests.
-      // We assume bulk updates don't introduce *new* images usually (just metadata changes),
-      // but if they do, we should process them. For performance, we skip image processing check 
-      // unless we know images are involved. For now, assuming metadata updates.
-      
-      // Map all to DB format
       const dbQuestions = questions.map(q => mapAppToDatabase(q));
-      
       const { successCount, failedCount } = await questionApi.bulkUpdateQuestions(dbQuestions);
       
-      // Optimistically update local state for all (or rely on API result to determine)
-      // Since we don't get individual results easily from the simple parallel implementation without more logic,
-      // we'll update all in state.
-      questions.forEach(question => {
-        dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
-      });
+      // Map to track updates
+      const updateMap = new Map(questions.map(q => [q.id.toString(), q]));
+
+      // Update State & Cache
+      dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
+          const updated = prevQuestions.map(q => {
+              const improved = updateMap.get(q.id.toString());
+              return improved ? { ...q, ...improved } : q;
+          });
+          saveToCache(updated);
+          return updated;
+      }});
       
       console.log(`✅ Bulk update complete: ${successCount} succeeded, ${failedCount} failed`);
-      
-      // Invalidate memory cache
-      memoryCache.questions = null;
-      
       return { successCount, failedCount };
     } catch (error) {
       console.error('Error in bulkUpdateQuestions:', error);
@@ -386,11 +396,17 @@ export function QuestionProvider({ children }) {
       const questionId = parseInt(id);
       await questionApi.deleteQuestion(questionId);
 
+      // 1. Update State
       dispatch({ type: ACTIONS.DELETE_QUESTION, payload: id });
-      console.log('Question deleted via API:', id);
       
-      // Invalidate memory cache
-      memoryCache.questions = null;
+      // 2. Update Cache
+      dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
+          const updated = prevQuestions.filter(q => q.id.toString() !== id.toString());
+          saveToCache(updated);
+          return updated;
+      }});
+
+      console.log('Question deleted via API:', id);
     } catch (error) {
       console.error('Error in deleteQuestion:', error);
       throw error;
@@ -612,6 +628,10 @@ export function QuestionProvider({ children }) {
   const refreshQuestions = async () => {
     try {
       console.log('🔄 Manually refreshing questions (API)...');
+      
+      // Refresh Hierarchy too
+      refreshHierarchy();
+
       const allQuestions = await questionApi.fetchAllQuestions();
 
       if (allQuestions.length > 0) {
@@ -798,29 +818,23 @@ export function QuestionProvider({ children }) {
   };
 
   const bulkReviewQueue = async (questionIds, inQueue) => {
-    // 1. Optimistic Local Update
-    const numericIds = questionIds.map(id => parseInt(id));
+    // 1. Update Local State & Cache
     const idSet = new Set(questionIds.map(String));
     
-    const updatedQuestionsForState = state.questions.map(q => 
-        idSet.has(String(q.id)) ? { ...q, inReviewQueue: inQueue } : q
-    );
-    
-    dispatch({ type: ACTIONS.SET_QUESTIONS, payload: updatedQuestionsForState });
+    dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
+        const updated = prevQuestions.map(q => 
+            idSet.has(String(q.id)) ? { ...q, inReviewQueue: inQueue } : q
+        );
+        saveToCache(updated);
+        return updated;
+    }});
 
     try {
       console.log(`📋 Bulk setting review queue to ${inQueue} for ${questionIds.length} questions...`);
-      
-      // Update in API using bulk update logic (fallback to loop in service)
+      const numericIds = questionIds.map(id => parseInt(id));
       const updates = numericIds.map(id => ({ id, in_review_queue: inQueue }));
       const { successCount, failedCount } = await questionApi.bulkUpdateQuestions(updates);
       
-      if (memoryCache.questions) {
-          memoryCache.questions = memoryCache.questions.map(q => 
-              idSet.has(String(q.id)) ? { ...q, inReviewQueue: inQueue } : q
-          );
-      }
-
       return { successCount, failedCount };
     } catch (err) {
       console.error('Exception in bulkReviewQueue:', err);
@@ -829,28 +843,23 @@ export function QuestionProvider({ children }) {
   };
 
   const bulkFlagQuestions = async (questionIds, flagged) => {
-    // 1. Optimistic Local Update
-    const numericIds = questionIds.map(id => parseInt(id));
+    // 1. Update Local State & Cache
     const idSet = new Set(questionIds.map(String));
     
-    const updatedQuestionsForState = state.questions.map(q => 
-        idSet.has(String(q.id)) ? { ...q, isFlagged: flagged } : q
-    );
-    
-    dispatch({ type: ACTIONS.SET_QUESTIONS, payload: updatedQuestionsForState });
+    dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
+        const updated = prevQuestions.map(q => 
+            idSet.has(String(q.id)) ? { ...q, isFlagged: flagged } : q
+        );
+        saveToCache(updated);
+        return updated;
+    }});
 
     try {
       console.log(`🚩 Bulk flagging ${questionIds.length} questions to ${flagged}...`);
-      
+      const numericIds = questionIds.map(id => parseInt(id));
       const updates = numericIds.map(id => ({ id, is_flagged: flagged }));
       const { successCount, failedCount } = await questionApi.bulkUpdateQuestions(updates);
       
-      if (memoryCache.questions) {
-          memoryCache.questions = memoryCache.questions.map(q => 
-              idSet.has(String(q.id)) ? { ...q, isFlagged: flagged } : q
-          );
-      }
-
       return { successCount, failedCount };
     } catch (err) {
       console.error('Exception in bulkFlagQuestions:', err);
@@ -859,28 +868,23 @@ export function QuestionProvider({ children }) {
   };
 
   const bulkVerifyQuestions = async (questionIds, verified) => {
-    // 1. Optimistic Local Update
-    const numericIds = questionIds.map(id => parseInt(id));
+    // 1. Update Local State & Cache
     const idSet = new Set(questionIds.map(String));
     
-    const updatedQuestionsForState = state.questions.map(q => 
-        idSet.has(String(q.id)) ? { ...q, isVerified: verified } : q
-    );
-    
-    dispatch({ type: ACTIONS.SET_QUESTIONS, payload: updatedQuestionsForState });
+    dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
+        const updated = prevQuestions.map(q => 
+            idSet.has(String(q.id)) ? { ...q, isVerified: verified } : q
+        );
+        saveToCache(updated);
+        return updated;
+    }});
 
     try {
       console.log(`✅ Bulk verifying ${questionIds.length} questions to ${verified}...`);
-      
+      const numericIds = questionIds.map(id => parseInt(id));
       const updates = numericIds.map(id => ({ id, is_verified: verified }));
       const { successCount, failedCount } = await questionApi.bulkUpdateQuestions(updates);
       
-      if (memoryCache.questions) {
-          memoryCache.questions = memoryCache.questions.map(q => 
-              idSet.has(String(q.id)) ? { ...q, isVerified: verified } : q
-          );
-      }
-
       return { successCount, failedCount };
     } catch (err) {
       console.error('Exception in bulkVerifyQuestions:', err);
@@ -905,6 +909,7 @@ export function QuestionProvider({ children }) {
     supabaseClient: supabase, // Exposed for direct storage access if needed elsewhere
     hierarchy: state.hierarchy,
     setQuestions,
+    clearCache,
     addQuestion,
     bulkAddQuestions,
     batchAddQuestions,
@@ -917,6 +922,7 @@ export function QuestionProvider({ children }) {
     setAuthenticated,
     updateStats,
     refreshQuestions,
+    refreshHierarchy,
     fetchMoreQuestions,
     fetchAllRemaining,
     toggleQuestionFlag,

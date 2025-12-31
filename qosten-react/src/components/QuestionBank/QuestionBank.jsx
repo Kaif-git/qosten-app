@@ -158,14 +158,19 @@ const fixCorruptedSQ = (text) => {
 };
 
 const getFilteredQuestions = (questions, filters, fullQuestionsMap = null, hasSearched = false) => {
-  return questions.filter(q => {
+  const result = questions.filter(q => {
+    const qSubject = (q.subject || '').trim();
+    const qChapter = (q.chapter || '').trim();
+    const fSubject = (filters.subject || '').trim();
+    const fChapter = (filters.chapter || '').trim();
+
     const matchesSubject = filters.subject === 'none'
       ? !q.subject
-      : !filters.subject || q.subject === filters.subject;
+      : !filters.subject || qSubject === fSubject;
       
     const matchesChapter = filters.chapter === 'none'
       ? !q.chapter
-      : !filters.chapter || q.chapter === filters.chapter;
+      : !filters.chapter || qChapter === fChapter;
 
     const matchesLesson = !filters.lesson || q.lesson === filters.lesson;
     const matchesType = !filters.type || q.type === filters.type;
@@ -209,10 +214,20 @@ const getFilteredQuestions = (questions, filters, fullQuestionsMap = null, hasSe
       explanation.includes(searchText) ||
       partsMatch;
   });
+
+  if (filters.subject || filters.chapter) {
+      console.log(`[Filter Debug] Total: ${questions.length}, Filtered: ${result.length}, Filters:`, {
+          subject: filters.subject,
+          chapter: filters.chapter,
+          type: filters.type
+      });
+  }
+
+  return result.sort((a, b) => parseInt(b.id) - parseInt(a.id));
 };
 
 export default function QuestionBank() {
-  const { questions, setQuestions, currentFilters, deleteQuestion, updateQuestion, bulkUpdateQuestions, bulkFlagQuestions, fetchQuestionsByIds, setFilters, fetchMoreQuestions, fetchAllRemaining } = useQuestions();
+  const { questions, setQuestions, currentFilters, deleteQuestion, updateQuestion, bulkUpdateQuestions, bulkFlagQuestions, fetchQuestionsByIds, setFilters, fetchMoreQuestions, fetchAllRemaining, clearCache, hierarchy } = useQuestions();
   const [selectedQuestions, setSelectedQuestions] = useState([]);
   const [selectionMode, setSelectionMode] = useState(false);
   const [lastSelectedId, setLastSelectedId] = useState(null); // Track last selected for shift-click
@@ -249,6 +264,38 @@ export default function QuestionBank() {
   // Restoring missing state for existing CQ Fixing logic
   const [showCQFixModal, setShowCQFixModal] = useState(false);
   const [cqFixCandidates, setCqFixCandidates] = useState([]);
+
+  // SQ Fixing State
+  const [showSQFixModal, setShowSQFixModal] = useState(false);
+  const [sqFixCandidates, setSqFixCandidates] = useState([]);
+
+  // MCQ Fixing State
+  const [showMCQFixModal, setShowMCQFixModal] = useState(false);
+  const [mcqFixCandidates, setMcqFixCandidates] = useState([]);
+
+  // MCQ Sync State
+  const [showMCQSyncModal, setShowMCQSyncModal] = useState(false);
+  const [mcqSyncCandidates, setMcqSyncCandidates] = useState([]);
+
+  // SQ Sync State
+  const [showSQSyncModal, setShowSQSyncModal] = useState(false);
+  const [sqSyncCandidates, setSqSyncCandidates] = useState([]);
+
+  // CQ Sync State
+  const [showCQSyncModal, setShowCQSyncModal] = useState(false);
+  const [cqSyncCandidates, setCqSyncCandidates] = useState([]);
+
+  // Unanswered MCQ State
+  const [showUnansweredMCQModal, setShowUnansweredMCQModal] = useState(false);
+  const [unansweredMCQs, setUnansweredMCQs] = useState([]);
+
+  // Split View State
+  const [isSplitView, setIsSplitView] = useState(false);
+  const [leftFilters, setLeftFilters] = useState({});
+  const [rightFilters, setRightFilters] = useState({});
+  
+  // Performance Optimization: Visible Count (Limit rendering)
+  const [visibleCount, setVisibleCount] = useState(50);
 
   const generateBulkFixText = (type) => {
     const flagged = questions.filter(q => q.isFlagged && q.type === type);
@@ -493,113 +540,96 @@ export default function QuestionBank() {
     }
   };
 
-  // SQ Fixing State
-  const [showSQFixModal, setShowSQFixModal] = useState(false);
-  const [sqFixCandidates, setSqFixCandidates] = useState([]);
-
-  // MCQ Fixing State
-  const [showMCQFixModal, setShowMCQFixModal] = useState(false);
-  const [mcqFixCandidates, setMcqFixCandidates] = useState([]);
-
-  // MCQ Sync State
-  const [showMCQSyncModal, setShowMCQSyncModal] = useState(false);
-  const [mcqSyncCandidates, setMcqSyncCandidates] = useState([]);
-
-  // SQ Sync State
-  const [showSQSyncModal, setShowSQSyncModal] = useState(false);
-  const [sqSyncCandidates, setSqSyncCandidates] = useState([]);
-
-  // CQ Sync State
-  const [showCQSyncModal, setShowCQSyncModal] = useState(false);
-  const [cqSyncCandidates, setCqSyncCandidates] = useState([]);
-
-  // Unanswered MCQ State
-  const [showUnansweredMCQModal, setShowUnansweredMCQModal] = useState(false);
-  const [unansweredMCQs, setUnansweredMCQs] = useState([]);
-
-  // Split View State
-  const [isSplitView, setIsSplitView] = useState(false);
-  const [leftFilters, setLeftFilters] = useState({});
-  const [rightFilters, setRightFilters] = useState({});
-  
-  // Performance Optimization: Visible Count (Limit rendering)
-  const [visibleCount, setVisibleCount] = useState(50);
-  
-  // On-Demand Fetching for Selected Subject
+  // On-Demand Fetching for Selected Criteria
   useEffect(() => {
-    const fetchSubjectData = async () => {
-      const subject = currentFilters.subject;
+    const fetchFilteredData = async () => {
+      const { subject, chapter, type, board, language } = currentFilters;
       if (!subject || subject === 'none') return;
       
-      // Check if we already have questions for this subject
-      // Heuristic: If we have > 0 questions for this subject, we *might* have them all or partially.
-      // But if the user selects a subject not in cache, count will be 0.
-      const hasQuestions = questions.some(q => q.subject === subject);
-      
-      // We should probably check against hierarchy count to know if we have *all*?
-      // For now, simpler: if 0, definitely fetch.
-      if (!hasQuestions) {
-        setFetchStatus(`Fetching questions for ${subject}...`);
+      // Determine if we need to fetch
+      const matches = questions.filter(q => {
+          if (subject && (q.subject || '').trim() !== subject.trim()) return false;
+          if (chapter && (q.chapter || '').trim() !== chapter.trim()) return false;
+          if (type && q.type !== type) return false;
+          if (board && q.board !== board) return false;
+          if (language && q.language !== language) return false;
+          return true;
+      });
+
+      console.log(`[Fetch Debug] Checking ${subject} / ${chapter}. Local matches: ${matches.length}`);
+
+      // If we have 0 questions for these filters, but hierarchy says we should have some
+      let expectedCount = 0;
+      if (hierarchy && hierarchy.length > 0) {
+          const subNode = hierarchy.find(h => h.name === subject);
+          if (subNode) {
+              if (chapter) {
+                  const chapNode = (subNode.chapters || []).find(c => c.name === chapter);
+                  expectedCount = chapNode?.total || 0;
+              } else {
+                  expectedCount = subNode.total || (subNode.chapters || []).reduce((sum, c) => sum + (c.total || 0), 0);
+              }
+          }
+      }
+
+      console.log(`[Fetch Debug] Expected: ${expectedCount}`);
+
+      // Trigger fetch if we have 0 locally but expected > 0
+      if (matches.length === 0 && expectedCount > 0) {
+        console.log(`[Fetch Debug] 🚀 Triggering API fetch for missing data...`);
+        setFetchStatus(`Fetching missing data...`);
         setIsFetchingMore(true);
         try {
-           // We fetch without pagination limit (or high limit) to get all for the subject
-           // Note: API needs to support 'subject' filter
-           const response = await questionApi.fetchQuestions({ subject, limit: 1000 });
+           const response = await questionApi.fetchQuestions({ 
+               subject, 
+               chapter, 
+               type, 
+               board, 
+               language, 
+               limit: 1000 
+           });
            const newQuestions = Array.isArray(response) ? response : (response.data || []);
+           console.log(`[Fetch Debug] API returned ${newQuestions.length} questions`);
            
            if (newQuestions.length > 0) {
-             const mapped = newQuestions.map(q => {
-                 // Map to app format (duplicating mapDatabaseToApp logic locally or importing it? 
-                 // Context doesn't expose mapDatabaseToApp. 
-                 // I'll rely on the fact that I can just add them via bulk mechanism or better:
-                 // Use `addQuestion`? No, too slow.
-                 // I need to dispatch SET_QUESTIONS with merge.
-                 // I'll assume raw data matches what context expects, but context does mapping.
-                 // Actually, QuestionContext exports `useQuestions` but the mapper is internal.
-                 // I should move mapper to utils or duplicate it. 
-                 // For now, let's assume raw data needs mapping.
-                 // I'll check if I can access the mapper or just reproduce it briefly.
-                 // Reproducing basic mapping:
-                 return {
-                    id: q.id,
-                    type: q.type,
-                    subject: q.subject,
-                    chapter: q.chapter,
-                    lesson: q.lesson,
-                    board: q.board,
-                    language: q.language,
-                    question: q.question,
-                    questionText: q.question_text,
-                    options: typeof q.options === 'string' ? JSON.parse(q.options) : q.options,
-                    correctAnswer: q.correct_answer,
-                    answer: q.answer,
-                    parts: typeof q.parts === 'string' ? JSON.parse(q.parts) : q.parts,
-                    image: q.image,
-                    answerimage1: q.answerimage1,
-                    answerimage2: q.answerimage2,
-                    explanation: q.explanation,
-                    tags: typeof q.tags === 'string' ? JSON.parse(q.tags) : q.tags,
-                    isFlagged: q.is_flagged,
-                    isVerified: q.is_verified,
-                    inReviewQueue: q.in_review_queue
-                 };
-             });
+             const mapped = newQuestions.map(q => ({
+                id: q.id,
+                type: q.type,
+                subject: q.subject,
+                chapter: q.chapter,
+                lesson: q.lesson,
+                board: q.board,
+                language: q.language,
+                question: q.question,
+                questionText: q.question_text,
+                options: typeof q.options === 'string' ? JSON.parse(q.options) : q.options,
+                correctAnswer: q.correct_answer,
+                answer: q.answer,
+                parts: typeof q.parts === 'string' ? JSON.parse(q.parts) : q.parts,
+                image: q.image,
+                answerimage1: q.answerimage1,
+                answerimage2: q.answerimage2,
+                explanation: q.explanation,
+                tags: typeof q.tags === 'string' ? JSON.parse(q.tags) : q.tags,
+                isFlagged: q.is_flagged,
+                isVerified: q.is_verified,
+                inReviewQueue: q.in_review_queue
+             }));
 
-             // Merge into context
-             // We can use setQuestions with a functional update
              setQuestions(prev => {
                 const existing = new Set(prev.map(p => p.id));
                 const uniqueNew = mapped.filter(m => !existing.has(m.id));
+                console.log(`[Fetch Debug] Merging ${uniqueNew.length} unique questions into state`);
                 return [...prev, ...uniqueNew];
              });
              
-             setFetchStatus(`Loaded ${mapped.length} questions for ${subject}`);
+             setFetchStatus(`Loaded ${mapped.length} additional questions`);
            } else {
-             setFetchStatus(`No questions found for ${subject}`);
+             setFetchStatus(`No questions found on server`);
            }
         } catch (e) {
-           console.error("Error fetching subject data", e);
-           setFetchStatus("Error loading subject data");
+           console.error("Error fetching filtered data", e);
+           setFetchStatus("Error loading data");
         } finally {
            setIsFetchingMore(false);
            setTimeout(() => setFetchStatus(''), 2000);
@@ -607,8 +637,8 @@ export default function QuestionBank() {
       }
     };
     
-    fetchSubjectData();
-  }, [currentFilters.subject]); // We can't easily include 'questions' dependency or it loops. 
+    fetchFilteredData();
+  }, [currentFilters.subject, currentFilters.chapter, currentFilters.type, currentFilters.board, currentFilters.language]); 
   // But we need to ensure we don't refetch if already fetched. The `hasQuestions` check handles the initial case.
   
   // Get unique metadata values from all questions
@@ -2029,30 +2059,65 @@ export default function QuestionBank() {
     if (view === 'left') filtersToUse = { ...currentFilters, ...leftFilters };
     if (view === 'right') filtersToUse = { ...currentFilters, ...rightFilters };
     
-    // 1. Get filtered Metadata (ignoring text, so hasSearched=false logic)
-    // We want to fetch everything that matches the category filters
-    const candidates = getFilteredQuestions(questions, filtersToUse, null, false);
-    
-    // 2. Identify missing full data
-    const idsToFetch = candidates
-        .filter(q => !fullQuestionsMap.has(q.id))
-        .map(q => q.id);
+    // 1. Ensure we have metadata from the server for these filters
+    // This handles the case where the local cache is incomplete
+    try {
+        const response = await questionApi.fetchQuestions({ 
+            subject: filtersToUse.subject,
+            chapter: filtersToUse.chapter,
+            type: filtersToUse.type,
+            board: filtersToUse.board,
+            language: filtersToUse.language,
+            limit: 1000 
+        });
+        const rawResults = Array.isArray(response) ? response : (response.data || []);
         
-    if (idsToFetch.length > 0) {
-        // Fetch full data for candidates
-        try {
-            const newFullQuestions = await fetchQuestionsByIds(idsToFetch);
-            
+        if (rawResults.length > 0) {
+            const mapped = rawResults.map(q => ({
+                id: q.id,
+                type: q.type,
+                subject: q.subject,
+                chapter: q.chapter,
+                lesson: q.lesson,
+                board: q.board,
+                language: q.language,
+                question: q.question,
+                questionText: q.question_text,
+                options: typeof q.options === 'string' ? JSON.parse(q.options) : q.options,
+                correctAnswer: q.correct_answer,
+                answer: q.answer,
+                parts: typeof q.parts === 'string' ? JSON.parse(q.parts) : q.parts,
+                image: q.image,
+                answerimage1: q.answerimage1,
+                answerimage2: q.answerimage2,
+                explanation: q.explanation,
+                tags: typeof q.tags === 'string' ? JSON.parse(q.tags) : q.tags,
+                isFlagged: q.is_flagged,
+                isVerified: q.is_verified,
+                inReviewQueue: q.in_review_queue
+            }));
+
+            // Merge into global questions state
+            setQuestions(prev => {
+                const existing = new Set(prev.map(p => p.id));
+                const uniqueNew = mapped.filter(m => !existing.has(m.id));
+                return [...prev, ...uniqueNew];
+            });
+
+            // Also update fullQuestionsMap since we already have full data from this endpoint
             setFullQuestionsMap(prev => {
                 const next = new Map(prev);
-                newFullQuestions.forEach(q => next.set(q.id, q));
+                mapped.forEach(q => next.set(q.id, q));
                 return next;
             });
-        } catch (error) {
-            console.error("Error fetching questions:", error);
-            alert("Failed to fetch questions. Please try again.");
         }
+    } catch (error) {
+        console.error("Error pre-fetching for search:", error);
     }
+
+    // 2. Refresh candidates from updated local state (which now includes API results)
+    // We use a small delay or just rely on the fact that we'll re-filter in the next render
+    // Actually, we can just setHasSearched(true) and the UI will update
     
     setHasSearched(true);
     setIsSearching(false);
@@ -4037,7 +4102,29 @@ export default function QuestionBank() {
                 </button>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
-                <h3 style={{ margin: 0 }}>Statistics Breakdown</h3>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+                    <h3 style={{ margin: 0 }}>Statistics Breakdown</h3>
+                    <button 
+                      onClick={() => {
+                        if (window.confirm('This will clear your local question cache and reload from the server. Use this if you see deleted chapters or stale data. Continue?')) {
+                            clearCache();
+                            window.location.reload();
+                        }
+                      }}
+                      style={{
+                        padding: '5px 10px',
+                        fontSize: '11px',
+                        backgroundColor: '#f8d7da',
+                        color: '#721c24',
+                        border: '1px solid #f5c6cb',
+                        borderRadius: '4px',
+                        cursor: 'pointer',
+                        fontWeight: 'bold'
+                      }}
+                    >
+                      🗑️ Clear Stale Cache
+                    </button>
+                </div>
                 <button 
                   onClick={() => setShowStats(!showStats)}
                   style={{

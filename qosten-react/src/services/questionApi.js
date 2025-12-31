@@ -32,9 +32,13 @@ export const questionApi = {
     if (params.limit !== undefined) searchParams.append('limit', params.limit);
     if (params.offset !== undefined) searchParams.append('offset', params.offset);
     
-    // Pass other filters if needed
+    // Pass other filters
     if (params.type) searchParams.append('type', params.type);
     if (params.subject) searchParams.append('subject', params.subject);
+    if (params.chapter) searchParams.append('chapter', params.chapter);
+    if (params.lesson) searchParams.append('lesson', params.lesson);
+    if (params.board) searchParams.append('board', params.board);
+    if (params.language) searchParams.append('language', params.language);
     
     const url = `${API_BASE_URL}/questions?${searchParams.toString()}`;
     const response = await fetchWithRetry(url);

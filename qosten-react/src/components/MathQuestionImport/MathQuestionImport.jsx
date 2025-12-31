@@ -4,7 +4,7 @@ import QuestionPreview from '../QuestionPreview/QuestionPreview';
 import { parseMathQuestions, getMathQuestionExample } from '../../utils/mathQuestionParser';
 
 export default function MathQuestionImport() {
-  const { addQuestion, setLastBatch, getLastBatchQuestions, lastBatch, updateQuestion } = useQuestions();
+  const { bulkAddQuestions, setLastBatch, getLastBatchQuestions, lastBatch, updateQuestion } = useQuestions();
   const [inputText, setInputText] = useState('');
   const [parsedQuestions, setParsedQuestions] = useState([]);
   const [showPreview, setShowPreview] = useState(false);
@@ -41,59 +41,42 @@ export default function MathQuestionImport() {
     setProgress({ current: 0, total: editedQuestions.length });
     setFailedQuestions([]);
     
-    let addedCount = 0;
-    const errors = [];
-    const addedQuestionIds = [];
+    try {
+      const result = await bulkAddQuestions(editedQuestions, (current, total) => {
+        setProgress({ current, total });
+      });
 
-    for (let i = 0; i < editedQuestions.length; i++) {
-      const question = editedQuestions[i];
-      try {
-        const addedQuestion = await addQuestion(question);
-        if (addedQuestion && addedQuestion.id) {
-          addedQuestionIds.push(addedQuestion.id);
-        }
-        addedCount++;
-      } catch (error) {
-        console.error('Error adding question:', error);
-        errors.push({
-          index: i + 1,
-          question: question.question?.substring(0, 100) + (question.question?.length > 100 ? '...' : ''),
-          error: error.message || 'Unknown error',
-          metadata: `${question.subject || 'N/A'} - ${question.chapter || 'N/A'}`
-        });
+      setIsAdding(false);
+      setProgress({ current: 0, total: 0 });
+      
+      // Show error modal if there are failures
+      if (result.errors.length > 0) {
+        setFailedQuestions(result.errors.map((err, idx) => ({
+            index: idx + 1,
+            question: 'Check console for details',
+            error: err.error || 'Unknown error',
+            metadata: 'Bulk upload error'
+        })));
+        setShowErrorModal(true);
       }
-      setProgress({ current: i + 1, total: editedQuestions.length });
-    }
-
-    setIsAdding(false);
-    setProgress({ current: 0, total: 0 });
-    
-    // Save the batch of added questions
-    if (addedQuestionIds.length > 0) {
-      setLastBatch(addedQuestionIds);
-    }
-    
-    // Show error modal if there are failures
-    if (errors.length > 0) {
-      setFailedQuestions(errors);
-      setShowErrorModal(true);
-    }
-    
-    // Show success/summary message
-    let message = `✅ Successfully added ${addedCount} math question(s) to the question bank!`;
-    if (errors.length > 0) {
-      message += `\n❌ ${errors.length} question(s) failed to upload. See details in the notification.`;
-    }
-    if (addedQuestionIds.length > 0) {
-      message += `\n\n💡 Tip: Use "Inspect Last Batch" to review or edit the questions you just added.`;
-    }
-    alert(message);
-    
-    setShowPreview(false);
-    
-    if (addedCount > 0) {
-      setInputText('');
-      setParsedQuestions([]);
+      
+      // Show success/summary message
+      let message = `✅ Successfully added ${result.successCount} math question(s) to the question bank!`;
+      if (result.failedCount > 0) {
+        message += `\n❌ ${result.failedCount} question(s) failed to upload. See details in the notification.`;
+      }
+      alert(message);
+      
+      setShowPreview(false);
+      
+      if (result.successCount > 0) {
+        setInputText('');
+        setParsedQuestions([]);
+      }
+    } catch (error) {
+      console.error('Error in bulk add:', error);
+      alert('Failed to add questions: ' + error.message);
+      setIsAdding(false);
     }
   };
 

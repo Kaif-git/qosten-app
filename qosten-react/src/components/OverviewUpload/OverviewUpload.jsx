@@ -3,22 +3,16 @@ import { supabase } from '../../services/supabaseClient';
 import { 
   parseOverviewText, 
   validateOverview, 
-  overviewToJSON, 
-  EXAMPLE_FORMAT 
+  overviewToJSON 
 } from '../../utils/overviewParser';
 import MarkdownContent from '../MarkdownContent/MarkdownContent';
 
 export default function OverviewUpload() {
   const [inputText, setInputText] = useState('');
-  const [chapterName, setChapterName] = useState('');
-  const [subject, setSubject] = useState('');
-  const [gradeLevel, setGradeLevel] = useState('');
-  const [language, setLanguage] = useState('en');
-  const [parsedData, setParsedData] = useState(null);
+  const [parsedChapters, setParsedChapters] = useState([]); // Array of { name, data }
   const [validationErrors, setValidationErrors] = useState([]);
   const [uploadStatus, setUploadStatus] = useState('');
   const [showPreview, setShowPreview] = useState(false);
-  const [showExample, setShowExample] = useState(false);
 
   const handleParse = () => {
     try {
@@ -30,35 +24,150 @@ export default function OverviewUpload() {
         return;
       }
 
-      // Parse the text
-      const parsed = parseOverviewText(inputText);
+      const lines = inputText.split('\n');
+      const chapters = [];
       
-      // Validate the parsed data
-      const validation = validateOverview(parsed);
-      
-      if (!validation.valid) {
-        setValidationErrors(validation.errors);
-        setParsedData(null);
+      // Global state for current logical block
+      let currentHeader = '';
+      let buckets = {
+        en: { topics: [], lastNum: 0, titleFallback: '' },
+        bn: { topics: [], lastNum: 0, titleFallback: '' }
+      };
+
+      const flushBuckets = () => {
+        const hasEN = buckets.en.topics.length > 0;
+        const hasBN = buckets.bn.topics.length > 0;
+
+        if (hasEN) {
+          const name = currentHeader || `Chapter: ${buckets.en.titleFallback}`;
+          chapters.push({
+            name: hasBN ? `${name} (English)` : name,
+            data: { topics: [...buckets.en.topics] }
+          });
+        }
+        if (hasBN) {
+          const name = currentHeader || `Chapter: ${buckets.bn.titleFallback}`;
+          chapters.push({
+            name: hasEN ? `${name} (Bangla)` : name,
+            data: { topics: [...buckets.bn.topics] }
+          });
+        }
+        
+        // Reset buckets
+        buckets = {
+          en: { topics: [], lastNum: 0, titleFallback: '' },
+          bn: { topics: [], lastNum: 0, titleFallback: '' }
+        };
+      };
+
+      let activeTopic = null;
+      let activeContent = [];
+
+      const saveActiveTopicToBucket = () => {
+        if (activeTopic) {
+          activeTopic.content = activeContent.join('\n').trim();
+          const lang = activeTopic.lang; // 'en' or 'bn'
+          buckets[lang].topics.push({
+            id: activeTopic.id,
+            title: activeTopic.title,
+            content: activeTopic.content
+          });
+          if (!buckets[lang].titleFallback) {
+            buckets[lang].titleFallback = activeTopic.title;
+          }
+          activeTopic = null;
+          activeContent = [];
+        }
+      };
+
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        const trimmed = line.trim().replace(/[\u200B-\u200D\uFEFF]/g, '');
+        if (!trimmed) continue;
+
+        // 1. Explicit Header Detection (resilient to hashes and bolding)
+        const headerMatch = trimmed.match(/^(?:[#\s*]*)(Chapter\s*\d+|অধ্যায়\s*[\d০-৯]+|English\s*Version|বাংলা\s*সংস্করণ)/i);
+        
+        // 2. Topic Marker Detection (T-01, টি-০১, T-01 & T-02)
+        // Matches T-01 or টি-০১ with optional ### and **
+        const topicMatch = trimmed.match(/^(?:[#\s*]*)((?:T|টি)-[০-৯\d]+(?:\s*&\s*(?:T|টি)-[০-৯\d]+)?)\s*[:：ঃ]\s*(.+)$/i);
+        
+        // 3. Hard Split Rule
+        const isHardSplit = /^[\s\-*#=]{3,}$/.test(trimmed);
+
+        if (headerMatch || isHardSplit) {
+          saveActiveTopicToBucket();
+          if (headerMatch) {
+            // Check if we already have topics in buckets before flushing
+            // This allows headers like "English Version" to act as a prefix for subsequent chapters
+            if (buckets.en.topics.length > 0 || buckets.bn.topics.length > 0) {
+                flushBuckets();
+            }
+            currentHeader = headerMatch[1].replace(/\*+/g, '').trim();
+          } else {
+            saveActiveTopicToBucket();
+            flushBuckets();
+            currentHeader = '';
+          }
+          continue;
+        }
+
+        if (topicMatch) {
+          saveActiveTopicToBucket();
+
+          const fullId = topicMatch[1].trim();
+          const isBengali = fullId.includes('টি');
+          const lang = isBengali ? 'bn' : 'en';
+          
+          // Extract the first number for restart detection
+          const numMatch = fullId.match(/[০-৯\d]+/);
+          const numStr = numMatch ? numMatch[0] : '0';
+          const bengaliMap = {'০':0,'১':1,'২':2,'৩':3,'৪':4,'৫':5,'৬':6,'৭':7,'৮':8,'৯':9};
+          const num = isBengali ? parseInt(numStr.split('').map(c => bengaliMap[c] ?? c).join('')) : parseInt(numStr);
+
+          // Check for Topic Number Restart in the same bucket
+          if (buckets[lang].topics.length > 0 && num <= buckets[lang].lastNum && num > 0) {
+            flushBuckets();
+          }
+
+          activeTopic = {
+            id: fullId,
+            title: topicMatch[2].replace(/\*+/g, '').trim().replace(/[:：ঃ]$/, ''),
+            lang: lang
+          };
+          buckets[lang].lastNum = num;
+          continue;
+        }
+
+        // Collect content for the active topic
+        if (activeTopic) {
+          activeContent.push(line);
+        }
+      }
+
+      // Final wrap up
+      saveActiveTopicToBucket();
+      flushBuckets();
+
+      if (chapters.length === 0) {
+        setValidationErrors(['No valid chapter overviews found. Ensure topics start with "T-01:" or "টি-০১:"']);
+        setParsedChapters([]);
         return;
       }
 
-      setParsedData(parsed);
+      setParsedChapters(chapters);
       setShowPreview(true);
-      setUploadStatus('✅ Parsed successfully! Review the preview below.');
+      setUploadStatus(`✅ Parsed ${chapters.length} chapter(s) successfully! Review below.`);
     } catch (error) {
+      console.error('Parse error:', error);
       setValidationErrors([error.message]);
-      setParsedData(null);
+      setParsedChapters([]);
     }
   };
 
   const handleUpload = async () => {
-    if (!parsedData) {
+    if (parsedChapters.length === 0) {
       setUploadStatus('❌ No data to upload. Please parse the text first.');
-      return;
-    }
-
-    if (!chapterName.trim()) {
-      setUploadStatus('❌ Please enter a chapter name.');
       return;
     }
 
@@ -68,36 +177,35 @@ export default function OverviewUpload() {
     }
 
     try {
-      setUploadStatus('⏳ Uploading...');
-
-      const { data, error } = await supabase
-        .from('chapter_overviews')
-        .insert([{
-          name: chapterName,
-          overview_data: parsedData,
-          subject: subject || null,
-          grade_level: gradeLevel || null,
-          language: language
-        }])
-        .select();
-
-      if (error) {
-        throw error;
-      }
-
-      setUploadStatus('✅ Upload successful! Chapter overview has been saved to the database.');
+      setUploadStatus(`⏳ Uploading ${parsedChapters.length} chapter(s)...`);
       
-      // Clear form after successful upload
-      setTimeout(() => {
-        setInputText('');
-        setChapterName('');
-        setSubject('');
-        setGradeLevel('');
-        setLanguage('en');
-        setParsedData(null);
-        setShowPreview(false);
-        setUploadStatus('');
-      }, 3000);
+      const uploadResults = await Promise.all(parsedChapters.map(async (chapter) => {
+        const { error } = await supabase
+          .from('chapter_overviews')
+          .insert([
+            {
+              name: chapter.name,
+              overview_data: chapter.data
+            }
+          ]);
+        return { name: chapter.name, success: !error, error };
+      }));
+
+      const failures = uploadResults.filter(r => !r.success);
+      
+      if (failures.length > 0) {
+        const failNames = failures.map(f => f.name).join(', ');
+        setUploadStatus(`⚠️ Uploaded with issues. Failed: ${failNames}`);
+      } else {
+        setUploadStatus(`✅ Successfully uploaded ${parsedChapters.length} chapter(s)!`);
+        
+        setTimeout(() => {
+          setInputText('');
+          setParsedChapters([]);
+          setShowPreview(false);
+          setUploadStatus('');
+        }, 3000);
+      }
 
     } catch (error) {
       console.error('Upload error:', error);
@@ -107,26 +215,41 @@ export default function OverviewUpload() {
 
   const handleClear = () => {
     setInputText('');
-    setParsedData(null);
+    setParsedChapters([]);
     setValidationErrors([]);
     setUploadStatus('');
     setShowPreview(false);
   };
 
-  const loadExample = () => {
-    setInputText(EXAMPLE_FORMAT);
-    setChapterName('Example Chapter');
-    setSubject('Physics');
-    setGradeLevel('High School');
-    setLanguage('en');
+  const handleNameChange = (index, newName) => {
+    setParsedChapters(prev => {
+      const updated = [...prev];
+      updated[index] = { ...updated[index], name: newName };
+      return updated;
+    });
   };
 
+  const loadExample = () => {
+    setInputText(`**English Version (Motion)**
+T-01: Types of Motion
+Linear, Rotational, Periodic.
+
+T-02: Equations
+v = u + at
+
+**বাংলা সংস্করণ (অধ্যায় ২: গতি)**
+টি-০১: গতির প্রকারভেদ
+রৈখিক, ঘূর্ণন, পর্যায়বৃত্ত।
+
+টি-০২: সমীকরণ
+v = u + at`);
+  };
 
   return (
     <div style={{ padding: '20px', maxWidth: '100%', margin: '0 auto', boxSizing: 'border-box' }}>
-      <h2 style={{ color: '#2c3e50', marginBottom: '10px' }}>📚 Upload Chapter Overview</h2>
+      <h2 style={{ color: '#2c3e50', marginBottom: '10px' }}>📚 Bulk Chapter Overview Upload</h2>
       <p style={{ color: '#7f8c8d', marginBottom: '20px' }}>
-        Parse and upload chapter overviews from markdown-formatted text
+        Paste multiple chapter overviews. Headers like "English Version" or "Chapter 3" will be used as the overview name.
       </p>
 
       <div style={{ 
@@ -141,63 +264,32 @@ export default function OverviewUpload() {
           <div style={{ marginBottom: '20px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
               <label style={{ fontWeight: '600', color: '#2c3e50' }}>
-                Chapter Overview Text:
+                Paste Overview Text:
               </label>
-              <div>
-                <button
-                  onClick={() => setShowExample(!showExample)}
-                  style={{
-                    padding: '5px 12px',
-                    backgroundColor: '#95a5a6',
-                    color: 'white',
-                    border: 'none',
-                    borderRadius: '4px',
-                    cursor: 'pointer',
-                    fontSize: '0.85rem',
-                    marginRight: '5px'
-                  }}
-                >
-                  {showExample ? 'Hide' : 'Show'} Format
-                </button>
-                <button
-                  onClick={loadExample}
-                  style={{
-                    padding: '5px 12px',
-                    backgroundColor: '#3498db',
-                    color: 'white',
-                    border: 'none',
-                    borderRadius: '4px',
-                    cursor: 'pointer',
-                    fontSize: '0.85rem'
-                  }}
-                >
-                  Load Example
-                </button>
-              </div>
+              <button
+                onClick={loadExample}
+                style={{
+                  padding: '5px 12px',
+                  backgroundColor: '#3498db',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: '4px',
+                  cursor: 'pointer',
+                  fontSize: '0.85rem'
+                }}
+              >
+                Load Example
+              </button>
             </div>
-
-            {showExample && (
-              <div style={{
-                backgroundColor: '#ecf0f1',
-                padding: '15px',
-                borderRadius: '6px',
-                marginBottom: '10px',
-                fontSize: '0.85rem',
-                fontFamily: 'monospace',
-                whiteSpace: 'pre-wrap'
-              }}>
-                {EXAMPLE_FORMAT}
-              </div>
-            )}
 
             <textarea
               value={inputText}
               onChange={(e) => setInputText(e.target.value)}
-              placeholder="Paste your chapter overview text here..."
+              placeholder="Paste your versioned chapter overview text here..."
               style={{
                 width: '100%',
-                minHeight: '300px',
-                maxHeight: '500px',
+                minHeight: '400px',
+                maxHeight: '600px',
                 padding: '12px',
                 borderRadius: '6px',
                 border: '1px solid #ddd',
@@ -207,87 +299,6 @@ export default function OverviewUpload() {
                 boxSizing: 'border-box'
               }}
             />
-          </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginBottom: '15px' }}>
-            <div>
-              <label style={{ fontWeight: '600', display: 'block', marginBottom: '5px', color: '#2c3e50' }}>
-                Chapter Name: *
-              </label>
-              <input
-                type="text"
-                value={chapterName}
-                onChange={(e) => setChapterName(e.target.value)}
-                placeholder="e.g., Physics Chapter 4: Work and Energy"
-                style={{
-                  width: '100%',
-                  padding: '8px 12px',
-                  borderRadius: '6px',
-                  border: '1px solid #ddd',
-                  fontSize: '0.95rem'
-                }}
-              />
-            </div>
-            <div>
-              <label style={{ fontWeight: '600', display: 'block', marginBottom: '5px', color: '#2c3e50' }}>
-                Language: *
-              </label>
-              <select
-                value={language}
-                onChange={(e) => setLanguage(e.target.value)}
-                style={{
-                  width: '100%',
-                  padding: '8px 12px',
-                  borderRadius: '6px',
-                  border: '1px solid #ddd',
-                  fontSize: '0.95rem',
-                  backgroundColor: 'white',
-                  cursor: 'pointer'
-                }}
-              >
-                <option value="en">English</option>
-                <option value="bn">বাংলা (Bangla)</option>
-              </select>
-            </div>
-          </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginBottom: '15px' }}>
-            <div>
-              <label style={{ fontWeight: '600', display: 'block', marginBottom: '5px', color: '#2c3e50' }}>
-                Subject:
-              </label>
-              <input
-                type="text"
-                value={subject}
-                onChange={(e) => setSubject(e.target.value)}
-                placeholder="e.g., Physics"
-                style={{
-                  width: '100%',
-                  padding: '8px 12px',
-                  borderRadius: '6px',
-                  border: '1px solid #ddd',
-                  fontSize: '0.95rem'
-                }}
-              />
-            </div>
-            <div>
-              <label style={{ fontWeight: '600', display: 'block', marginBottom: '5px', color: '#2c3e50' }}>
-                Grade Level:
-              </label>
-              <input
-                type="text"
-                value={gradeLevel}
-                onChange={(e) => setGradeLevel(e.target.value)}
-                placeholder="e.g., High School, Grade 10"
-                style={{
-                  width: '100%',
-                  padding: '8px 12px',
-                  borderRadius: '6px',
-                  border: '1px solid #ddd',
-                  fontSize: '0.95rem'
-                }}
-              />
-            </div>
           </div>
 
           <div style={{ display: 'flex', gap: '10px', marginBottom: '15px' }}>
@@ -309,20 +320,20 @@ export default function OverviewUpload() {
             </button>
             <button
               onClick={handleUpload}
-              disabled={!parsedData}
+              disabled={parsedChapters.length === 0}
               style={{
                 flex: 1,
                 padding: '12px',
-                backgroundColor: parsedData ? '#27ae60' : '#95a5a6',
+                backgroundColor: parsedChapters.length > 0 ? '#27ae60' : '#95a5a6',
                 color: 'white',
                 border: 'none',
                 borderRadius: '6px',
-                cursor: parsedData ? 'pointer' : 'not-allowed',
+                cursor: parsedChapters.length > 0 ? 'pointer' : 'not-allowed',
                 fontWeight: '600',
                 fontSize: '1rem'
               }}
             >
-              ⬆️ Upload to Database
+              ⬆️ Upload {parsedChapters.length} Chapters
             </button>
             <button
               onClick={handleClear}
@@ -349,7 +360,7 @@ export default function OverviewUpload() {
               padding: '15px',
               marginBottom: '15px'
             }}>
-              <h4 style={{ margin: '0 0 10px 0', color: '#c0392b' }}>❌ Validation Errors:</h4>
+              <h4 style={{ margin: '0 0 10px 0', color: '#c0392b' }}>❌ Parsing Errors:</h4>
               <ul style={{ margin: 0, paddingLeft: '20px' }}>
                 {validationErrors.map((error, index) => (
                   <li key={index} style={{ color: '#c0392b', marginBottom: '5px' }}>{error}</li>
@@ -362,7 +373,7 @@ export default function OverviewUpload() {
           {uploadStatus && (
             <div style={{
               backgroundColor: uploadStatus.includes('❌') ? '#ffe6e6' : '#d5f4e6',
-              border: `1px solid ${uploadStatus.includes('❌') ? '#ffcccc' : '#b8e6cc'}`,
+              border: `1px solid ${uploadStatus.includes('❌') ? '#ffcccc' : '#b8e6cc'}`, 
               borderRadius: '6px',
               padding: '12px',
               marginBottom: '15px',
@@ -372,66 +383,61 @@ export default function OverviewUpload() {
               {uploadStatus}
             </div>
           )}
-
-          {/* JSON Preview */}
-          {parsedData && (
-            <div>
-              <h3 style={{ color: '#2c3e50', marginBottom: '10px' }}>📄 Generated JSON:</h3>
-              <pre style={{
-                backgroundColor: '#ecf0f1',
-                padding: '15px',
-                borderRadius: '6px',
-                overflow: 'auto',
-                maxHeight: '250px',
-                fontSize: '0.85rem',
-                whiteSpace: 'pre-wrap',
-                wordBreak: 'break-word'
-              }}>
-                {overviewToJSON(parsedData)}
-              </pre>
-            </div>
-          )}
         </div>
 
         {/* Right Column - Preview */}
-        <div>
-          {showPreview && parsedData && (
+        <div style={{ overflowY: 'auto', maxHeight: '800px' }}>
+          {showPreview && parsedChapters.length > 0 ? (
             <div>
-              <h3 style={{ color: '#2c3e50', marginBottom: '15px' }}>👁️ Preview:</h3>
-              <div style={{
-                border: '1px solid #ddd',
-                borderRadius: '8px',
-                padding: '20px',
-                backgroundColor: '#fafafa',
-                maxHeight: '600px',
-                overflowY: 'auto',
-                boxSizing: 'border-box'
-              }}>
-                {parsedData.topics.map((topic, index) => (
-                  <div key={topic.id || index} style={{
-                    marginBottom: '25px',
-                    padding: '15px',
-                    backgroundColor: 'white',
-                    borderRadius: '6px',
-                    borderLeft: '4px solid #3498db'
-                  }}>
-                    <h4 style={{
-                      color: '#2c3e50',
-                      marginTop: 0,
-                      marginBottom: '12px',
-                      fontSize: '1.2rem'
-                    }}>
-                      {topic.id}: {topic.title}
-                    </h4>
-                    <MarkdownContent content={topic.content} />
+              <h3 style={{ color: '#2c3e50', marginBottom: '15px' }}>👁️ Bulk Preview:</h3>
+              {parsedChapters.map((chapter, cIdx) => (
+                <div key={cIdx} style={{ 
+                  marginBottom: '30px', 
+                  border: '1px solid #3498db', 
+                  borderRadius: '8px',
+                  padding: '15px',
+                  backgroundColor: '#f0f7ff'
+                }}>
+                  <div style={{ marginBottom: '15px', borderBottom: '2px solid #3498db', paddingBottom: '10px' }}>
+                    <label style={{ fontWeight: 'bold', color: '#2980b9', display: 'block', marginBottom: '5px', fontSize: '0.9rem' }}>
+                      📦 Overview Name (Editable):
+                    </label>
+                    <input 
+                      type="text" 
+                      value={chapter.name} 
+                      onChange={(e) => handleNameChange(cIdx, e.target.value)}
+                      style={{
+                        width: '100%',
+                        padding: '8px 12px',
+                        borderRadius: '4px',
+                        border: '1px solid #3498db',
+                        fontSize: '1.1rem',
+                        fontWeight: 'bold',
+                        color: '#2c3e50',
+                        backgroundColor: 'white',
+                        boxSizing: 'border-box'
+                      }}
+                    />
                   </div>
-                ))}
-              </div>
+                  {chapter.data.topics.map((topic, tIdx) => (
+                    <div key={tIdx} style={{
+                      marginBottom: '15px',
+                      padding: '12px',
+                      backgroundColor: 'white',
+                      borderRadius: '6px',
+                      boxShadow: '0 1px 3px rgba(0,0,0,0.1)'
+                    }}>
+                      <h4 style={{ color: '#2c3e50', marginTop: 0, marginBottom: '8px' }}>
+                        {topic.id}: {topic.title}
+                      </h4>
+                      <MarkdownContent content={topic.content} />
+                    </div>
+                  ))}
+                </div>
+              ))}
             </div>
-          )}
-
-          {!showPreview && (
-            <div style={{
+          ) : (
+            <div style={{ 
               border: '2px dashed #ddd',
               borderRadius: '8px',
               padding: '40px',

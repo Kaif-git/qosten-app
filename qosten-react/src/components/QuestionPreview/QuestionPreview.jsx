@@ -458,7 +458,7 @@ const CompactQuestionItem = React.memo(({ question, index, onCropAndAssign, onUp
   );
 });
 
-export default function QuestionPreview({ questions, onConfirm, onCancel, title, isEditMode = false }) {
+export default function QuestionPreview({ questions, onConfirm, onCancel, title, isEditMode = false, isUploading = false }) {
   const { questions: dbQuestions, addQuestion } = useQuestions();
 
   const [editableQuestions, setEditableQuestions] = useState(questions);
@@ -527,28 +527,34 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     updateCropBoxDOM(cropArea.x, cropArea.y, cropArea.width, cropArea.height);
   }, [cropArea, updateCropBoxDOM]);
   
-  // Get unique metadata values
-  const getUniqueValues = (field, listType = 'english') => {
-    const list = listType === 'english' ? editableQuestions : banglaQuestions;
-    // For English, we also include DB questions for suggestions
-    const allQuestions = listType === 'english' ? [...list, ...dbQuestions] : list;
+  // Get unique metadata values - MEMOIZED for performance
+  const getUniqueValues = useCallback((field, questionsList, dbList = []) => {
+    const combined = [...questionsList, ...dbList];
+    const seen = new Set();
+    const result = [];
     
-    const values = allQuestions
-      .map(q => q[field])
-      .filter(val => val && val.trim() !== '' && val !== 'N/A')
-      .filter((value, index, self) => self.indexOf(value) === index);
-    return values.sort();
-  };
-  
-  const uniqueSubjects = getUniqueValues('subject');
-  const uniqueChapters = getUniqueValues('chapter');
-  const uniqueLessons = getUniqueValues('lesson');
-  const uniqueBoards = getUniqueValues('board');
+    for (const q of combined) {
+        const val = q[field];
+        if (val && typeof val === 'string' && val.trim() !== '' && val !== 'N/A' && val !== '(N/A)') {
+            const trimmed = val.trim();
+            if (!seen.has(trimmed)) {
+                seen.add(trimmed);
+                result.push(trimmed);
+            }
+        }
+    }
+    return result.sort();
+  }, []);
 
-  const uniqueBanglaSubjects = getUniqueValues('subject', 'bangla');
-  const uniqueBanglaChapters = getUniqueValues('chapter', 'bangla');
-  const uniqueBanglaLessons = getUniqueValues('lesson', 'bangla');
-  const uniqueBanglaBoards = getUniqueValues('board', 'bangla');
+  const uniqueSubjects = useMemo(() => getUniqueValues('subject', editableQuestions, dbQuestions), [editableQuestions, dbQuestions, getUniqueValues]);
+  const uniqueChapters = useMemo(() => getUniqueValues('chapter', editableQuestions, dbQuestions), [editableQuestions, dbQuestions, getUniqueValues]);
+  const uniqueLessons = useMemo(() => getUniqueValues('lesson', editableQuestions, dbQuestions), [editableQuestions, dbQuestions, getUniqueValues]);
+  const uniqueBoards = useMemo(() => getUniqueValues('board', editableQuestions, dbQuestions), [editableQuestions, dbQuestions, getUniqueValues]);
+
+  const uniqueBanglaSubjects = useMemo(() => getUniqueValues('subject', banglaQuestions), [banglaQuestions, getUniqueValues]);
+  const uniqueBanglaChapters = useMemo(() => getUniqueValues('chapter', banglaQuestions), [banglaQuestions, getUniqueValues]);
+  const uniqueBanglaLessons = useMemo(() => getUniqueValues('lesson', banglaQuestions), [banglaQuestions, getUniqueValues]);
+  const uniqueBanglaBoards = useMemo(() => getUniqueValues('board', banglaQuestions), [banglaQuestions, getUniqueValues]);
 
   const updateQuestionOption = useCallback((qIndex, optIndex, field, value, listType = 'english') => {
     const setter = listType === 'english' ? setEditableQuestions : setBanglaQuestions;
@@ -560,18 +566,83 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       return updated;
     });
   }, []);
+
+  const [visibleCount, setVisibleCount] = useState(20);
+
+  const renderQuestionList = () => {
+    const enVisible = editableQuestions.slice(0, visibleCount);
+    const hasMore = visibleCount < Math.max(editableQuestions.length, banglaQuestions.length);
+
+    if (banglaQuestions.length > 0) {
+        return (
+            <div className="split-view-container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                {Array.from({ length: Math.min(visibleCount, Math.max(editableQuestions.length, banglaQuestions.length)) }).map((_, index) => (
+                    <React.Fragment key={index}>
+                        <div className="english-column" style={{ minWidth: 0 }}>
+                            {editableQuestions[index] ? renderQuestionPreview(editableQuestions[index], index, 'english') : <div style={{ padding: '20px', textAlign: 'center', color: '#999', border: '1px dashed #ccc' }}>No English Question</div>}
+                        </div>
+                        <div className="bangla-column" style={{ minWidth: 0 }}>
+                            {banglaQuestions[index] ? renderQuestionPreview(banglaQuestions[index], index, 'bangla') : <div style={{ padding: '20px', textAlign: 'center', color: '#999', border: '1px dashed #ccc' }}>No Bangla Question</div>}
+                        </div>
+                    </React.Fragment>
+                ))}
+                {hasMore && (
+                    <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '20px' }}>
+                        <button 
+                            type="button" 
+                            onClick={() => setVisibleCount(prev => prev + 20)}
+                            className="confirm-btn"
+                            style={{ backgroundColor: '#3498db', padding: '12px 40px' }}
+                        >
+                            Load More Questions ({Math.max(editableQuestions.length, banglaQuestions.length) - visibleCount} remaining)
+                        </button>
+                    </div>
+                )}
+            </div>
+        );
+    }
+
+    return (
+        <div className="preview-questions-container">
+            {enVisible.map((question, index) => renderQuestionPreview(question, index))}
+            {hasMore && (
+                <div style={{ textAlign: 'center', padding: '20px' }}>
+                    <button 
+                        type="button" 
+                        onClick={() => setVisibleCount(prev => prev + 20)}
+                        className="confirm-btn"
+                        style={{ backgroundColor: '#3498db', padding: '12px 40px' }}
+                    >
+                        Load More Questions ({editableQuestions.length - visibleCount} remaining)
+                    </button>
+                </div>
+            )}
+        </div>
+    );
+  };
   
   const updateQuestionPart = useCallback((qIndex, partIndex, field, value, listType = 'english') => {
     const setter = listType === 'english' ? setEditableQuestions : setBanglaQuestions;
     setter(prev => {
+      if (qIndex >= prev.length) return prev;
       const updated = [...prev];
       const parts = [...updated[qIndex].parts];
       parts[partIndex] = { ...parts[partIndex], [field]: value };
-      updated[qIndex] = { ...updated[qIndex], parts };
+      
+      const updatedQuestion = { ...updated[qIndex], parts };
+      
+      // Auto-map legacy image fields for the current list
+      if (field === 'answerImage') {
+          const partLetter = parts[partIndex]?.letter?.toLowerCase();
+          if (partLetter === 'c') updatedQuestion.answerimage1 = value;
+          else if (partLetter === 'd') updatedQuestion.answerimage2 = value;
+      }
+      
+      updated[qIndex] = updatedQuestion;
       return updated;
     });
 
-    // Auto-sync part images from English to Bangla
+    // Auto-sync to Bangla version if setting an image in English
     if (listType === 'english' && field === 'answerImage') {
       setBanglaQuestions(prev => {
         if (qIndex >= prev.length) return prev;
@@ -580,15 +651,14 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
         
         if (partIndex < parts.length) {
             parts[partIndex] = { ...parts[partIndex], [field]: value };
-            updated[qIndex] = { ...updated[qIndex], parts };
+            const updatedQuestion = { ...updated[qIndex], parts };
             
-            // Also sync legacy properties if applicable
+            // Sync legacy fields too
             const partLetter = parts[partIndex]?.letter?.toLowerCase();
-            if (partLetter === 'c') {
-                updated[qIndex] = { ...updated[qIndex], answerimage1: value };
-            } else if (partLetter === 'd') {
-                updated[qIndex] = { ...updated[qIndex], answerimage2: value };
-            }
+            if (partLetter === 'c') updatedQuestion.answerimage1 = value;
+            else if (partLetter === 'd') updatedQuestion.answerimage2 = value;
+            
+            updated[qIndex] = updatedQuestion;
         }
         return updated;
       });
@@ -596,12 +666,11 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   }, []);
 
   const updateQuestion = useCallback((index, field, value, listType = 'english') => {
-    // Special handling for removing part images from Easy Upload mode
+    console.log(`📝 updateQuestion: Index ${index}, Field ${field}, Value:`, typeof value === 'string' ? value.substring(0, 50) + '...' : value);
     if (field === 'part_image_remove') {
         const partIndex = value;
         updateQuestionPart(index, partIndex, 'answerImage', null);
         
-        // Sync English changes to Bangla and handle legacy fields (answerimage1/2)
         const setter = listType === 'english' ? setEditableQuestions : setBanglaQuestions;
         setter(prev => {
             const updated = [...prev];
@@ -636,7 +705,6 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       return updated;
     });
 
-    // Auto-sync images from English to Bangla
     if (listType === 'english' && (field === 'image' || field === 'answerimage1' || field === 'answerimage2')) {
       setBanglaQuestions(prev => {
         if (index >= prev.length) return prev;
@@ -651,18 +719,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        const dataUrl = reader.result;
-        updateQuestionPart(qIndex, partIndex, 'answerImage', dataUrl);
-        setEditableQuestions(prev => {
-          const updated = [...prev];
-          const partLetter = updated[qIndex]?.parts?.[partIndex]?.letter?.toLowerCase();
-          if (partLetter === 'c') {
-            updated[qIndex] = { ...updated[qIndex], answerimage1: dataUrl };
-          } else if (partLetter === 'd') {
-            updated[qIndex] = { ...updated[qIndex], answerimage2: dataUrl };
-          }
-          return updated;
-        });
+        updateQuestionPart(qIndex, partIndex, 'answerImage', reader.result);
       };
       reader.readAsDataURL(file);
     }
@@ -706,6 +763,22 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     alert('✓ All images cleared from current batch.');
   };
 
+  // Track object URLs for cleanup
+  const objectUrlsRef = useRef([]);
+  const trackObjectUrl = (url) => {
+    if (url && url.startsWith('blob:')) {
+      objectUrlsRef.current.push(url);
+    }
+    return url;
+  };
+
+  useEffect(() => {
+    return () => {
+      // Cleanup all object URLs when component unmounts
+      objectUrlsRef.current.forEach(url => URL.revokeObjectURL(url));
+    };
+  }, []);
+
   const handleCropAndAssign = useCallback((qIndex, targetType, partIndex = null) => {
     if (!imageRef.current) return;
     
@@ -714,21 +787,13 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     const displayedWidth = rect.width;
     const displayedHeight = rect.height;
     
-    // Safety check to avoid division by zero
     if (displayedWidth === 0 || displayedHeight === 0) return;
 
     const scaleX = img.naturalWidth / displayedWidth;
     const scaleY = img.naturalHeight / displayedHeight;
-    
     const currentCropArea = cropAreaRef.current;
     
-    // console.log(`✂️ Cropping: Displayed ${displayedWidth}x${displayedHeight}, Natural ${img.naturalWidth}x${img.naturalHeight}, Scale ${scaleX.toFixed(2)}x${scaleY.toFixed(2)}`);
-    
     const canvas = document.createElement('canvas');
-    
-    // Calculate actual crop coordinates on the natural image
-    const actualX = currentCropArea.x * scaleX;
-    const actualY = currentCropArea.y * scaleY;
     const actualWidth = currentCropArea.width * scaleX;
     const actualHeight = currentCropArea.height * scaleY;
 
@@ -738,8 +803,8 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     const ctx = canvas.getContext('2d');
     ctx.drawImage(
       img,
-      actualX,
-      actualY,
+      currentCropArea.x * scaleX,
+      currentCropArea.y * scaleY,
       actualWidth,
       actualHeight,
       0,
@@ -748,42 +813,64 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       actualHeight
     );
     
-    const croppedImage = canvas.toDataURL('image/jpeg', 0.7);
+    canvas.toBlob((blob) => {
+      if (!blob) return;
+      const croppedImageUrl = trackObjectUrl(URL.createObjectURL(blob));
+      console.log(`📸 handleCropAndAssign: Generated blob for Q#${qIndex + 1}, target: ${targetType}${partIndex !== null ? ', part: ' + partIndex : ''}`);
 
-    if (targetType === 'stem') {
-        updateQuestion(qIndex, 'image', croppedImage);
-    } else if (targetType === 'part' && partIndex !== null) {
-        updateQuestionPart(qIndex, partIndex, 'answerImage', croppedImage);
-        setEditableQuestions(prev => {
-          const updated = [...prev];
-          const partLetter = updated[qIndex]?.parts?.[partIndex]?.letter?.toLowerCase();
-          if (partLetter === 'c') {
-            updated[qIndex] = { ...updated[qIndex], answerimage1: croppedImage };
-          } else if (partLetter === 'd') {
-            updated[qIndex] = { ...updated[qIndex], answerimage2: croppedImage };
-          }
-          return updated;
-        });
-    }
+      if (targetType === 'stem') {
+          updateQuestion(qIndex, 'image', croppedImageUrl);
+      } else if (targetType === 'part' && partIndex !== null) {
+          updateQuestionPart(qIndex, partIndex, 'answerImage', croppedImageUrl);
+      }
+    }, 'image/jpeg', 0.8);
   }, [updateQuestion, updateQuestionPart]);
 
   console.log('[Performance] QuestionPreview Render Start');
+  const prevDeps = useRef({ editableQuestions, handleCropAndAssign, updateQuestion, easyVisibleCount: 20 });
+
+  const [easyVisibleCount, setEasyVisibleCount] = useState(20);
 
   const memoizedQuestionList = useMemo(() => {
-    console.log('[Performance] Recalculating memoizedQuestionList');
+    const changed = [];
+    if (prevDeps.current.editableQuestions !== editableQuestions) changed.push('editableQuestions');
+    if (prevDeps.current.handleCropAndAssign !== handleCropAndAssign) changed.push('handleCropAndAssign');
+    if (prevDeps.current.updateQuestion !== updateQuestion) changed.push('updateQuestion');
+    if (prevDeps.current.easyVisibleCount !== easyVisibleCount) changed.push('easyVisibleCount');
+    
+    console.log('[Performance] Recalculating memoizedQuestionList due to:', changed.join(', '));
+    
+    prevDeps.current = { editableQuestions, handleCropAndAssign, updateQuestion, easyVisibleCount };
+
+    const displayList = editableQuestions.slice(0, easyVisibleCount);
+    const hasMore = editableQuestions.length > easyVisibleCount;
+
     return (
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '15px' }}>
-        {editableQuestions.map((q, idx) => (
-            <CompactQuestionItem 
-                key={idx} 
-                question={q} 
-                index={idx} 
-                onCropAndAssign={handleCropAndAssign} 
-                onUpdate={updateQuestion}
-            />
-        ))}
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '15px' }}>
+            {displayList.map((q, idx) => (
+                <CompactQuestionItem 
+                    key={idx} 
+                    question={q} 
+                    index={idx} 
+                    onCropAndAssign={handleCropAndAssign} 
+                    onUpdate={updateQuestion}
+                />
+            ))}
+        </div>
+        {hasMore && (
+            <div style={{ textAlign: 'center', padding: '10px' }}>
+                <button 
+                    type="button" 
+                    onClick={() => setEasyVisibleCount(prev => prev + 20)}
+                    style={{ padding: '8px 20px', backgroundColor: '#3498db', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer', fontSize: '13px' }}
+                >
+                    Load More ({editableQuestions.length - easyVisibleCount} remaining)
+                </button>
+            </div>
+        )}
     </div>
-  )}, [editableQuestions, handleCropAndAssign, updateQuestion]);
+  )}, [editableQuestions, handleCropAndAssign, updateQuestion, easyVisibleCount]);
 
   if (!questions || questions.length === 0) return null;
   
@@ -955,16 +1042,13 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     const displayedWidth = rect.width;
     const displayedHeight = rect.height;
     
-    const scaleX = img.naturalWidth / displayedWidth;
-    const scaleY = img.naturalHeight / displayedHeight;
-    
     if (displayedWidth === 0 || displayedHeight === 0) return;
 
+    const scaleX = img.naturalWidth / displayedWidth;
+    const scaleY = img.naturalHeight / displayedHeight;
     const currentCropArea = cropAreaRef.current;
-    const canvas = document.createElement('canvas');
     
-    const actualX = currentCropArea.x * scaleX;
-    const actualY = currentCropArea.y * scaleY;
+    const canvas = document.createElement('canvas');
     const actualWidth = currentCropArea.width * scaleX;
     const actualHeight = currentCropArea.height * scaleY;
 
@@ -974,8 +1058,8 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     const ctx = canvas.getContext('2d');
     ctx.drawImage(
       img,
-      actualX,
-      actualY,
+      currentCropArea.x * scaleX,
+      currentCropArea.y * scaleY,
       actualWidth,
       actualHeight,
       0,
@@ -984,27 +1068,20 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       actualHeight
     );
     
-    const croppedImage = canvas.toDataURL('image/jpeg', 0.7);
+    canvas.toBlob((blob) => {
+      if (!blob) return;
+      const croppedImageUrl = trackObjectUrl(URL.createObjectURL(blob));
 
-    if (typeof currentCroppingIndex === 'object' && currentCroppingIndex !== null && currentCroppingIndex.type === 'part') {
-      const { qIndex, partIndex } = currentCroppingIndex;
-      updateQuestionPart(qIndex, partIndex, 'answerImage', croppedImage);
-      setEditableQuestions(prev => {
-        const updated = [...prev];
-        const partLetter = updated[qIndex]?.parts?.[partIndex]?.letter?.toLowerCase();
-        if (partLetter === 'c') {
-          updated[qIndex] = { ...updated[qIndex], answerimage1: croppedImage };
-        } else if (partLetter === 'd') {
-          updated[qIndex] = { ...updated[qIndex], answerimage2: croppedImage };
-        }
-        return updated;
-      });
-    } else {
-      updateQuestion(currentCroppingIndex, 'image', croppedImage);
-    }
+      if (typeof currentCroppingIndex === 'object' && currentCroppingIndex !== null && currentCroppingIndex.type === 'part') {
+        const { qIndex, partIndex } = currentCroppingIndex;
+        updateQuestionPart(qIndex, partIndex, 'answerImage', croppedImageUrl);
+      } else {
+        updateQuestion(currentCroppingIndex, 'image', croppedImageUrl);
+      }
 
-    setShowCropper(false);
-    setCurrentCroppingIndex(null);
+      setShowCropper(false);
+      setCurrentCroppingIndex(null);
+    }, 'image/jpeg', 0.8);
   };
   
   const handleMouseDown = (e) => {
@@ -1939,10 +2016,6 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
             <button 
                 onClick={() => {
                     setIsEasyImageMode(true);
-                    // Initialize crop area if not set
-                    if (!sourceDocument) {
-                        // Optional: could prompt to upload here
-                    }
                     if (cropArea.width === 0) {
                          setCropArea({ x: 10, y: 10, width: 200, height: 200 });
                     }
@@ -1979,12 +2052,10 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                 🇧🇩 Add Bangla Version
             </button>
           </div>
-          <p className="preview-count">
-            {isEditMode 
+          <p className="preview-count" dangerouslySetInnerHTML={{ __html: isEditMode 
               ? `Review and edit ${editableQuestions.length} question${editableQuestions.length !== 1 ? 's' : ''} from the batch.`
               : `Review and edit <strong>${editableQuestions.length}</strong> question${editableQuestions.length !== 1 ? 's' : ''} before adding to the question bank.`
-            }
-          </p>
+          }} />
           
           {/* Bangla Upload Modal */}
           {showBanglaUpload && (
@@ -1998,66 +2069,22 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-              zIndex: 10000
+              zIndex: 11000
             }}>
-              <div style={{
-                backgroundColor: 'white',
-                padding: '30px',
-                borderRadius: '10px',
-                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-                width: '80%',
-                maxWidth: '800px',
-                maxHeight: '90vh',
-                display: 'flex',
-                flexDirection: 'column'
-              }}>
-                <h3 style={{ marginTop: 0, color: '#8e44ad' }}>🇧🇩 Import Bangla Version</h3>
-                <p style={{ color: '#666', marginBottom: '15px' }}>
-                  Paste your Bangla questions here. They will be parsed and automatically linked with the images from the existing English questions based on their order.
+              <div className="panel" style={{ width: '600px', backgroundColor: 'white', padding: '25px', borderRadius: '10px' }}>
+                <h3>Add Bangla Version</h3>
+                <p style={{ fontSize: '14px', color: '#666' }}>
+                  Paste the Bangla version of the questions here. They will be mapped sequentially to the current English list, and images will be copied automatically.
                 </p>
                 <textarea
                   value={banglaInputText}
                   onChange={(e) => setBanglaInputText(e.target.value)}
-                  placeholder="Paste Bangla questions (Creative Questions format)..."
-                  style={{
-                    flex: 1,
-                    minHeight: '300px',
-                    padding: '15px',
-                    borderRadius: '5px',
-                    border: '1px solid #ccc',
-                    fontFamily: 'monospace',
-                    resize: 'none',
-                    marginBottom: '20px'
-                  }}
+                  placeholder="Paste Bangla questions here..."
+                  style={{ width: '100%', minHeight: '300px', marginBottom: '15px' }}
                 />
-                <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
-                  <button 
-                    onClick={() => setShowBanglaUpload(false)}
-                    style={{
-                      backgroundColor: '#6c757d',
-                      color: 'white',
-                      border: 'none',
-                      padding: '10px 20px',
-                      borderRadius: '5px',
-                      cursor: 'pointer'
-                    }}
-                  >
-                    Cancel
-                  </button>
-                  <button 
-                    onClick={handleBanglaUpload}
-                    style={{
-                      backgroundColor: '#27ae60',
-                      color: 'white',
-                      border: 'none',
-                      padding: '10px 20px',
-                      borderRadius: '5px',
-                      cursor: 'pointer',
-                      fontWeight: 'bold'
-                    }}
-                  >
-                    Parse & Link Images
-                  </button>
+                <div style={{ display: 'flex', gap: '10px', justifyContent: 'flex-end' }}>
+                  <button type="button" onClick={() => setShowBanglaUpload(false)} className="danger">Cancel</button>
+                  <button type="button" onClick={handleBanglaUpload} className="confirm">Process & Sync Bangla</button>
                 </div>
               </div>
             </div>
@@ -2077,6 +2104,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                 <h3 style={{ margin: 0, color: '#3498db' }}>📦 Bulk Metadata (EN)</h3>
                 <div>
                   <button 
+                    type="button"
                     onClick={() => selectAllQuestions('english')}
                     style={{
                       backgroundColor: '#3498db',
@@ -2092,6 +2120,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                     All
                   </button>
                   <button 
+                    type="button"
                     onClick={() => deselectAllQuestions('english')}
                     style={{
                       backgroundColor: '#95a5a6',
@@ -2114,7 +2143,6 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
               {showBulkEditor ? (
                 <div style={{ backgroundColor: 'white', padding: '10px', borderRadius: '5px', border: '1px solid #ddd' }}>
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '8px', marginBottom: '10px' }}>
-                    {/* ... Inputs for English ... */}
                     <input
                       list="preview-subjects-list"
                       placeholder="Subject"
@@ -2160,12 +2188,13 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                     </datalist>
                   </div>
                   <div style={{ display: 'flex', gap: '5px' }}>
-                    <button onClick={applyBulkMetadata} style={{ flex: 1, backgroundColor: '#27ae60', color: 'white', border: 'none', padding: '8px', borderRadius: '4px', cursor: 'pointer' }}>Apply</button>
-                    <button onClick={() => setShowBulkEditor(false)} style={{ flex: 1, backgroundColor: '#e74c3c', color: 'white', border: 'none', padding: '8px', borderRadius: '4px', cursor: 'pointer' }}>Cancel</button>
+                    <button type="button" onClick={applyBulkMetadata} style={{ flex: 1, backgroundColor: '#27ae60', color: 'white', border: 'none', padding: '8px', borderRadius: '4px', cursor: 'pointer' }}>Apply</button>
+                    <button type="button" onClick={() => setShowBulkEditor(false)} style={{ flex: 1, backgroundColor: '#e74c3c', color: 'white', border: 'none', padding: '8px', borderRadius: '4px', cursor: 'pointer' }}>Cancel</button>
                   </div>
                 </div>
               ) : (
                 <button 
+                  type="button"
                   onClick={() => setShowBulkEditor(true)}
                   disabled={selectedQuestions.size === 0}
                   style={{ width: '100%', padding: '8px', backgroundColor: selectedQuestions.size === 0 ? '#bdc3c7' : '#3498db', color: 'white', border: 'none', borderRadius: '4px', cursor: selectedQuestions.size === 0 ? 'not-allowed' : 'pointer' }}
@@ -2188,6 +2217,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                   <h3 style={{ margin: 0, color: '#e74c3c' }}>📦 Bulk Metadata (BN)</h3>
                   <div>
                     <button 
+                      type="button"
                       onClick={() => selectAllQuestions('bangla')}
                       style={{
                         backgroundColor: '#e74c3c',
@@ -2203,6 +2233,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                       All
                     </button>
                     <button 
+                      type="button"
                       onClick={() => deselectAllQuestions('bangla')}
                       style={{
                         backgroundColor: '#95a5a6',
@@ -2270,12 +2301,13 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                       </datalist>
                     </div>
                     <div style={{ display: 'flex', gap: '5px' }}>
-                      <button onClick={applyBanglaBulkMetadata} style={{ flex: 1, backgroundColor: '#27ae60', color: 'white', border: 'none', padding: '8px', borderRadius: '4px', cursor: 'pointer' }}>Apply</button>
-                      <button onClick={() => setShowBanglaBulkEditor(false)} style={{ flex: 1, backgroundColor: '#e74c3c', color: 'white', border: 'none', padding: '8px', borderRadius: '4px', cursor: 'pointer' }}>Cancel</button>
+                      <button type="button" onClick={applyBanglaBulkMetadata} style={{ flex: 1, backgroundColor: '#27ae60', color: 'white', border: 'none', padding: '8px', borderRadius: '4px', cursor: 'pointer' }}>Apply</button>
+                      <button type="button" onClick={() => setShowBanglaBulkEditor(false)} style={{ flex: 1, backgroundColor: '#e74c3c', color: 'white', border: 'none', padding: '8px', borderRadius: '4px', cursor: 'pointer' }}>Cancel</button>
                     </div>
                   </div>
                 ) : (
                   <button 
+                    type="button"
                     onClick={() => setShowBanglaBulkEditor(true)}
                     disabled={selectedBanglaQuestions.size === 0}
                     style={{ width: '100%', padding: '8px', backgroundColor: selectedBanglaQuestions.size === 0 ? '#bdc3c7' : '#e74c3c', color: 'white', border: 'none', borderRadius: '4px', cursor: selectedBanglaQuestions.size === 0 ? 'not-allowed' : 'pointer' }}
@@ -2349,28 +2381,19 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
           </div>
           
           <div className="preview-questions-container">
-            {banglaQuestions.length > 0 ? (
-                <div className="split-view-container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
-                    {Array.from({ length: Math.max(editableQuestions.length, banglaQuestions.length) }).map((_, index) => (
-                        <React.Fragment key={index}>
-                            <div className="english-column" style={{ minWidth: 0 }}>
-                                {editableQuestions[index] ? renderQuestionPreview(editableQuestions[index], index, 'english') : <div style={{ padding: '20px', textAlign: 'center', color: '#999', border: '1px dashed #ccc' }}>No English Question</div>}
-                            </div>
-                            <div className="bangla-column" style={{ minWidth: 0 }}>
-                                {banglaQuestions[index] ? renderQuestionPreview(banglaQuestions[index], index, 'bangla') : <div style={{ padding: '20px', textAlign: 'center', color: '#999', border: '1px dashed #ccc' }}>No Bangla Question</div>}
-                            </div>
-                        </React.Fragment>
-                    ))}
-                </div>
-            ) : (
-                editableQuestions.map((question, index) => renderQuestionPreview(question, index))
-            )}
+            {renderQuestionList()}
           </div>
+
           <div className="preview-modal-actions">
-            <button className="confirm-btn" onClick={() => onConfirm([...editableQuestions, ...banglaQuestions])}>
-              {isEditMode ? 'Save Changes' : 'Confirm & Add to Question Bank'}
+            <button 
+              className="confirm-btn" 
+              onClick={() => onConfirm([...editableQuestions, ...banglaQuestions])}
+              disabled={isUploading}
+              style={{ opacity: isUploading ? 0.7 : 1, cursor: isUploading ? 'not-allowed' : 'pointer' }}
+            >
+              {isUploading ? 'Uploading...' : (isEditMode ? 'Save Changes' : `Confirm & Add ${editableQuestions.length + banglaQuestions.length} Questions`)}
             </button>
-            <button className="cancel-btn" onClick={onCancel}>
+            <button className="cancel-btn" onClick={onCancel} disabled={isUploading}>
               {isEditMode ? 'Close' : 'Cancel'}
             </button>
           </div>
@@ -2381,7 +2404,6 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       {showCropper && sourceDocument && (
         <div 
           className="cropper-modal-overlay"
-          onMouseEnter={() => console.log('🎬 Cropper modal overlay mounted')}
           style={{ display: showCropper ? 'flex' : 'none' }}
         >
           <div 
@@ -2454,20 +2476,21 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                   className="cropper-image"
                   style={{ width: `${zoomLevel * 100}%`, maxWidth: 'none', display: 'block', userSelect: 'none' }}
                 />
-                                                <div 
-                                                  ref={cropBoxRef}
-                                                  className="crop-box"
-                                                  style={{
-                                                    left: `${cropArea.x}px`,
-                                                    top: `${cropArea.y}px`,
-                                                    width: `${cropArea.width}px`,
-                                                    height: `${cropArea.height}px`,
-                                                    position: 'absolute',
-                                                    border: '2px solid #3498db',
-                                                    boxShadow: '0 0 0 4000px rgba(0, 0, 0, 0.5)',
-                                                    willChange: 'left, top, width, height'
-                                                  }}
-                                                >                  <div className="crop-handle" />
+                <div 
+                  ref={cropBoxRef}
+                  className="crop-box"
+                  style={{
+                    left: `${cropArea.x}px`,
+                    top: `${cropArea.y}px`,
+                    width: `${cropArea.width}px`,
+                    height: `${cropArea.height}px`,
+                    position: 'absolute',
+                    border: '2px solid #3498db',
+                    boxShadow: '0 0 0 4000px rgba(0, 0, 0, 0.5)',
+                    willChange: 'left, top, width, height'
+                  }}
+                >
+                  <div className="crop-handle" />
                 </div>
               </div>
             </div>

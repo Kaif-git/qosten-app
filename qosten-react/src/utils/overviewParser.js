@@ -1,13 +1,12 @@
 /**
  * Parses chapter overview text in markdown format and converts to JSON structure
  * 
- * Expected format:
- * ### T-01: Topic Title
- * *   **Point:** Description
- *     *   Subpoint 1
- *     *   Subpoint 2
+ * Supports English and Bengali formats with multiple topics and version headers.
  * 
- * Stores the raw markdown content as-is for each topic
+ * Example Topic Formats:
+ * T-01: Topic Title
+ * টি-০১: শিরোনাম
+ * ### T-01: Topic Title
  */
 
 export function parseOverviewText(text) {
@@ -15,71 +14,73 @@ export function parseOverviewText(text) {
     throw new Error('Invalid input: text must be a non-empty string');
   }
 
+  // Split into lines
   const lines = text.split('\n');
-  const topics = [];
+  const result = {
+    topics: []
+  };
+  
   let currentTopic = null;
   let currentContent = [];
 
-  console.log('=== PARSING START ===');
-  console.log('Total lines:', lines.length);
-  console.log('First 5 lines:', lines.slice(0, 5).map((l, i) => `[${i}] "${l.substring(0, 50)}"`));
+  console.log('=== OVERVIEW PARSING START ===');
+  
+  // Clean up Unicode zero-width characters often found in pasted text
+  const cleanLine = (l) => l.replace(/[​-\u200D\uFEFF]/g, '').trim();
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
-    const trimmed = line.trim();
+    const trimmed = cleanLine(line);
 
-    // Topic header: ### T-01: Topic Title or ### T-০১: Topic Title (Bangla)
-    if (trimmed.startsWith('###')) {
-      console.log(`Line ${i}: Found ### header: "${trimmed.substring(0, 80)}"`);
-      
-      // Log character codes to debug
-      const headerPart = trimmed.substring(0, 15);
-      console.log(`  Character codes:`, Array.from(headerPart).map((c, i) => `[${i}]=${c}(${c.charCodeAt(0)})`).join(' '));
-      
-      // Parse topic - matches English digits (0-9) and Bangla digits (০-৯, U+09E6–U+09EF)
-      const topicMatch = trimmed.match(/^###\s+(T-[\d\u09E6-\u09EF]+):\s+(.+)$/);
-      console.log(`  Regex test result:`, topicMatch);
-      
-      // Save previous topic if exists
-      if (currentTopic && currentContent.length > 0) {
-        currentTopic.content = currentContent.join('\n');
-        topics.push(currentTopic);
-        console.log(`  Saved topic: ${currentTopic.id} with ${currentContent.length} content lines`);
-        currentContent = [];
+    if (!trimmed) continue;
+
+    // Detect Topic Header
+    // Matches: T-01, T-০১, টি-০১, টি-01, T-01 & T-02 with optional ### prefix and ** bolding
+    // Group 1: ID (e.g. T-01), Group 2: Title
+    const topicMatch = trimmed.match(/^(?:[#\s*]*)((?:T|টি)-[০-৯\d]+(?:\s*&\s*(?:T|টি)-[০-৯\d]+)?)\s*[:：ঃ]\s*(.+)$/i);
+
+    if (topicMatch) {
+      // Save previous topic if it exists
+      if (currentTopic) {
+        currentTopic.content = currentContent.join('\n').trim();
+        result.topics.push(currentTopic);
+        console.log(`  Saved topic: ${currentTopic.id}`);
       }
 
-      if (topicMatch) {
-        currentTopic = {
-          id: topicMatch[1],
-          title: topicMatch[2].trim(),
-          content: ''
-        };
-        console.log(`  Created new topic: ID="${currentTopic.id}" Title="${currentTopic.title.substring(0, 50)}"`);
-      } else {
-        console.log(`  WARNING: ### header found but regex didn't match!`);
-        currentTopic = null;
-      }
+      // Start new topic
+      currentTopic = {
+        id: topicMatch[1].trim(),
+        title: topicMatch[2].replace(/\*+/g, '').trim().replace(/[:：ঃ]$/, ''), // Remove markdown and trailing colons
+        content: ''
+      };
+      currentContent = [];
+      console.log(`  Found new topic: ${currentTopic.id} - ${currentTopic.title}`);
       continue;
     }
 
-    // Add line to current topic content (if it's not empty)
-    if (currentTopic && trimmed) {
-      currentContent.push(line);
+    // Skip version headers or chapter titles if they are just decorative
+    if (!currentTopic) {
+        if (trimmed.toLowerCase().includes('version') || trimmed.includes('সংস্করণ') || trimmed.toLowerCase().includes('chapter')) {
+            console.log(`  Skipping header line: ${trimmed}`);
+            continue;
+        }
+    }
+
+    // Collect content
+    if (currentTopic) {
+      currentContent.push(line); // Keep original line for better markdown formatting
     }
   }
 
   // Save last topic
   if (currentTopic) {
-    currentTopic.content = currentContent.join('\n');
-    topics.push(currentTopic);
-    console.log(`Final: Saved last topic: ${currentTopic.id} with ${currentContent.length} content lines`);
+    currentTopic.content = currentContent.join('\n').trim();
+    result.topics.push(currentTopic);
+    console.log(`  Saved final topic: ${currentTopic.id}`);
   }
 
-  console.log('=== PARSING COMPLETE ===');
-  console.log('Total topics found:', topics.length);
-  console.log('Topics:', topics.map(t => ({ id: t.id, title: t.title.substring(0, 40) })));
-
-  return { topics };
+  console.log(`=== PARSING COMPLETE: ${result.topics.length} topics found ===`);
+  return result;
 }
 
 /**
@@ -92,28 +93,14 @@ export function validateOverview(overviewData) {
 
   const errors = [];
 
-  if (!Array.isArray(overviewData.topics)) {
-    errors.push('Topics must be an array');
-    return { valid: false, errors };
-  }
-
   if (overviewData.topics.length === 0) {
-    errors.push('At least one topic is required');
+    errors.push('No topics found. Ensure topics start with "T-01:" or "টি-০১:"');
     return { valid: false, errors };
   }
 
-  overviewData.topics.forEach((topic, topicIndex) => {
-    if (!topic.id) {
-      errors.push(`Topic at index ${topicIndex} is missing an ID`);
-    }
-    if (!topic.title) {
-      errors.push(`Topic at index ${topicIndex} is missing a title`);
-    }
-    if (typeof topic.content !== 'string') {
-      errors.push(`Topic at index ${topicIndex} has invalid content (must be a string)`);
-    } else if (!topic.content.trim()) {
-      errors.push(`Topic "${topic.title || topic.id}" has no content`);
-    }
+  overviewData.topics.forEach((t, idx) => {
+    if (!t.title) errors.push(`Topic ${t.id || idx} is missing a title`);
+    if (!t.content) errors.push(`Topic ${t.title || t.id} has no content`);
   });
 
   return {
@@ -122,26 +109,22 @@ export function validateOverview(overviewData) {
   };
 }
 
-/**
- * Converts parsed overview to formatted JSON string
- */
-export function overviewToJSON(overviewData, pretty = true) {
-  return JSON.stringify(overviewData, null, pretty ? 2 : 0);
+export function overviewToJSON(data) {
+  return JSON.stringify(data, null, 2);
 }
 
-/**
- * Example usage and format guide
- */
-export const EXAMPLE_FORMAT = `### T-01: Work
-*   **Definition:** Work is done when a force causes an object to move.
-*   **Formula:** It is calculated as \\( W = F \\times s \\), where:
-    *   \\( W \\) is Work
-    *   \\( F \\) is the Force applied
-    *   \\( s \\) is the Displacement in the direction of the force
-*   **Unit:** The unit of work is the Joule (J).
+export const EXAMPLE_FORMAT = `
+English Version
+T-01: Basic Concepts of Motion
+Types of Motion: Linear, Rotational, Translational, Periodic, Oscillatory.
+Distance vs. Displacement: Distance is scalar, Displacement is vector.
 
-### T-02: Energy
-*   **Definition:** Energy is the ability to do work.
-*   **Types:**
-    *   Kinetic Energy
-    *   Potential Energy`;
+T-02: Equations of Motion
+v = u + at
+s = ut + 1/2at^2
+
+বাংলা সংস্করণ
+টি-০১: গতির মৌলিক ধারণা
+গতির প্রকারভেদ: রৈখিক, ঘূর্ণন, সরণজনিত, পর্যায়বৃত্ত।
+দূরত্ব বনাম সরণ: দূরত্ব স্কেলার, সরণ ভেক্টর।
+`;

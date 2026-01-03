@@ -1,77 +1,122 @@
-import React from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { useQuestions } from '../../context/QuestionContext';
 
 export default function SearchFilters({ filters, onFilterChange }) {
   const context = useQuestions();
-  const { hierarchy } = context; // Access hierarchy data
+  const { hierarchy } = context; 
   
-  // Debugging hierarchy
-  console.log('SearchFilters render. Hierarchy:', hierarchy?.length, hierarchy);
-
-  // Determine source of truth: props (controlled) or context (uncontrolled)
+  // Determine source of truth
   const isControlled = !!filters && !!onFilterChange;
   const activeFilters = isControlled ? filters : context.currentFilters;
-  const allQuestions = context.questions; // Always get questions from context for options
+  const allQuestions = context.questions; 
+
+  // Local state for debounced search text
+  const [localSearchText, setLocalSearchText] = React.useState(activeFilters.searchText || '');
+
+  // Sync local text when filter changes externally
+  useEffect(() => {
+    setLocalSearchText(activeFilters.searchText || '');
+  }, [activeFilters.searchText]);
+
+  // Debounce search update
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (localSearchText !== activeFilters.searchText) {
+        handleFilterChange('searchText', localSearchText);
+      }
+    }, 500);
+    return () => clearTimeout(timer);
+  }, [localSearchText]);
   
-  // Helper to filter questions based on ACTIVE filters, but excluding the key being generated
-  const getFilteredFor = (excludeKey) => {
+  // Optimization: Only use if hierarchy is not enough or for deep fields
+  // For dropdown options, we only care about Subject and Chapter dependencies
+  const getOptionsFiltered = useCallback((excludeKey) => {
       return allQuestions.filter(q => {
           if (excludeKey !== 'subject' && activeFilters.subject && activeFilters.subject !== 'none' && q.subject !== activeFilters.subject) return false;
           if (excludeKey !== 'chapter' && activeFilters.chapter && activeFilters.chapter !== 'none' && q.chapter !== activeFilters.chapter) return false;
-          // Lesson usually depends on chapter, so we filter by chapter. 
-          // If we are populating 'lesson', we respect 'chapter' filter.
-          if (excludeKey !== 'lesson' && activeFilters.lesson && q.lesson !== activeFilters.lesson) return false;
-          if (excludeKey !== 'board' && activeFilters.board && q.board !== activeFilters.board) return false;
-          if (excludeKey !== 'type' && activeFilters.type && q.type !== activeFilters.type) return false;
-          if (excludeKey !== 'language' && activeFilters.language && q.language !== activeFilters.language) return false;
           return true;
       });
-  };
+  }, [allQuestions, activeFilters.subject, activeFilters.chapter]);
 
-  // 1. Subjects: Use Hierarchy if available, else fallback to loaded questions
+  // 1. Subjects: Priority to Hierarchy
   const uniqueSubjects = React.useMemo(() => {
-    console.log('Calculating uniqueSubjects. Hierarchy length:', hierarchy?.length);
-    if (hierarchy && hierarchy.length > 0) {
-      return hierarchy.map(h => ({
-        name: h.name,
-        // Calculate total from chapters if not present on subject
-        count: h.total !== undefined ? h.total : (h.chapters || []).reduce((sum, c) => sum + (c.total || 0), 0)
-      })).sort((a, b) => a.name.localeCompare(b.name));
-    }
-    // Fallback
-    const subjects = [...new Set(getFilteredFor('subject').map(q => q.subject).filter(Boolean))].sort();
-    return subjects.map(s => ({ name: s, count: null }));
-  }, [hierarchy, allQuestions, activeFilters]); // Re-calc if activeFilters changes (for fallback)
+    const combined = [];
+    const seen = new Set();
 
-  // 2. Chapters: Use Hierarchy based on selected Subject
+    if (hierarchy && hierarchy.length > 0) {
+      hierarchy.forEach(h => {
+        combined.push({
+          name: h.name,
+          count: h.total !== undefined ? h.total : (h.chapters || []).reduce((sum, c) => sum + (c.total || 0), 0)
+        });
+        seen.add(h.name);
+      });
+    }
+
+    // Only scan allQuestions if hierarchy is missing items (rare)
+    if (allQuestions.length > 0 && allQuestions.length < 5000) { // Only scan for small datasets
+        allQuestions.forEach(q => {
+            if (q.subject && !seen.has(q.subject)) {
+                combined.push({ name: q.subject, count: null });
+                seen.add(q.subject);
+            }
+        });
+    }
+
+    return combined.sort((a, b) => a.name.localeCompare(b.name));
+  }, [hierarchy, allQuestions.length < 5000 ? allQuestions : null]);
+
+  // 2. Chapters: Priority to Hierarchy
   const uniqueChapters = React.useMemo(() => {
-    console.log('Calculating uniqueChapters. Subject:', activeFilters.subject);
+    const combined = [];
+    const seen = new Set();
+
     if (hierarchy && hierarchy.length > 0) {
       if (activeFilters.subject && activeFilters.subject !== 'none') {
         const subjectNode = hierarchy.find(h => h.name === activeFilters.subject);
         if (subjectNode && subjectNode.chapters) {
-          return subjectNode.chapters.map(c => ({
-            name: c.name,
-            count: c.total || 0
-          })).sort((a, b) => a.name.localeCompare(b.name));
+          subjectNode.chapters.forEach(c => {
+            combined.push({ name: c.name, count: c.total || 0 });
+            seen.add(c.name);
+          });
         }
       } else {
-        // All chapters from all subjects
-        return hierarchy.flatMap(h => h.chapters || []).map(c => ({
-           name: c.name,
-           count: c.total || 0
-        })).sort((a, b) => a.name.localeCompare(b.name));
+        hierarchy.flatMap(h => h.chapters || []).forEach(c => {
+          if (!seen.has(c.name)) {
+            combined.push({ name: c.name, count: c.total || 0 });
+            seen.add(c.name);
+          }
+        });
       }
     }
-    // Fallback
-    const chapters = [...new Set(getFilteredFor('chapter').map(q => q.chapter).filter(Boolean))].sort();
-    return chapters.map(c => ({ name: c, count: null }));
-  }, [hierarchy, activeFilters.subject, allQuestions]);
 
+    // Only scan local questions if specifically filtered by subject and local data might be newer
+    if (activeFilters.subject && activeFilters.subject !== 'none' && allQuestions.length < 10000) {
+        allQuestions.forEach(q => {
+            if (q.subject === activeFilters.subject && q.chapter && !seen.has(q.chapter)) {
+                combined.push({ name: q.chapter, count: null });
+                seen.add(q.chapter);
+            }
+        });
+    }
+
+    return combined.sort((a, b) => a.name.localeCompare(b.name));
+  }, [hierarchy, activeFilters.subject, allQuestions.length < 10000 ? allQuestions : null]);
 
   // For deeper levels (Lesson, Board) we still rely on loaded questions as Hierarchy might not go that deep yet
-  const uniqueLessons = [...new Set(getFilteredFor('lesson').map(q => q.lesson).filter(Boolean))].sort();
-  const uniqueBoards = [...new Set(getFilteredFor('board').map(q => q.board).filter(Boolean))].sort();
+  // MEMOIZE these expensive scans! 
+  // Safeguard: Skip deep scans if dataset is too large AND no subject is selected
+  const shouldSkipDeepScan = allQuestions.length > 10000 && (!activeFilters.subject || activeFilters.subject === 'none');
+
+  const uniqueLessons = React.useMemo(() => {
+    if (shouldSkipDeepScan) return [];
+    return [...new Set(getOptionsFiltered('lesson').map(q => q.lesson).filter(Boolean))].sort();
+  }, [getOptionsFiltered, shouldSkipDeepScan]);
+
+  const uniqueBoards = React.useMemo(() => {
+    if (shouldSkipDeepScan) return [];
+    return [...new Set(getOptionsFiltered('board').map(q => q.board).filter(Boolean))].sort();
+  }, [getOptionsFiltered, shouldSkipDeepScan]);
   
   const handleFilterChange = (key, value) => {
     const newFilters = { [key]: value };
@@ -125,8 +170,8 @@ export default function SearchFilters({ filters, onFilterChange }) {
           type="text"
           id="searchText"
           placeholder="Enter keywords..."
-          value={activeFilters.searchText || ''}
-          onChange={(e) => handleFilterChange('searchText', e.target.value)}
+          value={localSearchText}
+          onChange={(e) => setLocalSearchText(e.target.value)}
         />
       </div>
       

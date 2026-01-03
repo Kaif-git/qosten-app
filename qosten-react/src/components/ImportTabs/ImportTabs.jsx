@@ -4,6 +4,7 @@ import { useQuestions } from '../../context/QuestionContext';
 import QuestionPreview from '../QuestionPreview/QuestionPreview';
 import { translateEnglishWordsToBangla } from '../../utils/translateToBangla';
 import { parseCQQuestions } from '../../utils/cqParser';
+import { parseMCQQuestions } from '../../utils/mcqQuestionParser';
 
 const examples = {
   mcq: {
@@ -147,184 +148,13 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
   const [isUploading, setIsUploading] = useState(false);
   const [isTranslating, setIsTranslating] = useState(false);
   const [progress, setProgress] = useState({ current: 0, total: 0, status: '' });
-  const { addQuestion } = useQuestions();
+  const { bulkAddQuestions } = useQuestions();
   const navigate = useNavigate();
   
   const example = examples[type][language];
   const title = titles[type][language];
   
-  const parseMCQQuestions = (text, lang = 'en') => {
-    const cleanedText = text.replace(/\u200b/g, '').replace(/\*+/g, '');
-    const sections = cleanedText.split(/\n---+|###/).filter(s => s.trim());
-    const questions = [];
-
-    for (const section of sections) {
-        if (!section.trim()) continue;
-
-        const lines = section.split('\n').map(line => line.trim()).filter(line => line);
-        let currentQuestion = null;
-        let currentMetadata = { language: lang };
-        let inExplanation = false;
-
-        const saveCurrentQuestion = () => {
-            if (currentQuestion) {
-                questions.push(currentQuestion);
-                currentQuestion = null;
-            }
-        };
-
-        for (const line of lines) {
-            // Explicitly skip "Question Set" headers and horizontal rules
-            if (/^[#*\s\-\/]*(Question\s*Set|প্রশ্ন\s*সেট)\s*[\d০-৯]+/i.test(line) || /^[\s\-]*---[\s\-]*$/.test(line)) {
-                inExplanation = false; // CRITICAL: Stop explanation mode immediately
-                continue;
-            }
-            if (line.toLowerCase().includes('alternate') || line.toLowerCase().includes('also supported')) continue;
-
-            if (line.startsWith('[') && line.endsWith(']')) {
-                const match = line.match(/\[([^:ঃ]+)[:ঃ]\s*([^\]]*)\]/);
-                if (match) {
-                    const key = match[1].trim().toLowerCase();
-                    const value = match[2].trim();
-                    const keyMap = {'subject': 'subject', 'বিষয়': 'subject', 'chapter': 'chapter', 'অধ্যায়': 'chapter', 'lesson': 'lesson', 'পাঠ': 'lesson', 'board': 'board', 'বোর্ড': 'board'};
-                    if (keyMap[key]) currentMetadata[keyMap[key]] = value;
-                }
-                inExplanation = false;
-                continue;
-            }
-
-            // Start of a new question (must have dot or danda, NOT paren to distinguish from numeric options)
-            // Updated to allow optional space after dot/danda (e.g., "15.What")
-            if (/^[\d০-৯]+[।.]/.test(line)) {
-                // Robust heuristic to distinguish "1. Question" from "1. Option"
-                // Updated to allow optional space
-                const isSmallNum = /^[1-4১-৪][।.]/.test(line);
-                let isOption = false;
-
-                if (currentQuestion) {
-                    // 1. If Question is already "closed" (has answer/explanation), any number is a New Question
-                    if (currentQuestion.correctAnswer || currentQuestion.explanation) {
-                        isOption = false;
-                        console.log(`    🚫 Line "${line.substring(0,15)}"..." -> New Question (Previous closed)`);
-                    }
-                    // 2. Roman Context - "Which is correct?" always expects options
-                    else if (currentQuestion.questionText && (
-                             currentQuestion.questionText.includes('কোনটি সঠিক') || 
-                             currentQuestion.questionText.includes('Which is correct') ||
-                             currentQuestion.questionText.includes('নিচের কোনটি'))) {
-                        if (isSmallNum) {
-                            isOption = true;
-                            console.log(`    ✅ Line "${line.substring(0,15)}"..." -> Option (Roman Context)`);
-                        }
-                    }
-                    // 3. Sequential Option Check
-                    // If we see "1." and have 0 options, it's Option 1.
-                    // If we see "2." and have 1 option, it's Option 2.
-                    // If we see "2." and have 4 options, it's New Question 2.
-                    else if (isSmallNum) {
-                        const numMatch = line.match(/^([1-4১-৪])[।.]/);
-                        if (numMatch) {
-                            const numStr = numMatch[1];
-                            const bengaliMap = {'১':1, '২':2, '৩':3, '৪':4};
-                            const numVal = bengaliMap[numStr] || parseInt(numStr);
-                            
-                            // It is an option ONLY if it follows the sequence (current options + 1)
-                            // Allow strict sequential (1->2->3) or if it's 1 and we have none.
-                            if (numVal === currentQuestion.options.length + 1) {
-                                isOption = true;
-                                console.log(`    ✅ Line "${line.substring(0,15)}"..." -> Option ${numVal} (Sequential match)`);
-                            } else {
-                                console.log(`    🚫 Line "${line.substring(0,15)}"..." -> New Question (Sequence mismatch: ${numVal} vs next ${currentQuestion.options.length + 1})`);
-                            }
-                        }
-                    }
-                }
-                
-                if (!isOption) {
-                    saveCurrentQuestion();
-                    currentQuestion = {
-                        ...currentMetadata,
-                        type: 'mcq',
-                        // Handle potential lack of space after dot
-                        questionText: line.replace(/^[\[\d০-৯]+[।.]\s*/, '').trim(),
-                        options: [], correctAnswer: '', explanation: ''
-                    };
-                    console.log(`    🆕 New Question Started: ${line.substring(0, 20)}...`);
-                    inExplanation = false;
-                    continue;
-                }
-            }
-
-            if (!currentQuestion) continue;
-
-            // Updated regex to support Bengali numerals 1-4 (১-৪)
-            if (/^(?:[a-dক-ঘ]|[1-4১-৪])[.)\s]/i.test(line)) {
-                 const optionMatch = line.match(/^([a-dক-ঘ1-4১-৪])[.)\s]*(.+)$/i);
-                 if (optionMatch) {
-                    let letter = optionMatch[1].toLowerCase();
-                    const text = optionMatch[2].trim();
-                    const bengaliToEnglish = { 'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd' };
-                    const numToChar = { '1': 'a', '2': 'b', '3': 'c', '4': 'd' };
-                    const bengaliNumToChar = { '১': 'a', '২': 'b', '৩': 'c', '৪': 'd' };
-                    
-                    if (bengaliToEnglish[letter]) letter = bengaliToEnglish[letter];
-                    if (numToChar[letter]) letter = numToChar[letter];
-                    if (bengaliNumToChar[letter]) letter = bengaliNumToChar[letter];
-                    
-                    currentQuestion.options.push({ label: letter, text: text });
-                 }
-                 inExplanation = false;
-                 continue;
-            }
-
-            if (/^(correct|answer|ans|সঠিক(?:\s*উত্তর)?)\s*[:=ঃ：]/i.test(line)) {
-                const answerMatch = line.match(/^(?:correct|answer|ans|সঠিক(?:\s*উত্তর)?)\s*[:=ঃ：]\s*(.+)$/i);
-                if (answerMatch) {
-                    // Clean up answer: remove trailing paren if present (e.g. "a)" -> "a")
-                    let answer = answerMatch[1].trim().split(/\s+/)[0].replace(/[).]+$/, '').toLowerCase();
-                     const bengaliToEnglish = { 'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd' };
-                     const numToChar = { '1': 'a', '2': 'b', '3': 'c', '4': 'd' };
-                     const bengaliNumToChar = { '১': 'a', '২': 'b', '৩': 'c', '৪': 'd' };
-                     
-                    if (bengaliToEnglish[answer]) answer = bengaliToEnglish[answer];
-                    if (numToChar[answer]) answer = numToChar[answer];
-                    if (bengaliNumToChar[answer]) answer = bengaliNumToChar[answer];
-                    
-                    currentQuestion.correctAnswer = answer;
-                }
-                inExplanation = false; // reset, in case explanation is on next line
-                continue;
-            }
-
-            const explanationMarker = /^(explanation|explain|exp|bekkha|ব্যাখ্যা)\s*[:=ঃ：]?/i;
-            if (explanationMarker.test(line)) {
-                currentQuestion.explanation = line.replace(explanationMarker, '').trim();
-                inExplanation = true;
-                if(!currentQuestion.explanation) { // text is on the next line
-                  continue;
-                }
-                continue; // Processed explanation on this line
-            }
-
-            if (inExplanation) {
-                // If we encounter a Question Set marker while in explanation, stop explanation mode
-                if (/^[#*\s\-\/]*(Question\s*Set|প্রশ্ন\s*সেট)\s*[\d০-৯]+/i.test(line) || /^[\s\-]*---[\s\-]*$/.test(line)) {
-                    inExplanation = false;
-                    continue;
-                }
-                currentQuestion.explanation += (currentQuestion.explanation ? '\n' : '') + line;
-            } else if (currentQuestion.correctAnswer && !currentQuestion.explanation) {
-                // If we have a correct answer, any subsequent text is likely explanation
-                currentQuestion.explanation = (currentQuestion.explanation ? currentQuestion.explanation + '\n' : '') + line;
-                inExplanation = true;
-            } else if (currentQuestion && currentQuestion.questionText !== undefined && currentQuestion.options.length === 0) { // Continuation of question text (before options)
-                 currentQuestion.questionText += (currentQuestion.questionText ? '\n' : '') + line;
-            }
-        }
-        saveCurrentQuestion();
-    }
-    return questions;
-};
+  // parseMCQQuestions is now imported from utils
   
   // parseCQQuestions has been moved to src/utils/cqParser.js
   
@@ -545,63 +375,44 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
   };
   
   const confirmAddQuestions = async (editedQuestions) => {
+    console.log('🚀 confirmAddQuestions: Preparing to upload', editedQuestions.length, 'questions');
     setIsUploading(true);
     setProgress({ current: 0, total: editedQuestions.length, status: 'Uploading questions...' });
     
-    let addedCount = 0;
-    const addedIds = [];
-    
-    // Upload in batches of 20 for better performance
-    const BATCH_SIZE = 20;
-    
-    for (let i = 0; i < editedQuestions.length; i += BATCH_SIZE) {
-      const batch = editedQuestions.slice(i, i + BATCH_SIZE);
+    try {
+      const results = await bulkAddQuestions(editedQuestions, (current, total) => {
+        setProgress({ 
+          current, 
+          total, 
+          status: `Uploading batch... (${current}/${total})` 
+        });
+      });
       
-      // Upload batch in parallel
-      const results = await Promise.allSettled(
-        batch.map((question, batchIndex) => 
-          addQuestion(question)
-            .then((newQ) => ({ success: true, index: i + batchIndex, question: newQ }))
-            .catch(error => ({ success: false, error, index: i + batchIndex, question }))
-        )
-      );
+      setIsUploading(false);
       
-      // Process results
-      results.forEach(result => {
-        if (result.status === 'fulfilled' && result.value.success) {
-          addedCount++;
-          if (result.value.question && result.value.question.id) {
-              addedIds.push(result.value.question.id);
-          }
-        } else {
-          const errorData = result.value || {};
-          const error = errorData.error;
-          console.error('Error adding question:', error);
+      // Show detailed summary message
+      let message = `Upload Complete!\n\n✅ Successfully added: ${results.successCount}`;
+      if (results.failedCount > 0) {
+        message += `\n❌ Failed to add: ${results.failedCount}`;
+        message += `\n\nCheck console for details on failures.`;
+        if (results.errors.length <= 5) {
+            message += `\n\nErrors:\n- ${results.errors.map(e => e.error).join('\n- ')}`;
         }
-      });
+      }
       
-      // Update progress after each batch
-      setProgress({ 
-        current: Math.min(i + BATCH_SIZE, editedQuestions.length), 
-        total: editedQuestions.length, 
-        status: 'Uploading questions...' 
-      });
-    }
-    
-    setIsUploading(false);
-    
-    // Show summary message
-    let message = `Successfully added ${addedCount} question(s)! Redirecting to review...`;
-    alert(message);
-    setShowPreview(false);
-    
-    // Clear the input after successful upload
-    if (addedCount > 0) {
-      setInputText('');
-      setParsedQuestions([]);
+      alert(message);
+      setShowPreview(false);
       
-      // Redirect to bank with the specific IDs
-      navigate('/bank', { state: { highlightIds: addedIds } });
+      if (results.successCount > 0) {
+        setInputText('');
+        setParsedQuestions([]);
+        // Refresh and go to bank
+        navigate('/bank');
+      }
+    } catch (error) {
+      console.error('Bulk upload failed:', error);
+      setIsUploading(false);
+      alert('❌ Bulk upload failed: ' + error.message);
     }
   };
   
@@ -640,6 +451,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
           questions={parsedQuestions}
           onConfirm={confirmAddQuestions}
           onCancel={cancelPreview}
+          isUploading={isUploading}
         />
       )}
       

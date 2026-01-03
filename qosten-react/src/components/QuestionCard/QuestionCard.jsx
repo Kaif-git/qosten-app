@@ -70,7 +70,7 @@ function QuestionCard({ question, selectionMode, isSelected, onToggleSelect }) {
     if (question.type === 'mcq') {
       return (
         <>
-          <p><strong>Question:</strong> {question.board && <span style={{color: '#666', fontSize: '0.9em', fontWeight: 'normal'}}>({question.board})</span>} <LatexRenderer text={question.questionText || question.question || 'N/A'} /></p>
+          <div style={{ marginBottom: '10px' }}><strong>Question:</strong> {question.board && <span style={{color: '#666', fontSize: '0.9em', fontWeight: 'normal'}}>({question.board})</span>} <LatexRenderer text={question.questionText || question.question || 'N/A'} /></div>
           {question.image && (
             <img 
               src={question.image} 
@@ -99,14 +99,14 @@ function QuestionCard({ question, selectionMode, isSelected, onToggleSelect }) {
           ) : (
             <p>No options available</p>
           )}
-          <p><strong>Correct Answer:</strong> {question.correctAnswer ? question.correctAnswer.toUpperCase() : 'N/A'}</p>
-          {question.explanation && <p><strong>Explanation:</strong> <LatexRenderer text={question.explanation} /></p>}
+          <div style={{ marginBottom: '10px' }}><strong>Correct Answer:</strong> {question.correctAnswer ? question.correctAnswer.toUpperCase() : 'N/A'}</div>
+          {question.explanation && <div style={{ marginBottom: '10px' }}><strong>Explanation:</strong> <LatexRenderer text={question.explanation} /></div>}
         </>
       );
     } else if (question.type === 'cq') {
       return (
         <>
-          <p><strong>Question:</strong> {question.board && <span style={{color: '#666', fontSize: '0.9em', fontWeight: 'normal'}}>({question.board})</span>} <LatexRenderer text={question.questionText || 'N/A'} /></p>
+          <div style={{ marginBottom: '10px' }}><strong>Question:</strong> {question.board && <span style={{color: '#666', fontSize: '0.9em', fontWeight: 'normal'}}>({question.board})</span>} <LatexRenderer text={question.questionText || 'N/A'} /></div>
           {question.image && (
             <img 
               src={question.image} 
@@ -151,7 +151,7 @@ function QuestionCard({ question, selectionMode, isSelected, onToggleSelect }) {
     } else if (question.type === 'sq') {
       return (
         <>
-          <p><strong>Question:</strong> {question.board && <span style={{color: '#666', fontSize: '0.9em', fontWeight: 'normal'}}>({question.board})</span>} <LatexRenderer text={question.questionText || question.question || 'N/A'} /></p>
+          <div style={{ marginBottom: '10px' }}><strong>Question:</strong> {question.board && <span style={{color: '#666', fontSize: '0.9em', fontWeight: 'normal'}}>({question.board})</span>} <LatexRenderer text={question.questionText || question.question || 'N/A'} /></div>
           {question.image && (
             <img 
               src={question.image} 
@@ -159,7 +159,7 @@ function QuestionCard({ question, selectionMode, isSelected, onToggleSelect }) {
               style={{maxWidth: '200px', maxHeight: '200px', marginBottom: '10px'}} 
             />
           )}
-          <p><strong>Answer:</strong> <LatexRenderer text={question.answer || 'N/A'} /></p>
+          <div style={{ marginBottom: '10px' }}><strong>Answer:</strong> <LatexRenderer text={question.answer || 'N/A'} /></div>
         </>
       );
     }

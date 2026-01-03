@@ -1,142 +1,221 @@
 import React from 'react';
 import { useQuestions } from '../../context/QuestionContext';
 
-export default function Statistics({ questions, onFilterSelect, onSelectAll, selectedCategories = [] }) {
-  const { hierarchy, currentFilters } = useQuestions();
+export default function Statistics({ questions, onFilterSelect, onSelectAll, selectedCategories = [], filters }) {
+  const context = useQuestions();
+  const { hierarchy } = context;
+  
+  // Use provided filters or fallback to context (uncontrolled)
+  const activeFilters = filters || context.currentFilters;
 
-  // 1. Calculate stats from loaded questions (Default / Fallback)
-  const loadedSubjects = new Set(questions.map(q => q.subject).filter(Boolean));
-  const loadedChapters = new Set(questions.map(q => q.chapter).filter(Boolean));
-  const loadedTypes = new Set(questions.map(q => q.type).filter(Boolean));
-  
-  const detailedCounts = {
-    subjects: {},
-    chapters: {},
-    types: {}
-  };
-  
-  const chapterTypeBreakdown = {};
-  
-  // Populate from loaded questions
-  questions.forEach(q => {
-    if (q.subject) detailedCounts.subjects[q.subject] = (detailedCounts.subjects[q.subject] || 0) + 1;
-    if (q.chapter) {
-      detailedCounts.chapters[q.chapter] = (detailedCounts.chapters[q.chapter] || 0) + 1;
-      
-      if (!chapterTypeBreakdown[q.chapter]) {
-        chapterTypeBreakdown[q.chapter] = {};
+  // Memoize all calculations to prevent lag on every render
+  const stats = React.useMemo(() => {
+    // 1. Single Pass over Questions to collect all local data (O(N))
+    const loadedSubjects = new Set();
+    const loadedChapters = new Set();
+    const detailedCounts = { subjects: {}, chapters: {}, types: {} };
+    const chapterTypeBreakdown = {};
+    const loadedBreakdownByChapter = {}; 
+    const subjectToChaptersMap = {};
+
+    questions.forEach(q => {
+      const subject = (q.subject || '').trim();
+      const chapter = (q.chapter || '').trim();
+      const type = (q.type || 'unknown').toLowerCase();
+
+      if (subject) {
+        loadedSubjects.add(subject);
+        detailedCounts.subjects[subject] = (detailedCounts.subjects[subject] || 0) + 1;
+        
+        if (chapter) {
+            if (!subjectToChaptersMap[subject]) subjectToChaptersMap[subject] = new Set();
+            subjectToChaptersMap[subject].add(chapter);
+        }
       }
-      const type = q.type || 'unknown';
-      chapterTypeBreakdown[q.chapter][type] = (chapterTypeBreakdown[q.chapter][type] || 0) + 1;
-    }
-    if (q.type) detailedCounts.types[q.type] = (detailedCounts.types[q.type] || 0) + 1;
-  });
-
-  // 2. Override with Hierarchy data if available (for Subjects and Chapters)
-  let totalQuestionsCount = questions.length;
-  let subjectCount = loadedSubjects.size;
-  let chapterCount = loadedChapters.size;
-
-  if (hierarchy && hierarchy.length > 0) {
-      const hierarchySubjects = {};
-      const hierarchyChapters = {};
-      let hierarchyTotal = 0;
-
-      // Filter hierarchy based on current filters
-      hierarchy.forEach(sub => {
-          // 1. Basic Subject Filter match
-          if (currentFilters.subject && currentFilters.subject !== 'none' && sub.name !== currentFilters.subject) {
-              return;
-          }
-          if (currentFilters.subject === 'none' && sub.name) {
-              return;
-          }
-
-          // 2. Narrowing down: If any filters are active (beyond just subject), 
-          // ensure the subject is actually present in our filtered questions set.
-          // This handles Board, Type, Language, etc.
-          const hasActiveFilters = Object.entries(currentFilters).some(([k, v]) => {
-              if (k === 'verifiedStatus') return v !== 'all';
-              return v !== '' && v !== 'none' && k !== 'subject'; // ignore subject here as it's handled above
-          });
-
-          if (hasActiveFilters && !loadedSubjects.has(sub.name)) {
-              return;
-          }
-
-          let subTotal = 0;
-          let subHasMatchingChapters = false;
-
-          if (sub.chapters) {
-              sub.chapters.forEach(chap => {
-                  // Filter by Chapter
-                  if (currentFilters.chapter && currentFilters.chapter !== 'none' && chap.name !== currentFilters.chapter) {
-                      return;
-                  }
-                  if (currentFilters.chapter === 'none' && chap.name) {
-                      return;
-                  }
-
-                  // If we have non-hierarchy filters, ensure chapter is in filtered set
-                  if (hasActiveFilters && !loadedChapters.has(chap.name)) {
-                      return;
-                  }
-
-                  // If non-hierarchy filters are active, hierarchy counts are inaccurate.
-                  // Use loaded counts instead.
-                  if (hasActiveFilters) {
-                      hierarchyChapters[chap.name] = detailedCounts.chapters[chap.name] || 0;
-                  } else {
-                      hierarchyChapters[chap.name] = chap.total || 0;
-                  }
-                  
-                  subTotal += hierarchyChapters[chap.name];
-                  subHasMatchingChapters = true;
-                  
-                  // Try to merge type breakdown if available in hierarchy
-                  // ONLY if we don't have non-hierarchy filters (which hierarchy doesn't know about)
-                  if (!hasActiveFilters && chap.types && Array.isArray(chap.types)) {
-                       if (!chapterTypeBreakdown[chap.name]) chapterTypeBreakdown[chap.name] = {};
-                       chap.types.forEach(t => {
-                           if (currentFilters.type && t.name !== currentFilters.type) return;
-                           chapterTypeBreakdown[chap.name][t.name] = t.total;
-                       });
-                  }
-              });
-          }
-
-          // If we filtered chapters and none matched, this subject shouldn't show
-          if (currentFilters.chapter && !subHasMatchingChapters) {
-              return;
-          }
-          // If we have other filters and no matching chapters were found for this subject
-          if (hasActiveFilters && !subHasMatchingChapters && sub.chapters && sub.chapters.length > 0) {
-              return;
-          }
-
-          if (hasActiveFilters) {
-              hierarchySubjects[sub.name] = detailedCounts.subjects[sub.name] || 0;
-          } else {
-              hierarchySubjects[sub.name] = sub.total !== undefined ? sub.total : subTotal;
-          }
-          
-          // If filtering by chapter, use subTotal (sum of matched chapters)
-          if (currentFilters.chapter) {
-              hierarchySubjects[sub.name] = subTotal;
-          }
-          
-          hierarchyTotal += hierarchySubjects[sub.name];
-      });
-
-      // Override display data
-      detailedCounts.subjects = hierarchySubjects;
-      detailedCounts.chapters = hierarchyChapters;
       
-      // Update summary counts
-      totalQuestionsCount = hierarchyTotal;
-      subjectCount = Object.keys(hierarchySubjects).length;
-      chapterCount = Object.keys(hierarchyChapters).length;
-  }
+      if (chapter) {
+        loadedChapters.add(chapter);
+        detailedCounts.chapters[chapter] = (detailedCounts.chapters[chapter] || 0) + 1;
+        
+        if (!chapterTypeBreakdown[chapter]) chapterTypeBreakdown[chapter] = {};
+        chapterTypeBreakdown[chapter][type] = (chapterTypeBreakdown[chapter][type] || 0) + 1;
+
+        if (!loadedBreakdownByChapter[chapter]) loadedBreakdownByChapter[chapter] = {};
+        loadedBreakdownByChapter[chapter][type] = (loadedBreakdownByChapter[chapter][type] || 0) + 1;
+      }
+      if (q.type) detailedCounts.types[q.type] = (detailedCounts.types[q.type] || 0) + 1;
+    });
+
+    // 2. Override with Hierarchy data if available
+    let totalQuestionsCount = questions.length;
+    let subjectCount = loadedSubjects.size;
+    let chapterCount = loadedChapters.size;
+
+    if (hierarchy && hierarchy.length > 0) {
+        const hierarchySubjects = {};
+        const hierarchyChapters = {};
+
+        // Process Hierarchy Data (O(H))
+        hierarchy.forEach(sub => {
+            const subName = (sub.name || '').trim();
+            if (!subName) return;
+
+            let subTotalFromHierarchy = sub.total !== undefined ? sub.total : 0;
+            let sumOfChapters = 0;
+
+            if (sub.chapters) {
+                sub.chapters.forEach(chap => {
+                    const chapName = (chap.name || '').trim();
+                    if (!chapName) return;
+
+                    let chapTotalFromHierarchy = chap.total || 0;
+                    let sumOfTypes = 0;
+                    
+                    if (!chapterTypeBreakdown[chapName]) chapterTypeBreakdown[chapName] = {};
+                    
+                    if (chap.types && Array.isArray(chap.types)) {
+                         chap.types.forEach(t => {
+                             const typeName = t.name || 'unknown';
+                             chapterTypeBreakdown[chapName][typeName] = t.total;
+                             sumOfTypes += t.total;
+                         });
+                    }
+
+                    hierarchyChapters[chapName] = Math.max(chapTotalFromHierarchy, sumOfTypes);
+                    sumOfChapters += hierarchyChapters[chapName];
+                });
+            }
+            
+            hierarchySubjects[subName] = Math.max(subTotalFromHierarchy, sumOfChapters);
+        });
+
+        // Merge with Loaded Questions (Priority to local if higher)
+        Object.entries(detailedCounts.subjects).forEach(([sub, count]) => {
+            hierarchySubjects[sub] = Math.max(hierarchySubjects[sub] || 0, count);
+        });
+        
+        Object.entries(detailedCounts.chapters).forEach(([chap, count]) => {
+            hierarchyChapters[chap] = Math.max(hierarchyChapters[chap] || 0, count);
+        });
+
+        // Resolve Discrepancies (O(Chapters))
+        Object.keys(hierarchyChapters).forEach(chapName => {
+            if (!chapterTypeBreakdown[chapName]) chapterTypeBreakdown[chapName] = {};
+            
+            if (loadedBreakdownByChapter[chapName]) {
+                Object.entries(loadedBreakdownByChapter[chapName]).forEach(([type, count]) => {
+                    chapterTypeBreakdown[chapName][type] = Math.max(chapterTypeBreakdown[chapName][type] || 0, count);
+                });
+            }
+
+            const currentSumOfTypes = Object.entries(chapterTypeBreakdown[chapName])
+              .filter(([t]) => t !== 'other')
+              .reduce((a, b) => a + b[1], 0);
+              
+            const currentTotal = hierarchyChapters[chapName] || 0;
+            
+            if (currentTotal > currentSumOfTypes) {
+                chapterTypeBreakdown[chapName]['other'] = currentTotal - currentSumOfTypes;
+            } else if (currentSumOfTypes > currentTotal) {
+                hierarchyChapters[chapName] = currentSumOfTypes;
+                delete chapterTypeBreakdown[chapName]['other'];
+            }
+            else {
+                delete chapterTypeBreakdown[chapName]['other'];
+            }
+        });
+
+        // 3. Apply Filters to the merged data
+        const filteredHierarchySubjects = {};
+        const filteredHierarchyChapters = {};
+        const filteredHierarchyTypes = {};
+        let finalTotal = 0;
+
+        const hasActiveFilters = Object.entries(activeFilters).some(([k, v]) => {
+            if (k === 'verifiedStatus') return v !== 'all';
+            return v !== '' && v !== 'none' && k !== 'subject' && k !== 'chapter' && k !== 'searchText';
+        });
+
+        Object.keys(hierarchySubjects).forEach(subName => {
+            if (activeFilters.subject && activeFilters.subject !== 'none' && subName !== activeFilters.subject) return;
+            if (activeFilters.subject === 'none' && subName) return;
+            
+            if (hasActiveFilters && !loadedSubjects.has(subName)) return;
+
+            let subSum = 0;
+            let calculatedSumOfChapters = 0;
+            let hasMatchingChap = false;
+
+            const subNode = hierarchy.find(h => (h.name || '').trim() === subName);
+            const hierarchyChapterNames = subNode ? subNode.chapters.map(c => (c.name || '').trim()) : [];
+            const loadedChapterNames = subjectToChaptersMap[subName] ? Array.from(subjectToChaptersMap[subName]) : [];
+            
+            let relevantChapters = [...new Set([...hierarchyChapterNames, ...loadedChapterNames])];
+            
+            const subTotalFromHierarchy = hierarchySubjects[subName] || 0;
+
+            relevantChapters.forEach(chapName => {
+                if (activeFilters.chapter && activeFilters.chapter !== 'none' && chapName !== activeFilters.chapter) return;
+                if (activeFilters.chapter === 'none' && chapName) return;
+                if (hasActiveFilters && !loadedChapters.has(chapName)) return;
+
+                const val = hasActiveFilters ? (detailedCounts.chapters[chapName] || 0) : (hierarchyChapters[chapName] || 0);
+                filteredHierarchyChapters[chapName] = val;
+                calculatedSumOfChapters += val;
+                subSum += val;
+                hasMatchingChap = true;
+
+                if (!hasActiveFilters && chapterTypeBreakdown[chapName]) {
+                    Object.entries(chapterTypeBreakdown[chapName]).forEach(([t, count]) => {
+                        const typeLabel = t === 'other' ? 'Unspecified' : t;
+                        filteredHierarchyTypes[typeLabel] = (filteredHierarchyTypes[typeLabel] || 0) + count;
+                    });
+                } else if (hasActiveFilters) {
+                    if (loadedBreakdownByChapter[chapName]) {
+                        Object.entries(loadedBreakdownByChapter[chapName]).forEach(([t, count]) => {
+                            filteredHierarchyTypes[t] = (filteredHierarchyTypes[t] || 0) + count;
+                        });
+                    }
+                }
+            });
+            
+            if (!hasActiveFilters && !activeFilters.chapter) {
+                const uncategorizedCount = subTotalFromHierarchy - calculatedSumOfChapters;
+                if (uncategorizedCount > 0) {
+                    const noChapKey = `(No Chapter)`;
+                    filteredHierarchyChapters[noChapKey] = (filteredHierarchyChapters[noChapKey] || 0) + uncategorizedCount;
+                    subSum += uncategorizedCount;
+                    filteredHierarchyTypes['Unspecified'] = (filteredHierarchyTypes['Unspecified'] || 0) + uncategorizedCount;
+                }
+            }
+
+            if (activeFilters.chapter && !hasMatchingChap) return;
+
+            filteredHierarchySubjects[subName] = hasActiveFilters ? (detailedCounts.subjects[subName] || 0) : (activeFilters.chapter ? subSum : hierarchySubjects[subName]);
+            finalTotal += filteredHierarchySubjects[subName];
+        });
+
+        detailedCounts.subjects = filteredHierarchySubjects;
+        detailedCounts.chapters = filteredHierarchyChapters;
+        if (!hasActiveFilters) {
+            detailedCounts.types = filteredHierarchyTypes;
+        }
+        totalQuestionsCount = finalTotal;
+        subjectCount = Object.keys(filteredHierarchySubjects).length;
+        chapterCount = Object.keys(filteredHierarchyChapters).length;
+    }
+
+    return {
+        totalQuestionsCount,
+        subjectCount,
+        chapterCount,
+        detailedCounts,
+        chapterTypeBreakdown
+    };
+  }, [questions, hierarchy, activeFilters]);
+
+  const { totalQuestionsCount, subjectCount, chapterCount, detailedCounts, chapterTypeBreakdown } = stats;
+
 
   const isSelected = (type, key) => {
     return selectedCategories.some(cat => cat.type === type && cat.key === key);
@@ -275,7 +354,7 @@ export default function Statistics({ questions, onFilterSelect, onSelectAll, sel
           
           {Object.keys(detailedCounts.types).length > 0 && (
             <div>
-              <h4>By Type (Loaded):</h4>
+              <h4>By Type:</h4>
               {renderClickableList(detailedCounts.types, 'type')}
             </div>
           )}

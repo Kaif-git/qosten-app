@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useQuestions, cleanText } from '../../context/QuestionContext';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { useQuestions, cleanText, mapDatabaseToApp } from '../../context/QuestionContext';
 import { questionApi } from '../../services/questionApi';
 import Statistics from '../Statistics/Statistics';
 import SearchFilters from '../SearchFilters/SearchFilters';
@@ -158,7 +158,8 @@ const fixCorruptedSQ = (text) => {
 };
 
 const getFilteredQuestions = (questions, filters, fullQuestionsMap = null, hasSearched = false) => {
-  const result = questions.filter(q => {
+  // Stage 1: Metadata Filtering (Fast)
+  let result = questions.filter(q => {
     const qSubject = (q.subject || '').trim();
     const qChapter = (q.chapter || '').trim();
     const fSubject = (filters.subject || '').trim();
@@ -173,7 +174,11 @@ const getFilteredQuestions = (questions, filters, fullQuestionsMap = null, hasSe
       : !filters.chapter || qChapter === fChapter;
 
     const matchesLesson = !filters.lesson || q.lesson === filters.lesson;
-    const matchesType = !filters.type || q.type === filters.type;
+    const matchesType = !filters.type || 
+      (filters.type === 'Unspecified' 
+        ? (!q.type || q.type === 'other' || q.type === 'Unspecified') 
+        : q.type === filters.type);
+
     const matchesBoard = !filters.board || q.board === filters.board;
     const matchesLanguage = !filters.language || q.language === filters.language;
     const matchesFlaggedStatus = !filters.flaggedStatus || 
@@ -184,43 +189,30 @@ const getFilteredQuestions = (questions, filters, fullQuestionsMap = null, hasSe
       (filters.verifiedStatus === 'verified' && q.isVerified) ||
       (filters.verifiedStatus === 'unverified' && !q.isVerified);
     
-    const matchesMetadata = matchesSubject && matchesChapter && matchesLesson && matchesType && matchesBoard && matchesLanguage && matchesFlaggedStatus && matchesVerifiedStatus;
-    
-    if (!matchesMetadata) return false;
-
-    // If no search text, we match
-    if (!filters.searchText) return true;
-
-    // If we haven't searched (clicked the button), ignore text filter (for stats/metadata view)
-    if (!hasSearched) return true;
-
-    // If searched, use full data to check text
-    const fullQ = (fullQuestionsMap && fullQuestionsMap.get(q.id)) || q;
-    const searchText = filters.searchText.toLowerCase();
-
-    // Safe access
-    const question = (fullQ.question || '').toLowerCase();
-    const questionText = (fullQ.questionText || '').toLowerCase();
-    const answer = (fullQ.answer || '').toLowerCase();
-    const explanation = (fullQ.explanation || '').toLowerCase();
-    const partsMatch = fullQ.parts?.some(p => 
-      (p.text || '').toLowerCase().includes(searchText) || 
-      (p.answer || '').toLowerCase().includes(searchText)
-    );
-
-    return question.includes(searchText) ||
-      questionText.includes(searchText) ||
-      answer.includes(searchText) ||
-      explanation.includes(searchText) ||
-      partsMatch;
+    return matchesSubject && matchesChapter && matchesLesson && matchesType && matchesBoard && matchesLanguage && matchesFlaggedStatus && matchesVerifiedStatus;
   });
 
-  if (filters.subject || filters.chapter) {
-      console.log(`[Filter Debug] Total: ${questions.length}, Filtered: ${result.length}, Filters:`, {
-          subject: filters.subject,
-          chapter: filters.chapter,
-          type: filters.type
-      });
+  // Stage 2: Text Search (Expensive - only if needed and searched)
+  if (filters.searchText && hasSearched) {
+    const searchText = filters.searchText.toLowerCase();
+    result = result.filter(q => {
+      const fullQ = (fullQuestionsMap && fullQuestionsMap.get(q.id)) || q;
+      
+      const question = (fullQ.question || '').toLowerCase();
+      const questionText = (fullQ.questionText || '').toLowerCase();
+      const answer = (fullQ.answer || '').toLowerCase();
+      const explanation = (fullQ.explanation || '').toLowerCase();
+      const partsMatch = fullQ.parts?.some(p => 
+        (p.text || '').toLowerCase().includes(searchText) || 
+        (p.answer || '').toLowerCase().includes(searchText)
+      );
+
+      return question.includes(searchText) ||
+        questionText.includes(searchText) ||
+        answer.includes(searchText) ||
+        explanation.includes(searchText) ||
+        partsMatch;
+    });
   }
 
   return result.sort((a, b) => parseInt(b.id) - parseInt(a.id));
@@ -244,6 +236,7 @@ export default function QuestionBank() {
   const [isFixing, setIsFixing] = useState(false);
   const [isFetchingMore, setIsFetchingMore] = useState(false);
   const [isFetchingAll, setIsFetchingAll] = useState(false);
+  const [isSyncingMetadata, setIsSyncingMetadata] = useState(false);
   const [fetchStatus, setFetchStatus] = useState('');
   const [isAutoSyncing, setIsAutoSyncing] = useState(false);
   const [syncProgress, setSyncProgress] = useState({ current: 0, total: 0 });
@@ -299,6 +292,7 @@ export default function QuestionBank() {
 
   const generateBulkFixText = (type) => {
     const flagged = questions.filter(q => q.isFlagged && q.type === type);
+    console.log(`[BulkFix Debug] generateBulkFixText: Found ${flagged.length} flagged ${type} questions`);
     if (flagged.length === 0) return '';
 
     return flagged.map((q, idx) => {
@@ -337,6 +331,7 @@ export default function QuestionBank() {
 
   const generateReviewQueueText = (type) => {
     const queued = questions.filter(q => q.inReviewQueue && q.type === type);
+    console.log(`[ReviewQueue Debug] generateReviewQueueText: Found ${queued.length} queued ${type} questions`);
     if (queued.length === 0) return '';
 
     return queued.map((q, idx) => {
@@ -380,10 +375,7 @@ export default function QuestionBank() {
     }
 
     const queued = questions.filter(q => q.inReviewQueue && q.type === reviewQueueType);
-    if (queued.length === 0) {
-      alert('No queued questions of this type found.');
-      return;
-    }
+    console.log(`[ReviewQueue Debug] Found ${queued.length} flagged questions in state`);
 
     try {
       setIsFixing(true);
@@ -392,9 +384,11 @@ export default function QuestionBank() {
       if (reviewQueueType === 'mcq') {
         const { parseMCQQuestions } = await import('../../utils/mcqQuestionParser');
         parsedQuestions = parseMCQQuestions(reviewQueueInputText);
+        console.log(`[ReviewQueue Debug] Parsed ${parsedQuestions.length} MCQs from input text`);
       } else if (reviewQueueType === 'cq') {
         const { parseCQQuestions } = await import('../../utils/cqParser');
         parsedQuestions = parseCQQuestions(reviewQueueInputText);
+        console.log(`[ReviewQueue Debug] Parsed ${parsedQuestions.length} CQs from input text`);
       } else if (reviewQueueType === 'sq') {
         const blocks = reviewQueueInputText.split(/---+/).filter(b => b.trim());
         parsedQuestions = blocks.map(block => {
@@ -411,6 +405,7 @@ export default function QuestionBank() {
           });
           return q;
         });
+        console.log(`[ReviewQueue Debug] Parsed ${parsedQuestions.length} SQs from input text`);
       }
 
       if (parsedQuestions.length === 0) {
@@ -460,10 +455,7 @@ export default function QuestionBank() {
     }
 
     const flagged = questions.filter(q => q.isFlagged && q.type === bulkFixType);
-    if (flagged.length === 0) {
-      alert('No flagged questions of this type found.');
-      return;
-    }
+    console.log(`[BulkFix Debug] Found ${flagged.length} flagged questions in state`);
 
     try {
       setIsFixing(true);
@@ -472,12 +464,14 @@ export default function QuestionBank() {
       if (bulkFixType === 'mcq') {
         const { parseMCQQuestions } = await import('../../utils/mcqQuestionParser');
         parsedQuestions = parseMCQQuestions(bulkFixInputText);
+        console.log(`[BulkFix Debug] Parsed ${parsedQuestions.length} MCQs from input text`);
       } else if (bulkFixType === 'cq') {
         const { parseCQQuestions } = await import('../../utils/cqParser');
         parsedQuestions = parseCQQuestions(bulkFixInputText);
+        console.log(`[BulkFix Debug] Parsed ${parsedQuestions.length} CQs from input text`);
       } else if (bulkFixType === 'sq') {
-        // Simple SQ parsing logic for bulk fix
-        const blocks = bulkFixInputText.split(/---+/).filter(b => b.trim());
+        // Targeted SQ parsing for bulk fix
+        const blocks = bulkFixInputText.split(/---+|###/).filter(b => b.trim());
         parsedQuestions = blocks.map(block => {
           const lines = block.split('\n').map(l => l.trim()).filter(l => l);
           const q = { type: 'sq', subject: '', chapter: '', lesson: '', board: '', questionText: '', answer: '' };
@@ -492,6 +486,7 @@ export default function QuestionBank() {
           });
           return q;
         });
+        console.log(`[BulkFix Debug] Parsed ${parsedQuestions.length} SQs from input text`);
       }
 
       if (parsedQuestions.length === 0) {
@@ -499,13 +494,8 @@ export default function QuestionBank() {
         return;
       }
 
-      if (parsedQuestions.length !== flagged.length) {
-        if (!window.confirm(`Count mismatch! Found ${flagged.length} flagged questions but parsed ${parsedQuestions.length} from text. Proceed anyway? (Matched by order)`)) {
-          return;
-        }
-      }
-
       const updates = [];
+      // Match by order of appearance
       const count = Math.min(flagged.length, parsedQuestions.length);
       
       for (let i = 0; i < count; i++) {
@@ -513,11 +503,18 @@ export default function QuestionBank() {
         const improved = parsedQuestions[i];
         
         updates.push({
-          ...original,
-          ...improved,
+          ...original, // Keep all existing fields (id, etc)
+          ...improved, // Overwrite with parsed data
           id: original.id,
           isFlagged: false // Unflag after successful fix
         });
+      }
+
+      if (parsedQuestions.length !== flagged.length) {
+        const message = `Count mismatch! Found ${flagged.length} flagged questions but parsed ${parsedQuestions.length} from text.\n\nOnly the first ${count} will be updated and unflagged. Proceed?`;
+        if (!window.confirm(message)) {
+          return;
+        }
       }
 
       const result = await bulkUpdateQuestions(updates);
@@ -540,120 +537,141 @@ export default function QuestionBank() {
     }
   };
 
-  // On-Demand Fetching for Selected Criteria
+  // Proactive Fetching for Statistics Accuracy
   useEffect(() => {
-    const fetchFilteredData = async () => {
-      const { subject, chapter, type, board, language } = currentFilters;
-      if (!subject || subject === 'none') return;
+    const proactiveFetch = async () => {
+      // 1. Identify what's currently shown in statistics
+      // If a subject is selected, we are showing its chapters.
+      // If no subject is selected, we are showing subjects.
       
-      // Determine if we need to fetch
-      const matches = questions.filter(q => {
-          if (subject && (q.subject || '').trim() !== subject.trim()) return false;
-          if (chapter && (q.chapter || '').trim() !== chapter.trim()) return false;
-          if (type && q.type !== type) return false;
-          if (board && q.board !== board) return false;
-          if (language && q.language !== language) return false;
-          return true;
-      });
-
-      console.log(`[Fetch Debug] Checking ${subject} / ${chapter}. Local matches: ${matches.length}`);
-
-      // If we have 0 questions for these filters, but hierarchy says we should have some
-      let expectedCount = 0;
-      if (hierarchy && hierarchy.length > 0) {
-          const subNode = hierarchy.find(h => h.name === subject);
-          if (subNode) {
-              if (chapter) {
-                  const chapNode = (subNode.chapters || []).find(c => c.name === chapter);
-                  expectedCount = chapNode?.total || 0;
-              } else {
-                  expectedCount = subNode.total || (subNode.chapters || []).reduce((sum, c) => sum + (c.total || 0), 0);
-              }
+      const targets = [];
+      
+      // Target 1: Global context subject
+      if (currentFilters.subject && currentFilters.subject !== 'none') {
+          targets.push({ subject: currentFilters.subject, chapter: currentFilters.chapter });
+      }
+      
+      // Target 2 & 3: Split view subjects
+      if (isSplitView) {
+          if (leftFilters.subject && leftFilters.subject !== 'none') {
+              targets.push({ subject: leftFilters.subject, chapter: leftFilters.chapter });
+          }
+          if (rightFilters.subject && rightFilters.subject !== 'none') {
+              targets.push({ subject: rightFilters.subject, chapter: rightFilters.chapter });
           }
       }
 
-      console.log(`[Fetch Debug] Expected: ${expectedCount}`);
+      for (const target of targets) {
+          const { subject, chapter } = target;
+          
+          // Calculate how many we have vs how many we expect
+          const matches = questions.filter(q => {
+              if ((q.subject || '').trim() !== subject.trim()) return false;
+              if (chapter && (q.chapter || '').trim() !== chapter.trim()) return false;
+              return true;
+          });
 
-      // Trigger fetch if we have 0 locally but expected > 0
-      if (matches.length === 0 && expectedCount > 0) {
-        console.log(`[Fetch Debug] 🚀 Triggering API fetch for missing data...`);
-        setFetchStatus(`Fetching missing data...`);
-        setIsFetchingMore(true);
-        try {
-           const response = await questionApi.fetchQuestions({ 
-               subject, 
-               chapter, 
-               type, 
-               board, 
-               language, 
-               limit: 1000 
-           });
-           const newQuestions = Array.isArray(response) ? response : (response.data || []);
-           console.log(`[Fetch Debug] API returned ${newQuestions.length} questions`);
-           
-           if (newQuestions.length > 0) {
-             const mapped = newQuestions.map(q => ({
-                id: q.id,
-                type: q.type,
-                subject: q.subject,
-                chapter: q.chapter,
-                lesson: q.lesson,
-                board: q.board,
-                language: q.language,
-                question: q.question,
-                questionText: q.question_text,
-                options: typeof q.options === 'string' ? JSON.parse(q.options) : q.options,
-                correctAnswer: q.correct_answer,
-                answer: q.answer,
-                parts: typeof q.parts === 'string' ? JSON.parse(q.parts) : q.parts,
-                image: q.image,
-                answerimage1: q.answerimage1,
-                answerimage2: q.answerimage2,
-                explanation: q.explanation,
-                tags: typeof q.tags === 'string' ? JSON.parse(q.tags) : q.tags,
-                isFlagged: q.is_flagged,
-                isVerified: q.is_verified,
-                inReviewQueue: q.in_review_queue
-             }));
+          let expectedCount = 0;
+          if (hierarchy && hierarchy.length > 0) {
+              const subNode = hierarchy.find(h => (h.name || '').trim() === subject.trim());
+              if (subNode) {
+                  if (chapter) {
+                      const chapNode = (subNode.chapters || []).find(c => (c.name || '').trim() === chapter.trim());
+                      expectedCount = chapNode?.total || 0;
+                  } else {
+                      // Total for the entire subject
+                      expectedCount = subNode.total || (subNode.chapters || []).reduce((sum, c) => sum + (c.total || 0), 0);
+                  }
+              }
+          }
 
-             setQuestions(prev => {
-                const existing = new Set(prev.map(p => p.id));
-                const uniqueNew = mapped.filter(m => !existing.has(m.id));
-                console.log(`[Fetch Debug] Merging ${uniqueNew.length} unique questions into state`);
-                return [...prev, ...uniqueNew];
-             });
-             
-             setFetchStatus(`Loaded ${mapped.length} additional questions`);
-           } else {
-             setFetchStatus(`No questions found on server`);
-           }
-        } catch (e) {
-           console.error("Error fetching filtered data", e);
-           setFetchStatus("Error loading data");
-        } finally {
-           setIsFetchingMore(false);
-           setTimeout(() => setFetchStatus(''), 2000);
-        }
+          // If we are missing more than a few questions, trigger a full fetch for this criteria
+          // We use a small threshold (5) to account for minor sync delays
+          if (expectedCount > matches.length + 5) {
+            console.log(`[Proactive Fetch] 📥 Data incomplete for "${subject}${chapter ? ' / ' + chapter : ''}". Have ${matches.length}/${expectedCount}. Fetching...`);
+            
+            try {
+               // Use a very high limit to get everything for this subject/chapter in one go
+               // The API usually caps at a certain amount, but let's ask for up to 5000
+               const response = await questionApi.fetchQuestions({ 
+                   subject, 
+                   chapter, 
+                   limit: 5000 
+               });
+               const newQuestions = Array.isArray(response) ? response : (response.data || []);
+               
+               if (newQuestions.length > 0) {
+                 const mapped = newQuestions.map(q => ({
+                    id: q.id,
+                    type: q.type,
+                    subject: q.subject,
+                    chapter: q.chapter,
+                    lesson: q.lesson,
+                    board: q.board,
+                    language: q.language,
+                    question: q.question,
+                    questionText: q.question_text,
+                    options: typeof q.options === 'string' ? JSON.parse(q.options) : q.options,
+                    correctAnswer: q.correct_answer,
+                    answer: q.answer,
+                    parts: typeof q.parts === 'string' ? JSON.parse(q.parts) : q.parts,
+                    image: q.image,
+                    answerimage1: q.answerimage1,
+                    answerimage2: q.answerimage2,
+                    explanation: q.explanation,
+                    tags: typeof q.tags === 'string' ? JSON.parse(q.tags) : q.tags,
+                    isFlagged: q.is_flagged,
+                    isVerified: q.is_verified,
+                    inReviewQueue: q.in_review_queue
+                 }));
+
+                 setQuestions(prev => {
+                    const existing = new Set(prev.map(p => p.id));
+                    const uniqueNew = mapped.filter(m => !existing.has(m.id));
+                    if (uniqueNew.length === 0) return prev;
+                    return [...prev, ...uniqueNew];
+                 });
+                 
+                 console.log(`[Proactive Fetch] ✅ Loaded ${mapped.length} questions for "${subject}".`);
+               }
+            } catch (e) {
+               console.error("[Proactive Fetch] ❌ Error:", e);
+            }
+          }
       }
     };
     
-    fetchFilteredData();
-  }, [currentFilters.subject, currentFilters.chapter, currentFilters.type, currentFilters.board, currentFilters.language]); 
+    // Debounce proactive fetch slightly to avoid spamming during rapid filter changes
+    const timer = setTimeout(proactiveFetch, 1000);
+    return () => clearTimeout(timer);
+  }, [
+    currentFilters.subject, currentFilters.chapter,
+    leftFilters.subject, leftFilters.chapter,
+    rightFilters.subject, rightFilters.chapter,
+    isSplitView,
+    hierarchy,
+    // Dependency on questions.length is tricky but needed to re-evaluate when new data arrives
+    // but only if the length actually changed.
+    questions.length 
+  ]); 
   // But we need to ensure we don't refetch if already fetched. The `hasQuestions` check handles the initial case.
   
-  // Get unique metadata values from all questions
-  const getUniqueValues = (field) => {
-    const values = questions
-      .map(q => q[field])
-      .filter(val => val && val.trim() !== '' && val !== 'N/A')
-      .filter((value, index, self) => self.indexOf(value) === index);
-    return values.sort();
-  };
-  
-  const uniqueSubjects = getUniqueValues('subject');
-  const uniqueChapters = getUniqueValues('chapter');
-  const uniqueLessons = getUniqueValues('lesson');
-  const uniqueBoards = getUniqueValues('board');
+  // Get unique metadata values from all questions - MEMOIZED
+  const uniqueSubjects = React.useMemo(() => {
+    return [...new Set(questions.map(q => q.subject).filter(s => s && s !== 'N/A'))].sort();
+  }, [questions]);
+
+  const uniqueChapters = React.useMemo(() => {
+    return [...new Set(questions.map(q => q.chapter).filter(c => c && c !== 'N/A'))].sort();
+  }, [questions]);
+
+  const uniqueLessons = React.useMemo(() => {
+    return [...new Set(questions.map(q => q.lesson).filter(l => l && l !== 'N/A'))].sort();
+  }, [questions]);
+
+  const uniqueBoards = React.useMemo(() => {
+    return [...new Set(questions.map(q => q.board).filter(b => b && b !== 'N/A'))].sort();
+  }, [questions]);
 
   // Computed questions based on view mode - MEMOIZED to prevent lag on every click
   const filteredQuestionsSingle = React.useMemo(() => 
@@ -671,9 +689,24 @@ export default function QuestionBank() {
     [questions, currentFilters, rightFilters, fullQuestionsMap, hasSearched]
   );
   
-  const currentVisibleQuestions = isSplitView 
-    ? [...new Set([...filteredQuestionsLeft, ...filteredQuestionsRight])] 
-    : filteredQuestionsSingle;
+  const currentVisibleQuestions = React.useMemo(() => {
+    if (!isSplitView) return filteredQuestionsSingle;
+    // Efficiently merge two arrays and maintain uniqueness
+    const seen = new Set();
+    const result = [];
+    [...filteredQuestionsLeft, ...filteredQuestionsRight].forEach(q => {
+        if (!seen.has(q.id)) {
+            seen.add(q.id);
+            result.push(q);
+        }
+    });
+    return result;
+  }, [isSplitView, filteredQuestionsSingle, filteredQuestionsLeft, filteredQuestionsRight]);
+
+  // Reset visibleCount when filters change to keep rendering fast
+  useEffect(() => {
+    setVisibleCount(50);
+  }, [currentFilters, leftFilters, rightFilters, isSplitView]);
   
   // Convert selectedQuestions to Set for O(1) rendering performance
   const selectedSet = React.useMemo(() => new Set(selectedQuestions), [selectedQuestions]);
@@ -727,11 +760,17 @@ export default function QuestionBank() {
       return toggleQuestionSelectionRef.current(...args);
   }, []);
 
-  // Reset hasSearched when global or split-view filters change
-  // This ensures we always load full content for the current results set
+  // Automatically trigger loading when global or split-view filters change
+  // This ensures we immediately show results for Subject/Chapter selection
   useEffect(() => {
-    setHasSearched(false);
-  }, [currentFilters, isSplitView, leftFilters, rightFilters]);
+    const hasSubjectOrChapter = currentFilters.subject || currentFilters.chapter || 
+                               leftFilters.subject || leftFilters.chapter || 
+                               rightFilters.subject || rightFilters.chapter;
+    
+    if (hasSubjectOrChapter) {
+        setHasSearched(true);
+    }
+  }, [currentFilters.subject, currentFilters.chapter, isSplitView, leftFilters.subject, leftFilters.chapter, rightFilters.subject, rightFilters.chapter]);
   
   const selectAll = () => {
     setSelectedQuestions(currentVisibleQuestions.map(q => q.id));
@@ -1832,31 +1871,37 @@ export default function QuestionBank() {
   };
 
   const bulkEditMetadata = async () => {
+    console.log(`[BulkEdit Debug] Initializing bulk edit for ${selectedQuestions.length} selected IDs.`);
     if (selectedQuestions.length === 0) {
       alert('Please select at least one question to edit.');
       return;
     }
 
     // Ensure we have full data for selected questions to prevent overwriting with defaults
-    const missingIds = selectedQuestions.filter(id => !fullQuestionsMap.has(id));
+    const missingIds = selectedQuestions.filter(id => !fullQuestionsMap.has(id.toString()));
     if (missingIds.length > 0) {
+        console.log(`[BulkEdit Debug] Fetching full data for ${missingIds.length} missing questions.`);
         try {
             const fetched = await fetchQuestionsByIds(missingIds);
             setFullQuestionsMap(prev => {
                 const next = new Map(prev);
-                fetched.forEach(q => next.set(q.id, q));
+                fetched.forEach(q => next.set(q.id.toString(), q));
                 return next;
             });
         } catch (e) {
-            console.error("Error fetching for bulk edit", e);
+            console.error("[BulkEdit Debug] Error fetching for bulk edit", e);
             alert("Error preparing questions for edit.");
             return;
         }
     }
 
     // Get the selected question objects
-    const selectedQuestionObjects = selectedQuestions.map(id => fullQuestionsMap.get(id) || questions.find(q => q.id === id));
+    const selectedQuestionObjects = selectedQuestions.map(id => 
+        fullQuestionsMap.get(id.toString()) || questions.find(q => q.id.toString() === id.toString())
+    ).filter(Boolean);
     
+    console.log(`[BulkEdit Debug] Prepared ${selectedQuestionObjects.length} objects for update.`);
+
     // Prepare updates
     const updates = selectedQuestionObjects.map(question => {
         const updatedQuestion = { ...question };
@@ -1870,6 +1915,7 @@ export default function QuestionBank() {
     });
 
     try {
+        console.log(`[BulkEdit Debug] Sending ${updates.length} updates to bulkUpdateQuestions.`);
         const result = await bulkUpdateQuestions(updates);
         
         // Reset and close
@@ -1883,12 +1929,12 @@ export default function QuestionBank() {
         // Refresh full map with new data
         setFullQuestionsMap(prev => {
             const next = new Map(prev);
-            updates.forEach(q => next.set(q.id, q));
+            updates.forEach(q => next.set(q.id.toString(), q));
             return next;
         });
         
     } catch (error) {
-        console.error('Error updating metadata:', error);
+        console.error('[BulkEdit Debug] Error updating metadata:', error);
         alert('An error occurred while updating metadata.');
     }
   };
@@ -1997,19 +2043,27 @@ export default function QuestionBank() {
     }
   };
 
-  const handleSelectAllQuestionsInCategory = (category, value, event) => {
+  const handleSelectAllQuestionsInCategory = useCallback(async (category, value, event) => {
+    console.log(`[Selection Debug] Triggered selection for ${category}: "${value}"`);
     let categoriesToProcess = [{ type: category, key: value }];
+
+    // Comprehensive normalization for robust matching
+    const robustNormalize = (str) => (str || '').toString()
+        .normalize('NFC')
+        .replace(/[\s\u200B\u200C\u200D]+/g, '') // Remove all spaces and invisible chars
+        .toLowerCase();
+
+    const normalizedTargetValue = robustNormalize(value);
 
     // Handle Range Selection with Shift Key
     if (event && event.shiftKey && lastSelectedCategory && lastSelectedCategory.type === category) {
-      // Get all unique values for this category from current visible questions, sorted
-      const allValues = [...new Set(currentVisibleQuestions
+      const allValues = [...new Set(questions
         .map(q => q[category])
         .filter(Boolean))]
         .sort((a, b) => a.localeCompare(b));
       
-      const startIdx = allValues.indexOf(lastSelectedCategory.key);
-      const endIdx = allValues.indexOf(value);
+      const startIdx = allValues.map(robustNormalize).indexOf(robustNormalize(lastSelectedCategory.key));
+      const endIdx = allValues.map(robustNormalize).indexOf(normalizedTargetValue);
 
       if (startIdx !== -1 && endIdx !== -1) {
         const minIdx = Math.min(startIdx, endIdx);
@@ -2022,45 +2076,122 @@ export default function QuestionBank() {
 
     setLastSelectedCategory({ type: category, key: value });
 
-    // Determine all question IDs to be toggled/selected
-    const allMatchingIds = currentVisibleQuestions.filter(q => {
-      return categoriesToProcess.some(cat => q[cat.type] === cat.key);
-    }).map(q => q.id);
+    // Determine expected totals from hierarchy
+    let totalExpected = 0;
+    if (hierarchy && hierarchy.length > 0) {
+        categoriesToProcess.forEach(cat => {
+            const normKey = robustNormalize(cat.key);
+            if (cat.type === 'subject') {
+                const node = hierarchy.find(h => robustNormalize(h.name) === normKey);
+                totalExpected += node?.total || 0;
+            } else if (cat.type === 'chapter') {
+                hierarchy.forEach(s => {
+                    const chap = s.chapters?.find(c => robustNormalize(c.name) === normKey);
+                    if (chap) totalExpected += chap.total || 0;
+                });
+            }
+        });
+    }
 
-    const isAlreadySelected = selectedCategories.some(cat => cat.type === category && cat.key === value);
+    console.log(`[Selection Debug] Category: ${category}, Value: ${value}, Expected from Hierarchy: ${totalExpected}`);
 
-    // Toggle logic (only if single selection, or forced select if range)
+    const getLocalMatches = (qs, cat, val, list) => qs.filter(q => {
+        if (!q) return false;
+        if (cat === 'type' && val === 'Unspecified') {
+            return !q.type || q.type === 'other' || q.type === 'Unspecified';
+        }
+        const qVal = robustNormalize(q[cat]);
+        return list.some(c => qVal === robustNormalize(c.key));
+    });
+
+    let currentMatches = getLocalMatches(questions, category, value, categoriesToProcess);
+    console.log(`[Selection Debug] Found ${currentMatches.length} matches in local state.`);
+    
+    // FETCH IF INCOMPLETE
+    if (totalExpected > currentMatches.length + 2 && (category === 'subject' || category === 'chapter')) {
+        console.log(`[Selection Debug] Triggering proactive fetch for incomplete category data...`);
+        setFetchStatus(`Downloading ${totalExpected} questions...`);
+        
+        try {
+            const allNewQuestionsRaw = [];
+            for (const cat of categoriesToProcess) {
+                const response = await questionApi.fetchQuestions({ 
+                    [cat.type]: cat.key, 
+                    limit: 5000 
+                });
+                const batch = Array.isArray(response) ? response : (response.data || []);
+                allNewQuestionsRaw.push(...batch);
+            }
+
+            if (allNewQuestionsRaw.length > 0) {
+                const mapped = allNewQuestionsRaw.map(mapDatabaseToApp);
+                console.log(`[Selection Debug] Fetched ${mapped.length} additional questions.`);
+
+                setQuestions(prev => {
+                    const existingIds = new Set(prev.filter(p => p && p.id).map(p => p.id.toString()));
+                    const uniqueNew = mapped.filter(m => m && m.id && !existingIds.has(m.id.toString()));
+                    return uniqueNew.length > 0 ? [...prev, ...uniqueNew] : prev;
+                });
+
+                // Update local matches directly from fetched data + current state
+                const combinedIds = new Set(questions.filter(q => q && q.id).map(q => q.id.toString()));
+                const combinedArray = [...questions.filter(q => q)];
+                mapped.forEach(m => {
+                    if (!combinedIds.has(m.id.toString())) {
+                        combinedArray.push(m);
+                        combinedIds.add(m.id.toString());
+                    }
+                });
+                currentMatches = getLocalMatches(combinedArray, category, value, categoriesToProcess);
+                console.log(`[Selection Debug] After fetch, matches increased to ${currentMatches.length}.`);
+            }
+        } catch (e) {
+            console.error("[Selection Debug] Selection sync failed", e);
+        } finally {
+            setFetchStatus('');
+        }
+    }
+
+    const allMatchingIds = currentMatches.map(q => q.id).filter(id => id !== undefined && id !== null);
+    console.log(`[Selection Debug] Final ID list for selection has ${allMatchingIds.length} items.`);
+
+    const isAlreadySelected = selectedCategories.some(cat => 
+        cat.type === category && robustNormalize(cat.key) === normalizedTargetValue
+    );
+
     if (categoriesToProcess.length === 1 && isAlreadySelected) {
-      // Unselect single
+      console.log(`[Selection Debug] Deselecting category.`);
       setSelectedQuestions(prev => prev.filter(id => !allMatchingIds.includes(id)));
-      setSelectedCategories(prev => prev.filter(cat => !(cat.type === category && cat.key === value)));
+      setSelectedCategories(prev => prev.filter(cat => 
+        !(cat.type === category && robustNormalize(cat.key) === normalizedTargetValue)
+      ));
     } else {
-      // Select range or single
+      console.log(`[Selection Debug] Adding category to selection.`);
       if (!selectionMode) setSelectionMode(true);
-      
-      setSelectedQuestions(prev => [...new Set([...prev, ...allMatchingIds])]);
+      setSelectedQuestions(prev => {
+          const next = [...new Set([...prev, ...allMatchingIds])];
+          console.log(`[Selection Debug] New selectedQuestions length: ${next.length}`);
+          return next;
+      });
       setSelectedCategories(prev => {
         const newCats = [...prev];
         categoriesToProcess.forEach(newCat => {
-          if (!newCats.some(c => c.type === newCat.type && c.key === newCat.key)) {
+          if (!newCats.some(c => c.type === newCat.type && robustNormalize(c.key) === robustNormalize(newCat.key))) {
             newCats.push(newCat);
           }
         });
         return newCats;
       });
     }
-  };
+  }, [questions, hierarchy, selectedCategories, selectionMode, lastSelectedCategory, setQuestions]);
 
-  const handleSearch = async (view = 'single') => {
+  const handleSearch = useCallback(async (view = 'single') => {
     setIsSearching(true);
     
-    // Determine which filters to use
     let filtersToUse = currentFilters;
     if (view === 'left') filtersToUse = { ...currentFilters, ...leftFilters };
     if (view === 'right') filtersToUse = { ...currentFilters, ...rightFilters };
     
-    // 1. Ensure we have metadata from the server for these filters
-    // This handles the case where the local cache is incomplete
     try {
         const response = await questionApi.fetchQuestions({ 
             subject: filtersToUse.subject,
@@ -2068,60 +2199,36 @@ export default function QuestionBank() {
             type: filtersToUse.type,
             board: filtersToUse.board,
             language: filtersToUse.language,
-            limit: 1000 
+            limit: 5000 
         });
         const rawResults = Array.isArray(response) ? response : (response.data || []);
         
         if (rawResults.length > 0) {
-            const mapped = rawResults.map(q => ({
-                id: q.id,
-                type: q.type,
-                subject: q.subject,
-                chapter: q.chapter,
-                lesson: q.lesson,
-                board: q.board,
-                language: q.language,
-                question: q.question,
-                questionText: q.question_text,
-                options: typeof q.options === 'string' ? JSON.parse(q.options) : q.options,
-                correctAnswer: q.correct_answer,
-                answer: q.answer,
-                parts: typeof q.parts === 'string' ? JSON.parse(q.parts) : q.parts,
-                image: q.image,
-                answerimage1: q.answerimage1,
-                answerimage2: q.answerimage2,
-                explanation: q.explanation,
-                tags: typeof q.tags === 'string' ? JSON.parse(q.tags) : q.tags,
-                isFlagged: q.is_flagged,
-                isVerified: q.is_verified,
-                inReviewQueue: q.in_review_queue
-            }));
+            const mapped = rawResults.map(mapDatabaseToApp);
 
-            // Merge into global questions state
             setQuestions(prev => {
-                const existing = new Set(prev.map(p => p.id));
-                const uniqueNew = mapped.filter(m => !existing.has(m.id));
-                return [...prev, ...uniqueNew];
+                const existing = new Set(prev.filter(p => p && p.id).map(p => p.id.toString()));
+                const uniqueNew = mapped.filter(m => m && m.id && !existing.has(m.id.toString()));
+                return uniqueNew.length > 0 ? [...prev, ...uniqueNew] : prev;
             });
 
-            // Also update fullQuestionsMap since we already have full data from this endpoint
             setFullQuestionsMap(prev => {
                 const next = new Map(prev);
-                mapped.forEach(q => next.set(q.id, q));
+                mapped.forEach(q => {
+                    if (q && q.id) {
+                        next.set(q.id.toString(), q);
+                    }
+                });
                 return next;
             });
         }
     } catch (error) {
         console.error("Error pre-fetching for search:", error);
     }
-
-    // 2. Refresh candidates from updated local state (which now includes API results)
-    // We use a small delay or just rely on the fact that we'll re-filter in the next render
-    // Actually, we can just setHasSearched(true) and the UI will update
     
     setHasSearched(true);
     setIsSearching(false);
-  };
+  }, [currentFilters, leftFilters, rightFilters, setQuestions]);
 
   const handleFetchMore = async () => {
     setIsFetchingMore(true);
@@ -2156,6 +2263,107 @@ export default function QuestionBank() {
       setFetchStatus('Error during full fetch.');
     } finally {
       setIsFetchingAll(false);
+    }
+  };
+
+  const handleSyncAllMetadata = async () => {
+    if (!hierarchy || hierarchy.length === 0) {
+        alert("Hierarchy not loaded yet. Please wait.");
+        return;
+    }
+    
+    if (!window.confirm("This will identify and download all missing question types for ALL chapters to make your statistics 100% accurate. This may take a minute. Continue?")) return;
+
+    setIsSyncingMetadata(true);
+    setFetchStatus('Identifying missing data...');
+    
+    try {
+        const tasks = [];
+        hierarchy.forEach(sub => {
+            const subName = (sub.name || '').trim();
+            sub.chapters?.forEach(chap => {
+                const chapName = (chap.name || '').trim();
+                const expected = chap.total || 0;
+                const local = questions.filter(q => 
+                    (q.subject || '').trim() === subName && 
+                    (q.chapter || '').trim() === chapName
+                ).length;
+                
+                if (local < expected - 2) { // Use small threshold for minor sync diffs
+                    tasks.push({ subject: subName, chapter: chapName, expected, local });
+                }
+            });
+        });
+        
+        if (tasks.length === 0) {
+            alert("✅ All statistics are already 100% accurate!");
+            setIsSyncingMetadata(false);
+            setFetchStatus('');
+            return;
+        }
+        
+        console.log(`[Deep Sync] 🚀 Syncing ${tasks.length} chapters...`);
+        setFetchStatus(`Syncing ${tasks.length} chapters...`);
+        
+        // Execute in parallel chunks
+        const CHUNK_SIZE = 3;
+        for (let i = 0; i < tasks.length; i += CHUNK_SIZE) {
+            const chunk = tasks.slice(i, i + CHUNK_SIZE);
+            await Promise.all(chunk.map(async task => {
+                try {
+                    const response = await questionApi.fetchQuestions({
+                        subject: task.subject,
+                        chapter: task.chapter,
+                        limit: 5000 
+                    });
+                    const rawData = Array.isArray(response) ? response : (response.data || []);
+                    
+                    if (rawData.length > 0) {
+                        const mapped = rawData.map(q => ({
+                            id: q.id,
+                            type: q.type,
+                            subject: q.subject,
+                            chapter: q.chapter,
+                            lesson: q.lesson,
+                            board: q.board,
+                            language: q.language,
+                            question: q.question,
+                            questionText: q.question_text,
+                            options: typeof q.options === 'string' ? JSON.parse(q.options) : q.options,
+                            correctAnswer: q.correct_answer,
+                            answer: q.answer,
+                            parts: typeof q.parts === 'string' ? JSON.parse(q.parts) : q.parts,
+                            image: q.image,
+                            answerimage1: q.answerimage1,
+                            answerimage2: q.answerimage2,
+                            explanation: q.explanation,
+                            tags: typeof q.tags === 'string' ? JSON.parse(q.tags) : q.tags,
+                            isFlagged: q.is_flagged,
+                            isVerified: q.is_verified,
+                            inReviewQueue: q.in_review_queue
+                        }));
+
+                        setQuestions(prev => {
+                            const existing = new Set(prev.map(p => p.id.toString()));
+                            const uniqueNew = mapped.filter(m => !existing.has(m.id.toString()));
+                            if (uniqueNew.length === 0) return prev;
+                            return [...prev, ...uniqueNew];
+                        });
+                    }
+                } catch (err) {
+                    console.error(`Failed to sync ${task.subject}/${task.chapter}:`, err);
+                }
+            }));
+            setFetchStatus(`Synced ${Math.min(i + CHUNK_SIZE, tasks.length)} / ${tasks.length} chapters...`);
+        }
+        
+        alert("✅ Deep Statistics Sync complete! All counts should now be accurate.");
+    } catch (error) {
+        console.error('Error during metadata sync:', error);
+        alert('An error occurred during sync.');
+    } finally {
+        setIsSyncingMetadata(false);
+        setFetchStatus('');
     }
   };
 
@@ -4047,6 +4255,24 @@ export default function QuestionBank() {
             <div style={{marginBottom: '15px', marginTop: '10px', display: 'flex', justifyContent: 'flex-end', gap: '10px', alignItems: 'center'}}>
                 {fetchStatus && <span style={{fontSize: '12px', color: '#666'}}>{fetchStatus}</span>}
                 <button 
+                    onClick={handleSyncAllMetadata}
+                    disabled={isSyncingMetadata || isFetchingAll || isFetchingMore}
+                    style={{
+                        padding: '10px 20px', 
+                        backgroundColor: '#9b59b6', 
+                        color: 'white', 
+                        border: 'none', 
+                        borderRadius: '5px',
+                        cursor: (isSyncingMetadata || isFetchingAll || isFetchingMore) ? 'wait' : 'pointer',
+                        fontWeight: 'bold',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '5px'
+                    }}
+                >
+                    {isSyncingMetadata ? '🔄 Syncing Stats...' : '🔄 Deep Sync Stats'}
+                </button>
+                <button 
                     onClick={handleFetchAll}
                     disabled={isFetchingAll || isFetchingMore}
                     style={{
@@ -4142,15 +4368,16 @@ export default function QuestionBank() {
             {showStats && (
               <Statistics 
                   questions={filteredQuestionsSingle} 
+                  filters={currentFilters}
                   onFilterSelect={(key, value) => {
-                      // Update global context filters
-                      // Since setFilters does a merge, this works perfectly for drill-down
-                      const filterKey = key === 'board' ? 'board' : 
-                                        key === 'subject' ? 'subject' : 
-                                        key === 'chapter' ? 'chapter' : 
-                                        key === 'lesson' ? 'lesson' : 
-                                        key === 'type' ? 'type' : key;
-                      setFilters({ [filterKey]: value });
+                      const updates = { [key]: value };
+                      if (key === 'subject') {
+                          updates.chapter = '';
+                          updates.lesson = '';
+                      } else if (key === 'chapter') {
+                          updates.lesson = '';
+                      }
+                      setFilters(updates);
                   }}
                   onSelectAll={handleSelectAllQuestionsInCategory}
                   selectedCategories={selectedCategories}
@@ -4165,7 +4392,18 @@ export default function QuestionBank() {
                   <h3 style={{marginTop: 0, borderBottom: '1px solid #eee', paddingBottom: '10px'}}>Left View</h3>
                   <SearchFilters 
                     filters={leftFilters} 
-                    onFilterChange={(newFilters) => setLeftFilters(prev => ({ ...prev, ...newFilters }))} 
+                    onFilterChange={(newFilters) => {
+                        setLeftFilters(prev => {
+                            const updated = { ...prev, ...newFilters };
+                            if (newFilters.subject) {
+                                updated.chapter = '';
+                                updated.lesson = '';
+                            } else if (newFilters.chapter) {
+                                updated.lesson = '';
+                            }
+                            return updated;
+                        });
+                    }} 
                   />
                   <div style={{marginBottom: '10px', marginTop: '10px', display: 'flex', gap: '5px', flexWrap: 'wrap'}}>
                      <button 
@@ -4222,7 +4460,22 @@ export default function QuestionBank() {
                   </div>
                   <Statistics 
                     questions={filteredQuestionsLeft} 
-                    onFilterSelect={(key, value) => setLeftFilters(prev => ({ ...prev, [key]: value }))}
+                    filters={leftFilters}
+                    onFilterSelect={(key, value) => {
+                        console.log(`[SplitView Debug] Left Filter Select: ${key} = ${value}`);
+                        setLeftFilters(prev => {
+                            const updated = { ...prev, [key]: value };
+                            if (key === 'subject') {
+                                updated.chapter = '';
+                                updated.lesson = '';
+                            } else if (key === 'chapter') {
+                                updated.lesson = '';
+                            }
+                            return updated;
+                        });
+                    }}
+                    onSelectAll={handleSelectAllQuestionsInCategory}
+                    selectedCategories={selectedCategories}
                   />
                   {renderQuestionList(filteredQuestionsLeft, 'left')}
               </div>
@@ -4232,7 +4485,18 @@ export default function QuestionBank() {
                   <h3 style={{marginTop: 0, borderBottom: '1px solid #eee', paddingBottom: '10px'}}>Right View</h3>
                    <SearchFilters 
                     filters={rightFilters} 
-                    onFilterChange={(newFilters) => setRightFilters(prev => ({ ...prev, ...newFilters }))} 
+                    onFilterChange={(newFilters) => {
+                        setRightFilters(prev => {
+                            const updated = { ...prev, ...newFilters };
+                            if (newFilters.subject) {
+                                updated.chapter = '';
+                                updated.lesson = '';
+                            } else if (newFilters.chapter) {
+                                updated.lesson = '';
+                            }
+                            return updated;
+                        });
+                    }} 
                   />
                   <div style={{marginBottom: '10px', marginTop: '10px', display: 'flex', gap: '5px', flexWrap: 'wrap'}}>
                      <button 
@@ -4289,7 +4553,22 @@ export default function QuestionBank() {
                   </div>
                   <Statistics 
                     questions={filteredQuestionsRight} 
-                    onFilterSelect={(key, value) => setRightFilters(prev => ({ ...prev, [key]: value }))}
+                    filters={rightFilters}
+                    onFilterSelect={(key, value) => {
+                        console.log(`[SplitView Debug] Right Filter Select: ${key} = ${value}`);
+                        setRightFilters(prev => {
+                            const updated = { ...prev, [key]: value };
+                            if (key === 'subject') {
+                                updated.chapter = '';
+                                updated.lesson = '';
+                            } else if (key === 'chapter') {
+                                updated.lesson = '';
+                            }
+                            return updated;
+                        });
+                    }}
+                    onSelectAll={handleSelectAllQuestionsInCategory}
+                    selectedCategories={selectedCategories}
                   />
                   {renderQuestionList(filteredQuestionsRight, 'right')}
               </div>

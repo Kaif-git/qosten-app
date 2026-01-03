@@ -193,6 +193,7 @@ export const questionApi = {
   },
 
   async createQuestion(questionData) {
+    console.log('📤 API: createQuestion - sending data:', questionData);
     const response = await fetch(`${API_BASE_URL}/questions`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -233,7 +234,8 @@ export const questionApi = {
     const results = {
       successCount: 0,
       failedCount: 0,
-      errors: []
+      errors: [],
+      questions: [] // Return the created questions
     };
 
     // Use a batch size of 100 as requested
@@ -245,8 +247,6 @@ export const questionApi = {
       console.log(`📤 Uploading batch ${Math.floor(i / CHUNK_SIZE) + 1} (${i + 1} to ${Math.min(i + CHUNK_SIZE, total)} of ${total})...`);
       
       try {
-        // Assuming the API supports bulk creation at POST /questions/bulk or similar
-        // If not, we fall back to parallel requests for the chunk
         const response = await fetch(`${API_BASE_URL}/questions/bulk`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -254,15 +254,18 @@ export const questionApi = {
         });
 
         if (response.ok) {
+          const data = await response.json();
+          const addedBatch = Array.isArray(data) ? data : (data.data || chunk);
+          results.questions.push(...addedBatch);
           results.successCount += chunk.length;
           console.log(`✅ Batch ${Math.floor(i / CHUNK_SIZE) + 1} uploaded successfully.`);
         } else {
-          // If bulk endpoint fails or doesn't exist, try individual uploads for this chunk
           console.warn(`⚠️ Bulk endpoint failed with ${response.status}, falling back to individual uploads for this batch...`);
           
           for (const q of chunk) {
             try {
-              await this.createQuestion(q);
+              const newQ = await this.createQuestion(q);
+              results.questions.push(newQ.data || newQ);
               results.successCount++;
             } catch (err) {
               results.failedCount++;
@@ -272,10 +275,10 @@ export const questionApi = {
         }
       } catch (error) {
         console.error(`❌ Error uploading batch ${Math.floor(i / CHUNK_SIZE) + 1}:`, error);
-        // Fallback to individual for this batch on network error too
         for (const q of chunk) {
           try {
-            await this.createQuestion(q);
+            const newQ = await this.createQuestion(q);
+            results.questions.push(newQ.data || newQ);
             results.successCount++;
           } catch (err) {
             results.failedCount++;

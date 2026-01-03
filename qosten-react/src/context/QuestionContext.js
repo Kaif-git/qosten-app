@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer, useEffect, useRef } from 'react';
+import React, { createContext, useContext, useReducer, useEffect, useRef, useCallback, useMemo } from 'react';
 import { supabase } from '../services/supabaseClient';
 import { questionApi } from '../services/questionApi';
 
@@ -56,13 +56,13 @@ function questionReducer(state, action) {
       return {
         ...state,
         questions: state.questions.map(q => 
-          q.id === action.payload.id ? action.payload : q
+          q.id == action.payload.id ? action.payload : q
         )
       };
     case ACTIONS.DELETE_QUESTION:
       return {
         ...state,
-        questions: state.questions.filter(q => q.id !== action.payload)
+        questions: state.questions.filter(q => q.id != action.payload)
       };
     case ACTIONS.SET_FILTERS:
       return { ...state, currentFilters: { ...state.currentFilters, ...action.payload } };
@@ -113,175 +113,402 @@ const base64ToBlob = async (base64Data) => {
   return await res.blob();
 };
 
+/**
+ * Maps database question format to App format
+ */
+export const mapDatabaseToApp = (q) => {
+  if (!q) return null;
+  
+  const questionText = q.question_text || q.questionText || q.text || q.question || '';
+  const imageUrl = q.image_url || q.imageUrl || q.image || null;
+
+  // Basic question structure
+  const question = {
+    id: q.id,
+    type: q.type || 'mcq',
+    text: questionText,
+    questionText: questionText,
+    subject: q.subject || 'N/A',
+    chapter: q.chapter || 'N/A',
+    lesson: q.lesson || 'N/A',
+    board: q.board || 'N/A',
+    language: q.language || 'english',
+    imageUrl: imageUrl, // Canonical URL from DB
+    image: imageUrl,    // Local working copy/display
+    isFlagged: !!(q.is_flagged || q.isFlagged),
+    isVerified: !!(q.is_verified || q.isVerified),
+    inReviewQueue: !!(q.in_review_queue || q.inReviewQueue),
+    createdAt: q.created_at || q.createdAt
+  };
+
+  // Add MCQ specific fields
+  if (q.type === 'mcq') {
+    let opts = q.options;
+    if (typeof opts === 'string') {
+        try { opts = JSON.parse(opts); } catch (e) { opts = []; }
+    }
+    question.options = Array.isArray(opts) 
+      ? opts.map(opt => ({
+          label: opt.label || '',
+          text: opt.text || '',
+          image: opt.image || opt.image_url || null,
+          isCorrect: !!(opt.is_correct || opt.isCorrect)
+        }))
+      : [];
+    question.explanation = q.explanation || '';
+    question.correctAnswer = q.correct_answer || q.correctAnswer || '';
+  }
+
+  // Add CQ specific fields
+  if (q.type === 'cq') {
+    question.stem = q.stem || questionText;
+    let parts = q.parts;
+    if (typeof parts === 'string') {
+        try { parts = JSON.parse(parts); } catch (e) { parts = []; }
+    }
+    question.parts = Array.isArray(parts)
+      ? parts.map(part => ({
+          letter: part.letter || part.label || '',
+          label: part.label || part.letter || '',
+          text: part.text || '',
+          marks: part.marks || 0,
+          answer: part.answer || '',
+          image: part.image || part.answerImage || part.image_url || null,
+          answerImage: part.answerImage || part.image || part.image_url || null
+        }))
+      : [];
+    // Only use existing columns
+    question.answerimage1 = q.answerimage1 || q.answerImage1 || null;
+    question.answerimage2 = q.answerimage2 || q.answerImage2 || null;
+  }
+
+  // Add SQ specific fields
+  if (q.type === 'sq') {
+    question.question = questionText;
+    question.answer = q.answer || '';
+  }
+
+  return question;
+};
+
+/**
+ * Maps App question format to Database format
+ */
+const mapAppToDatabase = (q) => {
+  if (!q) return null;
+
+  // Priority to 'image' as it contains the newly uploaded Supabase URL
+  const finalImageUrl = q.image || q.imageUrl;
+  
+  if (finalImageUrl && finalImageUrl.startsWith('http')) {
+      console.log(`📡 mapAppToDatabase: Including Supabase URL for main image: ${finalImageUrl.substring(0, 60)}...`);
+  }
+
+  const dbQ = {
+    id: q.id,
+    type: q.type,
+    question_text: q.questionText || q.text || q.question || '',
+    subject: q.subject,
+    chapter: q.chapter,
+    lesson: q.lesson,
+    board: q.board,
+    language: q.language,
+    // Redundant image fields for backend compatibility
+    image_url: finalImageUrl,
+    image: finalImageUrl,
+    questionimage: finalImageUrl, 
+    is_flagged: !!q.isFlagged,
+    is_verified: !!q.isVerified,
+    in_review_queue: !!q.inReviewQueue
+  };
+
+  if (q.type === 'mcq') {
+    dbQ.options = (q.options || []).map((opt, idx) => {
+      const optImg = opt.image || opt.imageUrl;
+      if (optImg && optImg.startsWith('http')) {
+          console.log(`📡 mapAppToDatabase: Including Supabase URL for MCQ option ${opt.label}: ${optImg.substring(0, 60)}...`);
+      }
+      return {
+        label: opt.label,
+        text: opt.text,
+        image: optImg,
+        image_url: optImg,
+        is_correct: opt.isCorrect || opt.label === q.correctAnswer
+      };
+    });
+    dbQ.explanation = q.explanation;
+    dbQ.correct_answer = q.correctAnswer;
+  }
+
+  if (q.type === 'cq') {
+    dbQ.stem = q.stem || q.questionText || q.text || '';
+    
+    // Explicitly map answerimage1 and answerimage2
+    dbQ.answerimage1 = q.answerimage1;
+    dbQ.answerimage2 = q.answerimage2;
+    
+    dbQ.parts = (q.parts || []).map((part, idx) => {
+      const partImage = part.image || part.answerImage;
+      if (partImage && partImage.startsWith('http')) {
+          console.log(`📡 mapAppToDatabase: Including Supabase URL for CQ part ${part.letter}: ${partImage.substring(0, 60)}...`);
+      }
+      return {
+        label: part.label || part.letter,
+        letter: part.letter || part.label,
+        text: part.text,
+        marks: part.marks,
+        answer: part.answer,
+        image: partImage,
+        image_url: partImage
+      };
+    });
+  }
+
+  if (q.type === 'sq') {
+    dbQ.answer = q.answer;
+  }
+
+  return dbQ;
+};
+
 // Context provider component
 export function QuestionProvider({ children }) {
   const [state, dispatch] = useReducer(questionReducer, initialState);
   const isFetchingRef = useRef(false);
 
-  // Helper to save to both memory and persistent cache
+  // --- 1. Helpers ---
+
+  // Helper to update statistics based on current questions
+  const updateStats = useCallback((questions) => {
+    if (!questions || !Array.isArray(questions)) return;
+    
+    const subjects = new Set(questions.map(q => q.subject).filter(Boolean));
+    const chapters = new Set(questions.map(q => q.chapter).filter(Boolean));
+    
+    dispatch({ type: ACTIONS.UPDATE_STATS, payload: {
+      total: questions.length,
+      subjects: subjects.size,
+      chapters: chapters.size
+    }});
+  }, []);
+
+  // Helper to save to memory cache
   const saveToCache = (questions) => {
-    const timestamp = Date.now();
-    const cacheData = {
-      questions,
-      timestamp,
-      count: questions.length
-    };
+    if (!questions) return;
     
     // Update Memory Cache
     memoryCache = {
       questions,
-      timestamp,
-      expiresAt: timestamp + CACHE_TTL
+      timestamp: Date.now(),
+      expiresAt: Date.now() + CACHE_TTL
     };
     
-    // Update Persistent Cache
-    try {
-      localStorage.setItem(CACHE_KEY, JSON.stringify(cacheData));
-    } catch (e) {
-      console.warn('Failed to save to localStorage cache:', e);
-    }
+    // localStorage is disabled for the full questions array to avoid QuotaExceeded errors
+    // and the high CPU cost of stringifying large datasets (17k+ questions).
   };
+
+  const refreshHierarchy = useCallback(async () => {
+    if (isFetchingRef.current) return;
+    try {
+      console.log('📡 Refreshing question hierarchy...');
+      const hierarchyData = await questionApi.fetchHierarchy();
+      dispatch({ type: ACTIONS.SET_HIERARCHY, payload: hierarchyData });
+      console.log(`✅ Hierarchy refreshed for ${hierarchyData.length} subjects`);
+      return hierarchyData;
+    } catch (hErr) {
+      console.error('Failed to refresh hierarchy:', hErr);
+      return null;
+    }
+  }, []);
 
   const uploadImageToSupabase = async (fileOrBase64) => {
     if (!supabase || !fileOrBase64) return null;
     
-    // If it's already a URL, return it
-    if (typeof fileOrBase64 === 'string' && fileOrBase64.startsWith('http')) {
+    // If it's already a public URL, skip upload
+    if (typeof fileOrBase64 === 'string' && (fileOrBase64.startsWith('http') && !fileOrBase64.includes('blob:'))) {
         return fileOrBase64;
     }
 
+    console.log('🚀 uploadImageToSupabase: Preparing upload for', typeof fileOrBase64 === 'string' ? fileOrBase64.substring(0, 30) + '...' : 'File object');
+
     try {
         let fileToUpload = fileOrBase64;
-        let mimeType = 'image/jpeg'; // Default
+        let mimeType = 'image/jpeg'; 
         
-        if (typeof fileOrBase64 === 'string' && fileOrBase64.startsWith('data:')) {
-            // Extract mime type
-            const matches = fileOrBase64.match(/^data:(.+);base64,/);
-            if (matches && matches[1]) {
-                mimeType = matches[1];
+        if (typeof fileOrBase64 === 'string' && (fileOrBase64.startsWith('data:') || fileOrBase64.startsWith('blob:'))) {
+            if (fileOrBase64.startsWith('data:')) {
+                const matches = fileOrBase64.match(/^data:(.+);base64,/);
+                if (matches && matches[1]) {
+                    mimeType = matches[1];
+                }
             }
             fileToUpload = await base64ToBlob(fileOrBase64);
+            console.log('  ✅ Converted string/URL to Blob. Type:', fileToUpload.type, 'Size:', fileToUpload.size);
         }
         
         const ext = mimeType.split('/')[1] || 'jpg';
         const fileName = `${Date.now()}_${Math.random().toString(36).substring(7)}.${ext}`;
         const filePath = `${fileName}`; 
 
-        const { data, error } = await supabase
+        console.log('  📤 Uploading to Supabase bucket "question-images" as', filePath);
+        const { error } = await supabase
             .storage
             .from('question-images')
-            .upload(filePath, fileToUpload);
+            .upload(filePath, fileToUpload, {
+                contentType: mimeType,
+                upsert: false
+            });
 
         if (error) {
-            console.error('Error uploading image to Supabase:', error);
+            console.error('  ❌ Supabase upload error:', error);
             throw error;
         }
 
-        const { data: { publicUrl } } = supabase
+        const { data } = supabase
             .storage
             .from('question-images')
             .getPublicUrl(filePath);
 
-        return publicUrl;
+        if (!data || !data.publicUrl) {
+            throw new Error('Failed to generate public URL after upload');
+        }
+
+        console.log('  ✅ Upload successful! URL:', data.publicUrl);
+        return data.publicUrl;
     } catch (error) {
-        console.error('Image upload failed:', error);
-        // Fallback: return original if upload fails, or throw? 
-        // For now, let's allow it to proceed potentially broken or retry logic should be higher up.
-        // But better to throw so user knows.
+        console.error('  ❌ Image upload failed:', error);
         throw error;
     }
   };
 
-  const processQuestionImages = async (question) => {
+  const processQuestionImages = useCallback(async (question) => {
+      console.log('🖼️ processQuestionImages: Starting for question:', question.id || 'new');
       const q = { ...question };
       
-      if (q.image) q.image = await uploadImageToSupabase(q.image);
-      if (q.answerimage1) q.answerimage1 = await uploadImageToSupabase(q.answerimage1);
-      if (q.answerimage2) q.answerimage2 = await uploadImageToSupabase(q.answerimage2);
+      // 1. Process Main Image
+      if (q.image && (q.image.startsWith('data:') || q.image.startsWith('blob:'))) {
+          console.log('  - Uploading main image...');
+          q.image = await uploadImageToSupabase(q.image);
+      }
       
+      // 2. Process Legacy Answer Images
+      if (q.answerimage1 && (q.answerimage1.startsWith('data:') || q.answerimage1.startsWith('blob:'))) {
+          console.log('  - Uploading answerimage1...');
+          q.answerimage1 = await uploadImageToSupabase(q.answerimage1);
+      }
+      if (q.answerimage2 && (q.answerimage2.startsWith('data:') || q.answerimage2.startsWith('blob:'))) {
+          console.log('  - Uploading answerimage2...');
+          q.answerimage2 = await uploadImageToSupabase(q.answerimage2);
+      }
+      
+      // 3. Process CQ Parts
       if (q.parts && Array.isArray(q.parts)) {
-          q.parts = await Promise.all(q.parts.map(async p => {
-              if (p.answerImage) {
-                  return { ...p, answerImage: await uploadImageToSupabase(p.answerImage) };
+          console.log(`  - Processing ${q.parts.length} CQ parts...`);
+          q.parts = await Promise.all(q.parts.map(async (p, idx) => {
+              const updatedPart = { ...p };
+              const imageToUpload = p.answerImage || p.image;
+              if (imageToUpload && (imageToUpload.startsWith('data:') || imageToUpload.startsWith('blob:'))) {
+                  console.log(`    - Part ${idx} (${p.letter}): Uploading image...`);
+                  const url = await uploadImageToSupabase(imageToUpload);
+                  updatedPart.image = url;
+                  updatedPart.answerImage = url;
               }
-              return p;
+              return updatedPart;
+          }));
+      }
+
+      // 4. Process MCQ Options
+      if (q.options && Array.isArray(q.options)) {
+          console.log(`  - Processing ${q.options.length} MCQ options...`);
+          q.options = await Promise.all(q.options.map(async (opt, idx) => {
+              const updatedOpt = { ...opt };
+              if (opt.image && (opt.image.startsWith('data:') || opt.image.startsWith('blob:'))) {
+                  console.log(`    - Option ${idx} (${opt.label}): Uploading image...`);
+                  updatedOpt.image = await uploadImageToSupabase(opt.image);
+              }
+              return updatedOpt;
           }));
       }
       
+      console.log('🖼️ processQuestionImages: Finished.');
       return q;
-  };
+  }, [uploadImageToSupabase]);
 
-  // Actions
-  const setQuestions = (questions) => {
+  // --- 2. Effects ---
+
+  const lastQuestionsLengthRef = useRef(0);
+
+  // Sync state.questions to cache and update stats whenever questions change
+  useEffect(() => {
+    if (state.questions && state.questions.length > 0) {
+      if (state.questions !== memoryCache.questions) {
+        saveToCache(state.questions);
+        
+        const subjects = new Set(state.questions.map(q => q.subject).filter(Boolean));
+        const chapters = new Set(state.questions.map(q => q.chapter).filter(Boolean));
+        
+        dispatch({ type: ACTIONS.UPDATE_STATS, payload: {
+          total: state.questions.length,
+          subjects: subjects.size,
+          chapters: chapters.size
+        }});
+
+        if (state.questions.length !== lastQuestionsLengthRef.current) {
+            refreshHierarchy();
+            lastQuestionsLengthRef.current = state.questions.length;
+        }
+      }
+    }
+  }, [state.questions, refreshHierarchy]);
+
+  // --- 3. Actions ---
+
+  const setQuestions = useCallback((questions) => {
     dispatch({ type: ACTIONS.SET_QUESTIONS, payload: questions });
     if (typeof questions !== 'function') {
       updateStats(questions);
+      saveToCache(questions);
     }
-  };
+  }, [updateStats]);
 
-  const clearCache = () => {
+  const clearCache = useCallback(() => {
     memoryCache = { questions: null, timestamp: null, expiresAt: null };
     localStorage.removeItem(CACHE_KEY);
     console.log('🗑️ Cache cleared');
-  };
+  }, []);
 
-  const refreshHierarchy = async () => {
+  const addQuestion = useCallback(async (question) => {
     try {
-      console.log('📡 Refreshing question hierarchy...');
-      const hierarchyData = await questionApi.fetchHierarchy();
-      dispatch({ type: ACTIONS.SET_HIERARCHY, payload: hierarchyData });
-      console.log(`✅ Hierarchy refreshed for ${hierarchyData.length} subjects`);
-    } catch (hErr) {
-      console.error('Failed to refresh hierarchy:', hErr);
-    }
-  };
-
-  const addQuestion = async (question) => {
-    try {
-      // 1. Process Images (Upload to Supabase Bucket)
       const questionWithImages = await processQuestionImages(question);
-      
-      const dbQuestion = mapAppToDatabase({ ...questionWithImages, id: Date.now() + Math.floor(Math.random() * 10000) });
-      
-      // 3. Call API
+      const dbQuestion = mapAppToDatabase(questionWithImages);
       const responseData = await questionApi.createQuestion(dbQuestion);
-      
-      // 4. Update State
       const newQuestion = mapDatabaseToApp(responseData.data || responseData);
       
-      // Update State & Cache together
-      dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
-          const updated = [newQuestion, ...prevQuestions];
-          saveToCache(updated);
-          return updated;
-      }});
+      dispatch({ type: ACTIONS.ADD_QUESTION, payload: newQuestion });
       
-      // Refresh hierarchy in background
+      dispatch({ type: ACTIONS.UPDATE_STATS, payload: (prevStats) => ({
+        ...prevStats,
+        total: prevStats.total + 1
+      })});
+
       refreshHierarchy();
-      
       return newQuestion;
     } catch (error) {
       console.error('Error in addQuestion:', error);
       throw error;
     }
-  };
+  }, [refreshHierarchy, processQuestionImages]);
 
-  const bulkAddQuestions = async (questions, onProgress) => {
+  const bulkAddQuestions = useCallback(async (questions, onProgress) => {
     try {
       console.log(`🚀 Starting bulk add of ${questions.length} questions...`);
-      
-      const results = {
-        successCount: 0,
-        failedCount: 0,
-        errors: []
-      };
-
+      const results = { successCount: 0, failedCount: 0, errors: [] };
       const CHUNK_SIZE = 100;
       const total = questions.length;
+      const allNewQuestions = [];
 
       for (let i = 0; i < total; i += CHUNK_SIZE) {
         const chunk = questions.slice(i, i + CHUNK_SIZE);
-        
         const processedChunk = await Promise.all(chunk.map(async q => {
           try {
             const withImages = await processQuestionImages(q);
@@ -293,398 +520,146 @@ export function QuestionProvider({ children }) {
         }));
 
         const batchResults = await questionApi.bulkCreateQuestions(processedChunk);
-        
         results.successCount += batchResults.successCount;
         results.failedCount += batchResults.failedCount;
         results.errors.push(...batchResults.errors);
-
-        if (onProgress) {
-          onProgress(Math.min(i + CHUNK_SIZE, total), total);
+        
+        if (batchResults.questions) {
+            allNewQuestions.push(...batchResults.questions.map(mapDatabaseToApp));
         }
+
+        if (onProgress) onProgress(Math.min(i + CHUNK_SIZE, total), total);
       }
 
-      // Refresh everything to ensure UI is in sync
-      await refreshQuestions();
-      refreshHierarchy();
+      if (allNewQuestions.length > 0) {
+          const validNewOnes = allNewQuestions.filter(q => q && q.id);
+          dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prev) => [...validNewOnes, ...prev] });
+      } else {
+          await refreshHierarchy();
+      }
       
+      console.log(`🚀 bulkAddQuestions: Finished. Success: ${results.successCount}, Failed: ${results.failedCount}`);
       return results;
     } catch (error) {
       console.error('Error in bulkAddQuestions:', error);
       throw error;
     }
-  };
+  }, [refreshHierarchy, processQuestionImages]);
 
-  const batchAddQuestions = async (questions, onProgress) => {
+  const refreshQuestions = useCallback(async () => {
+    try {
+      console.log('🔄 Manually refreshing questions (API)...');
+      refreshHierarchy();
+      const allQuestions = await questionApi.fetchAllQuestions();
+      if (allQuestions.length > 0) {
+        const mappedQuestions = allQuestions.map(mapDatabaseToApp);
+        dispatch({ type: ACTIONS.SET_QUESTIONS, payload: mappedQuestions });
+        console.log(`✅ Successfully refreshed ${mappedQuestions.length} questions`);
+      }
+    } catch (error) {
+      console.error('Error refreshing questions:', error);
+    }
+  }, [refreshHierarchy]);
+
+  const batchAddQuestions = useCallback(async (questions, onProgress) => {
     try {
       console.log(`🚀 Starting batch add of ${questions.length} questions...`);
-      
       const dbQuestions = questions.map(q => mapAppToDatabase(q));
-      
       const result = await questionApi.batchCreateQuestions(dbQuestions, onProgress);
-      
-      // Refresh everything
       await refreshQuestions();
       refreshHierarchy();
-      
       return result;
     } catch (error) {
       console.error('Error in batchAddQuestions:', error);
       throw error;
     }
-  };
+  }, [refreshHierarchy, refreshQuestions]);
 
-
-  const updateQuestion = async (question) => {
+  const updateQuestion = useCallback(async (question) => {
     try {
-      // 1. Process Images
       const questionWithImages = await processQuestionImages(question);
-      
-      // 2. Map to API/DB format
       const dbQuestion = mapAppToDatabase(questionWithImages);
       const questionId = parseInt(question.id);
-
-      // 3. Call API
       await questionApi.updateQuestion(questionId, dbQuestion);
-
-      // 4. Update State & Cache
       dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: questionWithImages });
-      
-      // Sync cache
-      dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
-          const updated = prevQuestions.map(q => q.id === question.id ? questionWithImages : q);
-          saveToCache(updated);
-          return updated;
-      }});
-
-      console.log('Question updated via API:', question.id);
+      refreshHierarchy();
+      return questionWithImages;
     } catch (error) {
       console.error('Error in updateQuestion:', error);
       throw error;
     }
-  };
+  }, [refreshHierarchy, processQuestionImages]);
 
-  const bulkUpdateQuestions = async (questions) => {
+  const bulkUpdateQuestions = useCallback(async (questions) => {
     try {
       console.log(`🔄 Starting bulk update of ${questions.length} questions...`);
-      
       const dbQuestions = questions.map(q => mapAppToDatabase(q));
       const { successCount, failedCount } = await questionApi.bulkUpdateQuestions(dbQuestions);
       
-      // Map to track updates
       const updateMap = new Map(questions.map(q => [q.id.toString(), q]));
-
-      // Update State & Cache
       dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
-          const updated = prevQuestions.map(q => {
+          return prevQuestions.map(q => {
               const improved = updateMap.get(q.id.toString());
               return improved ? { ...q, ...improved } : q;
           });
-          saveToCache(updated);
-          return updated;
       }});
       
+      refreshHierarchy();
       console.log(`✅ Bulk update complete: ${successCount} succeeded, ${failedCount} failed`);
       return { successCount, failedCount };
     } catch (error) {
       console.error('Error in bulkUpdateQuestions:', error);
       throw error;
     }
-  };
+  }, [refreshHierarchy]);
 
-  const deleteQuestion = async (id) => {
+  const deleteQuestion = useCallback(async (id) => {
     try {
       const questionId = parseInt(id);
       await questionApi.deleteQuestion(questionId);
-
-      // 1. Update State
       dispatch({ type: ACTIONS.DELETE_QUESTION, payload: id });
-      
-      // 2. Update Cache
-      dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
-          const updated = prevQuestions.filter(q => q.id.toString() !== id.toString());
-          saveToCache(updated);
-          return updated;
-      }});
-
+      refreshHierarchy();
       console.log('Question deleted via API:', id);
     } catch (error) {
       console.error('Error in deleteQuestion:', error);
       throw error;
     }
-  };
+  }, [refreshHierarchy]);
 
-  const setFilters = (filters) => {
+  const setFilters = useCallback((filters) => {
     dispatch({ type: ACTIONS.SET_FILTERS, payload: filters });
-  };
-
-  const setEditingQuestion = (question) => {
-    dispatch({ type: ACTIONS.SET_EDITING_QUESTION, payload: question });
-  };
-
-  const setAuthenticated = (isAuth) => {
-    dispatch({ type: ACTIONS.SET_AUTHENTICATED, payload: isAuth });
-  };
-
-  const updateStats = (questions) => {
-    if (typeof questions === 'function') {
-        // If it's a function, we can't easily calculate stats here without the current state
-        // The reducer now handles UPDATE_STATS if we want to dispatch a function there
-        dispatch({ type: ACTIONS.UPDATE_STATS, payload: (prevStats) => {
-            // This is complex because we need the questions.
-            // For now, let's just ignore functional updates for stats or handle them in reducer.
-            return prevStats;
-        }});
-        return;
-    }
-
-    const subjects = new Set(questions.map(q => q.subject).filter(Boolean));
-    const chapters = new Set(questions.map(q => q.chapter).filter(Boolean));
-    
-    dispatch({ type: ACTIONS.UPDATE_STATS, payload: {
-      total: questions.length,
-      subjects: subjects.size,
-      chapters: chapters.size
-    }});
-  };
-
-
-  // Helper function to map database question to app format
-  const mapDatabaseToApp = (dbQuestion) => {
-    // Helper to parse JSON safely
-    const safeParse = (val, fallback = []) => {
-        if (typeof val === 'string') {
-            try {
-                return JSON.parse(val);
-            } catch (e) {
-                console.warn('Failed to parse JSON field:', e);
-                return fallback;
-            }
-        }
-        return val || fallback;
-    };
-
-    return {
-      id: dbQuestion.id?.toString() || Date.now().toString(),
-      type: dbQuestion.type,
-      subject: dbQuestion.subject,
-      chapter: dbQuestion.chapter,
-      lesson: dbQuestion.lesson,
-      board: dbQuestion.board,
-      language: dbQuestion.language || 'en',
-      question: dbQuestion.question,
-      questionText: dbQuestion.question_text, // Removed fallback to dbQuestion.question
-      options: safeParse(dbQuestion.options),
-      correctAnswer: dbQuestion.correct_answer,
-      answer: dbQuestion.answer,
-      parts: safeParse(dbQuestion.parts),
-      image: dbQuestion.image,
-      answerimage1: dbQuestion.answerimage1,
-      answerimage2: dbQuestion.answerimage2,
-      explanation: dbQuestion.explanation,
-      tags: safeParse(dbQuestion.tags),
-      isQuizzable: dbQuestion.is_quizzable !== undefined ? dbQuestion.is_quizzable : true,
-      isFlagged: dbQuestion.is_flagged || false,
-      isVerified: dbQuestion.is_verified || false,
-      inReviewQueue: dbQuestion.in_review_queue || false,
-      createdAt: dbQuestion.created_at
-    };
-  };
-
-  // Helper function to map app question to database format
-  const mapAppToDatabase = (appQuestion) => {
-    const type = appQuestion.type || 'mcq';
-    
-    // Ensure we have clean text for question_text column
-    // Priority: appQuestion.questionText > appQuestion.question (cleaned)
-    let qText = appQuestion.questionText ? appQuestion.questionText.trim() : '';
-    if (!qText && appQuestion.question) {
-        qText = cleanText(appQuestion.question);
-    }
-    
-    let questionField = (appQuestion.question || '').trim();
-    
-    if (type === 'cq') {
-      questionField = qText;
-    } else if (type === 'mcq') {
-      questionField = qText;
-    } else if (type === 'sq') {
-      questionField = qText;
-    }
-    
-    if (!questionField || questionField === 'MCQ:' || questionField === 'CQ:' || questionField === 'SQ:') {
-      if (type !== 'cq') {
-        questionField = `ID_${appQuestion.id || Date.now()}`;
-      } else {
-        questionField = (questionField === 'CQ:') ? '' : questionField;
-      }
-    }
-    
-    const dbQuestion = {
-      type: appQuestion.type,
-      subject: appQuestion.subject,
-      chapter: appQuestion.chapter,
-      lesson: appQuestion.lesson || 'N/A',
-      board: appQuestion.board || 'N/A',
-      language: appQuestion.language || 'en',
-      question: questionField,
-      question_text: qText,
-      // Stringify complex objects for D1/SQLite compatibility
-      options: appQuestion.options ? JSON.stringify(appQuestion.options) : null,
-      correct_answer: appQuestion.correctAnswer,
-      answer: appQuestion.answer,
-      parts: appQuestion.parts ? JSON.stringify(appQuestion.parts) : null,
-      image: appQuestion.image,
-      answerimage1: appQuestion.answerimage1,
-      answerimage2: appQuestion.answerimage2,
-      explanation: appQuestion.explanation,
-      tags: appQuestion.tags ? JSON.stringify(appQuestion.tags) : JSON.stringify([]),
-      is_flagged: appQuestion.isFlagged || false,
-      is_verified: appQuestion.isVerified || false,
-      in_review_queue: appQuestion.inReviewQueue || false,
-      synced: false
-    };
-    
-    // Only include id if it exists (for updates), exclude it for inserts
-    if (appQuestion.id) {
-      dbQuestion.id = parseInt(appQuestion.id);
-    }
-    
-    return dbQuestion;
-  };
-
-
-  // Load questions from API on mount
-  useEffect(() => {
-    const loadQuestionsFromDatabase = async () => {
-      if (isFetchingRef.current) return;
-      
-      let initialCount = 0;
-      let startPage = 0;
-
-      // 1. Try Memory Cache first (Instant)
-      if (memoryCache.questions) {
-        const age = Math.round((Date.now() - memoryCache.timestamp) / 1000);
-        console.log(`⚡ Memory cache HIT! ${memoryCache.questions.length} questions (age: ${age}s)`);
-        setQuestions(memoryCache.questions);
-        initialCount = memoryCache.questions.length;
-      } else {
-        // 2. Try Persistent Cache (localStorage)
-        const cached = localStorage.getItem(CACHE_KEY);
-        if (cached) {
-          try {
-            const { questions, timestamp } = JSON.parse(cached);
-            const age = Math.round((Date.now() - timestamp) / 1000);
-            
-            if (Date.now() - timestamp < CACHE_TTL) {
-              console.log(`💾 Persistent cache HIT! ${questions.length} questions (age: ${age}s)`);
-              // Update memory cache for next time
-              memoryCache = { questions, timestamp, expiresAt: timestamp + CACHE_TTL };
-              setQuestions(questions);
-              initialCount = questions.length;
-            } else {
-              console.log('⏳ Persistent cache EXPIRED, fetching fresh data...');
-            }
-          } catch (e) {
-            console.error('Error parsing cache:', e);
-          }
-        }
-      }
-
-      // 3. Fetch Hierarchy & Initial Questions
-      try {
-        isFetchingRef.current = true;
-        
-        // Fetch Hierarchy First (Fast)
-        console.log('📡 Fetching question hierarchy...');
-        try {
-            const hierarchyData = await questionApi.fetchHierarchy();
-            dispatch({ type: ACTIONS.SET_HIERARCHY, payload: hierarchyData });
-            console.log(`✅ Loaded hierarchy for ${hierarchyData.length} subjects`);
-        } catch (hErr) {
-            console.error('Failed to load hierarchy:', hErr);
-        }
-
-        // If we have no questions from cache, fetch the first page so the UI isn't empty
-        if (initialCount === 0) {
-            console.log('📡 Fetching initial page of questions...');
-            const BATCH_SIZE = 500;
-            const batchSizeReceived = await fetchMoreQuestions(0);
-            console.log(`✅ Initial load complete. Received ${batchSizeReceived} questions.`);
-        } else {
-             console.log(`✅ Skipping initial fetch, using ${initialCount} cached questions.`);
-        }
-        
-      } catch (error) {
-        console.error('Error loading questions from API:', error);
-      } finally {
-        isFetchingRef.current = false;
-      }
-    };
-
-    loadQuestionsFromDatabase();
   }, []);
 
-  // Function to manually refresh questions from API
-  const refreshQuestions = async () => {
-    try {
-      console.log('🔄 Manually refreshing questions (API)...');
-      
-      // Refresh Hierarchy too
-      refreshHierarchy();
+  const setEditingQuestion = useCallback((question) => {
+    dispatch({ type: ACTIONS.SET_EDITING_QUESTION, payload: question });
+  }, []);
 
-      const allQuestions = await questionApi.fetchAllQuestions();
+  const setAuthenticated = useCallback((isAuth) => {
+    dispatch({ type: ACTIONS.SET_AUTHENTICATED, payload: isAuth });
+  }, []);
 
-      if (allQuestions.length > 0) {
-        const mappedQuestions = allQuestions.map(mapDatabaseToApp);
-        setQuestions(mappedQuestions);
-        saveToCache(mappedQuestions); // Update cache with fresh data
-        console.log(`✅ Successfully refreshed ${mappedQuestions.length} questions`);
-      }
-    } catch (error) {
-      console.error('Error refreshing questions:', error);
-    }
-  };
-
-  const fetchMoreQuestions = async (forcedPage = null) => {
+  const fetchMoreQuestions = useCallback(async (forcedPage = null) => {
     if (isFetchingRef.current && forcedPage === null) return;
     
     try {
       if (forcedPage === null) isFetchingRef.current = true;
-      
       const BATCH_SIZE = 500;
-      // Use forcedPage if provided (for Fetch All loop), otherwise calculate from current state
       const nextPage = forcedPage !== null ? forcedPage : Math.floor(state.questions.length / BATCH_SIZE);
       
       console.log(`📡 Fetching Page ${nextPage}...`);
-      
       const response = await questionApi.fetchQuestions({
         limit: BATCH_SIZE,
         page: nextPage
       });
       
       const batch = Array.isArray(response) ? response : (response.data || []);
-      
       if (batch.length > 0) {
         const mappedBatch = batch.map(mapDatabaseToApp);
-        
-        // Use functional update to ensure we always have the latest questions
-        let addedCount = 0;
         dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
           const existingIds = new Set(prevQuestions.map(q => q.id.toString()));
           const uniqueNewBatch = mappedBatch.filter(q => !existingIds.has(q.id.toString()));
-          addedCount = uniqueNewBatch.length;
-          
-          if (addedCount > 0) {
-            const updated = [...prevQuestions, ...uniqueNewBatch];
-            // Update cache with the new full list
-            saveToCache(updated);
-            return updated;
-          }
-          return prevQuestions;
+          return uniqueNewBatch.length > 0 ? [...prevQuestions, ...uniqueNewBatch] : prevQuestions;
         }});
-
-        // Since dispatch is async in terms of state availability, 
-        // we'll return the length of the batch we tried to add
         return batch.length; 
       }
       return 0;
@@ -694,220 +669,137 @@ export function QuestionProvider({ children }) {
     } finally {
       if (forcedPage === null) isFetchingRef.current = false;
     }
-  };
+  }, [state.questions.length]);
 
-  const fetchAllRemaining = async (onProgress) => {
+  const fetchAllRemaining = useCallback(async (onProgress) => {
     if (isFetchingRef.current) return;
-    
     isFetchingRef.current = true;
     let totalAdded = 0;
     let hasMore = true;
     const BATCH_SIZE = 500;
-    // Start from the next page based on current count
     let currentPage = Math.floor(state.questions.length / BATCH_SIZE);
-    
-    console.log(`🚀 Starting "Fetch All" from Page ${currentPage}...`);
     
     try {
       while (hasMore) {
         const batchSizeReceived = await fetchMoreQuestions(currentPage);
-        
         if (batchSizeReceived > 0) {
           totalAdded += batchSizeReceived;
           if (onProgress) onProgress(totalAdded);
-          
           currentPage++;
-          
-          // Stop if we received a partial batch (reached end of DB)
-          if (batchSizeReceived < BATCH_SIZE) {
-            hasMore = false;
-          }
-          
+          if (batchSizeReceived < BATCH_SIZE) hasMore = false;
           await new Promise(resolve => setTimeout(resolve, 100));
         } else {
           hasMore = false;
         }
       }
-      
-      // Update cache one final time with the full set
-      // We'll get questions from the value object which should be updated by now
-      // Or just refresh questions manually to sync everything
     } catch (error) {
       console.error('Error during Fetch All:', error);
     } finally {
       isFetchingRef.current = false;
-      console.log(`🏁 "Fetch All" complete. Total records processed: ${totalAdded}`);
     }
     return totalAdded;
-  };
+  }, [fetchMoreQuestions, state.questions.length]);
 
-  const toggleQuestionFlag = async (questionId) => {
-    const question = state.questions.find(q => q.id === questionId);
+  const toggleQuestionFlag = useCallback(async (questionId) => {
+    const question = state.questions.find(q => q.id.toString() === questionId.toString());
     if (!question) return;
     
     const newFlaggedStatus = !question.isFlagged;
-
-    // 1. Optimistic UI Update
-    const updatedQuestion = { ...question, isFlagged: newFlaggedStatus };
-    dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: updatedQuestion });
+    dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: { ...question, isFlagged: newFlaggedStatus } });
 
     try {
       await questionApi.updateQuestion(parseInt(questionId), { is_flagged: newFlaggedStatus });
-      
-      // Update cache
-      if (memoryCache.questions) {
-             memoryCache.questions = memoryCache.questions.map(q => 
-                 q.id === questionId ? updatedQuestion : q
-             );
-      }
     } catch (err) {
-      console.error('Exception toggling flag:', err);
-      // Revert on error
       dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
     }
-  };
+  }, [state.questions]);
 
-  const toggleQuestionVerification = async (questionId) => {
-    const question = state.questions.find(q => q.id === questionId);
+  const toggleQuestionVerification = useCallback(async (questionId) => {
+    const question = state.questions.find(q => q.id.toString() === questionId.toString());
     if (!question) return;
     
     const newVerifiedStatus = !question.isVerified;
-
-    // 1. Optimistic UI Update
-    const updatedQuestion = { ...question, isVerified: newVerifiedStatus };
-    dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: updatedQuestion });
+    dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: { ...question, isVerified: newVerifiedStatus } });
 
     try {
       await questionApi.updateQuestion(parseInt(questionId), { is_verified: newVerifiedStatus });
-      
-      if (memoryCache.questions) {
-             memoryCache.questions = memoryCache.questions.map(q => 
-                 q.id === questionId ? updatedQuestion : q
-             );
-      }
     } catch (err) {
-      console.error('Exception toggling verification:', err);
-      // Revert on error
       dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
     }
-  };
+  }, [state.questions]);
 
-  const toggleReviewQueue = async (questionId) => {
-    const question = state.questions.find(q => q.id === questionId);
+  const toggleReviewQueue = useCallback(async (questionId) => {
+    const question = state.questions.find(q => q.id.toString() === questionId.toString());
     if (!question) return;
     
     const newQueueStatus = !question.inReviewQueue;
-
-    // 1. Optimistic UI Update
-    const updatedQuestion = { ...question, inReviewQueue: newQueueStatus };
-    dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: updatedQuestion });
+    dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: { ...question, inReviewQueue: newQueueStatus } });
 
     try {
       await questionApi.updateQuestion(parseInt(questionId), { in_review_queue: newQueueStatus });
-      
-      if (memoryCache.questions) {
-             memoryCache.questions = memoryCache.questions.map(q => 
-                 q.id === questionId ? updatedQuestion : q
-             );
-      }
     } catch (err) {
-      console.error('Exception toggling review queue:', err);
-      // Revert on error
       dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
     }
-  };
+  }, [state.questions]);
 
-  const bulkReviewQueue = async (questionIds, inQueue) => {
-    // 1. Update Local State & Cache
+  const bulkReviewQueue = useCallback(async (questionIds, inQueue) => {
     const idSet = new Set(questionIds.map(String));
-    
     dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
-        const updated = prevQuestions.map(q => 
-            idSet.has(String(q.id)) ? { ...q, inReviewQueue: inQueue } : q
-        );
-        saveToCache(updated);
-        return updated;
+        return prevQuestions.map(q => idSet.has(String(q.id)) ? { ...q, inReviewQueue: inQueue } : q);
     }});
 
     try {
-      console.log(`📋 Bulk setting review queue to ${inQueue} for ${questionIds.length} questions...`);
       const numericIds = questionIds.map(id => parseInt(id));
       const updates = numericIds.map(id => ({ id, in_review_queue: inQueue }));
-      const { successCount, failedCount } = await questionApi.bulkUpdateQuestions(updates);
-      
-      return { successCount, failedCount };
+      return await questionApi.bulkUpdateQuestions(updates);
     } catch (err) {
-      console.error('Exception in bulkReviewQueue:', err);
       return { successCount: 0, failedCount: questionIds.length };
     }
-  };
+  }, []);
 
-  const bulkFlagQuestions = async (questionIds, flagged) => {
-    // 1. Update Local State & Cache
+  const bulkFlagQuestions = useCallback(async (questionIds, flagged) => {
     const idSet = new Set(questionIds.map(String));
-    
     dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
-        const updated = prevQuestions.map(q => 
-            idSet.has(String(q.id)) ? { ...q, isFlagged: flagged } : q
-        );
-        saveToCache(updated);
-        return updated;
+        return prevQuestions.map(q => idSet.has(String(q.id)) ? { ...q, isFlagged: flagged } : q);
     }});
 
     try {
-      console.log(`🚩 Bulk flagging ${questionIds.length} questions to ${flagged}...`);
       const numericIds = questionIds.map(id => parseInt(id));
       const updates = numericIds.map(id => ({ id, is_flagged: flagged }));
-      const { successCount, failedCount } = await questionApi.bulkUpdateQuestions(updates);
-      
-      return { successCount, failedCount };
+      return await questionApi.bulkUpdateQuestions(updates);
     } catch (err) {
-      console.error('Exception in bulkFlagQuestions:', err);
       return { successCount: 0, failedCount: questionIds.length };
     }
-  };
+  }, []);
 
-  const bulkVerifyQuestions = async (questionIds, verified) => {
-    // 1. Update Local State & Cache
+  const bulkVerifyQuestions = useCallback(async (questionIds, verified) => {
     const idSet = new Set(questionIds.map(String));
-    
     dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
-        const updated = prevQuestions.map(q => 
-            idSet.has(String(q.id)) ? { ...q, isVerified: verified } : q
-        );
-        saveToCache(updated);
-        return updated;
+        return prevQuestions.map(q => idSet.has(String(q.id)) ? { ...q, isVerified: verified } : q);
     }});
 
     try {
-      console.log(`✅ Bulk verifying ${questionIds.length} questions to ${verified}...`);
       const numericIds = questionIds.map(id => parseInt(id));
       const updates = numericIds.map(id => ({ id, is_verified: verified }));
-      const { successCount, failedCount } = await questionApi.bulkUpdateQuestions(updates);
-      
-      return { successCount, failedCount };
+      return await questionApi.bulkUpdateQuestions(updates);
     } catch (err) {
-      console.error('Exception in bulkVerifyQuestions:', err);
       return { successCount: 0, failedCount: questionIds.length };
     }
-  };
+  }, []);
 
-  const fetchQuestionsByIds = async (ids) => {
+  const fetchQuestionsByIds = useCallback(async (ids) => {
     if (ids.length === 0) return [];
-
     try {
       const data = await questionApi.fetchQuestionsByIds(ids);
       return data.map(mapDatabaseToApp);
     } catch (error) {
-      console.error('Error in fetchQuestionsByIds:', error);
       return [];
     }
-  };
+  }, []);
 
-  const value = {
+  const value = useMemo(() => ({
     ...state,
-    supabaseClient: supabase, // Exposed for direct storage access if needed elsewhere
-    hierarchy: state.hierarchy,
+    supabaseClient: supabase,
     setQuestions,
     clearCache,
     addQuestion,
@@ -920,7 +812,6 @@ export function QuestionProvider({ children }) {
     setFilters,
     setEditingQuestion,
     setAuthenticated,
-    updateStats,
     refreshQuestions,
     refreshHierarchy,
     fetchMoreQuestions,
@@ -931,7 +822,15 @@ export function QuestionProvider({ children }) {
     bulkVerifyQuestions,
     toggleReviewQueue,
     bulkReviewQueue
-  };
+  }), [
+    state, 
+    setQuestions, clearCache, addQuestion, bulkAddQuestions, batchAddQuestions, 
+    updateQuestion, bulkUpdateQuestions, deleteQuestion, fetchQuestionsByIds, 
+    setFilters, setEditingQuestion, setAuthenticated, refreshQuestions, 
+    refreshHierarchy, fetchMoreQuestions, fetchAllRemaining, toggleQuestionFlag, 
+    bulkFlagQuestions, toggleQuestionVerification, bulkVerifyQuestions, 
+    toggleReviewQueue, bulkReviewQueue
+  ]);
 
   return (
     <QuestionContext.Provider value={value}>

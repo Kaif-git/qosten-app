@@ -8,12 +8,15 @@ export default function ChapterOverview() {
   const [selectedOverview, setSelectedOverview] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isEditingName, setIsEditingName] = useState(false);
+  const [editingName, setEditingName] = useState('');
+  const [saving, setSaving] = useState(false);
 
   useEffect(() => {
     fetchOverviews();
   }, []);
 
-  const fetchOverviews = async () => {
+  const fetchOverviews = async (preserveSelectionId = null) => {
     try {
       setLoading(true);
       
@@ -30,14 +33,57 @@ export default function ChapterOverview() {
 
       if (error) throw error;
       setOverviews(data || []);
+      
       if (data && data.length > 0) {
-        setSelectedOverview(data[0]);
+        if (preserveSelectionId) {
+          const preserved = data.find(o => o.id === preserveSelectionId);
+          setSelectedOverview(preserved || data[0]);
+        } else {
+          setSelectedOverview(data[0]);
+        }
       }
     } catch (err) {
       console.error('Error fetching overviews:', err);
       setError(err.message);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleStartEdit = () => {
+    setEditingName(selectedOverview.name);
+    setIsEditingName(true);
+  };
+
+  const handleCancelEdit = () => {
+    setIsEditingName(false);
+    setEditingName('');
+  };
+
+  const handleSaveName = async () => {
+    if (!editingName.trim()) {
+      alert('Name cannot be empty');
+      return;
+    }
+
+    try {
+      setSaving(true);
+      const { error } = await supabase
+        .from('chapter_overviews')
+        .update({ name: editingName.trim() })
+        .eq('id', selectedOverview.id);
+
+      if (error) throw error;
+
+      alert('✅ Chapter name updated successfully!');
+      setIsEditingName(false);
+      // Refresh list but keep the current one selected
+      await fetchOverviews(selectedOverview.id);
+    } catch (err) {
+      console.error('Error updating name:', err);
+      alert('❌ Failed to update name: ' + err.message);
+    } finally {
+      setSaving(false);
     }
   };
 
@@ -135,13 +181,78 @@ export default function ChapterOverview() {
             paddingBottom: '20px',
             borderBottom: '2px solid #ecf0f1'
           }}>
-            <h2 style={{ 
-              color: '#2c3e50',
-              marginTop: 0,
-              marginBottom: '10px'
-            }}>
-              {selectedOverview.name}
-            </h2>
+            {isEditingName ? (
+              <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginBottom: '10px' }}>
+                <input
+                  type="text"
+                  value={editingName}
+                  onChange={(e) => setEditingName(e.target.value)}
+                  style={{
+                    fontSize: '1.5rem',
+                    fontWeight: 'bold',
+                    padding: '8px 12px',
+                    borderRadius: '6px',
+                    border: '2px solid #3498db',
+                    flex: 1
+                  }}
+                  autoFocus
+                />
+                <button
+                  onClick={handleSaveName}
+                  disabled={saving}
+                  style={{
+                    padding: '10px 20px',
+                    backgroundColor: '#27ae60',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '6px',
+                    cursor: 'pointer',
+                    fontWeight: '600'
+                  }}
+                >
+                  {saving ? 'Saving...' : 'Save'}
+                </button>
+                <button
+                  onClick={handleCancelEdit}
+                  style={{
+                    padding: '10px 20px',
+                    backgroundColor: '#95a5a6',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '6px',
+                    cursor: 'pointer',
+                    fontWeight: '600'
+                  }}
+                >
+                  Cancel
+                </button>
+              </div>
+            ) : (
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                <h2 style={{ 
+                  color: '#2c3e50',
+                  marginTop: 0,
+                  marginBottom: '10px'
+                }}>
+                  {selectedOverview.name}
+                </h2>
+                <button
+                  onClick={handleStartEdit}
+                  style={{
+                    padding: '6px 12px',
+                    backgroundColor: '#f1f3f5',
+                    color: '#495057',
+                    border: '1px solid #ced4da',
+                    borderRadius: '4px',
+                    cursor: 'pointer',
+                    fontSize: '0.85rem'
+                  }}
+                >
+                  Edit Name
+                </button>
+              </div>
+            )}
+            
             {(selectedOverview.subject || selectedOverview.grade_level) && (
               <div style={{ color: '#7f8c8d', fontSize: '0.95rem' }}>
                 {selectedOverview.subject && <span>{selectedOverview.subject}</span>}

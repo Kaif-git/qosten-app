@@ -93,14 +93,18 @@ export default function MarkdownContent({ content }) {
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
+    if (!line.trim()) {
+      renderedLines.push(<div key={i} style={{ height: '10px' }} />);
+      continue;
+    }
     
-    // Match bullet points with indentation
-    const bulletMatch = line.match(/^(\s*)\*\s+(.+)$/);
+    // Match bullet points with indentation (supports * and -)
+    const bulletMatch = line.match(/^(\s*)([*+-\u2022])\s+(.+)$/);
     
     if (bulletMatch) {
       const indent = bulletMatch[1].length;
-      const text = bulletMatch[2];
-      const level = Math.floor(indent / 4);
+      const text = bulletMatch[3];
+      const level = Math.floor(indent / 2); // Reduced from 4 to 2 for more common markdown styles
       
       renderedLines.push(
         <div
@@ -116,13 +120,21 @@ export default function MarkdownContent({ content }) {
           <span style={{ 
             marginRight: '8px',
             minWidth: '8px',
-            fontSize: level === 0 ? '16px' : '14px'
+            fontSize: level === 0 ? '16px' : '14px',
+            color: '#3498db'
           }}>
             {level === 0 ? '•' : level === 1 ? '◦' : '▪'}
           </span>
           <span style={{ flex: 1 }}>
             {renderTextWithFormatting(text)}
           </span>
+        </div>
+      );
+    } else {
+      // Plain text line
+      renderedLines.push(
+        <div key={i} style={{ marginBottom: '8px', lineHeight: '1.7' }}>
+          {renderTextWithFormatting(line)}
         </div>
       );
     }

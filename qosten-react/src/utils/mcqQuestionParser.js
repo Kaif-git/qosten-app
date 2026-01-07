@@ -42,6 +42,53 @@ export function parseMCQQuestions(text) {
   console.log('📄 First 100 chars:', text.substring(0, 100));
 
   const questions = [];
+
+  const finalizeQuestion = (q) => {
+    if (!q || !q.questionText) return;
+
+    // --- HEURISTIC: Cleanup misidentified Roman numeral options ---
+    // If the question has standard choice labels (a, b, c, d or ক, খ, গ, ঘ) 
+    // AND it also has Roman numeral labels (i, ii, iii, iv), 
+    // the Roman numeral labels are likely part of the question statements.
+    const hasStandardLabels = q.options.some(opt => ['a', 'b', 'c', 'd', 'ক', 'খ', 'গ', 'ঘ'].includes(opt.label));
+    const hasRomanLabels = q.options.some(opt => ['i', 'ii', 'iii', 'iv'].includes(opt.label));
+
+    if (hasStandardLabels && hasRomanLabels) {
+      console.log('    🛠 Heuristic: Moving Roman numeral statements back into question text');
+      const romanOptions = q.options.filter(opt => ['i', 'ii', 'iii', 'iv'].includes(opt.label));
+      const choiceOptions = q.options.filter(opt => !['i', 'ii', 'iii', 'iv'].includes(opt.label));
+
+      // Append Roman statements to question text
+      let statementsText = romanOptions.map(opt => `${opt.label}. ${opt.text}`).join('\n');
+      q.questionText = q.questionText + '\n' + statementsText;
+      
+      // Keep only the choice options
+      q.options = choiceOptions;
+
+      // Re-run correct answer matching since options have changed
+      if (q.correctAnswer) {
+        const rawAnswer = q.correctAnswer;
+        const robustNormalize = (str) => (str || '').toString()
+          .normalize('NFC')
+          .replace(/[\\*\s\u200B\u200C\u200D]+/g, '')
+          .toLowerCase();
+        
+        const normalizedAnswer = robustNormalize(rawAnswer);
+        const matchingOption = q.options.find(opt => {
+          const normalizedOptText = robustNormalize(opt.text);
+          return normalizedOptText === normalizedAnswer || 
+                 (normalizedOptText.length > 2 && (normalizedOptText.includes(normalizedAnswer) || normalizedAnswer.includes(normalizedOptText)));
+        });
+
+        if (matchingOption) {
+          q.correctAnswer = matchingOption.label;
+          console.log('    🎯 Re-matched correct answer after cleanup. Label:', q.correctAnswer);
+        }
+      }
+    }
+
+    questions.push({ ...q });
+  };
   
   // Split by horizontal rule or ### to separate question sets
   const questionSets = text.split(/---+|###/).filter(s => s.trim());
@@ -90,7 +137,7 @@ export function parseMCQQuestions(text) {
           if (inExplanation && explanationBuffer.length > 0) {
             currentQuestion.explanation = explanationBuffer.join('\n').trim();
           }
-          questions.push({ ...currentQuestion });
+          finalizeQuestion(currentQuestion);
           
           // Reset for new question but keep previous metadata as fallback unless overwritten
           const prevMetadata = {
@@ -138,15 +185,19 @@ export function parseMCQQuestions(text) {
         const match = line.match(/^\*{0,2}\[\s*(Board|বোর্ড)\s*:\s*(.+?)\s*\]\*{0,2}$/i);
         currentQuestion.board = match[2].trim();
       }
-      // Parse options (a), b), c), d) or 1., 2., 3., 4. or Bengali equivalents)
+      // Parse options (a), b), c), d) or 1., 2., 3., 4. or Bengali equivalents or Roman numerals i., ii., iii., iv.)
       // Handle both start-of-line and inline options
       // Robust check: Label must be at start of line or preceded by space.
       // We prioritize options over question numbers if they look like 1-4 and we are in a question.
       // In this format, question numbers are usually bolded **1.** while options 1. are not.
       else if ((() => {
         const isNumericOption = line.match(/^\s*([1-4]|[১-৪])[\)\.।]\s+/);
-        const isAlphaOption = line.match(/^\s*([a-dক-ঘ])[\)\.।]\s+/) || line.match(/\s+[a-dক-ঘ]\)\s+/);
-        return (isAlphaOption || (isNumericOption && !line.startsWith('**'))) && 
+        // Updated regex to support Roman numerals i, ii, iii, iv
+        const isAlphaOption = line.match(/^\s*([a-dক-ঘi]{1,3})[\)\.।]\s+/) || line.match(/\s+([a-dক-ঘi]{1,3})\)\s+/);
+        // Ensure it doesn't match metadata markers
+        const isMetadataLine = line.match(/^\*{0,2}\[?\s*(Correct|সঠিক|Explanation|ব্যাখ্যা|Bekkha|Subject|বিষয়|Chapter|অধ্যায়|Lesson|পাঠ|Board|বোর্ড)/i);
+        
+        return !isMetadataLine && (isAlphaOption || (isNumericOption && !line.startsWith('**'))) && 
                !inExplanation && !line.startsWith('[') && 
                (inQuestion || questionBuffer.length > 0 || (currentQuestion.questionText && currentQuestion.options.length > 0));
       })()) {
@@ -158,8 +209,8 @@ export function parseMCQQuestions(text) {
           inQuestion = false;
         }
         
-        // Extract all options from the line
-        const optionPattern = /(?:^|\s+)([a-dক-ঘ]|[1-4])[\)\.।]\s*(.+?)(?=\s+([a-dক-ঘ]|[1-4])[\)\.।]|$)/gi;
+        // Extract all options from the line - updated regex for Roman numerals
+        const optionPattern = /(?:^|\s+)([a-dক-ঘi]{1,3})[\)\.।]\s*(.+?)(?=\s+([a-dক-ঘi]{1,3})[\)\.।]\s*|$)/gi;
         let match;
         let foundAny = false;
         while ((match = optionPattern.exec(line)) !== null) {
@@ -169,7 +220,8 @@ export function parseMCQQuestions(text) {
           const labelMap = { 
             'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd',
             '1': 'a', '2': 'b', '3': 'c', '4': 'd',
-            '১': 'a', '২': 'b', '৩': 'c', '৪': 'd'
+            '১': 'a', '২': 'b', '৩': 'c', '৪': 'd',
+            'i': 'i', 'ii': 'ii', 'iii': 'iii', 'iv': 'iv'
           };
           if (labelMap[optionLabel]) {
             optionLabel = labelMap[optionLabel];
@@ -197,7 +249,7 @@ export function parseMCQQuestions(text) {
                 if (inExplanation && explanationBuffer.length > 0) {
                   currentQuestion.explanation = explanationBuffer.join('\n').trim();
                 }
-                questions.push({ ...currentQuestion });
+                finalizeQuestion(currentQuestion);
                 
                 // Reset but KEEP METADATA (Subject, Chapter, etc.) for the next question
                 const prevMetadata = {
@@ -236,53 +288,51 @@ export function parseMCQQuestions(text) {
         let answerVal = match[2].trim();
         console.log('  ✅ Found Correct answer value:', answerVal);
 
-        // Case 1: Single letter or number label (a, b, c, d, 1, 2, 3, 4 or Bengali equivalents)
-        const labelMatch = answerVal.match(/^([a-dক-ঘ]|[1-4]|[১-৪])(?:\s*[\)\.।]\s*|$)/i);
-        if (labelMatch && answerVal.length <= 3) {
+        const robustNormalize = (str) => (str || '').toString()
+          .normalize('NFC')
+          .replace(/[\\*\s\u200B\u200C\u200D]+/g, '') // Remove all markdown, spaces and invisible chars
+          .toLowerCase();
+
+        const normalizedAnswer = robustNormalize(answerVal);
+        
+        // --- STEP 1: Exact Text Match ---
+        // (Highest priority: If the answer value exactly matches one of the option texts)
+        let matchingOption = currentQuestion.options.find(opt => {
+          const normalizedOptText = robustNormalize(opt.text);
+          return normalizedOptText === normalizedAnswer;
+        });
+
+        if (matchingOption) {
+          currentQuestion.correctAnswer = matchingOption.label;
+          console.log('    🎯 Exact text match found! Label:', matchingOption.label);
+        } 
+        // --- STEP 2: Label Match ---
+        // (If it looks like a label "a", "a)", etc. AND it's short)
+        else if (answerVal.match(/^([a-dক-ঘ]|[1-4]|[১-৪])(?:\s*[\)\.।]\s*|$)/i) && answerVal.length <= 4) {
+          const labelMatch = answerVal.match(/^([a-dক-ঘ]|[1-4]|[১-৪])(?:\s*[\)\.।]\s*|$)/i);
           let label = labelMatch[1].toLowerCase();
-          // Convert Bengali letters/numbers and English numbers to labels
           const labelMap = { 
             'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd',
             '1': 'a', '2': 'b', '3': 'c', '4': 'd',
             '১': 'a', '২': 'b', '৩': 'c', '৪': 'd'
           };
-          if (labelMap[label]) {
-            label = labelMap[label];
-          }
+          if (labelMap[label]) label = labelMap[label];
           currentQuestion.correctAnswer = label;
-          console.log('    🎯 Interpreted as label:', label);
-        } else {
-          // Case 2: Full text of an option
-          // Try to find a matching option label by comparing text
-          const robustNormalize = (str) => (str || '').toString()
-            .normalize('NFC')
-            .replace(/[\\*\s\u200B\u200C\u200D]+/g, '') // Remove all markdown, spaces and invisible chars
-            .toLowerCase();
-
-          const normalizedAnswer = robustNormalize(answerVal);
-          console.log(`    🔍 Attempting to match text: "${normalizedAnswer}"`);
-          
-          // First pass: Exact match (normalized)
-          let matchingOption = currentQuestion.options.find(opt => {
+          console.log('    🎯 Label match found! Label:', label);
+        }
+        // --- STEP 3: Fuzzy Text Match ---
+        else {
+          console.log(`    🔍 Attempting fuzzy match for text: "${normalizedAnswer}"`);
+          matchingOption = currentQuestion.options.find(opt => {
             const normalizedOptText = robustNormalize(opt.text);
-            return normalizedOptText === normalizedAnswer;
+            return (normalizedOptText.length > 2 && (normalizedOptText.includes(normalizedAnswer) || normalizedAnswer.includes(normalizedOptText)));
           });
-          
-          if (!matchingOption) {
-            console.log('    ⚠️ No exact match, trying fuzzy match...');
-            matchingOption = currentQuestion.options.find(opt => {
-              const normalizedOptText = robustNormalize(opt.text);
-              const isMatch = (normalizedOptText.length > 2 && (normalizedOptText.includes(normalizedAnswer) || normalizedAnswer.includes(normalizedOptText)));
-              if (isMatch) console.log(`    ✅ Fuzzy matched with: "${normalizedOptText}"`);
-              return isMatch;
-            });
-          }
-          
+
           if (matchingOption) {
             currentQuestion.correctAnswer = matchingOption.label;
-            console.log('    🎯 Matched option text to label:', matchingOption.label);
+            console.log('    🎯 Fuzzy match found! Label:', matchingOption.label);
           } else {
-            // Fallback: if we can't match, just take the first char if it's a valid label
+            // Fallback: take first character if it's a valid label
             const firstChar = answerVal[0].toLowerCase();
             const labelMap = { 
               'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd',
@@ -294,8 +344,9 @@ export function parseMCQQuestions(text) {
             } else if (labelMap[firstChar]) {
               currentQuestion.correctAnswer = labelMap[firstChar];
             } else {
-              currentQuestion.correctAnswer = answerVal; // Keep original as fallback
+              currentQuestion.correctAnswer = answerVal;
             }
+            console.log('    ⚠️ Fallback used. Final Correct Answer:', currentQuestion.correctAnswer);
           }
         }
       }
@@ -333,7 +384,7 @@ export function parseMCQQuestions(text) {
           
           // Save current question if valid
           if (currentQuestion.questionText && currentQuestion.options.length > 0) {
-            questions.push({ ...currentQuestion });
+            finalizeQuestion(currentQuestion);
           }
           
           // Reset for next question
@@ -379,7 +430,7 @@ export function parseMCQQuestions(text) {
         if (line.match(/^\*{0,2}\[\s*(Subject|বিষয়|বিষয়|Chapter|অধ্যায়|Lesson|পাঠ|Board|বোর্ড)\s*:/i)) {
             // New question starting, save current one
             if (currentQuestion.questionText) {
-                questions.push({ ...currentQuestion });
+                finalizeQuestion(currentQuestion);
             }
             // Logic to handle metadata will be in the metadata block
             // For now just stop question mode
@@ -398,7 +449,7 @@ export function parseMCQQuestions(text) {
     // Relaxed validation for saving last question: just question text is enough
     if (currentQuestion.questionText) {
       console.log('  💾 Saving last question of set');
-      questions.push(currentQuestion);
+      finalizeQuestion(currentQuestion);
     } else {
       console.log('  ⚠️ Last question incomplete:', {
         hasQuestion: !!currentQuestion.questionText,

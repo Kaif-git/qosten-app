@@ -253,14 +253,14 @@ export const parseCQQuestions = (text, lang = 'en') => {
             continue;
         }
 
-        // Handle Bangla answer section header (উত্তর:)
-        if (/^উত্তর\s*:/i.test(line)) {
+        // Handle Bangla answer section header (উত্তর: or সমাধান:)
+        if (/^(উত্তর|সমাধান)\s*:/i.test(line)) {
             state.inStimulusSection = false;
             state.inQuestionSection = false;
             state.inAnswerSection = true;
             
             // Check for inline content (e.g. "উত্তর: এখানে উত্তর")
-            const inlineContent = line.replace(/^উত্তর\s*[:ঃ]\s*/i, '').trim();
+            const inlineContent = line.replace(/^(উত্তর|সমাধান)\s*[:ঃ]\s*/i, '').trim();
             if (inlineContent) {
                 // Process as answer line
                 line = inlineContent; 
@@ -286,7 +286,7 @@ export const parseCQQuestions = (text, lang = 'en') => {
         }
 
         // Answer section detection
-        if (/^(answer|উত্তর|ans)\s*[:=ঃ]?/i.test(line) && !state.inAnswerSection) {
+        if (/^(answer|উত্তর|সমাধান|ans)\s*[:=ঃ]?/i.test(line) && !state.inAnswerSection) {
             state.inAnswerSection = true;
             state.currentAnswerPart = null; // Reset current answer part on new Answer: header
             if (!currentQuestion.questionText && state.questionTextLines.length > 0) {
@@ -295,7 +295,7 @@ export const parseCQQuestions = (text, lang = 'en') => {
             console.log(`    ✅ Found Answer section.`);
             
             // Handle inline content
-            const inlineContent = line.replace(/^(answer|উত্তর|ans)\s*[:=ঃ]?\s*/i, '').trim();
+            const inlineContent = line.replace(/^(answer|উত্তর|সমাধান|ans)\s*[:=ঃ]?\s*/i, '').trim();
             if (inlineContent) {
                 // If it's "Answer: a. something", we want to process "a. something" as a part answer
                 if (inlineContent.match(/^(?:Part\s+)?([a-dক-ঘ])[.:)]/i)) {
@@ -466,13 +466,14 @@ export const parseCQQuestions = (text, lang = 'en') => {
                     let partLetter = partMatch[1].toLowerCase();
                     const partContent = partMatch[2].trim();
                     
+                    // Convert Bengali letters consistently
+                    const bengaliToEnglish = { 'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd' };
+                    if (bengaliToEnglish[partLetter]) partLetter = bengaliToEnglish[partLetter];
+
                     // Check if this line contains more parts
                     if (/\s+([a-dক-ঘ])[.:)।]\s+/i.test(partContent)) {
                         splitAndAssign(partContent, partLetter);
                     } else {
-                        const bengaliToEnglish = { 'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd' };
-                        if (bengaliToEnglish[partLetter]) partLetter = bengaliToEnglish[partLetter];
-                        
                         const part = currentQuestion.parts.find(p => p.letter === partLetter);
                         if (part) {
                             part.answer = partContent;
@@ -499,13 +500,12 @@ export const parseCQQuestions = (text, lang = 'en') => {
                         splitAndAssign(line, state.currentAnswerPart.letter);
                     } else if (state.currentAnswerPart) {
                         // Continuation line
-                        const endsWithNewline = state.currentAnswerPart.answer.endsWith('\n');
                         if (!state.currentAnswerPart.answer) {
                             state.currentAnswerPart.answer = line;
-                        } else if (endsWithNewline) {
-                            state.currentAnswerPart.answer += line;
                         } else {
-                            state.currentAnswerPart.answer += '\n' + line;
+                            // If the line already ends with a newline (from isEmptyLine logic), don't add another
+                            const separator = state.currentAnswerPart.answer.endsWith('\n') ? '' : '\n';
+                            state.currentAnswerPart.answer += separator + line;
                         }
                     } else if (currentQuestion.parts.length > 0 && !state.useBulletPointFormat) {
                         // If no current answer part, append to the last part (fallback)

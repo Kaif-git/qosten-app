@@ -103,11 +103,21 @@ export default function ImageLinkingModal({ question, onClose, onLink, onUnlink 
       return;
     }
 
-    // Pass the selected question to parent component
+    // Helper to get image from column or from parts array
+    const getPartImage = (letter, colName) => {
+      if (selectedQuestion[colName]) return selectedQuestion[colName];
+      const part = selectedQuestion.parts?.find(p => p.letter?.toLowerCase() === letter);
+      return part?.image || part?.answerImage || null;
+    };
+
+    // Pass the selected question images to parent component
+    // Mapping: c->1, d->2, a->3, b->4
     onLink({
       image: selectedQuestion.image,
-      answerimage1: selectedQuestion.answerimage1,
-      answerimage2: selectedQuestion.answerimage2
+      answerimage1: getPartImage('c', 'answerimage1'),
+      answerimage2: getPartImage('d', 'answerimage2'),
+      answerimage3: getPartImage('a', 'answerimage3'),
+      answerimage4: getPartImage('b', 'answerimage4')
     });
 
     alert(`✓ Images linked successfully from question ${selectedQuestion.id}!`);
@@ -358,8 +368,23 @@ export default function ImageLinkingModal({ question, onClose, onLink, onUnlink 
                       <strong style={{ display: 'block', marginBottom: '10px', color: '#0056b3' }}>🖼️ Images to be Copied:</strong>
                       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
                         {selectedQuestion.image && <div style={{ textAlign: 'center' }}><img src={selectedQuestion.image} alt="S" style={{ width: '80px', height: '80px', objectFit: 'contain', border: '1px solid #ccc' }} /><br/><span style={{ fontSize: '10px' }}>Stem</span></div>}
-                        {selectedQuestion.answerimage1 && <div style={{ textAlign: 'center' }}><img src={selectedQuestion.answerimage1} alt="A1" style={{ width: '80px', height: '80px', objectFit: 'contain', border: '1px solid #ccc' }} /><br/><span style={{ fontSize: '10px' }}>Ans 1</span></div>}
-                        {selectedQuestion.answerimage2 && <div style={{ textAlign: 'center' }}><img src={selectedQuestion.answerimage2} alt="A2" style={{ width: '80px', height: '80px', objectFit: 'contain', border: '1px solid #ccc' }} /><br/><span style={{ fontSize: '10px' }}>Ans 2</span></div>}
+                        {(() => {
+                          const getImg = (l, c) => selectedQuestion[c] || selectedQuestion.parts?.find(p => p.letter?.toLowerCase() === l)?.image || selectedQuestion.parts?.find(p => p.letter?.toLowerCase() === l)?.answerImage;
+                          
+                          const img1 = getImg('c', 'answerimage1');
+                          const img2 = getImg('d', 'answerimage2');
+                          const img3 = getImg('a', 'answerimage3');
+                          const img4 = getImg('b', 'answerimage4');
+
+                          return (
+                            <>
+                              {img3 && <div style={{ textAlign: 'center' }}><img src={img3} alt="A" style={{ width: '80px', height: '80px', objectFit: 'contain', border: '1px solid #ccc' }} /><br/><span style={{ fontSize: '10px' }}>Part A (3)</span></div>}
+                              {img4 && <div style={{ textAlign: 'center' }}><img src={img4} alt="B" style={{ width: '80px', height: '80px', objectFit: 'contain', border: '1px solid #ccc' }} /><br/><span style={{ fontSize: '10px' }}>Part B (4)</span></div>}
+                              {img1 && <div style={{ textAlign: 'center' }}><img src={img1} alt="C" style={{ width: '80px', height: '80px', objectFit: 'contain', border: '1px solid #ccc' }} /><br/><span style={{ fontSize: '10px' }}>Part C (1)</span></div>}
+                              {img2 && <div style={{ textAlign: 'center' }}><img src={img2} alt="D" style={{ width: '80px', height: '80px', objectFit: 'contain', border: '1px solid #ccc' }} /><br/><span style={{ fontSize: '10px' }}>Part D (2)</span></div>}
+                            </>
+                          );
+                        })()}
                       </div>
                     </div>
                   </>

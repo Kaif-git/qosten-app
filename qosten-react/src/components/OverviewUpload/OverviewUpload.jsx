@@ -9,6 +9,7 @@ import MarkdownContent from '../MarkdownContent/MarkdownContent';
 
 export default function OverviewUpload() {
   const [inputText, setInputText] = useState('');
+  const [subject, setSubject] = useState('');
   const [parsedChapters, setParsedChapters] = useState([]); // Array of { name, data }
   const [validationErrors, setValidationErrors] = useState([]);
   const [uploadStatus, setUploadStatus] = useState('');
@@ -37,18 +38,19 @@ export default function OverviewUpload() {
       const flushBuckets = () => {
         const hasEN = buckets.en.topics.length > 0;
         const hasBN = buckets.bn.topics.length > 0;
+        const subjectPrefix = subject.trim() ? `${subject.trim()}: ` : '';
 
         if (hasEN) {
-          const name = currentHeader || `Chapter: ${buckets.en.titleFallback}`;
+          const baseName = currentHeader || `Chapter: ${buckets.en.titleFallback}`;
           chapters.push({
-            name: hasBN ? `${name} (English)` : name,
+            name: hasBN ? `${subjectPrefix}${baseName} (English)` : `${subjectPrefix}${baseName}`,
             data: { topics: [...buckets.en.topics] }
           });
         }
         if (hasBN) {
-          const name = currentHeader || `Chapter: ${buckets.bn.titleFallback}`;
+          const baseName = currentHeader || `Chapter: ${buckets.bn.titleFallback}`;
           chapters.push({
-            name: hasEN ? `${name} (Bangla)` : name,
+            name: hasEN ? `${subjectPrefix}${baseName} (Bangla)` : `${subjectPrefix}${baseName}`,
             data: { topics: [...buckets.bn.topics] }
           });
         }
@@ -86,7 +88,8 @@ export default function OverviewUpload() {
         if (!trimmed) continue;
 
         // 1. Explicit Header Detection (resilient to hashes and bolding)
-        const headerMatch = trimmed.match(/^(?:[#\s*]*)(Chapter\s*\d+|অধ্যায়\s*[\d০-৯]+|English\s*Version|বাংলা\s*সংস্করণ)/i);
+        // Supports Chapter 1, অধ্যায় ১, অধ্যায় ১, English Version, বাংলা সংস্করণ
+        const headerMatch = trimmed.match(/^(?:[#\s*]*)(Chapter\s*[\d০-৯]+|অধ্যায়\s*[\d০-৯]+|অধ্যায়\s*[\d০-৯]+|English\s*Version|বাংলা\s*সংস্করণ)(.*)$/i);
         
         // 2. Topic Marker Detection (T-01, টি-০১, T-01 & T-02)
         // Matches T-01 or টি-০১ with optional ### and **
@@ -99,11 +102,12 @@ export default function OverviewUpload() {
           saveActiveTopicToBucket();
           if (headerMatch) {
             // Check if we already have topics in buckets before flushing
-            // This allows headers like "English Version" to act as a prefix for subsequent chapters
             if (buckets.en.topics.length > 0 || buckets.bn.topics.length > 0) {
                 flushBuckets();
             }
-            currentHeader = headerMatch[1].replace(/\*+/g, '').trim();
+            const mainHeader = headerMatch[1].replace(/\*+/g, '').trim();
+            const subHeader = headerMatch[2].replace(/[#\s*:]+/g, ' ').trim();
+            currentHeader = subHeader ? `${mainHeader}: ${subHeader}` : mainHeader;
           } else {
             saveActiveTopicToBucket();
             flushBuckets();
@@ -215,6 +219,7 @@ export default function OverviewUpload() {
 
   const handleClear = () => {
     setInputText('');
+    setSubject('');
     setParsedChapters([]);
     setValidationErrors([]);
     setUploadStatus('');
@@ -262,6 +267,29 @@ v = u + at`);
         {/* Left Column - Input */}
         <div>
           <div style={{ marginBottom: '20px' }}>
+            <div style={{ marginBottom: '15px' }}>
+              <label style={{ fontWeight: '600', color: '#2c3e50', display: 'block', marginBottom: '8px' }}>
+                Subject Name (Optional):
+              </label>
+              <input
+                type="text"
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+                placeholder="e.g. Physics, Biology..."
+                style={{
+                  width: '100%',
+                  padding: '10px 12px',
+                  borderRadius: '6px',
+                  border: '1px solid #3498db',
+                  fontSize: '1rem',
+                  boxSizing: 'border-box'
+                }}
+              />
+              <small style={{ color: '#7f8c8d', marginTop: '4px', display: 'block' }}>
+                This will be prefixed to each chapter name (e.g. "Biology: Chapter 02")
+              </small>
+            </div>
+
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
               <label style={{ fontWeight: '600', color: '#2c3e50' }}>
                 Paste Overview Text:

@@ -162,12 +162,20 @@ export const mapDatabaseToApp = (q) => {
   // Add CQ specific fields
   if (q.type === 'cq') {
     question.stem = q.stem || questionText;
-    let parts = q.parts;
-    if (typeof parts === 'string') {
-        try { parts = JSON.parse(parts); } catch (e) { parts = []; }
+    
+    // Robust parsing for parts
+    let rawParts = q.parts;
+    if (typeof rawParts === 'string') {
+        try { 
+            rawParts = JSON.parse(rawParts); 
+        } catch (e) { 
+            console.error(`Error parsing parts for Q#${q.id}:`, e);
+            rawParts = []; 
+        }
     }
-    question.parts = Array.isArray(parts)
-      ? parts.map(part => ({
+    
+    const mappedParts = Array.isArray(rawParts)
+      ? rawParts.map(part => ({
           letter: part.letter || part.label || '',
           label: part.label || part.letter || '',
           text: part.text || '',
@@ -177,9 +185,37 @@ export const mapDatabaseToApp = (q) => {
           answerImage: part.answerImage || part.image || part.image_url || null
         }))
       : [];
-    // Only use existing columns
-    question.answerimage1 = q.answerimage1 || q.answerImage1 || null;
-    question.answerimage2 = q.answerimage2 || q.answerImage2 || null;
+
+    // Safe hoisting: If column is empty, use the image from parts for display,
+    // but don't overwrite the part image itself if the column is null.
+    const getImg = (col, letter) => {
+        if (col) return col;
+        const p = mappedParts.find(part => part.letter?.toLowerCase() === letter);
+        return p?.image || p?.answerImage || null;
+    };
+
+    // Maintain raw DB values for normalization tool
+    question._rawAnswerimage1 = q.answerimage1 !== undefined ? q.answerimage1 : (q.answerImage1 !== undefined ? q.answerImage1 : (q.answer_image_1 !== undefined ? q.answer_image_1 : (q.answer_image1 !== undefined ? q.answer_image1 : null)));
+    question._rawAnswerimage2 = q.answerimage2 !== undefined ? q.answerimage2 : (q.answerImage2 !== undefined ? q.answerImage2 : (q.answer_image_2 !== undefined ? q.answer_image_2 : (q.answer_image2 !== undefined ? q.answer_image2 : null)));
+    question._rawAnswerimage3 = q.answerimage3 !== undefined ? q.answerimage3 : (q.answerImage3 !== undefined ? q.answerImage3 : (q.answer_image_3 !== undefined ? q.answer_image_3 : (q.answer_image3 !== undefined ? q.answer_image3 : null)));
+    question._rawAnswerimage4 = q.answerimage4 !== undefined ? q.answerimage4 : (q.answerImage4 !== undefined ? q.answerImage4 : (q.answer_image_4 !== undefined ? q.answer_image_4 : (q.answer_image4 !== undefined ? q.answer_image4 : null)));
+
+    question.answerimage1 = getImg(question._rawAnswerimage1, 'c');
+    question.answerimage2 = getImg(question._rawAnswerimage2, 'd');
+    question.answerimage3 = getImg(question._rawAnswerimage3, 'a');
+    question.answerimage4 = getImg(question._rawAnswerimage4, 'b');
+
+    // Final parts assignment: Keep existing images but ensure they are available
+    question.parts = mappedParts.map(p => {
+        const l = p.letter?.toLowerCase();
+        let syncedImg = p.image;
+        if (l === 'c' && question.answerimage1) syncedImg = question.answerimage1;
+        else if (l === 'd' && question.answerimage2) syncedImg = question.answerimage2;
+        else if (l === 'a' && question.answerimage3) syncedImg = question.answerimage3;
+        else if (l === 'b' && question.answerimage4) syncedImg = question.answerimage4;
+        
+        return { ...p, image: syncedImg, answerImage: syncedImg };
+    });
   }
 
   // Add SQ specific fields
@@ -196,6 +232,16 @@ export const mapDatabaseToApp = (q) => {
  */
 const mapAppToDatabase = (q) => {
   if (!q) return null;
+
+  console.log(`📡 mapAppToDatabase: Mapping question ${q.id || 'new'} of type ${q.type}`);
+  if (q.type === 'cq') {
+      console.log('   CQ Image Columns in App state before mapping:', {
+          a1: q.answerimage1,
+          a2: q.answerimage2,
+          a3: q.answerimage3,
+          a4: q.answerimage4
+      });
+  }
 
   // Priority to 'image' as it contains the newly uploaded Supabase URL
   const finalImageUrl = q.image || q.imageUrl;
@@ -219,7 +265,28 @@ const mapAppToDatabase = (q) => {
     questionimage: finalImageUrl, 
     is_flagged: !!q.isFlagged,
     is_verified: !!q.isVerified,
-    in_review_queue: !!q.inReviewQueue
+    in_review_queue: !!q.inReviewQueue,
+    // Hoist answer image columns to top level for robust persistence
+    answerimage1: q.answerimage1,
+    answer_image_1: q.answerimage1,
+    answerImage1: q.answerimage1,
+    answer_image1: q.answerimage1,
+    AnswerImage1: q.answerimage1,
+    answerimage2: q.answerimage2,
+    answer_image_2: q.answerimage2,
+    answerImage2: q.answerimage2,
+    answer_image2: q.answerimage2,
+    AnswerImage2: q.answerimage2,
+    answerimage3: q.answerimage3,
+    answer_image_3: q.answerimage3,
+    answerImage3: q.answerimage3,
+    answer_image3: q.answerimage3,
+    AnswerImage3: q.answerimage3,
+    answerimage4: q.answerimage4,
+    answer_image_4: q.answerimage4,
+    answerImage4: q.answerimage4,
+    answer_image4: q.answerimage4,
+    AnswerImage4: q.answerimage4
   };
 
   if (q.type === 'mcq') {
@@ -242,10 +309,6 @@ const mapAppToDatabase = (q) => {
 
   if (q.type === 'cq') {
     dbQ.stem = q.stem || q.questionText || q.text || '';
-    
-    // Explicitly map answerimage1 and answerimage2
-    dbQ.answerimage1 = q.answerimage1;
-    dbQ.answerimage2 = q.answerimage2;
     
     dbQ.parts = (q.parts || []).map((part, idx) => {
       const partImage = part.image || part.answerImage;
@@ -382,26 +445,40 @@ export function QuestionProvider({ children }) {
   };
 
   const processQuestionImages = useCallback(async (question) => {
-      console.log('🖼️ processQuestionImages: Starting for question:', question.id || 'new');
+      console.log('🖼️ [QuestionContext] processQuestionImages: Starting for question:', question.id || 'new');
       const q = { ...question };
       
-      // 1. Process Main Image
+      // 1. Pre-sync: Ensure images are in BOTH parts and legacy columns before processing.
+      // This prevents one from wiping the other if only one was set (e.g. in QuestionForm).
+      if (q.parts && Array.isArray(q.parts)) {
+          console.log('  - Pre-syncing image columns and parts...');
+          q.parts = q.parts.map(p => {
+              const l = p.letter?.toLowerCase();
+              let colImg = null;
+              if (l === 'c') colImg = q.answerimage1;
+              else if (l === 'd') colImg = q.answerimage2;
+              else if (l === 'a') colImg = q.answerimage3;
+              else if (l === 'b') colImg = q.answerimage4;
+              
+              const partImg = p.answerImage || p.image;
+              
+              // If column has image but part doesn't, sync to part
+              if (colImg && !partImg) {
+                  console.log(`    -> Part ${l}: Column has image but part doesn't. Syncing to part.`);
+                  return { ...p, answerImage: colImg, image: colImg };
+              }
+              // If part has image but column doesn't, sync to column (handled in Step 2 post-sync)
+              return p;
+          });
+      }
+
+      // 2. Process Main Image
       if (q.image && (q.image.startsWith('data:') || q.image.startsWith('blob:'))) {
           console.log('  - Uploading main image...');
           q.image = await uploadImageToSupabase(q.image);
       }
       
-      // 2. Process Legacy Answer Images
-      if (q.answerimage1 && (q.answerimage1.startsWith('data:') || q.answerimage1.startsWith('blob:'))) {
-          console.log('  - Uploading answerimage1...');
-          q.answerimage1 = await uploadImageToSupabase(q.answerimage1);
-      }
-      if (q.answerimage2 && (q.answerimage2.startsWith('data:') || q.answerimage2.startsWith('blob:'))) {
-          console.log('  - Uploading answerimage2...');
-          q.answerimage2 = await uploadImageToSupabase(q.answerimage2);
-      }
-      
-      // 3. Process CQ Parts
+      // 3. Process CQ Parts (uploads any new images)
       if (q.parts && Array.isArray(q.parts)) {
           console.log(`  - Processing ${q.parts.length} CQ parts...`);
           q.parts = await Promise.all(q.parts.map(async (p, idx) => {
@@ -415,9 +492,28 @@ export function QuestionProvider({ children }) {
               }
               return updatedPart;
           }));
+
+          // Post-sync: Sync URLs from parts to legacy columns to ensure consistency
+          console.log('  - Post-syncing processed URLs from parts to legacy columns...');
+          q.parts.forEach(p => {
+              const l = p.letter?.toLowerCase();
+              if (l === 'c') { q.answerimage1 = p.answerImage; console.log('    -> answerimage1 set'); }
+              else if (l === 'd') { q.answerimage2 = p.answerImage; console.log('    -> answerimage2 set'); }
+              else if (l === 'a') { q.answerimage3 = p.answerImage; console.log('    -> answerimage3 set'); }
+              else if (l === 'b') { q.answerimage4 = p.answerImage; console.log('    -> answerimage4 set'); }
+          });
+      }
+      
+      // 4. Process Legacy Answer Images (double check)
+      const legacyFields = ['answerimage1', 'answerimage2', 'answerimage3', 'answerimage4'];
+      for (const field of legacyFields) {
+          if (q[field] && (q[field].startsWith('data:') || q[field].startsWith('blob:'))) {
+              console.log(`  - Uploading legacy ${field}...`);
+              q[field] = await uploadImageToSupabase(q[field]);
+          }
       }
 
-      // 4. Process MCQ Options
+      // 5. Process MCQ Options
       if (q.options && Array.isArray(q.options)) {
           console.log(`  - Processing ${q.options.length} MCQ options...`);
           q.options = await Promise.all(q.options.map(async (opt, idx) => {
@@ -430,7 +526,7 @@ export function QuestionProvider({ children }) {
           }));
       }
       
-      console.log('🖼️ processQuestionImages: Finished.');
+      console.log('🖼️ [QuestionContext] processQuestionImages: Finished.');
       return q;
   }, [uploadImageToSupabase]);
 
@@ -482,7 +578,19 @@ export function QuestionProvider({ children }) {
       const questionWithImages = await processQuestionImages(question);
       const dbQuestion = mapAppToDatabase(questionWithImages);
       const responseData = await questionApi.createQuestion(dbQuestion);
-      const newQuestion = mapDatabaseToApp(responseData.data || responseData);
+      
+      console.log('📥 [QuestionContext] addQuestion - responseData:', responseData);
+      
+      // Captures ID from various common response structures
+      const newId = responseData.id || 
+                    responseData.question_id || 
+                    (responseData.data && (responseData.data.id || responseData.data.question_id)) || 
+                    (responseData.question && (responseData.question.id || responseData.question.question_id)) ||
+                    dbQuestion.id;
+      
+      console.log(`📡 [QuestionContext] Captured new ID: ${newId}`);
+      
+      const newQuestion = { ...questionWithImages, id: newId };
       
       dispatch({ type: ACTIONS.ADD_QUESTION, payload: newQuestion });
       
@@ -511,29 +619,38 @@ export function QuestionProvider({ children }) {
         const chunk = questions.slice(i, i + CHUNK_SIZE);
         const processedChunk = await Promise.all(chunk.map(async q => {
           try {
-            const withImages = await processQuestionImages(q);
-            return mapAppToDatabase(withImages);
+            return await processQuestionImages(q);
           } catch (e) {
             console.error(`Error processing images for question ${q.id}:`, e);
-            return mapAppToDatabase(q);
+            return q;
           }
         }));
 
-        const batchResults = await questionApi.bulkCreateQuestions(processedChunk);
+        const dbChunk = processedChunk.map(mapAppToDatabase);
+        const batchResults = await questionApi.bulkCreateQuestions(dbChunk);
         results.successCount += batchResults.successCount;
         results.failedCount += batchResults.failedCount;
         results.errors.push(...batchResults.errors);
         
+        console.log(`📥 [QuestionContext] bulkAddQuestions - batch results:`, batchResults.questions);
+
+        // Merge the IDs back into our processed questions
         if (batchResults.questions) {
-            allNewQuestions.push(...batchResults.questions.map(mapDatabaseToApp));
+            batchResults.questions.forEach((dbQ, idx) => {
+                const sourceQ = processedChunk[idx];
+                if (sourceQ) {
+                    const capturedId = dbQ.id || dbQ.question_id || (dbQ.data && dbQ.data.id);
+                    console.log(`   -> Q#${idx} assigned ID: ${capturedId}`);
+                    allNewQuestions.push({ ...sourceQ, id: capturedId });
+                }
+            });
         }
 
         if (onProgress) onProgress(Math.min(i + CHUNK_SIZE, total), total);
       }
 
       if (allNewQuestions.length > 0) {
-          const validNewOnes = allNewQuestions.filter(q => q && q.id);
-          dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prev) => [...validNewOnes, ...prev] });
+          dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prev) => [...allNewQuestions, ...prev] });
       } else {
           await refreshHierarchy();
       }
@@ -551,8 +668,10 @@ export function QuestionProvider({ children }) {
       console.log('🔄 Manually refreshing questions (API)...');
       refreshHierarchy();
       const allQuestions = await questionApi.fetchAllQuestions();
-      if (allQuestions.length > 0) {
-        const mappedQuestions = allQuestions.map(mapDatabaseToApp);
+      if (allQuestions && allQuestions.length > 0) {
+        // Handle both direct array and {value: [...]} response
+        const batch = Array.isArray(allQuestions) ? allQuestions : (allQuestions.value || allQuestions.data || []);
+        const mappedQuestions = batch.map(mapDatabaseToApp);
         dispatch({ type: ACTIONS.SET_QUESTIONS, payload: mappedQuestions });
         console.log(`✅ Successfully refreshed ${mappedQuestions.length} questions`);
       }
@@ -564,7 +683,8 @@ export function QuestionProvider({ children }) {
   const batchAddQuestions = useCallback(async (questions, onProgress) => {
     try {
       console.log(`🚀 Starting batch add of ${questions.length} questions...`);
-      const dbQuestions = questions.map(q => mapAppToDatabase(q));
+      const processed = await Promise.all(questions.map(q => processQuestionImages(q)));
+      const dbQuestions = processed.map(q => mapAppToDatabase(q));
       const result = await questionApi.batchCreateQuestions(dbQuestions, onProgress);
       await refreshQuestions();
       refreshHierarchy();
@@ -573,7 +693,7 @@ export function QuestionProvider({ children }) {
       console.error('Error in batchAddQuestions:', error);
       throw error;
     }
-  }, [refreshHierarchy, refreshQuestions]);
+  }, [refreshHierarchy, refreshQuestions, processQuestionImages]);
 
   const updateQuestion = useCallback(async (question) => {
     try {
@@ -593,10 +713,11 @@ export function QuestionProvider({ children }) {
   const bulkUpdateQuestions = useCallback(async (questions) => {
     try {
       console.log(`🔄 Starting bulk update of ${questions.length} questions...`);
-      const dbQuestions = questions.map(q => mapAppToDatabase(q));
+      const processed = await Promise.all(questions.map(q => processQuestionImages(q)));
+      const dbQuestions = processed.map(q => mapAppToDatabase(q));
       const { successCount, failedCount } = await questionApi.bulkUpdateQuestions(dbQuestions);
       
-      const updateMap = new Map(questions.map(q => [q.id.toString(), q]));
+      const updateMap = new Map(processed.map(q => [q.id.toString(), q]));
       dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
           return prevQuestions.map(q => {
               const improved = updateMap.get(q.id.toString());
@@ -611,17 +732,22 @@ export function QuestionProvider({ children }) {
       console.error('Error in bulkUpdateQuestions:', error);
       throw error;
     }
-  }, [refreshHierarchy]);
+  }, [refreshHierarchy, processQuestionImages]);
 
   const deleteQuestion = useCallback(async (id) => {
+    if (id === null || id === undefined) {
+        console.error('❌ deleteQuestion: ID is null or undefined!');
+        return;
+    }
+    
     try {
-      const questionId = parseInt(id);
-      await questionApi.deleteQuestion(questionId);
+      console.log(`🗑️ [QuestionContext] deleteQuestion: ID: ${id}`);
+      await questionApi.deleteQuestion(id);
       dispatch({ type: ACTIONS.DELETE_QUESTION, payload: id });
       refreshHierarchy();
-      console.log('Question deleted via API:', id);
+      console.log('✅ Question deleted successfully:', id);
     } catch (error) {
-      console.error('Error in deleteQuestion:', error);
+      console.error('❌ Error in deleteQuestion:', error);
       throw error;
     }
   }, [refreshHierarchy]);

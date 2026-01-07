@@ -70,6 +70,22 @@ export default function FullQuestionContent({ question }) {
                 <div style={{ padding: '8px', backgroundColor: '#e9ecef', borderRadius: '4px', fontSize: '0.9em' }}>
                   <strong>Answer:</strong> <LatexRenderer text={part.answer || 'N/A'} />
                 </div>
+                {(() => {
+                  let partImage = part.image || part.answerImage;
+                  const letter = part.letter?.toLowerCase();
+                  if (letter === 'c' && question.answerimage1) partImage = question.answerimage1;
+                  else if (letter === 'd' && question.answerimage2) partImage = question.answerimage2;
+                  else if (letter === 'a' && question.answerimage3) partImage = question.answerimage3;
+                  else if (letter === 'b' && question.answerimage4) partImage = question.answerimage4;
+                  
+                  return partImage && (
+                    <img 
+                      src={partImage} 
+                      alt={`Part ${part.letter} answer`}
+                      style={{maxWidth: '200px', maxHeight: '200px', display: 'block', marginTop: '10px', borderRadius: '4px'}} 
+                    />
+                  );
+                })()}
               </div>
             ))}
           </div>

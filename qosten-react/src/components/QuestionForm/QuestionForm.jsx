@@ -36,7 +36,9 @@ export default function QuestionForm() {
     sqAnswer: '',
     image: null,
     answerimage1: null,
-    answerimage2: null
+    answerimage2: null,
+    answerimage3: null,
+    answerimage4: null
   });
   
   // Load editing question data on mount
@@ -67,7 +69,9 @@ export default function QuestionForm() {
         sqAnswer: editingQuestion.answer || '',
         image: editingQuestion.image,
         answerimage1: editingQuestion.answerimage1 || null,
-        answerimage2: editingQuestion.answerimage2 || null
+        answerimage2: editingQuestion.answerimage2 || null,
+        answerimage3: editingQuestion.answerimage3 || null,
+        answerimage4: editingQuestion.answerimage4 || null
       });
     }
   }, [editingQuestion]);
@@ -136,6 +140,34 @@ export default function QuestionForm() {
     setFormData(prev => ({ ...prev, answerimage2: null }));
   };
   
+  const handleAnswerImage3Upload = (file) => {
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setFormData(prev => ({ ...prev, answerimage3: reader.result }));
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+  
+  const removeAnswerImage3 = () => {
+    setFormData(prev => ({ ...prev, answerimage3: null }));
+  };
+  
+  const handleAnswerImage4Upload = (file) => {
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setFormData(prev => ({ ...prev, answerimage4: reader.result }));
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+  
+  const removeAnswerImage4 = () => {
+    setFormData(prev => ({ ...prev, answerimage4: null }));
+  };
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     
@@ -165,7 +197,9 @@ export default function QuestionForm() {
       language: formData.language,
       image: formData.image,
       answerimage1: formData.answerimage1,
-      answerimage2: formData.answerimage2
+      answerimage2: formData.answerimage2,
+      answerimage3: formData.answerimage3,
+      answerimage4: formData.answerimage4
     };
     
     if (formData.type === 'mcq') {
@@ -258,7 +292,9 @@ export default function QuestionForm() {
       sqAnswer: '',
       image: null,
       answerimage1: null,
-      answerimage2: null
+      answerimage2: null,
+      answerimage3: null,
+      answerimage4: null
     });
     setEditingQuestion(null);
   };
@@ -579,6 +615,66 @@ export default function QuestionForm() {
                 <button 
                   type="button" 
                   onClick={removeAnswerImage2}
+                  style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '8px 16px', borderRadius: '4px', cursor: 'pointer' }}
+                >
+                  ✕ Remove Image
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* Answer Image 3 (for part a) */}
+          <div style={{ marginTop: '15px', padding: '15px', backgroundColor: '#e2e3e5', border: '2px dashed #383d41', borderRadius: '6px' }}>
+            <label htmlFor="answerImage3" style={{ display: 'block', fontWeight: '600', color: '#383d41', marginBottom: '10px' }}>
+              Answer Image 3 (for part a):
+            </label>
+            <input 
+              type="file" 
+              id="answerImage3"
+              accept="image/*"
+              onChange={(e) => handleAnswerImage3Upload(e.target.files[0])}
+              style={{ display: 'block', width: '100%', padding: '8px', fontSize: '14px', cursor: 'pointer' }}
+            />
+            {formData.answerimage3 && (
+              <div style={{ marginTop: '15px' }}>
+                <img 
+                  src={formData.answerimage3} 
+                  alt="Answer Image 3" 
+                  style={{ maxWidth: '100%', maxHeight: '300px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'block', marginBottom: '10px' }}
+                />
+                <button 
+                  type="button" 
+                  onClick={removeAnswerImage3}
+                  style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '8px 16px', borderRadius: '4px', cursor: 'pointer' }}
+                >
+                  ✕ Remove Image
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* Answer Image 4 (for part b) */}
+          <div style={{ marginTop: '15px', padding: '15px', backgroundColor: '#d4edda', border: '2px dashed #155724', borderRadius: '6px' }}>
+            <label htmlFor="answerImage4" style={{ display: 'block', fontWeight: '600', color: '#155724', marginBottom: '10px' }}>
+              Answer Image 4 (for part b):
+            </label>
+            <input 
+              type="file" 
+              id="answerImage4"
+              accept="image/*"
+              onChange={(e) => handleAnswerImage4Upload(e.target.files[0])}
+              style={{ display: 'block', width: '100%', padding: '8px', fontSize: '14px', cursor: 'pointer' }}
+            />
+            {formData.answerimage4 && (
+              <div style={{ marginTop: '15px' }}>
+                <img 
+                  src={formData.answerimage4} 
+                  alt="Answer Image 4" 
+                  style={{ maxWidth: '100%', maxHeight: '300px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'block', marginBottom: '10px' }}
+                />
+                <button 
+                  type="button" 
+                  onClick={removeAnswerImage4}
                   style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '8px 16px', borderRadius: '4px', cursor: 'pointer' }}
                 >
                   ✕ Remove Image

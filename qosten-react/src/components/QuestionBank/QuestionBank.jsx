@@ -6,6 +6,7 @@ import SearchFilters from '../SearchFilters/SearchFilters';
 import QuestionCard from '../QuestionCard/QuestionCard';
 import FullQuestionContent from '../FullQuestionContent/FullQuestionContent';
 import { detectAndFixCQ } from '../../utils/cqFixUtils';
+import { performImageMigration, getMigrationPreview } from '../../utils/imageMigration';
 
 // Helper to fix corrupted MCQ format
 const fixCorruptedMCQ = (text) => {
@@ -219,7 +220,22 @@ const getFilteredQuestions = (questions, filters, fullQuestionsMap = null, hasSe
 };
 
 export default function QuestionBank() {
-  const { questions, setQuestions, currentFilters, deleteQuestion, updateQuestion, bulkUpdateQuestions, bulkFlagQuestions, fetchQuestionsByIds, setFilters, fetchMoreQuestions, fetchAllRemaining, clearCache, hierarchy } = useQuestions();
+  const { 
+    questions, 
+    setQuestions, 
+    currentFilters, 
+    deleteQuestion, 
+    updateQuestion, 
+    bulkUpdateQuestions, 
+    bulkFlagQuestions, 
+    fetchQuestionsByIds, 
+    setFilters, 
+    fetchMoreQuestions, 
+    fetchAllRemaining, 
+    clearCache, 
+    hierarchy,
+    refreshQuestions
+  } = useQuestions();
   const [selectedQuestions, setSelectedQuestions] = useState([]);
   const [selectionMode, setSelectionMode] = useState(false);
   const [lastSelectedId, setLastSelectedId] = useState(null); // Track last selected for shift-click
@@ -227,7 +243,18 @@ export default function QuestionBank() {
   const [showBulkMetadataEditor, setShowBulkMetadataEditor] = useState(false);
   const [bulkMetadata, setBulkMetadata] = useState({ subject: '', chapter: '', lesson: '', board: '' });
   const [showDuplicateModal, setShowDuplicateModal] = useState(false);
+  const [duplicateResultsFilters, setDuplicateResultsFilters] = useState({ subject: '', chapter: '', type: '' });
   const [duplicateGroups, setDuplicateGroups] = useState([]);
+
+  // Memoized filtered duplicate groups for display and deletion
+  const displayDuplicateGroups = React.useMemo(() => {
+    return duplicateGroups.filter(g => {
+      if (duplicateResultsFilters.subject && g.original.subject !== duplicateResultsFilters.subject) return false;
+      if (duplicateResultsFilters.chapter && g.original.chapter !== duplicateResultsFilters.chapter) return false;
+      if (duplicateResultsFilters.type && g.original.type !== duplicateResultsFilters.type) return false;
+      return true;
+    });
+  }, [duplicateGroups, duplicateResultsFilters]);
 
   // Search State
   const [fullQuestionsMap, setFullQuestionsMap] = useState(new Map());
@@ -267,8 +294,10 @@ export default function QuestionBank() {
   const [mcqFixCandidates, setMcqFixCandidates] = useState([]);
 
   // MCQ Sync State
-  const [showMCQSyncModal, setShowMCQSyncModal] = useState(false);
   const [mcqSyncCandidates, setMcqSyncCandidates] = useState([]);
+  const [showMCQSyncModal, setShowMCQSyncModal] = useState(false);
+  const [migrationCandidates, setMigrationCandidates] = useState([]);
+  const [showMigrationModal, setShowMigrationModal] = useState(false);
 
   // SQ Sync State
   const [showSQSyncModal, setShowSQSyncModal] = useState(false);
@@ -618,6 +647,8 @@ export default function QuestionBank() {
                     image: q.image,
                     answerimage1: q.answerimage1,
                     answerimage2: q.answerimage2,
+                    answerimage3: q.answerimage3,
+                    answerimage4: q.answerimage4,
                     explanation: q.explanation,
                     tags: typeof q.tags === 'string' ? JSON.parse(q.tags) : q.tags,
                     isFlagged: q.is_flagged,
@@ -1300,7 +1331,83 @@ export default function QuestionBank() {
           }
         };
       
-        const applyMCQFixes = async () => {      if (!window.confirm(`Are you sure you want to fix ${mcqFixCandidates.length} questions? This action cannot be undone.`)) return;
+        const handleNormalizeCQImages = async () => {
+    setIsFixing(true);
+    setSyncProgress({ current: 0, total: 0 });
+    try {
+        console.log("📡 Starting paginated fetch for ALL Creative Questions...");
+        
+        let allCQsMapped = [];
+        let page = 0;
+        const BATCH_SIZE = 500;
+        let hasMore = true;
+
+        while (hasMore) {
+            console.log(`📡 Fetching CQs page ${page}...`);
+            const response = await questionApi.fetchQuestions({ 
+                type: 'cq', 
+                limit: BATCH_SIZE,
+                page: page
+            });
+            
+            const batch = Array.isArray(response) ? response : (response.data || []);
+            
+            if (batch.length === 0) {
+                hasMore = false;
+            } else {
+                const mappedBatch = batch.map(mapDatabaseToApp);
+                allCQsMapped.push(...mappedBatch);
+                
+                if (batch.length < BATCH_SIZE) {
+                    hasMore = false;
+                } else {
+                    page++;
+                }
+            }
+            // Small delay to prevent rate limiting
+            await new Promise(resolve => setTimeout(resolve, 50));
+        }
+        
+        console.log(`✅ Fetched ${allCQsMapped.length} CQs total. Scanning for inconsistencies...`);
+        
+        if (allCQsMapped.length === 0) {
+            alert("No CQs found in database.");
+            return;
+        }
+
+        const preview = getMigrationPreview(allCQsMapped);
+        
+        if (preview.length > 0) {
+            setMigrationCandidates(preview);
+            setShowMigrationModal(true);
+        } else {
+            alert(`✨ All ${allCQsMapped.length} Creative Questions are already properly normalized.`);
+        }
+    } catch (err) {
+        console.error("Migration scan failed:", err);
+        alert("❌ Error: " + err.message);
+    } finally {
+        setIsFixing(false);
+    }
+  };
+
+  const applyMigration = async () => {
+    if (!window.confirm(`Apply migration to ${migrationCandidates.length} questions?`)) return;
+    
+    setIsFixing(true);
+    try {
+        const result = await performImageMigration(migrationCandidates, bulkUpdateQuestions);
+        alert(`✅ Successfully normalized ${result.count} questions!`);
+        setShowMigrationModal(false);
+        refreshQuestions();
+    } catch (err) {
+        alert("❌ Error: " + err.message);
+    } finally {
+        setIsFixing(false);
+    }
+  };
+
+  const applyMCQFixes = async () => {      if (!window.confirm(`Are you sure you want to fix ${mcqFixCandidates.length} questions? This action cannot be undone.`)) return;
 
       setIsFixing(true);
 
@@ -1669,20 +1776,20 @@ export default function QuestionBank() {
 
   const findDuplicates = async () => {
     const originalsMap = new Map();
-    const potentialDuplicates = [];
+    const candidateGroups = [];
 
-    setIsSearching(true); // Show loading indicator
+    setIsSearching(true);
+    setDuplicateResultsFilters({ subject: '', chapter: '', type: '' });
+    
+    console.log(`[Duplicate Debug] Starting duplicate scan on ${questions.length} questions...`);
 
-    // 1. Identify base keys and potential duplicates
+    // 1. Group ALL questions by a unique content key
     questions.forEach(q => {
-      // Use the 'question' field as it's our unique constraint field
-      const uniqueKey = q.question || '';
-      const type = q.type || '';
-      
-      // Skip common placeholders that shouldn't be treated as duplicates
-      const isPlaceholder = (key) => {
-        const k = key.trim().toLowerCase();
-        return k === '[there is a picture]' || 
+      // Skip common placeholders
+      const isPlaceholder = (text) => {
+        const k = (text || '').trim().toLowerCase();
+        return k === '' ||
+               k === '[there is a picture]' || 
                k === '[ছবি আছে]' || 
                k === 'picture' || 
                k === 'image' || 
@@ -1690,97 +1797,80 @@ export default function QuestionBank() {
                k.includes('[there is a picture for part');
       };
 
-      // Regex to find suffix like [1234567890] at the end
-      const match = uniqueKey.match(/^(.*)\s*\[(\d+)\]$/);
+      const rawText = q.question || q.questionText || '';
+      if (isPlaceholder(rawText)) return;
+
+      // Create a robust normalization of the text
+      // We strip the [suffix] for comparison if it exists
+      const cleanText = rawText.replace(/\s*\[\d+\]$/, '').trim();
+      const normalizedText = (cleanText || '').toString()
+        .normalize('NFC')
+        .replace(/[\s\u200B\u200C\u200D\u09BC]+/g, '')
+        .toLowerCase();
+
+      // Composite key for uniqueness: type + subject + normalized text
+      const lookupKey = `${q.type || 'unknown'}:${(q.subject || 'none').trim().toLowerCase()}:${normalizedText}`;
       
-      if (match) {
-        // It's a potential duplicate with a suffix
-        const baseKey = match[1].trim();
-        
-        // Skip if the base content is just a placeholder
-        if (!isPlaceholder(baseKey)) {
-          potentialDuplicates.push({ question: q, baseKey, type });
-        }
+      if (!originalsMap.has(lookupKey)) {
+        originalsMap.set(lookupKey, { original: q, duplicates: [] });
       } else {
-        // It's a potential original (no suffix)
-        // Skip if it's just a placeholder
-        if (!isPlaceholder(uniqueKey)) {
-          // Use type-aware key to prevent cross-type matching
-          const lookupKey = `${type}:${uniqueKey.trim()}`;
-          if (!originalsMap.has(lookupKey)) {
-            originalsMap.set(lookupKey, q);
-          }
-        }
+        originalsMap.get(lookupKey).duplicates.push(q);
       }
     });
 
-    // 2. Identify candidate groups
-    const candidateGroups = [];
-    potentialDuplicates.forEach(pd => {
-      const lookupKey = `${pd.type}:${pd.baseKey}`;
-      const original = originalsMap.get(lookupKey);
-      if (original) {
-        // We found a pair!
-        let group = candidateGroups.find(g => g.original.id === original.id);
-        if (!group) {
-          group = { original: original, duplicates: [] };
-          candidateGroups.push(group);
-        }
-        group.duplicates.push(pd.question);
+    // 2. Identify groups with actual duplicates
+    originalsMap.forEach((value, key) => {
+      if (value.duplicates.length > 0) {
+        candidateGroups.push(value);
       }
     });
+
+    console.log(`[Duplicate Debug] Found ${candidateGroups.length} candidate duplicate groups.`);
 
     if (candidateGroups.length === 0) {
       setIsSearching(false);
-      alert('No duplicates with [number] suffix patterns found.');
+      alert('No duplicate candidates found.');
       return;
     }
 
     // 3. Fetch full details for strict comparison
-    // Collect all IDs needed
     const idsToFetch = new Set();
     candidateGroups.forEach(g => {
-        if (!fullQuestionsMap.has(g.original.id)) idsToFetch.add(g.original.id);
+        if (!fullQuestionsMap.has(g.original.id.toString())) idsToFetch.add(g.original.id);
         g.duplicates.forEach(d => {
-            if (!fullQuestionsMap.has(d.id)) idsToFetch.add(d.id);
+            if (!fullQuestionsMap.has(d.id.toString())) idsToFetch.add(d.id);
         });
     });
 
-    // Create a local map for verification that includes current state + newly fetched
     const verificationMap = new Map(fullQuestionsMap);
 
     if (idsToFetch.size > 0) {
         try {
-            console.log(`Fetching ${idsToFetch.size} questions for strict duplicate check...`);
+            console.log(`[Duplicate Debug] Fetching ${idsToFetch.size} questions for strict check...`);
             const fetched = await fetchQuestionsByIds(Array.from(idsToFetch));
+            fetched.forEach(q => verificationMap.set(q.id.toString(), q));
             
-            // Update local verification map
-            fetched.forEach(q => verificationMap.set(q.id, q));
-
-            // Update local state cache
             setFullQuestionsMap(prev => {
                 const next = new Map(prev);
-                fetched.forEach(q => next.set(q.id, q));
+                fetched.forEach(q => next.set(q.id.toString(), q));
                 return next;
             });
         } catch (e) {
-            console.error("Error fetching for duplicate check", e);
+            console.error("[Duplicate Debug] Error fetching for duplicate check", e);
             setIsSearching(false);
-            alert("Error verifying duplicates. Please try again.");
+            alert("Error verifying duplicates.");
             return;
         }
     }
 
     // 4. Strict Deep Equality Check
     const finalGroups = [];
-    
     candidateGroups.forEach(group => {
-        const originalFull = verificationMap.get(group.original.id) || group.original;
+        const originalFull = verificationMap.get(group.original.id.toString()) || group.original;
         const confirmedDuplicates = [];
         
         group.duplicates.forEach(dup => {
-            const dupFull = verificationMap.get(dup.id) || dup;
-            // Check if they are actually duplicates
+            const dupFull = verificationMap.get(dup.id.toString()) || dup;
             if (areQuestionsDeeplyEqual(originalFull, dupFull)) {
                 confirmedDuplicates.push(dupFull);
             }
@@ -1794,13 +1884,14 @@ export default function QuestionBank() {
         }
     });
     
+    console.log(`[Duplicate Debug] Final confirmed groups: ${finalGroups.length}`);
+
     if (finalGroups.length === 0) {
         setIsSearching(false);
-        alert("No exact duplicates found after deep inspection.");
+        alert("No exact duplicates confirmed after deep inspection.");
         return;
     }
 
-    // 5. Finalize
     setDuplicateGroups(finalGroups);
     setShowDuplicateModal(true);
     setIsSearching(false);
@@ -1820,12 +1911,12 @@ export default function QuestionBank() {
   };
 
   const deleteAllDuplicates = async () => {
-    // Collect all duplicate IDs
-    const allDuplicateIds = duplicateGroups.flatMap(group => group.duplicates.map(d => d.id));
+    // Collect all duplicate IDs from the CURRENTLY FILTERED groups
+    const allDuplicateIds = displayDuplicateGroups.flatMap(group => group.duplicates.map(d => d.id));
     
     if (allDuplicateIds.length === 0) return;
 
-    if (window.confirm(`Are you sure you want to delete ALL ${allDuplicateIds.length} duplicates?`)) {
+    if (window.confirm(`Are you sure you want to delete ALL ${allDuplicateIds.length} visible duplicates?`)) {
       try {
         // Delete in batches to avoid overwhelming the server
         const BATCH_SIZE = 20;
@@ -1834,8 +1925,19 @@ export default function QuestionBank() {
           await Promise.all(batch.map(id => deleteQuestion(id)));
         }
         
-        setDuplicateGroups([]);
-        setShowDuplicateModal(false);
+        // Remove the deleted IDs from the main duplicateGroups state
+        const deletedIdSet = new Set(allDuplicateIds);
+        setDuplicateGroups(prev => 
+          prev.map(group => ({
+            ...group,
+            duplicates: group.duplicates.filter(d => !deletedIdSet.has(d.id))
+          })).filter(group => group.duplicates.length > 0)
+        );
+
+        if (allDuplicateIds.length === duplicateGroups.flatMap(g => g.duplicates).length) {
+          setShowDuplicateModal(false);
+        }
+        
         alert(`Successfully deleted ${allDuplicateIds.length} duplicates.`);
       } catch (error) {
         console.error("Error deleting duplicates:", error);
@@ -2050,7 +2152,7 @@ export default function QuestionBank() {
     // Comprehensive normalization for robust matching
     const robustNormalize = (str) => (str || '').toString()
         .normalize('NFC')
-        .replace(/[\s\u200B\u200C\u200D]+/g, '') // Remove all spaces and invisible chars
+        .replace(/[\s\u200B\u200C\u200D\u09BC]+/g, '') // Remove all spaces, invisible chars, and Bengali Nukta
         .toLowerCase();
 
     const normalizedTargetValue = robustNormalize(value);
@@ -2083,12 +2185,26 @@ export default function QuestionBank() {
             const normKey = robustNormalize(cat.key);
             if (cat.type === 'subject') {
                 const node = hierarchy.find(h => robustNormalize(h.name) === normKey);
-                totalExpected += node?.total || 0;
+                if (node) {
+                    // Correctly sum chapter totals if subject total is missing/0
+                    totalExpected += node.total || (node.chapters || []).reduce((sum, c) => sum + (c.total || 0), 0);
+                } else {
+                    console.log(`[Selection Debug] Subject "${cat.key}" (${normKey}) not found in hierarchy. Available subjects:`, 
+                        hierarchy.map(h => `${h.name} -> ${robustNormalize(h.name)}`).join(', ')
+                    );
+                }
             } else if (cat.type === 'chapter') {
+                let found = false;
                 hierarchy.forEach(s => {
                     const chap = s.chapters?.find(c => robustNormalize(c.name) === normKey);
-                    if (chap) totalExpected += chap.total || 0;
+                    if (chap) {
+                        totalExpected += chap.total || 0;
+                        found = true;
+                    }
                 });
+                if (!found) {
+                    console.log(`[Selection Debug] Chapter "${cat.key}" (${normKey}) not found in any subject in hierarchy.`);
+                }
             }
         });
     }
@@ -2101,11 +2217,17 @@ export default function QuestionBank() {
             return !q.type || q.type === 'other' || q.type === 'Unspecified';
         }
         const qVal = robustNormalize(q[cat]);
-        return list.some(c => qVal === robustNormalize(c.key));
+        const match = list.some(c => qVal === robustNormalize(c.key));
+        return match;
     });
 
     let currentMatches = getLocalMatches(questions, category, value, categoriesToProcess);
     console.log(`[Selection Debug] Found ${currentMatches.length} matches in local state.`);
+    if (currentMatches.length > 0) {
+        console.log(`[Selection Debug] Sample of matched questions (first 3):`, 
+            currentMatches.slice(0, 3).map(q => ({ id: q.id, subject: q.subject, chapter: q.chapter, type: q.type }))
+        );
+    }
     
     // FETCH IF INCOMPLETE
     if (totalExpected > currentMatches.length + 2 && (category === 'subject' || category === 'chapter')) {
@@ -2336,6 +2458,8 @@ export default function QuestionBank() {
                             image: q.image,
                             answerimage1: q.answerimage1,
                             answerimage2: q.answerimage2,
+                            answerimage3: q.answerimage3,
+                            answerimage4: q.answerimage4,
                             explanation: q.explanation,
                             tags: typeof q.tags === 'string' ? JSON.parse(q.tags) : q.tags,
                             isFlagged: q.is_flagged,
@@ -2632,70 +2756,128 @@ export default function QuestionBank() {
       )}
       
       {/* Duplicate Detector Modal */}
-      {showDuplicateModal && (
-        <div style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundColor: 'rgba(0, 0, 0, 0.8)',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          zIndex: 10000
-        }}>
+      {showDuplicateModal && (() => {
+        // Derive filter options from ALL duplicate groups found
+        const availableSubjects = [...new Set(duplicateGroups.map(g => g.original.subject).filter(Boolean))].sort();
+        const availableChapters = [...new Set(duplicateGroups
+          .filter(g => !duplicateResultsFilters.subject || g.original.subject === duplicateResultsFilters.subject)
+          .map(g => g.original.chapter).filter(Boolean))].sort();
+        const availableTypes = [...new Set(duplicateGroups.map(g => g.original.type).filter(Boolean))].sort();
+
+        return (
           <div style={{
-            backgroundColor: 'white',
-            padding: '30px',
-            borderRadius: '10px',
-            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-            maxWidth: '900px',
-            width: '95%',
-            maxHeight: '90vh',
-            overflowY: 'auto',
+            position: 'fixed',
+            top: 0, left: 0, right: 0, bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.8)',
             display: 'flex',
-            flexDirection: 'column'
+            justifyContent: 'center',
+            alignItems: 'center',
+            zIndex: 10000
           }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-              <h3 style={{ margin: 0, color: '#6f42c1' }}>🔍 Duplicate Detector Results</h3>
-              <div style={{ display: 'flex', gap: '10px' }}>
-                <button
-                  onClick={deleteAllDuplicates}
-                  style={{
-                    backgroundColor: '#dc3545',
-                    color: 'white',
-                    border: 'none',
-                    padding: '8px 16px',
-                    borderRadius: '4px',
-                    cursor: 'pointer',
-                    fontWeight: 'bold'
+            <div style={{
+              backgroundColor: 'white',
+              padding: '30px',
+              borderRadius: '10px',
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+              maxWidth: '1200px',
+              width: '95%',
+              maxHeight: '95vh',
+              overflowY: 'auto',
+              display: 'flex',
+              flexDirection: 'column'
+            }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+                <h3 style={{ margin: 0, color: '#6f42c1' }}>🔍 Duplicate Detector Results</h3>
+                <div style={{ display: 'flex', gap: '10px' }}>
+                  <button
+                    onClick={deleteAllDuplicates}
+                    style={{
+                      backgroundColor: '#dc3545',
+                      color: 'white',
+                      border: 'none',
+                      padding: '8px 16px',
+                      borderRadius: '4px',
+                      cursor: 'pointer',
+                      fontWeight: 'bold'
+                    }}
+                  >
+                    🗑 Delete ALL {displayDuplicateGroups.reduce((acc, g) => acc + g.duplicates.length, 0)} Duplicates (Filtered)
+                  </button>
+                  <button
+                    onClick={() => setShowDuplicateModal(false)}
+                    style={{
+                      backgroundColor: '#6c757d', color: 'white', border: 'none',
+                      padding: '8px 16px', borderRadius: '4px', cursor: 'pointer'
+                    }}
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+
+              {/* Filtering Controls */}
+              <div style={{ 
+                display: 'flex', gap: '15px', padding: '15px', backgroundColor: '#f8f9fa', 
+                borderRadius: '8px', marginBottom: '20px', alignItems: 'center', border: '1px solid #dee2e6' 
+              }}>
+                <span style={{ fontWeight: 'bold', color: '#495057' }}>Filter Results:</span>
+                
+                <div style={{ display: 'flex', flexDirection: 'column', minWidth: '150px' }}>
+                  <label style={{ fontSize: '0.8em', color: '#6c757d' }}>Subject</label>
+                  <select 
+                    value={duplicateResultsFilters.subject}
+                    onChange={(e) => setDuplicateResultsFilters(prev => ({ ...prev, subject: e.target.value, chapter: '' }))}
+                    style={{ padding: '6px', borderRadius: '4px', border: '1px solid #ced4da' }}
+                  >
+                    <option value="">All Subjects</option>
+                    {availableSubjects.map(s => <option key={s} value={s}>{s}</option>)}
+                  </select>
+                </div>
+
+                <div style={{ display: 'flex', flexDirection: 'column', minWidth: '150px' }}>
+                  <label style={{ fontSize: '0.8em', color: '#6c757d' }}>Chapter</label>
+                  <select 
+                    value={duplicateResultsFilters.chapter}
+                    onChange={(e) => setDuplicateResultsFilters(prev => ({ ...prev, chapter: e.target.value }))}
+                    style={{ padding: '6px', borderRadius: '4px', border: '1px solid #ced4da' }}
+                  >
+                    <option value="">All Chapters</option>
+                    {availableChapters.map(c => <option key={c} value={c}>{c}</option>)}
+                  </select>
+                </div>
+
+                <div style={{ display: 'flex', flexDirection: 'column', minWidth: '120px' }}>
+                  <label style={{ fontSize: '0.8em', color: '#6c757d' }}>Type</label>
+                  <select 
+                    value={duplicateResultsFilters.type}
+                    onChange={(e) => setDuplicateResultsFilters(prev => ({ ...prev, type: e.target.value }))}
+                    style={{ padding: '6px', borderRadius: '4px', border: '1px solid #ced4da' }}
+                  >
+                    <option value="">All Types</option>
+                    {availableTypes.map(t => <option key={t} value={t}>{t.toUpperCase()}</option>)}
+                  </select>
+                </div>
+
+                <button 
+                  onClick={() => setDuplicateResultsFilters({ subject: '', chapter: '', type: '' })}
+                  style={{ 
+                    marginTop: '15px', padding: '6px 12px', background: 'none', border: '1px solid #6c757d', 
+                    borderRadius: '4px', cursor: 'pointer', color: '#6c757d', fontSize: '0.9em'
                   }}
                 >
-                  🗑 Delete ALL Duplicates
-                </button>
-                <button
-                  onClick={() => setShowDuplicateModal(false)}
-                  style={{
-                    backgroundColor: '#6c757d',
-                    color: 'white',
-                    border: 'none',
-                    padding: '8px 16px',
-                    borderRadius: '4px',
-                    cursor: 'pointer'
-                  }}
-                >
-                  Close
+                  Clear
                 </button>
               </div>
-            </div>
 
-            <p style={{ color: '#666', marginBottom: '20px' }}>
-              Found <strong>{duplicateGroups.reduce((acc, g) => acc + g.duplicates.length, 0)}</strong> duplicates across <strong>{duplicateGroups.length}</strong> unique questions.
-            </p>
+              <p style={{ color: '#666', marginBottom: '20px' }}>
+                Showing <strong>{displayDuplicateGroups.reduce((acc, g) => acc + g.duplicates.length, 0)}</strong> duplicates across <strong>{displayDuplicateGroups.length}</strong> unique questions.
+                {duplicateGroups.length > displayDuplicateGroups.length && (
+                  <span style={{ marginLeft: '10px' }}>(Total found in scan: {duplicateGroups.length} groups)</span>
+                )}
+              </p>
 
-                        <div style={{ flex: 1, overflowY: 'auto' }}>
-                          {duplicateGroups.map((group, idx) => (
+              <div style={{ flex: 1, overflowY: 'auto' }}>
+                {displayDuplicateGroups.map((group, idx) => (
                             <div key={idx} style={{ 
                               border: '2px solid #6f42c1', 
                               borderRadius: '12px', 
@@ -2793,13 +2975,14 @@ export default function QuestionBank() {
                               </div>
                             </div>
                           ))}
-                                    </div>
-                                  </div>
-                                </div>
-                              )}
-                        
-                              {/* SQ Fix Confirmation Modal */}
-                              {showSQFixModal && (
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })()}
+
+                {/* SQ Fix Confirmation Modal */}
+                {showSQFixModal && (
                                 <div style={{
                                   position: 'fixed',
                                   top: 0,
@@ -3975,10 +4158,17 @@ export default function QuestionBank() {
             {isFixing ? '🔄 Syncing...' : '🔄 Sync CQ Fields'}
           </button>
 
-          <button
-            onClick={handleScanCorruptedCQs}
-            disabled={isFixing}
-            style={{
+                          <button 
+                            onClick={handleNormalizeCQImages}
+                            disabled={isFixing}
+                            style={{ backgroundColor: '#20c997' }}
+                            title="Move images from parts array to dedicated columns"
+                          >
+                            {isFixing ? 'Processing...' : '🖼️ Normalize CQ Images'}
+                          </button>
+                          <button 
+                            onClick={handleScanCorruptedCQs}
+                            disabled={isFixing}            style={{
               backgroundColor: '#d35400',
               color: 'white',
               padding: '10px 20px',
@@ -4577,6 +4767,63 @@ export default function QuestionBank() {
       
     </div>
       {/* Bulk Fix Flagged Questions Modal */}
+      {showMigrationModal && (
+        <div className="password-overlay" style={{ zIndex: 1100 }}>
+          <div className="password-prompt" style={{ width: '900px', maxWidth: '95vw', maxHeight: '90vh', overflowY: 'auto', textAlign: 'left' }}>
+            <h2 style={{ color: '#20c997', marginBottom: '20px' }}>🖼️ Image Normalization Preview</h2>
+            <p>The following {migrationCandidates.length} questions have images stored in the <strong>Parts Array</strong> but not in the <strong>Dedicated Columns</strong>. Normalizing them will move these images to the columns for better external app support.</p>
+            
+            <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '20px' }}>
+              <thead>
+                <tr style={{ backgroundColor: '#f8f9fa', borderBottom: '2px solid #dee2e6' }}>
+                  <th style={{ padding: '12px', textAlign: 'left' }}>ID / Board</th>
+                  <th style={{ padding: '12px', textAlign: 'left' }}>Migration Mapping</th>
+                  <th style={{ padding: '12px', textAlign: 'center' }}>Preview</th>
+                </tr>
+              </thead>
+              <tbody>
+                {migrationCandidates.map((item, idx) => (
+                  <tr key={idx} style={{ borderBottom: '1px solid #eee' }}>
+                    <td style={{ padding: '12px' }}>
+                      <strong style={{ color: '#007bff' }}>{item.question.id}</strong><br/>
+                      <span style={{ fontSize: '11px', color: '#666' }}>{item.question.board}</span>
+                    </td>
+                    <td style={{ padding: '12px' }}>
+                      {item.changes.map((c, cIdx) => (
+                        <div key={cIdx} style={{ marginBottom: '5px', fontSize: '13px' }}>
+                          Part <strong>{c.part}</strong> ➔ Column <strong>{c.targetColumn}</strong>
+                        </div>
+                      ))}
+                    </td>
+                    <td style={{ padding: '12px', textAlign: 'center' }}>
+                      <div style={{ display: 'flex', gap: '5px', justifyContent: 'center' }}>
+                        {item.changes.map((c, cIdx) => (
+                          <div key={cIdx} style={{ textAlign: 'center' }}>
+                             <img src={c.imageUrl} alt="preview" style={{ width: '40px', height: '40px', objectFit: 'contain', border: '1px solid #ddd' }} />
+                             <div style={{ fontSize: '9px' }}>{c.part}</div>
+                          </div>
+                        ))}
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+
+            <div style={{ marginTop: '30px', display: 'flex', gap: '10px', justifyContent: 'flex-end', position: 'sticky', bottom: 0, backgroundColor: 'white', padding: '15px 0' }}>
+              <button onClick={() => setShowMigrationModal(false)} style={{ backgroundColor: '#6c757d' }}>Cancel</button>
+              <button 
+                onClick={applyMigration} 
+                disabled={isFixing}
+                style={{ backgroundColor: '#20c997', fontWeight: 'bold' }}
+              >
+                {isFixing ? 'Applying...' : `🚀 Apply Migration to ${migrationCandidates.length} Questions`}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {showBulkFixModal && (
         <div style={{
           position: 'fixed',

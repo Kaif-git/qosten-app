@@ -193,40 +193,46 @@ export const questionApi = {
   },
 
   async createQuestion(questionData) {
-    console.log('📤 API: createQuestion - sending data:', questionData);
+    console.log('📤 [questionApi] createQuestion - sending full data:', JSON.stringify(questionData, null, 2));
     const response = await fetch(`${API_BASE_URL}/questions`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(questionData),
     });
+    const responseData = await response.json();
+    console.log('📥 [questionApi] createQuestion - response:', responseData);
     if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(`Failed to create question: ${response.status} ${errorText}`);
+        throw new Error(`Failed to create question: ${response.status} ${JSON.stringify(responseData)}`);
     }
-    return await response.json();
+    return responseData;
   },
 
   async updateQuestion(id, questionData) {
+    console.log(`📤 [questionApi] updateQuestion - ID: ${id}, data:`, questionData);
     const response = await fetch(`${API_BASE_URL}/questions/${id}`, {
       method: 'PUT', // Using PUT for full update, could be PATCH
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(questionData),
     });
+    const responseData = await response.json();
+    console.log(`📥 [questionApi] updateQuestion - ID: ${id}, response:`, responseData);
     if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(`Failed to update question: ${response.status} ${errorText}`);
+        throw new Error(`Failed to update question: ${response.status} ${JSON.stringify(responseData)}`);
     }
-    return await response.json();
+    return responseData;
   },
 
   async deleteQuestion(id) {
+    console.log(`📤 [questionApi] deleteQuestion - ID: ${id}`);
     const response = await fetch(`${API_BASE_URL}/questions/${id}`, {
       method: 'DELETE',
     });
     if (!response.ok) {
         const errorText = await response.text();
+        console.error(`📥 [questionApi] deleteQuestion - ID: ${id}, error:`, errorText);
         throw new Error(`Failed to delete question: ${response.status} ${errorText}`);
     }
+    console.log(`📥 [questionApi] deleteQuestion - ID: ${id}, SUCCESS`);
     return true;
   },
 
@@ -244,7 +250,7 @@ export const questionApi = {
 
     for (let i = 0; i < total; i += CHUNK_SIZE) {
       const chunk = questions.slice(i, i + CHUNK_SIZE);
-      console.log(`📤 Uploading batch ${Math.floor(i / CHUNK_SIZE) + 1} (${i + 1} to ${Math.min(i + CHUNK_SIZE, total)} of ${total})...`);
+      console.log(`📤 [questionApi] bulkCreateQuestions - batch ${Math.floor(i / CHUNK_SIZE) + 1} (${i + 1} to ${Math.min(i + CHUNK_SIZE, total)} of ${total})...`);
       
       try {
         const response = await fetch(`${API_BASE_URL}/questions/bulk`, {
@@ -255,17 +261,20 @@ export const questionApi = {
 
         if (response.ok) {
           const data = await response.json();
-          const addedBatch = Array.isArray(data) ? data : (data.data || chunk);
+          console.log(`📥 [questionApi] bulkCreateQuestions - batch ${Math.floor(i / CHUNK_SIZE) + 1} response:`, data);
+          // Standardize response to an array of objects
+          const addedBatch = Array.isArray(data) ? data : (data.data || data.questions || data.items || chunk);
           results.questions.push(...addedBatch);
           results.successCount += chunk.length;
-          console.log(`✅ Batch ${Math.floor(i / CHUNK_SIZE) + 1} uploaded successfully.`);
+          console.log(`✅ [questionApi] batch ${Math.floor(i / CHUNK_SIZE) + 1} uploaded successfully.`);
         } else {
-          console.warn(`⚠️ Bulk endpoint failed with ${response.status}, falling back to individual uploads for this batch...`);
+          console.warn(`⚠️ [questionApi] bulk endpoint failed with ${response.status}, falling back to individual uploads...`);
           
           for (const q of chunk) {
             try {
               const newQ = await this.createQuestion(q);
-              results.questions.push(newQ.data || newQ);
+              // Ensure we capture the object that contains the ID
+              results.questions.push(newQ.data || newQ.question || newQ);
               results.successCount++;
             } catch (err) {
               results.failedCount++;
@@ -274,11 +283,11 @@ export const questionApi = {
           }
         }
       } catch (error) {
-        console.error(`❌ Error uploading batch ${Math.floor(i / CHUNK_SIZE) + 1}:`, error);
+        console.error(`❌ [questionApi] error uploading batch ${Math.floor(i / CHUNK_SIZE) + 1}:`, error);
         for (const q of chunk) {
           try {
             const newQ = await this.createQuestion(q);
-            results.questions.push(newQ.data || newQ);
+            results.questions.push(newQ.data || newQ.question || newQ);
             results.successCount++;
           } catch (err) {
             results.failedCount++;

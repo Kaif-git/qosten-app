@@ -42,7 +42,11 @@ function QuestionCard({ question, selectionMode, isSelected, onToggleSelect }) {
         ...question,
         image: imageData.image,
         answerimage1: imageData.answerimage1,
-        answerimage2: imageData.answerimage2
+        answerimage2: imageData.answerimage2,
+        answerimage3: imageData.answerimage3,
+        answerimage4: imageData.answerimage4,
+        // Clear individual part images to ensure consistency with the new linked columns
+        parts: (question.parts || []).map(p => ({ ...p, image: null, answerImage: null }))
       };
       await updateQuestion(updatedQuestion);
     } catch (error) {
@@ -57,7 +61,11 @@ function QuestionCard({ question, selectionMode, isSelected, onToggleSelect }) {
         ...question,
         image: null,
         answerimage1: null,
-        answerimage2: null
+        answerimage2: null,
+        answerimage3: null,
+        answerimage4: null,
+        // Also clear individual part images
+        parts: (question.parts || []).map(p => ({ ...p, image: null, answerImage: null }))
       };
       await updateQuestion(updatedQuestion);
     } catch (error) {
@@ -65,6 +73,44 @@ function QuestionCard({ question, selectionMode, isSelected, onToggleSelect }) {
       alert('Error unlinking images. Please try again.');
     }
   };
+
+  const handleLogDetails = () => {
+    console.log(`CQ Details [ID: ${question.id}]:`, {
+      id: question.id,
+      type: question.type,
+      stemImage: question.image,
+      columns_in_memory: {
+        answerimage1_for_c: question.answerimage1,
+        answerimage2_for_d: question.answerimage2,
+        answerimage3_for_a: question.answerimage3,
+        answerimage4_for_b: question.answerimage4
+      },
+      columns_in_database: {
+        raw_answerimage1: question._rawAnswerimage1,
+        raw_answerimage2: question._rawAnswerimage2,
+        raw_answerimage3: question._rawAnswerimage3,
+        raw_answerimage4: question._rawAnswerimage4
+      },
+      partsWithSources: (question.parts || []).map(p => {
+        const letter = p.letter?.toLowerCase();
+        const colValue = question[`_rawAnswerimage${letter === 'c' ? '1' : letter === 'd' ? '2' : letter === 'a' ? '3' : letter === 'b' ? '4' : ''}`];
+
+        return {
+          letter: p.letter,
+          sourceUsed: colValue ? 'Top-level Column' : (p.image || p.answerImage ? 'Part Object' : 'None'),
+          resolvedImageUrl: colValue || p.image || p.answerImage,
+          columnValue: colValue,
+          partImage: p.image,
+          partAnswerImage: p.answerImage
+        };
+      })
+    });
+  };
+
+  // Auto-log for CQ cards when they render to help find inconsistencies
+  if (question.type === 'cq') {
+    // console.log(`Rendering CQ: ${question.id}`);
+  }
   
   const renderQuestionContent = () => {
     if (question.type === 'mcq') {
@@ -126,6 +172,14 @@ function QuestionCard({ question, selectionMode, isSelected, onToggleSelect }) {
                            question.answerimage2 !== '[There is a picture for part d]' && 
                            question.answerimage2 !== '[ছবি আছে জন্য অংশ d]') {
                   partImage = question.answerimage2;
+                } else if (part.letter === 'a' && question.answerimage3 && 
+                           question.answerimage3 !== '[There is a picture for part a]' && 
+                           question.answerimage3 !== '[ছবি আছে জন্য অংশ a]') {
+                  partImage = question.answerimage3;
+                } else if (part.letter === 'b' && question.answerimage4 && 
+                           question.answerimage4 !== '[There is a picture for part b]' && 
+                           question.answerimage4 !== '[ছবি আছে জন্য অংশ b]') {
+                  partImage = question.answerimage4;
                 }
                 
                 return (
@@ -279,6 +333,16 @@ function QuestionCard({ question, selectionMode, isSelected, onToggleSelect }) {
           )}
           <button onClick={handleEdit}>Edit</button>
           <button className="danger" onClick={handleDelete}>Delete</button>
+          <button 
+            onClick={handleLogDetails}
+            style={{
+              backgroundColor: '#343a40',
+              color: 'white',
+              border: 'none'
+            }}
+          >
+            📋 Log
+          </button>
         </div>
       )}
       

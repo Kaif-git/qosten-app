@@ -418,41 +418,43 @@ const CompactQuestionItem = React.memo(({ question, index, onCropAndAssign, onUp
           </button>
        </div>
 
-       {question.parts && question.parts.map((part, pIdx) => {
-           const letter = part.letter?.toLowerCase();
-           if (letter === 'c' || letter === 'd') {
-               const hasImg = (letter === 'c' && question.answerimage1) || (letter === 'd' && question.answerimage2) || part.answerImage;
-               return (
-                   <div key={pIdx} style={{marginTop: '8px', borderTop: '1px solid #eee', paddingTop: '8px'}}>
-                      <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3px'}}>
-                         <span style={{fontSize: '12px', fontWeight: 'bold'}}>Part {part.letter.toUpperCase()})</span>
-                         {hasImg && <span style={{color: 'green', fontSize: '10px', fontWeight: 'bold'}}>✓ Img</span>}
-                      </div>
-                      <div style={{display: 'flex', gap: '5px'}}>
-                        <button 
-                            onClick={() => onCropAndAssign(index, 'part', pIdx)}
-                            style={{fontSize: '11px', padding: '6px 10px', backgroundColor: '#8e44ad', color: 'white', border: 'none', borderRadius: '3px', cursor: 'pointer', flex: 1}}
-                        >
-                           {hasImg ? `Replace ${part.letter.toUpperCase()}` : `Set ${part.letter.toUpperCase()} Image`}
-                        </button>
-                        {hasImg && (
-                          <button 
-                              onClick={() => {
-                                // Find the specific update method for parts in context or via props
-                                // We'll assume updateQuestion works for field answerImage if we handle it correctly
-                                onUpdate(index, 'part_image_remove', pIdx);
-                              }}
-                              style={{fontSize: '11px', padding: '6px 10px', backgroundColor: '#e74c3c', color: 'white', border: 'none', borderRadius: '3px', cursor: 'pointer'}}
-                              title={`Remove ${part.letter.toUpperCase()} Image`}
-                          >
-                             ✕
-                          </button>
-                        )}
-                      </div>
-                   </div>
-               );
-           }
-           return null;
+       {question.type === 'cq' && ['a', 'b', 'c', 'd'].map((letter) => {
+           const pIdx = question.parts?.findIndex(p => p.letter?.toLowerCase() === letter);
+           const part = pIdx !== -1 ? question.parts[pIdx] : null;
+           
+           const hasImg = (letter === 'c' && question.answerimage1) || 
+                         (letter === 'd' && question.answerimage2) || 
+                         (letter === 'a' && question.answerimage3) || 
+                         (letter === 'b' && question.answerimage4) || 
+                         part?.answerImage;
+           
+           return (
+               <div key={letter} style={{marginTop: '8px', borderTop: '1px solid #eee', paddingTop: '8px'}}>
+                  <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3px'}}>
+                     <span style={{fontSize: '12px', fontWeight: 'bold'}}>Part {letter.toUpperCase()})</span>
+                     {hasImg && <span style={{color: 'green', fontSize: '10px', fontWeight: 'bold'}}>✓ Img</span>}
+                  </div>
+                  <div style={{display: 'flex', gap: '5px'}}>
+                    <button 
+                        onClick={() => onCropAndAssign(index, 'part', pIdx !== -1 ? pIdx : letter)}
+                        style={{fontSize: '11px', padding: '6px 10px', backgroundColor: '#8e44ad', color: 'white', border: 'none', borderRadius: '3px', cursor: 'pointer', flex: 1}}
+                    >
+                       {hasImg ? `Replace ${letter.toUpperCase()}` : `Set ${letter.toUpperCase()} Image`}
+                    </button>
+                    {hasImg && (
+                      <button 
+                          onClick={() => {
+                            onUpdate(index, 'part_image_remove', pIdx !== -1 ? pIdx : letter);
+                          }}
+                          style={{fontSize: '11px', padding: '6px 10px', backgroundColor: '#e74c3c', color: 'white', border: 'none', borderRadius: '3px', cursor: 'pointer'}}
+                          title={`Remove ${letter.toUpperCase()} Image`}
+                      >
+                         ✕
+                      </button>
+                    )}
+                  </div>
+               </div>
+           );
        })}
     </div>
   );
@@ -622,23 +624,42 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   };
   
   const updateQuestionPart = useCallback((qIndex, partIndex, field, value, listType = 'english') => {
+    console.log(`[QuestionPreview] updateQuestionPart: Q#${qIndex}, Part: ${partIndex}, Field: ${field}, Value type: ${typeof value}`);
     const setter = listType === 'english' ? setEditableQuestions : setBanglaQuestions;
     setter(prev => {
       if (qIndex >= prev.length) return prev;
       const updated = [...prev];
-      const parts = [...updated[qIndex].parts];
-      parts[partIndex] = { ...parts[partIndex], [field]: value };
+      const q = { ...updated[qIndex] };
+      const parts = [...(q.parts || [])];
       
-      const updatedQuestion = { ...updated[qIndex], parts };
-      
-      // Auto-map legacy image fields for the current list
-      if (field === 'answerImage') {
-          const partLetter = parts[partIndex]?.letter?.toLowerCase();
-          if (partLetter === 'c') updatedQuestion.answerimage1 = value;
-          else if (partLetter === 'd') updatedQuestion.answerimage2 = value;
+      let actualIdx = partIndex;
+      // If partIndex is a letter (e.g. 'a', 'b'), find or create that part
+      if (typeof partIndex === 'string') {
+          actualIdx = parts.findIndex(p => p.letter?.toLowerCase() === partIndex.toLowerCase());
+          if (actualIdx === -1) {
+              console.log(`[QuestionPreview] Creating new part object for letter: ${partIndex}`);
+              // Add a placeholder part if it doesn't exist
+              parts.push({ letter: partIndex.toLowerCase(), text: '', marks: 0, answer: '' });
+              actualIdx = parts.length - 1;
+          }
       }
       
-      updated[qIndex] = updatedQuestion;
+      if (actualIdx >= 0 && actualIdx < parts.length) {
+          parts[actualIdx] = { ...parts[actualIdx], [field]: value };
+          
+          // Auto-map legacy image fields for the current list
+          if (field === 'answerImage') {
+              const partLetter = parts[actualIdx]?.letter?.toLowerCase();
+              console.log(`[QuestionPreview] Syncing part ${partLetter} image to legacy column...`);
+              if (partLetter === 'c') { q.answerimage1 = value; console.log(' -> answerimage1 updated'); }
+              else if (partLetter === 'd') { q.answerimage2 = value; console.log(' -> answerimage2 updated'); }
+              else if (partLetter === 'a') { q.answerimage3 = value; console.log(' -> answerimage3 updated'); }
+              else if (partLetter === 'b') { q.answerimage4 = value; console.log(' -> answerimage4 updated'); }
+          }
+      }
+      
+      q.parts = parts;
+      updated[qIndex] = q;
       return updated;
     });
 
@@ -647,36 +668,67 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       setBanglaQuestions(prev => {
         if (qIndex >= prev.length) return prev;
         const updated = [...prev];
-        const parts = [...updated[qIndex].parts];
+        const q = { ...updated[qIndex] };
+        const parts = [...(q.parts || [])];
         
-        if (partIndex < parts.length) {
-            parts[partIndex] = { ...parts[partIndex], [field]: value };
-            const updatedQuestion = { ...updated[qIndex], parts };
+        let actualIdx = partIndex;
+        if (typeof partIndex === 'string') {
+            actualIdx = parts.findIndex(p => p.letter?.toLowerCase() === partIndex.toLowerCase());
+            if (actualIdx === -1) {
+                parts.push({ letter: partIndex.toLowerCase(), text: '', marks: 0, answer: '' });
+                actualIdx = parts.length - 1;
+            }
+        }
+
+        if (actualIdx >= 0 && actualIdx < parts.length) {
+            parts[actualIdx] = { ...parts[actualIdx], [field]: value };
             
             // Sync legacy fields too
-            const partLetter = parts[partIndex]?.letter?.toLowerCase();
-            if (partLetter === 'c') updatedQuestion.answerimage1 = value;
-            else if (partLetter === 'd') updatedQuestion.answerimage2 = value;
-            
-            updated[qIndex] = updatedQuestion;
+            const partLetter = parts[actualIdx]?.letter?.toLowerCase();
+            if (partLetter === 'c') q.answerimage1 = value;
+            else if (partLetter === 'd') q.answerimage2 = value;
+            else if (partLetter === 'a') q.answerimage3 = value;
+            else if (partLetter === 'b') q.answerimage4 = value;
         }
+        
+        q.parts = parts;
+        updated[qIndex] = q;
         return updated;
       });
     }
   }, []);
 
   const updateQuestion = useCallback((index, field, value, listType = 'english') => {
-    console.log(`📝 updateQuestion: Index ${index}, Field ${field}, Value:`, typeof value === 'string' ? value.substring(0, 50) + '...' : value);
+    console.log(`📝 [QuestionPreview] updateQuestion: Index ${index}, Field ${field}, Value type: ${typeof value}`);
+    if (typeof value === 'string' && value.startsWith('http')) {
+        console.log(`   -> URL: ${value.substring(0, 60)}...`);
+    }
+    
     if (field === 'part_image_remove') {
         const partIndex = value;
+        console.log(`   -> Removing part image for Q#${index}, Part: ${partIndex}`);
         updateQuestionPart(index, partIndex, 'answerImage', null);
         
         const setter = listType === 'english' ? setEditableQuestions : setBanglaQuestions;
         setter(prev => {
+            if (index >= prev.length) return prev;
             const updated = [...prev];
-            const partLetter = updated[index]?.parts?.[partIndex]?.letter?.toLowerCase();
-            if (partLetter === 'c') updated[index].answerimage1 = null;
-            else if (partLetter === 'd') updated[index].answerimage2 = null;
+            const q = { ...updated[index] };
+            
+            let partLetter = null;
+            if (typeof partIndex === 'number') {
+                partLetter = q.parts?.[partIndex]?.letter?.toLowerCase();
+            } else if (typeof partIndex === 'string') {
+                partLetter = partIndex.toLowerCase();
+            }
+
+            console.log(`   -> Syncing removal to legacy column for letter: ${partLetter}`);
+            if (partLetter === 'c') q.answerimage1 = null;
+            else if (partLetter === 'd') q.answerimage2 = null;
+            else if (partLetter === 'a') q.answerimage3 = null;
+            else if (partLetter === 'b') q.answerimage4 = null;
+            
+            updated[index] = q;
             return updated;
         });
 
@@ -684,14 +736,21 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
             setBanglaQuestions(prev => {
                 if (index >= prev.length) return prev;
                 const updated = [...prev];
-                const parts = [...updated[index].parts];
-                if (partIndex < parts.length) {
-                    parts[partIndex] = { ...parts[partIndex], answerImage: null };
-                    updated[index] = { ...updated[index], parts };
-                    const partLetter = parts[partIndex]?.letter?.toLowerCase();
-                    if (partLetter === 'c') updated[index].answerimage1 = null;
-                    else if (partLetter === 'd') updated[index].answerimage2 = null;
+                const q = { ...updated[index] };
+                
+                let partLetter = null;
+                if (typeof partIndex === 'number') {
+                    partLetter = q.parts?.[partIndex]?.letter?.toLowerCase();
+                } else if (typeof partIndex === 'string') {
+                    partLetter = partIndex.toLowerCase();
                 }
+
+                if (partLetter === 'c') q.answerimage1 = null;
+                else if (partLetter === 'd') q.answerimage2 = null;
+                else if (partLetter === 'a') q.answerimage3 = null;
+                else if (partLetter === 'b') q.answerimage4 = null;
+                
+                updated[index] = q;
                 return updated;
             });
         }
@@ -701,11 +760,33 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     const setter = listType === 'english' ? setEditableQuestions : setBanglaQuestions;
     setter(prev => {
       const updated = [...prev];
-      updated[index] = { ...updated[index], [field]: value };
+      const q = { ...updated[index], [field]: value };
+      
+      // Sync top-level answerimage columns back to parts
+      if (q.parts && Array.isArray(q.parts)) {
+          const mapping = {
+              'answerimage1': 'c',
+              'answerimage2': 'd',
+              'answerimage3': 'a',
+              'answerimage4': 'b'
+          };
+          const targetLetter = mapping[field];
+          if (targetLetter) {
+              console.log(`   -> Syncing legacy ${field} update back to part ${targetLetter}`);
+              q.parts = q.parts.map(p => 
+                  p.letter?.toLowerCase() === targetLetter 
+                  ? { ...p, image: value, answerImage: value } 
+                  : p
+              );
+          }
+      }
+      
+      updated[index] = q;
       return updated;
     });
 
-    if (listType === 'english' && (field === 'image' || field === 'answerimage1' || field === 'answerimage2')) {
+    if (listType === 'english' && (field === 'image' || field === 'answerimage1' || field === 'answerimage2' || field === 'answerimage3' || field === 'answerimage4')) {
+      console.log(`   -> Auto-syncing image field ${field} to Bangla list`);
       setBanglaQuestions(prev => {
         if (index >= prev.length) return prev;
         const updated = [...prev];
@@ -734,6 +815,10 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
         updated[qIndex] = { ...updated[qIndex], answerimage1: null };
       } else if (partLetter === 'd') {
         updated[qIndex] = { ...updated[qIndex], answerimage2: null };
+      } else if (partLetter === 'a') {
+        updated[qIndex] = { ...updated[qIndex], answerimage3: null };
+      } else if (partLetter === 'b') {
+        updated[qIndex] = { ...updated[qIndex], answerimage4: null };
       }
       return updated;
     });
@@ -745,7 +830,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     }
 
     setEditableQuestions(prev => prev.map(q => {
-      const updated = { ...q, image: null, answerimage1: null, answerimage2: null };
+      const updated = { ...q, image: null, answerimage1: null, answerimage2: null, answerimage3: null, answerimage4: null };
       if (updated.parts) {
         updated.parts = updated.parts.map(p => ({ ...p, answerImage: null }));
       }
@@ -753,7 +838,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     }));
 
     setBanglaQuestions(prev => prev.map(q => {
-      const updated = { ...q, image: null, answerimage1: null, answerimage2: null };
+      const updated = { ...q, image: null, answerimage1: null, answerimage2: null, answerimage3: null, answerimage4: null };
       if (updated.parts) {
         updated.parts = updated.parts.map(p => ({ ...p, answerImage: null }));
       }
@@ -1433,6 +1518,8 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
              // We'll check for answerimage1/2 properties on the question object first
              if (engQ.answerimage1) newQ.answerimage1 = engQ.answerimage1;
              if (engQ.answerimage2) newQ.answerimage2 = engQ.answerimage2;
+             if (engQ.answerimage3) newQ.answerimage3 = engQ.answerimage3;
+             if (engQ.answerimage4) newQ.answerimage4 = engQ.answerimage4;
 
              // Also map individual part 'answerImage' if present
              newQ.parts = newQ.parts.map(bnPart => {
@@ -1446,6 +1533,12 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                  }
                  if (bnPart.letter === 'd' && newQ.answerimage2) {
                      return { ...bnPart, answerImage: newQ.answerimage2 };
+                 }
+                 if (bnPart.letter === 'a' && newQ.answerimage3) {
+                     return { ...bnPart, answerImage: newQ.answerimage3 };
+                 }
+                 if (bnPart.letter === 'b' && newQ.answerimage4) {
+                     return { ...bnPart, answerImage: newQ.answerimage4 };
                  }
                  return bnPart;
              });
@@ -1762,10 +1855,13 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                   )}
                 </div>
 
-                {(part.letter?.toLowerCase() === 'c' || part.letter?.toLowerCase() === 'd') && (
+                {(part.letter?.toLowerCase() === 'a' || part.letter?.toLowerCase() === 'b' || part.letter?.toLowerCase() === 'c' || part.letter?.toLowerCase() === 'd') && (
                   <div style={{ marginTop: '10px' }}>
                     <label className="image-upload-label">
-                      {part.letter?.toLowerCase() === 'c' ? 'Answer Image 1 (answerimage1)' : 'Answer Image 2 (answerimage2)'}
+                      {part.letter?.toLowerCase() === 'c' ? 'Answer Image 1 (answerimage1)' : 
+                       part.letter?.toLowerCase() === 'd' ? 'Answer Image 2 (answerimage2)' : 
+                       part.letter?.toLowerCase() === 'a' ? 'Answer Image 3 (answerimage3)' : 
+                       'Answer Image 4 (answerimage4)'}
                     </label>
                     <div className="image-buttons-group">
                       <input

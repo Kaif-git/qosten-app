@@ -557,6 +557,36 @@ export function QuestionProvider({ children }) {
     }
   }, [state.questions, refreshHierarchy]);
 
+  // Handle fetching flagged questions when filter is set to 'flagged'
+  useEffect(() => {
+    if (state.currentFilters.flaggedStatus === 'flagged') {
+      const fetchFlagged = async () => {
+        try {
+          console.log('🚩 Fetching flagged questions from API...');
+          const data = await questionApi.fetchFlaggedQuestions();
+          const batch = Array.isArray(data) ? data : (data.data || []);
+          const mapped = batch.map(mapDatabaseToApp);
+          
+          dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prev) => {
+            const existingIds = new Set(prev.filter(q => q && q.id).map(q => q.id.toString()));
+            const newQuestions = mapped.filter(q => q && q.id && !existingIds.has(q.id.toString()));
+            
+            if (newQuestions.length === 0) {
+              console.log('ℹ️ No new flagged questions to add to state.');
+              return prev;
+            }
+            
+            console.log(`✅ Adding ${newQuestions.length} new flagged questions to state.`);
+            return [...newQuestions, ...prev];
+          }});
+        } catch (error) {
+          console.error('❌ Failed to fetch flagged questions:', error);
+        }
+      };
+      fetchFlagged();
+    }
+  }, [state.currentFilters.flaggedStatus]);
+
   // --- 3. Actions ---
 
   const setQuestions = useCallback((questions) => {
@@ -717,9 +747,10 @@ export function QuestionProvider({ children }) {
       const dbQuestions = processed.map(q => mapAppToDatabase(q));
       const { successCount, failedCount } = await questionApi.bulkUpdateQuestions(dbQuestions);
       
-      const updateMap = new Map(processed.map(q => [q.id.toString(), q]));
+      const updateMap = new Map(processed.filter(q => q && q.id).map(q => [q.id.toString(), q]));
       dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
           return prevQuestions.map(q => {
+              if (!q || !q.id) return q;
               const improved = updateMap.get(q.id.toString());
               return improved ? { ...q, ...improved } : q;
           });
@@ -782,8 +813,8 @@ export function QuestionProvider({ children }) {
       if (batch.length > 0) {
         const mappedBatch = batch.map(mapDatabaseToApp);
         dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
-          const existingIds = new Set(prevQuestions.map(q => q.id.toString()));
-          const uniqueNewBatch = mappedBatch.filter(q => !existingIds.has(q.id.toString()));
+          const existingIds = new Set(prevQuestions.filter(q => q && q.id).map(q => q.id.toString()));
+          const uniqueNewBatch = mappedBatch.filter(q => q && q.id && !existingIds.has(q.id.toString()));
           return uniqueNewBatch.length > 0 ? [...prevQuestions, ...uniqueNewBatch] : prevQuestions;
         }});
         return batch.length; 
@@ -827,7 +858,7 @@ export function QuestionProvider({ children }) {
   }, [fetchMoreQuestions, state.questions.length]);
 
   const toggleQuestionFlag = useCallback(async (questionId) => {
-    const question = state.questions.find(q => q.id.toString() === questionId.toString());
+    const question = state.questions.find(q => q && q.id && q.id.toString() === (questionId ? questionId.toString() : ''));
     if (!question) return;
     
     const newFlaggedStatus = !question.isFlagged;
@@ -841,7 +872,7 @@ export function QuestionProvider({ children }) {
   }, [state.questions]);
 
   const toggleQuestionVerification = useCallback(async (questionId) => {
-    const question = state.questions.find(q => q.id.toString() === questionId.toString());
+    const question = state.questions.find(q => q && q.id && q.id.toString() === (questionId ? questionId.toString() : ''));
     if (!question) return;
     
     const newVerifiedStatus = !question.isVerified;
@@ -855,7 +886,7 @@ export function QuestionProvider({ children }) {
   }, [state.questions]);
 
   const toggleReviewQueue = useCallback(async (questionId) => {
-    const question = state.questions.find(q => q.id.toString() === questionId.toString());
+    const question = state.questions.find(q => q && q.id && q.id.toString() === (questionId ? questionId.toString() : ''));
     if (!question) return;
     
     const newQueueStatus = !question.inReviewQueue;

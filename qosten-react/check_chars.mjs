@@ -1,7 +1,15 @@
+const userText = "উত্তর:";
+const literalText = "উত্তর:";
 
-const regexPart = 'অধ্যায়';
-const inputPart = 'অধ্যায়';
+function dump(s) {
+    return s.split('').map(c => c.charCodeAt(0).toString(16).padStart(4, '0')).join(' ');
+}
 
-console.log('Regex Part:', regexPart, regexPart.split('').map(c => c.charCodeAt(0).toString(16)));
-console.log('Input Part:', inputPart, inputPart.split('').map(c => c.charCodeAt(0).toString(16)));
-console.log('Match?', regexPart === inputPart);
+console.log("User Text:", dump(userText));
+console.log("Literal Text:", dump(literalText));
+
+const userNormalized = userText.normalize('NFC');
+const literalNormalized = literalText.normalize('NFC');
+
+console.log("User Normalized:", dump(userNormalized));
+console.log("Literal Normalized:", dump(literalNormalized));

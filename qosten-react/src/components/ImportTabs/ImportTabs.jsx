@@ -159,8 +159,10 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
   // parseCQQuestions has been moved to src/utils/cqParser.js
   
   const parseSQQuestions = (text, lang = 'en') => {
-    const cleanedText = text.replace(/\u200b/g, '').replace(/\*+/g, '');
-    const sections = cleanedText.split(/\n---+|###/).filter(s => s.trim());
+    // Normalize to NFC to handle Bangla characters consistently
+    const cleanedText = text.normalize('NFC').replace(/\u200b/g, '').replace(/\*+/g, '');
+    // Split by horizontal rules, hash markers, or when a new metadata block starts (preceded by newline)
+    const sections = ('\n' + cleanedText).split(/\n(?:---+|###|(?=\[?(?:Subject|Topic|বিষয়|বিষয়)[:ঃ]))/i).filter(s => s.trim());
     const questions = [];
 
     for (const section of sections) {
@@ -275,49 +277,86 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
         // Standard format fallback (1. Question ... Answer: ...)
         let currentQuestion = null;
         const saveCurrentQuestion = () => {
-            if (currentQuestion && currentQuestion.question) {
+            if (currentQuestion && (currentQuestion.question || currentQuestion.answer)) {
+                // If we only have an answer but it's empty space placeholder, don't save
+                if (currentQuestion.answer === ' ' && !currentQuestion.question) {
+                    currentQuestion = null;
+                    return;
+                }
                 questions.push(currentQuestion);
             }
             currentQuestion = null;
         };
 
-        for (const line of cleanLines) {
-            // Skip headers
-            if (/^(Question|প্রশ্ন|Q\.?|সৃজনশীল\s+প্রশ্ন)\s*[\d০-৯টে]*/i.test(line) && line.length < 20) continue;
+        // Check if this section uses explicit "Question X" prefixes
+        const usesQuestionPrefix = cleanLines.some(l => /^(?:Question|প্রশ্ন|Q\.?|সৃজনশীল\s+প্রশ্ন)\s*[\d০-৯টে]+/i.test(l));
 
-            // Detect new question start (digit followed by separator)
-            if (/^[\d০-৯]+[।.)\s]/.test(line)) {
+        for (const line of cleanLines) {
+            const trimmed = line.normalize('NFC').trim();
+            if (!trimmed) continue;
+
+            console.log(`[SQ Parser] Processing: "${trimmed.substring(0, 30)}${trimmed.length > 30 ? '...' : ''}"`);
+
+            // Detect "Question X" headers as new question starts
+            const questionHeaderMatch = trimmed.match(/^(?:Question|প্রশ্ন|Q\.?|সৃজনশীল\s+প্রশ্ন)\s*([\d০-৯টে]+)/i);
+            if (questionHeaderMatch && trimmed.length < 50) {
+                console.log(`[SQ Parser] New Question detected via header: ${trimmed}`);
                 saveCurrentQuestion();
                 currentQuestion = { ...sectionMetadata, question: '', answer: '' };
-
-                let text = line.replace(/^[\[\d০-৯]+[।.)\s]*/, '').trim();
-                const inlineAnswerMatch = text.match(/(answer|ans|উত্তর)\s*[:=]\s*(.*)/i);
-                if (inlineAnswerMatch) {
-                    currentQuestion.question = text.substring(0, inlineAnswerMatch.index).trim();
-                    currentQuestion.answer = inlineAnswerMatch[2].trim();
-                } else {
-                    currentQuestion.question = text;
+                
+                // If there's more text after "Question X:", use it as the beginning of question text
+                const afterHeader = trimmed.replace(/^(?:Question|প্রশ্ন|Q\.?|সৃজনশীল\s+প্রশ্ন)\s*[\d০-৯টে]*[:ঃ]?\s*/i, '').trim();
+                if (afterHeader) {
+                    currentQuestion.question = afterHeader;
                 }
                 continue;
+            }
+
+            // Detect new question start (digit followed by separator, e.g., "1. ")
+            if (/^[\d০-৯]+[।.)\s]/.test(trimmed)) {
+                // If we are using Question X prefixes, don't let a plain digit start a new question if we're already in an answer
+                // This prevents numbered lists in answers from being treated as new questions
+                const isInsideAnswer = currentQuestion && (currentQuestion.answer && currentQuestion.answer.trim());
+                
+                if (!usesQuestionPrefix || !isInsideAnswer) {
+                    console.log(`[SQ Parser] New Question detected via digit: ${trimmed.substring(0, 20)}`);
+                    saveCurrentQuestion();
+                    currentQuestion = { ...sectionMetadata, question: '', answer: '' };
+
+                    let text = trimmed.replace(/^[\[\d০-৯]+[।.)\s]*/, '').trim();
+                    const inlineAnswerMatch = text.match(/(answer|ans|উত্তর)\s*[:=ঃ]\s*(.*)/i);
+                    if (inlineAnswerMatch) {
+                        currentQuestion.question = text.substring(0, inlineAnswerMatch.index).trim();
+                        currentQuestion.answer = inlineAnswerMatch[2].trim();
+                    } else {
+                        currentQuestion.question = text;
+                    }
+                    continue;
+                }
             }
 
             if (!currentQuestion) continue;
 
             // Detect answer marker
-            const answerMatch = line.match(/^(?:answer|ans|উত্তর)\s*[:=ঃ]\s*(.+)$/i) || 
-                                (line.match(/^(answer|ans|উত্তর)\s*[:=ঃ]?\s*$/i) ? [line, ""] : null);
+            const answerMatch = trimmed.match(/^(?:answer|ans|উত্তর)\s*[:=ঃ]\s*(.+)$/i) || 
+                                (trimmed.match(/^(?:answer|ans|উত্তর)\s*[:=ঃ]?$/i) ? [trimmed, ""] : null);
             
             if (answerMatch) {
+                console.log(`[SQ Parser] Answer marker detected: ${trimmed}`);
                 if (answerMatch[1]) {
-                    currentQuestion.answer = (currentQuestion.answer ? currentQuestion.answer + '\n' : '') + answerMatch[1].trim();
+                    currentQuestion.answer = (currentQuestion.answer && currentQuestion.answer.trim() ? currentQuestion.answer + '\n' : '') + answerMatch[1].trim();
+                } else if (!currentQuestion.answer) {
+                    currentQuestion.answer = ' '; // Mark as started
                 }
                 continue;
             }
 
-            if (currentQuestion.answer) {
-                currentQuestion.answer += '\n' + line;
-            } else if (currentQuestion.question) {
-                currentQuestion.question += '\n' + line;
+            if (currentQuestion.answer && currentQuestion.answer.trim()) {
+                currentQuestion.answer += '\n' + trimmed;
+            } else if (currentQuestion.answer === ' ') {
+                currentQuestion.answer = trimmed;
+            } else {
+                currentQuestion.question = (currentQuestion.question && currentQuestion.question.trim() ? currentQuestion.question + '\n' : '') + trimmed;
             }
         }
         saveCurrentQuestion();

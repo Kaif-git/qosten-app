@@ -1836,10 +1836,12 @@ export default function QuestionBank() {
     // 3. Fetch full details for strict comparison
     const idsToFetch = new Set();
     candidateGroups.forEach(g => {
-        if (!fullQuestionsMap.has(g.original.id.toString())) idsToFetch.add(g.original.id);
-        g.duplicates.forEach(d => {
-            if (!fullQuestionsMap.has(d.id.toString())) idsToFetch.add(d.id);
-        });
+        if (g.original && g.original.id && !fullQuestionsMap.has(g.original.id.toString())) idsToFetch.add(g.original.id);
+        if (g.duplicates) {
+            g.duplicates.forEach(d => {
+                if (d && d.id && !fullQuestionsMap.has(d.id.toString())) idsToFetch.add(d.id);
+            });
+        }
     });
 
     const verificationMap = new Map(fullQuestionsMap);
@@ -1848,11 +1850,15 @@ export default function QuestionBank() {
         try {
             console.log(`[Duplicate Debug] Fetching ${idsToFetch.size} questions for strict check...`);
             const fetched = await fetchQuestionsByIds(Array.from(idsToFetch));
-            fetched.forEach(q => verificationMap.set(q.id.toString(), q));
+            fetched.forEach(q => {
+                if (q && q.id) verificationMap.set(q.id.toString(), q);
+            });
             
             setFullQuestionsMap(prev => {
                 const next = new Map(prev);
-                fetched.forEach(q => next.set(q.id.toString(), q));
+                fetched.forEach(q => {
+                    if (q && q.id) next.set(q.id.toString(), q);
+                });
                 return next;
             });
         } catch (e) {
@@ -1980,14 +1986,18 @@ export default function QuestionBank() {
     }
 
     // Ensure we have full data for selected questions to prevent overwriting with defaults
-    const missingIds = selectedQuestions.filter(id => !fullQuestionsMap.has(id.toString()));
+    const missingIds = selectedQuestions.filter(id => id && !fullQuestionsMap.has(id.toString()));
+    let fetchedQuestions = [];
+    
     if (missingIds.length > 0) {
         console.log(`[BulkEdit Debug] Fetching full data for ${missingIds.length} missing questions.`);
         try {
-            const fetched = await fetchQuestionsByIds(missingIds);
+            fetchedQuestions = await fetchQuestionsByIds(missingIds);
             setFullQuestionsMap(prev => {
                 const next = new Map(prev);
-                fetched.forEach(q => next.set(q.id.toString(), q));
+                fetchedQuestions.forEach(q => {
+                    if (q && q.id) next.set(q.id.toString(), q);
+                });
                 return next;
             });
         } catch (e) {
@@ -1998,9 +2008,16 @@ export default function QuestionBank() {
     }
 
     // Get the selected question objects
-    const selectedQuestionObjects = selectedQuestions.map(id => 
-        fullQuestionsMap.get(id.toString()) || questions.find(q => q.id.toString() === id.toString())
-    ).filter(Boolean);
+    const selectedQuestionObjects = selectedQuestions.map(id => {
+        if (!id) return null;
+        const idStr = id.toString();
+        // Check local fetched first, then fullQuestionsMap, then questions array
+        return (
+            fetchedQuestions.find(q => q && q.id && q.id.toString() === idStr) ||
+            fullQuestionsMap.get(idStr) || 
+            questions.find(q => q && q.id && q.id.toString() === idStr)
+        );
+    }).filter(Boolean);
     
     console.log(`[BulkEdit Debug] Prepared ${selectedQuestionObjects.length} objects for update.`);
 
@@ -2468,8 +2485,8 @@ export default function QuestionBank() {
                         }));
 
                         setQuestions(prev => {
-                            const existing = new Set(prev.map(p => p.id.toString()));
-                            const uniqueNew = mapped.filter(m => !existing.has(m.id.toString()));
+                            const existing = new Set(prev.filter(p => p && p.id).map(p => p.id.toString()));
+                            const uniqueNew = mapped.filter(m => m && m.id && !existing.has(m.id.toString()));
                             if (uniqueNew.length === 0) return prev;
                             return [...prev, ...uniqueNew];
                         });

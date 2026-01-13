@@ -50,6 +50,15 @@ export const questionApi = {
     return await response.json();
   },
 
+  async fetchFlaggedQuestions() {
+    const response = await fetchWithRetry(`${API_BASE_URL}/questions/flagged`);
+    if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Failed to fetch flagged questions: ${response.status} ${errorText}`);
+    }
+    return await response.json();
+  },
+
   async fetchHierarchy() {
     const response = await fetchWithRetry(`${API_BASE_URL}/hierarchy`);
     if (!response.ok) {

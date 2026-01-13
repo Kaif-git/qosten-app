@@ -209,8 +209,8 @@ export function parseMCQQuestions(text) {
           inQuestion = false;
         }
         
-        // Extract all options from the line - updated regex for Roman numerals
-        const optionPattern = /(?:^|\s+)([a-dক-ঘi]{1,3})[\)\.।]\s*(.+?)(?=\s+([a-dক-ঘi]{1,3})[\)\.।]\s*|$)/gi;
+        // Extract all options from the line - updated regex for numeric labels and Roman numerals
+        const optionPattern = /(?:^|\s+)([a-dক-ঘi1-4১-৪]{1,3})[\)\.।]\s*(.+?)(?=\s+([a-dক-ঘi1-4১-৪]{1,3})[\)\.।]\s*|$)/gi;
         let match;
         let foundAny = false;
         while ((match = optionPattern.exec(line)) !== null) {

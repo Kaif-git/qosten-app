@@ -214,16 +214,58 @@ export default function Statistics({ questions, onFilterSelect, onSelectAll, sel
     };
   }, [questions, hierarchy, activeFilters]);
 
+  // Verified Statistics Calculation
+  const verifiedStats = React.useMemo(() => {
+    const verifiedQuestions = questions.filter(q => q.isVerified);
+    
+    const detailedCounts = { subjects: {}, chapters: {}, types: {} };
+    const chapterTypeBreakdown = {};
+    const subjectToChaptersMap = {};
+
+    verifiedQuestions.forEach(q => {
+      const subject = (q.subject || '').trim();
+      const chapter = (q.chapter || '').trim();
+      const type = (q.type || 'unknown').toLowerCase();
+
+      if (subject) {
+        detailedCounts.subjects[subject] = (detailedCounts.subjects[subject] || 0) + 1;
+        
+        if (chapter) {
+            if (!subjectToChaptersMap[subject]) subjectToChaptersMap[subject] = new Set();
+            subjectToChaptersMap[subject].add(chapter);
+        }
+      }
+      
+      if (chapter) {
+        detailedCounts.chapters[chapter] = (detailedCounts.chapters[chapter] || 0) + 1;
+        
+        if (!chapterTypeBreakdown[chapter]) chapterTypeBreakdown[chapter] = {};
+        chapterTypeBreakdown[chapter][type] = (chapterTypeBreakdown[chapter][type] || 0) + 1;
+      }
+      if (q.type) detailedCounts.types[q.type] = (detailedCounts.types[q.type] || 0) + 1;
+    });
+
+    return {
+      total: verifiedQuestions.length,
+      subjectCount: Object.keys(detailedCounts.subjects).length,
+      chapterCount: Object.keys(detailedCounts.chapters).length,
+      detailedCounts,
+      chapterTypeBreakdown
+    };
+  }, [questions]);
+
   const { totalQuestionsCount, subjectCount, chapterCount, detailedCounts, chapterTypeBreakdown } = stats;
 
+  const [showVerifiedOnly, setShowVerifiedOnly] = React.useState(false);
 
   const isSelected = (type, key) => {
     return selectedCategories.some(cat => cat.type === type && cat.key === key);
   };
 
-  const renderClickableList = (items, type) => {
+  const renderClickableList = (items, type, breakdownSource = null) => {
     // Sort items by key (alphabetically) so range selection makes sense
     const sortedEntries = Object.entries(items).sort((a, b) => a[0].localeCompare(b[0]));
+    const source = breakdownSource || chapterTypeBreakdown;
 
     return (
       <ul className="clickable-stats-list" style={{ padding: 0, listStyle: 'none' }}>
@@ -232,7 +274,7 @@ export default function Statistics({ questions, onFilterSelect, onSelectAll, sel
           let labelContent = null;
           
           if (type === 'chapter') {
-             const breakdown = chapterTypeBreakdown[key];
+             const breakdown = source[key];
              const breakdownString = breakdown 
                ? Object.entries(breakdown)
                    .map(([t, typeCount]) => `${t.toUpperCase()}: ${typeCount}`)
@@ -320,46 +362,124 @@ export default function Statistics({ questions, onFilterSelect, onSelectAll, sel
 
   return (
     <>
-      <div className="stats">
-        <div className="stat-item">
-          <div className="stat-value">{totalQuestionsCount}</div>
-          <div>Total Questions {hierarchy?.length > 0 && <span style={{fontSize: '0.6em', color: '#666'}}>(Available)</span>}</div>
-        </div>
-        <div className="stat-item">
-          <div className="stat-value">{subjectCount}</div>
-          <div>Subjects</div>
-        </div>
-        <div className="stat-item">
-          <div className="stat-value">{chapterCount}</div>
-          <div>Chapters</div>
-        </div>
+      <div className="stats-tabs" style={{ display: 'flex', gap: '10px', marginBottom: '15px' }}>
+        <button 
+          onClick={() => setShowVerifiedOnly(false)}
+          style={{
+            padding: '8px 16px',
+            borderRadius: '20px',
+            border: 'none',
+            backgroundColor: !showVerifiedOnly ? '#007bff' : '#e9ecef',
+            color: !showVerifiedOnly ? 'white' : '#495057',
+            cursor: 'pointer',
+            fontWeight: '600'
+          }}
+        >
+          General Statistics
+        </button>
+        <button 
+          onClick={() => setShowVerifiedOnly(true)}
+          style={{
+            padding: '8px 16px',
+            borderRadius: '20px',
+            border: 'none',
+            backgroundColor: showVerifiedOnly ? '#28a745' : '#e9ecef',
+            color: showVerifiedOnly ? 'white' : '#495057',
+            cursor: 'pointer',
+            fontWeight: '600'
+          }}
+        >
+          Verified Only Statistics
+        </button>
       </div>
 
-      <div className="detailed-stats">
-        <h3>Detailed Counts {hierarchy?.length > 0 && <span style={{fontSize: '0.6em', color: '#666'}}>(Server Data)</span>}</h3>
-        <div className="detailed-stats-content">
-          {Object.keys(detailedCounts.subjects).length > 0 && (
-            <div>
-              <h4>By Subject:</h4>
-              {renderClickableList(detailedCounts.subjects, 'subject')}
+      {!showVerifiedOnly ? (
+        <>
+          <div className="stats">
+            <div className="stat-item">
+              <div className="stat-value">{totalQuestionsCount}</div>
+              <div>Total Questions {hierarchy?.length > 0 && <span style={{fontSize: '0.6em', color: '#666'}}>(Available)</span>}</div>
             </div>
-          )}
+            <div className="stat-item">
+              <div className="stat-value">{subjectCount}</div>
+              <div>Subjects</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-value">{chapterCount}</div>
+              <div>Chapters</div>
+            </div>
+          </div>
 
-          {Object.keys(detailedCounts.chapters).length > 0 && (
-            <div>
-              <h4>By Chapter:</h4>
-              {renderClickableList(detailedCounts.chapters, 'chapter')}
+          <div className="detailed-stats">
+            <h3>Detailed Counts {hierarchy?.length > 0 && <span style={{fontSize: '0.6em', color: '#666'}}>(Server Data)</span>}</h3>
+            <div className="detailed-stats-content">
+              {Object.keys(detailedCounts.subjects).length > 0 && (
+                <div>
+                  <h4>By Subject:</h4>
+                  {renderClickableList(detailedCounts.subjects, 'subject')}
+                </div>
+              )}
+
+              {Object.keys(detailedCounts.chapters).length > 0 && (
+                <div>
+                  <h4>By Chapter:</h4>
+                  {renderClickableList(detailedCounts.chapters, 'chapter')}
+                </div>
+              )}
+              
+              {Object.keys(detailedCounts.types).length > 0 && (
+                <div>
+                  <h4>By Type:</h4>
+                  {renderClickableList(detailedCounts.types, 'type')}
+                </div>
+              )}
             </div>
-          )}
-          
-          {Object.keys(detailedCounts.types).length > 0 && (
-            <div>
-              <h4>By Type:</h4>
-              {renderClickableList(detailedCounts.types, 'type')}
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="stats verified-stats">
+            <div className="stat-item" style={{ borderLeftColor: '#28a745' }}>
+              <div className="stat-value" style={{ color: '#28a745' }}>{verifiedStats.total}</div>
+              <div>Verified Questions</div>
             </div>
-          )}
-        </div>
-      </div>
+            <div className="stat-item" style={{ borderLeftColor: '#28a745' }}>
+              <div className="stat-value" style={{ color: '#28a745' }}>{verifiedStats.subjectCount}</div>
+              <div>Verified Subjects</div>
+            </div>
+            <div className="stat-item" style={{ borderLeftColor: '#28a745' }}>
+              <div className="stat-value" style={{ color: '#28a745' }}>{verifiedStats.chapterCount}</div>
+              <div>Verified Chapters</div>
+            </div>
+          </div>
+
+          <div className="detailed-stats verified-detailed">
+            <h3 style={{ color: '#28a745' }}>Verified Breakdown</h3>
+            <div className="detailed-stats-content">
+              {Object.keys(verifiedStats.detailedCounts.subjects).length > 0 && (
+                <div>
+                  <h4>By Subject (Verified):</h4>
+                  {renderClickableList(verifiedStats.detailedCounts.subjects, 'subject', verifiedStats.chapterTypeBreakdown)}
+                </div>
+              )}
+
+              {Object.keys(verifiedStats.detailedCounts.chapters).length > 0 && (
+                <div>
+                  <h4>By Chapter (Verified):</h4>
+                  {renderClickableList(verifiedStats.detailedCounts.chapters, 'chapter', verifiedStats.chapterTypeBreakdown)}
+                </div>
+              )}
+              
+              {Object.keys(verifiedStats.detailedCounts.types).length > 0 && (
+                <div>
+                  <h4>By Type (Verified):</h4>
+                  {renderClickableList(verifiedStats.detailedCounts.types, 'type', verifiedStats.chapterTypeBreakdown)}
+                </div>
+              )}
+            </div>
+          </div>
+        </>
+      )}
     </>
   );
 }

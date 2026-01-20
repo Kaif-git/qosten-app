@@ -102,6 +102,7 @@ export function parseMCQQuestions(text) {
     
     let currentQuestion = {
       type: 'mcq',
+      id: '',
       subject: '',
       chapter: '',
       lesson: '',
@@ -128,8 +129,13 @@ export function parseMCQQuestions(text) {
       }
       
       // Parse metadata fields (handle 0, 1 (*), or 2 (**) asterisks and Bengali field names)
+      // ID field for unique identification
+      if (line.match(/^\*{0,2}\[\s*ID\s*:\s*(.+?)\s*\]\*{0,2}$/i)) {
+        const match = line.match(/^\*{0,2}\[\s*ID\s*:\s*(.+?)\s*\]\*{0,2}$/i);
+        currentQuestion.id = match[1].trim();
+      }
       // Subject/বিষয় - If we encounter a new subject, save the current question first
-      if (line.match(/^\*{0,2}\[\s*(Subject|বিষয়)\s*:\s*(.+?)\s*\]\*{0,2}$/i)) {
+      else if (line.match(/^\*{0,2}\[\s*(Subject|বিষয়)\s*:\s*(.+?)\s*\]\*{0,2}$/i)) {
         console.log('  ✅ Found Subject line:', line.substring(0, 80));
         // Save previous question if it exists and is valid
         if (currentQuestion.questionText && currentQuestion.options.length > 0) {
@@ -237,13 +243,13 @@ export function parseMCQQuestions(text) {
         }
       }
             // Parse question number and text
-            else if (line.match(/^(\*{0,2})\s*[\d০-৯]+[\.।]/)) {
-              const fullMatch = line.match(/^(\*{0,2})\s*([\d০-৯]+)[\.।]/);
-              const qNum = fullMatch[2];
+            // Support: 1., **1.**, Question 1:, **Question 1:**
+            else if (line.match(/^(\*{0,2})\s*(Question\s*)?[\d০-৯]+[\.।:]/i)) {
+              const fullMatch = line.match(/^(\*{0,2})\s*(Question\s*)?([\d০-৯]+)[\.।:]/i);
+              const qNum = fullMatch[3];
               console.log(`  🔍 Found potential question number: ${qNum}`);
       
               // SAVE PREVIOUS QUESTION if it exists and has some content
-              // Relaxed check: just question text is enough to save, especially for recovery
               if (currentQuestion.questionText) {
                 console.log(`    💾 Saving question (ID: ${qNum || 'unknown'}) before starting next`);
                 if (inExplanation && explanationBuffer.length > 0) {
@@ -274,9 +280,9 @@ export function parseMCQQuestions(text) {
               
               inQuestion = true;
               questionBuffer = [];
-              // Remove the question number marker (handles 0, 1, or 2 asterisks, numerals, and . or । divider)
-              const questionText = line.replace(/^(\*{0,2})\s*[\d০-৯]+[\.।]\*{0,2}\s*/, '').trim();
-              console.log('  ✅ Found Question text:', questionText.substring(0, 60) + '...');
+              // Remove the question number marker
+              const questionText = line.replace(/^(\*{0,2})\s*(Question\s*)?[\d০-৯]+[\.।:]\*{0,2}\s*/i, '').trim();
+              console.log('  ✅ Found Question text line:', questionText.substring(0, 60) + '...');
               if (questionText) {
                 questionBuffer.push(questionText);
               }

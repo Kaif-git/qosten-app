@@ -1,23 +1,27 @@
 const API_BASE_URL = 'https://questions-api.edventure.workers.dev';
 
 // Helper for fetch with retry
-const fetchWithRetry = async (url, options = {}, retries = 3, backoff = 1000) => {
+const fetchWithRetry = async (url, options = {}, retries = 5, backoff = 1000) => {
   try {
     const response = await fetch(url, options);
-    // Retry on Service Unavailable (503) or Too Many Requests (429)
-    if (response.status === 503 || response.status === 429) {
+    
+    // Retry on Service Unavailable (503), Too Many Requests (429), or Gateway Timeout (504)
+    if ([429, 502, 503, 504].includes(response.status)) {
       if (retries > 0) {
-        console.warn(`⚠️ ${response.status} received from ${url}. Retrying in ${backoff}ms... (${retries} retries left)`);
-        await new Promise(resolve => setTimeout(resolve, backoff));
+        // Jittered backoff
+        const delay = backoff + Math.random() * 500;
+        console.warn(`⚠️ ${response.status} received from ${url}. Retrying in ${Math.round(delay)}ms... (${retries} retries left)`);
+        await new Promise(resolve => setTimeout(resolve, delay));
         return fetchWithRetry(url, options, retries - 1, backoff * 2);
       }
     }
     return response;
   } catch (error) {
-    // Retry on network errors (e.g. Failed to fetch)
+    // Retry on network errors (e.g. Failed to fetch, ERR_CONNECTION_RESET, ERR_QUIC_PROTOCOL_ERROR)
     if (retries > 0) {
-      console.warn(`⚠️ Network error fetching ${url}. Retrying in ${backoff}ms... (${retries} retries left)`, error);
-      await new Promise(resolve => setTimeout(resolve, backoff));
+      const delay = backoff + Math.random() * 500;
+      console.warn(`⚠️ Network error fetching ${url}. Retrying in ${Math.round(delay)}ms... (${retries} retries left)`, error);
+      await new Promise(resolve => setTimeout(resolve, delay));
       return fetchWithRetry(url, options, retries - 1, backoff * 2);
     }
     throw error;
@@ -177,7 +181,7 @@ export const questionApi = {
             break;
         }
 
-        await sleep(50);
+        await sleep(200); // Increased delay to avoid overwhelming the worker
       } catch (error) {
         console.error(`❌ Error on page ${page}:`, error);
         break; // Stop on error to avoid infinite loops
@@ -190,20 +194,40 @@ export const questionApi = {
 
   async fetchQuestionsByIds(ids) {
     if (!ids || ids.length === 0) return [];
-    // Assuming the API supports filtering by IDs via query param or POST
-    // Using GET with comma-separated IDs for now
-    const response = await fetch(`${API_BASE_URL}/questions?ids=${ids.join(',')}`);
-    if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(`Failed to fetch questions by IDs: ${response.status} ${errorText}`);
+    
+    const BATCH_SIZE = 100;
+    const allResults = [];
+    
+    for (let i = 0; i < ids.length; i += BATCH_SIZE) {
+        const chunk = ids.slice(i, i + BATCH_SIZE);
+        const url = `${API_BASE_URL}/questions?ids=${chunk.join(',')}`;
+        
+        try {
+            const response = await fetchWithRetry(url);
+            if (!response.ok) {
+                const errorText = await response.text();
+                console.error(`Failed to fetch chunk ${i/BATCH_SIZE}: ${response.status} ${errorText}`);
+                continue;
+            }
+            const data = await response.json();
+            const questions = Array.isArray(data) ? data : (data.data || []);
+            allResults.push(...questions);
+            
+            // Small delay between batches if there are more to fetch
+            if (i + BATCH_SIZE < ids.length) {
+                await new Promise(resolve => setTimeout(resolve, 100));
+            }
+        } catch (error) {
+            console.error(`Error fetching chunk ${i/BATCH_SIZE}:`, error);
+        }
     }
-    const data = await response.json();
-    return Array.isArray(data) ? data : (data.data || []);
+    
+    return allResults;
   },
 
   async createQuestion(questionData) {
     console.log('📤 [questionApi] createQuestion - sending full data:', JSON.stringify(questionData, null, 2));
-    const response = await fetch(`${API_BASE_URL}/questions`, {
+    const response = await fetchWithRetry(`${API_BASE_URL}/questions`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(questionData),
@@ -218,7 +242,7 @@ export const questionApi = {
 
   async updateQuestion(id, questionData) {
     console.log(`📤 [questionApi] updateQuestion - ID: ${id}, data:`, questionData);
-    const response = await fetch(`${API_BASE_URL}/questions/${id}`, {
+    const response = await fetchWithRetry(`${API_BASE_URL}/questions/${id}`, {
       method: 'PUT', // Using PUT for full update, could be PATCH
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(questionData),
@@ -233,7 +257,7 @@ export const questionApi = {
 
   async deleteQuestion(id) {
     console.log(`📤 [questionApi] deleteQuestion - ID: ${id}`);
-    const response = await fetch(`${API_BASE_URL}/questions/${id}`, {
+    const response = await fetchWithRetry(`${API_BASE_URL}/questions/${id}`, {
       method: 'DELETE',
     });
     if (!response.ok) {

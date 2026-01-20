@@ -533,10 +533,12 @@ export function QuestionProvider({ children }) {
   // --- 2. Effects ---
 
   const lastQuestionsLengthRef = useRef(0);
+  const questionsLengthRef = useRef(0);
 
   // Sync state.questions to cache and update stats whenever questions change
   useEffect(() => {
     if (state.questions && state.questions.length > 0) {
+      questionsLengthRef.current = state.questions.length;
       if (state.questions !== memoryCache.questions) {
         saveToCache(state.questions);
         
@@ -571,13 +573,22 @@ export function QuestionProvider({ children }) {
             const existingIds = new Set(prev.filter(q => q && q.id).map(q => q.id.toString()));
             const newQuestions = mapped.filter(q => q && q.id && !existingIds.has(q.id.toString()));
             
+            // Also update existing questions' flagged status if they are in the 'mapped' list
+            const mappedIds = new Set(mapped.map(q => q.id.toString()));
+            const updatedPrev = prev.map(q => {
+              if (q && q.id && mappedIds.has(q.id.toString())) {
+                return { ...q, isFlagged: true };
+              }
+              return q;
+            });
+
             if (newQuestions.length === 0) {
-              console.log('ℹ️ No new flagged questions to add to state.');
-              return prev;
+              console.log('ℹ️ No new flagged questions to add to state, but updated existing ones.');
+              return updatedPrev;
             }
             
             console.log(`✅ Adding ${newQuestions.length} new flagged questions to state.`);
-            return [...newQuestions, ...prev];
+            return [...newQuestions, ...updatedPrev];
           }});
         } catch (error) {
           console.error('❌ Failed to fetch flagged questions:', error);
@@ -801,7 +812,7 @@ export function QuestionProvider({ children }) {
     try {
       if (forcedPage === null) isFetchingRef.current = true;
       const BATCH_SIZE = 500;
-      const nextPage = forcedPage !== null ? forcedPage : Math.floor(state.questions.length / BATCH_SIZE);
+      const nextPage = forcedPage !== null ? forcedPage : Math.floor(questionsLengthRef.current / BATCH_SIZE);
       
       console.log(`📡 Fetching Page ${nextPage}...`);
       const response = await questionApi.fetchQuestions({
@@ -826,7 +837,7 @@ export function QuestionProvider({ children }) {
     } finally {
       if (forcedPage === null) isFetchingRef.current = false;
     }
-  }, [state.questions.length]);
+  }, []);
 
   const fetchAllRemaining = useCallback(async (onProgress) => {
     if (isFetchingRef.current) return;
@@ -834,7 +845,7 @@ export function QuestionProvider({ children }) {
     let totalAdded = 0;
     let hasMore = true;
     const BATCH_SIZE = 500;
-    let currentPage = Math.floor(state.questions.length / BATCH_SIZE);
+    let currentPage = Math.floor(questionsLengthRef.current / BATCH_SIZE);
     
     try {
       while (hasMore) {
@@ -855,17 +866,18 @@ export function QuestionProvider({ children }) {
       isFetchingRef.current = false;
     }
     return totalAdded;
-  }, [fetchMoreQuestions, state.questions.length]);
+  }, [fetchMoreQuestions]);
 
   const toggleQuestionFlag = useCallback(async (questionId) => {
     const question = state.questions.find(q => q && q.id && q.id.toString() === (questionId ? questionId.toString() : ''));
     if (!question) return;
     
-    const newFlaggedStatus = !question.isFlagged;
-    dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: { ...question, isFlagged: newFlaggedStatus } });
+    const updatedQuestion = { ...question, isFlagged: !question.isFlagged };
+    dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: updatedQuestion });
 
     try {
-      await questionApi.updateQuestion(parseInt(questionId), { is_flagged: newFlaggedStatus });
+      const dbQ = mapAppToDatabase(updatedQuestion);
+      await questionApi.updateQuestion(parseInt(questionId), dbQ);
     } catch (err) {
       dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
     }
@@ -875,11 +887,12 @@ export function QuestionProvider({ children }) {
     const question = state.questions.find(q => q && q.id && q.id.toString() === (questionId ? questionId.toString() : ''));
     if (!question) return;
     
-    const newVerifiedStatus = !question.isVerified;
-    dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: { ...question, isVerified: newVerifiedStatus } });
+    const updatedQuestion = { ...question, isVerified: !question.isVerified };
+    dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: updatedQuestion });
 
     try {
-      await questionApi.updateQuestion(parseInt(questionId), { is_verified: newVerifiedStatus });
+      const dbQ = mapAppToDatabase(updatedQuestion);
+      await questionApi.updateQuestion(parseInt(questionId), dbQ);
     } catch (err) {
       dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
     }
@@ -889,60 +902,99 @@ export function QuestionProvider({ children }) {
     const question = state.questions.find(q => q && q.id && q.id.toString() === (questionId ? questionId.toString() : ''));
     if (!question) return;
     
-    const newQueueStatus = !question.inReviewQueue;
-    dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: { ...question, inReviewQueue: newQueueStatus } });
+    const updatedQuestion = { ...question, inReviewQueue: !question.inReviewQueue };
+    dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: updatedQuestion });
 
     try {
-      await questionApi.updateQuestion(parseInt(questionId), { in_review_queue: newQueueStatus });
+      const dbQ = mapAppToDatabase(updatedQuestion);
+      await questionApi.updateQuestion(parseInt(questionId), dbQ);
     } catch (err) {
       dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
     }
   }, [state.questions]);
 
-  const bulkReviewQueue = useCallback(async (questionIds, inQueue) => {
-    const idSet = new Set(questionIds.map(String));
+  const bulkReviewQueue = useCallback(async (targets, inQueue) => {
+    const isObjectArray = targets.length > 0 && typeof targets[0] === 'object';
+    
+    let questionsToUpdate;
+    if (isObjectArray) {
+        questionsToUpdate = targets.map(q => ({ ...q, inReviewQueue: inQueue }));
+    } else {
+        const idSet = new Set(targets.map(String));
+        questionsToUpdate = state.questions
+          .filter(q => q && q.id && idSet.has(q.id.toString()))
+          .map(q => ({ ...q, inReviewQueue: inQueue }));
+    }
+
+    const idSetToUpdate = new Set(questionsToUpdate.map(q => q.id.toString()));
+
     dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
-        return prevQuestions.map(q => idSet.has(String(q.id)) ? { ...q, inReviewQueue: inQueue } : q);
+        return prevQuestions.map(q => q && q.id && idSetToUpdate.has(q.id.toString()) ? { ...q, inReviewQueue: inQueue } : q);
     }});
 
     try {
-      const numericIds = questionIds.map(id => parseInt(id));
-      const updates = numericIds.map(id => ({ id, in_review_queue: inQueue }));
+      const updates = questionsToUpdate.map(q => mapAppToDatabase(q));
       return await questionApi.bulkUpdateQuestions(updates);
     } catch (err) {
-      return { successCount: 0, failedCount: questionIds.length };
+      return { successCount: 0, failedCount: targets.length };
     }
-  }, []);
+  }, [state.questions]);
 
-  const bulkFlagQuestions = useCallback(async (questionIds, flagged) => {
-    const idSet = new Set(questionIds.map(String));
+  const bulkFlagQuestions = useCallback(async (targets, flagged) => {
+    // targets can be IDs or objects
+    const isObjectArray = targets.length > 0 && typeof targets[0] === 'object';
+    
+    let questionsToUpdate;
+    if (isObjectArray) {
+        questionsToUpdate = targets.map(q => ({ ...q, isFlagged: flagged }));
+    } else {
+        const idSet = new Set(targets.map(String));
+        questionsToUpdate = state.questions
+          .filter(q => q && q.id && idSet.has(q.id.toString()))
+          .map(q => ({ ...q, isFlagged: flagged }));
+    }
+
+    const idSetToUpdate = new Set(questionsToUpdate.map(q => q.id.toString()));
+
     dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
-        return prevQuestions.map(q => idSet.has(String(q.id)) ? { ...q, isFlagged: flagged } : q);
+        return prevQuestions.map(q => q && q.id && idSetToUpdate.has(q.id.toString()) ? { ...q, isFlagged: flagged } : q);
     }});
 
     try {
-      const numericIds = questionIds.map(id => parseInt(id));
-      const updates = numericIds.map(id => ({ id, is_flagged: flagged }));
+      const updates = questionsToUpdate.map(q => mapAppToDatabase(q));
       return await questionApi.bulkUpdateQuestions(updates);
     } catch (err) {
-      return { successCount: 0, failedCount: questionIds.length };
+      console.error('Error in bulkFlagQuestions:', err);
+      return { successCount: 0, failedCount: targets.length };
     }
-  }, []);
+  }, [state.questions]);
 
-  const bulkVerifyQuestions = useCallback(async (questionIds, verified) => {
-    const idSet = new Set(questionIds.map(String));
+  const bulkVerifyQuestions = useCallback(async (targets, verified) => {
+    const isObjectArray = targets.length > 0 && typeof targets[0] === 'object';
+    
+    let questionsToUpdate;
+    if (isObjectArray) {
+        questionsToUpdate = targets.map(q => ({ ...q, isVerified: verified }));
+    } else {
+        const idSet = new Set(targets.map(String));
+        questionsToUpdate = state.questions
+          .filter(q => q && q.id && idSet.has(q.id.toString()))
+          .map(q => ({ ...q, isVerified: verified }));
+    }
+
+    const idSetToUpdate = new Set(questionsToUpdate.map(q => q.id.toString()));
+
     dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
-        return prevQuestions.map(q => idSet.has(String(q.id)) ? { ...q, isVerified: verified } : q);
+        return prevQuestions.map(q => q && q.id && idSetToUpdate.has(q.id.toString()) ? { ...q, isVerified: verified } : q);
     }});
 
     try {
-      const numericIds = questionIds.map(id => parseInt(id));
-      const updates = numericIds.map(id => ({ id, is_verified: verified }));
+      const updates = questionsToUpdate.map(q => mapAppToDatabase(q));
       return await questionApi.bulkUpdateQuestions(updates);
     } catch (err) {
-      return { successCount: 0, failedCount: questionIds.length };
+      return { successCount: 0, failedCount: targets.length };
     }
-  }, []);
+  }, [state.questions]);
 
   const fetchQuestionsByIds = useCallback(async (ids) => {
     if (ids.length === 0) return [];

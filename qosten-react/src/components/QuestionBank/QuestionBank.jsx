@@ -6,6 +6,7 @@ import SearchFilters from '../SearchFilters/SearchFilters';
 import QuestionCard from '../QuestionCard/QuestionCard';
 import FullQuestionContent from '../FullQuestionContent/FullQuestionContent';
 import { detectAndFixCQ } from '../../utils/cqFixUtils';
+import { detectAndFixMCQOptions } from '../../utils/mcqFixUtils';
 import { performImageMigration, getMigrationPreview } from '../../utils/imageMigration';
 
 // Helper to fix corrupted MCQ format
@@ -296,6 +297,8 @@ export default function QuestionBank() {
   // MCQ Sync State
   const [mcqSyncCandidates, setMcqSyncCandidates] = useState([]);
   const [showMCQSyncModal, setShowMCQSyncModal] = useState(false);
+  const [mcqOptionsFixCandidates, setMcqOptionsFixCandidates] = useState([]);
+  const [showMCQOptionsFixModal, setShowMCQOptionsFixModal] = useState(false);
   const [migrationCandidates, setMigrationCandidates] = useState([]);
   const [showMigrationModal, setShowMigrationModal] = useState(false);
 
@@ -327,6 +330,7 @@ export default function QuestionBank() {
     return flagged.map((q, idx) => {
       const fullQ = fullQuestionsMap.get(q.id) || q;
       let text = `Question ${idx + 1}:\n`;
+      text += `[ID: ${q.id}]\n`;
       text += `[Subject: ${fullQ.subject || ''}]\n[Chapter: ${fullQ.chapter || ''}]\n[Lesson: ${fullQ.lesson || ''}]\n[Board: ${fullQ.board || ''}]\n`;
       
       if (type === 'mcq') {
@@ -366,6 +370,7 @@ export default function QuestionBank() {
     return queued.map((q, idx) => {
       const fullQ = fullQuestionsMap.get(q.id) || q;
       let text = `Question ${idx + 1}:\n`;
+      text += `[ID: ${q.id}]\n`;
       text += `[Subject: ${fullQ.subject || ''}]\n[Chapter: ${fullQ.chapter || ''}]\n[Lesson: ${fullQ.lesson || ''}]\n[Board: ${fullQ.board || ''}]\n`;
       
       if (type === 'mcq') {
@@ -404,7 +409,7 @@ export default function QuestionBank() {
     }
 
     const queued = questions.filter(q => q.inReviewQueue && q.type === reviewQueueType);
-    console.log(`[ReviewQueue Debug] Found ${queued.length} flagged questions in state`);
+    console.log(`[ReviewQueue Debug] Found ${queued.length} queued questions in state`);
 
     try {
       setIsFixing(true);
@@ -422,10 +427,11 @@ export default function QuestionBank() {
         const blocks = reviewQueueInputText.split(/---+/).filter(b => b.trim());
         parsedQuestions = blocks.map(block => {
           const lines = block.split('\n').map(l => l.trim()).filter(l => l);
-          const q = { type: 'sq', subject: '', chapter: '', lesson: '', board: '', questionText: '', answer: '' };
+          const q = { type: 'sq', id: '', subject: '', chapter: '', lesson: '', board: '', questionText: '', answer: '' };
           
           lines.forEach(line => {
-            if (line.includes('[Subject:')) q.subject = line.match(/\[Subject:\s*(.*?)\]/)?.[1] || '';
+            if (line.includes('[ID:')) q.id = line.match(/\[ID:\s*(.*?)\]/)?.[1] || '';
+            else if (line.includes('[Subject:')) q.subject = line.match(/\[Subject:\s*(.*?)\]/)?.[1] || '';
             else if (line.includes('[Chapter:')) q.chapter = line.match(/\[Chapter:\s*(.*?)\]/)?.[1] || '';
             else if (line.includes('[Lesson:')) q.lesson = line.match(/\[Lesson:\s*(.*?)\]/)?.[1] || '';
             else if (line.includes('[Board:')) q.board = line.match(/\[Board:\s*(.*?)\]/)?.[1] || '';
@@ -443,19 +449,57 @@ export default function QuestionBank() {
       }
 
       const updates = [];
-      const count = Math.min(queued.length, parsedQuestions.length);
+      const hasIds = parsedQuestions.some(p => p.id);
       
-      for (let i = 0; i < count; i++) {
-        const original = queued[i];
-        const improved = parsedQuestions[i];
-        
-        updates.push({
-          ...original,
-          ...improved,
-          id: original.id,
-          isVerified: true, // Verify after successful update
-          inReviewQueue: false // Remove from queue
+      if (hasIds) {
+        const parsedMap = new Map();
+        parsedQuestions.forEach(p => {
+          if (p.id) parsedMap.set(p.id.toString(), p);
         });
+
+        // Process EVERY question in the current review queue
+        queued.forEach(original => {
+          const improved = parsedMap.get(original.id.toString());
+          if (improved) {
+            // Update and verify
+            updates.push({
+              ...original,
+              ...improved,
+              id: original.id,
+              isVerified: true,
+              inReviewQueue: false
+            });
+          } else {
+            // Not mentioned in pasted text, but verify it as-is
+            updates.push({
+              ...original,
+              isVerified: true,
+              inReviewQueue: false
+            });
+          }
+        });
+        
+        console.log(`[ReviewQueue Debug] Processing entire queue (${queued.length} questions). ${parsedQuestions.length} updates found in text.`);
+      } else {
+        // Fallback to matching by order (backward compatibility)
+        const count = Math.min(queued.length, parsedQuestions.length);
+        for (let i = 0; i < count; i++) {
+          const original = queued[i];
+          const improved = parsedQuestions[i];
+          
+          updates.push({
+            ...original,
+            ...improved,
+            id: original.id,
+            isVerified: true,
+            inReviewQueue: false
+          });
+        }
+      }
+
+      if (updates.length === 0) {
+        alert('No matching questions found to update or verify.');
+        return;
       }
 
       const result = await bulkUpdateQuestions(updates);
@@ -503,10 +547,11 @@ export default function QuestionBank() {
         const blocks = bulkFixInputText.split(/---+|###/).filter(b => b.trim());
         parsedQuestions = blocks.map(block => {
           const lines = block.split('\n').map(l => l.trim()).filter(l => l);
-          const q = { type: 'sq', subject: '', chapter: '', lesson: '', board: '', questionText: '', answer: '' };
+          const q = { type: 'sq', id: '', subject: '', chapter: '', lesson: '', board: '', questionText: '', answer: '' };
           
           lines.forEach(line => {
-            if (line.includes('[Subject:')) q.subject = line.match(/\[Subject:\s*(.*?)\]/)?.[1] || '';
+            if (line.includes('[ID:')) q.id = line.match(/\[ID:\s*(.*?)\]/)?.[1] || '';
+            else if (line.includes('[Subject:')) q.subject = line.match(/\[Subject:\s*(.*?)\]/)?.[1] || '';
             else if (line.includes('[Chapter:')) q.chapter = line.match(/\[Chapter:\s*(.*?)\]/)?.[1] || '';
             else if (line.includes('[Lesson:')) q.lesson = line.match(/\[Lesson:\s*(.*?)\]/)?.[1] || '';
             else if (line.includes('[Board:')) q.board = line.match(/\[Board:\s*(.*?)\]/)?.[1] || '';
@@ -524,26 +569,48 @@ export default function QuestionBank() {
       }
 
       const updates = [];
-      // Match by order of appearance
-      const count = Math.min(flagged.length, parsedQuestions.length);
+      const hasIds = parsedQuestions.some(p => p.id);
       
-      for (let i = 0; i < count; i++) {
-        const original = flagged[i];
-        const improved = parsedQuestions[i];
-        
-        updates.push({
-          ...original, // Keep all existing fields (id, etc)
-          ...improved, // Overwrite with parsed data
-          id: original.id,
-          isFlagged: false // Unflag after successful fix
+      if (hasIds) {
+        parsedQuestions.forEach(improved => {
+          if (!improved.id) return;
+          
+          const original = questions.find(q => q.id.toString() === improved.id.toString());
+          if (original) {
+            updates.push({
+              ...original, 
+              ...improved, 
+              id: original.id,
+              isFlagged: false 
+            });
+          }
         });
+      } else {
+        // Match by order of appearance (fallback)
+        const count = Math.min(flagged.length, parsedQuestions.length);
+        for (let i = 0; i < count; i++) {
+          const original = flagged[i];
+          const improved = parsedQuestions[i];
+          
+          updates.push({
+            ...original, 
+            ...improved, 
+            id: original.id,
+            isFlagged: false 
+          });
+        }
+
+        if (parsedQuestions.length !== flagged.length) {
+          const message = `Count mismatch! Found ${flagged.length} flagged questions but parsed ${parsedQuestions.length} from text.\n\nOnly the first ${count} will be updated and unflagged. Proceed?`;
+          if (!window.confirm(message)) {
+            return;
+          }
+        }
       }
 
-      if (parsedQuestions.length !== flagged.length) {
-        const message = `Count mismatch! Found ${flagged.length} flagged questions but parsed ${parsedQuestions.length} from text.\n\nOnly the first ${count} will be updated and unflagged. Proceed?`;
-        if (!window.confirm(message)) {
-          return;
-        }
+      if (updates.length === 0) {
+        alert('No matching questions found to update.');
+        return;
       }
 
       const result = await bulkUpdateQuestions(updates);
@@ -1630,6 +1697,94 @@ export default function QuestionBank() {
     }
   };
 
+  const handleFindMCQsWithMergedOptions = async () => {
+    setIsSearching(true);
+    console.log("🚀 [MergedOptionsFix] Starting Scan...");
+    try {
+        const mcqs = currentVisibleQuestions.filter(q => q.type === 'mcq');
+        
+        if (mcqs.length === 0) {
+            alert("No MCQs found in current view.");
+            setIsSearching(false);
+            return;
+        }
+
+        // 1. Identify which questions actually need fixing based on local data first
+        const potentialIds = [];
+        const nonMatchSamples = [];
+        
+        for (const q of mcqs) {
+            const fullQ = fullQuestionsMap.get(q.id) || q;
+            const fixed = detectAndFixMCQOptions(fullQ);
+            
+            if (fixed) {
+                potentialIds.push(q.id);
+            } else if (nonMatchSamples.length < 10) {
+                nonMatchSamples.push({ id: q.id, text: (q.questionText || q.question || '').substring(0, 150) });
+            }
+        }
+
+        if (potentialIds.length === 0) {
+            console.log("❌ [MergedOptionsFix] No candidates found. Samples of checked text:");
+            console.table(nonMatchSamples);
+            alert("No MCQs with merged options were detected. Check console for samples of what was scanned.");
+            setIsSearching(false);
+            return;
+        }
+
+        console.log(`📊 [MergedOptionsFix] Potential candidates to fetch: ${potentialIds.length}`);
+
+        // 2. Fetch full data ONLY for the potential candidates
+        const fetchedMCQs = await fetchQuestionsByIds(potentialIds);
+
+        const candidates = [];
+        for (const q of fetchedMCQs) {
+            const fixed = detectAndFixMCQOptions(q);
+            if (fixed) {
+                // IMPORTANT: If we detected merged options in the text, it's a candidate
+                // even if the database 'options' count matches, because the text still needs cleaning.
+                candidates.push({
+                    original: q,
+                    fixed: fixed
+                });
+            }
+        }
+
+        console.log(`✅ [MergedOptionsFix] Final candidates for modal: ${candidates.length}`);
+
+        if (candidates.length === 0) {
+            alert("No MCQs with fixable merged options found after verifying full data.");
+        } else {
+            setMcqOptionsFixCandidates(candidates);
+            setShowMCQOptionsFixModal(true);
+        }
+    } catch (error) {
+        console.error("❌ [MergedOptionsFix] Error during scan:", error);
+        alert("An error occurred during scan.");
+    } finally {
+        setIsSearching(false);
+    }
+  };
+
+  const applyMCQOptionsFix = async () => {
+      if (mcqOptionsFixCandidates.length === 0) return;
+      if (!window.confirm(`Fix options for all ${mcqOptionsFixCandidates.length} questions?`)) return;
+
+      setIsFixing(true);
+      try {
+          const updates = mcqOptionsFixCandidates.map(c => c.fixed);
+          const result = await bulkUpdateQuestions(updates);
+          alert(`Successfully fixed options for ${result.successCount} questions!`);
+          setShowMCQOptionsFixModal(false);
+          setMcqOptionsFixCandidates([]);
+      } catch (error) {
+          console.error("Error applying MCQ options fix:", error);
+          alert("Failed to apply fixes.");
+      } finally {
+          setIsFixing(false);
+      }
+  };
+
   const handleFindUnansweredMCQs = async () => {
     setIsSearching(true);
     try {
@@ -1644,7 +1799,13 @@ export default function QuestionBank() {
 
         // 2. Fetch full data
         const idsToFetch = mcqs.map(m => m.id);
-        const fullMCQs = await fetchQuestionsByIds(idsToFetch);
+        const fetchedMCQs = await fetchQuestionsByIds(idsToFetch);
+
+        // Merge with local state to get current flags
+        const fullMCQs = fetchedMCQs.map(q => {
+          const localQ = questions.find(lq => lq.id.toString() === q.id.toString());
+          return localQ ? { ...q, isFlagged: localQ.isFlagged || q.isFlagged } : q;
+        });
 
         // 3. Detect unanswered
         const found = fullMCQs.filter(q => {
@@ -1659,14 +1820,17 @@ export default function QuestionBank() {
             // Check 2: Are options missing?
             const areOptionsMissing = !q.options || q.options.length === 0;
 
-            // If either is missing, it's a candidate for "Broken/Unanswered"
+            // If both are present, it's definitely NOT unanswered
             if (!isAnswerMissing && !areOptionsMissing) return false; 
             
             // However, we must ensure the answer isn't embedded in the text
-            const text = q.question || q.questionText || '';
+            const text = (q.question || q.questionText || '').toString();
             const hasEmbeddedAnswer = text.includes('|Ans:') || 
                                       text.includes('|Ans :') ||
-                                      text.includes('সঠিক:'); // Also check Bengali inline answer
+                                      text.includes('সঠিক:') ||
+                                      text.includes('Correct:') ||
+                                      text.includes('Ans:') ||
+                                      text.includes('উত্তর:');
 
             if (hasEmbeddedAnswer) return false;
 
@@ -1676,7 +1840,7 @@ export default function QuestionBank() {
         if (found.length === 0) {
             alert("All MCQs in the current view appear to have answers (either in field or in text).");
         } else {
-            setUnansweredMCQs(found);
+            setUnansweredMCQs(found.map(q => ({ ...q, isFlagged: q.isFlagged || false })));
             setShowUnansweredMCQModal(true);
         }
 
@@ -1689,20 +1853,43 @@ export default function QuestionBank() {
   };
 
   const flagUnansweredMCQs = async () => {
-      if (!window.confirm(`This will flag all ${unansweredMCQs.length} unanswered MCQs for review. Continue?`)) return;
+      const unflagged = unansweredMCQs.filter(q => !q.isFlagged);
+      if (unflagged.length === 0) {
+          alert("All these questions are already flagged!");
+          return;
+      }
+
+      if (!window.confirm(`This will flag all ${unflagged.length} remaining unanswered MCQs for review. Continue?`)) return;
       
       setIsFixing(true);
       try {
-          const ids = unansweredMCQs.map(q => q.id);
-          const result = await bulkFlagQuestions(ids, true);
-          alert(`Successfully flagged ${result.successCount} questions! You can now filter by "Flagged Only" to find them.`);
-          setShowUnansweredMCQModal(false);
+          const result = await bulkFlagQuestions(unflagged, true);
+          alert(`Successfully flagged ${result.successCount} questions!`);
+          
+          // Update local state
+          setUnansweredMCQs(prev => prev.map(q => ({ ...q, isFlagged: true })));
+          
+          // Optional: close if all flagged
+          // setShowUnansweredMCQModal(false);
       } catch (error) {
           console.error("Error flagging questions:", error);
           alert("Failed to flag questions.");
       } finally {
           setIsFixing(false);
       }
+  };
+
+  const toggleSingleUnansweredFlag = async (question) => {
+    try {
+        const result = await bulkFlagQuestions([question], !question.isFlagged);
+        if (result.successCount > 0) {
+            setUnansweredMCQs(prev => prev.map(q => 
+                q.id === question.id ? { ...q, isFlagged: !question.isFlagged } : q
+            ));
+        }
+    } catch (error) {
+        console.error("Error toggling flag:", error);
+    }
   };
 
   const deleteUnansweredMCQs = async () => {
@@ -1727,6 +1914,37 @@ export default function QuestionBank() {
       } catch (error) {
           console.error("Error deleting questions:", error);
           alert("An error occurred while deleting questions.");
+      } finally {
+          setIsFixing(false);
+      }
+  };
+
+  const fixAllUnansweredOptions = async () => {
+      const candidates = unansweredMCQs
+          .map(q => detectAndFixMCQOptions(q))
+          .filter(Boolean);
+
+      if (candidates.length === 0) {
+          alert("No questions could be automatically fixed.");
+          return;
+      }
+
+      if (!window.confirm(`Found ${candidates.length} questions with fixable options. Update them all now?`)) return;
+
+      setIsFixing(true);
+      try {
+          const result = await bulkUpdateQuestions(candidates);
+          alert(`Successfully fixed options for ${result.successCount} questions!`);
+          
+          // Update local state for those fixed
+          const fixedIds = new Set(candidates.map(c => c.id));
+          setUnansweredMCQs(prev => prev.map(q => {
+              const fixed = candidates.find(c => c.id === q.id);
+              return fixed ? fixed : q;
+          }));
+      } catch (error) {
+          console.error("Error fixing all options:", error);
+          alert("Failed to fix options.");
       } finally {
           setIsFixing(false);
       }
@@ -3985,6 +4203,21 @@ export default function QuestionBank() {
               <h3 style={{ margin: 0, color: '#c0392b' }}>❓ Unanswered MCQs Found</h3>
               <div style={{ display: 'flex', gap: '10px' }}>
                 <button
+                  onClick={fixAllUnansweredOptions}
+                  disabled={isFixing}
+                  style={{
+                    backgroundColor: '#2ecc71',
+                    color: 'white',
+                    border: 'none',
+                    padding: '8px 16px',
+                    borderRadius: '4px',
+                    cursor: 'pointer',
+                    fontWeight: 'bold'
+                  }}
+                >
+                  🛠 Fix Options
+                </button>
+                <button
                   onClick={flagUnansweredMCQs}
                   disabled={isFixing}
                   style={{
@@ -4038,23 +4271,130 @@ export default function QuestionBank() {
               {unansweredMCQs.map((q, idx) => (
                 <div key={idx} style={{ 
                   border: '1px solid #eee', 
-                  borderRadius: '8px', 
+                  borderRadius: '12px', 
                   marginBottom: '15px',
-                  padding: '15px',
-                  backgroundColor: '#fffaf0'
+                  padding: '20px',
+                  backgroundColor: q.isFlagged ? '#f8f9fa' : '#fffaf0',
+                  opacity: q.isFlagged ? 0.7 : 1,
+                  transition: 'all 0.3s ease',
+                  boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  gap: '20px'
                 }}>
-                  <div style={{ fontSize: '0.85em', color: '#888', marginBottom: '5px' }}>ID: {q.id} | Board: {q.board}</div>
-                  <div style={{ fontWeight: 'bold', marginBottom: '8px' }}>{q.questionText || q.question}</div>
-                  <div style={{ fontSize: '0.9em', color: '#666' }}>
-                    {q.options && q.options.length > 0 ? (
-                        <ul style={{ margin: '5px 0', paddingLeft: '20px' }}>
-                            {q.options.map((opt, i) => (
-                                <li key={i}>{opt.label}: {opt.text}</li>
-                            ))}
-                        </ul>
-                    ) : (
-                        <em>(No options available)</em>
-                    )}
+                  <div style={{ flex: 1 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
+                        <span style={{ 
+                            fontSize: '0.75em', 
+                            padding: '2px 8px', 
+                            borderRadius: '10px', 
+                            backgroundColor: '#3498db', 
+                            color: 'white',
+                            fontWeight: 'bold'
+                        }}>
+                            ID: {q.id}
+                        </span>
+                        {q.board && (
+                            <span style={{ fontSize: '0.75em', color: '#666' }}>{q.board}</span>
+                        )}
+                        {q.isFlagged && (
+                            <span style={{ fontSize: '0.75em', color: '#e67e22', fontWeight: 'bold' }}>🚩 FLAGGED</span>
+                        )}
+                    </div>
+                    
+                    <div style={{ 
+                        fontWeight: '600', 
+                        marginBottom: '12px', 
+                        fontSize: '1.05em',
+                        color: q.isFlagged ? '#888' : '#2c3e50',
+                        textDecoration: q.isFlagged ? 'line-through' : 'none'
+                    }}>
+                        {q.questionText || q.question}
+                    </div>
+                    
+                    <div style={{ fontSize: '0.9em', color: '#666' }}>
+                        {q.options && q.options.length > 0 ? (
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+                                {q.options.map((opt, i) => (
+                                    <div key={i} style={{ padding: '4px 8px', backgroundColor: 'rgba(0,0,0,0.03)', borderRadius: '4px' }}>
+                                        <strong>{opt.label}:</strong> {opt.text}
+                                    </div>
+                                ))}
+                            </div>
+                        ) : (
+                            <div style={{ color: '#c0392b', fontStyle: 'italic', backgroundColor: '#f9ebea', padding: '8px', borderRadius: '4px' }}>
+                                ⚠️ No options available for this question
+                            </div>
+                        )}
+                    </div>
+                  </div>
+
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', justifyContent: 'center' }}>
+                    <button
+                        onClick={async () => {
+                            const fixed = detectAndFixMCQOptions(q);
+                            if (fixed) {
+                                if (window.confirm('Fixed options detected. Update this question?')) {
+                                    await updateQuestion(fixed);
+                                    setUnansweredMCQs(prev => prev.map(item => item.id === q.id ? fixed : item));
+                                }
+                            } else {
+                                alert('Could not automatically fix options for this question.');
+                            }
+                        }}
+                        style={{
+                            padding: '8px 16px',
+                            borderRadius: '6px',
+                            border: 'none',
+                            backgroundColor: '#2ecc71',
+                            color: 'white',
+                            cursor: 'pointer',
+                            fontWeight: 'bold',
+                            fontSize: '0.9em',
+                            whiteSpace: 'nowrap',
+                            boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+                        }}
+                    >
+                        🛠 Fix Options
+                    </button>
+                    <button
+                        onClick={() => toggleSingleUnansweredFlag(q)}
+                        style={{
+                            padding: '8px 16px',
+                            borderRadius: '6px',
+                            border: 'none',
+                            backgroundColor: q.isFlagged ? '#95a5a6' : '#e67e22',
+                            color: 'white',
+                            cursor: 'pointer',
+                            fontWeight: 'bold',
+                            fontSize: '0.9em',
+                            whiteSpace: 'nowrap',
+                            boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+                        }}
+                    >
+                        {q.isFlagged ? '✓ Unflag' : '🚩 Flag Now'}
+                    </button>
+                    
+                    <button
+                        onClick={async () => {
+                            if (window.confirm('Delete this broken question?')) {
+                                await deleteQuestion(q.id);
+                                setUnansweredMCQs(prev => prev.filter(item => item.id !== q.id));
+                            }
+                        }}
+                        style={{
+                            padding: '8px 16px',
+                            borderRadius: '6px',
+                            border: '1px solid #fab1a0',
+                            backgroundColor: 'white',
+                            color: '#d63031',
+                            cursor: 'pointer',
+                            fontSize: '0.9em',
+                            whiteSpace: 'nowrap'
+                        }}
+                    >
+                        🗑 Delete
+                    </button>
                   </div>
                 </div>
               ))}
@@ -4217,6 +4557,23 @@ export default function QuestionBank() {
           </button>
 
           <button
+            onClick={handleFindMCQsWithMergedOptions}
+            disabled={isSearching}
+            style={{
+              backgroundColor: '#27ae60',
+              color: 'white',
+              padding: '10px 20px',
+              borderRadius: '6px',
+              border: 'none',
+              cursor: isSearching ? 'wait' : 'pointer',
+              fontWeight: '600',
+              marginRight: '10px'
+            }}
+          >
+            {isSearching ? '⏳ Scanning...' : '🛠 Auto-Fix Merged Options'}
+          </button>
+
+          <button
             onClick={handleFindUnansweredMCQs}
             disabled={isSearching}
             style={{
@@ -4230,7 +4587,7 @@ export default function QuestionBank() {
               marginRight: '10px'
             }}
           >
-            {isSearching ? '🔍 Searching...' : '🔍 Find Unanswered MCQs'}
+            {isSearching ? '⏳ Scanning...' : '🚩 Auto-Flag Unanswered MCQs'}
           </button>
 
           <button
@@ -5171,6 +5528,111 @@ export default function QuestionBank() {
               >
                 {isFixing ? '⏳ Processing...' : `🚀 Apply & Verify All ${reviewQueueType.toUpperCase()}`}
               </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* MCQ Options Fix Modal (Merged Options) */}
+      {showMCQOptionsFixModal && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          zIndex: 10000,
+          padding: '20px'
+        }}>
+          <div style={{
+            backgroundColor: 'white',
+            padding: '30px',
+            borderRadius: '12px',
+            boxShadow: '0 10px 25px rgba(0,0,0,0.2)',
+            width: '100%',
+            maxWidth: '1100px',
+            maxHeight: '90vh',
+            display: 'flex',
+            flexDirection: 'column'
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+              <h2 style={{ margin: 0, color: '#27ae60' }}>🛠 MCQ Merged Options Fixer</h2>
+              <div style={{ display: 'flex', gap: '10px' }}>
+                <button
+                  onClick={applyMCQOptionsFix}
+                  disabled={isFixing || mcqOptionsFixCandidates.length === 0}
+                  style={{
+                    backgroundColor: '#27ae60',
+                    color: 'white',
+                    padding: '8px 20px',
+                    borderRadius: '6px',
+                    border: 'none',
+                    fontWeight: 'bold',
+                    cursor: 'pointer'
+                  }}
+                >
+                  {isFixing ? 'Processing...' : `✅ Fix All ${mcqOptionsFixCandidates.length} Questions`}
+                </button>
+                <button 
+                  onClick={() => setShowMCQOptionsFixModal(false)}
+                  style={{ background: 'none', border: 'none', fontSize: '24px', cursor: 'pointer', color: '#666' }}
+                >✕</button>
+              </div>
+            </div>
+
+            <p style={{ color: '#666', marginBottom: '20px' }}>
+              Found <strong>{mcqOptionsFixCandidates.length}</strong> MCQs where options appear to be merged into the question text.
+            </p>
+
+            <div style={{ flex: 1, overflowY: 'auto', padding: '5px' }}>
+              {mcqOptionsFixCandidates.map((item, idx) => (
+                <div key={item.original.id} style={{ 
+                  border: '1px solid #eee', 
+                  borderRadius: '10px', 
+                  padding: '20px', 
+                  marginBottom: '20px',
+                  backgroundColor: '#fdfdfd'
+                }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '15px' }}>
+                    <span style={{ fontWeight: 'bold', color: '#333' }}>#{idx + 1} | ID: {item.original.id}</span>
+                    <button 
+                      onClick={() => {
+                        setMcqOptionsFixCandidates(prev => prev.filter(c => c.original.id !== item.original.id));
+                      }}
+                      style={{ fontSize: '11px', padding: '2px 8px', borderRadius: '4px', border: '1px solid #ccc', cursor: 'pointer' }}
+                    >Skip</button>
+                  </div>
+
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div style={{ padding: '15px', backgroundColor: '#fff5f5', borderRadius: '8px', border: '1px solid #feb2b2' }}>
+                      <div style={{ fontWeight: 'bold', color: '#c53030', marginBottom: '10px', fontSize: '13px' }}>ORIGINAL</div>
+                      <div style={{ fontSize: '14px', whiteSpace: 'pre-wrap' }}>{item.original.questionText || item.original.question}</div>
+                      <div style={{ marginTop: '10px', fontSize: '12px', color: '#666' }}>
+                        Options: {(item.original.options || []).length}
+                      </div>
+                    </div>
+
+                    <div style={{ padding: '15px', backgroundColor: '#f0fff4', borderRadius: '8px', border: '1px solid #9ae6b4' }}>
+                      <div style={{ fontWeight: 'bold', color: '#2f855a', marginBottom: '10px', fontSize: '13px' }}>FIXED</div>
+                      <div style={{ fontSize: '14px', whiteSpace: 'pre-wrap' }}>{item.fixed.questionText}</div>
+                      <div style={{ marginTop: '15px' }}>
+                        <div style={{ fontWeight: 'bold', fontSize: '12px', marginBottom: '5px' }}>EXTRACTED OPTIONS:</div>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5px' }}>
+                          {item.fixed.options.map((opt, i) => (
+                            <div key={i} style={{ fontSize: '12px', padding: '4px 8px', backgroundColor: 'rgba(255,255,255,0.5)', borderRadius: '4px' }}>
+                              <strong>{opt.label}:</strong> {opt.text}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

@@ -99,6 +99,7 @@ export const parseCQQuestions = (text, lang = 'en') => {
         saveCurrentQuestion();
         currentQuestion = {
             type: 'cq',
+            id: '',
             language: lang,
             questionText: pendingStem, // Inherit stem
             parts: [],
@@ -144,7 +145,7 @@ export const parseCQQuestions = (text, lang = 'en') => {
         // Metadata Block Start: [Subject: ...]
         // Updated: Allow optional spaces around brackets and keys (e.g. [ Subject: ... ])
         // Added alternative spelling for 'Chapter' (অধ্যায় vs অধ্যায়) to handle unicode differences
-        const metadataRegex = /^(?:\[)?\s*(Subject|Topic|Chapter|Lesson|Board|বিষয়|বিষয়|অধ্যায়|অধ্যায়|পাঠ|বোর্ড)\s*[:ঃ]\s*([^\]\n]*?)(?:\])?$/i;
+        const metadataRegex = /^(?:\[)?\s*(ID|Subject|Topic|Chapter|Lesson|Board|বিষয়|বিষয়|অধ্যায়|অধ্যায়|পাঠ|বোর্ড)\s*[:ঃ]\s*([^\]\n]*?)(?:\])?$/i;
         const isMetadataLine = metadataRegex.test(line);
         
         if (isSeparator) {
@@ -181,6 +182,7 @@ export const parseCQQuestions = (text, lang = 'en') => {
                 const key = match[1].trim().toLowerCase();
                 const value = match[2].trim();
                 const keyMap = {
+                    'id': 'id',
                     'subject': 'subject', 'topic': 'subject', 'বিষয়': 'subject', 'বিষয়': 'subject',
                     'chapter': 'chapter', 'অধ্যায়': 'chapter', 'অধ্যায়': 'chapter',
                     'lesson': 'lesson', 'পাঠ': 'lesson',

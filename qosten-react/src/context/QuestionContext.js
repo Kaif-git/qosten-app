@@ -135,9 +135,9 @@ export const mapDatabaseToApp = (q) => {
     language: q.language || 'english',
     imageUrl: imageUrl, // Canonical URL from DB
     image: imageUrl,    // Local working copy/display
-    isFlagged: !!(q.is_flagged || q.isFlagged),
-    isVerified: !!(q.is_verified || q.isVerified),
-    inReviewQueue: !!(q.in_review_queue || q.inReviewQueue),
+    isFlagged: !!(q.is_flagged || q.isFlagged || q.flagged),
+    isVerified: !!(q.is_verified || q.isVerified || q.verified),
+    inReviewQueue: !!(q.in_review_queue || q.inReviewQueue || q.review_queue),
     createdAt: q.created_at || q.createdAt
   };
 
@@ -264,8 +264,14 @@ const mapAppToDatabase = (q) => {
     image: finalImageUrl,
     questionimage: finalImageUrl, 
     is_flagged: !!q.isFlagged,
+    isFlagged: !!q.isFlagged,
+    flagged: !!q.isFlagged,
     is_verified: !!q.isVerified,
+    isVerified: !!q.isVerified,
+    verified: !!q.isVerified,
     in_review_queue: !!q.inReviewQueue,
+    inReviewQueue: !!q.inReviewQueue,
+    review_queue: !!q.inReviewQueue,
     // Hoist answer image columns to top level for robust persistence
     answerimage1: q.answerimage1,
     answer_image_1: q.answerimage1,
@@ -565,8 +571,19 @@ export function QuestionProvider({ children }) {
       const fetchFlagged = async () => {
         try {
           console.log('🚩 Fetching flagged questions from API...');
-          const data = await questionApi.fetchFlaggedQuestions();
-          const batch = Array.isArray(data) ? data : (data.data || []);
+          // Fetch first batch of flagged questions using the main API
+          const response = await questionApi.fetchQuestions({
+            flagged: 'true',
+            limit: 500,
+            page: 0
+          });
+          
+          const batch = Array.isArray(response) ? response : (response.data || []);
+          if (batch.length === 0) {
+              console.log('ℹ️ No flagged questions returned from API.');
+              return;
+          }
+          
           const mapped = batch.map(mapDatabaseToApp);
           
           dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prev) => {
@@ -597,6 +614,55 @@ export function QuestionProvider({ children }) {
       fetchFlagged();
     }
   }, [state.currentFilters.flaggedStatus]);
+
+  // Handle fetching verified questions when filter is set to 'verified'
+  useEffect(() => {
+    if (state.currentFilters.verifiedStatus === 'verified') {
+      const fetchVerified = async () => {
+        try {
+          console.log('✅ Fetching verified questions from API...');
+          // Fetch first batch of verified questions
+          const response = await questionApi.fetchQuestions({
+            verified: 'true',
+            limit: 500,
+            page: 0
+          });
+          
+          const batch = Array.isArray(response) ? response : (response.data || []);
+          if (batch.length === 0) {
+              console.log('ℹ️ No verified questions returned from API.');
+              return;
+          }
+          
+          const mapped = batch.map(mapDatabaseToApp);
+          
+          dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prev) => {
+            const existingIds = new Set(prev.filter(q => q && q.id).map(q => q.id.toString()));
+            const newQuestions = mapped.filter(q => q && q.id && !existingIds.has(q.id.toString()));
+            
+            // Also update existing questions' verified status
+            const mappedIds = new Set(mapped.map(q => q.id.toString()));
+            const updatedPrev = prev.map(q => {
+              if (q && q.id && mappedIds.has(q.id.toString())) {
+                return { ...q, isVerified: true };
+              }
+              return q;
+            });
+
+            if (newQuestions.length === 0) {
+              return updatedPrev;
+            }
+            
+            console.log(`✅ Adding ${newQuestions.length} new verified questions to state.`);
+            return [...newQuestions, ...updatedPrev];
+          }});
+        } catch (error) {
+          console.error('❌ Failed to fetch verified questions:', error);
+        }
+      };
+      fetchVerified();
+    }
+  }, [state.currentFilters.verifiedStatus]);
 
   // --- 3. Actions ---
 
@@ -760,11 +826,16 @@ export function QuestionProvider({ children }) {
       
       const updateMap = new Map(processed.filter(q => q && q.id).map(q => [q.id.toString(), q]));
       dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
-          return prevQuestions.map(q => {
+          const existingIds = new Set(prevQuestions.filter(q => q && q.id).map(q => q.id.toString()));
+          const toAdd = processed.filter(q => q && q.id && !existingIds.has(q.id.toString()));
+          
+          const updated = prevQuestions.map(q => {
               if (!q || !q.id) return q;
               const improved = updateMap.get(q.id.toString());
               return improved ? { ...q, ...improved } : q;
           });
+          
+          return [...toAdd, ...updated];
       }});
       
       refreshHierarchy();
@@ -815,10 +886,26 @@ export function QuestionProvider({ children }) {
       const nextPage = forcedPage !== null ? forcedPage : Math.floor(questionsLengthRef.current / BATCH_SIZE);
       
       console.log(`📡 Fetching Page ${nextPage}...`);
-      const response = await questionApi.fetchQuestions({
+      
+      const params = {
         limit: BATCH_SIZE,
         page: nextPage
-      });
+      };
+
+      // Add verification filter if set
+      if (state.currentFilters.verifiedStatus === 'verified') {
+        params.verified = 'true';
+      } else if (state.currentFilters.verifiedStatus === 'unverified') {
+        params.verified = 'false';
+      }
+
+      if (state.currentFilters.flaggedStatus === 'flagged') {
+        params.flagged = 'true';
+      } else if (state.currentFilters.flaggedStatus === 'unflagged') {
+        params.flagged = 'false';
+      }
+
+      const response = await questionApi.fetchQuestions(params);
       
       const batch = Array.isArray(response) ? response : (response.data || []);
       if (batch.length > 0) {
@@ -891,9 +978,11 @@ export function QuestionProvider({ children }) {
     dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: updatedQuestion });
 
     try {
-      const dbQ = mapAppToDatabase(updatedQuestion);
-      await questionApi.updateQuestion(parseInt(questionId), dbQ);
+      // Use the specific verify endpoint which handles toggling and review queue removal
+      await questionApi.verifyQuestion(parseInt(questionId));
     } catch (err) {
+      console.error('Failed to toggle verification:', err);
+      // Revert local state on failure
       dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
     }
   }, [state.questions]);
@@ -929,7 +1018,17 @@ export function QuestionProvider({ children }) {
     const idSetToUpdate = new Set(questionsToUpdate.map(q => q.id.toString()));
 
     dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
-        return prevQuestions.map(q => q && q.id && idSetToUpdate.has(q.id.toString()) ? { ...q, inReviewQueue: inQueue } : q);
+        const existingIds = new Set(prevQuestions.filter(q => q && q.id).map(q => q.id.toString()));
+        const toAdd = questionsToUpdate.filter(q => !existingIds.has(q.id.toString()));
+        
+        const updated = prevQuestions.map(q => {
+            if (q && q.id && idSetToUpdate.has(q.id.toString())) {
+                return { ...q, inReviewQueue: inQueue };
+            }
+            return q;
+        });
+        
+        return [...toAdd, ...updated];
     }});
 
     try {
@@ -957,7 +1056,17 @@ export function QuestionProvider({ children }) {
     const idSetToUpdate = new Set(questionsToUpdate.map(q => q.id.toString()));
 
     dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
-        return prevQuestions.map(q => q && q.id && idSetToUpdate.has(q.id.toString()) ? { ...q, isFlagged: flagged } : q);
+        const existingIds = new Set(prevQuestions.filter(q => q && q.id).map(q => q.id.toString()));
+        const toAdd = questionsToUpdate.filter(q => !existingIds.has(q.id.toString()));
+        
+        const updated = prevQuestions.map(q => {
+            if (q && q.id && idSetToUpdate.has(q.id.toString())) {
+                return { ...q, isFlagged: flagged };
+            }
+            return q;
+        });
+        
+        return [...toAdd, ...updated];
     }});
 
     try {
@@ -974,25 +1083,62 @@ export function QuestionProvider({ children }) {
     
     let questionsToUpdate;
     if (isObjectArray) {
-        questionsToUpdate = targets.map(q => ({ ...q, isVerified: verified }));
+        // Filter to only those that actually need to be changed (since it's a toggle API)
+        questionsToUpdate = targets.filter(q => !!q.isVerified !== verified);
     } else {
         const idSet = new Set(targets.map(String));
         questionsToUpdate = state.questions
-          .filter(q => q && q.id && idSet.has(q.id.toString()))
-          .map(q => ({ ...q, isVerified: verified }));
+          .filter(q => q && q.id && idSet.has(q.id.toString()) && !!q.isVerified !== verified);
+    }
+
+    if (questionsToUpdate.length === 0) {
+        console.log('No questions need verification status change.');
+        return { successCount: targets.length, failedCount: 0 };
     }
 
     const idSetToUpdate = new Set(questionsToUpdate.map(q => q.id.toString()));
 
+    // Optimistically update local state
     dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
-        return prevQuestions.map(q => q && q.id && idSetToUpdate.has(q.id.toString()) ? { ...q, isVerified: verified } : q);
+        const existingIds = new Set(prevQuestions.filter(q => q && q.id).map(q => q.id.toString()));
+        const toAdd = questionsToUpdate.filter(q => !existingIds.has(q.id.toString()));
+        
+        const updated = prevQuestions.map(q => {
+            if (q && q.id && idSetToUpdate.has(q.id.toString())) {
+                return { ...q, isVerified: verified };
+            }
+            return q;
+        });
+        
+        return [...toAdd, ...updated];
     }});
 
     try {
-      const updates = questionsToUpdate.map(q => mapAppToDatabase(q));
-      return await questionApi.bulkUpdateQuestions(updates);
+      // Call toggle endpoint for each question that needs it
+      // For now, we do them in sequence or small batches since there's no bulk verify endpoint mentioned
+      const results = { successCount: 0, failedCount: 0 };
+      
+      // Using a small concurrency limit to avoid overwhelming the worker
+      const CONCURRENCY = 5;
+      for (let i = 0; i < questionsToUpdate.length; i += CONCURRENCY) {
+          const chunk = questionsToUpdate.slice(i, i + CONCURRENCY);
+          await Promise.all(chunk.map(async q => {
+              try {
+                  await questionApi.verifyQuestion(q.id);
+                  results.successCount++;
+              } catch (err) {
+                  console.error(`Failed to verify question ${q.id}:`, err);
+                  results.failedCount++;
+                  // Revert this specific question in state? 
+                  // For simplicity we might just refresh later or let the user handle it
+              }
+          }));
+      }
+      
+      return results;
     } catch (err) {
-      return { successCount: 0, failedCount: targets.length };
+      console.error('Error in bulkVerifyQuestions:', err);
+      return { successCount: 0, failedCount: questionsToUpdate.length };
     }
   }, [state.questions]);
 

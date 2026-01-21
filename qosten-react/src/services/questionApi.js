@@ -44,6 +44,14 @@ export const questionApi = {
     if (params.board) searchParams.append('board', params.board);
     if (params.language) searchParams.append('language', params.language);
     
+    // Support verification and flagged status filter
+    if (params.verified !== undefined) {
+      searchParams.append('verified', params.verified);
+    }
+    if (params.flagged !== undefined) {
+      searchParams.append('flagged', params.flagged);
+    }
+    
     const url = `${API_BASE_URL}/questions?${searchParams.toString()}`;
     const response = await fetchWithRetry(url);
     
@@ -267,6 +275,19 @@ export const questionApi = {
     }
     console.log(`📥 [questionApi] deleteQuestion - ID: ${id}, SUCCESS`);
     return true;
+  },
+
+  async verifyQuestion(id) {
+    console.log(`📤 [questionApi] verifyQuestion - ID: ${id}`);
+    const response = await fetchWithRetry(`${API_BASE_URL}/questions/${id}/verify`, {
+      method: 'POST',
+    });
+    const responseData = await response.json();
+    console.log(`📥 [questionApi] verifyQuestion - ID: ${id}, response:`, responseData);
+    if (!response.ok) {
+        throw new Error(`Failed to verify question: ${response.status} ${JSON.stringify(responseData)}`);
+    }
+    return responseData;
   },
 
   async bulkCreateQuestions(questions, onProgress) {

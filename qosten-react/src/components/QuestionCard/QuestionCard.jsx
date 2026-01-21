@@ -5,7 +5,7 @@ import LatexRenderer from '../LatexRenderer/LatexRenderer';
 import ImageLinkingModal from '../ImageLinkingModal/ImageLinkingModal';
 
 function QuestionCard({ question, selectionMode, isSelected, onToggleSelect }) {
-  const { deleteQuestion, setEditingQuestion, toggleQuestionFlag, toggleReviewQueue, updateQuestion } = useQuestions();
+  const { deleteQuestion, setEditingQuestion, toggleQuestionFlag, toggleReviewQueue, toggleQuestionVerification, updateQuestion } = useQuestions();
   const navigate = useNavigate();
   const [showImageLinkingModal, setShowImageLinkingModal] = useState(false);
   
@@ -34,6 +34,11 @@ function QuestionCard({ question, selectionMode, isSelected, onToggleSelect }) {
   const handleToggleQueue = async (e) => {
     e.stopPropagation();
     await toggleReviewQueue(question.id);
+  };
+
+  const handleToggleVerification = async (e) => {
+    e.stopPropagation();
+    await toggleQuestionVerification(question.id);
   };
   
   const handleLinkImages = async (imageData) => {
@@ -318,6 +323,16 @@ function QuestionCard({ question, selectionMode, isSelected, onToggleSelect }) {
             }}
           >
             {question.inReviewQueue ? '📋 De-queue' : '📋 Queue'}
+          </button>
+          <button 
+            onClick={handleToggleVerification}
+            style={{
+              backgroundColor: question.isVerified ? '#f1c40f' : '#27ae60',
+              color: 'white',
+              border: 'none'
+            }}
+          >
+            {question.isVerified ? '❌ Unverify' : '✅ Verify'}
           </button>
           {question.type === 'cq' && (
             <button 

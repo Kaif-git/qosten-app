@@ -281,6 +281,8 @@ export default function QuestionBank() {
   const [showReviewQueueModal, setShowReviewQueueModal] = useState(false);
   const [reviewQueueType, setReviewQueueType] = useState('mcq');
   const [reviewQueueInputText, setReviewQueueInputText] = useState('');
+  const [showReviewQueuePreviewModal, setShowReviewQueuePreviewModal] = useState(false);
+  const [reviewQueuePreviewCandidates, setReviewQueuePreviewCandidates] = useState([]);
 
   // Restoring missing state for existing CQ Fixing logic
   const [showCQFixModal, setShowCQFixModal] = useState(false);
@@ -297,8 +299,6 @@ export default function QuestionBank() {
   // MCQ Sync State
   const [mcqSyncCandidates, setMcqSyncCandidates] = useState([]);
   const [showMCQSyncModal, setShowMCQSyncModal] = useState(false);
-  const [mcqOptionsFixCandidates, setMcqOptionsFixCandidates] = useState([]);
-  const [showMCQOptionsFixModal, setShowMCQOptionsFixModal] = useState(false);
   const [migrationCandidates, setMigrationCandidates] = useState([]);
   const [showMigrationModal, setShowMigrationModal] = useState(false);
 
@@ -314,6 +314,10 @@ export default function QuestionBank() {
   const [showUnansweredMCQModal, setShowUnansweredMCQModal] = useState(false);
   const [unansweredMCQs, setUnansweredMCQs] = useState([]);
 
+  // Image Placeholder MCQ State
+  const [showImagePlaceholderModal, setShowImagePlaceholderModal] = useState(false);
+  const [imagePlaceholderMCQs, setImagePlaceholderMCQs] = useState([]);
+
   // Split View State
   const [isSplitView, setIsSplitView] = useState(false);
   const [leftFilters, setLeftFilters] = useState({});
@@ -321,6 +325,107 @@ export default function QuestionBank() {
   
   // Performance Optimization: Visible Count (Limit rendering)
   const [visibleCount, setVisibleCount] = useState(50);
+
+  const checkIfChanged = (orig, fixed, type) => {
+    const qText1 = (orig.questionText || orig.question || '').trim();
+    const qText2 = (fixed.questionText || fixed.question || '').trim();
+    if (qText1 !== qText2) return true;
+    
+    if (type === 'mcq') {
+        if (orig.correctAnswer !== fixed.correctAnswer) return true;
+        if (orig.explanation !== fixed.explanation) return true;
+        if ((orig.options?.length || 0) !== (fixed.options?.length || 0)) return true;
+        for (let i = 0; i < (orig.options?.length || 0); i++) {
+            if (orig.options[i].text !== fixed.options[i]?.text) return true;
+        }
+    } else if (type === 'cq') {
+        if ((orig.parts?.length || 0) !== (fixed.parts?.length || 0)) return true;
+        for (let i = 0; i < (orig.parts?.length || 0); i++) {
+            if (orig.parts[i].text !== fixed.parts[i]?.text) return true;
+            if (orig.parts[i].answer !== fixed.parts[i]?.answer) return true;
+        }
+    } else if (type === 'sq') {
+        if ((orig.answer || '').trim() !== (fixed.answer || '').trim()) return true;
+    }
+    return false;
+  };
+
+  const handleRevertField = (questionId, fieldPath, originalValue) => {
+    setReviewQueuePreviewCandidates(prev => prev.map(c => {
+        if (c.original.id === questionId) {
+            const newFixed = { ...c.fixed };
+            
+            // Handle deep field paths (e.g. 'options.0.text' or 'parts.1.answer')
+            if (fieldPath.includes('.')) {
+                const parts = fieldPath.split('.');
+                let current = newFixed;
+                for (let i = 0; i < parts.length - 1; i++) {
+                    const key = parts[i];
+                    if (Array.isArray(current[key])) {
+                        current[key] = [...current[key]];
+                    } else {
+                        current[key] = { ...current[key] };
+                    }
+                    current = current[key];
+                }
+                current[parts[parts.length - 1]] = originalValue;
+            } else {
+                newFixed[fieldPath] = originalValue;
+            }
+
+            return {
+                ...c,
+                fixed: newFixed,
+                isChanged: checkIfChanged(c.original, newFixed, c.original.type)
+            };
+        }
+        return c;
+    }));
+  };
+
+  // Helper for highlighting text differences
+  const renderTextDiff = (oldText, newText, onRevert = null) => {
+    if (oldText === newText) return <div style={{ color: '#7f8c8d', fontSize: '12px' }}>{newText}</div>;
+    return (
+      <div style={{ position: 'relative', border: '1px solid #ffe0b2', padding: '8px', borderRadius: '6px', backgroundColor: '#fffcf5' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+            <div style={{ flex: 1 }}>
+                <div style={{ color: '#e74c3c', textDecoration: 'line-through', marginBottom: '4px', fontSize: '11px', backgroundColor: '#fdf2f2', padding: '2px', fontFamily: 'monospace' }}>
+                  {oldText || '(empty)'}
+                </div>
+                <div style={{ color: '#27ae60', backgroundColor: '#f2faf5', padding: '2px', fontWeight: '500', fontFamily: 'monospace', fontSize: '12px' }}>
+                  {newText || '(empty)'}
+                </div>
+            </div>
+            {onRevert && (
+                <button 
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        onRevert();
+                    }}
+                    title="Undo this change (revert to original)"
+                    style={{ 
+                        marginLeft: '10px', 
+                        padding: '4px 8px', 
+                        fontSize: '14px', 
+                        cursor: 'pointer',
+                        backgroundColor: 'white',
+                        border: '1px solid #e67e22',
+                        color: '#e67e22',
+                        borderRadius: '4px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        boxShadow: '0 1px 3px rgba(0,0,0,0.1)'
+                    }}
+                >
+                    ↩️
+                </button>
+            )}
+        </div>
+      </div>
+    );
+  };
 
   const generateBulkFixText = (type) => {
     const flagged = questions.filter(q => q.isFlagged && q.type === type);
@@ -448,7 +553,7 @@ export default function QuestionBank() {
         return;
       }
 
-      const updates = [];
+      const candidates = [];
       const hasIds = parsedQuestions.some(p => p.id);
       
       if (hasIds) {
@@ -457,51 +562,80 @@ export default function QuestionBank() {
           if (p.id) parsedMap.set(p.id.toString(), p);
         });
 
-        // Process EVERY question in the current review queue
         queued.forEach(original => {
+          const fullOriginal = fullQuestionsMap.get(original.id.toString()) || original;
           const improved = parsedMap.get(original.id.toString());
+          
           if (improved) {
-            // Update and verify
-            updates.push({
-              ...original,
+            const fixed = {
+              ...fullOriginal,
               ...improved,
               id: original.id,
               isVerified: true,
               inReviewQueue: false
+            };
+            candidates.push({
+              original: fullOriginal,
+              fixed: fixed,
+              isChanged: checkIfChanged(fullOriginal, fixed, reviewQueueType)
             });
           } else {
-            // Not mentioned in pasted text, but verify it as-is
-            updates.push({
-              ...original,
+            const fixed = {
+              ...fullOriginal,
               isVerified: true,
               inReviewQueue: false
+            };
+            candidates.push({
+              original: fullOriginal,
+              fixed: fixed,
+              isChanged: false
             });
           }
         });
-        
-        console.log(`[ReviewQueue Debug] Processing entire queue (${queued.length} questions). ${parsedQuestions.length} updates found in text.`);
       } else {
-        // Fallback to matching by order (backward compatibility)
         const count = Math.min(queued.length, parsedQuestions.length);
         for (let i = 0; i < count; i++) {
           const original = queued[i];
+          const fullOriginal = fullQuestionsMap.get(original.id.toString()) || original;
           const improved = parsedQuestions[i];
           
-          updates.push({
-            ...original,
+          const fixed = {
+            ...fullOriginal,
             ...improved,
             id: original.id,
             isVerified: true,
             inReviewQueue: false
+          };
+          candidates.push({
+            original: fullOriginal,
+            fixed: fixed,
+            isChanged: checkIfChanged(fullOriginal, fixed, reviewQueueType)
           });
         }
       }
 
-      if (updates.length === 0) {
+      if (candidates.length === 0) {
         alert('No matching questions found to update or verify.');
         return;
       }
 
+      setReviewQueuePreviewCandidates(candidates);
+      setShowReviewQueuePreviewModal(true);
+      setShowReviewQueueModal(false);
+
+    } catch (error) {
+      console.error('Error in review queue apply:', error);
+      alert('Error updating questions: ' + error.message);
+    } finally {
+      setIsFixing(false);
+    }
+  };
+
+  const confirmReviewQueueApply = async () => {
+    try {
+      setIsFixing(true);
+      const updates = reviewQueuePreviewCandidates.map(c => c.fixed);
+      
       const result = await bulkUpdateQuestions(updates);
       alert(`✅ Successfully updated, verified, and de-queued ${result.successCount} questions!`);
       
@@ -511,10 +645,11 @@ export default function QuestionBank() {
         return next;
       });
 
-      setShowReviewQueueModal(false);
+      setShowReviewQueuePreviewModal(false);
+      setReviewQueuePreviewCandidates([]);
       setReviewQueueInputText('');
     } catch (error) {
-      console.error('Error in review queue apply:', error);
+      console.error('Error in review queue confirm:', error);
       alert('Error updating questions: ' + error.message);
     } finally {
       setIsFixing(false);
@@ -1697,120 +1832,33 @@ export default function QuestionBank() {
     }
   };
 
-  const handleFindMCQsWithMergedOptions = async () => {
+  const handleFixUnansweredMCQs = async () => {
+    const scanAll = window.confirm("Scan ENTIRE database for unanswered MCQs?\n\nClick 'OK' to scan everything (thorough but slower)\nClick 'Cancel' to scan only currently loaded questions (faster)");
+    
     setIsSearching(true);
-    console.log("🚀 [MergedOptionsFix] Starting Scan...");
     try {
-        const mcqs = currentVisibleQuestions.filter(q => q.type === 'mcq');
-        
-        if (mcqs.length === 0) {
-            alert("No MCQs found in current view.");
-            setIsSearching(false);
-            return;
-        }
-
-        // 1. Identify which questions actually need fixing based on local data first
-        const potentialIds = [];
-        const nonMatchSamples = [];
-        
-        for (const q of mcqs) {
-            const fullQ = fullQuestionsMap.get(q.id) || q;
-            const fixed = detectAndFixMCQOptions(fullQ);
-            
-            if (fixed) {
-                potentialIds.push(q.id);
-            } else if (nonMatchSamples.length < 10) {
-                nonMatchSamples.push({ id: q.id, text: (q.questionText || q.question || '').substring(0, 150) });
-            }
-        }
-
-        if (potentialIds.length === 0) {
-            console.log("❌ [MergedOptionsFix] No candidates found. Samples of checked text:");
-            console.table(nonMatchSamples);
-            alert("No MCQs with merged options were detected. Check console for samples of what was scanned.");
-            setIsSearching(false);
-            return;
-        }
-
-        console.log(`📊 [MergedOptionsFix] Potential candidates to fetch: ${potentialIds.length}`);
-
-        // 2. Fetch full data ONLY for the potential candidates
-        const fetchedMCQs = await fetchQuestionsByIds(potentialIds);
-
-        const candidates = [];
-        for (const q of fetchedMCQs) {
-            const fixed = detectAndFixMCQOptions(q);
-            if (fixed) {
-                // IMPORTANT: If we detected merged options in the text, it's a candidate
-                // even if the database 'options' count matches, because the text still needs cleaning.
-                candidates.push({
-                    original: q,
-                    fixed: fixed
-                });
-            }
-        }
-
-        console.log(`✅ [MergedOptionsFix] Final candidates for modal: ${candidates.length}`);
-
-        if (candidates.length === 0) {
-            alert("No MCQs with fixable merged options found after verifying full data.");
+        let mcqs;
+        if (scanAll) {
+            console.log("📡 [FixUnanswered] Fetching all questions from database...");
+            const all = await questionApi.fetchAllQuestions();
+            // Use the established mapping logic from context to ensure ALL fields are preserved
+            const mapped = all.map(mapDatabaseToApp);
+            mcqs = mapped.filter(q => q.type === 'mcq');
+            console.log(`📡 [FixUnanswered] Fetched and mapped ${mcqs.length} MCQs total.`);
         } else {
-            setMcqOptionsFixCandidates(candidates);
-            setShowMCQOptionsFixModal(true);
+            mcqs = questions.filter(q => q && q.type === 'mcq');
         }
-    } catch (error) {
-        console.error("❌ [MergedOptionsFix] Error during scan:", error);
-        alert("An error occurred during scan.");
-    } finally {
-        setIsSearching(false);
-    }
-  };
-
-  const applyMCQOptionsFix = async () => {
-      if (mcqOptionsFixCandidates.length === 0) return;
-      if (!window.confirm(`Fix options for all ${mcqOptionsFixCandidates.length} questions?`)) return;
-
-      setIsFixing(true);
-      try {
-          const updates = mcqOptionsFixCandidates.map(c => c.fixed);
-          const result = await bulkUpdateQuestions(updates);
-          alert(`Successfully fixed options for ${result.successCount} questions!`);
-          setShowMCQOptionsFixModal(false);
-          setMcqOptionsFixCandidates([]);
-      } catch (error) {
-          console.error("Error applying MCQ options fix:", error);
-          alert("Failed to apply fixes.");
-      } finally {
-          setIsFixing(false);
-      }
-  };
-
-  const handleFindUnansweredMCQs = async () => {
-    setIsSearching(true);
-    try {
-        // 1. Get all MCQs from current view
-        const mcqs = currentVisibleQuestions.filter(q => q.type === 'mcq');
         
         if (mcqs.length === 0) {
-            alert("No MCQs found in current view.");
+            alert("No MCQs found to scan. Please load some questions first or choose to scan the entire database.");
             setIsSearching(false);
             return;
         }
 
-        // 2. Fetch full data
-        const idsToFetch = mcqs.map(m => m.id);
-        const fetchedMCQs = await fetchQuestionsByIds(idsToFetch);
-
-        // Merge with local state to get current flags
-        const fullMCQs = fetchedMCQs.map(q => {
-          const localQ = questions.find(lq => lq.id.toString() === q.id.toString());
-          return localQ ? { ...q, isFlagged: localQ.isFlagged || q.isFlagged } : q;
-        });
-
-        // 3. Detect unanswered
-        const found = fullMCQs.filter(q => {
+        // Helper to detect unanswered
+        const isUnanswered = (q) => {
             // Check 1: Is the explicit answer field empty/invalid?
-            const ans = q.correctAnswer;
+            const ans = q.correctAnswer || q.correct_answer;
             const isAnswerMissing = !ans || 
                                     ans === 'N/A' || 
                                     ans === '(N/A)' ||
@@ -1824,7 +1872,7 @@ export default function QuestionBank() {
             if (!isAnswerMissing && !areOptionsMissing) return false; 
             
             // However, we must ensure the answer isn't embedded in the text
-            const text = (q.question || q.questionText || '').toString();
+            const text = (q.question || q.questionText || q.question_text || '').toString();
             const hasEmbeddedAnswer = text.includes('|Ans:') || 
                                       text.includes('|Ans :') ||
                                       text.includes('সঠিক:') ||
@@ -1835,20 +1883,112 @@ export default function QuestionBank() {
             if (hasEmbeddedAnswer) return false;
 
             return true;
-        });
+        };
+
+        console.log(`🔍 [FixUnanswered] Scanning ${mcqs.length} questions...`);
+        const found = mcqs.filter(isUnanswered);
 
         if (found.length === 0) {
-            alert("All MCQs in the current view appear to have answers (either in field or in text).");
+            alert(`Scanned ${mcqs.length} MCQs. All appear to have answers.`);
         } else {
-            setUnansweredMCQs(found.map(q => ({ ...q, isFlagged: q.isFlagged || false })));
+            // Sort by ID to make it easier to go through
+            const sorted = found.sort((a, b) => b.id - a.id);
+            setUnansweredMCQs(sorted.map(q => ({ ...q, isFlagged: q.isFlagged || false })));
             setShowUnansweredMCQModal(true);
         }
 
     } catch (error) {
-        console.error("Error finding unanswered MCQs:", error);
+        console.error("❌ [FixUnanswered] Error:", error);
         alert("An error occurred while scanning MCQs.");
     } finally {
         setIsSearching(false);
+    }
+  };
+
+  const handleScanImagePlaceholderMCQs = async () => {
+    const scanAll = window.confirm("Scan ENTIRE database for MCQs with image/graph placeholders?\n\nClick 'OK' to scan everything\nClick 'Cancel' to scan only currently loaded questions");
+    
+    setIsSearching(true);
+    try {
+        let mcqs;
+        if (scanAll) {
+            const all = await questionApi.fetchAllQuestions();
+            const mapped = all.map(mapDatabaseToApp);
+            mcqs = mapped.filter(q => q.type === 'mcq');
+        } else {
+            mcqs = questions.filter(q => q && q.type === 'mcq');
+        }
+        
+        // Regex to match placeholders like [there is an image], [graph], [diagram], [picture] etc.
+        // Also matching common Bengali versions if they exist
+        const placeholderRegex = /\[(?:there is an? )?(?:image|graph|diagram|picture|ছবি|গ্রাফ|ডায়াগ্রাম)\]/i;
+
+        const found = mcqs.filter(q => {
+            const text = (q.questionText || q.question || '').toString();
+            const optionsText = (q.options || []).map(o => o.text).join(' ');
+            return placeholderRegex.test(text) || placeholderRegex.test(optionsText);
+        });
+
+        if (found.length === 0) {
+            alert("No MCQs with image placeholders found.");
+        } else {
+            setImagePlaceholderMCQs(found.sort((a, b) => b.id - a.id));
+            setShowImagePlaceholderModal(true);
+        }
+    } catch (error) {
+        console.error("❌ Error scanning for image placeholders:", error);
+    } finally {
+        setIsSearching(false);
+    }
+  };
+
+  const deleteImagePlaceholderMCQs = async () => {
+    if (!window.confirm(`⚠️ This will PERMANENTLY DELETE ${imagePlaceholderMCQs.length} questions. Continue?`)) return;
+    
+    setIsFixing(true);
+    try {
+        const ids = imagePlaceholderMCQs.map(q => q.id);
+        const BATCH_SIZE = 10;
+        for (let i = 0; i < ids.length; i += BATCH_SIZE) {
+            const batch = ids.slice(i, i + BATCH_SIZE);
+            await Promise.all(batch.map(id => deleteQuestion(id)));
+        }
+        alert(`Successfully deleted ${ids.length} questions.`);
+        setShowImagePlaceholderModal(false);
+        setImagePlaceholderMCQs([]);
+    } catch (error) {
+        console.error("Error deleting questions:", error);
+    } finally {
+        setIsFixing(false);
+    }
+  };
+
+  const flagImagePlaceholderMCQs = async () => {
+    const unflagged = imagePlaceholderMCQs.filter(q => !q.isFlagged);
+    if (unflagged.length === 0) return;
+
+    setIsFixing(true);
+    try {
+        await bulkFlagQuestions(unflagged, true);
+        setImagePlaceholderMCQs(prev => prev.map(q => ({ ...q, isFlagged: true })));
+        alert("Flagged all questions.");
+    } catch (error) {
+        console.error("Error flagging questions:", error);
+    } finally {
+        setIsFixing(false);
+    }
+  };
+
+  const toggleSinglePlaceholderFlag = async (question) => {
+    try {
+        const result = await bulkFlagQuestions([question], !question.isFlagged);
+        if (result.successCount > 0) {
+            setImagePlaceholderMCQs(prev => prev.map(q => 
+                q.id === question.id ? { ...q, isFlagged: !question.isFlagged } : q
+            ));
+        }
+    } catch (error) {
+        console.error("Error toggling flag:", error);
     }
   };
 
@@ -4313,7 +4453,7 @@ export default function QuestionBank() {
                     </div>
                     
                     <div style={{ fontSize: '0.9em', color: '#666' }}>
-                        {q.options && q.options.length > 0 ? (
+                        {Array.isArray(q.options) && q.options.length > 0 ? (
                             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
                                 {q.options.map((opt, i) => (
                                     <div key={i} style={{ padding: '4px 8px', backgroundColor: 'rgba(0,0,0,0.03)', borderRadius: '4px' }}>
@@ -4557,24 +4697,7 @@ export default function QuestionBank() {
           </button>
 
           <button
-            onClick={handleFindMCQsWithMergedOptions}
-            disabled={isSearching}
-            style={{
-              backgroundColor: '#27ae60',
-              color: 'white',
-              padding: '10px 20px',
-              borderRadius: '6px',
-              border: 'none',
-              cursor: isSearching ? 'wait' : 'pointer',
-              fontWeight: '600',
-              marginRight: '10px'
-            }}
-          >
-            {isSearching ? '⏳ Scanning...' : '🛠 Auto-Fix Merged Options'}
-          </button>
-
-          <button
-            onClick={handleFindUnansweredMCQs}
+            onClick={handleFixUnansweredMCQs}
             disabled={isSearching}
             style={{
               backgroundColor: '#c0392b',
@@ -4587,7 +4710,24 @@ export default function QuestionBank() {
               marginRight: '10px'
             }}
           >
-            {isSearching ? '⏳ Scanning...' : '🚩 Auto-Flag Unanswered MCQs'}
+            {isSearching ? '🔍 Scanning...' : '🔍 Scan Unanswered MCQs'}
+          </button>
+
+          <button
+            onClick={handleScanImagePlaceholderMCQs}
+            disabled={isSearching}
+            style={{
+              backgroundColor: '#e67e22',
+              color: 'white',
+              padding: '10px 20px',
+              borderRadius: '6px',
+              border: 'none',
+              cursor: isSearching ? 'wait' : 'pointer',
+              fontWeight: '600',
+              marginRight: '10px'
+            }}
+          >
+            {isSearching ? '🔍 Scanning...' : '🖼️ Scan Image Placeholders'}
           </button>
 
           <button
@@ -5533,110 +5673,300 @@ export default function QuestionBank() {
         </div>
       )}
 
-      {/* MCQ Options Fix Modal (Merged Options) */}
-      {showMCQOptionsFixModal && (
+      {/* Image Placeholder MCQ Modal */}
+      {showImagePlaceholderModal && (
+        <div style={{
+          position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.8)', display: 'flex',
+          justifyContent: 'center', alignItems: 'center', zIndex: 11000, padding: '20px'
+        }}>
+          <div style={{
+            backgroundColor: 'white', padding: '30px', borderRadius: '12px',
+            width: '100%', maxWidth: '1100px', maxHeight: '90vh', display: 'flex', flexDirection: 'column'
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+              <h2 style={{ margin: 0, color: '#e74c3c' }}>🖼️ Image Placeholder MCQs ({imagePlaceholderMCQs.length})</h2>
+              <button onClick={() => setShowImagePlaceholderModal(false)} style={{ background: 'none', border: 'none', fontSize: '24px', cursor: 'pointer' }}>✕</button>
+            </div>
+
+            <div style={{ flex: 1, overflowY: 'auto', marginBottom: '20px', border: '1px solid #eee', borderRadius: '8px' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                <thead style={{ position: 'sticky', top: 0, backgroundColor: '#f8f9fa', zIndex: 1 }}>
+                  <tr>
+                    <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6' }}>ID</th>
+                    <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6' }}>Question Text</th>
+                    <th style={{ padding: '12px', textAlign: 'center', borderBottom: '2px solid #dee2e6' }}>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {imagePlaceholderMCQs.map((q) => (
+                    <tr key={q.id} style={{ borderBottom: '1px solid #eee' }}>
+                      <td style={{ padding: '12px', fontSize: '12px' }}>{q.id}</td>
+                      <td style={{ padding: '12px', fontSize: '13px' }}>
+                        <div style={{ fontWeight: 'bold' }}>{q.subject} - {q.chapter}</div>
+                        <div style={{ color: '#555', marginTop: '4px' }}>{q.questionText || q.question}</div>
+                      </td>
+                      <td style={{ padding: '12px', textAlign: 'center' }}>
+                        <div style={{ display: 'flex', gap: '5px', justifyContent: 'center' }}>
+                          <button 
+                            onClick={() => toggleSinglePlaceholderFlag(q)}
+                            style={{ 
+                                padding: '4px 8px', fontSize: '12px', cursor: 'pointer',
+                                backgroundColor: q.isFlagged ? '#27ae60' : '#f39c12',
+                                color: 'white', border: 'none', borderRadius: '4px'
+                            }}
+                          >
+                            {q.isFlagged ? '✓ Flagged' : '🚩 Flag'}
+                          </button>
+                          <button 
+                            onClick={async () => {
+                                if (window.confirm('Delete this question?')) {
+                                    await deleteQuestion(q.id);
+                                    setImagePlaceholderMCQs(prev => prev.filter(item => item.id !== q.id));
+                                }
+                            }}
+                            style={{ padding: '4px 8px', fontSize: '12px', cursor: 'pointer', backgroundColor: '#e74c3c', color: 'white', border: 'none', borderRadius: '4px' }}
+                          >
+                            🗑️ Delete
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div style={{ display: 'flex', gap: '15px' }}>
+              <button onClick={flagImagePlaceholderMCQs} style={{ flex: 1, padding: '12px', backgroundColor: '#f39c12', color: 'white', border: 'none', borderRadius: '8px', fontWeight: 'bold', cursor: 'pointer' }}>
+                🚩 Flag All Remaining
+              </button>
+              <button onClick={deleteImagePlaceholderMCQs} style={{ flex: 1, padding: '12px', backgroundColor: '#e74c3c', color: 'white', border: 'none', borderRadius: '8px', fontWeight: 'bold', cursor: 'pointer' }}>
+                🗑️ Delete All Found
+              </button>
+              <button onClick={() => setShowImagePlaceholderModal(false)} style={{ padding: '12px 30px', backgroundColor: '#eee', border: 'none', borderRadius: '8px', cursor: 'pointer' }}>
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Review Queue Preview Modal */}
+      {showReviewQueuePreviewModal && (
         <div style={{
           position: 'fixed',
           top: 0,
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+          backgroundColor: 'rgba(0, 0, 0, 0.85)',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          zIndex: 10000,
+          zIndex: 10001,
           padding: '20px'
         }}>
           <div style={{
             backgroundColor: 'white',
             padding: '30px',
-            borderRadius: '12px',
-            boxShadow: '0 10px 25px rgba(0,0,0,0.2)',
+            borderRadius: '16px',
+            boxShadow: '0 15px 40px rgba(0,0,0,0.3)',
             width: '100%',
-            maxWidth: '1100px',
+            maxWidth: '1200px',
             maxHeight: '90vh',
             display: 'flex',
             flexDirection: 'column'
           }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-              <h2 style={{ margin: 0, color: '#27ae60' }}>🛠 MCQ Merged Options Fixer</h2>
-              <div style={{ display: 'flex', gap: '10px' }}>
-                <button
-                  onClick={applyMCQOptionsFix}
-                  disabled={isFixing || mcqOptionsFixCandidates.length === 0}
-                  style={{
-                    backgroundColor: '#27ae60',
-                    color: 'white',
-                    padding: '8px 20px',
-                    borderRadius: '6px',
-                    border: 'none',
-                    fontWeight: 'bold',
-                    cursor: 'pointer'
-                  }}
-                >
-                  {isFixing ? 'Processing...' : `✅ Fix All ${mcqOptionsFixCandidates.length} Questions`}
-                </button>
-                <button 
-                  onClick={() => setShowMCQOptionsFixModal(false)}
-                  style={{ background: 'none', border: 'none', fontSize: '24px', cursor: 'pointer', color: '#666' }}
-                >✕</button>
+              <div>
+                <h2 style={{ margin: 0, color: '#2c3e50' }}>🔎 Review Changes Preview</h2>
+                <div style={{ display: 'flex', gap: '20px', marginTop: '5px' }}>
+                  <span style={{ color: '#27ae60', fontWeight: 'bold' }}>
+                    🛠️ Fixing: {reviewQueuePreviewCandidates.filter(c => c.isChanged).length}
+                  </span>
+                  <span style={{ color: '#7f8c8d', fontWeight: 'bold' }}>
+                    ✅ Unchanged: {reviewQueuePreviewCandidates.filter(c => !c.isChanged).length}
+                  </span>
+                  <span style={{ color: '#34495e', fontWeight: 'bold' }}>
+                    📊 Total: {reviewQueuePreviewCandidates.length}
+                  </span>
+                </div>
               </div>
+              <button 
+                onClick={() => {
+                  setShowReviewQueuePreviewModal(false);
+                  setReviewQueuePreviewCandidates([]);
+                }}
+                style={{ background: 'none', border: 'none', fontSize: '24px', cursor: 'pointer', color: '#666' }}
+              >✕</button>
             </div>
 
-            <p style={{ color: '#666', marginBottom: '20px' }}>
-              Found <strong>{mcqOptionsFixCandidates.length}</strong> MCQs where options appear to be merged into the question text.
-            </p>
+            <div style={{ flex: 1, overflowY: 'auto', border: '1px solid #eee', borderRadius: '8px', padding: '10px' }}>
+              {reviewQueuePreviewCandidates.map((candidate, idx) => {
+                const { original: orig, fixed } = candidate;
+                if (!candidate.isChanged) return null; // Only show changed ones in detail
 
-            <div style={{ flex: 1, overflowY: 'auto', padding: '5px' }}>
-              {mcqOptionsFixCandidates.map((item, idx) => (
-                <div key={item.original.id} style={{ 
-                  border: '1px solid #eee', 
-                  borderRadius: '10px', 
-                  padding: '20px', 
-                  marginBottom: '20px',
-                  backgroundColor: '#fdfdfd'
-                }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '15px' }}>
-                    <span style={{ fontWeight: 'bold', color: '#333' }}>#{idx + 1} | ID: {item.original.id}</span>
-                    <button 
-                      onClick={() => {
-                        setMcqOptionsFixCandidates(prev => prev.filter(c => c.original.id !== item.original.id));
-                      }}
-                      style={{ fontSize: '11px', padding: '2px 8px', borderRadius: '4px', border: '1px solid #ccc', cursor: 'pointer' }}
-                    >Skip</button>
-                  </div>
-
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
-                    <div style={{ padding: '15px', backgroundColor: '#fff5f5', borderRadius: '8px', border: '1px solid #feb2b2' }}>
-                      <div style={{ fontWeight: 'bold', color: '#c53030', marginBottom: '10px', fontSize: '13px' }}>ORIGINAL</div>
-                      <div style={{ fontSize: '14px', whiteSpace: 'pre-wrap' }}>{item.original.questionText || item.original.question}</div>
-                      <div style={{ marginTop: '10px', fontSize: '12px', color: '#666' }}>
-                        Options: {(item.original.options || []).length}
-                      </div>
+                return (
+                  <div key={orig.id} style={{ 
+                    padding: '20px', 
+                    marginBottom: '20px', 
+                    backgroundColor: '#fff',
+                    border: '2px solid #e67e22',
+                    borderRadius: '12px',
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.05)'
+                  }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '15px', borderBottom: '2px solid #eee', paddingBottom: '10px' }}>
+                      <span style={{ fontWeight: 'bold', fontSize: '16px', color: '#2c3e50' }}>Question ID: {orig.id}</span>
+                      <span style={{ color: '#e67e22', fontWeight: 'bold', fontSize: '12px', backgroundColor: '#fff3e0', padding: '4px 10px', borderRadius: '20px' }}>
+                        MODIFIED
+                      </span>
                     </div>
 
-                    <div style={{ padding: '15px', backgroundColor: '#f0fff4', borderRadius: '8px', border: '1px solid #9ae6b4' }}>
-                      <div style={{ fontWeight: 'bold', color: '#2f855a', marginBottom: '10px', fontSize: '13px' }}>FIXED</div>
-                      <div style={{ fontSize: '14px', whiteSpace: 'pre-wrap' }}>{item.fixed.questionText}</div>
-                      <div style={{ marginTop: '15px' }}>
-                        <div style={{ fontWeight: 'bold', fontSize: '12px', marginBottom: '5px' }}>EXTRACTED OPTIONS:</div>
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5px' }}>
-                          {item.fixed.options.map((opt, i) => (
-                            <div key={i} style={{ fontSize: '12px', padding: '4px 8px', backgroundColor: 'rgba(255,255,255,0.5)', borderRadius: '4px' }}>
-                              <strong>{opt.label}:</strong> {opt.text}
+                    {/* Question Text Diff */}
+                    <div style={{ marginBottom: '15px' }}>
+                      <div style={{ fontWeight: 'bold', color: '#666', fontSize: '11px', marginBottom: '5px' }}>QUESTION TEXT:</div>
+                      {renderTextDiff(
+                          orig.questionText || orig.question, 
+                          fixed.questionText || fixed.question,
+                          () => handleRevertField(orig.id, 'questionText', orig.questionText || orig.question)
+                      )}
+                    </div>
+
+                    {/* MCQ Options Diff */}
+                    {orig.type === 'mcq' && (
+                      <div style={{ marginBottom: '15px', padding: '10px', backgroundColor: '#fcfcfc', borderRadius: '8px' }}>
+                        <div style={{ fontWeight: 'bold', color: '#666', fontSize: '11px', marginBottom: '8px' }}>OPTIONS:</div>
+                        {(fixed.options || []).map((newOpt, i) => {
+                          const oldOpt = orig.options?.[i] || {};
+                          return (
+                            <div key={i} style={{ marginBottom: '8px', display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
+                              <span style={{ fontWeight: 'bold', width: '25px' }}>{newOpt.label})</span>
+                              <div style={{ flex: 1 }}>
+                                {renderTextDiff(
+                                    oldOpt.text, 
+                                    newOpt.text,
+                                    () => handleRevertField(orig.id, `options.${i}.text`, oldOpt.text)
+                                )}
+                              </div>
                             </div>
-                          ))}
+                          );
+                        })}
+                        
+                        <div style={{ marginTop: '10px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                          <div>
+                            <div style={{ fontWeight: 'bold', color: '#666', fontSize: '11px', marginBottom: '5px' }}>CORRECT ANSWER:</div>
+                            {renderTextDiff(
+                                orig.correctAnswer, 
+                                fixed.correctAnswer,
+                                () => handleRevertField(orig.id, 'correctAnswer', orig.correctAnswer)
+                            )}
+                          </div>
+                          <div>
+                            <div style={{ fontWeight: 'bold', color: '#666', fontSize: '11px', marginBottom: '5px' }}>EXPLANATION:</div>
+                            {renderTextDiff(
+                                orig.explanation, 
+                                fixed.explanation,
+                                () => handleRevertField(orig.id, 'explanation', orig.explanation)
+                            )}
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    )}
+
+                    {/* CQ Parts Diff */}
+                    {orig.type === 'cq' && (
+                      <div style={{ marginBottom: '15px', padding: '10px', backgroundColor: '#fcfcfc', borderRadius: '8px' }}>
+                        <div style={{ fontWeight: 'bold', color: '#666', fontSize: '11px', marginBottom: '8px' }}>PARTS & ANSWERS:</div>
+                        {(fixed.parts || []).map((newPart, i) => {
+                          const oldPart = orig.parts?.[i] || {};
+                          return (
+                            <div key={i} style={{ marginBottom: '15px', borderBottom: '1px dashed #eee', paddingBottom: '10px' }}>
+                              <div style={{ fontWeight: 'bold', marginBottom: '5px' }}>Part {newPart.letter?.toUpperCase()}</div>
+                              <div style={{ marginLeft: '10px' }}>
+                                <div style={{ fontSize: '11px', color: '#999' }}>Question:</div>
+                                {renderTextDiff(
+                                    oldPart.text, 
+                                    newPart.text,
+                                    () => handleRevertField(orig.id, `parts.${i}.text`, oldPart.text)
+                                )}
+                                <div style={{ fontSize: '11px', color: '#999', marginTop: '5px' }}>Answer:</div>
+                                {renderTextDiff(
+                                    oldPart.answer, 
+                                    newPart.answer,
+                                    () => handleRevertField(orig.id, `parts.${i}.answer`, oldPart.answer)
+                                )}
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    )}
+
+                    {/* SQ Answer Diff */}
+                    {orig.type === 'sq' && (
+                      <div style={{ marginBottom: '15px' }}>
+                        <div style={{ fontWeight: 'bold', color: '#666', fontSize: '11px', marginBottom: '5px' }}>ANSWER:</div>
+                        {renderTextDiff(
+                            orig.answer, 
+                            fixed.answer,
+                            () => handleRevertField(orig.id, 'answer', orig.answer)
+                        )}
+                      </div>
+                    )}
                   </div>
+                );
+              })}
+
+              {/* Collapsed Unchanged Items */}
+              {reviewQueuePreviewCandidates.some(c => !c.isChanged) && (
+                <div style={{ 
+                  padding: '15px', 
+                  backgroundColor: '#f8f9fa', 
+                  borderRadius: '8px', 
+                  textAlign: 'center', 
+                  color: '#7f8c8d',
+                  border: '1px dashed #ccc'
+                }}>
+                  + {reviewQueuePreviewCandidates.filter(c => !c.isChanged).length} Unchanged questions will be verified and de-queued without modifications.
                 </div>
-              ))}
+              )}
+            </div>
+
+            <div style={{ marginTop: '20px', display: 'flex', gap: '15px' }}>
+              <button
+                onClick={() => {
+                  setShowReviewQueuePreviewModal(false);
+                  setReviewQueuePreviewCandidates([]);
+                }}
+                style={{ padding: '12px 24px', borderRadius: '8px', border: '1px solid #ccc', backgroundColor: 'white', cursor: 'pointer', fontWeight: 'bold' }}
+              >
+                Back to Editor
+              </button>
+              <button
+                onClick={confirmReviewQueueApply}
+                disabled={isFixing}
+                style={{
+                  flex: 1,
+                  padding: '12px 24px',
+                  borderRadius: '8px',
+                  border: 'none',
+                  backgroundColor: '#27ae60',
+                  color: 'white',
+                  fontWeight: 'bold',
+                  fontSize: '18px',
+                  cursor: isFixing ? 'not-allowed' : 'pointer',
+                  boxShadow: '0 4px 10px rgba(39, 174, 96, 0.3)'
+                }}
+              >
+                {isFixing ? '⏳ Applying Changes...' : `✅ Confirm & Apply ${reviewQueuePreviewCandidates.length} Updates`}
+              </button>
             </div>
           </div>
         </div>
       )}
+
+      {/* Selection Mode Batch Actions */}
     </>
   );
 }

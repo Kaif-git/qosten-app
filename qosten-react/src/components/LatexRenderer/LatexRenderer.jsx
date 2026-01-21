@@ -26,7 +26,6 @@ export default function LatexRenderer({ text, inline = false }) {
   // Split content to render mixed text and formulas
   // Supports $...$, $$...$$, \(...\), and \[...\]
   const parts = [];
-  let remaining = text;
   const regex = /(\$\$[\s\S]*?\$\$|\$[^$\n]*?\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\))/g;
   let lastIndex = 0;
   let match;

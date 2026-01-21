@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useQuestions } from '../../context/QuestionContext';
-import LatexRenderer from '../LatexRenderer/LatexRenderer';
 import FullQuestionContent from '../FullQuestionContent/FullQuestionContent';
 
 export default function ImageLinkingModal({ question, onClose, onLink, onUnlink }) {
@@ -14,7 +13,6 @@ export default function ImageLinkingModal({ question, onClose, onLink, onUnlink 
   const [expandedQuestions, setExpandedQuestions] = useState({});
 
   const [targetLanguage, setTargetLanguage] = useState(question.language === 'bn' ? 'en' : 'bn');
-  const [showAutoSuggest, setShowAutoSuggest] = useState(question.language === 'bn');
 
   const toggleExpand = (e, qId) => {
     e.stopPropagation();
@@ -75,7 +73,7 @@ export default function ImageLinkingModal({ question, onClose, onLink, onUnlink 
     }
 
     setFilteredQuestions(filtered);
-  }, [searchText, selectedSubject, selectedChapter, boardSearch, targetLanguage, questions, question.id]);
+  }, [searchText, selectedSubject, selectedChapter, boardSearch, targetLanguage, questions, question.id, languageFilteredQuestions]);
 
   const findCounterpart = () => {
     // Try to find the exact English counterpart for this Bangla question

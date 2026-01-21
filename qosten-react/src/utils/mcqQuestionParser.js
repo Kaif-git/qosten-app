@@ -119,11 +119,23 @@ export function parseMCQQuestions(text) {
     let questionBuffer = [];
     let inQuestion = false;
     
+    const isOptionLine = (line, inQuestion, questionBuffer, currentQuestion, inExplanation) => {
+      const isNumericOption = line.match(/^\s*([1-4]|[১-৪])[).।]\s+/);
+      // Updated regex to support Roman numerals i, ii, iii, iv
+      const isAlphaOption = line.match(/^\s*([a-dক-ঘi]{1,3})[).।]\s+/) || line.match(/\s+([a-dক-ঘi]{1,3})\)\s+/);
+      // Ensure it doesn't match metadata markers
+      const isMetadataLine = line.match(/^\*{0,2}\[?\s*(Correct|সঠিক|Explanation|ব্যাখ্যা|Bekkha|Subject|বিষয়|Chapter|অধ্যায়|Lesson|পাঠ|Board|বোর্ড)/i);
+      
+      return !isMetadataLine && (isAlphaOption || (isNumericOption && !line.startsWith('**'))) && 
+             !inExplanation && !line.startsWith('[') && 
+             (inQuestion || questionBuffer.length > 0 || (currentQuestion.questionText && currentQuestion.options.length > 0));
+    };
+
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
       // Skip "Question Set X" header or horizontal rules
-      if (line.match(/^[#*\s\-\/]*(Question\s*Set|প্রশ্ন\s*সেট)\s*[\d০-৯]+/i) || line.match(/^[\s\-]*---[\s\-]*$/)) {
+      if (line.match(/^[#*\s-/]*(Question\s*Set|প্রশ্ন\s*সেট)\s*[\d০-৯]+/i) || line.match(/^[\s-]*---[\s-]*$/)) {
         inExplanation = false; // CRITICAL: Stop explanation mode immediately
         continue;
       }
@@ -196,17 +208,7 @@ export function parseMCQQuestions(text) {
       // Robust check: Label must be at start of line or preceded by space.
       // We prioritize options over question numbers if they look like 1-4 and we are in a question.
       // In this format, question numbers are usually bolded **1.** while options 1. are not.
-      else if ((() => {
-        const isNumericOption = line.match(/^\s*([1-4]|[১-৪])[\)\.।]\s+/);
-        // Updated regex to support Roman numerals i, ii, iii, iv
-        const isAlphaOption = line.match(/^\s*([a-dক-ঘi]{1,3})[\)\.।]\s+/) || line.match(/\s+([a-dক-ঘi]{1,3})\)\s+/);
-        // Ensure it doesn't match metadata markers
-        const isMetadataLine = line.match(/^\*{0,2}\[?\s*(Correct|সঠিক|Explanation|ব্যাখ্যা|Bekkha|Subject|বিষয়|Chapter|অধ্যায়|Lesson|পাঠ|Board|বোর্ড)/i);
-        
-        return !isMetadataLine && (isAlphaOption || (isNumericOption && !line.startsWith('**'))) && 
-               !inExplanation && !line.startsWith('[') && 
-               (inQuestion || questionBuffer.length > 0 || (currentQuestion.questionText && currentQuestion.options.length > 0));
-      })()) {
+      else if (isOptionLine(line, inQuestion, questionBuffer, currentQuestion, inExplanation)) {
         console.log('  ✅ Found Option(s) in line:', line.substring(0, 50));
         // Save question text if we were collecting it
         if (inQuestion && questionBuffer.length > 0) {
@@ -216,7 +218,7 @@ export function parseMCQQuestions(text) {
         }
         
         // Extract all options from the line - updated regex for numeric labels and Roman numerals
-        const optionPattern = /(?:^|\s+)([a-dক-ঘi1-4১-৪]{1,3})[\)\.।]\s*(.+?)(?=\s+([a-dক-ঘi1-4১-৪]{1,3})[\)\.।]\s*|$)/gi;
+        const optionPattern = /(?:^|\s+)([a-dক-ঘi1-4১-৪]{1,3})[).।]\s*(.+?)(?=\s+([a-dক-ঘi1-4১-৪]{1,3})[).।]\s*|$)/gi;
         let match;
         let foundAny = false;
         while ((match = optionPattern.exec(line)) !== null) {
@@ -314,8 +316,8 @@ export function parseMCQQuestions(text) {
         } 
         // --- STEP 2: Label Match ---
         // (If it looks like a label "a", "a)", etc. AND it's short)
-        else if (answerVal.match(/^([a-dক-ঘ]|[1-4]|[১-৪])(?:\s*[\)\.।]\s*|$)/i) && answerVal.length <= 4) {
-          const labelMatch = answerVal.match(/^([a-dক-ঘ]|[1-4]|[১-৪])(?:\s*[\)\.।]\s*|$)/i);
+        else if (answerVal.match(/^([a-dক-ঘ]|[1-4]|[১-৪])(?:\s*[).।]\s*|$)/i) && answerVal.length <= 4) {
+          const labelMatch = answerVal.match(/^([a-dক-ঘ]|[1-4]|[১-৪])(?:\s*[).।]\s*|$)/i);
           let label = labelMatch[1].toLowerCase();
           const labelMap = { 
             'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd',
@@ -382,7 +384,7 @@ export function parseMCQQuestions(text) {
       // Collect explanation lines
       else if (inExplanation) {
         // Stop at next question set marker or metadata (handle both English and Bengali)
-        if (line.match(/^\*{0,2}\[\s*(Subject|বিষয়|বিষয়)\s*:/i) || line.match(/^[#*\s\-\/]*(Question\s*Set|প্রশ্ন\s*সেট)\s*[\d০-৯]+/i) || line.match(/^[\s\-]*---[\s\-]*$/)) {
+        if (line.match(/^\*{0,2}\[\s*(Subject|বিষয়|বিষয়)\s*:/i) || line.match(/^[#*\s-/]*(Question\s*Set|প্রশ্ন\s*সেট)\s*[\d০-৯]+/i) || line.match(/^[\s-]*---[\s-]*$/)) {
           // This is the start of next question, process current one
           if (explanationBuffer.length > 0) {
             currentQuestion.explanation = explanationBuffer.join('\n').trim();
@@ -413,7 +415,7 @@ export function parseMCQQuestions(text) {
           explanationBuffer = [];
           
           // If it was just a "Question Set" marker or horizontal rule, we don't want to re-process it as metadata
-          if (line.match(/^[#*\s\-\/]*(Question\s*Set|প্রশ্ন\s*সেট)\s*[\d০-৯]+/i) || line.match(/^[\s\-]*---[\s\-]*$/)) {
+          if (line.match(/^[#*\s-/]*(Question\s*Set|প্রশ্ন\s*সেট)\s*[\d০-৯]+/i) || line.match(/^[\s-]*---[\s-]*$/)) {
              continue;
           }
 

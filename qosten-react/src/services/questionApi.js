@@ -377,7 +377,7 @@ export const questionApi = {
 
         if (!response.ok) throw new Error(`Failed at chunk starting at ${i}`);
         
-        const result = await response.json();
+        await response.json();
         successCount += chunk.length;
         console.log(`Uploaded ${Math.min(i + chunk.length, total)}/${total}...`);
         

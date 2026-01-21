@@ -4,7 +4,7 @@ import QuestionPreview from '../QuestionPreview/QuestionPreview';
 import { parseMCQQuestions, getMCQQuestionExample } from '../../utils/mcqQuestionParser';
 
 export default function MCQImport() {
-  const { bulkAddQuestions, setLastBatch, getLastBatchQuestions, lastBatch, updateQuestion } = useQuestions();
+  const { bulkAddQuestions, getLastBatchQuestions, lastBatch, updateQuestion } = useQuestions();
   const [inputText, setInputText] = useState('');
   const [parsedQuestions, setParsedQuestions] = useState([]);
   const [showPreview, setShowPreview] = useState(false);

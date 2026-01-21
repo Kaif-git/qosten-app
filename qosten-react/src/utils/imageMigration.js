@@ -85,7 +85,7 @@ export const performImageMigration = async (candidates, updateBulk) => {
     });
 
     try {
-        const result = await updateBulk(updates);
+        await updateBulk(updates);
         return { success: true, count: updates.length };
     } catch (err) {
         console.error("Migration failed:", err);

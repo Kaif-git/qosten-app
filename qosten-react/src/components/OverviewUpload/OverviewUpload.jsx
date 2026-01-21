@@ -1,10 +1,5 @@
 import React, { useState } from 'react';
 import { supabase } from '../../services/supabaseClient';
-import { 
-  parseOverviewText, 
-  validateOverview, 
-  overviewToJSON 
-} from '../../utils/overviewParser';
 import MarkdownContent from '../MarkdownContent/MarkdownContent';
 
 export default function OverviewUpload() {

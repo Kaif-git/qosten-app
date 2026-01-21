@@ -68,7 +68,6 @@ const EasyCropper = ({
     }, [cropArea, updateCropBoxDOM]);
 
     const adjustCropSize = (dimension, delta) => {
-        const start = performance.now();
         const prev = cropAreaRef.current || cropArea;
         
         let newWidth = prev.width;
@@ -496,9 +495,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   const [isEasyImageMode, setIsEasyImageMode] = useState(false); // New Easy Image Mode
   const [isRenderingPage, setIsRenderingPage] = useState(false); // PDF render loading state
   const pdfDocumentRef = useRef(null); // Cache for PDF document object
-  const canvasRef = useRef(null);
   const imageRef = useRef(null);
-  const cropperContainerRef = useRef(null);
   const cropBoxRef = useRef(null); // Ref for the crop box DOM element
   const frameId = useRef(null);
   const isDraggingRef = useRef(false); // Use ref for dragging state to avoid re-renders
@@ -858,9 +855,10 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   };
 
   useEffect(() => {
+    const currentUrls = objectUrlsRef.current;
     return () => {
       // Cleanup all object URLs when component unmounts
-      objectUrlsRef.current.forEach(url => URL.revokeObjectURL(url));
+      currentUrls.forEach(url => URL.revokeObjectURL(url));
     };
   }, []);
 

@@ -241,7 +241,13 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
                     const match = line.match(/^([a-dক-ঘ])[.)]\s*(.+)$/);
                     if (match) {
                         if (currentAnsLabel) {
-                            const sub = subQuestions.find(s => s.label === currentAnsLabel);
+                            let sub = null;
+                            for (const s of subQuestions) {
+                                if (s.label === currentAnsLabel) {
+                                    sub = s;
+                                    break;
+                                }
+                            }
                             if (sub) sub.answer = currentAnsText.join('\n').trim();
                         }
                         currentAnsLabel = match[1];
@@ -252,7 +258,13 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
                 }
                 // Save last answer
                 if (currentAnsLabel) {
-                    const sub = subQuestions.find(s => s.label === currentAnsLabel);
+                    let sub = null;
+                    for (const s of subQuestions) {
+                        if (s.label === currentAnsLabel) {
+                            sub = s;
+                            break;
+                        }
+                    }
                     if (sub) sub.answer = currentAnsText.join('\n').trim();
                 }
                 
@@ -261,7 +273,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
                     if (sub.question && sub.answer) {
                         // Clean up marks from question text if present like (৩)
                         let qText = sub.question.trim();
-                        qText = qText.replace(/\s*[(\[]\s*[\d০-৯]+\s*[)\]]\s*$/, '');
+                        qText = qText.replace(/\s*[([ ]\s*[\d০-৯]+\s*[)\]]\s*$/, '');
                         
                         questions.push({
                             ...sectionMetadata,
@@ -323,7 +335,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
                     saveCurrentQuestion();
                     currentQuestion = { ...sectionMetadata, question: '', answer: '' };
 
-                    let text = trimmed.replace(/^[\[\d০-৯]+[।.)\s]*/, '').trim();
+                    let text = trimmed.replace(/^[[( ]\d০-৯]+[।.)\s]*/, '').trim();
                     const inlineAnswerMatch = text.match(/(answer|ans|উত্তর)\s*[:=ঃ]\s*(.*)/i);
                     if (inlineAnswerMatch) {
                         currentQuestion.question = text.substring(0, inlineAnswerMatch.index).trim();

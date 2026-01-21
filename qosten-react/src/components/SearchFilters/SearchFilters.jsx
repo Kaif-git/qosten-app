@@ -13,6 +13,49 @@ export default function SearchFilters({ filters, onFilterChange }) {
   // Local state for debounced search text
   const [localSearchText, setLocalSearchText] = React.useState(activeFilters.searchText || '');
 
+  const handleFilterChange = useCallback((keyOrMap, value) => {
+    let newFilters;
+    if (typeof keyOrMap === 'string') {
+      newFilters = { [keyOrMap]: value };
+      // Reset dependent filters
+      if (keyOrMap === 'subject') {
+        newFilters.chapter = ''; 
+        newFilters.lesson = '';
+      }
+      if (keyOrMap === 'chapter') {
+        newFilters.lesson = '';
+      }
+    } else {
+      newFilters = keyOrMap;
+    }
+
+    if (isControlled) {
+      onFilterChange(newFilters);
+    } else {
+      context.setFilters(newFilters);
+    }
+  }, [isControlled, onFilterChange, context]);
+  
+  const resetFilters = () => {
+    const resetState = {
+      searchText: '',
+      subject: '',
+      chapter: '',
+      lesson: '',
+      type: '',
+      board: '',
+      language: '',
+      flaggedStatus: '',
+      verifiedStatus: 'all'
+    };
+    
+    if (isControlled) {
+      onFilterChange(resetState);
+    } else {
+      context.setFilters(resetState);
+    }
+  };
+
   // Sync local text when filter changes externally
   useEffect(() => {
     setLocalSearchText(activeFilters.searchText || '');
@@ -26,7 +69,7 @@ export default function SearchFilters({ filters, onFilterChange }) {
       }
     }, 500);
     return () => clearTimeout(timer);
-  }, [localSearchText]);
+  }, [localSearchText, activeFilters.searchText, handleFilterChange]);
   
   // Optimization: Only use if hierarchy is not enough or for deep fields
   // For dropdown options, we only care about Subject and Chapter dependencies
@@ -37,6 +80,9 @@ export default function SearchFilters({ filters, onFilterChange }) {
           return true;
       });
   }, [allQuestions, activeFilters.subject, activeFilters.chapter]);
+
+  // Extract complex expression for subjects
+  const allQuestionsSmall = allQuestions.length < 5000 ? allQuestions : null;
 
   // 1. Subjects: Priority to Hierarchy
   const uniqueSubjects = React.useMemo(() => {
@@ -54,8 +100,8 @@ export default function SearchFilters({ filters, onFilterChange }) {
     }
 
     // Only scan allQuestions if hierarchy is missing items (rare)
-    if (allQuestions.length > 0 && allQuestions.length < 5000) { // Only scan for small datasets
-        allQuestions.forEach(q => {
+    if (allQuestionsSmall) { // Only scan for small datasets
+        allQuestionsSmall.forEach(q => {
             if (q.subject && !seen.has(q.subject)) {
                 combined.push({ name: q.subject, count: null });
                 seen.add(q.subject);
@@ -64,7 +110,10 @@ export default function SearchFilters({ filters, onFilterChange }) {
     }
 
     return combined.sort((a, b) => a.name.localeCompare(b.name));
-  }, [hierarchy, allQuestions.length < 5000 ? allQuestions : null]);
+  }, [hierarchy, allQuestionsSmall]);
+
+  // Extract complex expression for chapters
+  const allQuestionsMedium = allQuestions.length < 10000 ? allQuestions : null;
 
   // 2. Chapters: Priority to Hierarchy
   const uniqueChapters = React.useMemo(() => {
@@ -91,8 +140,8 @@ export default function SearchFilters({ filters, onFilterChange }) {
     }
 
     // Only scan local questions if specifically filtered by subject and local data might be newer
-    if (activeFilters.subject && activeFilters.subject !== 'none' && allQuestions.length < 10000) {
-        allQuestions.forEach(q => {
+    if (activeFilters.subject && activeFilters.subject !== 'none' && allQuestionsMedium) {
+        allQuestionsMedium.forEach(q => {
             if (q.subject === activeFilters.subject && q.chapter && !seen.has(q.chapter)) {
                 combined.push({ name: q.chapter, count: null });
                 seen.add(q.chapter);
@@ -101,7 +150,7 @@ export default function SearchFilters({ filters, onFilterChange }) {
     }
 
     return combined.sort((a, b) => a.name.localeCompare(b.name));
-  }, [hierarchy, activeFilters.subject, allQuestions.length < 10000 ? allQuestions : null]);
+  }, [hierarchy, activeFilters.subject, allQuestionsMedium]);
 
   // For deeper levels (Lesson, Board) we still rely on loaded questions as Hierarchy might not go that deep yet
   // MEMOIZE these expensive scans! 
@@ -118,50 +167,6 @@ export default function SearchFilters({ filters, onFilterChange }) {
     return [...new Set(getOptionsFiltered('board').map(q => q.board).filter(Boolean))].sort();
   }, [getOptionsFiltered, shouldSkipDeepScan]);
   
-  const handleFilterChange = (key, value) => {
-    const newFilters = { [key]: value };
-    // Reset dependent filters
-    if (key === 'subject') {
-       newFilters.chapter = ''; 
-       newFilters.lesson = '';
-    }
-    if (key === 'chapter') {
-       newFilters.lesson = '';
-    }
-
-    if (isControlled) {
-      // Merge with existing filters for the parent callback? 
-      // Usually parent expects just the change or the full new state.
-      // We'll pass the change and let parent handle merge, 
-      // OR we merge locally if we are supposed to pass full state.
-      // SearchFilters usually passes just the change based on previous code: onFilterChange({ [key]: value });
-      // But since we want to clear dependents, we pass multiple.
-      onFilterChange(newFilters);
-    } else {
-      context.setFilters(newFilters);
-    }
-  };
-  
-  const resetFilters = () => {
-    const resetState = {
-      searchText: '',
-      subject: '',
-      chapter: '',
-      lesson: '',
-      type: '',
-      board: '',
-      language: '',
-      flaggedStatus: '',
-      verifiedStatus: 'all'
-    };
-    
-    if (isControlled) {
-      onFilterChange(resetState);
-    } else {
-      context.setFilters(resetState);
-    }
-  };
-
   return (
     <div className="search-filters">
       <div>

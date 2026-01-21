@@ -34,7 +34,7 @@ export const detectAndFixCQ = (question) => {
         // or leading marks of the *next* part attached to the end of the text.
         // E.g. "...end of story.' [2]" where [2] is the marks for the next question.
         // We remove trailing sequence that looks like marks [num] or (num).
-        fixedText = fixedText.replace(/\s*[\[\(][\d\u09E6-\u09EF]+[\]\)]\s*$/, '');
+        fixedText = fixedText.replace(/\s*[[(][\d\u09E6-\u09EF]+[\])]\s*$/, '');
         
         fixedText = fixedText.trim();
 

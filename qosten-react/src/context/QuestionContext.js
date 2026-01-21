@@ -56,13 +56,13 @@ function questionReducer(state, action) {
       return {
         ...state,
         questions: state.questions.map(q => 
-          q.id == action.payload.id ? action.payload : q
+          q.id === action.payload.id ? action.payload : q
         )
       };
     case ACTIONS.DELETE_QUESTION:
       return {
         ...state,
-        questions: state.questions.filter(q => q.id != action.payload)
+        questions: state.questions.filter(q => q.id !== action.payload)
       };
     case ACTIONS.SET_FILTERS:
       return { ...state, currentFilters: { ...state.currentFilters, ...action.payload } };
@@ -390,7 +390,7 @@ export function QuestionProvider({ children }) {
     }
   }, []);
 
-  const uploadImageToSupabase = async (fileOrBase64) => {
+  const uploadImageToSupabase = useCallback(async (fileOrBase64) => {
     if (!supabase || !fileOrBase64) return null;
     
     // If it's already a public URL, skip upload
@@ -448,7 +448,7 @@ export function QuestionProvider({ children }) {
         console.error('  ❌ Image upload failed:', error);
         throw error;
     }
-  };
+  }, []);
 
   const processQuestionImages = useCallback(async (question) => {
       console.log('🖼️ [QuestionContext] processQuestionImages: Starting for question:', question.id || 'new');
@@ -924,7 +924,7 @@ export function QuestionProvider({ children }) {
     } finally {
       if (forcedPage === null) isFetchingRef.current = false;
     }
-  }, []);
+  }, [state.currentFilters.verifiedStatus, state.currentFilters.flaggedStatus]);
 
   const fetchAllRemaining = useCallback(async (onProgress) => {
     if (isFetchingRef.current) return;

@@ -26,8 +26,7 @@ export const detectAndFixMCQOptions = (question) => {
         
         const labelMap = { 
             '①': 'a', '②': 'b', '③': 'c', '④': 'd', '⑤': 'e',
-            '❶': 'a', '❷': 'b', '❸': 'c', '❹': 'd', '❺': 'e',
-            '①': 'a', '②': 'b', '③': 'c', '④': 'd', '⑤': 'e' 
+            '❶': 'a', '❷': 'b', '❸': 'c', '❹': 'd', '❺': 'e'
         };
         
         foundOptions = circledMatches.map(m => {
@@ -42,7 +41,7 @@ export const detectAndFixMCQOptions = (question) => {
     } 
     // Pattern 2: Standard a) b) c) d) or 1. 2. 3. 4. labels
     else {
-        const alphaPattern = /(?:^|\s+)(?:\()?([a-dক-ঘ1-4১-৪])[\)\.।]\s*(.*?)(?=\s+(?:\()?[a-dক-ঘ1-4১-৪][\)\.।]\s*|\s*(?:Correct|সঠিক|Ans|Answer)|$)/gi;
+        const alphaPattern = /(?:^|\s+)(?:\()?([a-dক-ঘ1-4১-৪])[).।]\s*(.*?)(?=\s+(?:\()?[a-dক-ঘ1-4১-৪][).।]\s*|\s*(?:Correct|সঠিক|Ans|Answer)|$)/gi;
         const alphaMatches = [...originalText.matchAll(alphaPattern)];
         
         if (alphaMatches.length >= 2) {

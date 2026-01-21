@@ -25,11 +25,6 @@ export default function Roadmap() {
     }
   };
 
-  const handleAddTestExp = (amount) => {
-    addExp(amount);
-    alert(`Added ${amount} EXP for testing!`);
-  };
-
   const getMilestoneStatus = (milestone) => {
     if (completedMilestones.includes(milestone.id)) {
       return 'completed';

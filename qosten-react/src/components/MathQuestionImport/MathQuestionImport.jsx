@@ -4,7 +4,7 @@ import QuestionPreview from '../QuestionPreview/QuestionPreview';
 import { parseMathQuestions, getMathQuestionExample } from '../../utils/mathQuestionParser';
 
 export default function MathQuestionImport() {
-  const { bulkAddQuestions, setLastBatch, getLastBatchQuestions, lastBatch, updateQuestion } = useQuestions();
+  const { bulkAddQuestions, getLastBatchQuestions, lastBatch, updateQuestion } = useQuestions();
   const [inputText, setInputText] = useState('');
   const [parsedQuestions, setParsedQuestions] = useState([]);
   const [showPreview, setShowPreview] = useState(false);

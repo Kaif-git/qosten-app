@@ -45,13 +45,13 @@ export default function BatchSizeTest() {
         batch.map(question => addQuestion(question))
       );
       
-      results.forEach(result => {
+      for (const result of results) {
         if (result.status === 'fulfilled') {
           successCount++;
         } else {
           errorCount++;
         }
-      });
+      }
     }
 
     const endTime = performance.now();

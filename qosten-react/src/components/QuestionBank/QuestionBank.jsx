@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { useQuestions, cleanText, mapDatabaseToApp } from '../../context/QuestionContext';
+import React, { useState, useEffect, useCallback } from 'react';
+import { useQuestions, mapDatabaseToApp } from '../../context/QuestionContext';
 import { questionApi } from '../../services/questionApi';
 import Statistics from '../Statistics/Statistics';
 import SearchFilters from '../SearchFilters/SearchFilters';
@@ -885,7 +885,9 @@ export default function QuestionBank() {
     hierarchy,
     // Dependency on questions.length is tricky but needed to re-evaluate when new data arrives
     // but only if the length actually changed.
-    questions.length 
+    questions.length,
+    questions,
+    setQuestions
   ]); 
   // But we need to ensure we don't refetch if already fetched. The `hasQuestions` check handles the initial case.
   
@@ -1135,7 +1137,7 @@ export default function QuestionBank() {
             const batch = currentCandidates.slice(0, 100);
             const updates = batch.map(item => item.fixed);
             
-            const result = await bulkUpdateQuestions(updates);
+            await bulkUpdateQuestions(updates);
             
             const syncedIds = new Set(batch.map(item => item.original.id));
             currentCandidates = currentCandidates.filter(item => !syncedIds.has(item.original.id));
@@ -1347,7 +1349,7 @@ export default function QuestionBank() {
             const batch = currentCandidates.slice(0, 100);
             const updates = batch.map(item => item.fixed);
             
-            const result = await bulkUpdateQuestions(updates);
+            await bulkUpdateQuestions(updates);
             
             const syncedIds = new Set(batch.map(item => item.original.id));
             currentCandidates = currentCandidates.filter(item => !syncedIds.has(item.original.id));
@@ -1377,7 +1379,6 @@ export default function QuestionBank() {
     if (!window.confirm("This will scan ALL displayed questions for corrupted MCQ formatting and attempt to fix them. Continue?")) return;
     
     setIsFixing(true);
-    let fixedCount = 0;
     
     try {
       // 1. Identify candidates from CURRENT VIEW
@@ -2077,7 +2078,6 @@ export default function QuestionBank() {
           alert(`Successfully fixed options for ${result.successCount} questions!`);
           
           // Update local state for those fixed
-          const fixedIds = new Set(candidates.map(c => c.id));
           setUnansweredMCQs(prev => prev.map(q => {
               const fixed = candidates.find(c => c.id === q.id);
               return fixed ? fixed : q;

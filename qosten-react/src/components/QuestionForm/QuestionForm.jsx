@@ -577,7 +577,7 @@ export default function QuestionForm() {
               <div style={{ marginTop: '15px' }}>
                 <img 
                   src={formData.answerimage1} 
-                  alt="Answer Image 1" 
+                  alt="Part c" 
                   style={{ maxWidth: '100%', maxHeight: '300px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'block', marginBottom: '10px' }}
                 />
                 <button 
@@ -609,7 +609,7 @@ export default function QuestionForm() {
               <div style={{ marginTop: '15px' }}>
                 <img 
                   src={formData.answerimage2} 
-                  alt="Answer Image 2" 
+                  alt="Part d" 
                   style={{ maxWidth: '100%', maxHeight: '300px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'block', marginBottom: '10px' }}
                 />
                 <button 
@@ -639,7 +639,7 @@ export default function QuestionForm() {
               <div style={{ marginTop: '15px' }}>
                 <img 
                   src={formData.answerimage3} 
-                  alt="Answer Image 3" 
+                  alt="Part a" 
                   style={{ maxWidth: '100%', maxHeight: '300px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'block', marginBottom: '10px' }}
                 />
                 <button 
@@ -669,7 +669,7 @@ export default function QuestionForm() {
               <div style={{ marginTop: '15px' }}>
                 <img 
                   src={formData.answerimage4} 
-                  alt="Answer Image 4" 
+                  alt="Part b" 
                   style={{ maxWidth: '100%', maxHeight: '300px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'block', marginBottom: '10px' }}
                 />
                 <button 

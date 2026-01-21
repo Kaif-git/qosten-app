@@ -3,7 +3,7 @@ import { useQuestions } from '../../context/QuestionContext';
 import { questionApi } from '../../services/questionApi';
 
 export default function Header() {
-  const { questions, setQuestions, refreshQuestions, bulkAddQuestions } = useQuestions();
+  const { questions, refreshQuestions, bulkAddQuestions } = useQuestions();
   const fileInputRef = useRef(null);
   const [isRefreshing, setIsRefreshing] = React.useState(false);
   const [isExporting, setIsExporting] = React.useState(false);

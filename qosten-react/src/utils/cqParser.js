@@ -351,7 +351,7 @@ export const parseCQQuestions = (text, lang = 'en') => {
                 state.hasStartedParts = true;
                 
                 // Extract marks
-                const marksMatch = partText.match(/[(\[]\s*([\d\u09E6-\u09EF]+)\s*[)\]]\s*$/);  
+                const marksMatch = partText.match(/[([ ]\s*([\d\u09E6-\u09EF]+)\s*[)\]]\s*$/);  
                 let marks = 0;
                 if (marksMatch) {
                     const bengaliNumerals = { '০': '0', '১': '1', '২': '2', '৩': '3', '৪': '4', '৫': '5', '৬': '6', '৭': '7', '৮': '8', '৯': '9' };

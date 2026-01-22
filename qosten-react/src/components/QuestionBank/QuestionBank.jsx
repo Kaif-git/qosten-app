@@ -313,6 +313,8 @@ export default function QuestionBank() {
   // Unanswered MCQ State
   const [showUnansweredMCQModal, setShowUnansweredMCQModal] = useState(false);
   const [unansweredMCQs, setUnansweredMCQs] = useState([]);
+  const [showNoOptionsMCQModal, setShowNoOptionsMCQModal] = useState(false);
+  const [noOptionsMCQs, setNoOptionsMCQs] = useState([]);
 
   // Image Placeholder MCQ State
   const [showImagePlaceholderModal, setShowImagePlaceholderModal] = useState(false);
@@ -1906,6 +1908,50 @@ export default function QuestionBank() {
     }
   };
 
+  const handleScanNoOptionsMCQs = async () => {
+    const scanAll = window.confirm("Scan ENTIRE database for MCQs without any options?\n\nClick 'OK' to scan everything\nClick 'Cancel' to scan only currently loaded questions");
+    
+    setIsSearching(true);
+    try {
+        let mcqs;
+        if (scanAll) {
+            console.log("📡 [NoOptions] Fetching all questions from database...");
+            const all = await questionApi.fetchAllQuestions();
+            const mapped = all.map(mapDatabaseToApp);
+            mcqs = mapped.filter(q => q.type === 'mcq');
+        } else {
+            mcqs = questions.filter(q => q && q.type === 'mcq');
+        }
+        
+        if (mcqs.length === 0) {
+            alert("No MCQs found to scan.");
+            setIsSearching(false);
+            return;
+        }
+
+        const isNoOptions = (q) => {
+            return !q.options || q.options.length === 0;
+        };
+
+        console.log(`🔍 [NoOptions] Scanning ${mcqs.length} questions...`);
+        const found = mcqs.filter(isNoOptions);
+
+        if (found.length === 0) {
+            alert(`Scanned ${mcqs.length} MCQs. All appear to have options.`);
+        } else {
+            const sorted = found.sort((a, b) => b.id - a.id);
+            setNoOptionsMCQs(sorted.map(q => ({ ...q, isFlagged: q.isFlagged || false })));
+            setShowNoOptionsMCQModal(true);
+        }
+
+    } catch (error) {
+        console.error("❌ [NoOptions] Error:", error);
+        alert("An error occurred while scanning MCQs.");
+    } finally {
+        setIsSearching(false);
+    }
+  };
+
   const handleScanImagePlaceholderMCQs = async () => {
     const scanAll = window.confirm("Scan ENTIRE database for MCQs with image/graph placeholders?\n\nClick 'OK' to scan everything\nClick 'Cancel' to scan only currently loaded questions");
     
@@ -2033,32 +2079,171 @@ export default function QuestionBank() {
     }
   };
 
-  const deleteUnansweredMCQs = async () => {
-      if (!window.confirm(`⚠️ WARNING: This will PERMANENTLY DELETE ${unansweredMCQs.length} unanswered questions. This action CANNOT be undone. Are you sure?`)) return;
-      
-      setIsFixing(true);
+    const deleteUnansweredMCQs = async () => {
+
+        if (!window.confirm(`⚠️ WARNING: This will PERMANENTLY DELETE ${unansweredMCQs.length} unanswered questions. This action CANNOT be undone. Are you sure?`)) return;
+
+        
+
+        setIsFixing(true);
+
+        try {
+
+            // Delete in batches
+
+            const ids = unansweredMCQs.map(q => q.id);
+
+            const BATCH_SIZE = 20;
+
+            let deletedCount = 0;
+
+            for (let i = 0; i < ids.length; i += BATCH_SIZE) {
+
+                const batch = ids.slice(i, i + BATCH_SIZE);
+
+                await Promise.all(batch.map(id => deleteQuestion(id)));
+
+                deletedCount += batch.length;
+
+            }
+
+            alert(`Successfully deleted ${deletedCount} questions.`);
+
+            setShowUnansweredMCQModal(false);
+
+            setUnansweredMCQs([]);
+
+        } catch (error) {
+
+            console.error("Error deleting questions:", error);
+
+            alert("An error occurred while deleting questions.");
+
+        } finally {
+
+            setIsFixing(false);
+
+        }
+
+    };
+
+  
+
+    const flagNoOptionsMCQs = async () => {
+
+        const unflagged = noOptionsMCQs.filter(q => !q.isFlagged);
+
+        if (unflagged.length === 0) {
+
+            alert("All these questions are already flagged!");
+
+            return;
+
+        }
+
+  
+
+        if (!window.confirm(`This will flag all ${unflagged.length} MCQs without options for review. Continue?`)) return;
+
+        
+
+        setIsFixing(true);
+
+        try {
+
+            const result = await bulkFlagQuestions(unflagged, true);
+
+            alert(`Successfully flagged ${result.successCount} questions!`);
+
+            setNoOptionsMCQs(prev => prev.map(q => ({ ...q, isFlagged: true })));
+
+        } catch (error) {
+
+            console.error("Error flagging questions:", error);
+
+            alert("Failed to flag questions.");
+
+        } finally {
+
+            setIsFixing(false);
+
+        }
+
+    };
+
+  
+
+    const toggleSingleNoOptionsFlag = async (question) => {
+
       try {
-          // Delete in batches
-          const ids = unansweredMCQs.map(q => q.id);
-          const BATCH_SIZE = 20;
-          let deletedCount = 0;
-          
-          for (let i = 0; i < ids.length; i += BATCH_SIZE) {
-              const batch = ids.slice(i, i + BATCH_SIZE);
-              await Promise.all(batch.map(id => deleteQuestion(id)));
-              deletedCount += batch.length;
+
+          const result = await bulkFlagQuestions([question], !question.isFlagged);
+
+          if (result.successCount > 0) {
+
+              setNoOptionsMCQs(prev => prev.map(q => 
+
+                  q.id === question.id ? { ...q, isFlagged: !question.isFlagged } : q
+
+              ));
+
           }
-          
-          alert(`Successfully deleted ${deletedCount} questions.`);
-          setShowUnansweredMCQModal(false);
-          setUnansweredMCQs([]);
+
       } catch (error) {
-          console.error("Error deleting questions:", error);
-          alert("An error occurred while deleting questions.");
-      } finally {
-          setIsFixing(false);
+
+          console.error("Error toggling flag:", error);
+
       }
-  };
+
+    };
+
+  
+
+    const deleteNoOptionsMCQs = async () => {
+
+        if (!window.confirm(`⚠️ WARNING: This will PERMANENTLY DELETE ${noOptionsMCQs.length} questions without options. This action CANNOT be undone. Are you sure?`)) return;
+
+        
+
+        setIsFixing(true);
+
+        try {
+
+            const ids = noOptionsMCQs.map(q => q.id);
+
+            const BATCH_SIZE = 20;
+
+            let deletedCount = 0;
+
+            for (let i = 0; i < ids.length; i += BATCH_SIZE) {
+
+                const batch = ids.slice(i, i + BATCH_SIZE);
+
+                await Promise.all(batch.map(id => deleteQuestion(id)));
+
+                deletedCount += batch.length;
+
+            }
+
+            alert(`Successfully deleted ${deletedCount} questions.`);
+
+            setShowNoOptionsMCQModal(false);
+
+            setNoOptionsMCQs([]);
+
+        } catch (error) {
+
+            console.error("Error deleting questions:", error);
+
+            alert("An error occurred while deleting questions.");
+
+        } finally {
+
+            setIsFixing(false);
+
+        }
+
+    };
 
   const fixAllUnansweredOptions = async () => {
       const candidates = unansweredMCQs
@@ -4542,6 +4727,206 @@ export default function QuestionBank() {
           </div>
         </div>
       )}
+
+      {/* No Options MCQ Detector Modal */}
+      {showNoOptionsMCQModal && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          zIndex: 10000
+        }}>
+          <div style={{
+            backgroundColor: 'white',
+            padding: '30px',
+            borderRadius: '10px',
+            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+            maxWidth: '900px',
+            width: '90%',
+            maxHeight: '90vh',
+            overflowY: 'auto',
+            display: 'flex',
+            flexDirection: 'column'
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+              <h3 style={{ margin: 0, color: '#c0392b' }}>❌ MCQs Without Options Found</h3>
+              <div style={{ display: 'flex', gap: '10px' }}>
+                <button
+                  onClick={flagNoOptionsMCQs}
+                  disabled={isFixing}
+                  style={{
+                    backgroundColor: '#e67e22',
+                    color: 'white',
+                    border: 'none',
+                    padding: '8px 16px',
+                    borderRadius: '4px',
+                    cursor: 'pointer',
+                    fontWeight: 'bold'
+                  }}
+                >
+                  🚩 Flag All ({noOptionsMCQs.length})
+                </button>
+                <button
+                  onClick={deleteNoOptionsMCQs}
+                  disabled={isFixing}
+                  style={{
+                    backgroundColor: '#c0392b',
+                    color: 'white',
+                    border: 'none',
+                    padding: '8px 16px',
+                    borderRadius: '4px',
+                    cursor: 'pointer',
+                    fontWeight: 'bold'
+                  }}
+                >
+                  🗑 Delete All
+                </button>
+                <button
+                  onClick={() => setShowNoOptionsMCQModal(false)}
+                  style={{
+                    backgroundColor: '#6c757d',
+                    color: 'white',
+                    border: 'none',
+                    padding: '8px 16px',
+                    borderRadius: '4px',
+                    cursor: 'pointer'
+                  }}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+
+            <p style={{ color: '#666', marginBottom: '20px' }}>
+              These <strong>{noOptionsMCQs.length}</strong> MCQs have no structured options in the database.
+            </p>
+
+            <div style={{ flex: 1, overflowY: 'auto' }}>
+              {noOptionsMCQs.map((q, idx) => (
+                <div key={idx} style={{ 
+                  border: '1px solid #eee', 
+                  borderRadius: '12px', 
+                  marginBottom: '15px',
+                  padding: '20px',
+                  backgroundColor: q.isFlagged ? '#f8f9fa' : '#fffaf0',
+                  opacity: q.isFlagged ? 0.7 : 1,
+                  transition: 'all 0.3s ease',
+                  boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  gap: '20px'
+                }}>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
+                        <span style={{ 
+                            fontSize: '0.75em', 
+                            padding: '2px 8px', 
+                            borderRadius: '10px', 
+                            backgroundColor: '#3498db', 
+                            color: 'white',
+                            fontWeight: 'bold'
+                        }}>
+                            ID: {q.id}
+                        </span>
+                        {q.board && (
+                            <span style={{ fontSize: '0.75em', color: '#666' }}>{q.board}</span>
+                        )}
+                        {q.isFlagged && (
+                            <span style={{ fontSize: '0.75em', color: '#e67e22', fontWeight: 'bold' }}>🚩 FLAGGED</span>
+                        )}
+                    </div>
+                    
+                    <div style={{ 
+                        fontWeight: '600', 
+                        marginBottom: '12px', 
+                        fontSize: '1.05em',
+                        color: q.isFlagged ? '#888' : '#2c3e50',
+                        textDecoration: q.isFlagged ? 'line-through' : 'none'
+                    }}>
+                        {q.questionText || q.question}
+                    </div>
+                  </div>
+
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', justifyContent: 'center' }}>
+                    <button
+                        onClick={async () => {
+                            const fixed = detectAndFixMCQOptions(q);
+                            if (fixed) {
+                                if (window.confirm('Fixed options detected. Update this question?')) {
+                                    await updateQuestion(fixed);
+                                    setNoOptionsMCQs(prev => prev.map(item => item.id === q.id ? fixed : item));
+                                }
+                            } else {
+                                alert('Could not automatically fix options for this question.');
+                            }
+                        }}
+                        style={{
+                            padding: '8px 16px',
+                            borderRadius: '6px',
+                            border: 'none',
+                            backgroundColor: '#2ecc71',
+                            color: 'white',
+                            cursor: 'pointer',
+                            fontWeight: 'bold',
+                            fontSize: '0.9em',
+                            whiteSpace: 'nowrap',
+                            boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+                        }}
+                    >
+                        🛠 Fix Options
+                    </button>
+                    <button
+                        onClick={() => toggleSingleNoOptionsFlag(q)}
+                        style={{
+                            padding: '8px 16px',
+                            borderRadius: '6px',
+                            border: 'none',
+                            backgroundColor: q.isFlagged ? '#95a5a6' : '#e67e22',
+                            color: 'white',
+                            cursor: 'pointer',
+                            fontWeight: 'bold',
+                            fontSize: '0.9em',
+                            whiteSpace: 'nowrap',
+                            boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+                        }}
+                    >
+                        {q.isFlagged ? '✓ Unflag' : '🚩 Flag Now'}
+                    </button>
+                    <button
+                        onClick={async () => {
+                            if (window.confirm('Are you sure you want to delete this question?')) {
+                                await deleteQuestion(q.id);
+                                setNoOptionsMCQs(prev => prev.filter(item => item.id !== q.id));
+                            }
+                        }}
+                        style={{
+                            padding: '8px 16px',
+                            borderRadius: '6px',
+                            border: 'none',
+                            backgroundColor: '#dc3545',
+                            color: 'white',
+                            cursor: 'pointer',
+                            fontWeight: 'bold',
+                            fontSize: '0.9em',
+                            whiteSpace: 'nowrap',
+                            boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+                        }}
+                    >
+                        🗑 Delete
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
       
       <div className="panel">
         <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
@@ -4711,6 +5096,23 @@ export default function QuestionBank() {
             }}
           >
             {isSearching ? '🔍 Scanning...' : '🔍 Scan Unanswered MCQs'}
+          </button>
+
+          <button
+            onClick={handleScanNoOptionsMCQs}
+            disabled={isSearching}
+            style={{
+              backgroundColor: '#c0392b',
+              color: 'white',
+              padding: '10px 20px',
+              borderRadius: '6px',
+              border: 'none',
+              cursor: isSearching ? 'wait' : 'pointer',
+              fontWeight: '600',
+              marginRight: '10px'
+            }}
+          >
+            {isSearching ? '🔍 Scanning...' : '❌ Scan No Options MCQs'}
           </button>
 
           <button

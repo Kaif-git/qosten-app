@@ -283,6 +283,7 @@ export default function QuestionBank() {
   const [reviewQueueInputText, setReviewQueueInputText] = useState('');
   const [showReviewQueuePreviewModal, setShowReviewQueuePreviewModal] = useState(false);
   const [reviewQueuePreviewCandidates, setReviewQueuePreviewCandidates] = useState([]);
+  const [showOnlyChangedInPreview, setShowOnlyChangedInPreview] = useState(true);
 
   // Restoring missing state for existing CQ Fixing logic
   const [showCQFixModal, setShowCQFixModal] = useState(false);
@@ -352,7 +353,7 @@ export default function QuestionBank() {
     return false;
   };
 
-  const handleRevertField = (questionId, fieldPath, originalValue) => {
+  const handleManualEdit = (questionId, fieldPath, newValue) => {
     setReviewQueuePreviewCandidates(prev => prev.map(c => {
         if (c.original.id === questionId) {
             const newFixed = { ...c.fixed };
@@ -370,9 +371,9 @@ export default function QuestionBank() {
                     }
                     current = current[key];
                 }
-                current[parts[parts.length - 1]] = originalValue;
+                current[parts[parts.length - 1]] = newValue;
             } else {
-                newFixed[fieldPath] = originalValue;
+                newFixed[fieldPath] = newValue;
             }
 
             return {
@@ -386,44 +387,73 @@ export default function QuestionBank() {
   };
 
   // Helper for highlighting text differences
-  const renderTextDiff = (oldText, newText, onRevert = null) => {
-    if (oldText === newText) return <div style={{ color: '#7f8c8d', fontSize: '12px' }}>{newText}</div>;
+  const renderTextDiff = (oldText, newText, onRevert = null, onEdit = null) => {
+    const isDifferent = oldText !== newText;
+    
     return (
-      <div style={{ position: 'relative', border: '1px solid #ffe0b2', padding: '8px', borderRadius: '6px', backgroundColor: '#fffcf5' }}>
+      <div style={{ position: 'relative', border: isDifferent ? '1px solid #ffe0b2' : '1px solid #eee', padding: '8px', borderRadius: '6px', backgroundColor: isDifferent ? '#fffcf5' : '#fafafa' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
             <div style={{ flex: 1 }}>
-                <div style={{ color: '#e74c3c', textDecoration: 'line-through', marginBottom: '4px', fontSize: '11px', backgroundColor: '#fdf2f2', padding: '2px', fontFamily: 'monospace' }}>
-                  {oldText || '(empty)'}
-                </div>
-                <div style={{ color: '#27ae60', backgroundColor: '#f2faf5', padding: '2px', fontWeight: '500', fontFamily: 'monospace', fontSize: '12px' }}>
+                {isDifferent && (
+                    <div style={{ color: '#e74c3c', textDecoration: 'line-through', marginBottom: '4px', fontSize: '11px', backgroundColor: '#fdf2f2', padding: '2px', fontFamily: 'monospace' }}>
+                      {oldText || '(empty)'}
+                    </div>
+                )}
+                <div style={{ color: isDifferent ? '#27ae60' : '#7f8c8d', backgroundColor: isDifferent ? '#f2faf5' : 'transparent', padding: '2px', fontWeight: isDifferent ? '500' : 'normal', fontFamily: 'monospace', fontSize: '12px' }}>
                   {newText || '(empty)'}
                 </div>
             </div>
-            {onRevert && (
-                <button 
-                    onClick={(e) => {
-                        e.stopPropagation();
-                        onRevert();
-                    }}
-                    title="Undo this change (revert to original)"
-                    style={{ 
-                        marginLeft: '10px', 
-                        padding: '4px 8px', 
-                        fontSize: '14px', 
-                        cursor: 'pointer',
-                        backgroundColor: 'white',
-                        border: '1px solid #e67e22',
-                        color: '#e67e22',
-                        borderRadius: '4px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        boxShadow: '0 1px 3px rgba(0,0,0,0.1)'
-                    }}
-                >
-                    ↩️
-                </button>
-            )}
+            <div style={{ display: 'flex', gap: '5px', marginLeft: '10px' }}>
+                {onEdit && (
+                    <button 
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            const val = window.prompt("Edit text:", newText);
+                            if (val !== null) onEdit(val);
+                        }}
+                        title="Manually edit this field"
+                        style={{ 
+                            padding: '4px 8px', 
+                            fontSize: '14px', 
+                            cursor: 'pointer',
+                            backgroundColor: 'white',
+                            border: '1px solid #3498db',
+                            color: '#3498db',
+                            borderRadius: '4px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            boxShadow: '0 1px 3px rgba(0,0,0,0.1)'
+                        }}
+                    >
+                        ✏️
+                    </button>
+                )}
+                {onRevert && isDifferent && (
+                    <button 
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            onRevert();
+                        }}
+                        title="Undo this change (revert to original)"
+                        style={{ 
+                            padding: '4px 8px', 
+                            fontSize: '14px', 
+                            cursor: 'pointer',
+                            backgroundColor: 'white',
+                            border: '1px solid #e67e22',
+                            color: '#e67e22',
+                            borderRadius: '4px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            boxShadow: '0 1px 3px rgba(0,0,0,0.1)'
+                        }}
+                    >
+                        ↩️
+                    </button>
+                )}
+            </div>
         </div>
       </div>
     );
@@ -569,6 +599,10 @@ export default function QuestionBank() {
           const improved = parsedMap.get(original.id.toString());
           
           if (improved) {
+            console.log(`🎯 [ReviewQueue] Targeting ID (Map): ${original.id}`);
+            console.log('📄 [ReviewQueue] Original (Full):', fullOriginal);
+            console.log('🆕 [ReviewQueue] New (Improved):', improved);
+
             const fixed = {
               ...fullOriginal,
               ...improved,
@@ -576,6 +610,9 @@ export default function QuestionBank() {
               isVerified: true,
               inReviewQueue: false
             };
+
+            console.log('✅ [ReviewQueue] Final State:', fixed);
+
             candidates.push({
               original: fullOriginal,
               fixed: fixed,
@@ -601,6 +638,10 @@ export default function QuestionBank() {
           const fullOriginal = fullQuestionsMap.get(original.id.toString()) || original;
           const improved = parsedQuestions[i];
           
+          console.log(`🎯 [ReviewQueue] Targeting ID (Index ${i}): ${original.id}`);
+          console.log('📄 [ReviewQueue] Original (Full):', fullOriginal);
+          console.log('🆕 [ReviewQueue] New (Improved):', improved);
+
           const fixed = {
             ...fullOriginal,
             ...improved,
@@ -608,6 +649,9 @@ export default function QuestionBank() {
             isVerified: true,
             inReviewQueue: false
           };
+
+          console.log('✅ [ReviewQueue] Final State:', fixed);
+
           candidates.push({
             original: fullOriginal,
             fixed: fixed,
@@ -6183,7 +6227,7 @@ export default function QuestionBank() {
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
               <div>
                 <h2 style={{ margin: 0, color: '#2c3e50' }}>🔎 Review Changes Preview</h2>
-                <div style={{ display: 'flex', gap: '20px', marginTop: '5px' }}>
+                <div style={{ display: 'flex', gap: '20px', marginTop: '5px', alignItems: 'center' }}>
                   <span style={{ color: '#27ae60', fontWeight: 'bold' }}>
                     🛠️ Fixing: {reviewQueuePreviewCandidates.filter(c => c.isChanged).length}
                   </span>
@@ -6193,6 +6237,28 @@ export default function QuestionBank() {
                   <span style={{ color: '#34495e', fontWeight: 'bold' }}>
                     📊 Total: {reviewQueuePreviewCandidates.length}
                   </span>
+                  
+                  <label style={{ 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    gap: '8px', 
+                    marginLeft: '20px', 
+                    cursor: 'pointer',
+                    backgroundColor: '#f1f2f6',
+                    padding: '4px 12px',
+                    borderRadius: '20px',
+                    fontSize: '13px',
+                    color: '#2f3542',
+                    fontWeight: '600'
+                  }}>
+                    <input 
+                      type="checkbox" 
+                      checked={showOnlyChangedInPreview}
+                      onChange={(e) => setShowOnlyChangedInPreview(e.target.checked)}
+                      style={{ cursor: 'pointer' }}
+                    />
+                    Show Only Changed
+                  </label>
                 </div>
               </div>
               <button 
@@ -6205,23 +6271,33 @@ export default function QuestionBank() {
             </div>
 
             <div style={{ flex: 1, overflowY: 'auto', border: '1px solid #eee', borderRadius: '8px', padding: '10px' }}>
-              {reviewQueuePreviewCandidates.map((candidate, idx) => {
+              {reviewQueuePreviewCandidates
+                .filter(candidate => !showOnlyChangedInPreview || candidate.isChanged)
+                .map((candidate, idx) => {
                 const { original: orig, fixed } = candidate;
-                if (!candidate.isChanged) return null; // Only show changed ones in detail
+                const isChanged = candidate.isChanged;
 
                 return (
                   <div key={orig.id} style={{ 
                     padding: '20px', 
                     marginBottom: '20px', 
                     backgroundColor: '#fff',
-                    border: '2px solid #e67e22',
+                    border: isChanged ? '2px solid #e67e22' : '1px solid #ddd',
                     borderRadius: '12px',
-                    boxShadow: '0 2px 8px rgba(0,0,0,0.05)'
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
+                    opacity: isChanged ? 1 : 0.8
                   }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '15px', borderBottom: '2px solid #eee', paddingBottom: '10px' }}>
                       <span style={{ fontWeight: 'bold', fontSize: '16px', color: '#2c3e50' }}>Question ID: {orig.id}</span>
-                      <span style={{ color: '#e67e22', fontWeight: 'bold', fontSize: '12px', backgroundColor: '#fff3e0', padding: '4px 10px', borderRadius: '20px' }}>
-                        MODIFIED
+                      <span style={{ 
+                        color: isChanged ? '#e67e22' : '#7f8c8d', 
+                        fontWeight: 'bold', 
+                        fontSize: '12px', 
+                        backgroundColor: isChanged ? '#fff3e0' : '#f8f9fa', 
+                        padding: '4px 10px', 
+                        borderRadius: '20px' 
+                      }}>
+                        {isChanged ? 'MODIFIED' : 'NO AUTO-CHANGES'}
                       </span>
                     </div>
 
@@ -6231,7 +6307,8 @@ export default function QuestionBank() {
                       {renderTextDiff(
                           orig.questionText || orig.question, 
                           fixed.questionText || fixed.question,
-                          () => handleRevertField(orig.id, 'questionText', orig.questionText || orig.question)
+                          () => handleManualEdit(orig.id, 'questionText', orig.questionText || orig.question),
+                          (val) => handleManualEdit(orig.id, 'questionText', val)
                       )}
                     </div>
 
@@ -6248,7 +6325,8 @@ export default function QuestionBank() {
                                 {renderTextDiff(
                                     oldOpt.text, 
                                     newOpt.text,
-                                    () => handleRevertField(orig.id, `options.${i}.text`, oldOpt.text)
+                                    () => handleManualEdit(orig.id, `options.${i}.text`, oldOpt.text),
+                                    (val) => handleManualEdit(orig.id, `options.${i}.text`, val)
                                 )}
                               </div>
                             </div>
@@ -6261,7 +6339,8 @@ export default function QuestionBank() {
                             {renderTextDiff(
                                 orig.correctAnswer, 
                                 fixed.correctAnswer,
-                                () => handleRevertField(orig.id, 'correctAnswer', orig.correctAnswer)
+                                () => handleManualEdit(orig.id, 'correctAnswer', orig.correctAnswer),
+                                (val) => handleManualEdit(orig.id, 'correctAnswer', val)
                             )}
                           </div>
                           <div>
@@ -6269,7 +6348,8 @@ export default function QuestionBank() {
                             {renderTextDiff(
                                 orig.explanation, 
                                 fixed.explanation,
-                                () => handleRevertField(orig.id, 'explanation', orig.explanation)
+                                () => handleManualEdit(orig.id, 'explanation', orig.explanation),
+                                (val) => handleManualEdit(orig.id, 'explanation', val)
                             )}
                           </div>
                         </div>
@@ -6290,13 +6370,15 @@ export default function QuestionBank() {
                                 {renderTextDiff(
                                     oldPart.text, 
                                     newPart.text,
-                                    () => handleRevertField(orig.id, `parts.${i}.text`, oldPart.text)
+                                    () => handleManualEdit(orig.id, `parts.${i}.text`, oldPart.text),
+                                    (val) => handleManualEdit(orig.id, `parts.${i}.text`, val)
                                 )}
                                 <div style={{ fontSize: '11px', color: '#999', marginTop: '5px' }}>Answer:</div>
                                 {renderTextDiff(
                                     oldPart.answer, 
                                     newPart.answer,
-                                    () => handleRevertField(orig.id, `parts.${i}.answer`, oldPart.answer)
+                                    () => handleManualEdit(orig.id, `parts.${i}.answer`, oldPart.answer),
+                                    (val) => handleManualEdit(orig.id, `parts.${i}.answer`, val)
                                 )}
                               </div>
                             </div>
@@ -6312,27 +6394,14 @@ export default function QuestionBank() {
                         {renderTextDiff(
                             orig.answer, 
                             fixed.answer,
-                            () => handleRevertField(orig.id, 'answer', orig.answer)
+                            () => handleManualEdit(orig.id, 'answer', orig.answer),
+                            (val) => handleManualEdit(orig.id, 'answer', val)
                         )}
                       </div>
                     )}
                   </div>
                 );
               })}
-
-              {/* Collapsed Unchanged Items */}
-              {reviewQueuePreviewCandidates.some(c => !c.isChanged) && (
-                <div style={{ 
-                  padding: '15px', 
-                  backgroundColor: '#f8f9fa', 
-                  borderRadius: '8px', 
-                  textAlign: 'center', 
-                  color: '#7f8c8d',
-                  border: '1px dashed #ccc'
-                }}>
-                  + {reviewQueuePreviewCandidates.filter(c => !c.isChanged).length} Unchanged questions will be verified and de-queued without modifications.
-                </div>
-              )}
             </div>
 
             <div style={{ marginTop: '20px', display: 'flex', gap: '15px' }}>

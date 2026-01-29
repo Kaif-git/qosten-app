@@ -120,11 +120,12 @@ export function parseMCQQuestions(text) {
     let inQuestion = false;
     
     const isOptionLine = (line, inQuestion, questionBuffer, currentQuestion, inExplanation) => {
-      const isNumericOption = line.match(/^\s*([1-4]|[১-৪])[).।]\s+/);
-      // Updated regex to support Roman numerals i, ii, iii, iv
-      const isAlphaOption = line.match(/^\s*([a-dক-ঘi]{1,3})[).।]\s+/) || line.match(/\s+([a-dক-ঘi]{1,3})\)\s+/);
-      // Ensure it doesn't match metadata markers
-      const isMetadataLine = line.match(/^\*{0,2}\[?\s*(Correct|সঠিক|Explanation|ব্যাখ্যা|Bekkha|Subject|বিষয়|Chapter|অধ্যায়|Lesson|পাঠ|Board|বোর্ড)/i);
+      // Use \s* instead of \s+ after delimiter to support cases without spaces
+      const isNumericOption = line.match(/^\s*([1-4]|[১-৪])[).।]\s*/);
+      // Updated regex to support Roman numerals i, ii, iii, iv and optional space after delimiter
+      const isAlphaOption = line.match(/^\s*([a-dক-ঘi]{1,3})[).।]\s*/) || line.match(/\s+([a-dক-ঘi]{1,3})\)\s*/);
+      // Ensure it doesn't match metadata markers (added বিষয় alternate spelling)
+      const isMetadataLine = line.match(/^\*{0,2}\[?\s*(Correct|সঠিক|Explanation|ব্যাখ্যা|Bekkha|Subject|বিষয়|বিষয়|Chapter|অধ্যায়|Lesson|পাঠ|Board|বোর্ড)/i);
       
       return !isMetadataLine && (isAlphaOption || (isNumericOption && !line.startsWith('**'))) && 
              !inExplanation && !line.startsWith('[') && 
@@ -147,7 +148,7 @@ export function parseMCQQuestions(text) {
         currentQuestion.id = match[1].trim();
       }
       // Subject/বিষয় - If we encounter a new subject, save the current question first
-      else if (line.match(/^\*{0,2}\[\s*(Subject|বিষয়)\s*:\s*(.+?)\s*\]\*{0,2}$/i)) {
+      else if (line.match(/^\*{0,2}\[\s*(Subject|বিষয়|বিষয়)\s*:\s*(.+?)\s*\]\*{0,2}$/i)) {
         console.log('  ✅ Found Subject line:', line.substring(0, 80));
         // Save previous question if it exists and is valid
         if (currentQuestion.questionText && currentQuestion.options.length > 0) {
@@ -181,7 +182,7 @@ export function parseMCQQuestions(text) {
         explanationBuffer = [];
         questionBuffer = [];
         
-        const match = line.match(/^\*{0,2}\[\s*(Subject|বিষয়)\s*:\s*(.+?)\s*\]\*{0,2}$/i);
+        const match = line.match(/^\*{0,2}\[\s*(Subject|বিষয়|বিষয়)\s*:\s*(.+?)\s*\]\*{0,2}$/i);
         currentQuestion.subject = match[2].trim();
       }
       // Chapter/অধ্যায়
@@ -245,10 +246,10 @@ export function parseMCQQuestions(text) {
         }
       }
             // Parse question number and text
-            // Support: 1., **1.**, Question 1:, **Question 1:**
-            else if (line.match(/^(\*{0,2})\s*(Question\s*)?[\d০-৯]+[\.।:]/i)) {
-              const fullMatch = line.match(/^(\*{0,2})\s*(Question\s*)?([\d০-৯]+)[\.।:]/i);
-              const qNum = fullMatch[3];
+            // Support: 1., **1.**, Question 1:, **Question 1:**, প্রশ্ন ১.
+            else if (line.match(/^(\*{0,2})\s*((Question|প্রশ্ন)\s*)?[\d০-৯]+[\.।:]/i)) {
+              const fullMatch = line.match(/^(\*{0,2})\s*((Question|প্রশ্ন)\s*)?([\d০-৯]+)[\.।:]/i);
+              const qNum = fullMatch[4];
               console.log(`  🔍 Found potential question number: ${qNum}`);
       
               // SAVE PREVIOUS QUESTION if it exists and has some content
@@ -283,7 +284,7 @@ export function parseMCQQuestions(text) {
               inQuestion = true;
               questionBuffer = [];
               // Remove the question number marker
-              const questionText = line.replace(/^(\*{0,2})\s*(Question\s*)?[\d০-৯]+[\.।:]\*{0,2}\s*/i, '').trim();
+              const questionText = line.replace(/^(\*{0,2})\s*((Question|প্রশ্ন)\s*)?[\d০-৯]+[\.।:]\*{0,2}\s*/i, '').trim();
               console.log('  ✅ Found Question text line:', questionText.substring(0, 60) + '...');
               if (questionText) {
                 questionBuffer.push(questionText);
@@ -383,8 +384,11 @@ export function parseMCQQuestions(text) {
       }
       // Collect explanation lines
       else if (inExplanation) {
-        // Stop at next question set marker or metadata (handle both English and Bengali)
-        if (line.match(/^\*{0,2}\[\s*(Subject|বিষয়|বিষয়)\s*:/i) || line.match(/^[#*\s-/]*(Question\s*Set|প্রশ্ন\s*সেট)\s*[\d০-৯]+/i) || line.match(/^[\s-]*---[\s-]*$/)) {
+        // Stop at next question set marker, metadata or new question marker
+        if (line.match(/^\*{0,2}\[\s*(Subject|বিষয়|বিষয়)\s*:/i) || 
+            line.match(/^[#*\s-/]*(Question\s*Set|প্রশ্ন\s*সেট)\s*[\d০-৯]+/i) || 
+            line.match(/^(\*{0,2})\s*((Question|প্রশ্ন)\s*)?[\d০-৯]+[\.।:]/i) ||
+            line.match(/^[\s-]*---[\s-]*$/)) {
           // This is the start of next question, process current one
           if (explanationBuffer.length > 0) {
             currentQuestion.explanation = explanationBuffer.join('\n').trim();
@@ -419,7 +423,7 @@ export function parseMCQQuestions(text) {
              continue;
           }
 
-          // Process this line as metadata
+          // Process this line as metadata or question start
           i--;
           continue;
         }
@@ -433,7 +437,8 @@ export function parseMCQQuestions(text) {
       }
       // Continue collecting question text if in question mode
       // Stop if an option label is found at the beginning of the line
-      else if (inQuestion && !line.match(/^[a-dক-ঘ]\)/)) {
+      // Improved regex to match what isOptionLine matches
+      else if (inQuestion && !line.match(/^\s*([a-dক-ঘi1-4১-৪]{1,3})[).।]/)) {
         // Also stop if new metadata block is found (case where options are missing)
         if (line.match(/^\*{0,2}\[\s*(Subject|বিষয়|বিষয়|Chapter|অধ্যায়|Lesson|পাঠ|Board|বোর্ড)\s*:/i)) {
             // New question starting, save current one

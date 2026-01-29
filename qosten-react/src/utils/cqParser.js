@@ -496,11 +496,7 @@ export const parseCQQuestions = (text, lang = 'en') => {
                         }
                     }
                 } else {
-                    // Split the line if it contains multiple answers like "a. ... b. ... c. ..."
-                    const multiPartRegex = /\s+([b-dক-ঘ])[.:)।]\s+/i;
-                    if (multiPartRegex.test(line) && state.currentAnswerPart) {
-                        splitAndAssign(line, state.currentAnswerPart.letter);
-                    } else if (state.currentAnswerPart) {
+                    if (state.currentAnswerPart) {
                         // Continuation line
                         if (!state.currentAnswerPart.answer) {
                             state.currentAnswerPart.answer = line;

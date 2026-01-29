@@ -1,3 +1,30 @@
+const BENGALI_TO_ENGLISH = { 'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd' };
+
+const assignPartAnswer = (letter, content, currentQuestion, state) => {
+    const enLetter = BENGALI_TO_ENGLISH[letter] || letter.toLowerCase();
+    const targetPart = currentQuestion.parts.find(p => p.letter === enLetter);
+    if (targetPart) {
+        targetPart.answer = content.trim();
+        state.currentAnswerPart = targetPart;
+    }
+};
+
+const splitAndAssignParts = (text, startLetter, currentQuestion, state) => {
+    const multiPartRegex = /\s+([a-dক-ঘ])[.:)।]\s+/gi;
+    let lastIndex = 0;
+    let currentLetter = startLetter;
+    let match;
+    
+    while ((match = multiPartRegex.exec(text)) !== null) {
+        const content = text.substring(lastIndex, match.index);
+        assignPartAnswer(currentLetter, content, currentQuestion, state);
+        currentLetter = match[1];
+        lastIndex = multiPartRegex.lastIndex;
+    }
+    // Assign the remainder
+    assignPartAnswer(currentLetter, text.substring(lastIndex), currentQuestion, state);
+};
+
 /**
  * Parse CQ (Creative Questions) from text.
  * Supports both English and Bangla formats.
@@ -437,44 +464,16 @@ export const parseCQQuestions = (text, lang = 'en') => {
                 const partRegex = /^(?:Part\s+)?([a-dক-ঘ])[:.)।]\s*(.*)/i;
                 const partMatch = line.match(partRegex);
                 
-                const splitAndAssign = (text, startLetter) => {
-                    const multiPartRegex = /\s+([a-dক-ঘ])[.:)।]\s+/gi;
-                    let lastIndex = 0;
-                    let currentLetter = startLetter;
-                    let match;
-                    
-                    // Helper to find and assign
-                    const assign = (letter, content) => {
-                        const bengaliToEnglish = { 'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd' };
-                        const enLetter = bengaliToEnglish[letter] || letter.toLowerCase();
-                        const targetPart = currentQuestion.parts.find(p => p.letter === enLetter);
-                        if (targetPart) {
-                            targetPart.answer = content.trim();
-                            state.currentAnswerPart = targetPart;
-                        }
-                    };
-
-                    while ((match = multiPartRegex.exec(text)) !== null) {
-                        const content = text.substring(lastIndex, match.index);
-                        assign(currentLetter, content);
-                        currentLetter = match[1];
-                        lastIndex = multiPartRegex.lastIndex;
-                    }
-                    // Assign the remainder
-                    assign(currentLetter, text.substring(lastIndex));
-                };
-
                 if (partMatch) {
                     let partLetter = partMatch[1].toLowerCase();
                     const partContent = partMatch[2].trim();
                     
                     // Convert Bengali letters consistently
-                    const bengaliToEnglish = { 'ক': 'a', 'খ': 'b', 'গ': 'c', 'ঘ': 'd' };
-                    if (bengaliToEnglish[partLetter]) partLetter = bengaliToEnglish[partLetter];
+                    if (BENGALI_TO_ENGLISH[partLetter]) partLetter = BENGALI_TO_ENGLISH[partLetter];
 
                     // Check if this line contains more parts
                     if (/\s+([a-dক-ঘ])[.:)।]\s+/i.test(partContent)) {
-                        splitAndAssign(partContent, partLetter);
+                        splitAndAssignParts(partContent, partLetter, currentQuestion, state);
                     } else {
                         const part = currentQuestion.parts.find(p => p.letter === partLetter);
                         if (part) {

@@ -247,8 +247,8 @@ export function parseMCQQuestions(text) {
       }
             // Parse question number and text
             // Support: 1., **1.**, Question 1:, **Question 1:**, প্রশ্ন ১.
-            else if (line.match(/^(\*{0,2})\s*((Question|প্রশ্ন)\s*)?[\d০-৯]+[\.।:]/i)) {
-              const fullMatch = line.match(/^(\*{0,2})\s*((Question|প্রশ্ন)\s*)?([\d০-৯]+)[\.।:]/i);
+            else if (line.match(/^(\*{0,2})\s*((Question|প্রশ্ন)\s*)?[\d০-৯]+[.।:]/i)) {
+              const fullMatch = line.match(/^(\*{0,2})\s*((Question|প্রশ্ন)\s*)?([\d০-৯]+)[.।:]/i);
               const qNum = fullMatch[4];
               console.log(`  🔍 Found potential question number: ${qNum}`);
       
@@ -284,7 +284,7 @@ export function parseMCQQuestions(text) {
               inQuestion = true;
               questionBuffer = [];
               // Remove the question number marker
-              const questionText = line.replace(/^(\*{0,2})\s*((Question|প্রশ্ন)\s*)?[\d০-৯]+[\.।:]\*{0,2}\s*/i, '').trim();
+              const questionText = line.replace(/^(\*{0,2})\s*((Question|প্রশ্ন)\s*)?[\d০-৯]+[.।:]\*{0,2}\s*/i, '').trim();
               console.log('  ✅ Found Question text line:', questionText.substring(0, 60) + '...');
               if (questionText) {
                 questionBuffer.push(questionText);
@@ -387,7 +387,7 @@ export function parseMCQQuestions(text) {
         // Stop at next question set marker, metadata or new question marker
         if (line.match(/^\*{0,2}\[\s*(Subject|বিষয়|বিষয়)\s*:/i) || 
             line.match(/^[#*\s-/]*(Question\s*Set|প্রশ্ন\s*সেট)\s*[\d০-৯]+/i) || 
-            line.match(/^(\*{0,2})\s*((Question|প্রশ্ন)\s*)?[\d০-৯]+[\.।:]/i) ||
+            line.match(/^(\*{0,2})\s*((Question|প্রশ্ন)\s*)?[\d০-৯]+[.।:]/i) ||
             line.match(/^[\s-]*---[\s-]*$/)) {
           // This is the start of next question, process current one
           if (explanationBuffer.length > 0) {

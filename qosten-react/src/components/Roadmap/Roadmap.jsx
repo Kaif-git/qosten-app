@@ -16,7 +16,7 @@ const milestones = [
 ];
 
 export default function Roadmap() {
-  const { currentExp, completedMilestones, completeMilestone, addExp, bonds } = useShop();
+  const { currentExp, completedMilestones, completeMilestone, bonds } = useShop();
 
   const handleClaimReward = (milestone) => {
     const success = completeMilestone(milestone.id, milestone.bonds);

@@ -51,7 +51,7 @@ const EasyCropper = ({
     // Initial sync with parent ref
     useEffect(() => {
         cropAreaRef.current = cropArea;
-    }, []);
+    }, [cropArea, cropAreaRef]);
 
     const updateCropBoxDOM = useCallback((x, y, w, h) => {
         if (cropBoxRef.current) {
@@ -479,9 +479,6 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     cropAreaRef.current = cropArea;
   }, [cropArea]);
 
-  const [isDragging, setIsDragging] = useState(false);
-  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
-  const [pdfArrayBuffer, setPdfArrayBuffer] = useState(null); // Store PDF data
   const [selectedQuestions, setSelectedQuestions] = useState(new Set());
   const [selectedBanglaQuestions, setSelectedBanglaQuestions] = useState(new Set());
   const [showBulkEditor, setShowBulkEditor] = useState(false);
@@ -1022,7 +1019,6 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
         try {
           const arrayBuffer = reader.result;
           const uint8Array = new Uint8Array(arrayBuffer);
-          setPdfArrayBuffer(uint8Array.slice());
           
           const loadingTask = pdfjsLib.getDocument({ data: uint8Array.slice() });
           const pdf = await loadingTask.promise;
@@ -1064,7 +1060,6 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       setSourceDocType('image');
       setPdfAsImage(null);
       setPdfPages([]);
-      setPdfArrayBuffer(null);
       pdfDocumentRef.current = null;
     }
   };
@@ -1176,7 +1171,6 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     
     isDraggingRef.current = true;
     dragStartRef.current = { x: x - cropAreaRef.current.x, y: y - cropAreaRef.current.y };
-    setIsDragging(true);
   };
   
   const handleMouseMove = (e) => {
@@ -1207,7 +1201,6 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     if (!isDraggingRef.current) return;
     
     isDraggingRef.current = false;
-    setIsDragging(false);
     
     if (frameId.current) {
       cancelAnimationFrame(frameId.current);
@@ -1227,7 +1220,6 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     
     isDraggingRef.current = true;
     dragStartRef.current = { x: x - cropAreaRef.current.x, y: y - cropAreaRef.current.y };
-    setIsDragging(true);
   };
   
   const handleTouchMove = (e) => {

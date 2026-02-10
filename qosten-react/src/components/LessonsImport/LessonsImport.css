@@ -1,0 +1,77 @@
+.lessons-import-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.lesson-input {
+  width: 100%;
+  min-height: 400px;
+  font-family: monospace;
+  padding: 15px;
+  margin: 15px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.example-box {
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.example-box summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #555;
+}
+
+.example-box pre {
+  font-size: 12px;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.preview-section {
+  border-top: 2px solid #eee;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.topic-preview {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.subtopics-preview ul, .questions-preview ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.subtopics-preview li, .questions-preview li {
+  padding: 5px 0;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+.upload-btn {
+  background-color: #9b59b6;
+  color: white;
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.upload-btn:hover {
+  background-color: #8e44ad;
+}

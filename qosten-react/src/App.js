@@ -19,6 +19,8 @@ import BatchSizeTest from './components/BatchSizeTest/BatchSizeTest';
 import TranslationTest from './components/TranslationTest/TranslationTest';
 import ChapterOverview from './components/ChapterOverview/ChapterOverview';
 import OverviewUpload from './components/OverviewUpload/OverviewUpload';
+import LessonsImport from './components/LessonsImport/LessonsImport';
+import LessonsView from './components/LessonsView/LessonsView';
 
 function App() {
   return (
@@ -50,6 +52,8 @@ function App() {
                 <Route path="/translate-test" element={<TranslationTest />} />
                 <Route path="/overview" element={<ChapterOverview />} />
                 <Route path="/overview-upload" element={<OverviewUpload />} />
+                <Route path="/lessons" element={<LessonsImport />} />
+                <Route path="/lessons-view" element={<LessonsView />} />
               </Routes>
             </div>
           </BrowserRouter>

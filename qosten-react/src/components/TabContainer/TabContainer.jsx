@@ -24,6 +24,8 @@ export default function TabContainer() {
       <NavLink to="/prompts" style={({isActive}) => ({...tabStyle, background: isActive ? '#2196F3' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>🤖 AI Prompts</NavLink>
       <NavLink to="/overview" style={({isActive}) => ({...tabStyle, background: isActive ? '#16a085' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>📚 Chapter Overview</NavLink>
       <NavLink to="/overview-upload" style={({isActive}) => ({...tabStyle, background: isActive ? '#27ae60' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>⬆️ Upload Overview</NavLink>
+      <NavLink to="/lessons" style={({isActive}) => ({...tabStyle, background: isActive ? '#9b59b6' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>📖 Import Lessons</NavLink>
+      <NavLink to="/lessons-view" style={({isActive}) => ({...tabStyle, background: isActive ? '#3498db' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>📚 Lesson Library</NavLink>
       {/* <NavLink to="/shop" style={({isActive}) => ({...tabStyle, background: isActive ? '#764ba2' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>🏪 Shop</NavLink> */}
       {/* <NavLink to="/roadmap" style={({isActive}) => ({...tabStyle, background: isActive ? '#f5576c' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>🗺️ Roadmap</NavLink> */}
       <NavLink to="/import-cq" style={({isActive}) => ({...tabStyle, background: isActive ? '#4CAF50' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>Import CQ</NavLink>

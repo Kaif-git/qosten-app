@@ -49,10 +49,6 @@ export default function LessonsView() {
     setEditedData(null);
   };
 
-  const handleTopicChange = (field, value) => {
-    setEditedData({ ...editedData, [field]: value });
-  };
-
   const handleSubtopicChange = (stId, field, value) => {
     const updatedSubtopics = editedData.subtopics.map(st => 
       st.id === stId ? { ...st, [field]: value } : st

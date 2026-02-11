@@ -63,6 +63,42 @@
   border-bottom: 1px solid #f9f9f9;
 }
 
+.questions-list-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.q-preview-item {
+  background: #fdfdfd;
+  padding: 10px;
+  border: 1px dashed #ddd;
+  border-radius: 4px;
+}
+
+.options-preview {
+  list-style: none !important;
+  margin: 5px 0;
+}
+
+.options-preview li {
+  font-size: 13px;
+  color: #666;
+  padding: 2px 8px !important;
+  border: none !important;
+}
+
+.options-preview li.correct {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.exp-preview {
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+}
+
 .upload-btn {
   background-color: #9b59b6;
   color: white;

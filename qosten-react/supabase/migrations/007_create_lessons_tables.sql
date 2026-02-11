@@ -1,10 +1,10 @@
 -- Drop existing tables if they exist to ensure a clean state
-DROP TABLE IF EXISTS lesson_questions;
-DROP TABLE IF EXISTS lesson_subtopics;
-DROP TABLE IF EXISTS lesson_topics;
+DROP TABLE IF EXISTS learn_questions;
+DROP TABLE IF EXISTS learn_subtopics;
+DROP TABLE IF EXISTS learn_topics;
 
--- Create lesson_topics table
-CREATE TABLE IF NOT EXISTS lesson_topics (
+-- Create learn_topics table
+CREATE TABLE IF NOT EXISTS learn_topics (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     subject TEXT NOT NULL,
     chapter TEXT NOT NULL,
@@ -12,10 +12,10 @@ CREATE TABLE IF NOT EXISTS lesson_topics (
     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
--- Create lesson_subtopics table
-CREATE TABLE IF NOT EXISTS lesson_subtopics (
+-- Create learn_subtopics table
+CREATE TABLE IF NOT EXISTS learn_subtopics (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    topic_id UUID NOT NULL REFERENCES lesson_topics(id) ON DELETE CASCADE,
+    topic_id UUID NOT NULL REFERENCES learn_topics(id) ON DELETE CASCADE,
     title TEXT NOT NULL,
     definition TEXT,
     explanation TEXT,
@@ -26,32 +26,38 @@ CREATE TABLE IF NOT EXISTS lesson_subtopics (
     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
--- Create lesson_questions table
-CREATE TABLE IF NOT EXISTS lesson_questions (
+-- Create learn_questions table
+CREATE TABLE IF NOT EXISTS learn_questions (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    topic_id UUID NOT NULL REFERENCES lesson_topics(id) ON DELETE CASCADE,
+    topic_id UUID NOT NULL REFERENCES learn_topics(id) ON DELETE CASCADE,
     question TEXT NOT NULL,
-    answer TEXT NOT NULL,
+    answer TEXT, -- Kept for compatibility
+    option_a TEXT,
+    option_b TEXT,
+    option_c TEXT,
+    option_d TEXT,
+    correct_answer TEXT,
+    explanation TEXT,
     order_index INTEGER NOT NULL,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Add indexes for better performance
-CREATE INDEX IF NOT EXISTS idx_lesson_topics_subject_chapter ON lesson_topics(subject, chapter);
-CREATE INDEX IF NOT EXISTS idx_lesson_subtopics_topic_id ON lesson_subtopics(topic_id);
-CREATE INDEX IF NOT EXISTS idx_lesson_questions_topic_id ON lesson_questions(topic_id);
+CREATE INDEX IF NOT EXISTS idx_learn_topics_subject_chapter ON learn_topics(subject, chapter);
+CREATE INDEX IF NOT EXISTS idx_learn_subtopics_topic_id ON learn_subtopics(topic_id);
+CREATE INDEX IF NOT EXISTS idx_learn_questions_topic_id ON learn_questions(topic_id);
 
 -- Enable RLS
-ALTER TABLE lesson_topics ENABLE ROW LEVEL SECURITY;
-ALTER TABLE lesson_subtopics ENABLE ROW LEVEL SECURITY;
-ALTER TABLE lesson_questions ENABLE ROW LEVEL SECURITY;
+ALTER TABLE learn_topics ENABLE ROW LEVEL SECURITY;
+ALTER TABLE learn_subtopics ENABLE ROW LEVEL SECURITY;
+ALTER TABLE learn_questions ENABLE ROW LEVEL SECURITY;
 
--- Create simple public access policies (following project pattern)
-CREATE POLICY "Allow read access to all users for lesson_topics" ON lesson_topics FOR SELECT USING (true);
-CREATE POLICY "Allow read access to all users for lesson_subtopics" ON lesson_subtopics FOR SELECT USING (true);
-CREATE POLICY "Allow read access to all users for lesson_questions" ON lesson_questions FOR SELECT USING (true);
+-- Create simple public access policies
+CREATE POLICY "Allow read access to all users for learn_topics" ON learn_topics FOR SELECT USING (true);
+CREATE POLICY "Allow read access to all users for learn_subtopics" ON learn_subtopics FOR SELECT USING (true);
+CREATE POLICY "Allow read access to all users for learn_questions" ON learn_questions FOR SELECT USING (true);
 
--- Allow all for now (matching dev environment)
-CREATE POLICY "Allow all for lesson_topics" ON lesson_topics FOR ALL USING (true);
-CREATE POLICY "Allow all for lesson_subtopics" ON lesson_subtopics FOR ALL USING (true);
-CREATE POLICY "Allow all for lesson_questions" ON lesson_questions FOR ALL USING (true);
+-- Allow all for now
+CREATE POLICY "Allow all for learn_topics" ON learn_topics FOR ALL USING (true);
+CREATE POLICY "Allow all for learn_subtopics" ON learn_subtopics FOR ALL USING (true);
+CREATE POLICY "Allow all for learn_questions" ON learn_questions FOR ALL USING (true);

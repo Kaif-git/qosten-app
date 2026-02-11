@@ -19,20 +19,25 @@ A flower is described in the sources as a **specialised modified shoot** specifi
 *   **Common Misconceptions/Mistake:** Thinking it is a reproductive organ; it is actually a non-essential part that provides structural support.
 *   **Difficulty:** Easy.
 
-#### **Subtopic 2: The Calyx (Outer Whorl)**
-*   **Definition:** The **outermost whorl** of a flower, where each individual part is called a **sepal**.
-*   **Explanation:** Its primary function is to **protect the internal parts** of the flower from environmental factors like sun and rain, as well as from pests.
-*   **Difficulty:** Easy.
-
 ---
 
 ### **Review Questions & Answers: Plant Anatomy**
 
 **Q1: Why is a flower technically considered a "modified shoot"?**
-**A:** It is a shoot that has been specifically adapted and modified by the plant for the specialized purpose of reproduction.
+a) Because it grows from the root
+b) Because it is adapted for reproduction
+c) Because it has leaves
+d) Because it grows in summer
+**Correct: b**
+**Explanation:** It is a shoot that has been specifically adapted and modified by the plant for the specialized purpose of reproduction.
 
-**Q2: What is the difference between a "complete" and an "incomplete" flower?**
-**A:** A complete flower possesses all five whorls; if a flower lacks any of these five whorls (such as the calyx or androecium), it is called an incomplete flower.`;
+**Q2: What is the main function of the Calyx?**
+a) Reproduction
+b) Attracting insects
+c) Protection
+d) Photosynthesis
+**Correct: c**
+**Explanation:** Its primary function is to protect the internal parts of the flower from environmental factors.`;
 
 export default function LessonsImport() {
   const [inputText, setInputText] = useState('');
@@ -135,11 +140,21 @@ export default function LessonsImport() {
 
               <div className="questions-preview">
                 <h5>Questions ({topic.questions.length})</h5>
-                <ul>
+                <div className="questions-list-preview">
                   {topic.questions.map((q, qIdx) => (
-                    <li key={qIdx}>{q.question}</li>
+                    <div key={qIdx} className="q-preview-item">
+                      <p><strong>Q: {q.question}</strong></p>
+                      <ul className="options-preview">
+                        {q.options.map((opt, oIdx) => (
+                          <li key={oIdx} className={q.correct_answer === opt.label ? 'correct' : ''}>
+                            {opt.label}) {opt.text}
+                          </li>
+                        ))}
+                      </ul>
+                      {q.explanation && <p className="exp-preview"><em>Exp: {q.explanation}</em></p>}
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             </div>
           ))}

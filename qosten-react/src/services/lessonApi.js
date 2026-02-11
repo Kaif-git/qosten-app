@@ -21,7 +21,7 @@ export const lessonApi = {
       try {
         // 1. Insert Topic
         const { data: topic, error: topicError } = await supabase
-          .from('lesson_topics')
+          .from('learn_topics')
           .insert([{
             subject,
             chapter,
@@ -47,24 +47,33 @@ export const lessonApi = {
           }));
 
           const { error: stError } = await supabase
-            .from('lesson_subtopics')
+            .from('learn_subtopics')
             .insert(subtopicsToInsert);
 
           if (stError) throw stError;
           results.subtopicsCreated += subtopicsToInsert.length;
         }
 
-        // 3. Insert Questions
+        // 3. Insert Questions (MCQ Format)
         if (topicData.questions && topicData.questions.length > 0) {
-          const questionsToInsert = topicData.questions.map((q, index) => ({
-            topic_id: topic.id,
-            question: q.question,
-            answer: q.answer,
-            order_index: index
-          }));
+          const questionsToInsert = topicData.questions.map((q, index) => {
+            const findOption = (label) => q.options.find(opt => opt.label === label)?.text || '';
+            return {
+              topic_id: topic.id,
+              question: q.question,
+              option_a: findOption('a') || findOption('ক'),
+              option_b: findOption('b') || findOption('খ'),
+              option_c: findOption('c') || findOption('গ'),
+              option_d: findOption('d') || findOption('ঘ'),
+              correct_answer: q.correct_answer,
+              explanation: q.explanation,
+              order_index: index,
+              answer: q.correct_answer // Maintaining compatibility if needed
+            };
+          });
 
           const { error: qError } = await supabase
-            .from('lesson_questions')
+            .from('learn_questions')
             .insert(questionsToInsert);
 
           if (qError) throw qError;
@@ -89,33 +98,122 @@ export const lessonApi = {
 
     // Fetch topics
     const { data: topics, error: topicsError } = await supabase
-      .from('lesson_topics')
+      .from('learn_topics')
       .select('*')
       .order('created_at', { ascending: false });
 
     if (topicsError) throw topicsError;
 
     // Fetch all subtopics and questions for these topics
-    // In a large app, we might do this per-topic, but for now we'll fetch all and group them
     const { data: subtopics, error: subtopicsError } = await supabase
-      .from('lesson_subtopics')
+      .from('learn_subtopics')
       .select('*')
       .order('order_index', { ascending: true });
 
     if (subtopicsError) throw subtopicsError;
 
     const { data: questions, error: questionsError } = await supabase
-      .from('lesson_questions')
+      .from('learn_questions')
       .select('*')
       .order('order_index', { ascending: true });
 
     if (questionsError) throw questionsError;
 
+    // Map questions to include options array for frontend compatibility
+    const formattedQuestions = questions.map(q => ({
+      ...q,
+      options: [
+        { label: 'a', text: q.option_a },
+        { label: 'b', text: q.option_b },
+        { label: 'c', text: q.option_c },
+        { label: 'd', text: q.option_d }
+      ].filter(opt => opt.text) // Only include options that have text
+    }));
+
     // Grouping
     return topics.map(topic => ({
       ...topic,
       subtopics: subtopics.filter(st => st.topic_id === topic.id),
-      questions: questions.filter(q => q.topic_id === topic.id)
+      questions: formattedQuestions.filter(q => q.topic_id === topic.id)
     }));
+  },
+
+  /**
+   * Updates an existing topic and its subtopics.
+   */
+  async updateTopic(topicId, topicData) {
+    if (!supabase) throw new Error('Supabase client is not initialized');
+
+    // 1. Update Topic Title
+    const { error: topicError } = await supabase
+      .from('learn_topics')
+      .update({ title: topicData.title })
+      .eq('id', topicId);
+
+    if (topicError) throw topicError;
+
+    // 2. Update Subtopics
+    // For simplicity, we'll assume subtopics are passed with their IDs
+    for (const st of topicData.subtopics) {
+      if (st.id) {
+        const { error: stError } = await supabase
+          .from('learn_subtopics')
+          .update({
+            title: st.title,
+            definition: st.definition,
+            explanation: st.explanation,
+            shortcut: st.shortcut,
+            mistakes: st.mistakes,
+            difficulty: st.difficulty
+          })
+          .eq('id', st.id);
+        if (stError) throw stError;
+      }
+    }
+
+    return { success: true };
+  },
+
+  /**
+   * Deletes a question.
+   */
+  async deleteQuestion(questionId) {
+    if (!supabase) throw new Error('Supabase client is not initialized');
+    const { error } = await supabase
+      .from('learn_questions')
+      .delete()
+      .eq('id', questionId);
+    if (error) throw error;
+    return { success: true };
+  },
+
+  /**
+   * Adds a batch of questions to a topic.
+   */
+  async addQuestionsToTopic(topicId, questions, startOrderIndex) {
+    if (!supabase) throw new Error('Supabase client is not initialized');
+    
+    const questionsToInsert = questions.map((q, index) => {
+      const findOption = (label) => q.options.find(opt => opt.label === label)?.text || '';
+      return {
+        topic_id: topicId,
+        question: q.question,
+        option_a: findOption('a') || findOption('ক'),
+        option_b: findOption('b') || findOption('খ'),
+        option_c: findOption('c') || findOption('গ'),
+        option_d: findOption('d') || findOption('ঘ'),
+        correct_answer: q.correct_answer,
+        explanation: q.explanation,
+        order_index: startOrderIndex + index,
+        answer: q.correct_answer
+      };
+    });
+
+    const { error } = await supabase
+      .from('learn_questions')
+      .insert(questionsToInsert);
+    
+    if (error) throw error;
+    return { success: true };
   }
 };

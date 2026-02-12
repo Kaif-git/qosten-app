@@ -3,41 +3,34 @@ import { parseLessonText, validateLesson } from '../../utils/lessonParser';
 import { lessonApi } from '../../services/lessonApi';
 import './LessonsImport.css';
 
-const EXAMPLE_LESSON = `Subject: Biology
-Chapter: Reproduction
-
+const EXAMPLE_LESSON = `Subject: Biology Chapter: Reproduction
 ### **Topic: Plant Anatomy - The Flower**
+A flower is a specialised modified shoot specifically designed for reproduction.
 
-A flower is described in the sources as a **specialised modified shoot** specifically designed for the purpose of reproduction in higher plants.
-
----
-
-#### **Subtopic 1: The Thalamus**
-*   **Definition:** The usually **round tip of the floral axis** from which the various parts of the flower develop.
-*   **Explanation:** It acts as the physical base or receptacle. All other floral whorls (calyx, corolla, androecium, and gynoecium) are arranged consecutively on this axis, one after the other.
-*   **Memorizing/Understanding shortcut:** Thalamus = **"The Throne"** (The seat where all the flower parts sit).
-*   **Common Misconceptions/Mistake:** Thinking it is a reproductive organ; it is actually a non-essential part that provides structural support.
+**Subtopic 1: The Thalamus**
+*   **Definition:** The round tip of the floral axis.
+*   **Explanation:** Acts as the physical base.
+*   **Memorizing/Understanding shortcut:** Thalamus = "The Throne".
 *   **Difficulty:** Easy.
 
 ---
 
 ### **Review Questions & Answers: Plant Anatomy**
-
-**Q1: Why is a flower technically considered a "modified shoot"?**
-a) Because it grows from the root
-b) Because it is adapted for reproduction
-c) Because it has leaves
-d) Because it grows in summer
+**Q1: Why is a flower a "modified shoot"?**
+a) Grows from root
+b) Adapted for reproduction
 **Correct: b**
-**Explanation:** It is a shoot that has been specifically adapted and modified by the plant for the specialized purpose of reproduction.
+**Explanation:** Specifically adapted for reproduction.
 
-**Q2: What is the main function of the Calyx?**
-a) Reproduction
-b) Attracting insects
-c) Protection
-d) Photosynthesis
-**Correct: c**
-**Explanation:** Its primary function is to protect the internal parts of the flower from environmental factors.`;
+Subject: Biology
+Chapter: Transport in Organisms
+### **Topic: Plant and Water Relationship**
+Water is the "fluid of life".
+
+**Subtopic 1: Imbibition**
+*   **Definition:** Absorption of liquid by colloidal substances.
+*   **Difficulty:** Easy.
+`;
 
 export default function LessonsImport() {
   const [inputText, setInputText] = useState('');
@@ -72,6 +65,7 @@ export default function LessonsImport() {
       const result = await lessonApi.uploadLesson(parsedData);
       
       let message = `Upload Successful!\n\n` +
+        `- Chapters: ${result.chaptersProcessed}\n` +
         `- Topics: ${result.topicsCreated}\n` +
         `- Subtopics: ${result.subtopicsCreated}\n` +
         `- Questions: ${result.questionsCreated}`;
@@ -122,45 +116,52 @@ export default function LessonsImport() {
 
       {parsedData && (
         <div className="preview-section">
-          <h3>Preview: {parsedData.subject} - {parsedData.chapter}</h3>
-          {parsedData.topics.map((topic, tIdx) => (
-            <div key={tIdx} className="topic-preview">
-              <h4>Topic: {topic.title}</h4>
+          <h3>Preview: {parsedData.length} Chapter(s)</h3>
+          
+          {parsedData.map((chapterData, cIdx) => (
+            <div key={cIdx} className="chapter-preview panel">
+              <h4>{chapterData.subject} - {chapterData.chapter}</h4>
               
-              <div className="subtopics-preview">
-                <h5>Subtopics ({topic.subtopics.length})</h5>
-                <ul>
-                  {topic.subtopics.map((st, sIdx) => (
-                    <li key={sIdx}>
-                      <strong>{st.title}</strong> - {st.definition?.substring(0, 50)}...
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {chapterData.topics.map((topic, tIdx) => (
+                <div key={tIdx} className="topic-preview">
+                  <h5>Topic: {topic.title}</h5>
+                  
+                  <div className="subtopics-preview">
+                    <h6>Subtopics ({topic.subtopics.length})</h6>
+                    <ul>
+                      {topic.subtopics.map((st, sIdx) => (
+                        <li key={sIdx}>
+                          <strong>{st.title}</strong> - {st.definition?.substring(0, 50)}...
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-              <div className="questions-preview">
-                <h5>Questions ({topic.questions.length})</h5>
-                <div className="questions-list-preview">
-                  {topic.questions.map((q, qIdx) => (
-                    <div key={qIdx} className="q-preview-item">
-                      <p><strong>Q: {q.question}</strong></p>
-                      <ul className="options-preview">
-                        {q.options.map((opt, oIdx) => (
-                          <li key={oIdx} className={q.correct_answer === opt.label ? 'correct' : ''}>
-                            {opt.label}) {opt.text}
-                          </li>
-                        ))}
-                      </ul>
-                      {q.explanation && <p className="exp-preview"><em>Exp: {q.explanation}</em></p>}
+                  <div className="questions-preview">
+                    <h6>Questions ({topic.questions.length})</h6>
+                    <div className="questions-list-preview">
+                      {topic.questions.map((q, qIdx) => (
+                        <div key={qIdx} className="q-preview-item">
+                          <p><strong>Q: {q.question}</strong></p>
+                          <ul className="options-preview">
+                            {q.options.map((opt, oIdx) => (
+                              <li key={oIdx} className={q.correct_answer === opt.label ? 'correct' : ''}>
+                                {opt.label}) {opt.text}
+                              </li>
+                            ))}
+                          </ul>
+                          {q.explanation && <p className="exp-preview"><em>Exp: {q.explanation}</em></p>}
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
           ))}
 
           <button className="upload-btn" onClick={handleUpload} disabled={isUploading}>
-            {isUploading ? uploadStatus : 'Upload to Database'}
+            {isUploading ? uploadStatus : 'Upload All to Database'}
           </button>
         </div>
       )}

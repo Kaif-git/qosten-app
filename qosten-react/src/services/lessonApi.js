@@ -2,86 +2,92 @@ import { supabase } from './supabaseClient';
 
 export const lessonApi = {
   /**
-   * Uploads parsed lesson data (topics, subtopics, and questions) to Supabase.
+   * Uploads parsed lesson data (one or more chapters) to Supabase.
    */
   async uploadLesson(lessonData) {
     if (!supabase) {
       throw new Error('Supabase client is not initialized');
     }
 
-    const { subject, chapter, topics } = lessonData;
+    const chapters = Array.isArray(lessonData) ? lessonData : [lessonData];
     const results = {
+      chaptersProcessed: 0,
       topicsCreated: 0,
       subtopicsCreated: 0,
       questionsCreated: 0,
       errors: []
     };
 
-    for (const topicData of topics) {
-      try {
-        // 1. Insert Topic
-        const { data: topic, error: topicError } = await supabase
-          .from('learn_topics')
-          .insert([{
-            subject,
-            chapter,
-            title: topicData.title
-          }])
-          .select()
-          .single();
+    for (const chapterData of chapters) {
+      const { subject, chapter, topics } = chapterData;
+      results.chaptersProcessed++;
 
-        if (topicError) throw topicError;
-        results.topicsCreated++;
+      for (const topicData of topics) {
+        try {
+          // 1. Insert Topic
+          const { data: topic, error: topicError } = await supabase
+            .from('learn_topics')
+            .insert([{
+              subject,
+              chapter,
+              title: topicData.title
+            }])
+            .select()
+            .single();
 
-        // 2. Insert Subtopics
-        if (topicData.subtopics && topicData.subtopics.length > 0) {
-          const subtopicsToInsert = topicData.subtopics.map((st, index) => ({
-            topic_id: topic.id,
-            title: st.title,
-            definition: st.definition,
-            explanation: st.explanation,
-            shortcut: st.shortcut,
-            mistakes: st.mistakes,
-            difficulty: st.difficulty,
-            order_index: index
-          }));
+          if (topicError) throw topicError;
+          results.topicsCreated++;
 
-          const { error: stError } = await supabase
-            .from('learn_subtopics')
-            .insert(subtopicsToInsert);
-
-          if (stError) throw stError;
-          results.subtopicsCreated += subtopicsToInsert.length;
-        }
-
-        // 3. Insert Questions (MCQ Format)
-        if (topicData.questions && topicData.questions.length > 0) {
-          const questionsToInsert = topicData.questions.map((q, index) => {
-            const findOption = (label) => q.options.find(opt => opt.label === label)?.text || '';
-            return {
+          // 2. Insert Subtopics
+          if (topicData.subtopics && topicData.subtopics.length > 0) {
+            const subtopicsToInsert = topicData.subtopics.map((st, index) => ({
               topic_id: topic.id,
-              question: q.question,
-              option_a: findOption('a') || findOption('ক'),
-              option_b: findOption('b') || findOption('খ'),
-              option_c: findOption('c') || findOption('গ'),
-              option_d: findOption('d') || findOption('ঘ'),
-              correct_answer: q.correct_answer,
-              explanation: q.explanation,
-              order_index: index,
-              answer: q.correct_answer // Maintaining compatibility if needed
-            };
-          });
+              title: st.title,
+              definition: st.definition,
+              explanation: st.explanation,
+              shortcut: st.shortcut,
+              mistakes: st.mistakes,
+              difficulty: st.difficulty,
+              order_index: index
+            }));
 
-          const { error: qError } = await supabase
-            .from('learn_questions')
-            .insert(questionsToInsert);
+            const { error: stError } = await supabase
+              .from('learn_subtopics')
+              .insert(subtopicsToInsert);
 
-          if (qError) throw qError;
-          results.questionsCreated += questionsToInsert.length;
+            if (stError) throw stError;
+            results.subtopicsCreated += subtopicsToInsert.length;
+          }
+
+          // 3. Insert Questions (MCQ Format)
+          if (topicData.questions && topicData.questions.length > 0) {
+            const questionsToInsert = topicData.questions.map((q, index) => {
+              const findOption = (label) => q.options.find(opt => opt.label === label)?.text || '';
+              return {
+                topic_id: topic.id,
+                question: q.question,
+                option_a: findOption('a') || findOption('ক'),
+                option_b: findOption('b') || findOption('খ'),
+                option_c: findOption('c') || findOption('গ'),
+                option_d: findOption('d') || findOption('ঘ'),
+                correct_answer: q.correct_answer,
+                explanation: q.explanation,
+                order_index: index,
+                answer: q.correct_answer
+              };
+            });
+
+            const { error: qError } = await supabase
+              .from('learn_questions')
+              .insert(questionsToInsert);
+
+            if (qError) throw qError;
+            results.questionsCreated += questionsToInsert.length;
+          }
+        } catch (err) {
+          console.error(`Error uploading topic "${topicData.title}" in chapter "${chapter}":`, err);
+          results.errors.push(`Chapter "${chapter}", Topic "${topicData.title}": ${err.message}`);
         }
-      } catch (err) {
-        console.error(`Error uploading topic "${topicData.title}":`, err);
-        results.errors.push(`Topic "${topicData.title}": ${err.message}`);
       }
     }
 

@@ -69,6 +69,44 @@ export default function LessonsView() {
     }
   };
 
+  const handleDeleteTopic = async (topicId, topicTitle) => {
+    if (!window.confirm(`Are you sure you want to delete "${topicTitle}"? This will permanently remove all its content and questions.`)) {
+      return;
+    }
+
+    setIsUpdating(true);
+    try {
+      await lessonApi.deleteTopic(topicId);
+      setLessons(prev => prev.filter(t => t.id !== topicId));
+      if (expandedTopicId === topicId) setExpandedTopicId(null);
+      if (editMode === topicId) {
+        setEditMode(null);
+        setEditedData(null);
+      }
+    } catch (err) {
+      alert('Failed to delete lesson: ' + err.message);
+    } finally {
+      setIsUpdating(false);
+    }
+  };
+
+  const handleDeleteChapter = async (subject, chapter) => {
+    if (!window.confirm(`Are you sure you want to delete the entire chapter "${chapter}"? This will remove all lessons, subtopics, and questions within it.`)) {
+      return;
+    }
+
+    setIsUpdating(true);
+    try {
+      await lessonApi.deleteChapter(subject, chapter);
+      setLessons(prev => prev.filter(t => !(t.subject === subject && t.chapter === chapter)));
+      setExpandedTopicId(null);
+    } catch (err) {
+      alert('Failed to delete chapter: ' + err.message);
+    } finally {
+      setIsUpdating(false);
+    }
+  };
+
   const deleteQuestion = async (qId) => {
     if (!window.confirm('Are you sure you want to delete this question?')) return;
     try {
@@ -114,6 +152,18 @@ export default function LessonsView() {
     }
   };
 
+  // Group lessons by Subject and then Chapter
+  const groupedLessons = lessons.reduce((acc, topic) => {
+    const subject = topic.subject || 'Unknown';
+    const chapter = topic.chapter || 'General';
+    
+    if (!acc[subject]) acc[subject] = {};
+    if (!acc[subject][chapter]) acc[subject][chapter] = [];
+    
+    acc[subject][chapter].push(topic);
+    return acc;
+  }, {});
+
   if (loading) return <div className="loading">Loading lessons...</div>;
   if (error) return <div className="error-message">Error: {error}</div>;
 
@@ -127,149 +177,168 @@ export default function LessonsView() {
       {lessons.length === 0 ? (
         <p>No lessons found. Go to the Import tab to add some!</p>
       ) : (
-        <div className="lessons-list">
-          {lessons.map((topic) => (
-            <div key={topic.id} className={`topic-card ${expandedTopicId === topic.id ? 'expanded' : ''} ${editMode === topic.id ? 'is-editing' : ''}`}>
-              <div className="topic-header" onClick={() => toggleTopic(topic.id)}>
-                <div className="topic-main-info">
-                  <span className="subject-tag">{topic.subject}</span>
-                  <span className="chapter-name">{topic.chapter}</span>
-                  <h3 className="topic-title">{topic.title}</h3>
-                </div>
-                <div className="topic-meta">
-                  <span>{topic.subtopics.length} Subtopics</span>
-                  <span>{topic.questions.length} Questions</span>
-                  <span className="expand-icon">{expandedTopicId === topic.id ? '−' : '+'}</span>
-                </div>
-              </div>
-
-              {expandedTopicId === topic.id && (
-                <div className="topic-content">
-                  <div className="action-bar">
-                    {editMode !== topic.id ? (
-                      <button className="edit-btn" onClick={(e) => { e.stopPropagation(); startEdit(topic); }}>Edit Lesson</button>
-                    ) : (
-                      <div className="edit-actions">
-                        <button className="save-btn" onClick={saveTopicChanges} disabled={isUpdating}>
-                          {isUpdating ? 'Saving...' : 'Save All Changes'}
-                        </button>
-                        <button className="cancel-btn" onClick={cancelEdit} disabled={isUpdating}>Cancel</button>
-                      </div>
-                    )}
+        <div className="subjects-list">
+          {Object.keys(groupedLessons).map(subject => (
+            <div key={subject} className="subject-section">
+              <h3 className="subject-heading">{subject}</h3>
+              
+              {Object.keys(groupedLessons[subject]).map(chapter => (
+                <div key={chapter} className="chapter-section">
+                  <div className="chapter-header-row">
+                    <h4 className="chapter-heading">Chapter: {chapter}</h4>
+                    <button 
+                      className="delete-chapter-btn" 
+                      onClick={() => handleDeleteChapter(subject, chapter)}
+                      disabled={isUpdating}
+                    >
+                      Delete Chapter
+                    </button>
                   </div>
-
-                  <section className="subtopics-section">
-                    <h4>Study Content</h4>
-                    {(editMode === topic.id ? editedData.subtopics : topic.subtopics).map((st) => (
-                      <div key={st.id} className="subtopic-item">
-                        <div className="subtopic-title-row">
-                          {editMode === topic.id ? (
-                            <input 
-                              className="edit-input title-input"
-                              value={st.title}
-                              onChange={(e) => handleSubtopicChange(st.id, 'title', e.target.value)}
-                            />
-                          ) : (
-                            <h5>{st.title}</h5>
-                          )}
-                          <span className={`difficulty-badge ${st.difficulty?.toLowerCase()}`}>
-                            {st.difficulty}
-                          </span>
+                  
+                  <div className="lessons-list">
+                    {groupedLessons[subject][chapter].map((topic) => (
+                      <div key={topic.id} className={`topic-card ${expandedTopicId === topic.id ? 'expanded' : ''} ${editMode === topic.id ? 'is-editing' : ''}`}>
+                        <div className="topic-header" onClick={() => toggleTopic(topic.id)}>
+                          <div className="topic-main-info">
+                            <h3 className="topic-title">{topic.title}</h3>
+                          </div>
+                          <div className="topic-meta">
+                            <span>{topic.subtopics.length} Subtopics</span>
+                            <span>{topic.questions.length} Questions</span>
+                            <span className="expand-icon">{expandedTopicId === topic.id ? '−' : '+'}</span>
+                          </div>
                         </div>
-                        
-                        <div className="content-grid">
-                          <div className="content-block">
-                            <label>Definition</label>
-                            {editMode === topic.id ? (
-                              <textarea 
-                                value={st.definition}
-                                onChange={(e) => handleSubtopicChange(st.id, 'definition', e.target.value)}
-                              />
-                            ) : (
-                              <p>{st.definition}</p>
-                            )}
-                          </div>
-                          <div className="content-block">
-                            <label>Explanation</label>
-                            {editMode === topic.id ? (
-                              <textarea 
-                                value={st.explanation}
-                                onChange={(e) => handleSubtopicChange(st.id, 'explanation', e.target.value)}
-                              />
-                            ) : (
-                              <p>{st.explanation}</p>
-                            )}
-                          </div>
-                          {(st.shortcut || editMode === topic.id) && (
-                            <div className="content-block shortcut">
-                              <label>Memory Shortcut</label>
-                              {editMode === topic.id ? (
-                                <textarea 
-                                  value={st.shortcut}
-                                  onChange={(e) => handleSubtopicChange(st.id, 'shortcut', e.target.value)}
-                                />
+
+                        {expandedTopicId === topic.id && (
+                          <div className="topic-content">
+                            <div className="action-bar">
+                              {editMode !== topic.id ? (
+                                <div className="default-actions">
+                                  <button className="edit-btn" onClick={(e) => { e.stopPropagation(); startEdit(topic); }}>Edit Lesson</button>
+                                  <button className="delete-lesson-btn" onClick={(e) => { e.stopPropagation(); handleDeleteTopic(topic.id, topic.title); }} disabled={isUpdating}>Delete Lesson</button>
+                                </div>
                               ) : (
-                                <p>{st.shortcut}</p>
+                                <div className="edit-actions">
+                                  <button className="save-btn" onClick={saveTopicChanges} disabled={isUpdating}>
+                                    {isUpdating ? 'Saving...' : 'Save All Changes'}
+                                  </button>
+                                  <button className="cancel-btn" onClick={cancelEdit} disabled={isUpdating}>Cancel</button>
+                                </div>
                               )}
                             </div>
-                          )}
-                          {(st.mistakes || editMode === topic.id) && (
-                            <div className="content-block mistake">
-                              <label>Common Mistakes</label>
-                              {editMode === topic.id ? (
-                                <textarea 
-                                  value={st.mistakes}
-                                  onChange={(e) => handleSubtopicChange(st.id, 'mistakes', e.target.value)}
-                                />
-                              ) : (
-                                <p>{st.mistakes}</p>
-                              )}
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                  </section>
+                            {/* ... rest of the topic content remains the same ... */}
+                            <section className="subtopics-section">
+                              <h4>Study Content</h4>
+                              {(editMode === topic.id ? editedData.subtopics : topic.subtopics).map((st) => (
+                                <div key={st.id} className="subtopic-item">
+                                  <div className="subtopic-title-row">
+                                    {editMode === topic.id ? (
+                                      <input 
+                                        className="edit-input title-input"
+                                        value={st.title}
+                                        onChange={(e) => handleSubtopicChange(st.id, 'title', e.target.value)}
+                                      />
+                                    ) : (
+                                      <h5>{st.title}</h5>
+                                    )}
+                                    <span className={`difficulty-badge ${st.difficulty?.toLowerCase()}`}>
+                                      {st.difficulty}
+                                    </span>
+                                  </div>
+                                  
+                                  <div className="content-grid">
+                                    <div className="content-block">
+                                      <label>Definition</label>
+                                      {editMode === topic.id ? (
+                                        <textarea 
+                                          value={st.definition}
+                                          onChange={(e) => handleSubtopicChange(st.id, 'definition', e.target.value)}
+                                        />
+                                      ) : (
+                                        <p>{st.definition}</p>
+                                      )}
+                                    </div>
+                                    <div className="content-block">
+                                      <label>Explanation</label>
+                                      {editMode === topic.id ? (
+                                        <textarea 
+                                          value={st.explanation}
+                                          onChange={(e) => handleSubtopicChange(st.id, 'explanation', e.target.value)}
+                                        />
+                                      ) : (
+                                        <p>{st.explanation}</p>
+                                      )}
+                                    </div>
+                                    {(st.shortcut || editMode === topic.id) && (
+                                      <div className="content-block shortcut">
+                                        <label>Memory Shortcut</label>
+                                        {editMode === topic.id ? (
+                                          <textarea 
+                                            value={st.shortcut}
+                                            onChange={(e) => handleSubtopicChange(st.id, 'shortcut', e.target.value)}
+                                          />
+                                        ) : (
+                                          <p>{st.shortcut}</p>
+                                        )}
+                                      </div>
+                                    )}
+                                    {(st.mistakes || editMode === topic.id) && (
+                                      <div className="content-block mistake">
+                                        <label>Common Mistakes</label>
+                                        {editMode === topic.id ? (
+                                          <textarea 
+                                            value={st.mistakes}
+                                            onChange={(e) => handleSubtopicChange(st.id, 'mistakes', e.target.value)}
+                                          />
+                                        ) : (
+                                          <p>{st.mistakes}</p>
+                                        )}
+                                      </div>
+                                    )}
+                                  </div>
+                                </div>
+                              ))}
+                            </section>
 
-                  <section className="questions-section">
-                    <div className="section-header">
-                      <h4>Review Questions</h4>
-                      {editMode === topic.id && <span className="edit-hint">(You can delete questions or batch add more below)</span>}
-                    </div>
-                    
-                    <div className="questions-grid">
-                      {(editMode === topic.id ? editedData.questions : topic.questions).map((q, idx) => (
-                        <div key={q.id} className="lesson-question-card mcq-card">
-                          <div className="q-header">
-                            <div className="q-text"><strong>Q{idx + 1}:</strong> {q.question}</div>
-                            {editMode === topic.id && (
-                              <button className="delete-q-btn" onClick={() => deleteQuestion(q.id)}>×</button>
-                            )}
-                          </div>
-                          <div className="options-list">
-                            {q.options && q.options.map((opt, oIdx) => (
-                              <div key={oIdx} className={`option-item ${q.correct_answer === opt.label ? 'correct' : ''}`}>
-                                <span className="option-label">{opt.label})</span>
-                                <span className="option-text">{opt.text}</span>
+                            <section className="questions-section">
+                              <div className="section-header">
+                                <h4>Review Questions</h4>
+                                {editMode === topic.id && <span className="edit-hint">(You can delete questions or batch add more below)</span>}
                               </div>
-                            ))}
-                          </div>
-                          {q.explanation && (
-                            <div className="explanation-text">
-                              <strong>Explanation:</strong> {q.explanation}
-                            </div>
-                          )}
-                        </div>
-                      ))}
-                    </div>
+                              
+                              <div className="questions-grid">
+                                {(editMode === topic.id ? editedData.questions : topic.questions).map((q, idx) => (
+                                  <div key={q.id} className="lesson-question-card mcq-card">
+                                    <div className="q-header">
+                                      <div className="q-text"><strong>Q{idx + 1}:</strong> {q.question}</div>
+                                      {editMode === topic.id && (
+                                        <button className="delete-q-btn" onClick={() => deleteQuestion(q.id)}>×</button>
+                                      )}
+                                    </div>
+                                    <div className="options-list">
+                                      {q.options && q.options.map((opt, oIdx) => (
+                                        <div key={oIdx} className={`option-item ${q.correct_answer === opt.label ? 'correct' : ''}`}>
+                                          <span className="option-label">{opt.label})</span>
+                                          <span className="option-text">{opt.text}</span>
+                                        </div>
+                                      ))}
+                                    </div>
+                                    {q.explanation && (
+                                      <div className="explanation-text">
+                                        <strong>Explanation:</strong> {q.explanation}
+                                      </div>
+                                    )}
+                                  </div>
+                                ))}
+                              </div>
 
-                    {editMode === topic.id && (
-                      <div className="batch-add-section">
-                        <h5>Batch Add MCQ Questions</h5>
-                        
-                        <div className="format-guide">
-                          <p><strong>Required Format:</strong></p>
-                          <pre>
+                              {editMode === topic.id && (
+                                <div className="batch-add-section">
+                                  <h5>Batch Add MCQ Questions</h5>
+                                  
+                                  <div className="format-guide">
+                                    <p><strong>Required Format:</strong></p>
+                                    <pre>
 {`Q1: Question text here?
 a) Option One
 b) Option Two
@@ -277,23 +346,28 @@ c) Option Three
 d) Option Four
 Correct: b
 Explanation: Why it is correct...`}
-                          </pre>
-                          <p className="hint">Supports Bengali: <strong>ক), খ), গ), ঘ)</strong> and <strong>Correct: গ</strong></p>
-                        </div>
+                                    </pre>
+                                    <p className="hint">Supports Bengali: <strong>ক), খ), গ), ঘ)</strong> and <strong>Correct: গ</strong></p>
+                                  </div>
 
-                        <textarea 
-                          placeholder="Paste more questions here..."
-                          value={batchQuestionText}
-                          onChange={(e) => setBatchQuestionText(e.target.value)}
-                        />
-                        <button className="batch-add-btn" onClick={handleBatchAdd} disabled={!batchQuestionText.trim() || isUpdating}>
-                          Parse & Add Questions
-                        </button>
+                                  <textarea 
+                                    placeholder="Paste more questions here..."
+                                    value={batchQuestionText}
+                                    onChange={(e) => setBatchQuestionText(e.target.value)}
+                                  />
+                                  <button className="batch-add-btn" onClick={handleBatchAdd} disabled={!batchQuestionText.trim() || isUpdating}>
+                                    Parse & Add Questions
+                                  </button>
+                                </div>
+                              )}
+                            </section>
+                          </div>
+                        )}
                       </div>
-                    )}
-                  </section>
+                    ))}
+                  </div>
                 </div>
-              )}
+              ))}
             </div>
           ))}
         </div>

@@ -17,6 +17,57 @@
   font-size: 14px;
 }
 
+.subject-section {
+  margin-bottom: 40px;
+}
+
+.subject-heading {
+  background: #2c3e50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.chapter-section {
+  margin-left: 20px;
+  margin-bottom: 30px;
+  border-left: 3px solid #3498db;
+  padding-left: 20px;
+}
+
+.chapter-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.chapter-heading {
+  color: #34495e;
+  margin: 0;
+  font-size: 18px;
+}
+
+.delete-chapter-btn {
+  background: transparent;
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.delete-chapter-btn:hover {
+  background: #e74c3c;
+  color: white;
+}
+
 .topic-card {
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -230,12 +281,14 @@
   margin-bottom: 15px;
 }
 
-.edit-actions {
+.edit-actions, .default-actions {
   display: flex;
   gap: 10px;
 }
 
 .edit-btn { background: #3498db; color: white; }
+.delete-lesson-btn { background: #ff7675; color: white; }
+.delete-lesson-btn:hover { background: #d63031; }
 .save-btn { background: #27ae60; color: white; }
 .cancel-btn { background: #95a5a6; color: white; }
 

@@ -78,9 +78,13 @@ export function parseLessonText(text) {
     }
 
     // Parse Topic
-    // Matches: ### **Topic: Topic Name** or ### Topic: Topic Name
-    const topicMatch = trimmed.match(/^###\s+(?:\*\*)?Topic:\s*(.*?)(?:\*\*)?$/i);
+    // Matches: ### **Topic: Topic Name**, **Topic: Name**, or * **Topic: Name**
+    const topicMatch = trimmed.match(/^(?:(?:[*\-\d.]+\s+)|(?:###\s+))?(?:\*\*)?Topic\s*[\d.]*[:：ঃ]\s*(.*?)(?:\*\*)?$/i);
     if (topicMatch) {
+      if (!currentChapter) {
+        currentChapter = { subject: 'Unknown', chapter: 'General', topics: [] };
+        chapters.push(currentChapter);
+      }
       currentTopic = {
         title: topicMatch[1].trim(),
         subtopics: [],
@@ -93,16 +97,16 @@ export function parseLessonText(text) {
     }
 
     // Parse Questions Header
-    if (trimmed.includes('###') && trimmed.toLowerCase().includes('review questions & answers')) {
+    if (trimmed.toLowerCase().includes('review questions')) {
       isParsingQuestions = true;
       currentSubtopic = null;
       continue;
     }
 
     // Parse Subtopic
-    // Matches: #### **Subtopic X: Name** or **Subtopic X: Name**
-    const subtopicMatch = trimmed.match(/^(?:####\s+)?(?:\*\*)?Subtopic\s*\d*:\s*(.*?)(?:\*\*)?$/i);
-    if (subtopicMatch && currentTopic && !isParsingQuestions) {
+    // Matches: #### **Subtopic X: Name**, **Subtopic X: Name**, or * **Subtopic X: Name**
+    const subtopicMatch = trimmed.match(/^(?:[*\-\d.]+\s+)?(?:####\s+)?(?:\*\*)?Subtopic\s*[\d.]*[:：ঃ]\s*(.*?)(?:\*\*)?$/i);
+    if (subtopicMatch && currentTopic) {
       currentSubtopic = {
         title: subtopicMatch[1].trim(),
         definition: '',
@@ -112,6 +116,7 @@ export function parseLessonText(text) {
         difficulty: ''
       };
       currentTopic.subtopics.push(currentSubtopic);
+      isParsingQuestions = false; // Reset when new subtopic starts
       continue;
     }
 
@@ -134,7 +139,7 @@ export function parseLessonText(text) {
     // Parse Questions and Answers (MCQ Format)
     if (isParsingQuestions && currentTopic) {
       // Matches Q1: or **Q1: ...**
-      const qMatch = trimmed.match(/^(?:\*\*)?Q\d*:\s*(.*?)(?:\*\*)?$/i);
+      const qMatch = trimmed.match(/^(?:\*\*)?Q\d*[:：ঃ]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
       if (qMatch) {
         currentQuestion = {
           question: qMatch[1].trim(),
@@ -147,7 +152,7 @@ export function parseLessonText(text) {
       }
 
       // Matches options: a) or **a)** or ক) etc.
-      const optionMatch = trimmed.match(/^(?:\*\*)?([a-d]|[ক-ঘ])\)\s*(.*?)(?:\*\*)?$/i);
+      const optionMatch = trimmed.match(/^(?:\*\*)?([a-d]|[ক-ঘ])\)\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
       if (optionMatch && currentQuestion) {
         currentQuestion.options.push({
           label: optionMatch[1].toLowerCase(),
@@ -157,14 +162,14 @@ export function parseLessonText(text) {
       }
 
       // Matches Correct: or **Correct:**
-      const correctMatch = trimmed.match(/^(?:\*\*)?Correct:\s*(.*?)(?:\*\*)?$/i);
+      const correctMatch = trimmed.match(/^(?:\*\*)?Correct\s*[:：ঃ]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
       if (correctMatch && currentQuestion) {
         currentQuestion.correct_answer = correctMatch[1].trim().toLowerCase();
         continue;
       }
 
       // Matches Explanation: or **Explanation:**
-      const explanationMatch = trimmed.match(/^(?:\*\*)?Explanation:\s*(.*?)(?:\*\*)?$/i);
+      const explanationMatch = trimmed.match(/^(?:\*\*)?Explanation\s*[:：ঃ]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
       if (explanationMatch && currentQuestion) {
         currentQuestion.explanation = explanationMatch[1].trim();
         continue;
@@ -202,7 +207,7 @@ export function parseQuestionsOnly(text) {
     const trimmed = cleanLine(line);
     if (!trimmed) continue;
 
-    const qMatch = trimmed.match(/^(?:\*\*)?Q\d*:\s*(.*?)(?:\*\*)?$/i);
+    const qMatch = trimmed.match(/^(?:\*\*)?Q\d*[:：ঃ]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
     if (qMatch) {
       currentQuestion = {
         question: qMatch[1].trim(),
@@ -214,7 +219,7 @@ export function parseQuestionsOnly(text) {
       continue;
     }
 
-    const optionMatch = trimmed.match(/^(?:\*\*)?([a-d]|[ক-ঘ])\)\s*(.*?)(?:\*\*)?$/i);
+    const optionMatch = trimmed.match(/^(?:\*\*)?([a-d]|[ক-ঘ])\)\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
     if (optionMatch && currentQuestion) {
       currentQuestion.options.push({
         label: optionMatch[1].toLowerCase(),
@@ -223,13 +228,13 @@ export function parseQuestionsOnly(text) {
       continue;
     }
 
-    const correctMatch = trimmed.match(/^(?:\*\*)?Correct:\s*(.*?)(?:\*\*)?$/i);
+    const correctMatch = trimmed.match(/^(?:\*\*)?Correct\s*[:：ঃ]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
     if (correctMatch && currentQuestion) {
       currentQuestion.correct_answer = correctMatch[1].trim().toLowerCase();
       continue;
     }
 
-    const explanationMatch = trimmed.match(/^(?:\*\*)?Explanation:\s*(.*?)(?:\*\*)?$/i);
+    const explanationMatch = trimmed.match(/^(?:\*\*)?Explanation\s*[:：ঃ]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
     if (explanationMatch && currentQuestion) {
       currentQuestion.explanation = explanationMatch[1].trim();
       continue;

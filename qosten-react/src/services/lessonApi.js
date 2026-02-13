@@ -194,6 +194,33 @@ export const lessonApi = {
   },
 
   /**
+   * Deletes a topic (lesson) and all its subtopics/questions.
+   */
+  async deleteTopic(topicId) {
+    if (!supabase) throw new Error('Supabase client is not initialized');
+    const { error } = await supabase
+      .from('learn_topics')
+      .delete()
+      .eq('id', topicId);
+    if (error) throw error;
+    return { success: true };
+  },
+
+  /**
+   * Deletes an entire chapter (all topics within it).
+   */
+  async deleteChapter(subject, chapter) {
+    if (!supabase) throw new Error('Supabase client is not initialized');
+    const { error } = await supabase
+      .from('learn_topics')
+      .delete()
+      .eq('subject', subject)
+      .eq('chapter', chapter);
+    if (error) throw error;
+    return { success: true };
+  },
+
+  /**
    * Adds a batch of questions to a topic.
    */
   async addQuestionsToTopic(topicId, questions, startOrderIndex) {

@@ -10,6 +10,8 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
     "@vitalets/google-translate-api": "^9.2.1",
+    "expo": "^54.0.33",
+    "expo-updates": "~29.0.16",
     "katex": "^0.16.22",
     "pdfjs-dist": "^5.4.149",
     "react": "^19.2.0",

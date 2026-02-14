@@ -12,6 +12,8 @@ export default function LessonsView() {
   const [editedData, setEditedData] = useState(null);
   const [batchQuestionText, setBatchQuestionText] = useState('');
   const [isUpdating, setIsUpdating] = useState(false);
+  const [editingSubject, setEditingSubject] = useState(null); // { oldName, newName }
+  const [editingChapter, setEditingChapter] = useState(null); // { subject, oldName, newName }
 
   useEffect(() => {
     loadLessons();
@@ -27,6 +29,42 @@ export default function LessonsView() {
       setError(err.message);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleRenameSubject = async () => {
+    if (!editingSubject || !editingSubject.newName.trim() || editingSubject.newName === editingSubject.oldName) {
+      setEditingSubject(null);
+      return;
+    }
+
+    setIsUpdating(true);
+    try {
+      await lessonApi.renameSubject(editingSubject.oldName, editingSubject.newName.trim());
+      await loadLessons();
+      setEditingSubject(null);
+    } catch (err) {
+      alert('Failed to rename subject: ' + err.message);
+    } finally {
+      setIsUpdating(false);
+    }
+  };
+
+  const handleRenameChapter = async () => {
+    if (!editingChapter || !editingChapter.newName.trim() || editingChapter.newName === editingChapter.oldName) {
+      setEditingChapter(null);
+      return;
+    }
+
+    setIsUpdating(true);
+    try {
+      await lessonApi.renameChapter(editingChapter.subject, editingChapter.oldName, editingChapter.newName.trim());
+      await loadLessons();
+      setEditingChapter(null);
+    } catch (err) {
+      alert('Failed to rename chapter: ' + err.message);
+    } finally {
+      setIsUpdating(false);
     }
   };
 
@@ -180,24 +218,70 @@ export default function LessonsView() {
         <div className="subjects-list">
           {Object.keys(groupedLessons).map(subject => (
             <div key={subject} className="subject-section">
-              <h3 className="subject-heading">{subject}</h3>
-              
-              {Object.keys(groupedLessons[subject]).map(chapter => (
-                <div key={chapter} className="chapter-section">
-                  <div className="chapter-header-row">
-                    <h4 className="chapter-heading">Chapter: {chapter}</h4>
-                    <button 
-                      className="delete-chapter-btn" 
-                      onClick={() => handleDeleteChapter(subject, chapter)}
-                      disabled={isUpdating}
-                    >
-                      Delete Chapter
-                    </button>
+              <div className="subject-header-row">
+                {editingSubject?.oldName === subject ? (
+                  <div className="rename-container">
+                    <input 
+                      className="rename-input"
+                      value={editingSubject.newName}
+                      onChange={(e) => setEditingSubject({ ...editingSubject, newName: e.target.value })}
+                      autoFocus
+                    />
+                    <button className="confirm-btn" onClick={handleRenameSubject} disabled={isUpdating}>✓</button>
+                    <button className="cancel-btn-small" onClick={() => setEditingSubject(null)} disabled={isUpdating}>×</button>
                   </div>
-                  
-                  <div className="lessons-list">
-                    {groupedLessons[subject][chapter].map((topic) => (
-                      <div key={topic.id} className={`topic-card ${expandedTopicId === topic.id ? 'expanded' : ''} ${editMode === topic.id ? 'is-editing' : ''}`}>
+                ) : (
+                  <h3 className="subject-heading" onClick={() => setEditingSubject({ oldName: subject, newName: subject })}>
+                    <span>{subject} ({Object.keys(groupedLessons[subject]).length} Chapters)</span>
+                    <span className="edit-icon-inline">✎</span>
+                  </h3>
+                )}
+              </div>
+              
+              {Object.keys(groupedLessons[subject]).map(chapter => {
+                const chapterTopics = groupedLessons[subject][chapter];
+                const totalSubtopics = chapterTopics.reduce((sum, t) => sum + (t.subtopics?.length || 0), 0);
+                const totalQuestions = chapterTopics.reduce((sum, t) => sum + (t.questions?.length || 0), 0);
+
+                return (
+                  <div key={chapter} className="chapter-section">
+                    <div className="chapter-header-row">
+                      <div className="chapter-info">
+                        {editingChapter?.subject === subject && editingChapter?.oldName === chapter ? (
+                          <div className="rename-container">
+                            <input 
+                              className="rename-input"
+                              value={editingChapter.newName}
+                              onChange={(e) => setEditingChapter({ ...editingChapter, newName: e.target.value })}
+                              autoFocus
+                            />
+                            <button className="confirm-btn" onClick={handleRenameChapter} disabled={isUpdating}>✓</button>
+                            <button className="cancel-btn-small" onClick={() => setEditingChapter(null)} disabled={isUpdating}>×</button>
+                          </div>
+                        ) : (
+                          <h4 className="chapter-heading" onClick={() => setEditingChapter({ subject, oldName: chapter, newName: chapter })}>
+                            Chapter: {chapter}
+                            <span className="edit-icon-inline">✎</span>
+                          </h4>
+                        )}
+                        <div className="chapter-stats">
+                          <span>{chapterTopics.length} Lessons</span>
+                          <span>{totalSubtopics} Subtopics</span>
+                          <span>{totalQuestions} Questions</span>
+                        </div>
+                      </div>
+                      <button 
+                        className="delete-chapter-btn" 
+                        onClick={() => handleDeleteChapter(subject, chapter)}
+                        disabled={isUpdating}
+                      >
+                        Delete Chapter
+                      </button>
+                    </div>
+                    
+                    <div className="lessons-list">
+                      {chapterTopics.map((topic) => (
+                        <div key={topic.id} className={`topic-card ${expandedTopicId === topic.id ? 'expanded' : ''} ${editMode === topic.id ? 'is-editing' : ''}`}>
                         <div className="topic-header" onClick={() => toggleTopic(topic.id)}>
                           <div className="topic-main-info">
                             <h3 className="topic-title">{topic.title}</h3>
@@ -367,7 +451,8 @@ Explanation: Why it is correct...`}
                     ))}
                   </div>
                 </div>
-              ))}
+                );
+              })}
             </div>
           ))}
         </div>

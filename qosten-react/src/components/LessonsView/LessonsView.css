@@ -30,6 +30,82 @@
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.subject-heading:hover {
+  background: #34495e;
+}
+
+.subject-header-row {
+  margin-bottom: 20px;
+}
+
+.rename-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.rename-input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.confirm-btn {
+  background: #27ae60;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 16px;
+}
+
+.cancel-btn-small {
+  background: #e74c3c;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 16px;
+}
+
+.edit-icon-inline {
+  font-size: 14px;
+  opacity: 0.6;
+  margin-left: 10px;
+}
+
+.chapter-heading {
+  color: #34495e;
+  margin: 0;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.chapter-heading:hover {
+  color: #2980b9;
 }
 
 .chapter-section {
@@ -39,19 +115,23 @@
   padding-left: 20px;
 }
 
-.chapter-header-row {
+.chapter-info {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 8px;
+  flex-direction: column;
+  gap: 4px;
 }
 
-.chapter-heading {
-  color: #34495e;
-  margin: 0;
-  font-size: 18px;
+.chapter-stats {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: #7f8c8d;
+}
+
+.chapter-stats span {
+  background: #f0f2f5;
+  padding: 2px 8px;
+  border-radius: 4px;
 }
 
 .delete-chapter-btn {

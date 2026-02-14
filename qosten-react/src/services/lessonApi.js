@@ -221,6 +221,33 @@ export const lessonApi = {
   },
 
   /**
+   * Renames a subject across all chapters and topics.
+   */
+  async renameSubject(oldSubjectName, newSubjectName) {
+    if (!supabase) throw new Error('Supabase client is not initialized');
+    const { error } = await supabase
+      .from('learn_topics')
+      .update({ subject: newSubjectName })
+      .eq('subject', oldSubjectName);
+    if (error) throw error;
+    return { success: true };
+  },
+
+  /**
+   * Renames a chapter within a subject.
+   */
+  async renameChapter(subject, oldChapterName, newChapterName) {
+    if (!supabase) throw new Error('Supabase client is not initialized');
+    const { error } = await supabase
+      .from('learn_topics')
+      .update({ chapter: newChapterName })
+      .eq('subject', subject)
+      .eq('chapter', oldChapterName);
+    if (error) throw error;
+    return { success: true };
+  },
+
+  /**
    * Adds a batch of questions to a topic.
    */
   async addQuestionsToTopic(topicId, questions, startOrderIndex) {

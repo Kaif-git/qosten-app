@@ -45,6 +45,32 @@
   margin-top: 20px;
 }
 
+.chapter-preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.chapter-preview-header h4 {
+  margin: 0;
+}
+
+.chapter-preview-stats {
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.chapter-preview-stats span {
+  background: #f0f2f5;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: #666;
+}
+
 .topic-preview {
   background: #fff;
   border: 1px solid #eee;

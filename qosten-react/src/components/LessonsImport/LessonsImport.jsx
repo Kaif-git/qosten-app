@@ -118,11 +118,22 @@ export default function LessonsImport() {
         <div className="preview-section">
           <h3>Preview: {parsedData.length} Chapter(s)</h3>
           
-          {parsedData.map((chapterData, cIdx) => (
-            <div key={cIdx} className="chapter-preview panel">
-              <h4>{chapterData.subject} - {chapterData.chapter}</h4>
-              
-              {chapterData.topics.map((topic, tIdx) => (
+          {parsedData.map((chapterData, cIdx) => {
+            const totalSubtopics = chapterData.topics.reduce((sum, t) => sum + t.subtopics.length, 0);
+            const totalQuestions = chapterData.topics.reduce((sum, t) => sum + t.questions.length, 0);
+            
+            return (
+              <div key={cIdx} className="chapter-preview panel">
+                <div className="chapter-preview-header">
+                  <h4>{chapterData.subject} - {chapterData.chapter}</h4>
+                  <div className="chapter-preview-stats">
+                    <span>{chapterData.topics.length} Lessons</span>
+                    <span>{totalSubtopics} Subtopics</span>
+                    <span>{totalQuestions} Questions</span>
+                  </div>
+                </div>
+                
+                {chapterData.topics.map((topic, tIdx) => (
                 <div key={tIdx} className="topic-preview">
                   <h5>Topic: {topic.title}</h5>
                   
@@ -158,13 +169,14 @@ export default function LessonsImport() {
                 </div>
               ))}
             </div>
-          ))}
+          );
+        })}
 
-          <button className="upload-btn" onClick={handleUpload} disabled={isUploading}>
-            {isUploading ? uploadStatus : 'Upload All to Database'}
-          </button>
-        </div>
-      )}
-    </div>
-  );
+        <button className="upload-btn" onClick={handleUpload} disabled={isUploading}>
+          {isUploading ? uploadStatus : 'Upload All to Database'}
+        </button>
+      </div>
+    )}
+  </div>
+);
 }

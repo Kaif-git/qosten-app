@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import LatexRenderer from '../LatexRenderer/LatexRenderer';
 import ImageLinkingModal from '../ImageLinkingModal/ImageLinkingModal';
 
-function QuestionCard({ question, selectionMode, isSelected, onToggleSelect }) {
+function QuestionCard({ question, selectionMode, isSelected, onToggleSelect, isLab }) {
   const { deleteQuestion, setEditingQuestion, toggleQuestionFlag, toggleReviewQueue, toggleQuestionVerification, updateQuestion } = useQuestions();
   const navigate = useNavigate();
   const [showImageLinkingModal, setShowImageLinkingModal] = useState(false);
@@ -264,6 +264,20 @@ function QuestionCard({ question, selectionMode, isSelected, onToggleSelect }) {
         <span>Lesson: {question.lesson || 'N/A'}</span>
         <span>Board: {question.board || 'N/A'}</span>
         <span>Type: {question.type ? question.type.toUpperCase() : 'N/A'}</span>
+        {isLab && (
+          <span style={{ 
+            backgroundColor: '#273c75', 
+            color: 'white', 
+            padding: '2px 8px', 
+            borderRadius: '4px',
+            fontWeight: 'bold',
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '4px'
+          }}>
+            🧪 LAB
+          </span>
+        )}
         {question.isFlagged && (
           <span style={{ 
             backgroundColor: '#e74c3c', 

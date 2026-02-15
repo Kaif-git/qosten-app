@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useQuestions, mapDatabaseToApp } from '../../context/QuestionContext';
 import { questionApi } from '../../services/questionApi';
+import { labApi } from '../../services/labApi';
 import Statistics from '../Statistics/Statistics';
 import SearchFilters from '../SearchFilters/SearchFilters';
 import QuestionCard from '../QuestionCard/QuestionCard';
@@ -328,6 +329,19 @@ export default function QuestionBank() {
   
   // Performance Optimization: Visible Count (Limit rendering)
   const [visibleCount, setVisibleCount] = useState(50);
+  const [labProblemIds, setLabProblemIds] = useState(new Set());
+
+  useEffect(() => {
+    const fetchLabIds = async () => {
+      try {
+        const ids = await labApi.fetchLabProblemIds();
+        setLabProblemIds(new Set(ids));
+      } catch (err) {
+        console.error('Error fetching lab IDs:', err);
+      }
+    };
+    fetchLabIds();
+  }, []);
 
   const checkIfChanged = (orig, fixed, type) => {
     const qText1 = (orig.questionText || orig.question || '').trim();
@@ -3164,6 +3178,7 @@ export default function QuestionBank() {
                     selectionMode={selectionMode}
                     isSelected={selectedSet.has(question.id)}
                     onToggleSelect={stableToggleQuestionSelection}
+                    isLab={labProblemIds.has(question.id.toString())}
                   />
                 );
               })}

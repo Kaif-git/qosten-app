@@ -1,0 +1,379 @@
+.lab-view-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.refresh-btn {
+  background: #2ecc71;
+  color: white;
+  padding: 8px 15px;
+  font-size: 14px;
+}
+
+.subject-section {
+  margin-bottom: 40px;
+}
+
+.subject-heading {
+  background: #273c75;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.subject-heading:hover {
+  background: #192a56;
+}
+
+.subject-header-row {
+  margin-bottom: 20px;
+}
+
+.rename-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.rename-input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.confirm-btn {
+  background: #27ae60;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 16px;
+}
+
+.cancel-btn-small {
+  background: #e74c3c;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 16px;
+}
+
+.edit-icon-inline {
+  font-size: 14px;
+  opacity: 0.6;
+  margin-left: 10px;
+}
+
+.chapter-heading {
+  color: #273c75;
+  margin: 0;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.chapter-heading:hover {
+  color: #192a56;
+}
+
+.chapter-section {
+  margin-left: 20px;
+  margin-bottom: 30px;
+  border-left: 3px solid #273c75;
+  padding-left: 20px;
+}
+
+.chapter-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.chapter-stats {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: #7f8c8d;
+}
+
+.chapter-stats span {
+  background: #f0f2f5;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.delete-chapter-btn {
+  background: transparent;
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.delete-chapter-btn:hover {
+  background: #e74c3c;
+  color: white;
+}
+
+.problem-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background: white;
+  transition: box-shadow 0.2s;
+}
+
+.problem-card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.problem-header {
+  padding: 15px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fdfdfd;
+}
+
+.problem-main-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.problem-title {
+  margin: 0;
+  font-size: 17px;
+  color: #333;
+}
+
+.problem-meta {
+  display: flex;
+  gap: 15px;
+  color: #888;
+  font-size: 13px;
+  align-items: center;
+}
+
+.board-tag {
+  background: #e1f5fe;
+  color: #0288d1;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.expand-icon {
+  font-size: 20px;
+  font-weight: bold;
+  color: #273c75;
+  width: 24px;
+  text-align: center;
+}
+
+.problem-content {
+  padding: 20px;
+  border-top: 1px solid #eee;
+  background: #fafafa;
+}
+
+.stem-section {
+  background: #fff;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #e1e8ed;
+  margin-bottom: 20px;
+}
+
+.stem-section h4 {
+  margin-top: 0;
+  color: #2c3e50;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.stem-content {
+  line-height: 1.6;
+  color: #2f3640;
+  white-space: pre-wrap;
+}
+
+.parts-section h4 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.part-item {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.part-header h5 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  color: #273c75;
+  border-bottom: 2px solid #f0f2f5;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+.content-block {
+  margin-bottom: 15px;
+}
+
+.content-block label {
+  display: block;
+  font-size: 11px;
+  font-weight: bold;
+  color: #999;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.content-block p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.steps-list {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 14px;
+  color: #444;
+}
+
+.steps-list li {
+  margin-bottom: 12px;
+}
+
+.step-object {
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #e9ecef;
+}
+
+.step-explanation {
+  font-weight: 500;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.step-mcq {
+  font-size: 13px;
+  color: #636e72;
+  font-style: italic;
+  margin-top: 5px;
+  padding-left: 10px;
+  border-left: 2px solid #3498db;
+}
+
+.step-state {
+  font-size: 11px;
+  color: #b2bec3;
+  margin-top: 5px;
+  text-align: right;
+}
+
+.final-answer {
+  background: #e8f5e9;
+  padding: 10px;
+  border-radius: 4px;
+  border-left: 4px solid #2ecc71;
+}
+
+.action-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+.edit-actions, .default-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn { background: #3498db; color: white; }
+.delete-problem-btn { background: #ff7675; color: white; }
+.delete-problem-btn:hover { background: #d63031; }
+.save-btn { background: #27ae60; color: white; }
+.cancel-btn { background: #95a5a6; color: white; }
+
+.edit-textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.edit-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.content-block textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 8px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.is-editing {
+  border-color: #273c75;
+  box-shadow: 0 0 10px rgba(39, 60, 117, 0.2);
+}
+
+@media (max-width: 768px) {
+  .problem-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+}

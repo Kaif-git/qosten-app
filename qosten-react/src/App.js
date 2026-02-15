@@ -21,6 +21,8 @@ import ChapterOverview from './components/ChapterOverview/ChapterOverview';
 import OverviewUpload from './components/OverviewUpload/OverviewUpload';
 import LessonsImport from './components/LessonsImport/LessonsImport';
 import LessonsView from './components/LessonsView/LessonsView';
+import LabImport from './components/LabImport/LabImport';
+import LabView from './components/LabView/LabView';
 
 function App() {
   return (
@@ -45,6 +47,7 @@ function App() {
                 <Route path="/import-math" element={<MathQuestionImport />} />
                 <Route path="/import-mcq" element={<MCQImport />} />
                 <Route path="/import-json" element={<CQJSONImport />} />
+                <Route path="/import-lab" element={<LabImport />} />
                 <Route path="/prompts" element={<SimplePromptManager />} />
                 <Route path="/shop" element={<Shop />} />
                 <Route path="/roadmap" element={<Roadmap />} />
@@ -54,6 +57,7 @@ function App() {
                 <Route path="/overview-upload" element={<OverviewUpload />} />
                 <Route path="/lessons" element={<LessonsImport />} />
                 <Route path="/lessons-view" element={<LessonsView />} />
+                <Route path="/lab-view" element={<LabView />} />
               </Routes>
             </div>
           </BrowserRouter>

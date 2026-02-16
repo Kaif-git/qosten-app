@@ -553,6 +553,62 @@ export default function QuestionBank() {
     }).join('\n---\n\n');
   };
 
+  const handleSelectForLab = () => {
+    // 1. Filter for CQs in current view that don't have a lab tag
+    // 'currentVisibleQuestions' honors the UI filters (Chapter, Subject etc.)
+    const availableCQs = currentVisibleQuestions.filter(q => 
+      q.type === 'cq' && 
+      !labProblemIds.has(q.id.toString())
+    );
+
+    if (availableCQs.length === 0) {
+      alert('No available CQs found in this view that are not already in the lab.');
+      return;
+    }
+
+    // 2. Ask for amount
+    const amountStr = window.prompt(`Found ${availableCQs.length} available CQs. How many would you like to select?`, '5');
+    if (amountStr === null) return;
+    
+    const amount = parseInt(amountStr);
+    if (isNaN(amount) || amount <= 0) {
+      alert('Invalid amount.');
+      return;
+    }
+
+    // 3. Shuffle and pick
+    const shuffled = [...availableCQs].sort(() => 0.5 - Math.random());
+    const selected = shuffled.slice(0, Math.min(amount, availableCQs.length));
+
+    // 4. Update selectedQuestions state
+    const selectedIds = selected.map(q => q.id);
+    setSelectedQuestions(selectedIds);
+    if (!selectionMode) setSelectionMode(true);
+
+    // 5. Generate text and copy to clipboard
+    const textToCopy = selected.map((q, idx) => {
+      const fullQ = fullQuestionsMap.get(q.id) || q;
+      let text = `Question ${idx + 1}:\n`;
+      text += `[ID: ${q.id}]\n`;
+      text += `[Subject: ${fullQ.subject || ''}]\n[Chapter: ${fullQ.chapter || ''}]\n[Lesson: ${fullQ.lesson || ''}]\n[Board: ${fullQ.board || ''}]\n`;
+      text += `Stem: ${fullQ.questionText || fullQ.question || ''}\n`;
+      
+      if (fullQ.parts && Array.isArray(fullQ.parts)) {
+        fullQ.parts.forEach(part => {
+          text += `${part.letter}. ${part.text} (${part.marks || 0})\n`;
+        });
+        text += `Answer:\n`;
+        fullQ.parts.forEach(part => {
+          text += `${part.letter}. ${part.answer || ''}\n`;
+        });
+      }
+      return text;
+    }).join('\n---\n\n');
+
+    navigator.clipboard.writeText(textToCopy);
+    alert(`📋 ${selected.length} questions selected and copied to clipboard!`);
+  };
+
   const handleReviewQueueApply = async () => {
     if (!reviewQueueInputText.trim()) {
       alert('Please paste the verified questions first.');
@@ -5208,6 +5264,23 @@ export default function QuestionBank() {
             }}
           >
             🚩 Bulk Fix Flagged
+          </button>
+
+          <button
+            onClick={handleSelectForLab}
+            style={{
+              backgroundColor: '#273c75',
+              color: 'white',
+              padding: '10px 20px',
+              borderRadius: '6px',
+              border: 'none',
+              cursor: 'pointer',
+              fontWeight: '600',
+              marginRight: '10px'
+            }}
+            title={currentFilters.type === 'cq' ? 'Randomly select CQs for lab from current view' : 'Please filter by CQ type first'}
+          >
+            🧪 Select for Lab
           </button>
 
           <button

@@ -124,16 +124,30 @@ export function parseLessonText(text) {
     if (currentSubtopic && !isParsingQuestions) {
       if (trimmed.includes('**Definition:**')) {
         currentSubtopic.definition = trimmed.replace(/^[*\-\s]*\*\*Definition:\*\*\s*/i, '').trim();
+        currentSubtopic._lastProp = 'definition';
+        continue;
       } else if (trimmed.includes('**Explanation:**')) {
         currentSubtopic.explanation = trimmed.replace(/^[*\-\s]*\*\*Explanation:\*\*\s*/i, '').trim();
+        currentSubtopic._lastProp = 'explanation';
+        continue;
       } else if (trimmed.includes('**Memorizing/Understanding shortcut:**')) {
         currentSubtopic.shortcut = trimmed.replace(/^[*\-\s]*\*\*Memorizing\/Understanding shortcut:\*\*\s*/i, '').trim();
+        currentSubtopic._lastProp = 'shortcut';
+        continue;
       } else if (trimmed.includes('**Common Misconceptions/Mistake:**')) {
         currentSubtopic.mistakes = trimmed.replace(/^[*\-\s]*\*\*Common Misconceptions\/Mistake:\*\*\s*/i, '').trim();
+        currentSubtopic._lastProp = 'mistakes';
+        continue;
       } else if (trimmed.includes('**Difficulty:**')) {
         currentSubtopic.difficulty = trimmed.replace(/^[*\-\s]*\*\*Difficulty:\*\*\s*/i, '').trim();
+        currentSubtopic._lastProp = 'difficulty';
+        continue;
+      } else if (currentSubtopic._lastProp && !trimmed.startsWith('---')) {
+        // Append to the last active property
+        const prop = currentSubtopic._lastProp;
+        currentSubtopic[prop] = (currentSubtopic[prop] ? currentSubtopic[prop] + '\n' : '') + trimmed;
+        continue;
       }
-      continue;
     }
 
     // Parse Questions and Answers (MCQ Format)
@@ -185,7 +199,26 @@ export function parseLessonText(text) {
           }
       }
     }
+
+    // Capture general topic content (description) if not already parsing subtopics or questions
+    if (currentTopic && !currentSubtopic && !isParsingQuestions && !trimmed.startsWith('---')) {
+        if (!currentTopic.description) currentTopic.description = '';
+        currentTopic.description = (currentTopic.description + '\n' + trimmed).trim();
+    }
   }
+
+  // Cleanup: remove the temporary _lastProp helper and trim strings
+  chapters.forEach(chapter => {
+    chapter.topics.forEach(topic => {
+      topic.subtopics.forEach(subtopic => {
+        delete subtopic._lastProp;
+        // Trim all properties
+        ['definition', 'explanation', 'shortcut', 'mistakes', 'difficulty'].forEach(key => {
+          if (subtopic[key]) subtopic[key] = subtopic[key].trim();
+        });
+      });
+    });
+  });
 
   return chapters;
 }

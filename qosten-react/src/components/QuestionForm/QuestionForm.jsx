@@ -559,6 +559,66 @@ export default function QuestionForm() {
         
         {/* CQ Parts */}
         <div className="cq-only">
+          {/* Answer Image 3 (for part a) */}
+          <div style={{ marginTop: '15px', padding: '15px', backgroundColor: '#e2e3e5', border: '2px dashed #383d41', borderRadius: '6px' }}>
+            <label htmlFor="answerImage3" style={{ display: 'block', fontWeight: '600', color: '#383d41', marginBottom: '10px' }}>
+              Answer Image 3 (for part a):
+            </label>
+            <input 
+              type="file" 
+              id="answerImage3"
+              accept="image/*"
+              onChange={(e) => handleAnswerImage3Upload(e.target.files[0])}
+              style={{ display: 'block', width: '100%', padding: '8px', fontSize: '14px', cursor: 'pointer' }}
+            />
+            {formData.answerimage3 && (
+              <div style={{ marginTop: '15px' }}>
+                <img 
+                  src={formData.answerimage3} 
+                  alt="Part a" 
+                  style={{ maxWidth: '100%', maxHeight: '300px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'block', marginBottom: '10px' }}
+                />
+                <button 
+                  type="button" 
+                  onClick={removeAnswerImage3}
+                  style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '8px 16px', borderRadius: '4px', cursor: 'pointer' }}
+                >
+                  ✕ Remove Image
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* Answer Image 4 (for part b) */}
+          <div style={{ marginTop: '15px', padding: '15px', backgroundColor: '#d4edda', border: '2px dashed #155724', borderRadius: '6px' }}>
+            <label htmlFor="answerImage4" style={{ display: 'block', fontWeight: '600', color: '#155724', marginBottom: '10px' }}>
+              Answer Image 4 (for part b):
+            </label>
+            <input 
+              type="file" 
+              id="answerImage4"
+              accept="image/*"
+              onChange={(e) => handleAnswerImage4Upload(e.target.files[0])}
+              style={{ display: 'block', width: '100%', padding: '8px', fontSize: '14px', cursor: 'pointer' }}
+            />
+            {formData.answerimage4 && (
+              <div style={{ marginTop: '15px' }}>
+                <img 
+                  src={formData.answerimage4} 
+                  alt="Part b" 
+                  style={{ maxWidth: '100%', maxHeight: '300px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'block', marginBottom: '10px' }}
+                />
+                <button 
+                  type="button" 
+                  onClick={removeAnswerImage4}
+                  style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '8px 16px', borderRadius: '4px', cursor: 'pointer' }}
+                >
+                  ✕ Remove Image
+                </button>
+              </div>
+            )}
+          </div>
+
           {/* Answer Image 1 (for part c) */}
           <div style={{ marginTop: '15px', padding: '15px', backgroundColor: '#fff3cd', border: '2px dashed #ffc107', borderRadius: '6px' }}>
             <label htmlFor="answerImage1" style={{ display: 'block', fontWeight: '600', color: '#856404', marginBottom: '10px' }}>
@@ -615,66 +675,6 @@ export default function QuestionForm() {
                 <button 
                   type="button" 
                   onClick={removeAnswerImage2}
-                  style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '8px 16px', borderRadius: '4px', cursor: 'pointer' }}
-                >
-                  ✕ Remove Image
-                </button>
-              </div>
-            )}
-          </div>
-
-          {/* Answer Image 3 (for part a) */}
-          <div style={{ marginTop: '15px', padding: '15px', backgroundColor: '#e2e3e5', border: '2px dashed #383d41', borderRadius: '6px' }}>
-            <label htmlFor="answerImage3" style={{ display: 'block', fontWeight: '600', color: '#383d41', marginBottom: '10px' }}>
-              Answer Image 3 (for part a):
-            </label>
-            <input 
-              type="file" 
-              id="answerImage3"
-              accept="image/*"
-              onChange={(e) => handleAnswerImage3Upload(e.target.files[0])}
-              style={{ display: 'block', width: '100%', padding: '8px', fontSize: '14px', cursor: 'pointer' }}
-            />
-            {formData.answerimage3 && (
-              <div style={{ marginTop: '15px' }}>
-                <img 
-                  src={formData.answerimage3} 
-                  alt="Part a" 
-                  style={{ maxWidth: '100%', maxHeight: '300px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'block', marginBottom: '10px' }}
-                />
-                <button 
-                  type="button" 
-                  onClick={removeAnswerImage3}
-                  style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '8px 16px', borderRadius: '4px', cursor: 'pointer' }}
-                >
-                  ✕ Remove Image
-                </button>
-              </div>
-            )}
-          </div>
-
-          {/* Answer Image 4 (for part b) */}
-          <div style={{ marginTop: '15px', padding: '15px', backgroundColor: '#d4edda', border: '2px dashed #155724', borderRadius: '6px' }}>
-            <label htmlFor="answerImage4" style={{ display: 'block', fontWeight: '600', color: '#155724', marginBottom: '10px' }}>
-              Answer Image 4 (for part b):
-            </label>
-            <input 
-              type="file" 
-              id="answerImage4"
-              accept="image/*"
-              onChange={(e) => handleAnswerImage4Upload(e.target.files[0])}
-              style={{ display: 'block', width: '100%', padding: '8px', fontSize: '14px', cursor: 'pointer' }}
-            />
-            {formData.answerimage4 && (
-              <div style={{ marginTop: '15px' }}>
-                <img 
-                  src={formData.answerimage4} 
-                  alt="Part b" 
-                  style={{ maxWidth: '100%', maxHeight: '300px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'block', marginBottom: '10px' }}
-                />
-                <button 
-                  type="button" 
-                  onClick={removeAnswerImage4}
                   style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '8px 16px', borderRadius: '4px', cursor: 'pointer' }}
                 >
                   ✕ Remove Image

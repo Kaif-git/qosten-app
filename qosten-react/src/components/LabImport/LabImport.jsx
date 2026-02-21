@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { labApi } from '../../services/labApi';
+import { questionApi } from '../../services/questionApi';
 import './LabImport.css';
 
 const LabImport = () => {
@@ -362,15 +363,17 @@ If you need normal text inside an equation, use \\text{...}.
 
       setStatus({ type: 'info', message: `Uploading ${problems.length} lab problems...` });
       
-      const formattedProblems = problems.map(p => ({
-        lab_problem_id: p.lab_problem_id,
-        subject: p.subject,
-        chapter: p.chapter,
-        lesson: p.lesson,
-        board: p.board,
-        stem: p.stem,
-        parts: p.parts // Stored as JSONB
-      }));
+      const formattedProblems = problems.map(p => {
+        return {
+          lab_problem_id: p.lab_problem_id,
+          subject: p.subject,
+          chapter: p.chapter,
+          lesson: p.lesson,
+          board: p.board,
+          stem: p.stem,
+          parts: p.parts // Stored as JSONB
+        };
+      });
 
       await labApi.bulkCreateLabProblems(formattedProblems);
 

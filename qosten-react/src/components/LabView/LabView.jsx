@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { labApi } from '../../services/labApi';
+import { questionApi } from '../../services/questionApi';
 import './LabView.css';
 
 export default function LabView() {
@@ -12,6 +13,7 @@ export default function LabView() {
   const [isUpdating, setIsUpdating] = useState(false);
   const [editingSubject, setEditingSubject] = useState(null); // { oldName, newName }
   const [editingChapter, setEditingChapter] = useState(null); // { subject, oldName, newName }
+  const [syncAllProgress, setSyncAllProgress] = useState(null); // { current, total }
 
   useEffect(() => {
     loadProblems();
@@ -27,6 +29,170 @@ export default function LabView() {
       setError(err.message);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleSyncAllImages = async () => {
+    if (problems.length === 0) return;
+    if (!window.confirm(`This will scan ${problems.length} lab problems and sync images from the database. Continue?`)) return;
+
+    setIsUpdating(true);
+    setSyncAllProgress({ current: 0, total: problems.length });
+    
+    try {
+      const ids = problems.map(p => p.lab_problem_id).filter(Boolean);
+      const questionMap = {};
+      
+      console.log(`🔍 Starting bulk sync for ${ids.length} IDs...`);
+
+      // Fetch matching questions in smaller chunks for parallel speed
+      const CHUNK_SIZE = 50;
+      for (let i = 0; i < ids.length; i += CHUNK_SIZE) {
+        const chunk = ids.slice(i, i + CHUNK_SIZE);
+        console.log(`📡 Fetching batch ${i/CHUNK_SIZE + 1} (${chunk.length} IDs)...`);
+        const questions = await questionApi.fetchQuestionsByIds(chunk);
+        
+        questions.forEach(q => {
+          if (q.id) questionMap[String(q.id)] = q;
+          if (q.lab_problem_id) questionMap[String(q.lab_problem_id)] = q;
+        });
+        setSyncAllProgress(prev => ({ ...prev, current: Math.min(i + CHUNK_SIZE, ids.length) }));
+      }
+
+      const foundCount = Object.keys(questionMap).length;
+      console.log(`✅ Fetched ${foundCount} unique questions from API.`);
+      if (foundCount > 0) {
+        const firstQ = questionMap[Object.keys(questionMap)[0]];
+        console.log('📝 Sample Question Props:', Object.keys(firstQ).filter(k => k.toLowerCase().includes('image')));
+      }
+
+      let updateCount = 0;
+      let alreadySyncedCount = 0;
+      let noImageInApiCount = 0;
+      let notFoundCount = 0;
+
+      setSyncAllProgress({ current: 0, total: problems.length, stage: 'Analyzing and Updating...' });
+
+      const isRealImage = (str) => {
+        if (!str || typeof str !== 'string') return false;
+        const s = str.toLowerCase();
+        if (s.includes('there is a picture') || s.includes('ছবি আছে')) return false;
+        if (s.startsWith('[') && s.endsWith(']')) return false;
+        return s.length > 10;
+      };
+
+      // Process updates in smaller parallel chunks to avoid blocking and speed up
+      const updateTasks = [];
+      const BATCH_SIZE = 10;
+
+      for (let i = 0; i < problems.length; i++) {
+        const problem = problems[i];
+        const labId = String(problem.lab_problem_id);
+        const q = questionMap[labId];
+        
+        if (q) {
+          const updateData = {};
+          
+          // Detect properties (handle both camelCase and lowercase from API)
+          const apiQuestionImage = q.questionimage || q.questionImage || q.image;
+          const apiImg1 = q.answerimage1 || q.answerImage1;
+          const apiImg2 = q.answerimage2 || q.answerImage2;
+          const apiImg3 = q.answerimage3 || q.answerImage3;
+          const apiImg4 = q.answerimage4 || q.answerImage4;
+
+          if (isRealImage(apiQuestionImage) && apiQuestionImage !== problem.questionimage) updateData.questionimage = apiQuestionImage;
+          if (isRealImage(apiImg1) && apiImg1 !== problem.answerimage1) updateData.answerimage1 = apiImg1;
+          if (isRealImage(apiImg2) && apiImg2 !== problem.answerimage2) updateData.answerimage2 = apiImg2;
+          if (isRealImage(apiImg3) && apiImg3 !== problem.answerimage3) updateData.answerimage3 = apiImg3;
+          if (isRealImage(apiImg4) && apiImg4 !== problem.answerimage4) updateData.answerimage4 = apiImg4;
+          
+          if (isRealImage(apiQuestionImage) && apiQuestionImage !== problem.stem_image) updateData.stem_image = apiQuestionImage;
+
+          if (Object.keys(updateData).length > 0) {
+            updateTasks.push({ id: problem.id, labId, data: updateData });
+          } else {
+            const hasAnyApiImage = [apiQuestionImage, apiImg1, apiImg2, apiImg3, apiImg4].some(isRealImage);
+            if (hasAnyApiImage) alreadySyncedCount++;
+            else noImageInApiCount++;
+          }
+        } else {
+          notFoundCount++;
+        }
+      }
+
+      console.log(`📊 Analysis: ${updateTasks.length} to update, ${alreadySyncedCount} already synced, ${noImageInApiCount} no images in API, ${notFoundCount} not found.`);
+
+      // Execute updates in batches
+      for (let i = 0; i < updateTasks.length; i += BATCH_SIZE) {
+        const chunk = updateTasks.slice(i, i + BATCH_SIZE);
+        await Promise.all(chunk.map(task => 
+          labApi.updateLabProblem(task.id, task.data)
+            .then(() => { updateCount++; })
+            .catch(err => console.error(`Failed to update ${task.labId}:`, err))
+        ));
+        setSyncAllProgress(prev => ({ ...prev, current: i + chunk.length, total: updateTasks.length, stage: 'Saving Updates...' }));
+      }
+
+      alert(`Sync Complete!\n\n- Updated: ${updateCount}\n- Already synced: ${alreadySyncedCount}\n- No images in API: ${noImageInApiCount}\n- Questions not found: ${notFoundCount}`);
+      await loadProblems();
+    } catch (err) {
+      console.error('Bulk sync failed:', err);
+      alert('Bulk sync failed: ' + err.message);
+    } finally {
+      setIsUpdating(false);
+      setSyncAllProgress(null);
+    }
+  };
+
+  const handleSyncImages = async (problem, shouldSave = true) => {
+    if (!problem.lab_problem_id) {
+      alert('Error: Lab problem ID is missing.');
+      return;
+    }
+
+    setIsUpdating(true);
+    try {
+      const questions = await questionApi.fetchQuestionsByIds([problem.lab_problem_id]);
+      if (!questions || questions.length === 0) {
+        alert('Could not find a matching question in the database.');
+        setIsUpdating(false);
+        return;
+      }
+
+      const q = questions[0];
+      const updateData = {
+        questionimage: q.image || null,
+        answerimage1: q.answerimage1 || null,
+        answerimage2: q.answerimage2 || null,
+        answerimage3: q.answerimage3 || null,
+        answerimage4: q.answerimage4 || null,
+        // Also update stem_image if it was used
+        stem_image: q.image || null
+      };
+
+      if (shouldSave) {
+        await labApi.updateLabProblem(problem.id, updateData);
+        
+        // Update local state
+        setProblems(prev => prev.map(p => 
+          p.id === problem.id ? { ...p, ...updateData } : p
+        ));
+        
+        alert(`Successfully synced and saved images for ${problem.lab_problem_id}!`);
+      }
+      
+      if (editMode === problem.id) {
+        setEditedData(prev => ({ ...prev, ...updateData }));
+        if (!shouldSave) {
+          alert(`Images pulled into fields for ${problem.lab_problem_id}. Don't forget to Save Changes!`);
+        }
+      }
+      
+    } catch (err) {
+      console.error('Error syncing images:', err);
+      alert('Sync failed: ' + err.message);
+    } finally {
+      setIsUpdating(false);
     }
   };
 
@@ -198,8 +364,29 @@ export default function LabView() {
     <div className="lab-view-container panel">
       <div className="header-row">
         <h2>🧪 Lab Library</h2>
-        <button className="refresh-btn" onClick={loadProblems} disabled={isUpdating}>Refresh</button>
+        <div className="header-actions">
+          <button className="sync-all-btn" onClick={handleSyncAllImages} disabled={isUpdating}>
+            🔄 Sync All Missing Images
+          </button>
+          <button className="refresh-btn" onClick={loadProblems} disabled={isUpdating}>Refresh</button>
+        </div>
       </div>
+
+      {syncAllProgress && (
+        <div className="sync-progress-overlay">
+          <div className="sync-progress-box">
+            <h4>Syncing Lab Images...</h4>
+            <div className="progress-bar-container">
+              <div 
+                className="progress-bar-fill" 
+                style={{ width: `${(syncAllProgress.current / syncAllProgress.total) * 100}%` }}
+              ></div>
+            </div>
+            <p>{syncAllProgress.stage || 'Fetching from API...'}</p>
+            <span>{syncAllProgress.current} / {syncAllProgress.total}</span>
+          </div>
+        </div>
+      )}
 
       {problems.length === 0 ? (
         <p>No lab problems found. Go to the Lab Import tab to add some!</p>
@@ -284,12 +471,18 @@ export default function LabView() {
                                 {editMode !== problem.id ? (
                                   <div className="default-actions">
                                     <button className="edit-btn" onClick={(e) => { e.stopPropagation(); startEdit(problem); }}>Edit Problem</button>
+                                    <button className="sync-btn" onClick={(e) => { e.stopPropagation(); handleSyncImages(problem, true); }} disabled={isUpdating}>
+                                      🔄 Sync Images
+                                    </button>
                                     <button className="delete-problem-btn" onClick={(e) => { e.stopPropagation(); handleDeleteProblem(problem.id, problem.lab_problem_id); }} disabled={isUpdating}>Delete Problem</button>
                                   </div>
                                 ) : (
                                   <div className="edit-actions">
                                     <button className="save-btn" onClick={saveProblemChanges} disabled={isUpdating}>
                                       {isUpdating ? 'Saving...' : 'Save Changes'}
+                                    </button>
+                                    <button className="sync-btn" onClick={(e) => { e.stopPropagation(); handleSyncImages(editedData, false); }} disabled={isUpdating}>
+                                      🔄 Sync to Fields
                                     </button>
                                     <button className="cancel-btn" onClick={cancelEdit} disabled={isUpdating}>Cancel</button>
                                   </div>
@@ -299,14 +492,96 @@ export default function LabView() {
                               <section className="stem-section">
                                 <h4>Stem</h4>
                                 {editMode === problem.id ? (
-                                  <textarea 
-                                    className="edit-textarea stem-input"
-                                    value={editedData.stem}
-                                    onChange={(e) => handleDataChange('stem', e.target.value)}
-                                  />
+                                  <>
+                                    <textarea 
+                                      className="edit-textarea stem-input"
+                                      value={editedData.stem}
+                                      onChange={(e) => handleDataChange('stem', e.target.value)}
+                                    />
+                                    <div className="images-edit-grid">
+                                      <div className="image-edit-block">
+                                        <label>Question Image URL (from API):</label>
+                                        <input 
+                                          type="text"
+                                          className="edit-input"
+                                          value={editedData.questionimage || ''}
+                                          onChange={(e) => handleDataChange('questionimage', e.target.value)}
+                                          placeholder="questionimage URL/Base64"
+                                        />
+                                        {editedData.questionimage && (
+                                          <img src={editedData.questionimage} alt="Question Preview" className="preview-img-small" />
+                                        )}
+                                      </div>
+                                      <div className="image-edit-block">
+                                        <label>Stem Image URL (legacy):</label>
+                                        <input 
+                                          type="text"
+                                          className="edit-input"
+                                          value={editedData.stem_image || ''}
+                                          onChange={(e) => handleDataChange('stem_image', e.target.value)}
+                                          placeholder="stem_image URL/Base64"
+                                        />
+                                        {editedData.stem_image && (
+                                          <img src={editedData.stem_image} alt="Stem Preview" className="preview-img-small" />
+                                        )}
+                                      </div>
+                                    </div>
+                                  </>
                                 ) : (
-                                  <div className="stem-content">{problem.stem}</div>
+                                  <div className="stem-content">
+                                    {problem.stem}
+                                    <div className="problem-images-row">
+                                      {problem.questionimage && (
+                                        <div className="problem-image-container">
+                                          <span className="image-label">Question Image:</span>
+                                          <img src={problem.questionimage} alt="Question" className="problem-image" />
+                                        </div>
+                                      )}
+                                      {problem.stem_image && (
+                                        <div className="problem-image-container">
+                                          <span className="image-label">Stem Image (Legacy):</span>
+                                          <img src={problem.stem_image} alt="Stem" className="problem-image" />
+                                        </div>
+                                      )}
+                                    </div>
+                                  </div>
                                 )}
+                              </section>
+
+                              <section className="images-section">
+                                <h4>Answer Images</h4>
+                                <div className="answer-images-grid">
+                                  {[
+                                    { key: 'answerimage3', label: 'Part A Image' },
+                                    { key: 'answerimage4', label: 'Part B Image' },
+                                    { key: 'answerimage1', label: 'Part C Image' },
+                                    { key: 'answerimage2', label: 'Part D Image' }
+                                  ].map(img => (
+                                    <div key={img.key} className="answer-image-item">
+                                      <label>{img.label}:</label>
+                                      {editMode === problem.id ? (
+                                        <>
+                                          <input 
+                                            type="text"
+                                            className="edit-input"
+                                            value={editedData[img.key] || ''}
+                                            onChange={(e) => handleDataChange(img.key, e.target.value)}
+                                            placeholder="URL/Base64"
+                                          />
+                                          {editedData[img.key] && (
+                                            <img src={editedData[img.key]} alt="Preview" className="preview-img-small" />
+                                          )}
+                                        </>
+                                      ) : (
+                                        problem[img.key] ? (
+                                          <div className="problem-image-container">
+                                            <img src={problem[img.key]} alt={img.label} className="problem-image" />
+                                          </div>
+                                        ) : <span>No image</span>
+                                      )}
+                                    </div>
+                                  ))}
+                                </div>
                               </section>
 
                               <section className="parts-section">

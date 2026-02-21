@@ -203,30 +203,34 @@ export const questionApi = {
   async fetchQuestionsByIds(ids) {
     if (!ids || ids.length === 0) return [];
     
-    const BATCH_SIZE = 100;
+    // The ?ids= filter is ignored by the current worker, 
+    // so we fetch individual questions in parallel with concurrency control.
     const allResults = [];
+    const CONCURRENCY = 10;
     
-    for (let i = 0; i < ids.length; i += BATCH_SIZE) {
-        const chunk = ids.slice(i, i + BATCH_SIZE);
-        const url = `${API_BASE_URL}/questions?ids=${chunk.join(',')}`;
+    for (let i = 0; i < ids.length; i += CONCURRENCY) {
+        const chunk = ids.slice(i, i + CONCURRENCY);
+        const promises = chunk.map(id => 
+            fetchWithRetry(`${API_BASE_URL}/questions/${id}`)
+                .then(async res => {
+                  if (res.status === 200) {
+                    const data = await res.json();
+                    return data;
+                  }
+                  return null;
+                })
+                .catch(err => {
+                  console.error(`Error fetching ID ${id}:`, err);
+                  return null;
+                })
+        );
         
-        try {
-            const response = await fetchWithRetry(url);
-            if (!response.ok) {
-                const errorText = await response.text();
-                console.error(`Failed to fetch chunk ${i/BATCH_SIZE}: ${response.status} ${errorText}`);
-                continue;
-            }
-            const data = await response.json();
-            const questions = Array.isArray(data) ? data : (data.data || []);
-            allResults.push(...questions);
-            
-            // Small delay between batches if there are more to fetch
-            if (i + BATCH_SIZE < ids.length) {
-                await new Promise(resolve => setTimeout(resolve, 100));
-            }
-        } catch (error) {
-            console.error(`Error fetching chunk ${i/BATCH_SIZE}:`, error);
+        const results = await Promise.all(promises);
+        allResults.push(...results.filter(Boolean));
+        
+        // Minor delay to prevent overwhelming the worker
+        if (i + CONCURRENCY < ids.length) {
+          await new Promise(resolve => setTimeout(resolve, 50));
         }
     }
     

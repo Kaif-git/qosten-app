@@ -169,22 +169,26 @@ function QuestionCard({ question, selectionMode, isSelected, onToggleSelect, isL
             <ul className="options-list">
               {question.parts.map((part, index) => {
                 let partImage = part.image;
-                if (part.letter === 'c' && question.answerimage1 && 
-                    question.answerimage1 !== '[There is a picture for part c]' && 
-                    question.answerimage1 !== '[ছবি আছে জন্য অংশ c]') {
-                  partImage = question.answerimage1;
-                } else if (part.letter === 'd' && question.answerimage2 && 
-                           question.answerimage2 !== '[There is a picture for part d]' && 
-                           question.answerimage2 !== '[ছবি আছে জন্য অংশ d]') {
-                  partImage = question.answerimage2;
-                } else if (part.letter === 'a' && question.answerimage3 && 
-                           question.answerimage3 !== '[There is a picture for part a]' && 
-                           question.answerimage3 !== '[ছবি আছে জন্য অংশ a]') {
+                const letter = part.letter?.toLowerCase();
+                
+                // Map based on the non-chronological column names
+                // 3=A, 4=B, 1=C, 2=D
+                if (letter === 'a' && question.answerimage3 && 
+                    question.answerimage3 !== '[There is a picture for part a]' && 
+                    question.answerimage3 !== '[ছবি আছে জন্য অংশ a]') {
                   partImage = question.answerimage3;
-                } else if (part.letter === 'b' && question.answerimage4 && 
+                } else if (letter === 'b' && question.answerimage4 && 
                            question.answerimage4 !== '[There is a picture for part b]' && 
                            question.answerimage4 !== '[ছবি আছে জন্য অংশ b]') {
                   partImage = question.answerimage4;
+                } else if (letter === 'c' && question.answerimage1 && 
+                    question.answerimage1 !== '[There is a picture for part c]' && 
+                    question.answerimage1 !== '[ছবি আছে জন্য অংশ c]') {
+                  partImage = question.answerimage1;
+                } else if (letter === 'd' && question.answerimage2 && 
+                           question.answerimage2 !== '[There is a picture for part d]' && 
+                           question.answerimage2 !== '[ছবি আছে জন্য অংশ d]') {
+                  partImage = question.answerimage2;
                 }
                 
                 return (

@@ -3,11 +3,66 @@
   margin: 0 auto;
 }
 
-.header-row {
+.header-actions {
   display: flex;
-  justify-content: space-between;
+  gap: 12px;
+}
+
+.sync-all-btn {
+  background: #273c75;
+  color: white;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sync-all-btn:hover {
+  background: #192a56;
+}
+
+.sync-all-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.sync-progress-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.sync-progress-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 20px;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px 0;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: #273c75;
+  transition: width 0.3s ease;
 }
 
 .refresh-btn {
@@ -335,10 +390,37 @@
 }
 
 .edit-btn { background: #3498db; color: white; }
+.sync-btn { background: #9b59b6; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; display: flex; align-items: center; gap: 5px; font-weight: 600; font-size: 13px; }
+.sync-btn:hover { background: #8e44ad; }
+.sync-btn:disabled { background: #bdc3c7; cursor: not-allowed; }
 .delete-problem-btn { background: #ff7675; color: white; }
 .delete-problem-btn:hover { background: #d63031; }
 .save-btn { background: #27ae60; color: white; }
 .cancel-btn { background: #95a5a6; color: white; }
+
+.images-edit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.problem-images-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.image-label {
+  display: block;
+  font-size: 11px;
+  font-weight: bold;
+  color: #7f8c8d;
+  background: #f8f9fa;
+  padding: 4px 8px;
+  border-bottom: 1px solid #eee;
+}
 
 .edit-textarea {
   width: 100%;
@@ -372,6 +454,80 @@
 .is-editing {
   border-color: #273c75;
   box-shadow: 0 0 10px rgba(39, 60, 117, 0.2);
+}
+
+.image-edit-block {
+  margin-top: 15px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 4px;
+  border: 1px dashed #ced4da;
+}
+
+.image-edit-block label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #495057;
+}
+
+.preview-img-small {
+  display: block;
+  max-width: 200px;
+  max-height: 150px;
+  margin-top: 10px;
+  border-radius: 4px;
+  border: 1px solid #dee2e6;
+}
+
+.problem-image-container {
+  margin-top: 15px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  display: inline-block;
+  background: white;
+}
+
+.problem-image {
+  display: block;
+  max-width: 100%;
+  max-height: 400px;
+}
+
+.images-section {
+  background: white;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #e1e8ed;
+  margin-bottom: 20px;
+}
+
+.images-section h4 {
+  margin-top: 0;
+  color: #2c3e50;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+.answer-images-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.answer-image-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.answer-image-item label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #7f8c8d;
 }
 
 @media (max-width: 768px) {

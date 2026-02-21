@@ -22,6 +22,19 @@ export const lessonApi = {
       const { subject, chapter, topics } = chapterData;
       results.chaptersProcessed++;
 
+      // Get max order index for this chapter to append
+      const { data: existingTopics } = await supabase
+        .from('learn_topics')
+        .select('order_index')
+        .eq('subject', subject)
+        .eq('chapter', chapter)
+        .order('order_index', { ascending: false })
+        .limit(1);
+      
+      let nextOrder = (existingTopics && existingTopics[0]?.order_index !== undefined) 
+        ? existingTopics[0].order_index + 1 
+        : 0;
+
       for (const topicData of topics) {
         try {
           // 1. Insert Topic
@@ -30,7 +43,8 @@ export const lessonApi = {
             .insert([{
               subject,
               chapter,
-              title: topicData.title
+              title: topicData.title,
+              order_index: nextOrder++
             }])
             .select()
             .single();
@@ -102,46 +116,132 @@ export const lessonApi = {
       throw new Error('Supabase client is not initialized');
     }
 
-    // Fetch topics
     const { data: topics, error: topicsError } = await supabase
       .from('learn_topics')
-      .select('*')
-      .order('created_at', { ascending: false });
+      .select(`
+        *,
+        subtopics:learn_subtopics(*),
+        questions:learn_questions(*)
+      `)
+      .order('subject', { ascending: true })
+      .order('chapter', { ascending: true })
+      .order('order_index', { ascending: true })
+      .order('order_index', { foreignTable: 'learn_subtopics', ascending: true })
+      .order('order_index', { foreignTable: 'learn_questions', ascending: true });
 
     if (topicsError) throw topicsError;
 
-    // Fetch all subtopics and questions for these topics
-    const { data: subtopics, error: subtopicsError } = await supabase
-      .from('learn_subtopics')
-      .select('*')
-      .order('order_index', { ascending: true });
-
-    if (subtopicsError) throw subtopicsError;
-
-    const { data: questions, error: questionsError } = await supabase
-      .from('learn_questions')
-      .select('*')
-      .order('order_index', { ascending: true });
-
-    if (questionsError) throw questionsError;
-
     // Map questions to include options array for frontend compatibility
-    const formattedQuestions = questions.map(q => ({
-      ...q,
-      options: [
-        { label: 'a', text: q.option_a },
-        { label: 'b', text: q.option_b },
-        { label: 'c', text: q.option_c },
-        { label: 'd', text: q.option_d }
-      ].filter(opt => opt.text) // Only include options that have text
-    }));
-
-    // Grouping
     return topics.map(topic => ({
       ...topic,
-      subtopics: subtopics.filter(st => st.topic_id === topic.id),
-      questions: formattedQuestions.filter(q => q.topic_id === topic.id)
+      subtopics: topic.subtopics || [],
+      questions: (topic.questions || []).map(q => ({
+        ...q,
+        options: [
+          { label: 'a', text: q.option_a },
+          { label: 'b', text: q.option_b },
+          { label: 'c', text: q.option_c },
+          { label: 'd', text: q.option_d }
+        ].filter(opt => opt.text) // Only include options that have text
+      }))
     }));
+  },
+
+  /**
+   * Creates a new topic at a specific position and shifts subsequent topics.
+   */
+  async createTopicAtPosition(topicData, position) {
+    if (!supabase) throw new Error('Supabase client is not initialized');
+
+    const { subject, chapter, title, subtopics, questions } = topicData;
+
+    // 1. Shift existing topics with order_index >= position
+    const { error: shiftError } = await supabase.rpc('increment_topic_orders', {
+      p_subject: subject,
+      p_chapter: chapter,
+      p_min_order: position
+    });
+
+    // If RPC doesn't exist, we'll have to do it manually (less efficient)
+    if (shiftError) {
+      console.warn('RPC increment_topic_orders failed or not found, falling back to manual shift:', shiftError);
+      const { data: toShift, error: fetchError } = await supabase
+        .from('learn_topics')
+        .select('id, order_index')
+        .eq('subject', subject)
+        .eq('chapter', chapter)
+        .gte('order_index', position);
+
+      if (fetchError) throw fetchError;
+
+      for (const t of toShift) {
+        await supabase
+          .from('learn_topics')
+          .update({ order_index: t.order_index + 1 })
+          .eq('id', t.id);
+      }
+    }
+
+    // 2. Insert the new topic
+    const { data: topic, error: topicError } = await supabase
+      .from('learn_topics')
+      .insert([{
+        subject,
+        chapter,
+        title,
+        order_index: position
+      }])
+      .select()
+      .single();
+
+    if (topicError) throw topicError;
+
+    // 3. Insert Subtopics
+    if (subtopics && subtopics.length > 0) {
+      const subtopicsToInsert = subtopics.map((st, index) => ({
+        topic_id: topic.id,
+        title: st.title,
+        definition: st.definition,
+        explanation: st.explanation,
+        shortcut: st.shortcut,
+        mistakes: st.mistakes,
+        difficulty: st.difficulty,
+        order_index: index
+      }));
+
+      const { error: stError } = await supabase
+        .from('learn_subtopics')
+        .insert(subtopicsToInsert);
+
+      if (stError) throw stError;
+    }
+
+    // 4. Insert Questions
+    if (questions && questions.length > 0) {
+      const questionsToInsert = questions.map((q, index) => {
+        const findOption = (label) => q.options.find(opt => opt.label === label)?.text || '';
+        return {
+          topic_id: topic.id,
+          question: q.question,
+          option_a: findOption('a') || findOption('ক'),
+          option_b: findOption('b') || findOption('খ'),
+          option_c: findOption('c') || findOption('গ'),
+          option_d: findOption('d') || findOption('ঘ'),
+          correct_answer: q.correct_answer,
+          explanation: q.explanation,
+          order_index: index,
+          answer: q.correct_answer
+        };
+      });
+
+      const { error: qError } = await supabase
+        .from('learn_questions')
+        .insert(questionsToInsert);
+
+      if (qError) throw qError;
+    }
+
+    return topic;
   },
 
   /**

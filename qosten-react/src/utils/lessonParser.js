@@ -87,7 +87,13 @@ export function parseLessonText(text) {
     }
 
     // Parse Questions Header
-    if (trimmed.toLowerCase().includes('review questions') || trimmed.includes('পর্যালোচনা প্রশ্ন ও উত্তর')) {
+    if (trimmed.toLowerCase().includes('review questions') || 
+        trimmed.includes('পর্যালোচনা প্রশ্ন ও উত্তর') ||
+        trimmed.includes('বিষয়ভিত্তিক MCQ') ||
+        trimmed.match(/^(?:###\s*)?(?:\*\*)?.*MCQ.*(?:\*\*)?$/i) ||
+        trimmed.match(/^(?:###\s*)?(?:\*\*)?.*Questions.*(?:\*\*)?$/i) ||
+        trimmed.match(/^(?:###\s*)?(?:\*\*)?.*প্রশ্ন.*(?:\*\*)?$/i)
+       ) {
       console.log('FOUND QUESTIONS HEADER');
       isParsingQuestions = true;
       currentSubtopic = null;
@@ -129,18 +135,17 @@ export function parseLessonText(text) {
         continue;
       }
 
-      const correctMatch = trimmed.match(/^(?:\*\*)?Correct(?:\*\*)?\s*[:：ঃ]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
-      if (correctMatch && currentQuestion) {
-        currentQuestion.correct_answer = correctMatch[1].trim().toLowerCase().replace(/\*\*$/, '').replace(/^\*\*?/, '');
-        continue;
-      }
-
-      const explanationMatch = trimmed.match(/^(?:\*\*)?Explanation(?:\*\*)?\s*[:：ঃ]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
-      if (explanationMatch && currentQuestion) {
-        currentQuestion.explanation = explanationMatch[1].trim().replace(/\*\*$/, '').replace(/^\*\*?/, '');
-        continue;
-      }
-
+          const correctMatch = trimmed.match(/^(?:\*\*)?(?:Correct|সঠিক|সঠিক উত্তর)(?:\*\*)?\s*[:：ঃ-]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
+          if (correctMatch && currentQuestion) {
+            currentQuestion.correct_answer = correctMatch[1].trim().toLowerCase().replace(/\*\*$/, '').replace(/^\*\*?/, '');
+            continue;
+          }
+      
+          const explanationMatch = trimmed.match(/^(?:\*\*)?(?:Explanation|ব্যাখ্যা)(?:\*\*)?\s*[:：ঃ-]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
+          if (explanationMatch && currentQuestion) {
+            currentQuestion.explanation = explanationMatch[1].trim().replace(/\*\*$/, '').replace(/^\*\*?/, '');
+            continue;
+          }
       const optionMatch = trimmed.match(/^(?:\*\*)?([a-d]|[ক-ঘ])[\).]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
       if (optionMatch && currentQuestion) {
         currentQuestion.options.push({
@@ -242,13 +247,13 @@ export function parseQuestionsOnly(text) {
       continue;
     }
 
-    const correctMatch = trimmed.match(/^(?:\*\*)?Correct(?:\*\*)?\s*[:：ঃ]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
+    const correctMatch = trimmed.match(/^(?:\*\*)?(?:Correct|সঠিক|সঠিক উত্তর)(?:\*\*)?\s*[:：ঃ-]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
     if (correctMatch && currentQuestion) {
       currentQuestion.correct_answer = correctMatch[1].trim().toLowerCase().replace(/\*\*$/, '').replace(/^\*\*?/, '');
       continue;
     }
 
-    const explanationMatch = trimmed.match(/^(?:\*\*)?Explanation(?:\*\*)?\s*[:：ঃ]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
+    const explanationMatch = trimmed.match(/^(?:\*\*)?(?:Explanation|ব্যাখ্যা)(?:\*\*)?\s*[:：ঃ-]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
     if (explanationMatch && currentQuestion) {
       currentQuestion.explanation = explanationMatch[1].trim().replace(/\*\*$/, '').replace(/^\*\*?/, '');
       continue;

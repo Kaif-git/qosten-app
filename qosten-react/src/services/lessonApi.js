@@ -148,6 +148,84 @@ export const lessonApi = {
   },
 
   /**
+   * Fetches distinct subjects.
+   */
+  async fetchSubjects() {
+    if (!supabase) throw new Error('Supabase client is not initialized');
+    const { data, error } = await supabase
+      .from('learn_topics')
+      .select('subject')
+      .order('subject');
+    if (error) throw error;
+    // Deduplicate subjects
+    return [...new Set(data.map(item => item.subject))];
+  },
+
+  /**
+   * Fetches distinct chapters for a given subject.
+   */
+  async fetchChapters(subject) {
+    if (!supabase) throw new Error('Supabase client is not initialized');
+    const { data, error } = await supabase
+      .from('learn_topics')
+      .select('chapter')
+      .eq('subject', subject)
+      .order('chapter');
+    if (error) throw error;
+    // Deduplicate chapters
+    return [...new Set(data.map(item => item.chapter))];
+  },
+
+  /**
+   * Fetches topics for a given subject and chapter (without deep details).
+   */
+  async fetchTopics(subject, chapter) {
+    if (!supabase) throw new Error('Supabase client is not initialized');
+    const { data, error } = await supabase
+      .from('learn_topics')
+      .select('*')
+      .eq('subject', subject)
+      .eq('chapter', chapter)
+      .order('order_index');
+    if (error) throw error;
+    // Return topics initialized with empty subtopics/questions for UI consistency until expanded
+    return data.map(t => ({ ...t, subtopics: [], questions: [] }));
+  },
+
+  /**
+   * Fetches subtopics and questions for a specific topic.
+   */
+  async fetchTopicDetails(topicId) {
+    if (!supabase) throw new Error('Supabase client is not initialized');
+
+    const { data: subtopics, error: stError } = await supabase
+      .from('learn_subtopics')
+      .select('*')
+      .eq('topic_id', topicId)
+      .order('order_index');
+    if (stError) throw stError;
+
+    const { data: questions, error: qError } = await supabase
+      .from('learn_questions')
+      .select('*')
+      .eq('topic_id', topicId)
+      .order('order_index');
+    if (qError) throw qError;
+
+    const formattedQuestions = questions.map(q => ({
+      ...q,
+      options: [
+        { label: 'a', text: q.option_a },
+        { label: 'b', text: q.option_b },
+        { label: 'c', text: q.option_c },
+        { label: 'd', text: q.option_d }
+      ].filter(opt => opt.text)
+    }));
+
+    return { subtopics, questions: formattedQuestions };
+  },
+
+  /**
    * Creates a new topic at a specific position and shifts subsequent topics.
    */
   async createTopicAtPosition(topicData, position) {

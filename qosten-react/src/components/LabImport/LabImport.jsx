@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { labApi } from '../../services/labApi';
-import { questionApi } from '../../services/questionApi';
 import './LabImport.css';
 
 const LabImport = () => {

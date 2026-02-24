@@ -125,11 +125,15 @@ export default function LabView() {
       // Execute updates in batches
       for (let i = 0; i < updateTasks.length; i += BATCH_SIZE) {
         const chunk = updateTasks.slice(i, i + BATCH_SIZE);
-        await Promise.all(chunk.map(task => 
+        const results = await Promise.all(chunk.map(task => 
           labApi.updateLabProblem(task.id, task.data)
-            .then(() => { updateCount++; })
-            .catch(err => console.error(`Failed to update ${task.labId}:`, err))
+            .then(() => true)
+            .catch(err => {
+              console.error(`Failed to update ${task.labId}:`, err);
+              return false;
+            })
         ));
+        updateCount += results.filter(Boolean).length;
         setSyncAllProgress(prev => ({ ...prev, current: i + chunk.length, total: updateTasks.length, stage: 'Saving Updates...' }));
       }
 

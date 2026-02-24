@@ -146,7 +146,7 @@ export function parseLessonText(text) {
             currentQuestion.explanation = explanationMatch[1].trim().replace(/\*\*$/, '').replace(/^\*\*?/, '');
             continue;
           }
-      const optionMatch = trimmed.match(/^(?:\*\*)?([a-d]|[ক-ঘ])[\).]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
+      const optionMatch = trimmed.match(/^(?:\*\*)?([a-d]|[ক-ঘ])[).]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
       if (optionMatch && currentQuestion) {
         currentQuestion.options.push({
           label: optionMatch[1].toLowerCase(),
@@ -259,7 +259,7 @@ export function parseQuestionsOnly(text) {
       continue;
     }
 
-    const optionMatch = trimmed.match(/^(?:\*\*)?([a-d]|[ক-ঘ])[\).]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
+    const optionMatch = trimmed.match(/^(?:\*\*)?([a-d]|[ক-ঘ])[).]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
     if (optionMatch && currentQuestion) {
       currentQuestion.options.push({
         label: optionMatch[1].toLowerCase(),
@@ -268,7 +268,7 @@ export function parseQuestionsOnly(text) {
       continue;
     }
 
-    if (currentQuestion && !trimmed.match(/^(?:\*\*)?Q\d*:/i) && !trimmed.match(/^([a-d]|[ক-ঘ])[\).]/i)) {
+    if (currentQuestion && !trimmed.match(/^(?:\*\*)?Q\d*:/i) && !trimmed.match(/^([a-d]|[ক-ঘ])[).]/i)) {
       if (currentQuestion.explanation) {
         currentQuestion.explanation += ' ' + trimmed;
       } else if (!currentQuestion.correct_answer && currentQuestion.options.length === 0) {

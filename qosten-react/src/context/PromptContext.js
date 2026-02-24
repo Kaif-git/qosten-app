@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer, useEffect } from 'react';
+import React, { createContext, useContext, useReducer, useEffect, useCallback } from 'react';
 import { createClient } from '@supabase/supabase-js';
 
 // Initialize Supabase client
@@ -91,8 +91,34 @@ const PromptContext = createContext();
 export function PromptProvider({ children }) {
   const [state, dispatch] = useReducer(promptReducer, initialState);
 
+  // Update statistics
+  const updateStats = useCallback((prompts) => {
+    const byType = {};
+    const bySubject = {};
+
+    prompts.forEach(prompt => {
+      // Count by type
+      if (prompt.prompt_type) {
+        byType[prompt.prompt_type] = (byType[prompt.prompt_type] || 0) + 1;
+      }
+      // Count by subject
+      if (prompt.subject) {
+        bySubject[prompt.subject] = (bySubject[prompt.subject] || 0) + 1;
+      }
+    });
+
+    dispatch({
+      type: ACTIONS.UPDATE_STATS,
+      payload: {
+        total: prompts.length,
+        byType,
+        bySubject
+      }
+    });
+  }, []);
+
   // Fetch all prompts from Supabase
-  const fetchPrompts = async () => {
+  const fetchPrompts = useCallback(async () => {
     if (!supabaseClient) {
       console.error('Supabase client not initialized');
       return;
@@ -114,7 +140,7 @@ export function PromptProvider({ children }) {
       console.error('Error fetching prompts:', error);
       dispatch({ type: ACTIONS.SET_ERROR, payload: error.message });
     }
-  };
+  }, [updateStats]);
 
   // Add a new prompt
   const addPrompt = async (prompt) => {
@@ -300,36 +326,10 @@ export function PromptProvider({ children }) {
     dispatch({ type: ACTIONS.SET_EDITING_PROMPT, payload: prompt });
   };
 
-  // Update statistics
-  const updateStats = (prompts) => {
-    const byType = {};
-    const bySubject = {};
-
-    prompts.forEach(prompt => {
-      // Count by type
-      if (prompt.prompt_type) {
-        byType[prompt.prompt_type] = (byType[prompt.prompt_type] || 0) + 1;
-      }
-      // Count by subject
-      if (prompt.subject) {
-        bySubject[prompt.subject] = (bySubject[prompt.subject] || 0) + 1;
-      }
-    });
-
-    dispatch({
-      type: ACTIONS.UPDATE_STATS,
-      payload: {
-        total: prompts.length,
-        byType,
-        bySubject
-      }
-    });
-  };
-
   // Load prompts on mount
   useEffect(() => {
     fetchPrompts();
-  }, []);
+  }, [fetchPrompts]);
 
   const value = {
     ...state,

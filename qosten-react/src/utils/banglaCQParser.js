@@ -58,7 +58,6 @@ export function parseBanglaCQQuestions(text) {
     let questionBuffer = [];
     let answerBuffer = [];
     let currentPartLetter = null;
-    let currentPartMarks = 0;
 
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
@@ -119,8 +118,9 @@ export function parseBanglaCQQuestions(text) {
       // Parse question lines (format: "a. question text (marks)")
       else if (inQuestions && line.match(/^[a-z]\.\s+.+/i)) {
         // Save previous question if exists
-        if (currentPartLetter && questionBuffer.length > 0) {
-          const existingPart = currentQuestion.parts.find(p => p.letter === currentPartLetter);
+        const letter = currentPartLetter;
+        if (letter && questionBuffer.length > 0) {
+          const existingPart = currentQuestion.parts.find(p => p.letter === letter);
           if (existingPart) {
             existingPart.text = questionBuffer.join(' ').trim();
           }
@@ -135,7 +135,8 @@ export function parseBanglaCQQuestions(text) {
           console.log(`  ✅ Found question ${currentPartLetter}: marks=${marks}`);
 
           // Check if part already exists (from answers section)
-          let part = currentQuestion.parts.find(p => p.letter === currentPartLetter);
+          const targetLetter = currentPartLetter;
+          let part = currentQuestion.parts.find(p => p.letter === targetLetter);
           if (!part) {
             part = {
               letter: currentPartLetter,
@@ -159,11 +160,12 @@ export function parseBanglaCQQuestions(text) {
       // Parse answer lines (format: "a. answer text")
       else if (inAnswers && line.match(/^[a-z]\.\s+/i)) {
         // Save previous answer if exists
-        if (currentPartLetter && answerBuffer.length > 0) {
-          let part = currentQuestion.parts.find(p => p.letter === currentPartLetter);
+        const letter = currentPartLetter;
+        if (letter && answerBuffer.length > 0) {
+          let part = currentQuestion.parts.find(p => p.letter === letter);
           if (!part) {
             part = {
-              letter: currentPartLetter,
+              letter: letter,
               text: '',
               marks: 0,
               answer: ''
@@ -176,7 +178,8 @@ export function parseBanglaCQQuestions(text) {
         const answerMatch = line.match(/^([a-z])\.\s+(.+)/i);
         if (answerMatch) {
           currentPartLetter = answerMatch[1].toLowerCase();
-          let part = currentQuestion.parts.find(p => p.letter === currentPartLetter);
+          const targetLetter = currentPartLetter;
+          let part = currentQuestion.parts.find(p => p.letter === targetLetter);
           if (!part) {
             part = {
               letter: currentPartLetter,

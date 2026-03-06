@@ -34,20 +34,78 @@
   background: #2c3e50;
 }
 
-.json-textarea {
-  width: 100%;
+.json-editor-wrapper {
+  display: flex;
   height: 400px;
-  padding: 15px;
   border: 1px solid #ddd;
   border-radius: 4px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.line-numbers-gutter {
+  width: 45px;
+  background-color: #f1f2f6;
+  border-right: 1px solid #dfe6e9;
+  color: #b2bec3;
+  padding: 15px 0;
+  text-align: right;
   font-family: 'Courier New', Courier, monospace;
   font-size: 14px;
-  resize: vertical;
-  margin-bottom: 20px;
+  user-select: none;
+  overflow: hidden;
   box-sizing: border-box;
 }
 
-.action-buttons {
+.line-number {
+  height: 21px; /* Matches line-height of textarea */
+  padding-right: 8px;
+}
+
+.json-textarea {
+  flex: 1;
+  height: 100% !important;
+  margin-bottom: 0 !important;
+  border: none !important;
+  padding: 15px !important;
+  line-height: 21px;
+  outline: none;
+}
+
+.jump-to-error-btn {
+  background-color: #2d3436;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.jump-to-error-btn:hover {
+  background-color: #000;
+}
+
+.remove-problem-btn {
+  background-color: #c0392b;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.remove-problem-btn:hover {
+  background-color: #a93226;
+}
+
+.json-error-details {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
@@ -112,6 +170,26 @@
   background: #f8d7da;
   color: #721c24;
   border: 1px solid #f5c6cb;
+}
+
+.json-error-details {
+  text-align: left;
+  margin-top: 5px;
+}
+
+.error-snippet {
+  background-color: #2d3436;
+  color: #fab1a0;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.error-snippet::first-line {
+  color: #dfe6e9;
 }
 
 .list-section {

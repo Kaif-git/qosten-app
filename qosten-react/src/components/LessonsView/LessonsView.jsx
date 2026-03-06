@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { lessonApi } from '../../services/lessonApi';
-import { parseQuestionsOnly, parseLessonText } from '../../utils/lessonParser';
+import { parseQuestionsOnly, parseLessonText, formatLessonToMarkdown } from '../../utils/lessonParser';
 import './LessonsView.css';
 
 export default function LessonsView() {
@@ -16,6 +16,7 @@ export default function LessonsView() {
   const [loadingChapters, setLoadingChapters] = useState({}); // { [subject]: boolean }
   const [loadingTopics, setLoadingTopics] = useState({}); // { [subject_chapter]: boolean }
   const [loadingDetails, setLoadingDetails] = useState({}); // { [topicId]: boolean }
+  const [copyingChapter, setCopyingChapter] = useState({}); // { [subject_chapter]: boolean }
 
   const [expandedSubjects, setExpandedSubjects] = useState({}); // { [subject]: boolean }
   const [expandedChapters, setExpandedChapters] = useState({}); // { [subject_chapter]: boolean }
@@ -47,6 +48,23 @@ export default function LessonsView() {
       setError(err.message);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleCopyChapter = async (subject, chapter) => {
+    const key = `${subject}_${chapter}`;
+    setCopyingChapter(prev => ({ ...prev, [key]: true }));
+    try {
+      const fullTopics = await lessonApi.fetchFullChapter(subject, chapter);
+      const markdown = formatLessonToMarkdown(subject, chapter, fullTopics);
+      
+      await navigator.clipboard.writeText(markdown);
+      alert(`Chapter "${chapter}" copied to clipboard in import format!`);
+    } catch (err) {
+      console.error('Error copying chapter:', err);
+      alert('Failed to copy chapter: ' + err.message);
+    } finally {
+      setCopyingChapter(prev => ({ ...prev, [key]: false }));
     }
   };
 
@@ -96,15 +114,10 @@ export default function LessonsView() {
     
     if (isExpanding) {
       setExpandedTopicId(topic.id);
-      // Fetch details if not already loaded (check if subtopics is empty/default)
-      // Note: fetchTopics initializes subtopics as []
-      // We can use a flag or check if we've fetched.
-      // Let's check a new property `detailsLoaded` that we'll add.
       if (!topic.detailsLoaded) {
         setLoadingDetails(prev => ({ ...prev, [topic.id]: true }));
         try {
           const details = await lessonApi.fetchTopicDetails(topic.id);
-          // Update the topic in state
           const key = `${topic.subject}_${topic.chapter}`;
           setTopicsByChapter(prev => ({
             ...prev,
@@ -131,8 +144,42 @@ export default function LessonsView() {
 
     setIsUpdating(true);
     try {
-      await lessonApi.renameSubject(editingSubject.oldName, editingSubject.newName.trim());
-      await loadSubjects(); // Reload list
+      const { oldName, newName } = editingSubject;
+      const trimmedNewName = newName.trim();
+      
+      await lessonApi.renameSubject(oldName, trimmedNewName);
+      
+      setChaptersBySubject(prev => {
+        const next = { ...prev };
+        if (next[oldName]) {
+          next[trimmedNewName] = next[oldName];
+          delete next[oldName];
+        }
+        return next;
+      });
+
+      setTopicsByChapter(prev => {
+        const next = { ...prev };
+        Object.keys(next).forEach(key => {
+          if (key.startsWith(`${oldName}_`)) {
+            const chapterPart = key.substring(oldName.length + 1);
+            next[`${trimmedNewName}_${chapterPart}`] = next[key];
+            delete next[key];
+          }
+        });
+        return next;
+      });
+
+      setExpandedSubjects(prev => {
+        const next = { ...prev };
+        if (next[oldName]) {
+          next[trimmedNewName] = next[oldName];
+          delete next[oldName];
+        }
+        return next;
+      });
+
+      await loadSubjects(); 
       setEditingSubject(null);
     } catch (err) {
       alert('Failed to rename subject: ' + err.message);
@@ -150,12 +197,9 @@ export default function LessonsView() {
     setIsUpdating(true);
     try {
       await lessonApi.renameChapter(editingChapter.subject, editingChapter.oldName, editingChapter.newName.trim());
-      // Refresh chapters for this subject
       const freshChapters = await lessonApi.fetchChapters(editingChapter.subject);
       setChaptersBySubject(prev => ({ ...prev, [editingChapter.subject]: freshChapters }));
       
-      // If we have topics loaded for the old name, we should probably clear them or migrate them.
-      // Easiest is to just clear them so they reload on next expand
       const oldKey = `${editingChapter.subject}_${editingChapter.oldName}`;
       setTopicsByChapter(prev => {
         const next = { ...prev };
@@ -178,7 +222,7 @@ export default function LessonsView() {
 
   const startEdit = (topic) => {
     setEditMode(topic.id);
-    setEditedData(JSON.parse(JSON.stringify(topic))); // Deep clone
+    setEditedData(JSON.parse(JSON.stringify(topic))); 
     setBatchQuestionText('');
   };
 
@@ -199,7 +243,6 @@ export default function LessonsView() {
     try {
       await lessonApi.updateTopic(editedData.id, editedData);
       
-      // Update local state without full reload
       const key = `${editedData.subject}_${editedData.chapter}`;
       setTopicsByChapter(prev => ({
         ...prev,
@@ -248,12 +291,10 @@ export default function LessonsView() {
     setIsUpdating(true);
     try {
       await lessonApi.deleteChapter(subject, chapter);
-      // Remove from chapters list
       setChaptersBySubject(prev => ({
         ...prev,
         [subject]: prev[subject].filter(c => c !== chapter)
       }));
-      // Remove topics cache
       const key = `${subject}_${chapter}`;
       setTopicsByChapter(prev => {
         const next = { ...prev };
@@ -273,7 +314,6 @@ export default function LessonsView() {
     try {
       await lessonApi.deleteQuestion(qId);
       
-      // Update editedData if editing
       if (editedData) {
         setEditedData(prev => ({
           ...prev,
@@ -281,21 +321,12 @@ export default function LessonsView() {
         }));
       }
 
-      // Also update main list just in case
       if (editMode) {
-          // If we are in edit mode, the main list update happens on save, 
-          // BUT the user might cancel. However, the deletion is permanent on server.
-          // So we should update the main list too.
-          const topicId = editMode;
-          // Find the topic to get subject/chapter
-          // Need to search... or just iterate.
-          // Since we know the topicId, we can find it.
-          // Optimization: editedData has subject/chapter
           const key = `${editedData.subject}_${editedData.chapter}`;
           setTopicsByChapter(prev => ({
             ...prev,
             [key]: prev[key].map(t => 
-                t.id === topicId 
+                t.id === editMode 
                 ? { ...t, questions: t.questions.filter(q => q.id !== qId) }
                 : t
             )
@@ -321,12 +352,10 @@ export default function LessonsView() {
       await lessonApi.addQuestionsToTopic(editedData.id, parsedQuestions, maxOrder + 1);
       setBatchQuestionText('');
       
-      // Reload details for this topic
       const details = await lessonApi.fetchTopicDetails(editedData.id);
       
       setEditedData(prev => ({ ...prev, ...details }));
       
-      // Update list
       const key = `${editedData.subject}_${editedData.chapter}`;
       setTopicsByChapter(prev => ({
         ...prev,
@@ -344,9 +373,6 @@ export default function LessonsView() {
     setIsUpdating(true);
     try {
       let topicTitle = newTopicData.title.trim();
-      // ... (Keep existing parsing logic mostly the same) ...
-      // For brevity, I'll simplify the parsing logic slightly or assume it's same as before.
-      // Since I need to replicate the parsing logic, I'll copy the core parts.
       
       if (newTopicData.content.trim()) {
         const hasTopicHeader = newTopicData.content.match(/^(?:[*#-]*\s*)?(?:###\s*)?(?:\*\*)?Topic(?:\s+[\d.]+)?\s*[:：ঃ.-]/im);
@@ -392,7 +418,6 @@ export default function LessonsView() {
       setAddingTopicTo(null);
       setNewTopicData({ title: '', content: '' });
       
-      // Refresh topics for this chapter
       const key = `${addingTopicTo.subject}_${addingTopicTo.chapter}`;
       const freshTopics = await lessonApi.fetchTopics(addingTopicTo.subject, addingTopicTo.chapter);
       setTopicsByChapter(prev => ({ ...prev, [key]: freshTopics }));
@@ -436,10 +461,21 @@ export default function LessonsView() {
                     <button className="cancel-btn-small" onClick={() => setEditingSubject(null)} disabled={isUpdating}>×</button>
                   </div>
                 ) : (
-                  <h3 className="subject-heading" onClick={() => toggleSubject(subject)}>
-                    <span>{subject} {chaptersBySubject[subject] ? `(${chaptersBySubject[subject].length} Chapters)` : ''}</span>
-                    <span className="expand-icon">{expandedSubjects[subject] ? '−' : '+'}</span>
-                  </h3>
+                  <>
+                    <h3 className="subject-heading" onClick={() => toggleSubject(subject)}>
+                      <span>{subject} {chaptersBySubject[subject] ? `(${chaptersBySubject[subject].length} Chapters)` : ''}</span>
+                      <span className="expand-icon">{expandedSubjects[subject] ? '−' : '+'}</span>
+                    </h3>
+                    <div className="subject-actions">
+                      <button 
+                        className="edit-icon-btn" 
+                        title="Rename Subject"
+                        onClick={(e) => { e.stopPropagation(); setEditingSubject({ oldName: subject, newName: subject }); }}
+                      >
+                        ✎
+                      </button>
+                    </div>
+                  </>
                 )}
               </div>
               
@@ -480,6 +516,14 @@ export default function LessonsView() {
                             </div>
                           </div>
                           <div className="chapter-actions">
+                            <button 
+                              className="copy-chapter-btn" 
+                              onClick={(e) => { e.stopPropagation(); handleCopyChapter(subject, chapter); }}
+                              disabled={copyingChapter[key]}
+                              title="Copy entire chapter in import format"
+                            >
+                              {copyingChapter[key] ? 'Copying...' : 'Copy Chapter'}
+                            </button>
                             <button className="edit-icon-btn" onClick={(e) => { e.stopPropagation(); setEditingChapter({ subject, oldName: chapter, newName: chapter }); }}>✎</button>
                             <button 
                               className="delete-chapter-btn" 
@@ -496,7 +540,6 @@ export default function LessonsView() {
                               <div className="loading-sub">Loading lessons...</div>
                           ) : (
                           <div className="lessons-list">
-                            {/* Insert at Top */}
                             {addingTopicTo?.subject === subject && addingTopicTo?.chapter === chapter && addingTopicTo?.position === 0 ? (
                               <div className="insert-topic-form">
                                 <h5>Insert New Lesson at Beginning</h5>

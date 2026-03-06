@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { useQuestions } from '../../context/QuestionContext';
 import { questionApi } from '../../services/questionApi';
+import { safeJsonParse } from '../../utils/jsonFixUtils';
 
 export default function Header() {
   const { questions, refreshQuestions, bulkAddQuestions } = useQuestions();
@@ -186,7 +187,7 @@ export default function Header() {
     const reader = new FileReader();
     reader.onload = async (e) => {
       try {
-        const importedQuestions = JSON.parse(e.target.result);
+        const importedQuestions = safeJsonParse(e.target.result);
         if (!Array.isArray(importedQuestions)) {
           alert('Invalid file format. Expected an array of questions.');
           return;

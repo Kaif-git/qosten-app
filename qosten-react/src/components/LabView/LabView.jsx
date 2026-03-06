@@ -14,10 +14,55 @@ export default function LabView() {
   const [editingSubject, setEditingSubject] = useState(null); // { oldName, newName }
   const [editingChapter, setEditingChapter] = useState(null); // { subject, oldName, newName }
   const [syncAllProgress, setSyncAllProgress] = useState(null); // { current, total }
+  const [selectedIds, setSelectedIds] = useState(new Set());
 
   useEffect(() => {
     loadProblems();
   }, []);
+
+  const toggleSelectAll = () => {
+    if (selectedIds.size === problems.length) {
+      setSelectedIds(new Set());
+    } else {
+      setSelectedIds(new Set(problems.map(p => p.id)));
+    }
+  };
+
+  const toggleSelectChapter = (chapterProblems) => {
+    const chapterIds = chapterProblems.map(p => p.id);
+    const allSelected = chapterIds.every(id => selectedIds.has(id));
+    
+    const newSelected = new Set(selectedIds);
+    if (allSelected) {
+      chapterIds.forEach(id => newSelected.delete(id));
+    } else {
+      chapterIds.forEach(id => newSelected.add(id));
+    }
+    setSelectedIds(newSelected);
+  };
+
+  const toggleSelectProblem = (id, e) => {
+    e.stopPropagation();
+    const newSelected = new Set(selectedIds);
+    if (newSelected.has(id)) {
+      newSelected.delete(id);
+    } else {
+      newSelected.add(id);
+    }
+    setSelectedIds(newSelected);
+  };
+
+  const handleCopySelected = () => {
+    const selectedProblems = problems
+      .filter(p => selectedIds.has(p.id))
+      .map(({ id, created_at, updated_at, ...rest }) => rest);
+
+    if (selectedProblems.length === 0) return;
+
+    const json = JSON.stringify(selectedProblems, null, 2);
+    navigator.clipboard.writeText(json);
+    alert(`📋 Copied ${selectedProblems.length} lab problems to clipboard!`);
+  };
 
   const loadProblems = async () => {
     try {
@@ -367,7 +412,14 @@ export default function LabView() {
   return (
     <div className="lab-view-container panel">
       <div className="header-row">
-        <h2>🧪 Lab Library</h2>
+        <div className="title-area">
+          <h2>🧪 Lab Library</h2>
+          {problems.length > 0 && (
+            <button className="select-all-btn" onClick={toggleSelectAll}>
+              {selectedIds.size === problems.length ? 'Deselect All' : 'Select All'}
+            </button>
+          )}
+        </div>
         <div className="header-actions">
           <button className="sync-all-btn" onClick={handleSyncAllImages} disabled={isUpdating}>
             🔄 Sync All Missing Images
@@ -375,6 +427,18 @@ export default function LabView() {
           <button className="refresh-btn" onClick={loadProblems} disabled={isUpdating}>Refresh</button>
         </div>
       </div>
+
+      {selectedIds.size > 0 && (
+        <div className="batch-action-bar">
+          <span className="selected-count">{selectedIds.size} items selected</span>
+          <button className="batch-copy-btn" onClick={handleCopySelected}>
+            📋 Copy Selected (JSON)
+          </button>
+          <button className="batch-clear-btn" onClick={() => setSelectedIds(new Set())}>
+            ✕ Clear Selection
+          </button>
+        </div>
+      )}
 
       {syncAllProgress && (
         <div className="sync-progress-overlay">
@@ -444,6 +508,12 @@ export default function LabView() {
                         )}
                         <div className="chapter-stats">
                           <span>{chapterProblems.length} Problems</span>
+                          <button 
+                            className="select-chapter-btn"
+                            onClick={() => toggleSelectChapter(chapterProblems)}
+                          >
+                            {chapterProblems.every(p => selectedIds.has(p.id)) ? 'Deselect Chapter' : 'Select Chapter'}
+                          </button>
                         </div>
                       </div>
                       <button 
@@ -457,9 +527,16 @@ export default function LabView() {
                     
                     <div className="problems-list">
                       {chapterProblems.map((problem) => (
-                        <div key={problem.id} className={`problem-card ${expandedProblemId === problem.id ? 'expanded' : ''} ${editMode === problem.id ? 'is-editing' : ''}`}>
+                        <div key={problem.id} className={`problem-card ${expandedProblemId === problem.id ? 'expanded' : ''} ${editMode === problem.id ? 'is-editing' : ''} ${selectedIds.has(problem.id) ? 'selected' : ''}`}>
                           <div className="problem-header" onClick={() => toggleProblem(problem.id)}>
                             <div className="problem-main-info">
+                              <input 
+                                type="checkbox"
+                                className="problem-checkbox"
+                                checked={selectedIds.has(problem.id)}
+                                onChange={(e) => toggleSelectProblem(problem.id, e)}
+                                onClick={(e) => e.stopPropagation()}
+                              />
                               <h3 className="problem-title">{problem.lab_problem_id}: {problem.lesson || 'Lab Problem'}</h3>
                             </div>
                             <div className="problem-meta">

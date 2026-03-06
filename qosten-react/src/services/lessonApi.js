@@ -193,6 +193,47 @@ export const lessonApi = {
   },
 
   /**
+   * Fetches all topics, subtopics, and questions for a specific chapter.
+   */
+  async fetchFullChapter(subject, chapter) {
+    if (!supabase) throw new Error('Supabase client is not initialized');
+    const { data: topics, error: topicsError } = await supabase
+      .from('learn_topics')
+      .select(`
+        *,
+        subtopics:learn_subtopics(*),
+        questions:learn_questions(*)
+      `)
+      .eq('subject', subject)
+      .eq('chapter', chapter)
+      .order('order_index', { ascending: true });
+
+    if (topicsError) throw topicsError;
+
+    // Apply secondary ordering manually or through further processing if needed, 
+    // but the sub-selects aren't easily ordered across multiple tables in one simple join query.
+    // We'll sort them in JS to be safe.
+    return topics.map(topic => {
+      const sortedSubtopics = (topic.subtopics || []).sort((a, b) => (a.order_index || 0) - (b.order_index || 0));
+      const sortedQuestions = (topic.questions || []).sort((a, b) => (a.order_index || 0) - (b.order_index || 0));
+      
+      return {
+        ...topic,
+        subtopics: sortedSubtopics,
+        questions: sortedQuestions.map(q => ({
+          ...q,
+          options: [
+            { label: 'a', text: q.option_a },
+            { label: 'b', text: q.option_b },
+            { label: 'c', text: q.option_c },
+            { label: 'd', text: q.option_d }
+          ].filter(opt => opt.text)
+        }))
+      };
+    });
+  },
+
+  /**
    * Fetches subtopics and questions for a specific topic.
    */
   async fetchTopicDetails(topicId) {

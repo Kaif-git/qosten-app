@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { labApi } from '../../services/labApi';
+import { safeJsonParse } from '../../utils/jsonFixUtils';
 import './LabImport.css';
 
 const LabImport = () => {
@@ -10,6 +11,98 @@ const LabImport = () => {
   const [isUploading, setIsUploading] = useState(false);
   const [recentProblems, setRecentProblems] = useState([]);
   const [isLoadingList, setIsLoadingList] = useState(false);
+  
+  const textareaRef = useRef(null);
+  const lineNumbersRef = useRef(null);
+
+  const lineCount = jsonInput.split('\n').length;
+
+  const handleScroll = () => {
+    if (lineNumbersRef.current && textareaRef.current) {
+      lineNumbersRef.current.scrollTop = textareaRef.current.scrollTop;
+    }
+  };
+
+  const goToError = (line, col) => {
+    if (!textareaRef.current) return;
+    
+    const lines = jsonInput.split('\n');
+    let pos = 0;
+    for (let i = 0; i < line - 1; i++) {
+      pos += lines[i].length + 1; // +1 for \n
+    }
+    pos += col - 1;
+
+    textareaRef.current.focus();
+    textareaRef.current.setSelectionRange(pos, pos);
+    
+    // Scroll to the line
+    const lineHeight = 21; // Match CSS line-height
+    textareaRef.current.scrollTop = (line - 5) * lineHeight;
+  };
+
+  const removeProblematicObject = (line, col) => {
+    if (!window.confirm("Are you sure you want to remove the entire question containing this error?")) return;
+
+    const lines = jsonInput.split('\n');
+    let errorPos = 0;
+    for (let i = 0; i < line - 1; i++) {
+      errorPos += lines[i].length + 1;
+    }
+    errorPos += col - 1;
+
+    // Search backwards for the start of the top-level object
+    let startPos = errorPos;
+    let bDepth = 0;
+    while (startPos >= 0) {
+      const char = jsonInput[startPos];
+      if (char === '}') bDepth++;
+      if (char === '{') {
+        if (bDepth === 0) break; 
+        bDepth--;
+      }
+      startPos--;
+    }
+
+    // Search forwards for the end of the top-level object
+    let endPos = errorPos;
+    bDepth = 0;
+    while (endPos < jsonInput.length) {
+      const char = jsonInput[endPos];
+      if (char === '{') bDepth++;
+      if (char === '}') {
+        if (bDepth === 0) break;
+        bDepth--;
+      }
+      endPos++;
+    }
+
+    if (startPos >= 0 && endPos < jsonInput.length) {
+      let finalStart = startPos;
+      let finalEnd = endPos + 1;
+
+      // Handle commas and whitespace
+      // 1. Try to find trailing comma
+      let trailingSearch = finalEnd;
+      while (trailingSearch < jsonInput.length && /\s/.test(jsonInput[trailingSearch])) trailingSearch++;
+      if (jsonInput[trailingSearch] === ',') {
+        finalEnd = trailingSearch + 1;
+      } else {
+        // 2. If no trailing comma, try to find leading comma
+        let leadingSearch = finalStart - 1;
+        while (leadingSearch >= 0 && /\s/.test(jsonInput[leadingSearch])) leadingSearch--;
+        if (jsonInput[leadingSearch] === ',') {
+          finalStart = leadingSearch;
+        }
+      }
+
+      const newInput = jsonInput.substring(0, finalStart) + jsonInput.substring(finalEnd);
+      setJsonInput(newInput);
+      setStatus({ type: 'success', message: 'Removed problematic question. You can try parsing/uploading again.' });
+    } else {
+      alert("Could not automatically determine object boundaries to remove. Please delete it manually.");
+    }
+  };
 
   const LAB_PROMPT_TEMPLATE = `{
   "lab_problem_id": "1766915237842",
@@ -350,8 +443,40 @@ If you need normal text inside an equation, use \\text{...}.
       setIsUploading(true);
       setStatus({ type: 'info', message: 'Parsing and validating JSON...' });
       
-      const parsedData = JSON.parse(jsonInput);
-      const problems = Array.isArray(parsedData) ? parsedData : [parsedData];
+      const { data, error, line, column, snippet, pointer } = safeJsonParse(jsonInput);
+      
+      if (error) {
+        setStatus({ 
+          type: 'error', 
+          message: (
+            <div className="json-error-details">
+              <strong>JSON Parse Error:</strong> {error}<br/>
+              <span>Line: {line}, Column: {column}</span>
+              <button 
+                onClick={() => goToError(line, column)}
+                className="jump-to-error-btn"
+              >
+                🎯 Jump to Line {line}
+              </button>
+              <button 
+                onClick={() => removeProblematicObject(line, column)}
+                className="remove-problem-btn"
+              >
+                🗑️ Remove This Question
+              </button>
+              <pre className="error-snippet">
+                {snippet}{'\n'}{pointer}
+              </pre>
+              <p style={{fontSize: '12px', marginTop: '10px'}}>
+                <em>Note: The error position might be slightly different if the system tried to auto-fix backslashes or quotes.</em>
+              </p>
+            </div>
+          )
+        });
+        return;
+      }
+
+      const problems = Array.isArray(data) ? data : [data];
 
       // Basic validation
       for (const problem of problems) {
@@ -370,7 +495,13 @@ If you need normal text inside an equation, use \\text{...}.
           lesson: p.lesson,
           board: p.board,
           stem: p.stem,
-          parts: p.parts // Stored as JSONB
+          parts: p.parts,
+          questionimage: p.questionimage || p.image || null,
+          answerimage1: p.answerimage1 || null,
+          answerimage2: p.answerimage2 || null,
+          answerimage3: p.answerimage3 || null,
+          answerimage4: p.answerimage4 || null,
+          stem_image: p.stem_image || p.image || null
         };
       });
 
@@ -436,12 +567,22 @@ If you need normal text inside an equation, use \\text{...}.
           </label>
         </div>
 
-        <textarea
-          className="json-textarea"
-          placeholder='Paste your JSON here... e.g. { "lab_problem_id": "...", "subject": "...", ... }'
-          value={jsonInput}
-          onChange={(e) => setJsonInput(e.target.value)}
-        />
+        <div className="json-editor-wrapper">
+          <div className="line-numbers-gutter" ref={lineNumbersRef}>
+            {Array.from({ length: lineCount }, (_, i) => (
+              <div key={i + 1} className="line-number">{i + 1}</div>
+            ))}
+          </div>
+          <textarea
+            ref={textareaRef}
+            className="json-textarea"
+            placeholder='Paste your JSON here... e.g. { "lab_problem_id": "...", "subject": "...", ... }'
+            value={jsonInput}
+            onChange={(e) => setJsonInput(e.target.value)}
+            onScroll={handleScroll}
+            spellCheck="false"
+          />
+        </div>
 
         <div className="action-buttons">
           <button 

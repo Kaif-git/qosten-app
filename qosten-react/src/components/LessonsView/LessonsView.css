@@ -58,7 +58,7 @@
   color: white;
   padding: 10px 20px;
   border-radius: 6px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -66,7 +66,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  flex: 1;
 }
 
 .subject-heading:hover {
@@ -75,6 +75,14 @@
 
 .subject-header-row {
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.subject-actions {
+  display: flex;
+  gap: 8px;
 }
 
 .rename-container {
@@ -85,6 +93,7 @@
   padding: 5px 10px;
   border-radius: 6px;
   border: 1px solid #ddd;
+  flex: 1;
 }
 
 .rename-input {
@@ -178,6 +187,26 @@
 .delete-chapter-btn:hover {
   background: #e74c3c;
   color: white;
+}
+
+.copy-chapter-btn {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 4px 12px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.copy-chapter-btn:hover {
+  background: #2980b9;
+}
+
+.copy-chapter-btn:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
 }
 
 .expand-icon-small {

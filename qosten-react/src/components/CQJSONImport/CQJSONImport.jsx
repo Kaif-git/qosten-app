@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useQuestions } from '../../context/QuestionContext';
 import { useNavigate } from 'react-router-dom';
+import { safeJsonParse } from '../../utils/jsonFixUtils';
 
 export default function CQJSONImport() {
   const { batchAddQuestions, questions: existingQuestions } = useQuestions();
@@ -18,7 +19,22 @@ export default function CQJSONImport() {
       const reader = new FileReader();
       reader.onload = (event) => {
         try {
-          const json = JSON.parse(event.target.result);
+          const { data, error, line, column, snippet, pointer } = safeJsonParse(event.target.result);
+          
+          if (error) {
+            setImportSummary({
+              parseError: true,
+              errorMessage: error,
+              line,
+              column,
+              snippet,
+              pointer
+            });
+            setFileContent(null);
+            return;
+          }
+
+          const json = data;
           if (!Array.isArray(json)) {
             alert('JSON must be an array of questions.');
             setFileContent(null);
@@ -103,14 +119,36 @@ export default function CQJSONImport() {
         </label>
         
         {importSummary && (
-          <div style={{ marginTop: '15px', textAlign: 'left', display: 'inline-block', backgroundColor: '#fff', padding: '10px', borderRadius: '5px', border: '1px solid #eee' }}>
-            <div style={{ color: '#666' }}>Total items in file: <strong>{importSummary.total}</strong></div>
-            <div style={{ color: '#2980b9' }}>CQ questions found: <strong>{importSummary.cqCount}</strong></div>
-            {importSummary.nonCQ > 0 && <div style={{ color: '#e67e22', fontSize: '12px' }}>• Ignored {importSummary.nonCQ} non-CQ items</div>}
-            <div style={{ color: '#27ae60', marginTop: '5px', borderTop: '1px solid #eee', paddingTop: '5px' }}>
-              <strong>{importSummary.newCount}</strong> new questions to import
-            </div>
-            {importSummary.skipped > 0 && <div style={{ color: '#7f8c8d', fontSize: '12px' }}>• Skipped {importSummary.skipped} duplicates</div>}
+          <div style={{ marginTop: '15px', textAlign: 'left', display: 'inline-block', backgroundColor: '#fff', padding: '10px', borderRadius: '5px', border: '1px solid #eee', width: '100%', boxSizing: 'border-box' }}>
+            {importSummary.parseError ? (
+              <div style={{ color: '#c0392b' }}>
+                <strong style={{ fontSize: '16px' }}>❌ JSON Parse Error</strong>
+                <div style={{ marginTop: '5px' }}>{importSummary.errorMessage}</div>
+                <div style={{ fontSize: '13px', color: '#666' }}>Line: {importSummary.line}, Column: {importSummary.column}</div>
+                <pre style={{
+                  backgroundColor: '#2d3436',
+                  color: '#fab1a0',
+                  padding: '10px',
+                  borderRadius: '4px',
+                  marginTop: '10px',
+                  fontFamily: 'monospace',
+                  overflowX: 'auto',
+                  whiteSpace: 'pre'
+                }}>
+                  {importSummary.snippet}{'\n'}{importSummary.pointer}
+                </pre>
+              </div>
+            ) : (
+              <>
+                <div style={{ color: '#666' }}>Total items in file: <strong>{importSummary.total}</strong></div>
+                <div style={{ color: '#2980b9' }}>CQ questions found: <strong>{importSummary.cqCount}</strong></div>
+                {importSummary.nonCQ > 0 && <div style={{ color: '#e67e22', fontSize: '12px' }}>• Ignored {importSummary.nonCQ} non-CQ items</div>}
+                <div style={{ color: '#27ae60', marginTop: '5px', borderTop: '1px solid #eee', paddingTop: '5px' }}>
+                  <strong>{importSummary.newCount}</strong> new questions to import
+                </div>
+                {importSummary.skipped > 0 && <div style={{ color: '#7f8c8d', fontSize: '12px' }}>• Skipped {importSummary.skipped} duplicates</div>}
+              </>
+            )}
           </div>
         )}
       </div>

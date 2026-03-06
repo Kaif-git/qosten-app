@@ -1,3 +1,5 @@
+import { safeJsonParse } from './jsonFixUtils';
+
 // Prompt type constants
 export const PROMPT_TYPES = {
   QUESTION_GENERATION: 'question_generation',
@@ -251,7 +253,7 @@ export function exportPromptsToJSON(prompts) {
  */
 export function importPromptsFromJSON(jsonString) {
   try {
-    return JSON.parse(jsonString);
+    return safeJsonParse(jsonString);
   } catch (error) {
     console.error('Error parsing JSON:', error);
     return [];

@@ -25,6 +25,43 @@ export const labApi = {
     return { data, totalCount: count };
   },
 
+  async fetchSubjects() {
+    if (!supabase) throw new Error('Supabase client not initialized');
+    const { data, error } = await supabase
+      .from('lab_problems')
+      .select('subject')
+      .order('subject');
+    
+    if (error) throw error;
+    return [...new Set(data.map(item => item.subject))];
+  },
+
+  async fetchChapters(subject) {
+    if (!supabase) throw new Error('Supabase client not initialized');
+    const { data, error } = await supabase
+      .from('lab_problems')
+      .select('chapter')
+      .eq('subject', subject)
+      .order('chapter');
+    
+    if (error) throw error;
+    return [...new Set(data.map(item => item.chapter))];
+  },
+
+  async fetchProblemsByChapter(subject, chapter, limit = 5, offset = 0) {
+    if (!supabase) throw new Error('Supabase client not initialized');
+    const { data, error, count } = await supabase
+      .from('lab_problems')
+      .select('*', { count: 'exact' })
+      .eq('subject', subject)
+      .eq('chapter', chapter)
+      .order('created_at', { ascending: false })
+      .range(offset, offset + limit - 1);
+    
+    if (error) throw error;
+    return { data, totalCount: count };
+  },
+
   async fetchLabProblemIds() {
     if (!supabase) throw new Error('Supabase client not initialized');
     const { data, error } = await supabase

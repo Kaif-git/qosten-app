@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { labApi } from '../../services/labApi';
 import { questionApi } from '../../services/questionApi';
 import './LabView.css';
 
 export default function LabView() {
+  const [searchParams] = useSearchParams();
   const [problems, setProblems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -19,6 +21,24 @@ export default function LabView() {
   useEffect(() => {
     loadProblems();
   }, []);
+
+  // Handle deep linking from searchParams
+  useEffect(() => {
+    const id = searchParams.get('id');
+    if (id && problems.length > 0) {
+      const problem = problems.find(p => p.id.toString() === id.toString() || p.lab_problem_id === id);
+      if (problem) {
+        if (expandedProblemId !== problem.id) {
+          setExpandedProblemId(problem.id);
+          // Scroll to problem
+          setTimeout(() => {
+            const element = document.getElementById(`lab-${problem.id}`);
+            if (element) element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 500);
+        }
+      }
+    }
+  }, [searchParams, problems, expandedProblemId]);
 
   const toggleSelectAll = () => {
     if (selectedIds.size === problems.length) {
@@ -527,7 +547,7 @@ export default function LabView() {
                     
                     <div className="problems-list">
                       {chapterProblems.map((problem) => (
-                        <div key={problem.id} className={`problem-card ${expandedProblemId === problem.id ? 'expanded' : ''} ${editMode === problem.id ? 'is-editing' : ''} ${selectedIds.has(problem.id) ? 'selected' : ''}`}>
+                        <div key={problem.id} id={`lab-${problem.id}`} className={`problem-card ${expandedProblemId === problem.id ? 'expanded' : ''} ${editMode === problem.id ? 'is-editing' : ''} ${selectedIds.has(problem.id) ? 'selected' : ''}`}>
                           <div className="problem-header" onClick={() => toggleProblem(problem.id)}>
                             <div className="problem-main-info">
                               <input 

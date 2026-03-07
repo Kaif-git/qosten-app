@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { lessonApi } from '../../services/lessonApi';
 import { parseQuestionsOnly, parseLessonText, formatLessonToMarkdown } from '../../utils/lessonParser';
 import './LessonsView.css';
 
 export default function LessonsView() {
+  const [searchParams] = useSearchParams();
   // -- Data State --
   const [subjects, setSubjects] = useState([]); // Array of strings
   const [chaptersBySubject, setChaptersBySubject] = useState({}); // { [subject]: [chapters] }
@@ -38,13 +40,43 @@ export default function LessonsView() {
     loadSubjects();
   }, []);
 
+  // Handle deep linking from searchParams
+  useEffect(() => {
+    const subject = searchParams.get('subject');
+    const chapter = searchParams.get('chapter');
+    const topicId = searchParams.get('topicId');
+
+    if (subject && subjects.includes(subject)) {
+      if (!expandedSubjects[subject]) {
+        toggleSubject(subject);
+      } else if (chapter && chaptersBySubject[subject]?.includes(chapter)) {
+        const key = `${subject}_${chapter}`;
+        if (!expandedChapters[key]) {
+          toggleChapter(subject, chapter);
+        } else if (topicId && topicsByChapter[key]) {
+          const topic = topicsByChapter[key].find(t => t.id.toString() === topicId.toString());
+          if (topic && expandedTopicId !== topic.id) {
+            toggleTopic(topic);
+            // Optional: Scroll to topic
+            setTimeout(() => {
+                const element = document.getElementById(`topic-${topic.id}`);
+                if (element) element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 500);
+          }
+        }
+      }
+    }
+  }, [searchParams, subjects, chaptersBySubject, topicsByChapter, expandedSubjects, expandedChapters, expandedTopicId]);
+
   const loadSubjects = async () => {
     try {
       setLoading(true);
+      console.log('Component calling loadSubjects...');
       const data = await lessonApi.fetchSubjects();
+      console.log('Received subjects in component:', data);
       setSubjects(data);
     } catch (err) {
-      console.error('Error loading subjects:', err);
+      console.error('Error loading subjects in component:', err);
       setError(err.message);
     } finally {
       setLoading(false);
@@ -575,7 +607,7 @@ export default function LessonsView() {
 
                             {topics.map((topic, index) => (
                               <React.Fragment key={topic.id}>
-                                <div className={`topic-card ${expandedTopicId === topic.id ? 'expanded' : ''} ${editMode === topic.id ? 'is-editing' : ''}`}>
+                                <div id={`topic-${topic.id}`} className={`topic-card ${expandedTopicId === topic.id ? 'expanded' : ''} ${editMode === topic.id ? 'is-editing' : ''}`}>
                                   <div className="topic-header" onClick={() => toggleTopic(topic)}>
                                     <div className="topic-main-info">
                                       <h3 className="topic-title">{topic.title}</h3>

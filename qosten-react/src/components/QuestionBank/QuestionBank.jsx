@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef, useMemo } from 'react';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 import { useQuestions, mapDatabaseToApp } from '../../context/QuestionContext';
 import { questionApi } from '../../services/questionApi';
 import { labApi } from '../../services/labApi';
@@ -12,6 +13,8 @@ import { performImageMigration, getMigrationPreview } from '../../utils/imageMig
 
 // Helper to fix corrupted MCQ format
 const fixCorruptedMCQ = (text) => {
+// ... existing code ...
+// ... existing code ...
   if (!text) return null;
   
   // Clean up prefixes
@@ -222,12 +225,15 @@ const getFilteredQuestions = (questions, filters, fullQuestionsMap = null, hasSe
 };
 
 export default function QuestionBank() {
+  const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
   const { 
     questions, 
     setQuestions, 
     currentFilters, 
     deleteQuestion, 
     updateQuestion, 
+    setEditingQuestion,
     bulkUpdateQuestions, 
     bulkFlagQuestions, 
     fetchQuestionsByIds, 
@@ -238,6 +244,26 @@ export default function QuestionBank() {
     hierarchy,
     refreshQuestions
   } = useQuestions();
+
+  // Auto-search and open modal if ID is provided in URL
+  const [selectedQuestionForModal, setSelectedQuestionForModal] = useState(null);
+  const autoOpenedRef = useRef(false);
+
+  useEffect(() => {
+    const id = searchParams.get('id');
+    if (id && !autoOpenedRef.current) {
+      if (id !== currentFilters.searchText) {
+        setFilters({ ...currentFilters, searchText: id });
+      }
+      
+      questionApi.fetchQuestionsByIds([id]).then(results => {
+        if (results && results.length > 0) {
+          setSelectedQuestionForModal(mapDatabaseToApp(results[0]));
+          autoOpenedRef.current = true;
+        }
+      }).catch(err => console.error('Error fetching deep-linked question:', err));
+    }
+  }, [searchParams, setFilters, currentFilters]);
   const [selectedQuestions, setSelectedQuestions] = useState([]);
   const [selectionMode, setSelectionMode] = useState(false);
   const [lastSelectedId, setLastSelectedId] = useState(null); // Track last selected for shift-click
@@ -6526,6 +6552,85 @@ export default function QuestionBank() {
       )}
 
       {/* Selection Mode Batch Actions */}
-    </>
-  );
-}
+      {selectedQuestionForModal && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.75)',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          zIndex: 10002,
+          padding: '20px'
+        }}>
+          <div style={{
+            backgroundColor: 'white',
+            padding: '25px',
+            borderRadius: '12px',
+            boxShadow: '0 10px 25px rgba(0,0,0,0.2)',
+            width: '100%',
+            maxWidth: '800px',
+            maxHeight: '90vh',
+            display: 'flex',
+            flexDirection: 'column',
+            position: 'relative'
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px', borderBottom: '1px solid #eee', paddingBottom: '10px' }}>
+              <h2 style={{ margin: 0, fontSize: '1.2rem' }}>Question Details [ID: {selectedQuestionForModal.id}]</h2>
+              <button 
+                onClick={() => setSelectedQuestionForModal(null)}
+                style={{ background: 'none', border: 'none', fontSize: '24px', cursor: 'pointer', color: '#666' }}
+              >✕</button>
+            </div>
+
+            <div style={{ flex: 1, overflowY: 'auto', paddingRight: '5px' }}>
+              <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', marginBottom: '20px', fontSize: '13px', color: '#666' }}>
+                <span style={{ backgroundColor: '#f0f2f5', padding: '4px 10px', borderRadius: '4px' }}><strong>Subject:</strong> {selectedQuestionForModal.subject}</span>
+                <span style={{ backgroundColor: '#f0f2f5', padding: '4px 10px', borderRadius: '4px' }}><strong>Chapter:</strong> {selectedQuestionForModal.chapter}</span>
+                {selectedQuestionForModal.board && <span style={{ backgroundColor: '#f0f2f5', padding: '4px 10px', borderRadius: '4px' }}><strong>Board:</strong> {selectedQuestionForModal.board}</span>}
+                <span style={{ backgroundColor: '#f0f2f5', padding: '4px 10px', borderRadius: '4px' }}><strong>Type:</strong> {selectedQuestionForModal.type?.toUpperCase()}</span>
+              </div>
+
+              <FullQuestionContent question={selectedQuestionForModal} />
+            </div>
+
+            <div style={{ marginTop: '20px', paddingTop: '15px', borderTop: '1px solid #eee', display: 'flex', gap: '10px', justifyContent: 'flex-end' }}>
+              <button 
+                onClick={() => {
+                  setEditingQuestion(selectedQuestionForModal);
+                  navigate('/add');
+                }}
+                style={{ 
+                  padding: '10px 20px', 
+                  borderRadius: '6px', 
+                  border: 'none', 
+                  backgroundColor: '#3498db', 
+                  color: 'white', 
+                  fontWeight: 'bold', 
+                  cursor: 'pointer' 
+                }}
+              >
+                ✏️ Edit Question
+              </button>
+              <button 
+                onClick={() => setSelectedQuestionForModal(null)}
+                style={{ 
+                  padding: '10px 20px', 
+                  borderRadius: '6px', 
+                  border: '1px solid #ccc', 
+                  backgroundColor: 'white', 
+                  cursor: 'pointer' 
+                }}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+      </>
+      );
+      }

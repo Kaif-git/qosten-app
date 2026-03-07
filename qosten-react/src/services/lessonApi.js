@@ -127,7 +127,8 @@ export const lessonApi = {
       .order('chapter', { ascending: true })
       .order('order_index', { ascending: true })
       .order('order_index', { foreignTable: 'learn_subtopics', ascending: true })
-      .order('order_index', { foreignTable: 'learn_questions', ascending: true });
+      .order('order_index', { foreignTable: 'learn_questions', ascending: true })
+      .range(0, 10000);
 
     if (topicsError) throw topicsError;
 
@@ -152,13 +153,41 @@ export const lessonApi = {
    */
   async fetchSubjects() {
     if (!supabase) throw new Error('Supabase client is not initialized');
-    const { data, error } = await supabase
-      .from('learn_topics')
-      .select('subject')
-      .order('subject');
-    if (error) throw error;
-    // Deduplicate subjects
-    return [...new Set(data.map(item => item.subject))];
+    
+    console.log('Fetching subjects from Supabase (paginated)...');
+    let allSubjects = [];
+    let from = 0;
+    const pageSize = 1000;
+    let hasMore = true;
+
+    while (hasMore) {
+      const to = from + pageSize - 1;
+      const { data, error } = await supabase
+        .from('learn_topics')
+        .select('subject')
+        .order('subject')
+        .range(from, to);
+        
+      if (error) {
+        console.error('Supabase error in fetchSubjects:', error);
+        throw error;
+      }
+      
+      if (!data || data.length === 0) {
+        hasMore = false;
+      } else {
+        allSubjects = allSubjects.concat(data.map(item => item.subject));
+        if (data.length < pageSize) {
+          hasMore = false;
+        } else {
+          from += pageSize;
+        }
+      }
+    }
+    
+    const uniqueSubjects = [...new Set(allSubjects)];
+    console.log(`Fetched ${allSubjects.length} total rows. Unique subjects (${uniqueSubjects.length}):`, uniqueSubjects);
+    return uniqueSubjects;
   },
 
   /**
@@ -166,14 +195,42 @@ export const lessonApi = {
    */
   async fetchChapters(subject) {
     if (!supabase) throw new Error('Supabase client is not initialized');
-    const { data, error } = await supabase
-      .from('learn_topics')
-      .select('chapter')
-      .eq('subject', subject)
-      .order('chapter');
-    if (error) throw error;
-    // Deduplicate chapters
-    return [...new Set(data.map(item => item.chapter))];
+    
+    console.log(`Fetching chapters for subject: ${subject} (paginated)...`);
+    let allChapters = [];
+    let from = 0;
+    const pageSize = 1000;
+    let hasMore = true;
+
+    while (hasMore) {
+      const to = from + pageSize - 1;
+      const { data, error } = await supabase
+        .from('learn_topics')
+        .select('chapter')
+        .eq('subject', subject)
+        .order('chapter')
+        .range(from, to);
+        
+      if (error) {
+        console.error('Supabase error in fetchChapters:', error);
+        throw error;
+      }
+      
+      if (!data || data.length === 0) {
+        hasMore = false;
+      } else {
+        allChapters = allChapters.concat(data.map(item => item.chapter));
+        if (data.length < pageSize) {
+          hasMore = false;
+        } else {
+          from += pageSize;
+        }
+      }
+    }
+    
+    const uniqueChapters = [...new Set(allChapters)];
+    console.log(`Fetched ${allChapters.length} total rows for chapters. Unique chapters (${uniqueChapters.length}):`, uniqueChapters);
+    return uniqueChapters;
   },
 
   /**
@@ -181,15 +238,40 @@ export const lessonApi = {
    */
   async fetchTopics(subject, chapter) {
     if (!supabase) throw new Error('Supabase client is not initialized');
-    const { data, error } = await supabase
-      .from('learn_topics')
-      .select('*')
-      .eq('subject', subject)
-      .eq('chapter', chapter)
-      .order('order_index');
-    if (error) throw error;
+    
+    // Topics for a single chapter are very unlikely to exceed 1000, 
+    // but we'll fetch them all just in case.
+    let allTopics = [];
+    let from = 0;
+    const pageSize = 1000;
+    let hasMore = true;
+
+    while (hasMore) {
+      const to = from + pageSize - 1;
+      const { data, error } = await supabase
+        .from('learn_topics')
+        .select('*')
+        .eq('subject', subject)
+        .eq('chapter', chapter)
+        .order('order_index')
+        .range(from, to);
+
+      if (error) throw error;
+      
+      if (!data || data.length === 0) {
+        hasMore = false;
+      } else {
+        allTopics = allTopics.concat(data);
+        if (data.length < pageSize) {
+          hasMore = false;
+        } else {
+          from += pageSize;
+        }
+      }
+    }
+    
     // Return topics initialized with empty subtopics/questions for UI consistency until expanded
-    return data.map(t => ({ ...t, subtopics: [], questions: [] }));
+    return allTopics.map(t => ({ ...t, subtopics: [], questions: [] }));
   },
 
   /**
@@ -197,40 +279,20 @@ export const lessonApi = {
    */
   async fetchFullChapter(subject, chapter) {
     if (!supabase) throw new Error('Supabase client is not initialized');
-    const { data: topics, error: topicsError } = await supabase
-      .from('learn_topics')
-      .select(`
-        *,
-        subtopics:learn_subtopics(*),
-        questions:learn_questions(*)
-      `)
-      .eq('subject', subject)
-      .eq('chapter', chapter)
-      .order('order_index', { ascending: true });
 
-    if (topicsError) throw topicsError;
+    // Fetch topics for the chapter
+    const topics = await this.fetchTopics(subject, chapter);
 
-    // Apply secondary ordering manually or through further processing if needed, 
-    // but the sub-selects aren't easily ordered across multiple tables in one simple join query.
-    // We'll sort them in JS to be safe.
-    return topics.map(topic => {
-      const sortedSubtopics = (topic.subtopics || []).sort((a, b) => (a.order_index || 0) - (b.order_index || 0));
-      const sortedQuestions = (topic.questions || []).sort((a, b) => (a.order_index || 0) - (b.order_index || 0));
-      
+    // Fetch details for each topic
+    const fullTopics = await Promise.all(topics.map(async (topic) => {
+      const details = await this.fetchTopicDetails(topic.id);
       return {
         ...topic,
-        subtopics: sortedSubtopics,
-        questions: sortedQuestions.map(q => ({
-          ...q,
-          options: [
-            { label: 'a', text: q.option_a },
-            { label: 'b', text: q.option_b },
-            { label: 'c', text: q.option_c },
-            { label: 'd', text: q.option_d }
-          ].filter(opt => opt.text)
-        }))
+        ...details
       };
-    });
+    }));
+
+    return fullTopics;
   },
 
   /**

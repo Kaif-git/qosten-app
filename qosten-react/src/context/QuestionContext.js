@@ -18,7 +18,7 @@ const initialState = {
     verifiedStatus: 'all' // 'all', 'verified', 'unverified'
   },
   editingQuestion: null,
-  isAuthenticated: false,
+  isAuthenticated: sessionStorage.getItem('qosten_auth') === 'true',
   stats: {
     total: 0,
     subjects: 0,
@@ -250,8 +250,11 @@ const mapAppToDatabase = (q) => {
       console.log(`📡 mapAppToDatabase: Including Supabase URL for main image: ${finalImageUrl.substring(0, 60)}...`);
   }
 
+  // Properly handle ID - omit for new questions to avoid SQLITE_MISMATCH
+  const cleanId = (q.id && q.id !== 'new' && q.id !== '') ? q.id : undefined;
+
   const dbQ = {
-    id: q.id,
+    id: cleanId,
     type: q.type,
     question_text: q.questionText || q.text || q.question || '',
     subject: q.subject,
@@ -263,15 +266,16 @@ const mapAppToDatabase = (q) => {
     image_url: finalImageUrl,
     image: finalImageUrl,
     questionimage: finalImageUrl, 
-    is_flagged: !!q.isFlagged,
-    isFlagged: !!q.isFlagged,
-    flagged: !!q.isFlagged,
-    is_verified: !!q.isVerified,
-    isVerified: !!q.isVerified,
-    verified: !!q.isVerified,
-    in_review_queue: !!q.inReviewQueue,
-    inReviewQueue: !!q.inReviewQueue,
-    review_queue: !!q.inReviewQueue,
+    // Convert booleans to 1/0 for robust SQLite/D1 compatibility
+    is_flagged: q.isFlagged ? 1 : 0,
+    isFlagged: q.isFlagged ? 1 : 0,
+    flagged: q.isFlagged ? 1 : 0,
+    is_verified: q.isVerified ? 1 : 0,
+    isVerified: q.isVerified ? 1 : 0,
+    verified: q.isVerified ? 1 : 0,
+    in_review_queue: q.inReviewQueue ? 1 : 0,
+    inReviewQueue: q.inReviewQueue ? 1 : 0,
+    review_queue: q.inReviewQueue ? 1 : 0,
     // Hoist answer image columns to top level for robust persistence
     answerimage1: q.answerimage1,
     answer_image_1: q.answerimage1,
@@ -296,7 +300,7 @@ const mapAppToDatabase = (q) => {
   };
 
   if (q.type === 'mcq') {
-    dbQ.options = (q.options || []).map((opt, idx) => {
+    const options = (q.options || []).map((opt, idx) => {
       const optImg = opt.image || opt.imageUrl;
       if (optImg && optImg.startsWith('http')) {
           console.log(`📡 mapAppToDatabase: Including Supabase URL for MCQ option ${opt.label}: ${optImg.substring(0, 60)}...`);
@@ -309,6 +313,8 @@ const mapAppToDatabase = (q) => {
         is_correct: opt.isCorrect || opt.label === q.correctAnswer
       };
     });
+    // Stringify options for DB storage
+    dbQ.options = JSON.stringify(options);
     dbQ.explanation = q.explanation;
     dbQ.correct_answer = q.correctAnswer;
   }
@@ -316,7 +322,7 @@ const mapAppToDatabase = (q) => {
   if (q.type === 'cq') {
     dbQ.stem = q.stem || q.questionText || q.text || '';
     
-    dbQ.parts = (q.parts || []).map((part, idx) => {
+    const parts = (q.parts || []).map((part, idx) => {
       const partImage = part.image || part.answerImage;
       if (partImage && partImage.startsWith('http')) {
           console.log(`📡 mapAppToDatabase: Including Supabase URL for CQ part ${part.letter}: ${partImage.substring(0, 60)}...`);
@@ -331,6 +337,8 @@ const mapAppToDatabase = (q) => {
         image_url: partImage
       };
     });
+    // Stringify parts for DB storage
+    dbQ.parts = JSON.stringify(parts);
   }
 
   if (q.type === 'sq') {

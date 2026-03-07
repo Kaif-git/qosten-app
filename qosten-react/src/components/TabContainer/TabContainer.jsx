@@ -36,6 +36,7 @@ export default function TabContainer() {
       <NavLink to="/import-cq-bn" style={({isActive}) => ({...tabStyle, background: isActive ? '#4CAF50' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>Import Bangla CQ</NavLink>
       <NavLink to="/import-sq-bn" style={({isActive}) => ({...tabStyle, background: isActive ? '#4CAF50' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>Import Bangla SQ</NavLink>
       <NavLink to="/translate-test" style={({isActive}) => ({...tabStyle, background: isActive ? '#28a745' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>🌐 Translation Test</NavLink>
+      <NavLink to="/dev" style={({isActive}) => ({...tabStyle, background: isActive ? '#d32f2f' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>🛠️ Dev Tab</NavLink>
     </div>
   );
 }

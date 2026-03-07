@@ -23,6 +23,7 @@ import LessonsImport from './components/LessonsImport/LessonsImport';
 import LessonsView from './components/LessonsView/LessonsView';
 import LabImport from './components/LabImport/LabImport';
 import LabView from './components/LabView/LabView';
+import DevView from './components/Dev/DevView';
 
 function App() {
   return (
@@ -58,6 +59,7 @@ function App() {
                 <Route path="/lessons" element={<LessonsImport />} />
                 <Route path="/lessons-view" element={<LessonsView />} />
                 <Route path="/lab-view" element={<LabView />} />
+                <Route path="/dev" element={<DevView />} />
               </Routes>
             </div>
           </BrowserRouter>

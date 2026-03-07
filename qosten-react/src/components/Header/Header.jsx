@@ -4,12 +4,17 @@ import { questionApi } from '../../services/questionApi';
 import { safeJsonParse } from '../../utils/jsonFixUtils';
 
 export default function Header() {
-  const { questions, refreshQuestions, bulkAddQuestions } = useQuestions();
+  const { questions, refreshQuestions, bulkAddQuestions, setAuthenticated } = useQuestions();
   const fileInputRef = useRef(null);
   const [isRefreshing, setIsRefreshing] = React.useState(false);
   const [isExporting, setIsExporting] = React.useState(false);
   const [isImporting, setIsImporting] = React.useState(false);
   const [importProgress, setImportProgress] = React.useState({ current: 0, total: 0 });
+
+  const handleLogout = () => {
+    sessionStorage.removeItem('qosten_auth');
+    setAuthenticated(false);
+  };
 
   const fetchFullQuestionsData = async () => {
     console.log('Fetching full data for export...');
@@ -300,6 +305,13 @@ export default function Header() {
           }}
         >
           {isRefreshing ? '🔄 Refreshing...' : '🔄 Refresh from DB'}
+        </button>
+        <button 
+          className="secondary" 
+          onClick={handleLogout}
+          style={{ backgroundColor: '#e74c3c', color: 'white' }}
+        >
+          🔒 Logout
         </button>
         <input
           ref={fileInputRef}

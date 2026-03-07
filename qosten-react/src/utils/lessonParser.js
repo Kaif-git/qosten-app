@@ -25,10 +25,10 @@ export function parseLessonText(text) {
     if (!trimmed || trimmed === '---') continue;
 
     // Parse Subject and Chapter
-    const subjectHeaderMatch = trimmed.match(/^(?:[*#-]*\s*)?(?:\*\*)?Subject\s*[:：ঃ]\s*(.*?)(?:\*\*)?(?:\s+(?:\*\*)?Chapter\s*[:：ঃ]|$)/i);
-    const chapterHeaderMatch = trimmed.match(/^(?:[*#-]*\s*)?(?:\*\*)?Chapter\s*[:：ঃ]\s*(.*?)(?:\*\*)?$/i);
-    const bengaliSubjectMatch = trimmed.match(/^(?:[*#-]*\s*)?(?:\*\*)?বিষয়\s*[:：ঃ]\s*(.*?)(?:\*\*)?$/i);
-    const bengaliChapterMatch = trimmed.match(/^(?:[*#-]*\s*)?(?:\*\*)?অধ্যায়\s*[:：ঃ]\s*(.*?)(?:\*\*)?$/i);
+    const subjectHeaderMatch = trimmed.match(/^(?:[*#-]*\s*)?(?:\*\*)?Subject(?:\s*\(.*?\))?\s*(?:\*\*)?[:：ঃ]\s*(.*?)(?:\*\*)?(?:\s+(?:\*\*)?Chapter\s*[:：ঃ]|$)/i);
+    const chapterHeaderMatch = trimmed.match(/^(?:[*#-]*\s*)?(?:\*\*)?Chapter(?:\s*\(.*?\))?\s*(?:\*\*)?[:：ঃ]\s*(.*?)(?:\*\*)?$/i);
+    const bengaliSubjectMatch = trimmed.match(/^(?:[*#-]*\s*)?(?:\*\*)?(?:বিষয়|বিষয়)\s*(?:\*\*)?[:：ঃ]\s*(.*?)(?:\*\*)?$/i);
+    const bengaliChapterMatch = trimmed.match(/^(?:[*#-]*\s*)?(?:\*\*)?(?:অধ্যায়|অধ্যায়)\s*(?:\*\*)?[:：ঃ]\s*(.*?)(?:\*\*)?$/i);
 
     // Logic for Chapter/Subject:
     // If we see "Subject" or "অধ্যায়", it's definitely a Chapter start.
@@ -66,22 +66,24 @@ export function parseLessonText(text) {
     }
 
     // Parse Topic (English "Topic" or Bengali "বিষয়" if we already have a chapter)
-    const topicMatch = trimmed.match(/^(?:[*#•+-\s]*)?(?:###\s*)?(?:\*\*)?(Topic|বিষয়)\s*[:：ঃ.-]?\s*(.*?)(?:\*\*)?$/i);
+    const topicMatch = trimmed.match(/^(?:[*#•+-\s]*)?(?:###\s*)?(?:\*\*)?(Topic|বিষয়|বিষয়|টপিক)(?:\s*\(.*?\))?\s*(?:\*\*)?[:：ঃ.-]?\s*(.*?)(?:\*\*)?$/i);
     if (topicMatch) {
       const title = topicMatch[2].replace(/^\*\*/, '').replace(/\*\*$/, '').trim();
       
-      if (!currentChapter) {
-        currentChapter = { subject: 'Unknown', chapter: 'General', topics: [] };
-        chapters.push(currentChapter);
-      }
+      if (!currentTopic || currentTopic.title !== title) {
+        if (!currentChapter) {
+          currentChapter = { subject: 'Unknown', chapter: 'General', topics: [] };
+          chapters.push(currentChapter);
+        }
 
-      console.log(`FOUND TOPIC: ${title}`);
-      currentTopic = {
-        title: title,
-        subtopics: [],
-        questions: []
-      };
-      currentChapter.topics.push(currentTopic);
+        console.log(`FOUND TOPIC: ${title}`);
+        currentTopic = {
+          title: title,
+          subtopics: [],
+          questions: []
+        };
+        currentChapter.topics.push(currentTopic);
+      }
       
       currentSubtopic = null;
       isParsingQuestions = false;
@@ -89,7 +91,7 @@ export function parseLessonText(text) {
     }
 
     // Parse Subtopic
-    const subtopicMatch = trimmed.match(/^(?:[*#•+-\s]*)?(?:####\s*)?(?:\*\*)?(Subtopic|উপবিষয়)\s*[:：ঃ.-]?\s*(.*?)(?:\*\*)?$/i);
+    const subtopicMatch = trimmed.match(/^(?:[*#•+-\s]*)?(?:####\s*)?(?:\*\*)?(Subtopic|উপবিষয়|উপবিষয়|উপ-বিষয়|উপ-বিষয়|উপ-টপিক|উপটপিক|সাবটপিক|সাব-টপিক)(?:\s*\(.*?\))?\s*(?:\*\*)?[:：ঃ.-]?\s*(.*?)(?:\*\*)?$/i);
     if (subtopicMatch && currentTopic) {
       const title = subtopicMatch[2].replace(/^\*\*/, '').replace(/\*\*$/, '').trim();
       console.log(`FOUND SUBTOPIC: ${title}`);
@@ -110,10 +112,12 @@ export function parseLessonText(text) {
     if (trimmed.toLowerCase().includes('review questions') || 
         trimmed.includes('পর্যালোচনা প্রশ্ন ও উত্তর') ||
         trimmed.includes('পুনরালোচনা প্রশ্ন ও উত্তর') ||
+        trimmed.includes('পুনরাবৃত্তিমূলক প্রশ্ন ও উত্তর') ||
+        trimmed.includes('পুনর্বিবেচনামূলক প্রশ্ন ও উত্তর') ||
         trimmed.includes('বিষয়ভিত্তিক MCQ') ||
         trimmed.match(/^(?:###\s*)?(?:\*\*)?.*MCQ.*(?:\*\*)?$/i) ||
         trimmed.match(/^(?:###\s*)?(?:\*\*)?.*Questions.*(?:\*\*)?$/i) ||
-        trimmed.match(/^(?:###\s*)?(?:\*\*)?.*প্রশ্ন.*(?:\*\*)?$/i)
+        (trimmed.match(/^(?:###\s*)?(?:\*\*)?.*প্রশ্ন.*(?:\*\*)?$/i) && !trimmed.match(/^(?:\*\*)?(?:Q|প্রশ্ন)\s*[\d০-৯]+\s*[:：ঃ]/i))
        ) {
       console.log('FOUND QUESTIONS HEADER');
       isParsingQuestions = true;
@@ -123,11 +127,11 @@ export function parseLessonText(text) {
 
     // Parse Questions
     if (isParsingQuestions && currentTopic) {
-      // Support English and Bengali digits in Question number
-      const qMatch = trimmed.match(/^(?:\*\*)?(?:Q|প্রশ্ন)\s*[\d০-৯]*[:：ঃ]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
+      // Support English and Bengali digits/text in Question label (e.g., "Q১:", "প্রশ্ন ১:", "Q1:", "প্রশ্ন ১০ (MCQ):")
+      const qMatch = trimmed.match(/^(?:\*\*)?(?:Q|প্রশ্ন)\s*[\d০-৯\s]*.*?(?:\*\*)?[:：ঃ]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
       if (qMatch) {
         currentQuestion = {
-          question: qMatch[1].trim().replace(/\*\*$/, ''),
+          question: qMatch[1].trim().replace(/\*\*$/, '').replace(/^\*\*?/, ''),
           options: [],
           correct_answer: '',
           explanation: ''
@@ -137,18 +141,18 @@ export function parseLessonText(text) {
         continue;
       }
 
-      const correctMatch = trimmed.match(/^(?:\*\*)?(?:Correct|সঠিক|সঠিক উত্তর)(?:\*\*)?\s*[:：ঃ-]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
+      const correctMatch = trimmed.match(/^(?:\*\*)?(?:Correct|সঠিক|সঠিক উত্তর)(?:\s*\(.*?\))?\s*(?:\*\*)?[:：ঃ-]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
       if (correctMatch && currentQuestion) {
         let ans = correctMatch[1].trim().toLowerCase().replace(/\*\*$/, '').replace(/^\*\*?/, '');
-        if (ans === 'ক') ans = 'a';
-        else if (ans === 'খ') ans = 'b';
-        else if (ans === 'গ') ans = 'c';
-        else if (ans === 'ঘ') ans = 'd';
+        if (ans === 'ক' || ans.startsWith('ক')) ans = 'a';
+        else if (ans === 'খ' || ans.startsWith('খ')) ans = 'b';
+        else if (ans === 'গ' || ans.startsWith('গ')) ans = 'c';
+        else if (ans === 'ঘ' || ans.startsWith('ঘ')) ans = 'd';
         currentQuestion.correct_answer = ans;
         continue;
       }
   
-      const explanationMatch = trimmed.match(/^(?:\*\*)?(?:Explanation|ব্যাখ্যা)(?:\*\*)?\s*[:：ঃ-]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
+      const explanationMatch = trimmed.match(/^(?:\*\*)?(?:Explanation|ব্যাখ্যা)(?:\s*\(.*?\))?\s*(?:\*\*)?[:：ঃ-]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
       if (explanationMatch && currentQuestion) {
         currentQuestion.explanation = explanationMatch[1].trim().replace(/\*\*$/, '').replace(/^\*\*?/, '');
         continue;
@@ -181,7 +185,7 @@ export function parseLessonText(text) {
 
     // Parse Subtopic properties
     if (currentTopic && !isParsingQuestions) {
-      const propMatch = trimmed.match(/^[#*•+-\s]*(?:\*\*)?(Definition|সংজ্ঞা|Explanation|ব্যাখ্যা|Memorizing\/Understanding shortcut|মুখস্থ\/বোঝার কৌশল|মনে রাখার টিপস\/কৌশল|Common Misconceptions\/Mistake|সাধারণ ভুল ধারণা\/ভুল|Difficulty|কঠিনতা|জটিলতা)(?:\*\*)?[:：ঃ.]\s*(?:\*\*)?\s*(.*)$/i);
+      const propMatch = trimmed.match(/^[#*•+-\s]*(?:\*\*)?(Definition|সংজ্ঞা|Explanation|ব্যাখ্যা|Memorizing\/Understanding shortcut|মুখস্থ\/বোঝার কৌশল|মনে রাখার টিপস\/কৌশল|মুখস্থ\/বোধগম্য করার সহজ উপায়|মুখস্থ করার কৌশল|মুখস্থ\/বোঝার সহজ উপায়|মনে রাখার\/বোঝার সংক্ষিপ্ত উপায়|Common Misconceptions\/Mistake|সাধারণ ভুল ধারণা\/ভুল|সাধারণ ভুল ধারণা|Difficulty|কাঠিন্য|কঠিনতা|জটিলতা)(?:\s*\(.*?\))?\s*(?:\*\*)?[:：ঃ.]\s*(?:\*\*)?\s*(.*)$/i);
       
       if (propMatch) {
         const propName = propMatch[1].toLowerCase();
@@ -207,18 +211,18 @@ export function parseLessonText(text) {
         } else if (propName.includes('explanation') || propName.includes('ব্যাখ্যা')) {
           currentSubtopic.explanation = propValue;
           currentSubtopic._lastProp = 'explanation';
-        } else if (propName.includes('shortcut') || propName.includes('কৌশল') || propName.includes('টিপস')) {
+        } else if (propName.includes('shortcut') || propName.includes('কৌশল') || propName.includes('টিপস') || propName.includes('উপায়') || propName.includes('উপায়')) {
           currentSubtopic.shortcut = propValue;
           currentSubtopic._lastProp = 'shortcut';
         } else if (propName.includes('misconceptions') || propName.includes('mistake') || propName.includes('ভুল')) {
           currentSubtopic.mistakes = propValue;
           currentSubtopic._lastProp = 'mistakes';
-        } else if (propName.includes('difficulty') || propName.includes('কঠিনতা') || propName.includes('জটিলতা')) {
+        } else if (propName.includes('difficulty') || propName.includes('কঠিনতা') || propName.includes('জটিলতা') || propName.includes('কাঠিন্য')) {
           currentSubtopic.difficulty = propValue;
           currentSubtopic._lastProp = 'difficulty';
         }
         continue;
-      } else if (currentSubtopic && currentSubtopic._lastProp && !trimmed.startsWith('#') && !trimmed.match(/^(?:বিষয়|অধ্যায়|উপবিষয়|Topic|Chapter|Subtopic)/i)) {
+      } else if (currentSubtopic && currentSubtopic._lastProp && !trimmed.startsWith('#') && !trimmed.match(/^(?:বিষয়|বিষয়|অধ্যায়|অধ্যায়|উপবিষয়|উপবিষয়|উপ-বিষয়|উপ-বিষয়|টপিক|উপটপিক|উপ-টপিক|Topic|Chapter|Subtopic)/i)) {
         const prop = currentSubtopic._lastProp;
         currentSubtopic[prop] = (currentSubtopic[prop] ? currentSubtopic[prop] + '\n' : '') + trimmed;
         continue;
@@ -245,9 +249,9 @@ export function parseQuestionsOnly(text) {
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
     const trimmed = cleanLine(line);
-    if (!trimmed) continue;
+    if (!trimmed || trimmed === '---') continue;
 
-    const qMatch = trimmed.match(/^(?:\*\*)?(?:Q|প্রশ্ন)\s*[\d০-৯]*[:：ঃ]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
+    const qMatch = trimmed.match(/^(?:\*\*)?(?:Q|প্রশ্ন)\s*[\d০-৯\s]*.*?(?:\*\*)?[:：ঃ]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
     if (qMatch) {
       currentQuestion = {
         question: qMatch[1].trim().replace(/\*\*$/, '').replace(/^\*\*?/, ''),
@@ -259,18 +263,18 @@ export function parseQuestionsOnly(text) {
       continue;
     }
 
-    const correctMatch = trimmed.match(/^(?:\*\*)?(?:Correct|সঠিক|সঠিক উত্তর)(?:\*\*)?\s*[:：ঃ-]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
+    const correctMatch = trimmed.match(/^(?:\*\*)?(?:Correct|সঠিক|সঠিক উত্তর)\s*(?:\*\*)?[:：ঃ-]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
     if (correctMatch && currentQuestion) {
       let ans = correctMatch[1].trim().toLowerCase().replace(/\*\*$/, '').replace(/^\*\*?/, '');
-      if (ans === 'ক') ans = 'a';
-      else if (ans === 'খ') ans = 'b';
-      else if (ans === 'গ') ans = 'c';
-      else if (ans === 'ঘ') ans = 'd';
+      if (ans === 'ক' || ans.startsWith('ক')) ans = 'a';
+      else if (ans === 'খ' || ans.startsWith('খ')) ans = 'b';
+      else if (ans === 'গ' || ans.startsWith('গ')) ans = 'c';
+      else if (ans === 'ঘ' || ans.startsWith('ঘ')) ans = 'd';
       currentQuestion.correct_answer = ans;
       continue;
     }
 
-    const explanationMatch = trimmed.match(/^(?:\*\*)?(?:Explanation|ব্যাখ্যা)(?:\*\*)?\s*[:：ঃ-]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
+    const explanationMatch = trimmed.match(/^(?:\*\*)?(?:Explanation|ব্যাখ্যা)\s*(?:\*\*)?[:：ঃ-]\s*(?:\*\*)?\s*(.*?)(?:\*\*)?$/i);
     if (explanationMatch && currentQuestion) {
       currentQuestion.explanation = explanationMatch[1].trim().replace(/\*\*$/, '').replace(/^\*\*?/, '');
       continue;

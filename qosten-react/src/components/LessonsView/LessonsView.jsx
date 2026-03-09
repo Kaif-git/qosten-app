@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { lessonApi } from '../../services/lessonApi';
 import { parseQuestionsOnly, parseLessonText, formatLessonToMarkdown } from '../../utils/lessonParser';
@@ -66,7 +66,7 @@ export default function LessonsView() {
         }
       }
     }
-  }, [searchParams, subjects, chaptersBySubject, topicsByChapter, expandedSubjects, expandedChapters, expandedTopicId]);
+  }, [searchParams, subjects, chaptersBySubject, topicsByChapter, expandedSubjects, expandedChapters, expandedTopicId, toggleSubject, toggleChapter, toggleTopic]);
 
   const loadSubjects = async () => {
     try {
@@ -100,7 +100,7 @@ export default function LessonsView() {
     }
   };
 
-  const toggleSubject = async (subject) => {
+  const toggleSubject = useCallback(async (subject) => {
     const isExpanding = !expandedSubjects[subject];
     setExpandedSubjects(prev => ({ ...prev, [subject]: isExpanding }));
 
@@ -116,9 +116,9 @@ export default function LessonsView() {
         setLoadingChapters(prev => ({ ...prev, [subject]: false }));
       }
     }
-  };
+  }, [expandedSubjects, chaptersBySubject]);
 
-  const toggleChapter = async (subject, chapter) => {
+  const toggleChapter = useCallback(async (subject, chapter) => {
     const key = `${subject}_${chapter}`;
     const isExpanding = !expandedChapters[key];
     setExpandedChapters(prev => ({ ...prev, [key]: isExpanding }));
@@ -134,9 +134,9 @@ export default function LessonsView() {
         setLoadingTopics(prev => ({ ...prev, [key]: false }));
       }
     }
-  };
+  }, [expandedChapters, topicsByChapter]);
 
-  const toggleTopic = async (topic) => {
+  const toggleTopic = useCallback(async (topic) => {
     if (editMode && editMode !== topic.id) {
       if (!window.confirm('You have unsaved changes. Discard them?')) return;
       setEditMode(null);
@@ -166,7 +166,7 @@ export default function LessonsView() {
     } else {
       setExpandedTopicId(null);
     }
-  };
+  }, [editMode, expandedTopicId]);
 
   const handleRenameSubject = async () => {
     if (!editingSubject || !editingSubject.newName.trim() || editingSubject.newName === editingSubject.oldName) {

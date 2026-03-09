@@ -54,11 +54,9 @@ export const repairJson = (jsonString) => {
     if (char === '"') {
       // Look ahead for next significant character
       let nextSig = '';
-      let nextSigIdx = -1;
       for (let j = i + 1; j < input.length; j++) {
         if (!/\s/.test(input[j])) {
           nextSig = input[j];
-          nextSigIdx = j;
           break;
         }
       }
@@ -91,7 +89,7 @@ export const repairJson = (jsonString) => {
 
     if (char === '\\') {
       const nextChar = input[i + 1];
-      if (nextChar && /["\\\/bfnrtu]/.test(nextChar)) {
+      if (nextChar && /["\\/bfnrtu]/.test(nextChar)) {
         if (nextChar === 'u') {
           const hexPart = input.substring(i + 2, i + 6);
           if (/^[0-9a-fA-F]{4}$/.test(hexPart)) {

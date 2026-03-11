@@ -36,39 +36,7 @@ export default function LessonsView() {
   const [addingTopicTo, setAddingTopicTo] = useState(null); // { subject, chapter, position }
   const [newTopicData, setNewTopicData] = useState({ title: '', content: '' });
 
-  useEffect(() => {
-    loadSubjects();
-  }, []);
-
-  // Handle deep linking from searchParams
-  useEffect(() => {
-    const subject = searchParams.get('subject');
-    const chapter = searchParams.get('chapter');
-    const topicId = searchParams.get('topicId');
-
-    if (subject && subjects.includes(subject)) {
-      if (!expandedSubjects[subject]) {
-        toggleSubject(subject);
-      } else if (chapter && chaptersBySubject[subject]?.includes(chapter)) {
-        const key = `${subject}_${chapter}`;
-        if (!expandedChapters[key]) {
-          toggleChapter(subject, chapter);
-        } else if (topicId && topicsByChapter[key]) {
-          const topic = topicsByChapter[key].find(t => t.id.toString() === topicId.toString());
-          if (topic && expandedTopicId !== topic.id) {
-            toggleTopic(topic);
-            // Optional: Scroll to topic
-            setTimeout(() => {
-                const element = document.getElementById(`topic-${topic.id}`);
-                if (element) element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }, 500);
-          }
-        }
-      }
-    }
-  }, [searchParams, subjects, chaptersBySubject, topicsByChapter, expandedSubjects, expandedChapters, expandedTopicId, toggleSubject, toggleChapter, toggleTopic]);
-
-  const loadSubjects = async () => {
+  const loadSubjects = useCallback(async () => {
     try {
       setLoading(true);
       console.log('Component calling loadSubjects...');
@@ -81,24 +49,7 @@ export default function LessonsView() {
     } finally {
       setLoading(false);
     }
-  };
-
-  const handleCopyChapter = async (subject, chapter) => {
-    const key = `${subject}_${chapter}`;
-    setCopyingChapter(prev => ({ ...prev, [key]: true }));
-    try {
-      const fullTopics = await lessonApi.fetchFullChapter(subject, chapter);
-      const markdown = formatLessonToMarkdown(subject, chapter, fullTopics);
-      
-      await navigator.clipboard.writeText(markdown);
-      alert(`Chapter "${chapter}" copied to clipboard in import format!`);
-    } catch (err) {
-      console.error('Error copying chapter:', err);
-      alert('Failed to copy chapter: ' + err.message);
-    } finally {
-      setCopyingChapter(prev => ({ ...prev, [key]: false }));
-    }
-  };
+  }, []);
 
   const toggleSubject = useCallback(async (subject) => {
     const isExpanding = !expandedSubjects[subject];
@@ -167,6 +118,55 @@ export default function LessonsView() {
       setExpandedTopicId(null);
     }
   }, [editMode, expandedTopicId]);
+
+  const handleCopyChapter = useCallback(async (subject, chapter) => {
+    const key = `${subject}_${chapter}`;
+    setCopyingChapter(prev => ({ ...prev, [key]: true }));
+    try {
+      const fullTopics = await lessonApi.fetchFullChapter(subject, chapter);
+      const markdown = formatLessonToMarkdown(subject, chapter, fullTopics);
+      
+      await navigator.clipboard.writeText(markdown);
+      alert(`Chapter "${chapter}" copied to clipboard in import format!`);
+    } catch (err) {
+      console.error('Error copying chapter:', err);
+      alert('Failed to copy chapter: ' + err.message);
+    } finally {
+      setCopyingChapter(prev => ({ ...prev, [key]: false }));
+    }
+  }, []);
+
+  useEffect(() => {
+    loadSubjects();
+  }, [loadSubjects]);
+
+  // Handle deep linking from searchParams
+  useEffect(() => {
+    const subject = searchParams.get('subject');
+    const chapter = searchParams.get('chapter');
+    const topicId = searchParams.get('topicId');
+
+    if (subject && subjects.includes(subject)) {
+      if (!expandedSubjects[subject]) {
+        toggleSubject(subject);
+      } else if (chapter && chaptersBySubject[subject]?.includes(chapter)) {
+        const key = `${subject}_${chapter}`;
+        if (!expandedChapters[key]) {
+          toggleChapter(subject, chapter);
+        } else if (topicId && topicsByChapter[key]) {
+          const topic = topicsByChapter[key].find(t => t.id.toString() === topicId.toString());
+          if (topic && expandedTopicId !== topic.id) {
+            toggleTopic(topic);
+            // Optional: Scroll to topic
+            setTimeout(() => {
+                const element = document.getElementById(`topic-${topic.id}`);
+                if (element) element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 500);
+          }
+        }
+      }
+    }
+  }, [searchParams, subjects, chaptersBySubject, topicsByChapter, expandedSubjects, expandedChapters, expandedTopicId, toggleSubject, toggleChapter, toggleTopic]);
 
   const handleRenameSubject = async () => {
     if (!editingSubject || !editingSubject.newName.trim() || editingSubject.newName === editingSubject.oldName) {

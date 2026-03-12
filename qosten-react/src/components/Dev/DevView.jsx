@@ -24,7 +24,6 @@ export default function DevView() {
 
   // Interaction states
   const [replyingTo, setReplyingTo] = useState(null); // { type: 'chat'|'report', id, userId }
-  const [viewingChatUserId, setViewingChatUserId] = useState(null); // When set, shows specific user DM history
   const [replyText, setReplyText] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [viewingDetails, setViewingDetails] = useState(null); // { type, data }
@@ -427,7 +426,6 @@ export default function DevView() {
     setIsSubmitting(true);
     try {
       const updatedUserIds = new Set();
-      const resolvedReportIds = new Set();
 
       for (const report of targetReports) {
         const user = report.user;
@@ -517,7 +515,7 @@ export default function DevView() {
         </div>
         <button 
           className="open-dm-btn" 
-          onClick={(e) => { e.stopPropagation(); setViewingChatUserId(userId); setActiveTab('chats'); }}
+          onClick={(e) => { e.stopPropagation(); setActiveTab('chats'); }}
           title="Open Direct Message History"
         >
           ✉️ DM

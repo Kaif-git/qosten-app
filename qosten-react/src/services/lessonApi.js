@@ -149,93 +149,158 @@ export const lessonApi = {
   },
 
   /**
-   * Fetches distinct subjects.
+   * Fetches distinct subjects from learn_topics.
+   * Paginated to ensure all rows are processed.
    */
   async fetchSubjects() {
     if (!supabase) throw new Error('Supabase client is not initialized');
     
-    console.log('Fetching subjects from Supabase (paginated)...');
+    console.log('Fetching all unique subjects from learn_topics table...');
     let allSubjects = [];
     let from = 0;
     const pageSize = 1000;
     let hasMore = true;
+    let iteration = 0;
 
     while (hasMore) {
-      const to = from + pageSize - 1;
-      const { data, error } = await supabase
+      iteration++;
+      console.log(`[lessonApi] Fetching subject batch #${iteration} (range ${from} to ${from + pageSize - 1})...`);
+      
+      const { data, error, count } = await supabase
         .from('learn_topics')
-        .select('subject')
-        .order('subject')
-        .range(from, to);
+        .select('subject', { count: 'exact' })
+        .order('id')
+        .range(from, from + pageSize - 1);
         
       if (error) {
-        console.error('Supabase error in fetchSubjects:', error);
+        console.error(`Supabase error in fetchSubjects:`, error);
         throw error;
       }
       
       if (!data || data.length === 0) {
+        console.log(`[lessonApi] No more data found at iteration ${iteration}.`);
         hasMore = false;
       } else {
-        allSubjects = allSubjects.concat(data.map(item => item.subject));
+        const batchSubjects = data.map(item => (item.subject || '').trim()).filter(Boolean);
+        allSubjects = allSubjects.concat(batchSubjects);
+        console.log(`[lessonApi] Batch #${iteration} returned ${data.length} rows. Total rows so far: ${allSubjects.length}. (Total in DB: ${count})`);
+        
         if (data.length < pageSize) {
           hasMore = false;
         } else {
           from += pageSize;
         }
       }
+      
+      // Safety break to prevent infinite loops if something goes wrong
+      if (iteration > 100) {
+        console.warn('[lessonApi] Safety break hit at 100 iterations.');
+        break;
+      }
     }
     
-    const uniqueSubjects = [...new Set(allSubjects)];
-    console.log(`Fetched ${allSubjects.length} total rows. Unique subjects (${uniqueSubjects.length}):`, uniqueSubjects);
+    const uniqueSubjects = [...new Set(allSubjects)].filter(Boolean).sort();
+    console.log(`[lessonApi] Final unique subjects count: ${uniqueSubjects.length}`, uniqueSubjects);
     return uniqueSubjects;
   },
 
   /**
-   * Fetches distinct chapters for a given subject.
+   * Fetches distinct chapters for a given subject from learn_topics.
    */
   async fetchChapters(subject) {
     if (!supabase) throw new Error('Supabase client is not initialized');
     
-    console.log(`Fetching chapters for subject: ${subject} (paginated)...`);
+    console.log(`Fetching all unique chapters for subject: ${subject} from learn_topics...`);
     let allChapters = [];
     let from = 0;
     const pageSize = 1000;
     let hasMore = true;
+    let iteration = 0;
 
     while (hasMore) {
-      const to = from + pageSize - 1;
+      iteration++;
       const { data, error } = await supabase
         .from('learn_topics')
         .select('chapter')
         .eq('subject', subject)
-        .order('chapter')
-        .range(from, to);
+        .order('id')
+        .range(from, from + pageSize - 1);
         
       if (error) {
-        console.error('Supabase error in fetchChapters:', error);
+        console.error(`Supabase error in fetchChapters:`, error);
         throw error;
       }
       
       if (!data || data.length === 0) {
         hasMore = false;
       } else {
-        allChapters = allChapters.concat(data.map(item => item.chapter));
+        const batchChapters = data.map(item => (item.chapter || '').trim()).filter(Boolean);
+        allChapters = allChapters.concat(batchChapters);
         if (data.length < pageSize) {
           hasMore = false;
         } else {
           from += pageSize;
         }
       }
+
+      if (iteration > 100) break;
     }
     
-    const uniqueChapters = [...new Set(allChapters)];
-    console.log(`Fetched ${allChapters.length} total rows for chapters. Unique chapters (${uniqueChapters.length}):`, uniqueChapters);
+    const uniqueChapters = [...new Set(allChapters)].filter(Boolean).sort();
+    console.log(`[lessonApi] Final unique chapters for ${subject}: ${uniqueChapters.length}`, uniqueChapters);
     return uniqueChapters;
   },
 
   /**
-   * Fetches topics for a given subject and chapter (without deep details).
+   * Fetches EVERYTHING (topics and subtopics) for a full JSON backup.
    */
+  async fetchFullExport() {
+    if (!supabase) throw new Error('Supabase client is not initialized');
+    
+    console.log('[lessonApi] Starting full database export...');
+    
+    const fetchAllFromTable = async (tableName) => {
+      let all = [];
+      let from = 0;
+      const pageSize = 1000;
+      let hasMore = true;
+      let iter = 0;
+
+      while (hasMore) {
+        iter++;
+        const { data, error, count } = await supabase
+          .from(tableName)
+          .select('*', { count: 'exact' })
+          .order('id')
+          .range(from, from + pageSize - 1);
+          
+        if (error) throw error;
+        
+        if (!data || data.length === 0) {
+          hasMore = false;
+        } else {
+          all = all.concat(data);
+          console.log(`[lessonApi] Export ${tableName}: Batch #${iter} (${data.length} rows). Total: ${all.length}/${count}`);
+          if (data.length < pageSize) hasMore = false;
+          else from += pageSize;
+        }
+        if (iter > 100) break;
+      }
+      return all;
+    };
+
+    try {
+      const [topics, subtopics] = await Promise.all([
+        fetchAllFromTable('learn_topics'),
+        fetchAllFromTable('learn_subtopics')
+      ]);
+
+      return { topics, subtopics };
+    } catch (err) {
+      console.error('[lessonApi] Full export failed:', err);
+      throw err;
+    }
+  },
   async fetchTopics(subject, chapter) {
     if (!supabase) throw new Error('Supabase client is not initialized');
     

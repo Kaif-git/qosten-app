@@ -4,7 +4,7 @@ import { questionApi } from '../../services/questionApi';
 import { safeJsonParse } from '../../utils/jsonFixUtils';
 
 export default function Header() {
-  const { questions, refreshQuestions, bulkAddQuestions, setAuthenticated } = useQuestions();
+  const { questions, refreshQuestions, bulkAddQuestions, setAuthenticated, user, setUser } = useQuestions();
   const fileInputRef = useRef(null);
   const [isRefreshing, setIsRefreshing] = React.useState(false);
   const [isExporting, setIsExporting] = React.useState(false);
@@ -13,6 +13,7 @@ export default function Header() {
 
   const handleLogout = () => {
     sessionStorage.removeItem('qosten_auth');
+    setUser(null);
     setAuthenticated(false);
   };
 
@@ -306,6 +307,11 @@ export default function Header() {
         >
           {isRefreshing ? '🔄 Refreshing...' : '🔄 Refresh from DB'}
         </button>
+        {user && (
+          <span style={{ margin: '0 15px', color: '#666', fontWeight: 'bold' }}>
+            👤 {user.display_name}
+          </span>
+        )}
         <button 
           className="secondary" 
           onClick={handleLogout}

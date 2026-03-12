@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useQuestions } from '../../context/QuestionContext';
 
 export default function PasswordOverlay() {
-  const { isAuthenticated, setAuthenticated } = useQuestions();
+  const { isAuthenticated, setAuthenticated, setUser } = useQuestions();
   const [password, setPassword] = useState('');
   const [error, setError] = useState(false);
 
@@ -10,6 +10,13 @@ export default function PasswordOverlay() {
     if (e) e.preventDefault();
     if (password === 'EdVenture') {
       sessionStorage.setItem('qosten_auth', 'true');
+      const devUser = {
+        user_id: '00000000-0000-0000-0000-000000000000',
+        display_name: 'System Developer',
+        username: 'developer',
+        account_tier: 'premium'
+      };
+      setUser(devUser);
       setAuthenticated(true);
       setError(false);
     } else {

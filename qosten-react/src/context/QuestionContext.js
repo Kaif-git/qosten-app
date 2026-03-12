@@ -19,6 +19,7 @@ const initialState = {
   },
   editingQuestion: null,
   isAuthenticated: sessionStorage.getItem('qosten_auth') === 'true',
+  user: JSON.parse(sessionStorage.getItem('qosten_user') || 'null'),
   stats: {
     total: 0,
     subjects: 0,
@@ -36,12 +37,15 @@ const ACTIONS = {
   SET_FILTERS: 'SET_FILTERS',
   SET_EDITING_QUESTION: 'SET_EDITING_QUESTION',
   SET_AUTHENTICATED: 'SET_AUTHENTICATED',
+  SET_USER: 'SET_USER',
   UPDATE_STATS: 'UPDATE_STATS'
 };
 
 // Reducer function
 function questionReducer(state, action) {
   switch (action.type) {
+    case ACTIONS.SET_USER:
+      return { ...state, user: action.payload };
     case ACTIONS.SET_QUESTIONS: {
       const newQuestions = typeof action.payload === 'function' 
         ? action.payload(state.questions) 
@@ -885,6 +889,15 @@ export function QuestionProvider({ children }) {
     dispatch({ type: ACTIONS.SET_AUTHENTICATED, payload: isAuth });
   }, []);
 
+  const setUser = useCallback((user) => {
+    dispatch({ type: ACTIONS.SET_USER, payload: user });
+    if (user) {
+      sessionStorage.setItem('qosten_user', JSON.stringify(user));
+    } else {
+      sessionStorage.removeItem('qosten_user');
+    }
+  }, []);
+
   const fetchMoreQuestions = useCallback(async (forcedPage = null) => {
     if (isFetchingRef.current && forcedPage === null) return;
     
@@ -1175,6 +1188,7 @@ export function QuestionProvider({ children }) {
     setFilters,
     setEditingQuestion,
     setAuthenticated,
+    setUser,
     refreshQuestions,
     refreshHierarchy,
     fetchMoreQuestions,
@@ -1189,7 +1203,7 @@ export function QuestionProvider({ children }) {
     state, 
     setQuestions, clearCache, addQuestion, bulkAddQuestions, batchAddQuestions, 
     updateQuestion, bulkUpdateQuestions, deleteQuestion, fetchQuestionsByIds, 
-    setFilters, setEditingQuestion, setAuthenticated, refreshQuestions, 
+    setFilters, setEditingQuestion, setAuthenticated, setUser, refreshQuestions, 
     refreshHierarchy, fetchMoreQuestions, fetchAllRemaining, toggleQuestionFlag, 
     bulkFlagQuestions, toggleQuestionVerification, bulkVerifyQuestions, 
     toggleReviewQueue, bulkReviewQueue

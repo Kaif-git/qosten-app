@@ -51,6 +51,62 @@ export default function LessonsView() {
     }
   }, []);
 
+  const handleExportJSON = async () => {
+    try {
+      setLoading(true);
+      const { topics, subtopics } = await lessonApi.fetchFullExport();
+      
+      // Build hierarchical structure
+      const exportData = {};
+      
+      // 1. Group by Subject -> Chapter -> Topic
+      topics.forEach(t => {
+        const sub = (t.subject || 'Unknown Subject').trim();
+        const chap = (t.chapter || 'Unknown Chapter').trim();
+        
+        if (!exportData[sub]) exportData[sub] = {};
+        if (!exportData[sub][chap]) exportData[sub][chap] = [];
+        
+        // Find subtopics for this topic
+        const relatedSubtopics = subtopics.filter(st => st.topic_id === t.id);
+        
+        exportData[sub][chap].push({
+          id: t.id,
+          title: t.title,
+          order_index: t.order_index,
+          subtopics: relatedSubtopics.map(st => ({
+            id: st.id,
+            title: st.title,
+            definition: st.definition,
+            explanation: st.explanation,
+            shortcut: st.shortcut,
+            mistakes: st.mistakes,
+            difficulty: st.difficulty,
+            order_index: st.order_index,
+            flagged: st.flagged
+          }))
+        });
+      });
+
+      // 2. Download as JSON file
+      const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `Edventure_Lessons_Export_${new Date().toISOString().split('T')[0]}.json`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+      
+      alert('Export completed successfully!');
+    } catch (err) {
+      alert('Export failed: ' + err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const toggleSubject = useCallback(async (subject) => {
     const isExpanding = !expandedSubjects[subject];
     setExpandedSubjects(prev => ({ ...prev, [subject]: isExpanding }));
@@ -471,7 +527,14 @@ export default function LessonsView() {
         <div className="title-area">
           <h2>Lesson Library</h2>
         </div>
-        <button className="refresh-btn" onClick={loadSubjects} disabled={isUpdating}>Refresh Subjects</button>
+        <div className="header-actions">
+          <button className="export-json-btn" onClick={handleExportJSON} disabled={loading || isUpdating}>
+            Export Full JSON
+          </button>
+          <button className="refresh-btn" onClick={loadSubjects} disabled={isUpdating}>
+            Refresh Subjects
+          </button>
+        </div>
       </div>
 
       {subjects.length === 0 ? (

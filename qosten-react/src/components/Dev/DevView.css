@@ -139,7 +139,7 @@
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    overflow: hidden;
+    overflow-x: auto;
 }
 
 .dev-view-container .reports-table {
@@ -609,4 +609,149 @@
     padding: 40px;
     text-align: center;
     color: #999;
+}
+
+/* Bulk Actions Bar */
+.dev-view-container .bulk-actions-bar {
+    position: sticky;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: #2c3e50;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    z-index: 100;
+    margin: 20px;
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.dev-view-container .selection-info {
+    font-size: 1.1em;
+}
+
+.dev-view-container .selection-info strong {
+    color: #fcc419;
+    font-size: 1.3em;
+}
+
+.dev-view-container .action-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.dev-view-container .bulk-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.9em;
+}
+
+.dev-view-container .bulk-btn.flag {
+    background: #e03131;
+    color: white;
+}
+
+.dev-view-container .bulk-btn.flag:hover {
+    background: #c92a2a;
+}
+
+.dev-view-container .bulk-btn.resolve {
+    background: #2b8a3e;
+    color: white;
+}
+
+.dev-view-container .bulk-btn.resolve:hover {
+    background: #237032;
+}
+
+.dev-view-container .bulk-btn.reward {
+    background: #f1c40f;
+    color: #2c3e50;
+}
+
+.dev-view-container .bulk-btn.reward:hover {
+    background: #f39c12;
+}
+
+.dev-view-container .bulk-btn.close {
+    background: #495057;
+    color: white;
+}
+
+.dev-view-container .bulk-btn.close:hover {
+    background: #343a40;
+}
+
+.dev-view-container .bulk-btn.cancel {
+    background: transparent;
+    color: #adb5bd;
+    border: 1px solid #495057;
+}
+
+.dev-view-container .bulk-btn.cancel:hover {
+    color: white;
+    border-color: white;
+}
+
+.dev-view-container .bulk-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Checkbox Styles */
+.dev-view-container .checkbox-cell {
+    width: 40px;
+    text-align: center;
+    vertical-align: middle !important;
+}
+
+.dev-view-container .checkbox-cell input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.dev-view-container .selected-row {
+    background-color: #e7f5ff !important;
+}
+
+.dev-view-container .reply-actions-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.dev-view-container .reward-buttons {
+    display: flex;
+    gap: 4px;
+}
+
+.dev-view-container .reward-btn {
+    padding: 3px 6px;
+    border: 1px solid #f1c40f;
+    background: #fdf9e1;
+    border-radius: 4px;
+    font-size: 0.75em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.dev-view-container .reward-btn:hover {
+    background: #f1c40f;
+    color: white;
 }

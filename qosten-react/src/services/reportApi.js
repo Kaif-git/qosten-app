@@ -30,7 +30,7 @@ export const reportApi = {
     const [subtopicsRes, labsRes, usersRes] = await Promise.all([
       subtopicIds.length > 0 ? supabase.from('learn_subtopics').select('id, title, topic_id').in('id', subtopicIds) : { data: [] },
       labIds.length > 0 ? supabase.from('lab_problems').select('id, title:lesson, chapter, subject').in('id', labIds) : { data: [] },
-      userIds.length > 0 ? supabase.from('user_profiles').select('user_id, display_name, username, account_tier').in('user_id', userIds) : { data: [] }
+      userIds.length > 0 ? supabase.from('user_profiles').select('user_id, display_name, username, account_tier, subscription_end_date').in('user_id', userIds) : { data: [] }
     ]);
 
     // Questions are from Worker API
@@ -84,7 +84,7 @@ export const reportApi = {
 
     const userIds = [...new Set(chats.map(c => c.user_id).filter(Boolean))];
     const { data: users } = userIds.length > 0 
-      ? await supabase.from('user_profiles').select('user_id, display_name, username, account_tier').in('user_id', userIds)
+      ? await supabase.from('user_profiles').select('user_id, display_name, username, account_tier, subscription_end_date').in('user_id', userIds)
       : { data: [] };
 
     const userMap = (users || []).reduce((acc, u) => ({ ...acc, [u.user_id]: u }), {});
@@ -106,20 +106,48 @@ export const reportApi = {
 
   /**
    * Sends a reply to a chat.
+   * Based on 3-step process: Chat Reply, Notification, Report Update.
    */
-  async sendChatReply(userId, message) {
+  async sendChatReply(userId, message, senderId = null) {
+    let finalSenderId = senderId;
+    
+    // If no senderId provided, try to get from session
+    if (!finalSenderId) {
+      const { data: { session } } = await supabase.auth.getSession();
+      finalSenderId = session?.user?.id || userId; // Fallback to userId if no session, but ideally should be dev id
+    }
+
     const { data, error } = await supabase
       .from('dev_chats')
       .insert([{
         user_id: userId,
         message: message,
         sender_type: 'developer',
-        sender_id: '00000000-0000-0000-0000-000000000000', // Use Nil UUID for System/Admin
+        sender_id: finalSenderId, 
         is_read: false
       }])
       .select();
     if (error) throw error;
     return data[0];
+  },
+
+  /**
+   * Creates a notification for a user.
+   */
+  async createNotification(userId, title, message, type = 'dev_chat', data = {}) {
+    const { data: result, error } = await supabase
+      .from('notifications')
+      .insert([{
+        user_id: userId,
+        title: title,
+        message: message,
+        type: type,
+        data: data,
+        read: false
+      }])
+      .select();
+    if (error) throw error;
+    return result[0];
   },
 
   /**
@@ -188,6 +216,27 @@ export const reportApi = {
       labs: labsRes.data || [],
       questions: Array.isArray(questionsData) ? questionsData : (questionsData.data || [])
     };
+  },
+
+  /**
+   * Sends a general notification to a user.
+   */
+  async sendNotification(userId, { type, title, message, action_url = null, data = {} }) {
+    const { data: result, error } = await supabase
+      .from('notifications')
+      .insert([{
+        user_id: userId,
+        type: type || 'system',
+        title: title,
+        message: message,
+        read: false,
+        action_url: action_url,
+        data: data,
+        created_at: new Date().toISOString()
+      }])
+      .select();
+    if (error) throw error;
+    return result[0];
   },
 
   /**

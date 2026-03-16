@@ -24,6 +24,7 @@ import LessonsView from './components/LessonsView/LessonsView';
 import LabImport from './components/LabImport/LabImport';
 import LabView from './components/LabView/LabView';
 import DevView from './components/Dev/DevView';
+import DataTracker from './components/DataTracker/DataTracker';
 
 function App() {
   return (
@@ -60,6 +61,7 @@ function App() {
                 <Route path="/lessons-view" element={<LessonsView />} />
                 <Route path="/lab-view" element={<LabView />} />
                 <Route path="/dev" element={<DevView />} />
+                <Route path="/tracker" element={<DataTracker />} />
               </Routes>
             </div>
           </BrowserRouter>

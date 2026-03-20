@@ -7,17 +7,26 @@ export const reportApi = {
    * Links related content and user profile data.
    */
   async fetchReports() {
-    const { data: reports, error } = await supabase
-      .from('user_reports')
-      .select('*')
-      .order('created_at', { ascending: false });
+    const { data: { user } } = await supabase.auth.getUser();
+    console.log(`🔍 [reportApi] Current User: ${user?.id} (${user?.email})`);
+    console.log('🔍 [reportApi] fetchReports: Starting fetch via RPC...');
+    
+    // Use RPC to bypass RLS for admin dashboard
+    const { data: reports, error } = await supabase.rpc('fetch_all_reports');
 
     if (error) {
-      console.error('Error fetching reports:', error);
+      console.error('❌ [reportApi] fetchReports error:', error);
       throw error;
     }
 
-    if (!reports || reports.length === 0) return [];
+    console.log(`📊 [reportApi] fetchReports: Found ${reports?.length || 0} raw reports`);
+    if (!reports || reports.length === 0) {
+      console.warn('⚠️ [reportApi] fetchReports: No reports returned from database.');
+      return [];
+    }
+
+    // Sort manually since RPC might not guarantee order despite the function definition
+    reports.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
 
     console.log('📦 [reportApi] Raw first report sample:', reports[0]);
     console.log('📦 [reportApi] Available columns in first report:', Object.keys(reports[0]));
@@ -74,13 +83,22 @@ export const reportApi = {
   },
 
   async fetchChats() {
-    const { data: chats, error } = await supabase
-      .from('dev_chats')
-      .select('*')
-      .order('created_at', { ascending: false });
+    console.log('🔍 [reportApi] fetchChats: Starting fetch via RPC...');
+    const { data: chats, error } = await supabase.rpc('fetch_all_chats');
 
-    if (error) throw error;
-    if (!chats || chats.length === 0) return [];
+    if (error) {
+      console.error('❌ [reportApi] fetchChats error:', error);
+      throw error;
+    }
+
+    console.log(`📊 [reportApi] fetchChats: Found ${chats?.length || 0} raw chats`);
+    if (!chats || chats.length === 0) {
+      console.warn('⚠️ [reportApi] fetchChats: No chats returned from database.');
+      return [];
+    }
+
+    // Sort manually since RPC might not guarantee order
+    chats.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
 
     const userIds = [...new Set(chats.map(c => c.user_id).filter(Boolean))];
     const { data: users } = userIds.length > 0 
@@ -96,11 +114,22 @@ export const reportApi = {
   },
 
   async fetchUsers() {
+    console.log('🔍 [reportApi] fetchUsers: Starting fetch...');
+    const { data: { user } } = await supabase.auth.getUser();
+    
     const { data, error } = await supabase
       .from('user_profiles')
       .select('*')
       .order('created_at', { ascending: false });
-    if (error) throw error;
+    
+    if (error) {
+      console.error('❌ [reportApi] fetchUsers error:', error);
+      throw error;
+    }
+    
+    const currentUserProfile = data.find(u => u.user_id === user?.id);
+    console.log(`📊 [reportApi] Current User Tier (DB): ${currentUserProfile?.account_tier || 'unknown'}`);
+    console.log(`📊 [reportApi] fetchUsers: Found ${data?.length || 0} users`);
     return data;
   },
 
@@ -241,14 +270,63 @@ export const reportApi = {
 
   /**
    * Updates a user profile (e.g., tier, subscription dates).
+   * Note: user_subscriptions is the source of truth for account_tier and subscription fields.
    */
   async updateUser(userId, updates) {
-    const { data, error } = await supabase
-      .from('user_profiles')
-      .update(updates)
-      .eq('user_id', userId)
-      .select();
-    if (error) throw error;
-    return data[0];
+    const subscriptionFields = [
+      'account_tier', 
+      'subscription_type', 
+      'subscription_start_date', 
+      'subscription_end_date',
+      'questions_answered_today',
+      'last_question_date',
+      'trial_activated_at',
+      'trial_end_date'
+    ];
+
+    const subUpdates = {};
+    const profileUpdates = {};
+
+    Object.keys(updates).forEach(key => {
+      if (subscriptionFields.includes(key)) {
+        subUpdates[key] = updates[key];
+      } else {
+        profileUpdates[key] = updates[key];
+      }
+    });
+
+    try {
+      // 1. Update user_subscriptions if there are sub fields
+      if (Object.keys(subUpdates).length > 0) {
+        const { error: subError } = await supabase
+          .from('user_subscriptions')
+          .update(subUpdates)
+          .eq('user_id', userId);
+        if (subError) throw subError;
+      }
+
+      // 2. Update user_profiles for other fields
+      // (Trigger on user_subscriptions will also sync sub fields to profile)
+      if (Object.keys(profileUpdates).length > 0) {
+        const { data, error: profileError } = await supabase
+          .from('user_profiles')
+          .update(profileUpdates)
+          .eq('user_id', userId)
+          .select();
+        if (profileError) throw profileError;
+        return data[0];
+      }
+
+      // If only sub fields were updated, fetch the updated profile to return
+      const { data } = await supabase
+        .from('user_profiles')
+        .select('*')
+        .eq('user_id', userId)
+        .single();
+      return data;
+    } catch (err) {
+      console.error('Error in updateUser:', err);
+      throw err;
+    }
   }
 };

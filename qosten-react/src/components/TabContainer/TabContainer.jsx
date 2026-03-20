@@ -17,6 +17,7 @@ export default function TabContainer() {
     <div className="tab-container" style={{display:'flex', marginBottom:15, overflowX:'auto', whiteSpace:'nowrap', paddingBottom:5}}>
       <NavLink to="/import" style={({isActive}) => ({...tabStyle, background: isActive ? '#4CAF50' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>Import Questions</NavLink>
       <NavLink to="/bank" style={({isActive}) => ({...tabStyle, background: isActive ? '#4CAF50' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>Question Bank</NavLink>
+      <NavLink to="/videos" style={({isActive}) => ({...tabStyle, background: isActive ? '#6f42c1' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>📺 Videos</NavLink>
       <NavLink to="/add" style={({isActive}) => ({...tabStyle, background: isActive ? '#4CAF50' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>Add New Question</NavLink>
       <NavLink to="/import-math" style={({isActive}) => ({...tabStyle, background: isActive ? '#e67e22' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>📐 Math Questions</NavLink>
       <NavLink to="/import-mcq" style={({isActive}) => ({...tabStyle, background: isActive ? '#9b59b6' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>📝 MCQ Questions</NavLink>

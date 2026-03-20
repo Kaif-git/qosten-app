@@ -47,6 +47,7 @@ export default function DevView() {
 
   const loadData = async () => {
     try {
+      console.log('🚀 [DevView] loadData: Starting data fetch...');
       setLoading(true);
       const [reportsData, chatsData, usersData, flaggedData] = await Promise.all([
         reportApi.fetchReports(),
@@ -55,6 +56,13 @@ export default function DevView() {
         reportApi.fetchFlaggedContent()
       ]);
       
+      console.log('✅ [DevView] loadData results:', {
+        reportsCount: reportsData?.length,
+        chatsCount: chatsData?.length,
+        usersCount: usersData?.length,
+        flagged: flaggedData
+      });
+
       const calculateDaysLeft = (u) => {
         let daysLeft = -999;
         if (u && u.account_tier === 'premium' && u.subscription_end_date) {

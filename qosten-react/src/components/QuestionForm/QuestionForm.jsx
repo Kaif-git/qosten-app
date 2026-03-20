@@ -3,6 +3,7 @@ import { useQuestions } from '../../context/QuestionContext';
 import { useNavigate } from 'react-router-dom';
 import QuestionPreview from '../QuestionPreview/QuestionPreview';
 import { translateEnglishWordsToBangla } from '../../utils/translateToBangla';
+import { videoApi } from '../../services/videoApi';
 
 export default function QuestionForm() {
   const { editingQuestion, addQuestion, updateQuestion, setEditingQuestion } = useQuestions();
@@ -10,6 +11,14 @@ export default function QuestionForm() {
   const [showPreview, setShowPreview] = useState(false);
   const [previewQuestion, setPreviewQuestion] = useState(null);
   const [isTranslating, setIsTranslating] = useState(false);
+  
+  // Video state
+  const [videoLinks, setVideoLinks] = useState([]);
+  const [deletedVideoIds, setDeletedVideoIds] = useState([]);
+  const [newVideoUrl, setNewVideoUrl] = useState('');
+  const [newVideoStart, setNewVideoStart] = useState('');
+  const [newVideoEnd, setNewVideoEnd] = useState('');
+  const [newVideoTitle, setNewVideoTitle] = useState('');
   
   const [formData, setFormData] = useState({
     type: 'mcq',
@@ -72,6 +81,11 @@ export default function QuestionForm() {
         answerimage2: editingQuestion.answerimage2 || null,
         answerimage3: editingQuestion.answerimage3 || null,
         answerimage4: editingQuestion.answerimage4 || null
+      });
+
+      // Load video links
+      videoApi.getVideoLinks(editingQuestion.id).then(links => {
+        setVideoLinks(links || []);
       });
     }
   }, [editingQuestion]);
@@ -168,6 +182,43 @@ export default function QuestionForm() {
     setFormData(prev => ({ ...prev, answerimage4: null }));
   };
   
+  const addVideoLink = () => {
+    if (!newVideoUrl) {
+      alert('Please enter a YouTube URL');
+      return;
+    }
+    
+    // Basic validation for YouTube URL
+    if (!newVideoUrl.includes('youtube.com') && !newVideoUrl.includes('youtu.be')) {
+      alert('Please enter a valid YouTube URL');
+      return;
+    }
+
+    const newLink = {
+      youtube_url: newVideoUrl,
+      start_time: parseInt(newVideoStart) || 0,
+      end_time: parseInt(newVideoEnd) || null,
+      title: newVideoTitle,
+      tempId: Date.now() // Temporary ID for list management
+    };
+
+    setVideoLinks([...videoLinks, newLink]);
+    
+    // Reset inputs
+    setNewVideoUrl('');
+    setNewVideoStart('');
+    setNewVideoEnd('');
+    setNewVideoTitle('');
+  };
+
+  const removeVideoLink = (index) => {
+    const linkToRemove = videoLinks[index];
+    if (linkToRemove.id) {
+      setDeletedVideoIds([...deletedVideoIds, linkToRemove.id]);
+    }
+    setVideoLinks(videoLinks.filter((_, i) => i !== index));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     
@@ -240,16 +291,50 @@ export default function QuestionForm() {
   const confirmAddQuestion = async (editedQuestions) => {
     // Get the first (and only) question from the array
     const editedQuestion = editedQuestions[0];
-    
+    let qId;
+
     try {
       if (editingQuestion) {
         await updateQuestion({ ...editedQuestion, id: editingQuestion.id });
+        qId = editingQuestion.id;
         alert('Question updated successfully!');
       } else {
-        await addQuestion(editedQuestion);
+        const newQ = await addQuestion(editedQuestion);
+        qId = newQ.id;
         alert('Question added successfully!');
       }
+
+      // Handle Video Links
+      if (qId) {
+        // Delete removed links
+        for (const id of deletedVideoIds) {
+          await videoApi.deleteVideoLink(id);
+        }
+
+        // Add/Update links
+        for (const link of videoLinks) {
+          const payload = {
+            question_id: qId,
+            youtube_url: link.youtube_url,
+            start_time: link.start_time,
+            end_time: link.end_time,
+            title: link.title,
+            question_type: formData.type
+          };
+
+          if (link.id) {
+            // Existing link, maybe update? For now we only support add/delete mostly, 
+            // but let's update just in case user edited it (though UI doesn't support edit yet)
+            // We can just skip update if we assume immutability in UI for now
+          } else {
+            // New link
+            await videoApi.addVideoLink(payload);
+          }
+        }
+      }
+
     } catch (error) {
+      console.error("Error saving question or videos:", error);
       alert(error.message);
       setShowPreview(false);
       return;
@@ -296,6 +381,8 @@ export default function QuestionForm() {
       answerimage3: null,
       answerimage4: null
     });
+    setVideoLinks([]);
+    setDeletedVideoIds([]);
     setEditingQuestion(null);
   };
   
@@ -781,8 +868,88 @@ export default function QuestionForm() {
         </div>
         
         
+        
+        {/* Video Solutions Section */}
+        <div style={{ marginTop: '20px', padding: '15px', border: '1px solid #ddd', borderRadius: '8px' }}>
+          <h3>📺 Video Solutions</h3>
+          
+          <div style={{ display: 'flex', gap: '10px', marginBottom: '10px', flexWrap: 'wrap' }}>
+            <input 
+              type="text" 
+              placeholder="YouTube URL" 
+              value={newVideoUrl}
+              onChange={(e) => setNewVideoUrl(e.target.value)}
+              style={{ flex: 2, minWidth: '200px' }}
+            />
+            <input 
+              type="text" 
+              placeholder="Title (Optional)" 
+              value={newVideoTitle}
+              onChange={(e) => setNewVideoTitle(e.target.value)}
+              style={{ flex: 1, minWidth: '150px' }}
+            />
+          </div>
+          <div style={{ display: 'flex', gap: '10px', marginBottom: '10px', alignItems: 'center' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+              <label style={{ margin: 0 }}>Start (sec):</label>
+              <input 
+                type="number" 
+                placeholder="0" 
+                value={newVideoStart}
+                onChange={(e) => setNewVideoStart(e.target.value)}
+                style={{ width: '80px' }}
+                min="0"
+              />
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+              <label style={{ margin: 0 }}>End (sec):</label>
+              <input 
+                type="number" 
+                placeholder="Optional" 
+                value={newVideoEnd}
+                onChange={(e) => setNewVideoEnd(e.target.value)}
+                style={{ width: '80px' }}
+                min="0"
+              />
+            </div>
+            <button 
+              type="button" 
+              onClick={addVideoLink}
+              style={{ backgroundColor: '#6c757d', color: 'white' }}
+            >
+              Add Video
+            </button>
+          </div>
+
+          {videoLinks.length > 0 && (
+            <div style={{ marginTop: '10px' }}>
+              <h4>Added Videos:</h4>
+              <ul style={{ listStyle: 'none', padding: 0 }}>
+                {videoLinks.map((link, index) => (
+                  <li key={index} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '5px', backgroundColor: '#f8f9fa', marginBottom: '5px', borderRadius: '4px' }}>
+                    <span style={{ flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                      {link.title || link.youtube_url} 
+                      <span style={{ color: '#666', fontSize: '0.9em', marginLeft: '5px' }}>
+                        ({link.start_time || 0}s {link.end_time ? `- ${link.end_time}s` : ''})
+                      </span>
+                    </span>
+                    <button 
+                      type="button" 
+                      onClick={() => removeVideoLink(index)}
+                      style={{ padding: '2px 8px', backgroundColor: '#dc3545', color: 'white', border: 'none', borderRadius: '4px' }}
+                    >
+                      Remove
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+
         <div style={{marginTop: '20px'}}>
           <button type="submit">{editingQuestion ? 'Update Question' : 'Save Question'}</button>
+
           {editingQuestion && (
             <button type="button" className="danger" onClick={cancelEdit}>Cancel Edit</button>
           )}

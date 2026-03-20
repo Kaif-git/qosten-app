@@ -3,9 +3,9 @@ import './App.css';
 import Header from './components/Header/Header';
 import TabContainer from './components/TabContainer/TabContainer';
 import QuestionBank from './components/QuestionBank/QuestionBank';
+import VideosView from './components/VideosView/VideosView';
 import QuestionForm from './components/QuestionForm/QuestionForm';
 import ImportTabs from './components/ImportTabs/ImportTabs';
-import PasswordOverlay from './components/PasswordOverlay/PasswordOverlay';
 import { QuestionProvider } from './context/QuestionContext';
 import { PromptProvider } from './context/SimplePromptContext';
 import { ShopProvider } from './context/ShopContext';
@@ -24,6 +24,7 @@ import LessonsView from './components/LessonsView/LessonsView';
 import LabImport from './components/LabImport/LabImport';
 import LabView from './components/LabView/LabView';
 import DevView from './components/Dev/DevView';
+import Login from './components/Dev/Login';
 import DataTracker from './components/DataTracker/DataTracker';
 
 function App() {
@@ -33,13 +34,13 @@ function App() {
         <ShopProvider>
           <BrowserRouter>
             <div className="App">
-              <PasswordOverlay />
               <Header />
               <TabContainer />
               <Routes>
                 <Route path="/" element={<Navigate to="/import" replace />} />
                 <Route path="/import" element={<ImportTabs type="mcq" language="en" />} />
                 <Route path="/bank" element={<QuestionBank />} />
+                <Route path="/videos" element={<VideosView />} />
                 <Route path="/add" element={<QuestionForm />} />
                 <Route path="/import-cq" element={<ImportTabs type="cq" language="en" />} />
                 <Route path="/import-sq" element={<ImportTabs type="sq" language="en" />} />
@@ -62,6 +63,7 @@ function App() {
                 <Route path="/lab-view" element={<LabView />} />
                 <Route path="/dev" element={<DevView />} />
                 <Route path="/tracker" element={<DataTracker />} />
+                <Route path="/login" element={<Login />} />
               </Routes>
             </div>
           </BrowserRouter>

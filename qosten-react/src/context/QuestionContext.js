@@ -18,8 +18,8 @@ const initialState = {
     verifiedStatus: 'all' // 'all', 'verified', 'unverified'
   },
   editingQuestion: null,
-  isAuthenticated: sessionStorage.getItem('qosten_auth') === 'true',
-  user: JSON.parse(sessionStorage.getItem('qosten_user') || 'null'),
+  isAuthenticated: false,
+  user: null,
   stats: {
     total: 0,
     subjects: 0,
@@ -356,6 +356,67 @@ const mapAppToDatabase = (q) => {
 export function QuestionProvider({ children }) {
   const [state, dispatch] = useReducer(questionReducer, initialState);
   const isFetchingRef = useRef(false);
+
+  // --- Auth Effect ---
+  useEffect(() => {
+    // 1. Initial check
+    const checkUser = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session?.user) {
+        handleUserSession(session.user);
+      }
+    };
+    checkUser();
+
+    // 2. Listen for changes
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      console.log('🔔 Auth event:', event);
+      if (session?.user) {
+        handleUserSession(session.user);
+      } else {
+        dispatch({ type: ACTIONS.SET_AUTHENTICATED, payload: false });
+        dispatch({ type: ACTIONS.SET_USER, payload: null });
+        sessionStorage.removeItem('qosten_user');
+        sessionStorage.removeItem('qosten_auth');
+      }
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  const handleUserSession = async (sbUser) => {
+    try {
+      // Fetch full profile from DB to get account_tier
+      const { data: profile } = await supabase
+        .from('user_profiles')
+        .select('*')
+        .eq('user_id', sbUser.id)
+        .single();
+      
+      const combinedUser = {
+        ...sbUser,
+        user_id: sbUser.id,
+        display_name: profile?.display_name || sbUser.user_metadata?.full_name || 'User',
+        username: profile?.username || sbUser.email?.split('@')[0],
+        account_tier: profile?.account_tier || 'free'
+      };
+
+      dispatch({ type: ACTIONS.SET_USER, payload: combinedUser });
+      dispatch({ type: ACTIONS.SET_AUTHENTICATED, payload: true });
+      sessionStorage.setItem('qosten_auth', 'true');
+      sessionStorage.setItem('qosten_user', JSON.stringify(combinedUser));
+    } catch (err) {
+      console.error('Error fetching profile:', err);
+      // Fallback to basic user data
+      const basicUser = {
+        user_id: sbUser.id,
+        display_name: sbUser.user_metadata?.full_name || 'User',
+        account_tier: 'free'
+      };
+      dispatch({ type: ACTIONS.SET_USER, payload: basicUser });
+      dispatch({ type: ACTIONS.SET_AUTHENTICATED, payload: true });
+    }
+  };
 
   // --- 1. Helpers ---
 
@@ -889,6 +950,23 @@ export function QuestionProvider({ children }) {
     dispatch({ type: ACTIONS.SET_AUTHENTICATED, payload: isAuth });
   }, []);
 
+  const setDeveloperAccess = useCallback(() => {
+    const devUser = {
+      id: 'fe2853d9-6d2b-4c31-89a1-225959de4a03',
+      user_id: 'fe2853d9-6d2b-4c31-89a1-225959de4a03',
+      email: 'wasi@edventure.com',
+      display_name: 'wasi Raied',
+      username: 'wasiraied',
+      account_tier: 'developer',
+      user_metadata: { full_name: 'wasi Raied' }
+    };
+    dispatch({ type: ACTIONS.SET_USER, payload: devUser });
+    dispatch({ type: ACTIONS.SET_AUTHENTICATED, payload: true });
+    sessionStorage.setItem('qosten_auth', 'true');
+    sessionStorage.setItem('qosten_user', JSON.stringify(devUser));
+    return devUser;
+  }, []);
+
   const setUser = useCallback((user) => {
     dispatch({ type: ACTIONS.SET_USER, payload: user });
     if (user) {
@@ -1188,6 +1266,7 @@ export function QuestionProvider({ children }) {
     setFilters,
     setEditingQuestion,
     setAuthenticated,
+    setDeveloperAccess,
     setUser,
     refreshQuestions,
     refreshHierarchy,

@@ -3,11 +3,13 @@ import { useQuestions } from '../../context/QuestionContext';
 import { useNavigate } from 'react-router-dom';
 import LatexRenderer from '../LatexRenderer/LatexRenderer';
 import ImageLinkingModal from '../ImageLinkingModal/ImageLinkingModal';
+import VideoLinkModal from '../VideoLinkModal/VideoLinkModal';
 
-function QuestionCard({ question, selectionMode, isSelected, onToggleSelect, isLab }) {
+function QuestionCard({ question, selectionMode, isSelected, onToggleSelect, isLab, videoCount = 0, onVideoUpdate }) {
   const { deleteQuestion, setEditingQuestion, toggleQuestionFlag, toggleReviewQueue, toggleQuestionVerification, updateQuestion } = useQuestions();
   const navigate = useNavigate();
   const [showImageLinkingModal, setShowImageLinkingModal] = useState(false);
+  const [showVideoLinkModal, setShowVideoLinkModal] = useState(false);
   
   const handleCardClick = (e) => {
     if (selectionMode) {
@@ -316,6 +318,21 @@ function QuestionCard({ question, selectionMode, isSelected, onToggleSelect, isL
             📋 QUEUED
           </span>
         )}
+        {videoCount > 0 && (
+          <span style={{ 
+            backgroundColor: '#6f42c1', 
+            color: 'white', 
+            padding: '2px 8px', 
+            borderRadius: '4px',
+            fontWeight: 'bold',
+            marginLeft: '5px',
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '4px'
+          }}>
+            📺 Video ({videoCount})
+          </span>
+        )}
       </div>
       
       {renderQuestionContent()}
@@ -364,7 +381,17 @@ function QuestionCard({ question, selectionMode, isSelected, onToggleSelect, isL
               🔗 Link Image
             </button>
           )}
-          <button onClick={handleEdit}>Edit</button>
+          <button 
+            onClick={() => setShowVideoLinkModal(true)}
+            style={{
+              backgroundColor: '#6f42c1',
+              color: 'white',
+              border: 'none'
+            }}
+          >
+            📺 {videoCount > 0 ? `Videos (${videoCount})` : 'Add Link'}
+          </button>
+          <button onClick={handleEdit}>Edit {videoCount > 0 ? `(Videos: ${videoCount})` : ''}</button>
           <button className="danger" onClick={handleDelete}>Delete</button>
           <button 
             onClick={handleLogDetails}
@@ -385,6 +412,14 @@ function QuestionCard({ question, selectionMode, isSelected, onToggleSelect, isL
           onClose={() => setShowImageLinkingModal(false)}
           onLink={handleLinkImages}
           onUnlink={handleUnlinkImages}
+        />
+      )}
+
+      {showVideoLinkModal && (
+        <VideoLinkModal
+          question={question}
+          onClose={() => setShowVideoLinkModal(false)}
+          onUpdate={() => onVideoUpdate && onVideoUpdate(question.id)}
         />
       )}
     </div>

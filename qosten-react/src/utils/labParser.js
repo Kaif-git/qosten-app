@@ -1,181 +1,4 @@
 
-export const parseLabBulletPoints = (text) => {
-  const lines = text.split('\n').map(l => l.trim()).filter(l => l);
-  
-  const result = {
-    lab_problem_id: Date.now().toString(), // Default if not provided
-    subject: '',
-    chapter: '',
-    lesson: null,
-    board: '',
-    stem: '',
-    parts: []
-  };
-
-  let currentPart = null;
-  let currentStep = null;
-  let currentOptions = [];
-
-  // Helper to extract value after label
-  // Supports: "- Label: Value", "Label: Value", "* Label: Value"
-  const getValue = (line, label) => {
-    const regex = new RegExp(`^[-*]?\\s*${label}\\s*[:=]\\s*(.*)`, 'i');
-    const match = line.match(regex);
-    return match ? match[1].trim() : null;
-  };
-
-  // Helper to check if line starts with label
-  const startsWith = (line, label) => {
-    const regex = new RegExp(`^[-*]?\\s*${label}\\b`, 'i');
-    return regex.test(line);
-  };
-
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-
-    // Top Level Fields
-    const idVal = getValue(line, 'ID') || getValue(line, 'Problem ID');
-    if (idVal) { result.lab_problem_id = idVal; continue; }
-
-    const subjVal = getValue(line, 'Subject');
-    if (subjVal) { result.subject = subjVal; continue; }
-
-    const chapVal = getValue(line, 'Chapter');
-    if (chapVal) { result.chapter = chapVal; continue; }
-
-    const boardVal = getValue(line, 'Board');
-    if (boardVal) { result.board = boardVal; continue; }
-    
-    const stemVal = getValue(line, 'Stem');
-    if (stemVal) { result.stem = stemVal; continue; }
-
-    // Parts
-    const partVal = getValue(line, 'Part');
-    if (partVal) {
-      currentPart = {
-        part_id: partVal.toLowerCase().replace(/part\s*/i, ''),
-        question_text: '',
-        guided_steps: [],
-        final_answer: ''
-      };
-      result.parts.push(currentPart);
-      currentStep = null; // Reset step when new part starts
-      continue;
-    }
-
-    if (startsWith(line, 'Question') && currentPart) {
-      currentPart.question_text = getValue(line, 'Question');
-      continue;
-    }
-
-    if (startsWith(line, 'Final Answer') && currentPart) {
-      currentPart.final_answer = getValue(line, 'Final Answer');
-      continue;
-    }
-
-    // Steps
-    const stepVal = getValue(line, 'Step');
-    if (stepVal && currentPart) {
-      currentStep = {
-        step_order: parseInt(stepVal) || (currentPart.guided_steps.length + 1),
-        current_state: '',
-        mcq: {
-          question: '',
-          options: [],
-          correct_option_index: 0
-        },
-        explanation: '',
-        concept_card: null,
-        next_state: ''
-      };
-      currentPart.guided_steps.push(currentStep);
-      currentOptions = []; // Reset options
-      continue;
-    }
-
-    if (!currentStep) continue;
-
-    const stateVal = getValue(line, 'State') || getValue(line, 'Current State');
-    if (stateVal) { currentStep.current_state = stateVal; continue; }
-
-    const nextVal = getValue(line, 'Next') || getValue(line, 'Next State');
-    if (nextVal) { currentStep.next_state = nextVal; continue; }
-
-    // MCQ
-    const mcqQ = getValue(line, 'MCQ') || getValue(line, 'MCQ Question');
-    if (mcqQ) { currentStep.mcq.question = mcqQ; continue; }
-
-    if (startsWith(line, 'Option')) {
-      // Handle "Option: Value" or just "- Option Value"
-      // Or sometimes just bullets if we are in an option block context?
-      // Let's stick to explicit labels for now for robustness
-      let optVal = getValue(line, 'Option');
-      if (!optVal) {
-        // Try to handle simple bullets if they look like options
-        // But for now, let's assume they are labeled or we detect them
-        optVal = line.replace(/^[-*]\s*Option\s*[:]?\s*/i, '').trim();
-      }
-      currentOptions.push(optVal);
-      currentStep.mcq.options = currentOptions;
-      continue;
-    }
-    
-    // Also handle just " - Value" if we know we are looking for options?
-    // That might be too risky. Let's stick to "Option: ..."
-    // Or allow a block of options under "Options:"
-    
-    const correctVal = getValue(line, 'Correct') || getValue(line, 'Correct Option');
-    if (correctVal) {
-      // Handle index (0,1,2,3) or alphabetical (a,b,c,d) or text match
-      const lower = correctVal.toLowerCase();
-      let index = 0;
-      if (['a', '0'].includes(lower)) index = 0;
-      else if (['b', '1'].includes(lower)) index = 1;
-      else if (['c', '2'].includes(lower)) index = 2;
-      else if (['d', '3'].includes(lower)) index = 3;
-      else {
-        // Try to parse number
-        const parsed = parseInt(correctVal);
-        if (!isNaN(parsed)) index = parsed;
-        // If 1-based, decrement? Let's assume 0-based if < 4, else 1-based
-        // Actually, let's just assume 0-based or 1-based based on value?
-        // Standard is usually 0-based in code, but humans write 1-based.
-        // Let's assume 1-based if it's 1-4.
-        if (index >= 1 && index <= 4) index -= 1; 
-      }
-      currentStep.mcq.correct_option_index = index;
-      continue;
-    }
-
-    const expVal = getValue(line, 'Explanation');
-    if (expVal) { currentStep.explanation = expVal; continue; }
-
-    // Concept Card
-    const conceptTitle = getValue(line, 'Concept Title') || getValue(line, 'Concept');
-    if (conceptTitle) {
-      if (!currentStep.concept_card) currentStep.concept_card = {};
-      currentStep.concept_card.title = conceptTitle;
-      continue;
-    }
-
-    const conceptText = getValue(line, 'Concept Text') || getValue(line, 'Concept Explanation');
-    if (conceptText) {
-      if (!currentStep.concept_card) currentStep.concept_card = {};
-      currentStep.concept_card.concept_explanation = conceptText;
-      continue;
-    }
-    
-    const formulaVal = getValue(line, 'Formula');
-    if (formulaVal) {
-      if (!currentStep.concept_card) currentStep.concept_card = {};
-      currentStep.concept_card.formula = formulaVal;
-      continue;
-    }
-  }
-
-  return result;
-};
-
 export const LAB_BULLET_TEMPLATE = `ID: 1766915237842
 Subject: Mathematics
 Chapter: Trigonometric Ratio
@@ -198,19 +21,318 @@ Concept Title: Cosine in a Right Triangle
 Concept Explanation: In a right triangle, cos θ = adjacent side / hypotenuse.
 Next: cos 30° = BC / AC
 
-Step: 2
-State: cos 30° = √3 / AC
-MCQ: What is the value of cos 30°?
-Option: 1/2
-Option: √3/2
-Option: √2/2
-Option: √3
-Correct: 1
-Explanation: The standard trigonometric value of cos 30° is √3/2.
-Next: √3/2 = √3 / AC
+Final Answer: AC = 2 cm`;
 
-Final Answer: AC = 2 cm
+export const parseLabBulletPoints = (text) => {
+  const lines = text.split('\n').map(l => l.trim()).filter(l => l);
+  
+  const results = [];
+  let currentResult = null;
+  let currentPart = null;
+  let currentStep = null;
+  let currentOptions = [];
+  let isCapturingStem = false;
 
-Part: b
-Question: Prove that (2 - 1/csc²A)^(-1) + (2 + 1/cot²A)^(-1) = 1.
-...`;
+  // Track global metadata to carry over if multiple questions share them
+  let globalMeta = {
+    subject: '',
+    chapter: '',
+    lesson: null,
+    board: ''
+  };
+
+  const startNewProblem = () => {
+    currentResult = {
+      lab_problem_id: Date.now().toString() + results.length,
+      subject: globalMeta.subject,
+      chapter: globalMeta.chapter,
+      lesson: globalMeta.lesson,
+      board: globalMeta.board,
+      stem: '',
+      parts: []
+    };
+    results.push(currentResult);
+    currentPart = null;
+    currentStep = null;
+    isCapturingStem = false;
+  };
+
+  const getValue = (line, label) => {
+    const escapedLabel = label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    let regex;
+    if (label.toLowerCase() === 'step') {
+      regex = new RegExp(`^[-*#\\s]*\\[?\\s*(?:\\*\\*)?${escapedLabel}(?:\\*\\*)?\\s*[:=-]?\\s*(\\d+)\\b`, 'i');
+    } else {
+      regex = new RegExp(`^[-*#\\s]*\\[?\\s*(?:\\*\\*)?${escapedLabel}\\b(?:\\*\\*)?\\s*[:=-]\\s*(.*)`, 'i');
+    }
+    const match = line.match(regex);
+    if (match) {
+      let val = (match[1] || '').trim();
+      // Thoroughly clean up markers
+      const clean = (s) => s.replace(/^(\*\*|__|[*_\[\]])\s*/, '').replace(/\s*(\*\*|__|[*_\[\]])$/, '').trim();
+      val = clean(val);
+      // Second pass for nested markers like [**Value**]
+      val = clean(val);
+      return val;
+    }
+    return null;
+  };
+
+  const startsWith = (line, label) => {
+    const escapedLabel = label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`^[-*#\\s]*\\[?\\s*(?:\\*\\*)?${escapedLabel}(?:\\*\\*)?\\b`, 'i');
+    return regex.test(line);
+  };
+
+  let isCapturingPartQuestion = false;
+  let isCapturingOptions = false;
+
+  const metadataLabels = ['Subject', 'Chapter', 'Lesson', 'Board', 'ID', 'Problem ID', 'Stem', 'Part', 'Question'];
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+
+    // Skip separator lines
+    if (line === '---' || line === '***' || line === '___') continue;
+
+    // Detect new question start
+    if (startsWith(line, 'Question') && !currentPart) {
+      startNewProblem();
+    }
+
+    const idVal = getValue(line, 'ID') || getValue(line, 'Problem ID');
+    if (idVal) {
+      if (!currentResult || (currentResult.parts.length > 0)) {
+        startNewProblem();
+      }
+      currentResult.lab_problem_id = idVal;
+      continue;
+    }
+
+    // Delay start until we see a known label if not already started
+    if (!currentResult) {
+      const isStartLabel = metadataLabels.some(label => startsWith(line, label));
+      if (isStartLabel) {
+        startNewProblem();
+      } else {
+        continue;
+      }
+    }
+
+    // Parts
+    if (startsWith(line, 'Part')) {
+      isCapturingStem = false;
+      isCapturingOptions = false;
+      const partRegex = /^[-*#\s]*\[?\s*(?:\*\*)?Part\s*(?::\s*)?([a-z0-9]+)(?:\*\*)?\s*[:=-]?\s*(.*?)\s*(?:\*\*)?\s*\]?$/i;
+      const match = line.match(partRegex);
+      
+      if (match) {
+        const partId = match[1].toLowerCase();
+        let potentialText = match[2].trim();
+        potentialText = potentialText.replace(/^[:=-]\s*/, '').replace(/^\*\*\s*/, '').trim();
+        // Clean potentialText
+        potentialText = potentialText.replace(/^(\*\*|__)/, '').replace(/(\*\*|__)$/, '').trim();
+        
+        currentPart = {
+          part_id: partId,
+          question_text: potentialText,
+          guided_steps: [],
+          final_answer: ''
+        };
+        currentResult.parts.push(currentPart);
+        currentStep = null;
+        isCapturingPartQuestion = !potentialText;
+        continue;
+      }
+    }
+
+    // Top Level Fields
+    const subjVal = getValue(line, 'Subject');
+    if (subjVal) { globalMeta.subject = subjVal; currentResult.subject = subjVal; continue; }
+
+    const chapVal = getValue(line, 'Chapter');
+    if (chapVal) { globalMeta.chapter = chapVal; currentResult.chapter = chapVal; continue; }
+
+    const lessonVal = getValue(line, 'Lesson');
+    if (lessonVal) { globalMeta.lesson = lessonVal; currentResult.lesson = lessonVal; continue; }
+
+    const boardVal = getValue(line, 'Board');
+    if (boardVal) { globalMeta.board = boardVal; currentResult.board = boardVal; continue; }
+    
+    const stemVal = getValue(line, 'Stem');
+    if (stemVal !== null) { 
+      currentResult.stem = stemVal; 
+      isCapturingStem = true; 
+      continue; 
+    }
+
+    // Part question capturing
+    if (isCapturingPartQuestion && currentPart) {
+      if (line.startsWith('---') || startsWith(line, 'Step') || startsWith(line, 'Final Answer')) {
+        isCapturingPartQuestion = false;
+      } else {
+        const isMetadata = metadataLabels.some(label => startsWith(line, label));
+        if (!isMetadata) {
+          currentPart.question_text = (currentPart.question_text + '\n' + line).trim();
+          continue;
+        } else {
+          isCapturingPartQuestion = false;
+        }
+      }
+    }
+
+    if (isCapturingStem) {
+      if (line.startsWith('---') || startsWith(line, 'Step') || startsWith(line, 'Part')) {
+        isCapturingStem = false;
+      } else if (line.startsWith('[') && line.includes(':') && line.endsWith(']')) {
+        isCapturingStem = false;
+      } else {
+        const isMetadata = metadataLabels.some(label => startsWith(line, label));
+        if (!isMetadata) {
+          currentResult.stem = (currentResult.stem + '\n' + line).trim();
+          continue;
+        } else {
+          isCapturingStem = false;
+        }
+      }
+    }
+
+    if (startsWith(line, 'Question') && currentPart) {
+      const qText = getValue(line, 'Question');
+      if (qText) currentPart.question_text = qText;
+      continue;
+    }
+
+    if (startsWith(line, 'Final Answer') && currentPart) {
+      currentPart.final_answer = getValue(line, 'Final Answer');
+      continue;
+    }
+
+    // Steps
+    const stepVal = getValue(line, 'Step');
+    if (stepVal && currentPart) {
+      isCapturingOptions = false;
+      currentStep = {
+        step_order: parseInt(stepVal) || (currentPart.guided_steps.length + 1),
+        current_state: '',
+        mcq: {
+          question: '',
+          options: [],
+          correct_option_index: 0
+        },
+        explanation: '',
+        concept_card: null,
+        next_state: ''
+      };
+      currentPart.guided_steps.push(currentStep);
+      currentOptions = [];
+      continue;
+    }
+
+    if (!currentStep) continue;
+
+    const stateVal = getValue(line, 'State') || getValue(line, 'Current State');
+    if (stateVal) { currentStep.current_state = stateVal; continue; }
+
+    const nextVal = getValue(line, 'Next') || getValue(line, 'Next State');
+    if (nextVal) { currentStep.next_state = nextVal; continue; }
+
+    // MCQ
+    const mcqQ = getValue(line, 'MCQ') || getValue(line, 'MCQ Question');
+    if (mcqQ) { 
+      isCapturingOptions = true;
+      if (currentStep.mcq.question) {
+        currentStep.mcq.options.push(mcqQ);
+      } else {
+        let nextLine = lines[i + 1];
+        const nextIsMCQ = nextLine && (startsWith(nextLine, 'MCQ') || startsWith(nextLine, 'MCQ Question'));
+        
+        if (nextIsMCQ) {
+          currentStep.mcq.question = currentStep.current_state || "";
+          currentStep.mcq.options.push(mcqQ);
+        } else {
+          currentStep.mcq.question = mcqQ;
+        }
+      }
+      continue; 
+    }
+
+    if (startsWith(line, 'Option')) {
+      isCapturingOptions = true;
+      let optVal = getValue(line, 'Option');
+      if (!optVal) {
+        optVal = line.replace(/^[-*#\s]*\[?\s*(?:\*\*)?Option(?:\*\*)?\s*[:=-]?\s*/i, '').replace(/\s*(?:\*\*)?\s*\]?$/, '').trim();
+      }
+      // Strip common prefixes but preserve decimals
+      optVal = optVal.replace(/^(?:[a-dA-D]|[0-3])\s*[:.)-]\s+/, '').trim();
+      currentStep.mcq.options.push(optVal);
+      continue;
+    }
+
+    const correctVal = getValue(line, 'Correct') || getValue(line, 'Correct Option');
+    if (correctVal) {
+      isCapturingOptions = false;
+      const firstPart = correctVal.split(/[(\s:]/)[0].trim();
+      const lower = firstPart.toLowerCase();
+      let index = 0;
+      if (['a', '0'].includes(lower)) index = 0;
+      else if (['b', '1'].includes(lower)) index = 1;
+      else if (['c', '2'].includes(lower)) index = 2;
+      else if (['d', '3'].includes(lower)) index = 3;
+      else {
+        const parsed = parseInt(firstPart);
+        if (!isNaN(parsed)) index = parsed;
+        if (index >= 1 && index <= 4) index -= 1; 
+      }
+      currentStep.mcq.correct_option_index = index;
+      continue;
+    }
+
+    const expVal = getValue(line, 'Explanation');
+    if (expVal) { isCapturingOptions = false; currentStep.explanation = expVal; continue; }
+
+    // Concept Card
+    const conceptTitle = getValue(line, 'Concept Title') || getValue(line, 'Concept');
+    if (conceptTitle) {
+      isCapturingOptions = false;
+      if (!currentStep.concept_card) currentStep.concept_card = {};
+      currentStep.concept_card.title = conceptTitle;
+      continue;
+    }
+
+    const conceptText = getValue(line, 'Concept Explanation') || getValue(line, 'Concept Text');
+    if (conceptText) {
+      isCapturingOptions = false;
+      if (!currentStep.concept_card) currentStep.concept_card = {};
+      currentStep.concept_card.concept_explanation = conceptText;
+      continue;
+    }
+    
+    const formulaVal = getValue(line, 'Formula');
+    if (formulaVal) {
+      isCapturingOptions = false;
+      if (!currentStep.concept_card) currentStep.concept_card = {};
+      currentStep.concept_card.formula = formulaVal;
+      continue;
+    }
+
+    // Bulleted options - require space after bullet to distinguish from bold markers
+    if (isCapturingOptions && (line.startsWith('- ') || line.startsWith('* '))) {
+      // Check if it's a known keyword that should break option capturing
+      const isBreakLabel = ['Step', 'Part', 'State', 'Correct', 'MCQ', 'Explanation', 'Concept'].some(label => startsWith(line, label));
+      
+      if (!isBreakLabel) {
+        const optVal = line.replace(/^[-*]\s+/, '').trim();
+        if (optVal) {
+          const cleaned = optVal.replace(/^(?:[a-dA-D]|[0-3])\s*[:.)-]\s+/, '').trim();
+          currentStep.mcq.options.push(cleaned);
+          continue;
+        }
+      } else {
+          isCapturingOptions = false;
+      }
+    }
+  }
+
+  return results.length === 1 ? results[0] : results;
+};

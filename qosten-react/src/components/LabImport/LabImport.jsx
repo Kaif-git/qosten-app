@@ -240,8 +240,15 @@ const LabImport = () => {
 
       // Basic validation
       for (const problem of problems) {
-        if (!problem.lab_problem_id || !problem.subject || !problem.chapter || !problem.stem || !problem.parts) {
-          throw new Error(`Missing required fields in problem: ${problem.lab_problem_id || 'unknown'}`);
+        const missingFields = [];
+        if (!problem.lab_problem_id) missingFields.push('lab_problem_id');
+        if (!problem.subject) missingFields.push('subject');
+        if (!problem.chapter) missingFields.push('chapter');
+        if (!problem.stem) missingFields.push('stem');
+        if (!problem.parts || problem.parts.length === 0) missingFields.push('parts');
+        
+        if (missingFields.length > 0) {
+          throw new Error(`Missing required fields [${missingFields.join(', ')}] in problem: ${problem.lab_problem_id || 'unknown'}`);
         }
       }
 
@@ -256,12 +263,11 @@ const LabImport = () => {
           board: p.board,
           stem: p.stem,
           parts: p.parts,
-          questionimage: p.questionimage || p.image || null,
+          questionimage: p.questionimage || p.stem_image || p.image || null,
           answerimage1: p.answerimage1 || null,
           answerimage2: p.answerimage2 || null,
           answerimage3: p.answerimage3 || null,
-          answerimage4: p.answerimage4 || null,
-          stem_image: p.stem_image || p.image || null
+          answerimage4: p.answerimage4 || null
         };
       });
 

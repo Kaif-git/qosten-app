@@ -3,6 +3,7 @@ import { useSearchParams, useNavigate } from 'react-router-dom';
 import { useQuestions, mapDatabaseToApp } from '../../context/QuestionContext';
 import { questionApi } from '../../services/questionApi';
 import { labApi } from '../../services/labApi';
+import { videoApi } from '../../services/videoApi';
 import Statistics from '../Statistics/Statistics';
 import SearchFilters from '../SearchFilters/SearchFilters';
 import QuestionCard from '../QuestionCard/QuestionCard';
@@ -356,6 +357,7 @@ export default function QuestionBank() {
   // Performance Optimization: Visible Count (Limit rendering)
   const [visibleCount, setVisibleCount] = useState(50);
   const [labProblemIds, setLabProblemIds] = useState(new Set());
+  const [videoCounts, setVideoCounts] = useState({});
 
   useEffect(() => {
     const fetchLabIds = async () => {
@@ -368,6 +370,7 @@ export default function QuestionBank() {
     };
     fetchLabIds();
   }, []);
+
 
   const checkIfChanged = (orig, fixed, type) => {
     const qText1 = (orig.questionText || orig.question || '').trim();
@@ -1084,7 +1087,32 @@ export default function QuestionBank() {
   useEffect(() => {
     setVisibleCount(50);
   }, [currentFilters, leftFilters, rightFilters, isSplitView]);
+
+  // Fetch video counts for visible questions
+  useEffect(() => {
+    // Only fetch if we have questions visible
+    if (currentVisibleQuestions.length > 0) {
+        const timer = setTimeout(() => {
+            const visibleQs = currentVisibleQuestions.slice(0, visibleCount);
+            const ids = visibleQs.map(q => q.id);
+            
+            // Only fetch if we don't have counts for these (or refresh logic?)
+            // We can just fetch all and merge, it's safer.
+            videoApi.getVideoCounts(ids).then(counts => {
+                setVideoCounts(prev => ({ ...prev, ...counts }));
+            });
+        }, 1000); // Debounce 1s to avoid spam
+        return () => clearTimeout(timer);
+    }
+  }, [currentVisibleQuestions, visibleCount]);
   
+  // Handle video update from QuestionCard
+  const handleVideoUpdate = useCallback((questionId) => {
+    videoApi.getVideoCounts([questionId]).then(counts => {
+      setVideoCounts(prev => ({ ...prev, [questionId]: counts[questionId] || 0 }));
+    });
+  }, []);
+
   // Convert selectedQuestions to Set for O(1) rendering performance
   const selectedSet = React.useMemo(() => new Set(selectedQuestions), [selectedQuestions]);
 
@@ -3261,6 +3289,8 @@ export default function QuestionBank() {
                     isSelected={selectedSet.has(question.id)}
                     onToggleSelect={stableToggleQuestionSelection}
                     isLab={labProblemIds.has(question.id.toString())}
+                    videoCount={videoCounts[question.id] || 0}
+                    onVideoUpdate={handleVideoUpdate}
                   />
                 );
               })}

@@ -7,10 +7,13 @@ export const trackerApi = {
   async getAllTrackers() {
     if (!supabase) return { data: [], error: 'Supabase client not initialized' };
     
-    const { data, error } = await supabase
-      .from('daily_guide_trackers')
-      .select('*')
-      .order('created_at', { ascending: false });
+    // Use RPC to bypass RLS for admin dashboard
+    const { data, error } = await supabase.rpc('fetch_all_trackers');
+    
+    if (data) {
+        // Sort manually since RPC might not guarantee order
+        data.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+    }
     
     return { data, error };
   },
@@ -51,10 +54,8 @@ export const trackerApi = {
     if (!supabase) return { data: [], error: 'Supabase client not initialized' };
     if (!userIds || userIds.length === 0) return { data: [], error: null };
     
-    const { data, error } = await supabase
-      .from('user_profiles')
-      .select('user_id, display_name, username, account_tier, created_at, last_seen_at')
-      .in('user_id', userIds);
+    // Use RPC to bypass RLS for admin dashboard
+    const { data, error } = await supabase.rpc('fetch_users_by_ids', { p_user_ids: userIds });
       
     return { data, error };
   }

@@ -170,8 +170,6 @@ export default function LabView() {
           if (isRealImage(apiImg2) && apiImg2 !== problem.answerimage2) updateData.answerimage2 = apiImg2;
           if (isRealImage(apiImg3) && apiImg3 !== problem.answerimage3) updateData.answerimage3 = apiImg3;
           if (isRealImage(apiImg4) && apiImg4 !== problem.answerimage4) updateData.answerimage4 = apiImg4;
-          
-          if (isRealImage(apiQuestionImage) && apiQuestionImage !== problem.stem_image) updateData.stem_image = apiQuestionImage;
 
           if (Object.keys(updateData).length > 0) {
             updateTasks.push({ id: problem.id, labId, data: updateData });
@@ -234,9 +232,7 @@ export default function LabView() {
         answerimage1: q.answerimage1 || null,
         answerimage2: q.answerimage2 || null,
         answerimage3: q.answerimage3 || null,
-        answerimage4: q.answerimage4 || null,
-        // Also update stem_image if it was used
-        stem_image: q.image || null
+        answerimage4: q.answerimage4 || null
       };
 
       if (shouldSave) {
@@ -611,19 +607,6 @@ export default function LabView() {
                                         />
                                         {editedData.questionimage && (
                                           <img src={editedData.questionimage} alt="Question Preview" className="preview-img-small" />
-                                        )}
-                                      </div>
-                                      <div className="image-edit-block">
-                                        <label>Stem Image URL (legacy):</label>
-                                        <input 
-                                          type="text"
-                                          className="edit-input"
-                                          value={editedData.stem_image || ''}
-                                          onChange={(e) => handleDataChange('stem_image', e.target.value)}
-                                          placeholder="stem_image URL/Base64"
-                                        />
-                                        {editedData.stem_image && (
-                                          <img src={editedData.stem_image} alt="Stem Preview" className="preview-img-small" />
                                         )}
                                       </div>
                                     </div>

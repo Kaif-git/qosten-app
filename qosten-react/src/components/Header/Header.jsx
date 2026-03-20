@@ -1,20 +1,26 @@
 import React, { useRef } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import { useQuestions } from '../../context/QuestionContext';
+import { supabase } from '../../services/supabaseClient';
 import { questionApi } from '../../services/questionApi';
 import { safeJsonParse } from '../../utils/jsonFixUtils';
 
 export default function Header() {
-  const { questions, refreshQuestions, bulkAddQuestions, setAuthenticated, user, setUser } = useQuestions();
+  const navigate = useNavigate();
+  const { questions, refreshQuestions, bulkAddQuestions, isAuthenticated, setAuthenticated, user, setUser } = useQuestions();
   const fileInputRef = useRef(null);
   const [isRefreshing, setIsRefreshing] = React.useState(false);
   const [isExporting, setIsExporting] = React.useState(false);
   const [isImporting, setIsImporting] = React.useState(false);
   const [importProgress, setImportProgress] = React.useState({ current: 0, total: 0 });
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
     sessionStorage.removeItem('qosten_auth');
+    sessionStorage.removeItem('qosten_user');
     setUser(null);
     setAuthenticated(false);
+    navigate('/login');
   };
 
   const fetchFullQuestionsData = async () => {
@@ -307,18 +313,33 @@ export default function Header() {
         >
           {isRefreshing ? '🔄 Refreshing...' : '🔄 Refresh from DB'}
         </button>
-        {user && (
-          <span style={{ margin: '0 15px', color: '#666', fontWeight: 'bold' }}>
-            👤 {user.display_name}
-          </span>
+        {isAuthenticated ? (
+          <>
+            {user && (
+              <span style={{ margin: '0 15px', color: '#666', fontWeight: 'bold' }}>
+                👤 {user.display_name} ({user.account_tier})
+              </span>
+            )}
+            <button 
+              className="secondary" 
+              onClick={handleLogout}
+              style={{ backgroundColor: '#e74c3c', color: 'white' }}
+            >
+              🔒 Logout
+            </button>
+            <Link to="/dev">
+              <button className="secondary dev-btn" style={{ backgroundColor: '#8e44ad', color: 'white' }}>
+                🛠️ Dev Dashboard
+              </button>
+            </Link>
+          </>
+        ) : (
+          <Link to="/login">
+            <button className="secondary" style={{ backgroundColor: '#3498db', color: 'white' }}>
+              🔑 Developer Login
+            </button>
+          </Link>
         )}
-        <button 
-          className="secondary" 
-          onClick={handleLogout}
-          style={{ backgroundColor: '#e74c3c', color: 'white' }}
-        >
-          🔒 Logout
-        </button>
         <input
           ref={fileInputRef}
           type="file"

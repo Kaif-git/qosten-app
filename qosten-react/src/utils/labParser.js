@@ -30,7 +30,6 @@ export const parseLabBulletPoints = (text) => {
   let currentResult = null;
   let currentPart = null;
   let currentStep = null;
-  let currentOptions = [];
   let isCapturingStem = false;
 
   // Track global metadata to carry over if multiple questions share them
@@ -87,7 +86,11 @@ export const parseLabBulletPoints = (text) => {
   let isCapturingPartQuestion = false;
   let isCapturingOptions = false;
 
-  const metadataLabels = ['Subject', 'Chapter', 'Lesson', 'Board', 'ID', 'Problem ID', 'Stem', 'Part', 'Question'];
+  const metadataLabels = [
+    'Subject', 'Chapter', 'Lesson', 'Board', 'ID', 'Problem ID', 
+    'Stem', 'Part', 'Question', 'Step', 'State', 'Current State', 
+    'MCQ', 'Option', 'Correct', 'Explanation', 'Concept', 'Next', 'Final Answer'
+  ];
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
@@ -168,32 +171,22 @@ export const parseLabBulletPoints = (text) => {
 
     // Part question capturing
     if (isCapturingPartQuestion && currentPart) {
-      if (line.startsWith('---') || startsWith(line, 'Step') || startsWith(line, 'Final Answer')) {
+      const isMetadata = metadataLabels.some(label => startsWith(line, label));
+      if (line.startsWith('---') || isMetadata) {
         isCapturingPartQuestion = false;
       } else {
-        const isMetadata = metadataLabels.some(label => startsWith(line, label));
-        if (!isMetadata) {
-          currentPart.question_text = (currentPart.question_text + '\n' + line).trim();
-          continue;
-        } else {
-          isCapturingPartQuestion = false;
-        }
+        currentPart.question_text = (currentPart.question_text + '\n' + line).trim();
+        continue;
       }
     }
 
     if (isCapturingStem) {
-      if (line.startsWith('---') || startsWith(line, 'Step') || startsWith(line, 'Part')) {
-        isCapturingStem = false;
-      } else if (line.startsWith('[') && line.includes(':') && line.endsWith(']')) {
+      const isMetadata = metadataLabels.some(label => startsWith(line, label));
+      if (line.startsWith('---') || isMetadata || (line.startsWith('[') && line.includes(':') && line.endsWith(']'))) {
         isCapturingStem = false;
       } else {
-        const isMetadata = metadataLabels.some(label => startsWith(line, label));
-        if (!isMetadata) {
-          currentResult.stem = (currentResult.stem + '\n' + line).trim();
-          continue;
-        } else {
-          isCapturingStem = false;
-        }
+        currentResult.stem = (currentResult.stem + '\n' + line).trim();
+        continue;
       }
     }
 
@@ -212,8 +205,17 @@ export const parseLabBulletPoints = (text) => {
     const stepVal = getValue(line, 'Step');
     if (stepVal && currentPart) {
       isCapturingOptions = false;
+      const order = parseInt(stepVal) || (currentPart.guided_steps.length + 1);
+      
+      // If we have an implicit step that matches this order and has no MCQ yet, reuse it
+      const lastStep = currentPart.guided_steps[currentPart.guided_steps.length - 1];
+      if (lastStep && lastStep.step_order === order && !lastStep.mcq.question && !lastStep.mcq.options.length) {
+        currentStep = lastStep;
+        continue;
+      }
+
       currentStep = {
-        step_order: parseInt(stepVal) || (currentPart.guided_steps.length + 1),
+        step_order: order,
         current_state: '',
         mcq: {
           question: '',
@@ -225,24 +227,69 @@ export const parseLabBulletPoints = (text) => {
         next_state: ''
       };
       currentPart.guided_steps.push(currentStep);
-      currentOptions = [];
       continue;
+    }
+
+    // Detect implied first step if we see step-level markers but no step started
+    const stateVal = getValue(line, 'State') || getValue(line, 'Current State');
+
+    // Handle State as Stem or Part Question if missing
+    if (stateVal !== null) {
+      if (!currentPart && currentResult && !currentResult.stem) {
+        currentResult.stem = stateVal;
+        isCapturingStem = true;
+        continue;
+      }
+      if (currentPart && !currentStep && !currentPart.question_text) {
+        currentPart.question_text = stateVal;
+        isCapturingPartQuestion = true;
+        continue;
+      }
+    }
+
+    const mcqQ = getValue(line, 'MCQ') || getValue(line, 'MCQ Question');
+    
+    if ((stateVal !== null || mcqQ !== null || startsWith(line, 'Option') || startsWith(line, 'Correct')) && currentPart && !currentStep) {
+      currentStep = {
+        step_order: 1,
+        current_state: '',
+        mcq: {
+          question: '',
+          options: [],
+          correct_option_index: 0
+        },
+        explanation: '',
+        concept_card: null,
+        next_state: ''
+      };
+      currentPart.guided_steps.push(currentStep);
     }
 
     if (!currentStep) continue;
 
-    const stateVal = getValue(line, 'State') || getValue(line, 'Current State');
-    if (stateVal) { currentStep.current_state = stateVal; continue; }
+    if (stateVal) { 
+      if (currentStep.current_state) {
+        currentStep.current_state = (currentStep.current_state + '\n' + stateVal).trim();
+      } else {
+        currentStep.current_state = stateVal; 
+      }
+      continue; 
+    }
 
     const nextVal = getValue(line, 'Next') || getValue(line, 'Next State');
     if (nextVal) { currentStep.next_state = nextVal; continue; }
 
     // MCQ
-    const mcqQ = getValue(line, 'MCQ') || getValue(line, 'MCQ Question');
     if (mcqQ) { 
       isCapturingOptions = true;
-      if (currentStep.mcq.question) {
-        currentStep.mcq.options.push(mcqQ);
+      // Reset or overwrite if we already have a full MCQ in this step
+      if (currentStep.mcq.options.length > 0) {
+        currentStep.mcq.question = mcqQ;
+        currentStep.mcq.options = [];
+        currentStep.mcq.correct_option_index = 0;
+      } else if (currentStep.mcq.question) {
+        // Support multi-line MCQ questions if no options yet
+        currentStep.mcq.question = (currentStep.mcq.question + '\n' + mcqQ).trim();
       } else {
         let nextLine = lines[i + 1];
         const nextIsMCQ = nextLine && (startsWith(nextLine, 'MCQ') || startsWith(nextLine, 'MCQ Question'));
@@ -275,14 +322,18 @@ export const parseLabBulletPoints = (text) => {
       const firstPart = correctVal.split(/[(\s:]/)[0].trim();
       const lower = firstPart.toLowerCase();
       let index = 0;
-      if (['a', '0'].includes(lower)) index = 0;
-      else if (['b', '1'].includes(lower)) index = 1;
-      else if (['c', '2'].includes(lower)) index = 2;
-      else if (['d', '3'].includes(lower)) index = 3;
+      
+      if (lower === 'a') index = 0;
+      else if (lower === 'b') index = 1;
+      else if (lower === 'c') index = 2;
+      else if (lower === 'd') index = 3;
       else {
         const parsed = parseInt(firstPart);
-        if (!isNaN(parsed)) index = parsed;
-        if (index >= 1 && index <= 4) index -= 1; 
+        if (!isNaN(parsed)) {
+          index = parsed;
+          // Most users use 1, 2, 3, 4. If they use 0, 1, 2, 3, we keep it as is if it's 0.
+          if (index >= 1 && index <= 4) index -= 1;
+        }
       }
       currentStep.mcq.correct_option_index = index;
       continue;

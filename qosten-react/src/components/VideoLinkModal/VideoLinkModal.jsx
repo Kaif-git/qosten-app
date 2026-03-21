@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { videoApi } from '../../services/videoApi';
 
 export default function VideoLinkModal({ question, onClose, onUpdate }) {
@@ -12,11 +12,7 @@ export default function VideoLinkModal({ question, onClose, onUpdate }) {
   const [newVideoStart, setNewVideoStart] = useState('');
   const [newVideoEnd, setNewVideoEnd] = useState('');
 
-  useEffect(() => {
-    fetchVideoLinks();
-  }, [question.id]);
-
-  const fetchVideoLinks = async () => {
+  const fetchVideoLinks = useCallback(async () => {
     setLoading(true);
     try {
       const links = await videoApi.getVideoLinks(question.id);
@@ -26,7 +22,11 @@ export default function VideoLinkModal({ question, onClose, onUpdate }) {
     } finally {
       setLoading(false);
     }
-  };
+  }, [question.id]);
+
+  useEffect(() => {
+    fetchVideoLinks();
+  }, [fetchVideoLinks]);
 
   const handleAddVideo = async () => {
     if (!newVideoUrl) {

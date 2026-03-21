@@ -64,11 +64,27 @@ export const labApi = {
 
   async fetchLabProblemIds() {
     if (!supabase) throw new Error('Supabase client not initialized');
-    const { data, error } = await supabase
-      .from('lab_problems')
-      .select('lab_problem_id');
-    if (error) throw error;
-    return data.map(item => item.lab_problem_id);
+    
+    let allIds = [];
+    let from = 0;
+    const PAGE_SIZE = 1000;
+    
+    while (true) {
+      const { data, error } = await supabase
+        .from('lab_problems')
+        .select('lab_problem_id')
+        .range(from, from + PAGE_SIZE - 1);
+        
+      if (error) throw error;
+      if (!data || data.length === 0) break;
+      
+      allIds = [...allIds, ...data.map(item => item.lab_problem_id)];
+      
+      if (data.length < PAGE_SIZE) break;
+      from += PAGE_SIZE;
+    }
+    
+    return allIds;
   },
 
   async createLabProblem(problemData) {
@@ -113,7 +129,10 @@ export const labApi = {
 
     const { data, error } = await supabase
       .from('lab_problems')
-      .insert(problems)
+      .upsert(problems, { 
+        onConflict: 'lab_problem_id', 
+        ignoreDuplicates: true 
+      })
       .select();
 
     if (error) throw error;

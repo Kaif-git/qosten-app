@@ -1282,7 +1282,7 @@ export function QuestionProvider({ children }) {
     state, 
     setQuestions, clearCache, addQuestion, bulkAddQuestions, batchAddQuestions, 
     updateQuestion, bulkUpdateQuestions, deleteQuestion, fetchQuestionsByIds, 
-    setFilters, setEditingQuestion, setAuthenticated, setUser, refreshQuestions, 
+    setFilters, setEditingQuestion, setAuthenticated, setDeveloperAccess, setUser, refreshQuestions, 
     refreshHierarchy, fetchMoreQuestions, fetchAllRemaining, toggleQuestionFlag, 
     bulkFlagQuestions, toggleQuestionVerification, bulkVerifyQuestions, 
     toggleReviewQueue, bulkReviewQueue

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { videoApi } from '../../services/videoApi';
 import { useQuestions } from '../../context/QuestionContext';
 import FullQuestionContent from '../FullQuestionContent/FullQuestionContent';
@@ -14,7 +14,7 @@ const VideosView = () => {
   const [showEditModal, setShowEditModal] = useState(false);
   const [selectedQuestionForEdit, setSelectedQuestionForEdit] = useState(null);
 
-  const loadVideos = async () => {
+  const loadVideos = useCallback(async () => {
     setLoading(true);
     try {
       const videoData = await videoApi.getAllVideoLinks(500);
@@ -35,11 +35,11 @@ const VideosView = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [fetchQuestionsByIds]);
 
   useEffect(() => {
     loadVideos();
-  }, [fetchQuestionsByIds]);
+  }, [loadVideos]);
 
   const formatTime = (seconds) => {
     if (seconds === null || seconds === undefined) return '0:00';

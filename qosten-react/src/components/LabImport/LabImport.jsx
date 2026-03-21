@@ -248,14 +248,75 @@ const LabImport = () => {
         if (!problem.parts || problem.parts.length === 0) missingFields.push('parts');
         
         if (missingFields.length > 0) {
-          throw new Error(`Missing required fields [${missingFields.join(', ')}] in problem: ${problem.lab_problem_id || 'unknown'}`);
+          const id = problem.lab_problem_id || 'unknown';
+          let lineNum = -1;
+          let colNum = -1;
+          
+          if (id !== 'unknown') {
+            const lines = jsonInput.split('\n');
+            const searchStr = `"${id}"`;
+            for (let i = 0; i < lines.length; i++) {
+              const idx = lines[i].indexOf(searchStr);
+              if (idx !== -1) {
+                lineNum = i + 1;
+                colNum = idx + 1;
+                break;
+              }
+            }
+          }
+
+          setStatus({ 
+            type: 'error', 
+            message: (
+              <div className="json-error-details">
+                <strong>Validation Error:</strong> Missing required fields [{missingFields.join(', ')}] in problem: {id}
+                {lineNum !== -1 && (
+                  <>
+                    <br/>
+                    <span>Line: {lineNum}</span>
+                    <button 
+                      onClick={() => goToError(lineNum, colNum)}
+                      className="jump-to-error-btn"
+                    >
+                      🎯 Jump to Line {lineNum}
+                    </button>
+                    <button 
+                      onClick={() => removeProblematicObject(lineNum, colNum)}
+                      className="remove-problem-btn"
+                    >
+                      🗑️ Remove This Question
+                    </button>
+                  </>
+                )}
+              </div>
+            )
+          });
+          setIsUploading(false);
+          return;
         }
       }
 
-      setStatus({ type: 'info', message: `Uploading ${problems.length} lab problems...` });
+      setStatus({ type: 'info', message: `Checking for existing problems and uploading up to ${problems.length} lab problems...` });
       
-      const formattedProblems = problems.map(p => {
-        return {
+      const existingIds = await labApi.fetchLabProblemIds();
+      const existingIdSet = new Set(existingIds.map(id => String(id)));
+
+      // Keep track of IDs in the current batch to avoid internal duplicates
+      const batchIdSet = new Set();
+      const formattedProblems = [];
+      let internalDuplicateCount = 0;
+
+      for (const p of problems) {
+        const pId = String(p.lab_problem_id);
+        if (existingIdSet.has(pId)) continue;
+        
+        if (batchIdSet.has(pId)) {
+          internalDuplicateCount++;
+          continue;
+        }
+
+        batchIdSet.add(pId);
+        formattedProblems.push({
           lab_problem_id: p.lab_problem_id,
           subject: p.subject,
           chapter: p.chapter,
@@ -268,12 +329,30 @@ const LabImport = () => {
           answerimage2: p.answerimage2 || null,
           answerimage3: p.answerimage3 || null,
           answerimage4: p.answerimage4 || null
-        };
+        });
+      }
+
+      const preSkippedCount = problems.length - formattedProblems.length;
+
+      if (formattedProblems.length === 0) {
+        setStatus({ 
+          type: 'info', 
+          message: `All ${problems.length} problems already exist in the database${internalDuplicateCount > 0 ? ` (found ${internalDuplicateCount} duplicates in your input)` : ''}. Nothing to upload.` 
+        });
+        return;
+      }
+
+      const result = await labApi.bulkCreateLabProblems(formattedProblems);
+      
+      // Since we use ignoreDuplicates: true, result might have fewer items than formattedProblems 
+      // if some were concurrently added or if our pre-fetch missed some.
+      const finalUploadedCount = result?.length || 0;
+      const totalSkipped = problems.length - finalUploadedCount;
+
+      setStatus({ 
+        type: 'success', 
+        message: `Successfully uploaded ${finalUploadedCount} lab problems!${totalSkipped > 0 ? ` (Skipped ${totalSkipped} existing or duplicate problems)` : ''}` 
       });
-
-      await labApi.bulkCreateLabProblems(formattedProblems);
-
-      setStatus({ type: 'success', message: `Successfully uploaded ${problems.length} lab problems!` });
       setJsonInput('');
       setBulletInput('');
       fetchProblems(); // Refresh list

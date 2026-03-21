@@ -332,8 +332,6 @@ const LabImport = () => {
         });
       }
 
-      const preSkippedCount = problems.length - formattedProblems.length;
-
       if (formattedProblems.length === 0) {
         setStatus({ 
           type: 'info', 

@@ -68,7 +68,7 @@ export const parseLabBulletPoints = (text) => {
     if (match) {
       let val = (match[1] || '').trim();
       // Thoroughly clean up markers
-      const clean = (s) => s.replace(/^(\*\*|__|[*_\[\]])\s*/, '').replace(/\s*(\*\*|__|[*_\[\]])$/, '').trim();
+      const clean = (s) => s.replace(/^(\*\*|__|[*_[\]])\s*/, '').replace(/\s*(\*\*|__|[*_[\]])$/, '').trim();
       val = clean(val);
       // Second pass for nested markers like [**Value**]
       val = clean(val);

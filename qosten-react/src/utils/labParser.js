@@ -282,11 +282,9 @@ export const parseLabBulletPoints = (text) => {
     // MCQ
     if (mcqQ) { 
       isCapturingOptions = true;
-      // Reset or overwrite if we already have a full MCQ in this step
+      // If we already have a full MCQ in this step, append instead of overwriting to preserve all data
       if (currentStep.mcq.options.length > 0) {
-        currentStep.mcq.question = mcqQ;
-        currentStep.mcq.options = [];
-        currentStep.mcq.correct_option_index = 0;
+        currentStep.mcq.question = (currentStep.mcq.question + '\n\n' + mcqQ).trim();
       } else if (currentStep.mcq.question) {
         // Support multi-line MCQ questions if no options yet
         currentStep.mcq.question = (currentStep.mcq.question + '\n' + mcqQ).trim();
@@ -340,7 +338,7 @@ export const parseLabBulletPoints = (text) => {
     }
 
     const expVal = getValue(line, 'Explanation');
-    if (expVal) { isCapturingOptions = false; currentStep.explanation = expVal; continue; }
+    if (expVal) { isCapturingOptions = false; currentStep.explanation = (currentStep.explanation + '\n' + expVal).trim(); continue; }
 
     // Concept Card
     const conceptTitle = getValue(line, 'Concept Title') || getValue(line, 'Concept');
@@ -370,7 +368,7 @@ export const parseLabBulletPoints = (text) => {
     // Bulleted options - require space after bullet to distinguish from bold markers
     if (isCapturingOptions && (line.startsWith('- ') || line.startsWith('* '))) {
       // Check if it's a known keyword that should break option capturing
-      const isBreakLabel = ['Step', 'Part', 'State', 'Correct', 'MCQ', 'Explanation', 'Concept'].some(label => startsWith(line, label));
+      const isBreakLabel = ['Step', 'Part', 'State', 'Correct', 'MCQ', 'Explanation', 'Concept', 'Next', 'Option', 'Final Answer', 'ID', 'Subject', 'Chapter', 'Board'].some(label => startsWith(line, label));
       
       if (!isBreakLabel) {
         const optVal = line.replace(/^[-*]\s+/, '').trim();
@@ -381,6 +379,7 @@ export const parseLabBulletPoints = (text) => {
         }
       } else {
           isCapturingOptions = false;
+          // Don't continue, let other handlers process this break label line
       }
     }
   }

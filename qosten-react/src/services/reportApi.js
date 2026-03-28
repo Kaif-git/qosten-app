@@ -270,7 +270,7 @@ export const reportApi = {
 
   /**
    * Updates a user profile (e.g., tier, subscription dates).
-   * Note: user_subscriptions is the source of truth for account_tier and subscription fields.
+   * Uses admin RPC to bypass RLS for developer dashboard actions.
    */
   async updateUser(userId, updates) {
     const subscriptionFields = [
@@ -296,28 +296,17 @@ export const reportApi = {
     });
 
     try {
-      // 1. Update user_subscriptions if there are sub fields
-      if (Object.keys(subUpdates).length > 0) {
-        const { error: subError } = await supabase
-          .from('user_subscriptions')
-          .update(subUpdates)
-          .eq('user_id', userId);
-        if (subError) throw subError;
-      }
+      // Use RPC to bypass RLS since Dev Dashboard might not have full Auth session
+      const { data: success, error } = await supabase.rpc('update_user_admin', {
+        target_user_id: userId,
+        profile_updates: profileUpdates,
+        subscription_updates: subUpdates
+      });
 
-      // 2. Update user_profiles for other fields
-      // (Trigger on user_subscriptions will also sync sub fields to profile)
-      if (Object.keys(profileUpdates).length > 0) {
-        const { data, error: profileError } = await supabase
-          .from('user_profiles')
-          .update(profileUpdates)
-          .eq('user_id', userId)
-          .select();
-        if (profileError) throw profileError;
-        return data[0];
-      }
+      if (error) throw error;
+      if (!success) throw new Error('Failed to update user via admin RPC');
 
-      // If only sub fields were updated, fetch the updated profile to return
+      // Fetch the updated profile to return
       const { data } = await supabase
         .from('user_profiles')
         .select('*')

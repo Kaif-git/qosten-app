@@ -14,7 +14,7 @@ export default function PasswordOverlay() {
         user_id: '00000000-0000-0000-0000-000000000000',
         display_name: 'System Developer',
         username: 'developer',
-        account_tier: 'premium'
+        account_tier: 'developer'
       };
       setUser(devUser);
       setAuthenticated(true);

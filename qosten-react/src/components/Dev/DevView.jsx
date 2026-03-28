@@ -21,6 +21,7 @@ export default function DevView() {
 
   // Selection state
   const [selectedReportIds, setSelectedReportIds] = useState([]);
+  const [selectedUserIds, setSelectedUserIds] = useState([]);
 
   // Interaction states
   const [replyingTo, setReplyingTo] = useState(null); // { type: 'chat'|'report', id, userId }
@@ -340,6 +341,76 @@ export default function DevView() {
       setSelectedReportIds([]);
     } else {
       setSelectedReportIds(reportsToSelect.map(r => r.id));
+    }
+  };
+
+  const toggleSelectUser = (id) => {
+    setSelectedUserIds(prev => 
+      prev.includes(id) ? prev.filter(uid => uid !== id) : [...prev, id]
+    );
+  };
+
+  const toggleSelectAllUsers = (usersToSelect) => {
+    if (selectedUserIds.length === usersToSelect.length && usersToSelect.length > 0) {
+      setSelectedUserIds([]);
+    } else {
+      setSelectedUserIds(usersToSelect.map(u => u.user_id));
+    }
+  };
+
+  const handleBatchExtendSubscription = async () => {
+    if (selectedUserIds.length === 0) return;
+    
+    const daysStr = window.prompt(`Extend subscription for ${selectedUserIds.length} users by how many days?`, "30");
+    if (!daysStr) return;
+    
+    const days = parseInt(daysStr);
+    if (isNaN(days)) {
+      alert('Invalid number of days');
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      const selectedUsersData = users.filter(u => selectedUserIds.includes(u.user_id));
+      const results = [];
+
+      for (const user of selectedUsersData) {
+        let baseDate = new Date();
+        if (user.account_tier === 'premium' && user.subscription_end_date) {
+          const currentEnd = new Date(user.subscription_end_date);
+          if (currentEnd > baseDate) baseDate = currentEnd;
+        }
+
+        const newEnd = new Date(baseDate.getTime() + days * 24 * 60 * 60 * 1000);
+        const updates = {
+          account_tier: 'premium',
+          subscription_end_date: newEnd.toISOString(),
+          subscription_type: 'manual_extension'
+        };
+        
+        await reportApi.updateUser(user.user_id, updates);
+        
+        const diffTime = newEnd - new Date();
+        const daysLeft = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        results.push({ user_id: user.user_id, updates, days_left: daysLeft });
+      }
+
+      // Update local state
+      const resultsMap = results.reduce((acc, r) => ({ ...acc, [r.user_id]: r }), {});
+      setUsers(prev => prev.map(u => {
+        if (resultsMap[u.user_id]) {
+          return { ...u, ...resultsMap[u.user_id].updates, days_left: resultsMap[u.user_id].days_left };
+        }
+        return u;
+      }));
+
+      alert(`Successfully extended subscription for ${selectedUserIds.length} users.`);
+      setSelectedUserIds([]);
+    } catch (err) {
+      alert('Batch extension failed: ' + err.message);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -1015,82 +1086,114 @@ export default function DevView() {
           {filteredUsers.length === 0 ? (
             <p className="no-data">No users found matching "{searchTerm}".</p>
           ) : (
-            <table className="reports-table">
-              <thead>
-                <tr>
-                  <th className="sortable" onClick={() => requestSort('display_name')}>User {sortConfig.key === 'display_name' ? (sortConfig.direction === 'asc' ? '↑' : '↓') : ''}</th>
-                  <th>Role</th>
-                  <th>School/Grade</th>
-                  <th className="sortable" onClick={() => requestSort('days_left')}>Subscription {sortConfig.key === 'days_left' ? (sortConfig.direction === 'asc' ? '↑' : '↓') : ''}</th>
-                  <th className="sortable" onClick={() => requestSort('last_seen_at')}>Last Seen {sortConfig.key === 'last_seen_at' ? (sortConfig.direction === 'asc' ? '↑' : '↓') : ''}</th>
-                  <th className="sortable" onClick={() => requestSort('created_at')}>Joined {sortConfig.key === 'created_at' ? (sortConfig.direction === 'asc' ? '↑' : '↓') : ''}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {filteredUsers.map((user) => (
-                  <tr key={user.id} className={`report-row ${searchTerm === user.user_id ? 'highlighted-row' : ''}`}>
-                    <td>
-                      <div className="user-info-badge">
-                        <span className="user-display-name">{user.display_name}</span>
-                        <span className="user-username">@{user.username}</span>
-                        <code style={{fontSize:'10px'}}>{user.user_id}</code>
-                      </div>
-                    </td>
-                    <td><span className="badge">{user.user_role}</span></td>
-                    <td>
-                      <div className="ref-item">
-                        <div>{user.school || 'No School'}</div>
-                        <div className="ref-context">{user.grade_level} ({user.curriculum_version})</div>
-                      </div>
-                    </td>
-                    <td>
-                      <div className="sub-management-cell">
-                        <span 
-                          className={`tier-badge ${user.account_tier} clickable`} 
-                          title="Click to cycle tier (Free -> Premium -> Dev)"
-                          onClick={() => handleChangeTier(user)}
-                        >
-                          {user.account_tier}
-                        </span>
-                        <div className="days-row">
-                          {user.account_tier === 'premium' ? (
-                            <div className={`days-left ${user.days_left < 3 ? 'urgent' : ''}`}>
-                              {user.days_left > 0 ? `${user.days_left}d left` : (user.days_left === 0 ? 'Today' : 'Expired')}
-                            </div>
-                          ) : (
-                            <div className="ref-context">{user.account_tier === 'developer' ? 'Dev Access' : 'Free Tier'}</div>
-                          )}
-                          <div className="sub-action-btns">
-                            <button 
-                              className="extend-sub-btn" 
-                              title="Extend/Grant Subscription"
-                              onClick={() => handleExtendSubscription(user)}
-                            >
-                              +
-                            </button>
-                            {(user.account_tier !== 'free' || user.subscription_end_date) && (
-                              <button 
-                                className="remove-sub-btn" 
-                                title="Remove Subscription/Reset to Free"
-                                onClick={() => handleRemoveSubscription(user)}
-                              >
-                                -
-                              </button>
+            <>
+              <table className="reports-table">
+                <thead>
+                  <tr>
+                    <th className="checkbox-cell">
+                      <input 
+                        type="checkbox" 
+                        checked={selectedUserIds.length === filteredUsers.length && filteredUsers.length > 0}
+                        onChange={() => toggleSelectAllUsers(filteredUsers)}
+                      />
+                    </th>
+                    <th className="sortable" onClick={() => requestSort('display_name')}>User {sortConfig.key === 'display_name' ? (sortConfig.direction === 'asc' ? '↑' : '↓') : ''}</th>
+                    <th>Role</th>
+                    <th>School/Grade</th>
+                    <th className="sortable" onClick={() => requestSort('days_left')}>Subscription {sortConfig.key === 'days_left' ? (sortConfig.direction === 'asc' ? '↑' : '↓') : ''}</th>
+                    <th className="sortable" onClick={() => requestSort('last_seen_at')}>Last Seen {sortConfig.key === 'last_seen_at' ? (sortConfig.direction === 'asc' ? '↑' : '↓') : ''}</th>
+                    <th className="sortable" onClick={() => requestSort('created_at')}>Joined {sortConfig.key === 'created_at' ? (sortConfig.direction === 'asc' ? '↑' : '↓') : ''}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {filteredUsers.map((user) => (
+                    <tr key={user.user_id} className={`report-row ${searchTerm === user.user_id ? 'highlighted-row' : ''} ${selectedUserIds.includes(user.user_id) ? 'selected-row' : ''}`}>
+                      <td className="checkbox-cell">
+                        <input 
+                          type="checkbox" 
+                          checked={selectedUserIds.includes(user.user_id)}
+                          onChange={() => toggleSelectUser(user.user_id)}
+                        />
+                      </td>
+                      <td>
+                        <div className="user-info-badge">
+                          <span className="user-display-name">{user.display_name}</span>
+                          <span className="user-username">@{user.username}</span>
+                          <code style={{fontSize:'10px'}}>{user.user_id}</code>
+                        </div>
+                      </td>
+                      <td><span className="badge">{user.user_role}</span></td>
+                      <td>
+                        <div className="ref-item">
+                          <div>{user.school || 'No School'}</div>
+                          <div className="ref-context">{user.grade_level} ({user.curriculum_version})</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div className="sub-management-cell">
+                          <span 
+                            className={`tier-badge ${user.account_tier} clickable`} 
+                            title="Click to cycle tier (Free -> Premium -> Dev)"
+                            onClick={() => handleChangeTier(user)}
+                          >
+                            {user.account_tier}
+                          </span>
+                          <div className="days-row">
+                            {user.account_tier === 'premium' ? (
+                              <div className={`days-left ${user.days_left < 3 ? 'urgent' : ''}`}>
+                                {user.days_left > 0 ? `${user.days_left}d left` : (user.days_left === 0 ? 'Today' : 'Expired')}
+                              </div>
+                            ) : (
+                              <div className="ref-context">{user.account_tier === 'developer' ? 'Dev Access' : 'Free Tier'}</div>
                             )}
+                            <div className="sub-action-btns">
+                              <button 
+                                className="extend-sub-btn" 
+                                title="Extend/Grant Subscription"
+                                onClick={() => handleExtendSubscription(user)}
+                              >
+                                +
+                              </button>
+                              {(user.account_tier !== 'free' || user.subscription_end_date) && (
+                                <button 
+                                  className="remove-sub-btn" 
+                                  title="Remove Subscription/Reset to Free"
+                                  onClick={() => handleRemoveSubscription(user)}
+                                >
+                                  -
+                                </button>
+                              )}
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </td>
-                    <td className="date-cell" style={{fontSize:'11px'}}>
-                      {user.last_seen_at ? new Date(user.last_seen_at).toLocaleString() : 'Never'}
-                    </td>
-                    <td className="date-cell" style={{fontSize:'11px'}}>
-                      {new Date(user.created_at).toLocaleDateString()}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+                      </td>
+                      <td className="date-cell" style={{fontSize:'11px'}}>
+                        {user.last_seen_at ? new Date(user.last_seen_at).toLocaleString() : 'Never'}
+                      </td>
+                      <td className="date-cell" style={{fontSize:'11px'}}>
+                        {new Date(user.created_at).toLocaleDateString()}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+
+              {selectedUserIds.length > 0 && (
+                <div className="bulk-actions-bar">
+                  <div className="selection-info">
+                    <strong>{selectedUserIds.length}</strong> users selected
+                  </div>
+                  <div className="action-buttons">
+                    <button className="bulk-btn reward" onClick={handleBatchExtendSubscription} disabled={isSubmitting}>
+                      ➕ Batch Extend Subs
+                    </button>
+                    <button className="bulk-btn cancel" onClick={() => setSelectedUserIds([])} disabled={isSubmitting}>
+                      Cancel
+                    </button>
+                  </div>
+                </div>
+              )}
+            </>
           )}
         </div>
       )}

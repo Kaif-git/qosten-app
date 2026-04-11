@@ -20,6 +20,11 @@ const initialState = {
   editingQuestion: null,
   isAuthenticated: false,
   user: null,
+  lastBatch: {
+    questions: [],
+    count: 0,
+    timestamp: null
+  },
   stats: {
     total: 0,
     subjects: 0,
@@ -38,7 +43,8 @@ const ACTIONS = {
   SET_EDITING_QUESTION: 'SET_EDITING_QUESTION',
   SET_AUTHENTICATED: 'SET_AUTHENTICATED',
   SET_USER: 'SET_USER',
-  UPDATE_STATS: 'UPDATE_STATS'
+  UPDATE_STATS: 'UPDATE_STATS',
+  SET_LAST_BATCH: 'SET_LAST_BATCH'
 };
 
 // Reducer function
@@ -80,6 +86,8 @@ function questionReducer(state, action) {
         : action.payload;
       return { ...state, stats: newStats };
     }
+    case ACTIONS.SET_LAST_BATCH:
+      return { ...state, lastBatch: action.payload };
     default:
       return state;
   }
@@ -831,18 +839,30 @@ export function QuestionProvider({ children }) {
 
       if (allNewQuestions.length > 0) {
           dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prev) => [...allNewQuestions, ...prev] });
+          // Save to lastBatch for inspection
+          dispatch({ 
+            type: ACTIONS.SET_LAST_BATCH, 
+            payload: {
+              questions: allNewQuestions,
+              count: allNewQuestions.length,
+              timestamp: Date.now()
+            }
+          });
       } else {
           await refreshHierarchy();
       }
-      
+
       console.log(`🚀 bulkAddQuestions: Finished. Success: ${results.successCount}, Failed: ${results.failedCount}`);
       return results;
-    } catch (error) {
+      } catch (error) {
       console.error('Error in bulkAddQuestions:', error);
       throw error;
-    }
-  }, [refreshHierarchy, processQuestionImages]);
+      }
+      }, [refreshHierarchy, processQuestionImages]);
 
+      const getLastBatchQuestions = useCallback(() => {
+      return state.lastBatch.questions;
+      }, [state.lastBatch.questions]);
   const refreshQuestions = useCallback(async () => {
     try {
       console.log('🔄 Manually refreshing questions (API)...');
@@ -1270,6 +1290,7 @@ export function QuestionProvider({ children }) {
     setUser,
     refreshQuestions,
     refreshHierarchy,
+    getLastBatchQuestions,
     fetchMoreQuestions,
     fetchAllRemaining,
     toggleQuestionFlag,
@@ -1283,7 +1304,7 @@ export function QuestionProvider({ children }) {
     setQuestions, clearCache, addQuestion, bulkAddQuestions, batchAddQuestions, 
     updateQuestion, bulkUpdateQuestions, deleteQuestion, fetchQuestionsByIds, 
     setFilters, setEditingQuestion, setAuthenticated, setDeveloperAccess, setUser, refreshQuestions, 
-    refreshHierarchy, fetchMoreQuestions, fetchAllRemaining, toggleQuestionFlag, 
+    refreshHierarchy, getLastBatchQuestions, fetchMoreQuestions, fetchAllRemaining, toggleQuestionFlag, 
     bulkFlagQuestions, toggleQuestionVerification, bulkVerifyQuestions, 
     toggleReviewQueue, bulkReviewQueue
   ]);

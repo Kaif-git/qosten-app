@@ -171,11 +171,11 @@ export default function DevView() {
     }
   };
 
-  const handleFlagToggle = async (type, id, currentValue, reportId) => {
+  const handleFlagToggle = async (type, id, currentValue, reportId, fullData = null) => {
     const action = currentValue ? 'unflag' : 'flag';
     if (!window.confirm(`Are you sure you want to ${action} this ${type}?`)) return;
     try {
-      await reportApi.flagContent(type, id, !currentValue);
+      await reportApi.flagContent(type, id, !currentValue, fullData);
       const isNowFlagged = !currentValue;
 
       if (isNowFlagged && reportId) {
@@ -200,19 +200,13 @@ export default function DevView() {
       // Update local flagged state
       setFlagged(prev => {
         const newState = { ...prev };
-        if (isNowFlagged) {
-          // This is tricky because we don't have the full object here to add to 'flagged' list
-          // But usually we are unflagging FROM the flagged list, or flagging from reports.
-          // For now, a partial refresh of flagged data might be needed or just tell user to refresh.
-          // But let's at least handle the 'unflag' case which is common in the flagged tab.
-          if (type === 'subtopics') newState.subtopics = prev.subtopics.filter(x => x.id !== id);
-          if (type === 'questions') newState.questions = prev.questions.filter(x => x.id !== id);
-          if (type === 'labs') newState.labs = prev.labs.filter(x => x.id !== id);
-        } else {
-           // Remove from flagged list if unflagged
-           newState.subtopics = prev.subtopics.filter(x => x.id !== id);
-           newState.questions = prev.questions.filter(x => x.id !== id);
-           newState.labs = prev.labs.filter(x => x.id !== id);
+        // Remove from flagged list if unflagged (currentValue was true, now false)
+        // Or if it was just flagged but we want to refresh (less common)
+        // Most common case here is unflagging from the flagged tab
+        if (!isNowFlagged) {
+          if (type === 'subtopic') newState.subtopics = prev.subtopics.filter(x => x.id !== id);
+          if (type === 'question') newState.questions = prev.questions.filter(x => x.id !== id);
+          if (type === 'lab_problem') newState.labs = prev.labs.filter(x => x.id !== id);
         }
         return newState;
       });
@@ -419,9 +413,9 @@ export default function DevView() {
     const targets = [];
     
     selectedReports.forEach(r => {
-      if (r.subtopic_id) targets.push({ type: 'subtopic', id: r.subtopic_id, reportId: r.id });
-      if (r.question_id) targets.push({ type: 'question', id: r.question_id, reportId: r.id });
-      if (r.lab_problem_id) targets.push({ type: 'lab_problem', id: r.lab_problem_id, reportId: r.id });
+      if (r.subtopic_id) targets.push({ type: 'subtopic', id: r.subtopic_id, reportId: r.id, data: r.subtopic });
+      if (r.question_id) targets.push({ type: 'question', id: r.question_id, reportId: r.id, data: r.question });
+      if (r.lab_problem_id) targets.push({ type: 'lab_problem', id: r.lab_problem_id, reportId: r.id, data: r.lab_problem });
     });
 
     if (targets.length === 0) {
@@ -433,7 +427,7 @@ export default function DevView() {
 
     setIsSubmitting(true);
     try {
-      await Promise.all(targets.map(t => reportApi.flagContent(t.type, t.id, true)));
+      await Promise.all(targets.map(t => reportApi.flagContent(t.type, t.id, true, t.data)));
       // Also update statuses of reports to 'open' if they were closed/resolved but now flagged
       await Promise.all(targets.map(t => reportApi.updateReport(t.reportId, { status: 'open' })));
       
@@ -857,7 +851,7 @@ export default function DevView() {
                               <strong>Subtopic:</strong> {report.subtopic.title}
                               <button 
                                 className={`flag-btn ${report.subtopic.flagged ? 'active' : ''}`} 
-                                onClick={(e) => { e.stopPropagation(); handleFlagToggle('subtopic', report.subtopic_id, report.subtopic.flagged, report.id); }}
+                                onClick={(e) => { e.stopPropagation(); handleFlagToggle('subtopic', report.subtopic_id, report.subtopic.flagged, report.id, report.subtopic); }}
                               >
                                 {report.subtopic.flagged ? '🏳️ Unflag' : '🚩 Flag'}
                               </button>
@@ -868,7 +862,7 @@ export default function DevView() {
                               <strong>Question:</strong> {report.question.question ? report.question.question.substring(0, 50) : 'No question text'}...
                               <button 
                                 className={`flag-btn ${report.question.is_flagged ? 'active' : ''}`} 
-                                onClick={(e) => { e.stopPropagation(); handleFlagToggle('question', report.question_id, report.question.is_flagged, report.id); }}
+                                onClick={(e) => { e.stopPropagation(); handleFlagToggle('question', report.question_id, report.question.is_flagged, report.id, report.question); }}
                               >
                                 {report.question.is_flagged ? '🏳️ Unflag' : '🚩 Flag'}
                               </button>
@@ -879,7 +873,7 @@ export default function DevView() {
                               <strong>Lab:</strong> {report.lab_problem.title}
                               <button 
                                 className={`flag-btn ${report.lab_problem.is_flagged ? 'active' : ''}`} 
-                                onClick={(e) => { e.stopPropagation(); handleFlagToggle('lab_problem', report.lab_problem_id, report.lab_problem.is_flagged, report.id); }}
+                                onClick={(e) => { e.stopPropagation(); handleFlagToggle('lab_problem', report.lab_problem_id, report.lab_problem.is_flagged, report.id, report.lab_problem); }}
                               >
                                 {report.lab_problem.is_flagged ? '🏳️ Unflag' : '🚩 Flag'}
                               </button>
@@ -1016,7 +1010,7 @@ export default function DevView() {
                         ))}
                       </td>
                       <td>
-                        <button className="flag-btn active" onClick={(e) => { e.stopPropagation(); handleFlagToggle('subtopic', st.id, true); }}>🏳️ Unflag</button>
+                        <button className="flag-btn active" onClick={(e) => { e.stopPropagation(); handleFlagToggle('subtopic', st.id, true, null, st); }}>🏳️ Unflag</button>
                       </td>
                     </tr>
                   ))}
@@ -1043,7 +1037,7 @@ export default function DevView() {
                         ))}
                       </td>
                       <td>
-                        <button className="flag-btn active" onClick={(e) => { e.stopPropagation(); handleFlagToggle('question', q.id, true); }}>🏳️ Unflag</button>
+                        <button className="flag-btn active" onClick={(e) => { e.stopPropagation(); handleFlagToggle('question', q.id, true, null, q); }}>🏳️ Unflag</button>
                       </td>
                     </tr>
                   ))}
@@ -1070,7 +1064,7 @@ export default function DevView() {
                         ))}
                       </td>
                       <td>
-                        <button className="flag-btn active" onClick={(e) => { e.stopPropagation(); handleFlagToggle('lab_problem', l.id, true); }}>🏳️ Unflag</button>
+                        <button className="flag-btn active" onClick={(e) => { e.stopPropagation(); handleFlagToggle('lab_problem', l.id, true, null, l); }}>🏳️ Unflag</button>
                       </td>
                     </tr>
                   ))}

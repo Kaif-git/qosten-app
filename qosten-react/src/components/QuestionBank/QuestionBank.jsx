@@ -8,6 +8,7 @@ import Statistics from '../Statistics/Statistics';
 import SearchFilters from '../SearchFilters/SearchFilters';
 import QuestionCard from '../QuestionCard/QuestionCard';
 import FullQuestionContent from '../FullQuestionContent/FullQuestionContent';
+import MCQFixExplanation from '../MCQImport/MCQFixExplanation';
 import { detectAndFixCQ } from '../../utils/cqFixUtils';
 import { detectAndFixMCQOptions } from '../../utils/mcqFixUtils';
 import { performImageMigration, getMigrationPreview } from '../../utils/imageMigration';
@@ -348,6 +349,9 @@ export default function QuestionBank() {
   // Image Placeholder MCQ State
   const [showImagePlaceholderModal, setShowImagePlaceholderModal] = useState(false);
   const [imagePlaceholderMCQs, setImagePlaceholderMCQs] = useState([]);
+  const [showMCQFixExplanation, setShowMCQFixExplanation] = useState(false);
+  const [showCircledFixModal, setShowCircledFixModal] = useState(false);
+  const [circledFixCandidates, setCircledFixCandidates] = useState([]);
 
   // Split View State
   const [isSplitView, setIsSplitView] = useState(false);
@@ -1704,6 +1708,67 @@ export default function QuestionBank() {
           }
         };
       
+        const handleScanCircledNumerals = async () => {
+          if (!window.confirm("Scan ALL database questions for circled numerals (①, ②, etc.) in correct answers or options and fix them?")) return;
+          
+          setIsFixing(true);
+          try {
+              const { normalizeCircledNumerals } = await import('../../utils/mcqFixUtils');
+              const all = await questionApi.fetchAllQuestions();
+              const mcqs = all.filter(q => q.type === 'mcq').map(mapDatabaseToApp);
+              
+              const candidates = [];
+              for (const q of mcqs) {
+                  const fixed = normalizeCircledNumerals(q);
+                  if (fixed) {
+                      candidates.push({
+                          original: q,
+                          fixed: fixed
+                      });
+                  }
+              }
+
+              if (candidates.length === 0) {
+                  alert("No MCQs with circled numerals found.");
+              } else {
+                  setCircledFixCandidates(candidates);
+                  setShowCircledFixModal(true);
+              }
+          } catch (error) {
+              console.error("Error scanning for circled numerals:", error);
+              alert("An error occurred while scanning.");
+          } finally {
+              setIsFixing(false);
+          }
+        };
+
+        const applyCircledFixes = async () => {
+          if (!window.confirm(`Apply circled numeral fixes to ${circledFixCandidates.length} questions?`)) return;
+
+          setIsFixing(true);
+          try {
+              const updates = circledFixCandidates.map(item => item.fixed);
+              const result = await bulkUpdateQuestions(updates);
+              
+              alert(`Successfully fixed ${result.successCount} questions!`);
+              setShowCircledFixModal(false);
+              setCircledFixCandidates([]);
+              
+              // Refresh full map with new data
+              setFullQuestionsMap(prev => {
+                  const next = new Map(prev);
+                  updates.forEach(q => next.set(q.id, q));
+                  return next;
+              });
+              refreshQuestions();
+          } catch (error) {
+              console.error("Error applying circled numeral fixes:", error);
+              alert("An error occurred while applying fixes.");
+          } finally {
+              setIsFixing(false);
+          }
+        };
+
         const handleNormalizeCQImages = async () => {
     setIsFixing(true);
     setSyncProgress({ current: 0, total: 0 });
@@ -4669,6 +4734,86 @@ export default function QuestionBank() {
         </div>
       )}
 
+      {/* Circled Numeral Fix Modal */}
+      {showCircledFixModal && (
+        <div style={{
+          position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.8)', display: 'flex',
+          justifyContent: 'center', alignItems: 'center', zIndex: 10000
+        }}>
+          <div style={{
+            backgroundColor: 'white', padding: '30px', borderRadius: '10px',
+            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+            maxWidth: '1000px', width: '90%', maxHeight: '90vh', display: 'flex', flexDirection: 'column'
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+              <h3 style={{ margin: 0, color: '#e67e22' }}>① Review Circled Numeral Fixes ({circledFixCandidates.length})</h3>
+              <div style={{ display: 'flex', gap: '10px' }}>
+                <button 
+                  onClick={applyCircledFixes} 
+                  disabled={isFixing} 
+                  style={{ backgroundColor: '#27ae60', color: 'white', padding: '8px 16px', borderRadius: '4px', border: 'none', cursor: 'pointer', fontWeight: 'bold' }}
+                >
+                  {isFixing ? 'Applying...' : 'Apply All Fixes'}
+                </button>
+                <button 
+                  onClick={() => setShowCircledFixModal(false)} 
+                  disabled={isFixing} 
+                  style={{ backgroundColor: '#6c757d', color: 'white', padding: '8px 16px', borderRadius: '4px', border: 'none', cursor: 'pointer' }}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+
+            <div style={{ flex: 1, overflowY: 'auto', padding: '10px', border: '1px solid #eee', borderRadius: '4px' }}>
+              {circledFixCandidates.map((item, idx) => (
+                <div key={item.original.id} style={{ marginBottom: '20px', padding: '15px', border: '1px solid #ddd', borderRadius: '8px', backgroundColor: '#fdfdfd' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px', borderBottom: '1px solid #eee', paddingBottom: '5px' }}>
+                    <strong>#{idx + 1} - Question ID: {item.original.id}</strong>
+                    <span style={{ fontSize: '12px', color: '#666' }}>{item.original.subject} / {item.original.chapter}</span>
+                  </div>
+                  
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                      <div style={{ fontWeight: 'bold', fontSize: '12px', color: '#c0392b', marginBottom: '5px' }}>Before:</div>
+                      <div style={{ padding: '10px', backgroundColor: '#f9ebea', borderRadius: '4px', fontSize: '12px' }}>
+                        <div><strong>Correct Ans:</strong> {item.original.correctAnswer}</div>
+                        <div style={{ marginTop: '5px' }}>
+                          <strong>Options:</strong>
+                          {item.original.options?.map(opt => (
+                            <div key={opt.label}>{opt.label}) {opt.text}</div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div style={{ fontWeight: 'bold', fontSize: '12px', color: '#27ae60', marginBottom: '5px' }}>After:</div>
+                      <div style={{ padding: '10px', backgroundColor: '#e8f8f5', borderRadius: '4px', fontSize: '12px' }}>
+                        <div><strong>Correct Ans:</strong> <span style={{ fontWeight: 'bold', color: '#27ae60' }}>{item.fixed.correctAnswer}</span></div>
+                        <div style={{ marginTop: '5px' }}>
+                          <strong>Options:</strong>
+                          {item.fixed.options?.map(opt => (
+                            <div key={opt.label}>
+                              <span style={{ 
+                                fontWeight: opt.label !== (item.original.options?.find(o => o.text === opt.text)?.label) ? 'bold' : 'normal', 
+                                color: opt.label !== (item.original.options?.find(o => o.text === opt.text)?.label) ? '#27ae60' : 'inherit' 
+                              }}>
+                                {opt.label})
+                              </span> {opt.text}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Unanswered MCQ Detector Modal */}
       {showUnansweredMCQModal && (
         <div style={{
@@ -5340,8 +5485,41 @@ export default function QuestionBank() {
           </button>
 
           <button
+            onClick={() => setShowMCQFixExplanation(!showMCQFixExplanation)}
+            style={{
+              backgroundColor: '#9b59b6',
+              color: 'white',
+              padding: '10px 20px',
+              borderRadius: '6px',
+              border: 'none',
+              cursor: 'pointer',
+              fontWeight: '600',
+              marginRight: '10px'
+            }}
+          >
+            🔧 Fix Explanations
+          </button>
+
+          <button
+            onClick={() => handleScanCircledNumerals()}
+            style={{
+              backgroundColor: '#e67e22',
+              color: 'white',
+              padding: '10px 20px',
+              borderRadius: '6px',
+              border: 'none',
+              cursor: 'pointer',
+              fontWeight: '600',
+              marginRight: '10px'
+            }}
+          >
+            ① Fix Circled Numerals
+          </button>
+
+          <button
             onClick={() => {
               setReviewQueueType('mcq');
+
               setShowReviewQueueModal(true);
             }}
             style={{
@@ -5542,8 +5720,15 @@ export default function QuestionBank() {
           )}
         </div>
       </div>
-      
+
+      {showMCQFixExplanation && (
+        <div style={{ padding: '0 20px' }}>
+          <MCQFixExplanation />
+        </div>
+      )}
+
       {!isSplitView ? (
+
           <>
             <SearchFilters />
             <div style={{marginBottom: '15px', marginTop: '10px', display: 'flex', justifyContent: 'flex-end', gap: '10px', alignItems: 'center'}}>

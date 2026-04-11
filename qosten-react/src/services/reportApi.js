@@ -212,15 +212,39 @@ export const reportApi = {
 
   /**
    * Flags content.
+   * For questions, we fetch the current data first to avoid wiping it out via PUT,
+   * and we use 1/0 for SQLite/D1 compatibility.
    */
-  async flagContent(type, id, value = true) {
+  async flagContent(type, id, value = true, fullData = null) {
     if (type === 'subtopic') {
       return await supabase.from('learn_subtopics').update({ flagged: value }).eq('id', id);
     } else if (type === 'lab_problem') {
       return await supabase.from('lab_problems').update({ is_flagged: value }).eq('id', id);
     } else if (type === 'question') {
-      // For questions, we use the Worker API update method
-      return await questionApi.updateQuestion(id, { is_flagged: value });
+      try {
+        let currentData = fullData;
+        if (!currentData) {
+          const fetched = await questionApi.fetchQuestionsByIds([id]);
+          if (fetched && fetched.length > 0) {
+            currentData = fetched[0];
+          }
+        }
+        
+        // If we have data, merge it and send full object. 
+        // If not, we still send a partial, but at least use 1/0.
+        const intValue = value ? 1 : 0;
+        const updates = currentData 
+          ? { ...currentData, is_flagged: intValue, isFlagged: intValue, flagged: intValue }
+          : { is_flagged: intValue, isFlagged: intValue, flagged: intValue };
+        
+        // Ensure ID is included in the body for the PUT request
+        if (!updates.id) updates.id = id;
+
+        return await questionApi.updateQuestion(id, updates);
+      } catch (err) {
+        console.error('Error in flagContent for question:', err);
+        throw err;
+      }
     }
   },
 

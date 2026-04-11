@@ -100,3 +100,53 @@ export const detectAndFixMCQOptions = (question) => {
 
     return null;
 };
+
+/**
+ * Normalizes circled numerals (①-④, ❶-❹) to standard labels (a-d).
+ * Useful for when the correct answer or options use these symbols.
+ * 
+ * @param {Object} question - The MCQ question object.
+ * @returns {Object|null} - Fixed question or null if no changes.
+ */
+export function normalizeCircledNumerals(question) {
+    if (question.type !== 'mcq') return null;
+
+    let changed = false;
+    const newQuestion = JSON.parse(JSON.stringify(question));
+
+    const labelMap = { 
+        '①': 'a', '②': 'b', '③': 'c', '④': 'd', '⑤': 'e',
+        '❶': 'a', '❷': 'b', '❸': 'c', '❹': 'd', '❺': 'e'
+    };
+
+    // 1. Fix correct answer if it's a circled numeral
+    if (newQuestion.correctAnswer && labelMap[newQuestion.correctAnswer]) {
+        console.log(`[MCQFix] Normalizing correct answer for ID ${question.id}: ${newQuestion.correctAnswer} -> ${labelMap[newQuestion.correctAnswer]}`);
+        newQuestion.correctAnswer = labelMap[newQuestion.correctAnswer];
+        changed = true;
+    }
+
+    // 2. Fix options if they use circled numerals as labels
+    if (newQuestion.options && Array.isArray(newQuestion.options)) {
+        newQuestion.options = newQuestion.options.map(opt => {
+            if (opt.label && labelMap[opt.label]) {
+                console.log(`[MCQFix] Normalizing option label for ID ${question.id}: ${opt.label} -> ${labelMap[opt.label]}`);
+                changed = true;
+                return { ...opt, label: labelMap[opt.label] };
+            }
+            return opt;
+        });
+    }
+
+    // 3. Check if correct answer matches an option text that contains a circled numeral
+    // Example: correctAnswer is "①" but options are {label: 'a', text: '...'}
+    if (!changed && newQuestion.correctAnswer && newQuestion.correctAnswer.length === 1) {
+        const char = newQuestion.correctAnswer;
+        if (labelMap[char]) {
+            newQuestion.correctAnswer = labelMap[char];
+            changed = true;
+        }
+    }
+
+    return changed ? newQuestion : null;
+}

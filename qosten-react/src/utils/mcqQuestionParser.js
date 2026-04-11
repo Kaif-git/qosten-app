@@ -304,6 +304,16 @@ export function parseMCQQuestions(text) {
 
         const normalizedAnswer = robustNormalize(answerVal);
         
+        const circledLabelMap = { 
+          '①': 'a', '②': 'b', '③': 'c', '④': 'd', '⑤': 'e',
+          '❶': 'a', '❷': 'b', '❸': 'c', '❹': 'd', '❺': 'e'
+        };
+
+        // --- STEP 0: Circled Numeral Match ---
+        if (answerVal.length === 1 && circledLabelMap[answerVal]) {
+          currentQuestion.correctAnswer = circledLabelMap[answerVal];
+          console.log('    🎯 Circled numeral match found! Label:', currentQuestion.correctAnswer);
+        }
         // --- STEP 1: Exact Text Match ---
         // (Highest priority: If the answer value exactly matches one of the option texts)
         let matchingOption = currentQuestion.options.find(opt => {

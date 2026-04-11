@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useQuestions } from '../../context/QuestionContext';
 import QuestionPreview from '../QuestionPreview/QuestionPreview';
 import { parseMCQQuestions, getMCQQuestionExample } from '../../utils/mcqQuestionParser';
+import MCQFixExplanation from './MCQFixExplanation';
 
 export default function MCQImport() {
   const { bulkAddQuestions, getLastBatchQuestions, lastBatch, updateQuestion } = useQuestions();
@@ -335,6 +336,8 @@ export default function MCQImport() {
           </div>
         )}
       </div>
+
+      <MCQFixExplanation />
     </>
   );
 }

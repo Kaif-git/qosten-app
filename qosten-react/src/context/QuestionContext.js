@@ -886,14 +886,17 @@ export function QuestionProvider({ children }) {
       const processed = await Promise.all(questions.map(q => processQuestionImages(q)));
       const dbQuestions = processed.map(q => mapAppToDatabase(q));
       const result = await questionApi.batchCreateQuestions(dbQuestions, onProgress);
-      await refreshQuestions();
+      
+      // Update local state with the new questions instead of refreshing entire DB
+      dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prev) => [...processed, ...prev] });
+      
       refreshHierarchy();
       return result;
     } catch (error) {
       console.error('Error in batchAddQuestions:', error);
       throw error;
     }
-  }, [refreshHierarchy, refreshQuestions, processQuestionImages]);
+  }, [refreshHierarchy, processQuestionImages]);
 
   const updateQuestion = useCallback(async (question) => {
     try {
@@ -915,7 +918,25 @@ export function QuestionProvider({ children }) {
       console.log(`🔄 Starting bulk update of ${questions.length} questions...`);
       const processed = await Promise.all(questions.map(q => processQuestionImages(q)));
       const dbQuestions = processed.map(q => mapAppToDatabase(q));
+      
+      // 1. Perform main data update
       const { successCount, failedCount } = await questionApi.bulkUpdateQuestions(dbQuestions);
+      
+      // 2. Explicitly call verify endpoint for questions being verified
+      // This is crucial because standard PUT /questions/:id might not update the is_verified bit
+      const verifyPromises = processed
+        .filter(q => q && q.id && q.isVerified)
+        .map(q => {
+          console.log(`✅ [QuestionContext] Explicitly verifying question ${q.id}...`);
+          return questionApi.verifyQuestion(q.id).catch(err => {
+            console.error(`❌ Failed to explicitly verify question ${q.id}:`, err);
+            return null;
+          });
+        });
+      
+      if (verifyPromises.length > 0) {
+        await Promise.all(verifyPromises);
+      }
       
       const updateMap = new Map(processed.filter(q => q && q.id).map(q => [q.id.toString(), q]));
       dispatch({ type: ACTIONS.SET_QUESTIONS, payload: (prevQuestions) => {
@@ -938,7 +959,7 @@ export function QuestionProvider({ children }) {
       console.error('Error in bulkUpdateQuestions:', error);
       throw error;
     }
-  }, [refreshHierarchy, processQuestionImages]);
+  }, [refreshHierarchy, refreshQuestions, processQuestionImages]);
 
   const deleteQuestion = useCallback(async (id) => {
     if (id === null || id === undefined) {

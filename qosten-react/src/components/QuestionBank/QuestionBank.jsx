@@ -693,28 +693,61 @@ export default function QuestionBank() {
       
       if (hasIds) {
         const parsedMap = new Map();
+        const idsToFetch = [];
+        
         parsedQuestions.forEach(p => {
-          if (p.id) parsedMap.set(p.id.toString(), p);
+          if (p.id) {
+            const idStr = p.id.toString();
+            parsedMap.set(idStr, p);
+            
+            // Check if we have this question in memory (full version preferred)
+            const inFullMap = fullQuestionsMap.has(idStr);
+            const inQuestionsArray = questions.some(q => q.id.toString() === idStr);
+            
+            if (!inFullMap && !inQuestionsArray) {
+              idsToFetch.push(p.id);
+            }
+          }
         });
 
-        queued.forEach(original => {
-          const fullOriginal = fullQuestionsMap.get(original.id.toString()) || original;
-          const improved = parsedMap.get(original.id.toString());
-          
-          if (improved) {
-            console.log(`🎯 [ReviewQueue] Targeting ID (Map): ${original.id}`);
-            console.log('📄 [ReviewQueue] Original (Full):', fullOriginal);
-            console.log('🆕 [ReviewQueue] New (Improved):', improved);
+        // 1. Fetch missing metadata for questions not in memory
+        let localFullMap = new Map(fullQuestionsMap);
+        if (idsToFetch.length > 0) {
+          console.log(`🔍 [ReviewQueue] Fetching ${idsToFetch.length} missing questions from DB...`);
+          try {
+            const fetched = await fetchQuestionsByIds(idsToFetch);
+            fetched.forEach(q => {
+              if (q && q.id) localFullMap.set(q.id.toString(), q);
+            });
+            
+            // Sync back to state for future use
+            setFullQuestionsMap(prev => {
+              const next = new Map(prev);
+              fetched.forEach(q => {
+                if (q && q.id) next.set(q.id.toString(), q);
+              });
+              return next;
+            });
+          } catch (fetchErr) {
+            console.error('Error fetching missing questions:', fetchErr);
+          }
+        }
 
+        // 2. Process ALL pasted questions (regardless of queue status)
+        parsedMap.forEach((improved, idStr) => {
+          const original = localFullMap.get(idStr) || questions.find(q => q.id.toString() === idStr);
+          
+          if (original) {
+            const fullOriginal = fullQuestionsMap.get(idStr) || original;
+            
+            console.log(`🎯 [ReviewQueue] Targeting ID: ${idStr}`);
             const fixed = {
               ...fullOriginal,
               ...improved,
-              id: original.id,
+              id: fullOriginal.id,
               isVerified: true,
               inReviewQueue: false
             };
-
-            console.log('✅ [ReviewQueue] Final State:', fixed);
 
             candidates.push({
               original: fullOriginal,
@@ -722,19 +755,15 @@ export default function QuestionBank() {
               isChanged: checkIfChanged(fullOriginal, fixed, reviewQueueType)
             });
           } else {
-            const fixed = {
-              ...fullOriginal,
-              isVerified: true,
-              inReviewQueue: false
-            };
-            candidates.push({
-              original: fullOriginal,
-              fixed: fixed,
-              isChanged: false
-            });
+            console.warn(`⚠️ [ReviewQueue] Question ID ${idStr} not found in memory or database.`);
           }
         });
+
+        // Note: Queued questions that WERE NOT pasted are intentionally ignored here
+        // so they don't get automatically verified/dequeued as requested.
+        
       } else {
+        // Match by index - only for questions already in the queue
         const count = Math.min(queued.length, parsedQuestions.length);
         for (let i = 0; i < count; i++) {
           const original = queued[i];
@@ -742,8 +771,6 @@ export default function QuestionBank() {
           const improved = parsedQuestions[i];
           
           console.log(`🎯 [ReviewQueue] Targeting ID (Index ${i}): ${original.id}`);
-          console.log('📄 [ReviewQueue] Original (Full):', fullOriginal);
-          console.log('🆕 [ReviewQueue] New (Improved):', improved);
 
           const fixed = {
             ...fullOriginal,
@@ -752,8 +779,6 @@ export default function QuestionBank() {
             isVerified: true,
             inReviewQueue: false
           };
-
-          console.log('✅ [ReviewQueue] Final State:', fixed);
 
           candidates.push({
             original: fullOriginal,
@@ -1760,7 +1785,6 @@ export default function QuestionBank() {
                   updates.forEach(q => next.set(q.id, q));
                   return next;
               });
-              refreshQuestions();
           } catch (error) {
               console.error("Error applying circled numeral fixes:", error);
               alert("An error occurred while applying fixes.");
@@ -1837,7 +1861,6 @@ export default function QuestionBank() {
         const result = await performImageMigration(migrationCandidates, bulkUpdateQuestions);
         alert(`✅ Successfully normalized ${result.count} questions!`);
         setShowMigrationModal(false);
-        refreshQuestions();
     } catch (err) {
         alert("❌ Error: " + err.message);
     } finally {

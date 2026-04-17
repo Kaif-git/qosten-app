@@ -959,7 +959,7 @@ export function QuestionProvider({ children }) {
       console.error('Error in bulkUpdateQuestions:', error);
       throw error;
     }
-  }, [refreshHierarchy, refreshQuestions, processQuestionImages]);
+  }, [refreshHierarchy, processQuestionImages]);
 
   const deleteQuestion = useCallback(async (id) => {
     if (id === null || id === undefined) {

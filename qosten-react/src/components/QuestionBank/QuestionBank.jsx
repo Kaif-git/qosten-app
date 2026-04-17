@@ -243,8 +243,7 @@ export default function QuestionBank() {
     fetchMoreQuestions, 
     fetchAllRemaining, 
     clearCache, 
-    hierarchy,
-    refreshQuestions
+    hierarchy
   } = useQuestions();
 
   // Auto-search and open modal if ID is provided in URL

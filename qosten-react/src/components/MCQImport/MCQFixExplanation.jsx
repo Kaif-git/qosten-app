@@ -7,7 +7,7 @@ import { parseMCQQuestions } from '../../utils/mcqQuestionParser';
 import { normalizeCircledNumerals } from '../../utils/mcqFixUtils';
 
 export default function MCQFixExplanation() {
-  const { bulkUpdateQuestions, refreshQuestions } = useQuestions();
+  const { bulkUpdateQuestions } = useQuestions();
   const [missingExplanationQuestions, setMissingExplanationQuestions] = useState([]);
   const [isScanning, setIsScanning] = useState(false);
   const [isUpdating, setIsUpdating] = useState(false);
@@ -98,8 +98,6 @@ export default function MCQFixExplanation() {
       
       setUpdateText('');
       setShowUpdateArea(false);
-      // Optional: Refresh local state
-      // refreshQuestions();
     } catch (error) {
       console.error('❌ Update failed:', error);
       alert('Error updating questions: ' + error.message);

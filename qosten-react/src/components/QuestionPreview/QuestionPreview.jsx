@@ -849,23 +849,6 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     alert('✓ All images cleared from current batch.');
   };
 
-  // Track object URLs for cleanup
-  const objectUrlsRef = useRef([]);
-  const trackObjectUrl = (url) => {
-    if (url && url.startsWith('blob:')) {
-      objectUrlsRef.current.push(url);
-    }
-    return url;
-  };
-
-  useEffect(() => {
-    const currentUrls = objectUrlsRef.current;
-    return () => {
-      // Cleanup all object URLs when component unmounts
-      currentUrls.forEach(url => URL.revokeObjectURL(url));
-    };
-  }, []);
-
   const handleCropAndAssign = useCallback((qIndex, targetType, partIndex = null) => {
     if (!imageRef.current) return;
     

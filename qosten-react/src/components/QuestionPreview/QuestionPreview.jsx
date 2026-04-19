@@ -4,6 +4,7 @@ import LatexRenderer from '../LatexRenderer/LatexRenderer';
 import { useQuestions } from '../../context/QuestionContext';
 import { parseCQQuestions } from '../../utils/cqParser';
 import * as pdfjsLib from 'pdfjs-dist';
+import { processImage } from '../../utils/imageProcessor';
 
 // Set up PDF.js worker using unpkg CDN with matching version
 pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.mjs`;
@@ -793,8 +794,14 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   const handlePartImageUpload = useCallback((qIndex, partIndex, file) => {
     if (file) {
       const reader = new FileReader();
-      reader.onloadend = () => {
-        updateQuestionPart(qIndex, partIndex, 'answerImage', reader.result);
+      reader.onloadend = async () => {
+        let imageData = reader.result;
+        try {
+          imageData = await processImage(imageData);
+        } catch (e) {
+          console.error('Image processing failed:', e);
+        }
+        updateQuestionPart(qIndex, partIndex, 'answerImage', imageData);
       };
       reader.readAsDataURL(file);
     }
@@ -893,17 +900,27 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       actualHeight
     );
     
-    canvas.toBlob((blob) => {
-      if (!blob) return;
-      const croppedImageUrl = trackObjectUrl(URL.createObjectURL(blob));
-      console.log(`📸 handleCropAndAssign: Generated blob for Q#${qIndex + 1}, target: ${targetType}${partIndex !== null ? ', part: ' + partIndex : ''}`);
+    // Process image to remove white background and trim
+    const dataUrl = canvas.toDataURL('image/png');
+    processImage(dataUrl).then(processedUrl => {
+      const croppedImageUrl = processedUrl;
+      console.log(`📸 handleCropAndAssign: Processed image for Q#${qIndex + 1}, target: ${targetType}${partIndex !== null ? ', part: ' + partIndex : ''}`);
 
       if (targetType === 'stem') {
           updateQuestion(qIndex, 'image', croppedImageUrl);
       } else if (targetType === 'part' && partIndex !== null) {
           updateQuestionPart(qIndex, partIndex, 'answerImage', croppedImageUrl);
       }
-    }, 'image/jpeg', 0.8);
+    }).catch(err => {
+      console.error('Error processing cropped image:', err);
+      // Fallback to original crop if processing fails
+      const croppedImageUrl = dataUrl;
+      if (targetType === 'stem') {
+          updateQuestion(qIndex, 'image', croppedImageUrl);
+      } else if (targetType === 'part' && partIndex !== null) {
+          updateQuestionPart(qIndex, partIndex, 'answerImage', croppedImageUrl);
+      }
+    });
   }, [updateQuestion, updateQuestionPart]);
 
   console.log('[Performance] QuestionPreview Render Start');
@@ -1087,8 +1104,14 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   const handleImageUpload = (index, file) => {
     if (file) {
       const reader = new FileReader();
-      reader.onloadend = () => {
-        updateQuestion(index, 'image', reader.result);
+      reader.onloadend = async () => {
+        let imageData = reader.result;
+        try {
+          imageData = await processImage(imageData);
+        } catch (e) {
+          console.error('Image processing failed:', e);
+        }
+        updateQuestion(index, 'image', imageData);
       };
       reader.readAsDataURL(file);
     }
@@ -1146,9 +1169,10 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       actualHeight
     );
     
-    canvas.toBlob((blob) => {
-      if (!blob) return;
-      const croppedImageUrl = trackObjectUrl(URL.createObjectURL(blob));
+    // Process image to remove white background and trim
+    const dataUrl = canvas.toDataURL('image/png');
+    processImage(dataUrl).then(processedUrl => {
+      const croppedImageUrl = processedUrl;
 
       if (typeof currentCroppingIndex === 'object' && currentCroppingIndex !== null && currentCroppingIndex.type === 'part') {
         const { qIndex, partIndex } = currentCroppingIndex;
@@ -1159,7 +1183,19 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
 
       setShowCropper(false);
       setCurrentCroppingIndex(null);
-    }, 'image/jpeg', 0.8);
+    }).catch(err => {
+      console.error('Error processing cropped image:', err);
+      // Fallback
+      const croppedImageUrl = dataUrl;
+      if (typeof currentCroppingIndex === 'object' && currentCroppingIndex !== null && currentCroppingIndex.type === 'part') {
+        const { qIndex, partIndex } = currentCroppingIndex;
+        updateQuestionPart(qIndex, partIndex, 'answerImage', croppedImageUrl);
+      } else {
+        updateQuestion(currentCroppingIndex, 'image', croppedImageUrl);
+      }
+      setShowCropper(false);
+      setCurrentCroppingIndex(null);
+    });
   };
   
   const handleMouseDown = (e) => {
@@ -2008,6 +2044,17 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
              <div style={{ padding: '10px 15px', borderBottom: '1px solid #ddd', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#f8f9fa', gap: '10px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
                     <h2 style={{margin: 0, fontSize: '1.1rem', whiteSpace: 'nowrap'}}>📷 Easy Upload</h2>
+                    <span style={{ 
+                        fontSize: '12px', 
+                        backgroundColor: '#e3f2fd', 
+                        color: '#1976d2', 
+                        padding: '4px 10px', 
+                        borderRadius: '12px',
+                        fontWeight: '600',
+                        border: '1px solid #90caf9'
+                    }}>
+                        ✨ Auto-Cut White Parts Active
+                    </span>
                 </div>
 
                 <div style={{ display: 'flex', gap: '10px' }}>

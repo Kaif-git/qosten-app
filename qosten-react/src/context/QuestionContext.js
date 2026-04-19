@@ -568,7 +568,9 @@ export function QuestionProvider({ children }) {
       // 3. Process CQ Parts (uploads any new images)
       if (q.parts && Array.isArray(q.parts)) {
           console.log(`  - Processing ${q.parts.length} CQ parts...`);
-          q.parts = await Promise.all(q.parts.map(async (p, idx) => {
+          const updatedParts = [];
+          for (let idx = 0; idx < q.parts.length; idx++) {
+              const p = q.parts[idx];
               const updatedPart = { ...p };
               const imageToUpload = p.answerImage || p.image;
               if (imageToUpload && (imageToUpload.startsWith('data:') || imageToUpload.startsWith('blob:'))) {
@@ -577,8 +579,9 @@ export function QuestionProvider({ children }) {
                   updatedPart.image = url;
                   updatedPart.answerImage = url;
               }
-              return updatedPart;
-          }));
+              updatedParts.push(updatedPart);
+          }
+          q.parts = updatedParts;
 
           // Post-sync: Sync URLs from parts to legacy columns to ensure consistency
           console.log('  - Post-syncing processed URLs from parts to legacy columns...');
@@ -805,14 +808,18 @@ export function QuestionProvider({ children }) {
 
       for (let i = 0; i < total; i += CHUNK_SIZE) {
         const chunk = questions.slice(i, i + CHUNK_SIZE);
-        const processedChunk = await Promise.all(chunk.map(async q => {
+        
+        // Process images sequentially to avoid browser concurrency limits and HTTP/2 protocol errors
+        const processedChunk = [];
+        for (const q of chunk) {
           try {
-            return await processQuestionImages(q);
+            const processedQ = await processQuestionImages(q);
+            processedChunk.push(processedQ);
           } catch (e) {
             console.error(`Error processing images for question ${q.id}:`, e);
-            return q;
+            processedChunk.push(q);
           }
-        }));
+        }
 
         const dbChunk = processedChunk.map(mapAppToDatabase);
         const batchResults = await questionApi.bulkCreateQuestions(dbChunk);
@@ -883,7 +890,14 @@ export function QuestionProvider({ children }) {
   const batchAddQuestions = useCallback(async (questions, onProgress) => {
     try {
       console.log(`🚀 Starting batch add of ${questions.length} questions...`);
-      const processed = await Promise.all(questions.map(q => processQuestionImages(q)));
+      
+      // Process images sequentially to avoid browser concurrency limits and HTTP/2 protocol errors
+      const processed = [];
+      for (const q of questions) {
+          const processedQ = await processQuestionImages(q);
+          processed.push(processedQ);
+      }
+      
       const dbQuestions = processed.map(q => mapAppToDatabase(q));
       const result = await questionApi.batchCreateQuestions(dbQuestions, onProgress);
       
@@ -916,7 +930,14 @@ export function QuestionProvider({ children }) {
   const bulkUpdateQuestions = useCallback(async (questions) => {
     try {
       console.log(`🔄 Starting bulk update of ${questions.length} questions...`);
-      const processed = await Promise.all(questions.map(q => processQuestionImages(q)));
+      
+      // Process images sequentially to avoid browser concurrency limits and HTTP/2 protocol errors
+      const processed = [];
+      for (const q of questions) {
+          const processedQ = await processQuestionImages(q);
+          processed.push(processedQ);
+      }
+
       const dbQuestions = processed.map(q => mapAppToDatabase(q));
       
       // 1. Perform main data update

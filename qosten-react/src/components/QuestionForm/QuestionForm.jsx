@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import QuestionPreview from '../QuestionPreview/QuestionPreview';
 import { translateEnglishWordsToBangla } from '../../utils/translateToBangla';
 import { videoApi } from '../../services/videoApi';
+import { processImage } from '../../utils/imageProcessor';
 
 export default function QuestionForm() {
   const { editingQuestion, addQuestion, updateQuestion, setEditingQuestion } = useQuestions();
@@ -11,6 +12,7 @@ export default function QuestionForm() {
   const [showPreview, setShowPreview] = useState(false);
   const [previewQuestion, setPreviewQuestion] = useState(null);
   const [isTranslating, setIsTranslating] = useState(false);
+  const [autoProcessImages, setAutoProcessImages] = useState(true);
   
   // Video state
   const [videoLinks, setVideoLinks] = useState([]);
@@ -112,11 +114,19 @@ export default function QuestionForm() {
     }));
   };
   
-  const handleImageUpload = (file) => {
+  const handleImageUpload = async (file) => {
     if (file) {
       const reader = new FileReader();
-      reader.onloadend = () => {
-        setFormData(prev => ({ ...prev, image: reader.result }));
+      reader.onloadend = async () => {
+        let imageData = reader.result;
+        if (autoProcessImages) {
+          try {
+            imageData = await processImage(imageData);
+          } catch (e) {
+            console.error('Image processing failed:', e);
+          }
+        }
+        setFormData(prev => ({ ...prev, image: imageData }));
       };
       reader.readAsDataURL(file);
     }
@@ -129,8 +139,16 @@ export default function QuestionForm() {
   const handleAnswerImage1Upload = (file) => {
     if (file) {
       const reader = new FileReader();
-      reader.onloadend = () => {
-        setFormData(prev => ({ ...prev, answerimage1: reader.result }));
+      reader.onloadend = async () => {
+        let imageData = reader.result;
+        if (autoProcessImages) {
+          try {
+            imageData = await processImage(imageData);
+          } catch (e) {
+            console.error('Image processing failed:', e);
+          }
+        }
+        setFormData(prev => ({ ...prev, answerimage1: imageData }));
       };
       reader.readAsDataURL(file);
     }
@@ -143,8 +161,16 @@ export default function QuestionForm() {
   const handleAnswerImage2Upload = (file) => {
     if (file) {
       const reader = new FileReader();
-      reader.onloadend = () => {
-        setFormData(prev => ({ ...prev, answerimage2: reader.result }));
+      reader.onloadend = async () => {
+        let imageData = reader.result;
+        if (autoProcessImages) {
+          try {
+            imageData = await processImage(imageData);
+          } catch (e) {
+            console.error('Image processing failed:', e);
+          }
+        }
+        setFormData(prev => ({ ...prev, answerimage2: imageData }));
       };
       reader.readAsDataURL(file);
     }
@@ -157,8 +183,16 @@ export default function QuestionForm() {
   const handleAnswerImage3Upload = (file) => {
     if (file) {
       const reader = new FileReader();
-      reader.onloadend = () => {
-        setFormData(prev => ({ ...prev, answerimage3: reader.result }));
+      reader.onloadend = async () => {
+        let imageData = reader.result;
+        if (autoProcessImages) {
+          try {
+            imageData = await processImage(imageData);
+          } catch (e) {
+            console.error('Image processing failed:', e);
+          }
+        }
+        setFormData(prev => ({ ...prev, answerimage3: imageData }));
       };
       reader.readAsDataURL(file);
     }
@@ -171,8 +205,16 @@ export default function QuestionForm() {
   const handleAnswerImage4Upload = (file) => {
     if (file) {
       const reader = new FileReader();
-      reader.onloadend = () => {
-        setFormData(prev => ({ ...prev, answerimage4: reader.result }));
+      reader.onloadend = async () => {
+        let imageData = reader.result;
+        if (autoProcessImages) {
+          try {
+            imageData = await processImage(imageData);
+          } catch (e) {
+            console.error('Image processing failed:', e);
+          }
+        }
+        setFormData(prev => ({ ...prev, answerimage4: imageData }));
       };
       reader.readAsDataURL(file);
     }
@@ -455,7 +497,32 @@ export default function QuestionForm() {
       )}
       
       <div className={`panel editing-${formData.type}`}>
-        <h2>{editingQuestion ? 'Edit Question' : 'Add New Question'}</h2>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+          <h2 style={{ margin: 0 }}>{editingQuestion ? 'Edit Question' : 'Add New Question'}</h2>
+          <div style={{ 
+            display: 'flex', 
+            alignItems: 'center', 
+            gap: '8px', 
+            padding: '8px 12px', 
+            backgroundColor: '#e3f2fd', 
+            borderRadius: '20px',
+            border: '1px solid #90caf9',
+            fontSize: '13px',
+            fontWeight: '600',
+            color: '#1976d2'
+          }}>
+            <input 
+              type="checkbox" 
+              id="autoProcess" 
+              checked={autoProcessImages}
+              onChange={(e) => setAutoProcessImages(e.target.checked)}
+              style={{ cursor: 'pointer' }}
+            />
+            <label htmlFor="autoProcess" style={{ cursor: 'pointer', margin: 0 }}>
+              ✨ Auto-Cut White Parts
+            </label>
+          </div>
+        </div>
       
       <form onSubmit={handleSubmit}>
         <div>
@@ -532,13 +599,25 @@ export default function QuestionForm() {
                 alt="Question" 
                 style={{ maxWidth: '100%', maxHeight: '400px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'block', marginBottom: '10px' }}
               />
-              <button 
-                type="button" 
-                onClick={removeImage}
-                style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '8px 16px', borderRadius: '4px', cursor: 'pointer' }}
-              >
-                ✕ Remove Image
-              </button>
+              <div style={{ display: 'flex', gap: '10px' }}>
+                <button 
+                  type="button" 
+                  onClick={async () => {
+                    const processed = await processImage(formData.image);
+                    handleInputChange('image', processed);
+                  }}
+                  style={{ backgroundColor: '#17a2b8', color: 'white', border: 'none', padding: '8px 16px', borderRadius: '4px', cursor: 'pointer' }}
+                >
+                  ✨ Process
+                </button>
+                <button 
+                  type="button" 
+                  onClick={removeImage}
+                  style={{ backgroundColor: '#dc3545', color: 'white', border: 'none', padding: '8px 16px', borderRadius: '4px', cursor: 'pointer' }}
+                >
+                  ✕ Remove Image
+                </button>
+              </div>
             </div>
           )}
         </div>

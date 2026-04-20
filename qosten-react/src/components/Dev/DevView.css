@@ -1,5 +1,7 @@
 .dev-view-container {
     padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .dev-view-container .header-row {
@@ -23,16 +25,18 @@
 
 .dev-view-container .user-search-input {
     padding: 8px 30px 8px 12px;
-    border: 1px solid #ced4da;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
     font-size: 14px;
     width: 200px;
     transition: all 0.2s;
+    background-color: var(--input-bg);
+    color: var(--text-color);
 }
 
 .dev-view-container .user-search-input:focus {
     outline: none;
-    border-color: #2196F3;
+    border-color: var(--secondary-color);
     box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
     width: 250px;
 }
@@ -42,7 +46,7 @@
     right: 8px;
     background: none;
     border: none;
-    color: #adb5bd;
+    color: var(--metadata-color);
     font-size: 18px;
     cursor: pointer;
     line-height: 1;
@@ -50,11 +54,11 @@
 }
 
 .dev-view-container .clear-search:hover {
-    color: #495057;
+    color: var(--text-color);
 }
 
 .dev-view-container .subtitle {
-    color: #666;
+    color: var(--metadata-color);
     font-size: 0.9em;
     margin-top: 5px;
 }

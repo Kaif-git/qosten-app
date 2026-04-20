@@ -3,11 +3,17 @@
  * Processes an image to remove white backgrounds and trim empty space.
  * 
  * @param {string} base64Str - The image as a base64 string
+ * @param {Object} settings - Processing settings (threshold, etc.)
  * @returns {Promise<string>} - The processed image as a base64 string
  */
-export const processImage = (base64Str) => {
+export const processImage = (base64Str, settings = { threshold: 240 }) => {
   return new Promise((resolve, reject) => {
+    const threshold = settings.threshold ?? 240;
     const img = new Image();
+    // Enable CORS for external URLs
+    if (base64Str.startsWith('http')) {
+      img.crossOrigin = 'anonymous';
+    }
     img.onload = () => {
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
@@ -20,9 +26,6 @@ export const processImage = (base64Str) => {
       const data = imageData.data;
       
       // 1. Make white pixels transparent
-      // Threshold for "white" - 240+ in all R, G, B
-      const threshold = 240;
-      
       for (let i = 0; i < data.length; i += 4) {
         const r = data[i];
         const g = data[i + 1];

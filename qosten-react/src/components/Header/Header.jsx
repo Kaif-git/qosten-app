@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useQuestions } from '../../context/QuestionContext';
+import { useTheme } from '../../context/ThemeContext';
 import { supabase } from '../../services/supabaseClient';
 import { questionApi } from '../../services/questionApi';
 import { safeJsonParse } from '../../utils/jsonFixUtils';
@@ -8,6 +9,7 @@ import { safeJsonParse } from '../../utils/jsonFixUtils';
 export default function Header() {
   const navigate = useNavigate();
   const { questions, refreshQuestions, bulkAddQuestions, isAuthenticated, setAuthenticated, user, setUser } = useQuestions();
+  const { isDarkMode, toggleTheme } = useTheme();
   const fileInputRef = useRef(null);
   const [isRefreshing, setIsRefreshing] = React.useState(false);
   const [isExporting, setIsExporting] = React.useState(false);
@@ -312,6 +314,13 @@ export default function Header() {
           }}
         >
           {isRefreshing ? '🔄 Refreshing...' : '🔄 Refresh from DB'}
+        </button>
+        <button 
+          className="secondary" 
+          onClick={toggleTheme}
+          style={{ backgroundColor: isDarkMode ? '#f1c40f' : '#34495e', color: isDarkMode ? 'black' : 'white' }}
+        >
+          {isDarkMode ? '☀️ Light Mode' : '🌙 Night Mode'}
         </button>
         {isAuthenticated ? (
           <>

@@ -21,6 +21,7 @@ const questionSchema = new mongoose.Schema({
     lesson: String,
     board: String,
     isQuizzable: { type: Boolean, default: true },
+    isFlagged: { type: Boolean, default: false },
     tags: [String],
     image: String,
 

@@ -9,6 +9,7 @@ import ImportTabs from './components/ImportTabs/ImportTabs';
 import { QuestionProvider } from './context/QuestionContext';
 import { PromptProvider } from './context/SimplePromptContext';
 import { ShopProvider } from './context/ShopContext';
+import { ThemeProvider } from './context/ThemeContext';
 import SimplePromptManager from './components/SimplePromptManager/SimplePromptManager';
 import MathQuestionImport from './components/MathQuestionImport/MathQuestionImport';
 import MCQImport from './components/MCQImport/MCQImport';
@@ -29,10 +30,11 @@ import DataTracker from './components/DataTracker/DataTracker';
 
 function App() {
   return (
-    <QuestionProvider>
-      <PromptProvider>
-        <ShopProvider>
-          <BrowserRouter>
+    <ThemeProvider>
+      <QuestionProvider>
+        <PromptProvider>
+          <ShopProvider>
+            <BrowserRouter>
             <div className="App">
               <Header />
               <TabContainer />
@@ -70,7 +72,8 @@ function App() {
         </ShopProvider>
       </PromptProvider>
     </QuestionProvider>
-  );
+  </ThemeProvider>
+);
 }
 
 export default App;

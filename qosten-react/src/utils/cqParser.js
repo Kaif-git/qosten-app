@@ -306,7 +306,7 @@ export const parseCQQuestions = (text, lang = 'en') => {
           (line.toLowerCase() === 'picture' || line.toLowerCase() === 'image' || line === 'ছবি' || line === 'চিত্র');
         
         if (isImagePlaceholder) {
-            currentQuestion.image = '[There is a picture]';
+            currentQuestion.image = null;
             // Only add to text if we are in stem/question mode
             if (!state.inAnswerSection) {
                 state.questionTextLines.push(line);

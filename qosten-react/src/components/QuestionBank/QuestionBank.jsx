@@ -12,6 +12,7 @@ import MCQFixExplanation from '../MCQImport/MCQFixExplanation';
 import { detectAndFixCQ } from '../../utils/cqFixUtils';
 import { detectAndFixMCQOptions } from '../../utils/mcqFixUtils';
 import { performImageMigration, getMigrationPreview } from '../../utils/imageMigration';
+import { processImage } from '../../utils/imageProcessor';
 
 // Helper to fix corrupted MCQ format
 const fixCorruptedMCQ = (text) => {
@@ -324,6 +325,12 @@ export default function QuestionBank() {
   // MCQ Fixing State
   const [showMCQFixModal, setShowMCQFixModal] = useState(false);
   const [mcqFixCandidates, setMcqFixCandidates] = useState([]);
+  const [showImageFixModal, setShowImageFixModal] = useState(false);
+  const [imageFixCandidates, setImageFixCandidates] = useState([]);
+  const [selectedImageFixIds, setSelectedImageFixIds] = useState(new Set());
+  const [imageFixPreviews, setImageFixPreviews] = useState(new Map());
+  const [selectedPreviewId, setSelectedPreviewId] = useState(null);
+  const [imageFixSettings, setImageFixSettings] = useState({ threshold: 240 });
 
   // MCQ Sync State
   const [mcqSyncCandidates, setMcqSyncCandidates] = useState([]);
@@ -1895,6 +1902,232 @@ export default function QuestionBank() {
       }
   };
 
+  const handleFixImages = async () => {
+    const scanAll = window.confirm("Scan database for questions with images to enhance (remove white background)?\n\nClick 'OK' to scan everything\nClick 'Cancel' to scan only currently loaded questions");
+    
+    setIsFixing(true);
+    setSyncProgress({ current: 0, total: 0 });
+    let questionsToScan = [];
+    
+    try {
+      if (scanAll) {
+        questionsToScan = await questionApi.fetchAllQuestions((batch) => {
+          setSyncProgress(prev => ({ ...prev, current: prev.current + batch.length }));
+        });
+      } else {
+        questionsToScan = currentVisibleQuestions;
+      }
+      
+      const candidates = questionsToScan.filter(q => 
+        q.image || q.answerimage1 || q.answerimage2 || q.answerimage3 || q.answerimage4 ||
+        (q.parts && q.parts.some(p => p.image || p.answerImage)) ||
+        (q.options && q.options.some(o => o.image))
+      );
+      
+      if (candidates.length === 0) {
+        alert("No questions with images found.");
+        setIsFixing(false);
+        return;
+      }
+      
+      setImageFixCandidates(candidates);
+      setSelectedImageFixIds(new Set(candidates.map(q => q.id)));
+      setShowImageFixModal(true);
+      
+    } catch (error) {
+      console.error("Error searching for images:", error);
+      alert("An error occurred: " + error.message);
+    } finally {
+      setIsFixing(false);
+      setSyncProgress({ current: 0, total: 0 });
+    }
+  };
+
+  const previewImageEnhancement = async (q) => {
+    setIsFixing(true);
+    try {
+      const updatedQ = JSON.parse(JSON.stringify(q));
+      
+      const process = async (val) => {
+        if (val && (typeof val === 'string') && (val.startsWith('data:image') || val.startsWith('http'))) {
+          try {
+            return await processImage(val, imageFixSettings);
+          } catch (e) {
+            console.error(`Failed to process image:`, e);
+            return val;
+          }
+        }
+        return val;
+      };
+      
+      if (updatedQ.image) updatedQ.image = await process(updatedQ.image);
+      if (updatedQ.answerimage1) updatedQ.answerimage1 = await process(updatedQ.answerimage1);
+      if (updatedQ.answerimage2) updatedQ.answerimage2 = await process(updatedQ.answerimage2);
+      if (updatedQ.answerimage3) updatedQ.answerimage3 = await process(updatedQ.answerimage3);
+      if (updatedQ.answerimage4) updatedQ.answerimage4 = await process(updatedQ.answerimage4);
+      
+      if (updatedQ.parts) {
+        for (let p of updatedQ.parts) {
+          if (p.image) p.image = await process(p.image);
+          if (p.answerImage) p.answerImage = await process(p.answerImage);
+        }
+      }
+      
+      if (updatedQ.options) {
+        for (let o of updatedQ.options) {
+          if (o.image) o.image = await process(o.image);
+        }
+      }
+      
+      setImageFixPreviews(prev => {
+        const next = new Map(prev);
+        next.set(q.id, updatedQ);
+        return next;
+      });
+    } catch (err) {
+      console.error("Preview failed:", err);
+    } finally {
+      setIsFixing(false);
+    }
+  };
+
+  const previewAllSelectedImages = async () => {
+    const selectedList = imageFixCandidates.filter(q => selectedImageFixIds.has(q.id));
+    if (selectedList.length === 0) return;
+    
+    setIsFixing(true);
+    setSyncProgress({ current: 0, total: selectedList.length });
+    
+    try {
+      for (let i = 0; i < selectedList.length; i++) {
+        const q = selectedList[i];
+        if (imageFixPreviews.has(q.id)) {
+          setSyncProgress(prev => ({ ...prev, current: i + 1 }));
+          continue;
+        }
+        
+        const updatedQ = JSON.parse(JSON.stringify(q));
+        const process = async (val) => {
+          if (val && (typeof val === 'string') && (val.startsWith('data:image') || val.startsWith('http'))) {
+            try { return await processImage(val, imageFixSettings); } catch (e) { return val; }
+          }
+          return val;
+        };
+        
+        if (updatedQ.image) updatedQ.image = await process(updatedQ.image);
+        if (updatedQ.answerimage1) updatedQ.answerimage1 = await process(updatedQ.answerimage1);
+        if (updatedQ.answerimage2) updatedQ.answerimage2 = await process(updatedQ.answerimage2);
+        if (updatedQ.answerimage3) updatedQ.answerimage3 = await process(updatedQ.answerimage3);
+        if (updatedQ.answerimage4) updatedQ.answerimage4 = await process(updatedQ.answerimage4);
+        
+        if (updatedQ.parts) {
+          for (let p of updatedQ.parts) {
+            if (p.image) p.image = await process(p.image);
+            if (p.answerImage) p.answerImage = await process(p.answerImage);
+          }
+        }
+        
+        if (updatedQ.options) {
+          for (let o of updatedQ.options) {
+            if (o.image) o.image = await process(o.image);
+          }
+        }
+        
+        setImageFixPreviews(prev => {
+          const next = new Map(prev);
+          next.set(q.id, updatedQ);
+          return next;
+        });
+        setSyncProgress({ current: i + 1, total: selectedList.length });
+      }
+    } finally {
+      setIsFixing(false);
+      setSyncProgress({ current: 0, total: 0 });
+    }
+  };
+
+  const applyImageEnhancements = async () => {
+    const selectedList = imageFixCandidates.filter(q => selectedImageFixIds.has(q.id));
+    if (selectedList.length === 0) {
+      alert("Please select at least one question.");
+      return;
+    }
+
+    if (!window.confirm(`Proceed with enhancing and uploading images for ${selectedList.length} selected questions?`)) {
+      return;
+    }
+
+    setIsFixing(true);
+    setSyncProgress({ current: 0, total: selectedList.length });
+
+    try {
+      let fixedCount = 0;
+      let updatedQuestions = [];
+      const CHUNK_SIZE = 10;
+      
+      for (let i = 0; i < selectedList.length; i++) {
+        const q = selectedList[i];
+        let updatedQ;
+        
+        // Use preview if available, otherwise process now
+        if (imageFixPreviews.has(q.id)) {
+          updatedQ = imageFixPreviews.get(q.id);
+        } else {
+          updatedQ = JSON.parse(JSON.stringify(q));
+          const process = async (val) => {
+            if (val && (typeof val === 'string') && (val.startsWith('data:image') || val.startsWith('http'))) {
+              try { return await processImage(val, imageFixSettings); } catch (e) { return val; }
+            }
+            return val;
+          };
+          
+          if (updatedQ.image) updatedQ.image = await process(updatedQ.image);
+          if (updatedQ.answerimage1) updatedQ.answerimage1 = await process(updatedQ.answerimage1);
+          if (updatedQ.answerimage2) updatedQ.answerimage2 = await process(updatedQ.answerimage2);
+          if (updatedQ.answerimage3) updatedQ.answerimage3 = await process(updatedQ.answerimage3);
+          if (updatedQ.answerimage4) updatedQ.answerimage4 = await process(updatedQ.answerimage4);
+          
+          if (updatedQ.parts) {
+            for (let p of updatedQ.parts) {
+              if (p.image) p.image = await process(p.image);
+              if (p.answerImage) p.answerImage = await process(p.answerImage);
+            }
+          }
+          
+          if (updatedQ.options) {
+            for (let o of updatedQ.options) {
+              if (o.image) o.image = await process(o.image);
+            }
+          }
+        }
+        
+        updatedQuestions.push(updatedQ);
+        fixedCount++;
+        setSyncProgress({ current: i + 1, total: selectedList.length });
+        
+        if (updatedQuestions.length >= CHUNK_SIZE) {
+          await bulkUpdateQuestions(updatedQuestions);
+          updatedQuestions = [];
+        }
+      }
+      
+      if (updatedQuestions.length > 0) {
+        await bulkUpdateQuestions(updatedQuestions);
+      }
+      
+      alert(`Successfully enhanced and uploaded images for ${fixedCount} questions.`);
+      setShowImageFixModal(false);
+      setImageFixCandidates([]);
+      setImageFixPreviews(new Map());
+    } catch (error) {
+      console.error("Error fixing images:", error);
+      alert("An error occurred: " + error.message);
+    } finally {
+      setIsFixing(false);
+      setSyncProgress({ current: 0, total: 0 });
+    }
+  };
+
   const handleSyncMCQFields = async (targetId = null) => {
     setIsFixing(true);
     try {
@@ -3316,11 +3549,11 @@ export default function QuestionBank() {
             <div style={{
                 textAlign: 'center', 
                 padding: '40px', 
-                color: '#666',
-                backgroundColor: '#f8f9fa',
+                color: 'var(--metadata-color)',
+                backgroundColor: 'var(--panel-bg)',
                 borderRadius: '8px',
                 marginTop: '20px',
-                border: '1px dashed #ced4da'
+                border: '1px dashed var(--border-color)'
             }}>
                 <p style={{fontSize: '1.1em', marginBottom: '20px'}}>
                     {qList.length} potential questions found based on filters.
@@ -3331,7 +3564,7 @@ export default function QuestionBank() {
                     style={{
                         padding: '12px 24px', 
                         fontSize: '16px', 
-                        backgroundColor: '#3498db', 
+                        backgroundColor: 'var(--secondary-color)', 
                         color: 'white', 
                         border: 'none', 
                         borderRadius: '5px',
@@ -3345,12 +3578,12 @@ export default function QuestionBank() {
             </div>
         ) : qList.length === 0 ? (
           <div style={{textAlign: 'center', padding: '40px'}}>
-             <p>No questions found matching your criteria.</p>
+             <p style={{color: 'var(--text-color)'}}>No questions found matching your criteria.</p>
              <button 
                 onClick={() => handleSearch(viewName)} 
                 style={{
                     padding: '8px 16px', 
-                    backgroundColor: '#6c757d', 
+                    backgroundColor: 'var(--metadata-color)', 
                     color: 'white', 
                     border: 'none', 
                     borderRadius: '4px',
@@ -3388,7 +3621,7 @@ export default function QuestionBank() {
                     onClick={() => setVisibleCount(prev => prev + 50)}
                     style={{
                       padding: '10px 30px',
-                      backgroundColor: '#3498db',
+                      backgroundColor: 'var(--secondary-color)',
                       color: 'white',
                       border: 'none',
                       borderRadius: '5px',
@@ -3408,6 +3641,38 @@ export default function QuestionBank() {
 
   return (
     <>
+      {isFixing && syncProgress.total > 0 && (
+        <div style={{
+          position: 'fixed',
+          top: '20px',
+          right: '20px',
+          backgroundColor: 'var(--question-bg)',
+          padding: '15px 25px',
+          borderRadius: '10px',
+          boxShadow: '0 10px 25px rgba(0,0,0,0.15)',
+          zIndex: 11000,
+          border: '1px solid var(--border-color)',
+          minWidth: '300px'
+        }}>
+          <h4 style={{ margin: '0 0 10px 0', color: 'var(--secondary-color)', fontSize: '14px' }}>⚙️ Processing Tasks...</h4>
+          <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', marginBottom: '8px', fontWeight: 'bold', color: 'var(--text-color)' }}>
+            <span>Progress: {syncProgress.current} / {syncProgress.total}</span>
+            <span>{Math.round((syncProgress.current / syncProgress.total) * 100)}%</span>
+          </div>
+          <div style={{ width: '100%', height: '10px', backgroundColor: 'var(--panel-bg)', borderRadius: '5px', overflow: 'hidden' }}>
+            <div style={{ 
+              width: `${(syncProgress.current / syncProgress.total) * 100}%`, 
+              height: '100%', 
+              backgroundColor: '#2ecc71',
+              transition: 'width 0.3s ease'
+            }} />
+          </div>
+          <p style={{ margin: '8px 0 0 0', fontSize: '11px', color: 'var(--metadata-color)', fontStyle: 'italic' }}>
+            Please wait while the system processes your request...
+          </p>
+        </div>
+      )}
+
       {/* Bulk Metadata Editor Modal */}
       {showBulkMetadataEditor && (
         <div style={{
@@ -3423,25 +3688,26 @@ export default function QuestionBank() {
           zIndex: 10000
         }}>
           <div style={{
-            backgroundColor: 'white',
+            backgroundColor: 'var(--question-bg)',
             padding: '30px',
             borderRadius: '10px',
             boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
             maxWidth: '600px',
-            width: '90%'
+            width: '90%',
+            color: 'var(--text-color)'
           }}>
-            <h3 style={{ marginTop: 0, color: '#3498db' }}>✏️ Bulk Edit Metadata</h3>
-            <p style={{ color: '#666', marginBottom: '20px' }}>
+            <h3 style={{ marginTop: 0, color: 'var(--secondary-color)' }}>✏️ Bulk Edit Metadata</h3>
+            <p style={{ color: 'var(--metadata-color)', marginBottom: '20px' }}>
               Update metadata for <strong>{selectedQuestions.length}</strong> selected question(s).
               Leave fields empty to keep existing values.
             </p>
             
             <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '20px', marginBottom: '25px' }}>
               <div>
-                <label style={{ fontSize: '14px', fontWeight: '600', display: 'block', marginBottom: '8px', color: '#444' }}>
+                <label style={{ fontSize: '14px', fontWeight: '600', display: 'block', marginBottom: '8px', color: 'var(--text-color)' }}>
                   Subject:
                   {uniqueSubjects.length > 0 && (
-                    <span style={{ fontSize: '12px', fontWeight: 'normal', color: '#888', marginLeft: '8px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 'normal', color: 'var(--metadata-color)', marginLeft: '8px' }}>
                       ({uniqueSubjects.length} existing values available)
                     </span>
                   )}
@@ -3452,7 +3718,7 @@ export default function QuestionBank() {
                   placeholder="Type new subject or select existing..."
                   value={bulkMetadata.subject}
                   onChange={(e) => setBulkMetadata(prev => ({ ...prev, subject: e.target.value }))}
-                  style={{ width: '100%', padding: '12px', borderRadius: '6px', border: '1px solid #ccc', fontSize: '14px', boxSizing: 'border-box' }}
+                  style={{ width: '100%', padding: '12px', borderRadius: '6px', border: '1px solid var(--border-color)', fontSize: '14px', boxSizing: 'border-box', backgroundColor: 'var(--input-bg)', color: 'var(--text-color)' }}
                 />
                 <datalist id="subjects-list">
                   {uniqueSubjects.map((subject, idx) => (
@@ -3462,10 +3728,10 @@ export default function QuestionBank() {
               </div>
 
               <div>
-                <label style={{ fontSize: '14px', fontWeight: '600', display: 'block', marginBottom: '8px', color: '#444' }}>
+                <label style={{ fontSize: '14px', fontWeight: '600', display: 'block', marginBottom: '8px', color: 'var(--text-color)' }}>
                   Chapter:
                   {uniqueChapters.length > 0 && (
-                    <span style={{ fontSize: '12px', fontWeight: 'normal', color: '#888', marginLeft: '8px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 'normal', color: 'var(--metadata-color)', marginLeft: '8px' }}>
                       ({uniqueChapters.length} existing values available)
                     </span>
                   )}
@@ -3476,7 +3742,7 @@ export default function QuestionBank() {
                   placeholder="Type new chapter or select existing..."
                   value={bulkMetadata.chapter}
                   onChange={(e) => setBulkMetadata(prev => ({ ...prev, chapter: e.target.value }))}
-                  style={{ width: '100%', padding: '12px', borderRadius: '6px', border: '1px solid #ccc', fontSize: '14px', boxSizing: 'border-box' }}
+                  style={{ width: '100%', padding: '12px', borderRadius: '6px', border: '1px solid var(--border-color)', fontSize: '14px', boxSizing: 'border-box', backgroundColor: 'var(--input-bg)', color: 'var(--text-color)' }}
                 />
                 <datalist id="chapters-list">
                   {uniqueChapters.map((chapter, idx) => (
@@ -3486,10 +3752,10 @@ export default function QuestionBank() {
               </div>
 
               <div>
-                <label style={{ fontSize: '14px', fontWeight: '600', display: 'block', marginBottom: '8px', color: '#444' }}>
+                <label style={{ fontSize: '14px', fontWeight: '600', display: 'block', marginBottom: '8px', color: 'var(--text-color)' }}>
                   Lesson:
                   {uniqueLessons.length > 0 && (
-                    <span style={{ fontSize: '12px', fontWeight: 'normal', color: '#888', marginLeft: '8px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 'normal', color: 'var(--metadata-color)', marginLeft: '8px' }}>
                       ({uniqueLessons.length} existing values available)
                     </span>
                   )}
@@ -3500,7 +3766,7 @@ export default function QuestionBank() {
                   placeholder="Type new lesson or select existing..."
                   value={bulkMetadata.lesson}
                   onChange={(e) => setBulkMetadata(prev => ({ ...prev, lesson: e.target.value }))}
-                  style={{ width: '100%', padding: '12px', borderRadius: '6px', border: '1px solid #ccc', fontSize: '14px', boxSizing: 'border-box' }}
+                  style={{ width: '100%', padding: '12px', borderRadius: '6px', border: '1px solid var(--border-color)', fontSize: '14px', boxSizing: 'border-box', backgroundColor: 'var(--input-bg)', color: 'var(--text-color)' }}
                 />
                 <datalist id="lessons-list">
                   {uniqueLessons.map((lesson, idx) => (
@@ -3510,10 +3776,10 @@ export default function QuestionBank() {
               </div>
 
               <div>
-                <label style={{ fontSize: '14px', fontWeight: '600', display: 'block', marginBottom: '8px', color: '#444' }}>
+                <label style={{ fontSize: '14px', fontWeight: '600', display: 'block', marginBottom: '8px', color: 'var(--text-color)' }}>
                   Board:
                   {uniqueBoards.length > 0 && (
-                    <span style={{ fontSize: '12px', fontWeight: 'normal', color: '#888', marginLeft: '8px' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 'normal', color: 'var(--metadata-color)', marginLeft: '8px' }}>
                       ({uniqueBoards.length} existing values available)
                     </span>
                   )}
@@ -3524,7 +3790,7 @@ export default function QuestionBank() {
                   placeholder="Type new board or select existing..."
                   value={bulkMetadata.board}
                   onChange={(e) => setBulkMetadata(prev => ({ ...prev, board: e.target.value }))}
-                  style={{ width: '100%', padding: '12px', borderRadius: '6px', border: '1px solid #ccc', fontSize: '14px', boxSizing: 'border-box' }}
+                  style={{ width: '100%', padding: '12px', borderRadius: '6px', border: '1px solid var(--border-color)', fontSize: '14px', boxSizing: 'border-box', backgroundColor: 'var(--input-bg)', color: 'var(--text-color)' }}
                 />
                 <datalist id="boards-list">
                   {uniqueBoards.map((board, idx) => (
@@ -3541,7 +3807,7 @@ export default function QuestionBank() {
                   setBulkMetadata({ subject: '', chapter: '', lesson: '', board: '' });
                 }}
                 style={{
-                  backgroundColor: '#6c757d',
+                  backgroundColor: 'var(--metadata-color)',
                   color: 'white',
                   border: 'none',
                   padding: '12px 24px',
@@ -3556,7 +3822,7 @@ export default function QuestionBank() {
               <button 
                 onClick={bulkEditMetadata}
                 style={{
-                  backgroundColor: '#27ae60',
+                  backgroundColor: 'var(--primary-color)',
                   color: 'white',
                   border: 'none',
                   padding: '12px 24px',
@@ -3593,7 +3859,7 @@ export default function QuestionBank() {
             zIndex: 10000
           }}>
             <div style={{
-              backgroundColor: 'white',
+              backgroundColor: 'var(--question-bg)',
               padding: '30px',
               borderRadius: '10px',
               boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
@@ -3602,15 +3868,16 @@ export default function QuestionBank() {
               maxHeight: '95vh',
               overflowY: 'auto',
               display: 'flex',
-              flexDirection: 'column'
+              flexDirection: 'column',
+              color: 'var(--text-color)'
             }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-                <h3 style={{ margin: 0, color: '#6f42c1' }}>🔍 Duplicate Detector Results</h3>
+                <h3 style={{ margin: 0, color: 'var(--secondary-color)' }}>🔍 Duplicate Detector Results</h3>
                 <div style={{ display: 'flex', gap: '10px' }}>
                   <button
                     onClick={deleteAllDuplicates}
                     style={{
-                      backgroundColor: '#dc3545',
+                      backgroundColor: 'var(--danger-color)',
                       color: 'white',
                       border: 'none',
                       padding: '8px 16px',
@@ -3624,7 +3891,7 @@ export default function QuestionBank() {
                   <button
                     onClick={() => setShowDuplicateModal(false)}
                     style={{
-                      backgroundColor: '#6c757d', color: 'white', border: 'none',
+                      backgroundColor: 'var(--metadata-color)', color: 'white', border: 'none',
                       padding: '8px 16px', borderRadius: '4px', cursor: 'pointer'
                     }}
                   >
@@ -4141,6 +4408,365 @@ export default function QuestionBank() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showImageFixModal && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          zIndex: 10000
+        }}>
+          <div style={{
+            backgroundColor: 'white',
+            padding: '30px',
+            borderRadius: '10px',
+            boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
+            maxWidth: '1000px',
+            width: '95%',
+            maxHeight: '90vh',
+            overflowY: 'auto',
+            display: 'flex',
+            flexDirection: 'column'
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+              <h3 style={{ margin: 0, color: '#27ae60' }}>🖼️ Review & Fix Images (White Eraser)</h3>
+              <div style={{ display: 'flex', gap: '10px' }}>
+                <button
+                  onClick={previewAllSelectedImages}
+                  disabled={isFixing || selectedImageFixIds.size === 0}
+                  style={{
+                    backgroundColor: '#3498db',
+                    color: 'white',
+                    border: 'none',
+                    padding: '8px 16px',
+                    borderRadius: '4px',
+                    cursor: (isFixing || selectedImageFixIds.size === 0) ? 'not-allowed' : 'pointer',
+                    fontWeight: 'bold'
+                  }}
+                >
+                  {isFixing ? 'Processing Previews...' : '🔍 Preview Selected'}
+                </button>
+                <button
+                  onClick={applyImageEnhancements}
+                  disabled={isFixing || selectedImageFixIds.size === 0}
+                  style={{
+                    backgroundColor: '#27ae60',
+                    color: 'white',
+                    border: 'none',
+                    padding: '8px 20px',
+                    borderRadius: '4px',
+                    cursor: (isFixing || selectedImageFixIds.size === 0) ? 'not-allowed' : 'pointer',
+                    fontWeight: 'bold'
+                  }}
+                >
+                  {isFixing ? 'Processing...' : `🚀 Enhance & Upload (${selectedImageFixIds.size})`}
+                </button>
+                <button
+                  onClick={() => {
+                    setShowImageFixModal(false);
+                    setImageFixPreviews(new Map());
+                  }}
+                  disabled={isFixing}
+                  style={{
+                    backgroundColor: '#6c757d',
+                    color: 'white',
+                    border: 'none',
+                    padding: '8px 16px',
+                    borderRadius: '4px',
+                    cursor: isFixing ? 'not-allowed' : 'pointer'
+                  }}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+
+            <p style={{ color: '#666', marginBottom: '20px' }}>
+              Select questions to apply the <strong>White Eraser</strong> enhancement. 
+              Click <strong>"Preview Selected"</strong> or the 🔍 icon on a question to see the <strong>Before & After</strong> result.
+            </p>
+
+            <div style={{ 
+              backgroundColor: '#f8f9fa', 
+              padding: '15px', 
+              borderRadius: '8px', 
+              border: '1px solid #dee2e6',
+              marginBottom: '20px',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '10px'
+            }}>
+              <div style={{ fontWeight: 'bold', fontSize: '14px', color: '#495057' }}>⚙️ Enhancement Settings</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                <div style={{ flex: 1 }}>
+                  <label style={{ display: 'block', fontSize: '12px', color: '#666', marginBottom: '5px' }}>
+                    White Removal Threshold: <strong>{imageFixSettings.threshold}</strong>
+                    <span style={{ marginLeft: '10px', fontWeight: 'normal', color: '#999' }}>
+                      (Lower = more aggressive removal, Higher = more conservative)
+                    </span>
+                  </label>
+                  <input 
+                    type="range" 
+                    min="150" 
+                    max="254" 
+                    value={imageFixSettings.threshold}
+                    onChange={(e) => {
+                      const newThreshold = parseInt(e.target.value);
+                      setImageFixSettings(prev => ({ ...prev, threshold: newThreshold }));
+                      // Clear previews when settings change so users are encouraged to re-preview
+                      if (imageFixPreviews.size > 0) {
+                        setImageFixPreviews(new Map());
+                      }
+                    }}
+                    style={{ width: '100%', cursor: 'pointer' }}
+                  />
+                  <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '10px', color: '#aaa' }}>
+                    <span>Aggressive (150)</span>
+                    <span>Standard (240)</span>
+                    <span>Strict (254)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style={{ marginBottom: '15px', display: 'flex', gap: '15px', alignItems: 'center' }}>
+              <button 
+                onClick={() => setSelectedImageFixIds(new Set(imageFixCandidates.map(q => q.id)))}
+                style={{ fontSize: '12px', padding: '5px 10px', cursor: 'pointer' }}
+              >
+                Select All
+              </button>
+              <button 
+                onClick={() => setSelectedImageFixIds(new Set())}
+                style={{ fontSize: '12px', padding: '5px 10px', cursor: 'pointer' }}
+              >
+                Deselect All
+              </button>
+              <span style={{ fontSize: '12px', color: '#888' }}>
+                {imageFixPreviews.size} preview(s) generated
+              </span>
+            </div>
+
+            <div style={{ flex: 1, overflowY: 'auto' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '15px' }}>
+                {imageFixCandidates.map((q) => (
+                  <div 
+                    key={q.id} 
+                    style={{ 
+                      border: selectedImageFixIds.has(q.id) ? '2px solid #27ae60' : '1px solid #ddd', 
+                      borderRadius: '8px', 
+                      padding: '15px',
+                      backgroundColor: selectedImageFixIds.has(q.id) ? '#f0fff4' : 'white',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '10px'
+                    }}
+                  >
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                      <div 
+                        onClick={() => {
+                          const next = new Set(selectedImageFixIds);
+                          if (next.has(q.id)) next.delete(q.id);
+                          else next.add(q.id);
+                          setSelectedImageFixIds(next);
+                        }}
+                        style={{ cursor: 'pointer', flex: 1 }}
+                      >
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '5px' }}>
+                          <input 
+                            type="checkbox" 
+                            checked={selectedImageFixIds.has(q.id)} 
+                            onChange={() => {}} // Handled by parent div
+                            style={{ transform: 'scale(1.2)' }}
+                          />
+                          <strong style={{ color: '#2c3e50' }}>ID: {q.id}</strong>
+                          <span style={{ fontSize: '12px', backgroundColor: '#eee', padding: '2px 6px', borderRadius: '4px' }}>{q.type?.toUpperCase()}</span>
+                        </div>
+                        <div style={{ fontSize: '13px', color: '#444' }}>{q.questionText || q.question}</div>
+                      </div>
+                      
+                      <button
+                        onClick={() => previewImageEnhancement(q)}
+                        disabled={isFixing}
+                        style={{
+                          backgroundColor: imageFixPreviews.has(q.id) ? '#27ae60' : '#3498db',
+                          color: 'white',
+                          border: 'none',
+                          padding: '5px 12px',
+                          borderRadius: '4px',
+                          cursor: isFixing ? 'not-allowed' : 'pointer',
+                          fontSize: '12px'
+                        }}
+                      >
+                        {imageFixPreviews.has(q.id) ? '🔄 Re-Preview' : '🔍 Preview Enhancement'}
+                      </button>
+                    </div>
+                    
+                    <div style={{ display: 'flex', gap: '20px' }}>
+                      {/* Before Column */}
+                      <div 
+                        style={{ flex: 1, cursor: 'zoom-in' }}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setSelectedPreviewId(q.id);
+                        }}
+                        title="Click to see enlarged comparison"
+                      >
+                        <div style={{ fontSize: '11px', fontWeight: 'bold', color: '#c0392b', marginBottom: '5px', display: 'flex', justifyContent: 'space-between' }}>
+                          <span>ORIGINAL (Before)</span>
+                          <span style={{ color: '#3498db' }}>🔍 Click to Enlarge</span>
+                        </div>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px', backgroundColor: '#fdf2f2', padding: '10px', borderRadius: '6px', border: '1px solid #fed7d7' }}>
+                          {q.image && <img src={q.image} alt="s" style={{ height: '80px', border: '1px solid #ccc', backgroundColor: 'white' }} />}
+                          {q.answerimage1 && <img src={q.answerimage1} alt="a1" style={{ height: '80px', border: '1px solid #ccc', backgroundColor: 'white' }} />}
+                          {q.answerimage2 && <img src={q.answerimage2} alt="a2" style={{ height: '80px', border: '1px solid #ccc', backgroundColor: 'white' }} />}
+                          {q.answerimage3 && <img src={q.answerimage3} alt="a3" style={{ height: '80px', border: '1px solid #ccc', backgroundColor: 'white' }} />}
+                          {q.answerimage4 && <img src={q.answerimage4} alt="a4" style={{ height: '80px', border: '1px solid #ccc', backgroundColor: 'white' }} />}
+                          {(!q.image && !q.answerimage1 && !q.answerimage2 && !q.answerimage3 && !q.answerimage4) && <span style={{ fontSize: '11px', color: '#999' }}>Check parts/options for images</span>}
+                        </div>
+                      </div>
+
+                      {/* After Column (if preview exists) */}
+                      {imageFixPreviews.has(q.id) ? (
+                        <div style={{ flex: 1 }}>
+                          <div style={{ fontSize: '11px', fontWeight: 'bold', color: '#27ae60', marginBottom: '5px' }}>ENHANCED (After)</div>
+                          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px', backgroundColor: '#f0fff4', padding: '10px', borderRadius: '6px', border: '1px solid #c6f6d5' }}>
+                            {(() => {
+                              const pq = imageFixPreviews.get(q.id);
+                              return (
+                                <>
+                                  {pq.image && <img src={pq.image} alt="s" style={{ height: '80px', border: '1px solid #27ae60', backgroundColor: 'white' }} />}
+                                  {pq.answerimage1 && <img src={pq.answerimage1} alt="a1" style={{ height: '80px', border: '1px solid #27ae60', backgroundColor: 'white' }} />}
+                                  {pq.answerimage2 && <img src={pq.answerimage2} alt="a2" style={{ height: '80px', border: '1px solid #27ae60', backgroundColor: 'white' }} />}
+                                  {pq.answerimage3 && <img src={pq.answerimage3} alt="a3" style={{ height: '80px', border: '1px solid #27ae60', backgroundColor: 'white' }} />}
+                                  {pq.answerimage4 && <img src={pq.answerimage4} alt="a4" style={{ height: '80px', border: '1px solid #27ae60', backgroundColor: 'white' }} />}
+                                </>
+                              );
+                            })()}
+                          </div>
+                        </div>
+                      ) : (
+                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#f8f9fa', borderRadius: '6px', border: '1px dashed #ddd', color: '#999', fontSize: '12px' }}>
+                          Click Preview to see enhancement result
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {selectedPreviewId && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.9)',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          zIndex: 11000
+        }}>
+          <div style={{
+            backgroundColor: 'white',
+            padding: '30px',
+            borderRadius: '12px',
+            width: '95%',
+            height: '90vh',
+            display: 'flex',
+            flexDirection: 'column',
+            position: 'relative'
+          }}>
+            <button 
+              onClick={() => setSelectedPreviewId(null)}
+              style={{
+                position: 'absolute',
+                top: '15px',
+                right: '15px',
+                background: '#e74c3c',
+                color: 'white',
+                border: 'none',
+                width: '40px',
+                height: '40px',
+                borderRadius: '50%',
+                fontSize: '20px',
+                cursor: 'pointer',
+                zIndex: 10
+              }}
+            >
+              ✕
+            </button>
+
+            <h3 style={{ margin: '0 0 20px 0', color: '#2c3e50' }}>🔍 Enlarged Preview: Question #{selectedPreviewId}</h3>
+            
+            <div style={{ flex: 1, display: 'flex', gap: '30px', overflow: 'hidden' }}>
+              {/* Original Column */}
+              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', height: '100%' }}>
+                <div style={{ backgroundColor: '#c0392b', color: 'white', padding: '10px', borderRadius: '6px 6px 0 0', fontWeight: 'bold', textAlign: 'center' }}>
+                  ORIGINAL (Before)
+                </div>
+                <div style={{ flex: 1, border: '2px solid #c0392b', borderRadius: '0 0 6px 6px', padding: '20px', overflowY: 'auto', backgroundColor: '#fdf2f2', display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center' }}>
+                  {(() => {
+                    const q = imageFixCandidates.find(item => item.id === selectedPreviewId);
+                    if (!q) return null;
+                    return (
+                      <>
+                        {q.image && <div style={{ textAlign: 'center' }}><p style={{ margin: '0 0 5px 0', fontSize: '12px', fontWeight: 'bold' }}>STEM IMAGE</p><img src={q.image} alt="s" style={{ maxWidth: '100%', border: '1px solid #ccc', backgroundColor: 'white' }} /></div>}
+                        {q.answerimage1 && <div style={{ textAlign: 'center' }}><p style={{ margin: '0 0 5px 0', fontSize: '12px', fontWeight: 'bold' }}>ANSWER 1</p><img src={q.answerimage1} alt="a1" style={{ maxWidth: '100%', border: '1px solid #ccc', backgroundColor: 'white' }} /></div>}
+                        {q.answerimage2 && <div style={{ textAlign: 'center' }}><p style={{ margin: '0 0 5px 0', fontSize: '12px', fontWeight: 'bold' }}>ANSWER 2</p><img src={q.answerimage2} alt="a2" style={{ maxWidth: '100%', border: '1px solid #ccc', backgroundColor: 'white' }} /></div>}
+                        {q.answerimage3 && <div style={{ textAlign: 'center' }}><p style={{ margin: '0 0 5px 0', fontSize: '12px', fontWeight: 'bold' }}>ANSWER 3</p><img src={q.answerimage3} alt="a3" style={{ maxWidth: '100%', border: '1px solid #ccc', backgroundColor: 'white' }} /></div>}
+                        {q.answerimage4 && <div style={{ textAlign: 'center' }}><p style={{ margin: '0 0 5px 0', fontSize: '12px', fontWeight: 'bold' }}>ANSWER 4</p><img src={q.answerimage4} alt="a4" style={{ maxWidth: '100%', border: '1px solid #ccc', backgroundColor: 'white' }} /></div>}
+                      </>
+                    );
+                  })()}
+                </div>
+              </div>
+
+              {/* Enhanced Column */}
+              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', height: '100%' }}>
+                <div style={{ backgroundColor: '#27ae60', color: 'white', padding: '10px', borderRadius: '6px 6px 0 0', fontWeight: 'bold', textAlign: 'center' }}>
+                  ENHANCED (After)
+                </div>
+                <div style={{ flex: 1, border: '2px solid #27ae60', borderRadius: '0 0 6px 6px', padding: '20px', overflowY: 'auto', backgroundColor: '#f0fff4', display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center' }}>
+                  {(() => {
+                    const pq = imageFixPreviews.get(selectedPreviewId);
+                    if (!pq) return <div style={{ height: '100%', display: 'flex', alignItems: 'center', color: '#999' }}>No preview generated yet. Click "Preview Enhancement" in the main modal.</div>;
+                    return (
+                      <>
+                        {pq.image && <div style={{ textAlign: 'center' }}><p style={{ margin: '0 0 5px 0', fontSize: '12px', fontWeight: 'bold', color: '#27ae60' }}>STEM IMAGE (Fixed)</p><img src={pq.image} alt="s" style={{ maxWidth: '100%', border: '2px solid #27ae60', backgroundColor: 'white' }} /></div>}
+                        {pq.answerimage1 && <div style={{ textAlign: 'center' }}><p style={{ margin: '0 0 5px 0', fontSize: '12px', fontWeight: 'bold', color: '#27ae60' }}>ANSWER 1 (Fixed)</p><img src={pq.answerimage1} alt="a1" style={{ maxWidth: '100%', border: '2px solid #27ae60', backgroundColor: 'white' }} /></div>}
+                        {pq.answerimage2 && <div style={{ textAlign: 'center' }}><p style={{ margin: '0 0 5px 0', fontSize: '12px', fontWeight: 'bold', color: '#27ae60' }}>ANSWER 2 (Fixed)</p><img src={pq.answerimage2} alt="a2" style={{ maxWidth: '100%', border: '2px solid #27ae60', backgroundColor: 'white' }} /></div>}
+                        {pq.answerimage3 && <div style={{ textAlign: 'center' }}><p style={{ margin: '0 0 5px 0', fontSize: '12px', fontWeight: 'bold', color: '#27ae60' }}>ANSWER 3 (Fixed)</p><img src={pq.answerimage3} alt="a3" style={{ maxWidth: '100%', border: '2px solid #27ae60', backgroundColor: 'white' }} /></div>}
+                        {pq.answerimage4 && <div style={{ textAlign: 'center' }}><p style={{ margin: '0 0 5px 0', fontSize: '12px', fontWeight: 'bold', color: '#27ae60' }}>ANSWER 4 (Fixed)</p><img src={pq.answerimage4} alt="a4" style={{ maxWidth: '100%', border: '2px solid #27ae60', backgroundColor: 'white' }} /></div>}
+                      </>
+                    );
+                  })()}
+                </div>
+              </div>
+            </div>
+
+            <div style={{ marginTop: '20px', textAlign: 'center' }}>
+              <button 
+                onClick={() => setSelectedPreviewId(null)}
+                style={{ padding: '12px 40px', backgroundColor: '#6c757d', color: 'white', border: 'none', borderRadius: '6px', fontWeight: 'bold', cursor: 'pointer' }}
+              >
+                Back to List
+              </button>
             </div>
           </div>
         </div>
@@ -5385,7 +6011,25 @@ export default function QuestionBank() {
                             title="Move images from parts array to dedicated columns"
                           >
                             {isFixing ? 'Processing...' : '🖼️ Normalize CQ Images'}
-                          </button>
+                            </button>
+                            <button
+                            onClick={handleFixImages}
+                            disabled={isFixing}
+                            style={{ 
+                              backgroundColor: '#27ae60',
+                              color: 'white',
+                              padding: '10px 20px',
+                              borderRadius: '6px',
+                              border: 'none',
+                              cursor: isFixing ? 'wait' : 'pointer',
+                              fontWeight: '600',
+                              marginRight: '10px'
+                            }}
+                            title="Remove white background from all question and answer images"
+                            >
+                            {isFixing ? 'Processing...' : '🖼️ Fix Images (White Eraser)'}
+                            </button>
+
                           <button 
                             onClick={handleScanCorruptedCQs}
                             disabled={isFixing}            style={{

@@ -131,13 +131,14 @@ const base64ToBlob = async (base64Data) => {
 export const mapDatabaseToApp = (q) => {
   if (!q) return null;
   
+  const type = (q.type || 'mcq').toLowerCase();
   const questionText = q.question_text || q.questionText || q.text || q.question || '';
   const imageUrl = q.image_url || q.imageUrl || q.image || null;
 
   // Basic question structure
   const question = {
     id: q.id,
-    type: q.type || 'mcq',
+    type: type,
     text: questionText,
     questionText: questionText,
     subject: q.subject || 'N/A',
@@ -154,7 +155,7 @@ export const mapDatabaseToApp = (q) => {
   };
 
   // Add MCQ specific fields
-  if (q.type === 'mcq') {
+  if (type === 'mcq') {
     let opts = q.options;
     if (typeof opts === 'string') {
         try { opts = JSON.parse(opts); } catch (e) { opts = []; }
@@ -172,7 +173,7 @@ export const mapDatabaseToApp = (q) => {
   }
 
   // Add CQ specific fields
-  if (q.type === 'cq') {
+  if (type === 'cq') {
     question.stem = q.stem || questionText;
     
     // Robust parsing for parts
@@ -231,7 +232,7 @@ export const mapDatabaseToApp = (q) => {
   }
 
   // Add SQ specific fields
-  if (q.type === 'sq') {
+  if (type === 'sq') {
     question.question = questionText;
     question.answer = q.answer || '';
   }

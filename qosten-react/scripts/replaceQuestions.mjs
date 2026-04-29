@@ -31,14 +31,24 @@ function parseQuestionsFile(content) {
     if (!idMatch) continue;
     
     const id = idMatch[1];
-    const q = { id: parseInt(id), metadata: {}, questionText: '', parts: [] };
+    const q = { 
+      id: parseInt(id), 
+      metadata: {}, 
+      questionText: '', 
+      parts: [], 
+      type: 'sq', 
+      answer: '', 
+      explanation: '' 
+    };
     
     let questionLines = [];
     let currentPart = null;
     let inAnswerSection = false;
+    let inExplanationSection = false;
     
     for (const line of rawLines.slice(1)) {
       const trimmed = line.trim();
+      if (!trimmed) continue;
       
       if (trimmed.startsWith('[Subject:')) {
         q.metadata.subject = trimmed.replace('[Subject:', '').replace(']', '').trim();
@@ -49,13 +59,22 @@ function parseQuestionsFile(content) {
       } else if (trimmed.startsWith('[Board:')) {
         q.metadata.board = trimmed.replace('[Board:', '').replace(']', '').trim();
       } else if (trimmed.toLowerCase() === 'question:') {
-        // Skip, question stem follows
+        // Skip
       } else if (trimmed.toLowerCase() === 'answer:') {
         inAnswerSection = true;
+        inExplanationSection = false;
+      } else if (trimmed.match(/^Correct:\s*([a-d])$/i)) {
+        q.answer = trimmed.match(/^Correct:\s*([a-d])$/i)[1].toUpperCase();
+        q.type = 'mcq';
+        inAnswerSection = false; // Stop appending to answer for MCQs once Correct: is found
+      } else if (trimmed.toLowerCase().startsWith('explanation:')) {
+        inAnswerSection = false;
+        inExplanationSection = true;
+        const expText = trimmed.replace(/^explanation:\s*/i, '');
+        if (expText) q.explanation += (q.explanation ? '\n' : '') + expText;
       } else if (trimmed.match(/^[a-d]\)\s*.+\(\d+\)$/i)) {
-        if (currentPart) {
-          q.parts.push(currentPart);
-        }
+        q.type = 'cq';
+        if (currentPart) q.parts.push(currentPart);
         const match = trimmed.match(/^([a-d])\)\s*(.+?)\s*\((\d+)\)\s*$/i);
         currentPart = {
           label: match[1].toUpperCase(),
@@ -65,18 +84,34 @@ function parseQuestionsFile(content) {
           answer: ''
         };
         inAnswerSection = false;
+        inExplanationSection = false;
+      } else if (trimmed.match(/^([a-d])\)\s*(.+)$/i)) {
+        // MCQ option
+        q.type = 'mcq';
+        const match = trimmed.match(/^([a-d])\)\s*(.+)$/i);
+        q.parts.push({
+          label: match[1].toUpperCase(),
+          letter: match[1].toUpperCase(),
+          text: match[2].trim(),
+          marks: 0,
+          answer: ''
+        });
       } else if (currentPart && inAnswerSection) {
         currentPart.answer += (currentPart.answer ? '\n' : '') + trimmed;
       } else if (currentPart) {
         currentPart.answer += (currentPart.answer ? '\n' : '') + trimmed;
       } else {
-        questionLines.push(trimmed);
+        if (inExplanationSection) {
+          q.explanation += (q.explanation ? '\n' : '') + trimmed;
+        } else if (!inAnswerSection) {
+          questionLines.push(trimmed);
+        } else {
+          q.answer += (q.answer ? '\n' : '') + trimmed;
+        }
       }
     }
     
-    if (currentPart) {
-      q.parts.push(currentPart);
-    }
+    if (currentPart) q.parts.push(currentPart);
     if (questionLines.length > 0) {
       q.questionText = questionLines.join('\n').trim();
     }
@@ -106,17 +141,27 @@ async function verifyQuestion(id) {
 }
 
 function mapToDatabase(q) {
+  const isMcq = q.type === 'mcq';
+  const correctLetter = isMcq ? q.answer?.toLowerCase() : null;
+
   return {
     id: q.id,
     stem: q.questionText,
     question: q.questionText,
     answer: q.answer,
+    correct_answer: correctLetter,
+    explanation: q.explanation || null,
     subject: q.metadata.subject,
     chapter: q.metadata.chapter,
     lesson: q.metadata.lesson,
     board: q.metadata.board || '',
-    type: 'cq',
-    parts: JSON.stringify(q.parts || []),
+    type: (q.type || 'cq').toLowerCase(),
+    options: isMcq ? JSON.stringify(q.parts.map(p => ({ 
+      label: p.label.toLowerCase(), 
+      text: p.text,
+      is_correct: p.label.toLowerCase() === correctLetter
+    }))) : '[]',
+    parts: isMcq ? '[]' : JSON.stringify(q.parts || []),
     is_verified: true
   };
 }
@@ -175,7 +220,12 @@ function formatForLog(q, label) {
 
 async function main() {
   const inputFile = process.argv[2] || 'batch_1_output.txt';
-  const outputFile = process.argv[3] || 'replace_log.txt';
+  
+  // Log directory and filename logic
+  const logDir = 'logs';
+  await fs.mkdir(logDir, { recursive: true });
+  const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+  const outputFile = `${logDir}/replace_log_${timestamp}.txt`;
   
   console.log(`Reading questions from: ${inputFile}`);
   

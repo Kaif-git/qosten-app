@@ -244,7 +244,8 @@ export default function QuestionBank() {
     fetchMoreQuestions, 
     fetchAllRemaining, 
     clearCache, 
-    hierarchy
+    hierarchy,
+    fixMCQ
   } = useQuestions();
 
   // Auto-search and open modal if ID is provided in URL
@@ -324,6 +325,9 @@ export default function QuestionBank() {
 
   // MCQ Fixing State
   const [showMCQFixModal, setShowMCQFixModal] = useState(false);
+  const [mcqFixInputText, setMcqFixInputText] = useState('');
+  const [mcqFixPreviewCandidates, setMcqFixPreviewCandidates] = useState([]);
+  const [showMCQFixPreviewModal, setShowMCQFixPreviewModal] = useState(false);
   const [mcqFixCandidates, setMcqFixCandidates] = useState([]);
   const [showImageFixModal, setShowImageFixModal] = useState(false);
   const [imageFixCandidates, setImageFixCandidates] = useState([]);
@@ -694,105 +698,47 @@ export default function QuestionBank() {
         return;
       }
 
-      const candidates = [];
-      const hasIds = parsedQuestions.some(p => p.id);
-      
-      if (hasIds) {
-        const parsedMap = new Map();
-        const idsToFetch = [];
-        
-        parsedQuestions.forEach(p => {
-          if (p.id) {
-            const idStr = p.id.toString();
-            parsedMap.set(idStr, p);
-            
-            // Check if we have this question in memory (full version preferred)
-            const inFullMap = fullQuestionsMap.has(idStr);
-            const inQuestionsArray = questions.some(q => q.id.toString() === idStr);
-            
-            if (!inFullMap && !inQuestionsArray) {
-              idsToFetch.push(p.id);
-            }
-          }
-        });
+      // 1. Fetch any missing questions into local state for proper merging
+      const missingIds = parsedQuestions
+        .map(q => q.id)
+        .filter(id => id && !questions.find(q => q.id.toString() === id.toString()));
 
-        // 1. Fetch missing metadata for questions not in memory
-        let localFullMap = new Map(fullQuestionsMap);
-        if (idsToFetch.length > 0) {
-          console.log(`🔍 [ReviewQueue] Fetching ${idsToFetch.length} missing questions from DB...`);
-          try {
-            const fetched = await fetchQuestionsByIds(idsToFetch);
-            fetched.forEach(q => {
-              if (q && q.id) localFullMap.set(q.id.toString(), q);
-            });
-            
-            // Sync back to state for future use
-            setFullQuestionsMap(prev => {
-              const next = new Map(prev);
-              fetched.forEach(q => {
-                if (q && q.id) next.set(q.id.toString(), q);
-              });
-              return next;
-            });
-          } catch (fetchErr) {
-            console.error('Error fetching missing questions:', fetchErr);
-          }
+      if (missingIds.length > 0) {
+        try {
+          const fetched = await fetchQuestionsByIds(missingIds);
+          setQuestions(prev => [...prev, ...fetched]);
+        } catch (fetchErr) {
+          console.error('Error fetching missing questions:', fetchErr);
         }
+      }
 
-        // 2. Process ALL pasted questions (regardless of queue status)
-        parsedMap.forEach((improved, idStr) => {
-          const original = localFullMap.get(idStr) || questions.find(q => q.id.toString() === idStr);
-          
-          if (original) {
-            const fullOriginal = fullQuestionsMap.get(idStr) || original;
-            
-            console.log(`🎯 [ReviewQueue] Targeting ID: ${idStr}`);
-            const fixed = {
-              ...fullOriginal,
-              ...improved,
-              id: fullOriginal.id,
-              isVerified: true,
-              inReviewQueue: false
-            };
+      const candidates = [];
+      const localFullMap = new Map(questions.map(q => [q.id.toString(), q]));
 
-            candidates.push({
-              original: fullOriginal,
-              fixed: fixed,
-              isChanged: checkIfChanged(fullOriginal, fixed, reviewQueueType)
-            });
-          } else {
-            console.warn(`⚠️ [ReviewQueue] Question ID ${idStr} not found in memory or database.`);
-          }
-        });
+      // 2. Process ALL pasted questions
+      parsedQuestions.forEach(improved => {
+        const idStr = improved.id?.toString();
+        if (!idStr) return;
 
-        // Note: Queued questions that WERE NOT pasted are intentionally ignored here
-        // so they don't get automatically verified/dequeued as requested.
-        
-      } else {
-        // Match by index - only for questions already in the queue
-        const count = Math.min(queued.length, parsedQuestions.length);
-        for (let i = 0; i < count; i++) {
-          const original = queued[i];
-          const fullOriginal = fullQuestionsMap.get(original.id.toString()) || original;
-          const improved = parsedQuestions[i];
-          
-          console.log(`🎯 [ReviewQueue] Targeting ID (Index ${i}): ${original.id}`);
-
+        const original = localFullMap.get(idStr) || questions.find(q => q.id.toString() === idStr);
+        if (original) {
+          const fullOriginal = fullQuestionsMap.get(idStr) || original;
           const fixed = {
             ...fullOriginal,
             ...improved,
-            id: original.id,
+            id: fullOriginal.id,
             isVerified: true,
             inReviewQueue: false
           };
-
           candidates.push({
             original: fullOriginal,
             fixed: fixed,
             isChanged: checkIfChanged(fullOriginal, fixed, reviewQueueType)
           });
+        } else {
+          console.warn(`⚠️ [ReviewQueue] Question ID ${idStr} not found`);
         }
-      }
+      });
 
       if (candidates.length === 0) {
         alert('No matching questions found to update or verify.');
@@ -802,10 +748,143 @@ export default function QuestionBank() {
       setReviewQueuePreviewCandidates(candidates);
       setShowReviewQueuePreviewModal(true);
       setShowReviewQueueModal(false);
-
     } catch (error) {
       console.error('Error in review queue apply:', error);
       alert('Error updating questions: ' + error.message);
+    } finally {
+      setIsFixing(false);
+    }
+  };
+
+  const handleMCQFixApply = async () => {
+    console.log('🚀 [QuestionBank] handleMCQFixApply called');
+    if (!mcqFixInputText.trim()) {
+      console.warn('⚠️ [QuestionBank] No input text provided');
+      alert('Please enter commands first.');
+      return;
+    }
+
+    try {
+      setIsFixing(true);
+      const lines = mcqFixInputText.split('\n').map(l => l.trim()).filter(l => l);
+      console.log(`📋 [QuestionBank] Processing ${lines.length} lines`);
+      const candidates = [];
+
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        console.log(`Processing line ${i + 1}: "${line}"`);
+        
+        const firstSpaceIndex = line.indexOf(' ');
+        let idStr = '';
+        let actionStr = '';
+
+        if (firstSpaceIndex === -1) {
+          idStr = line;
+          actionStr = '';
+        } else {
+          idStr = line.substring(0, firstSpaceIndex);
+          actionStr = line.substring(firstSpaceIndex + 1).trim().toLowerCase();
+        }
+        
+        if (idStr.endsWith(':')) idStr = idStr.slice(0, -1);
+        console.log(`Parsed ID: "${idStr}", Action: "${actionStr}"`);
+
+        let question = questions.find(q => q && q.id && q.id.toString() === idStr);
+        if (!question) {
+          console.log(`🔍 [QuestionBank] Direct match failed for ${idStr}, trying partial...`);
+          question = questions.find(q => q && q.id && (q.id.toString().includes(idStr) || idStr.includes(q.id.toString())));
+        }
+        
+        if (!question) {
+          console.warn(`❌ [QuestionBank] Question not found for ID ${idStr} in local state`);
+          continue;
+        }
+        console.log(`✅ Found question: ${question.id}`);
+
+        const original = { ...question };
+        let fixed = { ...question };
+        let isChanged = false;
+        let finalAction = '';
+
+        if (actionStr.includes('delete')) {
+          console.log(`Action: DELETE`);
+          fixed = { ...question, isDeleted: true };
+          isChanged = true;
+          finalAction = 'delete';
+        } else {
+          const correctMatch = actionStr.match(/correct[:\s]+([a-d])/);
+          if (correctMatch) {
+            const newCorrect = correctMatch[1];
+            console.log(`Action: CORRECT to ${newCorrect}`);
+            fixed = {
+              ...question,
+              correctAnswer: newCorrect,
+              options: (question.options || []).map(opt => ({
+                ...opt,
+                isCorrect: opt.label === newCorrect
+              })),
+              isVerified: true,
+              inReviewQueue: false
+            };
+            if (question.correctAnswer !== newCorrect) isChanged = true;
+            finalAction = `correct:${newCorrect}`;
+          } else {
+            // Default action: delete
+            console.log(`Action: Defaulting to DELETE (no valid action found)`);
+            fixed = { ...question, isDeleted: true };
+            isChanged = true;
+            finalAction = 'delete';
+          }
+        }
+
+        if (finalAction) {
+          console.log(`Adding to candidates: ${finalAction} for ${question.id}`);
+          candidates.push({ original, fixed, isChanged, action: finalAction });
+        } else {
+          console.warn(`⚠️ [QuestionBank] Line ${i + 1} had no recognized action`);
+        }
+      }
+
+      console.log(`🏁 [QuestionBank] Total candidates found: ${candidates.length}`);
+      if (candidates.length === 0) {
+        alert('No valid commands found.');
+        return;
+      }
+
+      setMcqFixPreviewCandidates(candidates);
+      setShowMCQFixPreviewModal(true);
+      setShowMCQFixModal(false);
+    } catch (error) {
+      console.error('❌ [QuestionBank] Error processing MCQ fix commands:', error);
+      alert('Error processing commands: ' + error.message);
+    } finally {
+      setIsFixing(false);
+    }
+  };
+
+  const confirmMCQFixApply = async () => {
+    try {
+      setIsFixing(true);
+      let successCount = 0;
+      let failCount = 0;
+      for (const candidate of mcqFixPreviewCandidates) {
+        const { original, fixed, action } = candidate;
+        try {
+          if (action === 'delete') {
+            await deleteQuestion(original.id);
+          } else {
+            await updateQuestion(fixed);
+          }
+          successCount++;
+        } catch (err) {
+          failCount++;
+        }
+      }
+      alert(`✅ Applied ${successCount} changes. ${failCount} failed.`);
+      setMcqFixPreviewCandidates([]);
+      setShowMCQFixPreviewModal(false);
+    } catch (error) {
+      alert('Error applying changes: ' + error.message);
     } finally {
       setIsFixing(false);
     }
@@ -3190,6 +3269,29 @@ export default function QuestionBank() {
     } catch (error) {
       console.error('Error removing from queue:', error);
       alert('Error removing from queue. Please try again.');
+    }
+  };
+
+  const [fixCommand, setFixCommand] = useState('');
+  const [fixResult, setFixResult] = useState(null);
+
+  const handleFixMCQ = async () => {
+    if (!fixCommand.trim()) {
+      alert('Please enter a command (e.g., "123 correct:b" or "456 delete")');
+      return;
+    }
+    try {
+      const result = await fixMCQ(fixCommand);
+      setFixResult(result);
+      if (result.success) {
+        alert(`✅ ${result.message}`);
+        setFixCommand('');
+      } else {
+        alert(`❌ ${result.message}`);
+      }
+    } catch (error) {
+      console.error('Error fixing MCQ:', error);
+      alert('Error fixing MCQ. Please try again.');
     }
   };
 
@@ -6203,6 +6305,21 @@ export default function QuestionBank() {
           </button>
 
           <button 
+            onClick={() => setShowMCQFixModal(true)}
+            style={{
+              backgroundColor: '#8e44ad',
+              color: 'white',
+              padding: '10px 20px',
+              borderRadius: '6px',
+              border: 'none',
+              cursor: 'pointer',
+              fontWeight: '600'
+            }}
+          >
+            🔧 MCQ Fix
+          </button>
+
+          <button 
             onClick={toggleSelectionMode}
             style={{
               backgroundColor: selectionMode ? '#6c757d' : '#007bff',
@@ -6359,7 +6476,7 @@ export default function QuestionBank() {
                 ✓ De-queue ({selectedQuestions.length})
               </button>
               
-              <button 
+<button 
                 onClick={bulkDelete}
                 disabled={selectedQuestions.length === 0}
                 style={{
@@ -6374,8 +6491,40 @@ export default function QuestionBank() {
               >
                 🗑 Delete Selected ({selectedQuestions.length})
               </button>
-              
-              <span style={{ 
+
+              <div style={{ display: 'flex', alignItems: 'center', gap: '5px', marginLeft: '10px' }}>
+                <input
+                  type="text"
+                  value={fixCommand}
+                  onChange={(e) => setFixCommand(e.target.value)}
+                  placeholder="ID correct:a or ID delete"
+                  onKeyDown={(e) => e.key === 'Enter' && handleFixMCQ()}
+                  style={{
+                    padding: '8px 10px',
+                    borderRadius: '4px',
+                    border: '1px solid #ddd',
+                    width: '150px',
+                    fontSize: '13px'
+                  }}
+                />
+                <button
+                  onClick={handleFixMCQ}
+                  style={{
+                    backgroundColor: '#9b59b6',
+                    color: 'white',
+                    padding: '8px 12px',
+                    borderRadius: '4px',
+                    border: 'none',
+                    cursor: 'pointer',
+                    fontWeight: '600',
+                    fontSize: '13px'
+                  }}
+                >
+                  🔧 Fix
+                </button>
+              </div>
+               
+              <span style={{
                 marginLeft: 'auto', 
                 fontWeight: '600', 
                 color: selectedQuestions.length > 0 ? '#007bff' : '#666'
@@ -7432,6 +7581,103 @@ export default function QuestionBank() {
         </div>
       )}
 
+      {/* MCQ Fix Modal */}
+      {showMCQFixModal && (
+        <div style={{
+          position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
+          backgroundColor: 'rgba(0,0,0,0.75)', display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 10000, padding: '20px'
+        }}>
+          <div style={{
+            backgroundColor: 'white', padding: '25px', borderRadius: '12px', width: '100%', maxWidth: '600px', display: 'flex', flexDirection: 'column'
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
+              <h2 style={{ margin: 0 }}>🔧 MCQ Quick Fix</h2>
+              <button onClick={() => setShowMCQFixModal(false)} style={{ background: 'none', border: 'none', fontSize: '24px', cursor: 'pointer' }}>✕</button>
+            </div>
+            <p style={{ color: '#666', marginBottom: '15px', fontSize: '14px' }}>
+              Enter one command per line:<br/>
+              - <code>[ID] delete</code>: Mark for deletion<br/>
+              - <code>[ID] correct:a/b/c/d</code>: Set correct answer
+            </p>
+            <textarea 
+              value={mcqFixInputText}
+              onChange={e => setMcqFixInputText(e.target.value)}
+              placeholder="123 correct:b&#10;456 delete"
+              rows={10}
+              style={{ width: '100%', padding: '12px', borderRadius: '6px', border: '1px solid #ddd', marginBottom: '20px', fontFamily: 'monospace' }}
+            />
+            <div style={{ display: 'flex', gap: '10px', justifyContent: 'flex-end' }}>
+              <button onClick={() => setShowMCQFixModal(false)} style={{ padding: '10px 20px', borderRadius: '6px', border: '1px solid #ccc', backgroundColor: 'white', cursor: 'pointer' }}>Cancel</button>
+              <button onClick={handleMCQFixApply} disabled={isFixing} style={{ padding: '10px 20px', borderRadius: '6px', border: 'none', backgroundColor: '#8e44ad', color: 'white', fontWeight: 'bold', cursor: isFixing ? 'not-allowed' : 'pointer' }}>
+                {isFixing ? '⏳ Processing...' : 'Preview Changes'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* MCQ Fix Preview Modal */}
+      {showMCQFixPreviewModal && (
+        <div style={{
+          position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
+          backgroundColor: 'rgba(0,0,0,0.85)', display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 10001, padding: '20px'
+        }}>
+          <div style={{
+            backgroundColor: 'white', padding: '25px', borderRadius: '12px', width: '100%', maxWidth: '900px', maxHeight: '90vh', display: 'flex', flexDirection: 'column'
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px', borderBottom: '1px solid #eee', paddingBottom: '10px' }}>
+              <h2 style={{ margin: 0 }}>🔍 Preview MCQ Fixes</h2>
+              <button onClick={() => setShowMCQFixPreviewModal(false)} style={{ background: 'none', border: 'none', fontSize: '24px', cursor: 'pointer' }}>✕</button>
+            </div>
+            <div style={{ flex: 1, overflowY: 'auto', marginBottom: '20px' }}>
+              {mcqFixPreviewCandidates.map((c, i) => (
+                <div key={i} style={{ 
+                  padding: '15px', border: '1px solid #eee', borderRadius: '8px', marginBottom: '10px', 
+                  backgroundColor: c.isChanged ? '#fffcf5' : '#f9f9f9',
+                  borderLeft: c.isChanged ? '4px solid #f1c40f' : '4px solid #ddd'
+                }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
+                    <span style={{ fontWeight: 'bold' }}>Question ID: {c.original.id}</span>
+                    <span style={{ 
+                      fontSize: '12px', padding: '2px 8px', borderRadius: '4px', 
+                      backgroundColor: c.action === 'delete' ? '#f8d7da' : '#d1ecf1', 
+                      color: c.action === 'delete' ? '#721c24' : '#0c5460' 
+                    }}>
+                      {c.action === 'delete' ? '🗑️ DELETE' : `🎯 CORRECT: ${c.fixed.correctAnswer.toUpperCase()}`}
+                    </span>
+                  </div>
+                  <div style={{ fontSize: '14px', marginBottom: '10px' }}>{c.original.questionText}</div>
+                  <div style={{ display: 'flex', gap: '20px', fontSize: '13px' }}>
+                    <div>
+                      <div style={{ color: '#999', fontSize: '11px' }}>BEFORE:</div>
+                      <span style={{ color: c.isChanged ? '#e74c3c' : '#666', textDecoration: c.isChanged ? 'line-through' : 'none' }}>
+                        {c.original.correctAnswer || 'None'}
+                      </span>
+                    </div>
+                    <div>
+                      <div style={{ color: '#999', fontSize: '11px' }}>AFTER:</div>
+                      <span style={{ color: '#27ae60', fontWeight: 'bold' }}>
+                        {c.action === 'delete' ? 'DELETED' : (c.fixed.correctAnswer || 'None')}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div style={{ display: 'flex', gap: '15px', justifyContent: 'flex-end' }}>
+              <button onClick={() => setShowMCQFixPreviewModal(false)} style={{ padding: '12px 24px', borderRadius: '8px', border: '1px solid #ccc', backgroundColor: 'white', cursor: 'pointer', fontWeight: 'bold' }}>
+                Back to Editor
+              </button>
+              <button onClick={confirmMCQFixApply} disabled={isFixing} style={{ 
+                padding: '12px 24px', borderRadius: '8px', border: 'none', backgroundColor: '#27ae60', color: 'white', fontWeight: 'bold', 
+                fontSize: '18px', cursor: isFixing ? 'not-allowed' : 'pointer', boxShadow: '0 4px 10px rgba(39, 174, 96, 0.3)' 
+              }}>
+                {isFixing ? '⏳ Applying...' : `✅ Confirm & Apply ${mcqFixPreviewCandidates.length} Fixes`}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       {/* Selection Mode Batch Actions */}
       {selectedQuestionForModal && (
         <div style={{

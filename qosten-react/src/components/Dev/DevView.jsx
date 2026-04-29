@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { reportApi } from '../../services/reportApi';
+import { useQuestions } from '../../context/QuestionContext';
 import './DevView.css';
 
 export default function DevView() {
   const navigate = useNavigate();
-  const [activeTab, setActiveTab] = useState('reports'); // 'reports', 'chats', 'users', 'flagged'
+  const [activeTab, setActiveTab] = useState('reports'); // 'reports', 'chats', 'users', 'flagged', 'mcqfix'
   const [reports, setReports] = useState([]);
   const [chats, setChats] = useState([]);
   const [users, setUsers] = useState([]);
@@ -767,6 +768,9 @@ export default function DevView() {
         </button>
         <button className={`sub-tab ${activeTab === 'flagged' ? 'active' : ''}`} onClick={() => setActiveTab('flagged')}>
           🚩 Flagged ({flagged.subtopics.length + flagged.questions.length + flagged.labs.length})
+        </button>
+        <button className={`sub-tab ${activeTab === 'mcqfix' ? 'active' : ''}`} onClick={() => setActiveTab('mcqfix')}>
+          🔧 MCQ Fixer
         </button>
       </div>
 

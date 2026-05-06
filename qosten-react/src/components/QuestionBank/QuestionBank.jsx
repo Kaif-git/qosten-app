@@ -13,6 +13,7 @@ import { detectAndFixCQ } from '../../utils/cqFixUtils';
 import { detectAndFixMCQOptions } from '../../utils/mcqFixUtils';
 import { performImageMigration, getMigrationPreview } from '../../utils/imageMigration';
 import { processImage } from '../../utils/imageProcessor';
+import ProcessChapterModal from './ProcessChapterModal';
 
 // Helper to fix corrupted MCQ format
 const fixCorruptedMCQ = (text) => {
@@ -272,6 +273,7 @@ export default function QuestionBank() {
   const [lastSelectedId, setLastSelectedId] = useState(null); // Track last selected for shift-click
 
   const [showBulkMetadataEditor, setShowBulkMetadataEditor] = useState(false);
+  const [showProcessChapterModal, setShowProcessChapterModal] = useState(false);
   const [bulkMetadata, setBulkMetadata] = useState({ subject: '', chapter: '', lesson: '', board: '' });
   const [showDuplicateModal, setShowDuplicateModal] = useState(false);
   const [duplicateResultsFilters, setDuplicateResultsFilters] = useState({ subject: '', chapter: '', type: '' });
@@ -6037,6 +6039,22 @@ export default function QuestionBank() {
           >
             🔍 Duplicate Detector
           </button>
+          
+          <button
+            onClick={() => setShowProcessChapterModal(true)}
+            style={{
+              backgroundColor: '#e67e22',
+              color: 'white',
+              padding: '10px 20px',
+              borderRadius: '6px',
+              border: 'none',
+              cursor: 'pointer',
+              fontWeight: '600',
+              marginRight: '10px'
+            }}
+          >
+            Process Chapter
+          </button>
 
           <button
             onClick={handleFixCorruptedMCQs}
@@ -6548,14 +6566,14 @@ export default function QuestionBank() {
             <SearchFilters />
             <div style={{marginBottom: '15px', marginTop: '10px', display: 'flex', justifyContent: 'flex-end', gap: '10px', alignItems: 'center'}}>
                 {fetchStatus && <span style={{fontSize: '12px', color: '#666'}}>{fetchStatus}</span>}
-                <button 
+                <button
                     onClick={handleSyncAllMetadata}
                     disabled={isSyncingMetadata || isFetchingAll || isFetchingMore}
                     style={{
-                        padding: '10px 20px', 
-                        backgroundColor: '#9b59b6', 
-                        color: 'white', 
-                        border: 'none', 
+                        padding: '10px 20px',
+                        backgroundColor: '#9b59b6',
+                        color: 'white',
+                        border: 'none',
                         borderRadius: '5px',
                         cursor: (isSyncingMetadata || isFetchingAll || isFetchingMore) ? 'wait' : 'pointer',
                         fontWeight: 'bold',
@@ -6566,14 +6584,14 @@ export default function QuestionBank() {
                 >
                     {isSyncingMetadata ? '🔄 Syncing Stats...' : '🔄 Deep Sync Stats'}
                 </button>
-                <button 
+                <button
                     onClick={handleFetchAll}
                     disabled={isFetchingAll || isFetchingMore}
                     style={{
-                        padding: '10px 20px', 
-                        backgroundColor: '#e67e22', 
-                        color: 'white', 
-                        border: 'none', 
+                        padding: '10px 20px',
+                        backgroundColor: '#e67e22',
+                        color: 'white',
+                        border: 'none',
                         borderRadius: '5px',
                         cursor: (isFetchingAll || isFetchingMore) ? 'wait' : 'pointer',
                         fontWeight: 'bold',
@@ -6584,6 +6602,14 @@ export default function QuestionBank() {
                 >
                     {isFetchingAll ? '⏳ Fetching All...' : '📥 Fetch All (Remaining)'}
                 </button>
+                {showProcessChapterModal && (
+                  <ProcessChapterModal
+                    isOpen={showProcessChapterModal}
+                    onClose={() => setShowProcessChapterModal(false)}
+                    subject={currentFilters.subject}
+                    questions={questions}
+                  />
+                )}
                 <button 
                     onClick={handleFetchMore}
                     disabled={isFetchingAll || isFetchingMore}

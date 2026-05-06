@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { reportApi } from '../../services/reportApi';
-import { useQuestions } from '../../context/QuestionContext';
 import './DevView.css';
 
 export default function DevView() {

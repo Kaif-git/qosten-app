@@ -3275,7 +3275,6 @@ export default function QuestionBank() {
   };
 
   const [fixCommand, setFixCommand] = useState('');
-  const [fixResult, setFixResult] = useState(null);
 
   const handleFixMCQ = async () => {
     if (!fixCommand.trim()) {
@@ -3284,7 +3283,6 @@ export default function QuestionBank() {
     }
     try {
       const result = await fixMCQ(fixCommand);
-      setFixResult(result);
       if (result.success) {
         alert(`✅ ${result.message}`);
         setFixCommand('');

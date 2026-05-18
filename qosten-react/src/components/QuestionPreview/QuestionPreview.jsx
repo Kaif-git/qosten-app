@@ -56,7 +56,7 @@ const EasyCropper = ({
         cropAreaRef.current = cropArea;
     }, [cropArea, cropAreaRef]);
 
-    const updateCropBoxDOM = useCallback((x, y, w, h) => {
+  const updateCropBoxDOM = useCallback((x, y, w, h) => {
         if (cropBoxRef.current) {
             cropBoxRef.current.style.left = `${x}px`;
             cropBoxRef.current.style.top = `${y}px`;
@@ -516,6 +516,48 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   useEffect(() => {
       zoomLevelRef.current = zoomLevel;
   }, [zoomLevel]);
+
+  const handleMergeImages = useCallback(async () => {
+    const urls = [...selectedMdImages];
+    if (urls.length < 2) return;
+    try {
+      const loaded = await Promise.all(urls.map(url => new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve(img);
+        img.onerror = reject;
+        img.src = url;
+      })));
+      const maxWidth = Math.max(...loaded.map(img => img.width));
+      const totalHeight = loaded.reduce((sum, img) => sum + img.height, 0);
+      const canvas = document.createElement('canvas');
+      canvas.width = maxWidth;
+      canvas.height = totalHeight;
+      const ctx = canvas.getContext('2d');
+      let y = 0;
+      for (const img of loaded) {
+        ctx.drawImage(img, Math.floor((maxWidth - img.width) / 2), y);
+        y += img.height;
+      }
+      setMergedImageUrl(canvas.toDataURL('image/png'));
+    } catch (err) {
+      console.error('Merge failed:', err);
+    }
+  }, [selectedMdImages]);
+
+  useEffect(() => {
+    if (!mdContainerRef.current) return;
+    const imgs = mdContainerRef.current.querySelectorAll('img');
+    imgs.forEach(img => {
+      if (selectedMdImages.has(img.src)) {
+        img.style.outline = '3px solid #3498db';
+        img.style.outlineOffset = '2px';
+        img.style.borderRadius = '4px';
+      } else {
+        img.style.outline = 'none';
+        img.style.outlineOffset = '0';
+      }
+    });
+  }, [selectedMdImages, mdInput]);
 
   const updateCropBoxDOM = useCallback((x, y, w, h) => {
     if (cropBoxRef.current) {
@@ -2039,34 +2081,6 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     }
   };
 
-  const handleMergeImages = useCallback(async () => {
-    const urls = [...selectedMdImages];
-    if (urls.length < 2) return;
-    try {
-      const loaded = await Promise.all(urls.map(url => new Promise((resolve, reject) => {
-        const img = new Image();
-        img.onload = () => resolve(img);
-        img.onerror = reject;
-        img.src = url;
-      })));
-      const maxWidth = Math.max(...loaded.map(img => img.width));
-      const totalHeight = loaded.reduce((sum, img) => sum + img.height, 0);
-      const canvas = document.createElement('canvas');
-      canvas.width = maxWidth;
-      canvas.height = totalHeight;
-      const ctx = canvas.getContext('2d');
-      let y = 0;
-      for (const img of loaded) {
-        ctx.drawImage(img, Math.floor((maxWidth - img.width) / 2), y);
-        y += img.height;
-      }
-      setMergedImageUrl(canvas.toDataURL('image/png'));
-    } catch (err) {
-      console.error('Merge failed:', err);
-      alert('Failed to merge images. Some images may have cross-origin restrictions.');
-    }
-  }, [selectedMdImages]);
-
   const renderMarkdownContent = () => {
     if (!mdInput.trim()) return null;
     const html = renderMarkdownHTML(mdInput);
@@ -2089,21 +2103,6 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       />
     );
   };
-
-  useEffect(() => {
-    if (!mdContainerRef.current) return;
-    const imgs = mdContainerRef.current.querySelectorAll('img');
-    imgs.forEach(img => {
-      if (selectedMdImages.has(img.src)) {
-        img.style.outline = '3px solid #3498db';
-        img.style.outlineOffset = '2px';
-        img.style.borderRadius = '4px';
-      } else {
-        img.style.outline = 'none';
-        img.style.outlineOffset = '0';
-      }
-    });
-  }, [selectedMdImages, mdInput]);
 
   if (isEasyImageMode) {
       return (

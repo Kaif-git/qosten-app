@@ -398,8 +398,18 @@ export const questionApi = {
     return { successCount };
   },
   
-  // Bulk update helper
-  async bulkUpdateQuestions(questions) {
+   // Proxy an external image through our server (bypasses CORS + signed URL restrictions)
+   async proxyImage(url) {
+     const response = await fetch(`${API_BASE_URL}/proxy-image?url=${encodeURIComponent(url)}`);
+     if (!response.ok) {
+       const text = await response.text();
+       throw new Error(`Proxy failed: ${response.status} ${text}`);
+     }
+     return await response.blob();
+   },
+
+   // Bulk update helper
+   async bulkUpdateQuestions(questions) {
      // Try a bulk endpoint first if it existed, but we'll use parallel requests for now
      // or a custom bulk endpoint if the user specified. 
      // We will use parallel promises with concurrency control could be better, 

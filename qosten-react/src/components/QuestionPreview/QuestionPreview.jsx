@@ -6,6 +6,7 @@ import { parseCQQuestions } from '../../utils/cqParser';
 import * as pdfjsLib from 'pdfjs-dist';
 import { processImage } from '../../utils/imageProcessor';
 import { renderMarkdownHTML } from '../../utils/markdownRenderer';
+import { questionApi } from '../../services/questionApi';
 import 'katex/dist/katex.min.css';
 
 // Set up PDF.js worker using unpkg CDN with matching version
@@ -523,10 +524,12 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     if (urls.length < 2) return;
 
     const fetchAsBlob = async (url) => {
-      // Try direct CORS fetch first
-      const resp = await fetch(url, { mode: 'cors', cache: 'force-cache' });
-      if (resp.ok) return await resp.blob();
-      throw new Error('Direct fetch failed');
+      try {
+        const resp = await fetch(url, { mode: 'cors', cache: 'force-cache' });
+        if (resp.ok) return await resp.blob();
+      } catch (_) {}
+      // Fallback: proxy through our own API (bypasses CORS + signed URL restrictions)
+      return await questionApi.proxyImage(url);
     };
 
     try {
@@ -551,7 +554,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       setMergedImageUrl(canvas.toDataURL('image/png'));
     } catch (err) {
       console.error('Merge failed:', err);
-      alert('The image server blocks cross-origin access. Use "Download Images" first from your browser\'s context menu, then upload them directly via the cropper tab.');
+      alert('Failed to merge images. Try downloading them first and uploading through the Upload tab.');
     }
   }, [selectedMdImages]);
 

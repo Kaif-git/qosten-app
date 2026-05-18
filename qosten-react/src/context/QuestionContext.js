@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useReducer, useEffect, useRef, useCallback, useMemo } from 'react';
-import { supabase } from '../services/supabaseClient';
+import { supabase, supabaseUrl } from '../services/supabaseClient';
 import { questionApi } from '../services/questionApi';
 
 // Initial state
@@ -120,6 +120,25 @@ export const cleanText = (text) => {
 };
 
 // Helper to convert base64 to Blob
+const fetchImageWithFallback = async (url) => {
+  // Try direct fetch first (works for CORS-friendly servers)
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    return await response.blob();
+  } catch (directErr) {
+    console.warn('  ⚠️ Direct fetch failed, trying server-side proxy:', directErr.message);
+  }
+
+  // Fallback: proxy through our own API (bypasses CORS + signed URL restrictions)
+  try {
+    const blob = await questionApi.proxyImage(url);
+    return blob;
+  } catch (proxyErr) {
+    throw new Error(`Failed to fetch image via direct and proxy: ${proxyErr.message}`);
+  }
+};
+
 const base64ToBlob = async (base64Data) => {
   const res = await fetch(base64Data);
   return await res.blob();
@@ -471,11 +490,20 @@ export function QuestionProvider({ children }) {
     }
   }, []);
 
+  const supabaseBucketUrl = useMemo(() => {
+    if (!supabase) return null;
+    const { data } = supabase.storage.from('question-images').getPublicUrl('_dummy_');
+    if (data?.publicUrl) {
+      return data.publicUrl.replace('_dummy_', '');
+    }
+    return `${supabaseUrl}/storage/v1/object/public/question-images/`;
+  }, []);
+
   const uploadImageToSupabase = useCallback(async (fileOrBase64) => {
     if (!supabase || !fileOrBase64) return null;
     
-    // If it's already a public URL, skip upload
-    if (typeof fileOrBase64 === 'string' && (fileOrBase64.startsWith('http') && !fileOrBase64.includes('blob:'))) {
+    // If it's already a URL from our own bucket, skip upload
+    if (typeof fileOrBase64 === 'string' && supabaseBucketUrl && fileOrBase64.startsWith(supabaseBucketUrl)) {
         return fileOrBase64;
     }
 
@@ -485,15 +513,25 @@ export function QuestionProvider({ children }) {
         let fileToUpload = fileOrBase64;
         let mimeType = 'image/jpeg'; 
         
-        if (typeof fileOrBase64 === 'string' && (fileOrBase64.startsWith('data:') || fileOrBase64.startsWith('blob:'))) {
+        if (typeof fileOrBase64 === 'string') {
             if (fileOrBase64.startsWith('data:')) {
                 const matches = fileOrBase64.match(/^data:(.+);base64,/);
                 if (matches && matches[1]) {
                     mimeType = matches[1];
                 }
+                fileToUpload = await base64ToBlob(fileOrBase64);
+                console.log('  ✅ Converted data URL to Blob. Type:', fileToUpload.type, 'Size:', fileToUpload.size);
+            } else if (fileOrBase64.startsWith('blob:')) {
+                fileToUpload = await base64ToBlob(fileOrBase64);
+                console.log('  ✅ Converted blob URL to Blob. Type:', fileToUpload.type, 'Size:', fileToUpload.size);
+            } else if (fileOrBase64.startsWith('http')) {
+                // External HTTP URL — download and re-upload to own bucket
+                console.log('  🌐 Fetching external image:', fileOrBase64.substring(0, 60) + '...');
+                const blob = await fetchImageWithFallback(fileOrBase64);
+                fileToUpload = blob;
+                mimeType = blob.type || 'image/jpeg';
+                console.log('  ✅ Fetched external image. Type:', mimeType, 'Size:', blob.size);
             }
-            fileToUpload = await base64ToBlob(fileOrBase64);
-            console.log('  ✅ Converted string/URL to Blob. Type:', fileToUpload.type, 'Size:', fileToUpload.size);
         }
         
         const ext = mimeType.split('/')[1] || 'jpg';
@@ -529,7 +567,18 @@ export function QuestionProvider({ children }) {
         console.error('  ❌ Image upload failed:', error);
         throw error;
     }
-  }, []);
+  }, [supabaseBucketUrl]);
+
+  const tryUploadImage = useCallback(async (imageUrl, label) => {
+    if (!imageUrl) return null;
+    try {
+      const url = await uploadImageToSupabase(imageUrl);
+      return url;
+    } catch (e) {
+      console.warn(`  ⚠️ Failed to upload ${label}, setting to null:`, e.message);
+      return null;
+    }
+  }, [uploadImageToSupabase]);
 
   const processQuestionImages = useCallback(async (question) => {
       console.log('🖼️ [QuestionContext] processQuestionImages: Starting for question:', question.id || 'new');
@@ -560,11 +609,8 @@ export function QuestionProvider({ children }) {
       }
 
       // 2. Process Main Image
-      if (q.image && (q.image.startsWith('data:') || q.image.startsWith('blob:'))) {
-          console.log('  - Uploading main image...');
-          q.image = await uploadImageToSupabase(q.image);
-      }
-      
+      q.image = await tryUploadImage(q.image, 'main image');
+
       // 3. Process CQ Parts (uploads any new images)
       if (q.parts && Array.isArray(q.parts)) {
           console.log(`  - Processing ${q.parts.length} CQ parts...`);
@@ -572,12 +618,16 @@ export function QuestionProvider({ children }) {
           for (let idx = 0; idx < q.parts.length; idx++) {
               const p = q.parts[idx];
               const updatedPart = { ...p };
-              const imageToUpload = p.answerImage || p.image;
-              if (imageToUpload && (imageToUpload.startsWith('data:') || imageToUpload.startsWith('blob:'))) {
-                  console.log(`    - Part ${idx} (${p.letter}): Uploading image...`);
-                  const url = await uploadImageToSupabase(imageToUpload);
-                  updatedPart.image = url;
-                  updatedPart.answerImage = url;
+              const uploaded = await tryUploadImage(
+                p.answerImage || p.image,
+                `part ${idx} (${p.letter})`
+              );
+              if (uploaded) {
+                updatedPart.image = uploaded;
+                updatedPart.answerImage = uploaded;
+              } else {
+                updatedPart.image = null;
+                updatedPart.answerImage = null;
               }
               updatedParts.push(updatedPart);
           }
@@ -597,10 +647,7 @@ export function QuestionProvider({ children }) {
       // 4. Process Legacy Answer Images (double check)
       const legacyFields = ['answerimage1', 'answerimage2', 'answerimage3', 'answerimage4'];
       for (const field of legacyFields) {
-          if (q[field] && (q[field].startsWith('data:') || q[field].startsWith('blob:'))) {
-              console.log(`  - Uploading legacy ${field}...`);
-              q[field] = await uploadImageToSupabase(q[field]);
-          }
+          q[field] = await tryUploadImage(q[field], `legacy ${field}`);
       }
 
       // 5. Process MCQ Options
@@ -608,17 +655,14 @@ export function QuestionProvider({ children }) {
           console.log(`  - Processing ${q.options.length} MCQ options...`);
           q.options = await Promise.all(q.options.map(async (opt, idx) => {
               const updatedOpt = { ...opt };
-              if (opt.image && (opt.image.startsWith('data:') || opt.image.startsWith('blob:'))) {
-                  console.log(`    - Option ${idx} (${opt.label}): Uploading image...`);
-                  updatedOpt.image = await uploadImageToSupabase(opt.image);
-              }
+              updatedOpt.image = await tryUploadImage(opt.image, `option ${idx} (${opt.label})`);
               return updatedOpt;
           }));
       }
       
       console.log('🖼️ [QuestionContext] processQuestionImages: Finished.');
       return q;
-  }, [uploadImageToSupabase]);
+  }, [tryUploadImage]);
 
   // --- 2. Effects ---
 

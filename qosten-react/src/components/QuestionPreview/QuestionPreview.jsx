@@ -5,6 +5,8 @@ import { useQuestions } from '../../context/QuestionContext';
 import { parseCQQuestions } from '../../utils/cqParser';
 import * as pdfjsLib from 'pdfjs-dist';
 import { processImage } from '../../utils/imageProcessor';
+import { renderMarkdownHTML } from '../../utils/markdownRenderer';
+import 'katex/dist/katex.min.css';
 
 // Set up PDF.js worker using unpkg CDN with matching version
 pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.mjs`;
@@ -492,12 +494,17 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   const [rotation, setRotation] = useState(0); // Rotation in degrees (0, 90, 180, 270)
   const [isEasyImageMode, setIsEasyImageMode] = useState(false); // New Easy Image Mode
   const [isRenderingPage, setIsRenderingPage] = useState(false); // PDF render loading state
+  const [easySourceMode, setEasySourceMode] = useState('cropper'); // 'cropper' | 'markdown'
+  const [mdInput, setMdInput] = useState('');
+  const [selectedMdImages, setSelectedMdImages] = useState(new Set());
+  const [mergedImageUrl, setMergedImageUrl] = useState(null);
   const pdfDocumentRef = useRef(null); // Cache for PDF document object
   const imageRef = useRef(null);
   const cropBoxRef = useRef(null); // Ref for the crop box DOM element
   const frameId = useRef(null);
   const isDraggingRef = useRef(false); // Use ref for dragging state to avoid re-renders
   const dragStartRef = useRef({ x: 0, y: 0 }); // Use ref for drag start to avoid re-renders
+  const mdContainerRef = useRef(null);
   
   // Performance Optimization Refs
   const debounceTimer = useRef(null);
@@ -850,6 +857,19 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   };
 
   const handleCropAndAssign = useCallback((qIndex, targetType, partIndex = null) => {
+    if (easySourceMode === 'markdown') {
+      const imgUrl = mergedImageUrl || (selectedMdImages.size === 1 ? [...selectedMdImages][0] : null);
+      if (!imgUrl) { alert('Select one image (or merge multiple) first.'); return; }
+      if (targetType === 'stem') {
+        updateQuestion(qIndex, 'image', imgUrl);
+      } else if (targetType === 'part' && partIndex !== null) {
+        updateQuestionPart(qIndex, partIndex, 'answerImage', imgUrl);
+      }
+      setMergedImageUrl(null);
+      setSelectedMdImages(new Set());
+      return;
+    }
+
     if (!imageRef.current) return;
     
     const img = imageRef.current;
@@ -904,7 +924,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
           updateQuestionPart(qIndex, partIndex, 'answerImage', croppedImageUrl);
       }
     });
-  }, [updateQuestion, updateQuestionPart]);
+  }, [updateQuestion, updateQuestionPart, easySourceMode, selectedMdImages, mergedImageUrl]);
 
   console.log('[Performance] QuestionPreview Render Start');
   const prevDeps = useRef({ editableQuestions, handleCropAndAssign, updateQuestion, easyVisibleCount: 20 });
@@ -2019,26 +2039,108 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     }
   };
 
+  const handleMergeImages = useCallback(async () => {
+    const urls = [...selectedMdImages];
+    if (urls.length < 2) return;
+    try {
+      const loaded = await Promise.all(urls.map(url => new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve(img);
+        img.onerror = reject;
+        img.src = url;
+      })));
+      const maxWidth = Math.max(...loaded.map(img => img.width));
+      const totalHeight = loaded.reduce((sum, img) => sum + img.height, 0);
+      const canvas = document.createElement('canvas');
+      canvas.width = maxWidth;
+      canvas.height = totalHeight;
+      const ctx = canvas.getContext('2d');
+      let y = 0;
+      for (const img of loaded) {
+        ctx.drawImage(img, Math.floor((maxWidth - img.width) / 2), y);
+        y += img.height;
+      }
+      setMergedImageUrl(canvas.toDataURL('image/png'));
+    } catch (err) {
+      console.error('Merge failed:', err);
+      alert('Failed to merge images. Some images may have cross-origin restrictions.');
+    }
+  }, [selectedMdImages]);
+
+  const renderMarkdownContent = () => {
+    if (!mdInput.trim()) return null;
+    const html = renderMarkdownHTML(mdInput);
+    return (
+      <div
+        ref={mdContainerRef}
+        onClick={(e) => {
+          const img = e.target.closest('img');
+          if (!img) return;
+          setSelectedMdImages(prev => {
+            const next = new Set(prev);
+            if (next.has(img.src)) next.delete(img.src);
+            else next.add(img.src);
+            return next;
+          });
+          setMergedImageUrl(null);
+        }}
+        dangerouslySetInnerHTML={{ __html: html }}
+        className="md-rendered-content"
+      />
+    );
+  };
+
+  useEffect(() => {
+    if (!mdContainerRef.current) return;
+    const imgs = mdContainerRef.current.querySelectorAll('img');
+    imgs.forEach(img => {
+      if (selectedMdImages.has(img.src)) {
+        img.style.outline = '3px solid #3498db';
+        img.style.outlineOffset = '2px';
+        img.style.borderRadius = '4px';
+      } else {
+        img.style.outline = 'none';
+        img.style.outlineOffset = '0';
+      }
+    });
+  }, [selectedMdImages, mdInput]);
+
   if (isEasyImageMode) {
       return (
         <div className="preview-modal-overlay">
           <div className="preview-modal" style={{ width: '95vw', maxWidth: '95vw', height: '95vh', display: 'flex', flexDirection: 'column', padding: 0, overflow: 'hidden' }}>
              {/* Header with Merged Controls */}
              <div style={{ padding: '10px 15px', borderBottom: '1px solid #ddd', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#f8f9fa', gap: '10px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
-                    <h2 style={{margin: 0, fontSize: '1.1rem', whiteSpace: 'nowrap'}}>📷 Easy Upload</h2>
-                    <span style={{ 
-                        fontSize: '12px', 
-                        backgroundColor: '#e3f2fd', 
-                        color: '#1976d2', 
-                        padding: '4px 10px', 
-                        borderRadius: '12px',
-                        fontWeight: '600',
-                        border: '1px solid #90caf9'
-                    }}>
-                        ✨ Auto-Cut White Parts Active
-                    </span>
-                </div>
+                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
+                     <h2 style={{margin: 0, fontSize: '1.1rem', whiteSpace: 'nowrap'}}>
+                       {easySourceMode === 'markdown' ? '📝 Markdown Assign' : '📷 Easy Upload'}
+                     </h2>
+                     {easySourceMode === 'cropper' ? (
+                       <span style={{ 
+                           fontSize: '12px', 
+                           backgroundColor: '#e3f2fd', 
+                           color: '#1976d2', 
+                           padding: '4px 10px', 
+                           borderRadius: '12px',
+                           fontWeight: '600',
+                           border: '1px solid #90caf9'
+                       }}>
+                           ✨ Auto-Cut White Parts Active
+                       </span>
+                     ) : (
+                       <span style={{ 
+                           fontSize: '12px', 
+                           backgroundColor: '#f3e5f5', 
+                           color: '#7b1fa2', 
+                           padding: '4px 10px', 
+                           borderRadius: '12px',
+                           fontWeight: '600',
+                           border: '1px solid #ce93d8'
+                       }}>
+                         {mergedImageUrl ? '🖼️ Merged' : selectedMdImages.size > 0 ? `🔵 ${selectedMdImages.size} Selected` : '⚪ Click Images'}
+                       </span>
+                     )}
+                 </div>
 
                 <div style={{ display: 'flex', gap: '10px' }}>
                     <button 
@@ -2063,10 +2165,33 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                 </div>
              </div>
              
-             <div className="easy-mode-container">
-                {/* Left Side: Cropper */}
-                <div className="easy-mode-cropper-section">
-                    {!sourceDocument ? (
+              <div className="easy-mode-container">
+                 {/* Left Side: Cropper / Markdown */}
+                 <div className="easy-mode-cropper-section" style={{ display: 'flex', flexDirection: 'column' }}>
+                    {/* Source Mode Tabs */}
+                    <div style={{ display: 'flex', borderBottom: '2px solid #ddd', marginBottom: '6px', flexShrink: 0 }}>
+                      <button onClick={() => setEasySourceMode('cropper')}
+                        style={{
+                          flex: 1, padding: '6px 10px', border: 'none', cursor: 'pointer', fontSize: '13px', fontWeight: 600,
+                          backgroundColor: easySourceMode === 'cropper' ? '#3498db' : '#ecf0f1',
+                          color: easySourceMode === 'cropper' ? 'white' : '#555',
+                          borderTopLeftRadius: '4px', borderTopRightRadius: '4px'
+                        }}>
+                        🖼️ Cropper
+                      </button>
+                      <button onClick={() => setEasySourceMode('markdown')}
+                        style={{
+                          flex: 1, padding: '6px 10px', border: 'none', cursor: 'pointer', fontSize: '13px', fontWeight: 600,
+                          backgroundColor: easySourceMode === 'markdown' ? '#8e44ad' : '#ecf0f1',
+                          color: easySourceMode === 'markdown' ? 'white' : '#555',
+                          borderTopLeftRadius: '4px', borderTopRightRadius: '4px'
+                        }}>
+                        📝 Markdown
+                      </button>
+                    </div>
+
+                    {easySourceMode === 'cropper' ? (
+                      !sourceDocument ? (
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', color: 'white' }}>
                             <h3>Start by Uploading a Source Document</h3>
                             <p style={{color: '#ccc'}}>Upload a PDF or Image to start cropping questions.</p>
@@ -2091,7 +2216,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                               </label>
                             </div>
                         </div>
-                    ) : (
+                      ) : (
                         <EasyCropper 
                             sourceDocument={sourceDocument}
                             sourceDocType={sourceDocType}
@@ -2104,15 +2229,69 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                             cropAreaRef={cropAreaRef}
                             isRenderingPage={isRenderingPage}
                         />
+                      )
+                    ) : (
+                      <div style={{ display: 'flex', flexDirection: 'column', flex: 1, minHeight: 0 }}>
+                        <textarea
+                          value={mdInput}
+                          onChange={e => setMdInput(e.target.value)}
+                          placeholder="Paste markdown content with images here..."
+                          style={{
+                            width: '100%', minHeight: '60px', maxHeight: '80px',
+                            padding: '6px 8px', fontSize: '13px', fontFamily: 'monospace',
+                            border: '1px solid #ccc', borderRadius: '4px',
+                            resize: 'vertical', boxSizing: 'border-box', flexShrink: 0
+                          }}
+                        />
+                        {(selectedMdImages.size > 0 || mergedImageUrl) && (
+                          <div style={{ display: 'flex', gap: '6px', margin: '4px 0', flexShrink: 0 }}>
+                            {selectedMdImages.size >= 2 && (
+                              <button onClick={handleMergeImages} style={{
+                                fontSize: '11px', padding: '4px 10px', backgroundColor: '#8e44ad',
+                                color: 'white', border: 'none', borderRadius: '3px', cursor: 'pointer'
+                              }}>
+                                🖇️ Merge {selectedMdImages.size} Images
+                              </button>
+                            )}
+                            <button onClick={() => { setSelectedMdImages(new Set()); setMergedImageUrl(null); }} style={{
+                              fontSize: '11px', padding: '4px 10px', backgroundColor: '#7f8c8d',
+                              color: 'white', border: 'none', borderRadius: '3px', cursor: 'pointer'
+                            }}>
+                              ✕ Clear Selection
+                            </button>
+                          </div>
+                        )}
+                        {mergedImageUrl && (
+                          <div style={{
+                            textAlign: 'center', margin: '4px 0', padding: '6px',
+                            border: '2px solid #8e44ad', borderRadius: '6px', backgroundColor: '#faf5ff',
+                            flexShrink: 0
+                          }}>
+                            <div style={{ fontSize: '12px', fontWeight: 600, color: '#8e44ad', marginBottom: '4px' }}>
+                              🖼️ Merged Image (click a slot to assign)
+                            </div>
+                            <img src={mergedImageUrl} alt="Merged" style={{ maxWidth: '100%', maxHeight: '160px', borderRadius: '4px' }} />
+                          </div>
+                        )}
+                        <div style={{ flex: 1, overflow: 'auto', border: '1px solid #ddd', borderRadius: '4px', padding: '8px', backgroundColor: '#fafafa' }}>
+                          {mdInput.trim() ? renderMarkdownContent() : (
+                            <div style={{ color: '#999', textAlign: 'center', padding: '40px 0' }}>
+                              Paste markdown above to see rendered images
+                            </div>
+                          )}
+                        </div>
+                      </div>
                     )}
-                </div>
+                 </div>
 
                 {/* Right Side: Question List */}
                 <div className="easy-mode-list-section" style={{ minWidth: '300px' }}>
                     <div style={{marginBottom: '10px'}}>
                         <h3 style={{ margin: 0, color: '#2c3e50' }}>Questions List</h3>
                         <p style={{fontSize: '12px', color: '#7f8c8d', margin: '5px 0 0 0'}}>
-                            Align the crop box on the left, then click the corresponding button below to assign the image.
+                          {easySourceMode === 'markdown'
+                            ? 'Click an image in the markdown panel, then click a button below to assign it.'
+                            : 'Align the crop box on the left, then click the corresponding button below to assign the image.'}
                         </p>
                     </div>
                     {memoizedQuestionList}
@@ -2132,6 +2311,9 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
             <button 
                 onClick={() => {
                     setIsEasyImageMode(true);
+                    setEasySourceMode('cropper');
+                    setSelectedMdImages(new Set());
+                    setMergedImageUrl(null);
                     if (cropArea.width === 0) {
                          setCropArea({ x: 10, y: 10, width: 200, height: 200 });
                     }

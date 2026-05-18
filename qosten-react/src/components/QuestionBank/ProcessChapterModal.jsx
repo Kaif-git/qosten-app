@@ -21,7 +21,15 @@ export default function ProcessChapterModal({ isOpen, onClose, subject, question
   const handleCopy = (chap, type) => {
     const filtered = questions.filter(q => q.subject === subject && (q.chapter || 'Uncategorized') === chap && q.type?.toLowerCase() === type);
     
-    const prompt = `I want you to look at the questions to see if theres any logical error, there are questions that are lacking stem, so the questions have something like "What was Mr Rahim doing" Even tho we havent been told cuz its supposed to be a story or incident cited for us to recogize from, if that happens then at the end of the response just give me the ids, ill delete thse questions. and also sometimes the explanation doesnt match the correct option, if tha thappens then change the correct option letter to the actual correct one. so give me the ids like [id] correct: d or [id] delete or [id] logical error' Always use Question id and not question number because we track it using question id.\n\n`;
+    const prompt = `Review these questions and return ONLY commands in this exact format (one per line):
+ID delete
+ID correct:a/b/c/d
+
+Rules:
+- Delete questions with missing context/stem (e.g., "What was Mr Rahim doing?" without prior story)
+- Fix correct answer if explanation doesn't match current answer
+- Use Question ID only, not question number
+- No extra text, just the commands\n\n`;
 
     const questionsText = filtered.map((q, idx) => {
       let text = `[ID: ${q.id}]\n${idx + 1}. ${q.questionText || q.question || ''}\n`;

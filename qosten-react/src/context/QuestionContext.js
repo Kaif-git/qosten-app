@@ -131,14 +131,13 @@ const base64ToBlob = async (base64Data) => {
 export const mapDatabaseToApp = (q) => {
   if (!q) return null;
   
-  const type = (q.type || 'mcq').toLowerCase();
   const questionText = q.question_text || q.questionText || q.text || q.question || '';
   const imageUrl = q.image_url || q.imageUrl || q.image || null;
 
   // Basic question structure
   const question = {
     id: q.id,
-    type: type,
+    type: q.type || 'mcq',
     text: questionText,
     questionText: questionText,
     subject: q.subject || 'N/A',
@@ -155,7 +154,7 @@ export const mapDatabaseToApp = (q) => {
   };
 
   // Add MCQ specific fields
-  if (type === 'mcq') {
+  if (q.type === 'mcq') {
     let opts = q.options;
     if (typeof opts === 'string') {
         try { opts = JSON.parse(opts); } catch (e) { opts = []; }
@@ -173,7 +172,7 @@ export const mapDatabaseToApp = (q) => {
   }
 
   // Add CQ specific fields
-  if (type === 'cq') {
+  if (q.type === 'cq') {
     question.stem = q.stem || questionText;
     
     // Robust parsing for parts
@@ -232,7 +231,7 @@ export const mapDatabaseToApp = (q) => {
   }
 
   // Add SQ specific fields
-  if (type === 'sq') {
+  if (q.type === 'sq') {
     question.question = questionText;
     question.answer = q.answer || '';
   }
@@ -1001,126 +1000,6 @@ export function QuestionProvider({ children }) {
     }
   }, [refreshHierarchy]);
 
-const fixMCQ = useCallback(async (command) => {
-    console.log('🚀 [QuestionContext] fixMCQ called with command:', command);
-    if (!command || typeof command !== 'string') {
-      console.error('❌ fixMCQ: Invalid command type');
-      return { success: false, message: 'Invalid command' };
-    }
-
-    const trimmed = command.trim();
-    const firstSpaceIndex = trimmed.indexOf(' ');
-    
-    let idStr = '';
-    let actionStr = '';
-
-    if (firstSpaceIndex === -1) {
-      idStr = trimmed;
-      actionStr = '';
-    } else {
-      idStr = trimmed.substring(0, firstSpaceIndex);
-      actionStr = trimmed.substring(firstSpaceIndex + 1).trim().toLowerCase();
-    }
-    
-    if (idStr.endsWith(':')) {
-      idStr = idStr.slice(0, -1);
-    }
-    console.log(`🔍 [QuestionContext] Parsed idStr: "${idStr}", actionStr: "${actionStr}"`);
-
-    // 1. Detection Mechanism
-    let question = null;
-
-    console.log(`🔍 [QuestionContext] Strategy A: Checking state for ID ${idStr}...`);
-    question = state.questions.find(q => q && q.id && q.id.toString() === idStr);
-    if (question) console.log('✅ Found in state (Direct Match)');
-
-    if (!question && /^\d+$/.test(idStr)) {
-      console.log(`🔍 [QuestionContext] Strategy B: API fetch for numeric ID ${idStr}...`);
-      try {
-        const results = await questionApi.fetchQuestionsByIds([idStr]);
-        console.log(`📥 [QuestionContext] API returned ${results?.length || 0} results`);
-        if (results && results.length > 0) {
-          question = results[0];
-          console.log('✅ Found via API fetch');
-        }
-      } catch (err) {
-        console.log(`🔍 [QuestionContext] API fetch failed for ${idStr}:`, err);
-      }
-    }
-
-    if (!question) {
-      console.log(`🔍 [QuestionContext] Strategy C: Trying partial match for ${idStr}...`);
-      question = state.questions.find(q => 
-        q && q.id && (
-          q.id.toString().includes(idStr) || 
-          idStr.includes(q.id.toString())
-        )
-      );
-      if (question) console.log(`✅ Found by partial match: ${question.id}`);
-    }
-
-    if (!question) {
-      console.error(`❌ fixMCQ: Question not found with ID: ${idStr}`);
-      return { success: false, message: `Question ${idStr} not found.` };
-    }
-
-    const finalId = question.id;
-    console.log(`🎯 [QuestionContext] target question identified: ID ${finalId}`);
-
-    // Action handling
-    if (actionStr.includes('delete')) {
-      console.log(`🗑️ [QuestionContext] Executing DELETE for ID: ${finalId}`);
-      try {
-        await questionApi.deleteQuestion(parseInt(finalId));
-        dispatch({ type: ACTIONS.DELETE_QUESTION, payload: parseInt(finalId) });
-        refreshHierarchy();
-        return { success: true, message: `Question ${finalId} deleted` };
-      } catch (error) {
-        console.error('❌ Error in fixMCQ delete:', error);
-        return { success: false, message: error.message };
-      }
-    }
-
-    const correctMatch = actionStr.match(/correct[:\s]+([a-d])/);
-    if (correctMatch) {
-      const newCorrect = correctMatch[1];
-      console.log(`✏️ [QuestionContext] Executing CORRECT: ${newCorrect} for ID: ${finalId}`);
-      
-      const updatedQuestion = {
-        ...question,
-        correctAnswer: newCorrect,
-        options: (question.options || []).map(opt => ({
-          ...opt,
-          isCorrect: opt.label === newCorrect
-        })),
-        isVerified: true,
-        inReviewQueue: false
-      };
-
-      try {
-        const dbQ = mapAppToDatabase(updatedQuestion);
-        await questionApi.updateQuestion(parseInt(finalId), dbQ);
-        dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: updatedQuestion });
-        return { success: true, message: `Question ${finalId} correct answer set to ${newCorrect}` };
-      } catch (error) {
-        console.error('❌ Error in fixMCQ correct:', error);
-        return { success: false, message: error.message };
-      }
-    }
-
-    // Default action: if an ID was found but no "correct" or "delete", treat as delete per user request
-    console.log(`🗑️ [QuestionContext] No action specified for ID ${finalId}, defaulting to DELETE`);
-    try {
-      await questionApi.deleteQuestion(parseInt(finalId));
-      dispatch({ type: ACTIONS.DELETE_QUESTION, payload: parseInt(finalId) });
-      refreshHierarchy();
-      return { success: true, message: `Question ${finalId} deleted (default action)` };
-    } catch (error) {
-      console.error('❌ Error in fixMCQ default delete:', error);
-      return { success: false, message: error.message };
-    }
-  }, [state.questions, refreshHierarchy]);
-
   const setFilters = useCallback((filters) => {
     dispatch({ type: ACTIONS.SET_FILTERS, payload: filters });
   }, []);
@@ -1445,7 +1324,6 @@ const fixMCQ = useCallback(async (command) => {
     updateQuestion,
     bulkUpdateQuestions,
     deleteQuestion,
-    fixMCQ,
     fetchQuestionsByIds,
     setFilters,
     setEditingQuestion,
@@ -1466,7 +1344,7 @@ const fixMCQ = useCallback(async (command) => {
   }), [
     state, 
     setQuestions, clearCache, addQuestion, bulkAddQuestions, batchAddQuestions, 
-    updateQuestion, bulkUpdateQuestions, deleteQuestion, fixMCQ, fetchQuestionsByIds, 
+    updateQuestion, bulkUpdateQuestions, deleteQuestion, fetchQuestionsByIds, 
     setFilters, setEditingQuestion, setAuthenticated, setDeveloperAccess, setUser, refreshQuestions, 
     refreshHierarchy, getLastBatchQuestions, fetchMoreQuestions, fetchAllRemaining, toggleQuestionFlag, 
     bulkFlagQuestions, toggleQuestionVerification, bulkVerifyQuestions, 

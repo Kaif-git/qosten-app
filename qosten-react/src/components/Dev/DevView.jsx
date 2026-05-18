@@ -5,7 +5,7 @@ import './DevView.css';
 
 export default function DevView() {
   const navigate = useNavigate();
-  const [activeTab, setActiveTab] = useState('reports'); // 'reports', 'chats', 'users', 'flagged', 'mcqfix'
+  const [activeTab, setActiveTab] = useState('reports'); // 'reports', 'chats', 'users', 'flagged'
   const [reports, setReports] = useState([]);
   const [chats, setChats] = useState([]);
   const [users, setUsers] = useState([]);
@@ -767,9 +767,6 @@ export default function DevView() {
         </button>
         <button className={`sub-tab ${activeTab === 'flagged' ? 'active' : ''}`} onClick={() => setActiveTab('flagged')}>
           🚩 Flagged ({flagged.subtopics.length + flagged.questions.length + flagged.labs.length})
-        </button>
-        <button className={`sub-tab ${activeTab === 'mcqfix' ? 'active' : ''}`} onClick={() => setActiveTab('mcqfix')}>
-          🔧 MCQ Fixer
         </button>
       </div>
 

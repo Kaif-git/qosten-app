@@ -498,6 +498,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   const [mdInput, setMdInput] = useState('');
   const [selectedMdImages, setSelectedMdImages] = useState(new Set());
   const [mergedImageUrl, setMergedImageUrl] = useState(null);
+  const [mergerImages, setMergerImages] = useState([]);
   const pdfDocumentRef = useRef(null); // Cache for PDF document object
   const imageRef = useRef(null);
   const cropBoxRef = useRef(null); // Ref for the crop box DOM element
@@ -520,12 +521,21 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   const handleMergeImages = useCallback(async () => {
     const urls = [...selectedMdImages];
     if (urls.length < 2) return;
+
+    const fetchAsBlob = async (url) => {
+      // Try direct CORS fetch first
+      const resp = await fetch(url, { mode: 'cors', cache: 'force-cache' });
+      if (resp.ok) return await resp.blob();
+      throw new Error('Direct fetch failed');
+    };
+
     try {
-      const loaded = await Promise.all(urls.map(url => new Promise((resolve, reject) => {
+      const blobs = await Promise.all(urls.map(fetchAsBlob));
+      const loaded = await Promise.all(blobs.map(blob => new Promise((resolve, reject) => {
         const img = new Image();
-        img.onload = () => resolve(img);
+        img.onload = () => { URL.revokeObjectURL(img.src); resolve(img); };
         img.onerror = reject;
-        img.src = url;
+        img.src = URL.createObjectURL(blob);
       })));
       const maxWidth = Math.max(...loaded.map(img => img.width));
       const totalHeight = loaded.reduce((sum, img) => sum + img.height, 0);
@@ -541,6 +551,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       setMergedImageUrl(canvas.toDataURL('image/png'));
     } catch (err) {
       console.error('Merge failed:', err);
+      alert('The image server blocks cross-origin access. Use "Download Images" first from your browser\'s context menu, then upload them directly via the cropper tab.');
     }
   }, [selectedMdImages]);
 
@@ -909,6 +920,17 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       }
       setMergedImageUrl(null);
       setSelectedMdImages(new Set());
+      return;
+    }
+
+    if (easySourceMode === 'merger') {
+      if (!mergedImageUrl) { alert('Merge images first, then assign.'); return; }
+      if (targetType === 'stem') {
+        updateQuestion(qIndex, 'image', mergedImageUrl);
+      } else if (targetType === 'part' && partIndex !== null) {
+        updateQuestionPart(qIndex, partIndex, 'answerImage', mergedImageUrl);
+      }
+      setMergedImageUrl(null);
       return;
     }
 
@@ -2111,9 +2133,9 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
              {/* Header with Merged Controls */}
              <div style={{ padding: '10px 15px', borderBottom: '1px solid #ddd', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#f8f9fa', gap: '10px' }}>
                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
-                     <h2 style={{margin: 0, fontSize: '1.1rem', whiteSpace: 'nowrap'}}>
-                       {easySourceMode === 'markdown' ? '📝 Markdown Assign' : '📷 Easy Upload'}
-                     </h2>
+                    <h2 style={{margin: 0, fontSize: '1.1rem', whiteSpace: 'nowrap'}}>
+                        {easySourceMode === 'merger' ? '🗃️ Image Merger' : easySourceMode === 'markdown' ? '📝 Markdown Assign' : '📷 Easy Upload'}
+                    </h2>
                      {easySourceMode === 'cropper' ? (
                        <span style={{ 
                            fontSize: '12px', 
@@ -2126,18 +2148,30 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                        }}>
                            ✨ Auto-Cut White Parts Active
                        </span>
-                     ) : (
-                       <span style={{ 
-                           fontSize: '12px', 
-                           backgroundColor: '#f3e5f5', 
-                           color: '#7b1fa2', 
-                           padding: '4px 10px', 
-                           borderRadius: '12px',
-                           fontWeight: '600',
-                           border: '1px solid #ce93d8'
-                       }}>
-                         {mergedImageUrl ? '🖼️ Merged' : selectedMdImages.size > 0 ? `🔵 ${selectedMdImages.size} Selected` : '⚪ Click Images'}
-                       </span>
+                      ) : easySourceMode === 'merger' ? (
+                        <span style={{ 
+                            fontSize: '12px', 
+                            backgroundColor: '#eafaf1', 
+                            color: '#27ae60', 
+                            padding: '4px 10px', 
+                            borderRadius: '12px',
+                            fontWeight: '600',
+                            border: '1px solid #a9dfbf'
+                        }}>
+                          {mergedImageUrl ? '🖼️ Merged' : mergerImages.length > 0 ? `📎 ${mergerImages.length} Files` : '🗂️ Drop Images'}
+                        </span>
+                      ) : (
+                        <span style={{ 
+                            fontSize: '12px', 
+                            backgroundColor: '#f3e5f5', 
+                            color: '#7b1fa2', 
+                            padding: '4px 10px', 
+                            borderRadius: '12px',
+                            fontWeight: '600',
+                            border: '1px solid #ce93d8'
+                        }}>
+                          {mergedImageUrl ? '🖼️ Merged' : selectedMdImages.size > 0 ? `🔵 ${selectedMdImages.size} Selected` : '⚪ Click Images'}
+                        </span>
                      )}
                  </div>
 
@@ -2187,6 +2221,15 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                         }}>
                         📝 Markdown
                       </button>
+                      <button onClick={() => setEasySourceMode('merger')}
+                        style={{
+                          flex: 1, padding: '6px 10px', border: 'none', cursor: 'pointer', fontSize: '13px', fontWeight: 600,
+                          backgroundColor: easySourceMode === 'merger' ? '#27ae60' : '#ecf0f1',
+                          color: easySourceMode === 'merger' ? 'white' : '#555',
+                          borderTopLeftRadius: '4px', borderTopRightRadius: '4px'
+                        }}>
+                        🗃️ Merger
+                      </button>
                     </div>
 
                     {easySourceMode === 'cropper' ? (
@@ -2229,6 +2272,131 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                             isRenderingPage={isRenderingPage}
                         />
                       )
+                    ) : easySourceMode === 'merger' ? (
+                      <div style={{ display: 'flex', flexDirection: 'column', flex: 1, minHeight: 0 }}>
+                        <div
+                          onDragOver={e => { e.preventDefault(); e.stopPropagation(); }}
+                          onDrop={e => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            const files = [...e.dataTransfer.files].filter(f => f.type.startsWith('image/'));
+                            if (files.length === 0) return;
+                            setMergerImages(prev => [...prev, ...files.map(f => ({ file: f, url: URL.createObjectURL(f), name: f.name }))]);
+                            setMergedImageUrl(null);
+                          }}
+                          style={{
+                            flex: mergerImages.length === 0 ? 1 : '0 0 auto',
+                            minHeight: mergerImages.length === 0 ? '120px' : '60px',
+                            border: '2px dashed #27ae60',
+                            borderRadius: '8px',
+                            display: 'flex', alignItems: 'center', justifyContent: 'center',
+                            cursor: 'pointer', backgroundColor: '#eafaf1', color: '#27ae60',
+                            fontSize: '14px', fontWeight: 600, marginBottom: '6px',
+                            transition: 'background-color 0.2s'
+                          }}
+                          onClick={() => document.getElementById('merger-file-input').click()}
+                          onDragOverCapture={e => e.currentTarget.style.backgroundColor = '#d5f5e3'}
+                          onDragLeaveCapture={e => e.currentTarget.style.backgroundColor = '#eafaf1'}
+                        >
+                          {mergerImages.length === 0
+                            ? '🗂️ Drop images here or click to select'
+                            : `📎 ${mergerImages.length} image${mergerImages.length > 1 ? 's' : ''} added (drop more)`}
+                        </div>
+                        <input
+                          id="merger-file-input"
+                          type="file"
+                          accept="image/*"
+                          multiple
+                          style={{ display: 'none' }}
+                          onChange={e => {
+                            const files = [...e.target.files].filter(f => f.type.startsWith('image/'));
+                            if (files.length === 0) return;
+                            setMergerImages(prev => [...prev, ...files.map(f => ({ file: f, url: URL.createObjectURL(f), name: f.name }))]);
+                            setMergedImageUrl(null);
+                          }}
+                        />
+                        {mergerImages.length > 0 && (
+                          <>
+                            <div style={{ display: 'flex', gap: '4px', overflowX: 'auto', flexShrink: 0, padding: '4px 0', minHeight: '50px' }}>
+                              {mergerImages.map((img, i) => (
+                                <div key={i} style={{ position: 'relative', flexShrink: 0 }}>
+                                  <img src={img.url} alt={img.name}
+                                    style={{ height: '48px', width: '48px', objectFit: 'cover', borderRadius: '4px', border: '1px solid #ccc' }}
+                                  />
+                                  <button
+                                    onClick={() => {
+                                      URL.revokeObjectURL(img.url);
+                                      setMergerImages(prev => prev.filter((_, j) => j !== i));
+                                    }}
+                                    style={{
+                                      position: 'absolute', top: '-4px', right: '-4px',
+                                      width: '16px', height: '16px', fontSize: '10px',
+                                      backgroundColor: '#e74c3c', color: 'white', border: 'none',
+                                      borderRadius: '50%', cursor: 'pointer', lineHeight: '16px',
+                                      padding: 0
+                                    }}
+                                  >✕</button>
+                                </div>
+                              ))}
+                            </div>
+                            <div style={{ display: 'flex', gap: '6px', margin: '4px 0', flexShrink: 0 }}>
+                              <button onClick={async () => {
+                                if (mergerImages.length < 2) { alert('Drop at least 2 images to merge.'); return; }
+                                try {
+                                  const loaded = await Promise.all(mergerImages.map(({ url }) => new Promise((resolve, reject) => {
+                                    const img = new Image();
+                                    img.onload = () => resolve(img);
+                                    img.onerror = reject;
+                                    img.src = url;
+                                  })));
+                                  const maxWidth = Math.max(...loaded.map(img => img.width));
+                                  const totalHeight = loaded.reduce((sum, img) => sum + img.height, 0);
+                                  const canvas = document.createElement('canvas');
+                                  canvas.width = maxWidth;
+                                  canvas.height = totalHeight;
+                                  const ctx = canvas.getContext('2d');
+                                  let y = 0;
+                                  for (const img of loaded) {
+                                    ctx.drawImage(img, Math.floor((maxWidth - img.width) / 2), y);
+                                    y += img.height;
+                                  }
+                                  setMergedImageUrl(canvas.toDataURL('image/png'));
+                                } catch (err) {
+                                  console.error('Merge failed:', err);
+                                  alert('Failed to merge images.');
+                                }
+                              }} style={{
+                                fontSize: '11px', padding: '4px 10px', backgroundColor: '#27ae60',
+                                color: 'white', border: 'none', borderRadius: '3px', cursor: 'pointer'
+                              }}>
+                                🖇️ Merge {mergerImages.length} Images
+                              </button>
+                              <button onClick={() => {
+                                mergerImages.forEach(({ url }) => URL.revokeObjectURL(url));
+                                setMergerImages([]);
+                                setMergedImageUrl(null);
+                              }} style={{
+                                fontSize: '11px', padding: '4px 10px', backgroundColor: '#7f8c8d',
+                                color: 'white', border: 'none', borderRadius: '3px', cursor: 'pointer'
+                              }}>
+                                ✕ Clear
+                              </button>
+                            </div>
+                            {mergedImageUrl && (
+                              <div style={{
+                                textAlign: 'center', margin: '4px 0', padding: '6px',
+                                border: '2px solid #27ae60', borderRadius: '6px', backgroundColor: '#eafaf1',
+                                flexShrink: 0
+                              }}>
+                                <div style={{ fontSize: '12px', fontWeight: 600, color: '#27ae60', marginBottom: '4px' }}>
+                                  🖼️ Merged Image (click a slot to assign)
+                                </div>
+                                <img src={mergedImageUrl} alt="Merged" style={{ maxWidth: '100%', maxHeight: '160px', borderRadius: '4px' }} />
+                              </div>
+                            )}
+                          </>
+                        )}
+                      </div>
                     ) : (
                       <div style={{ display: 'flex', flexDirection: 'column', flex: 1, minHeight: 0 }}>
                         <textarea
@@ -2288,7 +2456,9 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                     <div style={{marginBottom: '10px'}}>
                         <h3 style={{ margin: 0, color: '#2c3e50' }}>Questions List</h3>
                         <p style={{fontSize: '12px', color: '#7f8c8d', margin: '5px 0 0 0'}}>
-                          {easySourceMode === 'markdown'
+                          {easySourceMode === 'merger'
+                            ? 'Drop images into the merger tab, click "Merge", then click a slot button below to assign.'
+                            : easySourceMode === 'markdown'
                             ? 'Click an image in the markdown panel, then click a button below to assign it.'
                             : 'Align the crop box on the left, then click the corresponding button below to assign the image.'}
                         </p>

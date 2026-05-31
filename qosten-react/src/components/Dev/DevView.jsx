@@ -425,19 +425,19 @@ export default function DevView() {
       alert('Invalid number of days');
       return;
     }
-
+    
     setIsSubmitting(true);
     try {
       const selectedUsersData = users.filter(u => selectedUserIds.includes(u.user_id));
       const results = [];
-
+    
       for (const user of selectedUsersData) {
         let baseDate = new Date();
         if (user.account_tier === 'premium' && user.subscription_end_date) {
           const currentEnd = new Date(user.subscription_end_date);
           if (currentEnd > baseDate) baseDate = currentEnd;
         }
-
+    
         const newEnd = new Date(baseDate.getTime() + days * 24 * 60 * 60 * 1000);
         const updates = {
           account_tier: 'premium',
@@ -451,7 +451,7 @@ export default function DevView() {
         const daysLeft = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
         results.push({ user_id: user.user_id, updates, days_left: daysLeft });
       }
-
+    
       // Update local state
       const resultsMap = results.reduce((acc, r) => ({ ...acc, [r.user_id]: r }), {});
       setUsers(prev => prev.map(u => {
@@ -460,7 +460,7 @@ export default function DevView() {
         }
         return u;
       }));
-
+    
       alert(`Successfully extended subscription for ${selectedUserIds.length} users.`);
       setSelectedUserIds([]);
     } catch (err) {
@@ -470,86 +470,6 @@ export default function DevView() {
     }
   };
 
-  const handleBulkFlag = async () => {
-    const selectedReports = reports.filter(r => selectedReportIds.includes(r.id));
-    const targets = [];
-    
-    selectedReports.forEach(r => {
-      if (r.subtopic_id) targets.push({ type: 'subtopic', id: r.subtopic_id, reportId: r.id, data: r.subtopic });
-      if (r.question_id) targets.push({ type: 'question', id: r.question_id, reportId: r.id, data: r.question });
-      if (r.lab_problem_id) targets.push({ type: 'lab_problem', id: r.lab_problem_id, reportId: r.id, data: r.lab_problem });
-    });
-
-    if (targets.length === 0) {
-      alert('No valid content found to flag in selected reports.');
-      return;
-    }
-
-    if (!window.confirm(`Flag content for ${selectedReports.length} reports (${targets.length} items total)?`)) return;
-
-    setIsSubmitting(true);
-    try {
-      await Promise.all(targets.map(t => reportApi.flagContent(t.type, t.id, true, t.data)));
-      // Also update statuses of reports to 'open' if they were closed/resolved but now flagged
-      await Promise.all(targets.map(t => reportApi.updateReport(t.reportId, { status: 'open' })));
-      
-      // Update local state
-      const targetIds = new Set(targets.map(t => t.id));
-      const reportIdsToOpen = new Set(targets.map(t => t.reportId));
-
-      setReports(prev => prev.map(r => {
-        let updated = { ...r };
-        if (reportIdsToOpen.has(r.id)) updated.status = 'open';
-        
-        if (r.subtopic_id && targetIds.has(r.subtopic_id) && r.subtopic) {
-          updated.subtopic = { ...r.subtopic, flagged: true };
-        }
-        if (r.question_id && targetIds.has(r.question_id) && r.question) {
-          updated.question = { ...r.question, is_flagged: true };
-        }
-        if (r.lab_problem_id && targetIds.has(r.lab_problem_id) && r.lab_problem) {
-          updated.lab_problem = { ...r.lab_problem, is_flagged: true };
-        }
-        return updated;
-      }));
-
-      alert(`Successfully flagged ${targets.length} items.`);
-      setSelectedReportIds([]);
-    } catch (err) {
-      alert('Bulk flag failed: ' + err.message);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleBulkStatusUpdate = async (status) => {
-    const isResolving = status === 'resolved';
-    const confirmMsg = isResolving 
-      ? `Are you sure you want to resolve and DELETE ${selectedReportIds.length} reports?`
-      : `Update status to ${status} for ${selectedReportIds.length} reports?`;
-      
-    if (!window.confirm(confirmMsg)) return;
-    
-    setIsSubmitting(true);
-    try {
-      if (isResolving) {
-        await Promise.all(selectedReportIds.map(id => reportApi.deleteReport(id)));
-        const selectedSet = new Set(selectedReportIds);
-        setReports(prev => prev.filter(r => !selectedSet.has(r.id)));
-        alert(`Successfully resolved and deleted ${selectedReportIds.length} reports.`);
-      } else {
-        await Promise.all(selectedReportIds.map(id => reportApi.updateReport(id, { status })));
-        const selectedSet = new Set(selectedReportIds);
-        setReports(prev => prev.map(r => selectedSet.has(r.id) ? { ...r, status } : r));
-        alert(`Updated ${selectedReportIds.length} reports to ${status}.`);
-      }
-      setSelectedReportIds([]);
-    } catch (err) {
-      alert('Bulk status update failed: ' + err.message);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   const handleRewardPremium = async (targetReports, variant = 'en') => {
     const msgEn = "Thank You for using Edventure, we appreciate your feedback and as a Token of appreciation we have decided to extend/gift you with 2 days of Free Premium!";

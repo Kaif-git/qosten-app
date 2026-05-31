@@ -58,5 +58,32 @@ export const trackerApi = {
     const { data, error } = await supabase.rpc('fetch_users_by_ids', { p_user_ids: userIds });
       
     return { data, error };
+  },
+
+  /**
+   * Refresh daily aggregations for a specific user and date
+   */
+  async refreshAggregations(userId, date) {
+    if (!supabase) return { error: 'Supabase client not initialized' };
+    
+    const { data, error } = await supabase.rpc('refresh_daily_guide_aggregations', {
+      p_user_id: userId,
+      p_date: date || new Date().toISOString().split('T')[0]
+    });
+    
+    return { data, error };
+  },
+
+  /**
+   * Refresh all daily aggregations for a given date (batch)
+   */
+  async refreshAllAggregations(date) {
+    if (!supabase) return { error: 'Supabase client not initialized' };
+    
+    const { data, error } = await supabase.rpc('refresh_all_daily_aggregations', {
+      p_date: date || new Date().toISOString().split('T')[0]
+    });
+    
+    return { data, error };
   }
 };

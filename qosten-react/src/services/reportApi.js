@@ -1,17 +1,34 @@
 import { supabase } from './supabaseClient';
 import { questionApi } from './questionApi';
 
+const cache = {
+  reports: null,
+  chats: null,
+  users: null,
+  flagged: null,
+  metrics: {},
+};
+
 export const reportApi = {
-  /**
-   * Fetches all user reports from the user_reports table.
-   * Links related content and user profile data.
-   */
-  async fetchReports() {
+  clearCache() {
+    cache.reports = null;
+    cache.chats = null;
+    cache.users = null;
+    cache.flagged = null;
+    cache.metrics = {};
+    console.log('🧹 [reportApi] Cache cleared');
+  },
+
+  async fetchReports(useCache = true) {
+    if (useCache && cache.reports) {
+      console.log('📦 [reportApi] Returning cached reports');
+      return cache.reports;
+    }
+
     const { data: { user } } = await supabase.auth.getUser();
     console.log(`🔍 [reportApi] Current User: ${user?.id} (${user?.email})`);
     console.log('🔍 [reportApi] fetchReports: Starting fetch via RPC...');
-    
-    // Use RPC to bypass RLS for admin dashboard
+
     const { data: reports, error } = await supabase.rpc('fetch_all_reports');
 
     if (error) {
@@ -25,7 +42,6 @@ export const reportApi = {
       return [];
     }
 
-    // Sort manually since RPC might not guarantee order despite the function definition
     reports.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
 
     console.log('📦 [reportApi] Raw first report sample:', reports[0]);
@@ -42,12 +58,10 @@ export const reportApi = {
       userIds.length > 0 ? supabase.from('user_profiles').select('user_id, display_name, username, account_tier, subscription_end_date').in('user_id', userIds) : { data: [] }
     ]);
 
-    // Questions are from Worker API
     let questions = [];
     if (questionIds.length > 0) {
       try {
         const rawQuestions = await questionApi.fetchQuestionsByIds(questionIds);
-        // Map raw questions if needed (similar to mapDatabaseToApp in QuestionContext)
         questions = rawQuestions.map(q => ({
           ...q,
           questionText: q.questionText || q.question || 'No question text',
@@ -63,7 +77,7 @@ export const reportApi = {
       ...(questions || []).map(q => q.topic_id)
     ].filter(Boolean))];
 
-    const { data: topics } = topicIds.length > 0 
+    const { data: topics } = topicIds.length > 0
       ? await supabase.from('learn_topics').select('id, title, subject, chapter').in('id', topicIds)
       : { data: [] };
 
@@ -73,16 +87,24 @@ export const reportApi = {
     const labMap = (labsRes.data || []).reduce((acc, l) => ({ ...acc, [l.id]: l }), {});
     const userMap = (usersRes.data || []).reduce((acc, u) => ({ ...acc, [u.user_id]: u }), {});
 
-    return reports.map(report => ({
+    const result = reports.map(report => ({
       ...report,
       subtopic: subtopicMap[report.subtopic_id],
       question: questionMap[report.question_id],
       lab_problem: labMap[report.lab_problem_id],
       user: userMap[report.user_id]
     }));
+
+    cache.reports = result;
+    return result;
   },
 
-  async fetchChats() {
+  async fetchChats(useCache = true) {
+    if (useCache && cache.chats) {
+      console.log('📦 [reportApi] Returning cached chats');
+      return cache.chats;
+    }
+
     console.log('🔍 [reportApi] fetchChats: Starting fetch via RPC...');
     const { data: chats, error } = await supabase.rpc('fetch_all_chats');
 
@@ -97,53 +119,57 @@ export const reportApi = {
       return [];
     }
 
-    // Sort manually since RPC might not guarantee order
     chats.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
 
     const userIds = [...new Set(chats.map(c => c.user_id).filter(Boolean))];
-    const { data: users } = userIds.length > 0 
+    const { data: users } = userIds.length > 0
       ? await supabase.from('user_profiles').select('user_id, display_name, username, account_tier, subscription_end_date').in('user_id', userIds)
       : { data: [] };
 
     const userMap = (users || []).reduce((acc, u) => ({ ...acc, [u.user_id]: u }), {});
 
-    return chats.map(chat => ({
+    const result = chats.map(chat => ({
       ...chat,
       user: userMap[chat.user_id]
     }));
+
+    cache.chats = result;
+    return result;
   },
 
-  async fetchUsers() {
+  async fetchUsers(useCache = true) {
+    if (useCache && cache.users) {
+      console.log('📦 [reportApi] Returning cached users');
+      return cache.users;
+    }
+
     console.log('🔍 [reportApi] fetchUsers: Starting fetch...');
     const { data: { user } } = await supabase.auth.getUser();
-    
+
     const { data, error } = await supabase
       .from('user_profiles')
       .select('*')
       .order('created_at', { ascending: false });
-    
+
     if (error) {
       console.error('❌ [reportApi] fetchUsers error:', error);
       throw error;
     }
-    
+
     const currentUserProfile = data.find(u => u.user_id === user?.id);
     console.log(`📊 [reportApi] Current User Tier (DB): ${currentUserProfile?.account_tier || 'unknown'}`);
     console.log(`📊 [reportApi] fetchUsers: Found ${data?.length || 0} users`);
+
+    cache.users = data;
     return data;
   },
 
-  /**
-   * Sends a reply to a chat.
-   * Based on 3-step process: Chat Reply, Notification, Report Update.
-   */
   async sendChatReply(userId, message, senderId = null) {
     let finalSenderId = senderId;
-    
-    // If no senderId provided, try to get from session
+
     if (!finalSenderId) {
       const { data: { session } } = await supabase.auth.getSession();
-      finalSenderId = session?.user?.id || userId; // Fallback to userId if no session, but ideally should be dev id
+      finalSenderId = session?.user?.id || userId;
     }
 
     const { data, error } = await supabase
@@ -152,7 +178,7 @@ export const reportApi = {
         user_id: userId,
         message: message,
         sender_type: 'developer',
-        sender_id: finalSenderId, 
+        sender_id: finalSenderId,
         is_read: false
       }])
       .select();
@@ -160,9 +186,6 @@ export const reportApi = {
     return data[0];
   },
 
-  /**
-   * Creates a notification for a user.
-   */
   async createNotification(userId, title, message, type = 'dev_chat', data = {}) {
     const { data: result, error } = await supabase
       .from('notifications')
@@ -179,18 +202,14 @@ export const reportApi = {
     return result[0];
   },
 
-  /**
-   * Updates report status or internal notes.
-   */
   async updateReport(id, updates) {
     try {
       const { error } = await supabase
         .from('user_reports')
         .update(updates)
         .eq('id', id);
-      
+
       if (error) {
-        // If 'status' column is missing, try 'report_status'
         if (error.message?.includes('column "status" does not exist') && updates.status) {
           const fallbackUpdates = { ...updates, report_status: updates.status };
           delete fallbackUpdates.status;
@@ -210,11 +229,6 @@ export const reportApi = {
     }
   },
 
-  /**
-   * Flags content.
-   * For questions, we fetch the current data first to avoid wiping it out via PUT,
-   * and we use 1/0 for SQLite/D1 compatibility.
-   */
   async flagContent(type, id, value = true, fullData = null) {
     if (type === 'subtopic') {
       return await supabase.from('learn_subtopics').update({ flagged: value }).eq('id', id);
@@ -229,15 +243,12 @@ export const reportApi = {
             currentData = fetched[0];
           }
         }
-        
-        // If we have data, merge it and send full object. 
-        // If not, we still send a partial, but at least use 1/0.
+
         const intValue = value ? 1 : 0;
-        const updates = currentData 
+        const updates = currentData
           ? { ...currentData, is_flagged: intValue, isFlagged: intValue, flagged: intValue }
           : { is_flagged: intValue, isFlagged: intValue, flagged: intValue };
-        
-        // Ensure ID is included in the body for the PUT request
+
         if (!updates.id) updates.id = id;
 
         return await questionApi.updateQuestion(id, updates);
@@ -254,26 +265,28 @@ export const reportApi = {
     return true;
   },
 
-  /**
-   * Fetches all flagged content across subtopics, questions, and labs.
-   */
-  async fetchFlaggedContent() {
+  async fetchFlaggedContent(useCache = true) {
+    if (useCache && cache.flagged) {
+      console.log('📦 [reportApi] Returning cached flagged content');
+      return cache.flagged;
+    }
+
     const [subtopicsRes, labsRes, questionsData] = await Promise.all([
       supabase.from('learn_subtopics').select('*, topic:topic_id(title, subject, chapter)').eq('flagged', true),
       supabase.from('lab_problems').select('*, title:lesson').eq('is_flagged', true),
       questionApi.fetchFlaggedQuestions()
     ]);
 
-    return {
+    const result = {
       subtopics: subtopicsRes.data || [],
       labs: labsRes.data || [],
       questions: Array.isArray(questionsData) ? questionsData : (questionsData.data || [])
     };
+
+    cache.flagged = result;
+    return result;
   },
 
-  /**
-   * Sends a general notification to a user.
-   */
   async sendNotification(userId, { type, title, message, action_url = null, data = {} }) {
     const { data: result, error } = await supabase
       .from('notifications')
@@ -292,15 +305,11 @@ export const reportApi = {
     return result[0];
   },
 
-  /**
-   * Updates a user profile (e.g., tier, subscription dates).
-   * Uses admin RPC to bypass RLS for developer dashboard actions.
-   */
   async updateUser(userId, updates) {
     const subscriptionFields = [
-      'account_tier', 
-      'subscription_type', 
-      'subscription_start_date', 
+      'account_tier',
+      'subscription_type',
+      'subscription_start_date',
       'subscription_end_date',
       'questions_answered_today',
       'last_question_date',
@@ -320,7 +329,6 @@ export const reportApi = {
     });
 
     try {
-      // Use RPC to bypass RLS since Dev Dashboard might not have full Auth session
       const { data: success, error } = await supabase.rpc('update_user_admin', {
         target_user_id: userId,
         profile_updates: profileUpdates,
@@ -330,7 +338,6 @@ export const reportApi = {
       if (error) throw error;
       if (!success) throw new Error('Failed to update user via admin RPC');
 
-      // Fetch the updated profile to return
       const { data } = await supabase
         .from('user_profiles')
         .select('*')
@@ -339,6 +346,70 @@ export const reportApi = {
       return data;
     } catch (err) {
       console.error('Error in updateUser:', err);
+      throw err;
+    }
+  },
+
+  async fetchUserMetrics(userId, useCache = true) {
+    if (useCache && cache.metrics[userId]) {
+      console.log(`📦 [reportApi] Returning cached metrics for user ${userId}`);
+      return cache.metrics[userId];
+    }
+
+    try {
+      const [unified, streaks, studyPoints, mastery, flashcards] = await Promise.all([
+        supabase.from('daily_guide_unified').select('*').eq('user_id', userId).order('date', { ascending: false }),
+        supabase.from('simple_streaks').select('*').eq('user_id', userId).single(),
+        supabase.from('study_point_tracking').select('*').eq('user_id', userId).order('activity_date', { ascending: false }),
+        supabase.from('question_mastery').select('*').eq('user_id', userId),
+        supabase.from('flashcards_mastery').select('*').eq('user_id', userId)
+      ]);
+
+      const result = {
+        daily: unified.data || [],
+        streaks: streaks.data || null,
+        studyPoints: studyPoints.data || [],
+        mastery: mastery.data || [],
+        flashcards: flashcards.data || []
+      };
+
+      cache.metrics[userId] = result;
+      return result;
+    } catch (err) {
+      console.error('❌ [reportApi] fetchUserMetrics error:', err);
+      throw err;
+    }
+  },
+
+  async fetchRecentActivity(page = 0, pageSize = 20) {
+    try {
+      const from = page * pageSize;
+      const to = from + pageSize - 1;
+
+      const { data: activities, error } = await supabase
+        .from('user_attempts')
+        .select('attempted_at, question_type, was_correct, subject, chapter, user_id')
+        .order('attempted_at', { ascending: false })
+        .range(from, to);
+
+      if (error) throw error;
+      if (!activities || activities.length === 0) return [];
+
+      const userIds = [...new Set(activities.map(a => a.user_id).filter(Boolean))];
+      const { data: users, error: userError } = userIds.length > 0
+        ? await supabase.from('user_profiles').select('user_id, display_name, username').in('user_id', userIds)
+        : { data: [] };
+
+      if (userError) throw userError;
+
+      const userMap = (users || []).reduce((acc, u) => ({ ...acc, [u.user_id]: u }), {});
+
+      return activities.map(act => ({
+        ...act,
+        user_profiles: userMap[act.user_id] || null
+      }));
+    } catch (err) {
+      console.error('❌ [reportApi] fetchRecentActivity error:', err);
       throw err;
     }
   }

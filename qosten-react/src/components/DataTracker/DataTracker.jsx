@@ -83,6 +83,15 @@ const DataTracker = () => {
         user.totalDays = user.entries.length;
         user.lastActive = user.entries[0]?.date;
         
+        // Aggregate totals across all entries
+        user.totalAttempts = user.entries.reduce((sum, e) => sum + (e.attempts_count || 0), 0);
+        user.totalCorrect = user.entries.reduce((sum, e) => sum + (e.correct_attempts || 0), 0);
+        user.totalMastered = user.entries.reduce((sum, e) => sum + (e.sq_cq_mastered || 0) + (e.flashcards_mastered || 0), 0);
+        user.totalSubtopicsUnderstood = user.entries.reduce((sum, e) => sum + (e.subtopics_understood || 0), 0);
+        user.overallAccuracy = user.totalAttempts > 0 
+          ? Math.round((user.totalCorrect / user.totalAttempts) * 100) 
+          : null;
+        
         // Sort all activities by time desc
         user.allActivities.sort((a, b) => new Date(b.time) - new Date(a.time));
 
@@ -169,6 +178,18 @@ const DataTracker = () => {
           <button className="refresh-btn" onClick={fetchData} disabled={loading}>
             {loading ? '...' : '🔄 Refresh'}
           </button>
+          <button 
+            className="refresh-btn refresh-agg-btn" 
+            onClick={async () => {
+              setLoading(true);
+              await trackerApi.refreshAllAggregations();
+              await fetchData();
+            }} 
+            disabled={loading}
+            title="Re-aggregate data from user_attempts, question_mastery, flashcards_mastery, user_subtopic_understood"
+          >
+            {loading ? '...' : '📊 Sync Aggregates'}
+          </button>
         </div>
       </div>
 
@@ -213,6 +234,23 @@ const DataTracker = () => {
                   <span className="stat-value">{user.allActivities.length}</span>
                 </div>
 
+                <div className="stat-col">
+                  <span className="stat-label">Attempts</span>
+                  <span className="stat-value">{user.totalAttempts}</span>
+                </div>
+
+                <div className="stat-col">
+                  <span className="stat-label">Accuracy</span>
+                  <span className={`stat-value ${user.overallAccuracy !== null ? (user.overallAccuracy >= 80 ? 'text-green' : user.overallAccuracy >= 50 ? 'text-yellow' : 'text-red') : ''}`}>
+                    {user.overallAccuracy !== null ? `${user.overallAccuracy}%` : '—'}
+                  </span>
+                </div>
+
+                <div className="stat-col">
+                  <span className="stat-label">Mastered</span>
+                  <span className="stat-value">{user.totalMastered}</span>
+                </div>
+
                 <div className="expand-icon">▼</div>
               </div>
 
@@ -241,6 +279,9 @@ const DataTracker = () => {
                           <th>Topic Progress</th>
                           <th>Flashcards</th>
                           <th>Math Problems</th>
+                          <th>Attempts (MCQ/SQ/CQ)</th>
+                          <th>SQ/CQ Mastery</th>
+                          <th>Accuracy</th>
                           <th>Status</th>
                         </tr>
                       </thead>
@@ -252,17 +293,55 @@ const DataTracker = () => {
                               <span className={`metric-badge ${getMetricClass(entry.subtopics_learned, entry.subtopics_planned)}`}>
                                 {entry.subtopics_learned} / {entry.subtopics_planned}
                               </span>
+                              {entry.subtopics_understood > 0 && (
+                                <span style={{color:'#10b981', fontSize:'11px', marginLeft:'4px'}}>
+                                  ✓{entry.subtopics_understood}
+                                </span>
+                              )}
                             </td>
                             <td>
                               {entry.flashcards_reviewed} reviewed 
                               <span style={{color:'#a0aec0', fontSize:'11px', marginLeft:'4px'}}>
                                 ({entry.flashcards_in_queue} q)
                               </span>
+                              {entry.flashcards_mastered > 0 && (
+                                <span style={{color:'#10b981', fontSize:'11px', marginLeft:'4px'}}>
+                                  ★{entry.flashcards_mastered}
+                                </span>
+                              )}
                             </td>
                             <td>
                               <span className={`metric-badge ${getMetricClass(entry.math_problems_done, entry.math_problems_planned)}`}>
                                 {entry.math_problems_done} / {entry.math_problems_planned}
                               </span>
+                            </td>
+                            <td>
+                              <span style={{fontSize:'13px'}}>
+                                {entry.attempts_count || 0} total
+                              </span>
+                              {entry.attempts_count > 0 && (
+                                <div style={{fontSize:'11px', color:'#a0aec0'}}>
+                                  MCQ:{entry.mcq_attempts || 0} SQ:{entry.sq_attempts || 0} CQ:{entry.cq_attempts || 0}
+                                </div>
+                              )}
+                            </td>
+                            <td>
+                              {entry.sq_cq_reviewed > 0 || entry.sq_cq_mastered > 0 ? (
+                                <span style={{fontSize:'13px'}}>
+                                  {entry.sq_cq_reviewed} rev / {entry.sq_cq_mastered} mastered
+                                </span>
+                              ) : (
+                                <span style={{color:'#a0aec0', fontSize:'12px'}}>—</span>
+                              )}
+                            </td>
+                            <td>
+                              {entry.accuracy_pct != null ? (
+                                <span className={`metric-badge ${entry.accuracy_pct >= 80 ? 'high' : entry.accuracy_pct >= 50 ? 'medium' : 'low'}`}>
+                                  {entry.accuracy_pct}%
+                                </span>
+                              ) : (
+                                <span style={{color:'#a0aec0', fontSize:'12px'}}>—</span>
+                              )}
                             </td>
                             <td>
                               {entry.daily_goals_completed ? (

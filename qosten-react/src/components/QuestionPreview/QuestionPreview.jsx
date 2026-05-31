@@ -463,10 +463,18 @@ const CompactQuestionItem = React.memo(({ question, index, onCropAndAssign, onUp
   );
 });
 
-export default function QuestionPreview({ questions, onConfirm, onCancel, title, isEditMode = false, isUploading = false }) {
+export default function QuestionPreview({ questions, onConfirm, onCancel, title, isEditMode = false, isUploading = false, bnContent }) {
   const { questions: dbQuestions, addQuestion } = useQuestions();
 
   const [editableQuestions, setEditableQuestions] = useState(questions);
+
+  useEffect(() => {
+    setEditableQuestions(questions);
+  }, [questions]);
+
+  useEffect(() => {
+    setEditableQuestions(questions);
+  }, [questions]);
   const [banglaQuestions, setBanglaQuestions] = useState([]);
   const [sourceDocument, setSourceDocument] = useState(null);
   const [sourceDocType, setSourceDocType] = useState(null); // 'image' or 'pdf'
@@ -1564,15 +1572,16 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     alert(`✅ Metadata updated for ${selectedBanglaQuestions.size} Bangla question(s)!`);
   };
 
-  const handleBanglaUpload = () => {
-    if (!banglaInputText.trim()) {
+  const handleBanglaUpload = (content) => {
+    const text = (content || banglaInputText).trim();
+    if (!text) {
       alert('Please enter some Bangla questions.');
       return;
     }
 
     try {
       // Parse the Bangla text using the shared parser
-      const parsedBanglaQuestions = parseCQQuestions(banglaInputText, 'bn');
+      const parsedBanglaQuestions = parseCQQuestions(text, 'bn');
       
       if (parsedBanglaQuestions.length === 0) {
         alert('❌ No questions could be parsed. Please check the format.');
@@ -2506,7 +2515,13 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                 📷 Switch to Easy Image Upload Mode
             </button>
             <button 
-                onClick={() => setShowBanglaUpload(true)}
+                onClick={() => {
+                    if (bnContent) {
+                        handleBanglaUpload(bnContent);
+                    } else {
+                        setShowBanglaUpload(true);
+                    }
+                }}
                 style={{
                     backgroundColor: '#8e44ad',
                     color: 'white',

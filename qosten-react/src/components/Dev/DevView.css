@@ -759,3 +759,101 @@
     background: #f1c40f;
     color: white;
 }
+
+/* Metrics View Styles */
+.dev-view-container .metrics-view-container {
+    padding: 20px;
+}
+
+.dev-view-container .no-user-selected {
+    text-align: center;
+    padding: 50px;
+    color: #666;
+}
+
+.dev-view-container .user-metrics-dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.dev-view-container .metrics-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+}
+
+.dev-view-container .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.dev-view-container .metrics-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.dev-view-container .metrics-card h4 {
+    margin: 0 0 15px 0;
+    color: #666;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.dev-view-container .metric-value {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.dev-view-container .metric-value .main-val {
+    font-size: 2.5em;
+    font-weight: 800;
+    color: #2c3e50;
+}
+
+.dev-view-container .metric-value .sub-val {
+    font-size: 0.9em;
+    color: #888;
+}
+
+.dev-view-container .metrics-section {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+
+.dev-view-container .metrics-section h4 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.dev-view-container .timeline-container {
+    overflow-x: auto;
+}
+
+.dev-view-container .metrics-btn {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0 5px;
+    font-size: 1.1em;
+    transition: all 0.2s;
+}
+
+.dev-view-container .metrics-btn:hover {
+    background: #f0f7ff;
+    border-color: #2196F3;
+    transform: scale(1.1);
+}

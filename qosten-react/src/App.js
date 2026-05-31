@@ -15,6 +15,7 @@ import MathQuestionImport from './components/MathQuestionImport/MathQuestionImpo
 import MCQImport from './components/MCQImport/MCQImport';
 import CQJSONImport from './components/CQJSONImport/CQJSONImport';
 import CQMDImport from './components/CQMDImport/CQMDImport';
+import CQTXTImport from './components/CQTXTImport/CQTXTImport';
 import Shop from './components/Shop/Shop';
 import Roadmap from './components/Roadmap/Roadmap';
 import BatchSizeTest from './components/BatchSizeTest/BatchSizeTest';
@@ -54,6 +55,7 @@ function App() {
                 <Route path="/import-mcq" element={<MCQImport />} />
                 <Route path="/import-json" element={<CQJSONImport />} />
                 <Route path="/import-cq-md" element={<CQMDImport />} />
+                <Route path="/import-cq-txt" element={<CQTXTImport />} />
                 <Route path="/import-lab" element={<LabImport />} />
                 <Route path="/prompts" element={<SimplePromptManager />} />
                 <Route path="/shop" element={<Shop />} />

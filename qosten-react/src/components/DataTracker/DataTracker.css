@@ -358,3 +358,17 @@
 .metric-badge.high { background-color: #def7ec; color: #03543f; }
 .metric-badge.medium { background-color: #e1effe; color: #1e429f; }
 .metric-badge.low { background-color: #fef3c7; color: #92400e; }
+
+.refresh-agg-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  margin-left: 8px;
+}
+
+.refresh-agg-btn:hover {
+  background: linear-gradient(135deg, #5a6fd6 0%, #6a4192 100%);
+}
+
+.text-green { color: #10b981 !important; }
+.text-yellow { color: #f59e0b !important; }
+.text-red { color: #ef4444 !important; }

@@ -5,7 +5,7 @@ import './DevView.css';
 
 export default function DevView() {
   const navigate = useNavigate();
-  const [activeTab, setActiveTab] = useState('reports'); // 'reports', 'chats', 'users', 'flagged'
+  const [activeTab, setActiveTab] = useState('reports'); // 'reports', 'chats', 'users', 'flagged', 'metrics', 'activity'
   const [reports, setReports] = useState([]);
   const [chats, setChats] = useState([]);
   const [users, setUsers] = useState([]);
@@ -13,6 +13,17 @@ export default function DevView() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [refreshing, setRefreshing] = useState(false);
+  
+  // Metrics state
+  const [selectedUserId, setSelectedUserId] = useState(null);
+  const [userMetrics, setUserMetrics] = useState(null);
+  const [metricsLoading, setMetricsLoading] = useState(false);
+
+  // Activity state
+  const [activities, setActivities] = useState([]);
+  const [activityPage, setActivityPage] = useState(0);
+  const [activityLoading, setActivityLoading] = useState(false);
+  const [hasMoreActivity, setHasMoreActivity] = useState(true);
   
   // Search/Filter states
   const [searchTerm, setSearchTerm] = useState(''); // Generic search for Users
@@ -64,6 +75,7 @@ export default function DevView() {
         flagged: flaggedData
       });
 
+
       const calculateDaysLeft = (u) => {
         let daysLeft = -999;
         if (u && u.account_tier === 'premium' && u.subscription_end_date) {
@@ -107,7 +119,57 @@ export default function DevView() {
 
   const handleRefresh = () => {
     setRefreshing(true);
+    reportApi.clearCache();
     loadData();
+    if (activeTab === 'activity') {
+      loadRecentActivity(true);
+    }
+  };
+
+  const loadUserMetrics = async (userId, forceRefresh = false) => {
+    if (!userId) return;
+    setMetricsLoading(true);
+    try {
+      const metrics = await reportApi.fetchUserMetrics(userId, !forceRefresh);
+      setUserMetrics(metrics);
+      setSelectedUserId(userId);
+    } catch (err) {
+      alert('Failed to load metrics: ' + err.message);
+    } finally {
+      setMetricsLoading(false);
+    }
+  };
+
+  const handleViewMetrics = (userId) => {
+    setActiveTab('metrics');
+    loadUserMetrics(userId);
+  };
+
+  const loadRecentActivity = async (reset = false) => {
+    const page = reset ? 0 : activityPage;
+    setActivityLoading(true);
+    try {
+      const data = await reportApi.fetchRecentActivity(page);
+      if (reset) {
+        setActivities(data);
+        setActivityPage(1);
+      } else {
+        setActivities(prev => [...prev, ...data]);
+        setActivityPage(prev => prev + 1);
+      }
+      setHasMoreActivity(data.length === 20);
+    } catch (err) {
+      alert('Failed to load activity: ' + err.message);
+    } finally {
+      setActivityLoading(false);
+    }
+  };
+
+  const handleViewActivity = () => {
+    setActiveTab('activity');
+    if (activities.length === 0) {
+      loadRecentActivity(true);
+    }
   };
 
   const handleSendReply = async () => {
@@ -765,6 +827,12 @@ export default function DevView() {
         <button className={`sub-tab ${activeTab === 'users' ? 'active' : ''}`} onClick={() => setActiveTab('users')}>
           Users ({users.length})
         </button>
+        <button className={`sub-tab ${activeTab === 'metrics' ? 'active' : ''}`} onClick={() => setActiveTab('metrics')}>
+          📈 Metrics
+        </button>
+        <button className={`sub-tab ${activeTab === 'activity' ? 'active' : ''}`} onClick={handleViewActivity}>
+          🕒 Recent Activity
+        </button>
         <button className={`sub-tab ${activeTab === 'flagged' ? 'active' : ''}`} onClick={() => setActiveTab('flagged')}>
           🚩 Flagged ({flagged.subtopics.length + flagged.questions.length + flagged.labs.length})
         </button>
@@ -800,146 +868,290 @@ export default function DevView() {
         />
       )}
 
-      {activeTab === 'reports' && (
-        <div className="reports-table-container">
-          {filteredReports.length === 0 ? (
-            <p className="no-data">No reports found.</p>
-          ) : (
-            <>
-              <table className="reports-table">
-                <thead>
-                  <tr>
-                    <th className="checkbox-cell">
-                      <input 
-                        type="checkbox" 
-                        checked={selectedReportIds.length === filteredReports.length && filteredReports.length > 0}
-                        onChange={() => toggleSelectAll(filteredReports)}
-                      />
-                    </th>
-                    <th>Date</th>
-                    <th>Type</th>
-                    <th>User</th>
-                    <th>Reference & Actions</th>
-                    <th>Status</th>
-                    <th>Description</th>
-                    <th>Reply</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {filteredReports.map((report) => (
-                    <tr key={report.id} className={`report-row ${reportFilter && report.id.includes(reportFilter) ? 'highlighted-row' : ''} ${selectedReportIds.includes(report.id) ? 'selected-row' : ''}`}>
-                      <td className="checkbox-cell">
-                        <input 
-                          type="checkbox" 
-                          checked={selectedReportIds.includes(report.id)}
-                          onChange={() => toggleSelectReport(report.id)}
-                        />
-                      </td>
-                      <td className="date-cell">{new Date(report.created_at).toLocaleString()}</td>
-                      <td className="type-cell">
-                        <span className={`badge type-${report.report_type?.toLowerCase() || 'default'}`}>
-                          {report.report_type || 'N/A'}
-                        </span>
-                      </td>
-                      <td className="user-cell">
-                        <UserBadge user={report.user} userId={report.user_id} />
-                      </td>
-                      <td className="reference-cell">
-                        <div className="ref-and-flag">
-                          {report.subtopic && (
-                            <div className={`ref-item clickable ${report.subtopic.flagged ? 'flagged-content' : ''}`} onClick={() => navigateToContent('subtopic', report.subtopic)}>
-                              <strong>Subtopic:</strong> {report.subtopic.title}
-                              <button 
-                                className={`flag-btn ${report.subtopic.flagged ? 'active' : ''}`} 
-                                onClick={(e) => { e.stopPropagation(); handleFlagToggle('subtopic', report.subtopic_id, report.subtopic.flagged, report.id, report.subtopic); }}
-                              >
-                                {report.subtopic.flagged ? '🏳️ Unflag' : '🚩 Flag'}
-                              </button>
-                            </div>
-                          )}
-                          {report.question && (
-                            <div className={`ref-item clickable ${report.question.is_flagged ? 'flagged-content' : ''}`} onClick={() => navigateToContent('question', report.question)}>
-                              <strong>Question:</strong> {report.question.question ? report.question.question.substring(0, 50) : 'No question text'}...
-                              <button 
-                                className={`flag-btn ${report.question.is_flagged ? 'active' : ''}`} 
-                                onClick={(e) => { e.stopPropagation(); handleFlagToggle('question', report.question_id, report.question.is_flagged, report.id, report.question); }}
-                              >
-                                {report.question.is_flagged ? '🏳️ Unflag' : '🚩 Flag'}
-                              </button>
-                            </div>
-                          )}
-                          {report.lab_problem && (
-                            <div className={`ref-item clickable ${report.lab_problem.is_flagged ? 'flagged-content' : ''}`} onClick={() => navigateToContent('lab_problem', report.lab_problem)}>
-                              <strong>Lab:</strong> {report.lab_problem.title}
-                              <button 
-                                className={`flag-btn ${report.lab_problem.is_flagged ? 'active' : ''}`} 
-                                onClick={(e) => { e.stopPropagation(); handleFlagToggle('lab_problem', report.lab_problem_id, report.lab_problem.is_flagged, report.id, report.lab_problem); }}
-                              >
-                                {report.lab_problem.is_flagged ? '🏳️ Unflag' : '🚩 Flag'}
-                              </button>
-                            </div>
-                          )}
-                          {!report.subtopic && !report.question && !report.lab_problem && <span className="no-ref">No direct ref</span>}
-                        </div>
-                      </td>
-                      <td className="status-cell">
-                        <select 
-                          value={report.status || 'open'} 
-                          className={`status-select ${report.status}`}
-                          onChange={(e) => handleUpdateReportStatus(report.id, e.target.value)}
-                        >
-                          <option value="open">Open</option>
-                          <option value="resolved">Resolved</option>
-                          <option value="closed">Closed</option>
-                        </select>
-                      </td>
-                      <td className="description-cell">
-                        <div className="description-text">{report.description || report.details}</div>
-                      </td>
-                      <td>
-                        <div className="reply-actions-cell">
-                          <button className="reply-icon-btn" onClick={() => setReplyingTo({ type: 'report', id: report.id, userId: report.user_id })}>💬 Reply</button>
-                          <div className="reward-buttons">
-                            <button className="reward-btn en" title="Reward 7D Premium (English Msg)" onClick={() => handleRewardPremium([report], 'en')}>🎁 EN</button>
-                            <button className="reward-btn bn" title="Reward 7D Premium (Bangla Msg)" onClick={() => handleRewardPremium([report], 'bn')}>🎁 BN</button>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+       {activeTab === 'reports' && (
+         <div className="reports-table-container">
+           {filteredReports.length === 0 ? (
+             <p className="no-data">No reports found.</p>
+           ) : (
+             <>
+               <table className="reports-table">
+                 <thead>
+                   <tr>
+                     <th className="checkbox-cell">
+                       <input 
+                         type="checkbox" 
+                         checked={selectedReportIds.length === filteredReports.length && filteredReports.length > 0}
+                         onChange={() => toggleSelectAll(filteredReports)}
+                       />
+                     </th>
+                     <th>Date</th>
+                     <th>Type</th>
+                     <th>User</th>
+                     <th>Reference & Actions</th>
+                     <th>Status</th>
+                     <th>Description</th>
+                     <th>Reply</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                   {filteredReports.map((report) => (
+                     <tr key={report.id} className={`report-row ${reportFilter && report.id.includes(reportFilter) ? 'highlighted-row' : ''} ${selectedReportIds.includes(report.id) ? 'selected-row' : ''}`}>
+                       <td className="checkbox-cell">
+                         <input 
+                           type="checkbox" 
+                           checked={selectedReportIds.includes(report.id)}
+                           onChange={() => toggleSelectReport(report.id)}
+                         />
+                       </td>
+                       <td className="date-cell">{new Date(report.created_at).toLocaleString()}</td>
+                       <td className="type-cell">
+                         <span className={`badge type-${report.report_type?.toLowerCase() || 'default'}`}>
+                           {report.report_type || 'N/A'}
+                         </span>
+                       </td>
+                       <td className="user-cell">
+                         <UserBadge user={report.user} userId={report.user_id} />
+                       </td>
+                       <td className="reference-cell">
+                         <div className="ref-and-flag">
+                           {report.subtopic && (
+                             <div className={`ref-item clickable ${report.subtopic.flagged ? 'flagged-content' : ''}`} onClick={() => navigateToContent('subtopic', report.subtopic)}>
+                               <strong>Subtopic:</strong> {report.subtopic.title}
+                               <button 
+                                 className={`flag-btn ${report.subtopic.flagged ? 'active' : ''}`} 
+                                 onClick={(e) => { e.stopPropagation(); handleFlagToggle('subtopic', report.subtopic_id, report.subtopic.flagged, report.id, report.subtopic); }}
+                               >
+                                 {report.subtopic.flagged ? '🏳️ Unflag' : '🚩 Flag'}
+                               </button>
+                             </div>
+                           )}
+                           {report.question && (
+                             <div className={`ref-item clickable ${report.question.is_flagged ? 'flagged-content' : ''}`} onClick={() => navigateToContent('question', report.question)}>
+                               <strong>Question:</strong> {report.question.question ? report.question.question.substring(0, 50) : 'No question text'}...
+                               <button 
+                                 className={`flag-btn ${report.question.is_flagged ? 'active' : ''}`} 
+                                 onClick={(e) => { e.stopPropagation(); handleFlagToggle('question', report.question_id, report.question.is_flagged, report.id, report.question); }}
+                               >
+                                 {report.question.is_flagged ? '🏳️ Unflag' : '🚩 Flag'}
+                               </button>
+                             </div>
+                           )}
+                           {report.lab_problem && (
+                             <div className={`ref-item clickable ${report.lab_problem.is_flagged ? 'flagged-content' : ''}`} onClick={() => navigateToContent('lab_problem', report.lab_problem)}>
+                               <strong>Lab:</strong> {report.lab_problem.title}
+                               <button 
+                                 className={`flag-btn ${report.lab_problem.is_flagged ? 'active' : ''}`} 
+                                 onClick={(e) => { e.stopPropagation(); handleFlagToggle('lab_problem', report.lab_problem_id, report.lab_problem.is_flagged, report.id, report.lab_problem); }}
+                               >
+                                 {report.lab_problem.is_flagged ? '🏳️ Unflag' : '🚩 Flag'}
+                               </button>
+                             </div>
+                           )}
+                           {!report.subtopic && !report.question && !report.lab_problem && <span className="no-ref">No direct ref</span>}
+                         </div>
+                       </td>
+                       <td className="status-cell">
+                         <select 
+                           value={report.status || 'open'} 
+                           className={`status-select ${report.status}`}
+                           onChange={(e) => handleUpdateReportStatus(report.id, e.target.value)}
+                         >
+                           <option value="open">Open</option>
+                           <option value="resolved">Resolved</option>
+                           <option value="closed">Closed</option>
+                         </select>
+                       </td>
+                       <td className="description-cell">
+                         <div className="description-text">{report.description || report.details}</div>
+                       </td>
+                       <td>
+                         <div className="reply-actions-cell">
+                           <button className="reply-icon-btn" onClick={() => setReplyingTo({ type: 'report', id: report.id, userId: report.user_id })}>💬 Reply</button>
+                           <div className="reward-buttons">
+                             <button className="reward-btn en" title="Reward 7D Premium (English Msg)" onClick={() => handleRewardPremium([report], 'en')}>🎁 EN</button>
+                             <button className="reward-btn bn" title="Reward 7D Premium (Bangla Msg)" onClick={() => handleRewardPremium([report], 'bn')}>🎁 BN</button>
+                           </div>
+                         </div>
+                       </td>
+                     </tr>
+                   ))}
+                 </tbody>
+               </table>
+             </>
+           )}
+         </div>
+       )}
 
-              {selectedReportIds.length > 0 && (
-                <div className="bulk-actions-bar">
-                  <div className="selection-info">
-                    <strong>{selectedReportIds.length}</strong> reports selected
-                  </div>
-                  <div className="action-buttons">
-                    <button className="bulk-btn reward" onClick={() => handleRewardPremium(reports.filter(r => selectedReportIds.includes(r.id)), 'en')} disabled={isSubmitting}>
-                      🎁 Reward 7D (EN)
-                    </button>
-                    <button className="bulk-btn reward" onClick={() => handleRewardPremium(reports.filter(r => selectedReportIds.includes(r.id)), 'bn')} disabled={isSubmitting}>
-                      🎁 Reward 7D (BN)
-                    </button>
-                    <button className="bulk-btn flag" onClick={handleBulkFlag} disabled={isSubmitting}>
-                      🚩 Flag All
-                    </button>
-                    <button className="bulk-btn resolve" onClick={() => handleBulkStatusUpdate('resolved')} disabled={isSubmitting}>
-                      ✓ Resolve
-                    </button>
-                    <button className="bulk-btn cancel" onClick={() => setSelectedReportIds([])} disabled={isSubmitting}>
-                      Cancel
-                    </button>
-                  </div>
-                </div>
-              )}
-            </>
-          )}
-        </div>
+       {activeTab === 'metrics' && (
+         <div className="metrics-view-container">
+           {!selectedUserId ? (
+             <div className="no-user-selected">
+               <h3>Please select a user from the Users tab to view metrics.</h3>
+             </div>
+           ) : metricsLoading ? (
+             <div className="loading">Loading user metrics...</div>
+           ) : userMetrics ? (
+             <div className="user-metrics-dashboard">
+               <div className="metrics-header">
+                 <h3>Metrics for User: {selectedUserId}</h3>
+                 <button className="refresh-btn" onClick={() => loadUserMetrics(selectedUserId, true)}>Refresh Metrics</button>
+               </div>
+               
+               <div className="metrics-grid">
+                 <div className="metrics-card">
+                   <h4>🔥 Streak</h4>
+                   <div className="metric-value">
+                     <span className="main-val">{userMetrics.streaks?.current_streak || 0}</span>
+                     <span className="sub-val">Best: {userMetrics.streaks?.longest_streak || 0}</span>
+                   </div>
+                 </div>
+                 <div className="metrics-card">
+                   <h4>⭐ Study Points</h4>
+                   <div className="metric-value">
+                     <span className="main-val">{userMetrics.studyPoints?.length || 0}</span>
+                     <span className="sub-val">Total Activities</span>
+                   </div>
+                 </div>
+                 <div className="metrics-card">
+                   <h4>🎯 Mastery</h4>
+                   <div className="metric-value">
+                     <span className="main-val">{userMetrics.mastery?.filter(m => m.is_mastered).length || 0}</span>
+                     <span className="sub-val">of {userMetrics.mastery?.length || 0} questions</span>
+                   </div>
+                 </div>
+                 <div className="metrics-card">
+                   <h4>🗂️ Flashcards</h4>
+                   <div className="metric-value">
+                     <span className="main-val">{userMetrics.flashcards?.length || 0}</span>
+                     <span className="sub-val">Mastered: {userMetrics.flashcards?.filter(f => f.srs_state === 'mastered').length || 0}</span>
+                   </div>
+                 </div>
+               </div>
+
+               <div className="metrics-section">
+                 <h4>📅 Daily Activity Timeline</h4>
+                 <div className="timeline-container">
+                   <table className="reports-table">
+                     <thead>
+                       <tr>
+                         <th>Date</th>
+                         <th>Attempts</th>
+                         <th>Correct</th>
+                         <th>Accuracy</th>
+                         <th>MCQ</th>
+                         <th>SQ</th>
+                         <th>CQ</th>
+                         <th>Subtopics</th>
+                       </tr>
+                     </thead>
+                     <tbody>
+                       {userMetrics.daily.length === 0 ? (
+                         <tr><td colSpan="8" className="no-data">No daily data available.</td></tr>
+                       ) : (
+                         userMetrics.daily.map(day => {
+                           const acc = day.attempts_count > 0 ? Math.round((day.correct_attempts / day.attempts_count) * 100) : 0;
+                           return (
+                             <tr key={day.date}>
+                               <td>{day.date}</td>
+                               <td>{day.attempts_count || 0}</td>
+                               <td>{day.correct_attempts || 0}</td>
+                               <td>{acc}%</td>
+                               <td>{day.mcq_attempts || 0}</td>
+                               <td>{day.sq_attempts || 0}</td>
+                               <td>{day.cq_attempts || 0}</td>
+                               <td>{day.subtopics_learned || 0}</td>
+                             </tr>
+                           );
+                         })
+                       )}
+                     </tbody>
+                   </table>
+                 </div>
+               </div>
+             </div>
+           ) : (
+             <div className="no-data">No metrics data found for this user.</div>
+           )}
+         </div>
+       )}
+
+       {activeTab === 'activity' && (
+         <div className="activity-view-container">
+           <div className="metrics-header">
+             <h3>Global Recent Activity</h3>
+             <button className="refresh-btn" onClick={() => loadRecentActivity(true)}>Refresh Feed</button>
+           </div>
+           
+           <div className="reports-table-container">
+             {activityLoading && activities.length === 0 ? (
+               <div className="loading">Loading activities...</div>
+             ) : activities.length === 0 ? (
+               <div className="no-data">No recent activity found.</div>
+             ) : (
+               <>
+                 <table className="reports-table">
+                   <thead>
+                     <tr>
+                       <th>User</th>
+                       <th>Activity</th>
+                       <th>Context</th>
+                       <th>Result</th>
+                       <th>Timestamp</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                     {activities.map((act, idx) => (
+                       <tr key={act.attempted_at + idx}>
+                         <td>
+                           <div className="user-info-badge">
+                             <span className="user-display-name">{act.user_profiles?.display_name || 'Unknown'}</span>
+                             <span className="user-username">@{act.user_profiles?.username || 'anon'}</span>
+                           </div>
+                         </td>
+                         <td>
+                           <span className={`badge type-${act.question_type?.toLowerCase() || 'default'}`}>
+                             {act.question_type || 'Attempt'}
+                           </span>
+                         </td>
+                         <td>
+                           <div className="ref-item">
+                             <div>{act.subject || 'N/A'}</div>
+                             <div className="ref-context">{act.chapter || 'N/A'}</div>
+                           </div>
+                         </td>
+                         <td>
+                           <span className={`status-pill ${act.was_correct ? 'resolved' : 'rejected'}`}>
+                             {act.was_correct ? '✅ Correct' : '❌ Wrong'}
+                           </span>
+                         </td>
+                         <td className="date-cell" style={{fontSize:'11px'}}>
+                           {new Date(act.attempted_at).toLocaleString()}
+                         </td>
+                       </tr>
+                     ))}
+                   </tbody>
+                 </table>
+                 {hasMoreActivity && (
+                   <div style={{ textAlign: 'center', padding: '20px' }}>
+                     <button 
+                       className="refresh-btn" 
+                       onClick={() => loadRecentActivity()} 
+                       disabled={activityLoading}
+                     >
+                       {activityLoading ? 'Loading...' : 'Load More'}
+                     </button>
+                   </div>
+                 )}
+               </>
+             )}
+           </div>
+         </div>
+       )}
+
       )}
 
       {activeTab === 'chats' && (
+
         <div className="chats-table-container">
           {chats.length === 0 ? (
             <p className="no-data">No chats found.</p>
@@ -1095,9 +1307,12 @@ export default function DevView() {
                     <th>Role</th>
                     <th>School/Grade</th>
                     <th className="sortable" onClick={() => requestSort('days_left')}>Subscription {sortConfig.key === 'days_left' ? (sortConfig.direction === 'asc' ? '↑' : '↓') : ''}</th>
-                    <th className="sortable" onClick={() => requestSort('last_seen_at')}>Last Seen {sortConfig.key === 'last_seen_at' ? (sortConfig.direction === 'asc' ? '↑' : '↓') : ''}</th>
-                    <th className="sortable" onClick={() => requestSort('created_at')}>Joined {sortConfig.key === 'created_at' ? (sortConfig.direction === 'asc' ? '↑' : '↓') : ''}</th>
-                  </tr>
+                                <th className="sortable" onClick={() => requestSort('last_seen_at')}>Last Seen {sortConfig.key === 'last_seen_at' ? (sortConfig.direction === 'asc' ? '↑' : '↓') : ''}</th>
+                                <th>Email</th>
+                                <th>Source</th>
+                                <th className="sortable" onClick={() => requestSort('created_at')}>Joined {sortConfig.key === 'created_at' ? (sortConfig.direction === 'asc' ? '↑' : '↓') : ''}</th>
+                              </tr>
+
                 </thead>
                 <tbody>
                   {filteredUsers.map((user) => (
@@ -1123,44 +1338,58 @@ export default function DevView() {
                           <div className="ref-context">{user.grade_level} ({user.curriculum_version})</div>
                         </div>
                       </td>
-                      <td>
-                        <div className="sub-management-cell">
-                          <span 
-                            className={`tier-badge ${user.account_tier} clickable`} 
-                            title="Click to cycle tier (Free -> Premium -> Dev)"
-                            onClick={() => handleChangeTier(user)}
-                          >
-                            {user.account_tier}
-                          </span>
-                          <div className="days-row">
-                            {user.account_tier === 'premium' ? (
-                              <div className={`days-left ${user.days_left < 3 ? 'urgent' : ''}`}>
-                                {user.days_left > 0 ? `${user.days_left}d left` : (user.days_left === 0 ? 'Today' : 'Expired')}
-                              </div>
-                            ) : (
-                              <div className="ref-context">{user.account_tier === 'developer' ? 'Dev Access' : 'Free Tier'}</div>
-                            )}
-                            <div className="sub-action-btns">
-                              <button 
-                                className="extend-sub-btn" 
-                                title="Extend/Grant Subscription"
-                                onClick={() => handleExtendSubscription(user)}
-                              >
-                                +
-                              </button>
-                              {(user.account_tier !== 'free' || user.subscription_end_date) && (
-                                <button 
-                                  className="remove-sub-btn" 
-                                  title="Remove Subscription/Reset to Free"
-                                  onClick={() => handleRemoveSubscription(user)}
-                                >
-                                  -
-                                </button>
-                              )}
-                            </div>
-                          </div>
-                        </div>
-                      </td>
+                       <td>
+                                <div className="sub-management-cell">
+                                  <span 
+                                    className={`tier-badge ${user.account_tier} clickable`} 
+                                    title="Click to cycle tier (Free -> Premium -> Dev)"
+                                    onClick={() => handleChangeTier(user)}
+                                  >
+                                    {user.account_tier}
+                                  </span>
+                                  <div className="days-row">
+                                    {user.account_tier === 'premium' ? (
+                                      <div className={`days-left ${user.days_left < 3 ? 'urgent' : ''}`}>
+                                        {user.days_left > 0 ? `${user.days_left}d left` : (user.days_left === 0 ? 'Today' : 'Expired')}
+                                      </div>
+                                    ) : (
+                                      <div className="ref-context">{user.account_tier === 'developer' ? 'Dev Access' : 'Free Tier'}</div>
+                                    )}
+                                    <div className="sub-action-btns">
+                                      <button 
+                                        className="extend-sub-btn" 
+                                        title="Extend/Grant Subscription"
+                                        onClick={() => handleExtendSubscription(user)}
+                                      >
+                                        +
+                                      </button>
+                                      {(user.account_tier !== 'free' || user.subscription_end_date) && (
+                                        <button 
+                                          className="remove-sub-btn" 
+                                          title="Remove Subscription/Reset to Free"
+                                          onClick={() => handleRemoveSubscription(user)}
+                                        >
+                                          -
+                                        </button>
+                                      )}
+                                      <button 
+                                        className="metrics-btn" 
+                                        title="View Detailed Metrics"
+                                        onClick={() => handleViewMetrics(user.user_id)}
+                                      >
+                                        📈
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                                </td>
+                                <td>{user.email || 'N/A'}</td>
+                                <td>{user.referral_source || user.source || 'N/A'}</td>
+                                <td className="date-cell" style={{fontSize:'11px'}}>
+                                  {user.last_seen_at ? new Date(user.last_seen_at).toLocaleString() : 'Never'}
+                                </td>
+
+
                       <td className="date-cell" style={{fontSize:'11px'}}>
                         {user.last_seen_at ? new Date(user.last_seen_at).toLocaleString() : 'Never'}
                       </td>

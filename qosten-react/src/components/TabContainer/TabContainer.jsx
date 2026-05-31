@@ -32,6 +32,7 @@ export default function TabContainer() {
       {/* <NavLink to="/shop" style={({isActive}) => ({...tabStyle, background: isActive ? '#764ba2' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>🏪 Shop</NavLink> */}
       {/* <NavLink to="/roadmap" style={({isActive}) => ({...tabStyle, background: isActive ? '#f5576c' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>🗺️ Roadmap</NavLink> */}
       <NavLink to="/import-cq" style={({isActive}) => ({...tabStyle, background: isActive ? '#4CAF50' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>Import CQ</NavLink>
+      <NavLink to="/import-cq-txt" style={({isActive}) => ({...tabStyle, background: isActive ? '#e17055' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>📄 Import CQ TXT</NavLink>
       <NavLink to="/import-sq" style={({isActive}) => ({...tabStyle, background: isActive ? '#4CAF50' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>Import SQ</NavLink>
       <NavLink to="/import-bn" style={({isActive}) => ({...tabStyle, background: isActive ? '#4CAF50' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>Import Bangla Questions</NavLink>
       <NavLink to="/import-cq-bn" style={({isActive}) => ({...tabStyle, background: isActive ? '#4CAF50' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>Import Bangla CQ</NavLink>

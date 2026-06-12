@@ -1,11 +1,13 @@
 .latex-inline {
   display: inline;
+  white-space: pre-wrap;
 }
 
 .latex-block {
   display: block;
   margin: 10px 0;
   text-align: center;
+  white-space: pre-wrap;
 }
 
 /* KaTeX styling adjustments */

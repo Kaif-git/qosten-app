@@ -23,6 +23,47 @@ const colOptions = [
   { value: 'd', label: 'Part D' }
 ];
 
+/**
+ * Validate parsed CQ questions and log missing/lacking fields.
+ * @returns {{ valid: number, total: number, issues: Array }} Summary
+ */
+function validateCQQuestions(questions, label = '') {
+  const prefix = label ? `[${label}] ` : '';
+  console.log(`\n${prefix}🔍 VALIDATION REPORT (${questions.length} questions):`);
+  let totalIssues = 0;
+  const issueDetails = [];
+
+  for (let qi = 0; qi < questions.length; qi++) {
+    const q = questions[qi];
+    const issues = [];
+
+    if (!q.questionText || !q.questionText.trim()) issues.push('missing stem');
+    if (!q.subject) issues.push('missing subject');
+    if (!q.chapter || q.chapter === 'Skipped') issues.push('missing chapter');
+    if (!q.board) issues.push('missing board');
+
+    for (const p of q.parts) {
+      if (!p.text || !p.text.trim()) issues.push(`part ${p.letter}: empty text`);
+      if (!p.answer || !p.answer.trim()) issues.push(`part ${p.letter}: empty answer`);
+    }
+
+    if (issues.length > 0) {
+      totalIssues++;
+      const detail = `Q${qi + 1} (board: ${q.board || 'N/A'}): ${issues.join(', ')}`;
+      issueDetails.push(detail);
+      console.log(`  ${prefix}⚠️ ${detail}`);
+    }
+  }
+
+  if (totalIssues === 0) {
+    console.log(`  ${prefix}✅ All questions passed validation.`);
+  } else {
+    console.log(`  ${prefix}⚠️ ${totalIssues}/${questions.length} questions have issues.`);
+  }
+
+  return { valid: questions.length - totalIssues, total: questions.length, issues: issueDetails };
+}
+
 function parseAnswers(text) {
   const result = [];
   const lines = text.split('\n');
@@ -259,6 +300,7 @@ export default function CQTXTImport() {
     setShowPreview(false);
     const text = await file.text();
     const qs = parseTXTQuestions(text);
+    validateCQQuestions(qs, 'TXT Import');
     setTxtContent(text);
     setParsedQuestions(qs);
     setExpandedSet(new Set(qs.map((_, i) => i)));
@@ -436,6 +478,7 @@ export default function CQTXTImport() {
     // Read TXT
     const text = await txtFile.text();
     const questions = parseTXTQuestions(text);
+    validateCQQuestions(questions, 'Compiled Folder');
 
     // Read BN TXT (optional)
     if (bnFile) {
@@ -602,6 +645,12 @@ export default function CQTXTImport() {
   }, [buildUploadPayload]);
 
   const confirmPreview = useCallback(async (editedQuestions) => {
+    // Final validation before upload
+    const v = validateCQQuestions(editedQuestions, 'Pre-upload');
+    if (v.total > 0 && v.issues.length > 0) {
+      console.log(`  ⚠️ ${v.issues.length} question(s) with issues will still be uploaded.`);
+    }
+
     setIsUploading(true);
     setProgress({ current: 0, total: editedQuestions.length });
     try {

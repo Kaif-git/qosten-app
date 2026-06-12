@@ -67,4 +67,21 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
+## Qosten AI Features
+
+### AI Question Improver ✨
+You can now bulk-improve questions directly from the Question Bank:
+1. Enter **Select Multiple** mode.
+2. Select the questions you want to improve.
+3. Click **✨ Improve with AI**.
+4. Choose a task: **Fix LaTeX**, **Expand Answers**, **Fact Check**, or **Improve Style**.
+5. Preview the AI-suggested changes and click **Apply**.
+
+### Configuration
+To use the AI features, add your Gemini API Key to `.env`:
+```env
+REACT_APP_GEMINI_API_KEY=your_gemini_api_key_here
+```
+
+---
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -10,7 +10,7 @@ const assignPartAnswer = (letter, content, currentQuestion, state) => {
 };
 
 const splitAndAssignParts = (text, startLetter, currentQuestion, state) => {
-    const multiPartRegex = /\s+([a-dক-ঘ])[.:)।]\s+/gi;
+    const multiPartRegex = /[\]\s]+([a-dক-ঘ])[.:।]\s+/gi;
     let lastIndex = 0;
     let currentLetter = startLetter;
     let match;
@@ -96,8 +96,8 @@ export const parseCQQuestions = (text, lang = 'en') => {
                 if (currentQuestion.lesson) pendingMetadata.lesson = currentQuestion.lesson;
                 if (currentQuestion.board) pendingMetadata.board = currentQuestion.board;
                 
-                // Clean up empty parts
-                currentQuestion.parts = currentQuestion.parts.filter(part => part.text.trim());
+                // Clean up empty parts (keep parts with answer content even if text is empty)
+                currentQuestion.parts = currentQuestion.parts.filter(part => part.text.trim() || (part.answer && part.answer.trim()));
                 
                 if (currentQuestion.parts.length > 0) {
                     questions.push(currentQuestion);
@@ -217,8 +217,13 @@ export const parseCQQuestions = (text, lang = 'en') => {
                 };
                 const mappedKey = keyMap[key];
                 if (mappedKey) {
-                    currentQuestion[mappedKey] = value;
-                    console.log(`    ✅ Metadata ${mappedKey}: ${value}`);
+                    // Ignore ID as per user request
+                    if (mappedKey === 'id') {
+                        console.log(`    ⚠️ Ignoring ID: ${value}`);
+                    } else {
+                        currentQuestion[mappedKey] = value;
+                        console.log(`    ✅ Metadata ${mappedKey}: ${value}`);
+                    }
                 }
             }
             continue;
@@ -282,23 +287,95 @@ export const parseCQQuestions = (text, lang = 'en') => {
             continue;
         }
 
-        // Handle Bangla answer section header (উত্তর: or সমাধান:)
-        if (/^(উত্তর|সমাধান)\s*:/i.test(line)) {
+        // Handle Answer section header (Answer:, উত্তর:, সমাধান:, উঃ, etc.) - can be anywhere in the line
+        const answerHeaderRegex = /(?:(?:answer)(?!s)|উত্তরপত্র|(?:উত্তর)(?!ের)|সমাধান(?=\s*[:=ঃ])|উঃ|\bans\b)\s*[:=ঃ]?/i;
+        const answerMatch = line.match(answerHeaderRegex);
+        
+        if (answerMatch && !state.inAnswerSection) {
+            const headerIndex = answerMatch.index;
+            const preHeaderText = line.substring(0, headerIndex).trim();
+            const postHeaderText = line.substring(headerIndex + answerMatch[0].length).trim();
+
+            // If there was text before the header, it might be a question part
+            if (preHeaderText) {
+                const partMatch = preHeaderText.match(/^(?:Part\s+)?([a-dক-ঘ])[:.)।]\s*(.+)/i);
+                if (partMatch) {
+                    let partLetter = partMatch[1].toLowerCase();
+                    let partText = partMatch[2].trim();
+                    if (BENGALI_TO_ENGLISH[partLetter]) partLetter = BENGALI_TO_ENGLISH[partLetter];
+                    
+                    state.hasStartedParts = true;
+
+                    // Prevent duplicate part letters (artifacts between stem and sub-questions)
+                    const existingPartIdx = currentQuestion.parts.findIndex(p => p.letter === partLetter);
+                    if (existingPartIdx !== -1) {
+                        // This is a duplicate part letter. Treat as stem if it's early, or continuation.
+                        if (currentQuestion.parts.length <= 1 && existingPartIdx === 0) {
+                            // It's the very first part and we're seeing it again - likely a stem artifact
+                            state.questionTextLines.push(line);
+                        } else {
+                            // Continuation of previous part
+                            const lastPart = currentQuestion.parts[currentQuestion.parts.length - 1];
+                            if (lastPart) {
+                                lastPart.text += ' ' + line;
+                            }
+                        }
+                        continue; 
+                    }
+                    
+                    // Extract marks
+                    const marksMatch = partText.match(/[([ ]\s*([\d\u09E6-\u09EF]+)\s*[)\]]\s*$/);
+                    let marks = 0;
+                    if (marksMatch) {
+                        const bengaliNumerals = { '০': '0', '১': '1', '২': '2', '৩': '3', '৪': '4', '৫': '5', '৬': '6', '৭': '7', '৮': '8', '৯': '9' };
+                        let marksStr = marksMatch[1];
+                        for (const [bn, en] of Object.entries(bengaliNumerals)) {
+                            marksStr = marksStr.replace(new RegExp(bn, 'g'), en);
+                        }
+                        marks = parseInt(marksStr);
+                        partText = partText.slice(0, -marksMatch[0].length).trim();
+                    }
+                    
+                    currentQuestion.parts.push({
+                        letter: partLetter,
+                        text: partText,
+                        marks: marks,
+                        answer: ''
+                    });
+                    console.log(`    ✅ Found part ${partLetter} inline before answer header`);
+                } else {
+                    // Not a part, handle as stimulus or question text
+                    if (state.inStimulusSection) {
+                        state.stimulusLines.push(preHeaderText);
+                    } else if (state.inQuestionSection || !state.hasStartedParts) {
+                        state.questionTextLines.push(preHeaderText);
+                    } else if (state.hasStartedParts) {
+                        const lastPart = currentQuestion.parts[currentQuestion.parts.length - 1];
+                        if (lastPart) {
+                            lastPart.text += ' ' + preHeaderText;
+                        }
+                    }
+                }
+            }
+
             state.inStimulusSection = false;
             state.inQuestionSection = false;
             state.inAnswerSection = true;
+            state.currentAnswerPart = null;
             
-            // Check for inline content (e.g. "উত্তর: এখানে উত্তর")
-            const inlineContent = line.replace(/^(উত্তর|সমাধান)\s*[:ঃ]\s*/i, '').trim();
-            if (inlineContent) {
-                // Process as answer line
-                line = inlineContent; 
-                // Fall through to handle content
+            if (!currentQuestion.questionText && state.questionTextLines.length > 0) {
+                currentQuestion.questionText = state.questionTextLines.join('\n').trim();
+            }
+            console.log(`    ✅ Found Answer section: ${answerMatch[0]} at index ${headerIndex}`);
+            
+            if (postHeaderText) {
+                line = postHeaderText;
+                // Fall through to process postHeaderText in the answer section logic
             } else {
                 continue;
             }
         }
-
+        
         // Image placeholder detection
         const isImagePlaceholder = 
           (line.startsWith('[') && line.endsWith(']') && (line.toLowerCase().includes('picture') || line.toLowerCase().includes('image') || line.includes('ছবি') || line.includes('চিত্র')))
@@ -315,7 +392,7 @@ export const parseCQQuestions = (text, lang = 'en') => {
         }
 
         // Answer section detection
-        if (/^(answer|উত্তর|সমাধান|ans)\s*[:=ঃ]?/i.test(line) && !state.inAnswerSection) {
+        if (/^(?:(?:answer)(?!s)|উত্তরপত্র|(?:উত্তর)(?!ের)|সমাধান(?=\s*[:=ঃ])|উঃ|\bans\b)\s*[:=ঃ]?/i.test(line) && !state.inAnswerSection) {
             state.inAnswerSection = true;
             state.currentAnswerPart = null; // Reset current answer part on new Answer: header
             if (!currentQuestion.questionText && state.questionTextLines.length > 0) {
@@ -324,7 +401,7 @@ export const parseCQQuestions = (text, lang = 'en') => {
             console.log(`    ✅ Found Answer section.`);
             
             // Handle inline content
-            const inlineContent = line.replace(/^(answer|উত্তর|সমাধান|ans)\s*[:=ঃ]?\s*/i, '').trim();
+            const inlineContent = line.replace(/^(?:(?:answer)(?!s)|উত্তরপত্র|(?:উত্তর)(?!ের)|সমাধান(?=\s*[:=ঃ])|উঃ|\bans\b)\s*[:=ঃ]?\s*/i, '').trim();
             if (inlineContent) {
                 // If it's "Answer: a. something", we want to process "a. something" as a part answer
                 if (inlineContent.match(/^(?:Part\s+)?([a-dক-ঘ])[.:)]/i)) {
@@ -354,12 +431,30 @@ export const parseCQQuestions = (text, lang = 'en') => {
                 state.inStimulusSection = false;
                 // Don't continue, let it fall through to the part parsing logic below
             } else {
-                if (line.startsWith('>')) {
-                    state.stimulusLines.push(line.replace(/^>\s*/, '').trim());
-                } else if (line) {
-                    state.stimulusLines.push(line);
+                // Check for embedded Bangla part letter mid-line (e.g. "...0।ক. subquestion")
+                // These occur when the stem text and first sub-question are on the same line
+                // without a newline separator (common in questions 8-13 Bangla format)
+                const embeddedBanglaPart = line.match(/([ক-ঘ])[:.)]\s/);
+                const embeddedPartIdx = embeddedBanglaPart ? line.indexOf(embeddedBanglaPart[0]) : -1;
+                
+                if (embeddedPartIdx > 0) {
+                    // Split: prefix goes to stimulus, remainder is re-processed as a part
+                    const prefix = line.substring(0, embeddedPartIdx).trim();
+                    if (prefix) {
+                        state.stimulusLines.push(prefix);
+                    }
+                    line = line.substring(embeddedPartIdx);
+                    state.inStimulusSection = false;
+                    console.log(`  ✅ Split mid-line part letter '${embeddedBanglaPart[1]}' from stem`);
+                    // Fall through to part parsing logic below
+                } else {
+                    if (line.startsWith('>')) {
+                        state.stimulusLines.push(line.replace(/^>\s*/, '').trim());
+                    } else if (line) {
+                        state.stimulusLines.push(line);
+                    }
+                    continue;
                 }
-                continue;
             }
         }
 
@@ -472,30 +567,63 @@ export const parseCQQuestions = (text, lang = 'en') => {
                     if (BENGALI_TO_ENGLISH[partLetter]) partLetter = BENGALI_TO_ENGLISH[partLetter];
 
                     // Check if this line contains more parts
-                    if (/\s+([a-dক-ঘ])[.:)।]\s+/i.test(partContent)) {
+                    if (/[\]\s]+([a-dক-ঘ])[.:।]\s+/i.test(partContent)) {
                         splitAndAssignParts(partContent, partLetter, currentQuestion, state);
                     } else {
                         const part = currentQuestion.parts.find(p => p.letter === partLetter);
                         if (part) {
                             part.answer = partContent;
                             state.currentAnswerPart = part;
+                            console.log(`      ✅ Assigned answer to part ${part.letter}`);
                         } else {
-                            // It's a new part! Exit answer section.
-                            state.inAnswerSection = false;
-                            state.currentAnswerPart = null;
-                            
-                            // Process as a new part
-                            state.hasStartedParts = true;
-                            currentQuestion.parts.push({
+                            // Part letter doesn't exist yet — create it but DON'T exit answer section.
+                            // This handles cases where the sub-question part letter was embedded
+                            // mid-line in the stem and not detected during question parsing,
+                            // but now appears as the first answer line (e.g. Q8-13 Bangla format).
+                            console.log(`    ⚠️ Created missing part ${partLetter} in answer section with answer content`);
+                            const newPart = {
                                 letter: partLetter,
-                                text: partContent,
+                                text: '',
                                 marks: 0,
-                                answer: ''
-                            });
+                                answer: partContent
+                            };
+                            currentQuestion.parts.push(newPart);
+                            state.currentAnswerPart = newPart;
+                            state.hasStartedParts = true;
+                            // Sort parts to maintain a, b, c, d order
+                            currentQuestion.parts.sort((a, b) => a.letter.localeCompare(b.letter));
                         }
                     }
                 } else {
-                    if (state.currentAnswerPart) {
+                    // Check for inline part markers (e.g., "[উত্তর: -২]খ. ..." or "[প্রমাণিত]গ. ..." or "[চিত্রের বিন্যাসের বর্ণনা]খ. ...")
+                    const inlineSubPartRegex = /(\[[^\]]*\])\s*([a-dক-ঘ])[\.:]\s*/i;
+                    const inlineSubMatch = state.currentAnswerPart ? line.match(inlineSubPartRegex) : null;
+                    
+                    if (inlineSubMatch) {
+                        // Text from line start to end of the bracket (e.g., "... [উত্তর: -২]")
+                        const beforeText = line.substring(0, inlineSubMatch.index + inlineSubMatch[1].length);
+                        const partLetter = BENGALI_TO_ENGLISH[inlineSubMatch[2]] || inlineSubMatch[2].toLowerCase();
+                        const afterText = line.substring(inlineSubMatch.index + inlineSubMatch[0].length);
+                        
+                        // Append beforeText to current part with proper separator
+                        if (state.currentAnswerPart) {
+                            const sep = state.currentAnswerPart.answer.endsWith('\n') ? '' : '\n';
+                            state.currentAnswerPart.answer += sep + beforeText;
+                        }
+                        
+                        // Assign remaining text to the new part
+                        let part = currentQuestion.parts.find(p => p.letter === partLetter);
+                        if (part) {
+                            // Check if afterText has more chained inline parts (e.g. "B. ... C. ...")
+                            if (/[\]\s]+([a-dক-ঘ])[.:।]\s+/i.test(afterText)) {
+                                splitAndAssignParts(afterText, partLetter, currentQuestion, state);
+                            } else {
+                                part.answer = afterText;
+                                state.currentAnswerPart = part;
+                                console.log(`      ✅ Assigned inline answer to part ${part.letter}`);
+                            }
+                        }
+                    } else if (state.currentAnswerPart) {
                         // Continuation line
                         if (!state.currentAnswerPart.answer) {
                             state.currentAnswerPart.answer = line;
@@ -534,5 +662,32 @@ export const parseCQQuestions = (text, lang = 'en') => {
     }
     
     console.log(`\n✅ Total CQ questions parsed: ${questions.length}`);
+
+    // ── Validation guardrails ──────────────────────────────────────
+    console.log(`\n🔍 VALIDATION REPORT (${questions.length} questions):`);
+    let totalIssues = 0;
+    for (let qi = 0; qi < questions.length; qi++) {
+        const q = questions[qi];
+        const issues = [];
+
+        if (!q.questionText || !q.questionText.trim()) issues.push('missing stem');
+        if (!q.subject) issues.push('missing subject');
+        if (!q.chapter || q.chapter === 'Skipped') issues.push('missing chapter');
+        if (!q.board) issues.push('missing board');
+
+        for (const p of q.parts) {
+            if (!p.text || !p.text.trim()) issues.push(`part ${p.letter}: empty text`);
+            if (!p.answer || !p.answer.trim()) issues.push(`part ${p.letter}: empty answer`);
+        }
+
+        if (issues.length > 0) {
+            totalIssues++;
+            console.log(`  ⚠️ Question ${qi + 1} (board: ${q.board || 'N/A'}): ${issues.join(', ')}`);
+        }
+    }
+    if (totalIssues === 0) console.log('  ✅ All questions passed validation.');
+    else console.log(`  ⚠️ ${totalIssues}/${questions.length} questions have issues.`);
+    // ── End validation ─────────────────────────────────────────────
+
     return questions;
 };

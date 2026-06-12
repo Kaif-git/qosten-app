@@ -15,14 +15,19 @@ async function processFile(filePath) {
   const data = await fs.readFile(filePath, 'utf-8');
   const questions = JSON.parse(data);
 
-  let prompt = `Strictly review the following MCQ questions. 
+  let prompt = `You are an MCQ quality reviewer. Strictly review the following MCQ questions for these issues:
 
-OUTPUT FORMAT RULES:
-1. If a question is wrong, output: [ID] correct:[label]
-2. If a question is invalid/broken, output: [ID] delete
-3. If ALL questions in the list are correct, output ONLY: all correct
-4. DO NOT include any other text, reasoning, explanations, or conversational filler.
-5. Provide one correction per line.
+1. LOSS OF STEM: Questions that reference context not provided (e.g., "What was Mr. Rahim doing?" with no prior story), or questions that are incomplete phrases needing prior context.
+2. MISSING IMAGE: Questions whose stem or options reference an image (e.g., "based on the picture", "in the diagram", "from the chart") but have null/empty image field.
+3. INCORRECT OPTION/ANSWER: The correct answer label does not match the explanation content (e.g., explanation says option A is correct but answer says B).
+4. BROKEN/INVALID: Blank question text, garbled text, duplicate options, or any other obvious error.
+
+OUTPUT FORMAT RULES (strict - one command per line):
+- If a question needs to be deleted (stem loss, broken, invalid): [ID] delete
+- If the correct answer is wrong: [ID] correct:[label]
+- If all questions are fine: all correct
+- DO NOT include any other text, reasoning, or explanations.
+- Provide one correction per line.
 
 Questions to review:
 \n\n`;

@@ -174,28 +174,36 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
         let sectionMetadata = { type: 'sq', language: lang };
         let cleanLines = [];
         
-        // Robust metadata regex supporting both [Key: Value] and Key: Value formats
-        const metadataRegex = /^(?:\[)?(Subject|Topic|Chapter|Lesson|Board|বিষয়|বিষয়|অধ্যায়|পাঠ|বোর্ড)[:ঃ]\s*([^\]\n]*?)(?:\])?$/i;
-        
-        for (const line of allLines) {
-            const trimmed = line.trim();
-            if (!trimmed) continue;
-            
-            const metaMatch = trimmed.match(metadataRegex);
-            if (metaMatch) {
-                const key = metaMatch[1].toLowerCase();
-                const value = metaMatch[2].trim();
-                const keyMap = {
-                    'subject': 'subject', 'topic': 'subject', 'বিষয়': 'subject', 'বিষয়': 'subject',
-                    'chapter': 'chapter', 'অধ্যায়': 'chapter',
-                    'lesson': 'lesson', 'পাঠ': 'lesson',
-                    'board': 'board', 'বোর্ড': 'board'
-                };
-                if (keyMap[key]) sectionMetadata[keyMap[key]] = value;
-            } else {
-                cleanLines.push(trimmed);
-            }
-        }
+         // Robust metadata regex supporting both [Key: Value] and Key: Value formats
+         const metadataRegex = /^(?:\[)?(ID|Subject|Topic|Chapter|Lesson|Board|বিষয়|বিষয়|অধ্যায়|পাঠ|বোর্ড)[:ঃ]\s*([^\]\n]*?)(?:\])?$/i;
+         
+         for (const line of allLines) {
+             const trimmed = line.trim();
+             if (!trimmed) continue;
+             
+             const metaMatch = trimmed.match(metadataRegex);
+             if (metaMatch) {
+                 const key = metaMatch[1].toLowerCase();
+                 const value = metaMatch[2].trim();
+                 const keyMap = {
+                     'id': 'id',
+                     'subject': 'subject', 'topic': 'subject', 'বিষয়': 'subject', 'বিষয়': 'subject',
+                     'chapter': 'chapter', 'অধ্যায়': 'chapter',
+                     'lesson': 'lesson', 'পাঠ': 'lesson',
+                     'board': 'board', 'বোর্ড': 'board'
+                 };
+                 if (keyMap[key]) {
+                     // Ignore ID as per user request
+                     if (keyMap[key] === 'id') {
+                         console.log(`[SQ Parser] Ignoring ID: ${value}`);
+                     } else {
+                         sectionMetadata[keyMap[key]] = value;
+                     }
+                 }
+             } else {
+                 cleanLines.push(trimmed);
+             }
+         }
         
         // 2. Look for Answer section separator
         let answerDividerIndex = -1;
@@ -212,7 +220,8 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
             const answerPool = cleanLines.slice(answerDividerIndex + 1);
             
             // 3. Check for grouped markers (a., b., ... or ক., খ., ...)
-            const groupedMarkerRegex = /^([a-dক-ঘ])[.)]\s*/;
+            // Support optional leading number like "1. a)" or "১৭. ক)"
+            const groupedMarkerRegex = /^(?:[\d০-৯]+[।.)\s]*)?([a-dক-ঘ])[.)]\s*/;
             const hasQuestionMarkers = questionPool.some(l => groupedMarkerRegex.test(l));
             const hasAnswerMarkers = answerPool.some(l => groupedMarkerRegex.test(l));
             
@@ -223,7 +232,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
                 let subQuestions = [];
                 let currentSub = null;
                 for (const line of questionPool) {
-                    const match = line.match(/^([a-dক-ঘ])[.)]\s*(.+)$/);
+                    const match = line.match(/^(?:[\d০-৯]+[।.)\s]*)?([a-dক-ঘ])[.)]\s*(.+)$/);
                     if (match) {
                         if (currentSub) subQuestions.push(currentSub);
                         currentSub = { label: match[1], question: match[2], answer: '' };
@@ -238,7 +247,7 @@ export default function ImportTabs({ type = 'mcq', language = 'en' }) {
                 let currentAnsLabel = null;
                 let currentAnsText = [];
                 for (const line of answerPool) {
-                    const match = line.match(/^([a-dক-ঘ])[.)]\s*(.+)$/);
+                    const match = line.match(/^(?:[\d০-৯]+[।.)\s]*)?([a-dক-ঘ])[.)]\s*(.+)$/);
                     if (match) {
                         if (currentAnsLabel) {
                             let sub = null;

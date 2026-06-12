@@ -16,7 +16,7 @@ export const processImage = (base64Str, settings = { threshold: 240 }) => {
     }
     img.onload = () => {
       const canvas = document.createElement('canvas');
-      const ctx = canvas.getContext('2d');
+      const ctx = canvas.getContext('2d', { willReadFrequently: true });
       
       canvas.width = img.width;
       canvas.height = img.height;
@@ -51,7 +51,7 @@ export const processImage = (base64Str, settings = { threshold: 240 }) => {
  * Trims transparent pixels from the edges of a canvas.
  */
 function trimCanvas(canvas) {
-  const ctx = canvas.getContext('2d');
+  const ctx = canvas.getContext('2d', { willReadFrequently: true });
   const width = canvas.width;
   const height = canvas.height;
   const pixels = ctx.getImageData(0, 0, width, height);

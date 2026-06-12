@@ -238,11 +238,14 @@ export const questionApi = {
   },
 
   async createQuestion(questionData) {
-    console.log('📤 [questionApi] createQuestion - sending full data:', JSON.stringify(questionData, null, 2));
+    // Strip any local ID — server auto-generates it for new questions
+    const body = { ...questionData };
+    delete body.id;
+    console.log('📤 [questionApi] createQuestion - sending data:', JSON.stringify(body, null, 2));
     const response = await fetchWithRetry(`${API_BASE_URL}/questions`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(questionData),
+      body: JSON.stringify(body),
     });
     const responseData = await response.json();
     console.log('📥 [questionApi] createQuestion - response:', responseData);

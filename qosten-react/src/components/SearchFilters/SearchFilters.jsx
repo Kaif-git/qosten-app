@@ -303,6 +303,23 @@ export default function SearchFilters({ filters, onFilterChange }) {
           <option value="unverified">❌ Unverified Only</option>
         </select>
       </div>
+
+      <div>
+        <label htmlFor="filterLatex">∑ LaTeX Status:</label>
+        <select
+          id="filterLatex"
+          value={activeFilters.latexStatus || ''}
+          onChange={(e) => handleFilterChange('latexStatus', e.target.value)}
+          style={{ 
+            borderColor: activeFilters.latexStatus === 'has_issues' ? '#f39c12' : undefined,
+            fontWeight: activeFilters.latexStatus === 'has_issues' ? 'bold' : 'normal'
+          }}
+        >
+          <option value="">All Questions</option>
+          <option value="has_issues">⚠️ Has Issues</option>
+          <option value="clean">✓ Clean</option>
+        </select>
+      </div>
       
       <div style={{display: 'flex', gap: '10px', marginTop: '15px'}}>
         <button className="secondary" onClick={resetFilters}>Reset Filters</button>

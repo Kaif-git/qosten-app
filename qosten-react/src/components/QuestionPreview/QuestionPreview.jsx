@@ -3,14 +3,35 @@ import './QuestionPreview.css';
 import LatexRenderer from '../LatexRenderer/LatexRenderer';
 import { useQuestions } from '../../context/QuestionContext';
 import { parseCQQuestions } from '../../utils/cqParser';
+import { parseMCQQuestions } from '../../utils/mcqQuestionParser';
 import * as pdfjsLib from 'pdfjs-dist';
 import { processImage } from '../../utils/imageProcessor';
 import { renderMarkdownHTML } from '../../utils/markdownRenderer';
 import { questionApi } from '../../services/questionApi';
+import { areBoardsEquivalent } from '../../utils/latexUtils';
 import 'katex/dist/katex.min.css';
 
 // Set up PDF.js worker using unpkg CDN with matching version
 pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.mjs`;
+
+/**
+ * Check if text contains math expressions that are missing LaTeX delimiters.
+ * Flags patterns like a^2b + abc, sqrt(2), etc. that lack \(...\) or $$...$$ wrapping.
+ */
+function hasMissingLatex(text) {
+  if (!text || typeof text !== 'string') return false;
+  // If already wrapped in LaTeX delimiters, assume it's fine
+  if (/\\\(.*\\\)|\$\$.*\$\$/.test(text)) return false;
+  // Pattern: letter/digit followed by ^ followed by digit/letter (exponents like a^2, x^2)
+  if (/[a-zA-Z0-9]\^[a-zA-Z0-9]/.test(text)) return true;
+  // Pattern: standalone \sqrt, \frac, etc. without surrounding \(...\)
+  if (/\\frac\{|\\sqrt\{/.test(text)) return true;
+  // Pattern: algebraic expression with ^ and = (e.g. a^2b + abc = c^2a)
+  if (/[a-zA-Z]\^[a-zA-Z0-9]\s*[+\-*/]\s*[a-zA-Z]/.test(text)) return true;
+  // Pattern: multi-term algebra with = and exponents
+  if (/[a-zA-Z]\^[a-zA-Z0-9].*=.*[a-zA-Z]/.test(text)) return true;
+  return false;
+}
 
 // --- EASY CROPPER COMPONENT (Isolated State) ---
 const EasyCropper = ({ 
@@ -380,9 +401,9 @@ const CompactQuestionItem = React.memo(({ question, index, onCropAndAssign, onUp
             {question.image && <span style={{color: 'green', fontSize: '12px', fontWeight: 'bold'}}>✓ Stem Img</span>}
           </div>
        </div>
-       <p style={{ margin: '0 0 8px 0', fontSize: '12px', color: '#555', maxHeight: 'none', overflow: 'hidden' }}>
-          {question.questionText || question.question || 'No text'}
-       </p>
+        <p style={{ margin: '0 0 8px 0', fontSize: '12px', color: '#555', maxHeight: 'none', overflow: 'hidden' }}>
+           <LatexRenderer text={question.questionText || question.question || 'No text'} />
+        </p>
 
        {question.parts && Array.isArray(question.parts) && (
          <div style={{ marginBottom: '10px', paddingLeft: '8px', borderLeft: '2px solid #eee', fontSize: '11px', color: '#666' }}>
@@ -463,19 +484,115 @@ const CompactQuestionItem = React.memo(({ question, index, onCropAndAssign, onUp
   );
 });
 
+const CompactQuestionPair = React.memo(({ enQuestion, bnQuestion, index, onCropAndAssign, onUpdate }) => {
+  return (
+    <div className="question-preview-item compact-view" style={{
+      padding: '10px', fontSize: '14px', backgroundColor: 'white',
+      borderRadius: '5px', boxShadow: '0 1px 3px rgba(0,0,0,0.1)'
+    }}>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+        {/* English Column */}
+        <div style={{ borderRight: '1px solid #eee', paddingRight: '10px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '5px' }}>
+            <strong style={{ color: '#2c3e50', fontSize: '13px' }}>
+              🇬🇧 EN Q{index + 1}
+              {enQuestion.board && (
+                <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#666', marginLeft: '5px' }}>
+                  - {enQuestion.board}
+                </span>
+              )}
+            </strong>
+            <div style={{ display: 'flex', gap: '3px', alignItems: 'center' }}>
+              {enQuestion.type && <span style={{ fontSize: '10px', color: '#999' }}>{enQuestion.type.toUpperCase()}</span>}
+              {enQuestion.image && <span style={{ color: 'green', fontSize: '12px', fontWeight: 'bold' }}>✓ Img</span>}
+            </div>
+          </div>
+           <p style={{ margin: '0 0 8px 0', fontSize: '12px', color: '#555', maxHeight: 'none', overflow: 'hidden' }}>
+             <LatexRenderer text={enQuestion.questionText || enQuestion.question || 'No text'} />
+           </p>
+          <div style={{ display: 'flex', gap: '5px' }}>
+            <button
+              onClick={() => onCropAndAssign(index, 'stem', null, 'english')}
+              style={{ fontSize: '11px', padding: '6px 10px', backgroundColor: '#3498db', color: 'white', border: 'none', borderRadius: '3px', cursor: 'pointer', flex: 1 }}
+            >
+              {enQuestion.image ? 'Replace EN Stem' : 'Set EN Stem Img'}
+            </button>
+            {enQuestion.image && (
+              <button
+                onClick={() => onUpdate(index, 'image', null, 'english')}
+                style={{ fontSize: '11px', padding: '6px 10px', backgroundColor: '#e74c3c', color: 'white', border: 'none', borderRadius: '3px', cursor: 'pointer' }}
+                title="Remove English Stem Image"
+              >
+                ✕
+              </button>
+            )}
+          </div>
+        </div>
+        {/* Bangla Column */}
+        <div style={{ backgroundColor: '#f8f4ff', borderRadius: '4px', padding: '8px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '5px' }}>
+            <strong style={{ color: '#8e44ad', fontSize: '13px' }}>
+              🇧🇩 BN Q{index + 1}
+              {bnQuestion.board && (
+                <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#666', marginLeft: '5px' }}>
+                  - {bnQuestion.board}
+                </span>
+              )}
+            </strong>
+            <div style={{ display: 'flex', gap: '3px', alignItems: 'center' }}>
+              {bnQuestion.type && <span style={{ fontSize: '10px', color: '#999' }}>{bnQuestion.type.toUpperCase()}</span>}
+              {bnQuestion.image && <span style={{ color: 'green', fontSize: '12px', fontWeight: 'bold' }}>✓ Img</span>}
+            </div>
+          </div>
+           <p style={{ margin: '0 0 8px 0', fontSize: '12px', color: '#555', maxHeight: 'none', overflow: 'hidden' }}>
+             <LatexRenderer text={bnQuestion.questionText || bnQuestion.question || 'No text'} />
+           </p>
+          <div style={{ display: 'flex', gap: '5px' }}>
+            <button
+              onClick={() => onCropAndAssign(index, 'stem', null, 'bangla')}
+              style={{ fontSize: '11px', padding: '6px 10px', backgroundColor: '#8e44ad', color: 'white', border: 'none', borderRadius: '3px', cursor: 'pointer', flex: 1 }}
+            >
+              {bnQuestion.image ? 'Replace BN Stem' : 'Set BN Stem Img'}
+            </button>
+            {bnQuestion.image && (
+              <button
+                onClick={() => onUpdate(index, 'image', null, 'bangla')}
+                style={{ fontSize: '11px', padding: '6px 10px', backgroundColor: '#e74c3c', color: 'white', border: 'none', borderRadius: '3px', cursor: 'pointer' }}
+                title="Remove Bangla Stem Image"
+              >
+                ✕
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+});
+
 export default function QuestionPreview({ questions, onConfirm, onCancel, title, isEditMode = false, isUploading = false, bnContent }) {
   const { questions: dbQuestions, addQuestion } = useQuestions();
 
   const [editableQuestions, setEditableQuestions] = useState(questions);
 
-  useEffect(() => {
-    setEditableQuestions(questions);
-  }, [questions]);
+  // Refs to avoid stale closures in callbacks
+  const editableQuestionsRef = useRef(editableQuestions);
+  useEffect(() => { editableQuestionsRef.current = editableQuestions; }, [editableQuestions]);
 
   useEffect(() => {
     setEditableQuestions(questions);
   }, [questions]);
+
   const [banglaQuestions, setBanglaQuestions] = useState([]);
+  const banglaQuestionsRef = useRef(banglaQuestions);
+  useEffect(() => { banglaQuestionsRef.current = banglaQuestions; }, [banglaQuestions]);
+
+  const [unmatchedBanglaQuestions, setUnmatchedBanglaQuestions] = useState([]);
+  const [isMatchingMode, setIsMatchingMode] = useState(false);
+  const [matchingIndex, setMatchingIndex] = useState(0);
+  const [isReviewMode, setIsReviewMode] = useState(false);
+  const [selectedReviewEngIdx, setSelectedReviewEngIdx] = useState(null);
+  const [selectedReviewBnIdx, setSelectedReviewBnIdx] = useState(null);
   const [sourceDocument, setSourceDocument] = useState(null);
   const [sourceDocType, setSourceDocType] = useState(null); // 'image' or 'pdf'
   const [pdfPages, setPdfPages] = useState([]);
@@ -505,10 +622,13 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   const [isRenderingPage, setIsRenderingPage] = useState(false); // PDF render loading state
   const [easySourceMode, setEasySourceMode] = useState('cropper'); // 'cropper' | 'markdown'
   const [mdInput, setMdInput] = useState('');
-  const [selectedMdImages, setSelectedMdImages] = useState(new Set());
-  const [mergedImageUrl, setMergedImageUrl] = useState(null);
-  const [mergerImages, setMergerImages] = useState([]);
-  const pdfDocumentRef = useRef(null); // Cache for PDF document object
+   const [selectedMdImages, setSelectedMdImages] = useState(new Set());
+   const [mergedImageUrl, setMergedImageUrl] = useState(null);
+   const [mergerImages, setMergerImages] = useState([]);
+   const [showAllBanglaCandidates, setShowAllBanglaCandidates] = useState(false);
+   const [boardSearchText, setBoardSearchText] = useState('');
+   const [textSearchText, setTextSearchText] = useState('');
+   const pdfDocumentRef = useRef(null); // Cache for PDF document object
   const imageRef = useRef(null);
   const cropBoxRef = useRef(null); // Ref for the crop box DOM element
   const frameId = useRef(null);
@@ -521,6 +641,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   const zoomDebounceTimer = useRef(null);
   const zoomLevelRef = useRef(zoomLevel);
   const zoomContainerRef = useRef(null);
+  const loadFileInputRef = useRef(null);
 
   // Sync zoom ref with state
   useEffect(() => {
@@ -602,6 +723,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     const result = [];
     
     for (const q of combined) {
+        if (!q) continue;
         const val = q[field];
         if (val && typeof val === 'string' && val.trim() !== '' && val !== 'N/A' && val !== '(N/A)') {
             const trimmed = val.trim();
@@ -637,7 +759,402 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
 
   const [visibleCount, setVisibleCount] = useState(20);
 
+  const matchBanglaQuestion = (bnIndex) => {
+    const engQ = editableQuestions[matchingIndex];
+    const bnQ = unmatchedBanglaQuestions[bnIndex];
+    const syncedBnQ = syncImagesToBangla(engQ, bnQ);
+    
+    setBanglaQuestions(prev => {
+      const updated = [...prev];
+      updated[matchingIndex] = syncedBnQ;
+      return updated;
+    });
+    
+    const remainingBangla = unmatchedBanglaQuestions.filter((_, i) => i !== bnIndex);
+    setUnmatchedBanglaQuestions(remainingBangla);
+    
+    const nextQuestionWithImage = editableQuestions.slice(matchingIndex + 1).findIndex(q => 
+      q.image || q.imageUrl || q.questionImage || 
+      q.answerimage1 || q.answerimage2 || q.answerimage3 || q.answerimage4 || 
+      (q.parts && q.parts.some(p => p.answerImage))
+    );
+
+    if (nextQuestionWithImage !== -1) {
+      setMatchingIndex(matchingIndex + 1 + nextQuestionWithImage);
+    } else {
+      setIsMatchingMode(false);
+      if (remainingBangla.length > 0) {
+        if (window.confirm(`Some Bangla questions (${remainingBangla.length}) remain unmatched. Would you like to enter Manual Review mode to match them?`)) {
+          setIsReviewMode(true);
+        } else {
+          setUnmatchedBanglaQuestions([]);
+        }
+      } else {
+        alert('✅ All questions matched!');
+      }
+    }
+  };
+
+  const reviewMatchBanglaQuestion = (engIdx, bnIdx) => {
+    const engQ = editableQuestions[engIdx];
+    const bnQ = unmatchedBanglaQuestions[bnIdx];
+    const syncedBnQ = syncImagesToBangla(engQ, bnQ);
+    
+    setBanglaQuestions(prev => {
+      const updated = [...prev];
+      updated[engIdx] = syncedBnQ;
+      return updated;
+    });
+    
+    setUnmatchedBanglaQuestions(prev => prev.filter((_, i) => i !== bnIdx));
+  };
+
+  const renderReviewView = () => {
+    const unmatchedEnglish = editableQuestions
+      .map((q, i) => (!banglaQuestions[i] ? { q, i } : null))
+      .filter(Boolean);
+    
+    const unmatchedBangla = unmatchedBanglaQuestions;
+
+    if (unmatchedEnglish.length === 0 && unmatchedBangla.length === 0) {
+      return (
+        <div style={{ textAlign: 'center', padding: '40px', backgroundColor: 'white', borderRadius: '10px', border: '1px solid #ddd' }}>
+          <h3 style={{ color: '#27ae60' }}>✅ All questions matched!</h3>
+          <button onClick={() => setIsReviewMode(false)} style={{ marginTop: '15px', padding: '8px 16px', backgroundColor: '#3498db', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Back to Preview</button>
+        </div>
+      );
+    }
+
+    return (
+      <div className="review-mode-container" style={{ padding: '20px', backgroundColor: '#fdfdfd', borderRadius: '10px', border: '2px solid #e67e22' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+          <div>
+            <h2 style={{ margin: 0, color: '#d35400' }}>Manual Sync Review</h2>
+            <p style={{ margin: 0, fontSize: '14px', color: '#666' }}>Select one English and one Bangla question, then link them.</p>
+          </div>
+          <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+            <button 
+              onClick={() => {
+                if (selectedReviewEngIdx !== null && selectedReviewBnIdx !== null) {
+                  reviewMatchBanglaQuestion(selectedReviewEngIdx, selectedReviewBnIdx);
+                  setSelectedReviewEngIdx(null);
+                  setSelectedReviewBnIdx(null);
+                } else {
+                  alert('Please select both an English and a Bangla question.');
+                }
+              }}
+              style={{ padding: '10px 20px', backgroundColor: '#27ae60', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer', fontWeight: 'bold' }}
+            >
+              🔗 Link Selected
+            </button>
+            <button onClick={() => {
+              setIsReviewMode(false);
+              setUnmatchedBanglaQuestions([]);
+            }} style={{ padding: '8px 16px', backgroundColor: '#e74c3c', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Exit & Discard Unmatched</button>
+          </div>
+        </div>
+        
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px' }}>
+          <div className="unmatched-english-list">
+            <h3 style={{ color: '#2c3e50', borderBottom: '2px solid #3498db', paddingBottom: '10px', display: 'flex', justifyContent: 'space-between' }}>
+              <span>Unmatched English</span>
+              <span style={{ fontSize: '14px', color: '#666' }}>{unmatchedEnglish.length} left</span>
+            </h3>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginTop: '10px' }}>
+              {unmatchedEnglish.map(({ q, i }) => (
+                <div 
+                  key={i} 
+                  className="review-item" 
+                  onClick={() => setSelectedReviewEngIdx(i)}
+                  style={{ 
+                    padding: '12px', 
+                    border: selectedReviewEngIdx === i ? '2px solid #3498db' : '1px solid #ddd', 
+                    borderRadius: '6px', 
+                    backgroundColor: selectedReviewEngIdx === i ? '#e3f2fd' : 'white', 
+                    cursor: 'pointer',
+                    boxShadow: '0 1px 2px rgba(0,0,0,0.05)',
+                    transition: 'all 0.2s'
+                  }}
+                >
+                  <div style={{ fontWeight: 'bold', fontSize: '13px', marginBottom: '5px', display: 'flex', justifyContent: 'space-between' }}>
+                    <span>Q{i + 1} - {q.board || 'No Board'}</span>
+                    <span style={{ color: '#3498db', fontSize: '11px' }}>ID: {q.id || i}</span>
+                  </div>
+                  <div style={{ fontSize: '12px', color: '#666', lineHeight: '1.4' }}>{q.questionText || q.question || 'No text'}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div className="unmatched-bangla-list">
+            <h3 style={{ color: '#8e44ad', borderBottom: '2px solid #8e44ad', paddingBottom: '10px', display: 'flex', justifyContent: 'space-between' }}>
+              <span>Unmatched Bangla</span>
+              <span style={{ fontSize: '14px', color: '#666' }}>{unmatchedBangla.length} left</span>
+            </h3>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginTop: '10px' }}>
+              {unmatchedBangla.map((bnQ, bnIdx) => (
+                <div 
+                  key={bnIdx} 
+                  className="review-item" 
+                  onClick={() => setSelectedReviewBnIdx(bnIdx)}
+                  style={{ 
+                    padding: '12px', 
+                    border: selectedReviewBnIdx === bnIdx ? '2px solid #8e44ad' : '1px solid #ddd', 
+                    borderRadius: '6px', 
+                    backgroundColor: selectedReviewBnIdx === bnIdx ? '#f3e5f5' : 'white', 
+                    cursor: 'pointer',
+                    boxShadow: '0 1px 2px rgba(0,0,0,0.05)',
+                    transition: 'all 0.2s'
+                  }}
+                >
+                  <div style={{ fontWeight: 'bold', fontSize: '13px', marginBottom: '5px', display: 'flex', justifyContent: 'space-between' }}>
+                    <span>BN {bnIdx + 1} - {bnQ.board || 'No Board'}</span>
+                    <span style={{ color: '#8e44ad', fontSize: '11px' }}>ID: {bnQ.id || bnIdx}</span>
+                  </div>
+                  <div style={{ fontSize: '12px', color: '#666', lineHeight: '1.4' }}>{bnQ.questionText || bnQ.question || 'No text'}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  const renderMatchingView = () => {
+    const questionsWithImages = editableQuestions.map((q, idx) => ({
+      ...q,
+      originalIndex: idx,
+      hasImage: q.image || q.imageUrl || q.questionImage || 
+                q.answerimage1 || q.answerimage2 || q.answerimage3 || q.answerimage4 || 
+                (q.parts && q.parts.some(p => p.answerImage))
+    })).filter(q => q.hasImage);
+
+    if (questionsWithImages.length === 0) {
+      return (
+        <div className="matching-mode-container" style={{ padding: '40px', textAlign: 'center' }}>
+          <h2>No English questions with images found.</h2>
+          <p>Please upload images to your English questions first.</p>
+          <button onClick={() => setIsMatchingMode(false)} style={{ padding: '10px 20px', backgroundColor: '#3498db', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Return to Preview</button>
+        </div>
+      );
+    }
+
+    const activeEngQ = editableQuestions[matchingIndex];
+    const isActiveValid = activeEngQ && (
+      activeEngQ.image || activeEngQ.imageUrl || activeEngQ.questionImage || 
+      activeEngQ.answerimage1 || activeEngQ.answerimage2 || activeEngQ.answerimage3 || activeEngQ.answerimage4 || 
+      (activeEngQ.parts && activeEngQ.parts.some(p => p.answerImage))
+    );
+
+    if (!isActiveValid) {
+      return (
+        <div className="matching-mode-container" style={{ padding: '40px', textAlign: 'center' }}>
+          <h2>Please select a question from the left list.</h2>
+          <p>Select an English question that has images to start matching.</p>
+        </div>
+      );
+    }
+
+    const candidates = unmatchedBanglaQuestions.filter(bnQ => {
+      const qText = (bnQ.questionText || bnQ.question || '').toLowerCase();
+      const matchesText = !textSearchText || qText.includes(textSearchText.toLowerCase());
+      
+      if (showAllBanglaCandidates) {
+        const matchesBoard = !boardSearchText || !bnQ.board || bnQ.board.toLowerCase().includes(boardSearchText.toLowerCase());
+        return matchesText && matchesBoard;
+      } else {
+        const matchesBoard = !bnQ.board || !activeEngQ.board || bnQ.board === activeEngQ.board;
+        return matchesText && matchesBoard;
+      }
+    });
+
+    return (
+      <div className="matching-mode-container" style={{ 
+        display: 'flex', 
+        flexDirection: 'column', 
+        height: 'calc(100vh - 200px)', 
+        backgroundColor: '#f0f4f8', 
+        borderRadius: '10px', 
+        border: '2px solid #3498db', 
+        overflow: 'hidden' 
+      }}>
+        <div style={{ 
+          display: 'flex', 
+          justifyContent: 'space-between', 
+          alignItems: 'center', 
+          padding: '15px 20px', 
+          backgroundColor: '#fff', 
+          borderBottom: '1px solid #ddd' 
+        }}>
+          <h2 style={{ margin: 0, fontSize: '20px', color: '#2c3e50' }}>Image Matching Mode</h2>
+          <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+            <button 
+              onClick={() => setShowAllBanglaCandidates(!showAllBanglaCandidates)}
+              style={{
+                padding: '6px 12px',
+                fontSize: '12px',
+                backgroundColor: showAllBanglaCandidates ? '#27ae60' : '#7f8c8d',
+                color: 'white',
+                border: 'none',
+                borderRadius: '4px',
+                cursor: 'pointer'
+              }}
+            >
+              {showAllBanglaCandidates ? 'Showing All' : 'Filter by Board'}
+            </button>
+            <button 
+              onClick={() => setShowAllBanglaCandidates(!showAllBanglaCandidates)}
+              style={{
+                padding: '6px 12px',
+                fontSize: '12px',
+                backgroundColor: showAllBanglaCandidates ? '#27ae60' : '#7f8c8d',
+                color: 'white',
+                border: 'none',
+                borderRadius: '4px',
+                cursor: 'pointer'
+              }}
+            >
+              {showAllBanglaCandidates ? 'Showing All' : 'Filter by Board'}
+            </button>
+            {showAllBanglaCandidates && (
+              <input 
+                type="text" 
+                placeholder="Search board..." 
+                value={boardSearchText} 
+                onChange={(e) => setBoardSearchText(e.target.value)} 
+                style={{ 
+                  padding: '6px 12px', 
+                  fontSize: '12px', 
+                  borderRadius: '4px', 
+                  border: '1px solid #ddd',
+                  width: '150px',
+                  marginLeft: '10px'
+                }} 
+              />
+            )}
+            <input 
+              type="text" 
+              placeholder="Search text..." 
+              value={textSearchText} 
+              onChange={(e) => setTextSearchText(e.target.value)} 
+              style={{ 
+                padding: '6px 12px', 
+                fontSize: '12px', 
+                borderRadius: '4px', 
+                border: '1px solid #ddd',
+                width: '200px',
+                marginLeft: '10px'
+              }} 
+            />
+            <button onClick={() => setIsMatchingMode(false)} style={{ padding: '8px 16px', backgroundColor: '#e74c3c', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Cancel Matching</button>
+          </div>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: '350px 1fr', flex: 1, overflow: 'hidden' }}>
+          <div style={{ 
+            borderRight: '1px solid #ddd', 
+            display: 'flex', 
+            flexDirection: 'column', 
+            backgroundColor: '#fff',
+            overflow: 'hidden'
+          }}>
+            <div style={{ padding: '10px', backgroundColor: '#f8f9fa', borderBottom: '1px solid #ddd', fontWeight: 'bold', fontSize: '14px' }}>
+              English Questions with Images ({questionsWithImages.length})
+            </div>
+            <div style={{ overflowY: 'auto', flex: 1 }}>
+              {questionsWithImages.map((q) => (
+                <div 
+                  key={q.originalIndex} 
+                  onClick={() => setMatchingIndex(q.originalIndex)}
+                  style={{ 
+                    padding: '12px', 
+                    borderBottom: '1px solid #eee', 
+                    cursor: 'pointer', 
+                    backgroundColor: matchingIndex === q.originalIndex ? '#e3f2fd' : 'transparent',
+                    transition: 'background 0.2s',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '4px'
+                  }}
+                  onMouseEnter={(e) => { if (matchingIndex !== q.originalIndex) e.currentTarget.style.backgroundColor = '#f5f5f5'; }}
+                  onMouseLeave={(e) => { if (matchingIndex !== q.originalIndex) e.currentTarget.style.backgroundColor = 'transparent'; }}
+                >
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <span style={{ fontWeight: 'bold', fontSize: '13px' }}>Question {q.originalIndex + 1}</span>
+                    <span style={{ fontSize: '11px', color: '#666' }}>{q.board || 'N/A'}</span>
+                  </div>
+                  <div style={{ fontSize: '12px', color: '#555', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                    {q.questionText || q.question || 'No text'}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div style={{ overflowY: 'auto', padding: '20px', backgroundColor: '#fdfdfd' }}>
+            {activeEngQ ? (
+              <>
+                <div className="english-q-box" style={{ backgroundColor: 'white', padding: '20px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', marginBottom: '20px', border: '1px solid #eee' }}>
+                  <strong style={{ color: '#2c3e50', fontSize: '16px' }}>English Question {matchingIndex + 1}</strong>
+                  <div style={{ marginTop: '10px', fontSize: '14px', color: '#555' }}>
+                    <p><strong>Board:</strong> {activeEngQ.board || 'N/A'}</p>
+                    <p><strong>Text:</strong> {activeEngQ.questionText || activeEngQ.question || 'No text'}</p>
+                    {activeEngQ.image && (
+                      <div style={{ marginTop: '15px' }}>
+                        <img src={activeEngQ.image} alt="Stem" style={{ maxWidth: '100%', maxHeight: '300px', borderRadius: '5px', border: '1px solid #ddd' }} />
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                <div className="bangla-candidates-box">
+                  <strong style={{ color: '#8e44ad', fontSize: '16px', display: 'block', marginBottom: '15px' }}>
+                    {showAllBanglaCandidates ? 'All Unmatched Bangla Questions' : `Bangla Candidates for ${activeEngQ.board || 'this board'}`}
+                  </strong>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '15px' }}>
+                    {candidates.length > 0 ? candidates.map((bnQ) => {
+                      const actualIdx = unmatchedBanglaQuestions.indexOf(bnQ);
+                      return (
+                        <div key={actualIdx} style={{ 
+                          padding: '15px', 
+                          border: '1px solid #ddd', 
+                          borderRadius: '8px', 
+                          backgroundColor: 'white', 
+                          cursor: 'pointer', 
+                          transition: 'all 0.2s',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          justifyContent: 'space-between',
+                          minHeight: '100px'
+                        }}
+                        onClick={() => matchBanglaQuestion(actualIdx)}
+                        onMouseEnter={(e) => { e.currentTarget.style.borderColor = '#3498db'; e.currentTarget.style.backgroundColor = '#f8faff'; }}
+                        onMouseLeave={(e) => { e.currentTarget.style.borderColor = '#ddd'; e.currentTarget.style.backgroundColor = 'white'; }}>
+                          
+                          <div style={{ fontSize: '13px', color: '#666', marginBottom: '10px' }}>{bnQ.questionText || bnQ.question || 'No text'}</div>
+                          
+                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 'auto' }}>
+                            <span style={{ fontSize: '12px', fontWeight: 'bold', color: '#8e44ad' }}>Board: {bnQ.board || 'N/A'}</span>
+                            <span style={{ fontSize: '12px', color: '#3498db', fontWeight: 'bold' }}>Match ✓</span>
+                          </div>
+                        </div>
+                      );
+                    }) : <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '30px', color: '#999', fontStyle: 'italic' }}>No matching Bangla questions found.</div>}
+                  </div>
+                </div>
+              </>
+            ) : null}
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   const renderQuestionList = () => {
+    console.log('[Debug] renderQuestionList: isMatchingMode=', isMatchingMode, 'isReviewMode=', isReviewMode, 'editableQuestions.length=', editableQuestions.length, 'banglaQuestions.length=', banglaQuestions.length);
+    if (isMatchingMode) return renderMatchingView();
+    if (isReviewMode) return renderReviewView();
     const enVisible = editableQuestions.slice(0, visibleCount);
     const hasMore = visibleCount < Math.max(editableQuestions.length, banglaQuestions.length);
 
@@ -666,6 +1183,19 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                         </button>
                     </div>
                 )}
+                {unmatchedBanglaQuestions.length > 0 && (
+                  <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '20px', borderTop: '2px dashed #e67e22', marginTop: '20px' }}>
+                    <p style={{ color: '#d35400', fontWeight: 'bold', marginBottom: '10px' }}>
+                      ⚠️ {unmatchedBanglaQuestions.length} Bangla questions are not yet synced.
+                    </p>
+                    <button 
+                      onClick={() => setIsReviewMode(true)}
+                      style={{ padding: '10px 20px', backgroundColor: '#e67e22', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer', fontWeight: 'bold' }}
+                    >
+                      Enter Manual Review Mode
+                    </button>
+                  </div>
+                )}
             </div>
         );
     }
@@ -689,6 +1219,40 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     );
   };
   
+  const syncImagesToBangla = useCallback((engQ, bnQ) => {
+    const newBnQ = { ...bnQ };
+    if (engQ.image) newBnQ.image = engQ.image;
+    
+    if (engQ.parts && newBnQ.parts) {
+      // Legacy fields sync
+      if (engQ.answerimage1) newBnQ.answerimage1 = engQ.answerimage1;
+      if (engQ.answerimage2) newBnQ.answerimage2 = engQ.answerimage2;
+      if (engQ.answerimage3) newBnQ.answerimage3 = engQ.answerimage3;
+      if (engQ.answerimage4) newBnQ.answerimage4 = engQ.answerimage4;
+
+      newBnQ.parts = newBnQ.parts.map(bnPart => {
+        const engPart = engQ.parts?.find(p => p.letter === bnPart.letter);
+        if (engPart && engPart.answerImage) {
+          return { ...bnPart, answerImage: engPart.answerImage };
+        }
+        // Fallback to legacy fields
+        if (bnPart.letter === 'c' && newBnQ.answerimage1) return { ...bnPart, answerImage: newBnQ.answerimage1 };
+        if (bnPart.letter === 'd' && newBnQ.answerimage2) return { ...bnPart, answerImage: newBnQ.answerimage2 };
+        if (bnPart.letter === 'a' && newBnQ.answerimage3) return { ...bnPart, answerImage: newBnQ.answerimage3 };
+        if (bnPart.letter === 'b' && newBnQ.answerimage4) return { ...bnPart, answerImage: newBnQ.answerimage4 };
+        return bnPart;
+      });
+    }
+    
+    // Metadata sync
+    if (!newBnQ.subject && engQ.subject) newBnQ.subject = engQ.subject;
+    if (!newBnQ.chapter && engQ.chapter) newBnQ.chapter = engQ.chapter;
+    if (!newBnQ.lesson && engQ.lesson) newBnQ.lesson = engQ.lesson;
+    if (!newBnQ.board && engQ.board) newBnQ.board = engQ.board;
+ 
+    return newBnQ;
+  }, []);
+
   const updateQuestionPart = useCallback((qIndex, partIndex, field, value, listType = 'english') => {
     console.log(`[QuestionPreview] updateQuestionPart: Q#${qIndex}, Part: ${partIndex}, Field: ${field}, Value type: ${typeof value}`);
     const setter = listType === 'english' ? setEditableQuestions : setBanglaQuestions;
@@ -729,8 +1293,12 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
       return updated;
     });
 
-    // Auto-sync to Bangla version if setting an image in English
+    // Auto-sync to Bangla version only if boards match
     if (listType === 'english' && field === 'answerImage') {
+      const enQ = editableQuestionsRef.current?.[qIndex];
+      const bnQ = banglaQuestionsRef.current?.[qIndex];
+      const boardsDiffer = enQ && bnQ && enQ.board && bnQ.board && enQ.board !== bnQ.board;
+      if (boardsDiffer) { console.log(`   -> Skipping Bangla sync: board mismatch (EN: "${enQ.board}" vs BN: "${bnQ.board}")`); } else {
       setBanglaQuestions(prev => {
         if (qIndex >= prev.length) return prev;
         const updated = [...prev];
@@ -761,6 +1329,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
         updated[qIndex] = q;
         return updated;
       });
+      }
     }
   }, []);
 
@@ -799,6 +1368,12 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
         });
 
         if (listType === 'english') {
+          const enQ = editableQuestionsRef.current?.[index];
+          const bnQ = banglaQuestionsRef.current?.[index];
+          const boardsDiffer = enQ && bnQ && enQ.board && bnQ.board && enQ.board !== bnQ.board;
+          if (boardsDiffer) {
+            console.log(`   -> Skipping Bangla sync (part_image_remove): board mismatch (EN: "${enQ.board}" vs BN: "${bnQ.board}")`);
+          } else {
             setBanglaQuestions(prev => {
                 if (index >= prev.length) return prev;
                 const updated = [...prev];
@@ -819,6 +1394,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                 updated[index] = q;
                 return updated;
             });
+          }
         }
         return;
     }
@@ -852,13 +1428,20 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     });
 
     if (listType === 'english' && (field === 'image' || field === 'answerimage1' || field === 'answerimage2' || field === 'answerimage3' || field === 'answerimage4')) {
-      console.log(`   -> Auto-syncing image field ${field} to Bangla list`);
-      setBanglaQuestions(prev => {
-        if (index >= prev.length) return prev;
-        const updated = [...prev];
-        updated[index] = { ...updated[index], [field]: value };
-        return updated;
-      });
+      const enQ = editableQuestionsRef.current?.[index];
+      const bnQ = banglaQuestionsRef.current?.[index];
+      const boardsDiffer = enQ && bnQ && enQ.board && bnQ.board && enQ.board !== bnQ.board;
+      if (boardsDiffer) {
+        console.log(`   -> Skipping Bangla sync: board mismatch (EN: "${enQ.board}" vs BN: "${bnQ.board}")`);
+      } else {
+        console.log(`   -> Auto-syncing image field ${field} to Bangla list`);
+        setBanglaQuestions(prev => {
+          if (index >= prev.length) return prev;
+          const updated = [...prev];
+          updated[index] = { ...updated[index], [field]: value };
+          return updated;
+        });
+      }
     }
   }, [updateQuestionPart]);
 
@@ -920,14 +1503,14 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     alert('✓ All images cleared from current batch.');
   };
 
-  const handleCropAndAssign = useCallback((qIndex, targetType, partIndex = null) => {
+  const handleCropAndAssign = useCallback((qIndex, targetType, partIndex = null, listType = 'english') => {
     if (easySourceMode === 'markdown') {
       const imgUrl = mergedImageUrl || (selectedMdImages.size === 1 ? [...selectedMdImages][0] : null);
       if (!imgUrl) { alert('Select one image (or merge multiple) first.'); return; }
       if (targetType === 'stem') {
-        updateQuestion(qIndex, 'image', imgUrl);
+        updateQuestion(qIndex, 'image', imgUrl, listType);
       } else if (targetType === 'part' && partIndex !== null) {
-        updateQuestionPart(qIndex, partIndex, 'answerImage', imgUrl);
+        updateQuestionPart(qIndex, partIndex, 'answerImage', imgUrl, listType);
       }
       setMergedImageUrl(null);
       setSelectedMdImages(new Set());
@@ -937,9 +1520,9 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     if (easySourceMode === 'merger') {
       if (!mergedImageUrl) { alert('Merge images first, then assign.'); return; }
       if (targetType === 'stem') {
-        updateQuestion(qIndex, 'image', mergedImageUrl);
+        updateQuestion(qIndex, 'image', mergedImageUrl, listType);
       } else if (targetType === 'part' && partIndex !== null) {
-        updateQuestionPart(qIndex, partIndex, 'answerImage', mergedImageUrl);
+        updateQuestionPart(qIndex, partIndex, 'answerImage', mergedImageUrl, listType);
       }
       setMergedImageUrl(null);
       return;
@@ -982,21 +1565,21 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     const dataUrl = canvas.toDataURL('image/png');
     processImage(dataUrl).then(processedUrl => {
       const croppedImageUrl = processedUrl;
-      console.log(`📸 handleCropAndAssign: Processed image for Q#${qIndex + 1}, target: ${targetType}${partIndex !== null ? ', part: ' + partIndex : ''}`);
+      console.log(`📸 handleCropAndAssign: Processed image for Q#${qIndex + 1}, target: ${targetType}${partIndex !== null ? ', part: ' + partIndex : ''}${listType !== 'english' ? ', listType: ' + listType : ''}`);
 
       if (targetType === 'stem') {
-          updateQuestion(qIndex, 'image', croppedImageUrl);
+          updateQuestion(qIndex, 'image', croppedImageUrl, listType);
       } else if (targetType === 'part' && partIndex !== null) {
-          updateQuestionPart(qIndex, partIndex, 'answerImage', croppedImageUrl);
+          updateQuestionPart(qIndex, partIndex, 'answerImage', croppedImageUrl, listType);
       }
     }).catch(err => {
       console.error('Error processing cropped image:', err);
       // Fallback to original crop if processing fails
       const croppedImageUrl = dataUrl;
       if (targetType === 'stem') {
-          updateQuestion(qIndex, 'image', croppedImageUrl);
+          updateQuestion(qIndex, 'image', croppedImageUrl, listType);
       } else if (targetType === 'part' && partIndex !== null) {
-          updateQuestionPart(qIndex, partIndex, 'answerImage', croppedImageUrl);
+          updateQuestionPart(qIndex, partIndex, 'answerImage', croppedImageUrl, listType);
       }
     });
   }, [updateQuestion, updateQuestionPart, easySourceMode, selectedMdImages, mergedImageUrl]);
@@ -1005,51 +1588,133 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   const prevDeps = useRef({ editableQuestions, handleCropAndAssign, updateQuestion, easyVisibleCount: 20 });
 
   const [easyVisibleCount, setEasyVisibleCount] = useState(20);
+  const [boardSearch, setBoardSearch] = useState('');
+  const [textSearch, setTextSearch] = useState('');
+
+  const handleSaveProgress = useCallback(() => {
+    const data = {
+      version: 1,
+      timestamp: Date.now(),
+      questions: editableQuestions,
+      banglaQuestions: banglaQuestions.length > 0 ? banglaQuestions : undefined
+    };
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `question-progress-${new Date().toISOString().slice(0, 10)}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }, [editableQuestions, banglaQuestions]);
+
+  const handleLoadProgress = useCallback((e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      try {
+        const data = JSON.parse(ev.target.result);
+        if (!data.questions || !Array.isArray(data.questions)) {
+          alert('Invalid progress file: missing questions array.');
+          return;
+        }
+        setEditableQuestions(data.questions);
+        if (data.banglaQuestions) setBanglaQuestions(data.banglaQuestions);
+        alert(`Loaded ${data.questions.length} questions from progress file.`);
+      } catch (err) {
+        alert('Failed to load progress file: ' + err.message);
+      }
+    };
+    reader.readAsText(file);
+    e.target.value = '';
+  }, [setEditableQuestions]);
 
   const memoizedQuestionList = useMemo(() => {
     const changed = [];
     if (prevDeps.current.editableQuestions !== editableQuestions) changed.push('editableQuestions');
+    if (prevDeps.current.banglaQuestions !== banglaQuestions) changed.push('banglaQuestions');
     if (prevDeps.current.handleCropAndAssign !== handleCropAndAssign) changed.push('handleCropAndAssign');
     if (prevDeps.current.updateQuestion !== updateQuestion) changed.push('updateQuestion');
     if (prevDeps.current.easyVisibleCount !== easyVisibleCount) changed.push('easyVisibleCount');
+    if (prevDeps.current.boardSearch !== boardSearch) changed.push('boardSearch');
+    if (prevDeps.current.textSearch !== textSearch) changed.push('textSearch');
     
     console.log('[Performance] Recalculating memoizedQuestionList due to:', changed.join(', '));
     
-    prevDeps.current = { editableQuestions, handleCropAndAssign, updateQuestion, easyVisibleCount };
+    prevDeps.current = { editableQuestions, banglaQuestions, handleCropAndAssign, updateQuestion, easyVisibleCount, boardSearch, textSearch };
 
-    const displayList = editableQuestions.slice(0, easyVisibleCount);
-    const hasMore = editableQuestions.length > easyVisibleCount;
+    const hasBangla = banglaQuestions.length > 0;
+    const boardLower = boardSearch.toLowerCase().trim();
+    const textLower = textSearch.toLowerCase().trim();
+
+    const filteredQuestions = editableQuestions.filter((q, i) => {
+      if (boardLower) {
+        const enBoard = q.board && q.board.toLowerCase().includes(boardLower);
+        const bnBoard = hasBangla && banglaQuestions[i]?.board && banglaQuestions[i].board.toLowerCase().includes(boardLower);
+        if (!enBoard && !bnBoard) return false;
+      }
+      if (textLower) {
+        const enText = (q.questionText || q.question || q.stem || '').toLowerCase();
+        if (!enText.includes(textLower)) return false;
+      }
+      return true;
+    });
+    const displayList = filteredQuestions.slice(0, easyVisibleCount).map(q => ({
+      question: q,
+      originalIndex: editableQuestions.indexOf(q)
+    }));
+    const hasMore = filteredQuestions.length > easyVisibleCount;
 
     return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '15px' }}>
-            {displayList.map((q, idx) => (
-                <CompactQuestionItem 
-                    key={idx} 
-                    question={q} 
-                    index={idx} 
-                    onCropAndAssign={handleCropAndAssign} 
-                    onUpdate={updateQuestion}
+            {displayList.map(({ question: q, originalIndex }) =>
+              hasBangla && banglaQuestions[originalIndex] ? (
+                <CompactQuestionPair
+                  key={`pair-${originalIndex}`}
+                  enQuestion={q}
+                  bnQuestion={banglaQuestions[originalIndex]}
+                  index={originalIndex}
+                  onCropAndAssign={handleCropAndAssign}
+                  onUpdate={updateQuestion}
                 />
-            ))}
+              ) : (
+                <CompactQuestionItem
+                  key={originalIndex}
+                  question={q}
+                  index={originalIndex}
+                  onCropAndAssign={handleCropAndAssign}
+                  onUpdate={updateQuestion}
+                />
+              )
+            )}
         </div>
         {hasMore && (
             <div style={{ textAlign: 'center', padding: '10px' }}>
-                <button 
-                    type="button" 
+                <button
+                    type="button"
                     onClick={() => setEasyVisibleCount(prev => prev + 20)}
                     style={{ padding: '8px 20px', backgroundColor: '#3498db', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer', fontSize: '13px' }}
                 >
-                    Load More ({editableQuestions.length - easyVisibleCount} remaining)
+                    Load More ({filteredQuestions.length - easyVisibleCount} remaining)
                 </button>
             </div>
         )}
     </div>
-  )}, [editableQuestions, handleCropAndAssign, updateQuestion, easyVisibleCount]);
+  )}, [editableQuestions, banglaQuestions, handleCropAndAssign, updateQuestion, easyVisibleCount, boardSearch, textSearch]);
 
-  if (!questions || questions.length === 0) return null;
-  
-  const convertPdfPageToImage = async (pdfDocument, pageNumber, rot = 0) => {
+   const removeQuestion = useCallback((index) => {
+     if (window.confirm(`Remove question #${index + 1} from the list?`)) {
+       setEditableQuestions(prev => prev.filter((_, i) => i !== index));
+       setBanglaQuestions(prev => prev.filter((_, i) => i !== index));
+     }
+   }, [setBanglaQuestions, setEditableQuestions]);
+
+   if (!questions || questions.length === 0) return null;
+
+   const convertPdfPageToImage = async (pdfDocument, pageNumber, rot = 0) => {
     try {
       if (!pdfDocument) return null;
       const page = await pdfDocument.getPage(pageNumber);
@@ -1485,7 +2150,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
     }
   };
 
-  const toggleQuestionSelection = (index, listType = 'english') => {
+   const toggleQuestionSelection = (index, listType = 'english') => {
     const setSelected = listType === 'english' ? setSelectedQuestions : setSelectedBanglaQuestions;
     setSelected(prev => {
       const newSet = new Set(prev);
@@ -1573,103 +2238,39 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
   };
 
   const handleBanglaUpload = (content) => {
-    const text = (content || banglaInputText).trim();
+    const text = (typeof content === 'string' ? content : banglaInputText).trim();
     if (!text) {
       alert('Please enter some Bangla questions.');
       return;
     }
-
+ 
     try {
-      // Parse the Bangla text using the shared parser
-      const parsedBanglaQuestions = parseCQQuestions(text, 'bn');
+      const isMCQ = editableQuestions.some(q => q.type === 'mcq');
+      const parsedBanglaQuestions = isMCQ ? parseMCQQuestions(text) : parseCQQuestions(text, 'bn');
       
       if (parsedBanglaQuestions.length === 0) {
         alert('❌ No questions could be parsed. Please check the format.');
         return;
       }
-
-      // Filter current editable questions to find English CQs
-      // Assuming existing questions are English ones we want to map from
-      const englishQuestions = editableQuestions.filter(q => q.language !== 'bn');
-      
-      // We expect the number of Bangla questions to match the number of English questions
-      // OR we just map them sequentially.
-      // The user prompt says: "if I parse 10cqs ... give me the option to import bangla ... put the same images ... into the same serial"
-      
-      if (parsedBanglaQuestions.length !== englishQuestions.length) {
-         const confirmMismatch = window.confirm(
-             `⚠️ Count Mismatch:\n` +
-             `Found ${englishQuestions.length} English questions but parsed ${parsedBanglaQuestions.length} Bangla questions.\n\n` +
-             `Do you want to proceed anyway? Images will be mapped sequentially as far as possible.`
-         );
-         if (!confirmMismatch) return;
-      }
-
-      const questionsToAdd = parsedBanglaQuestions.map((bnQ, index) => {
-          // Find corresponding English question
-          const engQ = englishQuestions[index];
-          
-          if (!engQ) return bnQ; // No matching English question, return as is
-
-          // Copy images
-          const newQ = { ...bnQ };
-          
-          if (engQ.image) newQ.image = engQ.image;
-          
-          // Copy part images
-          if (engQ.parts && newQ.parts) {
-             // Map answer images based on part letter or index? 
-             // Usually c and d have images.
-             // We'll check for answerimage1/2 properties on the question object first
-             if (engQ.answerimage1) newQ.answerimage1 = engQ.answerimage1;
-             if (engQ.answerimage2) newQ.answerimage2 = engQ.answerimage2;
-             if (engQ.answerimage3) newQ.answerimage3 = engQ.answerimage3;
-             if (engQ.answerimage4) newQ.answerimage4 = engQ.answerimage4;
-
-             // Also map individual part 'answerImage' if present
-             newQ.parts = newQ.parts.map(bnPart => {
-                 const engPart = engQ.parts.find(p => p.letter === bnPart.letter);
-                 if (engPart && engPart.answerImage) {
-                     return { ...bnPart, answerImage: engPart.answerImage };
-                 }
-                 // Fallback: check if this is part c or d and we have mapped images
-                 if (bnPart.letter === 'c' && newQ.answerimage1) {
-                     return { ...bnPart, answerImage: newQ.answerimage1 };
-                 }
-                 if (bnPart.letter === 'd' && newQ.answerimage2) {
-                     return { ...bnPart, answerImage: newQ.answerimage2 };
-                 }
-                 if (bnPart.letter === 'a' && newQ.answerimage3) {
-                     return { ...bnPart, answerImage: newQ.answerimage3 };
-                 }
-                 if (bnPart.letter === 'b' && newQ.answerimage4) {
-                     return { ...bnPart, answerImage: newQ.answerimage4 };
-                 }
-                 return bnPart;
-             });
-          }
-          
-          // Also inherit metadata if missing in Bangla version
-          if (!newQ.subject && engQ.subject) newQ.subject = engQ.subject;
-          if (!newQ.chapter && engQ.chapter) newQ.chapter = engQ.chapter;
-          if (!newQ.lesson && engQ.lesson) newQ.lesson = engQ.lesson;
-          if (!newQ.board && engQ.board) newQ.board = engQ.board;
-
-          return newQ;
-      });
-
-      // Set Bangla questions state
-      setBanglaQuestions(questionsToAdd);
-      
+ 
+      setUnmatchedBanglaQuestions(parsedBanglaQuestions);
+       setIsMatchingMode(true);
+       const firstWithImageIdx = editableQuestions.findIndex(q => 
+         q.image || q.imageUrl || q.questionImage || 
+         q.answerimage1 || q.answerimage2 || q.answerimage3 || q.answerimage4 || 
+         (q.parts && q.parts.some(p => p.answerImage))
+       );
+       setMatchingIndex(firstWithImageIdx !== -1 ? firstWithImageIdx : 0);
       setBanglaInputText('');
       setShowBanglaUpload(false);
-      alert(`✅ Successfully processed ${questionsToAdd.length} Bangla questions!`);
+      alert(`✅ Parsed ${parsedBanglaQuestions.length} Bangla questions. Entering Matching Mode to sync images.`);
       
     } catch (e) {
       console.error('Error processing Bangla questions:', e);
       alert('Error processing Bangla questions: ' + e.message);
     }
   };
+
 
   const renderMCQPreview = (question, index, listType = 'english') => {
     const isSelected = listType === 'english' ? selectedQuestions.has(index) : selectedBanglaQuestions.has(index);
@@ -1692,6 +2293,7 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
             <span>Select</span>
           </label>
           <button type="button" onClick={() => uploadSingleQuestion(index)} style={{ backgroundColor: '#8e44ad', color: 'white', border: 'none', padding: '6px 12px', borderRadius: '4px', cursor: 'pointer', fontSize: '13px', fontWeight: '500' }}>Upload this</button>
+          <button type="button" onClick={() => removeQuestion(index)} style={{ backgroundColor: '#e74c3c', color: 'white', border: 'none', padding: '6px 12px', borderRadius: '4px', cursor: 'pointer', fontSize: '13px', fontWeight: '500' }}>✕ Remove</button>
         </div>
       </div>
       <div className="preview-metadata-edit">
@@ -1843,8 +2445,28 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
             <span>Select</span>
           </label>
           <button type="button" onClick={() => uploadSingleQuestion(index)} style={{ backgroundColor: '#8e44ad', color: 'white', border: 'none', padding: '6px 12px', borderRadius: '4px', cursor: 'pointer', fontSize: '13px', fontWeight: '500' }}>Upload this</button>
+          <button type="button" onClick={() => removeQuestion(index)} style={{ backgroundColor: '#e74c3c', color: 'white', border: 'none', padding: '6px 12px', borderRadius: '4px', cursor: 'pointer', fontSize: '13px', fontWeight: '500' }}>✕ Remove</button>
         </div>
       </div>
+      {(() => {
+        const missingLatexFields = [];
+        if (hasMissingLatex(question.questionText)) missingLatexFields.push('Stem');
+        if (question.parts) {
+          question.parts.forEach((p, i) => {
+            if (hasMissingLatex(p.text)) missingLatexFields.push(`Part ${p.letter} text`);
+            if (hasMissingLatex(p.answer)) missingLatexFields.push(`Part ${p.letter} answer`);
+          });
+        }
+        if (missingLatexFields.length > 0) {
+          return (
+            <div style={{ margin: '8px 0', padding: '8px 12px', backgroundColor: '#fff3cd', border: '1px solid #ffc107', borderRadius: 6, fontSize: 12, color: '#856404' }}>
+              <strong>⚠️ Missing LaTeX formatting in:</strong> {missingLatexFields.join(', ')}<br />
+              <span style={{ fontSize: 11 }}>Math expressions like <code>a^2b + abc</code> should be wrapped in <code>\(...\)</code> or <code>$$...$$</code>.</span>
+            </div>
+          );
+        }
+        return null;
+      })()}
       <div className="preview-metadata-edit">
         <input
           type="text"
@@ -2464,9 +3086,22 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                  </div>
 
                 {/* Right Side: Question List */}
-                <div className="easy-mode-list-section" style={{ minWidth: '300px' }}>
+                <div className="easy-mode-list-section" style={{ minWidth: '300px', display: 'flex', flexDirection: 'column' }}>
                     <div style={{marginBottom: '10px'}}>
-                        <h3 style={{ margin: 0, color: '#2c3e50' }}>Questions List</h3>
+                        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '6px', flexWrap: 'wrap'}}>
+                          <h3 style={{ margin: 0, color: '#2c3e50' }}>Questions List</h3>
+                          <div style={{display: 'flex', gap: '5px'}}>
+                            <button onClick={handleSaveProgress} title="Save progress (download JSON)"
+                              style={{fontSize: '11px', padding: '4px 8px', backgroundColor: '#27ae60', color: 'white', border: 'none', borderRadius: '3px', cursor: 'pointer', whiteSpace: 'nowrap'}}>
+                              💾 Save
+                            </button>
+                            <button onClick={() => loadFileInputRef.current?.click()} title="Load progress from JSON file"
+                              style={{fontSize: '11px', padding: '4px 8px', backgroundColor: '#8e44ad', color: 'white', border: 'none', borderRadius: '3px', cursor: 'pointer', whiteSpace: 'nowrap'}}>
+                              📂 Load
+                            </button>
+                            <input ref={loadFileInputRef} type="file" accept=".json" style={{display: 'none'}} onChange={handleLoadProgress} />
+                          </div>
+                        </div>
                         <p style={{fontSize: '12px', color: '#7f8c8d', margin: '5px 0 0 0'}}>
                           {easySourceMode === 'merger'
                             ? 'Drop images into the merger tab, click "Merge", then click a slot button below to assign.'
@@ -2474,6 +3109,30 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
                             ? 'Click an image in the markdown panel, then click a button below to assign it.'
                             : 'Align the crop box on the left, then click the corresponding button below to assign the image.'}
                         </p>
+                    </div>
+                    <div style={{ display: 'flex', gap: '6px', marginBottom: '10px' }}>
+                      <input
+                        type="text"
+                        placeholder="Search by board..."
+                        value={boardSearch}
+                        onChange={e => { setBoardSearch(e.target.value); setEasyVisibleCount(20); }}
+                        style={{
+                          flex: 1, padding: '8px 10px',
+                          border: '1px solid #ccc', borderRadius: '4px', fontSize: '13px',
+                          boxSizing: 'border-box'
+                        }}
+                      />
+                      <input
+                        type="text"
+                        placeholder="Search EN text..."
+                        value={textSearch}
+                        onChange={e => { setTextSearch(e.target.value); setEasyVisibleCount(20); }}
+                        style={{
+                          flex: 1, padding: '8px 10px',
+                          border: '1px solid #ccc', borderRadius: '4px', fontSize: '13px',
+                          boxSizing: 'border-box'
+                        }}
+                      />
                     </div>
                     {memoizedQuestionList}
                 </div>
@@ -2872,11 +3531,38 @@ export default function QuestionPreview({ questions, onConfirm, onCancel, title,
           <div className="preview-modal-actions">
             <button 
               className="confirm-btn" 
-              onClick={() => onConfirm([...editableQuestions, ...banglaQuestions])}
+              onClick={() => {
+                const allQuestions = [...editableQuestions, ...banglaQuestions, ...unmatchedBanglaQuestions].filter(q => q && q.type);
+                const errors = [];
+                allQuestions.forEach((q, i) => {
+                  if (q.type === 'cq') {
+                    if (!q.questionText || !q.questionText.trim()) {
+                      errors.push(`Question ${i + 1} (CQ): Question stem is empty`);
+                    }
+                    if (!q.parts || q.parts.length === 0) {
+                      errors.push(`Question ${i + 1} (CQ): No parts found`);
+                    } else {
+                      q.parts.forEach((part, pIdx) => {
+                        if (!part.text || !part.text.trim()) {
+                          errors.push(`Question ${i + 1} (CQ) - Part ${part.letter || pIdx + 1}: Part question text is empty`);
+                        }
+                        if (!part.answer || !part.answer.trim()) {
+                          errors.push(`Question ${i + 1} (CQ) - Part ${part.letter || pIdx + 1}: Answer is empty`);
+                        }
+                      });
+                    }
+                  }
+                });
+                if (errors.length > 0) {
+                  alert('❌ Cannot upload - some questions have missing data:\n\n' + errors.join('\n') + '\n\nPlease fix them in the editor above before confirming.');
+                  return;
+                }
+                onConfirm(allQuestions);
+              }}
               disabled={isUploading}
               style={{ opacity: isUploading ? 0.7 : 1, cursor: isUploading ? 'not-allowed' : 'pointer' }}
             >
-              {isUploading ? 'Uploading...' : (isEditMode ? 'Save Changes' : `Confirm & Add ${editableQuestions.length + banglaQuestions.length} Questions`)}
+              {isUploading ? 'Uploading...' : (isEditMode ? 'Save Changes' : `Confirm & Add ${editableQuestions.length + banglaQuestions.filter(Boolean).length + unmatchedBanglaQuestions.length} Questions`)}
             </button>
             <button className="cancel-btn" onClick={onCancel} disabled={isUploading}>
               {isEditMode ? 'Close' : 'Cancel'}

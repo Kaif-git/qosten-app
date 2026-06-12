@@ -5,16 +5,16 @@ import path from 'path';
 const API_BASE_URL = 'https://questions-api.edventure.workers.dev';
 const PROMPTS_DIR = 'ai_prompts';
 
-const PROMPT_TEMPLATE = `Review these questions and return ONLY commands in this exact format (one per line):
+const PROMPT_TEMPLATE = `You are an MCQ quality reviewer. Review for these issues:
+1. LOSS OF STEM: Questions referencing context not provided (e.g., "What was Mr. Rahim doing?" with no prior story).
+2. MISSING IMAGE: Stem/options reference an image (diagram, chart, picture) but image field is null.
+3. INCORRECT OPTION/ANSWER: Correct answer label doesn't match the explanation text.
+4. BROKEN/INVALID: Blank question text, garbled text, duplicate options, or other errors.
+
+Return ONLY commands (one per line):
 ID delete
 ID correct:a/b/c/d
-
-Rules:
-- Delete questions with missing context/stem (e.g., "What was Mr Rahim doing?" without prior story)
-- Fix correct answer if explanation doesn't match current answer
-- Use Question ID only, not question number
-- No extra text, just the commands
-- If all questions are correct and need no changes, output exactly: all correct\n\n`;
+If all correct: all correct\n\n`;
 
 async function getQuestions(params = {}) {
   let allQuestions = [];

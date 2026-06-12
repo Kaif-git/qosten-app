@@ -29,51 +29,56 @@ import LabView from './components/LabView/LabView';
 import DevView from './components/Dev/DevView';
 import Login from './components/Dev/Login';
 import DataTracker from './components/DataTracker/DataTracker';
+import { AIProvider } from './context/AIContext';
+import AITab from './components/AITab/AITab';
 
 function App() {
   return (
     <ThemeProvider>
       <QuestionProvider>
         <PromptProvider>
-          <ShopProvider>
-            <BrowserRouter>
-            <div className="App">
-              <Header />
-              <TabContainer />
-              <Routes>
-                <Route path="/" element={<Navigate to="/import" replace />} />
-                <Route path="/import" element={<ImportTabs type="mcq" language="en" />} />
-                <Route path="/bank" element={<QuestionBank />} />
-                <Route path="/videos" element={<VideosView />} />
-                <Route path="/add" element={<QuestionForm />} />
-                <Route path="/import-cq" element={<ImportTabs type="cq" language="en" />} />
-                <Route path="/import-sq" element={<ImportTabs type="sq" language="en" />} />
-                <Route path="/import-bn" element={<ImportTabs type="mcq" language="bn" />} />
-                <Route path="/import-cq-bn" element={<ImportTabs type="cq" language="bn" />} />
-                <Route path="/import-sq-bn" element={<ImportTabs type="sq" language="bn" />} />
-                <Route path="/import-math" element={<MathQuestionImport />} />
-                <Route path="/import-mcq" element={<MCQImport />} />
-                <Route path="/import-json" element={<CQJSONImport />} />
-                <Route path="/import-cq-md" element={<CQMDImport />} />
-                <Route path="/import-cq-txt" element={<CQTXTImport />} />
-                <Route path="/import-lab" element={<LabImport />} />
-                <Route path="/prompts" element={<SimplePromptManager />} />
-                <Route path="/shop" element={<Shop />} />
-                <Route path="/roadmap" element={<Roadmap />} />
-                <Route path="/batch-test" element={<BatchSizeTest />} />
-                <Route path="/translate-test" element={<TranslationTest />} />
-                <Route path="/overview" element={<ChapterOverview />} />
-                <Route path="/overview-upload" element={<OverviewUpload />} />
-                <Route path="/lessons" element={<LessonsImport />} />
-                <Route path="/lessons-view" element={<LessonsView />} />
-                <Route path="/lab-view" element={<LabView />} />
-                <Route path="/dev" element={<DevView />} />
-                <Route path="/tracker" element={<DataTracker />} />
-                <Route path="/login" element={<Login />} />
-              </Routes>
-            </div>
-          </BrowserRouter>
-        </ShopProvider>
+          <AIProvider>
+            <ShopProvider>
+              <BrowserRouter>
+              <div className="App">
+                <Header />
+                <TabContainer />
+                <Routes>
+                  <Route path="/" element={<Navigate to="/import" replace />} />
+                  <Route path="/import" element={<ImportTabs type="mcq" language="en" />} />
+                  <Route path="/bank" element={<QuestionBank />} />
+                  <Route path="/videos" element={<VideosView />} />
+                  <Route path="/add" element={<QuestionForm />} />
+                  <Route path="/import-cq" element={<ImportTabs type="cq" language="en" />} />
+                  <Route path="/import-sq" element={<ImportTabs type="sq" language="en" />} />
+                  <Route path="/import-bn" element={<ImportTabs type="mcq" language="bn" />} />
+                  <Route path="/import-cq-bn" element={<ImportTabs type="cq" language="bn" />} />
+                  <Route path="/import-sq-bn" element={<ImportTabs type="sq" language="bn" />} />
+                  <Route path="/import-math" element={<MathQuestionImport />} />
+                  <Route path="/import-mcq" element={<MCQImport />} />
+                  <Route path="/import-json" element={<CQJSONImport />} />
+                  <Route path="/import-cq-md" element={<CQMDImport />} />
+                  <Route path="/import-cq-txt" element={<CQTXTImport />} />
+                  <Route path="/import-lab" element={<LabImport />} />
+                  <Route path="/prompts" element={<SimplePromptManager />} />
+                  <Route path="/shop" element={<Shop />} />
+                  <Route path="/roadmap" element={<Roadmap />} />
+                  <Route path="/batch-test" element={<BatchSizeTest />} />
+                  <Route path="/translate-test" element={<TranslationTest />} />
+                  <Route path="/overview" element={<ChapterOverview />} />
+                  <Route path="/overview-upload" element={<OverviewUpload />} />
+                  <Route path="/lessons" element={<LessonsImport />} />
+                  <Route path="/lessons-view" element={<LessonsView />} />
+                  <Route path="/lab-view" element={<LabView />} />
+                  <Route path="/dev" element={<DevView />} />
+                  <Route path="/tracker" element={<DataTracker />} />
+                  <Route path="/ai" element={<AITab />} />
+                  <Route path="/login" element={<Login />} />
+                </Routes>
+              </div>
+            </BrowserRouter>
+          </ShopProvider>
+        </AIProvider>
       </PromptProvider>
     </QuestionProvider>
   </ThemeProvider>

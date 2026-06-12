@@ -1,0 +1,6 @@
+Error processing Bangladesh and Global Studies_Social Problems of Bangladesh and Remedies_mcq.txt: locator.waitFor: Target page, context or browser has been closed
+Call log:
+[2m  - waiting for locator('.qwen-chat-message-assistant .qwen-markdown').last() to be visible[22m
+
+Automation error: browser.newContext: Target page, context or browser has been closed
+    at async main (E:\Qosten\qosten-react\scripts\qwen_automation.mjs:27:23)

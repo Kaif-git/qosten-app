@@ -22,7 +22,13 @@ async function processFile(page, filePath, fileName) {
   const data = await fs.readFile(filePath, 'utf-8');
   const questions = JSON.parse(data);
 
-  let prompt = `Fix the following MCQ questions. Format: ID correct:a/b/c/d or ID delete. If all correct, output "all correct".\n\n`;
+  let prompt = `You are an MCQ quality reviewer. Review for these issues:
+1. LOSS OF STEM: Questions referencing context not provided (e.g., "What was Mr. Rahim doing?" with no story).
+2. MISSING IMAGE: Stem/options reference an image but image field is null.
+3. INCORRECT OPTION/ANSWER: Correct answer label doesn't match explanation.
+4. BROKEN/INVALID: Blank text, garbled text, duplicate options.
+
+Format: ID correct:a/b/c/d or ID delete. If all correct, output "all correct".\n\n`;
   questions.forEach(q => {
     prompt += `ID: ${q.id}\nQuestion: ${q.question}\n`;
 

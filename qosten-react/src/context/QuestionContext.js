@@ -5,6 +5,7 @@ import { questionApi } from '../services/questionApi';
 // Initial state
 const initialState = {
   questions: [],
+  history: {}, // Map of questionId -> [history of previous versions]
   hierarchy: [], // Stores subject/chapter structure and counts
   currentFilters: {
     searchText: '',
@@ -62,13 +63,40 @@ function questionReducer(state, action) {
       return { ...state, hierarchy: action.payload };
     case ACTIONS.ADD_QUESTION:
       return { ...state, questions: [action.payload, ...state.questions] };
-    case ACTIONS.UPDATE_QUESTION:
+    case ACTIONS.UPDATE_QUESTION: {
+      const prevQuestion = state.questions.find(q => q.id === action.payload.id);
+      const newHistory = { ...state.history };
+      if (prevQuestion) {
+        const qHistory = newHistory[action.payload.id] || [];
+        // Keep last 5 versions
+        newHistory[action.payload.id] = [prevQuestion, ...qHistory].slice(0, 5);
+      }
       return {
         ...state,
         questions: state.questions.map(q => 
           q.id === action.payload.id ? action.payload : q
-        )
+        ),
+        history: newHistory
       };
+    }
+    case 'ROLLBACK_QUESTION': {
+      const qHistory = state.history[action.payload] || [];
+      if (qHistory.length === 0) return state;
+      
+      const previousVersion = qHistory[0];
+      const remainingHistory = qHistory.slice(1);
+      
+      return {
+        ...state,
+        questions: state.questions.map(q => 
+          q.id === action.payload ? previousVersion : q
+        ),
+        history: {
+          ...state.history,
+          [action.payload]: remainingHistory
+        }
+      };
+    }
     case ACTIONS.DELETE_QUESTION:
       return {
         ...state,
@@ -155,7 +183,7 @@ export const mapDatabaseToApp = (q) => {
 
   // Basic question structure
   const question = {
-    id: q.id,
+    id: q.id || q.question_id || `temp_${Math.random().toString(36).substring(2, 11)}`,
     type: q.type || 'mcq',
     text: questionText,
     questionText: questionText,
@@ -811,7 +839,10 @@ export function QuestionProvider({ children }) {
   const addQuestion = useCallback(async (question) => {
     try {
       const questionWithImages = await processQuestionImages(question);
-      const dbQuestion = mapAppToDatabase(questionWithImages);
+      // Strip local ID for new questions — server auto-generates it
+      const dbQuestionData = { ...questionWithImages };
+      delete dbQuestionData.id;
+      const dbQuestion = mapAppToDatabase(dbQuestionData);
       const responseData = await questionApi.createQuestion(dbQuestion);
       
       console.log('📥 [QuestionContext] addQuestion - responseData:', responseData);
@@ -865,7 +896,12 @@ export function QuestionProvider({ children }) {
           }
         }
 
-        const dbChunk = processedChunk.map(mapAppToDatabase);
+        // Strip local IDs for new questions — server auto-generates them
+        const dbChunk = processedChunk.map(q => {
+          const copy = { ...q };
+          delete copy.id;
+          return mapAppToDatabase(copy);
+        });
         const batchResults = await questionApi.bulkCreateQuestions(dbChunk);
         results.successCount += batchResults.successCount;
         results.failedCount += batchResults.failedCount;
@@ -928,6 +964,7 @@ export function QuestionProvider({ children }) {
       }
     } catch (error) {
       console.error('Error refreshing questions:', error);
+      throw error;
     }
   }, [refreshHierarchy]);
 
@@ -942,7 +979,12 @@ export function QuestionProvider({ children }) {
           processed.push(processedQ);
       }
       
-      const dbQuestions = processed.map(q => mapAppToDatabase(q));
+      // Strip local IDs for new questions — server auto-generates them
+      const dbQuestions = processed.map(q => {
+        const copy = { ...q };
+        delete copy.id;
+        return mapAppToDatabase(copy);
+      });
       const result = await questionApi.batchCreateQuestions(dbQuestions, onProgress);
       
       // Update local state with the new questions instead of refreshing entire DB
@@ -961,6 +1003,10 @@ export function QuestionProvider({ children }) {
       const questionWithImages = await processQuestionImages(question);
       const dbQuestion = mapAppToDatabase(questionWithImages);
       const questionId = parseInt(question.id);
+      if (isNaN(questionId)) {
+        console.warn(`Cannot update question with non-numeric ID: ${question.id}`);
+        throw new Error('Question has no valid database ID and cannot be updated.');
+      }
       await questionApi.updateQuestion(questionId, dbQuestion);
       dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: questionWithImages });
       refreshHierarchy();
@@ -1087,7 +1133,7 @@ export function QuestionProvider({ children }) {
     
     try {
       if (forcedPage === null) isFetchingRef.current = true;
-      const BATCH_SIZE = 500;
+      const BATCH_SIZE = 200;
       const nextPage = forcedPage !== null ? forcedPage : Math.floor(questionsLengthRef.current / BATCH_SIZE);
       
       console.log(`📡 Fetching Page ${nextPage}...`);
@@ -1160,6 +1206,22 @@ export function QuestionProvider({ children }) {
     return totalAdded;
   }, [fetchMoreQuestions]);
 
+  const rollbackQuestion = useCallback(async (id) => {
+    const qHistory = state.history[id] || [];
+    if (qHistory.length === 0) return;
+
+    const previousVersion = qHistory[0];
+    try {
+      const dbQ = mapAppToDatabase(previousVersion);
+      await questionApi.updateQuestion(parseInt(id), dbQ);
+      dispatch({ type: 'ROLLBACK_QUESTION', payload: id });
+      refreshHierarchy();
+    } catch (err) {
+      console.error('Failed to rollback question:', err);
+      alert('Failed to rollback: ' + err.message);
+    }
+  }, [state.history, refreshHierarchy]);
+
   const toggleQuestionFlag = useCallback(async (questionId) => {
     const question = state.questions.find(q => q && q.id && q.id.toString() === (questionId ? questionId.toString() : ''));
     if (!question) return;
@@ -1169,7 +1231,12 @@ export function QuestionProvider({ children }) {
 
     try {
       const dbQ = mapAppToDatabase(updatedQuestion);
-      await questionApi.updateQuestion(parseInt(questionId), dbQ);
+      const numericId = parseInt(questionId);
+      if (!isNaN(numericId)) {
+        await questionApi.updateQuestion(numericId, dbQ);
+      } else {
+        console.warn(`Question ${questionId} has no numeric ID, skipping DB update.`);
+      }
     } catch (err) {
       dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
     }
@@ -1183,8 +1250,12 @@ export function QuestionProvider({ children }) {
     dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: updatedQuestion });
 
     try {
-      // Use the specific verify endpoint which handles toggling and review queue removal
-      await questionApi.verifyQuestion(parseInt(questionId));
+      const numericId = parseInt(questionId);
+      if (!isNaN(numericId)) {
+        await questionApi.verifyQuestion(numericId);
+      } else {
+        console.warn(`Question ${questionId} has no numeric ID, skipping DB update.`);
+      }
     } catch (err) {
       console.error('Failed to toggle verification:', err);
       // Revert local state on failure
@@ -1201,7 +1272,12 @@ export function QuestionProvider({ children }) {
 
     try {
       const dbQ = mapAppToDatabase(updatedQuestion);
-      await questionApi.updateQuestion(parseInt(questionId), dbQ);
+      const numericId = parseInt(questionId);
+      if (!isNaN(numericId)) {
+        await questionApi.updateQuestion(numericId, dbQ);
+      } else {
+        console.warn(`Question ${questionId} has no numeric ID, skipping DB update.`);
+      }
     } catch (err) {
       dispatch({ type: ACTIONS.UPDATE_QUESTION, payload: question });
     }
@@ -1367,6 +1443,7 @@ export function QuestionProvider({ children }) {
     batchAddQuestions,
     updateQuestion,
     bulkUpdateQuestions,
+    rollbackQuestion,
     deleteQuestion,
     fetchQuestionsByIds,
     setFilters,

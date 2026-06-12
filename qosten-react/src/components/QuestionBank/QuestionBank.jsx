@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { useQuestions, mapDatabaseToApp } from '../../context/QuestionContext';
+import { useAI } from '../../context/AIContext';
+import { aiService } from '../../services/aiService';
 import { questionApi } from '../../services/questionApi';
 import { labApi } from '../../services/labApi';
 import { videoApi } from '../../services/videoApi';
@@ -9,6 +11,8 @@ import SearchFilters from '../SearchFilters/SearchFilters';
 import QuestionCard from '../QuestionCard/QuestionCard';
 import FullQuestionContent from '../FullQuestionContent/FullQuestionContent';
 import MCQFixExplanation from '../MCQImport/MCQFixExplanation';
+import AIQuestionImprover from '../AIQuestionImprover/AIQuestionImprover';
+import AIQuestionPanel from '../AIQuestionPanel/AIQuestionPanel';
 import { detectAndFixCQ } from '../../utils/cqFixUtils';
 import { detectAndFixMCQOptions } from '../../utils/mcqFixUtils';
 import { performImageMigration, getMigrationPreview } from '../../utils/imageMigration';
@@ -198,7 +202,15 @@ const getFilteredQuestions = (questions, filters, fullQuestionsMap = null, hasSe
       (filters.verifiedStatus === 'verified' && q.isVerified) ||
       (filters.verifiedStatus === 'unverified' && !q.isVerified);
     
-    return matchesSubject && matchesChapter && matchesLesson && matchesType && matchesBoard && matchesLanguage && matchesFlaggedStatus && matchesVerifiedStatus;
+    // Stage 1.5: LaTeX Status (requires full object if not metadata)
+    let matchesLatexStatus = true;
+    if (filters.latexStatus) {
+      const fullQ = (fullQuestionsMap && fullQuestionsMap.get(q.id)) || q;
+      const hasIssue = aiService.hasLatexIssues(fullQ);
+      matchesLatexStatus = filters.latexStatus === 'has_issues' ? hasIssue : !hasIssue;
+    }
+    
+    return matchesSubject && matchesChapter && matchesLesson && matchesType && matchesBoard && matchesLanguage && matchesFlaggedStatus && matchesVerifiedStatus && matchesLatexStatus;
   });
 
   // Stage 2: Text Search (Expensive - only if needed and searched)
@@ -245,30 +257,183 @@ export default function QuestionBank() {
     fetchAllRemaining, 
     clearCache, 
     hierarchy
-  } = useQuestions();
+    } = useQuestions();
+    const { addToQueue } = useAI();
 
-  // Auto-search and open modal if ID is provided in URL
-  const [selectedQuestionForModal, setSelectedQuestionForModal] = useState(null);
-  const autoOpenedRef = useRef(false);
+    // Auto-search and open modal if ID is provided in URL
+    const [selectedQuestionForModal, setSelectedQuestionForModal] = useState(null);
+    const autoOpenedRef = useRef(false);
+    const itemRefs = useRef(new Map()); // Store refs for scrolling
 
-  useEffect(() => {
+    useEffect(() => {
     const id = searchParams.get('id');
     if (id && !autoOpenedRef.current) {
+      console.log(`🔗 [QuestionBank] Deep-link detected for ID: ${id}`);
       if (id !== currentFilters.searchText) {
         setFilters({ ...currentFilters, searchText: id });
       }
-      
+
       questionApi.fetchQuestionsByIds([id]).then(results => {
         if (results && results.length > 0) {
-          setSelectedQuestionForModal(mapDatabaseToApp(results[0]));
+          console.log(`✅ [QuestionBank] Found deep-linked question data:`, results[0]);
+          const mapped = mapDatabaseToApp(results[0]);
+          setSelectedQuestionForModal(mapped);
           autoOpenedRef.current = true;
+          
+          // Ensure visibleCount is large enough to include this item if it's already in the filtered list
+          // Or just increase it significantly to be safe
+          setVisibleCount(prev => Math.max(prev, 100));
+
+          // Scroll to the item after a short delay to allow rendering
+          setTimeout(() => {
+            const el = itemRefs.current.get(id);
+            if (el) {
+              console.log(`📍 [QuestionBank] Scrolling to and highlighting Q#${id}`);
+              el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              el.style.transition = 'background-color 1s';
+              el.style.backgroundColor = '#fff3cd';
+              setTimeout(() => { el.style.backgroundColor = ''; }, 2000);
+            } else {
+              console.warn(`⚠️ [QuestionBank] Element for Q#${id} not found in refs map. It might not be rendered yet or visibleCount is too low.`);
+              // Last ditch: if not found, we already opened the modal, which is the main goal.
+            }
+          }, 800);
+        } else {
+          console.error(`❌ [QuestionBank] Question ID ${id} not found in database.`);
         }
       }).catch(err => console.error('Error fetching deep-linked question:', err));
     }
-  }, [searchParams, setFilters, currentFilters]);
-  const [selectedQuestions, setSelectedQuestions] = useState([]);
-  const [selectionMode, setSelectionMode] = useState(false);
-  const [lastSelectedId, setLastSelectedId] = useState(null); // Track last selected for shift-click
+    }, [searchParams, setFilters, currentFilters]);
+    const [selectedQuestions, setSelectedQuestions] = useState([]);
+    const [selectionMode, setSelectionMode] = useState(false);
+    const [lastSelectedId, setLastSelectedId] = useState(null); 
+
+    const [showBatchAIModal, setShowBatchAIModal] = useState(false);
+    const [batchAITask, setBatchAITask] = useState('fix_latex');
+
+    const handleActivateSelection = (questionId) => {
+    setSelectionMode(true);
+    setSelectedQuestions([questionId]);
+    setLastSelectedId(questionId);
+    };
+
+    const handleQueueAllLatexIssues = () => {
+      // 1. Identify all questions with at least one LaTeX issue
+      const candidates = questions.filter(q => {
+        const fullQ = (fullQuestionsMap && fullQuestionsMap.get(q.id)) || q;
+        return aiService.hasLatexIssues(fullQ);
+      });
+
+      if (candidates.length === 0) {
+        alert(`No LaTeX issues found among all ${questions.length} loaded questions.`);
+        return;
+      }
+
+      // 2. Select a subset of questions to avoid storage quota issues
+      let selectedQuestions = candidates;
+      const MAX_RECOMMENDED = 100;
+
+      if (candidates.length > MAX_RECOMMENDED) {
+        const userChoice = window.prompt(
+          `⚠️ Found ${candidates.length} questions with issues. Browser storage (LocalStorage) cannot handle too many at once.\n\n` +
+          `Enter how many QUESTIONS to process (Max recommended: 100-200):\n` +
+          `- Type a number (e.g. "50") for top X\n` +
+          `- Type "random X" (e.g. "random 50") for random selection\n` +
+          `- Leave blank or cancel to stop.`,
+          MAX_RECOMMENDED.toString()
+        );
+
+        if (userChoice === null) return;
+        
+        const cleanChoice = userChoice.trim().toLowerCase();
+        if (cleanChoice.startsWith('random')) {
+          const num = parseInt(cleanChoice.replace('random', '').trim()) || MAX_RECOMMENDED;
+          selectedQuestions = [...candidates].sort(() => 0.5 - Math.random()).slice(0, num);
+        } else {
+          const num = parseInt(cleanChoice) || MAX_RECOMMENDED;
+          selectedQuestions = candidates.slice(0, num);
+        }
+      }
+
+      // 3. SURGICAL QUEUEING: Only queue fields that actually have issues
+      let taskCount = 0;
+      try {
+        selectedQuestions.forEach(q => {
+          const fullQ = (fullQuestionsMap && fullQuestionsMap.get(q.id)) || q;
+          
+          // Question Text
+          if (aiService.validateLatex(fullQ.questionText || fullQ.question)) {
+            addToQueue(fullQ, 'questionText', 'fix_latex');
+            taskCount++;
+          }
+          
+          // Explanation
+          if (fullQ.explanation && aiService.validateLatex(fullQ.explanation)) {
+            addToQueue(fullQ, 'explanation', 'fix_latex');
+            taskCount++;
+          }
+
+          // MCQ Options & Explanation
+          if (fullQ.type === 'mcq') {
+            if (fullQ.options && Array.isArray(fullQ.options)) {
+              fullQ.options.forEach((opt, idx) => {
+                if (aiService.validateLatex(opt.text)) {
+                  addToQueue(fullQ, `option_${idx}`, 'fix_latex');
+                  taskCount++;
+                }
+              });
+            }
+            if (fullQ.explanation && aiService.validateLatex(fullQ.explanation)) {
+              addToQueue(fullQ, 'explanation', 'fix_latex');
+              taskCount++;
+            }
+          }
+
+          // CQ Parts (Stem is handled by questionText above)
+          if (fullQ.type === 'cq' && fullQ.parts && Array.isArray(fullQ.parts)) {
+            fullQ.parts.forEach(p => {
+              if (aiService.validateLatex(p.text)) {
+                addToQueue(fullQ, `part_${p.letter}_text`, 'fix_latex');
+                taskCount++;
+              }
+              if (aiService.validateLatex(p.answer)) {
+                addToQueue(fullQ, `part_${p.letter}_answer`, 'fix_latex');
+                taskCount++;
+              }
+            });
+          }
+        });
+        alert(`Successfully queued ${taskCount} surgical tasks for ${selectedQuestions.length} questions. Visit the AI Hub to start.`);
+      } catch (err) {
+        if (err.name === 'QuotaExceededError' || err.message.includes('quota')) {
+          alert("❌ Storage limit exceeded! Please clear your AI Hub queue or history and try a smaller batch.");
+        } else {
+          alert(`❌ Error queuing items: ${err.message}`);
+        }
+      }
+    };
+
+    const handleBatchAIQueue = (task) => {
+    if (selectedQuestions.length === 0) return;
+
+    // Get full question objects for all selected IDs
+    const selectedFullObjects = questions.filter(q => selectedQuestions.includes(q.id));
+
+    selectedFullObjects.forEach(q => {
+      // For batch, we queue the most common problematic fields automatically
+      addToQueue(q, 'questionText', task);
+      if (q.explanation) addToQueue(q, 'explanation', task);
+
+      // If it's CQ, queue all parts
+      if (q.type === 'cq' && q.parts) {
+        q.parts.forEach(p => addToQueue(q, `part_${p.letter}`, task));
+      }
+    });
+
+    alert(`Queued ${selectedQuestions.length} questions for ${task.replace(/_/g, ' ')}.`);
+    setSelectionMode(false);
+    setSelectedQuestions([]);
+    }; // Track last selected for shift-click
 
   const [showBulkMetadataEditor, setShowBulkMetadataEditor] = useState(false);
   const [bulkMetadata, setBulkMetadata] = useState({ subject: '', chapter: '', lesson: '', board: '' });
@@ -353,6 +518,8 @@ export default function QuestionBank() {
   const [noOptionsMCQs, setNoOptionsMCQs] = useState([]);
 
   // Image Placeholder MCQ State
+  const [showAIImprover, setShowAIImprover] = useState(false);
+  const [activeQuestionForAI, setActiveQuestionForAI] = useState(null);
   const [showImagePlaceholderModal, setShowImagePlaceholderModal] = useState(false);
   const [imagePlaceholderMCQs, setImagePlaceholderMCQs] = useState([]);
   const [showMCQFixExplanation, setShowMCQFixExplanation] = useState(false);
@@ -1011,32 +1178,9 @@ export default function QuestionBank() {
                });
                const newQuestions = Array.isArray(response) ? response : (response.data || []);
                
-               if (newQuestions.length > 0) {
-                 const mapped = newQuestions.map(q => ({
-                    id: q.id,
-                    type: q.type,
-                    subject: q.subject,
-                    chapter: q.chapter,
-                    lesson: q.lesson,
-                    board: q.board,
-                    language: q.language,
-                    question: q.question,
-                    questionText: q.question_text,
-                    options: typeof q.options === 'string' ? JSON.parse(q.options) : q.options,
-                    correctAnswer: q.correct_answer,
-                    answer: q.answer,
-                    parts: typeof q.parts === 'string' ? JSON.parse(q.parts) : q.parts,
-                    image: q.image,
-                    answerimage1: q.answerimage1,
-                    answerimage2: q.answerimage2,
-                    answerimage3: q.answerimage3,
-                    answerimage4: q.answerimage4,
-                    explanation: q.explanation,
-                    tags: typeof q.tags === 'string' ? JSON.parse(q.tags) : q.tags,
-                    isFlagged: q.is_flagged,
-                    isVerified: q.is_verified,
-                    inReviewQueue: q.in_review_queue
-                 }));
+                if (newQuestions.length > 0) {
+                  const mapped = newQuestions.map(mapDatabaseToApp);
+
 
                  setQuestions(prev => {
                     const existing = new Set(prev.map(p => p.id));
@@ -1105,18 +1249,37 @@ export default function QuestionBank() {
   );
   
   const currentVisibleQuestions = React.useMemo(() => {
-    if (!isSplitView) return filteredQuestionsSingle;
-    // Efficiently merge two arrays and maintain uniqueness
-    const seen = new Set();
-    const result = [];
-    [...filteredQuestionsLeft, ...filteredQuestionsRight].forEach(q => {
-        if (!seen.has(q.id)) {
-            seen.add(q.id);
-            result.push(q);
-        }
-    });
-    return result;
-  }, [isSplitView, filteredQuestionsSingle, filteredQuestionsLeft, filteredQuestionsRight]);
+    let baseList = [];
+    if (!isSplitView) {
+      baseList = filteredQuestionsSingle;
+    } else {
+      // Efficiently merge two arrays and maintain uniqueness
+      const seen = new Set();
+      const result = [];
+      [...filteredQuestionsLeft, ...filteredQuestionsRight].forEach(q => {
+          if (!seen.has(q.id)) {
+              seen.add(q.id);
+              result.push(q);
+          }
+      });
+      baseList = result;
+    }
+
+    // PRIORITY: If a deep-linked ID is in the URL, move it to the front of the list
+    // to ensure it's rendered and reachable by scrollIntoView.
+    const deepLinkId = searchParams.get('id');
+    if (deepLinkId) {
+      const idx = baseList.findIndex(q => q.id.toString() === deepLinkId.toString());
+      if (idx > 0) {
+        const prioritized = [...baseList];
+        const item = prioritized.splice(idx, 1)[0];
+        prioritized.unshift(item);
+        return prioritized;
+      }
+    }
+    
+    return baseList;
+  }, [isSplitView, filteredQuestionsSingle, filteredQuestionsLeft, filteredQuestionsRight, searchParams]);
 
   // Reset visibleCount when filters change to keep rendering fast
   useEffect(() => {
@@ -1159,9 +1322,11 @@ export default function QuestionBank() {
   };
   
   const toggleQuestionSelection = (questionId, event) => {
+    console.log('[Selection Debug] toggleQuestionSelection called with id:', questionId);
     if (event && event.shiftKey && lastSelectedId) {
         // Handle Range Selection
         const allIds = currentVisibleQuestions.map(q => q.id);
+        console.log('[Selection Debug] allIds in view:', allIds);
         const startIdx = allIds.indexOf(lastSelectedId);
         const endIdx = allIds.indexOf(questionId);
         
@@ -1171,8 +1336,9 @@ export default function QuestionBank() {
             const rangeIds = allIds.slice(minIdx, maxIdx + 1);
             
             setSelectedQuestions(prev => {
-                // Merge rangeIds with prev, ensuring no duplicates
-                return [...new Set([...prev, ...rangeIds])];
+                const next = [...new Set([...prev, ...rangeIds])];
+                console.log('[Selection Debug] Range selection. Next selectedQuestions:', next);
+                return next;
             });
             // Update last selected to the one clicked
             setLastSelectedId(questionId);
@@ -1183,10 +1349,16 @@ export default function QuestionBank() {
     // Standard Toggle Selection
     setLastSelectedId(questionId);
     setSelectedQuestions(prev => {
-      if (prev.includes(questionId)) {
-        return prev.filter(id => id !== questionId);
+      const isSelected = prev.includes(questionId);
+      console.log('[Selection Debug] Standard toggle. ID:', questionId, 'Is already selected:', isSelected);
+      if (isSelected) {
+        const next = prev.filter(id => id !== questionId);
+        console.log('[Selection Debug] Deselected. Next selectedQuestions:', next);
+        return next;
       } else {
-        return [...prev, questionId];
+        const next = [...prev, questionId];
+        console.log('[Selection Debug] Selected. Next selectedQuestions:', next);
+        return next;
       }
     });
   };
@@ -1910,11 +2082,12 @@ export default function QuestionBank() {
     let questionsToScan = [];
     
     try {
-      if (scanAll) {
-        questionsToScan = await questionApi.fetchAllQuestions((batch) => {
-          setSyncProgress(prev => ({ ...prev, current: prev.current + batch.length }));
-        });
-      } else {
+       if (scanAll) {
+         const rawQuestions = await questionApi.fetchAllQuestions((batch) => {
+           setSyncProgress(prev => ({ ...prev, current: prev.current + batch.length }));
+         });
+         questionsToScan = rawQuestions.map(mapDatabaseToApp);
+       } else {
         questionsToScan = currentVisibleQuestions;
       }
       
@@ -3489,31 +3662,7 @@ export default function QuestionBank() {
                     const rawData = Array.isArray(response) ? response : (response.data || []);
                     
                     if (rawData.length > 0) {
-                        const mapped = rawData.map(q => ({
-                            id: q.id,
-                            type: q.type,
-                            subject: q.subject,
-                            chapter: q.chapter,
-                            lesson: q.lesson,
-                            board: q.board,
-                            language: q.language,
-                            question: q.question,
-                            questionText: q.question_text,
-                            options: typeof q.options === 'string' ? JSON.parse(q.options) : q.options,
-                            correctAnswer: q.correct_answer,
-                            answer: q.answer,
-                            parts: typeof q.parts === 'string' ? JSON.parse(q.parts) : q.parts,
-                            image: q.image,
-                            answerimage1: q.answerimage1,
-                            answerimage2: q.answerimage2,
-                            answerimage3: q.answerimage3,
-                            answerimage4: q.answerimage4,
-                            explanation: q.explanation,
-                            tags: typeof q.tags === 'string' ? JSON.parse(q.tags) : q.tags,
-                            isFlagged: q.is_flagged,
-                            isVerified: q.is_verified,
-                            inReviewQueue: q.in_review_queue
-                        }));
+                        const mapped = rawData.map(mapDatabaseToApp);
 
                         setQuestions(prev => {
                             const existing = new Set(prev.filter(p => p && p.id).map(p => p.id.toString()));
@@ -3602,16 +3751,19 @@ export default function QuestionBank() {
                     : (fullQ || question);
 
                 return (
-                  <QuestionCard 
-                    key={question.id} 
-                    question={displayQ}
-                    selectionMode={selectionMode}
-                    isSelected={selectedSet.has(question.id)}
-                    onToggleSelect={stableToggleQuestionSelection}
-                    isLab={labProblemIds.has(question.id.toString())}
-                    videoCount={videoCounts[question.id] || 0}
-                    onVideoUpdate={handleVideoUpdate}
-                  />
+                  <div key={question.id} ref={el => itemRefs.current.set(question.id, el)}>
+                    <QuestionCard
+                      question={displayQ}
+                      selectionMode={selectionMode}
+                      isSelected={selectedSet.has(question.id)}
+                      onToggleSelect={stableToggleQuestionSelection}
+                      onActivateSelection={handleActivateSelection}
+                      onAIClick={(q) => setActiveQuestionForAI(q)}
+                      isLab={question.id ? labProblemIds.has(question.id.toString()) : false}
+                      videoCount={videoCounts[question.id] || 0}
+                      onVideoUpdate={handleVideoUpdate}
+                    />
+                  </div>
                 );
               })}
               
@@ -6182,6 +6334,22 @@ export default function QuestionBank() {
             ① Fix Circled Numerals
           </button>
 
+          <button 
+            onClick={handleQueueAllLatexIssues}
+            style={{
+              backgroundColor: '#f39c12',
+              color: 'white',
+              padding: '10px 20px',
+              borderRadius: '6px',
+              border: 'none',
+              cursor: 'pointer',
+              fontWeight: '600',
+              marginRight: '10px'
+            }}
+          >
+            🔍 Queue All LaTeX Issues
+          </button>
+
           <button
             onClick={() => {
               setReviewQueueType('mcq');
@@ -6219,7 +6387,7 @@ export default function QuestionBank() {
           
           {selectionMode && (
             <>
-              <button 
+              <button
                 onClick={selectAll}
                 style={{
                   backgroundColor: '#28a745',
@@ -6232,7 +6400,76 @@ export default function QuestionBank() {
               >
                 Select All ({currentVisibleQuestions.length})
               </button>
-              
+
+              <button
+                onClick={() => setShowAIImprover(true)}
+                disabled={selectedQuestions.length === 0}
+                style={{
+                  backgroundColor: '#9b59b6',
+                  color: 'white',
+                  padding: '10px 20px',
+                  borderRadius: '6px',
+                  border: 'none',
+                  cursor: selectedQuestions.length === 0 ? 'not-allowed' : 'pointer',
+                  opacity: selectedQuestions.length === 0 ? 0.6 : 1,
+                  fontWeight: 'bold',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '5px'
+                }}
+              >
+                ✨ Improve with AI ({selectedQuestions.length})
+              </button>
+
+              <div style={{ position: 'relative' }}>
+                <button
+                  onClick={() => setShowBatchAIModal(!showBatchAIModal)}
+                  disabled={selectedQuestions.length === 0}
+                  style={{
+                    backgroundColor: '#6f42c1',
+                    color: 'white',
+                    padding: '10px 20px',
+                    borderRadius: '6px',
+                    border: 'none',
+                    cursor: selectedQuestions.length === 0 ? 'not-allowed' : 'pointer',
+                    opacity: selectedQuestions.length === 0 ? 0.6 : 1,
+                    fontWeight: 'bold'
+                  }}
+                >
+                  🤖 AI Batch Queue ({selectedQuestions.length})
+                </button>
+                
+                {showBatchAIModal && (
+                  <div style={{
+                    position: 'absolute',
+                    top: '100%',
+                    left: 0,
+                    zIndex: 2000,
+                    background: 'white',
+                    border: '1px solid #ddd',
+                    borderRadius: '8px',
+                    boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
+                    marginTop: '5px',
+                    minWidth: '200px',
+                    padding: '5px'
+                  }}>
+                    <div style={{ padding: '8px', fontSize: '11px', fontWeight: 'bold', color: '#666', borderBottom: '1px solid #eee' }}>
+                      BATCH QUEUE ACTION
+                    </div>
+                    {['fix_latex', 'improve_clarity', 'fact_check', 'generate_explanation'].map(task => (
+                      <div
+                        key={task}
+                        style={{ padding: '10px 15px', cursor: 'pointer', fontSize: '13px', borderRadius: '4px' }}
+                        onClick={() => handleBatchAIQueue(task)}
+                        onMouseEnter={(e) => e.target.style.background = '#f0f0f0'}
+                        onMouseLeave={(e) => e.target.style.background = 'transparent'}
+                      >
+                        {task.replace('_', ' ').toUpperCase()}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
               <button 
                 onClick={deselectAll}
                 style={{
@@ -7511,6 +7748,25 @@ export default function QuestionBank() {
             </div>
           </div>
         </div>
+      )}
+
+      {showAIImprover && (
+        <AIQuestionImprover
+          selectedQuestions={selectedQuestions}
+          onComplete={() => {
+            setShowAIImprover(false);
+            setSelectedQuestions([]);
+            setSelectionMode(false);
+          }}
+          onCancel={() => setShowAIImprover(false)}
+        />
+      )}
+
+      {activeQuestionForAI && (
+        <AIQuestionPanel
+          question={activeQuestionForAI}
+          onClose={() => setActiveQuestionForAI(null)}
+        />
       )}
       </>
       );

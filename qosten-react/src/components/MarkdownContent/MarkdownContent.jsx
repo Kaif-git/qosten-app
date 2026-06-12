@@ -1,5 +1,6 @@
 import React from 'react';
 import LatexRenderer from '../LatexRenderer/LatexRenderer';
+import { autoWrapLatex } from '../../utils/latexUtils';
 
 /**
  * Renders markdown content with bullet points and LaTeX formulas
@@ -15,10 +16,13 @@ export default function MarkdownContent({ content }) {
     let formatted = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     formatted = formatted.replace(/(?<!\*)\*([^*]+?)\*(?!\*)/g, '<em>$1</em>');
     
+    // Auto-wrap bare LaTeX before splitting
+    formatted = autoWrapLatex(formatted);
+    
     // Split by HTML tags and LaTeX delimiters
     const parts = [];
     let currentIndex = 0;
-    const regex = /(<strong>|<\/strong>|<em>|<\/em>)|(\\\([^)]*\\\)|\\\[[^\]]*\\\])/g;
+    const regex = /(<strong>|<\/strong>|<em>|<\/em>)|(\\\(.*?\\\)|\\\[.*?\\\])/g;
     let match;
     let openTags = [];
 

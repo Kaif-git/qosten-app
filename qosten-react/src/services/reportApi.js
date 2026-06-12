@@ -5,6 +5,7 @@ const cache = {
   reports: null,
   chats: null,
   users: null,
+  incompleteSignups: null,
   flagged: null,
   metrics: {},
 };
@@ -14,6 +15,7 @@ export const reportApi = {
     cache.reports = null;
     cache.chats = null;
     cache.users = null;
+    cache.incompleteSignups = null;
     cache.flagged = null;
     cache.metrics = {};
     console.log('🧹 [reportApi] Cache cleared');
@@ -164,6 +166,26 @@ export const reportApi = {
     return data;
   },
 
+  async fetchIncompleteSignups(useCache = true) {
+    if (useCache && cache.incompleteSignups) {
+      console.log('📦 [reportApi] Returning cached incomplete signups');
+      return cache.incompleteSignups;
+    }
+
+    console.log('🔍 [reportApi] fetchIncompleteSignups: Starting fetch via RPC...');
+    const { data, error } = await supabase.rpc('fetch_incomplete_users');
+
+    if (error) {
+      console.error('❌ [reportApi] fetchIncompleteSignups error:', error);
+      throw error;
+    }
+
+    console.log(`📊 [reportApi] fetchIncompleteSignups: Found ${data?.length || 0} users`);
+
+    cache.incompleteSignups = data;
+    return data;
+  },
+
   async sendChatReply(userId, message, senderId = null) {
     let finalSenderId = senderId;
 
@@ -173,17 +195,16 @@ export const reportApi = {
     }
 
     const { data, error } = await supabase
-      .from('dev_chats')
-      .insert([{
-        user_id: userId,
-        message: message,
-        sender_type: 'developer',
-        sender_id: finalSenderId,
-        is_read: false
-      }])
-      .select();
+      .rpc('send_dev_chat_message', {
+        p_user_id: userId,
+        p_message: message,
+        p_sender_type: 'developer',
+        p_sender_id: finalSenderId,
+        p_is_read: false
+      });
+
     if (error) throw error;
-    return data[0];
+    return data?.[0];
   },
 
   async createNotification(userId, title, message, type = 'dev_chat', data = {}) {
@@ -248,7 +269,6 @@ export const reportApi = {
         const updates = currentData
           ? { ...currentData, is_flagged: intValue, isFlagged: intValue, flagged: intValue }
           : { is_flagged: intValue, isFlagged: intValue, flagged: intValue };
-
         if (!updates.id) updates.id = id;
 
         return await questionApi.updateQuestion(id, updates);
@@ -289,20 +309,17 @@ export const reportApi = {
 
   async sendNotification(userId, { type, title, message, action_url = null, data = {} }) {
     const { data: result, error } = await supabase
-      .from('notifications')
-      .insert([{
-        user_id: userId,
-        type: type || 'system',
-        title: title,
-        message: message,
-        read: false,
-        action_url: action_url,
-        data: data,
-        created_at: new Date().toISOString()
-      }])
-      .select();
+      .rpc('send_notification', {
+        p_user_id: userId,
+        p_type: type || 'system',
+        p_title: title,
+        p_message: message,
+        p_read: false,
+        p_action_url: action_url,
+        p_data: data
+      });
     if (error) throw error;
-    return result[0];
+    return result?.[0];
   },
 
   async updateUser(userId, updates) {
@@ -383,14 +400,11 @@ export const reportApi = {
 
   async fetchRecentActivity(page = 0, pageSize = 20) {
     try {
-      const from = page * pageSize;
-      const to = from + pageSize - 1;
-
-      const { data: activities, error } = await supabase
-        .from('user_attempts')
-        .select('attempted_at, question_type, was_correct, subject, chapter, user_id')
-        .order('attempted_at', { ascending: false })
-        .range(from, to);
+      console.log(`🔍 [reportApi] fetchRecentActivity: Starting fetch via RPC (page ${page})...`);
+      const { data: activities, error } = await supabase.rpc('fetch_recent_activity_unified', { 
+        p_page: page, 
+        p_page_size: pageSize 
+      });
 
       if (error) throw error;
       if (!activities || activities.length === 0) return [];

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useQuestions } from '../../context/QuestionContext';
 import QuestionPreview from '../QuestionPreview/QuestionPreview';
-import { parseMCQQuestions, getMCQQuestionExample } from '../../utils/mcqQuestionParser';
+import { parseMCQQuestions, getMCQQuestionExample, validateMCQQuestions, filterDeadQuestions } from '../../utils/mcqQuestionParser';
 import MCQFixExplanation from './MCQFixExplanation';
 
 export default function MCQImport() {
@@ -14,6 +14,7 @@ export default function MCQImport() {
   const [failedQuestions, setFailedQuestions] = useState([]);
   const [showErrorModal, setShowErrorModal] = useState(false);
   const [showBatchInspector, setShowBatchInspector] = useState(false);
+  const [deadQuestionsInfo, setDeadQuestionsInfo] = useState(null);
 
   const parseQuestions = () => {
     if (!inputText.trim()) {
@@ -29,11 +30,40 @@ export default function MCQImport() {
         return;
       }
 
-      setParsedQuestions(questions);
+      const { valid, invalid } = validateMCQQuestions(questions);
+      
+      if (invalid.length > 0) {
+        const details = invalid.map(i =>
+          `  ${i.label}: ${i.errors.join('; ')}`
+        ).join('\n');
+        alert(
+          `❌ ${invalid.length} question(s) have empty required fields and cannot be uploaded:\n\n${details}\n\n` +
+          `Please fix them and re-parse.`
+        );
+        return;
+      }
+
+      // Check for dead/bad questions
+      const { clean, removed } = filterDeadQuestions(valid);
+      if (removed.length > 0) {
+        setDeadQuestionsInfo({ total: valid.length, clean, removed });
+        // Don't proceed yet - let user decide
+        return;
+      }
+
+      setParsedQuestions(valid);
       setShowPreview(true);
     } catch (error) {
       console.error('Error parsing questions:', error);
       alert(`Parsing error: ${error.message}`);
+    }
+  };
+
+  const proceedWithDeadQuestions = (keepClean = true) => {
+    if (deadQuestionsInfo) {
+      setParsedQuestions(keepClean ? deadQuestionsInfo.clean : deadQuestionsInfo.clean.concat(deadQuestionsInfo.removed.map(r => r.question)));
+      setDeadQuestionsInfo(null);
+      setShowPreview(true);
     }
   };
 
@@ -113,6 +143,101 @@ export default function MCQImport() {
           onConfirm={confirmAddQuestions}
           onCancel={cancelPreview}
         />
+      )}
+
+      {deadQuestionsInfo && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.7)',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          zIndex: 10000
+        }}>
+          <div style={{
+            backgroundColor: 'white',
+            padding: '30px',
+            borderRadius: '10px',
+            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+            maxWidth: '700px',
+            maxHeight: '80vh',
+            overflow: 'auto'
+          }}>
+            <h3 style={{ color: '#e67e22', marginBottom: '20px' }}>
+              ⚠️ {deadQuestionsInfo.removed.length} Question(s) with Potential Issues
+            </h3>
+            <p style={{ color: '#666', marginBottom: '15px' }}>
+              Out of {deadQuestionsInfo.total} parsed questions, {deadQuestionsInfo.removed.length} have detected issues
+              and may be unparseable or incorrect. You can exclude them or keep them.
+            </p>
+            {deadQuestionsInfo.removed.map((r, idx) => (
+              <div key={idx} style={{
+                border: '1px solid #f5cba7',
+                borderRadius: '8px',
+                padding: '12px',
+                marginBottom: '10px',
+                backgroundColor: '#fef5e7'
+              }}>
+                <div style={{ fontWeight: 'bold', marginBottom: '5px', color: '#e67e22' }}>
+                  {r.label}
+                </div>
+                <ul style={{ margin: 0, paddingLeft: '20px', fontSize: '13px', color: '#555' }}>
+                  {r.issues.map((issue, ii) => (
+                    <li key={ii}>{issue}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+            <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', marginTop: '20px' }}>
+              <button
+                onClick={() => proceedWithDeadQuestions(true)}
+                style={{
+                  backgroundColor: '#27ae60',
+                  color: 'white',
+                  border: 'none',
+                  padding: '10px 20px',
+                  borderRadius: '5px',
+                  cursor: 'pointer',
+                  fontSize: '15px'
+                }}
+              >
+                ✅ Proceed with {deadQuestionsInfo.clean.length} Clean Questions Only
+              </button>
+              <button
+                onClick={() => proceedWithDeadQuestions(false)}
+                style={{
+                  backgroundColor: '#e67e22',
+                  color: 'white',
+                  border: 'none',
+                  padding: '10px 20px',
+                  borderRadius: '5px',
+                  cursor: 'pointer',
+                  fontSize: '15px'
+                }}
+              >
+                📦 Keep All {deadQuestionsInfo.total} Questions
+              </button>
+              <button
+                onClick={() => setDeadQuestionsInfo(null)}
+                style={{
+                  backgroundColor: '#95a5a6',
+                  color: 'white',
+                  border: 'none',
+                  padding: '10px 20px',
+                  borderRadius: '5px',
+                  cursor: 'pointer',
+                  fontSize: '15px'
+                }}
+              >
+                ✏️ Go Back & Fix
+              </button>
+            </div>
+          </div>
+        </div>
       )}
       
       {isAdding && (

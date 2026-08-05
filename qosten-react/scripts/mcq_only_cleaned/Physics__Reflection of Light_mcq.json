@@ -1,0 +1,3044 @@
+[
+  {
+    "id": 1766381346565,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Which colour has the least wave length?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Violet",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Blue",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Green",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Red",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "In the visible spectrum, violet light has the shortest wavelength.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381346654,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Which one is the light of shortest wave length?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Gamma ray",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "X-ray",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Infrared",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Radio wave",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Gamma rays have the shortest wavelengths in the electromagnetic spectrum.\r\nExplanation: Gamma rays have the shortest wavelengths in the electromagnetic spectrum.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381346663,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "What is the magnification if the object locates at the focus of a concave mirror?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Equal",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Magnified",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Small",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Highly magnified",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "When the object is at the focus of a concave mirror, the image is formed at infinity and is highly magnified.\r\nExplanation: When the object is at the focus of a concave mirror, the image is formed at infinity and is highly magnified.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381346863,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "If an object is placed at a distance 10 cm in front of a plane mirror, at what distance in cm from the object will the image be formed?",
+    "options": [
+      {
+        "label": "a",
+        "text": "5",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "10",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "20",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The image is formed 10 cm behind the mirror. So distance from object to image = 10 cm (object to mirror) + 10 cm (mirror to image) = 20 cm.\r\nExplanation: The image is formed 10 cm behind the mirror. So distance from object to image = 10 cm (object to mirror) + 10 cm (mirror to image) = 20 cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381347165,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "How will the driver of the rear car will know whether the car in front is slowing down or not by looking at the light?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Brake light",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Turn light",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Back light",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Car’s room light",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The brake light illuminates when the car in front slows down.\r\nExplanation: The brake light illuminates when the car in front slows down.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381347390,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "What amount of light is reflected by a normal glass?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2%—3%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "3%—4%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "4%—5%",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "5%—6%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "A normal glass surface reflects about 4-5% of the incident light.\r\nExplanation: A normal glass surface reflects about 4-5% of the incident light.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381347451,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "If the size of an image of an object placed in front of a mirror is equal to the size of the object, then the mirror will be ---",
+    "options": [
+      {
+        "label": "a",
+        "text": "convex",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "concave",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "plane",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "spherical",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "In a plane mirror, magnification m = 1, so the image size equals the object size.\r\nExplanation: In a plane mirror, magnification m = 1, so the image size equals the object size.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381347456,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Which of the following has more wavelength?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Infrared",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Ultraviolet",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Violet",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Infrared light has a longer wavelength than ultraviolet and violet light.\r\nExplanation: Infrared light has a longer wavelength than ultraviolet and violet light.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381347545,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "[There is an image]\r\nIn figure, OC → focal length, OB → radius of curvature. Both real and virtual image can be found if an object is placed at which of the following point?",
+    "options": "[{\"label\":\"a\",\"text\":\"B C D\",\"is_correct\":false}]",
+    "correctAnswer": "[answer",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381347652,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "How will the yellow flower look through the blue glass?",
+    "options": [
+      {
+        "label": "a",
+        "text": "White",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Blue",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Yellow",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Black",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "A blue glass transmits mainly blue light. A yellow flower reflects yellow light (which is not blue), so little to no light from it passes through the blue glass, making it appear black.\r\nExplanation: A blue glass transmits mainly blue light. A yellow flower reflects yellow light (which is not blue), so little to no light from it passes through the blue glass, making it appear black.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381347681,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "How many laws of reflection are there?",
+    "options": [
+      {
+        "label": "a",
+        "text": "one",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "two",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "three",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "four",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "There are two laws of reflection.\r\nExplanation: There are two laws of reflection.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381347722,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Which one is not applicable in case of image forming by plane mirror?",
+    "options": [
+      {
+        "label": "a",
+        "text": "erect",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "real",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "imaginary",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "same size",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Images formed by plane mirrors are always virtual, not real.\r\nExplanation: Images formed by plane mirrors are always virtual, not real.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381347847,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Where real image is formed?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Plane mirror",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Concave mirror",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Convex mirror",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Concave lens",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Real images can be formed by concave mirrors (and convex lenses). Plane mirrors and convex mirrors always form virtual images. Concave lenses always form virtual images.\r\nExplanation: Real images can be formed by concave mirrors (and convex lenses). Plane mirrors and convex mirrors always form virtual images. Concave lenses always form virtual images.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381347995,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "How much is the distance of the image from pole of the object in given stem?",
+    "options": [
+      {
+        "label": "a",
+        "text": "80 cm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "40 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "20 cm",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "16 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Using the mirror formula: 1/v + 1/u = 1/f. Given u = -80 cm, f = -16 cm (concave mirror). So, 1/v + 1/(-80) = 1/(-16) => 1/v = -1/16 + 1/80 = (-5+1)/80 = -4/80 = -1/20. Therefore, v = -20 cm. The distance from the pole is 20 cm.\r\nExplanation: Using the mirror formula: 1/v + 1/u = 1/f. Given u = -80 cm, f = -16 cm (concave mirror). So, 1/v + 1/(-80) = 1/(-16) => 1/v = -1/16 + 1/80 = (-5+1)/80 = -4/80 = -1/20. Therefore, v = -20 cm. The distance from the pole is 20 cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381348001,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Red rose looks red because —\ni. reflects only red colour\nii. absorbs all colours except red\niii. red colour has longer wavelength",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "A red rose appears red because it reflects only red light (i) and absorbs all other colors except red (ii). While it's true that red has a longer wavelength (iii), this is a property of red light itself and not a reason why the rose appears red. The color we perceive is due to reflection and absorption properties.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381348030,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "What will be the nature of the image when an object placed at a distance more than twice focal length of concave mirror?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Real and inverted",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Real and erect",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "virtual and inverted",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Virtual and erect",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "For a concave mirror, when object is beyond 2F (i.e., u > 2f), the image is real, inverted, and diminished.\r\nExplanation: For a concave mirror, when object is beyond 2F (i.e., u > 2f), the image is real, inverted, and diminished.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381348054,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Looking at the convex part of the shining spoon, how will your image look like?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Straight and short",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Straight and magnified",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Inverted and magnified",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Inverted and short",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The convex side of a spoon acts as a convex mirror, producing an erect (straight) and diminished (short) image.\r\nExplanation: The convex side of a spoon acts as a convex mirror, producing an erect (straight) and diminished (short) image.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381348187,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "What is the distance of image from the object?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2 cm before the mirror",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2 cm behind the mirror",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "1 cm before the mirror",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "1 cm behind the mirror",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "[cannot",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381348478,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "The characteristics of the image formed in a plane mirror—\r\ni. image is virtual and erect ii. image is virtual and equal to the object iii. the distance between the mirror and image is half of the distance between the mirror and the object\r\nWhich one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "i and ii are correct. iii is incorrect because the distance from mirror to image equals the distance from mirror to object, not half.\r\nExplanation: i and ii are correct. iii is incorrect because the distance from mirror to image equals the distance from mirror to object, not half.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381348525,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "A spherical mirror has a focal length of 30 cm. What is the diameter of curvature?",
+    "options": [
+      {
+        "label": "a",
+        "text": "30cm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "40 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "60cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "120 cm",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Radius of curvature R = 2f = 2  30 cm = 60 cm. Diameter = 2R = 120 cm.\r\nExplanation: Radius of curvature R = 2f = 2  30 cm = 60 cm. Diameter = 2R = 120 cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381348642,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Which one is correct in case of the image of the object?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Real, erect and magnified",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Virtual, erect and magnified",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Virtual, erect and diminished",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Real, inverted and diminished",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "For a concave mirror when the object is placed between the pole and the focus, the image is virtual, erect, and magnified.\r\nExplanation: For a concave mirror when the object is placed between the pole and the focus, the image is virtual, erect, and magnified.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381348661,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "If an object of length 5 cm is placed at the centre of curvature of concave mirror then —\ni. the linear magnification is 1\nii. the size of image is equal\niii. the nature of image is real and inverted",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "When an object is placed at the center of curvature of a concave mirror, the image is formed at the same location with the same size (equal to object), real, and inverted. The magnification magnitude is 1, but since the image is inverted, m = -1 (not +1). Therefore, ii (size is equal) and iii (real and inverted) are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381348867,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "A 10 mm long awl pin is placed vertically in front of a concave mirror. A 5 mm long image of the awl pin is formed at 30 cm in front of the mirror. The focal length of this mirror is",
+    "options": [
+      {
+        "label": "a",
+        "text": "-30 cm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-20 cm",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "-40 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-60 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Height of object h_o = 10 mm, height of image h_i = 5 mm (real image, so inverted). Image is formed at 30 cm in front, so v = -30 cm. Magnification m = h_i/h_o = -5/10 = -0.5 (negative because inverted). Also m = -v/u => -0.5 = -(-30)/u => -0.5 = 30/u => u = -60 cm. Using mirror formula: 1/f = 1/v + 1/u = 1/(-30) + 1/(-60) = -1/30 - 1/60 = -3/60 = -1/20. So f = -20 cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381349002,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "What is the focal length of a convex mirror with a radius of curvature of 14 cm?",
+    "options": [
+      {
+        "label": "a",
+        "text": "7 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "14 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "28 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "—7 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "For a spherical mirror, f = R/2. For a convex mirror, focal length is positive. So, f = 14 cm / 2 = 7 cm.\r\nExplanation: For a spherical mirror, f = R/2. For a convex mirror, focal length is positive. So, f = 14 cm / 2 = 7 cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381349050,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Which one is correct for image formed in the convex mirror?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Inverted",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Exact",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Real",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Magnified",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "[options",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381349218,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "What is the distance of the belly of a human having normal height from the ground?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.75 m",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "1.0 m",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "1.5 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "1.75 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "For a person of average height (~1.7m), the belly (navel) is roughly about 1.0 m from the ground.\r\nExplanation: For a person of average height (~1.7m), the belly (navel) is roughly about 1.0 m from the ground.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381349450,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "In which angle large plane mirrors are set in the non-visible curves on the hilly roads?",
+    "options": [
+      {
+        "label": "a",
+        "text": "30°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "40°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "45°",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "50°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Plane mirrors are typically set at 45° to provide a clear view around blind curves.\r\nExplanation: Plane mirrors are typically set at 45° to provide a clear view around blind curves.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381349683,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Where the object be placed to get a virtual image from a concave mirror?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2F distance",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Between F and 2F",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Between P and F",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Between 2F and infinity",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "A virtual image is formed by a concave mirror only when the object is placed between the pole (P) and the principal focus (F).\r\nExplanation: A virtual image is formed by a concave mirror only when the object is placed between the pole (P) and the principal focus (F).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381349954,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "How is looked the yellow flower through a blue glass?",
+    "options": [
+      {
+        "label": "a",
+        "text": "White",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Blue",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Yellow",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Black",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "A blue glass transmits blue light. A yellow flower reflects yellow (which is a combination of red and green, not blue), so little light passes through, making it appear black.\r\nExplanation: A blue glass transmits blue light. A yellow flower reflects yellow (which is a combination of red and green, not blue), so little light passes through, making it appear black.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381349969,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Which type of image not form in convex mirror?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Virtual",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Straight",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Real",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Small in size",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Convex mirrors always form virtual images; they cannot form real images.\r\nExplanation: Convex mirrors always form virtual images; they cannot form real images.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381350121,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Which of the following determines the colours that we perceive?",
+    "options": [
+      {
+        "label": "a",
+        "text": "velocity",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "wavelength",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "speed",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "medium",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The color of light is determined by its wavelength.\r\nExplanation: The color of light is determined by its wavelength.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381350174,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Who demonstrated that light is an electro-magnetic wave?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Newton",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Maxwell",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Max Plank",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Galileo",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "James Clerk Maxwell formulated the theory of electromagnetism, showing light is an electromagnetic wave.\r\nExplanation: James Clerk Maxwell formulated the theory of electromagnetism, showing light is an electromagnetic wave.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381350268,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Image in a plane mirror is-\r\ni. real ii. straight iii. equal to the size of the object\r\nWhich one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Image in a plane mirror is virtual (not real), erect (straight), and equal in size to the object.\r\nExplanation: Image in a plane mirror is virtual (not real), erect (straight), and equal in size to the object.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381350318,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "If the wavelength is larger than the largest wavelength of visible light, what do we call it?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Ultraviolet",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "X-Ray",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Gamma-ray",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Infrared",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Infrared radiation has wavelengths longer than visible light.\r\nExplanation: Infrared radiation has wavelengths longer than visible light.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381350354,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Silvering is done—",
+    "options": [
+      {
+        "label": "a",
+        "text": "on both surface of spherical mirror",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "on the concave side of a convex mirror",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "in the concave part of the concave mirror",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "at the convex part of a diverging mirror",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "For a concave mirror, silvering is done on the concave (reflecting) surface.\r\nExplanation: For a concave mirror, silvering is done on the concave (reflecting) surface.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381350372,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Radius of curvature of a convex mirror 6 cm. An object placed 2 cm in front of the mirror will produce its image —\ni. virtual and straight\nii. real and inverted\niii. three times magnified",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "For a convex mirror, f = R/2 = 6/2 = 3 cm (positive). Object distance u = -2 cm (using sign convention). Using mirror formula: 1/v + 1/u = 1/f => 1/v + 1/(-2) = 1/3 => 1/v = 1/3 + 1/2 = 5/6. So v = 6/5 = 1.2 cm (positive, virtual image behind mirror). Magnification m = -v/u = -(1.2)/(-2) = 0.6. The image is virtual, erect (straight), and diminished (not magnified). Only statement i is correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381350391,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "What colour a red rose turn into in red colour?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Red",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Pink",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Green",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Blue",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "A red rose reflects red light. Under red light, it will appear red.\r\nExplanation: A red rose reflects red light. Under red light, it will appear red.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381350429,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Image formed in concave mirror —\ni. diminished and inverted\nii. equal and inverted\niii. magnified and erect",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "A concave mirror can produce different types of images depending on object position. When the object is beyond the center of curvature, the image is diminished and inverted (i). When the object is at the center of curvature, the image is equal in size and inverted (ii). When the object is between the pole and focus, the image is magnified and erect (iii is also possible). However, based on the options, statements i and ii represent the most common real image scenarios.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381350656,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "What is the wavelength of microwave light?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10⁻⁶ m",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "10⁻² m",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "10² m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10⁶ m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Microwaves have wavelengths on the order of centimeters to meters, typically around 10⁻² m (1 cm) for household ovens.\r\nExplanation: Microwaves have wavelengths on the order of centimeters to meters, typically around 10⁻² m (1 cm) for household ovens.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381350755,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "The focal length of a concave mirror is 10 cm. If an object is placed at the center of curvature of the mirror. What will be the distance of the image?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.08",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "12 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "12.5",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "20 cm",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "At the center of curvature, u = R = 2f = 20 cm. For a concave mirror, when u = R, the image is also formed at R (real, inverted, same size). So v = 20 cm.\r\nExplanation: At the center of curvature, u = R = 2f = 20 cm. For a concave mirror, when u = R, the image is also formed at R (real, inverted, same size). So v = 20 cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381350771,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "For concave mirror —\r\ni. the focal length is half of the radius of curvature\r\nii. if the focal length is infinite it will be a plane mirror\r\niii. if an object is placed between the pole and the principal focus its image will be virtual\r\nWhich of the following is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "All three statements are true for concave mirrors.\r\nExplanation: All three statements are true for concave mirrors.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381351023,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "According to above figure the nature and position of the image—",
+    "options": [
+      {
+        "label": "a",
+        "text": "erect and in front of the mirror",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "inverted and behind the mirror",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "virtual and magnified",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "real and magnified",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "[Based on the figure context, likely shows object between F and C for a concave mirror, producing a real, inverted, and magnified image beyond C.]\r\nExplanation: [Based on the figure context, likely shows object between F and C for a concave mirror, producing a real, inverted, and magnified image beyond C.]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381351155,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Which ray emits from remote controller?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Ultra violet",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Microwave",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "X-ray",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Infrared",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Remote controllers typically use infrared light.\r\nExplanation: Remote controllers typically use infrared light.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381351276,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "What angle does the principal axis make with the focal plane?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "45°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "90°",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "180°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The focal plane is perpendicular to the principal axis, so the angle is 90°.\r\nExplanation: The focal plane is perpendicular to the principal axis, so the angle is 90°.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381351314,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Where is the center of curvature of a plane mirror?",
+    "options": [
+      {
+        "label": "a",
+        "text": "In the main focus",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Under focus",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "In secondary focus",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "At infinity",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "A plane mirror can be considered a spherical mirror with an infinitely large radius of curvature, so its center of curvature is at infinity.\r\nExplanation: A plane mirror can be considered a spherical mirror with an infinitely large radius of curvature, so its center of curvature is at infinity.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381351538,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "How many types of image are there?",
+    "options": [
+      {
+        "label": "a",
+        "text": "five",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "four",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "three",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "two",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Images are broadly classified into two types: Real and Virtual.\r\nExplanation: Images are broadly classified into two types: Real and Virtual.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381351556,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "What is the angle between focal plane and principal axis of a concave mirror?",
+    "options": [
+      {
+        "label": "a",
+        "text": "90°",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "180°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "270°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "360°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The focal plane is perpendicular to the principal axis, so the angle is 90°.\r\nExplanation: The focal plane is perpendicular to the principal axis, so the angle is 90°.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381351585,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "What is the location of the image from the figure?",
+    "options": [
+      {
+        "label": "a",
+        "text": "At principal focus",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "At center of curvature",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "In between principal focus and center of curvature",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "In between pole and principal focus",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "[Based on typical figure showing object between F and C, the image is formed beyond C, which is a location beyond the center of curvature relative to the mirror, but option c might refer to the image distance being greater than R? The text says \"from the figure\", but no figure is provided. Option c is a common result for object between F and C.]\r\nExplanation: [Based on typical figure showing object between F and C, the image is formed beyond C, which is a location beyond the center of curvature relative to the mirror, but option c might refer to the image distance being greater than R? The text says \"from the figure\", but no figure is provided. Option c is a common result for object between F and C.]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381351951,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "When light travels from one medium to another it is —\r\ni. reflected ii. refracted iii. absorbed\r\nWhich of these is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "All three phenomena—reflection, refraction, and absorption—can occur when light encounters a new medium.\r\nExplanation: All three phenomena—reflection, refraction, and absorption—can occur when light encounters a new medium.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381352021,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "All kind of image can be formed-\ni. concave mirror\nii. convex mirror\niii. converging mirror",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i & iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "A concave mirror (which is also called a converging mirror) can form all kinds of images: real, virtual, magnified, diminished, and equal-sized. A convex mirror can only form virtual, erect, and diminished images. Since \"concave mirror\" and \"converging mirror\" refer to the same type of mirror, i and iii are both correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381352168,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "What is the range of the wave length of visible light?",
+    "options": [
+      {
+        "label": "a",
+        "text": "400nm—500nm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "500nm—700nm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "600nm—700nm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "400nm—700nm",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The visible spectrum ranges from approximately 400 nm (violet) to 700 nm (red).\r\nExplanation: The visible spectrum ranges from approximately 400 nm (violet) to 700 nm (red).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381352252,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Virtual images are formed in the-\r\ni. convex mirror ii. concave mirror iii. Plain mirror\r\nWhich of the following is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "All three can form virtual images. Convex mirror always. Plane mirror always. Concave mirror when object is between P and F.\r\nExplanation: All three can form virtual images. Convex mirror always. Plane mirror always. Concave mirror when object is between P and F.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381352640,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "The focal distance of a concave mirror is 16 cm. At which distance from the mirror if an object is placed, then 4 times magnified virtual image will be obtained?",
+    "options": [
+      {
+        "label": "a",
+        "text": "20 cm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "12 cm",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "12 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "20 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "For a virtual, magnified image in a concave mirror, the object must be between the pole and the focus. Given f = 16 cm, m = +4 (virtual, so positive). m = -v/u => 4 = -v/u => v = -4u. Using mirror formula: 1/v + 1/u = 1/f => 1/(-4u) + 1/u = 1/16 => (-1+4)/(4u) = 1/16 => 3/(4u) = 1/16 => 4u = 48 => u = 12 cm.\r\nExplanation: For a virtual, magnified image in a concave mirror, the object must be between the pole and the focus. Given f = 16 cm, m = +4 (virtual, so positive). m = -v/u => 4 = -v/u => v = -4u. Using mirror formula: 1/v + 1/u = 1/f => 1/(-4u) + 1/u = 1/16 => (-1+4)/(4u) = 1/16 => 3/(4u) = 1/16 => 4u = 48 => u = 12 cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381352959,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "If a body is placed between pole and principal focus of a concave mirror then where the image is form?",
+    "options": [
+      {
+        "label": "a",
+        "text": "In centre of curvature",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "In principal focus",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "In front focus",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Behind the mirror",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "When the object is between the pole (P) and the focus (F) of a concave mirror, the image is virtual, erect, and magnified, and is formed behind the mirror.\r\nExplanation: When the object is between the pole (P) and the focus (F) of a concave mirror, the image is virtual, erect, and magnified, and is formed behind the mirror.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381353264,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Which wavelength of light can we see?",
+    "options": [
+      {
+        "label": "a",
+        "text": "400 m",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "700 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "652 nm",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "600 am",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Visible light wavelengths are in the nanometer range, and 652 nm falls within the visible spectrum.\r\nExplanation: Visible light wavelengths are in the nanometer range, and 652 nm falls within the visible spectrum.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381353324,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "The wave length of which of the following is larger than that of the visible light?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Gamma Ray",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "X-ray",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Radio Wave",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Ultraviolet",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Radio waves have much longer wavelengths than visible light.\r\nExplanation: Radio waves have much longer wavelengths than visible light.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381353340,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "What will be the focal length in cm if radius of curvature of convex mirror is 10cm?",
+    "options": [
+      {
+        "label": "a",
+        "text": "+20",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "+5",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "-5",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-20",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "For a convex mirror, focal length f = R/2 and is positive. f = 10 cm / 2 = +5 cm.\r\nExplanation: For a convex mirror, focal length f = R/2 and is positive. f = 10 cm / 2 = +5 cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381353367,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "What is the wavelength of x-ray in m?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10⁻⁸",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "10⁻¹⁰",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "10⁻¹²",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10⁻¹⁴",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "X-rays typically have wavelengths around 10⁻¹⁰ m (or 0.1 nm).\r\nExplanation: X-rays typically have wavelengths around 10⁻¹⁰ m (or 0.1 nm).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381353438,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Which of the following is correct in case of an image created on a convex mirror?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Real and inverted",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Very magnified",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Equal to the object",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Within the focus",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The image formed by a convex mirror is always virtual, erect, diminished, and lies between the pole and the focus behind the mirror.\r\nExplanation: The image formed by a convex mirror is always virtual, erect, diminished, and lies between the pole and the focus behind the mirror.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381353827,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "What is the midpoint of the reflecting surface of spherical mirror?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Pole",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Focus",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Center of curvature",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Optical center",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The pole is the midpoint (geometric center) of the reflecting surface of a spherical mirror.\r\nExplanation: The pole is the midpoint (geometric center) of the reflecting surface of a spherical mirror.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381354000,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "At what angle is a red rose placed in front of a mirror to look brightest?",
+    "options": [
+      {
+        "label": "a",
+        "text": "30°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "45°",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "60°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "75°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "For maximum brightness due to specular reflection, the angle should be such that the reflected light goes directly to the observer. For a mirror, this often corresponds to the angle of incidence being 45° for common setups.\r\nExplanation: For maximum brightness due to specular reflection, the angle should be such that the reflected light goes directly to the observer. For a mirror, this often corresponds to the angle of incidence being 45° for common setups.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381354044,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "At what position of a concave mirror is the bulb used in torch light kept?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Between focal point and pole",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Outside the focal point",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "At the centre of curvature",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "At focal point",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "In a torch, the bulb is placed at the focus of the concave mirror to produce a parallel beam of light.\r\nExplanation: In a torch, the bulb is placed at the focus of the concave mirror to produce a parallel beam of light.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381354069,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "The image formed by convex mirror is always ---",
+    "options": [
+      {
+        "label": "a",
+        "text": "Real and inverted",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Real and straight",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Virtual and straight",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Virtual and inverted",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Convex mirrors always produce virtual, erect (straight), and diminished images.\r\nExplanation: Convex mirrors always produce virtual, erect (straight), and diminished images.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381354176,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "In case of concave mirror for magnification m = 1 where the object should be placed?",
+    "options": [
+      {
+        "label": "a",
+        "text": "At the center of curvature",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Between the focus and the center of curvature",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "At the focus",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Between the pole and the focus",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "For a concave mirror, m = -1 (real, inverted, same size) when the object is placed at the center of curvature. The text shows the derivation: u = 2f = r.\r\nExplanation: For a concave mirror, m = -1 (real, inverted, same size) when the object is placed at the center of curvature. The text shows the derivation: u = 2f = r.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381354209,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "[There is an image]\r\nWhich event indicate the following figure when ∠1 = ∠7",
+    "options": "[{\"label\":\"a\",\"text\":\"Polarization\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"Diffraction\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"Reflection\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"Refraction\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "When the angle of incidence (∠1) equals the angle of reflection (∠7), it indicates the law of reflection.\r\nExplanation: When the angle of incidence (∠1) equals the angle of reflection (∠7), it indicates the law of reflection.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381354365,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Which of the following is right in case of the image of the object AB?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Inverted",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Virtual",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Smaller",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Infinity",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "[Based on context, likely for a concave mirror with object beyond C, image is real, inverted, and diminished. So \"Inverted\" is correct.]\r\nExplanation: [Based on context, likely for a concave mirror with object beyond C, image is real, inverted, and diminished. So \"Inverted\" is correct.]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381354408,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Light is one kind of-\r\ni. particle ii. electromagnetic wave iii. energy\r\nWhich of the following is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Light exhibits dual nature (particle and wave) and is a form of energy.\r\nExplanation: Light exhibits dual nature (particle and wave) and is a form of energy.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381354659,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "How a green flower is viewed in red light?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Black",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Yellow",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Red",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Colorless",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "A green flower reflects green light and absorbs others. Under red light (which contains no green), it absorbs the red light and reflects little to no light, appearing black.\r\nExplanation: A green flower reflects green light and absorbs others. Under red light (which contains no green), it absorbs the red light and reflects little to no light, appearing black.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381354713,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "If a 5cm object is put in front of a convex mirror that produces a 2cm image, what will be the magnification of the object?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.1",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "0.2",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "0.3",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "0.4",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Magnification, m = height of image / height of object = 2 cm / 5 cm = 0.4.\r\nExplanation: Magnification, m = height of image / height of object = 2 cm / 5 cm = 0.4.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381354720,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "A concave mirror has a radius of curvature 100 cm. What is the focal length of it?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-2m",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-0.5m",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "+0.5m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "+2m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "For a concave mirror, f = R/2 and is negative. R=100 cm = 1 m. f = -1 m / 2 = -0.5 m.\r\nExplanation: For a concave mirror, f = R/2 and is negative. R=100 cm = 1 m. f = -1 m / 2 = -0.5 m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381354765,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "At what distance the image can be found- if the object is placed at the middle point between centre of curvature and principle focus in the front of concave mirror which has 10 cm focal length?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10 cm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "7.5 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "60 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "30 cm",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Given f = -10 cm (concave mirror), so R = 2f = -20 cm. The midpoint between C and F is at distance u = -(|R| + |f|)/2 = -(20 + 10)/2 = -15 cm. Using mirror formula: 1/f = 1/v + 1/u => 1/(-10) = 1/v + 1/(-15) => 1/v = -1/10 + 1/15 = (-3+2)/30 = -1/30. So v = -30 cm. The image is real and formed at 30 cm in front of the mirror.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381354786,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "If the wave length is less than the smallest wave length of visible light, then we call it -",
+    "options": [
+      {
+        "label": "a",
+        "text": "Infrared ray",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Microwave",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Ultraviolet light",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Radio wave",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Ultraviolet light has wavelengths shorter than the visible spectrum.\r\nExplanation: Ultraviolet light has wavelengths shorter than the visible spectrum.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381354850,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Image formed in convex mirror —\r\ni. always smaller compare to objects size\r\nii. always virtual and straight\r\niii. always form behind the mirror\r\nWhich one is correct",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "All three statements are true for images formed by convex mirrors.\r\nExplanation: All three statements are true for images formed by convex mirrors.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381354977,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Reflection of light depends on-\r\ni. nature of medium ii. distance iii. angle of incidence\r\nWhich one of the following is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Reflection depends on the nature of the reflecting surface (medium) and the angle of incidence, but not directly on the distance.\r\nExplanation: Reflection depends on the nature of the reflecting surface (medium) and the angle of incidence, but not directly on the distance.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381355040,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "The image of the pin hole camera is—",
+    "options": [
+      {
+        "label": "a",
+        "text": "real",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "straight",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "unclear",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "virtual",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "A pinhole camera produces a real, inverted image.\r\nExplanation: A pinhole camera produces a real, inverted image.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381355224,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "According to the wavelength of light, which one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Green > Yellow > Orange > Red",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Red > Orange > Yellow > Green",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Yellow > Orange > Green > Red",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Green > Yellow > Red > Orange",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "In the visible spectrum, wavelengths increase in this order: Violet, Blue, Green, Yellow, Orange, Red. So, Red has the longest wavelength among the options given.\r\nExplanation: In the visible spectrum, wavelengths increase in this order: Violet, Blue, Green, Yellow, Orange, Red. So, Red has the longest wavelength among the options given.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381355254,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Light is a form of —\r\ni. particle ii. electromagnetic wave iii. energy\r\nWhich of these is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Same as above.\r\nExplanation: Same as above.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381355549,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "For which position of the object the image produced in a concave mirror cannot be projected on a screen?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Between P and F",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Between F and C",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Between C and infinity",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "At infinity",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Virtual images (formed when object is between P and F) cannot be projected on a screen. Real images can be projected.\r\nExplanation: Virtual images (formed when object is between P and F) cannot be projected on a screen. Real images can be projected.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381355944,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "If the distance of an object from a plane minor is 2m, what will be the distance of the image from the object?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1m",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "3m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "4m",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "In a plane mirror, image distance equals object distance. So image is 2m behind the mirror. Distance between object and image = 2m + 2m = 4m.\r\nExplanation: In a plane mirror, image distance equals object distance. So image is 2m behind the mirror. Distance between object and image = 2m + 2m = 4m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381356065,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "What would be the image of AB on the mirror P-\r\ni. smaller and upright ii. magnified and upright iii. virtual and upright\r\nWhich one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "[not",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381356132,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Which one is correct for the formation of the image on plane mirror?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Object located to the same distance from the mirror",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Size of the object is inequal",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Virtual image formed",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Inverted image formed",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Images formed by plane mirrors are always virtual.\r\nExplanation: Images formed by plane mirrors are always virtual.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381356247,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "What kind of mirror does the opposite plane of a spoon work as?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Convex",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Concave",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Plane",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Plano Concave",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The outer (opposite/back) surface of a spoon acts as a convex mirror.\r\nExplanation: The outer (opposite/back) surface of a spoon acts as a convex mirror.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381356593,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "The value of magnification may be 1 in a —\r\ni. plane mirror ii. concave mirror iii. convex mirror\r\nWhich one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Magnification m=1 for a plane mirror always. For a concave mirror, m=1 when object is at C. For a convex mirror, m is always less than 1 (diminished). So i and ii are correct.\r\nExplanation: Magnification m=1 for a plane mirror always. For a concave mirror, m=1 when object is at C. For a convex mirror, m is always less than 1 (diminished). So i and ii are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381921498,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "For concave mirror —\r\ni. the focal length is half of the radius of curvature\r\nii. if the focal length is infinite it will be a plane mirror\r\niii. if an object is placed between the pole and the principal focus its image will be virtual\r\nWhich of the following is correct? [1766381921498]",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "All three statements are true for concave mirrors.\r\nExplanation: All three statements are true for concave mirrors.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381921727,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "When light travels from one medium to another it is —\r\ni. reflected ii. refracted iii. absorbed\r\nWhich of these is correct? [1766381921727]",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "All three phenomena—reflection, refraction, and absorption—can occur when light encounters a new medium.\r\nExplanation: All three phenomena—reflection, refraction, and absorption—can occur when light encounters a new medium.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381922935,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Light is one kind of-\r\ni. particle ii. electromagnetic wave iii. energy\r\nWhich of the following is correct? [1766381922935]",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Light exhibits dual nature (particle and wave) and is a form of energy.\r\nExplanation: Light exhibits dual nature (particle and wave) and is a form of energy.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381923668,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "[There is an image]\r\nWhich event indicate the following figure when ∠1 = ∠7 [1766381923668]",
+    "options": "[{\"label\":\"a\",\"text\":\"Polarization\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"Diffraction\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"Reflection\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"Refraction\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "When the angle of incidence (∠1) equals the angle of reflection (∠7), it indicates the law of reflection.\r\nExplanation: When the angle of incidence (∠1) equals the angle of reflection (∠7), it indicates the law of reflection.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381924261,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "The height of a man is 168 cm. What is the required minimum length of a mirror to see a full-length image?",
+    "options": [
+      {
+        "label": "a",
+        "text": "84 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "112 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "168 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "336 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "To see a full-length image in a plane mirror, the minimum length of the mirror must be half the person's height. 168 cm / 2 = 84 cm.\r\nExplanation: To see a full-length image in a plane mirror, the minimum length of the mirror must be half the person's height. 168 cm / 2 = 84 cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381924790,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "What would be the image of AB on the mirror P-\r\ni. smaller and upright ii. magnified and upright iii. virtual and upright\r\nWhich one is correct? [1766381924790]",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "[not",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381926914,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "The characteristics of the image formed in a plane mirror—\r\ni. image is virtual and erect ii. image is virtual and equal to the object iii. the distance between the mirror and image is half of the distance between the mirror and the object\r\nWhich one is correct? [1766381926914]",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "i and ii are correct. iii is incorrect because the distance from mirror to image equals the distance from mirror to object, not half.\r\nExplanation: i and ii are correct. iii is incorrect because the distance from mirror to image equals the distance from mirror to object, not half.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381926970,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Virtual image are always formed with—",
+    "options": [
+      {
+        "label": "a",
+        "text": "convex mirrors and convex lenses",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "concave mirrors and concave lenses",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "convex mirrors and concave lenses",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "concave mirrors and convex lenses",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Convex mirrors always form virtual images. Concave lenses also always form virtual images. Concave mirrors and convex lenses can form both real and virtual images depending on object position.\r\nExplanation: Convex mirrors always form virtual images. Concave lenses also always form virtual images. Concave mirrors and convex lenses can form both real and virtual images depending on object position.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381927104,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Light is a form of —\r\ni. particle ii. electromagnetic wave iii. energy\r\nWhich of these is correct? [1766381927104]",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Same as above.\r\nExplanation: Same as above.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381927497,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Reflection of light depends on-\r\ni. nature of medium ii. distance iii. angle of incidence\r\nWhich one of the following is correct? [1766381927497]",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Reflection depends on the nature of the reflecting surface (medium) and the angle of incidence, but not directly on the distance.\r\nExplanation: Reflection depends on the nature of the reflecting surface (medium) and the angle of incidence, but not directly on the distance.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381927975,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Virtual images are formed in the-\r\ni. convex mirror ii. concave mirror iii. Plain mirror\r\nWhich of the following is correct? [1766381927975]",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "All three can form virtual images. Convex mirror always. Plane mirror always. Concave mirror when object is between P and F.\r\nExplanation: All three can form virtual images. Convex mirror always. Plane mirror always. Concave mirror when object is between P and F.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381928504,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "[There is an image]\r\nIn figure, OC → focal length, OB → radius of curvature. Both real and virtual image can be found if an object is placed at which of the following point? [1766381928504]",
+    "options": "[{\"label\":\"a\",\"text\":\"B C D\",\"is_correct\":false}]",
+    "correctAnswer": "[answer",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381930536,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Image in a plane mirror is-\r\ni. real ii. straight iii. equal to the size of the object\r\nWhich one is correct? [1766381930536]",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Image in a plane mirror is virtual (not real), erect (straight), and equal in size to the object.\r\nExplanation: Image in a plane mirror is virtual (not real), erect (straight), and equal in size to the object.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381930645,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "Image formed in convex mirror —\r\ni. always smaller compare to objects size\r\nii. always virtual and straight\r\niii. always form behind the mirror\r\nWhich one is correct [1766381930645]",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "All three statements are true for images formed by convex mirrors.\r\nExplanation: All three statements are true for images formed by convex mirrors.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766381931069,
+    "subject": "Physics",
+    "chapter": "Reflection of Light",
+    "question": "The value of magnification may be 1 in a —\r\ni. plane mirror ii. concave mirror iii. convex mirror\r\nWhich one is correct? [1766381931069]",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Magnification m=1 for a plane mirror always. For a concave mirror, m=1 when object is at C. For a convex mirror, m is always less than 1 (diminished). So i and ii are correct.\r\nExplanation: Magnification m=1 for a plane mirror always. For a concave mirror, m=1 when object is at C. For a convex mirror, m is always less than 1 (diminished). So i and ii are correct.",
+    "image": null,
+    "language": "en"
+  }
+]

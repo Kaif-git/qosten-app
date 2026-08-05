@@ -1,0 +1,706 @@
+[
+  {
+    "id": 1767454720973,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৯: শব্দ ও পদের গঠন",
+    "question": "শব্দ যখন বাক্যে ব্যবহৃত হয় তখন তাকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পদাণু",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পদ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বাক্যাংশ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রকৃতি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বিভক্তিযুক্ত শব্দ যখন বাক্যে স্থান পায়, তখন তাকে পদ বলা হয়। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454721107,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৯: শব্দ ও পদের গঠন",
+    "question": "পদের লেজ কত ধরনের?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুই",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "তিন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাঁচ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পদের লেজ বা অতিরিক্ত অংশ সাধারণত দুই ধরনের হতে পারে (যেমন: বিভক্তি ও প্রত্যয়)। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454721231,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৯: শব্দ ও পদের গঠন",
+    "question": "কোনটি শব্দের শেষে যুক্ত হয় না?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রত্যয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিভক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বলক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উপসর্গ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "উপসর্গ সর্বদা শব্দের আগে বা শুরুতে যুক্ত হয়। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454721356,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৯: শব্দ ও পদের গঠন",
+    "question": "যেসব শব্দের শেষে শব্দ যুক্ত হয়ে বক্তব্য জোরালো করে তাকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বলক",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "প্রত্যয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিভক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উপসর্গ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বলক হলো এমন শব্দ যা অন্য শব্দের শেষে যুক্ত হয়ে অর্থের ওপর বিশেষ গুরুত্ব বা জোর প্রদান করে। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454721477,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৯: শব্দ ও পদের গঠন",
+    "question": "কোনটি সাধিত শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গাছ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পরিচালক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মাছ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চাঁদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'পরিচালক' শব্দটি 'পরি' উপসর্গ ও 'চাল' ধাতুর সমন্বয়ে গঠিত একটি সাধিত শব্দ। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454721604,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৯: শব্দ ও পদের গঠন",
+    "question": "কোনটি মৌলিক শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "টান",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বন্ধু",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রশাসন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দায়িত্ব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'টান' শব্দটি বিশ্লেষণ করা যায় না বলে এটি একটি মৌলিক শব্দ। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454721723,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৯: শব্দ ও পদের গঠন",
+    "question": "শব্দের কোথায় প্রত্যয় যুক্ত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রথমে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শেষে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মধ্যে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "যে কোনো স্থানে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "প্রত্যয় সবসময় মূল শব্দ বা ধাতুর শেষে যুক্ত হয়ে নতুন শব্দ গঠন করে। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454721843,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৯: শব্দ ও পদের গঠন",
+    "question": "কোনটি নির্দেশক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "টা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ইতি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তু",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'টা', 'টি', 'খানা' ইত্যাদি শব্দের শেষে বসে নির্দিষ্টতা বোঝায় বলে এদের নির্দেশক বলে। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454721970,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৯: শব্দ ও পদের গঠন",
+    "question": "কোনটি লগক নয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রত্যয়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "নির্দেশক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বলক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বচন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "প্রত্যয় নতুন শব্দ গঠন করে, কিন্তু লগক হিসেবে বিভক্তি, নির্দেশক বা বলক ব্যবহৃত হয়। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454722096,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৯: শব্দ ও পদের গঠন",
+    "question": "কোনটি লগক নয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রত্যয়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "নির্দেশক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বলক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিভক্তি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "প্রত্যয় হলো শব্দ গঠনের উপাদান, অন্যগুলো পদের সাথে যুক্ত হয়ে পদের রূপ পরিবর্তন বা নির্দেশ করে। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454761861,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৯: শব্দ ও পদের গঠন",
+    "question": "কোনটি লগক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রত্যয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিভক্তি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "উপসর্গ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সমাস",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যেসব শব্দাংশ শব্দের সাথে যুক্ত হয়ে পদের রূপ পরিবর্তন করে কিন্তু নতুন শব্দ গঠন করে না, তাদের লগক বলে; বিভক্তি তার একটি উদাহরণ। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454761998,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৯: শব্দ ও পদের গঠন",
+    "question": "নিচের কোন শব্দে কারক-বিভক্তির ব্যবহার হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "করলাম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কৃষকের",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তন্বী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বইগুলো",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'কৃষকের' শব্দে 'এর' বিভক্তি যুক্ত হয়ে কারক সম্পর্ক স্থাপন করেছে। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454762125,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৯: শব্দ ও পদের গঠন",
+    "question": "'ছেলেরা ক্রিকেট খেলে।'—এই বাক্যে ক্রিকেট পদটিকে কী বলা যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বলক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বচন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সলগ্ন পদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অলগ্ন পদ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "যে পদে কোনো লগক (বিভক্তি বা নির্দেশক) যুক্ত থাকে না, তাকে অলগ্ন পদ বলে। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454762245,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৯: শব্দ ও পদের গঠন",
+    "question": "'ছেলেরা মাঠে ফুটবল খেলে।'—এ বাক্যে অলগ্ন পদ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ছেলেরা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মাঠে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ফুটবল",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "খেলে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'ফুটবল' শব্দটির সাথে কোনো বিভক্তি বা চিহ্ন যুক্ত হয়নি, তাই এটি অলগ্ন পদ। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454762367,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৯: শব্দ ও পদের গঠন",
+    "question": "প্রকৃতি কত প্রকার?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "৩",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৪",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৫",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "প্রকৃতি দুই প্রকার: নাম প্রকৃতি ও ক্রিয়া প্রকৃতি (ধাতু)। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454762496,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৯: শব্দ ও পদের গঠন",
+    "question": "কোনটি লগক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বলক",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কারক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সংখ্যা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উপসর্গ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "শব্দের শেষে যুক্ত হয়ে বক্তব্য জোরালো করলে তাকে বলক বলে, যা লগকের একটি প্রকার। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454762621,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৯: শব্দ ও পদের গঠন",
+    "question": "কোনগুলো শব্দের লগক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিভক্তি ও বচন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সমাস ও প্রত্যয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রত্যয় ও সন্ধি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উপসর্গ ও কারক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বিভক্তি, নির্দেশক, বচন ও বলক হলো শব্দের লগক। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454762743,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৯: শব্দ ও পদের গঠন",
+    "question": "যেসব শব্দাংশ পদের সঙ্গে যুক্ত হয়ে পদকে নির্দিষ্ট করে সেগুলোকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নির্দেশক",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বচন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিভক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বলক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পদের সাথে যুক্ত হয়ে নির্দিষ্টতা প্রকাশকারী শব্দাংশকে নির্দেশক বলা হয়। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454762864,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৯: শব্দ ও পদের গঠন",
+    "question": "বাক্যের মধ্যে যেসব শব্দে লগক থাকে না সেগুলোকে বলে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "সলগ্ন পদ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিভক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অলগ্ন পদ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "পদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যেসব পদে কোনো দৃশ্যমান লগক বা বিভক্তি চিহ্ন নেই সেগুলোকে অলগ্ন পদ বলা হয়। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454762997,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৯: শব্দ ও পদের গঠন",
+    "question": "উপসর্গ ও প্রত্যয় দিয়ে তৈরি শব্দকে কী শব্দ বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মৌলিক শব্দ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রাতিপদিক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সাধিত শব্দ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "শব্দমূল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মৌলিক শব্দের সাথে উপসর্গ বা প্রত্যয় যুক্ত হয়ে যে নতুন শব্দ গঠিত হয় তাকে সাধিত শব্দ বলে। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454763128,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৯: শব্দ ও পদের গঠন",
+    "question": "গঠনগতভাবে পদ কত প্রকার?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুই",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "তিন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাঁচ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "গঠনগত দিক থেকে পদ দুই প্রকার: সলগ্ন পদ ও অলগ্ন পদ। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454763251,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৯: শব্দ ও পদের গঠন",
+    "question": "'সবটুকু ওষুধই তোমাকে খেতে হবে।'—এ বাক্যে 'সবটুকু' পদে কোন ধরনের লগক ব্যবহৃত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বচন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নির্দেশক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বলক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিভক্তি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'সবটুকু' শব্দের 'টুকু' অংশটি নির্দিষ্টতা প্রকাশ করছে বলে এটি নির্দেশক লগক। [৯]",
+    "image": null,
+    "language": "en"
+  }
+]

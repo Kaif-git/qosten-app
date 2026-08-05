@@ -1,0 +1,610 @@
+[
+  {
+    "id": 1768035221564,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৯: ক্রিয়াবিভক্তি",
+    "question": "ক্রিয়ার প্রথম অংশকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শব্দ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শব্দমূল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ধাতু",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ক্রিয়াবিভক্তি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ক্রিয়ার মূল অংশ বা প্রথম অংশকে ধাতু বলা হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035221673,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৯: ক্রিয়াবিভক্তি",
+    "question": "ক্রিয়ার দ্বিতীয় অংশকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ধ্বনি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বর্ণ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ধাতু",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ক্রিয়াবিভক্তি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ক্রিয়ার ধাতুর সাথে যা যুক্ত হয় তাকে ক্রিয়াবিভক্তি বলে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035221783,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৯: ক্রিয়াবিভক্তি",
+    "question": "সাধারণ ক্রিয়ার বর্তমান কালে ৩য় পক্ষের ক্রিয়াবিভক্তি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-ই (করি)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-আই (করাই)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "-এ (করলে)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-এন (করেন)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "৩য় পক্ষ বা নাম পুরুষের ক্ষেত্রে বর্তমান কালে '-এন' বিভক্তি ব্যবহৃত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035221880,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৯: ক্রিয়াবিভক্তি",
+    "question": "প্রযোজক ক্রিয়ার সাধারণ অতীত কালে শ্রোতা পক্ষের মানী ক্রিয়াবিভক্তি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-ইত (করাতি)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-আলাম (করালাম)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "-ইয়েছি (করিয়েছি)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-আলেন (করালেন)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "প্রযোজক ক্রিয়ার মানী শ্রোতা পক্ষে অতীত কালে '-আলেন' বিভক্তি যুক্ত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035221980,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৯: ক্রিয়াবিভক্তি",
+    "question": "সাধারণ ক্রিয়ার নিত্য অতীত কালে শ্রোতা পক্ষের ঘনিষ্ঠ ক্রিয়াবিভক্তি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-এ (করত)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-তি (করতি)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "-লে (করলে)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-এন (করেন)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ঘনিষ্ঠ শ্রোতা পক্ষে নিত্য অতীত কালে '-তি' বিভক্তি ব্যবহৃত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035222082,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৯: ক্রিয়াবিভক্তি",
+    "question": "প্রযোজক ক্রিয়ার সাধারণ বর্তমান কালে বক্তা পক্ষের ক্রিয়াবিভক্তি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-আই (করাই)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "-আস (করাস)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "-আর (করার)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-আই (করাই)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বক্তা পক্ষের প্রযোজক বর্তমান কালে '-আই' বিভক্তি যুক্ত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035222182,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৯: ক্রিয়াবিভক্তি",
+    "question": "নিচের কোনটি প্রযোজক ক্রিয়ার ভাববাচক অসমাপিকা ক্রিয়াবিভক্তি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-আনো (করানো)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-ইতে (করিতে)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "-আতে (করাতে)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "-আলে (করালে)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্রযোজক ক্রিয়ার ভাববাচক অসমাপিকা রূপে '-আতে' বিভক্তি বসে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035222282,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৯: ক্রিয়াবিভক্তি",
+    "question": "ক্রিয়ামূলের সঙ্গে সেবন লগ্নক যুক্ত হয়ে ক্রিয়ার কাল ও পক্ষ নির্দেশিত হয়, সেগুলোকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ধাতু",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ক্রিয়ামূল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ক্রিয়াবিভক্তি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ক্রিয়াপদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ধাতুর সঙ্গে যুক্ত হয়ে কাল ও পক্ষ নির্দেশকারী লগ্নকই হলো ক্রিয়াবিভক্তি.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035222391,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৯: ক্রিয়াবিভক্তি",
+    "question": "অধিকাংশ বাংলা ক্রিয়ার কয়টি রূপ আছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পাঁচটি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চারটি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তিনটি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দুটি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অধিকাংশ বাংলা ক্রিয়ার দুটি রূপ— সাধারণ ও প্রযোজক.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035222492,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৯: ক্রিয়াবিভক্তি",
+    "question": "সাধারণ ক্রিয়ার পুরাঘটিত বর্তমান কালে বক্তা পক্ষের ক্রিয়াবিভক্তি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-এছি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "-এছি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "-লাম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-মি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বক্তা পক্ষে পুরাঘটিত বর্তমানে '-এছি' বিভক্তি যুক্ত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035222593,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৯: ক্রিয়াবিভক্তি",
+    "question": "সাধারণ ক্রিয়ার বর্তমান অতীতে শ্রোতা পক্ষের ঘনিষ্ঠবাচক ক্রিয়াবিভক্তি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-ছিলে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-ছিলাম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "-ছিলি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "-ছিল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ঘনিষ্ঠ শ্রোতা পক্ষে নিত্য অতীতে '-ছিলি' বিভক্তি বসে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035222695,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৯: ক্রিয়াবিভক্তি",
+    "question": "নিত্য অতীতের অন্যপক্ষের ক্রিয়াবিভক্তি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ত/তেন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ত/তেন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ও/এন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "লে/লেন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "নিত্য অতীতে অন্যপক্ষের বিভক্তি হলো 'ত' বা 'তেন'.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035222794,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৯: ক্রিয়াবিভক্তি",
+    "question": "সাধারণ ক্রিয়ার সঙ্গে যুক্ত বর্তমান অনুজ্ঞার সম্মানাত্মক ক্রিয়াবিভক্তি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-ও",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-উন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "-উক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-ইস",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সম্মানার্থে বা মানী পক্ষের বর্তমান অনুজ্ঞায় '-উন' বিভক্তি যুক্ত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035222893,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৯: ক্রিয়াবিভক্তি",
+    "question": "প্রযোজক ক্রিয়ার সাধারণ অতীত কালে বক্তা পক্ষের ক্রিয়াবিভক্তি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-আলে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-আলাম",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "-আলো",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-আলেন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "প্রযোজক ক্রিয়ার বক্তা পক্ষের সাধারণ অতীতে '-আলাম' বিভক্তি ব্যবহৃত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035222994,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৯: ক্রিয়াবিভক্তি",
+    "question": "প্রযোজক ক্রিয়ার সঙ্গে যুক্ত ক্রিয়াবিভক্তি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ইব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "উক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "এন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আই",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "প্রযোজক ক্রিয়ার একটি সাধারণ বিভক্তি রূপ হলো 'আই'.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035223096,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৯: ক্রিয়াবিভক্তি",
+    "question": "বক্তা পক্ষের অনুজ্ঞা বর্তমান কালের ক্রিয়াবিভক্তি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নেই",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ও",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ইস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "এছে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বক্তা পক্ষের বা উত্তম পুরুষের অনুজ্ঞা হয় না, তাই বিভক্তি নেই.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035223197,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৯: ক্রিয়াবিভক্তি",
+    "question": "নিচের কোনটি সাধারণ ক্রিয়ার চূন্ত অসমাপিকা ক্রিয়ার রূপ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-এ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-লে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "-ইয়ে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "-আতে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সাধারণ ক্রিয়ার অসমাপিকা রূপে '-ইয়ে' বিভক্তি দেখা যায়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035223303,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৯: ক্রিয়াবিভক্তি",
+    "question": "'কর' ধাতুর পুরাঘটিত বর্তমান শ্রোতা পক্ষে ঘনিষ্ঠ ক্রিয়া কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "করিছে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "করবি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "করিছিস",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "করিস",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'কর' ধাতুর সাথে পুরাঘটিত বর্তমানে ঘনিষ্ঠ শ্রোতা পক্ষে 'িছিস' যুক্ত হয়ে 'করিছিস' হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035223401,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৯: ক্রিয়াবিভক্তি",
+    "question": "সীতা বই পড়ছে। — এখানে ক্রিয়াবিভক্তি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পড়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "এ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ছে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বই",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'পড়ছে' শব্দে মূল ধাতু 'পড়' এবং ক্রিয়াবিভক্তি হলো 'ছে'.",
+    "image": null,
+    "language": "en"
+  }
+]

@@ -1,0 +1,898 @@
+[
+  {
+    "id": 1767454717527,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "ব-ফলার উচ্চারণ নেই কোন শব্দে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অশ্ব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পক্ব",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিশ্বাস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শ্বশুর",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "শব্দের আদিতে ব-ফলা থাকলে অনেক ক্ষেত্রে তার উচ্চারণ হয় না, যেমন 'শ্বশুর' (উচ্চারণ: শশুর)। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454717653,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "'অদ্য' শব্দের উচ্চারণ—",
+    "options": [
+      {
+        "label": "a",
+        "text": "ওদ্দ্",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অদদো",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অদদো",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ওইদ্দ্যো",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "শব্দের শেষে য-ফলা থাকলে ওই বর্ণের দ্বিত্ব উচ্চারণ হয় এবং শেষ 'অ' কার 'ও' কারের মতো শোনায়। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454717774,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "'ঋণ'-এর উচ্চারণ—",
+    "options": [
+      {
+        "label": "a",
+        "text": "রিন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "রীন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হৃন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ঋন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'ঋ' বর্ণের উচ্চারণ সাধারণত 'রি'-এর মতো হয়। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454717902,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "কোন বর্ণটির নিজস্ব কোনো ধ্বনি নেই?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ঞ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "এ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'ঞ' বর্ণের কোনো স্বতন্ত্র ধ্বনি নেই; এটি উচ্চারণে 'ন' বা অনুনাসিক ধ্বনির রূপ নেয়। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454718027,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "'অ' কখনো আ-এর মতো উচ্চারিত হয়, যেমন—",
+    "options": [
+      {
+        "label": "a",
+        "text": "রাত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কাড়াকুড়ি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জ্ঞান",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "একতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'জ্ঞান' শব্দের আদিতে 'জ্ঞ' থাকলেও এর উচ্চারণ 'গ্যান' বা আ-কারের মতো হয়। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454718146,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "'এ' বর্ণের বিবৃত উচ্চারণের উদাহরণ—",
+    "options": [
+      {
+        "label": "a",
+        "text": "একটা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "এবার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দেখল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "খেলা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "'খেলা' শব্দে 'এ' বর্ণটি প্রসারিত বা বিবৃতভাবে উচ্চারিত হয়। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454718263,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "'এ' বর্ণের উচ্চারণ কত রকমের?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুই",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "তিন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাঁচ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'এ' বর্ণের দুই ধরনের উচ্চারণ দেখা যায়— স্বাভাবিক বা সংবৃত (যেমন: দেশ) এবং বিবৃত (যেমন: খেলা)। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454718391,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "শব্দের মধ্যে বা শেষে কোনো ব্যঞ্জনবর্ণের সঙ্গে র-ফলা থাকলে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "র-এর উচ্চারণ বজায় থাকে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দ্বিত্ব উচ্চারিত হয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দ্বিত্ব-সহ র-ফলা উচ্চারিত হয়",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "দ্বিত্ব উচ্চারিত হয় না",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "শব্দের মধ্যে বা শেষে র-ফলা থাকলে সেই বর্ণটি দ্বিত্ব উচ্চারিত হয় এবং র-ফলাও বজায় থাকে। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454718514,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "'শৃগাল' শব্দের উচ্চারণ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শৃগাল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শ্রীগাল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "শ্রীগাল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শ্রীগাল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'শৃ' বর্ণটির উচ্চারণ বাংলা প্রমিত রীতিতে 'শ্রি' বা 'শ্রী' এর মতো হয়। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454718626,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "'উনিশ'-এর সঠিক উচ্চারণ—",
+    "options": [
+      {
+        "label": "a",
+        "text": "উনিশ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "উনীশ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উন্নিশ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উন্নিশ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "'উনিশ' শব্দের সঠিক উচ্চারণগত বানান হলো উন্নিশ। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454718785,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "'অ'-এর স্বাভাবিক উচ্চারণ নেই কোনটিতে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জ্ঞাপন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "আকাশ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রাত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আলো",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'জ্ঞাপন' শব্দের উচ্চারণ 'গ্যাপন' হওয়ায় এখানে 'অ'-এর স্বাভাবিক উচ্চারণ বজায় থাকে না। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454718911,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "'সাধারণ'-এর সঠিক উচ্চারণ হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "শারারণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শারারন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "শারারণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শারারন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'সাধারণ' শব্দের সঠিক উচ্চারণ প্রমিত রীতিতে 'শাদারন' বা 'শারারন' এর মতো শোনায়। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454719043,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "কোন শব্দটিতে 'এ' বর্ণের 'অ্যা' উচ্চারণ হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "একটা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "দেশ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "এল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মেলা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'একটা' শব্দে 'এ' বর্ণের উচ্চারণ বিবৃত বা 'অ্যা'-এর মতো হয়। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454719157,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "কোন শব্দে 'এ' বর্ণের উচ্চারণ (অ্যা) এর মতো?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বেলা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "দেশ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "একটি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মেঘ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'বেলা' শব্দের 'এ' উচ্চারণটি বিবৃত বা 'অ্যা' ধ্বনির অনুরূপ। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454719280,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "'এ' বর্ণের স্বাভাবিক উচ্চারণের উদাহরণ—",
+    "options": [
+      {
+        "label": "a",
+        "text": "একতা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "খেলা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দেশ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মেলা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'দেশ' শব্দে 'এ' বর্ণটি তার মূল বা স্বাভাবিক রূপে উচ্চারিত হয়েছে। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454719398,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "'অরণ্য' শব্দের সঠিক উচ্চারণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শোরোন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সোরোন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শৌরন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সরোন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'অরণ্য' শব্দের শুদ্ধ উচ্চারণগত রূপ হলো 'অরোন-নো' বা 'শোরোন'। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454719523,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "শব্দের মধ্যে বা শেষে য-ফলা যুক্ত হলে ওই ব্যঞ্জনের উচ্চারণ কী হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সংবৃত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিবৃত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দ্বিত্ব",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "নাসিক্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "শব্দের মধ্যবর্তী বা অন্ত্য ব্যঞ্জনে য-ফলা থাকলে সেই ব্যঞ্জনটি দুইবার উচ্চারিত হয়। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454719638,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "শব্দের প্রথম বর্ণে ম-ফলা থাকলে ম-এর উচ্চারণ কার মতো?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ম-এর মতো",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মৌ-এর মতো",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অ-এর মতো",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ও-এর মতো",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "শব্দের শুরুতে ম-ফলা থাকলে ম-এর নিজস্ব উচ্চারণ থাকে না, বরং বর্ণটি সামান্য নাসিক্য হয়। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454719758,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "'বিশ্বাস' শব্দের শুদ্ধ উচ্চারণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিশ্বাশ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিশ্াশ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিশ্াশ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বিশ্াশ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'বিশ্বাস' শব্দের উচ্চারণ 'বিশ-শাশ' এর মতো হয়, যেখানে প্রথম 'শ' ধ্বনিটি রুদ্ধ। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454719875,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "নিচের কোনটি অ-বর্ণের স্বাভাবিক উচ্চারণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অতি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গড",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অনেক",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'অনেক' শব্দে 'অ' ধ্বনিটি অবিকৃত বা স্বাভাবিকভাবে উচ্চারিত হয়েছে। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454719990,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "'অতি' শব্দের সঠিক উচ্চারণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "উতি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অততি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ওতি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "জ্যোতি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "শব্দের শুরুতে 'অ' থাকলে এবং পরে 'ই' বা 'উ' থাকলে 'অ'-এর উচ্চারণ 'ও'-এর মতো হয়। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454720118,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "'ঔষধ' শব্দের সঠিক উচ্চারণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঔষদ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঔষধ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ওসদ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ওসোদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'ঔষধ' শব্দের প্রমিত উচ্চারণ হলো 'ওশোদ' বা 'ওসদ'। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454720242,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "'শ্রমিক' শব্দের শুদ্ধ উচ্চারণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্রোমিক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "স্রোমিক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শ্রমিক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "স্রোমিক",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "'শ্রমিক' শব্দে র-ফলা থাকায় উচ্চারণ 'স্রোমিক' এর মতো হয়। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454720368,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "'মোমবাতি'-এর সঠিক উচ্চারণ হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "মোমবাতি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "মোম্মবাতি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মোমবাতি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মৌম্মবাতি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'মোমবাতি' শব্দটি তার স্বাভাবিক রূপেই উচ্চারিত হয়। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454720484,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "'এ' ধ্বনির বিবৃত উচ্চারণ কেবল শব্দের কোন অংশে পাওয়া যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আদিতে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "শেষে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মধ্যে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আদি-অন্তে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বাংলা ভাষায় শব্দের শুরুতেই মূলত 'এ' বর্ণের বিবৃত (অ্যা) উচ্চারণ দেখা যায়। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454720604,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "'পদ্ম' শব্দের সঠিক উচ্চারণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পদ্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পদদো",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পদদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পদ্দো",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "শব্দের শেষে ম-ফলা থাকলে বর্ণটি দ্বিত্ব হয় এবং উচ্চারণ নাসিক্য হয়। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454720729,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "'সাধারণ' শব্দের উচ্চারণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাধারন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শারারোন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সাধারণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শ্রীরাল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'সাধারণ' শব্দের প্রমিত উচ্চারণ হলো 'শাদারন' বা 'শারারোন'। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454720847,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৮: বর্ণের উচ্চারণ",
+    "question": "'শ্রমিক' শব্দের সঠিক উচ্চারণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শোরমিক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "স্রোমিখ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "স্রোমিক",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "শোরোমহা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'শ্রমিক' শব্দের শুদ্ধ উচ্চারণগত রূপ হলো 'স্রোমিক'। [৮]",
+    "image": null,
+    "language": "en"
+  }
+]

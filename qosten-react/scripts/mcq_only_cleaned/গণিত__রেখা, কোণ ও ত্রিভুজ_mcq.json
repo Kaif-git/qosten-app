@@ -1,0 +1,1629 @@
+[
+  {
+    "id": 1768140628007,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "\\(\\angle BOC\\)-এর সম্পূরক কোণ কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৬০°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৯০°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১২০°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১৮০° - \\(\\angle BOC\\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "একটি কোণের সম্পূরক কোণ হল সেই কোণ যা এর সাথে যোগ করলে ১৮০ ডিগ্রি হয়। তাই, যদি \\(\\angle BOC = x\\) হয়, তবে এর সম্পূরক কোণ হবে \\(180^\\circ - x\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140628120,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "চিত্রে, \\(\\angle P\\) ও \\(\\angle Q\\)-এর সমদ্বিখণ্ডক O বিন্দুতে ছেদ করেছে এবং \\(\\angle R = 40^\\circ\\) হলে, \\(\\angle POQ = \\text{কত?}\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "[এখানে একটি চিত্র আছে]",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "[এখানে একটি চিত্র আছে]",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "[এখানে একটি চিত্র আছে]",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "[এখানে একটি চিত্র আছে]",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(\\triangle PQR\\)-এ কোণগুলোর সমষ্টি ১৮০°। তাই, \\(\\angle P + \\angle Q = 180^\\circ - 40^\\circ = 140^\\circ\\)। তাদের সমদ্বিখণ্ডক থেকে পাওয়া যায় \\(\\frac{1}{2} \\angle P + \\frac{1}{2} \\angle Q = 70^\\circ\\)। \\(\\triangle POQ\\)-এ, \\(\\frac{1}{2} \\angle P + \\frac{1}{2} \\angle Q + \\angle POQ = 180^\\circ\\), সুতরাং \\(70^\\circ + \\angle POQ = 180^\\circ\\), অর্থাৎ \\(\\angle POQ = 110^\\circ\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140628225,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "\\(\\triangle PQR\\)-এর \\(\\angle Q\\) ও \\(\\angle R\\) কোণের দুটি সমদ্বিখণ্ডক O বিন্দুতে ছেদ করলে এবং \\(\\angle P = 50^\\circ\\) হলে, \\(\\angle QOR = ?\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "[এখানে একটি চিত্র আছে]",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "[এখানে একটি চিত্র আছে]",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "[এখানে একটি চিত্র আছে]",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "[এখানে একটি চিত্র আছে]",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(\\triangle PQR\\)-এ, \\(\\angle Q + \\angle R = 180^\\circ - 50^\\circ = 130^\\circ\\)। তাদের সমদ্বিখণ্ডক থেকে পাওয়া যায় \\(\\frac{1}{2} \\angle Q + \\frac{1}{2} \\angle R = 65^\\circ\\)। \\(\\triangle QOR\\)-এ, \\(\\frac{1}{2} \\angle Q + \\frac{1}{2} \\angle R + \\angle QOR = 180^\\circ\\), সুতরাং \\(65^\\circ + \\angle QOR = 180^\\circ\\), অর্থাৎ \\(\\angle QOR = 115^\\circ\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140628343,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "একটি সমবাহু ত্রিভুজের একটি বাহু উভয় দিকে বর্ধিত করলে উৎপন্ন দুটি বহিঃস্থ কোণের সমষ্টি কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৮০°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২৪০°",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "৩০০°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৩৬০°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "একটি বাহু বর্ধিত করলে সেই শীর্ষবিন্দুতে দুটি রৈখিক যুগল সৃষ্টি হয়। একটি সমবাহু ত্রিভুজের প্রতিটি অন্তঃস্থ কোণ ৬০°। প্রতিটি বহিঃস্থ কোণ হল অন্তঃস্থ কোণের সম্পূরক কোণ, তাই প্রতিটি ১২০°। তাদের সমষ্টি ২৪০°।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140628464,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "চিত্রে \\(\\angle CAD\\)-এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৩০°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৬০°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৯০°",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "১২০°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "চিত্র অনুসারে, একটি ত্রিভুজে যদি দুটি কোণ ৬০° এবং ৩০° হয়, তবে তৃতীয় কোণ হবে ১৮০° - ৬০° - ৩০° = ৯০°। সুতরাং \\(\\angle CAD = 90^\\circ\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140628601,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "একটি ত্রিভুজের দুই বাহুর দৈর্ঘ্য যথাক্রমে ৩ সেমি ও ৮ সেমি হলে, তৃতীয় বাহুর দৈর্ঘ্য কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৬ সেমি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "৪ সেমি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৩ সেমি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১১ সেমি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ত্রিভুজ অসমতা উপপাদ্য অনুসারে, তৃতীয় বাহুটি অবশ্যই অন্য দুই বাহুর যোগফল (৩+৮=১১ সেমি) থেকে কম এবং তাদের পার্থক্য (৮-৩=৫ সেমি) থেকে বেশি হতে হবে। প্রদত্ত অপশনগুলোর মধ্যে শুধুমাত্র ৬ সেমি এটিকে সন্তুষ্ট করে (৫ < ৬ < ১১)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140628737,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "নিচের কোনটি শূন্য মাত্রার অস্তিত্ব হিসেবে বিবেচিত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সরলরেখা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কোণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিন্দু",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "একটি বিন্দুর দৈর্ঘ্য, প্রস্থ বা উচ্চতা নেই—এর মাত্রা শূন্য। একটি রেখার এক মাত্রা, একটি তলের দুই মাত্রা এবং কোণ একটি পরিমাপ, কোনো আকার নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140628845,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "ABC-তে যদি AB = AC হয় এবং \\(\\angle A = 40^\\circ\\), তবে \\(\\frac{1}{2} \\angle ACD = \\text{কত (ডিগ্রিতে)?}\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "৫৫°",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "৬০°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৭০°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১১০°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সমদ্বিবাহু ত্রিভুজ ABC-তে (AB=AC), \\(\\angle B = \\angle C\\)। যেহেতু \\(\\angle A = 40^\\circ\\), তাই \\(\\angle B + \\angle C = 140^\\circ\\)। সুতরাং \\(\\angle B = \\angle C = 70^\\circ\\)। বহিঃস্থ কোণ \\(\\angle ACD = \\angle A + \\angle B = 40^\\circ + 70^\\circ = 110^\\circ\\)। তাই \\(\\frac{1}{2} \\angle ACD = 55^\\circ\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140628954,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "একটি সমতলের কয়টি মাত্রা আছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শূন্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "এক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দুই",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "তিন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "একটি সমতল হল একটি সমতল, দ্বি-মাত্রিক পৃষ্ঠ যা অসীম পর্যন্ত বিস্তৃত। এর দৈর্ঘ্য ও প্রস্থ আছে কিন্তু পুরুত্ব নেই।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140629066,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "নিচের কোনটি ত্রিমাত্রিক বস্তু?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রশ্মি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রেখাংশ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সমতল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গোলক",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "একটি গোলক একটি ঘন, ত্রিমাত্রিক বস্তু (যেমন একটি বল)। রশ্মি, রেখাংশ এবং সমতল যথাক্রমে এক বা দ্বি-মাত্রিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140629172,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "একটি তলের প্রান্তগুলো হল —",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিন্দু",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রেখা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কোণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ত্রিভুজ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "একটি তল (যেমন একটি ত্রিমাত্রিক আকারের মুখ) প্রান্ত দ্বারা আবদ্ধ, এবং প্রান্তগুলো রেখাংশ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140629280,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "একটি রশ্মির কয়টি প্রান্তবিন্দু আছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "০",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অসীম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "একটি রশ্মি একটি প্রান্তবিন্দু থেকে শুরু হয় এবং একটি দিকে অসীম পর্যন্ত বিস্তৃত হয়। সুতরাং এর ঠিক একটি প্রান্তবিন্দু আছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140629414,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "একটি বিন্দু থেকে কয়টি রশ্মি আঁকা যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "০",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৪",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অসীম",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "একটি একক বিন্দু থেকে অসীম সংখ্যক দিকে রশ্মি আঁকা যায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140629548,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "যে কোণ দুই সমকোণ থেকে বড় কিন্তু চার সমকোণ থেকে ছোট তাকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্থূলকোণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সম্পূরক কোণ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পূরক কোণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রতিবিম্বিত কোণ (রিফ্লেক্স অ্যাঙ্গেল)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "একটি প্রতিবিম্বিত কোণ ১৮০° (দুই সমকোণ) থেকে বড় এবং ৩৬০° (চার সমকোণ) থেকে ছোট।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140629667,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "যদি AB || CD এবং একটি ছেদক রেখা তাদের ছেদ করে এবং একটি কোণ ৬০° হয়, তবে \\(\\angle ABE\\)-এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৬০°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৯০°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১২০°",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "১৫০°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যখন দুটি সমান্তরাল রেখাকে একটি ছেদক রেখা ছেদ করে, তখন একান্তর অন্তঃস্থ কোণ সমান এবং সহমাত্রিক কোণ সমান হয়। যদি একটি কোণ ৬০° হয়, তবে এর সম্পূরক কোণ ১২০° হবে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140629775,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "চিত্রে, যদি AB || CD এবং EF তাদের ছেদক হয় এবং \\(\\angle CQF = 60^\\circ\\), তবে \\(\\angle CQF\\)-এর পূরক কোণের মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৫০°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১২০°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৬০°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৩০°",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পূরক কোণ মানে দুটি কোণ যার সমষ্টি ৯০°। যদি \\(\\angle CQF = 60^\\circ\\) হয়, তবে এর পূরক কোণ = ৯০° - ৬০° = ৩০°।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140629878,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "একটি ত্রিভুজ PQR-এর \\(\\angle Q\\) ও \\(\\angle R\\) কোণের দুটি সমদ্বিখণ্ডক O বিন্দুতে ছেদ করলে এবং \\(\\angle P = 50^\\circ\\) হলে, \\(\\angle QOR = ?\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "৪০°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৬৫°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১১৫°",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "১৩০°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্রশ্ন ৩ এর মতোই। \\(\\triangle PQR\\)-এ, \\(\\angle Q + \\angle R = 130^\\circ\\)। অর্ধ-সমষ্টি ৬৫°। \\(\\triangle QOR\\)-এ, \\(\\angle QOR = 180^\\circ - 65^\\circ = 115^\\circ\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140629991,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "৬০° এর সম্পূরক কোণের অর্ধেক কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৩০°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৬০°",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "৯০°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১২০°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "৬০° এর সম্পূরক কোণ হল ১৮০° - ৬০° = ১২০°। ১২০° এর অর্ধেক হল ৬০°।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140630106,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "সরলকোণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "০°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৯০°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১২০°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১৮০°",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "একটি সরলকোণ ঠিক ১৮০° হয়, যা একটি সরলরেখা তৈরি করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140630230,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "চিত্রে, যদি AB || CD এবং একটি কোণ ৬০° হয়, তবে \\(\\angle BEP = \\text{কত?}\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "৩০°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৪০°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৬০°",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "১২০°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যখন দুটি সমান্তরাল রেখাকে একটি ছেদক রেখা ছেদ করে, তখন অনুরূপ কোণ সমান হয়। সুতরাং \\(\\angle BEP = 60^\\circ\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140630339,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "AABC-তে, E ও F যথাক্রমে AB ও AC-এর মধ্যবিন্দু। BC-এর দৈর্ঘ্য কত সেমি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৪ সেমি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৮ সেমি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১৪ সেমি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২৮ সেমি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মধ্যবিন্দু উপপাদ্য অনুসারে, EF || BC এবং EF = \\(\\frac{1}{2}\\) BC। দেওয়া আছে EF = 3x + 5 এবং BC = 12x - 8। \\(\\frac{1}{2}(12x - 8) = 3x + 5\\) বসিয়ে পাই 6x - 4 = 3x + 5, সুতরাং 3x = 9, x = 3। তাহলে BC = 12(3) - 8 = 28 সেমি।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140630447,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "চিত্রে, যদি \\(\\angle Q = 65^\\circ\\) এবং \\(\\angle R = 78^\\circ\\), তবে \\(\\angle P\\)-এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৩৭°",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "৬৫°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৭৮°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১১৫°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ত্রিভুজের তিনটি কোণের সমষ্টি ১৮০°। সুতরাং \\(\\angle P = 180^\\circ - 65^\\circ - 78^\\circ = 37^\\circ\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140630555,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "চিত্রে, যদি DE || BC এবং \\(\\angle ABC = 66^\\circ\\), তবে \\(\\angle ADE\\)-এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৫০°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৬৪°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৬৬°",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "১১৪°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যদি DE || BC হয়, তবে \\(\\angle ADE = \\angle ABC\\) (অনুরূপ কোণ)। সুতরাং \\(\\angle ADE = 66^\\circ\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140630665,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "চিত্রে, যদি \\(\\angle P = 70^\\circ\\) এবং \\(\\angle Q = 35^\\circ\\), তবে \\(\\angle R\\)-এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২৫°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৩৫°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৪৫°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৭৫°",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ত্রিভুজের তিনটি কোণের সমষ্টি ১৮০°। সুতরাং \\(\\angle R = 180^\\circ - 70^\\circ - 35^\\circ = 75^\\circ\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140630774,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "চিত্রে, \\(\\angle LCD7\\)-এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৫০°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৬০°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৭০°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১৩০°",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পাঠ্যতে বলা হয়েছে \\(\\angle LCD = 70^\\circ + 60^\\circ = 130^\\circ\\)। এটি বহিঃস্থ কোণ উপপাদ্য ব্যবহার করে: বহিঃস্থ কোণ (\\(\\angle LCD\\)) বিপরীত দুই অন্তঃস্থ কোণের সমষ্টির সমান।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140630877,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "চিত্রে \\(\\angle 2 = \\text{কত?}\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "৩০°",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "৬০°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৯০°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১২০°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পাঠ্যটি সমাধান করে: x + 2x + 3x = 180°, সুতরাং 6x=180°, x=30°। তারপর কোণ y (সম্ভবত \\(\\angle 2\\)) এর জন্য, 5x + y = 180°, সুতরাং 150° + y = 180°, অর্থাৎ y = 30°।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140630981,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "চিত্রে, QR = কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৩",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৯",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১৬",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২০",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "(উত্তর দেওয়া নেই। সম্ভবত পিথাগোরাসের উপপাদ্য ব্যবহার করতে হবে যদি ত্রিভুজ সমকোণী হয়।)",
+    "explanation": "(চিত্র ও বাহুর দৈর্ঘ্য ছাড়া নির্ণয় করা সম্ভব নয়।)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140631088,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "চিত্রে, একটি সমকোণী ত্রিভুজে যদি PQ = 12 এবং PR = 16 হয়, তবে QR = কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৩",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৯",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১৬",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২০",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পিথাগোরাসের উপপাদ্য অনুসারে, সমকোণী ত্রিভুজে \\(QR^2 = PQ^2 + PR^2 = 12^2 + 16^2 = 144 + 256 = 400\\)। সুতরাং \\(QR = \\sqrt{400} = 20\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140631233,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "চিত্রে, যদি PQ || RS এবং একটি ছেদক তাদের ছেদ করে, তবে \\(\\angle PQR + \\angle RSM = ?\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "১১০°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১২৫°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১৪০°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১৮০°",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "যখন দুটি সমান্তরাল রেখাকে একটি ছেদক রেখা ছেদ করে, তখন একই পাশের অন্তঃস্থ কোণের সমষ্টি ১৮০°।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140631354,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "একটি ত্রিভুজের তিন কোণের সমষ্টি হল:",
+    "options": [
+      {
+        "label": "a",
+        "text": "এক সমকোণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দুই সমকোণ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তিন সমকোণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চার সমকোণ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যেকোনো ত্রিভুজের তিনটি অন্তঃস্থ কোণের সমষ্টি সর্বদা ১৮০°, যা দুইটি সমকোণের সমান (৯০°+৯০°)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140631457,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "একটি সমবাহু ত্রিভুজের যেকোনো বাহু উভয় দিকে বর্ধিত করলে একটি বহিঃস্থ কোণ তৈরি হয়। এই কোণের পরিমাপ কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৯০°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১২০°",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "(অপশন সম্পূর্ণ দেখানো নেই)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "একটি সমবাহু ত্রিভুজের প্রতিটি অন্তঃস্থ কোণ ৬০°। বহিঃস্থ কোণ হল সম্পূরক কোণ: ১৮০° - ৬০° = ১২০°।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140631563,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "চিত্রে, \\(\\angle CART\\)-এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৪০°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৯০°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১১০°",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "১৩০°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পাঠ্যতে বলা হয়েছে \\(\\angle CART = \\angle ABC + \\angle LCD = 70^\\circ + 40^\\circ = 110^\\circ\\)। এটি বহিঃস্থ কোণ উপপাদ্য ব্যবহার করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140631665,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "নিচের কোনটি \\(90^\\circ - x\\) এর পূরক কোণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৯০°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১৮০°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "x",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৯০° + x",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পূরক কোণের সমষ্টি ৯০° হয়। তাই \\((90^\\circ - x)\\) এর পূরক কোণ হল \\(90^\\circ - (90^\\circ - x) = x\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140631766,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "\\(\\triangle ABC\\)-এর জন্য নিচের কোনটি সত্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "AB + AC > BC",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "AB + AC < BC",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "AB + AC = BC",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "AB = AC = BC",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যেকোনো ত্রিভুজে যেকোনো দুই বাহুর সমষ্টি তৃতীয় বাহু থেকে বড়। সুতরাং AB + AC > BC সত্য।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140631880,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "চিত্রে যদি PQ || RS হয় এবং AC একটি ছেদক হয়, তবে —\ni. \\(\\angle ACQ\\) এবং \\(\\angle CDS\\) অনুরূপ কোণ\nii. \\(\\angle ACQ\\) এবং \\(\\angle CDS\\) একান্তর কোণ\niii. \\(\\angle ACQ = \\angle CDS\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যখন দুইটি রেখা সমান্তরাল হয়, তখন অনুরূপ কোণ সমান হয়। সুতরাং \\(\\angle ACQ\\) এবং \\(\\angle CDS\\) অনুরূপ কোণ এবং তারা সমান।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140631985,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "চিত্রে, যদি \\(\\angle DOT + \\angle TOX = 180^\\circ\\) এবং তারা পাশাপাশি থাকে, তবে \\(\\angle DOT\\) এবং \\(\\angle TOX\\) একে অপরের —\ni. সম্পূরক\nii. সন্নিহিত\niii. পূরক",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যদি দুটি কোণের সমষ্টি ১৮০° হয় এবং তারা পাশাপাশি থাকে, তবে তারা সম্পূরক এবং সন্নিহিত কোণ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140632408,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "\\(\\angle YOZ\\)-এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৫৫°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১১০°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১২৫°",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "১৪০°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্রশ্ন ৩৯ থেকে, \\(\\angle Y = \\angle Z = 55^\\circ\\)। তাদের সমদ্বিখণ্ডক থেকে \\(\\frac{1}{2}\\angle Y = \\frac{1}{2}\\angle Z = 27.5^\\circ\\)। ত্রিভুজ YOZ-এ, \\(\\angle YOZ = 180^\\circ - 27.5^\\circ - 27.5^\\circ = 125^\\circ\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140632513,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "যদি DE || BC এবং BD || CF হয়, এবং \\(\\angle DBC = 70^\\circ\\), তবে \\(\\angle BDE = ?\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "৭০°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১০০°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১১০°",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "১২০°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যেহেতু DE || BC, তাই \\(\\angle BDE + \\angle DBC = 180^\\circ\\) (একই পাশের অন্তঃস্থ কোণ)। সুতরাং \\(\\angle BDE = 180^\\circ - 70^\\circ = 110^\\circ\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140632617,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "যদি \\(\\angle BAC = 60^\\circ\\), তবে \\(\\angle ABC + \\angle ACB = ?\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "১০০°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১২০°",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "২৪০°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১৮০°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ত্রিভুজের তিনটি কোণের সমষ্টি ১৮০°। সুতরাং \\(\\angle ABC + \\angle ACB = 180^\\circ - 60^\\circ = 120^\\circ\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140632911,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "যদি \\(\\angle AOD = 35^\\circ\\), তবে \\(\\angle AOD\\)-এর সম্পূরক কোণ হল —\ni. \\(\\angle BOD\\) (যদি \\(\\angle BOD = 145^\\circ\\))\nii. \\(\\angle AOC\\) (যদি \\(\\angle AOC = 145^\\circ\\))\niii. ১৪৫°",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\(\\angle AOD\\)-এর সম্পূরক কোণ হল \\(180^\\circ - 35^\\circ = 145^\\circ\\)। যেকোনো কোণ যার মান ১৪৫° হবে সেটি এর সম্পূরক কোণ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140633036,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "চিত্রে দেখানো \\(\\angle BOC\\)-এর পূরক কোণ এবং প্রতিবিম্বিত কোণের সমষ্টি কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৩৮০°",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "২৭০°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "২১৫°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১৮০°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পাঠ্যতে বলা হয়েছে: প্রতিবিম্বিত কোণ = \\(360^\\circ - 35^\\circ = 325^\\circ\\)। \\(\\angle BOC\\) (যা ৩৫°) এর পূরক কোণ = \\(90^\\circ - 35^\\circ = 55^\\circ\\)। সমষ্টি = \\(325^\\circ + 55^\\circ = 380^\\circ\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140633148,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "যদি DE || QR এবং \\(\\angle PQR = 65^\\circ\\), তবে \\(\\angle PDE = ?\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "৫৫°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৬০°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৬৫°",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৭০°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যেহেতু DE || QR, তাই \\(\\angle PDE = \\angle PQR\\) (অনুরূপ কোণ)। সুতরাং \\(\\angle PDE = 65^\\circ\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140636080,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "DE = ? (দেওয়া আছে DE || QR, QR = ৬.৫ সেমি, এবং সম্ভবত DE মধ্যরেখাংশ)",
+    "options": [
+      {
+        "label": "a",
+        "text": "১.৬ সেমি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২ সেমি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "২.৬ সেমি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৩.২৫ সেমি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "যদি DE ত্রিভুজ PQR-এর মধ্যরেখাংশ হয় (PQ এবং PR-এর মধ্যবিন্দু সংযোগকারী), তবে DE = \\(\\frac{1}{2}\\) QR = \\(\\frac{1}{2} \\times 6.5 = 3.25\\) সেমি। (দ্রষ্টব্য: ৩.২৫ সেমি তালিকাভুক্ত নেই, কিন্তু অপশনটি ভুল মুদ্রিত হতে পারে; ২.৬ সেমি কাছাকাছি কিন্তু সঠিক নয়।)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140636190,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "BA || CE হলে \\(\\angle ACE\\)-এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৫০°",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "৬০°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৭০°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৮০°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যদি BA || CE হয়, তবে \\(\\angle ACE\\) এবং \\(\\angle BAC\\) একান্তর অন্তঃস্থ কোণ, তাই তারা সমান। দেওয়া আছে \\(\\angle BAC = 50^\\circ\\), সুতরাং \\(\\angle ACE = 50^\\circ\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140636308,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "যদি \\(\\triangle ABC\\)-এর ভূমি = ৪ সেমি এবং উচ্চতা = ৬ সেমি, তবে ত্রিভুজের ক্ষেত্রফল কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(6\\sqrt{3}\\) বর্গ সেমি.",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১২ বর্গ সেমি.",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "২৪ বর্গ সেমি.",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(12\\sqrt{3}\\) বর্গ সেমি.",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ত্রিভুজের ক্ষেত্রফল = \\(\\frac{1}{2} \\times \\text{ভূমি} \\times \\text{উচ্চতা} = \\frac{1}{2} \\times 4 \\times 6 = 12\\) বর্গ সেমি।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140636501,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "\\(\\angle BAC\\)-এর সম্পূরক কোণ কত? (ABC সমবাহু ত্রিভুজ, BC কে D পর্যন্ত বর্ধিত করা হয়েছে)",
+    "options": [
+      {
+        "label": "a",
+        "text": "১২০°",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "৯০°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৬০°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৩০°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "একটি সমবাহু ত্রিভুজে প্রতিটি অন্তঃস্থ কোণ ৬০°। \\(\\angle BAC\\) (৬০°) এর সম্পূরক কোণ হল \\(180^\\circ - 60^\\circ = 120^\\circ\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140636607,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "\\(\\angle ABC + \\angle ACD\\)-এর মান কত? (ABC সমবাহু, BC কে D পর্যন্ত বর্ধিত)",
+    "options": [
+      {
+        "label": "a",
+        "text": "৬০°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১২০°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১৫০°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১৮০°",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\(\\angle ABC = 60^\\circ\\)। \\(\\angle ACD\\) হল C-তে বহিঃস্থ কোণ। একটি সমবাহু ত্রিভুজের জন্য বহিঃস্থ কোণ \\(180^\\circ - 60^\\circ = 120^\\circ\\)। সমষ্টি = \\(60^\\circ + 120^\\circ = 180^\\circ\\)। অন্যভাবে, \\(\\angle ACD = \\angle ABC + \\angle BAC = 60^\\circ+60^\\circ=120^\\circ\\), \\(\\angle ABC\\) এর সাথে সমষ্টি ১৮০°।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140636829,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "যদি \\(\\angle BAC = 60^\\circ\\), তবে \\(\\angle ABC + \\angle ACB = \\text{কত?}\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "৯০°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১০০°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১১০°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১২০°",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ত্রিভুজের তিনটি কোণের সমষ্টি ১৮০°। সুতরাং \\(\\angle ABC + \\angle ACB = 180^\\circ - 60^\\circ = 120^\\circ\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140636940,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "যদি \\(AB = AC\\) হয়, তবে \\(\\triangle ABC\\) কী ধরনের ত্রিভুজ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সমদ্বিবাহু",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বিষমবাহু",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সমবাহু",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "স্থূলকোণী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "দুটি সমান বাহু (AB = AC) বিশিষ্ট ত্রিভুজকে সমদ্বিবাহু ত্রিভুজ বলে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140637051,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "যদি \\(\\angle C = 45^\\circ\\) এবং \\(\\angle B = 35^\\circ\\) হয়, তবে \\(\\angle A + \\(\\angle B = ?\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "৮০°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১০৫°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১১০°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১৪৫°",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ত্রিভুজের তিনটি কোণের সমষ্টি ১৮০°। সুতরাং \\(\\angle A = 180^\\circ - 45^\\circ - 35^\\circ = 100^\\circ\\)। তাই \\(\\angle A + \\angle B = 100^\\circ + 45^\\circ = 145^\\circ\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140637160,
+    "subject": "গণিত",
+    "chapter": "রেখা, কোণ ও ত্রিভুজ",
+    "question": "যদি \\(\\angle A = 120^\\circ, \\angle B = 25^\\circ, \\angle C = 35^\\circ\\) হয়, তবে \\(\\angle ACD\\)-এর পরিমাপ কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৫০°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১৫৫°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১৬০°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১৪৫°",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\(\\angle ACD\\) হল C-তে বহিঃস্থ কোণ। ত্রিভুজ ABC-এ, \\(\\angle ACD = \\angle A + \\angle B = 120^\\circ + 25^\\circ = 145^\\circ\\)। (দ্রষ্টব্য: \\(\\angle C\\) হল C-তে অন্তঃস্থ কোণ, বহিঃস্থ কোণ নির্ণয়ের জন্য প্রয়োজন নেই।)",
+    "image": null,
+    "language": "en"
+  }
+]

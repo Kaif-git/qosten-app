@@ -1,0 +1,2011 @@
+[
+  {
+    "id": 1768847270497,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is computer vision syndrome?",
+        "marks": 1,
+        "answer": "If someone works on the computer for a long time without taking breaks, it causes various eye problems such as eye strain, dry eyes, blurred vision, and headaches, which is called computer vision syndrome.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why is grounding used in the case of the electrical connection of a residential building?",
+        "marks": 2,
+        "answer": "Houses usually have high voltage and neutral connections. If valuable equipment (e.g., computer, fridge) is connected, grounding is added to the frame of the appliance. If the equipment becomes electrified due to a fault, current flows directly from the cover to the ground. This flow usually melts the fuse and renders the device harmless, preventing electric shock if touched.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find the refracted angle for an incident ray with a 30° angle from the cladding to the core.",
+        "marks": 3,
+        "answer": "Using Snell's law: \\(n_1 \\sin \\theta_1 = n_2 \\sin \\theta_2\\).\nHere, \\(n_1 = 1.45\\) (cladding), \\(n_2 = 1.75\\) (core), and \\(\\theta_1 = 30°\\).\n\\[\n1.45 \\sin 30° = 1.75 \\sin \\theta_2\n\\]\n\\[\n\\sin \\theta_2 = \\frac{1.45 \\times 0.5}{1.75} = \\frac{0.725}{1.75} \\approx 0.4143\n\\]\n\\[\n\\theta_2 = \\sin^{-1}(0.4143) \\approx 24.5°\n\\]\nThe refracted angle is approximately 24.5°.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "For which minimum value of incident angle will the optical fiber transmit a light wave? Show mathematically. What is the cause of the popularity of this system in communication?",
+        "marks": 4,
+        "answer": "The minimum incident angle for transmission is the critical angle at the core-cladding interface. For total internal reflection, the light must travel from the denser medium (core) to the rarer medium (cladding).\nThe critical angle \\(\\theta_c\\) is:\n\\[\n\\sin \\theta_c = \\frac{n_{\\text{cladding}}}{n_{\\text{core}}} = \\frac{1.45}{1.75} \\approx 0.8286\n\\]\n\\[\n\\theta_c = \\sin^{-1}(0.8286) \\approx 56°\n\\]\nTherefore, the incident ray inside the core must strike the interface at an angle of 56° or greater from the normal for total internal reflection to occur.\nOptical fiber is popular because it transmits data as light signals via total internal reflection. It allows for high-speed transmission over hundreds of kilometers with very low signal loss (absorption) and no electromagnetic interference.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768847276035,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is reflection of light?",
+        "marks": 1,
+        "answer": "When a light ray traveling through one medium is incident on the surface of another medium and some portion of the light returns to the first medium, it is called the reflection of light.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why does the dentist use a concave mirror? Explain.",
+        "marks": 2,
+        "answer": "Dentists hold concave mirrors close to the teeth (within the focal length) so that a virtual, erect, and magnified image of the teeth is formed. This allows the dentist to see the dental problem clearly.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Calculate the distance of the object in figure-1.",
+        "marks": 3,
+        "answer": "Using the mirror formula . From the figure (where  and , and since it's a dentist's mirror, the image is virtual, so ):\nThe object distance from the mirror is .",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Draw a ray-figure to show characteristics of the image of target object OA.",
+        "marks": 4,
+        "answer": "[There is an image: A ray diagram showing an object beyond the center of curvature of a concave mirror. The rays from the top of the object meet below the axis to form a real, inverted, diminished image between C and F.]\nCharacteristics: The image is real, inverted, and diminished.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847268286_74htp7.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847268286_74htp7.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266466_o6v6p4.jpeg"
+  },
+  {
+    "id": 1768847276147,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is refraction of light?",
+        "marks": 1,
+        "answer": "When a light ray enters a transparent medium diagonally from one transparent medium to another transparent medium, the phenomenon of changing its direction at the separation plane of the two media is called refraction of light.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why does the refracted ray bend during refraction of light?",
+        "marks": 2,
+        "answer": "In refraction of light, the refracted ray bends when a light ray passes from one transparent medium to another because the speed of light changes due to the difference in refractive index or optical density of the two media. This change in speed of light causes the light ray to change direction. When a ray of light passes from a rarer medium to a denser medium, the speed of light slows down in the denser medium and the light bends towards the normal. Again, going from denser medium to rarer medium, speed of light in rarer medium increases as compared to denser medium and light ray moves away from the normal.",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266466_bw3g3r.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266466_bw3g3r.jpeg"
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Calculate the power of the lens.",
+        "marks": 3,
+        "answer": "Power of lens, \\(\\mathrm{P} = \\frac{1}{f}\\) (f in meters). Here, \\(f = -50 \\mathrm{cm} = -0.5 \\mathrm{m}\\).\n\\[\n\\mathrm{P} = \\frac{1}{-0.5} = -2 \\mathrm{D}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "How does the glass in the stem help the person to remove his problem of eye? Explain with ray-figure.",
+        "marks": 4,
+        "answer": "Person P has myopia (nearsightedness). The power of the prescribed lens is negative, i.e., it is a concave lens.\nIn nearsightedness, a bundle of parallel rays from an infinitely distant point is projected at a point in front of the retina by the action of the eye lens. So the eye cannot see it clearly. But the ray coming from the most distant point the eye can see clearly (far point) forms an image on the retina. If a bundle of parallel rays coming from infinity, before striking the eye, can be made to appear as if it were coming from the far point by using a concave lens, then the eye will see it clearly. Parallel rays can be converted into diverging rays by a concave lens. Thus, to view an object at infinity, glasses with a concave lens must be used.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266466_ez4wte.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266466_ez4wte.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768847276350,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called the total internal reflection?",
+        "marks": 0,
+        "answer": "When a light ray is incident on the plane of separation of two media at an angle greater than the critical angle on its way from the denser medium to the rarer medium, all of the light rays are completely reflected at the plane of separation and return to the denser medium again. This phenomenon is called total internal reflection.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "What do you mean by the refractive index of glass with respect to air is 1.52?",
+        "marks": 0,
+        "answer": "Refractive index of glass with respect to air is 1.52 means that if light rays enter glass from air, then the ratio of the sine of the angle of incidence (in air) to the sine of the angle of refraction (in glass) will always be 1.52. Alternatively, it means the speed of light in air is 1.52 times the speed of light in glass.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the focal length of lens of \\(1^{\\mathrm{st}}\\) learner.",
+        "marks": 0,
+        "answer": "Power of lens, \\(\\mathrm{P} = -5 \\mathrm{D}\\). Focal length, \\(f = \\frac{1}{\\mathrm{P}} = \\frac{1}{-5} = -0.2 \\mathrm{m} = -20 \\mathrm{cm}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "How can you cure the eye sight problem of \\(2^{\\mathrm{nd}}\\) learner? Explain with ray diagram.",
+        "marks": 0,
+        "answer": "The 2nd learner has farsightedness (hypermetropia). Their near point has moved from the normal 25 cm to 40 cm. They can see distant objects properly but cannot see near objects clearly.\nThe lens used to cure this defect is a convex lens. The convex lens creates a virtual image of an object placed at the normal near point (25 cm) at the location of the defective eye's near point (40 cm). This allows the eye's lens to focus the rays onto the retina.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847268371_90qxc.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847268371_90qxc.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266466_noh9rd.jpeg"
+  },
+  {
+    "id": 1768847276485,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is blind spot?",
+        "marks": 1,
+        "answer": "The blind spot is the part of the retina where the optic nerve enters, and no rod or cone cells are present, meaning no image can be formed there.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why does the power of a lens increase as its curvature increases? Explain.",
+        "marks": 2,
+        "answer": "As the curvature of the lens increases, its radius of curvature decreases, causing the focal length () to decrease. Since power , a shorter focal length results in a higher power.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find the distance of the image in scenario-1.",
+        "marks": 3,
+        "answer": "In scenario-1, , so . If the object is  from  and placed between  and  as shown in the diagram, it would actually be at . Assuming the object is  beyond  ():\nThe image distance is  from the pole.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "The lens of scenario-2 will play a role in eliminating which kind of defects of the human eye? Give your logical statement with figure.",
+        "marks": 4,
+        "answer": "In scenario-2, the image is virtual and magnified (). This is only possible for a convex lens when the object is within the focus. A convex lens is used to correct hypermetropia (farsightedness).\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768847276678,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is the principle axis of mirror?",
+        "marks": 0,
+        "answer": "The principal axis of a spherical mirror is a line going through the center of curvature and the pole of the mirror that is exactly perpendicular to the surface of the mirror at the pole.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Explain why the movie screen is white?",
+        "marks": 0,
+        "answer": "Movie screens are white because white surfaces reflect all colors of light equally and properly. If the movie screens were any other color, they would absorb some wavelengths of light, causing altered and inaccurate color representation in the projected image. Since white screens reflect all wavelengths of the visible spectrum properly, the color accuracy delivered on screen remains accurate.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the critical angle of the material of glasses.",
+        "marks": 0,
+        "answer": "Refractive index of glass, \\(n_2 = 1.56\\). Refractive index of air, \\(n_1 = 1\\). For total internal reflection from glass to air:\n\\[\n\\sin \\theta_c = \\frac{n_1}{n_2} = \\frac{1}{1.56}\n\\]\n\\[\n\\theta_c = \\sin^{-1}\\left(\\frac{1}{1.56}\\right) = \\sin^{-1}(0.641) \\approx 39.87^\\circ\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Discuss with ray diagram the reason, effect and remedy of Mina's grandmother's eye problem.",
+        "marks": 0,
+        "answer": "Mina's grandmother has hypermetropia (farsightedness).\nReason:\n1. The converging power of the eye lens decreases, or the focal length of the eye lens increases.\n2. The radius of the eyeball decreases.\nEffect: Light rays from a distant object are focused on the retina, but rays from a near object are focused behind the retina, causing blurry near vision.\nRemedy: Use spectacles with a convex lens. The convex lens provides additional convergence, reducing the effective focal length, so that near objects can be focused on the retina.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266467_iy0o9b.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266467_iy0o9b.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768847276783,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is prism?",
+        "marks": 1,
+        "answer": "A prism is a transparent optical instrument or object which disperses the light rays into its various constituent colors. For example, white light is dispersed into seven colors of light that are called the spectrum of white light.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why are plane mirrors big in size placed at \\(45^{\\circ}\\) at the turns of hilly road?",
+        "marks": 2,
+        "answer": "On hilly roads, there are sharp turns where drivers cannot see vehicles coming from the opposite direction. Large plane mirrors placed at \\(45^\\circ\\) at these turns allow drivers to see around the corner by reflecting the view of the oncoming traffic from the other side of the road, thus preventing accidents.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the refractive index of medium 'a' with respect to the medium 'b'.",
+        "marks": 3,
+        "answer": "From the figure and Snell's law: \\(n_a \\sin \\theta_a = n_b \\sin \\theta_b\\). Given \\(\\theta_a = 60^\\circ\\), \\(\\theta_b = 90^\\circ\\) (grazing emergence).\n\\[\nn_a \\sin 60^\\circ = n_b \\sin 90^\\circ\n\\]\n\\[\n\\frac{n_a}{n_b} = \\frac{\\sin 90^\\circ}{\\sin 60^\\circ} = \\frac{1}{\\sqrt{3}/2} = \\frac{2}{\\sqrt{3}} \\approx 1.155\n\\]\nRefractive index of 'a' w.r.t 'b' is \\(1.155\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "The density of which medium is greater between 'b' and 'c', if the critical angle becomes half by using the medium 'c' instead of medium 'b'? Analyze mathematically.",
+        "marks": 4,
+        "answer": "Let critical angle for 'b' w.r.t 'a' be \\(\\theta_{c,b}\\). Then \\(\\sin \\theta_{c,b} = \\frac{n_a}{n_b} = 1.155^{-1}?\\) Wait, careful: Critical angle from denser 'b' to rarer 'a': \\(\\sin \\theta_{c,b} = \\frac{n_a}{n_b} = 1/1.155 \\approx 0.866\\). So \\(\\theta_{c,b} \\approx 60^\\circ\\).\nNow, if medium 'c' replaces 'b', and the new critical angle \\(\\theta_{c,c} = \\theta_{c,b} / 2 = 30^\\circ\\).\nThen \\(\\sin \\theta_{c,c} = \\frac{n_a}{n_c}\\).\n\\[\n\\frac{n_a}{n_c} = \\sin 30^\\circ = 0.5\n\\]\nWe have \\(\\frac{n_a}{n_b} \\approx 0.866\\) and \\(\\frac{n_a}{n_c} = 0.5\\).\nSince \\(0.866 > 0.5\\), we get \\(\\frac{n_a}{n_b} > \\frac{n_a}{n_c} \\Rightarrow n_c > n_b\\).\nTherefore, medium 'c' has a higher refractive index than medium 'b', meaning 'c' is optically denser than 'b'.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266467_rp7p6c.jpeg"
+  },
+  {
+    "id": 1768847276904,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "Define magnification.",
+        "marks": 0,
+        "answer": "Magnification refers to how much larger or smaller the image is than the real object. It is the ratio of the size of the image to the size of the object.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why leaves look black in red light.",
+        "marks": 0,
+        "answer": "Leaves usually appear green because they reflect green light and absorb other colors. In red light, there is no green light to reflect. Since the leaf absorbs the red light (like it absorbs other non-green colors), it reflects almost no light back to our eyes, and thus appears black.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "According to fig-1 determine the velocity of light in the liquid medium.",
+        "marks": 0,
+        "answer": "From Fig-1: \\(i = 45^\\circ\\), \\(r = 30^\\circ\\), \\(c = 3 \\times 10^8 \\mathrm{ms^{-1}}\\). Using Snell's law:\n\\[\nn_{\\text{liquid}} = \\frac{\\sin i}{\\sin r} = \\frac{\\sin 45^\\circ}{\\sin 30^\\circ} = \\frac{0.7071}{0.5} = 1.414\n\\]\nVelocity in liquid: \\(v = \\frac{c}{n} = \\frac{3 \\times 10^8}{1.414} \\approx 2.12 \\times 10^8 \\mathrm{ms^{-1}}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "According to fig-2, for mirror and lens which image of object OA will be projected on a screen? Explain by drawing a ray diagram.",
+        "marks": 0,
+        "answer": "Only real images can be projected onto a screen.\nFor the concave lens: It always produces virtual, erect, and diminished images. So, its image of OA cannot be projected.\nFor the concave mirror: It can produce real or virtual images depending on object position. In the figure, if OA is placed between the pole and the focus, the image will be virtual and erect (and magnified), which cannot be projected. If OA is placed beyond the focus, the image will be real and inverted, which can be projected. From the figure's description, it seems the object is within the focus, so the image is virtual. Therefore, neither the lens nor the mirror in the given configuration will produce an image that can be projected onto a screen.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847267940_4w9zrh.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847267940_4w9zrh.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266467_cimdkk.jpeg"
+  },
+  {
+    "id": 1768847277126,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called plane mirror?",
+        "marks": 1,
+        "answer": "A plane mirror is a mirror with a flat reflective surface. For light rays striking a plane mirror, the angle of reflection equals the angle of incidence.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "In which cases does the refraction of light not take place?",
+        "marks": 2,
+        "answer": "Far point \\(d_B = 300 \\mathrm{cm} = 3 \\mathrm{m}\\). Required power \\(P_B = 1/(-3) \\approx -0.33 D\\).\nThe given lens power is \\(-0.33 D\\), which matches Person B's requirement closely. Therefore, the lens can remedy the myopia of Person B.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the distance of image in scenario-1.",
+        "marks": 3,
+        "answer": "For convex mirror: \\(R = 30 \\mathrm{cm}\\), so \\(f = -R/2 = -15 \\mathrm{cm}\\). \\(u = -60 \\mathrm{cm}\\). Using mirror formula:\n\\[\n\\frac{1}{v} = \\frac{1}{f} - \\frac{1}{u} = \\frac{1}{-15} - \\frac{1}{-60} = -\\frac{1}{15} + \\frac{1}{60} = \\frac{-4+1}{60} = -\\frac{3}{60} = -\\frac{1}{20}\n\\]\n\\[\nv = -20 \\mathrm{cm}\n\\]\nThe image is virtual, \\(20 \\mathrm{cm}\\) behind the mirror.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Which defect of the person between A and B can be remedied with the help of the lens of scenario-2? Put your opinion through analysis.",
+        "marks": 4,
+        "answer": "For Person",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266467_p4pp8.jpeg"
+  },
+  {
+    "id": 1768847277226,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called plane mirror?",
+        "marks": 1,
+        "answer": "For Person",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "In which cases does the refraction of light not take place?",
+        "marks": 2,
+        "answer": "Far point = 300 cm = 3 m. Required power \\(P_B = 1/(-3) \\approx -0.33\\) D.\nThe given lens power is -0.33 D, which matches Person B's requirement. Therefore, the lens can remedy the myopia of Person B.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the distance of image in scenario-1.",
+        "marks": 3,
+        "answer": "For convex mirror: \\(R = 30\\) cm, so \\(f = -R/2 = -15\\) cm. \\(u = -60\\) cm. Using mirror formula:\n\\[\n\\frac{1}{v} = \\frac{1}{f} - \\frac{1}{u} = \\frac{1}{-15} - \\frac{1}{-60} = -\\frac{1}{15} + \\frac{1}{60} = \\frac{-4+1}{60} = -\\frac{3}{60} = -\\frac{1}{20}\n\\]\n\\[\nv = -20\\text{ cm}\n\\]\nThe image is virtual, 20 cm behind the mirror.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Which defect of the person between A and B can be remedied with the help of the lens of scenario-2? Put your opinion through analysis.",
+        "marks": 4,
+        "answer": "For Person",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847268047_47c4lg.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847268047_47c4lg.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266467_yozz1e4.jpeg"
+  },
+  {
+    "id": 1768847277329,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is lens?",
+        "marks": 0,
+        "answer": "A transparent refracting medium confined by two spherical surfaces is called a lens.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why the value of reflection angle is zero if the incident ray is fallen normally?",
+        "marks": 0,
+        "answer": "When a ray falls normally on a surface, the angle of incidence is \\(0^\\circ\\). According to the law of reflection, the angle of reflection equals the angle of incidence, so it is also \\(0^\\circ\\). Therefore, the reflected ray retraces the path of the incident ray.",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266467_6qjbqp.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266467_6qjbqp.jpeg"
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find out the refractive index of medium 'X' with respect to medium 'Y'.",
+        "marks": 0,
+        "answer": "Using Snell's law for X to Y:\n\\[\nn_X \\sin 65^\\circ = n_Y \\sin 50^\\circ\n\\]\nRefractive index of X w.r.t Y:\n\\[\n_Y n_X = \\frac{\\sin 50^\\circ}{\\sin 65^\\circ} = \\frac{0.7660}{0.9063} \\approx 0.845\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "What will happen when the ray enters into 'Z' medium from 'Y' medium? Demonstrate with the help of figure.",
+        "marks": 0,
+        "answer": "Given \\(_Y n_Z = 0.74 < 1\\). This means medium Y is denser than Z (\\(n_Y > n_Z\\)). When the ray goes from Y (denser) to Z (rarer), total internal reflection may occur if the incident angle exceeds the critical angle.\nThe incident angle in Y for the ray going to Z is \\(50^\\circ\\) (same as refraction angle from X to Y).\nCritical angle \\(\\theta_c = \\sin^{-1}(_Y n_Z) = \\sin^{-1}(0.74) \\approx 47.73^\\circ\\).\nSince \\(50^\\circ > 47.73^\\circ\\), the incident angle is greater than the critical angle. Therefore, total internal reflection will occur; no light enters medium Z.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266467_eq6q9w.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266467_eq6q9w.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768847277426,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is lens?",
+        "marks": 1,
+        "answer": "A transparent refracting medium confined by two spherical surfaces is called a lens.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "What do you mean by accommodation of eye?",
+        "marks": 2,
+        "answer": "The capacity of eyes to change their focal length to see objects of any distance clearly is called the accommodation power of eyes. The eye lens changes its shape (and thus focal length) via ciliary muscles so that images of objects at different distances are formed on the retina.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find out the velocity of light in water?",
+        "marks": 3,
+        "answer": "\\(n_w = \\frac{c}{v_w} \\Rightarrow v_w = \\frac{c}{n_w} = \\frac{3 \\times 10^8}{1.33} \\approx 2.26 \\times 10^8 \\mathrm{ms^{-1}}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "How much high will the fish be seen from its real position? Analyze it with logic.",
+        "marks": 4,
+        "answer": "When we look at a fish underwater from air, the fish appears shallower (higher) than its actual depth due to refraction. This apparent depth \\(d'\\) is related to real depth \\(d\\) by \\(d' = \\frac{d}{n}\\), where \\(n\\) is the refractive index of water relative to air (\\(n \\approx 1.33\\)). So the fish appears to be at about \\(d/1.33\\) depth, i.e., it appears raised by an amount \\(d - d/1.33 = d(1 - 1/1.33) \\approx 0.25d\\). Thus, it appears about \\(25\\%\\) closer to the surface than it actually is.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847268303_zzenri.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847268303_zzenri.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266467_i6vmne.jpeg"
+  },
+  {
+    "id": 1768847277631,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is critical angle?",
+        "marks": 1,
+        "answer": "When a ray of light passes from a denser medium to a rarer medium, the refracted ray deviates away from the normal. The angle of incidence in the denser medium for which the angle of refraction in the rarer medium becomes \\(90^\\circ\\) is called the critical angle.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why do not we see in the dark room? Explain.",
+        "marks": 2,
+        "answer": "We see an object only when light from a source reaches our eyes after being reflected or emitted by the object. In a dark room, there is no (or insufficient) light to illuminate objects, so no light reaches our eyes from them, and we cannot see.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Draw an image of the mentioned object 'AO' in the stem.",
+        "marks": 3,
+        "answer": "[There is an image: Ray diagram for convex lens with object between F and 2F. Rays from top of object: one parallel to axis goes through focus on other side; one through optical center goes straight. They meet to form a real, inverted, magnified image beyond 2F on the other side.]",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847267940_l82ged.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847267940_l82ged.jpeg"
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "To remove which type of defects of the eye is the mentioned lens in the stem used? Explain with ray diagram.",
+        "marks": 4,
+        "answer": "The lens in the stem is a convex lens (as it forms a real, inverted image for object between F and 2F). Convex lenses are used to correct hypermetropia (farsightedness).\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266467_3kx2qhb.jpeg"
+  },
+  {
+    "id": 1768847277741,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called optical centre?",
+        "marks": 0,
+        "answer": "The point on the principal axis inside a lens through which if a ray of light passes, it emerges without any deviation in its path (i.e., incident and emergent rays are parallel), is called the optical centre.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "In the evening, why the pitch covered road are seen like water? Explain.",
+        "marks": 0,
+        "answer": "On hot days, the air near the road surface is hotter and less dense (lower refractive index) than the cooler air above. When light from the sky or distant objects passes through these layers, it refracts away from the normal. At a certain angle, total internal reflection occurs from the lower, hotter layer, making the road appear reflective like a water surface. This mirage effect makes the road look wet.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the power of the above lens. (Given \\(2f = 40 \\mathrm{cm}\\))",
+        "marks": 0,
+        "answer": "Given \\(2f = 40 \\mathrm{cm} \\Rightarrow f = 20 \\mathrm{cm} = 0.2 \\mathrm{m}\\).\nPower \\(P = \\frac{1}{f} = \\frac{1}{0.2} = +5 \\mathrm{D}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "What type of defect of vision can be remedied by the above lens? Explain by drawing ray diagram.",
+        "marks": 0,
+        "answer": "is a convex lens. Convex lenses are used to correct hypermetropia (farsightedness).\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266467_msbz1s.jpeg"
+  },
+  {
+    "id": 1768847277953,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called optical centre?",
+        "marks": 0,
+        "answer": "The point on the principal axis inside a lens through which if a ray of light is passed, it emerges without deviation, is called the optical centre.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "How to create perceptions of colored object by cones cell? Explain.",
+        "marks": 0,
+        "answer": "The retina contains photoreceptor cells: rods and cones. Cones are responsible for color vision. There are three types of cones sensitive to red, green, and blue light. When light of different wavelengths falls on them, they are stimulated in different proportions. This information is sent to the brain via the optic nerve, and the brain processes these signals to perceive the full range of colors.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the power of helping lens for clear sight for the man.",
+        "marks": 0,
+        "answer": "The man has myopia; his far point is 60 cm. To correct this, a concave lens is used so that an object at infinity appears to be at his far point. For object at infinity (\\(u=\\infty\\)), image at far point (\\(v=-60 \\mathrm{cm} = -0.6 \\mathrm{m}\\)).\nPower \\(P = \\frac{1}{f} = \\frac{1}{v} - \\frac{1}{u} = \\frac{1}{-0.6} - 0 = -1.67 \\mathrm{D}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "How to work the helping lens for clear sight for the man? Explain it with ray-diagram.",
+        "marks": 0,
+        "answer": "The concave lens diverges incoming parallel rays from a distant object, making them appear to come from the man's far point (60 cm). The eye's lens can then focus these diverging rays onto the retina.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768847278141,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is principal focus of lens?",
+        "marks": 0,
+        "answer": "The principal focus of a lens is the point on the principal axis where light rays parallel to the axis either converge (for convex lens) or appear to diverge from (for concave lens) after refraction.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "How do we see the objects placed in different distances standing at same place? Explain.",
+        "marks": 0,
+        "answer": "This is due to the accommodation of the eye. The ciliary muscles change the curvature (and thus focal length) of the eye lens. For distant objects, the lens flattens (longer focal length); for near objects, it becomes more curved (shorter focal length). This ensures the image is always formed on the retina.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find the distance of object from optical centre.",
+        "marks": 0,
+        "answer": "Using lens formula: \\(\\frac{1}{f} = \\frac{1}{u} + \\frac{1}{v}\\). Given \\(f=20 \\mathrm{cm}\\), \\(v=100 \\mathrm{cm}\\) (real image, positive).\n\\[\n\\frac{1}{u} = \\frac{1}{f} - \\frac{1}{v} = \\frac{1}{20} - \\frac{1}{100} = \\frac{5-1}{100} = \\frac{4}{100} = \\frac{1}{25}\n\\]\n\\[\nu = 25 \\mathrm{cm}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Is it possible to form image at the same side of object by changing the position of object? Demonstrate with the help of figure.",
+        "marks": 0,
+        "answer": "Yes, for a convex lens, if the object is placed within its focal length (\\(u < f\\)), the image formed is virtual, erect, and on the same side as the object.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266467_6im0bn.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266467_6im0bn.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768847278313,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What kind of defects exist in Lima's eyes?",
+        "marks": 1,
+        "answer": "Lima is suffering from Myopia (nearsightedness).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "What does it mean that diamond's critical angle is 24°?",
+        "marks": 2,
+        "answer": "A critical angle of 24° for diamond means that when light travels from diamond to air, if the angle of incidence in diamond exceeds 24°, total internal reflection occurs. If the angle is exactly 24°, the refracted ray grazes along the interface (refraction angle 90°).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Calculate the power of the sun glass given by the doctor.",
+        "marks": 3,
+        "answer": "Focal length of sunglass (concave lens) \\(f = -10\\) cm = -0.1 m.\nPower \\(P = \\frac{1}{f} = \\frac{1}{-0.1} = -10\\) D.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Find out the position, nature and shape of the image.",
+        "marks": 4,
+        "answer": "For the concave lens: \\(u = -15\\) cm, \\(f = -10\\) cm.\nUsing lens formula:\n\\[\n\\frac{1}{v} = \\frac{1}{f} - \\frac{1}{u} = \\frac{1}{-10} - \\frac{1}{-15} = -\\frac{1}{10} + \\frac{1}{15} = \\frac{-3+2}{30} = -\\frac{1}{30}\n\\]\n\\[\nv = -30\\text{ cm}\n\\]\nMagnification \\(m = \\frac{v}{u} = \\frac{-30}{-15} = 2\\) (positive indicates erect image).\nImage height = \\(m \\times 5\\) cm = \\(2 \\times 5 = 10\\) cm.\nPosition: 30 cm on the same side as the object (virtual).\nNature: Virtual, erect.\nShape: Magnified (10 cm long).\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266468_1b145a.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266468_1b145a.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768847278486,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called apparent expansion of liquid?",
+        "marks": 1,
+        "answer": "The expansion of a liquid, measured without considering the expansion of the container, is called the apparent expansion of the liquid.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why does semiconductor behave as insulator at low temperature?",
+        "marks": 2,
+        "answer": "In semiconductors, electrical conductivity depends on the number of free charge carriers (electrons and holes). At low temperatures, electrons lack thermal energy to break free from their atoms into the conduction band, so the number of free carriers drops significantly, causing the semiconductor to behave like an insulator.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the critical angle of the material of glass.",
+        "marks": 3,
+        "answer": "\\(n_{\\text{glass}} = 1.54\\), \\(n_{\\text{air}} = 1\\). Critical angle from glass to air:\n\\[\n\\sin \\theta_c = \\frac{n_{\\text{air}}}{n_{\\text{glass}}} = \\frac{1}{1.54} \\approx 0.6494\n\\]\n\\[\n\\theta_c = \\sin^{-1}(0.6494) \\approx 40.49^\\circ\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Discuss with ray diagram the cause, effect and remedy of Mr. Jabir's eye defect.",
+        "marks": 4,
+        "answer": "Mr. Jabir has hypermetropia (farsightedness).\nCause: Decreased converging power of eye lens (increased focal length) or shortening of eyeball radius.\nEffect: Near objects focus behind the retina, causing blurry near vision. Distant vision may be fine.\nRemedy: Use spectacles with convex lenses. The convex lens adds convergence, reducing the effective focal length so that near objects focus on the retina.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266468_7d2747.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266468_7d2747.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768847278591,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "Define total internal reflection of light.",
+        "marks": 1,
+        "answer": "When a light ray traveling from a denser medium to a rarer medium strikes the interface at an angle greater than the critical angle, it is completely reflected back into the denser medium. This phenomenon is called total internal reflection.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Absorption of light occurs in various things. Explain.",
+        "marks": 2,
+        "answer": "Absorption of light occurs when the energy of light photons is transferred to the atoms or molecules of a material, increasing their vibrational, rotational, or electronic energy (often as heat). Different materials absorb different wavelengths based on their molecular structure. Dark colors absorb more visible light than light colors.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Calculate the power of lens of the spectacle at the prescription by doctor to Mr. Sahel.",
+        "marks": 3,
+        "answer": "The spectacle lens focal length is between the last two: \\(18 \\mathrm{cm}\\) and \\(22 \\mathrm{cm}\\). Taking the average:\n\\[\nf = \\frac{18 + 22}{2} = 20 \\mathrm{cm} = 0.2 \\mathrm{m}\n\\]\nPower \\(P = \\frac{1}{0.2} = +5 \\mathrm{D}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Analyze the reason and remedy of above mentioned eye defect with the help of ray diagram.",
+        "marks": 4,
+        "answer": "The positive power indicates a convex lens, used for hypermetropia.\nReason: Decreased converging power of eye lens or shortened eyeball.\nRemedy: Convex lens spectacles.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768847278781,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What do you mean by refractive index?",
+        "marks": 0,
+        "answer": "Refractive index is the ratio of the speed of light in vacuum (or air) to its speed in the medium. It also equals the ratio of the sine of the angle of incidence to the sine of the angle of refraction when light passes from air into the medium.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "A piece of diamond glitters more than a piece of glass of same size, explain.",
+        "marks": 0,
+        "answer": "Diamond has a higher refractive index (\\(\\approx 2.42\\)) than glass (\\(\\approx 1.5\\)). This means light bends more inside diamond. Also, diamond's smaller critical angle (\\(\\approx 24^\\circ\\)) causes more light to undergo total internal reflection within it before exiting at specific facets, producing more sparkle (brilliance and fire) than glass.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find the velocity of light in glass medium. (Given \\(n_g=1.52\\), \\(c=3\\times10^8 \\mathrm{ms^{-1}}\\))",
+        "marks": 0,
+        "answer": "\\(v_g = \\frac{c}{n_g} = \\frac{3\\times10^8}{1.52} \\approx 1.97 \\times 10^8 \\mathrm{ms^{-1}}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "According to the stem whether \\(i_{2}\\) will be same to \\(i_{1}\\) or not. Verify with mathematical analysis.",
+        "marks": 0,
+        "answer": "For a rectangular slab with parallel sides, the emergent ray is parallel to the incident ray, so \\(i_2 = i_1\\) if the medium on both sides is the same (air). Mathematically:\nFirst refraction (air to glass): \\(n_g = \\frac{\\sin i_1}{\\sin r_1} \\Rightarrow \\sin r_1 = \\frac{\\sin 55^\\circ}{1.52}\\).\nInside the slab, \\(r_2 = r_1\\) (alternate angles).\nSecond refraction (glass to air): \\(n_g = \\frac{\\sin i_2}{\\sin r_2} \\Rightarrow \\sin i_2 = n_g \\sin r_2 = n_g \\sin r_1 = n_g \\times \\frac{\\sin i_1}{n_g} = \\sin i_1\\).\nTherefore, \\(i_2 = i_1 = 55^\\circ\\).\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266468_49k3us.jpeg"
+  },
+  {
+    "id": 1768847278889,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is regular reflection?",
+        "marks": 0,
+        "answer": "Regular reflection is the reflection of light from a smooth, polished surface where parallel incident rays remain parallel after reflection, producing a clear image.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why convex mirror is used as a side mirror in vehicles? Explain.",
+        "marks": 0,
+        "answer": "Convex mirrors provide a wider field of view and produce diminished, upright images. This allows drivers to see more area (including blind spots) in a small mirror. Though objects appear smaller and farther, the increased safety from a broader view makes them ideal for side mirrors.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "What is the velocity of light inside core? (Given \\(n_{\\text{core}}=1.5\\), \\(c=3\\times10^8 \\mathrm{ms^{-1}}\\))",
+        "marks": 0,
+        "answer": "\\(v_{\\text{core}} = \\frac{c}{n_{\\text{core}}} = \\frac{3\\times10^8}{1.5} = 2 \\times 10^8 \\mathrm{ms^{-1}}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Will it be possible to exchange information through the figure in the stem above? If not possible then what steps will have to take? Analyze mathematically.",
+        "marks": 0,
+        "answer": "For information transmission via optical fiber, total internal reflection must occur at the core-clad interface. This requires the incident angle inside the core to be greater than the critical angle \\(\\theta_c\\), where\n\\[\n\\sin \\theta_c = \\frac{n_{\\text{clad}}}{n_{\\text{core}}}\n\\]\nGiven \\(n_{\\text{clad}}=1.45\\), \\(n_{\\text{core}}=1.5\\):\n\\[\n\\sin \\theta_c = \\frac{1.45}{1.5} \\approx 0.9667 \\Rightarrow \\theta_c \\approx 75.1^\\circ\n\\]\nThe light must enter the core from air at an angle such that inside the core, its angle with the normal is \\(\\geq 75.1^\\circ\\). Using Snell's law at the air-core entrance:\n\\(n_{\\text{air}} \\sin \\theta_{\\text{air}} = n_{\\text{core}} \\sin (90^\\circ - \\theta_c) = n_{\\text{core}} \\cos \\theta_c\\).\n\\(\\cos \\theta_c \\approx \\cos 75.1^\\circ \\approx 0.2588\\).\nSo, \\(\\sin \\theta_{\\text{air}} = 1.5 \\times 0.2588 \\approx 0.3882 \\Rightarrow \\theta_{\\text{air}} \\approx 22.8^\\circ\\).\nTherefore, for transmission, the light must enter the fiber within a cone of acceptance with half-angle \\(22.8^\\circ\\). If the incident light in the figure is within this angle, information exchange is possible; otherwise, the launching angle must be adjusted.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266468_cylay8d.jpeg"
+  },
+  {
+    "id": 1768847278992,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called 1 dioptre?",
+        "marks": 0,
+        "answer": "1 dioptre is the power of a lens whose focal length is 1 meter.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "The power of a lens is \\(+5D\\) what does it mean?",
+        "marks": 2,
+        "answer": "A lens power of \\(+5D\\) means it is a converging (convex) lens with a focal length of \\(\\frac{1}{5} = 0.2 \\mathrm{m} = 20 \\mathrm{cm}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Calculate the power of the lens according to the scenario-1.",
+        "marks": 0,
+        "answer": "For myopia correction, a concave lens is used. Given \\(f = 20 \\mathrm{cm} = 0.2 \\mathrm{m}\\) (but for concave, \\(f\\) is negative). So \\(P = \\frac{1}{-0.2} = -5 \\mathrm{D}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "According to the scenario-2, will the ray of light be totally reflected? Analyze with mathematical logic and necessary ray diagram.",
+        "marks": 0,
+        "answer": "From glass (\\(n_g = \\sqrt{5} \\approx 2.236\\)) to air (\\(n_a=1\\)). The critical angle \\(\\theta_c = \\sin^{-1}(\\frac{n_a}{n_g}) = \\sin^{-1}(\\frac{1}{\\sqrt{5}}) \\approx \\sin^{-1}(0.4472) \\approx 26.57^\\circ\\).\nThe incident angle is \\(26^\\circ\\), which is less than \\(26.57^\\circ\\). Therefore, the ray will not be totally internally reflected; it will refract into air.\nUsing Snell's law: \\(n_g \\sin 26^\\circ = n_a \\sin r\\)\n\\(\\sin r = \\sqrt{5} \\sin 26^\\circ \\approx 2.236 \\times 0.4384 \\approx 0.980\\)\n\\(r \\approx \\sin^{-1}(0.980) \\approx 78.5^\\circ\\).\nSo the ray refracts into air at about \\(78.5^\\circ\\).\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768847279090,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called principal axis?",
+        "marks": 0,
+        "answer": "The line passing through the optical centre and the centres of curvature of the two spherical surfaces of a lens is called the principal axis.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Write down the difference between regular and irregular reflection of light.",
+        "marks": 0,
+        "answer": "• Regular Reflection: Occurs on smooth surfaces; parallel incident rays remain parallel after reflection; produces clear images.\n• Irregular Reflection (Diffuse): Occurs on rough surfaces; parallel incident rays scatter in different directions; does not produce clear images.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find the length of the image.",
+        "marks": 0,
+        "answer": "\\(u = -30 \\mathrm{cm}\\), \\(f = +20 \\mathrm{cm}\\), \\(h_o = 15 \\mathrm{cm}\\).\nUsing lens formula:\n\\[\n\\frac{1}{v} = \\frac{1}{f} - \\frac{1}{u} = \\frac{1}{20} - \\frac{1}{-30} = \\frac{1}{20} + \\frac{1}{30} = \\frac{3+2}{60} = \\frac{5}{60} = \\frac{1}{12}\n\\]\n\\[\nv = +12 \\mathrm{cm}\n\\]\nMagnification \\(m = \\frac{v}{u} = \\frac{12}{-30} = -0.4\\).\nImage height \\(h_i = |m| \\times h_o = 0.4 \\times 15 = 6 \\mathrm{cm}\\).",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266468_gu9tz9.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266468_gu9tz9.jpeg"
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "What type of human eyes error can be solved by using the above lens? Analyze with the ray diagram.",
+        "marks": 0,
+        "answer": "A convex lens converges light. It is used to correct hypermetropia (farsightedness).\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768847279190,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "Define center of curvature.",
+        "marks": 0,
+        "answer": "The centre of curvature is the centre of the sphere of which the reflecting or refracting spherical surface is a part.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Perpendicular incident ray on mirror reflects back in the same path.-Explain.",
+        "marks": 0,
+        "answer": "When a ray is incident perpendicularly (along the normal), the angle of incidence is \\(0^\\circ\\). By the law of reflection, the angle of reflection is also \\(0^\\circ\\), so the ray retraces its path back along the normal.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the length of the image created in mirror.",
+        "marks": 0,
+        "answer": "For concave mirror: \\(u = -20 \\mathrm{cm}\\), \\(f = -10 \\mathrm{cm}\\), \\(h_o = 30 \\mathrm{cm}\\).\nUsing mirror formula:\n\\[\n\\frac{1}{v} = \\frac{1}{f} - \\frac{1}{u} = \\frac{1}{-10} - \\frac{1}{-20} = -\\frac{1}{10} + \\frac{1}{20} = \\frac{-2+1}{20} = -\\frac{1}{20}\n\\]\n\\[\nv = -20 \\mathrm{cm}\n\\]\nMagnification \\(m = -\\frac{v}{u} = -\\frac{-20}{-20} = -1\\).\nImage height \\(h_i = |m| \\times h_o = 1 \\times 30 = 30 \\mathrm{cm}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Explain the ray diagram of the image created in the lens.",
+        "marks": 0,
+        "answer": "For the convex lens: \\(u = -20 \\mathrm{cm}\\), \\(f = +10 \\mathrm{cm}\\). This is at \\(2f\\) (since \\(2f=20 \\mathrm{cm}\\)). When object is at \\(2f\\), the image is also at \\(2f\\) on the other side, real, inverted, and same size as object.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266468_w5f2pg.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266468_w5f2pg.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768847279303,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is lens?",
+        "marks": 1,
+        "answer": "A transparent refracting medium confined by two spherical surfaces is called a lens.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why does normal eye can see objects at any distance?",
+        "marks": 2,
+        "answer": "The normal eye has the ability of accommodation. The ciliary muscles change the curvature (and thus focal length) of the eye lens so that images of objects at various distances are focused on the retina.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the distance of image of the object from the lens.",
+        "marks": 3,
+        "answer": "\\(P = +2.5 \\mathrm{D} \\Rightarrow f = \\frac{1}{P} = \\frac{1}{2.5} = 0.4 \\mathrm{m} = 40 \\mathrm{cm}\\).\n\\(u = -20 \\mathrm{cm}\\).\nUsing lens formula:\n\\[\n\\frac{1}{v} = \\frac{1}{f} - \\frac{1}{u} = \\frac{1}{40} - \\frac{1}{-20} = \\frac{1}{40} + \\frac{1}{20} = \\frac{1+2}{40} = \\frac{3}{40}\n\\]\n\\[\nv = \\frac{40}{3} \\approx 13.33 \\mathrm{cm}\n\\]\nPositive \\(v\\) indicates real image on opposite side.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "For which defect of eye the lens of stem is useful for remedy-explain with figure.",
+        "marks": 4,
+        "answer": "The convex lens (+2.5D) is used to correct hypermetropia.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266468_36wy2p.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266468_36wy2p.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768847279409,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is magnification?",
+        "marks": 0,
+        "answer": "Magnification is the ratio of the size of the image to the size of the object.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why we cannot see X rays with naked eyes?",
+        "marks": 0,
+        "answer": "The human eye is sensitive only to visible light wavelengths (approx. 400–700 nm). X-rays have much shorter wavelengths (0.01–10 nm), outside this range. The photoreceptors in our retina do not respond to X-ray photons, so we cannot see them.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the length of the image. (Given object height likely; from working, object distance u=15 cm, f=10 cm, v=30 cm)",
+        "marks": 0,
+        "answer": "From the geometry: \\(R = 20 \\mathrm{cm}\\) (since f=10 cm, R=2f=20 cm). CF = R - OF = 20-10=10 cm. A is midpoint of CF, so AF=5 cm. Then u = OA = OF+FA = 10+5=15 cm. f= -10 cm (concave mirror).\nUsing mirror formula:\n\\[\n\\frac{1}{v} = \\frac{1}{f} - \\frac{1}{u} = \\frac{1}{-10} - \\frac{1}{-15} = -\\frac{1}{10} + \\frac{1}{15} = \\frac{-3+2}{30} = -\\frac{1}{30}\n\\]\n\\[\nv = -30 \\mathrm{cm}\n\\]\nMagnification \\(m = -\\frac{v}{u} = -\\frac{-30}{-15} = -2\\).\nIf object height = h, then image height = |m|  h = 2h. (Specific numeric length requires original object height.)",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Is it possible to get a virtual and straight image by changing the position of the object AB in the figure? Explain with ray diagram.",
+        "marks": 0,
+        "answer": "For a concave mirror, a virtual and erect (straight) image is formed if the object is placed between the pole (P) and the focus (F). So, by moving AB to within PF, a virtual, erect, magnified image is obtained.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847268357_twgs6.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847268357_twgs6.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266468_te7eyf.jpeg"
+  },
+  {
+    "id": 1768847279510,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is an optical centre?",
+        "marks": 0,
+        "answer": "The optical centre is the point on the principal axis of a lens through which light passes without deviation.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why is concave mirror is called converging mirror? Explain.",
+        "marks": 0,
+        "answer": "A concave mirror converges parallel rays of light incident on it to a single point (the focus) after reflection. Hence, it is called a converging mirror.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the power of the lens used in spectacles described by the doctor.",
+        "marks": 0,
+        "answer": "The student has myopia with far point 60 cm. For correction, a concave lens is used so that an object at infinity appears at the far point.\n\\(u = \\infty\\), \\(v = -60 \\mathrm{cm} = -0.6 \\mathrm{m}\\).\n\\(P = \\frac{1}{f} = \\frac{1}{v} - \\frac{1}{u} = \\frac{1}{-0.6} - 0 = -1.67 \\mathrm{D}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "From the mirror mentioned in scenario 2, can you get an image equal to the object? Explain with diagram.",
+        "marks": 0,
+        "answer": "The mirror is a concave mirror (since it can produce both real and virtual images). Yes, an image equal in size to the object can be obtained by placing the object exactly at the centre of curvature (C). Then, the image is also at C, real, inverted, and same size.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266468_knku9.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266468_knku9.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768847279618,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is image?",
+        "marks": 0,
+        "answer": "If light rays emitted from a point converge at a second point or appear to diverge from a second point after reflection or refraction, that second point is called the image of the first point.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Light wave is transverse wave.-Explain.",
+        "marks": 0,
+        "answer": "In a transverse wave, the particles of the medium oscillate perpendicular to the direction of wave propagation. Light is an electromagnetic wave consisting of oscillating electric and magnetic fields that are perpendicular to each other and to the direction of propagation, hence it is a transverse wave.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find the refractive index of water.",
+        "marks": 0,
+        "answer": "\\(n = \\frac{\\sin i}{\\sin r} = \\frac{\\sin 30^\\circ}{\\sin 19^\\circ} = \\frac{0.5}{0.3256} \\approx 1.54\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Mathematically find the condition of total internal reflection.",
+        "marks": 0,
+        "answer": "Conditions for total internal reflection:\n1. Light must travel from a denser medium to a rarer medium.\n2. The angle of incidence in the denser medium must be greater than the critical angle \\(\\theta_c\\), where\n\\[\n\\sin \\theta_c = \\frac{n_{\\text{rarer}}}{n_{\\text{denser}}}\n\\]\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768847279720,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is linear magnification?",
+        "marks": 1,
+        "answer": "Linear magnification is the ratio of the height of the image to the height of the object.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "How do you identify lens without touching it?",
+        "marks": 2,
+        "answer": "Observe the image formed by the lens of a distant object. If the image is erect and diminished, it is a concave lens. If the image is inverted and can be projected, it is a convex lens. Alternatively, bring an object close: if the seen image is virtual, erect, and magnified, it's convex; if virtual, erect, and diminished, it's concave.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Draw the ray diagram and find out the image similarities from fig'a' and fig'b'.",
+        "marks": 3,
+        "answer": "For both concave mirror and concave lens:\nSimilarity: Both can produce virtual, erect, and diminished images when the object is placed appropriately.\nFor concave lens: Always produces virtual, erect, diminished image regardless of object position.\nFor concave mirror: Produces virtual, erect, magnified image when object is between pole and focus.\nDifference: The concave mirror can also produce real images, while concave lens produces only virtual images.",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847268444_ld1f8.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847268444_ld1f8.jpeg"
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "How we can get real image from figure'a', explain any two positions of object with ray diagram.",
+        "marks": 4,
+        "answer": "For a concave mirror, real images can be obtained at two positions:\n1. Object beyond C (center of curvature): Image is between F and C, real, inverted, diminished.\n2. Object between C and F: Image is beyond C, real, inverted, magnified.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847268444_1swuf.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847268444_1swuf.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266469_du3o2i.jpeg"
+  },
+  {
+    "id": 1768847279900,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called refractive index?",
+        "marks": 1,
+        "answer": "For Person",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why do not we see in the dark room? Explain.",
+        "marks": 2,
+        "answer": "The given lens power is -0.33",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the distance of image in scenario-1.",
+        "marks": 3,
+        "answer": "For convex mirror: \\(R=30\\) cm \\(\\Rightarrow f = -R/2 = -15\\) cm, \\(u=-60\\) cm.\n\\[\n\\frac{1}{v} = \\frac{1}{f} - \\frac{1}{u} = \\frac{1}{-15} - \\frac{1}{-60} = -\\frac{1}{15} + \\frac{1}{60} = \\frac{-4+1}{60} = -\\frac{3}{60} = -\\frac{1}{20}\n\\]\n\\[\nv = -20\\text{ cm}\n\\]\nImage is virtual, 20 cm behind mirror.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Which defect of the person between A and B can be remedied with the help of the lens of scenario-2? Give opinion by mathematical analysis.",
+        "marks": 4,
+        "answer": "than Person B's (-0.4 D). However, neither person's requirement matches exactly. The lens at -0.33 D would provide partial correction, being better suited for someone with a far point between 2.5 m and 4 m (approximately 3 m). It would help Person A more than Person B, though neither would get full correction.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847268207_w6pwi7.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847268207_w6pwi7.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266469_qxfqa5.jpeg"
+  },
+  {
+    "id": 1768847280005,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is optical centre?",
+        "marks": 1,
+        "answer": "The optical centre is the point on the principal axis of a lens where a ray passes through without deviation.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "What do you mean by accommodation of eye?",
+        "marks": 2,
+        "answer": "Accommodation is the ability of the eye to change the focal length of its lens by changing its curvature, in order to focus on objects at different distances.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find distance of the image from lens.",
+        "marks": 3,
+        "answer": "\\(P = -2\\) D \\(\\Rightarrow f = \\frac{1}{P} = \\frac{1}{-2} = -0.5\\) m = -50 cm.\n\\(u = -25\\) cm.\nUsing lens formula: \\(\\frac{1}{f} = \\frac{1}{v} - \\frac{1}{u}\\)\n\\[\n\\frac{1}{v} = \\frac{1}{f} + \\frac{1}{u} = \\frac{1}{-50} + \\frac{1}{-25} = -\\frac{1}{50} - \\frac{1}{25} = \\frac{-1-2}{50} = -\\frac{3}{50}\n\\]\n\\[\nv = -\\frac{50}{3} \\approx -16.67\\text{ cm}\n\\]\nThe image is virtual, approximately 16.67 cm on the same side as the object.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "For what type of eye defect the stem's lens is used, analyze with ray diagram.",
+        "marks": 4,
+        "answer": "The concave lens (negative power) is used to correct myopia (nearsightedness).\nIn myopia, parallel rays from distant objects focus in front of the retina. A concave lens diverges these rays before they enter the eye, making them appear to come from the person's far point, allowing the eye to focus them properly on the retina.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768847280103,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is a lens?",
+        "marks": 1,
+        "answer": "A lens is a transparent refracting medium bounded by two curved surfaces (or one curved and one plane).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Which cells produce light perception of colored objects, and how? Explain.",
+        "marks": 2,
+        "answer": "Cone cells in the retina are responsible for color vision. They contain photopigments sensitive to different wavelengths (red, green, blue). When light strikes them, they send signals to the brain, which interprets the combination as color.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the power of the lens.",
+        "marks": 3,
+        "answer": "\\(v = 100\\) cm (real image, positive), \\(m = -2\\) (real image is inverted, so negative magnification).\n\\(m = \\frac{v}{u}\\) \\(\\Rightarrow -2 = \\frac{100}{u}\\) \\(\\Rightarrow u = -50\\) cm.\nUsing lens formula: \\(\\frac{1}{f} = \\frac{1}{v} - \\frac{1}{u} = \\frac{1}{100} - \\frac{1}{-50} = \\frac{1}{100} + \\frac{1}{50} = \\frac{1+2}{100} = \\frac{3}{100}\\).\n\\(f = \\frac{100}{3}\\) cm \\(\\approx 33.33\\) cm = 0.333 m.\nPower \\(P = \\frac{1}{f} = \\frac{1}{0.333} \\approx +3\\) D.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "How does and which type of eye defects can be minimized by the given lens? Analyze with the help of ray diagram.",
+        "marks": 4,
+        "answer": "A convex lens (positive power) is used to correct hypermetropia (farsightedness).\nIn hypermetropia, the eye's converging power is insufficient, causing near objects to focus behind the retina. A convex lens provides additional convergence, bringing the focus forward onto the retina, enabling clear near vision.",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266469_4kckgs.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266469_4kckgs.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768847280215,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called image?",
+        "marks": 0,
+        "answer": "An image is a point where light rays either actually meet or appear to meet after reflection or refraction.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why is convex mirror used for the side view mirror in vehicles? Explain.",
+        "marks": 0,
+        "answer": "Convex mirrors provide a wider field of view and produce diminished, upright images, allowing drivers to see more area behind and beside the vehicle in a small mirror, reducing blind spots.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Calculate speed of light in 'b' medium.",
+        "marks": 0,
+        "answer": "For medium 'b' w.r.t 'a': \\(\\sin \\theta_{c,b} = \\frac{n_a}{n_b}\\). Also \\(n = \\frac{c_a}{c_b}\\). So \\(\\frac{c_a}{c_b} = \\frac{1}{\\sin \\theta_{c,b}} = \\frac{1}{\\sin 40^\\circ}\\).\n\\(c_b = c_a \\cdot \\sin 40^\\circ = 2.9 \\times 10^8 \\times 0.6428 \\approx 1.86 \\times 10^8 \\mathrm{ms^{-1}}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Between 'b' and 'c' which one is optically denser? Explain mathematically.",
+        "marks": 0,
+        "answer": "Critical angle \\(\\theta_c\\) is related by \\(\\sin \\theta_c = \\frac{n_{\\text{rarer}}}{n_{\\text{denser}}}\\). Here rarer is 'a' for both.\nFor 'b': \\(\\sin 40^\\circ = \\frac{n_a}{n_b}\\).\nFor 'c': \\(\\sin 50^\\circ = \\frac{n_a}{n_c}\\).\nSince \\(\\sin 40^\\circ < \\sin 50^\\circ\\), we have \\(\\frac{n_a}{n_b} < \\frac{n_a}{n_c} \\Rightarrow n_c > n_b\\). Therefore, medium 'c' is optically denser than 'b'.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768847280370,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is lens?",
+        "marks": 0,
+        "answer": "A lens is a transparent refracting medium bounded by two spherical surfaces.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why we cannot see lights of any wavelength?",
+        "marks": 0,
+        "answer": "The human eye is sensitive only to electromagnetic radiation within a specific wavelength range (about 400–700 nm), called visible light. Light outside this range (e.g., infrared, ultraviolet) does not stimulate the retina, so we cannot see it.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find the relative refractive index of medium (b). (Assuming same as Q9: i=45°, r=60°, so \\(_a n_b = \\frac{\\sin i}{\\sin r} = \\frac{\\sin 45}{\\sin 60} = 0.816\\))",
+        "marks": 0,
+        "answer": "\\(_a n_b = \\frac{\\sin 45^\\circ}{\\sin 60^\\circ} = \\frac{0.7071}{0.8660} \\approx 0.816\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "If this two medium exchange their place and AO light goes in same direction then what will happen? Analyze with figure.",
+        "marks": 0,
+        "answer": "If medium 'a' and 'b' are swapped, light now travels from 'b' to 'a'. The refractive index from 'b' to 'a' is \\(_b n_a = \\frac{1}{_a n_b} = \\frac{1}{0.816} \\approx 1.225\\).\nIf the incident ray in 'b' is at the same angle as before (say \\(45^\\circ\\) in the new 'b'), then using Snell's law:\n\\(1.225 \\sin i = 1 \\sin r \\Rightarrow \\sin r = 1.225 \\sin 45^\\circ \\approx 1.225 \\times 0.7071 \\approx 0.866 \\Rightarrow r \\approx 60^\\circ\\).\nSo the ray would refract into 'a' at \\(60^\\circ\\). However, if the incident angle in 'b' is larger, it could exceed the critical angle. The critical angle from 'b' to 'a' is \\(\\theta_c = \\sin^{-1}(1/1.225) = \\sin^{-1}(0.816) \\approx 54.7^\\circ\\). If the incident angle > 54.7°, total internal reflection occurs.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266469_rh7aua.jpeg"
+  },
+  {
+    "id": 1768847280570,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is lens?",
+        "marks": 0,
+        "answer": "A lens is a transparent refracting medium bounded by two spherical surfaces.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "What do you mean by accommodation of eye?",
+        "marks": 0,
+        "answer": "Accommodation is the eye's ability to change the focal length of its lens to focus on objects at different distances.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the power of lens according to the stem.",
+        "marks": 0,
+        "answer": "\\(f = 20 \\mathrm{cm} = 0.2 \\mathrm{m}\\). Power \\(P = \\frac{1}{0.2} = +5 \\mathrm{D}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "If the object is brought forward \\(10\\mathrm{cm}\\) from its position, show the position, nature and size of an image by ray diagram.",
+        "marks": 0,
+        "answer": "Initially, object is at 30 cm from optical centre. Focal length is 20 cm, so initially object is beyond F (30 > 20). If brought forward 10 cm, new object distance \\(u = -20 \\mathrm{cm}\\) (i.e., at the focus).\nWhen object is at focus, image is at infinity (real, inverted, highly magnified).\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266469_avqivm.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266469_avqivm.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768847280681,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "Define magnification.",
+        "marks": 1,
+        "answer": "Magnification is the ratio of the size of the image to the size of the object.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Explain why is concave lens known as diverging lens?",
+        "marks": 2,
+        "answer": "A concave lens is called a diverging lens because it causes parallel rays of light incident on it to spread out (diverge) after refraction, as if they are coming from a virtual focus.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Explain how does scenario-2 take place in desert?",
+        "marks": 3,
+        "answer": "Scenario-2 depicts a mirage. In deserts, the sand gets very hot, heating the air just above it. This creates a temperature gradient: hot, less dense air near the ground (lower refractive index) and cooler, denser air above (higher refractive index). When light from the sky (or distant objects) passes through these layers, it refracts away from the normal continuously. At a certain layer, the angle of incidence exceeds the critical angle, causing total internal reflection. This reflected light reaches the observer's eye, making it seem as if there is a reflecting water surface (image of the sky) on the ground.",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847268229_n2xlg8.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847268229_n2xlg8.jpeg"
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Analyze with figure about the normal functioning in case of scenario-1.",
+        "marks": 4,
+        "answer": "Scenario-1 is hypermetropia (farsightedness).\nNormal functioning: In a normal eye, light from a near object is focused on the retina.\nDefect: In hypermetropia, the eyeball is too short or the lens power is too weak, causing near objects to focus behind the retina.\nRemedy: A convex lens is used to add convergence, bringing the focus forward onto the retina.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847268230_2vzlmp.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847268230_2vzlmp.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266469_3kw7g.jpeg"
+  },
+  {
+    "id": 1768847280783,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is the refractive index?",
+        "marks": 0,
+        "answer": "Refractive index of a medium is the ratio of the speed of light in vacuum to its speed in that medium.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Explain lens power \\(+2D\\).",
+        "marks": 0,
+        "answer": "A lens power of \\(+2D\\) means it is a converging (convex) lens with a focal length of \\(1/2 = 0.5 \\mathrm{m} = 50 \\mathrm{cm}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Explain Suman's eye problem.",
+        "marks": 0,
+        "answer": "Suman has myopia (nearsightedness). He cannot see distant objects (like the blackboard) clearly because the image forms in front of the retina due to excessive converging power of the eye lens or elongated eyeball.",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266469_uq1b0c.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266469_uq1b0c.jpeg"
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "The teacher's glasses could not solve Suman's eye problem? Analyze mathematically.",
+        "marks": 0,
+        "answer": "The teacher gave a convex lens (+2D). For myopia, a concave lens is needed.\nLet Suman's far point be \\(d\\) meters. For correction, a concave lens of focal length \\(-d\\) is needed so that an object at infinity appears at \\(d\\).\nThe convex lens would instead converge light more, making the image form even farther in front of the retina, worsening the blur. Mathematically, if Suman's uncorrected far point is \\(d\\), the required concave lens power is \\(P = -1/d\\). The convex lens with \\(P=+2D\\) would effectively make his eye's total power even more positive, reducing the far point further, which is opposite of what is needed.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768847280888,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "Which characteristic of light is used to make optical fiber?",
+        "marks": 1,
+        "answer": "Total internal reflection of light is used in optical fibers.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "What do you understand by the power of lens is + 6.5D?",
+        "marks": 2,
+        "answer": "A lens power of \\(+6.5D\\) means it is a convex lens with focal length \\(f = 1/6.5 \\approx 0.1538 \\mathrm{m} = 15.38 \\mathrm{cm}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the position, nature and shape of object AQ.",
+        "marks": 3,
+        "answer": "For a concave lens, the image is always virtual, erect, and diminished, and located between the lens and the focus on the same side as the object. So for object AQ, the image A'Q' is virtual, erect, smaller, and on the same side.",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847269145_8if168.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847269145_8if168.jpeg"
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Explain how we can find the shape of object AQ in concave mirror.",
+        "marks": 4,
+        "answer": "To find the image of AQ in a concave mirror, use ray diagrams:\n• Draw a ray from A parallel to principal axis; after reflection, it passes through focus F.\n• Draw a ray from A through the centre of curvature C; it reflects back on itself.\n• The intersection of these reflected rays (or their extensions) gives the image point A'.\n• Similarly for Q (on axis), its image Q' is on the axis.\nThe image A'Q' can be real or virtual, inverted or erect, depending on object position.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847269145_m2cuvp.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847269145_m2cuvp.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266469_1bt9y7.jpeg"
+  },
+  {
+    "id": 1768847280987,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "Write the Snell's law?",
+        "marks": 0,
+        "answer": "Snell's law: \\(n_1 \\sin \\theta_1 = n_2 \\sin \\theta_2\\), where \\(n\\) is refractive index and \\(\\theta\\) is angle with normal.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Explain the relation between Kinetic energy, momentum and velocity with a proper equation?",
+        "marks": 0,
+        "answer": "Kinetic energy \\(K = \\frac{1}{2} m v^2\\), momentum \\(p = m v\\). So, \\(K = \\frac{p^2}{2m}\\) and \\(p = \\sqrt{2mK}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Draw the refracted ray and find the angle of refraction. (Assume i given, say 30°? Not specified in text, so generic.)",
+        "marks": 0,
+        "answer": "[There is an image: Refracted ray bending towards normal.]\nIf incident angle \\(i\\) is given, e.g., \\(i=30^\\circ\\), then\n\\(1 \\cdot \\sin 30^\\circ = 1.52 \\cdot \\sin r \\Rightarrow \\sin r = 0.5/1.52 \\approx 0.3289 \\Rightarrow r \\approx 19.2^\\circ\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "What is critical angle? Set up a relation between critical angle and refractive index.",
+        "marks": 0,
+        "answer": "Critical angle is the angle of incidence in the denser medium for which the angle of refraction in the rarer medium is \\(90^\\circ\\). Relation: \\(\\sin \\theta_c = \\frac{n_{\\text{rarer}}}{n_{\\text{denser}}}\\).\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266470_qcfl5q.jpeg"
+  },
+  {
+    "id": 1768847281164,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "Define specific heat.",
+        "marks": 0,
+        "answer": "Specific heat is the amount of heat required to raise the temperature of 1 kg of a substance by \\(1^\\circ C\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "What is meant by power of a motor is 1.5 HP?",
+        "marks": 0,
+        "answer": "1 HP (horsepower) = 746 W. So, a motor of 1.5 HP means its power is \\(1.5 \\times 746 = 1119 \\mathrm{W}\\). It can do 1119 joules of work per second.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine magnification factor.",
+        "marks": 0,
+        "answer": "Given image height \\(h_i = 12 \\mathrm{cm}\\), object height \\(h_o = 30 \\mathrm{cm}\\) (from figure context). Magnification \\(m = \\frac{h_i}{h_o} = \\frac{12}{30} = 0.4\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Mathematically show that the stem follows the \\(2^{\\mathrm{nd}}\\) law of reflection of light.",
+        "marks": 0,
+        "answer": "The second law of reflection: angle of incidence = angle of reflection.\nIn the ray diagram, take a point on the object, e.g., A. Draw incident ray AO to mirror point O, and reflected ray OA'. At O, draw the normal. Measure the angles: angle between AO and normal = angle between OA' and normal. This equality can be proven geometrically from the mirror's geometry and the fact that the image is formed by intersection of reflected rays.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847268455_yr6vdc.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847268455_yr6vdc.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768847266470_s1ol3.jpeg"
+  },
+  {
+    "id": 1768847281266,
+    "subject": "Physics",
+    "chapter": "Refraction of Light",
+    "lesson": "Light: Reflection, Refraction, Lenses, and Human Eye",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is critical angle?",
+        "marks": 0,
+        "answer": "Critical angle is the angle of incidence in a denser medium for which the angle of refraction in the rarer medium is \\(90^\\circ\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why concave mirror is called convergence mirror? Explain.",
+        "marks": 0,
+        "answer": "A concave mirror converges parallel incident rays to a single point (focus) after reflection, hence called a converging mirror.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Calculate the distance of the image.",
+        "marks": 0,
+        "answer": "Erect, magnified image implies virtual image from a convex lens when object is within focal length. \\(f=10 \\mathrm{cm}\\), \\(m=+2\\).\n\\(m = \\frac{v}{u} = 2 \\Rightarrow v = 2u\\).\nUsing lens formula: \\(\\frac{1}{f} = \\frac{1}{v} - \\frac{1}{u} \\Rightarrow \\frac{1}{10} = \\frac{1}{2u} - \\frac{1}{u} = -\\frac{1}{2u}\\).\nSo, \\(-\\frac{1}{2u} = \\frac{1}{10} \\Rightarrow 2u = -10 \\Rightarrow u = -5 \\mathrm{cm}\\).\nThen \\(v = 2u = -10 \\mathrm{cm}\\).\nNegative v indicates virtual image on same side, 10 cm from lens.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "The lens mentioned in the stimulus is used to address what type of eye problem? Analyze the method of solving this problem with diagrams.",
+        "marks": 0,
+        "answer": "The lens is convex (since it produces magnified virtual image). Convex lenses are used to correct hypermetropia.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  }
+]

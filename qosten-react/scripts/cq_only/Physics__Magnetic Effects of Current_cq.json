@@ -1,0 +1,1129 @@
+[
+  {
+    "id": 1768848441355,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "lesson": "Transformers and Electromagnetic Induction",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is the definition of an IC?",
+        "marks": 0,
+        "answer": "An IC or integrated circuit is a structure made from semiconductors like silicon, in which millions of microscopic electrical circuits are connected or integrated into an area the size of a fingernail.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Show that the Earth is a huge magnet.",
+        "marks": 0,
+        "answer": "The Earth is a huge magnet. When a bar magnet is suspended, it always points in the north-south direction. The geographic North Pole of the Earth is actually the magnetic south pole. Therefore, when a bar magnet is suspended, its north pole is attracted to the geographic North Pole. Similarly, the geographic South Pole is the magnetic north pole. That is why if you hang a bar magnet at the South Pole, its south pole faces the geographic South Pole.\nHowever, the geographic North Pole and the magnetic South Pole are not at the same point. Similarly, the geographic South Pole and magnetic North Pole are different points. This means the geographic meridian and magnetic meridian are at a slight angle.",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768848439964_btfwl.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768848439964_btfwl.jpeg"
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the voltage of the secondary coil.",
+        "marks": 0,
+        "answer": "\\[\n\\frac{V_p}{V_s} = \\frac{N_p}{N_s}\n\\]\nHere, primary voltage \\(V_p = 220 \\mathrm{V}\\)\nRatio:\n\\[\n\\frac{N_p}{N_s} = \\frac{3}{7}\n\\]\nSo:\n\\[\nV_s = \\frac{N_s}{N_p} \\times V_p = \\frac{7}{3} \\times 220 = 513.33 \\mathrm{V}\n\\]\nThus, the secondary coil voltage is \\(513.33 \\mathrm{V}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Analyze the principle on which the transformer is based and discuss its application.",
+        "marks": 0,
+        "answer": "Transformers operate on the principle of electromagnetic induction. When a conducting coil is placed in a changing magnetic field, an electromotive force (EMF) is induced, causing current to flow. A transformer consists of two coils not directly connected but linked by electromagnetic induction. Applying AC voltage to the primary coil creates a changing magnetic field, which induces an EMF in the secondary coil. The voltage ratio is given by \\(\\frac{V_p}{V_s} = \\frac{N_p}{N_s}\\). In an ideal transformer, power is conserved: \\(V_p I_p = V_s I_s\\). Transformers are used to step up voltage for efficient long-distance transmission (reducing current and power loss) and to step down voltage for residential/industrial use.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768848439965_ycb5l.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768848439965_ycb5l.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768848442400,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "lesson": "Transformers and Applications",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is a solenoid?",
+        "marks": 0,
+        "answer": "A solenoid is a coil of wire through which, when current flows, a strong magnetic field is created around the coil.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why is an ultrasonogram used instead of an X-ray?",
+        "marks": 0,
+        "answer": "Ultrasonography is used instead of X-rays because X-rays are electromagnetic waves with wavelengths thousands of times shorter than visible light, meaning they have much higher energy. Their wavelength is \\(10^{-10} \\mathrm{m}\\) or less. X-ray radiation is harmful to the body as it can penetrate flesh and image bones, but it poses risks, especially to pregnant women. Ultrasonography uses high-frequency (1–10 MHz) sound waves reflected from tissues to create images, avoiding harmful radiation.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Calculate the electric potential at the output.",
+        "marks": 0,
+        "answer": "Given:\n\\[\n\\frac{V_p}{V_s} = \\frac{n_p}{n_s}\n\\]\nHere: \\(V_p = 200 \\mathrm{V}\\), \\(n_p = 800\\), \\(n_s = 6000\\)\nSo:\n\\[\nV_s = \\frac{n_s}{n_p} \\times V_p = \\frac{6000}{800} \\times 200 = 1500 \\mathrm{V}\n\\]\nThe output electric potential is \\(1500 \\mathrm{V}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Explain mathematically whether the electric motor will be effective or not.",
+        "marks": 0,
+        "answer": "From given data:\n\\[\nI_p = 60 \\mathrm{A}\n\\]\nWe know:\n\\[\n\\frac{I_s}{I_p} = \\frac{n_p}{n_s}\n\\]\nSo:\n\\[\nI_s = \\frac{n_p}{n_s} \\times I_p = \\frac{800}{6000} \\times 60 = 8 \\mathrm{A}\n\\]\nPower in secondary coil:\n\\[\nP_s = V_s I_s = 1500 \\times 8 = 12000 \\mathrm{W} = 12 \\mathrm{kW}\n\\]\nMotor power = \\(12.5 \\mathrm{kW}\\)\nSince \\(12.5 \\mathrm{kW} > 12 \\mathrm{kW}\\), the motor requires more power than the transformer can supply, so it will not be effective.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768848439965_yv30vl.jpeg"
+  },
+  {
+    "id": 1768848442524,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "lesson": "Transformers",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is electromagnetic induction?",
+        "marks": 0,
+        "answer": "Electromagnetic induction is the phenomenon of producing a temporary electromotive force or current in a closed circuit by moving a magnet or changing the current in a nearby circuit.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Explain the relationship between an electric wire and a magnetic field.",
+        "marks": 0,
+        "answer": "When a charge is stationary, an electric field surrounds it. When current flows through a wire, a magnetic field is created around it. Moving charges produce magnetic fields, forming circular magnetic field lines. The direction is given by Fleming's right-hand rule. Reversing the current reverses the magnetic field. When current stops, the magnetic field disappears. Thus, there is a direct relationship between an electric wire and a magnetic field.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find the resistance of the secondary coil.",
+        "marks": 0,
+        "answer": "Given:\n\\[\n\\frac{I_s}{I_p} = \\frac{V_p}{V_s}\n\\]\nSo:\n\\[\nI_s = \\frac{V_p}{V_s} \\times I_p = \\frac{100}{200} \\times 2 = 1 \\mathrm{A}\n\\]\nFrom Ohm's law:\n\\[\nR_s = \\frac{V_s}{I_s} = \\frac{200}{1} = 200 \\Omega\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Show mathematically whether the equipment will be usable when connected to the transformer.",
+        "marks": 0,
+        "answer": "Output power of transformer:\n\\[\nP_s = V_s I_s = 200 \\times 1 = 200 \\mathrm{W}\n\\]\nEquipment power = \\(205 \\mathrm{W}\\)\nSince \\(200 \\mathrm{W} < 205 \\mathrm{W}\\), the equipment will not be usable.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768848439966_z201q5.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768848439966_z201q5.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768848442641,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "lesson": "Transformers and Medical Physics",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is radioactivity?",
+        "marks": 0,
+        "answer": "Radioactivity is the process of spontaneous and continuous emission of alpha, beta, and gamma rays from the nucleus of a substance.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Which test is more effective for detecting gallstones? Explain.",
+        "marks": 0,
+        "answer": "Both X-rays and ultrasonography are used to detect gallstones. However, ultrasonography is safer and can be used on pregnant women. It uses a transducer emitting high-frequency (1–6 MHz) sound waves. The reflected waves are converted into electrical signals to create images, allowing gallstone detection without harmful radiation.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the number of turns in the secondary coil.",
+        "marks": 0,
+        "answer": "Given:\n\\[\n\\frac{V_p}{V_s} = \\frac{n_p}{n_s}\n\\]\nHere: \\(V_p = 440 \\mathrm{V}\\), \\(n_p = 500\\), \\(V_s = 220 \\mathrm{V}\\)\nSo:\n\\[\nn_s = \\frac{V_s}{V_p} \\times n_p = \\frac{220}{440} \\times 500 = 250\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Analyze mathematically whether it is possible to light a \\(110 \\Omega\\) bulb using this transformer.",
+        "marks": 0,
+        "answer": "For the bulb: \\(R = 110 \\Omega\\), \\(V_s = 220 \\mathrm{V}\\)\nPower required:\n\\[\nP_s = \\frac{V_s^2}{R} = \\frac{(220)^2}{110} = 440 \\mathrm{W}\n\\]\nGiven: \\(I_p = 1 \\mathrm{A}\\)\nWe know:\n\\[\n\\frac{I_s}{I_p} = \\frac{V_p}{V_s}\n\\]\nSo:\n\\[\nI_s = \\frac{V_p}{V_s} \\times I_p = \\frac{440}{220} \\times 1 = 2 \\mathrm{A}\n\\]\nPower available from transformer:\n\\[\nP_s = V_s I_s = 220 \\times 2 = 440 \\mathrm{W}\n\\]\nSince available power equals required power, it is possible to light the bulb.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768848439966_0byt8n.jpeg"
+  },
+  {
+    "id": 1768848442751,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "lesson": "Transformers",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is the full form of ECG?",
+        "marks": 0,
+        "answer": "The full form of ECG is Electrocardiogram.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why are digital signals better for long-distance communication?",
+        "marks": 0,
+        "answer": "Digital signals are better for long-distance transmission because analog signals lose power with distance and require regeneration, which introduces noise and distortion. Digital signals can be amplified without loss of quality, maintaining signal integrity over long distances.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the current in the secondary coil.",
+        "marks": 0,
+        "answer": "Given:\n\\[\n\\frac{V_p}{V_s} = \\frac{I_s}{I_p}\n\\]\nSo:\n\\[\nI_s = \\frac{V_p}{V_s} \\times I_p = \\frac{210}{700} \\times 0.83 = 0.249 \\mathrm{A}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "What type of transformer is this? Analyze with mathematical reasoning.",
+        "marks": 0,
+        "answer": "We know:\n\\[\n\\frac{V_p}{V_s} = \\frac{n_p}{n_s}\n\\]\nHere \\(V_s > V_p\\), so \\(n_s > n_p\\). Also \\(I_s < I_p\\).\nThus, it is a step-up transformer.\nNumber of turns in secondary coil:\n\\[\nn_s = \\frac{V_s}{V_p} \\times n_p = \\frac{700}{210} \\times 30 = 100\n\\]\nSince \\(n_s > n_p\\) and \\(V_s > V_p\\), it is a step-up transformer.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768848442877,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "lesson": "Transformers",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is electromagnetic induction?",
+        "marks": 0,
+        "answer": "Electromagnetic induction is the phenomenon of producing a temporary electromotive force or current in a closed circuit by moving a magnet or changing the current in a nearby circuit.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why does a transformer only work with alternating current?",
+        "marks": 0,
+        "answer": "Transformers rely on electromagnetic induction, which requires a changing magnetic field. AC current produces a changing magnetic field, inducing an EMF in the secondary coil. DC current produces a constant magnetic field, so no EMF is induced.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the resistance of the secondary coil.",
+        "marks": 0,
+        "answer": "Given:\n\\[\n\\frac{V_p}{V_s} = \\frac{n_p}{n_s}\n\\]\nSo:\n\\[\nV_s = \\frac{n_s}{n_p} \\times V_p = \\frac{125}{50} \\times 220 = 550 \\mathrm{V}\n\\]\n\\[\nI_s = \\frac{n_p}{n_s} \\times I_p = \\frac{50}{125} \\times 10 = 4 \\mathrm{A}\n\\]\nUsing Ohm’s law:\n\\[\nR_s = \\frac{V_s}{I_s} = \\frac{550}{4} = 137.5 \\Omega\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Mathematically analyze why, as the secondary voltage increases, the secondary current decreases in the same ratio.",
+        "marks": 0,
+        "answer": "From transformer equations:\n\\[\n\\frac{V_p}{V_s} = \\frac{n_p}{n_s} \\quad \\text{and} \\quad \\frac{I_s}{I_p} = \\frac{n_p}{n_s}\n\\]\nSo:\n\\[\nV_s = \\frac{n_s}{n_p} V_p, \\quad I_s = \\frac{n_p}{n_s} I_p\n\\]\nIf \\(n_s\\) increases, \\(V_s\\) increases proportionally and \\(I_s\\) decreases inversely. For an ideal transformer:\n\\[\nP_p = P_s \\quad \\Rightarrow \\quad V_p I_p = V_s I_s\n\\]\nThus, if \\(V_s\\) increases, \\(I_s\\) must decrease to keep power constant.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768848442990,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "lesson": "Transformers and Motors",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is a generator?",
+        "marks": 0,
+        "answer": "A generator is a machine that converts mechanical energy into electrical energy.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why do semiconductors behave as insulators at low temperatures?",
+        "marks": 0,
+        "answer": "At low temperatures (near 0 K), electrons in the valence band of a semiconductor lack enough thermal energy to cross the forbidden energy gap to the conduction band. Thus, very few charge carriers are available, and the semiconductor behaves like an insulator.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the current in the secondary coil of device A.",
+        "marks": 0,
+        "answer": "For transformer A:\nGiven: \\(n_p = 50\\), \\(n_s = 20\\), \\(I_p = 5 \\mathrm{A}\\)\nWe know:\n\\[\n\\frac{I_s}{I_p} = \\frac{n_p}{n_s}\n\\]\nSo:\n\\[\nI_s = \\frac{n_p}{n_s} \\times I_p = \\frac{50}{20} \\times 5 = 12.5 \\mathrm{A}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Is it possible to run device B using device A? Analyze mathematically.",
+        "marks": 0,
+        "answer": "For motor B:\n\\[\nm = 200 \\mathrm{kg}, \\quad h = 40 \\mathrm{m}, \\quad t = 40 \\mathrm{s}, \\quad g = 9.8 \\mathrm{m/s^2}, \\quad \\eta = 0.9\n\\]\nOutput power:\n\\[\nP_{\\text{out}} = \\frac{mgh}{t} = \\frac{200 \\times 9.8 \\times 40}{40} = 1960 \\mathrm{W}\n\\]\nRequired input power:\n\\[\nP_{\\text{in}} = \\frac{P_{\\text{out}}}{\\eta} = \\frac{1960}{0.9} \\approx 2177.78 \\mathrm{W}\n\\]\nFor transformer A:\n\\[\nP_p = V_p I_p = 220 \\times 5 = 1100 \\mathrm{W}\n\\]\nAssuming an ideal transformer: \\(P_s = P_p = 1100 \\mathrm{W}\\)\nSince \\(1100 \\mathrm{W} < 2177.78 \\mathrm{W}\\), it is not possible to run motor B with transformer A.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768848439967_sj9x6v.jpeg"
+  },
+  {
+    "id": 1768848443104,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "lesson": "Transformers",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is friction?",
+        "marks": 0,
+        "answer": "Friction is the resistance that one surface or object encounters when moving over another.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "How can you identify a mirror without touching it?",
+        "marks": 0,
+        "answer": "You can identify a mirror by observing the image it produces. A plane mirror produces an image of the same size as the object, a concave mirror produces a magnified image, and a convex mirror produces a diminished image.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the ratio of the current in the secondary coil to the current in the primary coil.",
+        "marks": 0,
+        "answer": "\\[\n\\frac{I_s}{I_p} = \\frac{V_p}{V_s} = \\frac{20}{50} = 0.4 = 2:5\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "What change should be made to the number of turns to make the transformer suitable for residential use? Analyze mathematically.",
+        "marks": 0,
+        "answer": "For residential use, the secondary voltage should be \\(220 \\mathrm{V}\\). Given \\(V_p = 20 \\mathrm{V}\\), \\(n_p = 100\\), original \\(n_s\\) from:\n\\[\n\\frac{V_p}{V_s} = \\frac{n_p}{n_s} \\Rightarrow n_s = \\frac{V_s}{V_p} \\times n_p = \\frac{50}{20} \\times 100 = 250\n\\]\nFor new \\(V_s' = 220 \\mathrm{V}\\):\n\\[\nn_s' = \\frac{V_s'}{V_p} \\times n_p = \\frac{220}{20} \\times 100 = 1100\n\\]\nIncrease needed: \\(1100 - 250 = 850\\) turns.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768848443220,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "lesson": "Transformers and Motors",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is an electric motor?",
+        "marks": 0,
+        "answer": "An electric motor is a machine that converts electrical energy into mechanical energy.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Explain how electron affinity causes static electricity.",
+        "marks": 0,
+        "answer": "When two objects are rubbed together, electric charges develop due to differences in electron affinity. Electron affinity is an object’s tendency to accept electrons. The object with higher electron affinity gains electrons from the other, resulting in one object having an excess of electrons (negative charge) and the other a deficit (positive charge).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the number of turns in the primary coil.",
+        "marks": 0,
+        "answer": "Given:\n\\[\n\\frac{n_p}{n_s} = \\frac{I_s}{I_p}\n\\]\nSo:\n\\[\nn_p = \\frac{I_s}{I_p} \\times n_s = \\frac{5}{2} \\times 30 = 75\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Mathematically analyze whether the transformer can run the motor.",
+        "marks": 0,
+        "answer": "Motor output power:\n\\[\nP_{\\text{out}} = \\frac{mgh}{t} = \\frac{200 \\times 9.8 \\times 30}{98} = 600 \\mathrm{W}\n\\]\nEfficiency \\(\\eta = 0.5\\), so required input power:\n\\[\nP_{\\text{in}} = \\frac{P_{\\text{out}}}{\\eta} = \\frac{600}{0.5} = 1200 \\mathrm{W}\n\\]\nTransformer power:\n\\[\nP = V_p I_p = 600 \\times 2 = 1200 \\mathrm{W}\n\\]\nSince transformer power equals required input power, it is possible to run the motor.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768848443336,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "lesson": "Transformers and Motors",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is a generator?",
+        "marks": 0,
+        "answer": "A generator is a machine that converts mechanical energy into electrical energy.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why is an electric motor used in an electric fan?",
+        "marks": 0,
+        "answer": "An electric motor rotates an armature placed inside a permanent magnet. When current flows through the coil, it creates a magnetic field that interacts with the permanent magnet’s field, causing rotation. This rotation is transferred to fan blades via a shaft, making the fan spin.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the resistance of the primary coil.",
+        "marks": 0,
+        "answer": "Given: \\(V_p = 1000 \\mathrm{V}\\), \\(I_p = 1.5 \\mathrm{A}\\)\nAssuming the primary coil is purely resistive:\n\\[\nR_p = \\frac{V_p}{I_p} = \\frac{1000}{1.5} \\approx 666.67 \\Omega\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Can the transformer run the electric motor? Analyze mathematically.",
+        "marks": 0,
+        "answer": "Motor power = \\(2 \\mathrm{HP} = 2 \\times 746 \\mathrm{W} = 1492 \\mathrm{W}\\)\nSecondary voltage:\n\\[\nV_s = \\frac{n_s}{n_p} \\times V_p = \\frac{30}{100} \\times 1000 = 300 \\mathrm{V}\n\\]\nSecondary current:\n\\[\nI_s = \\frac{n_p}{n_s} \\times I_p = \\frac{100}{30} \\times 1.5 = 5 \\mathrm{A}\n\\]\nSecondary power:\n\\[\nP_s = V_s I_s = 300 \\times 5 = 1500 \\mathrm{W}\n\\]\nSince \\(1500 \\mathrm{W} > 1492 \\mathrm{W}\\), the transformer can run the motor.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768848439968_jqqc8v.jpeg"
+  },
+  {
+    "id": 1768848443460,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "lesson": "Transformers",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is a solenoid?",
+        "marks": 0,
+        "answer": "A solenoid is a coil of wire that produces a magnetic field when an electric current passes through it.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "What is meant by the accommodation power of the eye?",
+        "marks": 0,
+        "answer": "Accommodation power is the eye’s ability to change the shape of the lens to focus on objects at different distances. For near objects, the lens thickens; for distant objects, it thins.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the resistance of the secondary coil.",
+        "marks": 0,
+        "answer": "Given:\n\\[\n\\frac{N_p}{N_s} = \\frac{I_s}{I_p} = \\frac{V_p}{V_s}\n\\]\nSo:\n\\[\nV_s = \\frac{N_s}{N_p} \\times V_p = \\frac{100}{25} \\times 220 = 880 \\mathrm{V}\n\\]\n\\[\nI_s = \\frac{N_p}{N_s} \\times I_p = \\frac{25}{100} \\times 15 = 3.75 \\mathrm{A}\n\\]\nResistance:\n\\[\nR_s = \\frac{V_s}{I_s} = \\frac{880}{3.75} \\approx 234.67 \\Omega\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "\"As the secondary voltage increases, the secondary current decreases in the same ratio.\"—Analyze mathematically.",
+        "marks": 0,
+        "answer": "For an ideal transformer:\n\\[\nV_p I_p = V_s I_s \\quad \\Rightarrow \\quad I_s = \\frac{V_p I_p}{V_s}\n\\]\nIf \\(V_s\\) increases, \\(I_s\\) decreases inversely to keep power constant.\nAlso from turns ratio:\n\\[\n\\frac{V_s}{V_p} = \\frac{N_s}{N_p}, \\quad \\frac{I_s}{I_p} = \\frac{N_p}{N_s}\n\\]\nThus, if \\(N_s\\) increases, \\(V_s\\) increases and \\(I_s\\) decreases proportionally.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768848443591,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "lesson": "Transformers",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is a solenoid?",
+        "marks": 0,
+        "answer": "A solenoid is a coil of wire that creates a strong magnetic field when current flows through it.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "How can the strength of an electromagnet be increased?",
+        "marks": 0,
+        "answer": "The strength of an electromagnet can be increased by:\ni. Increasing the current.\nii. Increasing the number of turns in the coil.\niii. Shaping the magnet into a U-shape to bring poles closer.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the electrical energy per second in the secondary coil.",
+        "marks": 0,
+        "answer": "Given: \\(N_p = 60\\), \\(N_s = 3\\), \\(I_p = 250 \\mathrm{A}\\), assume \\(V_p = 2500 \\mathrm{V}\\) (typical context)\nSecondary current:\n\\[\nI_s = \\frac{N_p}{N_s} \\times I_p = \\frac{60}{3} \\times 250 = 5000 \\mathrm{A}\n\\]\nSecondary voltage:\n\\[\nV_s = \\frac{N_s}{N_p} \\times V_p = \\frac{3}{60} \\times 2500 = 125 \\mathrm{V}\n\\]\nPower (energy per second):\n\\[\nP_s = V_s I_s = 125 \\times 5000 = 625000 \\mathrm{W} = 625 \\mathrm{kW}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Explain mathematically why this transformer is not suitable for long-distance power transmission.",
+        "marks": 0,
+        "answer": "For long-distance transmission, high voltage and low current are needed to minimize \\(I^2 R\\) losses. Here, the transformer steps voltage down to \\(125 \\mathrm{V}\\) and current up to \\(5000 \\mathrm{A}\\), resulting in huge power loss in transmission lines. Thus, it is not suitable.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768848439968_q3h21s.jpeg"
+  },
+  {
+    "id": 1768848443700,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "lesson": "Transformers and Circuits",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is a transformer?",
+        "marks": 0,
+        "answer": "A transformer is an electrical device that transfers energy between circuits through electromagnetic induction, increasing or decreasing AC voltage.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Which transformer is used for long-distance electricity transmission? Explain.",
+        "marks": 0,
+        "answer": "A step-up transformer is used for long-distance transmission because it increases voltage and reduces current, minimizing \\(I^2 R\\) power losses in transmission lines.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the number of turns in the secondary coil.",
+        "marks": 0,
+        "answer": "For a transformer, the turns ratio is related to resistance ratio by:\n\\[\n\\frac{N_s}{N_p} = \\sqrt{\\frac{R_s}{R_p}}\n\\]\nGiven: \\(R_p = 10 \\Omega\\), \\(R_s = 480 \\Omega\\), \\(N_p = 5000\\)\n\\[\n\\frac{N_s}{N_p} = \\sqrt{\\frac{480}{10}} = \\sqrt{48} \\approx 6.928\n\\]\n\\[\nN_s = N_p \\times 6.928 = 5000 \\times 6.928 \\approx 34641\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Will the induced EMF per turn in the secondary coil be \\(0.4472 \\mathrm{V}\\)? Analyze mathematically.",
+        "marks": 0,
+        "answer": "Given power \\(P = 5 \\times 10^5 \\mathrm{W}\\), we can find secondary voltage from:\n\\[\nP = \\frac{V_s^2}{R_s} \\Rightarrow V_s = \\sqrt{P \\times R_s} = \\sqrt{5 \\times 10^5 \\times 480}\n\\]\n\\[\nV_s = \\sqrt{2.4 \\times 10^8} \\approx 15491.93 \\mathrm{V}\n\\]\nInduced EMF per turn in secondary:\n\\[\n\\frac{V_s}{N_s} = \\frac{15491.93}{34641} \\approx 0.447 \\mathrm{V}\n\\]\nYes, the induced EMF per turn is approximately \\(0.447 \\mathrm{V}\\), which matches the given value of \\(0.4472 \\mathrm{V}\\).\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768848443824,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "lesson": "Transformers",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is a solenoid?",
+        "marks": 0,
+        "answer": "A solenoid is a coil of wire that creates a strong magnetic field when electric current passes through it.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "List two characteristics of a step-up transformer.",
+        "marks": 0,
+        "answer": "Two characteristics of a step-up transformer:\ni. The number of turns in the secondary coil is greater than in the primary coil (\\(N_s > N_p\\)).\nii. The secondary voltage is greater than the primary voltage (\\(V_s > V_p\\)).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the secondary current of transformer A.",
+        "marks": 0,
+        "answer": "For transformer A:\n\\[\n\\frac{I_s}{I_p} = \\frac{N_p}{N_s} \\Rightarrow I_s = \\frac{N_p}{N_s} \\times I_p = \\frac{30}{300} \\times 6 = 0.6 \\mathrm{A}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Which transformer is suitable for residential use and which for industrial use? Explain mathematically.",
+        "marks": 0,
+        "answer": "For transformer A:\nTurn ratio: \\(\\frac{N_s}{N_p} = \\frac{300}{30} = 10 > 1\\) → step-up transformer\n\\[\nV_s = \\frac{N_s}{N_p} \\times V_p = 10 \\times 500 = 5000 \\mathrm{V}\n\\]\nFor transformer B:\nTurn ratio: \\(\\frac{N_s}{N_p} = \\frac{30}{60} = 0.5 < 1\\) → step-down transformer\n\\[\nV_s = \\frac{N_s}{N_p} \\times V_p = 0.5 \\times 500 = 250 \\mathrm{V}\n\\]\nTransformer B (step-down, 250 V output) is suitable for residential use because homes typically require 220-240 V.\nTransformer A (step-up, 5000 V output) is suitable for industrial use or power transmission where high voltages are needed.",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768848443928,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "lesson": "Transformers and Motors",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is a transformer?",
+        "marks": 0,
+        "answer": "A transformer is a device that changes AC voltage levels, either stepping it up or down.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Explain how differences in electron affinity cause static electricity.",
+        "marks": 0,
+        "answer": "When two objects are rubbed, differences in electron affinity cause one to gain electrons (becoming negative) and the other to lose electrons (becoming positive), creating static electricity.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the number of turns in the primary coil.",
+        "marks": 0,
+        "answer": "\\[\n\\frac{n_p}{n_s} = \\frac{I_s}{I_p} \\Rightarrow n_p = \\frac{I_s}{I_p} \\times n_s = \\frac{5}{2} \\times 30 = 75\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Mathematically analyze whether the transformer can drive the motor.",
+        "marks": 0,
+        "answer": "Motor output power:\n\\[\nP_{\\text{out}} = \\frac{mgh}{t} = \\frac{200 \\times 9.8 \\times 30}{98} = 600 \\mathrm{W}\n\\]\nEfficiency \\(\\eta = 0.5\\), so required input power:\n\\[\nP_{\\text{in}} = \\frac{P_{\\text{out}}}{\\eta} = \\frac{600}{0.5} = 1200 \\mathrm{W}\n\\]\nTransformer power:\n\\[\nP = V_p I_p = 600 \\times 2 = 1200 \\mathrm{W}\n\\]\nSince powers are equal, the transformer can drive the motor.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768848444031,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "lesson": "Force and Transformers",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is a transformer?",
+        "marks": 0,
+        "answer": "A transformer transfers electrical energy between AC circuits by electromagnetic induction, changing voltage levels.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "What does a 10 N force mean?",
+        "marks": 0,
+        "answer": "A 10 N force can accelerate a 1 kg mass at \\(10 \\mathrm{m/s^2}\\) (Newton’s second law).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "What is the acceleration of the football due to the applied force?",
+        "marks": 0,
+        "answer": "Net force = Applied force − Friction = \\(5 - 1 = 4 \\mathrm{N}\\)\nMass = \\(0.4 \\mathrm{kg}\\)\nAcceleration:\n\\[\na = \\frac{F_{\\text{net}}}{m} = \\frac{4}{0.4} = 10 \\mathrm{m/s^2}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Show that the power in the primary and secondary coils of the transformer is constant.",
+        "marks": 0,
+        "answer": "Primary power:\n\\[\nP_p = V_p I_p = 220 \\times 5 = 1100 \\mathrm{W}\n\\]\nTurns ratio \\(1:50\\) → \\(\\frac{N_p}{N_s} = \\frac{1}{50}\\)\nSecondary voltage:\n\\[\nV_s = \\frac{N_s}{N_p} \\times V_p = 50 \\times 220 = 11000 \\mathrm{V}\n\\]\nSecondary current:\n\\[\nI_s = \\frac{N_p}{N_s} \\times I_p = \\frac{1}{50} \\times 5 = 0.1 \\mathrm{A}\n\\]\nSecondary power:\n\\[\nP_s = V_s I_s = 11000 \\times 0.1 = 1100 \\mathrm{W}\n\\]\nThus, \\(P_p = P_s\\).\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768848444144,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "lesson": "Transformers",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is a generator?",
+        "marks": 0,
+        "answer": "A generator converts mechanical energy into electrical energy.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why is a motor called the opposite of a generator?",
+        "marks": 0,
+        "answer": "A motor converts electrical energy into mechanical energy, while a generator does the opposite. Their structures are similar, but their functions are reversed.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find \\(\\mathrm{E_p} : \\mathrm{E_s}\\).",
+        "marks": 0,
+        "answer": "\\[\n\\frac{E_p}{E_s} = \\frac{N_p}{N_s} = \\frac{1}{50} \\quad \\Rightarrow \\quad E_p : E_s = 1:50\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Show mathematically that the power in the primary and secondary coils is constant.",
+        "marks": 0,
+        "answer": "Primary power:\n\\[\nP_p = E_p I_p = 220 \\times 5 = 1100 \\mathrm{W}\n\\]\nSecondary voltage:\n\\[\nE_s = \\frac{N_s}{N_p} \\times E_p = 50 \\times 220 = 11000 \\mathrm{V}\n\\]\nSecondary current:\n\\[\nI_s = \\frac{N_p}{N_s} \\times I_p = \\frac{1}{50} \\times 5 = 0.1 \\mathrm{A}\n\\]\nSecondary power:\n\\[\nP_s = E_s I_s = 11000 \\times 0.1 = 1100 \\mathrm{W}\n\\]\nThus, \\(P_p = P_s\\).\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768848444283,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "lesson": "Transformers",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is an electromagnet?",
+        "marks": 0,
+        "answer": "An electromagnet is a magnet created by passing current through a coil wrapped around a magnetic core.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why is power constant in an ideal transformer?",
+        "marks": 0,
+        "answer": "In an ideal transformer, power is conserved due to energy conservation: input power equals output power.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine \\(I_s\\) for transformer P.",
+        "marks": 0,
+        "answer": "For transformer P:\n\\[\n\\frac{I_s}{I_p} = \\frac{N_p}{N_s} \\Rightarrow I_s = \\frac{N_p}{N_s} \\times I_p = \\frac{30}{300} \\times 6 = 0.6 \\mathrm{A}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Find the difference in secondary voltages and identify which transformer is suitable for residential and industrial use.",
+        "marks": 0,
+        "answer": "For P:\n\\[\nV_s = \\frac{N_s}{N_p} \\times V_p = \\frac{300}{30} \\times 500 = 5000 \\mathrm{V}\n\\]\nFor Q:\n\\[\nV_s = \\frac{30}{60} \\times 500 = 250 \\mathrm{V}\n\\]\nDifference: \\(5000 - 250 = 4750 \\mathrm{V}\\)\nTransformer Q (step-down, low voltage) is suitable for residential use.\nTransformer P (step-up, high voltage) is suitable for industrial use.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768848444395,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "lesson": "Transformers and Motors",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is a solenoid?",
+        "marks": 0,
+        "answer": "A solenoid is a coil that creates a magnetic field when current flows through it.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why doesn’t a transformer work with DC input?",
+        "marks": 0,
+        "answer": "Transformers require a changing magnetic field to induce voltage in the secondary coil. DC produces a constant field, so no induction occurs.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "If the wire is stretched to 8 times its original length, what is its new resistance?",
+        "marks": 0,
+        "answer": "Resistance \\(R \\propto \\frac{L}{A}\\). If length increases 8 times and volume is constant, area reduces to \\(1/8\\).\nNew resistance:\n\\[\nR' = \\rho \\frac{8L}{A/8} = 64 \\times \\rho \\frac{L}{A} = 64R = 64 \\times 40 = 2560 \\Omega\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Can the transformer run the motor? Show mathematically.",
+        "marks": 0,
+        "answer": "Motor output power:\n\\[\nP_{\\text{out}} = \\frac{mgh}{t} = \\frac{200 \\times 9.8 \\times 30}{120} = 490 \\mathrm{W}\n\\]\nEfficiency \\(0.7\\), so required input power:\n\\[\nP_{\\text{in}} = \\frac{490}{0.7} \\approx 700 \\mathrm{W}\n\\]\nTransformer power:\n\\[\nP = V_p I_p = 600 \\times 1.1 = 660 \\mathrm{W}\n\\]\nSince \\(660 \\mathrm{W} < 700 \\mathrm{W}\\), it cannot run the motor.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768848444503,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "lesson": "Transformers and Energy",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is a solenoid?",
+        "marks": 0,
+        "answer": "A solenoid is a coil that creates a strong magnetic field when current flows through it.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Show that the Earth is a huge magnet.",
+        "marks": 0,
+        "answer": "The Earth behaves like a huge magnet: a suspended bar magnet aligns north-south because the geographic North Pole is a magnetic south pole, attracting the magnet’s north pole. Similarly, the geographic South Pole is a magnetic north pole.",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768848441012_qbg79p.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768848441012_qbg79p.jpeg"
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the number of turns in the secondary coil.",
+        "marks": 0,
+        "answer": "From earlier problem (Q4):\nGiven: \\(V_p = 440 \\mathrm{V}\\), \\(n_p = 500\\), \\(V_s = 220 \\mathrm{V}\\)\n\\[\nn_s = \\frac{V_s}{V_p} \\times n_p = \\frac{220}{440} \\times 500 = 250\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Analyze mathematically whether a \\(110 \\Omega\\) bulb can be lit using this transformer.",
+        "marks": 0,
+        "answer": "Bulb: \\(R = 110 \\Omega\\), \\(V_s = 220 \\mathrm{V}\\)\nRequired power:\n\\[\nP = \\frac{V_s^2}{R} = \\frac{220^2}{110} = 440 \\mathrm{W}\n\\]\nGiven \\(I_p = 1 \\mathrm{A}\\):\n\\[\nI_s = \\frac{V_p}{V_s} \\times I_p = \\frac{440}{220} \\times 1 = 2 \\mathrm{A}\n\\]\nAvailable power:\n\\[\nP_s = V_s I_s = 220 \\times 2 = 440 \\mathrm{W}\n\\]\nYes, it is possible.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768848439968_4dce5.jpeg"
+  },
+  {
+    "id": 1768848444666,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "lesson": "Half-life and Transformers",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is half-life?",
+        "marks": 0,
+        "answer": "Half-life is the time required for half of the radioactive atoms in a sample to decay.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "List some properties of X-rays.",
+        "marks": 0,
+        "answer": "Properties of X-rays:\ni. Electromagnetic waves that penetrate matter.\nii. Can ionize atoms.\niii. Travel in straight lines.\niv. Not deflected by electric or magnetic fields.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the secondary current of device A.",
+        "marks": 0,
+        "answer": "Given: \\(n_p = 50\\), \\(n_s = 20\\), \\(I_p = 5 \\mathrm{A}\\)\n\\[\nI_s = \\frac{n_p}{n_s} \\times I_p = \\frac{50}{20} \\times 5 = 12.5 \\mathrm{A}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Can device B be run using device A? Analyze mathematically.",
+        "marks": 0,
+        "answer": "Motor output power:\n\\[\nP_{\\text{out}} = \\frac{mgh}{t} = \\frac{200 \\times 9.8 \\times 40}{40} = 1960 \\mathrm{W}\n\\]\nRequired input power:\n\\[\nP_{\\text{in}} = \\frac{P_{\\text{out}}}{0.9} \\approx 2177.78 \\mathrm{W}\n\\]\nTransformer power:\n\\[\nP = V_p I_p = 220 \\times 5 = 1100 \\mathrm{W}\n\\]\nSince \\(1100 \\mathrm{W} < 2177.78 \\mathrm{W}\\), it is not possible.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768848439968_zxxela.jpeg"
+  },
+  {
+    "id": 1768848444780,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "lesson": "Transformers and Circuits",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is electromagnetic induction?",
+        "marks": 0,
+        "answer": "Electromagnetic induction is the production of an EMF or current in a closed circuit due to a changing magnetic field.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why are parallel connections used in households?",
+        "marks": 0,
+        "answer": "Parallel connections allow all appliances to receive the same voltage and be controlled independently, making them ideal for households.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Calculate the primary current of transformer A.",
+        "marks": 0,
+        "answer": "For A:\n\\[\n\\frac{I_s}{I_p} = \\frac{N_p}{N_s} \\Rightarrow I_p = \\frac{N_s}{N_p} \\times I_s = \\frac{500}{50} \\times 0.8 = 8 \\mathrm{A}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Determine which transformer is suitable for home and which for industry.",
+        "marks": 0,
+        "answer": "For A:\n\\[\nV_s = \\frac{N_s}{N_p} \\times V_p = \\frac{500}{50} \\times 400 = 4000 \\mathrm{V} \\quad (\\text{step-up})\n\\]\nFor B:\n\\[\nV_s = \\frac{40}{80} \\times 400 = 200 \\mathrm{V} \\quad (\\text{step-down})\n\\]\nTransformer A (step-up) is suitable for industry; B (step-down) for home.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768848444962,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "lesson": "Isotopes and Transformers",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "Define isotope.",
+        "marks": 0,
+        "answer": "Isotopes are atoms of the same element with the same number of protons but different numbers of neutrons.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "How can induced current be increased?",
+        "marks": 0,
+        "answer": "Induced current can be increased by:\n1. Increasing the number of turns in the coil.\n2. Increasing the magnetic field strength.\n3. Increasing the relative speed between coil and magnet.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find the secondary voltage.",
+        "marks": 0,
+        "answer": "\\[\n\\frac{V_s}{V_p} = \\frac{N_s}{N_p} = \\frac{100}{2} = 50\n\\]\n\\[\nV_s = 50 \\times 220 = 11000 \\mathrm{V}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Is the power in the primary and secondary coils constant? Explain mathematically.",
+        "marks": 0,
+        "answer": "Primary power:\n\\[\nP_p = 220 \\times 10 = 2200 \\mathrm{W}\n\\]\nSecondary current:\n\\[\nI_s = \\frac{N_p}{N_s} \\times I_p = \\frac{2}{100} \\times 10 = 0.2 \\mathrm{A}\n\\]\nSecondary power:\n\\[\nP_s = 11000 \\times 0.2 = 2200 \\mathrm{W}\n\\]\nThus, \\(P_p = P_s\\); power is constant.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  }
+]

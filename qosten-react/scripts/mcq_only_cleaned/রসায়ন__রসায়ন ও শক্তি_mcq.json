@@ -1,0 +1,5252 @@
+[
+  {
+    "id": 1768552460048,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "শক্তির আন্তর্জাতিক একক কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ক্যালরি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জুল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কিলোক্যালরি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কিলোজুল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "জুল (J) হল শক্তির আন্তর্জাতিক পদ্ধতির (SI) একক, যার নামকরণ করা হয়েছে পদার্থবিদ জেমস প্রেসকট জুলের নামে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552460154,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "আকর্ষণ বল কী? পরমাণুর মধ্যে কীভাবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আন্তঃআণবিক শক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বন্ধন শক্তি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "রাসায়নিক শক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিভব শক্তি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বন্ধন শক্তি হল দুটি পরমাণুর মধ্যকার আকর্ষণ বল (রাসায়নিক বন্ধন) ভাঙতে প্রয়োজনীয় শক্তির পরিমাণ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552460269,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "লোহার ভিতরে পরমাণুগুলোর মধ্যে কোন বন্ধন বল থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ধাতব বন্ধন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সমযোজী বন্ধন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "লোন বন্ধন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সমন্বয় সমযোজী বন্ধন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "লোহা একটি ধাতু। ধাতুতে পরমাণুগুলো ধাতব বন্ধন দ্বারা একসাথে আবদ্ধ থাকে, যেখানে ইলেকট্রনগুলি সমস্ত পরমাণুর মধ্যে ভাগাভাগি হয়ে একটি \"ইলেকট্রনের সাগর\" তৈরি করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552460376,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "মাইটের ব্যাটারিতে ব্যবহার হয় —",
+    "options": [
+      {
+        "label": "a",
+        "text": "কোবাল্ট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পারদ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সীসা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "লিথিয়াম",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বাটন সেল ব্যাটারি (যেমন ঘড়িতে ব্যবহৃত) প্রায়শই লিথিয়াম ব্যবহার করে কারণ এটি হালকা ও উচ্চ শক্তি ঘনত্ব প্রদান করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552460484,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "C-Cl বন্ধনের বন্ধন শক্তি কত? (পরিবর্তন)",
+    "options": [
+      {
+        "label": "a",
+        "text": "কার্বন পালস কলেয়েস",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "244 kJ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "326 kJ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "431 kJ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কার্বন-ক্লোরিন (C-Cl) একক বন্ধনের জন্য সাধারণত বন্ধন শক্তি প্রায় 326 কিলোজুল প্রতি মোল (kJ/mol)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552461552,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "ঘর তাপমাত্রায় আয়নিক যৌগের অবস্থা কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গ্যাসীয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তরল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কঠিন",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "প্লাজমা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "আয়নিক যৌগ (যেমন সাদা লবণ, NaCl) সাধারণত ঘর তাপমাত্রায় কঠিন হয় কারণ ধনাত্মক ও ঋণাত্মক আয়নগুলোর মধ্যে শক্ত ইলেক্ট্রোস্ট্যাটিক বলগুলি তাদের একটি কঠিন, স্ফটিক গঠনে ধরে রাখে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552462671,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোন সমযোজী যৌগ ঘর তাপমাত্রায় কঠিন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ব্রেনজেন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "নেপ্টালিয়নস",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ফ্লোরিন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "হাইড্রোজেন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\"ব্রেনজেন\" সম্ভবত বেনজিনের একটি ভুল বানান। তবে বেনজিন ঘর তাপমাত্রায় তরল। অনেক সমযোজী নেটওয়ার্ক কঠিন (যেমন হীরা) ঘর তাপমাত্রায় কঠিন, কিন্তু প্রদত্ত অপশন এবং সাধারণ জ্ঞান থেকে, উত্তরটি হতে পারে কোনো কঠিন সমযোজী আণবিক যৌগ যেমন আয়োডিন বা একটি মুদ্রণপ্রমাদ। সাধারণ উদাহরণের প্রসঙ্গে ধরে নিলে, ঘর তাপমাত্রায় কঠিন একটি সমযোজী যৌগ হতে পারে ন্যাপথালিন (মথবলের বলতে ব্যবহৃত)। অপশনগুলোতে \"ব্রেনজেন\" (বেনজিন) দেওয়া আছে যা ভুল কারণ এটি তরল। প্রশ্ন বা অপশনে মুদ্রণপ্রমাদ থাকতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552463057,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোন অবস্থায় আন্তঃআণবিক দূরত্ব সবচেয়ে কম?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কঠিন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "তরল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাষ্প",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্লাজমা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কঠিন পদার্থে অণু, পরমাণু বা আয়নগুলো খুব ঘনিষ্ঠভাবে একটি নির্দিষ্ট বিন্যাসে প্যাক করা থাকে, তাই আন্তঃআণবিক দূরত্ব (কণাগুলোর মধ্যে স্থান) সবচেয়ে কম।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552463170,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "চুন ও পানির মধ্যে বিক্রিয়ায় কী উৎপন্ন হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "CaliCO₃",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "CaCO₃",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "H₂CO₃",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Ca(OH)₂",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "চুন হল ক্যালসিয়াম অক্সাইড (CaO)। এটি পানির (H₂O) সাথে বিক্রিয়া করে ক্যালসিয়াম হাইড্রোক্সাইড, Ca(OH)₂ উৎপন্ন করে। এটি একটি অতি তাপউৎপাদী বিক্রিয়া, যাকে চুনের স্লেকিং বলে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552463286,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "CaO + 2H₂O → Ca(OH)₂: ΔH —",
+    "options": [
+      {
+        "label": "a",
+        "text": "63.95 kJ/mol",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "36.95 kJ/mol",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "63.95 kJ/mol",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "90 kJ/mol",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ক্যালসিয়াম অক্সাইড (কুইকলাইম) এর পানির সাথে বিক্রিয়া করে ক্যালসিয়াম হাইড্রোক্সাইড (স্লেকড লাইম) গঠন তাপউৎপাদী এবং প্রতি মোল CaO-এর জন্য প্রায় 63.95 kJ তাপশক্তি নির্গত করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552463398,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "এক মোল মিথেন গ্যাস পোড়ালে কত জুল শক্তি পাওয়া যায়? (G/g B/-17)",
+    "options": [
+      {
+        "label": "a",
+        "text": "891000 J",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "789000 J",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "891000 J",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "978000 J",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "মিথেনের (CH₄) জন্য আদর্শ দহনের এনথালপি প্রায় -890 kJ/mol। এর মানে এক মোল পোড়ালে প্রায় 890,000 জুল শক্তি নির্গত হয় (যেহেতু 1 kJ = 1000 J)। অপশন ক, 891000 J, সবচেয়ে কাছাকাছি মান।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552463500,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "বাতাসের কোন উপাদানের তাপ শোষণ ক্ষমতা বেশি এবং তাপ আটকে রাখতে পারে? (G/g B/-17)",
+    "options": [
+      {
+        "label": "a",
+        "text": "অক্সিজেন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নাইট্রোজেন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কার্বন ডাই অক্সাইড",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "জলীয় বাষ্প",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কার্বন ডাই অক্সাইড (CO₂) একটি গ্রিনহাউস গ্যাস। এর পৃথিবীর পৃষ্ঠ থেকে ইনফ্রারেড বিকিরণ (তাপ) শোষণ ও আটকে রাখার ক্ষমতা রয়েছে, যা গ্রিনহাউস প্রভাব তৈরি করতে সাহায্য করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552463603,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোন বিক্রিয়ায় তাপ শোষণ ঘটে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অ্যামোনিয়া ক্লোরাইড পানিতে যোগ করা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ক্যালসিয়াম কার্বনেট পানিতে যোগ করা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হাইড্রোজেন ও অক্সিজেন থেকে পানি উৎপাদন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নাইট্রোজেন ও হাইড্রোজেন থেকে অ্যামোনিয়া উৎপাদন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অ্যামোনিয়াম ক্লোরাইড (NH₄Cl) যখন পানিতে দ্রবীভূত হয়, এটি পরিবেশ থেকে তাপ শোষণ করে, ফলে দ্রবণটি ঠান্ডা হয়। এটি একটি তাপহারী প্রক্রিয়া। পাঠ্যে প্রদত্ত ব্যাখ্যা এটি নিশ্চিত করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552463716,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "আইসোথার্মাল বিক্রিয়ায় কী ঘটে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তাপমাত্রা উৎপন্ন হয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তাপ শোষিত হয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তাপ উৎপন্ন হয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তাপমাত্রা অপরিবর্তিত থাকে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\"আইসোথার্মাল\" অর্থ ধ্রুব তাপমাত্রা। আইসোথার্মাল বিক্রিয়ায়, সিস্টেমের তাপমাত্রার কোন পরিবর্তন হয় না। এই ধ্রুব তাপমাত্রা বজায় রাখার জন্য পরিবেশের সাথে তাপ বিনিময় হতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552463832,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "বেকিং সোডায় লেবুর রসের এক ফোঁটা যোগ করলে তাপমাত্রা —",
+    "options": [
+      {
+        "label": "a",
+        "text": "হ্রাস পায়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বৃদ্ধি পায়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অপরিবর্তিত থাকে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দ্বিগুণ হয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "লেবুর রস (একটি অ্যাসিড) বেকিং সোডা (সোডিয়াম বাইকার্বনেট, একটি ক্ষার) এর সাথে একটি অ্যাসিড-ক্ষার নিরপেক্ষ বিক্রিয়ায় অংশ নেয়। এই নির্দিষ্ট বিক্রিয়াটি তাপহারী, যার অর্থ এটি পরিবেশ থেকে তাপ শোষণ করে, ফলে তাপমাত্রা হ্রাস পায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552463956,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোনো রাসায়নিক বিক্রিয়ায় যদি বিক্রিয়কগুলোর মোট শক্তির পরিমাণ \\( E_1 \\) হয় এবং উৎপাদগুলোর মোট শক্তির পরিমাণ \\( E_2 \\) হয়, তবে তাপহারী বিক্রিয়ার জন্য কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( E_1 \\rightarrow E_2 \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( E_1 = E_2 \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( E_2 > E_1 \\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\( E_2 \\neq E_1 \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "তাপহারী বিক্রিয়ায়, বিক্রিয়কের চেয়ে উৎপাদের শক্তি বেশি থাকে কারণ পরিবেশ থেকে শক্তি শোষিত হয়। সুতরাং, যদি \\( E_1 \\) বিক্রিয়ক শক্তি এবং \\( E_2 \\) উৎপাদ শক্তি হয়, তাহলে \\( E_2 > E_1 \\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552464069,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "ছোট শেলের মধ্যে CaCO₃-এর পরিমাণ –",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( 50\\% \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( 100\\% \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( 98\\% \\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\( 99\\% \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ছোট শেল, যেমন ডিম বা সামুদ্রিক জীবের খোলস, প্রাথমিকভাবে ক্যালসিয়াম কার্বনেট (CaCO₃) দিয়ে তৈরি, তবে এতে少量 পরিমাণ জৈব পদার্থও থাকে। এগুলোতে সাধারণত প্রায় ৯৫-৯৮% CaCO₃ থাকে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552464176,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "CaCO₃(s) + X → CaO(s) + CO₂ (g); এই বিক্রিয়ায় \\( X^2 \\)-এর মান কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( 176.8 \\, \\text{kJ/mol} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\( -176.8 \\, \\text{kJ/mol} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( 98 \\, \\text{kJ/mol} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( -98 \\, \\text{kJ/mol} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ক্যালসিয়াম কার্বনেটের (চুনাপাথর) তাপীয় বিয়োজন হয়ে ক্যালসিয়াম অক্সাইড (কুইকলাইম) ও কার্বন ডাই অক্সাইড গঠনে তাপশক্তির ইনপুট প্রয়োজন। এটি একটি তাপহারী বিক্রিয়া। এই বিক্রিয়ার জন্য আদর্শ এনথালপি পরিবর্তন (ΔH) ধনাত্মক, প্রায় +176.8 kJ/mol। এখানে 'X' হল প্রয়োজনীয় তাপ ইনপুট।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552464285,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "মিথেন গ্যাসের দহনে উৎপন্ন তাপের পরিমাণ কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( 980\\text{kJ} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( 890\\text{kJ} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "\\( 90\\text{kJ} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( 1890\\text{kJ} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "এক মোল মিথেন গ্যাস (CH₄) এর দহনে প্রায় ৮৯০ kJ তাপশক্তি নির্গত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552464396,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোন ক্ষেত্রে \\( E_1 > E_2 \\)? (যেখানে E1=বিক্রিয়ক শক্তি, E2=উৎপাদ শক্তি)",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( N_2 + O_2 \\rightarrow 2NO \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( CaCO_3 \\rightarrow CaO + CO_2 \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( CaO + H_2O \\rightarrow Ca(OH)_2 \\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\( 2NH_3 \\rightarrow N_2 + 3H_2 \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\( E_1 > E_2 \\) মানে বিক্রিয়কের শক্তি উৎপাদের চেয়ে বেশি, তাই শক্তি নির্গত হয় (তাপউৎপাদী বিক্রিয়া)। বিক্রিয়া গ, CaO + H₂O → Ca(OH)₂, অতি তাপউৎপাদী (তাপ নির্গত করে)। বিক্রিয়া ক ও খ তাপহারী (তাপ শোষণ করে)। বিক্রিয়া ঘ তাপহারী (অ্যামোনিয়ার বিয়োজন)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552464500,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "এক মোল মিথেন গ্যাস পোড়ালে কত kJ তাপ উৎপন্ন হয়? \\( (D.B.-10) \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( 880 \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( 890 \\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "\\( 980 \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( 990 \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মিথেনের জন্য আদর্শ দহনের তাপ প্রায় 890 kJ প্রতি মোল।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552464602,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "CaO + CO₂ → CaCO₃; এই বিক্রিয়াটির ΔH মান কত? \\( (C.B.-30) \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( -176.8 \\, \\text{kJ} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\( -63.95 \\, \\text{kJ} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( +63.95 \\, \\text{kJ} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( +176.8 \\, \\text{kJ} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এটি চুনাপাথর বিয়োজন বিক্রিয়ার বিপরীত। এটি তাপউৎপাদী, তাপ নির্গত করে। এনথালপি পরিবর্তন (ΔH) ঋণাত্মক। মানটি অগ্রবর্তী তাপহারী বিক্রিয়ার সমান, সুতরাং ΔH = -176.8 kJ.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552464714,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "O₂ অণুর বন্ধন শক্তি kJ/mole-এ কত? \\( (R.B.-30; S.R.-20; Straw Cantonment Public School and College, Dhaka) \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( 151 \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( 244 \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( 464 \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( 498 \\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অক্সিজেন অণুর (O=O) দ্বি-বন্ধনের জন্য বন্ধন শক্তি 498 kJ/mol.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552464814,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "C–H বন্ধনের বন্ধন শক্তি কিলোজুল/মোলে কত? \\( (D.B.-24) \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( 326 \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( 344 \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( 391 \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( 414 \\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কার্বন-হাইড্রোজেন (C-H) একক বন্ধনের জন্য সাধারণ বন্ধন শক্তি, যেমন মিথেনে (CH₄), প্রায় 414 kJ/mol.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552464915,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "হেবার পদ্ধতিতে প্রতি মোল NH₃ উৎপাদনে কত তাপশক্তি উৎপন্ন হয়? \\( (B.B.-30) \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( -92 \\, \\text{kJ} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\( -46 \\, \\text{kJ} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( 46 \\, \\text{kJ} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( 92 \\, \\text{kJ} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "হেবার প্রক্রিয়ার বিক্রিয়া হল N₂ + 3H₂ ⇌ 2NH₃. 2 মোল অ্যামোনিয়া উৎপাদনের জন্য আদর্শ এনথালপি পরিবর্তন (ΔH) -92 kJ. অতএব, প্রতি মোল NH₃ উৎপাদনে নির্গত তাপ হল -92 kJ / 2 = -46 kJ. যাইহোক, প্রশ্নটি জিজ্ঞাসা করেছে *প্রতি মোল NH₃ উৎপাদনে উৎপন্ন তাপশক্তি*। বিক্রিয়াটির ΔH (2 মোল NH₃ এর জন্য) হল -92 kJ. অপশনগুলো থেকে সরাসরি উত্তর, যা পাঠ্যপুস্তকের মানের সাথে মেলে, তা হল -92 kJ. অস্পষ্টতা থাকতে পারে; আদর্শ তথ্য প্রায়শই 2 mol NH₃ এর জন্য ΔH = -92 kJ বলে উল্লেখ করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552465016,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "অক্সিজেন অণুর দুটি অক্সিজেন পরমাণুর মধ্যে বন্ধন শক্তি কত? \\( (B.B.-20) \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( 414 \\, \\text{kJ/mole} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( 431 \\, \\text{kJ/mole} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( 464 \\, \\text{kJ/mole} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( 498 \\, \\text{kJ/mole} \\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "আণবিক অক্সিজেনে O=O দ্বি-বন্ধনের বন্ধন বিয়োজন শক্তি 498 kJ/mol.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552465128,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "\\( N_2(g) + 3H_2(g) \\rightarrow 2NH_3(g) \\). উপরোক্ত বিক্রিয়ায় ΔH-এর মান কত? \\( (D.B.-19) \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( -198 \\, \\text{kJ} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( -92 \\, \\text{kJ} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "\\( +92 \\, \\text{kJ} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( +198 \\, \\text{kJ} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "নাইট্রোজেন ও হাইড্রোজেন থেকে অ্যামোনিয়া সংশ্লেষণ (হেবার প্রক্রিয়া) একটি তাপউৎপাদী বিক্রিয়া। আদর্শ এনথালপি পরিবর্তন (ΔH) গঠিত 2 মোল অ্যামোনিয়ার জন্য -92 kJ.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552465228,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোনটির বন্ধন শক্তি বেশি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( H_2 \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( N_2 \\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "\\( O_2 \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( Cl_2 \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বন্ধন শক্তি হল এক মোল বন্ধন ভাঙতে প্রয়োজনীয় শক্তি। নাইট্রোজেন গ্যাসের (N≡N) খুব শক্ত ত্রি-বন্ধন রয়েছে যার বন্ধন শক্তি প্রায় 946 kJ/mol, যা H-H (436 kJ/mol), O=O (498 kJ/mol), এবং Cl-Cl (244 kJ/mol) এর চেয়ে বেশি।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552465330,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "H – H বন্ধনের বন্ধন শক্তি kJmol⁻¹-এ কত? \\( (Uchcha Madhyamik Bidyalaya, Dhaka) \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( 464 \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( 326 \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( 431 \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( 436 \\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "হাইড্রোজেন অণুর H-H একক বন্ধনের জন্য বন্ধন বিয়োজন শক্তি 436 kJ/mol.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552465434,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "নিম্নোক্ত কোন অণুটিকে ভাঙতে বেশি শক্তির প্রয়োজন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( H_2 \\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\( O_2 \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( Cl_2 \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( HCl \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এই প্রশ্নটি জিজ্ঞাসা করছে কোন দ্বিপারমাণবিক অণুটিকে পরমাণুতে ভাঙতে সবচেয়ে বেশি শক্তির প্রয়োজন। বন্ধন শক্তি তুলনা করলে: H-H (436 kJ/mol) O=O (498 kJ/mol) এর চেয়ে বেশি? অপেক্ষা করুন, 436 < 498. দেখা যাক: H-H = 436, O=O = 498, Cl-Cl = 244, H-Cl = 431. O=O এর সবচেয়ে বেশি বন্ধন শক্তি (498 kJ/mol). মুদ্রণপ্রমাদ বা কৌশল থাকতে পারে। আদর্শ বন্ধন শক্তি অনুযায়ী, O₂-এর সবচেয়ে বেশি শক্তি প্রয়োজন। তবে H₂, Cl₂, এবং HCl এর মধ্যে, H₂ এর Cl₂ ও HCl এর চেয়ে বেশি শক্তি প্রয়োজন। অপশনে O₂ রয়েছে, যার সর্বোচ্চ। সম্ভবত তুলনাটি O₂ বাদ দিয়ে? প্রশ্নটি ত্রুটিপূর্ণ বা কোনো নির্দিষ্ট ধারণা পরীক্ষা করছে। আদর্শ তথ্য ব্যবহার করে, O₂ এর সর্বোচ্চ বন্ধন শক্তি।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552465539,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "\\( 2H_2 + O_2 \\rightarrow 2H_2O \\); যেখানে H – H, O = O এবং O – H এর বন্ধন শক্তি যথাক্রমে 435, 498 এবং 464 kJ/mole। উপরোক্ত বিক্রিয়ায় ΔH-এর মান কত? \\( (S.B.-17) \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( -244 \\, \\text{kJ} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( +244 \\, \\text{kJ} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( +488 \\, \\text{kJ} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( -488 \\, \\text{kJ} \\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ΔH = Σ(ভাঙা বিক্রিয়কের বন্ধন শক্তি) - Σ(গঠিত উৎপাদের বন্ধন শক্তি)।\nভাঙা বন্ধন: 2টি H-H বন্ধন (2*435=870) এবং 1টি O=O বন্ধন (1*498=498)। মোট = 1368 kJ.\nগঠিত বন্ধন: 4টি O-H বন্ধন (2টি H₂O অণুতে, প্রতিটিতে 2টি O-H বন্ধন, সুতরাং 4*464=1856 kJ)।\nΔH = 1368 - 1856 = -488 kJ. ঋণাত্মক চিহ্নটি একটি তাপউৎপাদী বিক্রিয়া নির্দেশ করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552465638,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "OH⁻ আয়ন থেকে 2 মোল অক্সিজেন উৎপাদনে কত মোল ইলেকট্রনের প্রয়োজন হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( 1 \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( 2 \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( 4 \\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\( 8 \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পানির তড়িৎবিশ্লেষণের সময় অ্যানোডে বিক্রিয়া হল: 4OH⁻ → O₂ + 2H₂O + 4e⁻। 1 মোল O₂ উৎপাদনে 4 মোল ইলেকট্রনের প্রয়োজন। অতএব, 2 মোল O₂ উৎপাদনে 8 মোল ইলেকট্রনের প্রয়োজন। কিন্তু 8 কোনো অপশন নয়। প্রশ্নটি 1 মোল O₂ এর জন্য হতে পারে। 1 মোল O₂ এর জন্য, 4 মোল e⁻ প্রয়োজন। অপশনগুলো হল 1, 2, 4, 8। 2 মোলের জন্য এটি 8 হওয়া উচিত। কিন্তু 8 হল অপশন ঘ। প্রশ্নটি বলে \"2 mole of oxygen\", তাই উত্তর হওয়া উচিত 8 (ঘ)। সম্ভবত একটি অসঙ্গতি।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552465747,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "দুই মোল Cl-Cl⁷ এর বন্ধন শক্তি কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( 326 \\, \\text{kJ} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( 431 \\, \\text{kJ} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( 488 \\, \\text{kJ} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\( 498 \\, \\text{kJ} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "একটি Cl-Cl বন্ধনের জন্য বন্ধন শক্তি হল 244 kJ/mol। দুই মোল Cl-Cl বন্ধনের জন্য মোট শক্তি হবে 2 * 244 kJ = 488 kJ.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552465849,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "H-I-এর শক্তির পরিমাণ কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( 299 \\, \\text{kJ/mol} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\( 193 \\, \\text{kJ/mol} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( 563 \\, \\text{kJ/mol} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( 350 \\, \\text{kJ/mol} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "হাইড্রোজেন-আয়োডিন (H-I) একক বন্ধনের বন্ধন শক্তি প্রায় 299 kJ/mol.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552465953,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "N = N-এ শক্তির পরিমাণ কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( 946 \\, \\text{kJ/mol} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\( 193 \\, \\text{kJ/mol} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( 139 \\, \\text{kJ/mol} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( 99 \\, \\text{kJ/mol} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "নাইট্রোজেন ত্রি-বন্ধনের (N≡N) বন্ধন শক্তি অত্যন্ত উচ্চ, প্রায় 946 kJ/mol.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552466056,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "\\( CH_4 + 2Cl_2 \\rightarrow CH_2Cl_2 + 2HCl \\) [C – H, Cl – Cl, C – Cl এবং H – Cl এর বন্ধন শক্তি যথাক্রমে 414, 244, 326 এবং 431 kJ/mol] kJ-এ এই বিক্রিয়ার ΔH-এর মান কত? \\( (B.B.-24) \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( 92 \\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\( 99 \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( 192 \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( 198 \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ΔH = Σ(ভাঙা বন্ধন) - Σ(গঠিত বন্ধন)।\nভাঙা বন্ধন: CH₄-এ, 2টি C-H বন্ধন ভাঙে (ধরে নিলাম CH₂Cl₂ গঠনের জন্য 2টি C-H বন্ধন ভাঙে) এবং 2টি Cl-Cl বন্ধন ভাঙে। শক্তি = (2*414) + (2*244) = 828 + 488 = 1316 kJ.\nগঠিত বন্ধন: 2টি C-Cl বন্ধন এবং 2টি H-Cl বন্ধন গঠিত হয়। শক্তি = (2*326) + (2*431) = 652 + 862 = 1514 kJ.\nΔH = 1316 - 1514 = -198 kJ. কিন্তু -198 কোনো অপশন নয়; +198 হল অপশন ঘ। প্রদত্ত ΔH হল লিখিত বিক্রিয়ার জন্য। হিসাব করে -198 kJ (তাপউৎপাদী) পাওয়া যায়। সম্ভবত প্রশ্নটি মান বা চিহ্নের ত্রুটি আছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552466160,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "\\( CH_3Cl + Cl_2 = CH_2Cl_2 + HCl \\), এই বিক্রিয়ায় C – H, C – Cl, Cl – Cl এবং H – Cl এর বন্ধন শক্তি যথাক্রমে 414, 326, 244, 431 kJ/mol। ΔH-এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( -99 \\, \\text{kJ} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\( -425 \\, \\text{kJ} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( 751 \\, \\text{kJ} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( 315 \\, \\text{kJ} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ΔH = (ভাঙা বন্ধন) - (গঠিত বন্ধন)।\nভাঙা বন্ধন: 1টি C-H বন্ধন (414) + 1টি Cl-Cl বন্ধন (244) = 658 kJ.\nগঠিত বন্ধন: 1টি C-Cl বন্ধন (326) + 1টি H-Cl বন্ধন (431) = 757 kJ.\nΔH = 658 - 757 = -99 kJ.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552466261,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "দহন বলতে একটি পদার্থকে কীসের সাথে জ্বলানো বোঝায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অক্সিজেন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "হাইড্রোজেন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পানি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( H_2PO_4 \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "দহন হল একটি রাসায়নিক বিক্রিয়া যেখানে একটি পদার্থ অক্সিজেনের সাথে দ্রুত বিক্রিয়া করে, সাধারণত তাপ ও আলো উৎপন্ন করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552466368,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "দহন কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আগুনে জ্বলানো",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "O\\(_2\\) দ্বারা জারণ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "নাইট্রোজেনে জ্বলানো",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রাসায়নিক বিক্রিয়ার মাধ্যমে O\\(_2\\) তৈরি করা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "দহন বিশেষভাবে একটি উচ্চ তাপমাত্রার তাপউৎপাদী জারণ-বিজারণ রাসায়নিক বিক্রিয়া একটি জ্বালানি ও একটি জারকের মধ্যে, সাধারণত বায়ুমণ্ডলীয় অক্সিজেন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552466470,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "C ও H এর সম্পূর্ণ দহনে কী উৎপন্ন হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "CO\\(_2\\), H\\(_2\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "CO, H\\(_2\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "CO\\(_2\\), H\\(_2\\)O",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "C\\(_6\\)H\\(_6\\), H\\(_2\\)O",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পর্যাপ্ত অক্সিজেনে একটি হাইড্রোকার্বনের (কার্বন ও হাইড্রোজেনযুক্ত) সম্পূর্ণ দহনে কার্বন ডাই অক্সাইড (CO₂) এবং পানি (H₂O) উৎপন্ন হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552466573,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "জ্বালানি পোড়ালে যে শক্তি পাওয়া যায় তা পদার্থের কোন শক্তি থেকে পাওয়া যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তড়িৎ শক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তাপ শক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রাসায়নিক শক্তি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বিভব শক্তি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "জ্বালানিতে সঞ্চিত রাসায়নিক শক্তি থাকে। যখন সেগুলো জ্বলে (দহন হয়), তখন এই রাসায়নিক শক্তি তাপ (তাপীয় শক্তি) ও আলোক শক্তিতে রূপান্তরিত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552466671,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "ড্যানিয়েল কোষে কোনটি ধনাত্মক আয়নে রূপান্তরিত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Cu",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Zn",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Zn\\(^{2+}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Cu\\(^{2+}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ড্যানিয়েল কোষে, দস্তা ইলেকট্রোড (Zn) জারণের মধ্য দিয়ে যায়: Zn(s) → Zn²⁺(aq) + 2e⁻। দস্তা ধাতু ইলেকট্রন হারায় এবং দস্তা আয়নে (Zn²⁺) রূপান্তরিত হয়, যা ধনাত্মক আয়ন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552466770,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোনটি রাসায়নিক শক্তি ছাড়া পাওয়া যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আলোক শক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তাপ শক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অভিকর্ষ বল",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "যান্ত্রিক শক্তি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "অভিকর্ষ বল (বা মহাকর্ষীয় বিভব শক্তি) হল একটি শক্তির রূপ যা একটি বস্তুর মহাকর্ষীয় ক্ষেত্রে অবস্থানের সাথে সম্পর্কিত। এটি রাসায়নিক বন্ধন বা বিক্রিয়া জড়িত করে না, যেমনটি রাসায়নিক শক্তি যা অণুর বন্ধনে সঞ্চিত থাকে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552466878,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "পরমাণু ও অণুতে কোন ধরনের শক্তি সঞ্চিত থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সৌর শক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "যান্ত্রিক শক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তাপ শক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রাসায়নিক শক্তি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "রাসায়নিক শক্তি হল সঞ্চিত বিভব শক্তি যা পরমাণু ও অণুর মধ্যে রাসায়নিক বন্ধনে থাকে। এটি রাসায়নিক বিক্রিয়ার সময় মুক্ত বা শোষিত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552466982,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোন ধরনের শক্তি ঘনঘন ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তড়িৎ শক্তি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "শব্দ শক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রাসায়নিক শক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তাপ শক্তি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "আধুনিক দৈনন্দিন জীবনে, তড়িৎ শক্তি ঘর, শিল্প ও ইলেকট্রনিক যন্ত্রপাতি চালাতে সর্বাধিক ঘনঘন ব্যবহৃত শক্তির রূপ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552467088,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কাঠ পোড়ালে রূপান্তরিত হয় –",
+    "options": [
+      {
+        "label": "a",
+        "text": "তড়িৎ শক্তিতে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রাসায়নিক শক্তিতে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যান্ত্রিক শক্তিতে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তাপ শক্তিতে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কাঠ পোড়ানো একটি দহন বিক্রিয়া। কাঠে সঞ্চিত রাসায়নিক শক্তি প্রাথমিকভাবে তাপ (তাপীয়) শক্তি ও আলোক শক্তিতে রূপান্তরিত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552467196,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোনটিতে তাপশক্তি যান্ত্রিক শক্তিতে রূপান্তরিত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জাহাজ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "রিকশা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ACD",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কম্পিউটার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "জাহাজের ইঞ্জিনে (যেমন বাষ্প টারবাইন বা অভ্যন্তরীণ দহন ইঞ্জিন) জ্বালানি পোড়ানোর তাপশক্তি বাষ্প তৈরি বা গ্যাস প্রসারিত করতে ব্যবহৃত হয়, যা তারপর যান্ত্রিক গতি তৈরি করতে পিস্টন বা টারবাইন চালায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552467306,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "হাইড্রোজেন জ্বালানি কোষ কোন ধরনের কোষ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শুষ্ক কোষ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তড়িৎবিশ্লেষ্য কোষ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ফিউশন কোষ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সঞ্চয় কোষ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "হাইড্রোজেন জ্বালানি কোষ হল একটি তড়িৎরাসায়নিক কোষ (বা গ্যালভানিক কোষ) যা জারণ-বিজারণ বিক্রিয়ার মাধ্যমে হাইড্রোজেন ও অক্সিজেন ব্যবহার করে বিদ্যুৎ উৎপন্ন করে, যার উপজাত হিসেবে পানি হয়। এটি ক্রমাগত জ্বালানি ও জারকের সরবরাহ প্রয়োজন, তাই এটি ঐতিহ্যগত অর্থে একটি প্রাথমিক (শুষ্ক) বা সঞ্চয় কোষ নয়, কিন্তু এটি একটি তড়িৎবিশ্লেষ্য কোষ হিসেবে কাজ করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552467410,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোন প্রক্রিয়ার মাধ্যমে উদ্ভিদ খাদ্য তৈরি করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাষ্পমোচন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ইমবিবিশন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সালোকসংশ্লেষণ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "নাইট্রোজেন সংবদ্ধন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "উদ্ভিদ সালোকসংশ্লেষণ প্রক্রিয়ায় কার্বন ডাই অক্সাইড, পানি ও সূর্যালোককে গ্লুকোজ (খাদ্য) ও অক্সিজেনে রূপান্তরিত করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552467587,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "যদি বিক্রিয়কের মোট অভ্যন্তরীণ শক্তি 120kJ হয় এবং উৎপাদের অভ্যন্তরীণ শক্তি 95kJ হয়। তাপ শক্তির পরিবর্তন কত, ΔH=7kJ",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( 65 \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( 25 \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( -25 \\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\( -215 \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "একটি সিস্টেমের অভ্যন্তরীণ শক্তি (ΔU) বা এনথালপি (ΔH) পরিবর্তন: ΔH = H(উৎপাদ) - H(বিক্রিয়ক)। এখানে, ΔH = 95 kJ - 120 kJ = -25 kJ। প্রশ্নে \"7kJ\" একটি মুদ্রণপ্রমাদ বা অপ্রাসঙ্গিক বলে মনে হচ্ছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552467687,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "জ্বালানি পোড়ালে, রাসায়নিক শক্তি পরিবর্তিত হয় —\n[এখানে একটি চিত্র আছে]",
+    "options": [
+      {
+        "label": "a",
+        "text": "গতিশক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিভব শক্তি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "(পাঠ্যে অসম্পূর্ণ প্রশ্ন/অপশন। সাধারণত, পোড়ানোর সময় রাসায়নিক শক্তি তাপ ও আলোক শক্তিতে পরিবর্তিত হয়।)",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552467785,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "জ্বালানিতে কোন শক্তি সঞ্চিত থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "যান্ত্রিক শক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রাসায়নিক শক্তি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "দ্রুতি শক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ভোল্টেজ শক্তি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পেট্রল, কাঠ বা গ্যাসের মতো জ্বালানিতে তাদের অণুর বন্ধনের মধ্যে রাসায়নিক শক্তি সঞ্চিত থাকে। জ্বালানি দহনের মধ্য দিয়ে গেলে এই শক্তি তাপ ও আলো হিসেবে মুক্ত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552467887,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কার্বনিক অ্যাসিডের সংকেত কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "H\\(_2\\)CO\\(_3\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "HNO\\(_3\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "HNO\\(_3\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "H\\(_2\\)CO\\(_2\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কার্বনিক অ্যাসিড তৈরি হয় যখন কার্বন ডাই অক্সাইড পানিতে দ্রবীভূত হয়। এর রাসায়নিক সংকেত হল H₂CO₃.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552468003,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "জীবাশ্ম জ্বালানি পোড়ানোর ফলে প্রতি বছর কত CO\\(_2\\) (g) আয়ন উৎপন্ন হয়? \\( \\textit{[M.B.Co.g. J.B.-20]} \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "21.3 Billion",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "57.34 Billion",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "57.34 Million",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "99.99 Million",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "প্রশ্নটি সম্ভবত CO₂ গ্যাসের পরিমাণ (টন বা অণুতে) জিজ্ঞাসা করে, আয়ন নয়। জীবাশ্ম জ্বালানি পোড়ালে প্রতি বছর বিলিয়ন বিলিয়ন টন CO₂ নির্গত হয়। ভর বা মেট্রিক টন সংখ্যার জন্য 57.34 বিলিয়ন একটি সম্ভাব্য সংখ্যা।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552468111,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "বিশুদ্ধ জ্বালানি থেকে কোনটি উৎপন্ন হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "CO",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "CO\\(_2\\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "NO\\(_2\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "N\\(_2\\)O",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বিশুদ্ধ জ্বালানি, যেমন হাইড্রোকার্বন (যেমন মিথেন CH₄), পর্যাপ্ত অক্সিজেনে সম্পূর্ণ দহনের মধ্য দিয়ে গেলে প্রাথমিকভাবে কার্বন ডাই অক্সাইড (CO₂) ও পানি (H₂O) উৎপন্ন করে। প্রদত্ত ব্যাখ্যা এটি নিশ্চিত করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552468283,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোনটি পোড়ালে ক্ষতিকর যৌগ উৎপন্ন করে না?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রাকৃতিক জ্বালানি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জীবাশ্ম জ্বালানি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিশুদ্ধ জ্বালানি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "জৈব জ্বালানি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পাঠ্য \"বিশুদ্ধ জ্বালানি\" কে হাইড্রোকার্বন দিয়ে গঠিত হিসাবে সংজ্ঞায়িত করে। পর্যাপ্ত অক্সিজেনে সম্পূর্ণরূপে পোড়ালে তারা শুধুমাত্র CO₂ এবং H₂O উৎপন্ন করে, যা অন্তর্নিহিতভাবে বিষাক্ত নয় (যদিও CO₂ একটি গ্রিনহাউস গ্যাস)। জীবাশ্ম জ্বালানির মতো অন্যান্য জ্বালানিতে প্রায়শই অশুদ্ধি (সালফার, নাইট্রোজেন) থাকে যা দহনে ক্ষতিকর অক্সাইড (SOₓ, NOₓ) উৎপন্ন করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552468396,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "অম্ল বৃষ্টির প্রধান উপাদান কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "C",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "O",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "H",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "O",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "(অপশন অস্পষ্ট। অম্ল বৃষ্টির প্রধান *অবদানকারী* হল সালফার ও নাইট্রোজেন অক্সাইড (SO₂, NOₓ)। প্রদত্ত অপশন (C, O, H) ভুল। সম্ভবত মুদ্রণপ্রমাদ। সাধারণ জ্ঞান অনুযায়ী, প্রদত্ত কোন অপশনই সঠিক নয়।)",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552468495,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "নিম্নোক্তগুলোর মধ্যে কোনটি বিষাক্ত গ্যাস?",
+    "options": [
+      {
+        "label": "a",
+        "text": "CO",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "CO\\(_2\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "O\\(_2\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "O\\(_3\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কার্বন মনোক্সাইড (CO) একটি বর্ণহীন, গন্ধহীন এবং অত্যন্ত বিষাক্ত গ্যাস। এটি অক্সিজেনের চেয়ে রক্তের হিমোগ্লোবিনের সাথে দৃঢ়ভাবে আবদ্ধ হয়, শরীরে অক্সিজেন পরিবহন বাধাগ্রস্ত করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552468599,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোনটি বিশুদ্ধ জ্বালানি নয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কাঠ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রাকৃতিক গ্যাস",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পেট্রোলিয়াম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "N এবং S ধারণকারী জ্বালানি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এই প্রসঙ্গে \"বিশুদ্ধ জ্বালানি\" হল একটি হাইড্রোকার্বন জ্বালানি। নাইট্রোজেন (N) ও সালফার (S) পরমাণু ধারণকারী জ্বালানি অশুদ্ধ কারণ তাদের দহনে ক্ষতিকর নাইট্রোজেন অক্সাইড ও সালফার অক্সাইড উৎপন্ন হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552468699,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "নিম্নোক্তগুলোর মধ্যে কোনটি পৃথিবীকে অতিবেগুনি রশ্মি থেকে রক্ষা করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "O\\(_2\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "NO\\(_2\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "CO\\(_2\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "O\\(_3\\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পৃথিবীর স্ট্র্যাটোস্ফিয়ারে ওজোন স্তর (O₃) সূর্যের ক্ষতিকর অতিবেগুনি (UV) বিকিরণের বেশিরভাগ শোষণ করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552468804,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোনটি বিষাক্ত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "PbO",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ZnO",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "FeO",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Al\\(_2\\)O\\(_3\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "লেড(II) অক্সাইড (PbO) বিষাক্ত কারণ সীসা একটি ভারী ধাতু যা মানুষ ও প্রাণীর মধ্যে বিষক্রিয়া সৃষ্টি করতে পারে, স্নায়ুতন্ত্র ও অন্যান্য অঙ্গকে প্রভাবিত করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552468904,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "আলোক রাসায়নিক ধোঁয়াশার উপাদানগুলি কী কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "CO\\(_2\\), NO\\(_2\\), CH\\(_4\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "CO\\(_2\\), N\\(_2\\)O, CH\\(_4\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "CO\\(_2\\), NO\\(_2\\), CH\\(_4\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "CH\\(_4\\), CO\\(_2\\), N\\(_2\\)O\\(_5\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "(অপশনগুলো যেন নকল করা। আলোক রাসায়নিক ধোঁয়াশায় প্রাথমিকভাবে নাইট্রোজেন অক্সাইড (NOₓ), ওজোন (O₃), উদ্বায়ী জৈব যৌগ (VOCs), এবং পারক্সিঅ্যাসাইল নাইট্রেট (PANs) থাকে। অপশনগুলোর মধ্যে, NO₂ একটি মূল উপাদান।)",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552469002,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "নিম্নোক্তগুলোর মধ্যে কোনটি জৈব জ্বালানি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ইথানল",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কেরোসিন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "CN\\(_2\\)O",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পেট্রল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ইথানল (C₂H₅OH) একটি জৈব যৌগ যা বায়োমাস (যেমন আখ বা ভুট্টা) থেকে উৎপাদিত হয় এবং জৈবজ্বালানি হিসাবে ব্যবহৃত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552469108,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "নিম্নোক্তগুলোর মধ্যে কোনটি জীবাশ্ম জ্বালানি নয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কয়লা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পেট্রল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ডিজেল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ইথানল",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "জীবাশ্ম জ্বালানি লক্ষ লক্ষ বছর ধরে প্রাচীন উদ্ভিদ ও প্রাণীর দেহাবশেষ থেকে তৈরি হয় (যেমন কয়লা, পেট্রোলিয়াম, প্রাকৃতিক গ্যাস)। ইথানল একটি জৈবজ্বালানি যা সমসাময়িক উদ্ভিদ পদার্থ থেকে গাঁজন প্রক্রিয়ায় উৎপাদিত হয়, তাই এটি জীবাশ্ম জ্বালানি নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552469219,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোনটি বাতাসে সাদা ধোঁয়া তৈরি করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "NH\\(_3\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "NH\\(_4\\)Cl",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "CaCl\\(_2\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Cl\\(_2\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "অ্যামোনিয়াম ক্লোরাইড (NH₄Cl) একটি সাদা কঠিন। যখন গ্যাসীয় অ্যামোনিয়া (NH₃) ও হাইড্রোজেন ক্লোরাইড (HCl) বাতাসে বিক্রিয়া করে, তখন তারা NH₄Cl-এর ক্ষুদ্র কঠিন কণা তৈরি করে, যা সাদা ধোঁয়া বা কুয়াশার মতো দেখায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552469316,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোনটি গ্রিনহাউস প্রভাবের জন্য বেশি দায়ী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "CO",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "SO\\(_2\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "NO\\(_2\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "CO\\(_2\\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কার্বন ডাই অক্সাইড (CO₂) হল প্রাথমিক গ্রিনহাউস গ্যাস যা উন্নত গ্রিনহাউস প্রভাব ও গ্লোবাল ওয়ার্মিং-এ অবদান রাখে এর প্রাচুর্য ও দীর্ঘ বায়ুমণ্ডলীয় জীবনকালের কারণে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552469415,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোনটি আলোক রাসায়নিক ধোঁয়াশার উপাদান?",
+    "options": [
+      {
+        "label": "a",
+        "text": "N\\(_2\\)O",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "SO\\(_2\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "NO\\(_2\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "CO\\(_2\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "নাইট্রোজেন ডাই অক্সাইড (NO₂) আলোক রাসায়নিক ধোঁয়াশার একটি মূল উপাদান। এটি একটি বাদামী বর্ণের গ্যাস যা সূর্যালোক দ্বারা চালিত রাসায়নিক বিক্রিয়ায় অংশ নেয় যা ধোঁয়াশা তৈরি করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552469562,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "নিম্নলিখিতগুলোর মধ্যে কোনটি জৈবজ্বালানি উৎপাদনে ব্যবহার করা যেতে পারে? \\( \\textit{[D.B.-19]} \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "খেজুরের রস",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "পলিডাইন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রোটিন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পলিয়েস্টার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "খেজুরের রস (বা পাম তেল) একটি উদ্ভিদ-ভিত্তিক পদার্থ যা বায়োডিজেল বা বায়োইথানলের মতো জৈবজ্বালানি উৎপাদনের জন্য প্রক্রিয়াজাত করা যেতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552469704,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "আলোক রাসায়নিক ধোঁয়াতে কোনটি উপস্থিত থাকে? \\( \\textit{[B.B.-17]} \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "কার্বন মনোক্সাইড",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কার্বন ডাই অক্সাইড",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ফসফরাস ট্রাইঅক্সাইড",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ক্লোরিন হেপ্টাঅক্সাইড",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "আলোক রাসায়নিক ধোঁয়াতে বিভিন্ন দূষক থাকে, যার মধ্যে রয়েছে কার্বন মনোক্সাইড (CO), নাইট্রোজেন অক্সাইড, ওজোন, এবং উদ্বায়ী জৈব যৌগ। অপশনগুলোর মধ্যে, কার্বন মনোক্সাইড একটি সাধারণ উপাদান।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552469840,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "ইথাইল অ্যালকোহলের সংকেত কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "CH\\(_3\\)-CH\\(_2\\)-OH",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "CH\\(_3\\)-OH",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "CH\\(_3\\)-CHO",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "CH\\(_3\\)-CH\\(_2\\)-OH",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ইথাইল অ্যালকোহল বা ইথানলের আণবিক সংকেত C₂H₅OH, যা CH₃-CH₂-OH হিসাবে লেখা যেতে পারে। অপশন ক ও ঘ একই এবং সঠিক। অপশন খ মিথানল, এবং অপশন গ অ্যাসিট্যালডিহাইড।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552469959,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "ব্রাজিলে খনিজ জ্বালানির সাথে কত শতাংশ ইথানল মেশানো বাধ্যতামূলক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "25",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "15",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "10",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "5",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ব্রাজিলের দীর্ঘদিনের নীতি রয়েছে গ্যাসোলিনের সাথে ইথানল মিশ্রণের। বাধ্যতামূলক মিশ্রণের মাত্রা প্রায়শই ২০-২৭% এর কাছাকাছি থাকে। অপশন ক, ২৫%, একটি সাধারণ সংখ্যা।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552470064,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "ইথানল কী ধরনের পদার্থ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কঠিন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নিরপেক্ষ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জ্বলনশীল",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ক্ষারকীয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ইথানল একটি দাহ্য তরল যা জ্বালানি হিসাবে জ্বালানো যেতে পারে। এটি জ্বলনশীল।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552472538,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোনটি ইলেকট্রনিক পরিবাহী? \\( \\textit{[S.B.-24]} \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "অম্লীয় দ্রবণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ক্ষারকীয় দ্রবণ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "লবণের দ্রবণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গ্রাফাইট",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "গ্রাফাইট কার্বনের একটি কঠিন রূপভেদ যেখানে স্তরের মধ্যে ইলেকট্রন অবাধে চলাচল করতে পারে, যা এটিকে বিদ্যুৎ পরিবাহী হতে দেয়। আয়নিক দ্রবণ (অম্ল, ক্ষার, লবণ) আয়নের মাধ্যমে বিদ্যুৎ পরিবাহিতা করে, মুক্ত ইলেকট্রনের মাধ্যমে নয়। প্রশ্নটি \"ইলেকট্রনিক পরিবাহী\" নির্দিষ্ট করে, যার অর্থ ইলেকট্রনের মাধ্যমে পরিবাহিতা, যা ধাতু ও গ্রাফাইটের জন্য সাধারণ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552472635,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "নিম্নলিখিতগুলোর মধ্যে কোনটি অপরিবাহী? \\( \\textit{[J.B.-20]} \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্ক্র্যাপ আয়রন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "C\\(_2\\)H\\(_5\\)OH",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "NaCl দ্রবণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কঠিন CaCl\\(_2\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ইথানল (C₂H₅OH) তার বিশুদ্ধ তরল আকারে একটি আণবিক যৌগ যা আয়নে বিয়োজিত হয় না। অতএব, এটি বিদ্যুৎ পরিবাহিতা করে না এবং একটি অপরিবাহী। স্ক্র্যাপ আয়রন একটি ধাতু (পরিবাহী)। NaCl দ্রবণ ও কঠিন CaCl₂ (গলিত বা দ্রবীভূত অবস্থায়) আয়নিক পরিবাহী।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552472740,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "আমাদের দেহে তড়িৎবিশ্লেষ্যের চাহিদা কোন যৌগ পূরণ করে? \\( \\textit{[All Board-18]} \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "O\\(_2\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "H\\(_2\\)O",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "CO\\(_2\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "NaCl",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "তড়িৎবিশ্লেষ্য হল এমন পদার্থ যা পানিতে দ্রবীভূত হলে আয়ন তৈরি করে এবং অনেক শারীরিক ক্রিয়াকলাপের জন্য অপরিহার্য (নার্ভ ইম্পালস, পেশী কার্যকারিতা)। সোডিয়াম ক্লোরাইড (NaCl, সাধারণ লবণ) Na⁺ ও Cl⁻ আয়নে দ্রবীভূত হয়, তড়িৎবিশ্লেষ্যের চাহিদা পূরণ করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552472849,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "নিম্নলিখিতগুলোর মধ্যে কোনটি দুর্বল তড়িৎবিশ্লেষ্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "H\\(_2\\)O",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "CuSO\\(_4\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "H\\(_2\\)SO\\(_4\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "NaCl",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "একটি দুর্বল তড়িৎবিশ্লেষ্য দ্রবণে আংশিকভাবে আয়নে বিয়োজিত হয়। বিশুদ্ধ পানি (H₂O) খুব সামান্য পরিমাণে H⁺ ও OH⁻ আয়নে বিয়োজিত হয়, যা এটিকে একটি অতি দুর্বল তড়িৎবিশ্লেষ্য করে তোলে। অন্যগুলো প্রবল তড়িৎবিশ্লেষ্য (সম্পূর্ণ বিয়োজিত)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552472953,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোনটির জলীয় দ্রবণ তড়িৎ পরিবাহী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চিনি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গ্লুকোজ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ইউরিয়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নীলা তুঁত",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "নীলা তুঁত হল কপার(II) সালফেট পেন্টাহাইড্রেট (CuSO₄·5H₂O)। এর জলীয় দ্রবণে Cu²⁺ ও SO₄²⁻ আয়ন থাকে, যা এটিকে বিদ্যুৎ পরিবাহিতা করতে দেয়। চিনি, গ্লুকোজ, ও ইউরিয়া আণবিক যৌগ যা দ্রবণে আয়ন তৈরি করে না এবং অপরিবাহী।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552473064,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোনটি মৃদু তড়িৎবিশ্লেষ্য? \\( \\textit{[D.B.-20]} \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "H\\(_2\\)O",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "CuSO\\(_4\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "NaCl",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "H\\(_2\\)SO\\(_4\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\"মৃদু তড়িৎবিশ্লেষ্য\" অর্থ দুর্বল তড়িৎবিশ্লেষ্য। পানি একটি অতি দুর্বল তড়িৎবিশ্লেষ্য কারণ এটি অতি সামান্য পরিমাণে আয়নে বিয়োজিত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552473172,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোনটি ইলেকট্রনিক পরিবাহী? \\( \\textit{[R.B.-20]} \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "লোহা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সালফার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অম্ল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "লবণের দ্রবণ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "লোহা একটি ধাতু। ধাতুতে, ডিলোকালাইজড ইলেকট্রনের চলাচলের কারণে তড়িৎ পরিবাহিতা ঘটে। সালফার একটি অধাতু অপরিবাহী। অম্ল ও লবণের দ্রবণ আয়নের মাধ্যমে (আয়নিক পরিবাহিতা) পরিবাহিতা করে, মুক্ত ইলেকট্রনের মাধ্যমে নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552473271,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "নিম্নলিখিতগুলোর মধ্যে কোনটি প্রথম বিজারিত হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Fe\\(^{2+}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Ca\\(^{2+}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Zn\\(^{2+}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Cu\\(^{2+}\\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "তড়িৎবিশ্লেষণের সময়, যেসব আয়নের ইলেকট্রন গ্রহণের প্রবণতা সবচেয়ে বেশি (সর্বোচ্চ বিজারণ বিভব) তারা প্রথমে ক্যাথোডে বিজারিত হয়। প্রদত্ত আয়নগুলোর মধ্যে, Cu²⁺-এর বিজারণ বিভব সর্বোচ্চ (সবচেয়ে সহজে বিজারিত হয়)। প্রদত্ত ব্যাখ্যা এটি নিশ্চিত করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552473378,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "নিম্নলিখিতগুলোর মধ্যে কোনটির জলীয় দ্রবণ অ-তড়িৎবিশ্লেষ্য? \\( \\textit{[D.B.-20]} \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "নীলা তুঁত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চিনি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অ্যামোনিয়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ভিনিগার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "একটি অ-তড়িৎবিশ্লেষ্য পানিতে আয়নে বিয়োজিত হয় না এবং বিদ্যুৎ পরিবাহিতা করে না। চিনি (সুক্রোজ, C₁₂H₂₂O₁₁) পানিতে দ্রবীভূত হয় কিন্তু অণু হিসাবে থাকে, তাই এটি একটি অ-তড়িৎবিশ্লেষ্য। নীলা তুঁত (CuSO₄) একটি প্রবল তড়িৎবিশ্লেষ্য। অ্যামোনিয়া (NH₃) ও ভিনিগার (অ্যাসিটিক অ্যাসিড, CH₃COOH) দুর্বল তড়িৎবিশ্লেষ্য।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552473479,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "ক্যাথোডে কোনটি প্রথম বিজারিত হয়? \\( \\textit{[C.B.-20]} \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "Fe\\(^{2+}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Ag\\(^{+}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Al\\(^{3+}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Sn\\(^{2+}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সিলভার আয়ন (Ag⁺) এর একটি অত্যন্ত উচ্চ বিজারণ বিভব রয়েছে, যার অর্থ এটির ইলেকট্রন গ্রহণ করে সিলভার ধাতুতে বিজারিত হওয়ার প্রবণতা খুব শক্তিশালী। অতএব, এই আয়নগুলোর মধ্যে, Ag⁺ তড়িৎবিশ্লেষণের সময় ক্যাথোডে প্রথম বিজারিত হবে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552473585,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোনটি প্রথম ডিসচার্জ হয়? \\( \\textit{[R.B.-20]} \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "Zn\\(^{2+}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Pb\\(^{2+}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Mg\\(^{2+}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Cu\\(^{2+}\\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এখানে \"ডিসচার্জ\" অর্থ ক্যাথোডে ধাতুতে বিজারিত হওয়া। Cu²⁺ এর এই আয়নগুলোর মধ্যে সর্বোচ্চ বিজারণ বিভব রয়েছে, তাই এটি প্রথমে ডিসচার্জ (Cu ধাতুতে বিজারিত) হবে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552473691,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "তড়িৎবিশ্লেষণের সময় ক্যাথোডে কোন বিক্রিয়া ঘটে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "H + H → H\\(_2\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "SO\\(_4\\)\\(^{2-}\\) → SO\\(_4\\) + 2e\\(^{-}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "OH\\(^-\\) → OH + e\\(^{-}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "4H\\(^+\\) + 4e\\(^{-}\\) → 2H\\(_2\\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ক্যাথোড হল সেই ইলেকট্রোড যেখানে বিজারণ (ইলেকট্রন লাভ) ঘটে। একটি অম্লীয় জলীয় দ্রবণের তড়িৎবিশ্লেষণে, হাইড্রোজেন আয়ন (H⁺) হাইড্রোজেন গ্যাসে (H₂) বিজারিত হয়: 2H⁺ + 2e⁻ → H₂, বা যেমন অপশন ঘ-এ লেখা হয়েছে, 4H⁺ + 4e⁻ → 2H₂। অপশন ক H পরমাণুর সমন্বয় দেখায়, ইলেকট্রন লাভের ধাপ নয়। অপশন খ ও গ জারণ বিক্রিয়া (ইলেকট্রন হারানো) যা অ্যানোডে ঘটবে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552473792,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "তড়িৎবিশ্লেষণের সময় একটি দ্রবণে একাধিক ধনাত্মক আয়ন থাকলে কোনটি প্রথমে ডিসচার্জ হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "K\\(^+\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "H\\(^+\\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Na\\(^+\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Mg\\(^{2+}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "জলীয় দ্রবণের তড়িৎবিশ্লেষণের সময়, যদি ধাতব আয়ন হাইড্রোজেনের চেয়ে কম প্রতিক্রিয়াশীল হয় (অর্থাৎ H⁺ এর চেয়ে কম বিজারণ বিভব থাকে), তবে ধাতব আয়ন ডিসচার্জ হয়। যদি ধাতব আয়ন হাইড্রোজেনের চেয়ে বেশি প্রতিক্রিয়াশীল হয় (যেমন K⁺, Na⁺, Mg²⁺), তবে পানির হাইড্রোজেন আয়ন অগ্রাধিকারভিত্তিতে বিজারিত হয় এবং ক্যাথোডে H₂ গ্যাস হিসাবে ডিসচার্জ হয়। অতএব, একটি জলীয় দ্রবণে এই ধনাত্মক আয়নগুলোর মধ্যে, H⁺ (পানি থেকে) প্রথমে ডিসচার্জ হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552473915,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "শুষ্ক কোষে কোনটি অ্যানোড?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Na",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Na-Hg",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "H\\(_2\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Cl\\(_2\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "(প্রশ্ন অস্পষ্ট। সম্ভবত নকল বা মুদ্রণপ্রমাদ। একটি সাধারণ লেকলানশে (জিঙ্ক-কার্বন) শুষ্ক কোষে অ্যানোড হল দস্তার কন্টেইনার।)",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552474025,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "শুষ্ক কোষে কোনটি অ্যানোড?",
+    "options": [
+      {
+        "label": "a",
+        "text": "NaCl",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Zn",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "MnO\\(_2\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "NH\\(_4\\)Cl",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "একটি আদর্শ জিঙ্ক-কার্বন শুষ্ক কোষে, দস্তা ধাতুর কন্টেইনার নেতিবাচক ইলেকট্রোড (অ্যানোড) হিসাবে কাজ করে, যেখানে জারণ ঘটে: Zn → Zn²⁺ + 2e⁻।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552474133,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "শুষ্ক কোষে, অ্যামোনিয়াম ক্লোরাইড কতগুলি ইলেকট্রন গ্রহণ করে অ্যামোনিয়া গ্যাসে পরিণত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "3",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "4",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "একটি শুষ্ক কোষে, একটি ক্যাথোড বিক্রিয়া জড়িত অ্যামোনিয়াম আয়ন (NH₄⁺) বিজারিত হয়: 2NH₄⁺ + 2e⁻ → 2NH₃ + H₂। সুতরাং, প্রতিটি NH₄⁺ আয়ন একটি ইলেকট্রন গ্রহণ করে, তবে দুটি অণু অ্যামোনিয়া তৈরি করতে দুটি ইলেকট্রন নেওয়া হয়। প্রশ্নটি জিজ্ঞাসা করে অ্যামোনিয়াম ক্লোরাইড \"কতগুলি ইলেকট্রন গ্রহণ করে অ্যামোনিয়া গ্যাসে পরিণত হয়।\" প্রতি NH₃ অণুর জন্য? অর্ধ-বিক্রিয়াটি দেখায় 1 e⁻ প্রতি NH₄⁺ বিজারিত হয়ে NH₃। সুতরাং, একটি NH₄⁺ কে NH₃ হতে হলে 1 ইলেকট্রন লাগে। কিন্তু সাধারণ উপস্থাপনা হল 2NH₄⁺ + 2e⁻ → 2NH₃। অপশনগুলো দেখে সম্ভবত 2 (যেহেতু সুষম সমীকরণটি প্রক্রিয়াটির জন্য 2 ইলেকট্রন দেখায়)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552474260,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোনটি দুর্বল তড়িৎবিশ্লেষ্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "CH\\(_3\\)COOH",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "H\\(_2\\)SO\\(_4\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "CuSO\\(_4\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "NaCl",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অ্যাসিটিক অ্যাসিড (CH₃COOH) একটি দুর্বল অ্যাসিড। এটি পানিতে আংশিকভাবে আয়নে (CH₃COO⁻ ও H⁺) বিয়োজিত হয়, যা এটিকে একটি দুর্বল তড়িৎবিশ্লেষ্য করে তোলে। অন্যগুলো প্রবল তড়িৎবিশ্লেষ্য।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552474368,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "গলিত সোডিয়াম ক্লোরাইডের তড়িৎবিশ্লেষণের প্রক্রিয়ায়, নিম্নলিখিতগুলোর মধ্যে কোনটি সঠিক অ্যানোড বিক্রিয়া?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Na + e\\(^{-}\\) → Na",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2H\\(^+\\) + 2e\\(^{-}\\) → H\\(_2\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "2O\\(^{2-}\\)-4e\\(^{-}\\) → O\\(_2\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "4OH-4e\\(^{-}\\) → 2H\\(_2\\)O + O\\(_2\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "*গলিত* NaCl-এর তড়িৎবিশ্লেষণে (পানি নেই), আয়নগুলি Na⁺ ও Cl⁻। অ্যানোডে (ধনাত্মক ইলেকট্রোড), জারণ ঘটে। ক্লোরাইড আয়ন (Cl⁻) ক্লোরিন গ্যাসে জারিত হয়: 2Cl⁻ → Cl₂ + 2e⁻। সেই সঠিক অপশনটি তালিকাভুক্ত নেই। অপশন গ অক্সাইড আয়নের জারণের জন্য। কোনোটিই গলিত NaCl-এর জন্য পুরোপুরি মেলে না। তবে, যদি এটি জলীয় NaCl হত, তাহলে অপশন ঘ ঘটতে পারে। প্রশ্নটি বলে \"গলিত,\" তাই আদর্শ উত্তর হল ক্লোরাইড জারণ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552474471,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "NaOH উৎপাদনে কোনটি ব্যবহার করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "NaOH-এর লঘু দ্রবণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পারদ ইলেকট্রোড",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "প্লাটিনাম ইলেকট্রোড",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গলিত NaCl",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সোডিয়াম হাইড্রক্সাইড (NaOH) ও ক্লোরিন উৎপাদনের জন্য পারদ ক্যাথোড কোষে (কাস্টনার-কেলনার প্রক্রিয়া) একটি প্রবাহিত পারদ ক্যাথোড ব্যবহার করা হয়। ক্যাথোডে গঠিত সোডিয়াম ধাতু পারদে দ্রবীভূত হয়ে অ্যামালগাম তৈরি করে, যা পরে পানির সাথে বিক্রিয়া করে NaOH উৎপন্ন করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552474580,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "লবণাক্ত পানির তড়িৎবিশ্লেষণে প্রধানত কী ঘটে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Na",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Cl₂",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "NaOH",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "H₂O",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "লবণাক্ত পানির (ঘন NaCl দ্রবণ) তড়িৎবিশ্লেষণ ক্লোরিন গ্যাস (অ্যানোডে), হাইড্রোজেন গ্যাস (ক্যাথোডে), এবং দ্রবণে সোডিয়াম হাইড্রক্সাইড (NaOH) উৎপাদনের জন্য করা হয়। প্রধান বাণিজ্যিক পণ্য প্রায়শই সোডিয়াম হাইড্রক্সাইড।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552474679,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "পানির তড়িৎবিশ্লেষণে এক মোল অক্সিজেন উৎপাদনে কত মোল ইলেকট্রনের প্রয়োজন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1 mole",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2 mole",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "3 mole",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "4 mole",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পানির তড়িৎবিশ্লেষণের জন্য সুষম অ্যানোড বিক্রিয়া হল: 2H₂O → O₂ + 4H⁺ + 4e⁻ (বা 4OH⁻ → O₂ + 2H₂O + 4e⁻)। এটি দেখায় যে 1 মোল O₂ গ্যাস উৎপাদনের জন্য 4 মোল ইলেকট্রনের প্রয়োজন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552474780,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "পানির তড়িৎবিশ্লেষণে কোনটি ইলেকট্রোড হিসেবে ব্যবহার করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Cu",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Zn",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Pt",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "H\\(_2\\)SO\\(_4\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্লাটিনাম (Pt) প্রায়শই পানির তড়িৎবিশ্লেষণে একটি নিষ্ক্রিয় ইলেকট্রোড হিসেবে ব্যবহার করা হয় কারণ এটি উৎপাদ (অক্সিজেন ও হাইড্রোজেন) বা তড়িৎবিশ্লেষ্যের সাথে বিক্রিয়া করে না।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552474881,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "জ্বালানি কোষে কোনটি সর্বোত্তম জ্বালানি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "H₂",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "O₂",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "N₂",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "CH₄",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "হাইড্রোজেন (H₂) জ্বালানি কোষের জন্য সর্বোত্তম জ্বালানি হিসেবে বিবেচিত কারণ এর জারণে শুধুমাত্র পানি একটি উপজাত হিসাবে উৎপন্ন হয়, যা এটিকে পরিষ্কার ও দক্ষ করে তোলে। এটির ওজন অনুসারে উচ্চ শক্তি ঘনত্বও রয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552474979,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "তড়িৎলেপন কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তড়িৎবিশ্লেষণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গ্যালভানিক কোষে বিক্রিয়া",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তড়িৎবিশ্লেষ্য কোষ দ্বারা তড়িৎলেপন",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অ্যানোডের ক্ষতি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "তড়িৎলেপন একটি প্রক্রিয়া যা একটি তড়িৎবিশ্লেষ্য কোষ ব্যবহার করে অন্য বস্তুর (ক্যাথোড) পৃষ্ঠে ধাতুর একটি পাতলা স্তর জমা করে। অপশন গ সরাসরি এটি বর্ণনা করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552475077,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "লোহার উপর নিকেলের স্তরের জন্য কোন দ্রবণ প্রয়োজন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "FeSO₄",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "CuSO₄",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "NiSO₄",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "CaSO₄",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "লোহার উপর নিকেল তড়িৎলেপন করতে, তড়িৎবিশ্লেষ্য দ্রবণে অবশ্যই লেপন ধাতুর আয়ন থাকতে হবে। নিকেল সালফেট (NiSO₄) দ্রবণ Ni²⁺ আয়ন সরবরাহ করে, যা লোহার বস্তুর (ক্যাথোড) উপর নিকেল ধাতু হিসাবে বিজারিত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552475174,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোনটি পরিবেশ বান্ধব জ্বালানি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অকটেন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মিথেন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিটুমিনাস কয়লা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "হাইড্রোজেন জ্বালানি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "হাইড্রোজেন জ্বালানি, যখন একটি জ্বালানি কোষে ব্যবহার করা হয়, তখন শুধুমাত্র পানি একটি উপজাত হিসাবে উৎপন্ন করে। এটি ব্যবহারের স্থানে গ্রিনহাউস গ্যাস বা দূষক নির্গত করে না, যা এটিকে অত্যন্ত পরিবেশ বান্ধব করে তোলে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552475287,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "বিমান তৈরিতে কোন ধাতু ব্যবহার করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Ca",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Al",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Sn",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Cu",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "অ্যালুমিনিয়াম (Al) ও এর সংকরগুলি বিমান নির্মাণে ব্যাপকভাবে ব্যবহৃত হয় কারণ তারা শক্তিশালী, হালকা ও জারা প্রতিরোধী।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552475388,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "ঘড়ির চেইনের চকচকে ভাবের জন্য কোন ধাতু দায়ী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অ্যালুমিনিয়াম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ক্রোমিয়াম",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "নিকেল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "লোহা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ক্রোমিয়াম (Cr) প্রায়শই ঘড়ির চেইনের মতো বস্তুর উপর তড়িৎলেপন করা হয় কারণ এটি একটি চকচকে, আকর্ষণীয় এবং জারা প্রতিরোধী পৃষ্ঠ প্রদান করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552475595,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "লিথিয়াম ব্যাটারিতে কোনটি ব্যবহার করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "PbO₂",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "MnO₂",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "HgO",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "LiCoO₂",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "লিথিয়াম কোবাল্ট অক্সাইড (LiCoO₂) হল রিচার্জেবল লিথিয়াম-আয়ন ব্যাটারিতে একটি সাধারণ ক্যাথোড পদার্থ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552475700,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "গ্যালভানিক কোষে কোনটি ক্যাথোড?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Fe | Fe²⁺ (aq)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Cu | Cu²⁺ (aq)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Zn | Zn²⁺ (aq)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Ag | Ag⁺ (aq)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "একটি গ্যালভানিক কোষে, ক্যাথোড হল সেই ইলেকট্রোড যেখানে বিজারণ ঘটে। এটি উচ্চতর বিজারণ বিভব (আরও ধনাত্মক বা কম ঋণাত্মক) সহ ইলেকট্রোড। প্রদত্ত অর্ধ-কোষগুলোর মধ্যে, Cu|Cu²⁺ ও Ag|Ag⁺ এর Zn|Zn²⁺ ও Fe|Fe²⁺ এর চেয়ে উচ্চতর বিজারণ বিভব রয়েছে। একটি নির্দিষ্ট কোষ সমন্বয় ছাড়া, এগুলোর যেকোনোটি একটি বেশি প্রতিক্রিয়াশীল অ্যানোডের সাথে জোড়া হয়ে ক্যাথোড হতে পারে। সাধারণত, একটি আদর্শ ড্যানিয়েল কোষে, Cu|Cu²⁺ হল ক্যাথোড। নোটটি বলে \"Galvanic cell will be replaced by daniel cell.\" সুতরাং, একটি ড্যানিয়েল কোষের জন্য (Zn|Zn²⁺ || Cu²⁺|Cu), ক্যাথোড হল Cu|Cu²⁺ (অপশন খ)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552475812,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "লিথিয়াম ব্যাটারিতে কোনটি ব্যবহার করা হয়? (চিত্র 8-17)",
+    "options": [
+      {
+        "label": "a",
+        "text": "Hg₂O",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "LiSiO₂",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "LiCoO₂",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Zn এবং MnO₂",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্রশ্ন 101 এর মত, LiCoO₂ লিথিয়াম-আয়ন ব্যাটারিতে একটি আদর্শ ক্যাথোড পদার্থ। অপশন ঘ একটি জিঙ্ক-কার্বন বা ক্ষারকীয় ব্যাটারির উপাদান বর্ণনা করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552475917,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "শুষ্ক কোষ থেকে কত বৈদ্যুতিক বিভব পাওয়া যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1.0 volt",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "1.5 volt",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "2.0 volt",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "2.5 volt",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "একটি আদর্শ একক জিঙ্ক-কার্বন শুষ্ক কোষ প্রায় 1.5 ভোল্টের একটি তড়িচ্চালক বল (emf) উৎপন্ন করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552476021,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "নিম্নলিখিতগুলোর মধ্যে কোনটি Sn(s) | Sn²⁺ (aq) এর ইলেকট্রোড বিক্রিয়া?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Sn(s) → Sn⁺⁺ (aq) + e⁻",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Sn²⁺ (aq) → Sn(s) + 2e⁻",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Sn(s) → Sn²⁺ (aq) + 2e⁻",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Sn(s) → Sn²⁺ (aq) - 2e⁻",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Sn(s) | Sn²⁺(aq) স্বরলিপিটি একটি অর্ধ-কোষকে উপস্থাপন করে যেখানে কঠিন টিন তার আয়নের সাথে সাম্যাবস্থায় থাকে। জারণের সময় (যদি এই অর্ধ-কোষটি অ্যানোড হিসাবে কাজ করে) যে বিক্রিয়া ঘটে তা হল: Sn(s) → Sn²⁺(aq) + 2e⁻। অপশন গ সঠিকভাবে এই জারণ অর্ধ-বিক্রিয়াটি দেখায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552476124,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "গাড়ির ব্যাটারিতে কোন ধাতু ব্যবহার করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Na",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "K",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Pb",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Mn",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "গাড়ির ব্যাটারি সীসা-অ্যাসিড ব্যাটারি। তারা অ্যানোড ও ক্যাথোড উভয়েই (বিভিন্ন আকারে: Pb ও PbO₂) সক্রিয় পদার্থ হিসেবে সীসা (Pb) ব্যবহার করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552476229,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "শুষ্ক কোষে MnO₂ এর জারণ দ্বারা কী উৎপন্ন হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "MnO₂",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Mn₂O",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Mn₃O₂",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Mn₂O₃",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "একটি শুষ্ক কোষে, ম্যাঙ্গানিজ ডাই অক্সাইড (MnO₂) একটি ডিপোলারাইজার হিসাবে কাজ করে। এটি নিজেই বিজারিত হয়, ইলেকট্রন গ্রহণ করে। যাইহোক, প্রশ্নটি MnO₂ এর *জারণ* সম্পর্কে জিজ্ঞাসা করে, যা প্রাথমিক প্রক্রিয়া নয়। সম্ভবত এটি একটি পার্শ্ব বিক্রিয়া বা একটি ভিন্ন কোষ বোঝায়। কিছু প্রসঙ্গে, MnO₂ জারিত হতে পারে। ক্ষারকীয় কোষে MnO₂ বিজারণের একটি সাধারণ পণ্য হল Mn₂O₃। সুতরাং, Mn₂O₃ (অপশন ঘ) একটি সম্ভাব্য পণ্য।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552476343,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোন কোষকে ব্যাটারি বলা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শুষ্ক কোষ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "LP.S.",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গ্যালভানিক কোষ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সঞ্চিত কোষ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "একটি ব্যাটারি হল এক বা একাধিক গ্যালভানিক (ভোল্টাইক) কোষের সংকলন যা একটি কাঙ্খিত ভোল্টেজ ও কারেন্ট সরবরাহ করার জন্য একসাথে সংযুক্ত থাকে। সুতরাং, একটি গ্যালভানিক কোষ হল একটি ব্যাটারির মৌলিক একক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552476457,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "শুষ্ক কোষে তড়িৎবিশ্লেষ্য কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "MnO₂",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "MnCl₂",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ZnCl₂",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "NH₄Cl + ZnCl₂",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "একটি সাধারণ জিঙ্ক-কার্বন শুষ্ক কোষে, তড়িৎবিশ্লেষ্য হল একটি আর্দ্র পেস্ট যা প্রাথমিকভাবে অ্যামোনিয়াম ক্লোরাইড (NH₄Cl) ও জিঙ্ক ক্লোরাইড (ZnCl₂) দিয়ে তৈরি।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552476560,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "শুষ্ক কোষে কোনটি বিজারিত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দস্তা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অ্যামোনিয়াম আয়ন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ম্যাঙ্গানিজ ডাই অক্সাইড",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কার্বন রড",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "একটি শুষ্ক কোষে, দস্তা অ্যানোড জারিত হয় (ইলেকট্রন হারায়)। ইলেকট্রনগুলি ক্যাথোডে প্রবাহিত হয়, যেখানে ম্যাঙ্গানিজ ডাই অক্সাইড (MnO₂) বিজারিত হয় (ইলেকট্রন লাভ করে)। কার্বন রড শুধুমাত্র একটি নিষ্ক্রিয় পরিবাহী।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552476669,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "ড্যানিয়েল কোষে অ্যানোড হিসেবে কোনটি ব্যবহার করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Ag/Ag⁺",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Cu/Cu²⁺",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Zn/Zn²⁺",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Sn/Sn²⁺",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "একটি ড্যানিয়েল কোষে, দস্তা (Zn) বেশি প্রতিক্রিয়াশীল ধাতু এবং অ্যানোড হিসেবে কাজ করে, যেখানে জারণ ঘটে: Zn → Zn²⁺ + 2e⁻।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552476770,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "92 U + 0ⁿ → 56X + 36Kr + 9µ⁺ heat energy, উপরোক্ত বিক্রিয়ায় A-এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "140",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "141",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "142",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "143",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বিক্রিয়াটি ইউরেনিয়াম-235 এর নিউক্লীয় ফিশন বর্ণনা করে। ভর সংখ্যার (উপরিসূচক) যোগফল উভয় পাশে সমান হতে হবে। বাম দিক: 235 (U) + 1 (n) = 236. ডান দিক: A (X) + 90 (Kr) + 3*1 (3 নিউট্রন) = A + 93. সুতরাং, A + 93 = 236 => A = 143. কিন্তু 143 অপশন ঘ. মুদ্রণপ্রমাদ থাকতে পারে। যদি এটি ¹₀n (নিউট্রন), উপরিসূচক 1 হয়। উৎপাদগুলি 36Kr দেখায়, সম্ভবত ⁹⁰Kr. তাহলে A + 90 + 3 = 236, A=143. যদি Kr হয় ⁸⁹Kr, তাহলে A=144. প্রদত্ত অপশন, 143 উপস্থিত। প্রশ্নটি বলে \"9µ⁺\" যার অর্থ 3 নিউট্রন হতে পারে (µ নিউট্রন হতে পারে)। সুতরাং A=143. কিন্তু অপশন খ হল 141. সম্ভবত Kr হল ⁹²Kr? দেখা যাক: U-235 এর আদর্শ ফিশন প্রায়শই Ba-141 ও Kr-92 উৎপন্ন করে। প্রশ্নে 56X (Ba এর পারমাণবিক সংখ্যা 56) ও 36Kr রয়েছে। সুতরাং, সম্ভবত X হল ¹⁴¹Ba এবং Kr হল ⁹²Kr. তাহলে A=141. সুতরাং, সঠিক উত্তর হল খ) 141.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552476880,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "হালকা পানিতে কীভাবে বিদ্যুৎ উৎপন্ন হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফিশন বিক্রিয়া",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ফিউশন বিক্রিয়া",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রাসায়নিক বিক্রিয়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জারণ-বিজারণ বিক্রিয়া",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\"হালকা পানি\" সাধারণত সাধারণ পানি (H₂O) বোঝায় ভারী পানি (D₂O) এর বিপরীতে। হালকা পানি চুল্লিগুলি হল নিউক্লিয়ার চুল্লি যা ঠান্ডা ও মডারেটর হিসেবে সাধারণ পানি ব্যবহার করে। তারা নিউক্লীয় ফিশন বিক্রিয়া থেকে তাপ ব্যবহার করে বিদ্যুৎ উৎপন্ন করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552476986,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "যেকোনো মৌলের নিউক্লিয়াসে উপস্থিত মৌলিক কণার সর্বনিম্ন সংখ্যা কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "2",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "3",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "4",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "একটি পরমাণুর নিউক্লিয়াসে প্রোটন ও নিউট্রন থাকে। হালকা মৌল, হাইড্রোজেন-1 (প্রোটিয়াম), এর নিউক্লিয়াসে শুধুমাত্র একটি প্রোটন (এবং কোনো নিউট্রন নেই) থাকে। অতএব, নিউক্লিয়াসে মৌলিক কণার সর্বনিম্ন সংখ্যা হল এক (একটি একক প্রোটন)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552477098,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "চেরনোবিল দুর্ঘটনা কোন বছর ঘটেছিল? \\( (Aldryan Ucheko Mahfiyamih Bidyalinya, Dhaka) \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "1986",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "1990",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "1976",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "1985",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "চেরনোবিল নিউক্লিয়ার বিপর্যয় ঘটেছিল ২৬ এপ্রিল, ১৯৮৬ সালে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552477198,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "\\( ^{235}U + 0 \\rightarrow ^{90}X + ^{10}Y + 3 \\rightarrow 0 \\) + Energy; \\( ^{90}X \\) কি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Kr",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Sr",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Rb",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Cs",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ইউরেনিয়াম-235 এর একটি সাধারণ ফিশন পথে, এটি স্ট্রনশিয়াম-90 (⁹⁰Sr, পারমাণবিক সংখ্যা 38) ও জেনন-143 (¹⁴³Xe, পারমাণবিক সংখ্যা 54) এ বিভক্ত হয়, প্লাস নিউট্রন। ভর সংখ্যা 90 সহ পণ্যটি প্রায়শই স্ট্রনশিয়াম-90 (Sr)। অপশনে Sr রয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552477313,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "ইউরেনিয়াম-235F এর ভাঙনে কোনটি উৎপন্ন হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "থোরিয়াম-232",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জেনন-145",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জেনন-143",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "থোরিয়াম – 236",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ইউরেনিয়াম-235 ফিশনের মধ্য দিয়ে যায়, দুটি ছোট নিউক্লিয়াসে (ফিশন ফ্র্যাগমেন্ট) বিভক্ত হয়ে। জেনন-143 একটি সাধারণ ফিশন পণ্য।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552477425,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "বিকিরণে কোন শক্তি নির্গত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তাপ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "আলো",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রাসায়নিক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিদ্যুৎ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "তেজস্ক্রিয় পদার্থ বা নিউক্লিয়ার বিক্রিয়া থেকে বিকিরণ বিভিন্ন রূপের শক্তি নির্গত করতে পারে, যার মধ্যে রয়েছে কণাগুলির গতিশক্তি, গামা রশ্মি (আলো/তড়িৎচুম্বকীয় বিকিরণের একটি রূপ), এবং তাপ। সবচেয়ে সরাসরি রূপগুলি হল কণা ও তড়িৎচুম্বকীয় বিকিরণ, যা শেষ পর্যন্ত তাপ উৎপন্ন করতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552477532,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোন ধরনের বিক্রিয়া হল বিকিরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফিশন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফিউশন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নিউক্লিয়ার",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ঘনত্ব দ্বারা প্রভাবিত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রসায়ন/পদার্থবিদ্যার প্রসঙ্গে, বিকিরণ সাধারণত একটি অস্থিতিশীল পারমাণবিক নিউক্লিয়াস থেকে কণা বা শক্তি নির্গত হওয়া বোঝায়। এটি একটি নিউক্লিয়ার বিক্রিয়া (বিশেষভাবে, তেজস্ক্রিয় ক্ষয়), ঘনত্ব দ্বারা প্রভাবিত একটি রাসায়নিক বিক্রিয়া নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552477861,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "ফিশন কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তাপউৎপাদী বিক্রিয়া",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "জারণ বিক্রিয়া",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তাপহারী বিক্রিয়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সংযোজন বিক্রিয়া",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "নিউক্লীয় ফিশন হল একটি ভারী নিউক্লিয়াসের হালকা নিউক্লিয়াসে বিভক্ত হওয়া, প্রচুর পরিমাণে শক্তি নির্গত হওয়ার সাথে সাথে। এটি একটি তাপউৎপাদী প্রক্রিয়া (শক্তি নির্গত করে)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552478366,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "Pt ইলেকট্রোড ব্যবহার করে ঘন NaCl দ্রবণের তড়িৎবিশ্লেষণের সময় নিম্নলিখিতগুলোর মধ্যে কোনটি উৎপন্ন হয় না? \\( (RAUK Utava Model College, Dhaka) \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "Na",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "NaOH",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "H₂",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Cl₂",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "নিষ্ক্রিয় ইলেকট্রোড ব্যবহার করে ঘন জলীয় সোডিয়াম ক্লোরাইড (লবণাক্ত পানি) এর তড়িৎবিশ্লেষণে, অ্যানোডে ক্লোরিন গ্যাস (Cl₂), ক্যাথোডে হাইড্রোজেন গ্যাস (H₂) উৎপন্ন হয় এবং দ্রবণে সোডিয়াম হাইড্রক্সাইড (NaOH) থাকে। সোডিয়াম ধাতু (Na) উৎপন্ন হয় না কারণ Na⁺ আয়নের তুলনায় পানি বিজারিত হয়। প্রদত্ত ব্যাখ্যা এটি নিশ্চিত করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552478748,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "জ্বালানি কোষে কোনটি জারিত হয়? \\( (Shabeed Bir Utiam LL. Arwar Giri College, Dhaka) \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "N",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "H",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "C",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "O",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "একটি হাইড্রোজেন জ্বালানি কোষে, হাইড্রোজেন গ্যাস (H₂) অ্যানোডে জারিত হয়: H₂ → 2H⁺ + 2e⁻।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552478862,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোন সমীকরণটি একটি বিক্রিয়া দেখায় যা প্রকৃতপক্ষে ঘটবে? \\( (Benjadzah International School and College, DOHS, Mohabhai Dhaka) \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "2MgO + C → CO₂ + Mg",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "MgO + Cu → CuO + Mg",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "PbO + Zn → ZnO + Pb",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ZnO + H₂ → H₂O + Zn",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "একটি বেশি প্রতিক্রিয়াশীল ধাতু কম প্রতিক্রিয়াশীল ধাতুকে তার অক্সাইড থেকে স্থানচ্যুত করতে পারে। সক্রিয়তা সিরিজ থেকে, জিংক (Zn) সীসা (Pb) এর চেয়ে বেশি প্রতিক্রিয়াশীল, তাই Zn PbO কে Pb তে বিজারিত করতে পারে এবং নিজে ZnO হয়ে যেতে পারে। অন্য বিক্রিয়াগুলি সম্ভব নয় কারণ বিজারক (C, Cu, H₂) যে ধাতুকে (Mg, Zn) বিজারিত করতে চায় তার চেয়ে কম প্রতিক্রিয়াশীল। প্রদত্ত ব্যাখ্যা এটি নিশ্চিত করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552478965,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কোন আয়নটি প্রথমে বিজারিত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Zn²⁺",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Cu²⁺",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Al³⁺",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Ca²⁺",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "তড়িৎবিশ্লেষণের সময়, সর্বোচ্চ বিজারণ বিভব (সবচেয়ে সহজে বিজারিত) সহ ক্যাটায়নটি প্রথমে বিজারিত হয়। এগুলোর মধ্যে, Cu²⁺ এর সর্বোচ্চ বিজারণ বিভব রয়েছে, তাই এটি প্রথমে বিজারিত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552479074,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "তড়িৎবিশ্লেষণের সময় ক্যাথোডে কোন বিক্রিয়া ঘটে? \\( (BIAN Laboratory School & College, Bogura) \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "H + H → H₂",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "SO₄²⁻ → SO₄ + 2e⁻",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "OH⁻ → OH + e⁻",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "4H⁺ + 4e⁻ → 2H₂",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ক্যাথোড হল যেখানে বিজারণ (ইলেকট্রন লাভ) ঘটে। একটি জলীয় অম্ল দ্রবণের তড়িৎবিশ্লেষণে, হাইড্রোজেন আয়ন (H⁺) হাইড্রোজেন গ্যাসে বিজারিত হয়: 2H⁺ + 2e⁻ → H₂, বা যেমন লেখা হয়েছে, 4H⁺ + 4e⁻ → 2H₂। অপশন ক পরমাণুর সমন্বয় দেখায়, ইলেকট্রন লাভের ধাপ নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552479206,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "সমযোজী যৌগের তুলনায়, আয়নিক যৌগের বেশি থাকে –\ni. গলনাঙ্ক\nii. স্ফুটনাঙ্ক\niii. যৌগগুলোর আকর্ষণ শক্তি",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "আয়নিক যৌগগুলির সাধারণত উচ্চ গলনাঙ্ক ও স্ফুটনাঙ্ক থাকে কারণ আয়নগুলিকে একটি জালিতে ধরে রাখা শক্ত ইলেক্ট্রোস্ট্যাটিক শক্তি (আয়নিক বন্ধন) এর কারণে। এই শক্তিশালী বলটিকে উচ্চ জালি শক্তি (আকর্ষণ শক্তি)ও বলা হয়। সুতরাং, তিনটি বিবৃতি সঠিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552479314,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "যদি Cu মৌল ও Ag মৌলের ইলেকট্রোড নিয়ে গ্যালভানিক কোষ তৈরি করা হয় তবে— \\( (Paparentia Nova School & College, Dhaka) \\)\ni. Cu মৌলের ইলেকট্রোডটি অ্যানোড হিসাবে কাজ করে।\nii. Ag মৌলের ইলেকট্রোডটি ক্যাথোড হিসাবে কাজ করে।\niii. Cu মৌলের ইলেকট্রোডে জারণ ঘটবে।",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Cu ও Ag দিয়ে তৈরি গ্যালভানিক কোষে, রূপা (Ag) এর তামা (Cu) এর চেয়ে উচ্চতর বিজারণ বিভব রয়েছে। অতএব, Ag ক্যাথোড হিসাবে কাজ করবে (বিজারণ ঘটে) এবং Cu অ্যানোড হিসাবে কাজ করবে (জারণ ঘটে)। সুতরাং, বিবৃতি ii ও iii সঠিক। বিবৃতি i ভুল কারণ Cu হল অ্যানোড, Ag নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552479419,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "গ্যালভানিক কোষে—\ni. Zn একটি বিজারক হিসেবে কাজ করে।\nii. ক্যাথোডে Cu জমা হয়।\niii. লবণ সেতুতে KCl ব্যবহার করা হয়।",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "একটি আদর্শ ড্যানিয়েল কোষে (Zn-Cu): i. Zn বিজারক এজেন্ট (বিজারক) হিসাবে কাজ করে কারণ এটি জারিত হয়। ii. Cu²⁺ আয়ন বিজারিত হয়ে Cu ধাতু হিসাবে ক্যাথোডে জমা হয়। iii. পটাসিয়াম ক্লোরাইড (KCl) একটি সাধারণ নিষ্ক্রিয় তড়িৎবিশ্লেষ্য যা সার্কিট সম্পূর্ণ করতে লবণ সেতুতে ব্যবহৃত হয়। সবগুলি বিবৃতি সঠিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552479524,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "Zn/Zn\\(^2+\\)(aq) || Cu\\(^2+\\)(aq)/Cu কোষে—\ni. ইলেকট্রোড বিক্রিয়া স্বতঃস্ফূর্তভাবে ঘটে।\nii. রাসায়নিক শক্তি বিদ্যুৎ শক্তিতে রূপান্তরিত হয়।\niii. Cu/Cu\\(^2+\\)(aq) ইলেকট্রোড একটি অ্যানোড হিসেবে ব্যবহার করা হয়।",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "একটি Zn-Cu গ্যালভানিক কোষে: i. বিক্রিয়াগুলি (Zn জারণ, Cu²⁺ বিজারণ) স্বতঃস্ফূর্তভাবে ঘটে। ii. জারণ-বিজারণ বিক্রিয়া থেকে রাসায়নিক শক্তি বিদ্যুৎ শক্তিতে রূপান্তরিত হয়। iii. Cu/Cu²⁺ ইলেকট্রোড হল ক্যাথোড (বিজারণ স্থল), অ্যানোড নয়। সুতরাং, i ও ii সঠিক; iii ভুল।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552479637,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "ভারী পানি চুল্লি—\ni. বিদ্যুৎ উৎপাদনে ব্যবহৃত হয়\nii. ফিশন বিক্রিয়া ঘটে\niii. এটি একটি নিউক্লিয়ার চুল্লি",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "একটি ভারী পানি চুল্লি (বা ফার্নেস) ভারী পানি (D₂O) কে মডারেটর হিসেবে ব্যবহার করে। এটি এক ধরনের নিউক্লিয়ার চুল্লি যেখানে: i. নিউক্লীয় ফিশন তাপ উৎপন্ন করতে ব্যবহৃত হয়, যা বিদ্যুৎ উৎপন্ন করে। ii. ইউরেনিয়াম বা প্লুটোনিয়ামের ফিশন বিক্রিয়া ঘটে। iii. এটি প্রকৃতপক্ষে একটি নিউক্লিয়ার চুল্লি। সবগুলি সঠিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552479742,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "মৌলের তেজস্ক্রিয়তা হল—\ni. অস্থিতিশীল আইসোটোপের বিকীর্ণ রশ্মি\nii. ইলেকট্রনের বিকীর্ণ শক্তি\niii. নিউক্লিয়ার বিক্রিয়ার ফলাফল",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "তেজস্ক্রিয়তা হল: i. অস্থিতিশীল পারমাণবিক নিউক্লিয়াস থেকে বিকিরণ (আলফা, বিটা, গামা রশ্মি) নির্গত হওয়া। iii. এটি স্বতঃস্ফূর্ত নিউক্লিয়ার বিক্রিয়া (ক্ষয়) থেকে উদ্ভূত হয়। বিবৃতি ii আংশিক সত্য (বিটা বিকিরণে ইলেকট্রন জড়িত), কিন্তু সমস্ত তেজস্ক্রিয়তা ইলেকট্রনের বিকীর্ণ শক্তি নয় (আলফা হিলিয়াম নিউক্লিয়াস, গামা ফোটন)। এটি আরও সঠিকভাবে বলতে গেলে নিউক্লিয়াস থেকে বিকিরণ। সুতরাং, i ও iii স্পষ্টতই সঠিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552479847,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "\\( \\frac{1}{92} U + q_1 \\rightarrow \\frac{141}{56} X^3 + 36Y^4 + 3q_1 \\) + বিপুল শক্তি বিক্রিয়ায়—(D.B.-24)\ni. Y একটি নিষ্ক্রিয় মৌল\nii. X হল গ্রুপ নং 2-এর একটি মৌল\niii. নিউক্লীয় ফিশন ঘটেছে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "এটি ইউরেনিয়াম-235 এর নিউক্লীয় ফিশন উপস্থাপন করে। i. Y হল ক্রিপ্টন (Kr, পারমাণবিক সংখ্যা 36)। ক্রিপ্টন একটি নোবেল গ্যাস (গ্রুপ 18), যা নিষ্ক্রিয়। সুতরাং, i সঠিক। ii. X হল বেরিয়াম (Ba, পারমাণবিক সংখ্যা 56)। বেরিয়াম পর্যায় সারণীর গ্রুপ 2-এ রয়েছে। সুতরাং, ii সঠিক। iii. বিক্রিয়াটি প্রকৃতপক্ষে একটি নিউক্লীয় ফিশন। সুতরাং, তিনটি সঠিক। উত্তর হওয়া উচিত ঘ) i, ii & iii. কিন্তু অপশনগুলো জোড়ায় জোড়ায়। সম্ভবত প্রশ্নে মুদ্রণপ্রমাদ আছে। বিষয়বস্তু অনুযায়ী, i, ii, iii সবই সত্য বলে মনে হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552479952,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "ফিউশন হল—\ni. এক ধরনের অণুজীব\nii. সূর্যে বিক্রিয়া\niii. ছোট নিউক্লিয়াস একত্রিত করে বড় নিউক্লিয়াস গঠন",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "নিউক্লীয় ফিউশন হল: ii. সূর্য ও তারাগুলিতে শক্তি সরবরাহকারী প্রাথমিক বিক্রিয়া। iii. যে প্রক্রিয়ায় দুটি হালকা পারমাণবিক নিউক্লিয়াস মিলিত হয়ে একটি ভারী নিউক্লিয়াস গঠন করে। বিবৃতি i সম্পূর্ণভাবে অপ্রাসঙ্গিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552480050,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "গ্যালভানিক কোষের ক্ষেত্রে—(RADUK Utara Model College, Dhaka)\ni. অ্যানোড ধনাত্মক\nii. বিদ্যুৎ উৎপন্ন করে\niii. লবণ সেতু ব্যবহার করা হয়",
+    "options": [
+      {
+        "label": "a",
+        "text": "i, ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "একটি গ্যালভানিক কোষে: i. অ্যানোড হল ঋণাত্মক (এটি সার্কিটে ইলেকট্রন পাঠায়)। সাবধান: একটি গ্যালভানিক কোষে, অ্যানোড হল সেই ইলেকট্রোড যেখানে জারণ ঘটে। এটি ইলেকট্রনের উৎস, তাই এটি ক্যাথোডের তুলনায় ঋণাত্মক চার্জযুক্ত। সুতরাং, বিবৃতি i (\"অ্যানোড ধনাত্মক\") FALSE। ক্যাথোড ধনাত্মক। সুতরাং, শুধুমাত্র ii ও iii সঠিক। কিন্তু অপশন ক) i,ii এবং খ) i,ii,iii. যদি i মিথ্যা হয় তবে কোনোটিই খাপ খায় না। সম্ভবত মুদ্রণপ্রমাদ বা ভিন্ন রীতি? তড়িৎবিশ্লেষ্য কোষে, অ্যানোড ধনাত্মক। গ্যালভানিক কোষে, এটি ঋণাত্মক। সুতরাং, সম্ভবত i ভুল।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552480157,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "শুষ্ক কোষে তড়িৎবিশ্লেষ্য হিসেবে কোন পদার্থ ব্যবহার করা হয় না? \\( (Bangkok International School and College, DONS, Mohallai Dhaka) \\)\ni. MnO\\(_2\\)\nii. NH\\(_4\\)Cl\niii. ZnCl\\(_2\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "i",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "-ii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i, ii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "একটি শুষ্ক কোষে, তড়িৎবিশ্লেষ্য হল NH₄Cl ও ZnCl₂ সমন্বিত আর্দ্র পেস্ট। ম্যাঙ্গানিজ ডাই অক্সাইড (MnO₂) হল ডিপোলারাইজার (ক্যাথোড পদার্থ), তড়িৎবিশ্লেষ্যের অংশ নয়। সুতরাং, শুধুমাত্র i (MnO₂) তড়িৎবিশ্লেষ্য হিসেবে ব্যবহৃত হয় না।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552480262,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "এই বিক্রিয়ায়—\ni. তাপ বিকশিত হয়\nii. চাপ প্রয়োগ করে অগ্রবর্তী বিক্রিয়ার হার বাড়ানো হয়\niii. জারণ ও বিজারণ উভয়ই ঘটে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "(প্রশ্নটি অসম্পূর্ণ; কোনো বিক্রিয়া নির্দিষ্ট করা নেই। নির্ধারণ করা যাবে না।)",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552480386,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "সোডিয়াম ক্লোরাইড একটি X যৌগ\nউদ্দীপকে X কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আয়নিক",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সমযোজী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বন্ধন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অ্যারে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সোডিয়াম ক্লোরাইড (NaCl) হল একটি আয়নিক যৌগের একটি ক্লাসিক উদাহরণ, সোডিয়াম থেকে ক্লোরিনে ইলেকট্রন স্থানান্তরের মাধ্যমে গঠিত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552480493,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "X যৌগ—\ni. উচ্চ গলনাঙ্ক ও স্ফুটনাঙ্ক আছে\nii. খাদ্য লবণ\niii. ঘর তাপমাত্রায় কঠিন",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সোডিয়াম ক্লোরাইড (আয়নিক যৌগ): i. শক্তিশালী আয়নিক বন্ধনের কারণে উচ্চ গলনাঙ্ক ও স্ফুটনাঙ্ক আছে। ii. এটি সাধারণ টেবিল লবণ যা খাবারে ব্যবহৃত হয়। iii. এটি ঘর তাপমাত্রায় কঠিন। সবগুলি সঠিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552480594,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "\\[ \\text{Cosl} + O_2 \\rightarrow X(g) \\]\nX এর সংকেত কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "H\\(_2\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "H\\(_2\\)O",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "CH\\(_4\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "CO\\(_2\\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\"Cosl\" সম্ভবত \"Coal\" এর একটি মুদ্রণপ্রমাদ। কয়লা প্রাথমত কার্বন। যখন কয়লা (কার্বন) অক্সিজেনে সম্পূর্ণরূপে জ্বলে, তখন এটি কার্বন ডাই অক্সাইড গ্যাস (CO₂) উৎপন্ন করে। ব্যাখ্যা এটি নিশ্চিত করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552480695,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "উদ্দীপকের ক্ষেত্রে—\ni. বিক্রিয়ার ΔH ঋণাত্মক\nii. উৎপাদের স্থিতিশক্তি > বিক্রিয়কের মোট স্থিতিশক্তি\niii. X এর আন্তঃআণবিক শক্তি কম",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কয়লার দহনের জন্য (C + O₂ → CO₂): i. এটি অতি তাপউৎপাদী, তাই ΔH ঋণাত্মক। ii. উৎপাদ (CO₂) বিক্রিয়কের চেয়ে বেশি স্থিতিশীল (কম শক্তি আছে), তাই উৎপাদের স্থিতিশক্তি বিক্রিয়কের স্থিতিশক্তির চেয়ে কম, বেশি নয়। সুতরাং ii মিথ্যা। iii. X হল CO₂, ঘর তাপমাত্রায় একটি গ্যাস। গ্যাসের কঠিন বা তরলের তুলনায় কম আন্তঃআণবিক শক্তি (শক্তি) থাকে। সুতরাং iii সত্য। অতএব, i ও iii সঠিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552480799,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "CH₃CH₂(g)+ Cl₂(g) → CH₃-CH₂Cl(g) + X(g)\nবিক্রিয়ার বন্ধন ভাঙার জন্য মোট শক্তি কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "244kJ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "414kJ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "658kJ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "757kJ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বন্ধন ভাঙার শক্তি বের করতে, বিক্রিয়কগুলিতে ভাঙা বন্ধনের শক্তির যোগফল করুন। ইথেনে (CH₃CH₃), একটি C-H বন্ধন ভাঙে (414 kJ/mol, ধরে নিলাম ইথাইল র্যাডিকেল গঠনের জন্য একটি C-H বন্ধন ভাঙে, তারপর Cl আক্রমণ করে)। আসলে, বিক্রিয়াটি হ্যালোজেনেশন: C₂H₆ + Cl₂ → C₂H₅Cl + HCl. সুতরাং, একটি C-H বন্ধন ও একটি Cl-Cl বন্ধন ভাঙে। শক্তি = C-H (414) + Cl-Cl (244) = 658 kJ। অপশন গ.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552480911,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "X যৌগের পরমাণুগুলোর মধ্যে বন্ধন শক্তি কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "414kJ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "431kJ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "658kJ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "464kJ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "X হল বিক্রিয়ায় উৎপন্ন HCl (হাইড্রোজেন ক্লোরাইড)। H-Cl এর জন্য বন্ধন শক্তি হল 431 kJ/mol।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552481046,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "নিম্নলিখিত তথ্যের উপর ভিত্তি করে ১৬৬ ও ১৬৭ নং প্রশ্নের উত্তর দিন:\nCH\\(_4\\) + 4Cl\\(_2\\) = CCl\\(_4\\) + 4HCl; ΔH = X\nX-এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-99 kJ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "198 kJ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "297 kJ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-396 kJ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বন্ধন শক্তি ব্যবহার করে গণনা করুন (সাধারণ মান: C-H=414, Cl-Cl=244, C-Cl=326, H-Cl=431)।\nভাঙা বন্ধন: 4 C-H & 4 Cl-Cl = (4*414)+(4*244)=1656+976=2632 kJ.\nগঠিত বন্ধন: 4 C-Cl & 4 H-Cl = (4*326)+(4*431)=1304+1724=3028 kJ.\nΔH = 2632 - 3028 = -396 kJ.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552481179,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "নিম্নলিখিতগুলোর মধ্যে কোনগুলি সঠিক?\ni. CH\\(_4\\) এর দহনের তাপ 890 kJ\nii. এটি প্রতিস্থাপন বিক্রিয়া\niii. CCl\\(_4\\) এর আকৃতি চতুস্তলকীয়",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "i. সঠিক, CH₄ এর ΔH_comb ≈ -890 kJ/mol. ii. সঠিক, মিথেন ক্লোরিনেশন একটি প্রতিস্থাপন বিক্রিয়া। iii. সঠিক, CCl₄ এর একটি চতুস্তলকীয় আণবিক গঠন রয়েছে। সবগুলি সঠিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552481323,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "Zn(s) + CuSO\\(_4\\)(aq) → X(aq) + Cu(s)\nএই বিক্রিয়ায় X কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ZnSO\\(_4\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Zn\\(^{2+}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "SO\\(_4^{2-}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ZnSO\\(_3\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এটি একটি একক স্থানচ্যুতি বিক্রিয়া। দস্তা কপার সালফেট থেকে তামাকে স্থানচ্যুত করে, জিংক সালফেট (ZnSO₄) ও তামা ধাতু গঠন করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552481460,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "এই বিক্রিয়ায় রাসায়নিক শক্তি কোন শক্তিতে রূপান্তরিত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তাপ শক্তি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বিদ্যুৎ শক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রাসায়নিক শক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "যান্ত্রিক শক্তি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বিক্রিয়া Zn + CuSO₄ → ZnSO₄ + Cu তাপউৎপাদী; এটি তাপ নির্গত করে। রাসায়নিক শক্তি তাপশক্তিতে রূপান্তরিত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552481605,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "কেরোসিন একটি জ্বলনশীল পদার্থ। এটি জ্বালানোর পর নিম্নলিখিত বিক্রিয়া ঘটে কেরোসিন → কার্বন ডাই অক্সাইড + তাপ + আলো + পানি\nএই বিক্রিয়ায় কী করা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রাসায়নিক পরিবর্তন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ভৌত পরিবর্তন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জারণ - বিজারণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জলবিশ্লেষণ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কেরোসিন জ্বালানো একটি রাসায়নিক পরিবর্তন (নতুন পদার্থ তৈরি হয়)। এটি একটি জারণ-বিজারণ (রেডক্স) বিক্রিয়াও বটে যেখানে কেরোসিন অক্সিজেন দ্বারা জারিত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552481706,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "এই বিক্রিয়ায় -\ni. অক্সিজেন প্রয়োজন\nii. দহন বিক্রিয়া ঘটে\niii. তাপ ও আলো তড়িৎচুম্বকীয় রশ্মি হিসাবে বিচ্ছুরিত হয়",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i, ii এবং iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "দহনের জন্য: i. অক্সিজেন প্রয়োজন। ii. এটি একটি দহন বিক্রিয়া। iii. তাপ ও আলো হল তড়িৎচুম্বকীয় বিকিরণের রূপ। সবগুলি সঠিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552481813,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "6CO\\(_2\\) + 12H\\(_2\\)O → C\\(_6\\)H\\(_{12}\\)O\\(_6\\) + 6O\\(_2\\) + 6H\\(_2\\)O\nএই বিক্রিয়ায় কোন ধরনের শক্তি উৎপন্ন হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তাপ শক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রাসায়নিক শক্তি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বিদ্যুৎ শক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "যান্ত্রিক শক্তি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "এটি সালোকসংশ্লেষণ সমীকরণ। আলোক শক্তি শোষিত হয় এবং গ্লুকোজে (C₆H₁₂O₆) সঞ্চিত রাসায়নিক শক্তিতে রূপান্তরিত হয়। সুতরাং, রাসায়নিক শক্তি উৎপন্ন হয় (সঞ্চিত)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552481919,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "এই বিক্রিয়ায় ইমপ্যাক্টর হিসেবে কোনটি ব্যবহার করা হয়?\ni. সূর্যালোক\nii. ক্লোরোফিল\niii. বাতাস",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i, ii এবং iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সালোকসংশ্লেষণের জন্য, সূর্যালোক (শক্তির উৎস) এবং ক্লোরোফিল (আলো শোষণকারী রঞ্জক) অপরিহার্য। বাতাস কার্বন ডাই অক্সাইড সরবরাহ করে, কিন্তু \"ইমপ্যাক্টর\" সম্ভবত \"ফ্যাক্টর\" বা \"ইনপুট\" বোঝায়। সূর্যালোক ও ক্লোরোফিল সরাসরি অভিনেতা। বাতাস CO₂ এর উৎস, কিন্তু সাধারণত \"ইমপ্যাক্টর\" বলা হয় না। সম্ভবত i এবং ii.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552482019,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "X একটি গ্যাস যা বৃষ্টির পানির সাথে বিক্রিয়া করে H\\(_2\\)CO\\(_3\\) উৎপন্ন করে।\nএর মধ্যে কোনটি X গ্যাস?",
+    "options": [
+      {
+        "label": "a",
+        "text": "O\\(_3\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "O\\(_2\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "H\\(_2\\)O",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "CO\\(_2\\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কার্বন ডাই অক্সাইড (CO₂) বৃষ্টির পানিতে দ্রবীভূত হয়ে কার্বনিক অ্যাসিড গঠন করে: CO₂ + H₂O ⇌ H₂CO₃.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552482127,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "X যৌগ —\ni. অম্ল বৃষ্টির জন্য দায়ী\nii. গাছের জন্য জীবনরক্ষাকারী\niii. পরিবেশের ক্ষতি করে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "CO₂: i. অম্ল বৃষ্টিতে অবদান রাখে (কার্বনিক অ্যাসিড দুর্বল অম্ল বৃষ্টি)। ii. গাছের সালোকসংশ্লেষণের জন্য CO₂ প্রয়োজন (জীবনরক্ষাকারী)। iii. জ্বালানি পোড়ানোর অতিরিক্ত CO₂ গ্রিনহাউস প্রভাবের মাধ্যমে পরিবেশের ক্ষতি করে। প্রসঙ্গের উপর নির্ভর করে সবগুলি সত্য হতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552482231,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "4X + 2H\\(_2\\)O + O\\(_2\\) → 4HNO\\(_3\\)\nনিম্নলিখিতগুলোর মধ্যে কোনটি X?",
+    "options": [
+      {
+        "label": "a",
+        "text": "SO\\(_2\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "CO\\(_2\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "SO\\(_3\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "NO\\(_2\\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "নাইট্রোজেন ডাই অক্সাইড (NO₂) পানি ও অক্সিজেনের সাথে বিক্রিয়া করে নাইট্রিক অ্যাসিড (HNO₃) গঠন করে: 4NO₂ + 2H₂O + O₂ → 4HNO₃.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552482331,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "উদ্দীপকের X —\ni. অম্ল বৃষ্টির বিক্রিয়ায় অংশগ্রহণ করে\nii. আলোক রাসায়নিক বিক্রিয়ায় অংশগ্রহণ করে\niii. পরিবেশের ক্ষতি করে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "NO₂ অম্ল বৃষ্টি গঠনে (নাইট্রিক অ্যাসিড) একটি মূল খেলোয়াড়। এটি আলোক রাসায়নিক ধোঁয়াশা বিক্রিয়ায় জড়িত। এটি একটি বায়ু দূষক যা পরিবেশ ও স্বাস্থ্যের ক্ষতি করে। সবগুলি সঠিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552482434,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "C\\(_2\\)H\\(_5\\)OH + O\\(_2\\) → CO\\(_2\\) + H\\(_2\\)O\nউদ্দীপকের জ্বালানির নাম কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ইথানল",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "মিথানল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রোপেন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মিথেন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সংকেত C₂H₅OH হল ইথানল।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552482542,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "নিম্নলিখিত যৌগগুলোর মধ্যে কোনটি উদ্দীপকের যৌগের সাথে মিশ্রিত হয়ে \"জ্বালানি কোষ\" গঠন করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মিথেন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মিথানল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "প্রোপেন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রোপানল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ডাইরেক্ট মিথানল জ্বালানি কোষ (DMFC) জ্বালানি হিসেবে মিথানল ব্যবহার করে। ইথানলও ব্যবহার করা যেতে পারে, তবে কিছু জ্বালানি কোষে মিথানল বেশি সাধারণ। উদ্দীপকের যৌগটি ইথানল। মিথানল হল আরেকটি অ্যালকোহল যা জ্বালানি কোষে ব্যবহৃত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552482642,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "\\[Zn \\rightarrow Zn^{2+} + 2e^{-}\\]\n\\[Cu^{2+} + 2e^{-} \\rightarrow Cu\\]\n১ম বিক্রিয়াটি কোষের কোন কোণায় ঘটে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অ্যানোড",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ক্যাথোড",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পাত্রের উপরের অংশ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাত্রের নিচের অংশ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "প্রথম বিক্রিয়াটি জারণ (ইলেকট্রন হারানো) দেখায়। জারণ অ্যানোডে ঘটে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552482747,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "উদ্দীপকের বিক্রিয়া —\ni. ইলেকট্রন স্থানান্তর নির্দেশ করে\nii. তড়িৎরাসায়নিক কোষে ঘটে\niii. তড়িৎবিশ্লেষ্য কোষে ঘটে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এই অর্ধ-বিক্রিয়াগুলি ইলেকট্রন স্থানান্তর (রেডক্স) দেখায়। এগুলি উভয় প্রকারের তড়িৎরাসায়নিক কোষে ঘটে: গ্যালভানিক/ভোল্টাইক (যা বিদ্যুৎ উৎপন্ন করে) এবং তড়িৎবিশ্লেষ্য (যা বিদ্যুৎ ব্যবহার করে)। সুতরাং, সবগুলি সঠিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552482845,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "[এখানে একটি চিত্র আছে: তড়িৎলেপন প্রক্রিয়া]\nচিত্রে, 'A' ইলেকট্রোডটি কোন ধাতু দিয়ে তৈরি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তামা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "রূপা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ক্রোমিয়াম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিকেল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552482947,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "যখন উদ্দীপকে তড়িৎলেপন ঘটছিল —\ni. ইলেকট্রোড 'A' ক্রমাগত ক্ষয়প্রাপ্ত হয়\nii. ইলেকট্রোড 'B'-তে জারণ ঘটে\niii. SO\\(_4^{2-}\\)-এর বিজারণ ঘটে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "তড়িৎলেপনে, অ্যানোড (A) লেপনের ধাতু দিয়ে তৈরি। এটি জারিত হয় (ক্ষয়প্রাপ্ত হয়) দ্রবণে ধাতব আয়ন মুক্ত করতে। ক্যাথোড (B) হল যে বস্তুটি লেপন করা হবে, যেখানে বিজারণ ঘটে (ধাতব আয়ন জমা হয়)। SO₄²⁻ সাধারণত বিজারিত হয় না; এটি দ্রবণে থাকে। সুতরাং, i সত্য (অ্যানোড ক্ষয়প্রাপ্ত হয়), ii মিথ্যা (জারণ অ্যানোড A-তে ঘটে, B-তে নয়), iii মিথ্যা। শুধুমাত্র i সত্য। কিন্তু অপশন ক বলে i ও ii, যার মধ্যে মিথ্যা ii অন্তর্ভুক্ত। সম্ভবত ভুল বরাদ্দ। আদর্শ প্রক্রিয়া অনুসারে, শুধুমাত্র i সত্য।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552483046,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "গ্যালভানিক কোষে, অ্যানোড ইলেকট্রন ত্যাগ করে এবং ধাতুর আকারে ধনাত্মক আয়ন জমা হয়। এটি অ্যানোড ও ক্যাথোডে আয়নের ঘনত্বের পার্থক্য দেখায়, যা দূর করার জন্য একটি U-আকৃতির লবণ সেতু ব্যবহার করা হয়।\nউদ্দীপকের কোষে নিম্নলিখিতগুলোর মধ্যে কোনটি ক্যাথোড হিসেবে ব্যবহার করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Zn",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Pt",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Ag",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Cu",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বর্ণনাটি \"অ্যানোড ইলেকট্রন ত্যাগ করে এবং ধনাত্মক আয়ন জমা হয়\" সম্ভবত Zn জারণের কথা উল্লেখ করে। একটি ড্যানিয়েল কোষে, Zn হল অ্যানোড, Cu হল ক্যাথোড। সুতরাং, ক্যাথোড হল Cu।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552483145,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "উদ্দীপকের ক্ষেত্রে —\ni. অ্যানোডে Cu\\(^{2+}\\) আয়নের আধিক্য লক্ষ্য করা যায়\nii. ক্যাথোডে ঋণাত্মক আয়নের আধিক্য লক্ষ্য করা যায়\niii. লবণ সেতু থেকে বিপরীত আয়ন আসে এবং দ্রবণে আয়নের ঘনত্বের অসাম্য দূর করে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "একটি ড্যানিয়েল কোষে: i. অ্যানোডে (Zn), Zn²⁺ আয়ন উৎপন্ন হয়, Cu²⁺ নয়। সুতরাং i মিথ্যা। ii. ক্যাথোডে (Cu), Cu²⁺ আয়ন বিজারিত হয়, ফলে দ্রবণে ঋণাত্মক আয়ন (SO₄²⁻) এর আধিক্য থাকে। সুতরাং ii সত্য। iii. লবণ সেতু আয়ন চলাচলের অনুমতি দেয় এবং চার্জ ব্যালেন্স করে, আধিক্য প্রতিরোধ করে। সুতরাং iii সত্য। এইভাবে, ii ও iii সঠিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552483247,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "[এখানে একটি চিত্র আছে: U আকারের নল]\nU-আকৃতির নলের কাজ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শক্তি ভারসাম্য করা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ভর ভারসাম্য করা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আয়ন ভারসাম্য করা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ইলেকট্রন ভারসাম্য করা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "U-আকৃতির নল (লবণ সেতু) অর্ধ-কোষগুলির মধ্যে আয়ন প্রবাহের অনুমতি দিয়ে বৈদ্যুতিক নিরপেক্ষতা বজায় রাখতে (আয়ন চার্জ ভারসাম্য করতে) দেয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552483352,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "উপরোক্ত উদ্দীপকে।\ni. অ্যানোড ধারকে Zn\\(^{2+}\\) এর সংখ্যা বৃদ্ধি পায়\nii. ক্যাথোড ধারকে SO\\(_4^{2-}\\) এর সংখ্যা বৃদ্ধি পায়\niii. Zn/Zn\\(^{2+}\\) অ্যানোড অর্ধকোষ হিসাবে কাজ করে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "একটি Zn-Cu কোষে: i. অ্যানোডে, Zn জারিত হয়ে Zn²⁺ হয়, Zn²⁺ ঘনত্ব বৃদ্ধি করে। ii. ক্যাথোডে, Cu²⁺ Cu তে বিজারিত হয়, সুতরাং Cu²⁺ হ্রাস পায়। এটি SO₄²⁻ এর আধিক্য তৈরি করে, তবে সংখ্যা অগত্যা বৃদ্ধি পায় না; ক্যাটায়নের তুলনায় ঘনত্ব বৃদ্ধি পায়। বিবৃতিটি বলে \"সংখ্যা বৃদ্ধি পায়,\" যা সঠিক নাও হতে পারে কারণ লবণ সেতু থেকে আয়ন আসে? সম্ভবত ii মিথ্যা। iii. Zn/Zn²⁺ হল অ্যানোড অর্ধ-কোষ। সুতরাং, i ও iii স্পষ্টতই সত্য। ii অস্পষ্ট।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768552483453,
+    "subject": "রসায়ন",
+    "chapter": "রসায়ন ও শক্তি",
+    "question": "235 U + 0 n → 141 X + Z Y + 30 n + E\nA\nZ Y হল —",
+    "options": [
+      {
+        "label": "a",
+        "text": "92",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "89",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "89",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "92",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ভর সংখ্যা সংরক্ষিত করি: 235+1 = 236 = 141 + Z + 3 => Z = 92.\nপারমাণবিক সংখ্যা সংরক্ষিত করি: 92 + 0 = 56 + Z + 0 => Z = 36.\nসুতরাং, মৌলটি হল Kr (ক্রিপ্টন) যার ভর সংখ্যা 92.",
+    "image": null,
+    "language": "en"
+  }
+]

@@ -1,0 +1,1378 @@
+[
+  {
+    "id": 1768036751675,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"বিদেশে থাকে যে\" এককথায় প্রকাশ কী হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিদেশি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দেশি-বিদেশি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রবাসী",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "প্রোষিতভর্তৃকা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যে ব্যক্তি নিজের দেশ ছেড়ে বিদেশে বসবাস করে তাকে এককথায় ‘প্রবাসী’ বলা হয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036771956,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"যা নিবারণ করা কষ্টকর\"—এর সংকুচিত রূপ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুর্নিবার",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অনিবার্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অদম্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অনিবার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যা নিবারণ করা অত্যন্ত কঠিন তাকে এককথায় ‘দুর্নিবার’ বলা হয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036772076,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"দীপ্তি পাচ্ছে এমন\"—এককথায় কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দেদীপ্যমান",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "দীপ্তিময়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দীপ্যমান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দীপ্তমান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যা বর্তমানে উজ্জ্বল হয়ে জ্বলছে বা দীপ্তি দিচ্ছে তাকে ‘দেদীপ্যমান’ বলা হয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036772194,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"যা অধ্যয়ন করা হয়েছে\"—তাকে এককথায় বলে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুর্জয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সুপঠিত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অনূদিত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অধীত",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "যা পাঠ করা বা পড়া হয়েছে তাকে এককথায় ‘অধীত’ বলা হয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036772317,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"সম্মুখে অগ্রসর হয়ে অভ্যর্থনা\"—এককথায় কী হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সম্বর্ধনা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অভিনন্দন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ফলগুস্মনা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রত্যুদ্গমন",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কাউকে গ্রহণ করার জন্য এগিয়ে গিয়ে যে অভ্যর্থনা জানানো হয় তাকে ‘প্রত্যুদ্গমন’ বলে [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036772426,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"যে নারীর স্বামী বিদেশে থাকে\"—তাকে এককথায় কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সুচিস্মিতা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সুচিস্মিতা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সুচিস্মিতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রোষিতভর্তৃকা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "যে নারীর স্বামী বিদেশে অবস্থান করছে তাকে এককথায় ‘প্রোষিতভর্তৃকা’ বলা হয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036772551,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"যিনি বিদ্যা লাভ করেছেন\"—তাকে এককথায় কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কৃতবিদ্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিদ্বান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জ্ঞানী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কৃতবিদ্য",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বিদ্যা অর্জন করেছেন এমন ব্যক্তিকে এককথায় ‘কৃতবিদ্য’ বলা হয় [৪]। (বি.দ্র. উৎসে ঘ চিহ্নিত)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036772656,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"যে গাছে ফল ধরে কিন্তু ফুল ধরে না\"—তাকে এককথায় কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পরগাছা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মাকাল ফল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বর্ণচোরা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বনস্পতি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ফুল না হয়ে সরাসরি ফল দেয় এমন গাছকে ‘বনস্পতি’ বলা হয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036772775,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"যে বিষয়ে কোনো বিতর্ক নেই\"—বাক্যটির সঠিক বাক্য সংকোচন কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অবিসংবাদি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অবিসংবাদি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অবিসংবাদি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অকালদর্শী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যে বিষয়ে কোনো বিরোধ বা বিতর্ক নেই তাকে ‘অবিসংবাদি’ বলা হয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036772891,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"যা বাক্য ও মনের অগোচর\"—এককথায় হবে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "গুপ্তকথা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অবাংমানসগোচর",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অচিন্তনীয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অচিন্তনীয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যা কথা দিয়ে প্রকাশ করা যায় না এবং মনের ভাবনারও বাইরে তাকে ‘অবাংমানসগোচর’ বলে [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036773010,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"যে মেয়ের বিয়ে হয়নি\"—এককথায় কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কুমারী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অনুঢ়া",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বাগদত্তা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অবিবাহিতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "অবিবাহিতা মেয়েকে এককথায় ‘অনুঢ়া’ বলা হয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036773123,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"যা চিন্তা করা যায় না\"—এককথায় কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চিন্তাহীন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অচিন্ত্যনীয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অচিন্ত্য",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "চিন্তাকর্ষ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মানুষের ভাবনার অতীত বা যা কল্পনাও করা যায় না তাকে ‘অচিন্ত্য’ বলা হয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036773231,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"উপকারীর উপকার স্বীকার করে যে\"—এর সঠিক বাক্য সংকোচন কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কৃতজ্ঞ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অপকারী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কৃতজ্ঞ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উপকারী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কেউ উপকার করলে তা যে মেনে নেয় বা স্বীকার করে তাকে ‘কৃতজ্ঞ’ বলে [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036773363,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"যে ভবিষ্যৎ না ভেবেই কাজ করে\"—এককথায় কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অবিমৃষ্যকারী",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অচিন্ত্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অপরিণামদর্শী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অবিসংবাদী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পরিণাম চিন্তা না করে হঠাৎ কোনো কাজ করে ফেলা ব্যক্তিকে ‘অবিমৃষ্যকারী’ বলা হয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036773476,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"আপনাকে কেন্দ্র করে যার চিন্তা\"—বাক্যটির সংক্ষেপ রূপ হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "আত্মকেন্দ্রিক",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "আত্মচিন্তা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আত্মচেতনা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আত্মজ্ঞান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যে ব্যক্তি কেবল নিজের স্বার্থ বা নিজেকে নিয়েই ভাবে তাকে ‘আত্মকেন্দ্রিক’ বলা হয় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036773595,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"যে ভবিষ্যতের কথা চিন্তা করে না\"—বাক্যটিকে এককথায় কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অপরিণামদর্শী",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অদৃষ্টপূর্ব",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অচিন্তনীয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অবিমৃষ্যকারী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যে ভবিষ্যৎ সম্পর্কে কোনো পূর্বচিন্তা করে না তাকে ‘অপরিণামদর্শী’ বলা হয় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036773702,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"যা দীপ্তি পাচ্ছে\"—এককথায় কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দীপ্তিময়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দীপ্যমান",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "দেদীপ্যমান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দীপ্যমান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যা বর্তমানে আলো ছড়াচ্ছে বা দীপ্তি দিচ্ছে তাকে ‘দীপ্যমান’ বলা হয় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036773808,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"যা বারবার দুলছে\"—এককথায় প্রকাশ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দোদুল্যমান",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "দীপ্যমান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পুনঃপুন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দুর্নিবার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যা অনবরত দোল খাচ্ছে তাকে এককথায় ‘দোদুল্যমান’ বলা হয় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036773923,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"যা দমন করা যায় না\"—এককথায় কী হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুর্নিবার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দুবার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দুর্দম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অদম্য",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "যাকে দমানো বা বশ করা সম্ভব নয় তাকে ‘অদম্য’ বলা হয় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036774027,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"নষ্ট হওয়া স্বভাব যার\"—এককথায় কী হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অবিনশ্বর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নষ্টস্বভাব",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নশ্বর",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বিনাশী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যা ধ্বংসশীল বা যার বিনাশ অনিবার্য তাকে ‘নশ্বর’ বলা হয় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036774136,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"যা পূর্বে দেখা যায়নি\"—এককথায় কী হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অদৃষ্ট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অদৃষ্টপূর্ব",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অপূর্ব",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অদৃষ্টপূর্ব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যা আগে কখনও দেখা হয়নি তাকে ‘অদৃষ্টপূর্ব’ বলা হয় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036774244,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"যা দমন করা কষ্টকর\"—এককথায় কী হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুর্দম",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "দমনীয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দুর্জয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অনিবার্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যাকে দমন করা অত্যন্ত পরিশ্রমের বা কঠিন সাধ্য তাকে ‘দুর্দম’ বলা হয় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036774364,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"যা দমন করা দুষ্কর\"— এর সংকুচিত রূপ হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুর্দম",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "দমনীয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দুর্জয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অনিবার্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কষ্টসাধ্য দমনের বিষয়কে ‘দুর্দম’ বলা হয় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036774472,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"বিচরণের মধ্যে হিতকর\"—এককথায় কী হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিচরণশীল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিচরণহীন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিখ্যাত",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বনস্পতি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "(বি.দ্র. উৎসে গ চিহ্নিত থাকলেও সাধারণ অর্থে বিখ্যাত মানে পরিচিত।) [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036774581,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"যা বলা যায় না\"—এককথায় কী হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অকথ্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অব্যক্ত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অনুক্ত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দুবাচ্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যা মুখে আনা সম্ভব নয় বা বলা যায় না তাকে ‘অকথ্য’ বলা হয় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036774687,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"ইন্দ্রিয়কে জয় করেছেন যিনি\"—এককথায় প্রকাশ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জিতেন্দ্রিয়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ইন্দ্রিয়জিত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জীবনমৃত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কৃতদার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যিনি নিজের রিপু বা ইন্দ্রিয়সমূহকে বশীভূত করেছেন তাকে ‘জিতেন্দ্রিয়’ বলে [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036774808,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"কোনোভাবেই যা নিবারণ করা যায় না\"—এর এককথায় প্রকাশ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অনিবার্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "দুর্নিবার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দমনীয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রোদুন্মান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যা ঠেকানো অসম্ভব বা যা ঘটবেই তাকে ‘অনিবার্য’ বলা হয় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036774919,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "\"যার কোনো উপায় নেই\"—এককথায় কী হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নিরূপায়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অনন্যোপায়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অকৃতভয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অনিবার্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "অন্য কোনো পথ বা বিকল্প না থাকলে তাকে ‘অনন্যোপায়’ বলা হয় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036801716,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "‘মৃতের মতো অবস্থা যার’—এককথায় কী হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মুমূর্ষু",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মুমূর্ষু",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মুমূর্ষু",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মৃতপ্রায়",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "যার অবস্থা মৃতের ন্যায় হয়ে পড়েছে তাকে এককথায় ‘মৃতপ্রায়’ বলা হয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036801824,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "‘সকলের জন্য প্রযোজ্য’—এককথায় কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সর্বজনীন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সর্বজনীন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সর্বজনীন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সার্বজনীন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যা সব মানুষের জন্য উপযোগী বা বরাদ্দ তাকে ‘সর্বজনীন’ বলা হয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036801928,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "‘যে ব্যক্তির দুহাত সমান চলে’—তাকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দোভাষী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কুশল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সব্যসাচী",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "দ্বিজ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যার বাম হাত ও ডান হাত সমান দক্ষতায় কাজ করতে পারে তাকে ‘সব্যসাচী’ বলা হয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036802040,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "‘যার উপস্থিত বুদ্ধি আছে’—বাক্যের এককথায় প্রকাশ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রত্যুৎপন্নমতি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রত্যুৎপন্নমতি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বুদ্ধিমতী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বুদ্ধিমান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যার তৎক্ষণাৎ বুদ্ধি কাজ করে বা উপস্থিত বুদ্ধি আছে তাকে ‘প্রত্যুৎপন্নমতি’ বলে [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036802150,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "‘যা বলা হয়নি’—এককথায় কী হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "না-বলা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অনুক্ত",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "নির্বাক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মুক্ত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যা অব্যক্ত রয়ে গেছে বা বলা হয়নি তাকে ‘অনুক্ত’ বলা হয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036802258,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "‘যে নারীর স্বামী ও পুত্র নেই’—এককথায় কী হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অনূঢ়া",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কুমারী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সদ্যো",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অবীরা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "স্বামী ও পুত্রহীন নারীকে এককথায় ‘অবীরা’ বলা হয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036802374,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "‘যে নারী বীর সন্তান প্রসব করে’—এককথায় কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বন্ধ্যা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বীরপ্রসূ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কাকবন্ধ্যা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ফলপ্রসূ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যে মাতা বীর সন্তানের জন্ম দেন তাকে ‘বীরপ্রসূ’ বলা হয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036802832,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "‘যে নারীর সন্তান বাঁচে না’—এককথায় কী হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অনূঢ়া",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বীরপ্রসূ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিধবা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মৃতবৎস",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "যার সন্তান জন্মের পর মারা যায় তাকে ‘মৃতবৎস’ বলা হয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036803215,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "‘যা চেটে খেতে হয়’—এর বাক্য সংকোচন কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "লেহ্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "লেহ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চুষ্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চকোলেট",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যে খাদ্য চাটন হিসেবে গ্রহণ করা হয় তাকে ‘লেহ্য’ বলা হয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036803540,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "‘যে সকল অত্যাচারই সয়ে যায়’—এর সংকোচন কী হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সর্বংসহা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সর্বংজাতা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সহনশীল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সহনশীল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অসীম সহনক্ষমতা সম্পন্ন ব্যক্তিকে ‘সর্বংসহা’ বলা হয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036803754,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "‘যে উপকারীর অপকার করে’—তাকে এককথায় কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অকৃতজ্ঞ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কৃতজ্ঞ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কৃতঘ্ন",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "পাপি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "উপকারের বদলে যে ক্ষতি বা অপকার করে তাকে ‘কৃতঘ্ন’ বলে [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036804158,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "‘যা সাধারণের মধ্যে দেখা যায় না এমন’—বাক্যের সংকোচন কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অসাধারণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অসাধারণ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অতুলনীয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দুর্লভ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যা সুলভ নয় বা সচরাচর দেখা যায় না তাকে ‘অসাধারণ’ বলা হয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036804388,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "‘কর্ম সম্পাদনে পরিশ্রমী’—বাক্যটির সঠিক বাক্য সংকোচন কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্মী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কর্মট",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পরিশ্রমী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কর্মনিষ্ঠ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যে কোনো কাজ করতে খুব উদ্যমী বা পরিশ্রমী তাকে ‘কর্মঠ’ বলা হয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036804498,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "‘যে বন হিংত্র জন্তুতে পরিপূর্ণ’—এককথায় কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুর্গম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শ্বাপদসংকুল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অরণ্যজনপদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শ্বাপদসংকুল",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "হিংস্র বন্য পশুবহুল বনকে ‘শ্বাপদসংকুল’ অরণ্য বলা হয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036804673,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "বাক্য সংকোচন বা এককথায় প্রকাশ",
+    "question": "‘যা কখনো নষ্ট হয় না’—এর সংক্ষিপ্ত রূপ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নশ্বর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অনশ্বর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সর্বংসহা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অবিনশ্বর",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "যা চিরস্থায়ী এবং যার বিনাশ বা ধ্বংস নেই তাকে ‘অবিনশ্বর’ বলা হয় [৪]।",
+    "image": null,
+    "language": "en"
+  }
+]

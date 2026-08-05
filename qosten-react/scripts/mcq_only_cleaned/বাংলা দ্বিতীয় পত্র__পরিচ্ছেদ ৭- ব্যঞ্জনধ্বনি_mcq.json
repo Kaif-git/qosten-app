@@ -1,0 +1,1186 @@
+[
+  {
+    "id": 1767454680681,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "বাগযন্ত্রের ঠিক যে জায়গায় বাতাস বাধা পেয়ে ব্যঞ্জনধ্বনি সৃষ্টি হয়, সেই জায়গাটিকে বলা হয়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "উচ্চারণস্থান",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "উচ্চারণ প্রকৃতি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ধ্বনি সৃষ্টি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ধ্বনি প্রকৃতি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বাগযন্ত্রের নির্দিষ্ট যে অংশে শ্বাসবায়ু বাধা পেয়ে ব্যঞ্জনধ্বনি উৎপন্ন হয়, তাকে উচ্চারণস্থান বলা হয়। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454680831,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "দন্ত্য ব্যঞ্জনধ্বনির মুখ্য বাগপ্রত্যঙ্গ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নিচের ঠোঁট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জিভের ডগা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "আলজিভ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দাঁত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "দন্ত্য ব্যঞ্জন উচ্চারণে জিভের ডগা উপরের দাঁতের পাটির স্পর্শে কাজ করে। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454680963,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "কোন ব্যঞ্জনধ্বনি উচ্চারণের সময়ে জিভের ডগা উপরের পাটির দাঁতের গোড়ার সঙ্গে লেগে বায়ুপথে বাধা সৃষ্টি করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ওষ্ঠ্য ব্যঞ্জন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দন্ত্য ব্যঞ্জন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দন্তমূলীয় ব্যঞ্জন",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মূর্ধন্য ব্যঞ্জন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "জিভের ডগা দাঁতের গোড়া বা দন্তমূল স্পর্শ করলে তাকে দন্তমূলীয় ব্যঞ্জন বলে। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454681084,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "তালব্য ব্যঞ্জনধ্বনির উদাহরণ আছে কোন শব্দে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শসা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ঘাস",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'শসা' শব্দের 'শ' ধ্বনিটি তালুর স্পর্শে উচ্চারিত হয় বলে এটি তালব্য ব্যঞ্জন। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454681201,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "পার্শ্বিক ব্যঞ্জনধ্বনির উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ল",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "র",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'ল' উচ্চারণের সময় বাতাস জিভের দুই পাশ দিয়ে বেরিয়ে যায় বলে একে পার্শ্বিক ব্যঞ্জন বলে। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454681317,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "কোনটি তাড়িত ব্যঞ্জনের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "র",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ড়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "দ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ণ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'ড়' ও 'ঢ়' উচ্চারণের সময় জিভের ডগা মূর্ধাকে দ্রুত আঘাত করে বা তাড়িত করে। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454681458,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "কোনগুলো ঘোষ ব্যঞ্জন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ব, ড",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ট, ঠ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চ, ছ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ত, দ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যে ধ্বনি উচ্চারণে স্বরতন্ত্রী অনুরণিত হয় তাকে ঘোষ ধ্বনি বলে; যেমন: ব, ড। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454681585,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "ফুসফুস থেকে নির্গত বায়ুপ্রবাহ কম থাকলে সেগুলোকে কোন ধ্বনি বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঘোষ ধ্বনি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অঘোষ ধ্বনি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অল্পপ্রাণ ধ্বনি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মহাপ্রাণ ধ্বনি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "উচ্চারণে বাতাসের চাপ কম থাকলে তাকে অল্পপ্রাণ ধ্বনি বলে। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454681739,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "কম্পিত ব্যঞ্জনের উপস্থিতি আছে কোন শব্দে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ধড়ো",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হাড়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "হার",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "'র' ধ্বনি উচ্চারণের সময় জিভ কম্পিত হয়, যা 'হার' শব্দে বিদ্যমান। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454681863,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "উচ্চারণস্থান অনুযায়ী ‘গ’ কেমন ধ্বনি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দন্ত্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মূর্ধন্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তালব্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কণ্ঠ্য",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "‘গ’ কণ্ঠ বা জিভমূল থেকে উচ্চারিত হয়। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454682056,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "ঘোষ মহাপ্রাণ ব্যঞ্জনধ্বনি কোনগুলো?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ধ, ছ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ট, ঠ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "খ, গ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "থ, ফ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'ধ' ও 'ছ' উচ্চারণে বাতাসের চাপ বেশি থাকে এবং স্বরতন্ত্রী অনুরণিত হয়। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454682218,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "উচ্চারণস্থান অনুসারে ব্যঞ্জনধ্বনিগুলোকে কী কী ভাগে ভাগ করা যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দন্তমূলীয়, তালব্য, কণ্ঠনালীয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দন্তমূলীয়, কণ্ঠনালীয়, পার্শ্বিক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তালব্য, কণ্ঠনালীয়, নাসিক্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কণ্ঠমূলীয়, দন্তমূলীয়, মূর্ধন্য",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ব্যঞ্জনধ্বনিগুলোকে তাদের উচ্চারণস্থলের ভিত্তিতে বিভিন্ন বিভাগে বিভক্ত করা হয়। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454682382,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "উচ্চারণস্থান অনুযায়ী ‘শ’ কেমন ধ্বনি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দন্ত্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মূর্ধন্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তালব্য",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কণ্ঠ্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "‘শ’ উচ্চারণের সময় জিভের মধ্যভাগ শক্ত তালু স্পর্শ করে। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454682542,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "মধ্যপ্রাণ ব্যঞ্জনধ্বনি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ব",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ধ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "স",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বর্গের চতুর্থ ধ্বনিগুলো সাধারণত মহাপ্রাণ বা মধ্যপ্রাণ হিসেবে বিবেচিত। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454682703,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "দন্তমূলীয় ব্যঞ্জনধ্বনির উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "র-ধ্বনি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "উ-ধ্বনি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অ-ধ্বনি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "থ-ধ্বনি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "‘র’ ধ্বনি উচ্চারণের সময় জিভের ডগা দন্তমূলকে স্পর্শ করে। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454683022,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "নিচের কোনটি কণ্ঠনালীয় ব্যঞ্জনের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ষ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "স",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "হ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "‘হ’ উচ্চারণের সময় বাতাস সরাসরি কণ্ঠনালি থেকে বের হয়। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454683181,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "কণ্ঠনালীয় ব্যঞ্জন উচ্চারণের সময়ে ধ্বনিদ্বার থেকে বায়ু কণ্ঠনালি হয়ে সরাসরি বের হয়ে আসে। কোন ধ্বনিটি এর উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "খ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কণ্ঠনালীয় ব্যঞ্জন হিসেবে ‘হ’ উচ্চারণে কোনো মুখগহ্বরীয় বাধা থাকে না। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454683345,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "কোনটির স্পর্শে কণ্ঠধ্বনি উচ্চারিত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তালু ও জিভ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জিভ ও দাঁত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কোমল তালু ও জিভমূল",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ঠোঁট ও জিভ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কণ্ঠ বা জিবমূলীয় ধ্বনি উচ্চারণে জিভমূল ও কোমল তালুর প্রধান ভূমিকা থাকে। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454683506,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "যে ব্যঞ্জনের উচ্চারণে বাতাস মুখবিবরের কোথাও বাধা না পেয়ে কেবল ঘর্ষণপ্রাপ্ত হয় এবং শিস ধ্বনির সৃষ্টি করে তাকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অঘোষ অল্পপ্রাণ ধ্বনি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অঘোষ মহাপ্রাণ ধ্বনি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দন্ত্য ধ্বনি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উষ্ম ধ্বনি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "উষ্ম ধ্বনি (শ, ষ, স, হ) উচ্চারণে বাতাসের ঘর্ষণের ফলে শিস দেওয়ার মতো আওয়াজ হয়। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454683688,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "কোনগুলো অঘোষ ব্যঞ্জন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শ, ষ, স",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "গ, ঘ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ম, ন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "য, র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বর্গের ১ম ও ২য় বর্ণ এবং শ, ষ, স হলো অঘোষ ব্যঞ্জন। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454683858,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "কোনগুলো তাড়নজাত ব্যঞ্জনধ্বনি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প, ফ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "য, র",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ড়, ঢ়",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "জিভের অগ্রভাগ দ্বারা মূর্ধাকে দ্রুত আঘাত বা তাড়না করে এই ধ্বনিগুলো উচ্চারিত হয়। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454684022,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "কোনগুলো ঘোষ ব্যঞ্জনধ্বনি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ক, চ, ট, ত, প",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "খ, ছ, ঠ, থ, ফ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গ, জ, ড, দ, ব",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "শ, ষ, স",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বর্গের ৩য়, ৪র্থ ও ৫ম বর্ণগুলো ঘোষ ধ্বনি। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454684186,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "কোনটি নাসিক্য ব্যঞ্জন-এর উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ভ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ম",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "স",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যে ধ্বনি উচ্চারণে বাতাস মুখ ও নাক উভয় দিক দিয়ে বের হয় তাকে নাসিক্য ধ্বনি বলে। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454684341,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "অঘোষ ব্যঞ্জনধ্বনি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ত",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ঘ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "থ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ড",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বর্গের প্রথম বর্ণগুলো অঘোষ ধ্বনির অন্তর্ভুক্ত। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454684505,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "অল্পপ্রাণ ব্যঞ্জন নিচের কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "খ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ঘ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বর্গের ১ম ও ৩য় বর্ণগুলো অল্পপ্রাণ ধ্বনি। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454716041,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "'ট-বর্গীয়' ধ্বনি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ট",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "প",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ট, ঠ, ড, ঢ, ণ—এই পাঁচটি বর্ণকে ট-বর্গীয় বর্ণ বলা হয় এবং এদের উচ্চারণস্থান হলো মূর্ধা। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454716173,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "ট বর্গীয় বর্ণগুলো হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "ট, ঠ, ড, ঢ, ণ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ত, থ, দ, ধ, ন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প, ফ, ব, ভ, ম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চ, ছ, জ, ঝ, ঞ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বাংলা বর্ণমালায় 'ট' থেকে 'ণ' পর্যন্ত বর্ণগুলো একই বর্গের অন্তর্ভুক্ত যাদের উচ্চারণ মূর্ধা থেকে হয়। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454716294,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "কোন চারটি বর্ণকে উষ্মবর্ণ বলা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ক, চ, ট, ত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "খ, ছ, ঠ, থ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শ, স, ষ, হ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "গ, ঘ, ড, ঢ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "শ, স, ষ, হ—এই চারটি বর্ণ উচ্চারণের সময় বায়ু ঘর্ষণপ্রাপ্ত হয় এবং শিস ধ্বনির সৃষ্টি করে বলে এদের উষ্মবর্ণ বলে। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454716422,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "কম্পনজাত ধ্বনি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "র",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ড়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ঢ়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'র' উচ্চারণের সময় জিভ একাধিকবার অতি দ্রুত দন্তমূলকে আঘাত করে কম্পন সৃষ্টি করে, তাই একে কম্পিত ব্যঞ্জন বলে। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454716539,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "শ, স, ষ, হ— এ তিনটি বর্ণকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্বর বর্ণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ব্যঞ্জন বর্ণ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "স্পর্শ বর্ণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উষ্ম বর্ণ/শিস ধ্বনি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এই ধ্বনিগুলো উচ্চারণের সময় নিঃশ্বাস যতক্ষণ খুশি রাখা যায় এবং ঘর্ষণের ফলে শিস দেওয়ার মতো আওয়াজ হয়। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454716656,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "দন্তমূলীয় উষ্ম ব্যঞ্জনধ্বনি নিচের কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ষ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "স",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'স' ধ্বনিটি দন্তমূলের সাহায্যে এবং ঘর্ষণজাত প্রক্রিয়ায় উচ্চারিত হয় বলে এটি দন্তমূলীয় উষ্ম ব্যঞ্জন। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454716775,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "'হার' শব্দের 'র' কোন ব্যঞ্জনধ্বনির উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কম্পিত ব্যঞ্জন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "পার্শ্বিক ব্যঞ্জন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উষ্ম ব্যঞ্জন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "স্পৃষ্ট ব্যঞ্জন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'হার' বা 'কার' শব্দে ব্যবহৃত 'র' ধ্বনি উচ্চারণের সময় জিভ দন্তমূলে দ্রুত কম্পন তৈরি করে। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454716893,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "কোন বর্ণগুচ্ছটি অঘোষ ব্যঞ্জন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ন, র, ল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জ, জ, ড",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গ, ঘ, হ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "স, শ, ষ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "স, শ, ষ—এই ধ্বনিগুলো উচ্চারণের সময় স্বরতন্ত্রী অনুরণিত হয় না, তাই এগুলো অঘোষ ধ্বনি। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454717027,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "কোন দুটি ঘোষ মহাপ্রাণ ধ্বনি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ক, চ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "খ, ছ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গ, জ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ঘ, ঝ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বর্গের চতুর্থ ধ্বনিগুলো (যেমন: ঘ, ঝ) উচ্চারণে স্বরতন্ত্রী অনুরণিত হয় এবং বাতাসের চাপের আধিক্য থাকে। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454717146,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "তাড়নজাত ব্যঞ্জনধ্বনির উদাহরণ আছে কোন শব্দে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কাকা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "থালা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পড়া",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ধান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'পড়া' শব্দের 'ড়' ধ্বনিটি জিভের অগ্রভাগ দ্বারা মূর্ধাকে দ্রুত আঘাত করে উচ্চারিত হয়। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454717286,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "নিচের কোনগুলো ঘোষ ব্যঞ্জন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গ, ঘ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ত, থ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শ, ষ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চ, ছ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বর্গের ৩য় ও ৪র্থ ধ্বনি হিসেবে 'গ' এবং 'ঘ' ঘোষ ধ্বনির উদাহরণ। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454717405,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৭: ব্যঞ্জনধ্বনি",
+    "question": "অঘোষ অল্পপ্রাণ ধ্বনি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ক",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "খ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ঘ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বর্গের প্রথম ধ্বনি 'ক' উচ্চারণে বাতাসের চাপ কম থাকে এবং স্বরতন্ত্রী অনুরণিত হয় না। [৭]",
+    "image": null,
+    "language": "en"
+  }
+]

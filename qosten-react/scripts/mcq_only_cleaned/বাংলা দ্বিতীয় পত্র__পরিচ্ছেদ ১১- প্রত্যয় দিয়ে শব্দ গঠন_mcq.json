@@ -1,0 +1,4802 @@
+[
+  {
+    "id": 1767454768511,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "ধাতুর পরে যেসব প্রত্যয় যুক্ত হয় তাদের কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কৃৎপ্রত্যয়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "তদ্ধিত প্রত্যয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কৃদন্ত শব্দ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তদ্ধিতান্ত পদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ধাতুর সঙ্গে যে প্রত্যয় যুক্ত হয় তা হলো কৃৎপ্রত্যয়। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454768650,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "তদ্ধিত প্রত্যয় দিয়ে সাধিত শব্দকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রত্যয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রকৃতি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মৌলিক শব্দ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তদ্ধিতান্ত শব্দ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "শব্দমূলের সাথে তদ্ধিত প্রত্যয় যুক্ত হয়ে যে শব্দ গঠিত হয় তাকে তদ্ধিতান্ত শব্দ বলে। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454768778,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটি তদ্ধিতান্ত শব্দের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "খেলনা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নাগর",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "গমন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পড়া",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'নগর' শব্দমূলের সাথে প্রত্যয় যুক্ত হয়ে 'নাগর' শব্দটি গঠিত হয়েছে। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454768915,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটির নিজস্ব অর্থ আছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রত্যয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "উপসর্গ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শব্দ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বচন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "শব্দ হলো অর্থের একক, যার নিজস্ব অর্থ থাকে; প্রত্যয় বা উপসর্গের নিজস্ব অর্থ নেই। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454769041,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটি কৃদন্ত শব্দের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ভাজি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বিবাহিত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দৈনিক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাগলামি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'ভাজ' ধাতুর সাথে প্রত্যয় যুক্ত হয়ে 'ভাজি' শব্দটি গঠিত হয়েছে। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454769337,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোন শব্দটি 'উয়া' প্রত্যয় যোগে গঠিত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "লাগোয়া",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঘরোয়া",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পড়ুয়া",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বাড়িওয়ালা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'পড়' ধাতুর সাথে 'উয়া' প্রত্যয় যুক্ত হয়ে 'পড়ুয়া' শব্দটি গঠিত। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454769651,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "অবজ্ঞা অর্থে কোন শব্দটি ব্যবহৃত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কানাই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গেঁয়ো",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "চোরা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বেতো",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "গ্রাম্য বা অবজ্ঞা বোঝাতে এখানে 'গেঁয়ো' শব্দটি ব্যবহৃত হয়েছে। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455566972,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটি **'সদৃশ'** অর্থের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তদ্ভব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মেছো",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তদ্ধিত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাঘা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "'বাঘা' শব্দটি 'বাঘ' শব্দের সাথে 'আ' প্রত্যয় যোগে গঠিত এবং এটি 'সদৃশ' অর্থ প্রকাশ করে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455567148,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "**ভাব অর্থে** তদ্ধিত প্রত্যয় কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জমিদারি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "লাঠালাঠি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাহাদুরি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ডাক্তারী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'বাহাদুরি' শব্দটি বাহাদুর শব্দের সাথে 'ই' প্রত্যয় যোগে গঠিত হয়ে ভাব অর্থ প্রকাশ করে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455567299,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "**বৃহৎ অর্থে** প্রত্যয়যুক্ত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাঘা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গয়না",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ডিঙা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "জমিদারি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ক্ষুদ্র নৌকাকে 'ডিঙি' এবং বড় নৌকাকে 'ডিঙা' বলা হয়, তাই এটি বৃহৎ অর্থ প্রকাশ করে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455567459,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'টাক + উ = টেকো' — এখানে 'উ' প্রত্যয় কী অর্থে ব্যবহৃত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নিন্দা অর্থে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "যুক্ত অর্থে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ভাব অর্থে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জাত অর্থে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "টেকো বলতে টাক 'যুক্ত' মাথা বোঝায়, তাই এখানে 'উ' প্রত্যয়টি যুক্ত অর্থে ব্যবহৃত হয়েছে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455567614,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "শব্দ ও ধাতুর পরে **অর্থহীন** যেসব শব্দাংশ যুক্ত হয়ে নতুন শব্দ তৈরি হয় সেগুলোকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "উপসর্গ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অনুসর্গ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যোজক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রত্যয়",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "শব্দ বা ধাতুর পরে যেসব অর্থহীন শব্দাংশ যুক্ত হয়ে নতুন শব্দ তৈরি করে, তাদের প্রত্যয় বলা হয়। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455567866,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'চোরা'- এখানে 'আ' প্রত্যয় যুক্ত হয়েছে কোন অর্থে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অপকারী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অবজ্ঞা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সামান্যতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিন্দা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "'চোরা' শব্দটি নিন্দা বা তুচ্ছার্থক অর্থে ব্যবহৃত হয়। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455568019,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "প্রত্যয় যুক্ত হওয়ার ফলে **অবজ্ঞা অর্থে** ব্যবহৃত হয় নিচের কোন শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কানাই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গেঁয়ো",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বেতো",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চোরা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "উৎস অনুসারে 'চোরা' শব্দটি অবজ্ঞা বা নিন্দা অর্থে প্রত্যয়যুক্ত শব্দ হিসেবে চিহ্নিত। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455568169,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটি **ক্ষুদ্রার্থেও** সাধিত শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বর্ধমান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বুদ্ধিমান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আমানান",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "দয়াবান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "উৎসে ১৭ নম্বর প্রশ্নের সঠিক উত্তর হিসেবে 'গ' অপশনটি চিহ্নিত করা হয়েছে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455568324,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "**'কুদরতপ'** কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কৃত্তান্ত সাধিত শব্দ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তদ্ধিত সাধিত শব্দ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মৌলিক শব্দ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মুন + মতুপ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "এটি তদ্ধিত প্রত্যয় দ্বারা সাধিত একটি শব্দ। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455568477,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "**অবজ্ঞা অর্থে** কোনটিতে 'আ' প্রত্যয় যুক্ত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ডিঙা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কেষ্টা/চোরা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "হাতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাইশা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কেষ্টা বা চোরা শব্দে 'আ' প্রত্যয় অবজ্ঞা অর্থে ব্যবহৃত হয়। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455568766,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "**ধাতুর পরে** যেসব প্রত্যয় যুক্ত হয় তাদের কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কৃৎপ্রত্যয়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "তদ্ধিত প্রত্যয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কৃদন্ত পদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তদ্ধিতান্ত পদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ধাতুর পরে যেসব প্রত্যয় যুক্ত হয়, সেগুলোকে কৃৎপ্রত্যয় বলে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455568924,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "ক্ষুদ্রার্থেও সাধিত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্থায়ী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঢাকাই",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শৈশব",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাঘা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "উৎসে ২১ নম্বর প্রশ্নের সঠিক উত্তর হিসেবে 'ঘ' অপশনটি চিহ্নিত করা হয়েছে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455569173,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোন শব্দটিতে **'আগত' অর্থে** প্রত্যয় যুক্ত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঢাকাই",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "দানিয়া",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কানাই",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ডাক্তারি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ঢাকা থেকে আগত অর্থে 'ঢাকাই' শব্দটি গঠিত হয়েছে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455569324,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "**'দর্শনীয়'** শব্দের সঠিক শব্দ গঠন কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দর্শন + অনীয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দৃশ্য + অনীয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দৃষ্টি + য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দৃশ্য + অনীয়",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "দৃশ্য ধাতুর সাথে অনীয় প্রত্যয় যুক্ত হয়ে দর্শনীয় শব্দটি গঠিত হয়। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455569471,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোন শব্দটি **তদ্ধিত প্রত্যয়জাত** শব্দের উদাহরণ নয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শৈশব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দাপট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাঘা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শয়ান",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "শয়ান একটি কৃদন্ত শব্দ (শী + অন), তদ্ধিত প্রত্যয়জাত নয়। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455569625,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "**'ডিঙা'** শব্দের 'আ' প্রত্যয় কী অর্থে ব্যবহৃত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সদৃশ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বৃহৎ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ছোট",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পূর্ণ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ডিঙি থেকে ডিঙা শব্দটি বড় বা বৃহৎ অর্থ প্রকাশ করতে ব্যবহৃত হয়। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455569778,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোন প্রকৃতি-প্রত্যয়ের বিশ্লেষণটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চল্ + ইষ্ণু = চলিষ্ণু",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "পঠ্ + ইত = পঠিত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তাজ + ই = তাজি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মিশর + ইয় = মিশরীয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "চল্ ধাতুর সাথে ইষ্ণু প্রত্যয় যুক্ত হয়ে চলিষ্ণু গঠিত হয়, যা সঠিক। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455569925,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটি **তদ্ধিত সাধিত** শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বর্ধমান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বুদ্ধিমান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আমানান",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "দয়াবান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "উৎসে ২৭ নম্বর প্রশ্নের সঠিক উত্তর হিসেবে 'গ' অপশনটি চিহ্নিত করা হয়েছে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455570075,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "**'নিন্দা'** অর্থে কোন শব্দটি ব্যবহৃত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চোরা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ডিঙা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বেতো",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কেষ্টামি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "চোরা শব্দটি নিন্দা বা মন্দ অর্থে ব্যবহৃত তদ্ধিতান্ত শব্দ। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455570224,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'ইতর' শব্দের সাথে **'আমি'** প্রত্যয় যুক্ত হয়ে কোন অর্থ প্রকাশ করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ভাব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নিন্দা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অবজ্ঞা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সংশ্লিষ্ট",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ইতর + আমি = ইতরামি, এটি নিন্দা অর্থ প্রকাশ করে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455570388,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "**সদৃশ অর্থে** প্রত্যয়যুক্ত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাঘা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ঢাকাই",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "টেকো",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চোরা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বাঘের মতো বা সদৃশ বোঝাতে 'বাঘা' শব্দটি ব্যবহৃত হয়। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455570540,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটি **কৃদন্ত শব্দ**?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শৈশব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সলিল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বিবিয়ানা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গ্রামীণ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সলিল শব্দটি কৃৎপ্রত্যয় যোগে গঠিত একটি কৃদন্ত শব্দ। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455570698,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটি **তদ্ধিতান্ত শব্দের** উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নেত্র",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হামলা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চতুক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পানসে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পানসে শব্দটি তদ্ধিত প্রত্যয় যোগে গঠিত একটি শব্দ। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455570852,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "প্রকৃতি-প্রত্যয় সাধিত **সঠিক শব্দ** কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চল্ + ইষ্ণু = চলিষ্ণু",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "প্রাণ + ই = প্রাণী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ডাক + আই = ঢাকাই",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সল্ + ইল = সলিল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "প্রকৃতি এবং প্রত্যয়ের সঠিক মিলনে 'চলিষ্ণু' শব্দটি গঠিত হয়েছে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455571011,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "**'নৈপুণ্য' অর্থে** প্রত্যয় যুক্ত হয়েছে কোন শব্দে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ডাক্তারি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নেয়ে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বাহাদুরি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাঘা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "নৌকা চালনায় নিপুণ বা দক্ষ অর্থে 'নেয়ে' শব্দে প্রত্যয় ব্যবহৃত হয়েছে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455571172,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটি **তদ্ধিতান্ত শব্দ**?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পাঠক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শুনানি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "স্থায়ী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রাষ্ট্রীয়",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "রাষ্ট্রের সাথে প্রত্যয় যুক্ত হয়ে রাষ্ট্রীয় শব্দটি গঠিত হয়েছে যা একটি তদ্ধিতান্ত শব্দ। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455571439,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "শব্দের কোথায় প্রত্যয় যুক্ত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রথমে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শেষে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মধ্যে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "যেকোনো স্থানে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "প্রত্যয় সর্বদা শব্দের শেষে যুক্ত হয়। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455571744,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "কোন শব্দে **'নৈপুণ্য' অর্থে** প্রত্যয়ের ব্যবহার হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ডাক্তারি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মেটে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নেয়ে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বাহাদুরি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "নৌকা চালনায় দক্ষ ব্যক্তিকে নেয়ে বলা হয়, যা নৈপুণ্য অর্থ প্রকাশ করে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455571897,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "**'উক্তি'-এর** প্রকৃতি ও প্রত্যয় কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বচ্ + ক্ত",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বচ্ + উক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বচ্ + তি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বচ + তি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সংস্কৃত ব্যাকরণ অনুযায়ী বচ্ ধাতুর সাথে ক্ত (তি) প্রত্যয় যোগে উক্তি গঠিত হয়। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455572108,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "শব্দমূলের **অন্য নাম** কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ধ্বনিমূল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রকৃতি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "শব্দগুচ্ছ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিভক্তি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "শব্দের মূল অংশকে প্রকৃতি বলা হয়। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455572260,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "কোনটিতে **'যুক্ত' অর্থে** প্রত্যয় ব্যবহৃত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মেছো",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "টেকো",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "গেঁয়ো",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গেঁয়ো",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "টাক যুক্ত মাথাকে টেকো বলা হয়। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455572415,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "**'শৃ' + অনট = 'শ্রবণ'** কোন সূত্রে প্রাপ্ত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গুণ ও বৃদ্ধি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "গুণ ও সন্ধি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বৃদ্ধি ও সন্ধি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সন্ধি সূত্রে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এটি গুণ ও বৃদ্ধি প্রক্রিয়ার মাধ্যমে সাধিত হয়েছে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455572558,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "**'দোলনা'-এর** প্রকৃতি-প্রত্যয় কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুল্ + অনা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "দোল্ + না",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দিল্ + না",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দীল + অনা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "দুল্ ধাতুর সাথে অনা প্রত্যয় যুক্ত হয়ে দোলনা গঠিত হয়েছে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455572711,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "ক্ষুদ্রার্থেও সাধিত শব্দটিকে কী বলা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিভক্তিযুক্ত পদ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সমাসবদ্ধ পদ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কৃদন্ত পদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সম্বন্ধপদ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "উৎসে ৪৪ নম্বর প্রশ্নের সঠিক উত্তর হিসেবে 'ঘ' অপশনটি চিহ্নিত করা হয়েছে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455572867,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "**'চলিষ্ণু'** শব্দটির প্রকৃতি ও প্রত্যয় হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "চল্ + ইষ্ণু",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "চল্ + ঈষ্ণু",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চল + ইষ্ণু",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চল্ + ইষ্ণু",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "চল্ ধাতুর সাথে ইষ্ণু প্রত্যয় যুক্ত হয়ে চলিষ্ণু গঠিত হয়েছে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455572981,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "**'ভাব' অর্থে** প্রত্যয় যুক্ত হয়েছে কোনটিতে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জমিদারি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পাগলামি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ঘরামি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রেশমি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পাগল শব্দের সাথে আমি প্রত্যয় যুক্ত হয়ে ভাব অর্থ প্রকাশ করে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455573102,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "কোন শব্দে **ভাব অর্থে** প্রত্যয়ের ব্যবহার হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাহাদুরি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ডাক্তারি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জেঠামি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "জমিদারি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "জেঠা শব্দের সাথে আমি প্রত্যয় যুক্ত হয়ে ভাব প্রকাশ করছে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455573232,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "**ভাব অর্থে** প্রত্যয়যুক্ত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গেঁয়ো",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জমিদারি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কানাই",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ইতরামি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ইতর শব্দের সাথে আমি প্রত্যয় যুক্ত হয়ে নিন্দনীয় ভাব প্রকাশ করে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455573345,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "তদ্ধিত প্রত্যয় সাধিত শব্দটির নাম কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রত্যয়ান্ত শব্দ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কৃদন্ত শব্দ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তদ্ধিতান্ত শব্দ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সাধিত শব্দ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "তদ্ধিত প্রত্যয় দিয়ে সাধিত শব্দকে তদ্ধিতান্ত শব্দ বলে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455573459,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "ক্ষুদ্রার্থেও প্রত্যয় যুক্ত হয়েছে কোন শব্দে? বা **বৃহৎ অর্থে** 'আ' তদ্ধিত প্রত্যয়ের ব্যবহার কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ডিঙা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ডিঙি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হাতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ডোকরা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বৃহৎ অর্থ বোঝাতে 'আ' প্রত্যয় যোগে ডিঙা শব্দটি গঠিত হয়। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455573578,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "**'ঢাকাই'** শব্দে কোন অর্থে 'আই' প্রত্যয় যুক্ত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আদর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ভাব",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উপজীবিকা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জাত",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ঢাকা থেকে আগত বা জাত অর্থে ঢাকাই শব্দটি গঠিত। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455573696,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "**'উপজীবিকা' অর্থে** তদ্ধিত প্রত্যয় কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চাষি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "দোকানি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জেলে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নেয়ে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "চাষ করে যে জীবিকা নির্বাহ করে তাকে চাষি বলা হয়। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455573806,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "**\"শয়ান\"** এর প্রকৃতি-প্রত্যয় নিচের কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শো + শান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শী + ওয়ান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শী + ক্ত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শী + আন",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "শী ধাতুর সাথে আন প্রত্যয় যুক্ত হয়ে শয়ান শব্দটি গঠিত হয়। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455573932,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "প্রত্যয় যুক্ত হওয়ার ফলে অনেক সময় শব্দের কী বদলায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রকৃতি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অর্থ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শ্রেণি পরিচয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অর্থ ও শ্রেণি পরিচয়",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "প্রত্যয় যুক্ত হওয়ার ফলে শব্দের অর্থ এবং ব্যাকরণিক শ্রেণি উভয়ই পরিবর্তিত হতে পারে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455574056,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "**\"পেশব\"** শব্দটি কোন প্রত্যয় যোগে গঠিত শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "উৎসে ৫৫ নম্বর প্রশ্নের সঠিক উত্তর হিসেবে 'ক' অপশনটি চিহ্নিত করা হয়েছে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455574169,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "**\"শান্তি\"** শব্দের সঠিক প্রকৃতি-প্রত্যয় হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "শম্ + তি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "শম্ + তি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শান্ত্ + ই",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শম্ + ত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "শম্ ধাতুর সাথে তি প্রত্যয় যুক্ত হয়ে শান্তি গঠিত হয়। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455574279,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "**'সৌন্দর্য'** শব্দটির সঠিক প্রকৃতি ও প্রত্যয় কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সুন্দর + য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সুন্দর + অ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সুন্দর + জ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সুন্দর + য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সুন্দর শব্দের সাথে য প্রত্যয় যুক্ত হয়ে সৌন্দর্য গঠিত হয়। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455574431,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "**'ডাক্তারি'** কী অর্থে তদ্ধিত প্রত্যয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মালিক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চাকরি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ব্যবসা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পেশা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ডাক্তারি বলতে একজন ডাক্তারের পেশা বোঝায়। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455574564,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "**'জমিদারি'** কী অর্থে তদ্ধিত প্রত্যয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পেশা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ব্যবসা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মালিকানা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মালিক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "জমিদারি বলতে জমিদারির মালিকানা বা অবস্থা বোঝায়। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455574690,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "**'উপকরণ' অর্থে** নিচের কোনটি তদ্ধিত প্রত্যয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মেটে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বাহাদুরি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নেয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জমিদারি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "মাটি দিয়ে তৈরি বা মাটির উপকরণ বোঝাতে 'মেটে' শব্দটি ব্যবহৃত হয়। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456009388,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটি ক্ষুদ্রত্বে শব্দের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আষাঢ়ে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চোর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হাড়িয়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মেছো",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "শব্দের শেষে যে প্রত্যয় যুক্ত হয়, সেগুলোকে তদ্ধিত প্রত্যয় বলে [২]। তদ্ধিত প্রত্যয় দিয়ে সাধিত শব্দকে বলে তদ্ধিতান্ত শব্দ [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456009997,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "ভাব অর্থে তদ্ধিত প্রত্যয় কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জমিদারি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "লাঠালাঠি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাহাদুরি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ডাক্তারি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বিশেষ্য ও বিশেষণের পরে তদ্ধিত প্রত্যয় যুক্ত হয় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456010119,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "বৃহৎ অর্থে প্রত্যয়যুক্ত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাঘা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঢিঙি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ডিঙা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "জমিদারি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456010235,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "টাঁক + উ = টেকো— এখানে 'উ' প্রত্যয় কী অর্থে ব্যবহৃত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নিন্দা অর্থে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "যুক্ত অর্থে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ভাব অর্থে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জাত অর্থে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456010370,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "শব্দ ও ধাতুর পরে অর্থহীন যেসব শব্দাংশ যুক্ত হয়ে নতুন শব্দ তৈরি হয় সেগুলোকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "উপসর্গ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অনুসর্গ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যোজক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রত্যয়",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "প্রত্যয়ের নিজস্ব কোনো অর্থ নেই; শব্দ ও ধাতুর পরে প্রত্যয় যুক্ত হয়ে নতুন শব্দ তৈরি করে [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456010490,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'চোরা'-এখানে 'আ' প্রত্যয় যুক্ত হয়েছে কোন অর্থে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অপকারী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অবজ্ঞা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সামান্যতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিন্দা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456010608,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "প্রত্যয় যুক্ত হওয়ায় অবজ্ঞা অর্থে ব্যবহৃত হয় নিচের কোন শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কানাই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গেঁয়ো",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বেতো",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চোরা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456010713,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটি ক্ষুদ্রত্বে সাধিত শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বর্ধমান",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বুদ্ধিমান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জ্ঞানবান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দয়াবান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456010814,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'কুন্দপুষ্প' কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কৃৎপ্রত্যয় সাধিত শব্দ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তদ্ধিত সাধিত শব্দ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মৌলিক শব্দ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মুন + বতুপ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456010920,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "অবজ্ঞা অর্থে কোনটিতে 'আ' প্রত্যয় যুক্ত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ডিঙা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কেষ্ট/চোরা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "হাতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাইশা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456011063,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "ধাতুর পরে যেসব প্রত্যয় যুক্ত হয় তাদের কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কৃৎপ্রত্যয়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "তদ্ধিত প্রত্যয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কৃদন্ত পদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তদ্ধিতান্ত পদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ধাতুর পরে যেসব প্রত্যয় যুক্ত হয়, সেগুলোকে কৃৎপ্রত্যয় বলে [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456011188,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "ক্ষুদ্রত্বে সাধিত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্থায়ী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঢাকাই",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শৈশব",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বাঘা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456011316,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোন শব্দটিতে 'আগত' অর্থে প্রত্যয় যুক্ত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঢাকাই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দখিনা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কানাই",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ডাক্তারি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456011447,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'দর্শনীয়' শব্দের সঠিক শব্দ গঠন কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দৃক্ + অনীয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দৃশ + অনীয়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "দৃষ্টি + য়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দৃশ্য + অনীয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456011567,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোন শব্দটি তদ্ধিত প্রত্যয়জাত শব্দের উদাহরণ নয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শৈশব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দাপট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাঘা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শয়ান",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456011681,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'ডিঙা' শব্দের 'আ' প্রত্যয় কী অর্থে ব্যবহৃত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সদৃশ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বৃহৎ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ছোটো",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পূর্ণ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456011802,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোন প্রকৃতি-প্রত্যয়ের বিশ্লেষণটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চল্ + ইষ্ণু = চলিষ্ণু",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পঠ্ + ইত = পঠিত",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তাজ + ই = তাজি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মিশর + ইয় = মিশরীয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456012029,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'নিন্ম' অর্থে কোন শব্দটি ব্যবহার হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চোরা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ডিঙা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বেতো",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জেলানি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456012143,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'ইতর' শব্দের সাথে 'আমি' প্রত্যয় যুক্ত হয়ে কোন অর্থ প্রকাশ করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ভাব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নিন্দা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অবজ্ঞা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সংশ্লিষ্ট",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456012291,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "সদৃশ অর্থে প্রত্যয়যুক্ত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাঘা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ঢাকাই",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "টেকো",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চোরা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456012436,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটি কৃদন্ত শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শৈশব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সলিল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিধিবিদ্ধ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "গ্রামীণ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কৃৎপ্রত্যয় দিয়ে সাধিত শব্দকে বলে কৃদন্ত শব্দ [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456012582,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটি তদ্ধিতান্ত শব্দের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নেত্র",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হামলা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চড়ক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পানসে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456012724,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "প্রকৃতি-প্রত্যয় সাধিত সঠিক শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চল্ + ইষ্ণু = চলিষ্ণু",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রাণ + ই = প্রাণী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ঢাক + আই = ঢাকাই",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সল্ + ইল = সলিল",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456012848,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'নৈপুণ্য' অর্থে প্রত্যয় যুক্ত হয়েছে কোন শব্দে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ডাক্তারি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নেয়ে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বাহাদুরি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাঘা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456012969,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটি তদ্ধিতান্ত শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পাঠক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শুনানি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "স্থায়ী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রাষ্ট্রীয়",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456013104,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "শব্দের কোথায় প্রত্যয় যুক্ত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রথমে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শেষে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মধ্যে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "যেকোনো স্থানে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456013336,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "কোন শব্দে 'নৈপুণ্য' অর্থে প্রত্যয়ের ব্যবহার হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ডাক্তারি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মেটে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নেয়ে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বাহাদুরি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456013464,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'উক্তি'-এর প্রকৃতি ও প্রত্যয় কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বচ্ + ত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বচ্ + উক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বদ্ + তি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বচ + তি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456013586,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "শব্দমূলের অন্য নাম কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ধ্বনিমূল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শব্দগুচ্ছ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিভক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রকৃতি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456013710,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "কোনটিতে 'যুক্ত' অর্থে প্রত্যয় ব্যবহৃত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মেছো",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "টেকো",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "গেঁয়ো",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গোঁয়ো",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456013832,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "শ্রু + অনট = শ্রবণ' কোন সূত্রে গঠিত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গুণ ও বৃদ্ধি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "গুণ ও সন্ধি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বৃদ্ধি ও সন্ধি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সন্ধি সূত্রে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456013963,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'দোলনা'-এর প্রকৃতি-প্রত্যয় কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুল্ + অনা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "দোল্ + না",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দিল + না",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দীল + অনা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456014076,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "ক্ষুদ্রত্বে সাধিত পদটিকে কী বলা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিভক্তিযুক্ত পদ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সমাসবদ্ধ পদ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কৃদন্ত পদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তদ্ধিতান্ত পদ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456014204,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'চলিষ্ণু' শব্দের প্রকৃতি ও প্রত্যয় হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "চল্ + ইষ্ণু",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চল্ + ইষ্ণু",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চল্ + ইষ্ণু",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "চল্ + উষ্ণু",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456014336,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'ভাব' অর্থে প্রত্যয় যুক্ত হয়েছে কোনটিতে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জমিদারি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পাগলামি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ঘরমি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রেশমি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456014453,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "কোন শব্দে ভাব অর্থে প্রত্যয়ের ব্যবহার হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাহাদুরি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ডাক্তারি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জেঠামি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "জমিদারি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456014567,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "ভাব অর্থে প্রত্যয়যুক্ত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গেঁয়ো",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জমিদারি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কানাই",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ইতরামি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456014680,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "তদ্ধিত প্রত্যয় সাধিত শব্দটির নাম কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রত্যয়ান্ত শব্দ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কৃদন্ত শব্দ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তদ্ধিতান্ত শব্দ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সাধিত শব্দ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456014810,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "ক্ষুদ্রার্থে প্রত্যয় যুক্ত হয়েছে কোন শব্দে?\nখু বা ক্ষুদ্রার্থে 'আ' তদ্ধিত প্রত্যয়ের ব্যবহার কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ডিঙা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ডিঙি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বাঘা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ডোকা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456014921,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'ঢাকাই' শব্দে কোন অর্থে 'আই' প্রত্যয় যুক্ত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আদর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ভাব",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উপজীবিকা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জাত",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456015035,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'উপজীবিকা' অর্থে তদ্ধিত প্রত্যয় কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চাষি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দোকানি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জেলে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মেছো",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456015223,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'শয়ান' এর প্রকৃতি-প্রত্যয় নিচের কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শো + মান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শী + ওয়ান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শী + শান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শী + আন",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456015338,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "প্রত্যয় যুক্ত হওয়ার পরে অনেক সময় শব্দের কী পরিবর্তন হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রকৃতি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অর্থ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শ্রেণি পরিচয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অর্থ ও শ্রেণি পরিচয়",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "প্রত্যয় যুক্ত হওয়ার পরে অনেক সময় শব্দের অর্থ ও শ্রেণি পরিচয় বদলে যায় [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456015470,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'শৈশব' শব্দটি কোন প্রত্যয়ে গঠিত শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "আউ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456015596,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'শাস্তি' শব্দের সঠিক প্রকৃতি-প্রত্যয় হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "শাস + তি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "শাস + ইতি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শাস্ত্র + ই",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শাস + ত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456015715,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'সৌন্দর্য' শব্দটির সঠিক প্রকৃতি ও প্রত্যয় কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সন্দর + য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সুন্দর + অ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সুন্দর + জ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সুন্দর + য",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456015844,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'ডাক্তারি' কী অর্থে তদ্ধিত প্রত্যয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মালিক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চাকরি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ব্যবসা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পেশা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456015959,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'জমিদারি' কী অর্থে তদ্ধিত প্রত্যয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পেশা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ব্যবসা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মালিকানা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মালিক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456016078,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'উপকরণ' অর্থে নিচের কোনটি তদ্ধিত প্রত্যয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মেটে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বাহাদুরি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নেয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জমিদারি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456016191,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "সমাসের মাধ্যমে গঠিত হয়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "নতুন শব্দ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "নতুন বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নতুন বর্ণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নতুন ধ্বনি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বাক্যে পরস্পর সম্পর্কযুক্ত একাধিক পদের এক পদে পরিণত হওয়াকে বলে— সমাস [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456016544,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'পরীক্ষায় নিয়ন্ত্রক পরীক্ষার সমসূচি স্কুল-কলেজে পাঠানোর নির্দেশ দিয়েছেন।'— এই বাক্যে সমস্তপদ কোন পদ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সমসূচি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সমস্যমান পদ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পূর্বপদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পরপদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456016787,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটি দ্বন্দ্ব সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নয়-ছয়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "খাসজমি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কনকচাঁপা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "হিমালয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456016900,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটি কর্মধারয় সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হাতঘড়ি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "চোখে-মুখে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সেতার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তিলপেলজা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456017009,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটির ব্যাসবাক্যে 'যে' যোজক রয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বেগুনভাজা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ত্রিফলা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ঘরজামাই",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "হাতঘড়ি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456017133,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "মধ্যপদলোপী কর্মধারয় সমাস কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চৌরাস্তা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঘৃতান্ন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "চালাকচতুর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "টাকমাথা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456017294,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "উপমিত কর্মধারয় সমাস কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চাঁদমুখ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "শশব্যস্ত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হাতঘড়ি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিষাদসিন্ধু",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456017446,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটিতে উপমেয় পদের সাথে উপমান পদের অভেদ কল্পনা করা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কাজলকালো",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মনমাঝি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তুষারশুভ্র",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চৌরাস্তা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456017549,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "বিভক্তি লোপ পাওয়া তৎপুরুষ সমাসের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ছেলে-ভুলানো",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "তেপান্তর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গোঁফখেজুরে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "হাতে কাটা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456017668,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটি অলুক তৎপুরুষ সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গ্রামান্তর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গাছপাকা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ধানখেত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গরুরগাড়ি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456017778,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "কোন সমাসে পূর্বপদ ও পরপদের কোনোটির অর্থ না বুঝিয়ে অন্য কিছু বোঝায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দ্বিগু সমাস",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তৎপুরুষ সমাস",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বহুব্রীহি সমাস",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কর্মধারয় সমাস",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456017890,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "যে বহুব্রীহি সমাসে সমস্তপদে পূর্বপদের বিভক্তি অক্ষুণ্ণ থাকে তাকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সংখ্যাবাচক বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ব্যতিহার বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পদলোপী বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অলুক বহুব্রীহি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456018005,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'গ্রামছাড়া' কোন সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দ্বন্দ্ব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কর্মধারয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তৎপুরুষ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বহুব্রীহি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456018136,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোন সমস্তপদটি উপমান কর্মধারয় সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঘৃতান্ন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শশব্যস্ত",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মনমাঝি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিষাদসিন্ধু",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456018255,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "যার সাথে তুলনা করা হয় তাকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "উপমান",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "উপমেয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রূপক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অদ্ভুত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456018365,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'গায়ে-হলুদ' কোন সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "উপপদ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তৎপুরুষ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অব্যয়ীভাব",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বহুব্রীহি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456018481,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটি তৎপুরুষ সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অকালমৃত্যু",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অলসতা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গোলাপফুল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সেতার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456018593,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটি উপমিত কর্মধারয় সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চন্দ্রমুখ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "শশব্যস্ত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কাজলকালো",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তুষারশুভ্র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456018708,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটিতে উপমেয় পদের সাথে উপমান পদের অভেদ কল্পনা করা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চৌরাস্তা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিষাদসিন্ধু",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তিলপেলজা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নয়ছয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456018815,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "বিভক্তি লোপ পাওয়া তৎপুরুষ সমাসের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ছেলে-ভুলানো",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "তেলেনভাজা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গোঁফখেজুরে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "হাতে কাটা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456018929,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটি অলুক তৎপুরুষ সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গ্রামছাড়া",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গাছপাকা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ধানখেত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গরুরগাড়ি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456019044,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটি দ্বিগু কর্মধারয় সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঘরজামাই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঘৃতান্ন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিষাদসিন্ধু",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ত্রিফলা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456019537,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "ব্যাধিকরণ বহুব্রীহি সমাসের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কানাকানি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কানাকানি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গোঁফখেজুরে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "লাঠালাঠি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456019655,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'বিজয়-পতাকা' কোন কর্মধারয় সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মধ্যপদলোপী কর্মধারয়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "উপমান কর্মধারয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উপমিত কর্মধারয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রূপক কর্মধারয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456019765,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "সমাসবদ্ধ পদের পরবর্তী অংশকে কী বলা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পূর্বপদ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দক্ষিণ পদ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পরপদ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "প্রধানপদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456019877,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটিতে 'যে' যোজক রয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বেগুনভাজা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ত্রিফলা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তেপান্তর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গৃহবাসী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456019992,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "কোন সমাসে পূর্বপদ ও পরপদ উভয়টিরই সমান প্রাধান্য থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কর্মধারয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তৎপুরুষ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দ্বন্দ্ব",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456020095,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "কোনটি কর্মধারয় সমাস?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হাতেকলমে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গোলাভরা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পঞ্চবটী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "লাল পেড়ে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456020209,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'গোলাপফুল' সমাসবদ্ধ পদের ব্যাসবাক্য কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গোলাপ যে ফুল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গোলাপ রঙের ফুল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গোলাপ নামের ফুল",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "গোলাপি ফুল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456020330,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "দ্বিগু কর্মধারয় সমাসের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চতুর্ভুজ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সেতার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ত্রিফলা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সাহেব-বিবি-গোলাম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456020446,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটি অলুক দ্বন্দ্ব সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হীরে-জহরত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ছেলে-মেয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গাছে-পাকা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চলনে-বলনে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456020639,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোন অংশটি অলুক তৎপুরুষ সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আগাগোড়া",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অকালমৃত্যু",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তেলেনভাজা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "গোঁফখেজুরে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456020762,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "কোন ধরনের কর্মধারয় সমাসে উভয় পদই বিশেষ্য হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রূপক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মধ্যপদলোপী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উপমান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উপমিত",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456020866,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'গরুরগাড়ি' কোন সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অলুক দ্বন্দ্ব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রূপক কর্মধারয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অলুক তৎপুরুষ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ব্যতিহার বহুব্রীহি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456020978,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'জায়া' শব্দটি বহুব্রীহি সমাসে হয়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "দম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জানি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "যুবতি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পত্নী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456021107,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "সংখ্যাবাচক বহুব্রীহি সমাসের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ত্রিফলা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চৌরাস্তা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উনিশ-বিশ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সেতার",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456021220,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "সমাসের উদ্দেশ্য কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাক্য গঠন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শব্দ গঠন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাক্যের শোভা বর্ধন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সংক্ষেপণ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456021334,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'মহাজ্ঞান'-এর সঠিক ব্যাসবাক্য কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মহান যে জ্ঞান",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "মহৎ যে জ্ঞান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মহৎ যে জ্ঞান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মহতী যে জ্ঞান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456021450,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'চন্দ্রমুখ' কোন কর্মধারয় সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "উপমান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "উপমিত",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "রূপক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মধ্যপদলোপী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456021565,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "'চন্দ্রমুখ' শব্দের ব্যাসবাক্য কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চন্দ্রের ন্যায় মুখ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চন্দ্র রূপ মুখ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মুখ চন্দ্রের ন্যায়",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মুখ ও চন্দ্র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456021691,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "উপমিত কর্মধারয় সমাসের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চন্দ্রমুখ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বিষাদসিন্ধু",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কাজলকালো",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তুষারশুভ্র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456021801,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটি দ্বিগু কর্মধারয় সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শশব্যস্ত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চৌরাস্তা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "আলুসিদ্ধ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মনমাঝি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456021921,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটি বহুব্রীহি সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঘৃতান্ন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সেতার",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মনমাঝি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জজবুড়ো",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456022113,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১১: প্রত্যয় দিয়ে শব্দ গঠন",
+    "question": "কোন বহুব্রীহি সমাসে পারস্পরিক ক্রিয়ার কোনো অবস্থা তৈরি হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সমানাধিকরণ বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ব্যাধিকরণ বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ব্যতিহার বহুব্রীহি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অলুক বহুব্রীহি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  }
+]

@@ -1,0 +1,898 @@
+[
+  {
+    "id": 1768035246595,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "বাক্যে ক্রিয়ার সঙ্গে কোন পদের সম্পর্ককে কারক বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিশেষ্য ও বিশেষণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিশেষ্য ও সর্বনাম",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বিশেষ্য ও অনুসর্গ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিশেষণ ও আবেগ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ক্রিয়ার সাথে বিশেষ্য ও সর্বনামের সম্পর্ককেই কারক বলা হয় [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035246696,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "ক্রিয়ার সঙ্গে সরাসরি সম্পর্ক নেই, তেমন কারকের নাম কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সম্বন্ধ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অপাদান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অধিকরণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কর্ত্রী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সম্বন্ধ পদের সাথে ক্রিয়ার সরাসরি কোনো সম্পর্ক থাকে না [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035246797,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "বাংলা ভাষায় কারকের সংখ্যা কয়টি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তিন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পাঁচ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ছয়",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বাংলা ব্যাকরণ অনুযায়ী কারক মোট ছয় প্রকার [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035246907,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "'আমরা নদীর ঘাট থেকে রিকশা নিয়েছিলাম' — বাক্যটিতে আমরা কোন কারক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্ত্রী",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কর্ম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "করণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অপাদান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যারা কাজটি সম্পাদন করছে (আমরা), তারা হলো কর্ত্রী কারক [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035247013,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "যাকে আশ্রয় করে কর্তা ক্রিয়া সম্পাদন করে তাকে কোন কারক বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্ত্রী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কর্ম",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অধিকরণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অপাদান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কর্তা যা করে বা যাকে কেন্দ্র করে কাজ করে, তা-ই কর্ম কারক [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035247115,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "'শিক্ষককে জানাও' — এই বাক্যে 'শিক্ষককে' কোন কারক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অধিকরণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অপাদান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কর্ত্রী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কর্ম",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এখানে 'শিক্ষককে' হলো ক্রিয়ার কর্ম, তাই এটি কর্ম কারক [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035247221,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "'ভেড়া দিয়ে চাষ করা সম্ভব নয়' — এই বাক্যে 'ভেড়া দিয়ে' কোন কারক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্ম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কর্ত্রী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "করণ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কর্ত্রী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যার সাহায্যে কাজ করা হয়, তা করণ কারক [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035247321,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "'জমি থেকে ফসল পাই' — বাক্যটিতে 'জমি থেকে' কোন কারক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "করণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অধিকরণ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অপাদান",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কর্ম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যা থেকে কিছু বিচ্যুত বা উৎপন্ন হয়, তা অপাদান কারক [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035247421,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "কোন কারকে মূলত ক্রিয়ার স্থান, সময় ইত্যাদি বোঝায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অপাদান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অধিকরণ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সম্বন্ধ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কর্ম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ক্রিয়ার আধার তথা স্থান ও কালকে অধিকরণ কারক বলে [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035247521,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "'গাছের ফল পেকেছে' — এখানে কোন বিভক্তির প্রয়োগ হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-র",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "-এর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "-রে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-এ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'গাছ' শব্দের সাথে '-এর' বা '-র' বিভক্তি যুক্ত হয়েছে [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035247624,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "'শিক্ষককে জানাও' — এখানে বিভক্তি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "এ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "একে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কাফে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'শিক্ষক' শব্দের সাথে 'কে' বিভক্তি যুক্ত হয়েছে [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035247776,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "কোন কারকে স্থান, কাল, বিষয় ও ভাব নির্দেশিত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সম্বন্ধ কারকে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "করণ কারকে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অপাদান কারকে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অধিকরণ কারকে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "স্থান, কাল ও বিষয়ের আধারই হলো অধিকরণ কারক [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035247937,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "কারক সম্পর্ক বোঝাতে বিশেষ্য ও সর্বনামের সঙ্গে যুক্ত হয়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "উপসর্গ ও বিভক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অনুসর্গ ও বিভক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পদ ও অনুসর্গ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিভক্তি ও অনুসর্গ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বিভক্তি ও অনুসর্গ বিশেষ্য/সর্বনামের সাথে যুক্ত হয়ে কারক সম্পর্ক তৈরি করে [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035248076,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "কারক কত প্রকার?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ছয়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "চার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দুই",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ব্যাকরণে কারক ছয় প্রকার— কর্ত্রী, কর্ম, করণ, অপাদান, অধিকরণ ও সম্বন্ধ [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035248220,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "কর্তী কারকে 'এ' বিভক্তির উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পাগলে কিনা বলে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "শিক্ষাকে জানাও",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ঘোড়া দিয়ে চাষ করা সম্ভব নয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রাজীব বাংলা ব্যাকরণে ভালো",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'পাগলে' শব্দে কর্তার সাথে 'এ' বিভক্তি যুক্ত হয়েছে [৮].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035248357,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "'গাঁয়ে মানে না আপনি মোড়ল' — এখানে 'গাঁয়ে' কোন কারক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্ম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কর্ত্রী",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অধিকরণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অপাদান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'গাঁ' (গ্রামবাসী) এখানে কর্তা হিসেবে কাজ করছে, তাই এটি কর্ত্রী কারক [৮].\nআপনার জন্য প্রয়োজনীয় ১০০টি প্রশ্ন এখানে প্রদান করা হলো। আরও প্রশ্নের জন্য নির্দেশ দিন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035288501,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "কোন বাক্যটিতে কর্ম কারকে শূন্য বিভক্তি রয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শিক্ষক মহোদয় পাঠদান করছেন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তারা ফল ধারা খেলে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ডাক্তার ডাকো",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "আমি ঢাকা যাচ্ছি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'ডাক্তার' শব্দটি এখানে কর্ম কারক এবং এর সাথে কোনো প্রকাশ্য বিভক্তি নেই, তাই এটি শূন্য বিভক্তি [৮]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035299208,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "'দশমাইল দিনে পায়ে হেঁটে চলতে হতো মাইল পর মাইল' — বাক্যে 'দশমাইল' কোন কারকের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্ম কারক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অপাদান কারক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অধিকরণ কারক",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সম্বন্ধ কারক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'দশমাইল' এখানে দূরত্বের আধার তথা স্থান নির্দেশ করছে, তাই এটি অধিকরণ কারক [৮]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035299675,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "'আমার জামার বোতামগুলো একটু অন্যরকম' — বাক্যটিতে 'আমার জামার' কোন কারক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্ম কারক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কর্ত্রী কারক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অধিকরণ কারক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সম্বন্ধ কারক",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "'জামার' শব্দের সাথে ক্রিয়ার সরাসরি সম্পর্ক নেই, বরং বোতামের সম্পর্ক বোঝাচ্ছে; তাই এটি সম্বন্ধ কারক [৮]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035300270,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "'দশমাইল দিনে পায়ে হেঁটে চলতে হতো মাইল পর মাইল' — বাক্যটিতে 'পায়ে' কোন কারক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অপাদান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অধিকরণ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কর্ম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সম্বন্ধ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "এখানে 'পায়ে' শব্দটি চলাচলের আধার হিসেবে কাজ করছে, তাই এটি অধিকরণ কারক [৮]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035300897,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "কোন কারকে ২য়া বিভক্তির উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জমি থেকে ফসল পাই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শিক্ষককে জানাও",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বাবা বাড়িতে আছেন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সে রোজ এক প্লেট ভাত খায়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'শিক্ষককে' শব্দে 'কে' বিভক্তি যুক্ত হয়েছে যা কর্ম কারকে ২য়া বিভক্তির উদাহরণ [৮]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035301463,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "কোন কারকে কখনো কখনো 'এ' বিভক্তি যুক্ত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "করণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অপাদান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অধিকরণ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সম্বন্ধ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "অধিকরণ কারকে স্থান বা বিষয় বোঝাতে প্রায়ই 'এ' বিভক্তি যুক্ত হয় [৮]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035301775,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "'সজীব অঙ্কে ভালো' — বাক্যে 'অঙ্কে' কোন কারক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অপাদান কারক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অধিকরণ কারক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সম্বন্ধ কারক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "করণ কারক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বিষয় বোঝাতে 'অঙ্কে' শব্দটি অধিকরণ কারক হিসেবে ব্যবহৃত হয়েছে [৮]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035301892,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "'বাবা বাড়িতে আছেন' — নিম্নরেখ শব্দটি কোন কারক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্মকারক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "করণ কারক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অধিকরণ কারক",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সম্বন্ধ কারক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'বাড়িতে' শব্দটি স্থান নির্দেশ করছে, তাই এটি অধিকরণ কারক [৮]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035302019,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "'কাপড়টা উঁচু টেবিল থেকে পড়ে গেল' ওই বাক্যে 'উঁচু টেবিল থেকে' কোন কারক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "করণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অপাদান",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অধিকরণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কর্ম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যা থেকে কোনো কিছু বিচ্যুত হয় বা পড়ে যায়, তাকে অপাদান কারক বলে [৮]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035302137,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "'মিতা অংকে ভালো' — বাক্যে 'অঙ্কে' কোন কারক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অধিকরণ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অপাদান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সম্বন্ধ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "করণ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কোনো বিষয়ে দক্ষতা বা বিষয় নির্দেশ করলে তা অধিকরণ কারক হয় [৮]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035302240,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "'এ দেহে প্রাণ নেই' — বাক্যের 'দেহে' শব্দটিতে কোন কারকে কোন বিভক্তি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্ত্রী ৭মী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অপাদানে ৭মী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কর্মে ৭মী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অধিকরণে ৭মী",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "'দেহে' একটি স্থান বা আধার এবং এতে 'এ' বিভক্তি যুক্ত থাকায় এটি অধিকরণে ৭মী [৮]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035302357,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৫: কারক",
+    "question": "'রাজীব বাংলা ব্যাকরণে ভালো' — বাক্যটিতে 'ব্যাকরণে' কোন কারক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্ত্রী কারক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কর্মকারক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অপাদান কারক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অধিকরণ কারক",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "'ব্যাকরণ' একটি নির্দিষ্ট বিষয় বোঝাচ্ছে, তাই এটি অধিকরণ কারক [৮]।",
+    "image": null,
+    "language": "en"
+  }
+]

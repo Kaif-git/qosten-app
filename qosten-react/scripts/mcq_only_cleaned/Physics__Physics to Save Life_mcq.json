@@ -1,0 +1,2168 @@
+[
+  {
+    "id": 1768846448240,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "The process of seeing any internal organ directly from outside is called-",
+    "options": [
+      {
+        "label": "a",
+        "text": "CT Scan",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ETT",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ECG",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Endoscopy",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Endoscopy is a procedure where a flexible tube with a light and camera (endoscope) is inserted into the body, allowing doctors to see internal organs directly on a screen.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846448361,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "X-Ray is used in which of the following devices?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Ultrasonography and CT Scan",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "CT Scan and radio therapy",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ECG and ultrasonography",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ECG and radio therapy",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "X-rays are used in CT Scans (which take multiple X-ray images to create cross-sections) and in Radiotherapy (where high-energy X-rays are used to destroy cancer cells).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846448467,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "In which of the following is ultrasonography used?",
+    "options": [
+      {
+        "label": "a",
+        "text": "To know the size of fetus",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "For treatment in radiotherapy",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "In the diagnosis of lung cancer",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "In the diagnosis of the presence of stone in kidney",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Ultrasonography (ultrasound) uses high-frequency sound waves to create images. It is commonly used to monitor fetal development during pregnancy (to know the size of the fetus) and to detect issues like kidney stones. Both options a and d are correct applications of ultrasonography. It is not used for radiotherapy treatment or as the primary tool for diagnosing lung cancer.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846448609,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "With which of the following materials is an apron used by a patient covered during taking X-ray?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Gallium",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Cadmium",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Carbon",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Lead",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Lead aprons are used as a shield during X-rays because lead is a dense metal that effectively blocks X-ray radiation, protecting the patient's body parts that are not being imaged.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846448714,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "What technology has played a ground breaking role in finding out the workings of human brain?",
+    "options": [
+      {
+        "label": "a",
+        "text": "MRI",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ETT",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "PET",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ECG",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "PET (Positron Emission Tomography) scan has been groundbreaking for studying brain function. It tracks a radioactive tracer to show how tissues and organs are functioning, which is crucial for understanding brain activity and metabolism.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846448824,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Radiotherapy is used for the treatment of-",
+    "options": [
+      {
+        "label": "a",
+        "text": "Heart",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Thyroid gland",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Kidney",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Gallbladder",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Radiotherapy uses high-energy radiation (like X-rays) to destroy cancer cells. It is commonly used to treat cancer of the thyroid gland, among other types.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846448925,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "What is the frequency range of sound used in ultrasonography?",
+    "options": [
+      {
+        "label": "a",
+        "text": "(20-2000)Hz",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "(20-20,000)KHz",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "(1-10)MHz",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "(1-10)GHz",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Ultrasonography uses ultrasonic sound waves, which are sound waves with frequencies higher than the human ear can hear. The typical frequency range used in medical ultrasound is 1 to 10 Megahertz (MHz).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846449046,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "The age of fossil can be determined by observing the presence of which of the following?",
+    "options": [
+      {
+        "label": "a",
+        "text": "C-13",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "C-14",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "C-135",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "C-513",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The age of fossils and archaeological specimens can be determined by measuring the amount of Carbon-14 (C-14), a radioactive isotope of carbon, present in them. This technique is known as radiocarbon dating.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846449171,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "What is the wave length of X-ray?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10^-6 m",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "10^-10 m",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "10^-12 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10^-14 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "X-rays are a form of electromagnetic radiation. Their wavelengths are very short, typically around 10^-10 meters (which is 0.1 nanometers), placing them between ultraviolet light and gamma rays on the electromagnetic spectrum.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846449274,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "What is the technique to check thin blood vessel blockage?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Angioplasty",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Angiogram",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "E.C.G.",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "E.T.T.",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "An Angiogram is an imaging test that uses X-rays and a special dye (contrast material) to look at the inside of blood vessels. It is specifically used to check for blockages or narrowing in arteries and veins.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846449375,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Which establishes relation between biology and physics?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Biology",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Physics",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Biophysics",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Chemistry",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Biophysics is the interdisciplinary science that applies the theories and methods of physics to understand biological systems. It establishes the relationship between biology and physics.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846449478,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Which branch of science does work with DNA?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Political science",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Biology",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Physics",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Social science",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Biology is the primary branch of science that works with DNA, studying its structure, function, replication, and role in heredity. While biophysics (a subdiscipline combining biology and physics) also studies DNA using physical principles, among the given options, Biology is the correct answer.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846449586,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Who was Jagadish Chandra Bose?",
+    "options": [
+      {
+        "label": "a",
+        "text": "an actor",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "famous poet",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "physicist",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "director",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Sir Jagadish Chandra Bose was a renowned Indian physicist, biologist, biophysicist, and plant physiologist. He made significant contributions to the study of radio waves and plant science.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846449687,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Ancestor of Jagadish Chandra Bose lived in which district?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Dhaka",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Rajshahi",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Khulna",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Munshiganj",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The ancestors of Sir Jagadish Chandra Bose lived in the Bikrampur region of Munshiganj District in present-day Bangladesh.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846449794,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Which organ of the body can be considered an automatic pump?",
+    "options": [
+      {
+        "label": "a",
+        "text": "heart",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "lungs",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "stomach",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "kidney",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The heart is considered an automatic pump because it rhythmically and continuously contracts and relaxes without conscious effort to pump blood throughout the body.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846449901,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Which one is used in the treatment of the leukemia of blood?",
+    "options": [
+      {
+        "label": "a",
+        "text": "¹³¹I",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "³²P",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "⁴⁰Ca",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "¹⁴C",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Phosphorus-32 (³²P) is a radioactive isotope sometimes used in the treatment of certain blood disorders, including some types of leukemia (cancer of blood-forming tissues).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846450004,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "When ultrasound is used for examination of the heart, then this test is called-",
+    "options": [
+      {
+        "label": "a",
+        "text": "Ultrasonography",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Echocardiography",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Angiography",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Angioplasty",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "When ultrasound is specifically used to examine the heart's structure and function, the test is called Echocardiography. It creates moving images of the heart.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846450107,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Which of the following is a special filter system?",
+    "options": [
+      {
+        "label": "a",
+        "text": "kidney",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "heart",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "stomach",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "liver",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The kidney is a special filtering organ. It removes waste products and excess fluid from the blood to form urine, which is then excreted from the body.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846450210,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "What kind of waste does kidney remove from the blood in order to filter it?",
+    "options": [
+      {
+        "label": "a",
+        "text": "oxygen",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "nitrogen",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "carbon dioxide",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "carbon mono-oxide",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The kidneys filter waste products from the blood. A major waste product they remove is urea, which contains nitrogen and is produced when the body breaks down proteins.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846450322,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Which one can automatically recover its disabled parts?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Petrol engine",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Diesel engine",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Human body",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Steam engine",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Unlike machines, the human body has the ability to heal itself and recover from injury or damage to a certain extent, such as healing a cut or mending a broken bone.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846450440,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Who discovered X-ray?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Becquerel",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Röntgen",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Wilhelm Conrad Röntgen, a German physicist, discovered X-rays in 1895. He was awarded the first Nobel Prize in Physics in 1901 for this discovery.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846450665,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "In which instrument transducer is found?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Ultrasonography",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "X- ray",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Endoscopy",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "MRI",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "A transducer is a key component in an ultrasonography machine. It both produces the ultrasonic sound waves and detects the echoes that bounce back from internal structures to create an image.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846450827,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Which test is done to detect cardiac problem and tumour?",
+    "options": [
+      {
+        "label": "a",
+        "text": "CT scan",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "MRI",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Ultrasonogram",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ECG",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Both CT (Computed Tomography) scans and MRI (Magnetic Resonance Imaging) are powerful imaging techniques used to detect a wide range of issues, including cardiac (heart) problems and tumors in various parts of the body. Both options a and b are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846450935,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "How many electrodes are there on the two sides of a glass sphere of X-ray?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Two",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Three",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Four",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Five",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "In a basic X-ray tube, there are two main electrodes inside the glass vacuum tube: the cathode (which emits electrons) and the anode (which is the target where electrons strike to produce X-rays).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846451146,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Which one of the following tests is needed to diagnose lung cancer?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ETT and Endoscopy",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Endoscopy and Angiography",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Angiography and CT scan",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "X- Ray and CT scan",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Diagnosing lung cancer often involves imaging tests. A chest X-ray is usually the first step to find an abnormal mass. A CT scan provides more detailed, cross-sectional images of the lungs and is crucial for confirming the location, size, and spread of a tumor.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846451276,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "In an ultrasonographic machine, what is provided with electric energy to produce ultrasonic wave?",
+    "options": [
+      {
+        "label": "a",
+        "text": "transmitter",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "transducer",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "filament",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "transformer",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "In an ultrasonography machine, electric energy is provided to the transducer. The transducer contains piezoelectric crystals that vibrate at high frequency when electricity is applied, producing ultrasonic sound waves.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846451383,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Which one is used for taking pictures of the internal part of human body?",
+    "options": [
+      {
+        "label": "a",
+        "text": "X-ray",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ECG",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ECO",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Ultrasonography",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Both X-ray imaging and Ultrasonography (ultrasound) are common, non-invasive techniques used to create pictures (images) of the internal structures of the human body. ECG (Electrocardiogram) measures the heart's electrical activity, not an image. Both options a and d are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846451490,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "How many types of uses are there of radioactive isotope?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "3",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "4",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "5",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The text states that radioactive isotopes are used for two main types of work in the medical sector: one for determining (diagnosing) disease and another for treating/curing disease.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846451798,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Linear accelerator is used to make which of the following high powerful thing?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Alpha ray",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Beta ray",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Gamma ray",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "X-ray",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "A linear accelerator (linac) is a device that uses high-frequency electromagnetic waves to accelerate charged particles (like electrons) to high energies. These high-energy particles are then directed at a target to produce high-powered X-rays used in radiation therapy for cancer.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846451910,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Which helps determine the extent to which the tumor has invaded other surrounding tissue?",
+    "options": [
+      {
+        "label": "a",
+        "text": "MRI",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Endoscopy",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ECG",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "CT Scan image",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "CT (Computed Tomography) scans provide detailed cross-sectional images of the body. These images are very useful for doctors to see the exact size, shape, and location of a tumor and to determine how much it has invaded or spread into the surrounding tissues.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846452013,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "To identify the diseases related to coronary artery which one is used?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ECHO",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ETT",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ECG",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Angiogram",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "An Angiogram (specifically a Coronary Angiogram) is the definitive test to identify diseases related to the coronary arteries (the blood vessels that supply the heart muscle). It uses X-rays and dye to show blockages or narrowing in these arteries.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846452114,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Which of the following has a certain amount in the human body?",
+    "options": [
+      {
+        "label": "a",
+        "text": "N₄",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "CH₄",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "CO₂",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "C¹⁴",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Carbon-14 (C¹⁴) is a radioactive isotope of carbon. A very small but constant amount of C¹⁴ is naturally present in the human body (and all living things) because it is absorbed from the environment (through food and air).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846452217,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "What is the full form of CT Scan?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Computed Tomography Scan",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Computerized Transverse Scan",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Cardiac Tomography Scan",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Computer Topography Scan",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The full form of CT Scan is Computed Tomography Scan. Sometimes \"Computerized\" is used instead of \"Computed,\" but \"Computed Tomography\" is the standard medical term.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846452326,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "The subject matter of physics\ni. The laws which the physical world of nature follows\nii. Mathematical explanations of the physical world of nature\niii. To work with the diversity of the living world.",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Physics is the study of the fundamental laws of nature (i) and often uses mathematics to describe and explain these laws and the behavior of the physical universe (ii). Working with the diversity of the living world is the primary focus of biology, not physics (iii is incorrect).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846452447,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Every organ in the human body\ni. Moves on its own\nii. There is a preset relation between them\niii. Their functions are specific",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Organs in the human body do not all move on their own (i is incorrect; for example, the liver doesn't move independently). However, organs work together in systems with a preset, coordinated relationship (ii is correct), and each organ has a specific, specialized function (iii is correct).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846452717,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Among the human body organs are\ni. Lungs\nii. Liver\niii. Kidneys",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The lungs, liver, and kidneys are all vital organs in the human body. They are part of different systems (respiratory, digestive/excretory, and urinary/excretory respectively) but are all correctly listed as human body organs.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846452833,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "X-ray\ni. Can penetrate through body muscles\nii. Can penetrate through bone\niii. Can create image on photographic plate",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "All statements are properties of X-rays. They penetrate soft tissues (muscles) easily (i). They are partially absorbed by dense materials like bone (ii), creating a shadow image. This differential absorption allows them to create an image on a photographic plate or digital sensor (iii).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846452940,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "In CT scan\ni. X-ray is used\nii. Three dimensional image is formed\niii. It is used for detection of cancer",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "All statements are true about CT scans. They use a rotating X-ray source and detectors (i). A computer processes these X-ray measurements to construct a three-dimensional image of the inside of the body (ii). CT scans are very useful for detecting and evaluating tumors/cancer (iii).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846453048,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "The reason for increase in average life expectancy of humans in the globe\ni. Improvement of living standard\nii. Use of vaccines\niii. Awareness of health",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The increase in global average life expectancy is due to a combination of factors including better living conditions (i), widespread vaccination preventing infectious diseases (ii), and greater public awareness about hygiene, diet, and healthcare (iii).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846453172,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "X-ray can identify\ni. Bone fracture\nii. Crack in bone\niii. Lung cancer",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "X-ray imaging is commonly used to identify bone fractures (i) and cracks or fine lines in bones (ii). While not as detailed as a CT scan, a chest X-ray is often the first imaging test used to detect abnormalities like lung cancer (iii).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846453361,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "X-ray\ni. Can kill cancer cells\nii. Used in treatment\niii. has another name-Roentgen ray",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "All statements are correct. High-energy X-rays can destroy cancer cells (i), which is why they are used in radiotherapy for cancer treatment (ii). X-rays are indeed named after their discoverer, Wilhelm Röntgen, and are sometimes called Roentgen rays (iii).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846453467,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Devices for healing cancer\ni. X-ray\nii. Cobalt-isotope\niii. Phosphorus isotope",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "All are used in cancer treatment. X-ray machines produce radiation for external beam radiotherapy (i). Radioactive isotopes like Cobalt-60 are used in machines for radiation therapy (ii). Isotopes like Phosphorus-32 can be used internally for treating certain cancers (iii).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846453566,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Ultrasonic wave\ni. reflected\nii. transmitted\niii. absorbed",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "When ultrasonic waves encounter different tissues inside the body, they can be reflected back (this echo is used to create the image), transmitted through to deeper tissues, or absorbed by the tissues (converting sound energy to a tiny amount of heat). All three phenomena occur.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846453672,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "CT scan\ni. A large machine\nii. Abbreviated form of Computed Tomography scan\niii. The test is not done on pregnant women",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "All are true. A CT scanner is a large, doughnut-shaped machine (i). CT stands for Computed Tomography (ii). Due to the use of ionizing radiation (X-rays), CT scans are generally avoided during pregnancy unless absolutely necessary to protect the developing fetus (iii).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846453779,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Ultrasonography\ni. In the machine, microphone can be used.\nii. Safer than X-ray\niii. Dependent on high frequency sound and its echo",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Ultrasonography uses a transducer, not a microphone (i is incorrect). It is generally considered safer than X-ray because it uses sound waves, not ionizing radiation (ii is correct). The technique is entirely dependent on sending high-frequency sound waves into the body and analyzing the returning echoes (iii is correct).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846453881,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Image of CT scan helps physician to\ni. Detect tumor\nii. Ascertain the shape of tumor\niii. Know the position of tumor",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The detailed images from a CT scan allow a physician to detect the presence of a tumor (i), determine its precise shape and size (ii), and locate its exact position within the body (iii). This information is crucial for diagnosis and treatment planning.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846453982,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "MRI\ni. In the machine, powerful magnetic field is used.\nii. In the machine, X-ray is used\niii. A painless disease detection process",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "MRI uses a powerful magnetic field and radio waves, not X-rays (i is correct, ii is incorrect). It is a non-invasive and painless imaging procedure (iii is correct).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846454086,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "What is used in Angiography?\ni. Transducer\nii. Dye\niii. Catheter",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "In angiography, a catheter (a thin, flexible tube) is inserted into a blood vessel (iii). A special dye (contrast material) is injected through this catheter to make the blood vessels visible on X-ray images (ii). A transducer is used in ultrasound, not in standard angiography (i is incorrect).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846454190,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "In angiography test, dye comes out of the body\ni. Through sweat\nii. Through kidney\niii. Through urine",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The contrast dye used in angiography is filtered out of the blood by the kidneys (ii) and is then excreted from the body through urine (iii). It is not primarily excreted through sweat (i).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846454290,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Endoscopy -\ni. Generally means seeing the outside of something\nii. The machine has two tubes\niii. The machine uses the total internal reflection of light",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Endoscopy means looking *inside* the body, not the outside (i is incorrect). A typical endoscope has at least two bundles of optical fibers: one to carry light in and one to carry the image out (ii is correct). It uses the principle of total internal reflection within these optical fibers to transmit light and images (iii is correct).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846454394,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Endoscopy is used to\ni. Monitor female reproductive organs\nii. Examine abdomen & pelvis\niii. Examine the vertebrae of the spinal cord",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Endoscopy is used for procedures like hysteroscopy to monitor reproductive organs (i) and laparoscopy to examine the abdomen and pelvis (ii). Examining the vertebrae of the spinal cord is typically done with imaging like MRI or CT, not with a standard endoscope (iii is incorrect).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846454498,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "ECG is used to\ni. detect the beat rate of the heart\nii. measure the rhythmicity of the heart\niii. Identify the blockage of the external arteries",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "An ECG (Electrocardiogram) detects and records the heart's electrical activity. It is used to find the heart rate (beat rate) (i) and check if the heartbeat is regular (rhythmicity) (ii). It cannot directly identify blockages in arteries; that requires tests like an angiogram (iii is incorrect).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846454597,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Radiotherapy can\ni. Reduce the size of the tumor\nii. Destroy the remaining part of tumor\niii. Destroy DNA",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Radiotherapy works by damaging the DNA inside cells, which prevents them from growing and dividing (iii). This action can shrink (reduce the size of) a tumor (i) and ultimately aims to destroy all cancerous cells, including any remaining parts of the tumor (ii).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846454701,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Radio therapy can\ni. destroy cancer cell\nii. destroy the splitting power of cancer cell\niii. destroy some nearby healthy cells",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Radiotherapy's primary goal is to destroy cancer cells by damaging their DNA (i), which stops their ability to divide and grow (destroying their splitting power) (ii). A known side effect is that it can also damage some healthy cells near the tumor (iii), which is why treatment is carefully targeted.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846454812,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "What did he first use in the invented signal?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Non- conductor",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Conductor",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Semiconductor",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Insulator",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "In his early experiments with wireless communication, Jagadish Chandra Bose first used an insulator (specifically, a glass prism) to demonstrate the refraction of radio waves, similar to light.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846454931,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "What was the wavelength of the wave?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2 mm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "3 mm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "4 mm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "5 mm",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Jagadish Chandra Bose generated and studied radio waves with very short wavelengths for his time, around 5 mm, which placed them in the microwave region of the spectrum.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846455040,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "His notable invention on plant physiology is\ni. Crescograph\nii. Blood circulation in the human body\niii. Stimulation process in plant",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Jagadish Chandra Bose invented the crescograph to measure plant growth (i) and conducted pioneering research on the sensitivity and stimulation processes in plants (iii). He did not discover blood circulation in humans (that was William Harvey) (ii is incorrect).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846455144,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "In the mentioned process, the tube used to enter the material is called",
+    "options": [
+      {
+        "label": "a",
+        "text": "Funnel",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Catheter",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Optical tube",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Syringe",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "In an angiogram, a thin, flexible tube called a catheter is inserted into an artery (usually in the groin or arm) and threaded to the area to be studied. The contrast dye is injected through this catheter.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846455247,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Generally for the problems for which doctors recommend this test are\ni. Stone & Ovarian tumor\nii. To check the renal arteries\niii. Problems in the veins",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Angiography is primarily used to visualize blood vessels. It is recommended to check for blockages or narrowing in arteries like the renal arteries (ii) and to diagnose problems in the veins, such as deep vein thrombosis (iii). It is not the standard test for stones or ovarian tumors; ultrasound or CT is used for those (i is incorrect).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846455359,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "What wave is used in the machine?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Visible light",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "X- ray",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Ultrasonic",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Radio",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "MRI (Magnetic Resonance Imaging) uses strong magnetic fields and radio waves (a type of electromagnetic wave) to generate images. It does not use ionizing radiation like X-rays.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846455596,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "In the mentioned process\ni. Dye is used\nii. Magnetic field is used\niii. 3D image is found",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "MRI uses a powerful magnetic field (ii) and can construct detailed three-dimensional (3D) images of the body (iii). Contrast dye (gadolinium-based) is commonly used in MRI to enhance certain details and improve visualization of specific tissues or abnormalities (i). All three statements are correct for MRI procedures.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846455792,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "The machine is called—",
+    "options": [
+      {
+        "label": "a",
+        "text": "ECG",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ETT",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Endoscopy",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Angiogram",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Based on the context and the description of a machine with tubes used to look inside the body, the image likely depicts an endoscope, making the machine an endoscopy unit.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846455893,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "The use of above machine is apparent in—\ni. Testing lungs\nii. Testing Stomach\niii. Testing heart",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Endoscopy is used for procedures like bronchoscopy (to examine lungs and airways - i) and gastroscopy (to examine the stomach and esophagus - ii). It is not typically used to examine the heart's internal structures; echocardiography is used for that (iii is incorrect).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846455993,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "How many tubes are present in this machine?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "3",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "4",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "5",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "A standard endoscope typically contains two main bundles of optical fibers or channels: one to carry light into the body and another to carry the image back to the eyepiece or camera.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846456100,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "The mentioned process is used to examine the following type of organs in our body -",
+    "options": [
+      {
+        "label": "a",
+        "text": "Soft",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Hard",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Muscular",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Hollow",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Endoscopy is particularly useful for examining hollow or tubular organs and body cavities, such as the digestive tract (stomach, intestines), respiratory tract (lungs, bronchi), and others, where the endoscope can be inserted.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846456201,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "In the mentioned device\ni. Nuclear magnetic resonance is used\nii. Total reflection of light is used\niii. Two transparent tubes are present",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "An endoscope uses the principle of total internal reflection of light within optical fibers to transmit images (ii is correct) and typically contains two fiber-optic bundles or channels (tubes) (iii is correct). Nuclear magnetic resonance is the principle behind MRI, not endoscopy (i is incorrect).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846456310,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "Among the two types of works mentioned in the stem, one type of work is determining the disease. Another one is used for -",
+    "options": [
+      {
+        "label": "a",
+        "text": "Curing the disease",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Resisting the disease",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Antidote of the disease",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Keeping the health well",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The stem states radioactive isotopes are used for two types of work in medicine: diagnosis (determining the disease) and therapy (curing or treating the disease).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768846456419,
+    "subject": "Physics",
+    "chapter": "Physics to Save Life",
+    "question": "First example of the stem is used in - treatment.",
+    "options": [
+      {
+        "label": "a",
+        "text": "Broken- bone",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Cancer",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Heart",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Head neuron",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The first example given in the stem is Cobalt-60. Cobalt-60 is a radioactive isotope commonly used in radiotherapy machines for the treatment of various types of cancer.",
+    "image": null,
+    "language": "en"
+  }
+]

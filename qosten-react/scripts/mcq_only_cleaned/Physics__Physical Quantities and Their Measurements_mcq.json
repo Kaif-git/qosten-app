@@ -1,0 +1,4418 @@
+[
+  {
+    "id": 1765533297353,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "What is the radius of proton?",
+    "options": [
+      {
+        "label": "a",
+        "text": "7 \\times 10^{-5} \\, \\text{m}",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "5 \\times 10^{-11} \\, \\text{m}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "1 \\times 10^{-15} \\, \\text{m}",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "9 \\times 10^{-31} \\, \\text{m}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The approximate radius of a proton is  1 \\times 10^{-15} \\, \\text{m}  (1 femtometer).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533298591,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "At what percentages of visible planets, stars and galaxies of the universe can physicists explain?",
+    "options": [
+      {
+        "label": "a",
+        "text": "3",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "4",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "5",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "6",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Physicists can explain only about 4% of the visible universe.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533300020,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which one is the derived quantity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Temperature",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Amount of substance",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Luminous intensity",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Heat",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Heat is a form of energy, which is a derived quantity. The others are fundamental quantities.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533300388,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "If there are 1% error in the measurement of the radius of a wire, then what will be the relative error in the measurement of area?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2%",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "10%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "20%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Area A = \\pi r^2. Relative error in area = 2 \\times relative error in radius = 2 \\times 1\\% = 2\\%.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533300942,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "How many nanometres does 100 terameters make?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10^{-23}",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "10^3",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "10^5",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10^{23}",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "100 Tm = 100 \\times 10^{12} m = 10^{14} m.\r\n1 nm = 10^{-9} m.\r\nSo, 10^{14} \\text{ m} = 10^{14} / 10^{-9} \\text{ nm} = 10^{23} \\text{ nm}.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533301118,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which scientist made magnet with help of electric current?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Volta",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Kelvin",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Oersted",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Faraday",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Hans Christian Oersted discovered that an electric current creates a magnetic field.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533301263,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which scientist proved the property of light wave?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Thales",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Young",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Maxwell",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Becquerel",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Thomas Young demonstrated the wave nature of light through his double-slit experiment.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533301795,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "What percentage of visible planets, stars and galaxies in the universe can physicists explain?",
+    "options": [
+      {
+        "label": "a",
+        "text": "4%",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "5%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "6%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "7%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Physicists currently understand and can explain only about 4% of the visible universe, with the rest being dark matter and dark energy.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533301956,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "I atto meter = ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10^{-9}",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "10^{-12}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "10^{-15}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10^{-18}",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "1 attometer = 10^{-18} meter.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533302483,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "By the combination of quantum theory and the theory of relativity, who declared hypothesised existence of an anti particle?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Dirac",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Roentgen",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Becquerel",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Marie Curie",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Dirac combined quantum theory and relativity to predict the existence of antimatter, specifically the positron.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533302487,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "I am = how pm?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10^{30}",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "10^6",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "10^{-3}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10^{-6}",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "1 am = 10^{-18} m, 1 pm = 10^{-12} m.\r\nSo, 10^{-18} \\text{ m} = 10^{-6} \\times 10^{-12} \\text{ m} = 10^{-6} \\text{ pm}.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533303084,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Who invented Calculus which is a new branch in Mathematics?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Scientist Newton and Copernicus",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Scientist Newton and Galileo",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Scientist Newton and Leibnitz",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Scientist Newton and Rutherford",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Calculus was independently developed by Isaac Newton and Gottfried Wilhelm Leibniz.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533303144,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which is the dimension of 2as in the equation v^2 = u^2 + 2as?",
+    "options": [
+      {
+        "label": "a",
+        "text": "L^2 T^{-2}",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "LT^{-2}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "LT^{-1}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "LT",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "In v^2 = u^2 + 2as, v^2 has dimension [L^2 T^{-2}]. So 2as must also have the same dimension: a = [LT^{-2}], s = [L], therefore 2as = [LT^{-2}][L] = [L^2 T^{-2}].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533303396,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Who is considered as the architect of optics?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Al-Masudi",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Ibne Al Hayum",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Omar Khaiyam",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Al Khorgimi",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Ibn al-Haytham (also known as Alhazen) is often called the \"father of modern optics\" for his extensive work on light, vision, and optics.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533303446,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "The existence of anti matter declared by the scientist--",
+    "options": [
+      {
+        "label": "a",
+        "text": "Dirac",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Henri Becquerel",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Al-Khwarizmi",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Copernicus",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Dirac theoretically predicted the existence of antimatter through his relativistic quantum equation.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533303677,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Who had showed that the universe is expanding gradually?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Einstein",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Hubble",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Galileo",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Newton",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Edwin Hubble provided observational evidence that galaxies are moving away from each other, indicating an expanding universe.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533303840,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which scientist first gave the idea of the sun centric solar system?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Galileo",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Copernicus",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Aristarchus",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Seleucus",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Aristarchus of Samos proposed a heliocentric model centuries before Copernicus.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533303957,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Who gave correct mathematical explanation of Quantum Theory of radiation?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Einstein",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Sayendra Nath Bose",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Max Planck",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Maxwell",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Max Planck provided the mathematical foundation for quantum theory with his law of blackbody radiation.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533304051,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "In which Muslim Scientist's book, the reference of the Windmill is found?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Al-Masudi",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Ibn-Al-Haitham",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Al-Hazen",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Abdus Salam",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Al-Masudi's historical writings contain early references to windmills.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533304357,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Who was the first to deny explanations which were only based on religion, myth and extrasensory perception but without logic?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Thales",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Pythagoras",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Democritus",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Aristarchus",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Thales of Miletus is considered the first to reject mythological explanations and instead use rational, logical reasoning in understanding nature.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533304710,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "The dimension of \\frac{1}{2} at^2 is --",
+    "options": [
+      {
+        "label": "a",
+        "text": "L",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "LT^2",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "LT^{-1}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "LT^{-2}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\frac{1}{2} a t^2 = \\text{acceleration} \\times \\text{time}^2 = (LT^{-2})(T^2) = L.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533304726,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Who has discovered magnetic field in the flow of electricity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Einstein",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Oersted",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Faraday",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Max Plank",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Hans Christian Oersted discovered that an electric current produces a magnetic field.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533304740,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "1 Candela corresponds to what luminous intensity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\frac{1}{683} \\text{ watt per steradian}",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\frac{555}{683} \\text{ watt per steradian}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "683 lumens per steradian",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "1 lumen per steradian",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "1 candela is defined as the luminous intensity of a source that emits monochromatic radiation of frequency 540 × 10^{12} Hz with a radiant intensity of \\frac{1}{683} watt per steradian.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533304837,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which two quantities are same in dimension?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Pressure and stress",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Work and power",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Electric current and luminous intensity",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Acceleration and velocity",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Pressure and stress both have the same dimensional formula: [ML^{-1}T^{-2}].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533305562,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Who is the inventor of the wind pump?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Romer",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Von Guericke",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Huygen",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Robert Hooke",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Otto von Guericke is credited with early developments of the air pump and related pneumatic devices.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533306032,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "From which of the following resources are semiconductors created?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Solid state physics",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Nuclear physics",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Molecular physics",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Electric and magnetic science",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Semiconductors are studied and developed within the branch of solid state physics.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533306165,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Who predicted the eclipse of the sun?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Thales",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Democritus",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Aristotle",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Aristarchus",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Thales of Miletus is credited with predicting a solar eclipse in 585 BCE.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533306590,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which of the following is fundamental quantity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Electric intensity",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Electric conductivity",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Electric charge",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Electric current",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Electric current is a fundamental quantity in SI. The others are derived.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533306603,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Based on which equations of science has different technologies been developed?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Physics",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Chemistry",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Biology",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Math",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Physics provides fundamental equations and principles that form the basis for many technologies.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533306806,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Who knew about the magnetic property of loadstone?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Pythagoras",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Democritus",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Thales",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Aristotle",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Thales of Miletus is recorded as one of the first to describe the magnetic properties of lodestone.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533306982,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Who introduced the atomic theory?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Dalton",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Thomson",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Rutherford",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Maxwell",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "John Dalton proposed the modern atomic theory in chemistry.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533307077,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "What is the length of a meter scale?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.5 m",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "1 m",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "2 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "2.54 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "A meter scale is 1 meter long.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533307734,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which one of the following is insulator?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Human body",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Soil",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Glass",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Iron",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Glass is a good electrical insulator, while the others can conduct electricity to varying degrees.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533307967,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Who gave the name atom to the indivisible unit of matter?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Pythagoras",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Ibn Sina",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Democritus",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Allazen",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Democritus coined the term \"atom\" (from Greek \"atomos,\" meaning indivisible) for the smallest unit of matter.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533307991,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Who is the founder of experimental scientific process?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Kepler",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Thales",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Roger Bacon",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Huygen",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Roger Bacon emphasized empirical methods and experimentation in scientific inquiry.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533308368,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which is the fundamental branch of science?",
+    "options": [
+      {
+        "label": "a",
+        "text": "sound",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "optics",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Physics",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "electricity",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Physics is considered the most fundamental natural science, underlying other branches like chemistry, biology, and engineering.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533308508,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which scientist invented the radioactivity of uranium?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Max Planck",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Bacquerel",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Albert Einstein",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Neill Bohr's",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Henri Becquerel discovered the radioactivity of uranium.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533308691,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which one is fundamental unit?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Joule",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Newton",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Candela",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Pascal",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Candela is a fundamental SI unit. Joule, Newton, and Pascal are derived units.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533308789,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Who is the first man to make the model of aero-plane?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Orbil Wright",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Orbil Wright",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Leonardo da Vinci",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Roger bacon",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Leonardo da Vinci designed early models of flying machines, including ornithopters and parachutes.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533308953,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which one is the smallest unit?",
+    "options": [
+      {
+        "label": "a",
+        "text": "micrometer",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "nanometer",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "picometer",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "femtometer",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Femtometer (10^{-15} m) is smaller than picometer (10^{-12} m), nanometer (10^{-9} m), and micrometer (10^{-6} m).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533309207,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Who showed that all the galaxies of the Universe are moving away from one another?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Dirac",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Hubble",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Becquerel",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Roentgen",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Edwin Hubble observed redshift in galaxies, indicating they are receding from each other.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533309538,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Who discovered X-ray?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Rutherford",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Roentgen",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Pierre Curie",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Marie Curie",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Wilhelm Conrad Röntgen discovered X-rays.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533309568,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Following which one is a derived unit?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Ampere",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Kelvin",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Newton",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Candela",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Newton (unit of force) is a derived unit. Ampere, Kelvin, and Candela are fundamental.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533309780,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Who is called the father of modern science?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Galileo",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Newton",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Einstein",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Archimedes",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Galileo Galilei is often called the \"father of modern science\" for his pioneering use of experimentation and mathematics.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533310006,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which one is the minimum sub-multiple used in S.I unit?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Peta",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Femto",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Nano",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Micro",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Femto (10^{-15}) is the smallest sub-multiple among the options given.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533310130,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Who measured the velocity of light by studying the eclipse of a satellite of Jupiter?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Galileo",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Romer",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Kepler",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Copernicus",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Ole Rømer used observations of Jupiter's moon Io to estimate the speed of light.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533310230,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "How many meters equal one picometer?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10^{-9}",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "10^{-12}",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "10^{-15}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10^{-18}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "1 picometer = 10^{-12} meter.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533310518,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "I hectopascal is equal to —",
+    "options": [
+      {
+        "label": "a",
+        "text": "10^2 \\, \\text{Pa}",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "10^3 \\, \\text{Pa}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "10^4 \\, \\text{Pa}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10^5 \\, \\text{Pa}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "1 hectopascal = 100 Pa = 10^2 Pa.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533310603,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Who invented electric battery?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Oersted",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Volta",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Newton",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Kelvin",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Alessandro Volta invented the first true electric battery, the voltaic pile.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533310690,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which one is the unit of Luminous Intensity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "A",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "K",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "J",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Cd",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The SI unit of luminous intensity is the candela (Cd).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533310729,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "I Petameter = how much meter?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10^9",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "10^{12}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "10^{15}",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "10^{18}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "1 petameter = 10^{15} meters.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533310765,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Who gave the definitions of displacement, motion, acceleration time etc?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Galileo",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Newton",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Huygen",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Robert Hooke",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Galileo Galilei defined and studied fundamental kinematic concepts like displacement, velocity, and acceleration.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533310772,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Who effectively used zero?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Aryabhata",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Brahmagupta",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Vaskar",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Khwarizmi",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Brahmagupta formally defined and used zero as a number in arithmetic operations.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533311020,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "After the invention of radioactivity while explaining a special radiation called beta ray, the following was discovered —",
+    "options": [
+      {
+        "label": "a",
+        "text": "Gravitational force",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Acceleration due to gravity",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Weak nuclear force",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Strong nuclear force",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The study of beta decay led to the discovery of the weak nuclear force.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533311392,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which is derived quantity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Length",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Mass",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Time",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Force",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Force is a derived quantity (mass × acceleration). Length, mass, and time are fundamental.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533311469,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "What is the radius of 1 gram cylinder made of platinum iridium alloy?",
+    "options": [
+      {
+        "label": "a",
+        "text": "9.3 cm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "3.9 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "2.95 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "1.95 cm",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The international prototype kilogram is a cylinder with a height and diameter both about 3.9 cm, but its radius is approximately 1.95 cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533311545,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Who, the ancient scientist, is partially contributed to the research on the vibration of strings used in musical instrument at present?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Thales",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Pythagoras",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Democritus",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Archimedes",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Pythagoras studied the vibrations of strings and the mathematical relationships in musical notes.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533311722,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "I pm = How many am?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10^6",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "10^3",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "10^{-5}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10^{-6}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "1 pm = 10^{-12} m, 1 am = 10^{-18} m. So, 10^{-12} / 10^{-18} = 10^6 am.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533311939,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which one of the following is the dimension of work?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ML^2T^{-2}",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "MLT^{-2}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ML^2T^{-3}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "MLT^{-1}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Work = force × distance = [MLT^{-2}][L] = [ML^2T^{-2}].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533312210,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "What did Maxwell discover?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Magnets can be made by the flow of electricity",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Electricity can be produced by varying a magnetic field",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "electromagnetic wave",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "electric battery",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "James Clerk Maxwell predicted the existence of electromagnetic waves through his equations.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533312640,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Who discovered gravity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Copernicus",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Galileo",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Newton",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Einstein",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Isaac Newton formulated the law of universal gravitation.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533312896,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which relation of the following is correct in case of multiples of units or prefix?",
+    "options": [
+      {
+        "label": "a",
+        "text": "tera > pico",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "giga > tera",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "tera < mega",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "exa < atto",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Tera (10^{12}) is greater than pico (10^{-12}).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533313127,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Who invented theory of relativity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Planck",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Einstein",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Rutherford",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Faraday",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Albert Einstein developed the theory of relativity.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533313613,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "I picometer = How much centimeter?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10^{-8}",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "10^{-16}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "10^{-12}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10^{-10}",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "1 pm = 10^{-12} m = 10^{-12} \\times 10^2 cm = 10^{-10} cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533313770,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which one is radius of solar system?",
+    "options": [
+      {
+        "label": "a",
+        "text": "6 \\times 10^6 \\, \\text{m}",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "6 \\times 10^{12} \\, \\text{m}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "6 \\times 10^6 \\, \\text{km}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "6 \\times 10^{13} \\, \\text{km}",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The approximate radius of the solar system (to the outer edges) is about 6 \\times 10^{13} \\, \\text{km}.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533313914,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Who had fundamental works with vibrating wire along with geometry?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Pythagoras",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Democritus",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Thales",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Aristotle",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Pythagoras studied the vibrations of strings and related them to geometric and numerical ratios.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533314251,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "In this universe anything we can measure is called —",
+    "options": [
+      {
+        "label": "a",
+        "text": "amount",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "quantity",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "measuring instrument",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "unit",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "A physical quantity is anything that can be measured.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533314445,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Who discovered radium?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Rutherford",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Becquerel",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Roentgen",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Marie Curie",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Marie Curie discovered the radioactive element radium.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533314726,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which one is a fundamental quantity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Heat",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Amount of substance",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Velocity",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Electric potential",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Amount of substance (mole) is a fundamental quantity.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533314748,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "What is the radius of the cylinder which is used as the standard of \"kilogram\" in measuring the SI unit of mass?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1 cm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "1.95 cm",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "3.3 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "0.39 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The international prototype kilogram cylinder has a radius of approximately 1.95 cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533314759,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "What type of charge does the nucleus of an atom contain?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Positive",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Negative",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Neutral",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Positive and negative both",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The nucleus contains protons (positive) and neutrons (neutral), giving it a net positive charge.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533314868,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "How many meters are there in a light-year?",
+    "options": [
+      {
+        "label": "a",
+        "text": "9.4 \\times 10^{15} \\, \\text{m}",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "4.9 \\times 10^{13} \\, \\text{m}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "9.4 \\times 10^{12} \\, \\text{m}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "4.9 \\times 10^{12} \\, \\text{m}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "1 light-year ≈ 9.46 \\times 10^{15} meters.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533315450,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which one of the following is a fundamental unit?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ampere",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "joule",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "watt",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "volt",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Ampere is a fundamental SI unit. Joule, watt, and volt are derived.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533315703,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "How many microseconds in 1 nanosecond?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10^5",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "0.001 \\, \\text{s}",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "0.00001 \\, \\text{s}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10^{-6} \\, \\text{s}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "1 ns = 10^{-9} s, 1 μs = 10^{-6} s. So, 1 ns = 0.001 μs.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533315824,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which is the smallest unit?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Micrometer",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Nanometer",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Picometer",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Femtometer",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Femtometer (10^{-15} m) is the smallest among the given options.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533315966,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which one not vector quantity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Displacement",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "velocity",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "speed",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "acceleration",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Speed is a scalar quantity; it has magnitude but no direction.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533316468,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which one of the following is nano second?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10^{-6} \\, \\text{sec}",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "10^{-9} \\, \\text{sec}",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "10^6 \\, \\text{sec}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10^9 \\, \\text{sec}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "1 nanosecond = 10^{-9} second.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533316474,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which of the following two scientists invented that \"nucleus is fissionable\"?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Otto Hann and Strassmann",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Neil Bohr and Ernest Rutherford",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Pierre Curie and Madam Curie",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Max Planck and Albert Einstein",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Otto Hahn and Fritz Strassmann discovered nuclear fission.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533316553,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which particle rotates around an atom centering the nucleus?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Electron",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Proton",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Neutron",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Positron",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Electrons orbit the nucleus in an atom.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533316957,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which one is the dimension of volume?",
+    "options": [
+      {
+        "label": "a",
+        "text": "L^3",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "V",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "L",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "m^2",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Volume has the dimensional formula [L^3].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533317468,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "To determine the amount of anything is called —",
+    "options": [
+      {
+        "label": "a",
+        "text": "measurement",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "dimension",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "measuring instruments",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "unit",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Measurement is the process of determining the size, amount, or degree of something.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533317707,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "What is the SI unit of temperature?",
+    "options": [
+      {
+        "label": "a",
+        "text": "kelvin",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "degree",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "fahrenheit",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "celsius",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The SI base unit of temperature is the kelvin (K).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533317898,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Elementary particles are called —",
+    "options": [
+      {
+        "label": "a",
+        "text": "Electron",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Neutron",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Proton",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Quarks",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Quarks are considered elementary particles, while electrons, protons, and neutrons are made up of quarks or are themselves fundamental (in the case of electrons).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533318120,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "In how many parts can the objective of physics be divided?",
+    "options": [
+      {
+        "label": "a",
+        "text": "One",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Two",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Three",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Four",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The objectives of physics are often divided into two: to discover the fundamental laws of nature and to apply those laws in practical situations.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533318437,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which scientist gave the equation E = mc^2?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Stephen Hawking",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Einstein",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Newton",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Pascal",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Albert Einstein derived the mass-energy equivalence formula E = mc^2.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533318535,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "10 fm = ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10^{-10}",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "10^{-12}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "10^{-14}",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "10^{-15}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "10 femtometers = 10 \\times 10^{-15} \\, \\text{m} = 10^{-14} \\, \\text{m}.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533318617,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "How much part of the triple point temperature of water is considered to be one Kelvin?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\frac{1}{273}",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\frac{1}{273.15}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\frac{1}{273.16}",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\frac{1}{275}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "One kelvin is defined as \\frac{1}{273.16} of the thermodynamic temperature of the triple point of water.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533318669,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which one of the following is fundamental quantity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "velocity",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "heat",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "electric potential",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "luminous intensity",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Luminous intensity is one of the seven fundamental quantities in SI.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533319070,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "What is called the displacement of screw gauge?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Error",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Least count",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Venier constant",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Pitch",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The pitch of a screw gauge is the distance moved by the spindle per revolution.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533319149,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "How many farad is equal to one pico farad?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10^{-15}",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "10^{-12}",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "10^{12}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10^{15}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "1 picofarad = 10^{-12} farad.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533319379,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "From the integrated use of main scale and the Vernier scale, the net reading is 12.66 cm. If the vernier coincidence with the main scale is 6, what is the value of Vernier constant? [Given that the main scale reading is 12.6 cm]",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.1 mm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "0.01 cm",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "0.05 mm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "0.5 mm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Vernier contribution = 12.66 - 12.6 = 0.06 cm. VC = 0.06 cm / 6 = 0.01 cm (which equals 0.1 mm).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533319410,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "I gigahertz = how much hertz?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10^{12}",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "10^9",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "10^6",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10^3",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "1 GHz = 10^9 Hz.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533319698,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "What form of forces are the two forces electromagnetic and weak nuclear force?",
+    "options": [
+      {
+        "label": "a",
+        "text": "different forces",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "same forces",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "different forms of the same force",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "same form of different forces",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "At high energies, electromagnetic and weak nuclear forces unify into the electroweak force, different manifestations of the same fundamental interaction.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533320055,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "In case of the determination of the length of a rod with the help of slide callipers if main scale reading is M. Vernier constant is VC and Vernier superimposition is V, then which one is the formula to determine the length of the rod (L)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "L = M - V \\times CV",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "L = M + V \\times VC",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "L = M - V + VC",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "L = M + V + VC",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Total length = Main scale reading + (Vernier coincidence × Vernier constant).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533320070,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Where is the first nuclear plant of Bangladesh is being made?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Nupur",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Rupnagar",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Rooppur",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Rampal",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Bangladesh's first nuclear power plant is under construction in Rooppur.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533320837,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "What is the S.I unit of electric current?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ampere",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "coulomb",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Kelvin",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "candela",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The SI unit of electric current is the ampere (A).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533320851,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "The value of main scale of slide calipers is 1 mm and the number of divisions in the vernier scale is 20. What is the vernier constant?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.01",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "0.05",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "0.1",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "0.5",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "VC = 1 mm / 20 = 0.05 mm (unit not specified, but 0.05 is the numeric value).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533320954,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which one is a scalar quantity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Displacement",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Force",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Work",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Weight",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Work is a scalar quantity; it is the dot product of force and displacement.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533321005,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Measuring the thickness of a rectangular pane of glass with slide calipers gave a main scale reading of 18 mm and vernier coincidence of 4. What is the thickness if the vernier constant is 0.01 cm?",
+    "options": [
+      {
+        "label": "a",
+        "text": "18.4 mm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "18.04 mm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "18.4 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "18.04 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Thickness = MSR + (Vernier reading × VC) = 18 mm + (4 × 0.01 cm) = 18 mm + 0.04 cm = 18 mm + 0.4 mm = 18.4 mm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533321025,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "What is the approximate diameter of a typical galaxy in meters?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10^{21}",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "10^{18}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "10^{15}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10^{12}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "A typical galaxy like the Milky Way has a diameter on the order of 10^{21} meters (about 100,000 light-years).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533321272,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "The main scale division of slide calipers is 1 mm and number of divisions in vernier scale is 20. What is vernier constant?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.05 mm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "0.05 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "0.05 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "0.05 km",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "VC = 1 mm / 20 = 0.05 mm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533321495,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "The length of one smallest division of main scale of a slide calipers is 1 mm. Number of division of vernier scale is 10. What is the vernier constant?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.01 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "0.001 mm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "0.001 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "0.1 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "VC = 1 mm / 10 = 0.1 mm = 0.01 cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533321532,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "What is the number of fundamental quantities?",
+    "options": [
+      {
+        "label": "a",
+        "text": "three",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "six",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "seven",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "nine",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "There are seven fundamental quantities in the SI system.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533321661,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "The 18 division of main scale is equal to the 20 division of vernier scale, what is vernier constant?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.05 mm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "0.06 mm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "0.09 mm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "0.1mm",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "20 VSD = 18 MSD → 1 VSD = 0.9 MSD. VC = 1 MSD - 1 VSD = 1 mm - 0.9 mm = 0.1 mm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533321959,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "In screw gauge, the number of circular divisions is 'a', the least constant is 'b' and the pitch is 'c'. Which one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "abc = 1",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "c = ab",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "a = bc",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "b = ac",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Least count (b) = Pitch (c) / Number of circular divisions (a) → c = a × b.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533322351,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Vernier constant in a slide calipers is 5 \\times 10^{-3} cm. What is the number of divisions in the Vernier scale of the slide calipers?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "20",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "30",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "50",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "VC = s/n. If s = 0.1 cm (1 mm), and VC = 0.005 cm, then n = s/VC = 0.1 / 0.005 = 20.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533322389,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "What is the minimum distance which can be measured by a slide calipers?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.1mm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "0.01mm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "1mm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Up to vernier constant",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The minimum measurable distance is the least count (vernier constant) of the calipers.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533322469,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "10 nano second = ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10^{-8} \\, \\text{second}",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "10^{-6} \\, \\text{second}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "10^{-5} \\, \\text{second}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10^{-6} \\, \\text{second}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "10 ns = 10 \\times 10^{-9} \\, \\text{s} = 10^{-8} \\, \\text{s}.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533322475,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which one is the dimension of force?",
+    "options": [
+      {
+        "label": "a",
+        "text": "MLT^{-2}",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "MLT^{-1}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ML^{-2}T^{-2}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ML^{-2}T^{-3}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Force = mass × acceleration = [M][LT^{-2}] = [MLT^{-2}].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533322613,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "In case of determining the thickness of a rectangular glass plate, main scale reading is 18 mm and vernier coincidence is 8. If the vernier constant of the tool is 0.01 cm, what is the thickness of the glass plate?",
+    "options": [
+      {
+        "label": "a",
+        "text": "18.08 mm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "18.8 mm",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "18.08 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "18.8 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Thickness = MSR + (Vernier reading × VC) = 18 mm + (8 × 0.01 cm) = 18 mm + 0.08 cm = 18 mm + 0.8 mm = 18.8 mm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533322656,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "How much mA is equal to 1μA?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10^{-3} \\, \\text{mA}",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "10^{-6} \\, \\text{mA}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "10^{-7} \\, \\text{mA}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10^{-9} \\, \\text{mA}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "1 μA = 10^{-6} A, 1 mA = 10^{-3} A. So, 1 μA = 10^{-3} mA.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533322736,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "What is the factor of 'mega'?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10^8",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "10^6",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "10^4",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10^2",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Mega = 10^6.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533323041,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "A minimum of 1mm can be measured with a scale. If the length of an object is 1 mm. What will be the percentage relative error of measurement?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.5%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "5%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "15%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "50%",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Absolute error = ±0.5 mm (half of the least count). Measured value = 1 mm.\r\nRelative error = (0.5 / 1) × 100% = 50%.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533323049,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "If the least count of a screw gauge with a 2mm pitch is 0.002 cm, what is the number of divisions on the circular scale?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10^3",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "10^2",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "10^{-2}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10^{-3}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Pitch = 2 mm = 0.2 cm. LC = Pitch / N → N = Pitch / LC = 0.2 cm / 0.002 cm = 100 = 10^2.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533323083,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "If main scale reading is 9mm, vernier constant is 0.1 mm and vernier superimposition 3-what is the total reading?",
+    "options": [
+      {
+        "label": "a",
+        "text": "9.3 cm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "0.93 cm",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "0.09 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "9.03 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Total = 9 mm + (3 × 0.1 mm) = 9.3 mm = 0.93 cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533323193,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "From the integrated use of main scale and the Vernier scale, the net reading is 12.66 cm. If the vernier coincidence with the main scale is 6, what is the value of Vernier constant? [Given that the main scale reading is 12.6 cm]",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.1 mm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "0.01 cm",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "0.5 mm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "0.05 mm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Vernier contribution = 12.66 - 12.6 = 0.06 cm. VC = 0.06 cm / 6 = 0.01 cm (which equals 0.1 mm).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533323312,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "If the linear scale reading of a screw gauge is 3 mm for a wire and the circular scale reading is 20, what is the diameter of the wire? [Given: pitch = 1 mm, 50 divisions on circular scale]",
+    "options": [
+      {
+        "label": "a",
+        "text": "2.3 mm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "3.4 mm",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "3.2 mm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "2.3 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Least count = pitch / circular divisions = 1 mm / 50 = 0.02 mm. Diameter = LSR + (CSR × LC) = 3 mm + (20 × 0.02 mm) = 3 mm + 0.4 mm = 3.4 mm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533323397,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "If the 10 divisions of vernier scale is equal to 9 divisions of main scale, what is the value of vernier constant?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.1 mm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "0.11 mm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "0.12 mm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "0.01 mm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "10 VSD = 9 MSD → 1 VSD = 0.9 MSD. VC = 1 MSD - 1 VSD = 1 mm - 0.9 mm = 0.1 mm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533323474,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "By which instrument length can be measured accurately?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Meter scale",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Vernier scale",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Slide calipers",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Digital slide calipers",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Digital slide calipers provide the highest accuracy among the options.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533323755,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which one is the formula of volume of a sphere?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\frac{1}{3} \\pi d^3",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\frac{1}{6} \\pi d^3",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "\\frac{2}{3} \\pi d^3",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\frac{3}{4} \\pi d^3",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Volume of sphere = \\frac{4}{3} \\pi r^3 = \\frac{4}{3} \\pi \\left(\\frac{d}{2}\\right)^3 = \\frac{1}{6} \\pi d^3.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533323960,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Micro prefix indicates—",
+    "options": [
+      {
+        "label": "a",
+        "text": "10^{-12}",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "10^{-9}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "10^{-6}",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "10^{-3}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Micro = 10^{-6}.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533324168,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "If the third line of Vernier scale coincides with the thirteenth line of the main scale, what will be the Vernier coincidence reading?",
+    "options": [
+      {
+        "label": "a",
+        "text": "3",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "10",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "13",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "16",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "When the 3rd vernier line coincides with a main scale line, the vernier coincidence reading is 3.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533324404,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Determine the length of the rod. For measuring the rod use a Slide calipers scale and found the reading of main scale was 5 cm, Vernier division is 7 and Vernier constant is 0.1 mm.",
+    "options": [
+      {
+        "label": "a",
+        "text": "5.7 cm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "5.7 mm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "5.07 mm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "5.07 cm",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Length = 5 cm + (7 × 0.1 mm) = 5 cm + 0.7 mm = 5 cm + 0.07 cm = 5.07 cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533324569,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Using vernier scale minimum how much length can be measured? When number of vernier divisions is 10.",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.1 m",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "0.001m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "0.0001m",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "0.00001m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "With 10 vernier divisions and 1 mm main scale division, least count = 0.1 mm = 0.0001 m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533324983,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "What m^3 is the volume of a sphere of radius 2m?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\frac{8}{3} \\pi",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "6\\pi",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "8\\pi",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\frac{32}{3} \\pi",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Volume = \\frac{4}{3} \\pi r^3 = \\frac{4}{3} \\pi (2)^3 = \\frac{32}{3} \\pi \\, \\text{m}^3.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533325161,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "If the zero of the vernier scale is to the left of the zero of the main scale then the error is known as",
+    "options": [
+      {
+        "label": "a",
+        "text": "Positive error",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Negative error",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Black lash error",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Newton error",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "When the vernier zero is left of the main scale zero, it indicates a negative zero error.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533325205,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "If the Vernier constant of any slide calipers is 0.005 cm then how many divisions are there in scale? [The smallest division of main scale is 1 mm]",
+    "options": [
+      {
+        "label": "a",
+        "text": "5",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "10",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "20",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "200",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "VC = s/n → n = s/VC = 0.1 cm / 0.005 cm = 20.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533325298,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "What is the diameter of a cylinder if its length is \\frac{7}{22} m and its volume is 4 m^3?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2 m",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "4 m",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "6 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "8 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Volume V = \\pi r^2 l. Given l = \\frac{7}{22} m, V = 4 m^3.\nr^2 = \\frac{V}{\\pi l} = \\frac{4}{\\pi \\times \\frac{7}{22}} = \\frac{4 \\times 22}{7\\pi}.\nUsing \\pi = \\frac{22}{7}, r^2 = \\frac{4 \\times 22}{7 \\times \\frac{22}{7}} = 4.\nSo r = 2 m, diameter = 4 m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533325750,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Vernier constant is —",
+    "options": [
+      {
+        "label": "a",
+        "text": "The difference between the length of the smallest division of the main scale and one division of vernier scale",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "The ratio of the length of the smallest division of the main scale and one division of vernier scale",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "The length of one division of vernier scale",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "The length of the smallest division of the main scale",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Vernier constant (least count) = 1 MSD - 1 VSD.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533325982,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which instrument is used to measure the diameter of a solid thin wire?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Meter scale",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Screwgauge",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Slide Calipers",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Vernier scale",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "A screw gauge (micrometer) is used for precise measurement of small diameters like wires.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533326233,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "What is the total number of divisions of a Vernier scale of a slide caliper with Vernier constant of 0.1mm?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10 divisions",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "20 divisions",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "40 divisions",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "50 divisions",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "If MSD = 1 mm, VC = 0.1 mm = 1 mm / n → n = 10.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533326271,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "In a screw gauge the circular scale advances by 6 divisions from the zero mark of the linear scale when no object is placed. After placing a bob, the linear scale reading is 5.4 mm and circular scale reading is 14. What is the actual diameter of the bob? [The least count is 0.01 mm]",
+    "options": [
+      {
+        "label": "a",
+        "text": "5.20 mm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "5.48 mm",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "5.54 mm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "5.60 mm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Zero error = +6 divisions (since it advances without object).\r\nCorrected circular reading = 14 - 6 = 8 divisions.\r\nDiameter = LSR + (Corrected CSR × LC) = 5.4 mm + (8 × 0.01 mm) = 5.48 mm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533326536,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "The screw advances 6 mm by rotating twice. What is the pitch here?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1 mm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2 mm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "3 mm",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "4 mm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Pitch = distance per revolution = 6 mm / 2 = 3 mm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533326718,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "What is the value of vernier constant when the main scale of slide of calipers is 1 mm and number of divisions in vernier scale is 20?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.05 cm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "0.05 m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "0.05 mm",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "0.05 km",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "VC = 1 mm / 20 = 0.05 mm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533326767,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "If main scale reading is 9 mm, vernier constant is 0.1 mm and vernier superimposition 3-what is the total reading?",
+    "options": [
+      {
+        "label": "a",
+        "text": "9.3 cm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "0.093 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "9.03 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "0.93 cm",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Total = 9 mm + (3 × 0.1 mm) = 9.3 mm = 0.93 cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533328375,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which of the following is measured by spring balance?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Mass",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Acceleration due to gravity",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Force of gravity",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Force of friction",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "A spring balance measures force (like weight, which is the force of gravity on a mass).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533328897,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "By using meter scale, the length of some rods are measured, which is possible?",
+    "options": [
+      {
+        "label": "a",
+        "text": "3.65 cm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "8.3 mm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "12.7 cm",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "0.3642 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "A meter scale typically has 1 mm divisions, so measurements can be made to the nearest millimeter. 12.7 cm = 127 mm is a possible measurement.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765533330478,
+    "subject": "Physics",
+    "chapter": "Physical Quantities and Their Measurements",
+    "question": "Which one of the following is the correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "VC = sn",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "VC = \\frac{n}{s}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "VC = \\frac{s}{n}",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "VC = s × n",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Vernier constant = (Value of one main scale division) / (Number of vernier divisions) = s/n.",
+    "image": null,
+    "language": "en"
+  }
+]

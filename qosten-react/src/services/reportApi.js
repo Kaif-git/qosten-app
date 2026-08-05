@@ -398,6 +398,127 @@ export const reportApi = {
     }
   },
 
+  async fetchUserAIUsage(userId, date) {
+    try {
+      const dateStr = date || new Date().toISOString().split('T')[0];
+      const [usageLogs, dailyQuota] = await Promise.all([
+        supabase.rpc('fetch_user_ai_usage_logs', { p_user_id: userId, p_date: dateStr, p_limit: 100 }),
+        supabase.from('user_ai_quotas').select('*').eq('user_id', userId).eq('date', dateStr).maybeSingle()
+      ]);
+
+      const logs = usageLogs.data?.logs || [];
+      const requests = logs.length;
+      const tokens = logs.reduce((s, l) => s + (l.tokens_total || 0), 0);
+      const toolCalls = logs.reduce((s, l) => s + (l.tool_call_count || 0), 0);
+      const cacheHits = logs.filter(l => l.cache_hit).length;
+
+      const aiUsage = await supabase.rpc('fetch_user_ai_usage', { p_user_id: userId, p_date: dateStr });
+      const convData = aiUsage.data || {};
+
+      return {
+        daily: { requests, tokens, toolCalls, cacheHits, logs, quota: dailyQuota.data || null },
+        totalConversations: convData.conversations || 0,
+        totalTokensAllTime: convData.totalTokensAllTime || 0,
+      };
+    } catch (err) {
+      console.error('[reportApi] fetchUserAIUsage error:', err);
+      throw err;
+    }
+  },
+
+  async fetchUserAIConversations(userId, page = 0, pageSize = 50) {
+    try {
+      const { data, error } = await supabase.rpc('fetch_user_ai_conversations', {
+        p_user_id: userId,
+        p_page: page,
+        p_page_size: pageSize,
+      });
+
+      if (error) throw error;
+      const result = data || { conversations: [], total: 0 };
+
+      return {
+        conversations: result.conversations || [],
+        total: result.total || 0,
+        page,
+        pageSize,
+      };
+    } catch (err) {
+      console.error('[reportApi] fetchUserAIConversations error:', err);
+      throw err;
+    }
+  },
+
+  async fetchAllAIMetrics() {
+    try {
+      const today = new Date().toISOString().split('T')[0];
+      const quotaUsage = await supabase.from('user_ai_quotas').select('user_id, requests_used, requests_limit').eq('date', today);
+
+      return {
+        totalRequestsToday: quotaUsage.data?.reduce((s, q) => s + (q.requests_used || 0), 0) || 0,
+        dailyActiveUsers: 0,
+        quotaSnapshots: quotaUsage.data || [],
+      };
+    } catch (err) {
+      console.error('[reportApi] fetchAllAIMetrics error:', err);
+      throw err;
+    }
+  },
+
+  async fetchAIChatSessions(page = 0, pageSize = 20) {
+    try {
+      const { data, error } = await supabase
+        .from('ai_chat_history')
+        .select('session_id, created_at, role')
+        .order('created_at', { ascending: false });
+
+      if (error) throw error;
+
+      const sessionMap = new Map();
+      for (const row of data || []) {
+        if (!sessionMap.has(row.session_id)) {
+          sessionMap.set(row.session_id, {
+            session_id: row.session_id,
+            message_count: 0,
+            last_message_at: row.created_at,
+          });
+        }
+        const s = sessionMap.get(row.session_id);
+        s.message_count++;
+        if (new Date(row.created_at) > new Date(s.last_message_at)) {
+          s.last_message_at = row.created_at;
+        }
+      }
+
+      const allSessions = Array.from(sessionMap.values())
+        .sort((a, b) => new Date(b.last_message_at) - new Date(a.last_message_at));
+
+      const total = allSessions.length;
+      const paginated = allSessions.slice(page * pageSize, (page + 1) * pageSize);
+
+      return { sessions: paginated, total };
+    } catch (err) {
+      console.error('[reportApi] fetchAIChatSessions error:', err);
+      throw err;
+    }
+  },
+
+  async fetchAIChatMessages(sessionId) {
+    try {
+      const { data, error } = await supabase
+        .from('ai_chat_history')
+        .select('*')
+        .eq('session_id', sessionId)
+        .order('created_at', { ascending: true });
+
+      if (error) throw error;
+      return data || [];
+    } catch (err) {
+      console.error('[reportApi] fetchAIChatMessages error:', err);
+      throw err;
+    }
+  },
+
   async fetchRecentActivity(page = 0, pageSize = 20) {
     try {
       console.log(`🔍 [reportApi] fetchRecentActivity: Starting fetch via RPC (page ${page})...`);

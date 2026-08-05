@@ -1,0 +1,2109 @@
+[
+  {
+    "id": 1768846213650,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Elasticity, Pressure, Buoyancy, Pascal's Law",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is radioactivity?",
+        "marks": 1,
+        "answer": "Radioactivity is the emission or transmission of rays in the form of waves or particles through space or a material medium by the spontaneous disintegration of atomic nuclei.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "\"Weight is a derived quantity\"—Explain.",
+        "marks": 2,
+        "answer": "Weight = mass × acceleration = mass × velocity/time = mass × displacement/(time)². Here, mass, displacement and time are fundamental quantities. As weight is a combined quantity of fundamental quantities, that is why weight is a derived quantity.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Calculate the area of cross section of the wire.",
+        "marks": 3,
+        "answer": "d = L + M × LC = 3 + 65 × 0.01 = 3.65 mm = 3.65 × 10⁻³ m\nA = (π/4)d² = (3.1416/4) × (3.65 × 10⁻³)² = 10.463 × 10⁻⁶ m²\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "If we hang a 15 kg mass at the one end of the above wire what will be the elongation?—Analysis mathematically.",
+        "marks": 4,
+        "answer": "Tension T = mg = 15 × 9.8 = 147 N.\nUsing Young's modulus formula:\nΔL/L = (1/Y) × (T/A)\nΔL/10 = (1/(200 × 10⁹)) × (147/(10.463 × 10⁻⁶))\nΔL = 10 × 147/(200 × 10⁹ × 10.463 × 10⁻⁶)\nΔL ≈ 0.00007 m = 0.07 mm\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768846221371,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Pressure and Buoyancy",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is non-contact force?",
+        "marks": 0,
+        "answer": "A force acting between two objects without direct contact is called a non-contact force.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Explain momentum conservation law.",
+        "marks": 0,
+        "answer": "Law of Conservation of Momentum: If only action-reaction force acts between multiple objects, the total amount of momentum in a particular direction will remain unchanged. Explanation: Let two objects of masses \\(\\mathrm{m}_1\\) and \\(\\mathrm{m}_2\\) move along the same straight line in the same direction with initial velocity of \\(\\mathrm{u}_1\\) and \\(\\mathrm{u}_2\\) respectively. After the collision, if their velocities are \\(\\mathrm{v}_1\\) and \\(\\mathrm{v}_2\\) respectively, then by law of conservation of momentum,\n\\[\n\\mathrm{m}_1\\mathrm{u}_1 + \\mathrm{m}_2\\mathrm{u}_2 = \\mathrm{m}_1\\mathrm{v}_1 + \\mathrm{m}_2\\mathrm{v}_2\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find the pressure under water at the bottom of the pond.",
+        "marks": 0,
+        "answer": "\\[\nP = h \\rho g = 3 \\times 1000 \\times 9.8 = 29400\\ \\mathrm{Pa}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Either the ball will sink in the water or not? Explain mathematically.",
+        "marks": 0,
+        "answer": "Weight of ball \\(W = mg = 0.2 \\times 9.8 = 1.96\\ \\mathrm{N}\\).\nBuoyancy \\(F_b = V \\rho g = 250 \\times 10^{-6} \\times 1000 \\times 9.8 = 2.45\\ \\mathrm{N}\\).\nSince \\(F_b > W\\), the ball will not sink.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768846221488,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Pascal’s Law & Hydraulic Press",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "Write the Hooke's law.",
+        "marks": 0,
+        "answer": "Hooke's law states that stress is proportional to strain within the elastic limit.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why does water remain cold in earthen jar rather than brass jar? Explain.",
+        "marks": 0,
+        "answer": "Earthen jars have tiny pores. Water seeps out, evaporates, and absorbs latent heat from the remaining water, cooling it. Brass jars have no pores, so no evaporation cooling occurs.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "If \\(10\\mathrm{kg}\\) mass impose on the smaller piston, how much mass must be applied to the larger piston for equilibrium? Calculate.",
+        "marks": 0,
+        "answer": "\\[\n\\frac{F_2}{F_1} = \\frac{A_2}{A_1} = \\left( \\frac{r_2}{r_1} \\right)^2 = \\left( \\frac{1.25}{0.25} \\right)^2 = 25\n\\]\n\\[\nF_1 = 10 \\times 9.8 = 98\\ \\mathrm{N}, \\quad F_2 = 25 \\times 98 = 2450\\ \\mathrm{N}\n\\]\nMass on larger piston \\(= \\frac{2450}{9.8} = 250\\ \\mathrm{kg}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Whether the displacement ratio of the two pistons will be \\(25:1\\), show it by mathematical analysis.",
+        "marks": 0,
+        "answer": "\\[\n\\frac{l_1}{l_2} = \\frac{A_2}{A_1} = 25 \\Rightarrow l_1 : l_2 = 25 : 1\n\\]\nThus displacement ratio is \\(25:1\\).\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768846210747_auoe6n.jpeg"
+  },
+  {
+    "id": 1768846221598,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Buoyancy and Floating",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is efficiency?",
+        "marks": 0,
+        "answer": "The ratio of the available effective energy of a machine to the total energy delivered is called the efficiency of that machine.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "What do you mean by the atmospheric at any place is \\(980\\mathrm{Nm}^2\\)? Explain it.",
+        "marks": 0,
+        "answer": "Atmospheric pressure of \\(980\\ \\mathrm{Nm}^{-2}\\) means the force exerted by air is \\(980\\ \\mathrm{N}\\) per square meter at that place.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the weight of the object in glycerin.",
+        "marks": 0,
+        "answer": "Weight in air \\(W_a = mg = 200 \\times 9.8 = 1960\\ \\mathrm{N}\\)\nBuoyancy \\(F_b = V \\rho_f g = 0.125 \\times 1260 \\times 9.8 = 1543.5\\ \\mathrm{N}\\)\nWeight in glycerin \\(= W_a - F_b = 1960 - 1543.5 = 416.5\\ \\mathrm{N}\\)",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "What change in volume for floating when the stem object is immersed in glycerin? Analyze mathematically.",
+        "marks": 0,
+        "answer": "For floating, buoyancy = weight of object:\n\\[\nV' \\rho_f g = W_a\n\\]\n\\[\nV' = \\frac{W_a}{\\rho_f g} = \\frac{1960}{1260 \\times 9.8} \\approx 0.15873\\ \\mathrm{m}^3\n\\]\nIncrease in volume \\(= V' - V = 0.15873 - 0.125 = 0.03373\\ \\mathrm{m}^3\\).\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768846221703,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Pressure and Buoyancy",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called pressure?",
+        "marks": 1,
+        "answer": "Pressure is the force applied perpendicularly per unit area of a surface.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why the sound of thundering is heard after a moment of lightening? Explain.",
+        "marks": 2,
+        "answer": "Light travels much faster (3 × 10⁸ m/s) than sound (≈343 m/s in air). Therefore, we see the lightning almost instantly, but the sound takes time to reach us based on the distance.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the value of pressure at the bottom of B container.",
+        "marks": 3,
+        "answer": "W = 0.05 × 9.8 = 0.49 N\nIn container A (ρ_A = 1200 kg/m³):\nBuoyancy F_A = V × ρ_A × g = 50 × 10⁻⁶ × 1200 × 9.8 = 0.588 N\nSince F_A > W → body will float.\nIn container B (ρ_B = 800 kg/m³):\nBuoyancy F_B = V × ρ_B × g = 50 × 10⁻⁶ × 800 × 9.8 = 0.392 N\nSince F_B < W → body will sink.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "What will happen if the body 'C' is dropped into the container A and B respectively? Give your opinion mathematically.",
+        "marks": 4,
+        "answer": "Density of body",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768846210750_0t3p8.jpeg"
+  },
+  {
+    "id": 1768846221806,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Hydraulic Press & Barometer",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called stress?",
+        "marks": 0,
+        "answer": "When an object is deformed by an external force, a resisting force arises inside the object for elasticity. The resisting force acting perpendicular to unit area inside the object is called stress.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why is the tip of the drill machine smooth? Explain.",
+        "marks": 0,
+        "answer": "Smooth tip reduces area, increases pressure for easier drilling.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the value of force felt on the larger piston.",
+        "marks": 0,
+        "answer": "\\[\n\\frac{F_2}{F_1} = \\frac{A_2}{A_1} \\Rightarrow F_2 = \\frac{A_2}{A_1} \\times F_1 = \\frac{20}{4} \\times 20 = 100\\ \\mathrm{N}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Which liquid would be more suitable in making barometer? Give your logical opinion.",
+        "marks": 0,
+        "answer": "Density of liquid A:\n\\[\n\\rho_A = \\frac{P}{h g} = \\frac{13328}{0.1 \\times 9.8} = 13600\\ \\mathrm{kgm}^{-3}\n\\]\nDensity of liquid B:\n\\[\n\\rho_B = \\frac{\\text{Lost weight}}{V g} = \\frac{196}{0.02 \\times 9.8} = 1000\\ \\mathrm{kgm}^{-3}\n\\]\nFor barometer height \\(h = \\frac{P}{\\rho g}\\):\n\\[\nh_A = \\frac{101325}{13600 \\times 9.8} \\approx 0.76\\ \\mathrm{m},\\quad h_B \\approx 10.33\\ \\mathrm{m}\n\\]\nLiquid A (denser) is more suitable.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768846210750_80tjv.jpeg"
+  },
+  {
+    "id": 1768846221910,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Pressure and Buoyancy",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "State the principle of increasing force.",
+        "marks": 0,
+        "answer": "Principle of increasing force: A force applied on a piston on a smaller portion of the fluid will produce a force many times greater on the larger piston.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why the lower side is wide than the upper side of a dam?",
+        "marks": 0,
+        "answer": "Water pressure increases with depth. Wider base distributes force, prevents collapse.",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768846212414_o3z6da.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768846212414_o3z6da.jpeg"
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the pressure of the liquid at the point \"B\".",
+        "marks": 0,
+        "answer": "\\[\nP = h \\rho g = 0.9 \\times 1000 \\times 9.8 = 8820\\ \\mathrm{Pa}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "The immersed cylinder of the stem will be loss the weight? Explain mathematically.",
+        "marks": 0,
+        "answer": "Area \\(A = \\pi r^2 = 3.14 \\times 0.01 = 0.0314\\ \\mathrm{m}^2\\)\nForce on bottom \\(F_2 = P_2 A = 8820 \\times 0.0314 = 277.088\\ \\mathrm{N}\\)\nForce on top \\(F_1 = h_1 \\rho g A = 0.4 \\times 1000 \\times 9.8 \\times 0.0314 = 123.09\\ \\mathrm{N}\\)\nBuoyancy \\(= F_2 - F_1 = 153.93\\ \\mathrm{N}\\)\nUpward buoyant force reduces apparent weight, so cylinder loses weight.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768846210750_dl67c8.jpeg"
+  },
+  {
+    "id": 1768846222122,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Archimedes’ Principle & Hydraulic Press",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "Write down Archimedes law.",
+        "marks": 0,
+        "answer": "If a body is immersed in a liquid, the weight of the body is reduced by an amount equal to the weight of the displaced liquid.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Explain why rotten egg floats on water.",
+        "marks": 0,
+        "answer": "Rotten egg has gases inside, reducing its density below water’s density, so it floats.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the density of the sphere from scenario-1.",
+        "marks": 0,
+        "answer": "Radius \\(r = 0.03\\ \\mathrm{m}\\),\nVolume \\(V = \\frac{4}{3} \\pi r^3 = 1.13 \\times 10^{-4}\\ \\mathrm{m}^3\\)\nDensity \\(\\rho = \\frac{m}{V} = \\frac{0.5}{1.13 \\times 10^{-4}} \\approx 4420.97\\ \\mathrm{kgm}^{-3}\\)",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Amounts of work done in both the pistons were unchanged in scenario-2. Give your opinion through analysis.",
+        "marks": 0,
+        "answer": "For incompressible fluid: \\(A_1 l_1 = A_2 l_2\\)\n\\[\nl_2 = \\frac{A_1}{A_2} l_1 = \\frac{5}{100} \\times 0.2 = 0.01\\ \\mathrm{m}\n\\]\nWork done on smaller piston \\(W_1 = F_1 l_1 = 100 \\times 0.2 = 20\\ \\mathrm{J}\\)\nForce on larger piston \\(F_2 = \\frac{A_2}{A_1} F_1 = \\frac{100}{5} \\times 100 = 2000\\ \\mathrm{N}\\)\nWork done on larger piston \\(W_2 = F_2 l_2 = 2000 \\times 0.01 = 20\\ \\mathrm{J}\\)\nThus \\(W_1 = W_2\\), work done is unchanged.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768846210750_38lal.jpeg"
+  },
+  {
+    "id": 1768846222231,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Hydraulic Press",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called the apparent expansion of liquid?",
+        "marks": 0,
+        "answer": "The expansion of a liquid without considering the expansion of the container, is called apparent expansion of the liquid.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why the atmospheric pressure changes with the change of altitude?",
+        "marks": 0,
+        "answer": "Air density decreases with altitude, so weight of air column decreases, reducing pressure.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "If a mass of \\(10\\mathrm{kg}\\) is exerted on small piston then what will be the upward force on large piston?",
+        "marks": 0,
+        "answer": "\\[\n\\frac{F_2}{F_1} = \\frac{A_2}{A_1} \\Rightarrow F_2 = \\frac{2.5}{0.5} \\times (10 \\times 9.8) = 490\\ \\mathrm{N}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "If the downward displacement of the smaller piston be \\(6\\mathrm{cm}\\) will the energy of both the pistons be balanced? Analyze mathematically.",
+        "marks": 0,
+        "answer": "\\[\nl_1 A_1 = l_2 A_2 \\Rightarrow 0.06 \\times 0.5 = l_2 \\times 2.5 \\Rightarrow l_2 = 0.012\\ \\mathrm{m}\n\\]\nWork on smaller piston \\(W_1 = F_1 l_1 = 98 \\times 0.06 = 5.88\\ \\mathrm{J}\\)\nWork on larger piston \\(W_2 = F_2 l_2 = 490 \\times 0.012 = 5.88\\ \\mathrm{J}\\)\nYes, energy balanced.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768846210750_wp9kq.jpeg"
+  },
+  {
+    "id": 1768846222332,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Buoyancy and Floating",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is strain?",
+        "marks": 0,
+        "answer": "The relative change in length or shape which is made by applying a force from outside is called strain.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why does pressure of air decrease when density of air is low? Explain.",
+        "marks": 0,
+        "answer": "Pressure \\(P = h \\rho g\\). If density \\(\\rho\\) decreases, pressure decreases for constant height.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "What is the weight of object 'A' in water?",
+        "marks": 0,
+        "answer": "Volume of A \\(V_A = 0.25 \\times 0.16 \\times 0.12 = 4.8 \\times 10^{-3}\\ \\mathrm{m}^3\\)\nWeight in air \\(W_A = 10 \\times 9.8 = 98\\ \\mathrm{N}\\)\nBuoyancy \\(B_A = V_A \\rho_w g = 4.8 \\times 10^{-3} \\times 1000 \\times 9.8 = 47.04\\ \\mathrm{N}\\)\nWeight in water \\(= 98 - 47.04 = 50.96\\ \\mathrm{N}\\)",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "If objects A and B are tied together and immersed in water, will it float or sink? Analyze mathematically.",
+        "marks": 0,
+        "answer": "Volume of B \\(V_B = \\frac{m}{\\rho} = \\frac{2}{400} = 5 \\times 10^{-3}\\ \\mathrm{m}^3\\)\nBuoyancy on B \\(B_B = V_B \\rho_w g = 5 \\times 10^{-3} \\times 1000 \\times 9.8 = 49\\ \\mathrm{N}\\)\nTotal weight \\(= 98 + 19.6 = 117.6\\ \\mathrm{N}\\)\nTotal buoyancy \\(= 47.04 + 49 = 96.04\\ \\mathrm{N}\\)\nSince weight > buoyancy, they sink.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768846210750_cfwf2.jpeg"
+  },
+  {
+    "id": 1768846222438,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Buoyancy and Density",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "Write the law of Pascal.",
+        "marks": 0,
+        "answer": "If pressure is applied on a liquid or a gas enclosed in a container from the outside, then this pressure is transmitted equally and acts perpendicularly on the surface of the container in contact with the liquid or gas.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "In the experiment of Torricelli the height of mercury stops at \\(76\\mathrm{cm}\\)—Explain.",
+        "marks": 0,
+        "answer": "At 76 cm height, the pressure due to mercury column equals atmospheric pressure. Forces balance, so mercury stops.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "What will be the weight of the bar in water?",
+        "marks": 0,
+        "answer": "Volume \\(V = 3.5 \\times 2 \\times 1.6 \\times 10^{-6} = 11.2 \\times 10^{-6}\\ \\mathrm{m}^3\\)\nBuoyancy \\(= V \\rho_w g = 11.2 \\times 10^{-6} \\times 1000 \\times 9.8 = 0.10976\\ \\mathrm{N}\\)\nWeight in water \\(= 1.96 - 0.10976 = 1.85024\\ \\mathrm{N}\\)",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Explain with mathematical logic if the gold bar is pure.",
+        "marks": 0,
+        "answer": "Mass of bar \\(= \\frac{1.96}{9.8} = 0.2\\ \\mathrm{kg}\\)\nDensity \\(\\rho = \\frac{0.2}{11.2 \\times 10^{-6}} \\approx 17857\\ \\mathrm{kgm}^{-3}\\)\nGiven pure gold density \\(19300\\ \\mathrm{kgm}^{-3}\\), not equal → impure.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768846210750_n9njm.jpeg"
+  },
+  {
+    "id": 1768846222541,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Buoyancy and Pressure",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is mechanical energy?",
+        "marks": 1,
+        "answer": "Mechanical energy is the energy stored in an object due to its position or motion (sum of kinetic and potential energy).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "A piece of iron sinks in water but a ship made of iron does not sink.—Why?",
+        "marks": 2,
+        "answer": "h₂ = m_total/(πr²ρ) = 0.226/(π(0.03)² × 1000) ≈ 0.08 m\nNew pressure: P₂ = 0.08 × 1000 × 9.8 = 784 Pa\nChange in pressure = P₂ - P₁ = 784 - 392 = 392 Pa (increase)\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "If a piece of wood of density 500 kg/m³ is placed in cylinder 'B', what percentage will float of the wood piece? Calculate.",
+        "marks": 3,
+        "answer": "Fraction submerged = ρ_wood/ρ_water = 500/1000 = 0.5\nSo 50% submerged, 50% floats above water.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "What will be the change in pressure of cylinder 'B' if water from cylinder 'A' is poured into cylinder 'B'? Explain mathematically.",
+        "marks": 4,
+        "answer": "Initial pressure at bottom of",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768846210750_sl8c5j.jpeg"
+  },
+  {
+    "id": 1768846222645,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Stress-Strain & Buoyancy",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called unbalanced force?",
+        "marks": 0,
+        "answer": "If the sum of two or more forces is not zero, causing acceleration, those forces are unbalanced.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "As water vapor increases in air, pressure decreases—Explain.",
+        "marks": 0,
+        "answer": "Water vapor molecules are lighter than N₂/O₂, so average molecular mass decreases, reducing density and pressure.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the strain of the rubber when the object R is hung below Q.",
+        "marks": 0,
+        "answer": "Mass of R \\(= 0.45\\ \\mathrm{kg}\\), Tension \\(T = 0.45 \\times 9.8 = 4.41\\ \\mathrm{N}\\)\nArea \\(A = 2 \\times 10^{-4}\\ \\mathrm{m}^2\\), \\(Y = 10^4\\ \\mathrm{Nm}^{-2}\\)\nStrain \\(= \\frac{T/A}{Y} = \\frac{4.41 / (2 \\times 10^{-4})}{10^4} = 2.205\\)",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "The object P is dropped in water, can it travel \\(49\\mathrm{m}\\) in \\(5\\mathrm{s}\\)? Evaluate mathematically.",
+        "marks": 0,
+        "answer": "Density of P \\(= 2000\\ \\mathrm{kgm}^{-3}\\), Mass \\(= 0.3\\ \\mathrm{kg}\\), Volume \\(V = \\frac{0.3}{2000} = 1.5 \\times 10^{-4}\\ \\mathrm{m}^3\\)\nWeight \\(W = 0.3 \\times 9.8 = 2.94\\ \\mathrm{N}\\)\nBuoyancy \\(F_b = 1.5 \\times 10^{-4} \\times 1000 \\times 9.8 = 1.47\\ \\mathrm{N}\\)\nNet force \\(= 2.94 - 1.47 = 1.47\\ \\mathrm{N}\\) downward\nAcceleration \\(a = \\frac{1.47}{0.3} = 4.9\\ \\mathrm{ms}^{-2}\\)\nDistance in 5 s: \\(s = 0 + 0.5 \\times 4.9 \\times 25 = 61.25\\ \\mathrm{m} > 49\\ \\mathrm{m}\\) → Yes.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768846210750_d5nr29.jpeg"
+  },
+  {
+    "id": 1768846222748,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Archimedes’ Principle",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called stress?",
+        "marks": 0,
+        "answer": "The force per unit area that develops within a substance due to deformation is called stress.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Elasticity of all the matters are not same.—Explain.",
+        "marks": 0,
+        "answer": "Elasticity depends on intermolecular bonds. Metals have strong bonds (high elasticity), liquids/gases have weaker bonds (low elasticity).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "How much kerosene (in gm) falls out of the pot?",
+        "marks": 0,
+        "answer": "Volume spilled = volume of object \\(= 4\\ \\mathrm{cm}^3\\)\nMass spilled \\(= 4 \\times 10^{-6} \\times 800 = 3.2 \\times 10^{-3}\\ \\mathrm{kg} = 3.2\\ \\mathrm{g}\\)",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Explain mathematically if the lost weight of the object will be equal to the amount of kerosene replaced by the object.",
+        "marks": 0,
+        "answer": "Lost weight (buoyancy) \\(= V \\rho_f g = 4 \\times 10^{-6} \\times 800 \\times 9.8 = 0.03136\\ \\mathrm{N}\\)\nWeight of spilled kerosene \\(= 3.2 \\times 10^{-3} \\times 9.8 = 0.03136\\ \\mathrm{N}\\)\nThey are equal.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768846222851,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Archimedes’ Principle",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "Write down the Hooke's law.",
+        "marks": 0,
+        "answer": "Within elastic limit, stress is proportional to strain.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "How does the stress cause strain? Explain.",
+        "marks": 0,
+        "answer": "External force causes deformation (strain), internal resistive force per unit area is stress. More stress → more strain.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Calculate the pressure under the lower surface of the object.",
+        "marks": 0,
+        "answer": "Height of lower surface from water surface \\(= 30\\ \\mathrm{cm} = 0.3\\ \\mathrm{m}\\)\nPressure \\(P = h \\rho g = 0.3 \\times 1000 \\times 9.8 = 2940\\ \\mathrm{Pa}\\)",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Analyze mathematically whether the figure of the stimulus supports the Archimedes' law or not.",
+        "marks": 0,
+        "answer": "Upper surface height \\(= 14\\ \\mathrm{cm} = 0.14\\ \\mathrm{m}\\), Pressure \\(P_2 = 0.14 \\times 1000 \\times 9.8 = 1372\\ \\mathrm{Pa}\\)\nArea \\(A = 5 \\times 10^{-4}\\ \\mathrm{m}^2\\)\nUpward force \\(F_1 = 2940 \\times 5 \\times 10^{-4} = 1.47\\ \\mathrm{N}\\)\nDownward force \\(F_2 = 1372 \\times 5 \\times 10^{-4} = 0.686\\ \\mathrm{N}\\)\nBuoyancy \\(= 1.47 - 0.686 = 0.784\\ \\mathrm{N}\\)\nWeight of displaced water = volume submerged × density × g. If equal, Archimedes’ law holds. Given data suggests it does.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768846210751_8wdukn.jpeg"
+  },
+  {
+    "id": 1768846223071,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Young’s Modulus & Buoyancy",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "Define renewable energy.",
+        "marks": 0,
+        "answer": "Renewable energy is inexhaustible and can be produced from other energies.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "How does the pressure of gas create in a closed region? Explain.",
+        "marks": 0,
+        "answer": "Gas molecules move randomly, collide with walls, change momentum, exert force per unit area = pressure.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Calculate the value of Young's modulus of the wire.",
+        "marks": 0,
+        "answer": "Tension \\(T = 10 \\times 9.8 = 98\\ \\mathrm{N}\\), Area \\(A = 1 \\times 10^{-6}\\ \\mathrm{m}^2\\), \\(L_0 = 3\\ \\mathrm{m}\\), \\(L = 3.003\\ \\mathrm{m}\\)\n\\[\nY = \\frac{T/A}{(L - L_0)/L_0} = \\frac{98 / 10^{-6}}{0.003 / 3} = 9.8 \\times 10^{10}\\ \\mathrm{Nm}^{-2}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "If the weight of the wire is \\(8.1\\ \\mathrm{gm}\\) whether the wire will float or sink after throwing it in water? Explain through mathematical analysis.",
+        "marks": 0,
+        "answer": "Volume of wire \\(V = A L_0 = 10^{-6} \\times 3 = 3 \\times 10^{-6}\\ \\mathrm{m}^3\\)\nDensity \\(\\rho = \\frac{8.1 \\times 10^{-3}}{3 \\times 10^{-6}} = 2700\\ \\mathrm{kgm}^{-3} > \\rho_{water}\\) → sink.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768846210751_zotlfk.jpeg"
+  },
+  {
+    "id": 1768846223184,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Pressure & Buoyancy",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is pressure?",
+        "marks": 0,
+        "answer": "Force applied perpendicularly per unit area.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why there is no unit of strain?",
+        "marks": 0,
+        "answer": "Strain = change in length/original length → ratio, dimensionless.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the weight of the stimulate object in water.",
+        "marks": 0,
+        "answer": "Weight in air \\(= 5.5 \\times 9.8 = 53.9\\ \\mathrm{N}\\)\nBuoyancy \\(= V \\rho g = (0.03 \\times 0.1) \\times 1000 \\times 9.8 = 29.4\\ \\mathrm{N}\\)\nWeight in water \\(= 53.9 - 29.4 = 24.5\\ \\mathrm{N}\\)",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "For what change of volume of stimulate object, it will float with fully immersed in water? Give mathematical logic.",
+        "marks": 0,
+        "answer": "For floating fully immersed: Weight = Buoyancy\n\\[\n5.5 \\times 9.8 = V' \\times 1000 \\times 9.8 \\Rightarrow V' = 0.0055\\ \\mathrm{m}^3\n\\]\nChange in volume \\(= 0.0055 - (0.03 \\times 0.1) = 0.0025\\ \\mathrm{m}^3\\) increase.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768846223287,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Pressure & Hydraulic Press",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is strain?",
+        "marks": 0,
+        "answer": "Relative change in length/shape due to external force.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why does the density of matter decrease when the temperature increases?",
+        "marks": 0,
+        "answer": "Molecules spread apart, volume increases, density decreases.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the value of force F₂.",
+        "marks": 0,
+        "answer": "\\[\n\\frac{F_2}{F_1} = \\frac{A_2}{A_1} = \\left( \\frac{4}{0.2} \\right)^2 = 400\n\\]\n\\(F_1 = 4\\ \\mathrm{N}\\), \\(F_2 = 4 \\times 400 = 1600\\ \\mathrm{N}\\)",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Equal pressure of mercury is felt at different depths of the three liquids of the stem—Analyze mathematically.",
+        "marks": 0,
+        "answer": "For same pressure \\(P = h \\rho g\\):\n\\[\nh_{Hg} = 0.76\\ \\mathrm{m}, \\quad h_{water} = \\frac{P}{\\rho_w g} = \\frac{101325}{1000 \\times 9.8} \\approx 10.34\\ \\mathrm{m}, \\quad h_{kerosene} = \\frac{P}{800 \\times 9.8} \\approx 12.92\\ \\mathrm{m}\n\\]\nDifferent depths for same pressure.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768846210751_2cgtn6.jpeg"
+  },
+  {
+    "id": 1768846223392,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Floating & Pressure",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "Write down Pascal's law.",
+        "marks": 0,
+        "answer": "External pressure on confined fluid is transmitted equally in all directions.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why cooking in a pressure cooker is quick?",
+        "marks": 0,
+        "answer": "Higher pressure raises boiling point, faster cooking.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the maximum pressure of wooden piece on a floor.",
+        "marks": 0,
+        "answer": "Smallest area \\(= 0.2 \\times 0.1 = 0.02\\ \\mathrm{m}^2\\)\nPressure \\(= \\frac{4 \\times 9.8}{0.02} = 1960\\ \\mathrm{Pa}\\)",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "What percentage of the wooden piece would float in sea water? Analyze mathematically.",
+        "marks": 0,
+        "answer": "Density of wood: Half submerged in river water \\(\\rho_{wood} = 0.5 \\times 1000 = 500\\ \\mathrm{kgm}^{-3}\\)\nIn sea water: Fraction submerged \\(= \\frac{500}{1030} \\approx 0.4854\\)\nSo 48.54% submerged, 51.46% floats.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768846223506,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Hydraulic Press",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called density?",
+        "marks": 0,
+        "answer": "Mass per unit volume.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why does the air bubble rising from the bottom of the reservoir get bigger?",
+        "marks": 0,
+        "answer": "Pressure decreases as bubble rises, volume expands (Boyle’s law).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the water pressure at the bottom of the cylinder.",
+        "marks": 0,
+        "answer": "Given data missing; using standard formula \\(P = h \\rho g\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Whether the weight of the liquid removed by the PORS object will be equal to the weight lost by the object, explain it mathematically.",
+        "marks": 0,
+        "answer": "By Archimedes’ principle: weight lost = weight of displaced liquid.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768846210751_893g4i.jpeg"
+  },
+  {
+    "id": 1768846223626,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Hydraulic Press",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is Pascal's law?",
+        "marks": 1,
+        "answer": "Pascal's law states that pressure applied to an enclosed fluid is transmitted undiminished to every portion of the fluid and to the walls of the containing vessel.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why does atmospheric pressure decrease with altitude? Explain.",
+        "marks": 2,
+        "answer": "Atmospheric pressure is due to the weight of the air column above. As altitude increases, the height of the air column above decreases, and the air also becomes less dense. Both factors reduce the weight of air above, decreasing atmospheric pressure.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the force on the second piston.",
+        "marks": 3,
+        "answer": "F₂ = (A₂/A₁) × F₁ = (25/5) × 980 = 4900 N",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "If displacement of first piston is 2 cm, can second piston move 3 cm?",
+        "marks": 4,
+        "answer": "For incompressible fluid: A₁l₁ = A₂l₂\nl₂ = (A₁/A₂) × l₁ = (5/25) × 0.02 = 0.004 m = 0.4 cm < 3 cm\nNo, the second piston cannot move 3 cm; it can only move 0.4 cm.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768846223883,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Stress & Pressure",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is stress?",
+        "marks": 0,
+        "answer": "Force per unit area due to deformation.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Which one is more painful to walk bare footed on plain bricks soloing road or a brick chucked road? Explain.",
+        "marks": 0,
+        "answer": "Brick chucked road: smaller contact area → higher pressure → more painful.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Calculate the applied pressure by the body 'A' on surface ab.",
+        "marks": 0,
+        "answer": "Mass \\(= 0.6\\ \\mathrm{kg}\\), area \\(= 0.1 \\times 0.05 = 0.005\\ \\mathrm{m}^2\\)\nPressure \\(= \\frac{0.6 \\times 9.8}{0.005} = 1176\\ \\mathrm{Pa}\\)",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Is the gold bar made by pure gold or not? Mathematically analyze.",
+        "marks": 0,
+        "answer": "Given data incomplete; using density comparison:\nIf density < 19300 kg/m³ → impure.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768846210751_gxly8c.jpeg"
+  },
+  {
+    "id": 1768846224036,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Hydraulic Press & Torricelli",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is stress?",
+        "marks": 0,
+        "answer": "Force per unit area due to deformation.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "What is meant by Torricelli's vacuum?",
+        "marks": 0,
+        "answer": "Vacuum above mercury column in barometer tube.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "How much upward force will act on \\(\\mathrm{C_2}\\) piston, if \\(10\\mathrm{kg}\\) mass kept on \\(\\mathrm{C_1}\\) piston?",
+        "marks": 0,
+        "answer": "\\[\nF_2 = \\frac{A_2}{A_1} F_1 = \\frac{80}{4} \\times (10 \\times 9.8) = 1960\\ \\mathrm{N}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "How will be the graph of \\((\\mathrm{F_1}\\ \\mathrm{Vs}\\ \\mathrm{F_2})\\) if 1N, 2N and 3N forces are applied on \\(\\mathrm{C_1}\\) piston? Show it.",
+        "marks": 0,
+        "answer": "\\(F_2 = 20 F_1\\)\nFor \\(F_1 = 1, 2, 3\\ \\mathrm{N}\\), \\(F_2 = 20, 40, 60\\ \\mathrm{N}\\)\nGraph is straight line through origin.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768846212407_js3hf.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768846212407_js3hf.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768846210751_jihate.jpeg"
+  },
+  {
+    "id": 1768846224211,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Hydraulic Press",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is strain?",
+        "marks": 1,
+        "answer": "Strain is the relative change in length or shape of a material when subjected to stress. It is dimensionless.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why it is possible to immerse a body in the river when this body floating in the ocean? Explain.",
+        "marks": 2,
+        "answer": "Ocean water is denser than river water due to dissolved salts. A body floating in the ocean experiences greater buoyant force. When placed in river water (less dense), the buoyant force may be less than the body's weight, causing it to sink or be fully immersed.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the equal work done is happen in greater and smaller piston in the mentioned stem.",
+        "marks": 3,
+        "answer": "Force on larger piston: F₂ = (r₂/r₁)² × F₁ = (10/1)² × 100 = 10000 N\nWork on smaller piston: W₁ = F₁ × l₁ = 100 × 0.3 = 30 J\nWork on larger piston: W₂ = F₂ × l₂ = 10000 × 0.03 = 300 J\nW₁ ≠ W₂. The work is not equal, indicating energy loss (friction/heat).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "How much should the radius of the greater piston increase to produce the necessary force which is require for oil production? Analyze mathematically.",
+        "marks": 4,
+        "answer": "To produce F₂ = 20000 N with F₁ = 100 N:\n(r₂'/r₁)² = F₂/F₁ = 20000/100 = 200\nr₂'/r₁ = √200 ≈ 14.14\nCurrent ratio is 10:1, so new ratio should be 14.14:1\nIncrease factor = 14.14/10 = 1.414 or 41.4% increase in radius.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768846224364,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Hydraulic Press",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is hydraulic press?",
+        "marks": 1,
+        "answer": "A hydraulic press is a machine that uses Pascal's principle to generate a large force from a small force through the use of pistons of different areas in an enclosed fluid system.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "State Pascal's law.",
+        "marks": 2,
+        "answer": "Pascal's law states that pressure applied to an enclosed fluid is transmitted undiminished to all portions of the fluid and to the walls of its container.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Calculate F₂ for each case.",
+        "marks": 3,
+        "answer": "F₂ = (A₂/A₁) × F₁ = (0.00282/0.00031) × F₁ ≈ 9.097 × F₁\nFor F₁ = 5 N: F₂ ≈ 45.48 N\nFor F₁ = 12 N: F₂ ≈ 109.16 N\nFor F₁ = 30 N: F₂ ≈ 272.91 N",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Plot F₁ vs F₂ graph and determine the relationship.",
+        "marks": 4,
+        "answer": "The graph of F₁ vs F₂ is a straight line passing through the origin with slope ≈ 9.097, showing that F₂ is directly proportional to F₁: F₂ = 9.097F₁.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768846224512,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Archimedes’ Principle",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is the volume expansion coefficient of gas at constant pressure?",
+        "marks": 0,
+        "answer": "\\(\\beta_p = \\frac{1}{T}\\) (inverse of absolute temperature).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "What does buoyancy mean? Explain.",
+        "marks": 0,
+        "answer": "Upward force on immersed object equal to weight of displaced fluid.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the material density of the object.",
+        "marks": 0,
+        "answer": "\\[\n\\rho = \\frac{0.50}{1.75 \\times 10^{-4}} \\approx 2857.14\\ \\mathrm{kgm}^{-3}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "The stimulus data supports a particular formula optimize it through appropriate mathematical analysis.",
+        "marks": 0,
+        "answer": "Weight in air \\(= 0.5 \\times 9.8 = 4.9\\ \\mathrm{N}\\)\nLost weight \\(= 4.9 - 3.185 = 1.715\\ \\mathrm{N}\\)\nWeight of displaced water \\(= 1.75 \\times 10^{-4} \\times 1000 \\times 9.8 = 1.715\\ \\mathrm{N}\\)\nMatches Archimedes’ principle.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768846224665,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Hydraulic Press",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is reflection of light?",
+        "marks": 0,
+        "answer": "Light returning at interface between media.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why is the wastage of electric energy in the use of filament bulb?",
+        "marks": 0,
+        "answer": "Filament heats up, much energy lost as heat.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find out the value of applied force \\(\\mathrm{X}^\\circ \\mathrm{N}\\) on the smaller piston.",
+        "marks": 0,
+        "answer": "\\[\n\\frac{F_2}{F_1} = \\frac{A_2}{A_1} \\Rightarrow 2500 = F_1 \\times \\frac{2.5}{0.5} \\Rightarrow F_1 = 500\\ \\mathrm{N}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Is there any change of work done in both the pistons according to the given information's of the stem? Analyze your opinion mathematically.",
+        "marks": 0,
+        "answer": "\\(l_2 = \\frac{A_1}{A_2} l_1 = \\frac{0.5}{2.5} \\times 0.07 = 0.014\\ \\mathrm{m}\\)\n\\(W_1 = 500 \\times 0.07 = 35\\ \\mathrm{J}\\), \\(W_2 = 2500 \\times 0.014 = 35\\ \\mathrm{J}\\) → Equal.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768846224771,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Vernier Caliper & Density",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is strain?",
+        "marks": 0,
+        "answer": "Ratio of deformation to original dimension.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Human body is far more surprising than the most complex machine in the world. Explain.",
+        "marks": 0,
+        "answer": "Human body self-heals, thinks, adapts, reproduces—beyond any machine.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Measure the diameter of the sphere.",
+        "marks": 0,
+        "answer": "Vernier constant \\(= \\frac{1\\ \\mathrm{mm}}{20} = 0.05\\ \\mathrm{mm} = 0.005\\ \\mathrm{cm}\\)\nDiameter \\(= 2.6 + 5 \\times 0.005 = 2.625\\ \\mathrm{cm}\\)",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Will the sphere sink or float in water? Support your answer with mathematical logic.",
+        "marks": 0,
+        "answer": "Radius \\(= 1.3125\\ \\mathrm{cm} = 0.013125\\ \\mathrm{m}\\)\nVolume \\(= \\frac{4}{3} \\pi (0.013125)^3 \\approx 9.47 \\times 10^{-6}\\ \\mathrm{m}^3\\)\nDensity \\(= \\frac{0.025}{9.47 \\times 10^{-6}} \\approx 2639.7\\ \\mathrm{kgm}^{-3} > 1000\\ \\mathrm{kgm}^{-3}\\) → sink.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768846224876,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Hydraulic Press",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called air pressure?",
+        "marks": 0,
+        "answer": "Force per unit area due to weight of air.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why a person does not get sunk into the Dead Sea?",
+        "marks": 0,
+        "answer": "High salinity → high density → high buoyancy.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "What will be the value of \\(\\mathrm{A}_2\\) in above stem?",
+        "marks": 0,
+        "answer": "Given \\(F_1 = 50\\), \\(F_2 = 1000\\), \\(A_1\\) unknown:\n\\[\n\\frac{A_2}{A_1} = \\frac{F_2}{F_1} = 20 \\Rightarrow A_2 = 20 A_1\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "If we get \\(\\mathrm{F}_2\\) three times larger than previous and \\(\\mathrm{F}_1\\) remain unchanged then what change is done in above stem?",
+        "marks": 0,
+        "answer": "New \\(F_2' = 4000\\), \\(F_1' = 50\\):\n\\[\n\\frac{A_2'}{A_1'} = \\frac{4000}{50} = 80\n\\]\nIf \\(A_1\\) same: \\(A_2' = 80 A_1 = 4 A_2\\) (4× larger).\nIf \\(A_2\\) same: \\(A_1' = A_2 / 80 = A_1 / 4\\) (¼ smaller).\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768846210751_10ufb.jpeg"
+  },
+  {
+    "id": 1768846224985,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Buoyancy & Archimedes",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is buoyancy?",
+        "marks": 0,
+        "answer": "Upward force on immersed object equal to weight of displaced fluid.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why swimming in sea water is easier than that of in river water? Explain.",
+        "marks": 0,
+        "answer": "Sea water denser → greater buoyancy.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find the density of the material of the body.",
+        "marks": 0,
+        "answer": "Volume \\(= 25 \\times 12 \\times 10^{-6} = 3 \\times 10^{-4}\\ \\mathrm{m}^3\\)\nMass \\(= \\frac{9.9}{9.8} \\approx 1.01\\ \\mathrm{kg}\\)\nDensity \\(= \\frac{1.01}{3 \\times 10^{-4}} \\approx 3366.67\\ \\mathrm{kgm}^{-3}\\)",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Does the stem above support the Archimedes Principle? Analyze mathematically.",
+        "marks": 0,
+        "answer": "Lost weight \\(= 9.9 - 7.2 = 2.7\\ \\mathrm{N}\\)\nWeight of displaced water \\(= 3 \\times 10^{-4} \\times 1000 \\times 9.8 = 2.94\\ \\mathrm{N}\\)\nNot equal → does not support exactly (≈ within error).\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768846225109,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Young's Modulus & Buoyancy",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called pressure?",
+        "marks": 1,
+        "answer": "Pressure is the force applied perpendicularly per unit area of a surface.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why two pieces of ice have joined together when pressed?",
+        "marks": 2,
+        "answer": "When ice is pressed, the pressure at the contact point increases. This increased pressure lowers the melting point of ice at that location, causing it to melt. When the pressure is released, the water refreezes, joining the two pieces together.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find the weight of the wire in water. [ρ_w = 1000 kg/m³]",
+        "marks": 3,
+        "answer": "Mass = 5 g = 0.005 kg, Length = 2 m, A = 4 × 10⁻⁶ m²\nVolume = A × L = 4 × 10⁻⁶ × 2 = 8 × 10⁻⁶ m³\nWeight in air = mg = 0.005 × 9.8 = 0.049 N\nBuoyancy = V × ρ_w × g = 8 × 10⁻⁶ × 1000 × 9.8 = 0.0784 N\nSince buoyancy > weight, the wire would float if released.\nApparent weight in water = 0.049 - 0.0784 = -0.0294 N (negative indicates it would rise)\nIf held submerged, the tension needed would be 0.0294 N upward.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "What amount of load is to be suspended to get 2% increment in length of the wire?",
+        "marks": 4,
+        "answer": "ΔL = 2% of L = 0.02 × 2 = 0.04 m\nUsing Y = (F/A)/(ΔL/L):\nF = Y × A × ΔL/L = 2.45 × 10¹⁰ × 4 × 10⁻⁶ × 0.04/2 = 1960 N\nMass = 1960/9.8 = 200 kg\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768846225259,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Vernier Caliper & Buoyancy",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "Define Vernier coincidence.",
+        "marks": 0,
+        "answer": "Vernier coincidence is when a vernier scale division aligns exactly with a main scale division.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "A piece of iron sinks in water, floats in mercury. Explain.",
+        "marks": 0,
+        "answer": "Iron density > water → sinks; Iron density < mercury → floats.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the radius of the sphere.",
+        "marks": 0,
+        "answer": "Diameter \\(= 12.2 + 5 \\times 0.01 = 12.25\\ \\mathrm{cm}\\)\nRadius \\(= 6.125\\ \\mathrm{cm}\\)",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Will the sphere float or sink in water? Explain mathematically.",
+        "marks": 0,
+        "answer": "Volume \\(= \\frac{4}{3} \\pi (6.125)^3 \\approx 962.5\\ \\mathrm{cm}^3\\)\nDensity \\(= \\frac{1000\\ \\mathrm{g}}{962.5} \\approx 1.039\\ \\mathrm{g/cm}^3 > 1\\ \\mathrm{g/cm}^3\\) → sink.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768846225365,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Specific Heat & Archimedes",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called specific heat?",
+        "marks": 0,
+        "answer": "Heat required to raise 1 kg by 1 K.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why does evaporation produce cooling? Explain.",
+        "marks": 0,
+        "answer": "High-energy molecules escape, average kinetic energy decreases → temperature drops.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Calculate pressure at the bottom of the object.",
+        "marks": 0,
+        "answer": "Height difference \\(= 30 - 14 = 16\\ \\mathrm{cm} = 0.16\\ \\mathrm{m}\\)\nPressure \\(= 0.16 \\times 1000 \\times 9.8 = 1568\\ \\mathrm{Pa}\\)",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "In the figure of the stem is Archimedes law followed or not? Analyze mathematically.",
+        "marks": 0,
+        "answer": "Upward force > downward force → net buoyancy → Archimedes’ law followed.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768846210751_axw1i.jpeg"
+  },
+  {
+    "id": 1768846225636,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Pressure & Archimedes",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is pressure?",
+        "marks": 0,
+        "answer": "Force per unit area.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Density of a body is \\(10\\ \\mathrm{kgm}^{-3}\\). What does it mean?",
+        "marks": 0,
+        "answer": "Mass of 1 m³ of body is 10 kg.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find the pressure of the liquid at the bottom of the container.",
+        "marks": 0,
+        "answer": "\\(P = h \\rho g = 0.5 \\times 800 \\times 9.8 = 3920\\ \\mathrm{Pa}\\)",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Will the volume of the liquid displaced by the body be \\(2.5\\times 10^{-4}\\ \\mathrm{m}^{3}\\)?",
+        "marks": 0,
+        "answer": "Lost weight = buoyancy = weight of displaced liquid:\n\\[\nV = \\frac{1.96}{800 \\times 9.8} = 2.5 \\times 10^{-4}\\ \\mathrm{m}^3\n\\]\nYes.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768846225739,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Young’s Modulus",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "Write down the Hooke's law.",
+        "marks": 0,
+        "answer": "Stress ∝ strain within elastic limit.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Density of water is \\(1000\\ \\mathrm{kgm}^{-3}\\) what does it mean?",
+        "marks": 0,
+        "answer": "Mass of 1 m³ of water is 1000 kg.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find the tension in the wire.",
+        "marks": 0,
+        "answer": "Tension \\(= mg = 0.5 \\times 9.8 = 4.9\\ \\mathrm{N}\\)",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Is the wire made of copper? Explain with the help of modulus of elasticity.",
+        "marks": 0,
+        "answer": "Stress \\(= \\frac{4.9}{\\pi (0.25 \\times 10^{-3})^2} \\approx 2.495 \\times 10^7\\ \\mathrm{Nm}^{-2}\\)\nStrain \\(= \\frac{0.02}{1} = 0.02\\)\n\\(Y = \\frac{\\text{stress}}{\\text{strain}} \\approx 1.2475 \\times 10^9\\ \\mathrm{Nm}^{-2}\\)\nGiven \\(Y_{Cu} = 1.23 \\times 10^{11}\\ \\mathrm{Nm}^{-2}\\) → not matching → not copper.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768846225853,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Buoyancy & Density",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is evaporation?",
+        "marks": 0,
+        "answer": "Liquid to gas phase change at surface.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Air density changes during the blowing of lanterns? Explain.",
+        "marks": 0,
+        "answer": "Heating air in lantern reduces density, creates lift.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the density of the object.",
+        "marks": 0,
+        "answer": "\\[\n\\rho = \\frac{200}{0.125} = 1600\\ \\mathrm{kgm}^{-3}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "According to stem, the object will float in glycerine or not determine mathematically.",
+        "marks": 0,
+        "answer": "Weight \\(= 1960\\ \\mathrm{N}\\), Buoyancy \\(= 0.125 \\times 1260 \\times 9.8 = 1543.5\\ \\mathrm{N}\\)\nWeight > Buoyancy → sink.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768846226082,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Expansion & Density",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is heat capacitance?",
+        "marks": 0,
+        "answer": "Heat required to raise temperature by 1 K.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why is there no unit of strain?",
+        "marks": 0,
+        "answer": "Strain is ratio, dimensionless.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "What is the volume of \\(5\\ \\mathrm{kg}\\) Dead Sea water?",
+        "marks": 0,
+        "answer": "Density \\(= 1240\\ \\mathrm{kgm}^{-3}\\)\nVolume \\(= \\frac{5}{1240} \\approx 4.03 \\times 10^{-3}\\ \\mathrm{m}^3\\)",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "If the primary height of the copper piece is \\(30\\ \\mathrm{cm}\\) then what will be its final volume from scene 2?",
+        "marks": 0,
+        "answer": "Initial volume \\(= 50 \\times 30 = 1500\\ \\mathrm{cm}^3 = 1.5 \\times 10^{-3}\\ \\mathrm{m}^3\\)\n\\(\\Delta A = 0.25\\ \\mathrm{cm}^2\\), \\(\\beta = \\frac{\\Delta A}{A_0 \\Delta T} = \\frac{0.25}{50 \\times 90} = 5.56 \\times 10^{-5}\\ \\mathrm{K}^{-1}\\)\n\\(\\gamma \\approx 2\\beta = 1.11 \\times 10^{-4}\\ \\mathrm{K}^{-1}\\)\n\\(\\Delta V = \\gamma V_0 \\Delta T = 1.11 \\times 10^{-4} \\times 1.5 \\times 10^{-3} \\times 90 \\approx 1.5 \\times 10^{-5}\\ \\mathrm{m}^3\\)\nFinal volume \\(\\approx 1.515 \\times 10^{-3}\\ \\mathrm{m}^3\\).\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768846226184,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Stress & Archimedes",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is stress?",
+        "marks": 0,
+        "answer": "Force per unit area due to deformation.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why does rotten egg floats in water? Explain.",
+        "marks": 0,
+        "answer": "Rotten egg has gas inside → lower density → floats.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find the maximum pressure of the material on floor.",
+        "marks": 0,
+        "answer": "Smallest area \\(= 5 \\times 4 = 20\\ \\mathrm{cm}^2 = 0.002\\ \\mathrm{m}^2\\)\nPressure \\(= \\frac{9.8}{0.002} = 4900\\ \\mathrm{Pa}\\)",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Does the above statement support Archimedes Law? Explain mathematically.",
+        "marks": 0,
+        "answer": "Volume \\(= 0.1 \\times 0.05 \\times 0.04 = 2 \\times 10^{-4}\\ \\mathrm{m}^3\\)\nWeight of displaced water \\(= 2 \\times 10^{-4} \\times 1000 \\times 9.8 = 1.96\\ \\mathrm{N}\\)\nLost weight \\(= 9.8 - 7.84 = 1.96\\ \\mathrm{N}\\) → Matches → Supports Archimedes.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768846226290,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Archimedes' Principle",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is 1 Pa?",
+        "marks": 1,
+        "answer": "1 Pascal (Pa) is the pressure exerted when a force of 1 Newton acts perpendicularly on an area of 1 square meter.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "State and explain the Hooke's Law.",
+        "marks": 2,
+        "answer": "Hooke's law states that within the elastic limit, stress is directly proportional to strain. This means that the deformation of a material is proportional to the applied force, and the material returns to its original shape when the force is removed.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "According to the stem determine the density of the object A?",
+        "marks": 3,
+        "answer": "Total surface area = 6a² = 100 cm²\nSide length a = √(100/6) ≈ 4.08 cm = 0.0408 m\nVolume = a³ ≈ (0.0408)³ ≈ 6.79 × 10⁻⁵ m³\nMass = 8.45/9.8 ≈ 0.862 kg\nDensity = 0.862/(6.79 × 10⁻⁵) ≈ 12,695 kg/m³",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Does the phenomenon obey the Archimedes law? Analyze Mathematically.",
+        "marks": 4,
+        "answer": "Lost weight = 8.45 - 7.225 = 1.225 N\nWeight of displaced water (by Archimedes) = V × ρ_water × g\n= 6.79 × 10⁻⁵ × 1000 × 9.8 ≈ 0.665 N\nThe calculated buoyancy (0.665 N) does not match the lost weight (1.225 N), suggesting either measurement error or the object is not fully submerged. If the stated values are correct, it does not perfectly obey Archimedes' law as given.",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768846210751_k93ho5.jpeg"
+  },
+  {
+    "id": 1768846226477,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Density & Buoyancy",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is density?",
+        "marks": 0,
+        "answer": "Mass per unit volume.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "What will be the height of the water column in 1 atmospheric pressure?",
+        "marks": 0,
+        "answer": "\\(h = \\frac{P}{\\rho g} = \\frac{101325}{1000 \\times 9.8} \\approx 10.34\\ \\mathrm{m}\\)",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Calculate the density of the object.",
+        "marks": 0,
+        "answer": "Radius \\(= 0.045\\ \\mathrm{m}\\), Volume \\(= \\frac{4}{3} \\pi (0.045)^3 \\approx 3.82 \\times 10^{-4}\\ \\mathrm{m}^3\\)\nDensity \\(= \\frac{3}{3.82 \\times 10^{-4}} \\approx 7853\\ \\mathrm{kgm}^{-3}\\)",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Compare the weight of the given two objects in two liquids 'A' & 'B'—Show it mathematically.",
+        "marks": 0,
+        "answer": "Weight in liquid = Weight in air – Buoyancy\nBuoyancy in A \\(= 3.82 \\times 10^{-4} \\times 1200 \\times 9.8 \\approx 4.49\\ \\mathrm{N}\\)\nBuoyancy in B \\(= 3.82 \\times 10^{-4} \\times 1040 \\times 9.8 \\approx 3.89\\ \\mathrm{N}\\)\nWeight in air \\(= 29.4\\ \\mathrm{N}\\)\nWeight in A \\(= 29.4 - 4.49 = 24.91\\ \\mathrm{N}\\)\nWeight in B \\(= 29.4 - 3.89 = 25.51\\ \\mathrm{N}\\)\nWeight in B > Weight in A.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768846226717,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Pressure & Buoyancy",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is pressure?",
+        "marks": 0,
+        "answer": "Force per unit area.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Find the dimension of energy?",
+        "marks": 0,
+        "answer": "\\([E] = \\mathrm{ML}^2\\mathrm{T}^{-2}\\)",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "What is the density of the sphere?",
+        "marks": 0,
+        "answer": "Radius \\(= 0.1\\ \\mathrm{m}\\), Volume \\(= \\frac{4}{3} \\pi (0.1)^3 \\approx 4.188 \\times 10^{-3}\\ \\mathrm{m}^3\\)\nDensity \\(= \\frac{50}{4.188 \\times 10^{-3}} \\approx 11936\\ \\mathrm{kgm}^{-3}\\)",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Will the sphere be lifted by applying the force in the smaller piston? Explain with mathematical logic.",
+        "marks": 0,
+        "answer": "\\(A_1 = \\pi (0.05)^2 \\approx 7.854 \\times 10^{-3}\\ \\mathrm{m}^2\\), \\(A_2 = \\pi (0.15)^2 \\approx 7.069 \\times 10^{-2}\\ \\mathrm{m}^2\\)\n\\(F_2 = \\frac{A_2}{A_1} F_1 = \\frac{7.069 \\times 10^{-2}}{7.854 \\times 10^{-3}} \\times 15 \\approx 135\\ \\mathrm{N}\\)\nWeight of sphere \\(= 490\\ \\mathrm{N}\\)\n\\(F_2 < \\text{Weight}\\) → cannot lift.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768846210752_gjj3x.jpeg"
+  },
+  {
+    "id": 1768846226867,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Buoyancy & Floating",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "State Hooke's law.",
+        "marks": 0,
+        "answer": "Within elastic limit, stress ∝ strain.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "What do you understand plasma state of matter?",
+        "marks": 0,
+        "answer": "Plasma: ionized gas, conductive, high temperature.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the density of \"x\".",
+        "marks": 0,
+        "answer": "Weight \\(= 0.25 \\times 9.8 = 2.45\\ \\mathrm{N}\\)\nIn water: \\(0.5 V \\times 1000 \\times 9.8 = 2.45 \\Rightarrow V \\approx 5 \\times 10^{-4}\\ \\mathrm{m}^3\\)\nIn X: \\(0.4 V \\times \\rho_x \\times 9.8 = 2.45 \\Rightarrow \\rho_x \\approx 1250\\ \\mathrm{kgm}^{-3}\\)",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Analyze the amount of buoyant force, on the mentioned plastic sphere when it is dropped in kerosene.",
+        "marks": 0,
+        "answer": "Buoyancy in kerosene (\\(\\rho = 800\\ \\mathrm{kgm}^{-3}\\)):\nFully submerged: \\(F_b = 5 \\times 10^{-4} \\times 800 \\times 9.8 = 3.92\\ \\mathrm{N}\\)\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768846227017,
+    "subject": "Physics",
+    "chapter": "State of Matter and Pressure",
+    "lesson": "Pressure & Buoyancy",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is strain?",
+        "marks": 0,
+        "answer": "Relative change in length/shape due to force.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Explain the uses of density in our everyday lives.",
+        "marks": 0,
+        "answer": "Density differences drive convection (cooking, weather), buoyancy (swimming, ships), etc.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Calculate the depth of the pond.",
+        "marks": 0,
+        "answer": "\\(P_{\\text{bottom}} = P_{\\text{air}} + h \\rho g\\)\n\\(h = \\frac{2.974 \\times 10^5 - 1.013 \\times 10^5}{1000 \\times 9.8} \\approx 20\\ \\mathrm{m}\\)",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Will the object float or sink in the water? Analyze mathematically.",
+        "marks": 0,
+        "answer": "Density of object \\(= \\frac{3}{750 \\times 10^{-6}} = 4000\\ \\mathrm{kgm}^{-3} > 1000\\ \\mathrm{kgm}^{-3}\\) → sink.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  }
+]

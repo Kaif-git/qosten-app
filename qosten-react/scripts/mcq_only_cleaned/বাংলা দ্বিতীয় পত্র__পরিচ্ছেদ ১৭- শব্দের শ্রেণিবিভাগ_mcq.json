@@ -1,0 +1,3138 @@
+[
+  {
+    "id": 1767455498430,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "উৎস বিবেচনায় বাংলা শব্দভাণ্ডার কত প্রকার?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তিন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চার",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পাঁচ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ছয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "উৎস অনুসারে শব্দ চার প্রকার: তৎসম, তদ্ভব, দেশি ও বিদেশি। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455498571,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "নিচের কোনটি তৎসম শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গ্রু",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কুতি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কলম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাখি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "উৎসে ২০২ নম্বর প্রশ্নের সঠিক উত্তর হিসেবে 'ক' অপশনটি চিহ্নিত করা হয়েছে। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455498704,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "কোন শ্রেণির বাংলা শব্দে লিখিত চেহারা সংস্কৃতের অনুরূপ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তদ্ভব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তদ্ধিত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দেশি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তৎসম",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "তৎসম শব্দের অর্থ হলো 'তার সমান' বা সংস্কৃতের সমান। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455498866,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "গঠন বিবেচনায় শব্দ দুই ভাগে বিভক্ত, যথা—",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রত্যয় ও বিভক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ধ্বনি ও বর্ণ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মৌলিক ও সাধিত",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "তৎসম ও তদ্ভব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "শব্দ গঠনের দিক দিয়ে মৌলিক ও সাধিত— এই দুই প্রকার। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455498992,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "পদ বিবেচনায় শব্দ কত প্রকার?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পাঁচ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সাত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আট",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "দশ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ব্যাকরণিক ভাবে পদ বা শব্দ আট প্রকার। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455499108,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "কোনটি পদের নাম নয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অবিনি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অনুসর্গ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যোজক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পদাশ্রিত",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পদাশ্রিত নির্দেশক একটি পৃথক ব্যাকরণিক অংশ, এটি আট প্রকার পদের অন্তর্ভুক্ত নয়। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455499225,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "নিচের কোনটি পর্তুগিজ শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আঁতেল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দারোগা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আলপিন",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ঘোলাই",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "আলপিন শব্দটি পর্তুগিজ ভাষা থেকে আগত। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455499345,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'তোপ' কোন ভাষার শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হিন্দি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফারসি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তুর্কি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "আরবি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "তোপ তুর্কি ভাষা থেকে আগত একটি শব্দ। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455499456,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'ডাকাত' কোন ভাষার শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তুর্কি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হিন্দি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ফারসি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "আরবি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ডাকাত শব্দটি ফারসি ভাষা থেকে আগত। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455499576,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'ফারসি' শব্দের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কার্তুজ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "তারিখ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বালতি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দারোগা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কার্তুজ শব্দটি ফরাসি (ফারসি নয়, উৎসে ভুল হতে পারে) বা ফারসি উৎস হিসেবে চিহ্নিত। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455499690,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "কোনটি মৌলিক শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গরমিল",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বন্ধুত্ব",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রশাসন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গোলাম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "উৎসে ২১১ নম্বর প্রশ্নের সঠিক উত্তর হিসেবে 'ক' অপশনটি চিহ্নিত করা হয়েছে। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455499894,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "নিচের কোনটি দেশি শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "টোপর",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কুমির",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বালতি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চাকু",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "টোপর একটি খাটি দেশি শব্দ। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455500048,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "দেশি শব্দের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "টেঁটা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "টোপর",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "চাবি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাকি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "টোপর হলো দেশি শব্দ। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455500182,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "নিচের কোনটি সাধিত শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গোলাপ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গাছ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হাত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সম্পাদকীয়",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মূল শব্দের সাথে প্রত্যয় বা উপসর্গ যুক্ত হয়ে সম্পাদকীয় গঠিত হয়েছে। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455500314,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'ঘোড়া' কোন জাতীয় শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তৎসম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তদ্ভব",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "দেশি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ফারসি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ঘোড়া শব্দটি তদ্ভব শ্রেণির শব্দ। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455500434,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "নিচের কোনটি পর্তুগিজ শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কারখানা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আদালত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রেকর্ড",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আলমারি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "আলমারি শব্দটি পর্তুগিজ ভাষা থেকে এসেছে। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455500561,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "কোনটি তৎসম শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চিনি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চন্দ্ৰ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "আনারস",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "চন্দ্র একটি তৎসম শব্দ। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455500679,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'সমঝোতা' কোন ভাষা থেকে আসা শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আরবি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফারসি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হিন্দি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "তুর্কি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সমঝোতা শব্দটি হিন্দি ভাষা থেকে আগত। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455500797,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'আদালত' কোন ভাষার শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আরবি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ফারসি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হিন্দি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ওলন্দাজ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "আদালত একটি আরবি শব্দ। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455500911,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'সচিবালয়' কোন শব্দ হিসেবে পরিচিত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তৎসম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পারিভাষিক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তদ্ভব",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দেশি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "এটি একটি প্রশাসনিক পারিভাষিক শব্দ। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455501027,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'দোকান' কোন ভাষার শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আরবি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফারসি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পর্তুগিজ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তুর্কি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "দোকান ফারসি ভাষা থেকে আগত। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455501154,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'পারিভাষিক' গঠন বিবেচনায় কোন শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মৌলিক শব্দ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পারিভাষিক শব্দ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সাধিত শব্দ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বিদেশি শব্দ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পারিভাষিক শব্দগুলো সাধারণত সাধিত শব্দের অন্তর্ভুক্ত। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455501277,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "কোনটি তৎসম শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সচিবালয়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কলম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আদালত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কারখানা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সচিবালয় একটি তৎসম শব্দ। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455501399,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "ফারসি শব্দের উদাহরণ কোনগুলো?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নামাজ, রোজা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "হজ, জাকাত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নামায, আযান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জান্নাত, দোযখ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "নামাজ ও রোজা ফারসি শব্দ। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455501529,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'কুপন' কোন ধরনের শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফরাসি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ফারসি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ওলন্দাজ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পর্তুগিজ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কুপন শব্দটি ফরাসি ভাষা থেকে আগত। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455501659,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "কোনটি মৌলিক শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চাঁদ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কতৃত্ব",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রশাসন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দায়িত্ব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "চাঁদ শব্দটিকে আর বিশ্লেষণ করা যায় না বিধায় এটি মৌলিক। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455501780,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'কলম, বাতি, আদালত' — কোন ধরনের বিদেশি শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফারসি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তুর্কি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আরবি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "হিন্দি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "এই শব্দগুলো আরবি ভাষা থেকে আগত। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455501898,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "নিচের কোনটি পর্তুগিজ শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তোপ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বালতি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "চাকু",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সমঝোতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বালতি একটি পর্তুগিজ শব্দ। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455502028,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'দারোগা' কোন ভাষার শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হিন্দি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পর্তুগিজ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তুর্কি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ফরাসি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "দারোগা শব্দটি তুর্কি ভাষা থেকে আগত। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455502197,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'লাগাতার' কোন ভাষার শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আরবি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফারসি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হিন্দি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তুর্কি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "উৎসে ২৩০ নম্বর প্রশ্নের সঠিক উত্তর হিসেবে 'ঘ' অপশনটি চিহ্নিত করা হয়েছে। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455502330,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'আঁতেল' শব্দটি কোন ভাষা থেকে এসেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পর্তুগিজ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফরাসি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তুর্কি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ফারসি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "আঁতেল শব্দটি ফরাসি ভাষা থেকে আগত। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455502450,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'সুনামি' কোন ভাষার শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফরাসি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পর্তুগিজ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ওলন্দাজ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জাপানি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সুনামি একটি জাপানি শব্দ। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455502572,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "সমান প্রক্রিয়ায় যে শব্দ গঠিত হয় তাকে বলে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "তৎসম শব্দ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সাধিত শব্দ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তদ্ভব শব্দ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দেশি শব্দ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সমাস, প্রত্যয় বা অন্য প্রক্রিয়ায় গঠিত শব্দকে সাধিত শব্দ বলে। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455502694,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'তারিখ' কোন ভাষার শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফারসি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আরবি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তুর্কি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পর্তুগিজ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "তারিখ শব্দটি আরবি ভাষা থেকে আগত। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455502848,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'চশমা' কোন ভাষার শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আরবি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফারসি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পর্তুগিজ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ওলন্দাজ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "চশমা একটি ফারসি শব্দ। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456606717,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "বিশেষ্য ও বিশেষণের নারী ও নরভেদের নাম কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বচন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "লিঙ্গ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বিভক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নির্দেশক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বিশেষ্য ও বিশেষণের নর-নারীভেদের নাম লিঙ্গ [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456606839,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "নিচের কোন শব্দটি উভয়লিঙ্গ প্রকাশ্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সন্তান",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ভেড়ি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ছাত্র",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ঘর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456606947,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "ক্লীব লিঙ্গ শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সতী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মন্ত্রী",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মানুষ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাখি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456607078,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "কোন শব্দটি অপরিবর্তনীয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মাতা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দাদী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চাচি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শিক্ষিত",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কিছু শব্দ আছে যার কোনো নারীবাচক রূপ হয় না [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456607295,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "নিচের কোনটি নিত্য নারীবাচক শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শিল্পী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সতীন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কবি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জেলেনি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সতীন শব্দটির কোনো নরবাচক রূপ নেই [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456607415,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'-অক' প্রত্যয় দিয়ে গঠিত নরবাচক শব্দকে নারীবাচক করার সময়ে 'অক' এর জায়গায় কী হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-একা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-ওকা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "-ইকা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "-আকা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যেমন: বালক + ইকা = বালিকা [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456607527,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "নিচের কোন নারীবাচক শব্দের সঙ্গে নরবাচক শব্দের গঠনগত মিল নেই?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বেগম",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ভাইঝি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ছেলে বউ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গায়িকা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456607759,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "কোনটি পত্নী অর্থে নারীবাচক শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ছাত্রী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জেলেনি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আয়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মামি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456607880,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "নিত্য পুরুষবাচক শব্দের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বুদ্ধিমান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শ্রীমান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শিক্ষক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অকৃতদার",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456607991,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "বিশেষ নিয়মে সাধিত নারীবাচক শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "যোগিনী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গীতিিকা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নেত্রী",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বৈষ্ণবী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456608098,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "কোনটি নিত্য নারীবাচক বাংলা শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সধবা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বিদুষী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সপত্নী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিমাতৃক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456608206,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "সাধারণ অর্থে স্ত্রীবাচক শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ছাত্রী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জেলেনি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ডাইনি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ভাবি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456608742,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'বিধবা' শব্দটি কোন জাতীয় নারীবাচক শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সপত্নীববাচক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পত্নীবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সাধারণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিত্য",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456608871,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "বিশেষ নিয়মে গঠিত নারীবাচক শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নর-নারী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বালক-বালিকা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সুধী-সুধীমানী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "খান-খানম",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456608974,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "নিত্য নারীবাচক শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সধবা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অভাগী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কুরাইশিন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চৌধুরানী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456609088,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'নি' প্রত্যয় যোগে গঠিত নারীবাচক শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কাঙালিনি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জেলেনি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বাঘিনি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিজযিনি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456609217,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "নিচের কোনটি সংখ্যাবর্ণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পাঁচ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৩",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "আড়াই",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৪র্থ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সংখ্যা নির্দেশের জন্য যেসব চিহ্ন ব্যবহৃত হয়, সেগুলোকে সংখ্যাবর্ণ বলে [৮]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456609565,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "নিচের কোনটি সংখ্যাশব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বারো",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "২০০",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ডজন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "একাকী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456609991,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "নিচের কোনটি পূরণবাচক সংখ্যাশব্দ নয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "উনিশ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আড়াই",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "আশি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তেষট্টি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "আড়াই একটি ভগ্নাংশ পূরণবাচক শব্দ [৮]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456610246,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "সাধারণ পূরণবাচকের নারীবাচক রূপের ব্যবহার আছে কোনটিতে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দশমী",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ষোড়শ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অষ্টাদশ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ষোলই",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456610360,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "পূর্ণসংখ্যার থেকে খানিকটা কম বা বেশি বোঝালে কী ধরনের পূরণবাচক হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গুণিতক পূরণবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ভগ্নাংশ পূরণবাচক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তারিখ পূরণবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সাধারণ পূরণবাচক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456610472,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "নিচের কোনটি ভগ্নাংশ পূরণবাচক শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ষোলই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তেহাই",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সপ্তম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চতুর্দশ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456610689,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "কোন পূর্ণ পূরণবাচক সংখ্যাটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২৬তম = অর্বাতিশতম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২১তম = একবিংশতম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৮০তম = অশীতিতম",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৯৯তম = নবনীতম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456610810,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "পূর্ণসংখ্যার থেকে খানিকটা বেশি বোঝায় কোনটি দ্বারা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আধ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পোয়া",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আড়াই",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "চৌথা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456610918,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "পূরণবাচক শব্দ 'অশীতিম'-এর অপর নাম কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আশিটিতম",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "আষ্টাশীতম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নব্বইতম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নবনবীতম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456611024,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "বাংলা ভাষায় সংখ্যা নির্দেশর জন্য কয়টি সংখ্যাবর্ণ রয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৭",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৮",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৯",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১০",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456611242,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "নিচের কোনটি ক্রমবাচক সংখ্যাশব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "একাদশ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২য়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পঞ্চম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২০",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456611358,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "কোনটি ক্রমবাচক সংখ্যাশব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "একাদাশ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সপ্তম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তেঁত্রিশ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "চব্বিশ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456611589,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'সপ্তদশী' শব্দটি কোন সংখ্যাবাচক শব্দের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তারিখবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পূরণবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ভগ্নাংশবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সাধারণ পূরণবাচক",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456611696,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "সংখ্যাবাচক শব্দ কয় প্রকার?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চার প্রকার",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "তিন প্রকার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পাঁচ প্রকার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দুই প্রকার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456611806,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "১৮-এর সাধারণ পূরণবাচক সংখ্যা কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ষোলো",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ষোড়শ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ষোলই",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অষ্টাদশ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456611914,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'তেপান্তর' কোন প্রকারের সংখ্যাবাচক শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাধারণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ভগ্নাংশ পূরণবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তারিখ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ক্রমবাচক",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456612030,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "সাধারণ পূরণবাচক শব্দের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আড়াই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পঁচাত্তর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "একুশে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিংশ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456612142,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'নয়' কোন সংখ্যাবাচক শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তারিখ পূরণবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পূরণবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ক্রমবাচক",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ভগ্নাংশ পূরণবাচক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456612503,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "কোনটি তারিখবাচক শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চৌঠা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "চতুর্থ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৪",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456612617,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "উৎস বিবেচনার বাংলা শব্দভাণ্ডার কত প্রকার?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তিন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পাঁচ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ছয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "উৎস বিবেচনায় শব্দ পাঁচ প্রকার: তৎসম, তদ্ভব, অর্ধ-তৎসম, দেশি ও বিদেশি [১০]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456612721,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "নিচের কোনটি তৎসম শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গ্রহ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কুচি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কলম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাখি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456612834,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "কোন শ্রেণির বাংলা শব্দের লিখিত চেহারা সংস্কৃতের অনুরূপ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তদ্ভব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তৎসম",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "দেশি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিদেশি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456612939,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "গঠন বিবেচনার শব্দ দুই ভাগে বিভক্ত, যথা—",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রত্যয় ও বিভক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ধ্বনি ও বর্ণ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মৌলিক ও সাধিত",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "তৎসম ও তদ্ভব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456613046,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "শব্দ বিবেচনার শব্দ কত প্রকার?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পাঁচ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সাত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আট",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দশ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456613164,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "কোনটি পদের নাম নয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অব্যয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অনুসর্গ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যোজক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পদান্বয়",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456613275,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "নিচের কোনটি পর্তুগিজ শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কারখানা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আদালত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সাবান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আলমারি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456613508,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'ডাকাত' কোন ভাষার শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তুর্কি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হিন্দি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ফারসি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আরবি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456613617,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'ফারসি' শব্দের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কার্তুজ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তারিখ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বালতি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দারোগা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456613729,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "কোনটি মৌলিক শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গরমিল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বন্ধু",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "প্রশাসন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গোলাম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456613833,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "নিচের কোনটি দেশি শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "টোপর",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কুর্মি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বালতি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চাকু",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456614175,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'ঘোড়া' কোন জাতীয় শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তৎসম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তদ্ভব",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "দেশি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ফারসি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456614294,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "নিচের কোনটি পর্তুগিজ শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কারখানা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আদালত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সাবান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আলমারি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456614410,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "কোনটি তৎসম শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কিসি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হস্ত",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অন্যজন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456614638,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'আদালত' কোন ভাষার শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আরবি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ফারসি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ফরাসি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ওলন্দাজ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456614765,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'সচিবালয়' কোন শব্দ হিসেবে পরিচিত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তৎসম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পরিভাষিক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মৌলিক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিদেশি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456615012,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'ধর্মীয়' গঠন বিবেচনার কোন শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মৌলিক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সাধিত শব্দ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তদ্ভব শব্দ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সাধিত শব্দ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456615128,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "কোনটি তৎসম শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সচিবালয়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কলম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আদালত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কারখানা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456615242,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "ফারসি শব্দের উদাহরণ কোনগুলো?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নামাজ, রোজা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হজ, জাকাত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নামাজ, আরাম",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "জান্নাত, দোযখ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456615357,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'কুপন' কোন ধরনের শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফারসি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফরাসি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ওলন্দাজ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পর্তুগিজ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456615471,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "কোনটি মৌলিক শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জীবন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বস্তু",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "প্রশাসন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দায়িত্ব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456615636,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'কলম, বাকি, আদালত'— কোন ধরনের বিদেশি শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফারসি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তুর্কি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আরবি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "হিন্দি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456615781,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "নিচের কোনটি পর্তুগিজ শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তোপ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বালতি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "চাকর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সমঝোতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456615925,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'দারোগা' কোন ভাষার শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হিন্দি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তুর্কি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "আরবি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ফরাসি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456616075,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'লজাদার' কোন ভাষার শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আরবি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফারসি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "হিন্দি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তুর্কি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456616358,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'সুুনামি' কোন ভাষার শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফরাসি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পর্তুগিজ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ওলন্দাজ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জাপানি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456616515,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "সমান প্রক্রিয়ায় যে শব্দ গঠিত হয় তাকে বলে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "তৎসম শব্দ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সাধিত শব্দ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তদ্ভব শব্দ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দেশি শব্দ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456616667,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৭: শব্দের শ্রেণিবিভাগ",
+    "question": "'তারিখ' কোন ভাষার শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আরবি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফারসি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তুর্কি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পর্তুগিজ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  }
+]

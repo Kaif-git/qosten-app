@@ -1,0 +1,233 @@
+[
+  {
+    "id": 1779877138422,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮ - যতিচিহ্ন",
+    "question": "যতিচিহ্নের অপর নাম কী?",
+    "options": "[{\"label\":\"a\",\"text\":\"বিরামচিহ্ন\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বিরতিচিহ্ন\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"বিস্ময়চিহ্ন\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"ক ও খ উভয়ই\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877138539,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮ - যতিচিহ্ন",
+    "question": "বাক্যের পূর্ণ সমাপ্তি বা পূর্ণ বিরতি নির্দেশ করতে কোন বিরামচিহ্ন ব্যবহৃত হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"কমা\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"সেমিকোলন\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"বিকল্পচিহ্ন\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"দাঁড়ি\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877138663,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮ - যতিচিহ্ন",
+    "question": "শব্দ, বর্গ ও অধীন বাক্যকে আলাদা করতে ব্যবহৃত হয়—",
+    "options": "[{\"label\":\"a\",\"text\":\"দাঁড়ি\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"কমা\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"সেমিকোলন\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"কোলন\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877138794,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮ - যতিচিহ্ন",
+    "question": "দুটি অধীন বাক্যের মধ্যে অর্থের ঘনিষ্ঠতা নির্দেশ করতে কোন যতিচিহ্ন ব্যবহৃত হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"কমা\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"কোলন\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"সেমিকোলন\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"বিকল্পচিহ্ন\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877138910,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮ - যতিচিহ্ন",
+    "question": "প্রশ্ন বোঝাতে কোন যতিচিহ্নের ব্যবহার হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"প্রশ্নচিহ্ন\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"বিস্ময়চিহ্ন\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"দাঁড়ি\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"উদ্ধরণচিহ্ন\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877139030,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮ - যতিচিহ্ন",
+    "question": "শব্দসংক্ষেপ ও ক্রম নির্দেশ করতে কোন যতিচিহ্ন ব্যবহৃত হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"বিন্দু\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"ত্রিবিন্দু\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"বিকল্পচিহ্ন\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"কোলন\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877139182,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮ - যতিচিহ্ন",
+    "question": "লেখার সময়ে কোনো কথা অব্যক্ত রাখতে চাইলে কোন বিরামচিহ্ন ব্যবহার করা হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"বিন্দু\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"ত্রিবিন্দু\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"কমা\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"কোলন\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877139302,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮ - যতিচিহ্ন",
+    "question": "যতিচিহ্নে 'বিন্দু' (•)-এর কাজ কী?",
+    "options": "[{\"label\":\"a\",\"text\":\"কোনো অংশ বাদ\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বাক্যের মধ্যকার একাধিক পদকে সংযুক্ত\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"ক্রমনির্দেশ\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"কালনির্দেশ\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877139421,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮ - যতিচিহ্ন",
+    "question": "অতিরিক্ত তথ্য উপস্থাপনের প্রয়োজন হলে বাক্যে কোন যতিচিহ্ন ব্যবহার করা হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"হাইফেন\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"ড্যাশ\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"কোলন\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"বন্ধনী\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877139537,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮ - যতিচিহ্ন",
+    "question": "বাক্যের মধ্যকার একাধিক পদকে সংযুক্ত করতে কোন যতিচিহ্নের ব্যবহার হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"কমা\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"ড্যাশ\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"কোলন\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"হাইফেন\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877139672,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮ - যতিচিহ্ন",
+    "question": "একটির বদলে অন্যটির সম্ভাবনা বোঝাতে যে যতিচিহ্ন ব্যবহার করা হয় তাকে বলে—",
+    "options": "[{\"label\":\"a\",\"text\":\"ইলোক\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বিন্দু\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"ত্রিবিন্দু\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"বিকল্পচিহ্ন\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877139795,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮ - যতিচিহ্ন",
+    "question": "কোন চিহ্নটি বিশেষ ব্যাখ্যামূলক অর্থে সাহিত্যে ব্যবহৃত হয়ে থাকে?",
+    "options": "[{\"label\":\"a\",\"text\":\"( )\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"[ ]\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"{ }\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"< >\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877139918,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮ - যতিচিহ্ন",
+    "question": "কোনো অংশ বাদ দিতে চাইলে সেখানে কোন বিরামচিহ্নের ব্যবহার হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"বন্ধনী\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বিন্দু\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"ত্রিবিন্দু\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"বিকল্পচিহ্ন\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877140045,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮ - যতিচিহ্ন",
+    "question": "অতিরিক্ত তথ্য উপস্থাপন ও কাল নির্দেশের ক্ষেত্রে কোন যতিচিহ্নের ব্যবহার করা হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"হাইফেন\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বন্ধনী\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"ত্রিবিন্দু\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"কোলন\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877140165,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮ - যতিচিহ্ন",
+    "question": "বাড়ি বা রাস্তার নম্বরের পরে কোন চিহ্ন বসে?",
+    "options": "[{\"label\":\"a\",\"text\":\"হাইফেন\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"কমা\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"দাঁড়ি\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"লোপচিহ্ন\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877140280,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮ - যতিচিহ্ন",
+    "question": "বাক্যের প্রথম অংশের কোন উত্তিকে দ্বিতীয় অংশে ব্যাখ্যা করার জন্য কোন যতিচিহ্ন ব্যবহার করা হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"ড্যাশ\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"কোলন\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"হাইফেন\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"সেমিকোলন\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877140399,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮ - যতিচিহ্ন",
+    "question": "বাক্যে পরিসমাপ্তি বোঝাতে কোন চিহ্ন ব্যবহৃত হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"কমা\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"কোলন\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"সেমিকোলন\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"দাঁড়ি বা পূর্ণচ্ছেদ\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877140518,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮ - যতিচিহ্ন",
+    "question": "বাংলা ভাষায় প্রচলিত যতিচিহ্ন কতটি?",
+    "options": "[{\"label\":\"a\",\"text\":\"১০\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"১১\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"১২\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"১৩\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877140644,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮ - যতিচিহ্ন",
+    "question": "লেখার সময়ে কোনো অংশ বাদ দিতে চাইলে কোন বিরামচিহ্নের ব্যবহার করা হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"বিন্দু\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"ড্যাশ\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"কোলন\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"ত্রিবিন্দু\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877140757,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮ - যতিচিহ্ন",
+    "question": "বাক্যে সামান্য বিরতি নির্দেশ করে কোনটি?",
+    "options": "[{\"label\":\"a\",\"text\":\"দাঁড়ি\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"সেমিকোলন\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"কোলন\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"কমা\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877140888,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮ - যতিচিহ্ন",
+    "question": "উদ্ধরণচিহ্ন কয় রকম?",
+    "options": "[{\"label\":\"a\",\"text\":\"দুই\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"তিন\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"চার\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"পাঁচ\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  }
+]

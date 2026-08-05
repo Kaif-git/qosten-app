@@ -1,0 +1,1570 @@
+[
+  {
+    "id": 1768405671447,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "সুকান্ত ভট্টাচার্য তাঁর কবিতায় কাদের প্রতি গভীর মমতা প্রকাশ করেছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নিপীড়িত গণমানুষের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ক্ষুধার্ত অভাবীদের",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ডাক হরকরাদের",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শ্রমজীবী মানুষের",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কবি সুকান্ত ভট্টাচার্য ‘রানার’ কবিতায় শ্রমজীবী মানুষ তথা ডাক হরকরাদের জীবনসংগ্রাম ও কষ্টের প্রতি গভীর মমত্ববোধ প্রকাশ করেছেন। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405672278,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "রানার কাঁধে কী নিয়ে ছুটে চলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জানা-অজানার বোঝা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "টাকার বোঝা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চিঠি আর সংবাদপত্রের",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "আবেগ-অনুভূতি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রানার তার কাঁধে বিভিন্ন মানুষের চিঠিপত্র ও সংবাদপত্রের বোঝা নিয়ে দ্রুতগতিতে ছুটে চলে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405672434,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "কোন চরণে রানারের গতিময়তা বোঝানো হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রানার চলেছে খবরের বোঝা হাতে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "এ বোঝা টানার দিন কবে শেষ হবে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তাঁর জীবনের মন্থর মতো পিছে যায় বন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কেমন করে এ রানার সবে হরিণের মতো যায়",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "‘কেমন করে এ রানার সবে হরিণের মতো যায়’—এই চরণে রানারের অতি দ্রুতগতির চলনকে হরিণের সাথে তুলনা করে তার গতিময়তা প্রকাশ করা হয়েছে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405672631,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "রানারের চলার গতির সাথে কবি কিসের সাদৃশ্য খুঁজে পান?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হরিণের",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "তারার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সূর্যের",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আলোর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "রানার বনের মাঝ দিয়ে অত্যন্ত দ্রুতগতিতে ছুটে চলে, যা কবির কাছে বনের হরিণের গতির সাথে সাদৃশ্যপূর্ণ মনে হয়েছে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405672786,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "‘রানার’ কবিতায় রানারের প্রিয়ার ব্যথা বিভিন্ন রজনী জাগার কারণ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ক্ষুধা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পরিশ্রম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ভীতি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অভিমান",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "রানার দিনের পর দিন প্রিয়াকে ছেড়ে দূরে থাকায় তার প্রিয়া অভিমানে রাত জেগে অপেক্ষা করে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405673054,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "‘রানার’ কবিতায় কোন পঙক্তিতে শ্রমজীবী মানুষের মরণজয়ী হওয়ার কথা বলা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ক্লান্তশ্বাস ছুঁয়েছে আকাশ, মাটি ভিজে গেছে ঘামে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "‘রানার’ এ বোঝা টানার দিন কবে শেষ হবে?",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জীবনের সব রাত্রিকে ওরা কিনেছে অল্প দামে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "পৃথিবীর বোঝা ক্ষুধিত রানার পৌঁছে দিয়েছে ‘মেলে’",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "শ্রমজীবী মানুষ বা রানাররা সামান্য পারিশ্রমিকের বিনিময়ে নিজেদের জীবনের সব বিশ্রাম ও ঘুম বিসর্জন দিয়ে দায়িত্ব পালন করে, যা কবিতায় ‘রাত্রিকে অল্প দামে কেনা’ হিসেবে উল্লেখ করা হয়েছে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405673201,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "‘রানার’ কবিতায় মিটি মিটি করে চায় কে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রকৃতি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জোনাকিরা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তারারা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "হরিণ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রানার যখন রাতের অন্ধকারে ছুটে চলে, তখন আকাশের তারারা তার দিকে মিটি মিটি করে তাকিয়ে থাকে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405673332,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "জীবনের সব রাত্রিকে বিত্তশালীরা কেমন দামে কিনেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সস্তা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অল্প",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সস্তা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিনা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কবিতায় বলা হয়েছে যে, শ্রমজীবী মানুষের বা রানারের জীবনের রাতের বিশ্রামগুলো বিত্তশালীরা সামান্য বা অল্প দামে কিনে নিয়েছে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405673487,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "‘রাত শেষ হয়ে সূর্য উঠবে কবে’—এখানে ‘রাত’ শব্দটি কোন অর্থে ব্যবহৃত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুঃখের প্রহর",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "আঁধার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রাত্রি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অস্পষ্টতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এখানে ‘রাত’ বলতে রানারের জীবনের সীমাহীন দুঃখ-কষ্ট ও অভাব-অনটনের সময়কালকে বোঝানো হয়েছে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405673601,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "রানারের সংসারের ‘অভাব’ বোঝাতে কবিতার কোন শব্দটি ব্যবহৃত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কালো ধোঁয়া",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রাতের কালো",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "রাত নির্জন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ক্লান্তশ্বাস",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "রানারের অভাবগ্রস্ত জীবনের অন্ধকার বোঝাতে ‘রাতের কালো’ বা কালোর প্রতীকী ব্যবহার করা হয়েছে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405673810,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "রানারের কাছে পৃথিবীটা ‘কালো ধোঁয়া’ মনে হয় কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মেঘাচ্ছন্ন থাকায়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সূর্য না ওঠায়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দুঃখ বেদনায়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অভাবের তাড়নায়",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অভাব ও দারিদ্র্যের কারণে রানারের জীবন বিষাদময় হয়ে উঠেছে, তাই তার কাছে পৃথিবীটা ধোঁয়ার মতো অন্ধকার মনে হয়। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405674014,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "‘তোর চেয়ে দ্রুত সূর্য উঠবে তবে’—রানারের সূর্য ওঠাকে ভয় পাওয়ার কারণ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্তব্যনিষ্ঠা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দায়িত্ববোধ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সম্মানহীনতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কালের প্রতি শ্রদ্ধা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "রানার অত্যন্ত দায়িত্বশীল। সূর্য ওঠার আগে তাকে গন্তব্যে পৌঁছাতে হবে, নতুবা তার দায়িত্বে অবহেলা হবে, এই ভয় থেকেই তার এমন অনুভূতি। [২, ৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405674146,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "রানার কোনটিকে বেশি ভয় পায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দস্যুর আক্রমণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চিঠির বোঝা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কালো রাত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সূর্য ওঠা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "রানারের সবচেয়ে বড় ভয় সূর্য ওঠা, কারণ সূর্য ওঠার আগেই তাকে সব চিঠি গন্তব্যে পৌঁছে দিতে হয়। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405674258,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "দস্যুর ভয়ের চেয়েও রানার সূর্য ওঠাকে বেশি ভয় পায় কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চাকরি হারানোর জন্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দায়িত্ববোধের কারণে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ডাক না পাওয়ার ভয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাড়ি ফেরার তাড়া থাকায়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "দস্যুরা তার ক্ষতি করতে পারে, কিন্তু সূর্য উঠলে তার পবিত্র দায়িত্ব পালনে বিঘ্ন ঘটবে—এই উচ্চতর দায়িত্ববোধ থেকেই সে সূর্য ওঠাকে বেশি ভয় পায়। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405674379,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "‘রানার’ কবিতায় রানার চলার সময়ে বন কীভাবে পিছে যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাতাসের মতো",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হরিণের মতো",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মন্থর মতো",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "আলোর মতো",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রানারের গতি এত বেশি যে তার জীবনের মন্থরতার মতো বনের গাছপালাগুলো পিছে সরে যায় বলে মনে হয়। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405674503,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "কে রানারকে সহানুভূতিসূচক চিঠি পাঠাবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পথের তৃণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ভোরের আকাশ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "রাতের তারা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কালো রাত্রি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কবিতার এক পর্যায়ে রানারের প্রতি সহমর্মিতা প্রকাশ করতে গিয়ে ভোরের আকাশ তাকে সহানুভূতিসূচক চিঠি পাঠানোর কথা বলা হয়েছে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405674644,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "আলোর স্পর্শে কী কেটে যাবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আঁধার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কালোরাত্রি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মনের কালিমা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দুঃখের কাল",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কবি প্রত্যাশা করেন যে নতুন ভোরের আলোর স্পর্শে রানারের জীবনের দীর্ঘ দুঃখের কাল বা সময় কেটে যাবে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405674770,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "রানার কবিতার নতুন খবর কোথায় পৌঁছাতে হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অভাবীর মেলে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "শহরে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ডাকঘরে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মানুষের কাছে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "রানার নতুন খবরের বোঝা নিয়ে দ্রুত গতিতে শহরে বা গন্তব্যে পৌঁছে দেয়। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405674884,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "রানার কবিতার ‘নতুন দিনের প্রত্যাশা’ প্রকাশ পেয়েছে কোন কথায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সহানুভূতির চিঠি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শপথের চিঠি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আকাশ হয়েছে লাল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দেখা দেবে বুঝি প্রভাত এখুনি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "‘দেখা দেবে বুঝি প্রভাত এখুনি’—এই চরণের মাধ্যমে রানারের দুঃখের রজনী শেষ হয়ে নতুন ও সুন্দর আগামীর প্রত্যাশা ফুটে উঠেছে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405675005,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "পৌঁছে দাও এ নতুন খবর—অপেক্ষিত ‘মেলে’—এখানে ‘মেলে’ শব্দের অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিকশিত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সাদৃশ্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ডাকে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সন্ধানে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "‘মেলে’ শব্দটি এখানে ডাক সার্ভিস বা মেইল ট্রেন অর্থে ব্যবহৃত হয়েছে যেখানে রানার খবর পৌঁছে দেয়। [২, ৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405675323,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "ইংরেজি ‘runner’ এর অভিধানিক অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "যিনি দৌড়ান",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ডাক হরকরা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সংবাদ বাহক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দৌড়বিদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "‘রানার’ একটি ইংরেজি শব্দ যার আভিধানিক অর্থ হলো ‘যিনি দৌড়ান’। [২, ৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405675460,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "রানারের জীবনের সাথে কিসের সাদৃশ্য পাওয়া যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দায়িত্বশীলতা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দারিদ্র্য",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পেশার প্রয়োজনীয়তা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিষ্ঠার চেষ্টা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "রানারের জীবন দারিদ্র্যপীড়িত ও অবহেলিত, যা কবিতার বিভিন্ন পঙক্তিতে ফুটে উঠেছে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405675573,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "‘রানার’ কবিতাটি কোন কাব্যগ্রন্থ থেকে সংকলন করা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হরতাল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ছাড়পত্র",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অগ্নিবীণা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সাম্যবাদী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সুকান্ত ভট্টাচার্যের বিখ্যাত কাব্যগ্রন্থ ‘ছাড়পত্র’ থেকে ‘রানার’ কবিতাটি নেওয়া হয়েছে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405675734,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "‘রানার’ কবিতার কবির মূলভাবনা কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শ্রমজীবী মানুষের জীবন-জীবিকা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শ্রমজীবী মানুষের প্রতিনিধি রানার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মানুষ হিসেবে শ্রমজীবী মানুষের মহত্ব",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "শোষিত-বঞ্চিত মানুষদের কথা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রানারের পেশা ছোট হলেও মানুষ হিসেবে তার মহত্ব ও দায়িত্ববোধকে কবি এখানে প্রধান করে তুলেছেন। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405675989,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "রানারের গতিবেগের সাথে কবি কীসের তুলনা খুঁজে পেয়েছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জাহাজের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বনের",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হরিণের",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "তারার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বনের হরিণের মতো রানারও অতি দ্রুতবেগে তার গন্তব্যের দিকে ধাবিত হয়। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405676103,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "‘রানার’ কবিতায় ঝুম ঝুম ঘণ্টা কখন বাজে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মাঝরাতে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মধ্যরাতে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রাতে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সূর্যোদয়ে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রানার যখন রাতের অন্ধকারে নির্জন পথে ছুটে চলে, তখন তার হাতের লাঠির ঝুম ঝুম ঘণ্টা বাজতে থাকে। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405676238,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "রানারের পথ চলা কে দেখতে পায় না?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জোনাকি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রাতের তারা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আকাশ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পথের তৃণ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পথের ধারের ঘাস বা তৃণরা রানারের দ্রুত পথ চলা দেখতে পায় না। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405676367,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "‘রানার’ কবিতায় মিটিমিটি করে কে চায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রকৃতি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জোনাকিরা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তারারা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "হরিণেরা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রাতের আকাশে মিটিমিটি করে তাকিয়ে থাকা তারারা রানারের এই কষ্টসাধ্য যাত্রার সাক্ষী। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405676519,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "মাটি ভিজে গেছে কিসে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বৃষ্টিতে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঘামে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কুয়াশায়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চোখের জলে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "রানারের হাড়ভাঙা খাটুনি আর পরিশ্রমের ফলে তার শরীর থেকে ঝরা ঘামে মাটি ভিজে যায়। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405676757,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "সুকান্ত ভট্টাচার্য কোন কথাটি ব্যবহারের মাধ্যমে রানারের গতিময়তা বুঝিয়েছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রানার যাবেই পৌঁছে ভোরে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হরিণের মতো যায়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "রানার চলেছে রানার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিষেধ জানে না মানার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "হরিণের দ্রুতগতির উপমা ব্যবহার করে কবি রানারের ক্ষিপ্রতাকে তুলে ধরেছেন। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405676889,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "‘এর কথা ঢাকা পড়ে থাকবেই... রাত্রির খামে’—শূন্যস্থানে কোনটি হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কাল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কালো",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বিনিদ্র",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কালি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "রানারের জীবনের দুঃখের কাহিনীগুলো অন্ধকারের খামে অর্থাৎ অবহেলাতেই ঢাকা পড়ে থাকবে বলে কবি আক্ষেপ করেছেন। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405677069,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "রানারের দুঃখের কথা কিসে ঢাকা পড়ে থাকবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফাঁপা পাতায়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চোখের জলে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কালো রাত্রির খামে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "পথের ধুলোয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রানার অন্য সবার খবরের সংবাদ বয়ে বেড়ায়, কিন্তু তার নিজের জীবনের অভাব ও কষ্টের কথাগুলো অন্ধকারের মধ্যেই সীমিত থাকে। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405677221,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "‘রানার’ কবিতায় রানার চলার সময়ে বন কীভাবে পিছে যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রাতের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মন্থর",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "দ্রুতবেগে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ধীরগতিতে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "রানারের জীবনের গতির তুলনায় বনের স্থিরতা বা মন্থরতা যেন পিছে পড়ে থাকে। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405677371,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "‘তারও চেয়ে ভয় কখন সূর্য ওঠে’—সূর্য ওঠাকে রানারের ভয় পাওয়ার কারণ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্তব্যনিষ্ঠা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দায়িত্ববোধ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সম্মানহীনতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কালের প্রতি শ্রদ্ধা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সময়মতো গন্তব্যে পৌঁছানো রানারের কাছে পবিত্র দায়িত্ব, তাই দেরি হওয়ার আশঙ্কায় সে সূর্য ওঠাকে ভয় পায়। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405677526,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "দস্যুর ভয়ের চেয়েও রানার সূর্য ওঠাকে বেশি ভয় পায় কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চাকরি হারানোর ভয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ডাক না পাওয়ার ভয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাড়ি ফেরার তাড়া থাকায়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দায়িত্ববোধের কারণে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "একজন আদর্শ রানারের কাছে তার কাজ বা দায়িত্বই সবার উপরে, তাই দস্যুর ভয়কেও সে তুচ্ছ করে। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405677683,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "রানারের কাছে পৃথিবীটা কালো ধোঁয়া মনে হয় কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মেঘাচ্ছন্ন থাকায়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অভাবের তাড়নায়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সূর্য না ওঠায়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কলকারখানার কারণে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "চরম অভাব ও দারিদ্র্যের কারণে রানারের জীবন বিষময়, যা তার দৃষ্টিতে পৃথিবীকে অন্ধকারাচ্ছন্ন করে তোলে। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405677835,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "‘সময় হয়েছে নতুন খবর আনার’—এখানে ‘নতুন খবর’ বলতে কোনটিকে বোঝানো হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বৈষম্যমুক্ত নাগরিক সুবিধা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বৈষম্যহীন সমাজ প্রতিষ্ঠার",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "গণমানুষের রাজত্ব কায়েমের",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ধনিক শ্রেণির প্রতাপ হ্রাসের",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কবি এখানে একটি নতুন শোষণহীন সমাজ গড়ার খবর বা বার্তার ইঙ্গিত দিয়েছেন। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405677992,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "কার রানারের পথচলা দেখে অবাক হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জোনাকিরা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রাতের পাখিরা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রাতের তারারা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "গাঁয়ের লোকেরা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রাতের অন্ধকার ছিঁড়ে রানার যখন নিরন্তর ছুটে চলে, তখন আকাশের তারারা বিস্ময়ে তাকিয়ে থাকে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405678146,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "কিসের মতো করে রানার পথ চলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "খরগোশের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হরিণের",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কচ্ছপের",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চিতার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কবিতায় রানারের গতিকে দ্রুতগামী হরিণের সাথে তুলনা করা হয়েছে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405678348,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "কবি রানারের বোঝাকে ‘পৃথিবীর বোঝা’ বলেছেন কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পৃথিবী ছোট হয়ে আসছে বলে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হরেক রকমের বস্তু আছে বলে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ঘাড়ের চেয়ে বড় আর ভারী বলে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিভিন্ন দেশের চিঠিপত্র আছে বলে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "রানারের চিঠিপত্রের ঝুলিতে মানুষের আনন্দ-বেদনা ও দেশ-বিদেশের নানা খবর থাকে, যা এক বিশাল দায়িত্ব বা বোঝা। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405678550,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "ওরা অল্প দামে কী কিনেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রানারের জীবন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জীবনের সব রাত",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "জীবনের সব সুখ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জীবনের সব শ্রম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বিত্তশালীরা রানারদের মতো শ্রমজীবী মানুষের বিশ্রামের সময়টুকু বা রাতগুলোকে নামমাত্র মজুরিতে কিনে নেয়। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405678696,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "রানার কীভাবে অনিদ্র রাত যাপন করে কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "একাকীত্বের কারণে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ক্ষুধার তাড়নায়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "চোরের ভয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সন্তানের চিন্তায়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "রানারের জীবনে অভাব এতই প্রকট যে ক্ষুধার জ্বালায় তাকে প্রায়ই ঘুমহীন রাত কাটাতে হয়। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405678838,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "‘রাত শেষ হয়ে সূর্য উঠবে কবে’—এর দ্বারা কবি কী বোঝাতে চেয়েছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রানার বিশ্রাম পাবে কখন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বৈষম্যহীন সমাজ প্রতিষ্ঠার লগ্ন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "রানারের ছুটির অবসান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ধনবাদী সমাজের পতনক্ষণ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কবি এখানে রূপক অর্থে একটি নতুন প্রভাত বা বৈষম্যমুক্ত সমাজ ব্যবস্থার আসার সময় জানতে চেয়েছেন। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405679006,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "রানারের চিঠির বোঝা কোথা থেকে কোথায় পৌঁছাতে হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দিগন্ত থেকে দিগন্তে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পূর্ব থেকে পশ্চিমে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শহর থেকে শহরে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "গ্রাম থেকে গ্রামে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রানার এক শহর থেকে অন্য শহরে চিঠিপত্র ও খবরের বোঝা পৌঁছে দেওয়ার কাজ করে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405679383,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "‘পিঠেতে টাকার বোঝা, তবু এই টাকাকে যাবে না ছোঁয়া’—একথা দিয়ে রানারের কোন বৈশিষ্ট্য ফুটে উঠেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "টাকার কুমির",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিশ্বস্ততা ও সততা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "চোরের ভয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কপটতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "রানারের পিঠে অন্যের পাঠানো টাকার ব্যাগ থাকলেও সে তা স্পর্শ করে না, যা তার চরম সততার পরিচয় দেয়। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405679508,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "রানারের দুঃখের কথা জীবনভর কে জানবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তৃণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পথ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রাত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "রানার দিনের পর দিন যে পথে চলাচল করে, সেই পথই একমাত্র তার নীরব কান্নার সাক্ষী থাকে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405679685,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "রানারের কষ্টের কথা আকাশের তারারা কীভাবে তাকাচ্ছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফ্যাল ফ্যাল চোখে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "করুণ চোখে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ম্লান চোখে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মিটিমিটি করে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "রানারের জীবনসংগ্রাম দেখে আকাশ থেকে তারারা সহানুভূতিভরে মিটিমিটি করে চেয়ে থাকে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405679817,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "‘কালো রাত্রির খাম’ বলতে কবি কী বোঝাতে চেয়েছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কালো রঙের খাম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কাজপাগল আচরণ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "লোকচক্ষুর অগোচর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অন্ধকারাচ্ছন্ন রাত",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কালো রাত্রি বা অন্ধকারের মধ্যে রানারের জীবনের সব না-বলা দুঃখ ঢাকা পড়ে থাকে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768405679927,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "রানার",
+    "question": "‘রানার’ কবিতায় রানার শ্রমজীবী শ্রেণির প্রতিনিধি। কবিতায় রানারের জীবনে নতুন প্রভাতের প্রত্যাশার মধ্য দিয়ে শ্রমজীবী শ্রেণির মুক্তি কামনা করা হয়েছে। এটি রানারের জীবনের কী প্রকাশ করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অসহায়ত্ব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দৃঢ়তা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সচেতনতা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মানবিকতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রানার তার নিজের অধিকার সম্পর্কে একদিন সচেতন হবে এবং মুক্তির নতুন ভোরে পৌঁছাবে—এই আশাবাদই এখানে ব্যক্ত হয়েছে। [৪]",
+    "image": null,
+    "language": "en"
+  }
+]

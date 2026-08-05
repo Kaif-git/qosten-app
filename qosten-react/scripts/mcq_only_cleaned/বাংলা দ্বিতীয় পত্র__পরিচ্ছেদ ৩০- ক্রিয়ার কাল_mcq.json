@@ -1,0 +1,834 @@
+[
+  {
+    "id": 1768035223501,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩০: ক্রিয়ার কাল",
+    "question": "ক্রিয়ার সংঘটনের সময়কে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ক্রিয়ার মূল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ক্রিয়ার স্থান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ক্রিয়ার কাল",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ক্রিয়ার বিভক্তি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ক্রিয়ার কাজ সম্পন্ন হওয়ার সময়কেই ক্রিয়ার কাল বলা হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035223611,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩০: ক্রিয়ার কাল",
+    "question": "ঘটমান বর্তমান কালের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আমি রোজ স্কুলে যাই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আমি স্কুলে যাচ্ছি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "আমি স্কুলে এসেছি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আমরা স্কুলে এসেছি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যে কাজ বর্তমানে চলছে বা ঘটছে তা ঘটমান বর্তমান, যেমন— 'আমি স্কুলে যাচ্ছি'.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035223711,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩০: ক্রিয়ার কাল",
+    "question": "কোন কালে অনুজ্ঞা হয় না?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বর্তমান কালে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ভবিষ্যৎ কালে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অতীত কালে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ঘটমান ভবিষ্যৎ কালে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "অতীত কালে কোনো আদেশ বা অনুরোধ (অনুজ্ঞা) সম্ভব নয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035223814,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩০: ক্রিয়ার কাল",
+    "question": "কাজটি চলছে এখনও শেষ হয়নি, এমন বোঝাতে কোন বর্তমান কাল ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাধারণ বর্তমান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঘটমান বর্তমান",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পুরাঘটিত বর্তমান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিত্য বর্তমান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বর্তমান সময়ে কাজটির চলমান অবস্থা বোঝাতে ঘটমান বর্তমান ব্যবহৃত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035223913,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩০: ক্রিয়ার কাল",
+    "question": "'আমার আশীর্বাদ নিয়ো' — বাক্যটি কোন কালের?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাধারণ বর্তমান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অনুজ্ঞা বর্তমান",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সাধারণ অতীত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিত্য অতীত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'নিয়ো' শব্দটি বর্তমান কালের অনুজ্ঞা বা অনুরোধ প্রকাশ করছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035224036,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩০: ক্রিয়ার কাল",
+    "question": "'আজ বিকেলে যদি সুমন আসত, মজা হতো' — বাক্যটির ক্রিয়া অতীতের হলেও এটি কোন কালের?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাধারণ বর্তমান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঘটমান বর্তমান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সাধারণ অতীত",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সাধারণ ভবিষ্যৎ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'আসত' ও 'হতো' অতীতে কোনো সম্ভাবনা নির্দেশ করছে, তাই এটি সাধারণ অতীত.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035224138,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩০: ক্রিয়ার কাল",
+    "question": "নিচের কোন বাক্য ঘটমান অতীতের, কিন্তু ক্রিয়ার কাল সাধারণ বর্তমান কালের?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আমি গত বছর পরীক্ষা দিয়েছি।",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সবাই যেন সভায় হাজির থাকে।",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গত বছর তিনি এখানে পদ পান।",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পরের সপ্তাহে আমরা বাড়ি যাচ্ছি।",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "'বাড়ি যাচ্ছি' রূপটি বর্তমান কালের হলেও এটি নিকট ভবিষ্যৎ বা পরিকল্পনার ক্ষেত্রে ব্যবহৃত হচ্ছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035224243,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩০: ক্রিয়ার কাল",
+    "question": "'ভালোবাসবে শোকে গেয়ো।' — এ বাক্যটি কোন ভবিষ্যৎ কালের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাধারণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঘটমান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পুরাঘটিত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অনুজ্ঞা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "'গেয়ো' দ্বারা ভবিষ্যতে কোনো কাজ করার আদেশ বা অনুরোধ (অনুজ্ঞা) বোঝানো হচ্ছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035224353,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩০: ক্রিয়ার কাল",
+    "question": "'ছেলেরা প্রতিদিন বিকেলে গোল্লাছুট খেলত।' — বাক্যটির ক্রিয়া কোন কালের?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাধারণ অতীত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পুরাঘটিত অতীত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নিত্য অতীত",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সাধারণ বর্তমান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "অতীতে কোনো কাজ নিয়মিত বা অভ্যাসগতভাবে ঘটলে তাকে নিত্য অতীত বলে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035224467,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩০: ক্রিয়ার কাল",
+    "question": "বর্তমান কাল কত প্রকার?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তিন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "চার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাঁচ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বর্তমান কাল মূলত তিন প্রকার: সাধারণ বর্তমান, ঘটমান বর্তমান ও পুরাঘটিত বর্তমান.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035224570,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩০: ক্রিয়ার কাল",
+    "question": "পুরাঘটিত অতীত কালের প্রযোজক ক্রিয়ার বিভক্তি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ইয়েছিল",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "আছিনুম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ইয়েছিস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আছেন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পুরাঘটিত অতীতে প্রযোজক ক্রিয়ার বিভক্তি হিসেবে 'ইয়েছিল' যুক্ত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035224692,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩০: ক্রিয়ার কাল",
+    "question": "যে ক্রিয়া বর্তমানে কালে নিয়মিতভাবে ঘটে, তাকে কোন বর্তমান কাল বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাধারণ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ঘটমান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পুরাঘটিত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অনুজ্ঞা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বর্তমানে কোনো কাজ নিয়মিত ঘটলে তাকে সাধারণ বর্তমান বা নিত্য বর্তমান বলা হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035224805,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩০: ক্রিয়ার কাল",
+    "question": "'তাড়াতাড়ি কাজটি করো।' — বাক্যটি কোন কালকে নির্দেশ করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পুরাঘটিত বর্তমান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অনুজ্ঞা বর্তমান",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সাধারণ ভবিষ্যৎ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অনুজ্ঞা ভবিষ্যৎ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বর্তমান কালে কাউকে আদেশ করায় এটি অনুজ্ঞা বর্তমান.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035224906,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩০: ক্রিয়ার কাল",
+    "question": "'যদি বৃষ্টি হতো, সবাই মিলে খিচুড়ি খেতাম' — ক্রিয়ার বিশিষ্ট প্রয়োগে বাক্যটি কোন কালের?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাধারণ ভবিষ্যৎ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সাধারণ অতীত",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সাধারণ বর্তমান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পুরাঘটিত অতীত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "শর্তযুক্ত অতীত সম্ভাবনা বোঝাতে সাধারণ অতীত কাল ব্যবহৃত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035225007,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩০: ক্রিয়ার কাল",
+    "question": "'বৃষ্টি শেষ হওয়ার আগেই আমরা বাড়ি পৌঁছেছিলাম।' — বাক্যটি কোন কালের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাধারণ অতীত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঘটমান অতীত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পুরাঘটিত অতীত",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "নিত্য অতীত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "অনেক আগে ঘটে যাওয়া কোনো কাজের বর্ণনায় পুরাঘটিত অতীত ব্যবহৃত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035225112,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩০: ক্রিয়ার কাল",
+    "question": "সাধারণ অতীত কালের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তারা মাঠে খেলছিল।",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তখন বাড়িটা জ্বলে উঠল।",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তাড়াতাড়ি কাজটা করো।",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "খুব সকালে ঘুম থেকে উঠতাম।",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যে কাজ মাত্র শেষ হয়েছে কিন্তু ফল বর্তমানে নেই তা সাধারণ অতীত.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035225215,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩০: ক্রিয়ার কাল",
+    "question": "'সকলের মঙ্গল হোক' — বাক্যটি বর্তমান কালের কোন রূপ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাধারণ বর্তমান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঘটমান বর্তমান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পুরাঘটিত বর্তমান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অনুজ্ঞা বর্তমান",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "প্রার্থনা বা আশীর্বাদমূলক বাক্য অনুজ্ঞা বর্তমানের অন্তর্ভুক্ত.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035225313,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩০: ক্রিয়ার কাল",
+    "question": "'আজ যদি মামুন আসত, কেমন মজা হতো' — বাক্যটি কোন কালের?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঘটমান অতীত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পুরাঘটিত অতীত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নিত্য অতীত",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সাধারণ অতীত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "অতীতের কোনো শর্ত বা অনিয়মিত অভ্যাস বোঝাতে নিত্য অতীত ব্যবহৃত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035225418,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩০: ক্রিয়ার কাল",
+    "question": "বা আজ যদি মামুন আসত, কেমন মজা হতো — বাক্যটি কোন কালের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঘটমান অতীত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পুরাঘটিত অতীত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নিত্য অতীত",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সাধারণ অতীত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বাক্যটি অতীতের কোনো আকাঙ্ক্ষা বা শর্ত প্রকাশ করছে, যা নিত্য অতীতের বৈশিষ্ট্য.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035225521,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩০: ক্রিয়ার কাল",
+    "question": "নিচের কোন বাক্যে ঘটমান ভবিষ্যতের কিন্তু ক্রিয়ার কাল বর্তমান কালের?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তোমরা হয়তো হয় দফার কথা ভুলে থাকবে।",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সবাই যেন সভায় হাজির থাকে।",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যদি বৃষ্টি হতো, সবাই মিলে খিচুড়ি খেতাম।",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ঈশ্বরচন্দ্র বিদ্যাসাগর ১৮৯১ সালে মৃত্যুবরণ করেন।",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ঐতিহাসিক বর্তমানের ক্ষেত্রে অনেক সময় বর্তমানের রূপ দিয়ে অতীত বা ভবিষ্যৎ বোঝানো হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035225622,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩০: ক্রিয়ার কাল",
+    "question": "'এমন ঘটনা ঘটতেই থাকবে।' — বাক্যটি কোন কালের?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পুরাঘটিত অতীত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঘটমান ভবিষ্যৎ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "নিত্য অতীত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অনুজ্ঞা বর্তমান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কাজ ভবিষ্যতে নিরন্তর চলতে থাকবে বোঝাতে ঘটমান ভবিষ্যৎ ব্যবহৃত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035225726,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩০: ক্রিয়ার কাল",
+    "question": "সাধারণ অতীত কালের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তখন বাড়িটা জ্বলে উঠল।",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "তখন বাড়িটা জ্বলে উঠেছিল।",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তখন বাড়িটা জ্বলে উঠল।",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তখন বাড়িটা জ্বলে উঠত।",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'জ্বলে উঠল' পদটি সাধারণ অতীত কালের রূপ.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035225831,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩০: ক্রিয়ার কাল",
+    "question": "'তাড়াতাড়ি কাজটা করো।' — বাক্যটি কোন কালের?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাধারণ বর্তমান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঘটমান বর্তমান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নিত্য অতীত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বর্তমান অনুজ্ঞা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "আদেশসূচক হওয়ার কারণে এটি বর্তমান অনুজ্ঞা.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035225931,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩০: ক্রিয়ার কাল",
+    "question": "অতীতে প্রায়ই ঘটত এমন বোঝালে কোন অতীত কাল হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাধারণ অতীত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঘটমান অতীত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পুরাঘটিত অতীত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিত্য অতীত",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অতীতের নিয়মিত অভ্যাসকে নিত্য অতীত বলা হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035226034,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩০: ক্রিয়ার কাল",
+    "question": "নিচের কোনটি নিত্য অতীত কালের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তারা মাঠে খেলছিল।",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তারা সেখানে বেড়াতে গেল।",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "খুব সকালে ঘুম থেকে উঠতাম।",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "এমন ঘটনা ঘটতেই থাকবে।",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'উঠতাম' শব্দটি অতীতের অভ্যাস বা নিত্যতা নির্দেশ করে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035226131,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩০: ক্রিয়ার কাল",
+    "question": "'শীঘ্রই বৃষ্টি আসবে।' — কোন কালের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাধারণ বর্তমান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বর্তমান অনুজ্ঞা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সাধারণ ভবিষ্যৎ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ভবিষ্যৎ অনুজ্ঞা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ভবিষ্যতে কোনো কাজ সাধারণভাবে ঘটবে বোঝালে সাধারণ ভবিষ্যৎ হয়.",
+    "image": null,
+    "language": "en"
+  }
+]

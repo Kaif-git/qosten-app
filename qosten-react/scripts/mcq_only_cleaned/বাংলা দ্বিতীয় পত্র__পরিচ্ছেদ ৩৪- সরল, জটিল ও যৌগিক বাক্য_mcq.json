@@ -1,0 +1,930 @@
+[
+  {
+    "id": 1768035243498,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "যে বাক্যে একটি সমাপিকা ক্রিয়া থাকে তাকে কোন বাক্য বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সরল বাক্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "যৌগিক বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জটিল বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মিশ্র বাক্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "একটিমাত্র সমাপিকা ক্রিয়া থাকলে তাকে সরল বাক্য বলা হয় [৬].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035243598,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "'তিনি ভাত খেয়ে চেয়ারে বসলেন' — বাক্যে অসমাপিকা ক্রিয়া কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ভাত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "খেয়ে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "চেয়ারে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বসলেন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "' খেয়ে' শব্দটি এখানে অসমাপিকা ক্রিয়া কারণ এটি বাক্য পূর্ণ করে না [৬].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035243699,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "একাধিক সমাপিকা ক্রিয়া কী দিয়ে যুক্ত হলে যৌগিক বাক্য হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিভক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিশেষণ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যোজক",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অনুসর্গ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "এবং, ও, কিন্তু ইত্যাদি যোজক দিয়ে বাক্য যুক্ত হলে তাকে যৌগিক বাক্য বলে [৬].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035243799,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "জটিল বাক্যের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "যদি তুমি চাও, তবে আমি দেখা পাব।",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "পাখিগুলো আকাশে উড়ছে।",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আমরা তিন ভাই এক দুই বোন।",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আমার সমুদ্র দেখতে খুব ভাল লাগে।",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সাপেক্ষ যোজক (যদি... তবে) দিয়ে গঠিত হওয়ায় এটি একটি জটিল বাক্য [৬].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035243898,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "সম্বন্ধ বোঝাতে জটিল বাক্যে যোজকের কোন জোড় ব্যবহার করা যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "যে-সে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "যত-তত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যেটুকু-সেটুকু",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "যখন-তখন",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সময় বা সম্বন্ধ বোঝাতে 'যখন... তখন' সাপেক্ষ যোজক জোড় ব্যবহৃত হয় [৬].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035244010,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "নিচের কোনটি সরল বাক্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পরিশ্রমীরা জীবনে সাফল্য লাভ করে।",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সে এখানে এল এবং বসে পড়ল।",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "লোকটি নিস্ব, কিন্তু অভদ্র নয়।",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিপদ এবং দুঃখ এক সাথে আসে।",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এই বাক্যে একটিমাত্র সমাপিকা ক্রিয়া থাকায় এটি সরল বাক্য [৬].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035244114,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "'দুর্জন লোক পরিত্যাজ্য' — বাক্যটিকে জটিল বাক্যে পরিণত করলে হবে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "যেসব লোক দুর্জন, তারা পরিত্যাজ্য।",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "যে দুর্জন সেই পরিত্যাজ্য।",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দুর্জন লোক মাত্রই পরিত্যাজ্য।",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দুর্জন লোকে সকলকে পরিত্যাগ করে।",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সাপেক্ষ সর্বনাম ব্যবহার করে একে জটিল বাক্যে রূপান্তর করা হয়েছে [৬].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035244215,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "'সে এখানে এসেই বসে পড়ল' — বাক্যটির যৌগিক বাক্যাংশ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সে এখানে এসে বসলো।",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সে এখানে এল এবং বসে পড়ল।",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সে এখানে এসে বসেছে।",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সে এখানে এল, তারপরে বসে পড়ল।",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'এবং' যোজক যুক্ত করে একে যৌগিক বাক্যে পরিণত করা হয়েছে [৬].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035244315,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "'যখন সে সুযোগ পেল, তখন সে আনন্দিত হলো' — বাক্যটির সরল বাক্যরূপ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সে সুযোগ পেয়ে আনন্দিত হলো।",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সুযোগ পেয়ে সে আনন্দিত হলো।",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সেই সে সুযোগ পেল, সেই সে আনন্দিত হলো।",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "যদি সুযোগ পাও, তবে আনন্দিত হও।",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সাপেক্ষ যোজক বর্জন করে একটি সমাপিকা ক্রিয়া রাখলে তা সরল বাক্য হয় [৬].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035244412,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "দুটি সমাপিকা ক্রিয়া থাকে কোন বাক্যে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সরল বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জটিল বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যৌগিক বাক্য",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মিশ্র বাক্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যৌগিক বাক্যে যোজক দ্বারা যুক্ত অন্তত দুটি সমাপিকা ক্রিয়া থাকে [৬].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035244509,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "'পকেটমার' গঠন বিবেচনায় কোন প্রকার ক্রিয়ার উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রযোজক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সরল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সংযোগ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "যৌগিক",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "'পকেটমার' শব্দটি যৌগিক ক্রিয়ার একটি বিশেষ গঠন প্রকাশ করে [৬].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035244609,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "যৌগিক বাক্যকে জটিল বাক্যে রূপান্তর করার সময় যৌগিক বাক্যের কোনটি বাদ দিতে হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাপেক্ষ সর্বনাম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সমাপিকা ক্রিয়া",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যোজক",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বিভক্তি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যৌগিক বাক্যের যোজক (এবং, ও ইত্যাদি) বাদ দিয়ে সাপেক্ষ যোজক ব্যবহার করতে হয় [৬].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035244719,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "কোনটি যৌগিক বাক্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিপদ আসলে দুঃখও আসে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দুঃখ ছাড়া বিপদ আসে না",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিপদ এবং দুঃখ এক সময়ে আসে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বিপদ দেখলে দুঃখ আসে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'এবং' যোজকের ব্যবহার বাক্যটিকে যৌগিক বাক্যে পরিণত করেছে [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035244818,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "'যখন বিপদ আসে, তখন দুঃখও আসে।' — এটি কোন ধরনের বাক্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সরল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "যৌগিক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মিশ্র",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "আশ্রিত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যখন... তখন সাপেক্ষ যোজক থাকায় এটি মিশ্র বা জটিল বাক্য [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035244932,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "'বিপদ এবং দুঃখ এক সময়ে আসে।' — গঠন অনুযায়ী বাক্যটি কোন প্রকারের?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সরল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জটিল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যৌগিক",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মিশ্র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যোজক দ্বারা দুটি স্বাধীন বাক্য বা বাক্যাংশ যুক্ত হওয়ায় এটি যৌগিক বাক্য [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035245046,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "'নিয়মিত সাঁতার কাটো, স্বাস্থ্য ভালো থাকবে।' — এটি কোন ধরনের বাক্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সরল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "যৌগিক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মিশ্র",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জটিল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "এখানে কমা (,) যোজকের কাজ করছে যা দুটি স্বাধীন বাক্যকে যুক্ত করেছে [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035245156,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "'তিনি ভাত খেয়ে ঘুমিয়ে পড়লেন।' — বাক্যটি কোন প্রকারের?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সরল",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "জটিল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মিশ্র",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "যৌগিক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বাক্যটিতে একটিমাত্র সমাপিকা ক্রিয়া থাকায় এটি সরল বাক্য [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035245259,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "'তুমি চেষ্টা না করায় ব্যর্থ হয়েছ।' — এটি কোন বাক্যের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সরল বাক্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "জটিল বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মিশ্র বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "যৌগিক বাক্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "জটিল বা যৌগিক বাক্যের কোনো বৈশিষ্ট্য না থাকায় এবং একটি ক্রিয়া থাকায় এটি সরল বাক্য [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035245461,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "'অন্ধকার হয়ে এসেছে — বন্ধুরাও মুখ ভার করে রইল।' — এটি কোন ধরনের বাক্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সরল বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জটিল বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মিশ্র বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "যৌগিক বাক্য",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ড্যাশ (—) চিহ্নের মাধ্যমে দুটি সমাপিকা ক্রিয়াযুক্ত স্বাধীন বাক্যকে যুক্ত করা হয়েছে [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035245563,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "যেসব বাক্যের বিধেয় অংশে ক্রিয়া থাকে না, সেগুলোকে কী বাক্য বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সরল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জটিল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সক্রিয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অক্রিয়",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ক্রিয়া অনুপস্থিত থাকলে তাকে অক্রিয় বাক্য বলা হয় [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035245666,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "'ভিক্ষুককে টাকা দাও।' — এটি কোন ধরনের বাক্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জটিল বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "যৌগিক বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অক্রিয় বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সরল বাক্য",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "একটিমাত্র আদেশসূচক সমাপিকা ক্রিয়া 'দাও' থাকায় এটি সরল বাক্য [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035245769,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "নিচের কোনটি সরল বাক্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "যে ছেলেটি এখানে এসেছিল, সে আমার ভাই।",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দোষ করেছ, অতএব শাস্তি পাবে।",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিপদ এবং দুঃখ এক সাথে আসে।",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সে এখানে এসে সব কথা খুলে বলল।",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "একটি সমাপিকা ক্রিয়া থাকায় এটি সরল বাক্য [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035245871,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "'পরিশ্রমীরা জীবনে সফল হয়।' — বাক্যটির জটিল রূপ কী হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "যদি পরিশ্রম করো তাহলে সফল হবে।",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পরিশ্রম করায় তুমি সফল হয়েছ।",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যত পরিশ্রম, জীবনে তত সফলতা।",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "যারা পরিশ্রম করে তারা জীবনে সফল হয়।",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "'যারা... তারা' সাপেক্ষ সর্বনাম যুক্ত করায় এটি জটিল বাক্য হয়েছে [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035245973,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "'শাকিলরা নীল আকাশে উড়ছে।' — গঠন বৈশিষ্ট্য অনুযায়ী বাক্যটি হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "মিশ্র",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সরল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "যৌগিক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জটিল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "একটি উদ্দেশ্য ও একটি বিধেয় বিশিষ্ট বাক্য সরল বাক্য [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035246078,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "'যে ছেলেটি এখানে এসেছিল, সে আমার ভাই।' — বাক্যটি গঠন বৈশিষ্ট্য অনুযায়ী—",
+    "options": [
+      {
+        "label": "a",
+        "text": "সরল বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "যৌগিক বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জটিল বাক্য",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "প্রশ্নবোধক বাক্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সাপেক্ষ সর্বনাম 'যে... সে' থাকার কারণে এটি জটিল বাক্য [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035246180,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "'যাঁরা পরিশ্রম করে, তারা জীবনে সফল হয়।' — গঠন-বৈশিষ্ট্য অনুযায়ী এটি কোন বাক্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জটিল",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "যৌগিক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিস্ময়বোধক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সরল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "প্রধান খণ্ডবাক্যের সাথে আশ্রিত খণ্ডবাক্য যুক্ত থাকায় এটি জটিল বাক্য [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035246285,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "সরল বাক্যে অনেক সময় কোনটি অনুপস্থিত থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিশেষণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিশেষ্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সর্বনাম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ক্রিয়া",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সরল অক্রিয় বাক্যে অনেক সময় ক্রিয়া উহ্য বা অনুপস্থিত থাকে [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035246385,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "' লোকটি অশিক্ষিত হলেও অভদ্র নয়।' — এর যৌগিক বাক্য কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "যদিও লোকটি অশিক্ষিত তবু অভদ্র নয়।",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "লোকটি অশিক্ষিত এবং অভদ্র।",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "লোকটি অশিক্ষিত, কিন্তু অভদ্র নয়।",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "লোকটি যেমন অশিক্ষিত তেমন অভদ্র।",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'কিন্তু' যোজক দ্বারা দুটি অংশ যুক্ত হওয়ায় এটি যৌগিক বাক্য [৭].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035246493,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৪: সরল, জটিল ও যৌগিক বাক্য",
+    "question": "'ভালো ছেলেরা শিক্ষকের আদেশ পালন করে।' — এটি কী ধরনের বাক্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জটিল বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আশ্রিত খণ্ডবাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যৌগিক বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সরল বাক্য",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "একটিমাত্র উদ্দেশ্য ও বিধেয় থাকায় এটি সরল বাক্য [৭].",
+    "image": null,
+    "language": "en"
+  }
+]

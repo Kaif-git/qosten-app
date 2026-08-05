@@ -1,0 +1,2029 @@
+[
+  {
+    "id": 1767455534979,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "পাশাপাশি ধ্বনির মিলনকে বলে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "একীকরণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সন্নিবেশ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সমাস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সন্ধি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পাশাপাশি দুটি ধ্বনির মিলনকে সন্ধি বলে। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455535138,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "অ/আ + অ/আ = আ সূত্রের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "উত্তরাধিকার",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "জানেত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অতিিন্দ্রিয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নাবিক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "উত্তর + অধিকার = উত্তরাধিকার। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455535258,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "স্বরের সঙ্গে স্বরের যে সন্ধি হয় তাকে কোন সন্ধি বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্বরসন্ধি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ব্যঞ্জনসন্ধি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিসর্গসন্ধি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "স্বর-ব্যঞ্জন সন্ধি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "স্বরধ্বনির সাথে স্বরধ্বনির মিলনকে স্বরসন্ধি বলা হয়। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455535374,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "গো + আদি = গবাদি — কোন সূত্রে সিদ্ধ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ও + অনা স্বর = অব্ + স্বর",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "এ + অন্য স্বর = অয়্ + স্বর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ঐ + অন্য স্বর = আয়্ + স্বর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ঔ/উ + অন্য স্বর = অব্ + স্বর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ও-কার এর পরে স্বরধ্বনি থাকলে ও-কার স্থানে 'অব' হয়। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455535489,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "ব্যঞ্জনসন্ধি কতভাবে হতে পারে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "এক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দুই",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তিন",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "চার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ব্যঞ্জনসন্ধি তিনভাবে হতে পারে। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455535608,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "'পরিচ্ছেদ' কোন নিয়মে ব্যঞ্জনসন্ধি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্বর + স্বর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "স্বর + ব্যঞ্জন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ব্যঞ্জন + ব্যঞ্জন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ব্যঞ্জন + স্বর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পরি + ছেদ = পরিচ্ছেদ, এখানে স্বরধ্বনির পর ব্যঞ্জনধ্বনি মিলে সন্ধি হয়েছে। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455535725,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "নিচের কোনটিতে জ-এর প্রভাবে ত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সংখ্যা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "উজ্জ্বল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বিপদমুক্ত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চলচ্চিত্র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "উৎ + জ্বল = উজ্জ্বল, এখানে ত-এর জায়গায় জ হয়েছে। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455535841,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "নিচের কোনটি বিসর্গ সন্ধির উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ষষ্ঠ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সম্মান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যষ্ঠ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মনোযোগ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মনঃ + যোগ = মনোযোগ। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455535957,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "নিচের কোনটিতে বিসর্গ 'ও' হয়ে গেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নীরোগ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আরোগ্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তিরোধান",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ভৌগোলিক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "তিরঃ + ধান = তিরোধান, এখানে বিসর্গ ও-কারে পরিণত হয়েছে। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455536064,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "নিপাতনে সিদ্ধ ব্যঞ্জনসন্ধি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নায়ক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিদ্যালয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শুভেচ্ছা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "একাদশ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এক + দশ = একাদশ, এটি বিশেষ নিয়মে সাধিত সন্ধি। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455536206,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "সঠিক সন্ধিবিচ্ছেদ নিচের কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বন + ঔষধি = বনৌষধি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শীত + আর্ত = শীতার্ত",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পরি + ইক্ষা = পরীক্ষা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রবী + ইন্দ্র = রবীন্দ্র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "শীত + ঋত = শীতার্ত, এটি সঠিক সন্ধিবিচ্ছেদ। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455536326,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "অ/আ + ই/ঈ = এ সূত্রের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শুভেচ্ছা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "জানেত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শীতার্ত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "যথোচিত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "শুভ + ইচ্ছা = শুভেচ্ছা। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455536447,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "কোনটি বিশেষ নিয়মে সাধিত সন্ধি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পরি + কার = পরিষ্কার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নৌ + ইক = নাবিক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গৈ + অক = গায়ক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সম্ + বাদ = সংবাদ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সম্ + বাদ = সংবাদ এটি একটি বিশেষ নিয়মে সাধিত ব্যঞ্জনসন্ধি। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455536557,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "নিচের কোন শব্দের সন্ধিতে বিসর্গ (ঃ) ও-কার হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পুরস্কার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মনোযোগ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "নীরোগ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গোপদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মনঃ + যোগ = মনোযোগ। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455536671,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "সন্ধি কত প্রকার?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তিন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "চার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাঁচ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সন্ধি প্রধানত তিন প্রকার: স্বরসন্ধি, ব্যঞ্জনসন্ধি ও বিসর্গ সন্ধি। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455536784,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "'মন্বন্তর' শব্দের সঠিক সন্ধি-বিচ্ছেদ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মন + অন্তি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মনু + হরি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মন + ঋষি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মনু + অন্তর",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মনু + অন্তর = মন্বন্তর। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455536911,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "'শয়ন' শব্দটির সন্ধিবিচ্ছেদ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শ + অন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শে + অন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সপ + ন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পর + অন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "শে + অন = শয়ন। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455537022,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "নিপাতনে সিদ্ধ স্বরসন্ধি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পুতেলিকা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মার্তণ্ড",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নাবিক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কুলটা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কুল + অটা = কুলটা, এটি নিপাতনে সিদ্ধ স্বরসন্ধি। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455537137,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "নিপাতনে সিদ্ধ ব্যঞ্জনসন্ধির উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গোপদ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ষষ্ঠ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গায়ক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কুলটা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "গো + পদ = গোপদ, এটি নিপাতনে সিদ্ধ ব্যঞ্জনসন্ধি। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455537334,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "নিপাতনে সিদ্ধ ব্যঞ্জনসন্ধি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নায়ক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "একাদশ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সিসক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শুভেচ্ছা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "এক + দশ = একাদশ। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455537464,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "নিচের কোনটি নিপাতনে সিদ্ধ সন্ধির উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তস্কর",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "নিস্বর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দুস্তর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দুষ্কর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "তৎ + কর = তস্কর, এটি নিপাতনে সিদ্ধ সন্ধি। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455537582,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "নিপাতনে সিদ্ধ ব্যঞ্জনসন্ধির উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কুলটা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গবাক্ষ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ভাস্কর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বৃহস্পতি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বৃহৎ + পতি = বৃহস্পতি, এটি নিপাতনে সিদ্ধ ব্যঞ্জনসন্ধি। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455537699,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "'বিসর্গ-সন্ধির ক্ষেত্রে কিছু সন্ধিতে পূর্ববর্তী স্বর দীর্ঘ হয়'— এরূপ সন্ধির উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তিরঃ + ধান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নিঃ + আকার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নিঃ + চয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিঃ + রব",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "নিঃ + রব = নীরব, এখানে 'ই' স্বরটি দীর্ঘ হয়ে 'ঈ' হয়েছে। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455537812,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "'শীতার্ত' সন্ধিটি কোন নিয়মে সাধিত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অ + ঋত = আর",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অ + ঋীত = আর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আ + রিত = আর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আ + ঋত = আর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "শীত + ঋত = শীতার্ত (অ + ঋ = আর)। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455537938,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "'নাবিক'-এর সন্ধিবিচ্ছেদ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "না + ইক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নৌ + ইক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "নো + ইক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "না + বিক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "নৌ + ইক = নাবিক। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455538062,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "সঠিক সন্ধিবিচ্ছেদ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নির + আকার = নিরাকার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নিঃ + আকার = নিরাকার",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পুনর + মিলন = পুনর্মিলন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আশীর + বাদ = আশীর্বাদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "নিঃ + আকার = নিরাকার এটি সঠিক বিসর্গ সন্ধি। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455538188,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "নিচের কোনটি নিপাতনে সিদ্ধ ব্যঞ্জনসন্ধির উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নিঃ + রোগ = নীরোগ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পুরঃ + কার = পুরস্কার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মনঃ + যোগ = মনোযোগ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "এক + দশ = একাদশ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "একাদশ একটি নিপাতনে সিদ্ধ ব্যঞ্জনসন্ধি। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455538312,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "'অহরহ'-এর সন্ধিবিচ্ছেদ—",
+    "options": [
+      {
+        "label": "a",
+        "text": "অহঃ + রত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অহঃ + অহ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অহ + নিশা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অহ + নিপ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "অহঃ + অহ = অহরহ। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455538441,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "সন্ধির নিয়মে অ-কারে অ-কারে আ-কার হয়েছে কোনটিতে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হিমাচল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রত্নাকর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হিমালয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিদ্যালয়",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বিদ্যা + আলয় = বিদ্যালয়। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455538570,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "'শুভেচ্ছা' শব্দটির সঠিক সন্ধিবিচ্ছেদ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শুভ + অচ্ছা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শুভ + ইচ্ছা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "শুভ + ইা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শুভে + ইচ্ছা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "শুভ + ইচ্ছা = শুভেচ্ছা। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455538696,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "'এক + দশ = একাদশ' কোন সন্ধির উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নিপাতনে সিদ্ধ স্বরসন্ধি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ব্যঞ্জনসন্ধি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিসর্গসন্ধি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিপাতনে সিদ্ধ ব্যঞ্জনসন্ধি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এটি কোনো সাধারণ নিয়ম না মেনে গঠিত হওয়ায় নিপাতনে সিদ্ধ ব্যঞ্জনসন্ধি। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455538815,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "সন্ধিতে আ + উ = কী হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "এ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঐ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ও",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ঔ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "স্বরসন্ধির নিয়ম অনুযায়ী আ + উ = ও হয়। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455538928,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "'জনৈক' - শব্দটির সন্ধিবিচ্ছেদ—",
+    "options": [
+      {
+        "label": "a",
+        "text": "জন + এক",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "জন + ঐক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জন + এক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জন + ঔক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "জন + এক = জনৈক। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455539040,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "'পরীক্ষা'-এর সন্ধিবিচ্ছেদ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পরি + ইক্ষা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পরি + ঈক্ষা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পরী + ইক্ষা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পরি + ইক্ষ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পরি + ঈক্ষা = পরীক্ষা। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455539151,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "নিচের কোনটি সঠিক সন্ধিবিচ্ছেদ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পরি + ছদ = পরিচ্ছদ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নি + চয় = নিশ্চয়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পরি + দন = পরিদধ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বৃষ + তি = বৃষ্টি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "নি + চয় = নিশ্চয় এটি সঠিক বিসর্গ সন্ধি। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455539263,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "নিপাতনে সিদ্ধ উচ্চারণ উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গায়ক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নাবিক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তিজত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মার্তণ্ড",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মার্তণ্ড একটি নিপাতনে সিদ্ধ সন্ধি। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455539379,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "নিচের কোনটি নিয়ম অনুসারে সন্ধি হয় না?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গায়ক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নাবিক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গবাদি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গবাক্ষ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "গবাক্ষ শব্দটি নিপাতনে সিদ্ধ হওয়ায় এটি সাধারণ নিয়ম মানে না। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456360253,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "পাশাপাশি ধ্বনির মিলনকে বলে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "একীকরণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সমীকরণ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সমাস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সন্ধি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456360397,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "অ / আ + অ / আ = আ সূত্রের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "উত্তরোত্তর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জানক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অতিব্দ্রিয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নাবিক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456360694,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "গো + আদি = গবাদি— কোন সূত্রে সিদ্ধ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ও + অন্য স্বর = অব্ + স্বর",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "এ + অন্য স্বর = অয়্ + স্বর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ঐ + অন্য স্বর = আয়্ + স্বর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ঔ + অন্য স্বর = আব্ + স্বর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456361258,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "নিচের কোনটিতে জ্-এর প্রভাবে ত্ হয়েছে জ্?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সংখ্যা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "উজ্জ্বল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বিপদসংকুল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চলচ্চিত্র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456361406,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "নিচের কোনটি বিসর্গ সন্ধির উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ষষ্ঠ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সমান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যথ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মনোযোগ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456361881,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "সঠিক সন্ধিবিচ্ছেদ নিচের কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বন + ওষধি = বনৌষধি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "শীত + আর্ত = শীতার্ত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পরি + ঈক্ষা = পরীক্ষা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রবী + ইন্দ্র = রবীন্দ্র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456362031,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "অ / আ + ই / ঈ = এ সূত্রের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শুভেচ্ছা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "জানক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রবীন্দ্র",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "যথোপরি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456362348,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "নিচের কোন শব্দের সন্ধিতে বিসর্গ (ঃ) ও-কার হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পুরস্কার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মনোযোগ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "নীরোগ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গোষ্পদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456362646,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "'মহর্ষি' পদের সঠিক সন্ধি-বিচ্ছেদ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মহ + ঋষি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ম + ঋষি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মহা + ঋষি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মহা + ঋষি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456362793,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "'শয়ন' শব্দটির সন্ধিবিচ্ছেদ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শ + অন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শে + অন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "শ + ন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শয় + অন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456362942,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "নিপাতনে সিদ্ধ স্বরসন্ধি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পুংস্ত্ব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মার্তণ্ড",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নাবিক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কুলটা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456363111,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "নিপাতনে সিদ্ধ ব্যঞ্জনসন্ধির উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গোস্পদ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ষষ্ঠ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গায়ক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কুলটা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456363262,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "নিপাতনে সিদ্ধ ব্যঞ্জনসন্ধি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নায়ক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "একাদশ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "দ্বিসপ্ত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শুভেচ্ছা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456363451,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "নিচের কোনটি নিপাতনে সিদ্ধ সন্ধি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তস্কর",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "নিথর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দুস্তর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দুষ্কর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456363596,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "নিপাতনে সিদ্ধ ব্যঞ্জনসন্ধির উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কুলটা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গবাক্ষ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "একাদশ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বৃহস্পতি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456363813,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "'বিসর্গসন্ধি বিসর্গ (ঃ) কিন্তু স্বরধ্বনির পরিবর্তে হয় না।'—এরূপ সন্ধির উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তিরঃ + ধান",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "নিঃ + আকার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নিঃ + চয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিঃ + রস",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456364245,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "'শীতার্ত' সন্ধিটি কোন নিয়মে সাধিত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অ + ঋত = অর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অ + রীত = আর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আ + রিত = আর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আ + ঋত = আর",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456364394,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "'নাবিক'-এর সন্ধিবিচ্ছেদ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "না + ইক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নৌ + ইক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "নৌ + ইজ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "না + বিক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456364928,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "'অহরহ'-এর সন্ধিবিচ্ছেদ—",
+    "options": [
+      {
+        "label": "a",
+        "text": "অহঃ + হর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অহঃ + অহ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অহ + নিশা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অহ + নিপ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456365136,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "সন্ধির নিয়মে অ-কারে অ-কারে আ-কার হয়েছে কোনটিতে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হিমালয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রত্নাকর",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "যথা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিদ্যালয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456365287,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "'শুভেচ্ছা' শব্দটির সঠিক সন্ধিবিচ্ছেদ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শুভ + অচ্ছা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শুভ + আচ্ছা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শুভ + ইচ্ছা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সুভে + ইচ্ছা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456365692,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "অ + উ = ও হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "এ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ও",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ঔ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ঐ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456365943,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "'জনৈক'— শব্দটির সন্ধিবিচ্ছেদ—",
+    "options": [
+      {
+        "label": "a",
+        "text": "জন + ঐক্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জন + এক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "জন + এক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জন + ঔক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456366088,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "'পরীক্ষা'-এর সন্ধিবিচ্ছেদ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পরি + ইক্ষা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পরি + ইক্ষা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পরী + ইক্ষা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পরি + ঈক্ষা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456366275,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "নিচের কোনটি সঠিক সন্ধিবিচ্ছেদ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পরি + ছদ = পরিচ্ছদ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বদ্ + ছ = বচ্ছ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নিশ্ব + চয় = নিশ্চয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নি + অবক = নায়ক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456366434,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "নিপাতনে সিদ্ধ স্বরসন্ধি উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গায়ক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নাবিক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গবাক্ষ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "গবা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456366644,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৩: সন্ধি",
+    "question": "নিচের কোনটি নিয়ম অনুসারে সন্ধি হয় না?",
+    "options": "[{\"label\":\"a\",\"text\":\"গায়ক\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"নাবিক\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"গবাক্ষ\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"গবা\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  }
+]

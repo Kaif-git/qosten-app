@@ -1,0 +1,884 @@
+[
+  {
+    "id": 1768748117247,
+    "subject": "Physics",
+    "chapter": "Current Electricity ",
+    "lesson": "Specific Resistance and Load Shedding",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is specific resistance?",
+        "marks": 0,
+        "answer": "The resistance of a conductor of unit length and unit cross-sectional area at a given temperature is called the specific resistance of its material at that temperature.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Preventing wastage of electricity will reduce load shedding—Explain it.",
+        "marks": 0,
+        "answer": "- At",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the equivalent resistance of the circuit.",
+        "marks": 0,
+        "answer": "- Voltage at",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "What are the changes in voltage at point B and D before and after ground connection? Show it mathematically.",
+        "marks": 0,
+        "answer": "\\(\\Delta V_D = 0 - (-1.635) = 1.635\\mathrm{V}\\) (decrease)\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748113311_ahaon.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748113311_ahaon.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111796_gx9pk8.jpeg"
+  },
+  {
+    "id": 1768748117376,
+    "subject": "Physics",
+    "chapter": "Current Electricity ",
+    "lesson": "Rheostat, Temperature and Resistance",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "Define Rheostat.",
+        "marks": 0,
+        "answer": "A resistor whose value can be changed as required is called a variable resistor or rheostat.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "If temperature is increased, the resistance of copper increases but the resistance of silicon reduces, Explain.",
+        "marks": 0,
+        "answer": "Copper is a conductive material. In the case of conductive materials, resistance increases as temperature increases because when the temperature increases, the vibration or kinetic energy of the molecules of the conductive material increases. As a result, the path of electrons is more obstructed. This increases the resistance. Silicon on the other hand is a semiconductor material. At low temperatures they behave like insulators. An increase in temperature increases the free electrons in their last orbitals, resulting in an increase in current flow and a decrease in resistance. Therefore, as the temperature increases, the resistance of copper increases but the resistance of silicon reduces.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Calculate equivalent resistance of the circuit shown in the figure.",
+        "marks": 0,
+        "answer": "- \\(R_3\\) and \\(R_4\\) are in series: \\(R_{34} = 10 + 6 = 16\\Omega\\)\n- \\(R_5\\), \\(R_{34}\\), and \\(R_6\\) are in parallel:\n\\[\n\\frac{1}{R_p} = \\frac{1}{10} + \\frac{1}{16} + \\frac{1}{20} = \\frac{8 + 5 + 4}{80} = \\frac{17}{80}\n\\]\n\\[\nR_p = \\frac{80}{17} \\approx 4.71\\Omega\n\\]\n- \\(R_1\\), \\(R_2\\), and \\(R_p\\) are in series:\n\\[\nR_{eq} = 4 + 6 + 4.71 = 14.71\\Omega\n\\]\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Mathematically explain whether the power of \\(R_4\\) and \\(R_6\\) will be equal or not.",
+        "marks": 0,
+        "answer": "- Total resistance \\(R_{eq} = 16\\Omega\\) (given in answer key, simplified)\n- Current:\n\\[\nI = \\frac{80}{16} = 5\\mathrm{A}\n\\]\n- Voltage across BD: \\(V_{BD} = I \\times R_p = 5 \\times 5 = 25\\mathrm{V}\\)\n- Power of \\(R_6\\):\n\\[\nP_6 = \\frac{V_{BD}^2}{R_6} = \\frac{25^2}{20} = 31.25\\mathrm{W}\n\\]\n- Current through \\(R_3\\) and \\(R_4\\):\n\\[\nI_1 = \\frac{V_{BD}}{R_5} = \\frac{25}{10} = 2.5\\mathrm{A}\n\\]\n- Power of \\(R_4\\):\n\\[\nP_4 = I_1^2 \\times R_4 = (2.5)^2 \\times 6 = 37.5\\mathrm{W}\n\\]\n- Since \\(P_4 \\neq P_6\\) and \\(P_4 > P_6\\), the powers are not equal.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748113250_i6ioj8.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748113250_i6ioj8.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111796_73bvtq.jpeg"
+  },
+  {
+    "id": 1768748117541,
+    "subject": "Physics",
+    "chapter": "Current Electricity ",
+    "lesson": "Ohm's Law and Circuit Analysis",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "Write down Ohm's law.",
+        "marks": 0,
+        "answer": "Ohm's law states that the current flowing through a conductor at constant temperature is proportional to the potential difference across the conductor.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why is use of bulb with filament decreasing gradually?",
+        "marks": 0,
+        "answer": "The filaments of electric bulbs used in homes are made of tungsten. Due to tungsten's high relative resistance or melting point, it can convert electrical energy into light energy very easily. Currently filament is slowly declining in popularity because making bulb with it requires heating the filament. It consumes a large amount of the electricity as heat, so energy is wasted here. For this, their efficiency become very low, so now their usage has decreased.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Calculate the total resistance of the circuit.",
+        "marks": 0,
+        "answer": "- \\(4\\Omega\\) and \\(2\\Omega\\) are open → ignored.\n- \\(8\\Omega\\) and \\(12\\Omega\\) in series: \\(R_{s1} = 8 + 12 = 20\\Omega\\)\n- \\(R_{s1}\\) and \\(20\\Omega\\) in parallel:\n\\[\n\\frac{1}{R_{p1}} = \\frac{1}{20} + \\frac{1}{20} = \\frac{1}{10} \\quad \\Rightarrow \\quad R_{p1} = 10\\Omega\n\\]\n- \\(7\\Omega\\) and \\(5\\Omega\\) in series: \\(R_{s2} = 7 + 5 = 12\\Omega\\)\n- \\(R_{s2}\\) and \\(12\\Omega\\) in parallel:\n\\[\n\\frac{1}{R_{p2}} = \\frac{1}{12} + \\frac{1}{12} = \\frac{1}{6} \\quad \\Rightarrow \\quad R_{p2} = 6\\Omega\n\\]\n- \\(R_{p1}\\) and \\(R_{p2}\\) in series:\n\\[\nR_{eq} = 10 + 6 = 16\\Omega\n\\]\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748113340_qi1noh.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748113340_qi1noh.jpeg"
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Explain mathematically whether the potential difference of part AC and part DE will be equal or not.",
+        "marks": 0,
+        "answer": "- Current:\n\\[\nI = \\frac{96}{16} = 6\\mathrm{A}\n\\]\n- Voltage across AC: \\(V_{AC} = I \\times R_{p1} = 6 \\times 10 = 60\\mathrm{V}\\)\n- Voltage across CE: \\(V_{CE} = I \\times R_{p2} = 6 \\times 6 = 36\\mathrm{V}\\)\n- Current through DE:\n\\[\nI_1 = \\frac{V_{CE}}{7 + 5} = \\frac{36}{12} = 3\\mathrm{A}\n\\]\n- Voltage across DE: \\(V_{DE} = I_1 \\times 5 = 3 \\times 5 = 15\\mathrm{V}\\)\n- Since \\(V_{AC} \\neq V_{DE}\\) and \\(V_{AC} > V_{DE}\\), the potential differences are not equal.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748113340_1b8dcd.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748113340_1b8dcd.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111796_00o7i8.jpeg"
+  },
+  {
+    "id": 1768748118184,
+    "subject": "Physics",
+    "chapter": "Current Electricity ",
+    "lesson": "Diodes and Power Calculation",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called diode?",
+        "marks": 0,
+        "answer": "A junction (p-n junction) formed by connecting a p type semiconductor with an n type semiconductor is called a diode.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Explain how to connect an ammeter to a circuit.",
+        "marks": 0,
+        "answer": "An ammeter has to be connected in series connection in the circuit. Current flow is usually determined with the help of ammeter in the circuit. The resistance of the ammeter is very low. So connecting it in series connection in the circuit does not change the original flow. Otherwise if it is connected in parallel in the circuit, the current will pass through the ammeter. As a result the circuit will become de-energized. Hence it is connected in series.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find out the equivalent resistance of the circuit.",
+        "marks": 0,
+        "answer": "- Resistance of bulb 1 (\\(50\\mathrm{W}, 220\\mathrm{V}\\)):\n\\[\nR_1 = \\frac{220^2}{50} = 968\\Omega\n\\]\n- Resistance of bulbs 2 and 3 (\\(100\\mathrm{W}, 220\\mathrm{V}\\)):\n\\[\nR_2 = R_3 = \\frac{220^2}{100} = 484\\Omega\n\\]\n- \\(R_2\\) and \\(R_3\\) in parallel:\n\\[\n\\frac{1}{R_p} = \\frac{1}{484} + \\frac{1}{484} = \\frac{2}{484} \\quad \\Rightarrow \\quad R_p = 242\\Omega\n\\]\n- \\(R_1\\) and \\(R_p\\) in series:\n\\[\nR_{eq} = 968 + 242 = 1210\\Omega\n\\]\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Calculate the probability that the electric bill will be 651 taka in the month of January, if all the bulbs are connected in parallel and kept on for 6 hours daily.",
+        "marks": 0,
+        "answer": "- Total power in parallel: \\(P_{total} = 50 + 100 + 100 = 250\\mathrm{W} = 0.25\\mathrm{kW}\\)\n- Daily use: \\(6\\) hours → daily energy = \\(0.25 \\times 6 = 1.5 \\text{ kWh}\\)\n- January has 31 days:\n\\[\nW = 1.5 \\times 31 = 46.5 \\text{ kWh}\n\\]\n- Cost at \\(14\\) taka per unit:\n\\[\n\\text{Bill} = 46.5 \\times 14 = 651 \\text{ taka}\n\\]\n- The bill will be 651 taka.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111797_xuomqq.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111797_xuomqq.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768748118353,
+    "subject": "Physics",
+    "chapter": "Current Electricity ",
+    "lesson": "Conductivity and Household Circuits",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "Write down Ohm's law.",
+        "marks": 0,
+        "answer": "Ohm's law states that the current flowing through a conductor at constant temperature is proportional to the potential difference across the conductor.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why the conductivity of a conductor decreases with increase of temperature?",
+        "marks": 0,
+        "answer": "Increase in the temperature decreases the conductivity of a conductor because increase in the temperature increases the kinetic energy of the free electrons in the conduction band of the conductor. As a result, the electrons collide with each other. Because of this, the path of electrons is blocked and the total flow of electrons is reduced and the current flow is reduced. That's why the conductivity decreases.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find out the potential difference between 'A' and 'B' in the circuit.",
+        "marks": 0,
+        "answer": "- Total resistance: \\(R = 2 + 4 + 6 = 12\\Omega\\)\n- Current:\n\\[\nI = \\frac{6}{12} = 0.5\\mathrm{A}\n\\]\n- Voltage between A and B:\n\\[\nV_{AB} = I \\times 2 = 0.5 \\times 2 = 1\\mathrm{V}\n\\]\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "The resistance of the figure replaced by using household equipment, draw a circuit and analyze its usefulness.",
+        "marks": 0,
+        "answer": "- Electrical equipment in houses are connected in parallel with supply lines. As a result, all the equipments get equal power. As the values of the resistors are different, the values of the current through the equipments comprising the resistors will also be different. A material with a lower resistance value will have more current flow through it. Each equipment has separate switches to control them separately. The switch is connected to high voltage.\n- It is possible to operate the equipments using the circuit in the diagram in houses. But if for some reason high current flows, the equipments may burn and accidents may occur. Fuses of various currents are used to prevent accidents caused by overflow of current in houses. If for any reason there is excess current flow in the line, the fuse itself burns and disconnects the part. In this way, equipment damage and possible accidents can be avoided. So it can be said that since fuse is used in the circuit, the circuit is useful to avoid accidents.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748114555_yix4zh.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748114555_yix4zh.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111797_7x50l.jpeg"
+  },
+  {
+    "id": 1768748118482,
+    "subject": "Physics",
+    "chapter": "Current Electricity ",
+    "lesson": "Semiconductors and Energy Consumption",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called semiconductor substance?",
+        "marks": 0,
+        "answer": "The materials whose current conduction capacity lies between that of conductors and insulators in normal temperature are called semiconductors.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Explain why the conductivity of a copper wire decreases when it is stretched uniformly.",
+        "marks": 0,
+        "answer": "If a copper wire is stretched, it's length increases. At the same time it's cross-sectional area decreases. This increase of length and decrease in area occurs in such a way that the volume remain unchanged. As a result, the resistance of that wire increases. Resistance and conductance is opposite to each other:\n\\[\nG = \\frac{1}{R}\n\\]\nSo, as resistance increases, conductance decreases. Therefore, if a copper wire is stretched uniformly, it's conductance gets decreased.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the equivalent resistance between A and B in figure- A.",
+        "marks": 0,
+        "answer": "- \\(R_1\\) and \\(R_2\\) in series: \\(R_s = 10 + 10 = 20\\Omega\\)\n- \\(R_s\\) and \\(R_3 = 5\\Omega\\) in parallel:\n\\[\n\\frac{1}{R_p} = \\frac{1}{20} + \\frac{1}{5} = \\frac{1}{4} \\quad \\Rightarrow \\quad R_p = 4\\Omega\n\\]\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Do \\(R_2\\) and \\(R_3\\) of figure- 2 spend the equal amount of energy in same time? Put your opinion through analysis.",
+        "marks": 0,
+        "answer": "- Voltage across \\(R_3 = 12\\mathrm{V}\\):\n\\[\nP_3 = \\frac{12^2}{12} = 12\\mathrm{W}\n\\]\n- Current through \\(R_1\\) and \\(R_2\\):\n\\[\nI = \\frac{12}{24 + 12} = \\frac{12}{36} = \\frac{1}{3}\\mathrm{A}\n\\]\n- Power of \\(R_2\\):\n\\[\nP_2 = I^2 \\times R_2 = \\left(\\frac{1}{3}\\right)^2 \\times 12 = 1.333\\mathrm{W}\n\\]\n- Since \\(P_2 \\neq P_3\\), they do not consume the same amount of energy.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111797_2wyf6.jpeg"
+  },
+  {
+    "id": 1768748118601,
+    "subject": "Physics",
+    "chapter": "Current Electricity ",
+    "lesson": "EMF and Series/Parallel Circuits",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is electromotive force?",
+        "marks": 0,
+        "answer": "The amount of energy required by an electric source to transfer unit positive charge from one point of the circuit and bring it there again by travelling the total circuit is called the electromotive force of that source.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why does the flow of current change with change of resistances?",
+        "marks": 0,
+        "answer": "The characteristic of a conductor for which the flow of electricity through it gets obstructed is called resistance. From Ohm's law:\n\\[\nI = \\frac{V}{R}\n\\]\nor \\(I \\propto \\frac{1}{R}\\) when \\(V\\) is constant. So, if potential difference remains constant, flow of electricity is inversely proportional to resistance. Flow of electricity will be less if resistance is more and vice versa. So, change of resistance affects the flow of electricity. Besides, resistance increases with the increase in temperature resulting in a decrease in the flow of electricity.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Calculate the equivalent resistance of the circuit.",
+        "marks": 0,
+        "answer": "- \\(R_1 = 15\\Omega\\), \\(R_2 = 15\\Omega\\), \\(R_3 = 25\\Omega\\) in parallel:\n\\[\n\\frac{1}{R_{eq}} = \\frac{1}{15} + \\frac{1}{15} + \\frac{1}{25} = \\frac{13}{75}\n\\]\n\\[\nR_{eq} = \\frac{75}{13} \\approx 5.77\\Omega\n\\]\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "How will the flow of current be changed if all the resistors of the circuit of the stem are connected in series? Explain mathematically.",
+        "marks": 0,
+        "answer": "- In parallel: \\(I_p = \\frac{12}{5.77} \\approx 2.08\\mathrm{A}\\)\n- In series: \\(R_s = 15 + 15 + 25 = 55\\Omega\\)\n\\[\nI_s = \\frac{12}{55} \\approx 0.218\\mathrm{A}\n\\]\n- Ratio:\n\\[\n\\frac{I_s}{I_p} = \\frac{0.218}{2.08} \\approx 0.105\n\\]\nSo, current in series is about 0.105 times that in parallel.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111797_o4ggcb.jpeg"
+  },
+  {
+    "id": 1768748118809,
+    "subject": "Physics",
+    "chapter": "Current Electricity ",
+    "lesson": "EMF, Energy Waste, and Resistance Change",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is electromotive force?",
+        "marks": 0,
+        "answer": "The amount of energy required by an electric source to transfer unit positive charge from one point of the circuit and bring it there again by travelling the total circuit is called the electromotive force of that source.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why is the wastage of electric energy in the use of filament bulb? Explain.",
+        "marks": 0,
+        "answer": "In filament bulbs, filament has to be heated in order to produce light. Here, a large portion of the electrical energy is spent as heat energy resulting in a wastage of electrical energy.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "What will be the value of changed resistance of the stem if the length of the wire is made three times and area of cross section is made half?",
+        "marks": 0,
+        "answer": "- Initial resistance: \\(R = \\rho \\frac{L_0}{A_0}\\)\n- New length: \\(L_1 = 3L_0\\)\n- New area: \\(A_1 = \\frac{A_0}{2}\\)\n- New resistance:\n\\[\nR_1 = \\rho \\frac{L_1}{A_1} = \\rho \\frac{3L_0}{A_0/2} = 6 \\times \\rho \\frac{L_0}{A_0} = 6R\n\\]\nIf \\(R = 5\\Omega\\), then \\(R_1 = 30\\Omega\\).\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Is the ammeter in the above circuit giving the correct reading? Analyze mathematically.",
+        "marks": 0,
+        "answer": "- \\(R_1\\) and \\(R_2\\) in parallel:\n\\[\n\\frac{1}{R_p} = \\frac{1}{3} + \\frac{1}{6} = \\frac{1}{2} \\quad \\Rightarrow \\quad R_p = 2\\Omega\n\\]\n- Total resistance: \\(R_{eq} = R_p + R_3 = 2 + 1 = 3\\Omega\\)\n- Total current:\n\\[\nI = \\frac{12}{3} = 4\\mathrm{A}\n\\]\n- Voltage across AB: \\(V_{AB} = I \\times R_p = 4 \\times 2 = 8\\mathrm{V}\\)\n- Current through \\(R_1\\):\n\\[\nI_1 = \\frac{V_{AB}}{R_1} = \\frac{8}{3} \\approx 2.67\\mathrm{A}\n\\]\n- Given ammeter reading is \\(2.67\\mathrm{A}\\), which matches \\(I_1\\). So the ammeter is correct.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748113251_2t9ijg.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748113251_2t9ijg.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111797_ocir87.jpeg"
+  },
+  {
+    "id": 1768748119487,
+    "subject": "Physics",
+    "chapter": "Current Electricity ",
+    "lesson": "Stress, Sound, and Conductivity",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is stress?",
+        "marks": 0,
+        "answer": "The force per unit area that develops within a substance due to deformation is called stress.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Explain that the speed of sound depends on the humidity of the air.",
+        "marks": 0,
+        "answer": "The velocity of sound in air directly depends on the air density. The velocity of sound decreases with the increase of density and vice versa. If the humidity of air changes, the density also changes, resulting in the change in velocity of the sound in the air. Therefore, the velocity of the sound in the air depends on the humidity of the air.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the electric conductivity of fig P.",
+        "marks": 0,
+        "answer": "- Given: \\(L = 100\\mathrm{m}\\), diameter \\(d = 1.5\\mathrm{mm}\\), radius \\(r = 0.75\\mathrm{mm} = 0.75 \\times 10^{-3}\\mathrm{m}\\)\n- Area:\n\\[\nA = \\pi r^2 = \\pi \\times (0.75 \\times 10^{-3})^2 = 1.767 \\times 10^{-6} \\mathrm{m}^2\n\\]\n- Resistance: \\(R = 56.57\\Omega\\)\n- Resistivity:\n\\[\n\\rho = \\frac{RA}{L} = \\frac{56.57 \\times 1.767 \\times 10^{-6}}{100} = 9.9967 \\times 10^{-7} \\Omega\\mathrm{m}\n\\]\n- Conductivity:\n\\[\n\\sigma = \\frac{1}{\\rho} = \\frac{1}{9.9967 \\times 10^{-7}} \\approx 1 \\times 10^6 (\\Omega\\mathrm{m})^{-1}\n\\]\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Will the electric power of \\(20\\Omega\\) and \\(15\\Omega\\) be the same in fig Q? Demonstrate mathematical logic.",
+        "marks": 0,
+        "answer": "- \\(10\\Omega\\) and \\(20\\Omega\\) in series: \\(R_{s1} = 30\\Omega\\)\n- Current through \\(20\\Omega\\):\n\\[\nI_1 = \\frac{100}{30} \\approx 3.33\\mathrm{A}\n\\]\n- Power:\n\\[\nP_1 = I_1^2 \\times 20 = (3.33)^2 \\times 20 \\approx 221.78\\mathrm{W}\n\\]\n- \\(15\\Omega\\) and \\(10\\Omega\\) in series: \\(R_{s2} = 25\\Omega\\)\n- Current through \\(15\\Omega\\):\n\\[\nI_2 = \\frac{100}{25} = 4\\mathrm{A}\n\\]\n- Power:\n\\[\nP_2 = I_2^2 \\times 15 = 16 \\times 15 = 240\\mathrm{W}\n\\]\n- Since \\(P_1 \\neq P_2\\), the powers are not equal.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748113226_0aj30j.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748113226_0aj30j.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111797_l8pr4q.jpeg"
+  },
+  {
+    "id": 1768748119607,
+    "subject": "Physics",
+    "chapter": "Current Electricity ",
+    "lesson": "Conductivity and Motor Effectiveness",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is conductivity?",
+        "marks": 0,
+        "answer": "At fixed temperature, current conductance of a conductor of unit length and unit area is the conductivity of that material. Conductivity is the inverse of specific resistance.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why the flow of current will be impacted if a conducting wire is stretched?",
+        "marks": 0,
+        "answer": "If a conducting wire is stretched, it's resistance changes resulting in a change in current flow. If a wire is stretched, it's cross sectional area will decrease and length will increase in order to keep it's volume unchanged. As length increases and area decreases, so resistance \\(R = \\rho \\frac{L}{A}\\) will increase. And because of increase in resistance, current flow will decrease.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the equivalent resistance of the circuit.",
+        "marks": 0,
+        "answer": "- \\(6\\Omega\\) and \\(6\\Omega\\) in parallel across BC:\n\\[\n\\frac{1}{R_{p1}} = \\frac{1}{6} + \\frac{1}{6} = \\frac{1}{3} \\quad \\Rightarrow \\quad R_{p1} = 3\\Omega\n\\]\n- \\(8\\Omega\\) and \\(8\\Omega\\) in parallel across ED:\n\\[\n\\frac{1}{R_{p2}} = \\frac{1}{8} + \\frac{1}{8} = \\frac{1}{4} \\quad \\Rightarrow \\quad R_{p2} = 4\\Omega\n\\]\n- All in series: \\(R_{eq} = 1 + 3 + 2 + 4 = 10\\Omega\\)\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "If an electric motor of \\(1.9\\mathrm{kW}\\) is connected at the C point, will the motor be effective? Explain mathematically.",
+        "marks": 0,
+        "answer": "- Motor power \\(P = 1.9\\mathrm{kW} = 1900\\mathrm{W}\\), voltage \\(V = 220\\mathrm{V}\\)\n- Resistance of motor:\n\\[\nR_m = \\frac{V^2}{P} = \\frac{220^2}{1900} \\approx 25.47\\Omega\n\\]\n- New total resistance: \\(R_{total} = 10 + 25.47 = 35.47\\Omega\\)\n- Current:\n\\[\nI = \\frac{220}{35.47} \\approx 6.20\\mathrm{A}\n\\]\n- Power supplied to motor:\n\\[\nP_{supplied} = I^2 \\times R_m = (6.20)^2 \\times 25.47 \\approx 979.7\\mathrm{W}\n\\]\n- Since \\(P_{supplied} < P\\), the motor will not be effective.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111797_6u6qmp.jpeg"
+  },
+  {
+    "id": 1768748119758,
+    "subject": "Physics",
+    "chapter": "Current Electricity ",
+    "lesson": "Conductivity and System Loss",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is conductivity?",
+        "marks": 0,
+        "answer": "At a fixed temperature, current conductance of a conductor of unit length and unit area is the conductivity of that conductor. Conductivity is the inverse quantity of specific resistance.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "For which reason electric system loss may increase? Explain.",
+        "marks": 0,
+        "answer": "The wires used to transmit electricity from one place to another has some resistance. This resistance produces heat \\((I^2R)\\) while carrying current, which is the loss of electric power. This is also known as the system loss. If step-up transformer is not used to increase the voltage of the supplied current, then the value of \\(I^2R\\) increase, resulting in higher system loss.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "What will be the use of electric energy in September month if all the equipments are used 5 hours in a day?",
+        "marks": 0,
+        "answer": "- Total power of 2 fans: \\(70\\mathrm{W}\\)\n- Daily energy for fans:\n\\[\nW_1 = 70 \\times 5 = 350\\mathrm{Wh} = 0.35\\mathrm{kWh}\n\\]\n- Total power of 3 bulbs: \\(200\\mathrm{W}\\)\n- Daily energy for bulbs:\n\\[\nW_2 = 200 \\times 5 = 1000\\mathrm{Wh} = 1\\mathrm{kWh}\n\\]\n- Total daily energy: \\(W = 0.35 + 1 = 1.35\\mathrm{kWh}\\)\n- September has 30 days:\n\\[\nW_{total} = 1.35 \\times 30 = 40.5\\mathrm{kWh} = 40.5 \\text{ units}\n\\]\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "What will be the change in flow of current if two fans are connected in series by keeping all the bulbs in parallel of the stimulus? Analyze mathematically.",
+        "marks": 0,
+        "answer": "- Resistance of bulbs:\n\\[\nR_1 = \\frac{220^2}{100} = 484\\Omega,\\quad R_2 = \\frac{220^2}{60} \\approx 806.67\\Omega,\\quad R_3 = \\frac{220^2}{40} = 1210\\Omega\n\\]\n- Resistance of each fan:\n\\[\nR_f = \\frac{220^2}{35} \\approx 1382.86\\Omega\n\\]\n- All in parallel:\n\\[\n\\frac{1}{R_{eq}} = \\frac{1}{484} + \\frac{1}{806.67} + \\frac{1}{1210} + \\frac{1}{1382.86} + \\frac{1}{1382.86}\n\\]\n\\[\nR_{eq} \\approx 179.26\\Omega\n\\]\n- Current:\n\\[\nI = \\frac{220}{179.26} \\approx 1.227\\mathrm{A}\n\\]\n- Two fans in series: \\(R_{fseries} = 2 \\times 1382.86 = 2765.72\\Omega\\)\n- Bulbs in parallel with fans:\n\\[\n\\frac{1}{R_p} = \\frac{1}{2765.72} + \\frac{1}{484} + \\frac{1}{806.67} + \\frac{1}{1210}\n\\]\n\\[\nR_p \\approx 222.53\\Omega\n\\]\n- New current:\n\\[\nI' = \\frac{220}{222.53} \\approx 0.989\\mathrm{A}\n\\]\n- Change: \\(\\Delta I = 1.227 - 0.989 = 0.238\\mathrm{A}\\) decrease.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111798_dcxbew.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111798_dcxbew.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768748119984,
+    "subject": "Physics",
+    "chapter": "Current Electricity ",
+    "lesson": "EMF and Conductivity",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called electromotive force?",
+        "marks": 0,
+        "answer": "In an electric source work done by the source in driving a unit positive charge from one point of the circuit to the same point by traversing the complete circuit along with the source, or in other words the necessary energy to do so is defined as electromotive force.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why specific resistance and conductivity are opposite?",
+        "marks": 0,
+        "answer": "Conductivity is a measure of how well a material conducts electricity. Specific resistance, on the other hand, is a measure of how well a material resists the current, or flow of charges. This is measured in Ohms/m. Total resistance offered by the material is measured in Ohms. The two parameters are thus exactly opposite of each other. Their units are also exactly opposite, and inverse of each other. Thus conductivity is inverse of resistivity. Product of conductivity and resistivity is always one, being inverse of each other.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find the equivalent resistance of the circuit.",
+        "marks": 0,
+        "answer": "- \\(R_1\\), \\(R_2\\), \\(R_3\\) in parallel:\n\\[\n\\frac{1}{R_{p1}} = \\frac{1}{6} + \\frac{1}{3} + \\frac{1}{6} = \\frac{2}{3} \\quad \\Rightarrow \\quad R_{p1} = 1.5\\Omega\n\\]\n- \\(R_4\\) and \\(R_5\\) in parallel:\n\\[\n\\frac{1}{R_{p2}} = \\frac{1}{3} + \\frac{1}{6} = \\frac{1}{2} \\quad \\Rightarrow \\quad R_{p2} = 2\\Omega\n\\]\n- Total: \\(R_{eq} = 1.5 + 2 = 3.5\\Omega\\)\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Will the current flowing through \\(R_3\\) and \\(R_4\\) be equal? Analyze mathematically.",
+        "marks": 0,
+        "answer": "- Current:\n\\[\nI = \\frac{14}{3.5} = 4\\mathrm{A}\n\\]\n- Voltage across \\(R_{p1}\\): \\(V_{p1} = I \\times R_{p1} = 4 \\times 1.5 = 6\\mathrm{V}\\)\n- Current through \\(R_2\\):\n\\[\nI_2 = \\frac{6}{3} = 2\\mathrm{A}\n\\]\n- Voltage across \\(R_{p2}\\): \\(V_{p2} = I \\times R_{p2} = 4 \\times 2 = 8\\mathrm{V}\\)\n- Current through \\(R_4\\):\n\\[\nI_4 = \\frac{8}{3} \\approx 2.67\\mathrm{A}\n\\]\n- Since \\(I_2 \\neq I_4\\), the currents are not equal.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111798_wgwfwa.jpeg"
+  },
+  {
+    "id": 1768748120114,
+    "subject": "Physics",
+    "chapter": "Current Electricity ",
+    "lesson": "Rheostat and Ammeter Accuracy",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is Rheostat?",
+        "marks": 0,
+        "answer": "Rheostat is a type of resistance whose value can be changed within a certain limit. This is also called variable resistance.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why does electric bill increase using filament is a bulb? Explain.",
+        "marks": 0,
+        "answer": "Electric bill increases if filament is used in a bulb. Filament is a very thin wire or conductor. If electricity passes through a filament, it gets very hot and glows, thus functions as a bulb. However, most of the electricity used to glow the filament converts into heat energy which dissipated in air, only some energy converts into light. So, it takes more electricity to light a filament bulb which ultimately, increases the electric bill.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the equivalent resistance of circuit-2.",
+        "marks": 0,
+        "answer": "- \\(R_1\\), \\(R_2\\), \\(R_3\\) in parallel:\n\\[\n\\frac{1}{R_p} = \\frac{1}{6} + \\frac{1}{6} + \\frac{1}{6} = \\frac{1}{2} \\quad \\Rightarrow \\quad R_p = 2\\Omega\n\\]\n- With \\(R_4\\) in series:\n\\[\nR_{eq} = 2 + 4 = 6\\Omega\n\\]\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Is the value of Ammeter obtained in circuit-1 correct? Analyze mathematically.",
+        "marks": 0,
+        "answer": "- Circuit-1:\n\\[\nR_{eq} = 1 + \\left(\\frac{1}{6} + \\frac{1}{3}\\right)^{-1} = 1 + 2 = 3\\Omega\n\\]\n- Current:\n\\[\nI = \\frac{12}{3} = 4\\mathrm{A}\n\\]\n- Current through \\(R_1\\) (using current divider):\n\\[\nI_1 = \\frac{R_2}{R_1 + R_2} \\times I = \\frac{6}{3+6} \\times 4 = \\frac{6}{9} \\times 4 = 2.67\\mathrm{A}\n\\]\n- Ammeter reads \\(2.67\\mathrm{A}\\), which matches. So it is correct.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111798_1chvpn.jpeg"
+  },
+  {
+    "id": 1768748120413,
+    "subject": "Physics",
+    "chapter": "Current Electricity ",
+    "lesson": "EMF and Bulb Brightness",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is electromotive force?",
+        "marks": 0,
+        "answer": "Electromotive force is defined as the work done by the source or the energy spent by the source in driving a unit positive charge from one point of the circuit to the same point by traversing the complete circuit along with the source.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why nichrome wire is used in electric iron?",
+        "marks": 0,
+        "answer": "Nichrome wire is used for making heating appliances such as, electric iron because nichrome does not oxidize and burn easily at high temperature. It has higher melting and boiling point. It also has higher resistivity, so that it can produce more heat by current passing through it. We know the equation, \\(P = I^2R\\). So, the higher the resistance, the more it will convert into heat. Thus, it is used in electric iron.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the flow of current through \\(R_4\\).",
+        "marks": 0,
+        "answer": "- \\(R_1\\) and \\(R_2\\) in series: \\(R_{12} = 6 + 6 = 12\\Omega\\)\n- \\(R_3\\), \\(R_4\\), \\(R_{12}\\) in parallel:\n\\[\n\\frac{1}{R_p} = \\frac{1}{4} + \\frac{1}{2} + \\frac{1}{12} = \\frac{3+6+1}{12} = \\frac{10}{12} = \\frac{5}{6}\n\\]\n\\[\nR_p = \\frac{6}{5} = 1.2\\Omega\n\\]\n- Current:\n\\[\nI = \\frac{9}{1.2} = 7.5\\mathrm{A}\n\\]\n- Voltage across parallel combination: \\(V_p = I \\times R_p = 7.5 \\times 1.2 = 9\\mathrm{V}\\)\n- Current through \\(R_4\\):\n\\[\nI_4 = \\frac{V_p}{R_4} = \\frac{9}{2} = 4.5\\mathrm{A}\n\\]\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Will the bulb glow brightly if a bulb of \\(60W\\) is connected to the circuit instead of the resistors? Explain mathematically.",
+        "marks": 0,
+        "answer": "- Resistance of \\(60\\mathrm{W}\\) bulb at \\(9\\mathrm{V}\\):\n\\[\nR_b = \\frac{V^2}{P} = \\frac{81}{60} = 1.35\\Omega\n\\]\n- Equivalent resistance of original circuit: \\(R_{eq} = 1.2\\Omega\\)\n- Since \\(R_b > R_{eq}\\), the bulb will glow brighter because it draws less current than the original resistors, but the brightness depends on power:\n\\[\nP_b = \\frac{V^2}{R_b} = \\frac{81}{1.35} = 60\\mathrm{W}\n\\]\n- Original power:\n\\[\nP_{orig} = \\frac{V^2}{R_{eq}} = \\frac{81}{1.2} = 67.5\\mathrm{W}\n\\]\n- Since \\(P_b < P_{orig}\\), the bulb will glow less brightly.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111798_r9d5y5.jpeg"
+  },
+  {
+    "id": 1768748120571,
+    "subject": "Physics",
+    "chapter": "Current Electricity ",
+    "lesson": "Resistance and Household Circuits",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is resistance?",
+        "marks": 0,
+        "answer": "Resistance is the obstacle to the flow of current.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why the resistance is greater in thin wire compare to thick wire? Explain.",
+        "marks": 0,
+        "answer": "The resistance is greater in thin wire compare to thick wire because a thin wire has fewer electrons to carry the current. There is inversely proportional relationship between resistance and the area of the cross section.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the equivalent resistance of the circuit.",
+        "marks": 0,
+        "answer": "- First two \\(10\\Omega\\) in parallel:\n\\[\n\\frac{1}{R_{p1}} = \\frac{1}{10} + \\frac{1}{10} = \\frac{1}{5} \\quad \\Rightarrow \\quad R_{p1} = 5\\Omega\n\\]\n- Last two \\(10\\Omega\\) in parallel:\n\\[\n\\frac{1}{R_{p2}} = \\frac{1}{10} + \\frac{1}{10} = \\frac{1}{5} \\quad \\Rightarrow \\quad R_{p2} = 5\\Omega\n\\]\n- All in series: \\(R_{eq} = 5 + 10 + 5 = 20\\Omega\\)\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748113888_n1ttp.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748113888_n1ttp.jpeg"
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Compare the current of the present circuit and rearranging the resistance which is more suitable in house when the electromotive force is constant.",
+        "marks": 0,
+        "answer": "- Present circuit: \\(I = \\frac{40}{20} = 2\\mathrm{A}\\)\n- All in parallel:\n\\[\n\\frac{1}{R_p} = \\frac{1}{10} + \\frac{1}{10} + \\frac{1}{10} + \\frac{1}{10} + \\frac{1}{10} = \\frac{5}{10} = \\frac{1}{2}\n\\]\n\\[\nR_p = 2\\Omega\n\\]\n- Current: \\(I' = \\frac{40}{2} = 20\\mathrm{A}\\)\n- Parallel connection is more suitable in houses because it allows higher current and independent operation of appliances.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748113888_3ac74d.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748113888_3ac74d.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111798_grv9vh.jpeg"
+  },
+  {
+    "id": 1768748120733,
+    "subject": "Physics",
+    "chapter": "Current Electricity ",
+    "lesson": "Ohm's Law and Energy Cost",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "Write down the Ohm's law.",
+        "marks": 0,
+        "answer": "Ohm's law states that the current through a conductor between two points is directly proportional to the voltage across the two points.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "What do you mean by the electromotive force of a dry cell is \\(1.5\\mathrm{V}\\)?",
+        "marks": 0,
+        "answer": "The electromotive force of a dry cell is \\(1.5\\mathrm{V}\\) means that a battery with an EMF rating \\(1.5\\mathrm{V}\\) can supply a maximum of \\(1.5\\mathrm{V}\\) of electric energy in an open circuit and when the circuit is closed it will have a potential difference of \\(1.5\\mathrm{V}\\).\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "If the bulb of the fig-2 is used everyday for 6 hours for 30 days, then what could be the electric energy usage? If each unit has a price of 8 Taka, then what will be the total cost for this?",
+        "marks": 0,
+        "answer": "- Power: \\(P = 20\\mathrm{W} = 0.02\\mathrm{kW}\\)\n- Daily energy: \\(0.02 \\times 6 = 0.12\\mathrm{kWh}\\)\n- 30 days: \\(0.12 \\times 30 = 3.6\\mathrm{kWh}\\)\n- Cost: \\(3.6 \\times 8 = 28.8\\) taka\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "If the resistors \\(R_1\\), \\(R_2\\) & \\(R_3\\) of fig-1 are connected in series, what will be the change in current compared with fig-1?",
+        "marks": 0,
+        "answer": "- Fig-1:\n\\[\nR_p = \\left(\\frac{1}{10} + \\frac{1}{10} + \\frac{1}{10}\\right)^{-1} = \\frac{10}{3} \\approx 3.33\\Omega\n\\]\n\\[\nR_{eq} = 3.33 + 5 = 8.33\\Omega\n\\]\n- Current:\n\\[\nI_1 = \\frac{220}{8.33} \\approx 26.4\\mathrm{A}\n\\]\n- All in series:\n\\[\nR_{eq}' = 10 + 10 + 10 + 5 = 35\\Omega\n\\]\n- Current:\n\\[\nI_2 = \\frac{220}{35} \\approx 6.29\\mathrm{A}\n\\]\n- Change: \\(\\Delta I = 26.4 - 6.29 = 20.11\\mathrm{A}\\) decrease.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111798_vawra8.jpeg"
+  },
+  {
+    "id": 1768748120855,
+    "subject": "Physics",
+    "chapter": "Current Electricity ",
+    "lesson": "Specific Resistance and Current Division",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is specific resistance?",
+        "marks": 0,
+        "answer": "If a conductor has one unit length and one square unit cross sectional area, then its resistance is called the specific resistance of that conductor.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why system loss is occurred? Explain.",
+        "marks": 0,
+        "answer": "When current (I) flows through a resistance (R), heat (I²R) is generated and this is a loss of electrical energy which is called system loss. The conducting wires that are used to carry electricity from one place to another have some minimum resistance. That resistance somewhat obstructs the flow of electricity which is dissipated as heat. That converted heat is the system loss of the conductor.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the equivalent resistance of the circuit.",
+        "marks": 0,
+        "answer": "- \\(R_2\\) and \\(R_3\\) in series: \\(R_{23} = 2 + 2 = 4\\Omega\\)\n- \\(R_{23}\\) and \\(R_4\\) in parallel:\n\\[\n\\frac{1}{R_p} = \\frac{1}{4} + \\frac{1}{4} = \\frac{1}{2} \\quad \\Rightarrow \\quad R_p = 2\\Omega\n\\]\n- With \\(R_1\\) in series:\n\\[\nR_{eq} = 2 + 2 = 4\\Omega\n\\]\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "\"The electric current are different, though the value of \\(R_1\\) and \\(R_2\\) are same.\" — Evaluate the validity of the speech.",
+        "marks": 0,
+        "answer": "- Total current:\n\\[\nI = \\frac{12}{4} = 3\\mathrm{A}\n\\]\n- Current through \\(R_1 = 3\\mathrm{A}\\)\n- Current through \\(R_2\\) (using current divider):\n\\[\nI_2 = \\frac{R_4}{R_{23} + R_4} \\times I = \\frac{4}{4+4} \\times 3 = \\frac{1}{2} \\times 3 = 1.5\\mathrm{A}\n\\]\n- Since \\(I_1 = 3\\mathrm{A}\\) and \\(I_2 = 1.5\\mathrm{A}\\), the currents are different even though \\(R_1 = R_2 = 2\\Omega\\). The statement is valid.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111798_26gc2q.jpeg"
+  },
+  {
+    "id": 1768748120998,
+    "subject": "Physics",
+    "chapter": "Current Electricity ",
+    "lesson": "Resistance and Power Comparison",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is resistance?",
+        "marks": 0,
+        "answer": "Resistance is the obstacle to the flow of current.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Explain why the resistance of a thick wire is less than thin wire.",
+        "marks": 0,
+        "answer": "The resistance a wire is inversely proportional to the cross-sectional area of that wire. If the resistance is R and the cross-sectional area is A, then \\(R \\propto \\frac{1}{A}\\). So, the higher the cross-sectional area of a wire, the lower its resistance. Hence, the resistance of a thick wire is less than thin wire.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the equivalent resistance of the first circuit.",
+        "marks": 0,
+        "answer": "- \\(R_2\\) and \\(R_3\\) in series: \\(R_{23} = 2 + 2 = 4\\Omega\\)\n- \\(R_1\\) and \\(R_{23}\\) in parallel:\n\\[\n\\frac{1}{R_p} = \\frac{1}{4} + \\frac{1}{4} = \\frac{1}{2} \\quad \\Rightarrow \\quad R_p = 2\\Omega\n\\]\n- With \\(R_4\\) in series:\n\\[\nR_{eq} = 2 + 4 = 6\\Omega\n\\]\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Compare the electric power of the two circuits.",
+        "marks": 0,
+        "answer": "- Circuit 1:\n\\[\nP_1 = \\frac{V^2}{R_{eq}} = \\frac{12^2}{6} = 24\\mathrm{W}\n\\]\n- Circuit 2:\n- Two \\(5\\Omega\\) in parallel:\n\\[\n\\frac{1}{R_{p1}} = \\frac{1}{5} + \\frac{1}{5} = \\frac{2}{5} \\quad \\Rightarrow \\quad R_{p1} = 2.5\\Omega\n\\]\n- \\(4\\Omega\\) and \\(20\\Omega\\) in parallel:\n\\[\n\\frac{1}{R_{p2}} = \\frac{1}{4} + \\frac{1}{20} = \\frac{6}{20} = \\frac{3}{10} \\quad \\Rightarrow \\quad R_{p2} = \\frac{10}{3} \\approx 3.33\\Omega\n\\]\n- All in series: \\(R_{eq2} = 20 + 2.5 + 3.33 = 25.83\\Omega\\)\n- Power:\n\\[\nP_2 = \\frac{12^2}{25.83} \\approx 5.57\\mathrm{W}\n\\]\n- Since \\(P_1 > P_2\\), circuit 1 consumes more power.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111798_3p1jg.jpeg"
+  }
+]

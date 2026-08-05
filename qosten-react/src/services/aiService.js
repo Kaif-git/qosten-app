@@ -1,44 +1,27 @@
-const API_KEYS = (process.env.REACT_APP_GEMINI_API_KEYS || '').split(',').filter(Boolean);
-if (API_KEYS.length === 0) {
-  console.warn('⚠️ [aiService] No API keys found in REACT_APP_GEMINI_API_KEYS environment variable.');
-}
+import { aiUsageService } from './aiUsageService';
+import { supabase } from './supabaseClient';
 
-const MODEL_NAME = 'gemma-4-31b-it';
 const BASE_URL = 'https://generativelanguage.googleapis.com/v1beta/models';
 
-function getApiKey(index) {
-  return API_KEYS[index % API_KEYS.length];
-}
-
-/**
- * The most robust JSON extractor possible.
- */
 function extractJson(text) {
   if (!text) return null;
 
   const tryParse = (jsonStr) => {
     try {
-      // Basic cleaning for common AI mistakes
       const cleaned = jsonStr
         .trim()
-        .replace(/\n/g, '\\n') // Escape raw newlines
+        .replace(/\n/g, '\\n')
         .replace(/\r/g, '\\r')
-        .replace(/,\s*([\]}])/g, '$1'); // Remove trailing commas
+        .replace(/,\s*([\]}])/g, '$1');
       
       return JSON.parse(cleaned);
     } catch (e) {
       try {
-        // More aggressive: fix unescaped backslashes (common in LaTeX)
-        // Only escape if not followed by a valid escape char
         const fixed = jsonStr
           .replace(/\\(?!(?:["\\\/bfnrt]|u[0-9a-fA-F]{4}))/g, '\\\\')
           .replace(/\n/g, '\\n');
         return JSON.parse(fixed);
-      } catch (e2) {
-        // Last ditch: try to extract just the fields we need via regex if parsing totally fails
-        // But for now, just log the failure
-        // console.error("❌ [extractJson] Parse failed after sanitization", e2.message);
-      }
+      } catch (e2) {}
     }
     return null;
   };
@@ -61,16 +44,33 @@ function extractJson(text) {
   return foundObjects.length > 0 ? foundObjects : null;
 }
 
-async function callModel(prompt, retryCount = 5, keyIndex = 0, onRawResponse = null, onStatusUpdate = null, onObjectFound = null) {
-  const key = getApiKey(keyIndex);
-  const url = `${BASE_URL}/${MODEL_NAME}:streamGenerateContent?key=${key}`;
-  const internalIndex = keyIndex % API_KEYS.length;
-  
-  if (onStatusUpdate) onStatusUpdate(`📡 Requesting ${MODEL_NAME} (Key #${internalIndex})...`);
-
-  const extractedIds = new Set();
+async function callModel(prompt, retryCount = 5, onRawResponse = null, onStatusUpdate = null, onObjectFound = null, requestType = 'unknown', metadata = {}, preferredKey = null) {
+  const startTime = Date.now();
+  let currentKey = null;
+  let apiKeyId = null;
 
   try {
+    if (preferredKey) {
+      currentKey = preferredKey;
+    } else {
+      currentKey = await aiUsageService.getBestKey();
+    }
+    
+    if (!currentKey) {
+      throw new Error('No available API keys');
+    }
+
+    apiKeyId = currentKey.id;
+    const apiKey = currentKey.api_key;
+    const modelName = currentKey.model || 'gemma-4-31b-it';
+    const url = `${BASE_URL}/${modelName}:streamGenerateContent?key=${apiKey}`;
+
+    if (onStatusUpdate) {
+      onStatusUpdate(`Requesting ${modelName} (${currentKey.key_name})...`);
+    }
+
+    const extractedIds = new Set();
+
     const response = await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -86,11 +86,38 @@ async function callModel(prompt, retryCount = 5, keyIndex = 0, onRawResponse = n
     });
 
     if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      const errorMsg = errorData.error?.message || `API Error ${response.status}`;
+      const errorCode = errorData.error?.code || errorData.error?.status;
+
+      await aiUsageService.logUsage({
+        apiKeyId,
+        requestType,
+        model: currentKey.model,
+        responseTimeMs: Date.now() - startTime,
+        success: false,
+        errorMessage: errorMsg,
+        metadata
+      });
+
+      await aiUsageService.logKeyError({
+        apiKeyId,
+        errorType: response.status === 429 ? 'rate_limit' : response.status === 401 ? 'auth_error' : response.status === 403 ? 'forbidden' : 'api_error',
+        errorCode,
+        errorMessage: errorMsg,
+        httpStatus: response.status,
+        requestType,
+        model: currentKey.model,
+        retryCount: 5 - retryCount,
+        metadata
+      });
+
       if (retryCount > 0) {
-        console.warn(`⚠️ [aiService] Key #${internalIndex} failed (${response.status}). Rotating...`);
-        return await callModel(prompt, retryCount - 1, keyIndex + 1, onRawResponse, onStatusUpdate, onObjectFound);
+        console.warn(`Key ${currentKey.key_name} failed. Retrying with next key...`);
+        if (onStatusUpdate) onStatusUpdate(`Key failed, rotating... (${retryCount} retries left)`);
+        return await callModel(prompt, retryCount - 1, onRawResponse, onStatusUpdate, onObjectFound, requestType, metadata);
       }
-      throw new Error(`AI API Error ${response.status}`);
+      throw new Error(errorMsg);
     }
 
     const reader = response.body.getReader();
@@ -127,7 +154,6 @@ async function callModel(prompt, retryCount = 5, keyIndex = 0, onRawResponse = n
             fullContent += textPart;
             if (onRawResponse) onRawResponse(textPart);
 
-            // INCREMENTAL DISCOVERY:
             if (onObjectFound && fullContent.includes('}', lastDiscoveryIndex)) {
               try {
                 const found = extractJson(fullContent.substring(lastDiscoveryIndex));
@@ -136,7 +162,6 @@ async function callModel(prompt, retryCount = 5, keyIndex = 0, onRawResponse = n
                     if (obj.id && !extractedIds.has(obj.id.toString())) {
                       extractedIds.add(obj.id.toString());
                       onObjectFound(obj);
-                      // Update lastDiscoveryIndex to the end of the last found object to be safe
                       lastDiscoveryIndex = fullContent.lastIndexOf('}', fullContent.length - 1) + 1;
                     }
                   }
@@ -149,7 +174,6 @@ async function callModel(prompt, retryCount = 5, keyIndex = 0, onRawResponse = n
       }
     }
 
-    // FINAL FALLBACK: Ensure all objects were found
     if (onObjectFound) {
       const finalFound = extractJson(fullContent);
       if (finalFound) {
@@ -162,57 +186,92 @@ async function callModel(prompt, retryCount = 5, keyIndex = 0, onRawResponse = n
       }
     }
 
+    const responseTime = Date.now() - startTime;
+    
+    await aiUsageService.logUsage({
+      apiKeyId,
+      requestType,
+      model: currentKey.model,
+      inputTokens: prompt.length / 4,
+      outputTokens: fullContent.length / 4,
+      responseTimeMs: responseTime,
+      success: true,
+      metadata
+    });
+
+    try {
+      const sessionId = crypto.randomUUID();
+      await supabase.from('ai_chat_history').insert([
+        {
+          session_id: sessionId,
+          role: 'user',
+          content: prompt,
+          model: currentKey.model,
+          tokens_used: Math.round(prompt.length / 4),
+        },
+        {
+          session_id: sessionId,
+          role: 'assistant',
+          content: fullContent,
+          model: currentKey.model,
+          tokens_used: Math.round(fullContent.length / 4),
+        }
+      ]);
+    } catch (storeErr) {
+      console.error('Failed to store conversation:', storeErr);
+    }
+
     if (!fullContent) throw new Error("Empty AI response stream.");
     return extractJson(fullContent);
 
   } catch (err) {
+    if (apiKeyId) {
+      await aiUsageService.logUsage({
+        apiKeyId,
+        requestType,
+        model: currentKey?.model,
+        responseTimeMs: Date.now() - startTime,
+        success: false,
+        errorMessage: err.message,
+        metadata
+      });
+
+      await aiUsageService.logKeyError({
+        apiKeyId,
+        errorType: 'exception',
+        errorMessage: err.message,
+        requestType,
+        model: currentKey?.model,
+        retryCount: 5 - retryCount,
+        metadata
+      });
+    }
+
     if (retryCount > 0) {
-      return await callModel(prompt, retryCount - 1, keyIndex + 1, onRawResponse, onStatusUpdate, onObjectFound);
+      console.warn(`Request failed. Retrying... (${retryCount} retries left)`);
+      return await callModel(prompt, retryCount - 1, onRawResponse, onStatusUpdate, onObjectFound, requestType, metadata);
     }
     throw err;
   }
 }
 
 export const aiService = {
-  /**
-   * Scans a parsed JS string for common LaTeX syntax errors.
-   */
   validateLatex(text) {
     if (!text || typeof text !== 'string') return false;
     
-    // 1. Check for raw control characters that indicate failed JSON escaping 
-    // \x09 is TAB (\t), \x0C is Form Feed (\f)
-    // If AI sent \frac instead of \\frac, JSON.parse creates a tab or other control char.
     const hasFailedEscaping = /[\x00-\x08\x09\x0B\x0C\x0E-\x1F]/.test(text);
-    
-    // 2. Check for unbalanced delimiters in the parsed string
     const openCount = (text.match(/\\\(/g) || []).length;
     const closeCount = (text.match(/\\\)/g) || []).length;
-    
-    // 3. Check for raw display math
     const hasDisplayMath = text.includes('\\[') || text.includes('$$');
-
-    // 4. Check for "double slash leak" (AI outputting \\( when it should be \( in the parsed string)
     const hasDoubleSlashLeak = /\\\\\(/.test(text);
-
-    // 5. Check for missing delimiters around COMPLEX math commands
-    // We are more selective now to avoid flagging simple scientific notation if desired
-    // but standard commands like \frac, \sqrt, \theta really should have delimiters.
     const complexMathCommands = /\\(frac|sqrt|alpha|beta|gamma|delta|theta|pi|phi|sigma|omega|sum|int|limit|dots|div|pm|mp|approx|neq|le|ge|rightarrow|leftarrow)/i;
     const hasComplexMath = complexMathCommands.test(text);
-    
-    // 6. Check for exponents/subscripts without delimiters (e.g. x^2, H_2O)
-    // Only flag if it's mixed with letters/complex patterns
     const hasBareMathPatterns = /([a-zA-Z])\^|([0-9])\^([a-zA-Z])|\^\{/.test(text) || /([a-zA-Z])_([0-9])/.test(text);
-
     const hasDelimiters = text.includes('\\(') || text.includes('\\[') || text.includes('$$');
 
     return hasFailedEscaping || (openCount !== closeCount) || hasDisplayMath || hasDoubleSlashLeak || ((hasComplexMath || hasBareMathPatterns) && !hasDelimiters);
   },
 
-  /**
-   * Scans a full question object for any LaTeX issues in its fields.
-   */
   hasLatexIssues(q) {
     if (!q || typeof q !== 'object') return false;
     
@@ -228,7 +287,7 @@ export const aiService = {
     return checkFields.some(f => this.validateLatex(f));
   },
 
-  async improveQuestions(questions, task, customInstructions = '', onRawResponse = null, onStatusUpdate = null, onResult = null, keyIndex = 0) {
+  async improveQuestions(questions, task, customInstructions = '', onRawResponse = null, onStatusUpdate = null, onResult = null, preferredKey = null) {
     const isFactCheck = task === 'fact_check';
     const prompt = `
 YOU ARE AN ELITE DATA PROCESSING SYSTEM. 
@@ -267,20 +326,29 @@ ${JSON.stringify(questions.map(q => ({
 STRICT_JSON_OBJECTS_ONLY_START_NOW:
 `;
 
-    console.log(`🤖 [aiService] Launching task: ${task}`);
-    console.log(`📝 [aiService] Prompt (truncated):`, prompt.substring(0, 500) + "...");
-    console.log(`📦 [aiService] Surgical payload:`, questions);
+    console.log(`Launching AI task: ${task} with ${questions.length} questions`);
 
-    return await callModel(prompt, 5, keyIndex, 
+    return await callModel(prompt, 5, 
       (delta) => {
         if (onRawResponse) onRawResponse(delta);
       }, 
       onStatusUpdate, 
       (obj) => {
-        console.log(`📥 [aiService] Received incremental object from AI:`, obj);
+        console.log(`Received incremental object:`, obj);
         if (onResult) onResult(obj);
-      }
+      },
+      task,
+      { questionCount: questions.length, customInstructions },
+      preferredKey
     );
+  },
+
+  async checkUsage() {
+    const stats = await aiUsageService.getDashboardStats();
+    return stats;
+  },
+
+  async getKeys() {
+    return await aiUsageService.loadKeys();
   }
 };
-

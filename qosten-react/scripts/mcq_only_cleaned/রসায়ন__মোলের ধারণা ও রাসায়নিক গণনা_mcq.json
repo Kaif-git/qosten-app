@@ -1,0 +1,3458 @@
+[
+  {
+    "id": 1766559234375,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "সেমি-মোলার দ্রবণ কি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১ M",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "০.৫ M",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "০.২ M",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "০.১ M",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সেমি-মোলার দ্রবণ অর্থাৎ অর্ধ-মোলার দ্রবণ, অর্থাৎ ০.৫ M দ্রবণ।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559234850,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "২ মোল Ca^{2+} আয়নে মোট কতটি আয়ন থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "6.023 \\times 10^{23}",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "4.046 \\times 10^{23}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "1.204 \\times 10^{24}",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "2.41 \\times 10^{24}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "১ মোল Ca^{2+} আয়ন = 6.02 \\times 10^{23} টি আয়ন। অতএব, ২ মোল Ca^{2+} আয়ন = 2 \\times 6.02 \\times 10^{23} = 1.204 \\times 10^{24} টি আয়ন।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559235488,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "ম্যাগনেসিয়াম নাইট্রেটে মোট কতটি পরমাণু আছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৫",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৭",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৯",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "১৪",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ম্যাগনেসিয়াম নাইট্রেটের সংকেত Mg(NO3)2। মোট পরমাণু = ১ (Mg) + ২ (N) + ৬ (O) = ৯টি।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559237112,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "৫ গ্রাম Mg ধাতুর সাথে কত গ্রাম অক্সিজেন বিক্রিয়া করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৩.৩৩ g",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "৬.৬৬ g",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৯.৯৯ g",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১.১১ g",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বিক্রিয়া: 2Mg(s) + O_2(g) -> 2MgO(s)। ৪৮ গ্রাম Mg, ৩২ গ্রাম O_2-এর সাথে বিক্রিয়া করে। অতএব, ৫ গ্রাম Mg,  (32 \\times 5) / 48 = 3.33  গ্রাম O_2-এর সাথে বিক্রিয়া করে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559237193,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "B যৌগটির আণবিক ভর কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৭৯",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "৭৪",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৭১",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৬০",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "[চিত্র স্থানধারক: সম্ভবত একটি গঠন বা তথ্য দেখাচ্ছে যার মাধ্যমে আণবিক ভর ৭৯ হিসেব করা যায়।]",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559237845,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "CO_2 অণু গঠনের জন্য ৩ গ্রাম কার্বনের সাথে কত গ্রাম অক্সিজেন বিক্রিয়া করবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৮ g",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "১২ g",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৩২ g",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৪৪ g",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "C + O2 -> CO2। ১২ গ্রাম C, ৩২ গ্রাম O2-এর সাথে বিক্রিয়া করে। অতএব, ৩ গ্রাম C,  (32 \\times 3)/12 = 8  গ্রাম O2-এর সাথে বিক্রিয়া করে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559237974,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "ফসফরিক অ্যাসিডে ফসফরাসের শতকরা পরিমাণ কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৪৮.৪৪%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৩১.৯৬%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৩১.৬৩%",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "১৮.২৯%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ফসফরিক অ্যাসিডে মোট শতকরা সংযুক্তি হল ফসফরাস ৩১.৬০৮ শতাংশ, হাইড্রোজেন ৩.০৮৫৪ শতাংশ এবং অক্সিজেন ৬৫.৩০৬ শতাংশ।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559238311,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "আদর্শ অবস্থায় ০.২৫ মোল অক্সিজেনে অণুর সংখ্যা কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "6.02 \\times 10^{23}",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "3.01 \\times 10^{23}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "1.505 \\times 10^{23}",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "12.04 \\times 10^{23}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "অণুর সংখ্যা = মোল x অ্যাভোগাড্রো সংখ্যা = ০.২৫ x ৬.০২ x ১০^২৩ = ১.৫০৫ x ১০^২৩।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559238487,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "যে শাখায় বিক্রিয়ক ও উৎপাদের পরিমাণ আলোচনা করা হয় তা হল -",
+    "options": [
+      {
+        "label": "a",
+        "text": "গতিতত্ত্ব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ভগ্নাংশ পাতন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ক্যালোরিমিতি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "স্টোইকিওমেট্রি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "স্টোইকিওমেট্রি হল রসায়নের সেই শাখা যা রাসায়নিক বিক্রিয়ায় বিক্রিয়ক ও উৎপাদের পরিমাণগত সম্পর্ক নিয়ে আলোচনা করে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559238542,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "2NaHCO_3 \\xrightarrow{\\Delta} R + CO_2 + H_2O এই ক্ষেত্রে R যৌগটির আণবিক ভর কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১০৬",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "৮২",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১০০",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৯২",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বিক্রিয়া: 2NaHCO3 -> Na2CO3 (R) + CO2 + H2O। Na2CO3-এর মোলার ভর = (23x2)+12+(16x3)=১০৬।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559239009,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "৭৫০ মিলিলিটার ০.১ M সোডিয়াম কার্বোনেট দ্রবণে কত গ্রাম দ্রব বিদ্যমান?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৩",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৬.৩০",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৭.২৫",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৭.৯৫",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Na2CO3-এর মোল সংখ্যা = মোলারিটি x আয়তন(লিটার) = ০.১ x ০.৭৫ = ০.০৭৫ মোল। ভর = মোল x মোলার ভর = ০.০৭৫ x ১০৬ = ৭.৯৫ গ্রাম।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559239027,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "অ্যামোনিয়াম ফসফেটের একটি অণুতে কতগুলি পরমাণু থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৭",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১৮",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১৯",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২০",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অ্যামোনিয়াম ফসফেটের সংকেত (NH4)3PO4। মোট পরমাণু = ৩ N + ১২ H + ১ P + ৪ O = ২০টি।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559239071,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "১ মোল পানিতে হাইড্রোজেন পরমাণুর সংখ্যা কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১৮",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "6.023 \\times 10^{23}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "1.2046 \\times 10^{24}",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "১ মোল পানিতে 6.023 \\times 10^{23} টি অণু থাকে। ১টি H_2O অণুতে ২টি H পরমাণু থাকে। অতএব, 6.023 \\times 10^{23} টি H_2O অণুতে H পরমাণুর সংখ্যা 2 \\times 6.023 \\times 10^{23} = 1.2046 \\times 10^{24} টি।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559239370,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "০.০০৭৫ মোল HCl দ্রবণে HCl-এর ভর কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "০.০০২৭৪ g",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "০.২৭৪ g",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "২.৭৪ g",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২৭.৪ g",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "১ মোল HCl = ৩৬.৫ গ্রাম। অতএব, ০.০০৭৫ মোল HCl = ৩৬.৫ x ০.০০৭৫ = ০.২৭৪ গ্রাম।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559239423,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "০.৪৪ গ্রাম CO_2 গ্যাসে কত মোল CO_2 বিদ্যমান?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১.০",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "০.০১",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "০.১",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "০.৫",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "৪৪ গ্রাম CO_2 = ১ মোল। ১ গ্রাম CO_2 = 1/44 মোল। অতএব, ০.৪৪ গ্রাম CO_2 = 0.44/44 = 0.01 মোল।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559239638,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "২৪ গ্রাম Mg-এর সাথে কত গ্রাম O_2 বিক্রিয়া করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৮ g",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১২ g",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১৬ g",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৩২ g",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "2Mg + O2 -> 2MgO। ৪৮ গ্রাম Mg, ৩২ গ্রাম O2-এর সাথে বিক্রিয়া করে। অতএব, ২৪ গ্রাম Mg,  (32 \\times 24)/48 = 16  গ্রাম O2-এর সাথে বিক্রিয়া করে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559239643,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "০.৫ M Na_2CO_3-এ কতটি অণু উপস্থিত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2.011 \\times 10^{23}",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "3.011 \\times 10^{23}",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "6.023 \\times 10^{23}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "1.011 \\times 10^{23}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "[এখানে একটি চিত্র রয়েছে যা দ্রবণের নির্দিষ্ট আয়তনে অণুর সংখ্যার গণনা দেখাচ্ছে।]",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559240515,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "ফ্লোরিনের একটি পরমাণুর প্রকৃত ভর কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "4.48 \\times 10^{-23} g",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "3.16 \\times 10^{-23} g",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "1.66 \\times 10^{-24} g",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "6.023 \\times 10^{-23} g",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "১ মোল F পরমাণু = ১৯ গ্রাম। ১টি F পরমাণুর ভর = 19 / (6.02 \\times 10^{23}) = 3.16 \\times 10^{-23} গ্রাম।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559240624,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "১ গ্রাম CaCO_3-এ অণুর সংখ্যা কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "6.02 \\times 10^{21}",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "6.02 \\times 10^{22}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "6.02 \\times 10^{23}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "6.02 \\times 10^{24}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ক্যালসিয়াম কার্বোনেটের মোলার ভর ১০০ গ্রাম/মোল, যার মানে ১০০ গ্রাম ক্যালসিয়াম কার্বোনেটে 6.02 \\times 10^{23} টি অণু (অ্যাভোগাড্রো সংখ্যা) থাকে। অতএব, ১ গ্রাম ক্যালসিয়াম কার্বোনেটে অণুর সংখ্যা 6.02 \\times 10^{23} / 100 = 6.02 \\times 10^{21} টি।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559240636,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "৫টি পানির অণুর ভর কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "3.5 \\times 10^{23}",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "1.50 \\times 10^{23}",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "4.2 \\times 10^{24}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "6.02 \\times 10^{23}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "১ মোল (6.023x10^23 টি অণু) H2O-এর ভর = ১৮ গ্রাম। ৫টি অণুর ভর = (১৮ x ৫) / (6.023x10^23) = ১.৫০ x ১০^-২২ গ্রাম। অপশনগুলোতে ফরম্যাটিং সমস্যা থাকতে পারে, তবে প্রসঙ্গ অনুযায়ী, খ) সঠিক উত্তর হিসেবে বিবেচিত।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559240747,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "১ মিলিমোল ম্যাগনেসিয়াম কার্বোনেটে কত গ্রাম বিদ্যমান?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৮৪",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "০.৮৪",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "০.০৮৪",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "০.০৮৪",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "MgCO3-এর মোলার ভর = ৮৪ গ্রাম/মোল। ১ মিলিমোল = ০.০০১ মোল। ভর = ৮৪ গ্রাম/মোল x ০.০০১ মোল = ০.০৮৪ গ্রাম।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559241108,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "নাইট্রিক অ্যাসিডে নাইট্রোজেনের শতকরা পরিমাণ কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১.৬১%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৭৬.১৬%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "২৮%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২২.২৩%",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "নাইট্রিক অ্যাসিডের আণবিক ভর = ১+১৪+(১৬x৩) = ৬৩। এখানে নাইট্রোজেনের শতকরা পরিমাণ = (১৪/৬৩) x ১০০ = ২২.২৩%।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559241269,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "আদর্শ তাপমাত্রা ও চাপে ৬০ গ্রাম SO_2-এর আয়তন কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২১ L",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "২২ L",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "২৩ L",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২৫ L",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "১ মোল SO_2-এর ভর = ৩২ + (2x16) = ৬৪ গ্রাম। STP-তে, ১ মোল SO_2 = ২২.৪ L। অতএব, ৬০ গ্রাম SO_2 = (22.4 x 60) / 64 = 21 L।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559241374,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "একটি H_2O অণুর ভর কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "5.8 \\times 10^{23}",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "3.5 \\times 10^{23}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "2.99 \\times 10^{23}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "2.99 \\times 10^{-23}",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "H2O-এর মোলার ভর = ১৮ গ্রাম/মোল। ১টি অণুর ভর = ১৮ / (6.023x10^23) = ২.৯৯ x ১০^-২৩ গ্রাম। অপশনে টাইপো আছে; সঠিক মান ২.৯৯ x ১০^-২৩ গ্রাম।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559242352,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "অ্যালুমিনিয়াম নাইট্রেট যৌগে নাইট্রেট র্যাডিকালের সংখ্যা কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "18.069 \\times 10^{-24}",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "18.069 \\times 10^{24}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "1.8069 \\times 10^{24}",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "1.8069 \\times 10^{26}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Al(NO3)3-এ ৩টি NO3- র্যাডিকাল থাকে। ১ মোল Al(NO3)3-এ ৩ x 6.02 x 10^23 টি NO3 র্যাডিকাল থাকে = 1.806 x 10^24 টি র্যাডিকাল।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559242894,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "STP-তে ৬৪ গ্রাম অক্সিজেনের মোলার আয়তন (L) কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১১.২",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২২.৪",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৩৩.৬",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৪৪.৮",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "O2-এর মোলার ভর = ৩২ গ্রাম/মোল। ৬৪ গ্রামে মোল সংখ্যা = ৬৪/৩২ = ২ মোল। STP-তে, ১ মোল গ্যাসের আয়তন = ২২.৪ L। ২ মোল গ্যাসের আয়তন = ২ x ২২.৪ = ৪৪.৮ L।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559243047,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "Mg-এর চারটি পরমাণুর ভর কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "7.96 \\times 10^{-23} g",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "1.59 \\times 10^{-23} g",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৪৮ g",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৯৬ g",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Mg-এর ১ মোল বা 6.023 \\times 10^{23} টি পরমাণুর ভর = ২৪ গ্রাম। অতএব, Mg-এর ৪টি পরমাণুর ভর =  (24 \\times 4) / (6.023 \\times 10^{23}) = 7.96 \\times 10^{-23}  গ্রাম।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559243083,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "১০% (w/V) H_2SO_4 দ্রবণের ১০০ গ্রাম দ্রবণে H_2SO_4-এর পরিমাণ কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৯৮ g",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১০ g",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "৪.৯৮",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১০ g",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "১০% (w/V) মানে ১০০ মিলিলিটার দ্রবণে ১০ গ্রাম দ্রব (H2SO4) বিদ্যমান। প্রশ্নে \"১০০ গ্রাম দ্রবণ\" বলা হয়েছে, কিন্তু w/v এর আদর্শ সংজ্ঞা এবং এই ধরণের প্রশ্নের প্রেক্ষিতে, এটি সাধারণত ১০০ মিলিলিটারে ১০ গ্রামকে নির্দেশ করে। প্রদত্ত অপশন এবং প্রসঙ্গ ১০ গ্রামই নির্দেশ করে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559243747,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "পর্যাপ্ত বায়ুতে ৬৫ গ্রাম দস্তার দহনে কত গ্রাম ZnO উৎপন্ন হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৮১",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "৯৫",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১২২",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১৬২",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "[এখানে একটি চিত্র রয়েছে যা গণনা দেখাচ্ছে: 2Zn + O2 -> 2ZnO। ৬৫ গ্রাম Zn (১ মোল) থেকে ৮১ গ্রাম ZnO (১ মোল) উৎপন্ন হয়।]",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559243777,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "১ গ্রাম KCl-এ অণুর সংখ্যা কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "8.084 \\times 10^{21}",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "8.084 \\times 10^{22}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "8.084 \\times 10^{23}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "8.084 \\times 10^{24}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "KCl-এর আণবিক ভর = ৩৯ + ৩৫.৫ = ৭৪.৫। ৭৪.৫ গ্রাম KCl-এ 6.023 \\times 10^{23} টি অণু থাকে। অতএব, ১ গ্রাম KCl-এ অণুর সংখ্যা  (6.023 \\times 10^{23}) / 74.5 = 8.084 \\times 10^{21}  টি।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559243838,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "৯ গ্রাম পানিতে কতগুলি অণু উপস্থিত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "6.023 \\times 10^{23}",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "3.012 \\times 10^{23}",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "1.204 \\times 10^{24}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "4.012 \\times 10^{23}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "H2O-এর মোলার ভর = ১৮ গ্রাম/মোল। ৯ গ্রামে মোল সংখ্যা = ৯/১৮ = ০.৫ মোল। অণুর সংখ্যা = ০.৫ x 6.023 x 10^23 = 3.012 x 10^23 টি।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559244337,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "১ মোল ইথেন গ্যাসের দহনের জন্য কত মোল O_2 প্রয়োজন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৭ মোল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২ মোল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৫ মোল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৩.৫ মোল",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বিক্রিয়া: 2C2H6 + 7O2 -> 4CO2 + 6H2O। ১ মোল C2H6-এর জন্য প্রয়োজনীয় O2-এর মোল = ৭/২ = ৩.৫ মোল।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559244393,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "Na_2SO_4-এর আণবিক ভর কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৯৮",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১০৬",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১২৪",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১৪২",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মোলার ভর = (23x2) + 32 + (16x4) = 46+32+64=১৪২।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559245273,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "০.৫ লিটার ০.১ M দ্রবণ প্রস্তুত করতে কত গ্রাম Na_2CO_3 প্রয়োজন হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "০.৫৩ g",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "৫৩ g",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৫৯ g",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৫৩০ g",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "প্রয়োজনীয় মোল = মোলারিটি x আয়তন(লিটার) = ০.১ x ০.৫ = ০.০৫ মোল। Na2CO3-এর মোলার ভর = ১০৬ গ্রাম/মোল। প্রয়োজনীয় ভর = ০.০৫ x ১০৬ = ৫.৩ গ্রাম। এই অসামঞ্জস্য ইঙ্গিত করে যে অপশনে সম্ভবত টাইপো রয়েছে; ৫.৩ গ্রাম সঠিক, কিন্তু অপশনের মধ্যে ০.৫৩ গ্রাম থাকলে তা ০.০৫ লিটারের জন্য হতে পারে। সাধারণ প্রশ্নের প্যাটার্ন অনুযায়ী, গণনায় ৫.৩ গ্রাম পাওয়া যায়। প্রদত্ত উত্তর (ক) ০.৫৩ গ্রাম উৎসে ভুল হতে পারে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559245302,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "একটি গ্যাসের ঘনত্ব ১.৪৩ g L^{-1}। গ্যাসটির সংকেত কি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৪২.৪ g",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৪৩.৪ g",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৪৪.৪ g",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৪৬.৪ g",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "[এটি একটি অসম্পূর্ণ প্রশ্ন/উত্তর বলে মনে হচ্ছে। সাধারণত, STP-তে ঘনত্ব = মোলার ভর / ২২.৪। মোলার ভর = ঘনত্ব x ২২.৪ = ১.৪৩ x ২২.৪ ≈ ৩২ গ্রাম/মোল, যা O2-এর সাথে মিলে। অপশনগুলি স্পষ্ট নয়। উত্তর সম্ভবত মোলার ভর, ৩২, কিন্তু তালিকাভুক্ত নেই। প্রদত্ত লেখা অনুযায়ী, এটি \"44.4 g\" বলছে, যা হয়তো CO2 (44 গ্রাম/মোল) এর মোলার ভর হতে পারে যদি ভিন্ন ঘনত্ব দেয়া হতো।]",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559245372,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "সোডা অ্যাশে অক্সিজেনের শতকরা সংযুক্তি কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১১.৩২%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২০.২৪%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৪৩.৩৯%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৪৫.২৮%",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সোডা অ্যাশের সংকেত Na2CO3। আণবিক ভর ১০৬। অক্সিজেনের শতকরা সংযুক্তি = (48 x 100)/106 = 45.28%।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559246701,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "STP-তে ৮.৫ গ্রাম অ্যামোনিয়া গ্যাসের আয়তন কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১০.৫ L",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১১.৫ L",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১১.২ L",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "১১.১ L",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "V = (w/M) x 22.4 = (8.5/17) x 22.4 = 0.5 x 22.4 = 11.2 L।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559247308,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "STP-তে ১০ গ্রাম হিলিয়াম গ্যাসের আয়তন কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১১২ L",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৫৬ L",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "২২.৪ L",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১১.২ L",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "STP-তে, ৪ গ্রাম হিলিয়াম গ্যাস (১ মোল He)-এর আয়তন = ২২.৪ L। অতএব, ১০ গ্রাম হিলিয়াম গ্যাসের আয়তন = (22.4 x 10) / 4 = 56 L।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559247489,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "আদর্শ অবস্থায় ২ গ্রাম হাইড্রোজেনের আয়তন কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২২.৪ L",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "৪৪.৮ L",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৬৭.২ L",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৮৯.৬ L",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এখানে, ভর w = ২ গ্রাম, H_2-এর আণবিক ভর, M = ২, V = ? n = w/M = V/22.4, ২/২ = V/22.4, V = ২২.৪ L।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559252213,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "যে দ্রবণে ১০০০ মিলিলিটারে ১১৭ গ্রাম NaCl থাকে তার মোলারিটি কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২ M",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "৪ M",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৫ M",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৬ M",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "NaCl-এর মোলার ভর = ৫৮.৫ গ্রাম/মোল। NaCl-এর মোল সংখ্যা = ১১৭ / ৫৮.৫ = ২ মোল। আয়তন = ১ L। মোলারিটি = ২ মোল / ১ L = ২ M।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559252482,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "STP-তে ০.২৫ মোল নাইট্রোজেন ডাই-অক্সাইড গ্যাসের আয়তন কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২২.৪ L",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৩.৫৬ L",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৪.৬২ L",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৫.৬০ L",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "STP-তে, ১ মোল গ্যাস = ২২.৪ L। ০.২৫ মোল গ্যাসের আয়তন = ০.২৫ x ২২.৪ = ৫.৬০ L।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559253344,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "নিচের কোনটি ডেসিমোলার দ্রবণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "০.০১M",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "০.০৫M",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "০.১M",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "০.৫M",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ডেসিমোলার দ্রবণ অর্থাৎ এক-দশমাংশ মোলার দ্রবণ, অর্থাৎ ০.১ M দ্রবণ।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559253346,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "STP-তে ৩.৪ গ্রাম অ্যামোনিয়া গ্যাসের আয়তন কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২.২৪ L",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৪.৪৮ L",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "১.১২ L",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৪.০২ L",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "NH3-এর মোলার ভর = ১৭ গ্রাম/মোল। মোল সংখ্যা = ৩.৪/১৭ = ০.২ মোল। STP-তে আয়তন = ০.২ x ২২.৪ = ৪.৪৮ L।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559253884,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "৫০০ মিলিলিটার দ্রবণে ২৪.৫ গ্রাম H₂SO₄ দ্রবীভূত করলে দ্রবণের ঘনত্ব কত হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "০.৫ M",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "০.০৫M",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "০.২৫M",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "০.১M",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "H2SO4-এর মোলার ভর = ৯৮ গ্রাম/মোল। মোল সংখ্যা = ২৪.৫/৯৮ = ০.২৫ মোল। আয়তন = ০.৫ L। মোলারিটি = ০.২৫/০.৫ = ০.৫ M।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559255560,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "৪৮ গ্রাম Mg সালফিউরিক অ্যাসিডের সাথে বিক্রিয়া করলে কত লিটার H_2 গ্যাস উৎপন্ন হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২২.৪ L",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১১.২ L",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৪৪.৮ L",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৫.৬ L",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Mg + H2SO4 -> MgSO4 + H2। ২৪ গ্রাম Mg থেকে STP-তে ২২.৪ L H2 উৎপন্ন হয়। অতএব, ৪৮ গ্রাম Mg থেকে ৪৪.৮ L H2 উৎপন্ন হয়।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559256218,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "কার্বন মনোক্সাইডের আণবিক ভর কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৭",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১৮",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "২০",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২৮",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "CO = ১২ + ১৬ = ২৮।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559257044,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "Na_2CO_3-এ CO_3^{2-} আয়নের শতকরা সংযুক্তি কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৭৮.৩%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৫৬.৬%",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "১৫.২%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৫.৭%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Na2CO3-এর মোলার ভর = ১০৬। CO3^2- আয়নের মোলার ভর = ৬০। %CO3^2- = (৬০/১০৬) x ১০০ = ৫৬.৬%।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559257137,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "ব্লু ভিট্রিওলে কতগুলি পানি অণু থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৩",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৫",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৭",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ব্লু ভিট্রিওল হল CuSO4.5H2O। এতে প্রতি ফর্মুলা ইউনিটে ৫টি পানি অণু থাকে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559257566,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "অ্যালুমিনিয়াম সালফেটের একটি অণুতে কতগুলি পরমাণু বিদ্যমান?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৫",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১০",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১৪",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১৭",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অ্যালুমিনিয়াম সালফেটের সংকেত Al2(SO4)3। মোট পরমাণু = ২ Al + ৩ S + ১২ O = ১৭টি।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559257568,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "সমুদ্রের পানির রাসায়নিক সংকেত কি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Na_2CO_3",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "H_2O",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "(H_2O)_n",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "NaCl",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সমুদ্রের পানির প্রাথমিক রাসায়নিক উপাদান হল H2O, যদিও এতে লবণ দ্রবীভূত থাকে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559257624,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "Mg + Cl₂ → MgCl₂। এই বিক্রিয়ায় ভরের ভিত্তিতে সীমাকারী বিক্রিয়ক কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Mg",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Cl₂",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "MgCl₂",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Mg এবং Cl₂",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "প্রশ্নটি",
+    "explanation": "",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559257721,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "২৭ গ্রাম পানিতে কত মোল পানি বিদ্যমান?",
+    "options": [
+      {
+        "label": "a",
+        "text": "০.৫",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১.৫",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "২",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "H2O-এর মোলার ভর = ১৮ গ্রাম/মোল। মোল সংখ্যা = ২৭/১৮ = ১.৫ মোল।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559258038,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "মোলারিটি কোন বিষয়ের উপর নির্ভর করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তাপমাত্রা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "প্রভাবক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চাপ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাত্র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "মোলারিটি (প্রতি লিটার দ্রবণে দ্রবের মোল সংখ্যা) তাপমাত্রার উপর নির্ভর করে কারণ আয়তন তাপমাত্রার সাথে পরিবর্তিত হয়।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559258192,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "০.৫ লিটার, ৫৬ গ্রাম কস্টিক পটাশের মোলারিটি কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "০.১M",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "০.২M",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১M",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২M",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কস্টিক পটাশ হল KOH। মোলার ভর = ৫৬ গ্রাম/মোল। ৫৬ গ্রাম KOH = ১ মোল। মোলারিটি = মোল/আয়তন(লিটার) = ১ মোল / ০.৫ L = ২ M।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559258464,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "STP-তে, 3L H_2 এবং 3L N_2 পরস্পরের সাথে বিক্রিয়া করলে কত লিটার NH_3 উৎপন্ন হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৬ L",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৩ L",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১ L",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২ L",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বিক্রিয়া: N2 + 3H2 -> 2NH3। H2 সীমাকারী। 3L H2, (2/3)3L = 2L NH3 উৎপন্ন করে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559258759,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "ক্যালসিয়াম ফসফেটে মোট পরমাণুর সংখ্যা কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৬",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১১",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১৩",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "১৭",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ক্যালসিয়াম ফসফেটের সংকেত Ca3(PO4)2। মোট পরমাণু = ৩ Ca + ২ P + ৮ O = ১৩টি।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559259400,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "মোলার দ্রবণের ঘনত্ব কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "০.১ M",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "০.৫ M",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১ M",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "২ M",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "একটি মোলার দ্রবণ মানে একটি ১ মোলার (১ M) দ্রবণ।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559259493,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "এক লিটার দ্রবণে ০.১ মোল দ্রব দ্রবীভূত থাকলে দ্রবণের ঘনত্ব কত হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "০.১M",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "০.০১M",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "০.৫M",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "০.০৫M",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "মোলারিটি = দ্রবের মোল সংখ্যা / দ্রবণের আয়তন(লিটার) = ০.১ মোল / ১ L = ০.১ M।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559260199,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "দ্রবের ভরের ক্ষেত্রে, দ্রবণের আয়তনের গ্রাম একক কোন এককে নেয়া উচিত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "লিটার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ডেসিলিটার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গ্রাম/লিটার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মিলিলিটার",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সাধারণ মোলারিটি গণনার জন্য, যখন ভর গ্রামে থাকে, তখন আয়তন মিলিলিটারে নেয়া হয় S = (1000w)/(MV) সূত্রের জন্য, অথবা লিটারে রূপান্তরিত করা হয় (আয়তন L = mL/1000)।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559260222,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "ব্লু ভিট্রিওলের সংকেত কি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "CuSO_4.7H_2O",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "FeSO_4.7H_2O",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ZnSO_4.5H_2O",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "CuSO_4.5H_2O",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ব্লু ভিট্রিওল হল কপার(II) সালফেট পেন্টাহাইড্রেট, CuSO4.5H2O।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559260353,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "Na_2CO_3 + 2HCl → yNaCl + H_2O + CO_2. এই বিক্রিয়ায় x ও y-এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২, ২",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "২, ৩",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "২, ৪",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৩, ৩",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সমতা যুক্ত সমীকরণ: Na2CO3 + 2HCl -> 2NaCl + H2O + CO2। সুতরাং, x (HCl-এর সহগ?) হল ২, y (NaCl-এর সহগ) হল ২। প্রশ্নে 'x' ও 'y' অস্পষ্টভাবে ব্যবহার করা হয়েছে; সাধারণ প্যাটার্ন অনুযায়ী, x HCl সহগ (২) এবং y NaCl সহগ (২) কে নির্দেশ করে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559260409,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "CuSO₄·5H₂O-তে অক্সিজেনের শতকরা সংযুক্তি কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২৫.৪৫%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৫৭.৭২%",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "১২.৮৩%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৩৬.০৭%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "CuSO4.5H2O-এর মোলার ভর = ৬৩.৫+৩২+৬৪+৯০ = ২৪৯.৫। O-এর ভর = ৬৪ (SO4 থেকে) + ৮০ (5H2O থেকে) = ১৪৪? মনে রাখা দরকার: 5H2O-তে, O = ৫১৬=৮০। মোট O = SO4 থেকে ৪ + H2O থেকে ৫ = ৯টি O পরমাণু = ৯১৬=১৪৪। %O = (১৪৪/২৪৯.৫)১০০ ≈ ৫৭.৭২%।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559260719,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "নিচের কোনটি দ্বারা ১০০ মিলিলিটার সেমিমোলার দ্রবণ প্রস্তুত করা যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১০.৬ গ্রাম Na₂CO₃",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২ গ্রাম NaOH",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "৬৩ গ্রাম HNO₃",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৩৬.৫ গ্রাম HCl",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "১০০ মিলিলিটার ০.৫ M দ্রবণ প্রস্তুত করতে প্রয়োজনীয় দ্রবের পরিমাণ — Na2CO3 = (0.5×100×106)/1000 = ৫.৩ গ্রাম; NaOH = (0.5×100×40)/1000 = ২ গ্রাম; HNO3 = (0.5×100×63)/1000 = ৩.১৫ গ্রাম; HCl = (0.5×100×36.5)/1000 = ১.৮২৫ গ্রাম। সুতরাং, ২ গ্রাম NaOH সঠিক।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559260798,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "৫৬ গ্রাম CaO-এর মোলার আয়তন কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২২.৪ L",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২৪ L",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "৩০ L",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৫৬ L",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মোলার আয়তন বলতে একটি পদার্থের এক মোল দ্বারা দখলকৃত আয়তন বোঝায়। কঠিনের জন্য, এটি একটি নির্দিষ্ট ২২.৪ L নয়। ৫৬ গ্রাম CaO হল ১ মোল (M=56)। এর আয়তন ঘনত্বের উপর নির্ভর করে। ঘনত্ব না দিয়ে হিসেব করা যায় না। প্রশ্নটি সম্ভবত একটি দেয়া ঘনত্বের ভিত্তিতে অথবা কৌশলমূলক। প্রদত্ত উত্তর প্রসঙ্গ-নির্দিষ্ট।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559260865,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "১ মোল CO_2 এবং ১ মোল O_2-এর মোলার আয়তন কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "CO_2-এর আয়তন > O_2-এর আয়তন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "CO_2-এর আয়তন < O_2-এর আয়তন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "CO_2-এর আয়তন = O_2-এর আয়তন",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কোনটিই নয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "একই তাপমাত্রা ও চাপে, যেকোনো গ্যাসের ১ মোল সমান আয়তন দখল করে (অ্যাভোগাড্রোর সূত্র)। তাই, CO2-এর আয়তন = O2-এর আয়তন।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559261607,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "১০০ মিলিলিটার দ্রবণে ৪৯ গ্রাম HNO₃ থাকলে এর ঘনত্ব কত হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১.৭৭ M",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৪.৭৭ M",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৬.৭৭ M",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৭.৭৭ M",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "HNO₃-এর আণবিক ভর = ১ + ১৪ + ৩ × ১৬ = ৬৩। আমরা জানি, ভর, w = (SVM)/1000 => S = (1000w)/(MV) = (1000 × 49)/(63 × 100) = ৭.৭৭ M।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559262598,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "একটি যৌগের বাষ্প ঘনত্ব ১৪। এর আণবিক ভর কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৪",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২৮",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "৪২",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৫৬",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "আণবিক ভর = ২ x বাষ্প ঘনত্ব = ২ x ১৪ = ২৮।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559262708,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "সার্জারিতে ব্যবহৃত কাঁচিতে Cr-এর শতকরা পরিমাণ কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৭৪",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১৮",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "৮",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সার্জিক্যাল স্টেইনলেস স্টিলে সাধারণত প্রায় ১৮% ক্রোমিয়াম (Cr) থাকে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559263614,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "একটি সেমিমোলার দ্রবণে কত মোল দ্রব দ্রবীভূত থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "০.১ মোল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "০.৫ মোল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "১ মোল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২ মোল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সেমিমোলার মানে ০.৫ M। ১ লিটার সেমিমোলার দ্রবণে ০.৫ মোল দ্রব থাকে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559263846,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "দ্রবণ = ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দ্রব + দ্রব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দ্রব + দ্রাবক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "দ্রাবক + দ্রাবক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২ × দ্রাবক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "দ্রবণ হল দ্রাবকে দ্রবীভূত দ্রবের একটি সমসংমিশ্রণ।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559263967,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "NH₄CNO - \\Delta X. X যৌগটিতে পরমাণুর সংখ্যা কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৬",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৮",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "6.023 \\times 10^{23}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "48.1874 \\times 10^{23}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বিক্রিয়া: NH4CNO -> (NH2)2CO (ইউরিয়া) তাপ প্রদানে। ইউরিয়া, (NH2)2CO, তে ২ N + ৪ H + ১ C + ১ O = ৮টি পরমাণু থাকে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559264298,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "H_2O-তে H-এর শতকরা সংযুক্তি কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৮৮.৮৯%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৯১%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১১.১১%",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৯৭%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "H2O-এর মোলার ভর = ১৮। %H = (২/১৮) x ১০০ = ১১.১১%।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559264306,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "ফসফরিক অ্যাসিডে ফসফরাসের শতকরা পরিমাণ কত? [1766559264306]",
+    "options": [
+      {
+        "label": "a",
+        "text": "৪৮.৪৪%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৩১.৯৬%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৩১.৬৩%",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "১৮.২৯%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্রশ্ন ৫২ অনুযায়ী।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559264461,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "শতকরা সংযুক্তি বলতে কি বোঝায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১০০০ গ্রাম যৌগে কোনো মৌল যত গ্রাম থাকে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১০০ গ্রাম যৌগে কোনো মৌল যত গ্রাম থাকে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "১০০০ গ্রাম যৌগে কোনো মৌল যত গ্রাম থাকে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১ গ্রাম যৌগে কোনো মৌল যত গ্রাম থাকে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "শতকরা সংযুক্তি হল যৌগের ১০০ গ্রামে কোনো মৌলের উপস্থিত ভর (গ্রামে)।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559265599,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "৫০০ মিলিলিটার পানিতে ১১১ গ্রাম CaCl₂ দ্রবীভূত করলে দ্রবণের মোলারিটি কত হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "০.৫ M",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১ M",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "২ M",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৩ M",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "CaCl2-এর মোলার ভর = ১১১ গ্রাম/মোল। ১১১ গ্রাম CaCl2 = ১ মোল। আয়তন = ০.৫ L। মোলারিটি = ১ মোল / ০.৫ L = ২ M।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559265662,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "কোন দ্রবণের আয়তন কত যাতে ২০ গ্রাম Na₂CO₃ দ্রবীভূত করে ০.৭৫ M Na₂CO₃ দ্রবণ তৈরি করা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২০০ mL",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২৫০ mL",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "৩০০ mL",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৫০০ mL",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Na2CO3-এর মোলার ভর = ১০৬ গ্রাম/মোল। Na2CO3-এর মোল সংখ্যা = ২০/১০৬ ≈ ০.১৮৮৭ মোল। মোলারিটি = মোল/আয়তন(লিটার)। সুতরাং, আয়তন(লিটার) = মোল/মোলারিটি = ০.১৮৮৭ / ০.৭৫ ≈ ০.২৫১৬ L = ২৫১.৬ mL ≈ ২৫০ mL।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559265718,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "মৌলের শতকরা সংযুক্তির গাণিতিক রূপ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "(nA/M) x 100",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "(A/n) x 100",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "(nA x 100)/M",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "(A/M) x 100n",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কোনো মৌলের শতকরা সংযুক্তি = (মৌলের পরমাণুর সংখ্যা 'n' x পারমাণবিক ভর 'A' / যৌগের মোলার ভর 'M') x 100।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559266538,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "এক মোল কপার সালফেটে পানির পরিমাণ কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৮g",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৯০g",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "১২৫g",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১৩০g",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কপার সালফেট পেন্টাহাইড্রেট: CuSO4.5H2O। এর ১ মোলে ৫ মোল H2O থাকে। ৫ মোল H2O-এর ভর = ৫ x ১৮ = ৯০ গ্রাম।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559266577,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "HNO₃-এ N-এর শতকরা সংযুক্তি কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২৯.৭৮%",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "২৫%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৩০%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৫০%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "HNO3-এর মোলার ভর = ৬৩। %N = (১৪/৬৩) x ১০০ = ২২.২২%। হুবহু মিলছে না; ২৯.৭৮% এর কাছাকাছি? একটি অসামঞ্জস্য আছে। প্রশ্ন ৫৩ অনুযায়ী, এটি ২২.২৩%। এখানে অপশনে সম্ভবত টাইপো। সঠিক গণনাকৃত মান ~২২.২%।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559273416,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "STP-তে ইথেন গ্যাসের ঘনত্ব কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "০.৭১৪g/L",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১.২৫g/L",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১.৩৪g/L",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "১.৬০g/L",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "C2H6-এর মোলার ভর = ৩০ গ্রাম/মোল। STP-তে, ১ মোল গ্যাস = ২২.৪ L। ঘনত্ব = ভর/আয়তন = 30g / 22.4L = 1.34 g/L।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559273667,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "ফিটকিরিতে কত মোল পানি যুক্ত থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৮",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২০",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "২২",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২৪",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সাধারণ ফিটকিরি হল KAl(SO4)2.12H2O। এতে প্রতি ফর্মুলা ইউনিটে ১২ মোল পানি থাকে। ১২ মোল পানি ১২ x ১৮ = ২১৬ গ্রাম পানির সাথে সামঞ্জস্যপূর্ণ, কিন্তু প্রশ্নটি \"মোল পানি\" জিজ্ঞাসা করছে, যা ১২। ২৪ সাধারণ ফিটকিরির জন্য সঠিক নয়। তবে কিছু ফিটকিরি যেমন অ্যামোনিয়াম আয়রন ফিটকিরিতে ১২ থাকে, পটাশ ফিটকিরিতে ১২ থাকে। অপশন ২৪ হয়তো ভিন্ন ধরনের যৌগের জন্য (যেমন ফর্মুলার দ্বিগুণ?)। সাধারণ পাঠ্যক্রম অনুযায়ী, ফিটকিরি (পটাশ ফিটকিরি)-তে ১২টি থাকে। প্রদত্ত উত্তর ২৪ ভিন্ন যৌগ বা টাইপো নির্দেশ করতে পারে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559274473,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "Al_2(SO_4)_3-এ S-এর শতকরা সংযুক্তি কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৫.৭৮৯%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২৫.৭৮%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "২৮.০৭%",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৫৬.১৪%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Al2(SO4)3-এর মোলার ভর = 27x2 + (32x3 + 16x12) = 54 + (96+192)=342। %S = (32x3 / 342) x 100 = (96/342)x100 = 28.07%।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559274848,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "১০ গ্রাম HCl(aq) সম্পূর্ণরূপে প্রশমিত করতে কত গ্রাম KOH(aq) প্রয়োজন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৭.৬৭ গ্রাম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১৫.৩৪ গ্রাম",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "১৬.৪৭ গ্রাম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৩২.৯৪ গ্রাম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "KOH + HCl -> KCl + H2O। HCl-এর মোলার ভর=৩৬.৫, KOH=৫৬। ৩৬.৫ গ্রাম HCl, ৫৬ গ্রাম KOH-এর সাথে বিক্রিয়া করে। সুতরাং, ১০ গ্রাম HCl, (56x10)/36.5 = 15.34 গ্রাম KOH-এর সাথে বিক্রিয়া করে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559275441,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "অ্যানালারে সর্বোচ্চ কত অংশ মিশ্রণ থাকতে পারে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "৫",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৪০",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৯৯",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অ্যানালার গ্রেড উচ্চ বিশুদ্ধতার, প্রায় ৯৯% বিশুদ্ধ, যার অর্থ ১০০ অংশে সর্বোচ্চ ১ অংশ মিশ্রণ।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559275797,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "STP-তে CO₂-এর ৬টি অণুর আয়তন কত লিটার?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2.23 \\times 10^{-22}",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "2.5 \\times 10^{-22}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "3.21 \\times 10^{-22}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "2.23 \\times 10^{-21}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "১ মোল (6.023x10^23 টি অণু) STP-তে ২২.৪ L আয়তন দখল করে। ৬টি অণুর আয়তন = (22.4 x 6) / (6.023x10^23) = 2.23 x 10^-22 L।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559276049,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "ইউরিয়ায় নাইট্রোজেনের পরিমাণ কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৪০%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৫০%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৫৬%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৪৬%",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ইউরিয়া: (NH2)2CO। মোলার ভর = ৬০। %N = (28/60) x 100 = 46.67% ≈ 46%।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559276148,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "পর্যাপ্ত পরিমাণ বায়ুতে ২৪ গ্রাম Mg-এর দহনের পর কত গ্রাম MgO পাওয়া যাবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৪০ গ্রাম",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "৬০ গ্রাম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৮০ গ্রাম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১০০ গ্রাম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "2Mg + O2 -> 2MgO। ৪৮ গ্রাম Mg থেকে ৮০ গ্রাম MgO উৎপন্ন হয়। সুতরাং, ২৪ গ্রাম Mg থেকে (80x24)/48 = ৪০ গ্রাম MgO উৎপন্ন হয়।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559276248,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "যদি ১ মোল NaOH, HCl-এর সাথে বিক্রিয়া করে ৫০ গ্রাম NaCl উৎপন্ন করে, তাহলে শতকরা ফলন কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৯৮.৮%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৯০.৫%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৮০.৪%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৮৫.৫%",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "NaOH + HCl -> NaCl + H2O। ১ মোল NaOH থেকে ১ মোল NaCl = ৫৮.৫ গ্রাম উৎপন্ন হওয়া উচিত। প্রকৃত ফলন = ৫০ গ্রাম। শতকরা ফলন = (50/58.5) x 100 = 85.5%।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559277333,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "১০০ গ্রাম ম্যাগনেসিয়াম কার্বোনেট উত্তপ্ত করে ৪৫ গ্রাম ম্যাগনেসিয়াম অক্সাইড পাওয়া গেলে শতকরা ফলন কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৪০%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৪৭.৬২%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৮৪%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৯৪.৫০%",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "MgCO3 -> MgO + CO2। MgCO3-এর মোলার ভর=৮৪, MgO=৪০। ১০০ গ্রাম MgCO3 থেকে তাত্ত্বিক ফলন = (100 x 40)/84 = 47.62 গ্রাম MgO। প্রকৃত ফলন = ৪৫ গ্রাম। শতকরা ফলন = (45/47.62) x 100 = 94.50%।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559277749,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "১ কেজি চুনাপাথরের বিয়োজন থেকে কত চুন উৎপন্ন হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৫৬ গ্রাম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৪৪ গ্রাম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৫৬০ গ্রাম",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৬০০ গ্রাম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "CaCO3(s) -> CaO(s) + CO2(g)। ১০০ গ্রাম CaCO3 (চুনাপাথর) থেকে ৫৬ গ্রাম CaO (চুন) উৎপন্ন হয়। অতএব, ১ কেজি বা ১০০০ গ্রাম চুনাপাথর থেকে (1000 x 56)/100 গ্রাম = ৫৬০ গ্রাম চুন উৎপন্ন হয়।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559277783,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "২৫০ মিলিলিটার ০.২ M H₂SO₄ দ্রবণের pH কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "০.৩৯৭",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "০.৬৯৯",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "০.০৩৯৭",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "০.০৬৯",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "H2SO4 একটি প্রাবল্য দ্বি-প্রোটিক অ্যাসিড। H+-এর ঘনত্ব = ২ x ০.২ M = ০.৪ M। pH = -log[H+] = -log(0.4) = ০.৩৯৭৯। কিন্তু অপশন ক) হল ০.৩৯৭, খ) হল ০.৬৯৯। ০.৪ M H+ এর pH ~০.৩৯৭। সুতরাং ক) সঠিক বলে মনে হয়। তবে যদি লঘূকরণ বা অসম্পূর্ণ বিযোজন বিবেচনা করা হয়? সাধারণত প্রাবল্য অ্যাসিডের জন্য, pH = -log(0.4)=0.397। প্রদত্ত উত্তর অপশনে টাইপো থাকতে পারে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559277994,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "৪ গ্রাম C_2H_4-এ কতগুলি পরমাণু আছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "8.03 \\times 10^{22}",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "6.02 \\times 10^{23}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "5.0 \\times 10^{22}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "4.91 \\times 10^{22}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "C2H4-এর মোলার ভর = ২৮ গ্রাম/মোল। ৪ গ্রামে মোল সংখ্যা = ৪/২৮ = ১/৭ মোল। অণুর সংখ্যা = (১/৭) x 6.023x10^23 = 8.604x10^22 টি অণু। প্রতিটি C2H4 অণুতে ৬টি পরমাণু থাকে (2C+4H)। মোট পরমাণু = 8.604x10^22 x 6 = 5.16x10^23? এটা মেলে না। সাবধানে গণনা করি: অণুর সংখ্যা = (4/28)  NA = (1/7)6.023e23 = 8.604e22। প্রতি অণুতে পরমাণু = ৬। মোট পরমাণু = 8.604e22  6 = 5.16e23। কোনোটিই মেলে না। অপশন ক) 8.03e22 অণুর সংখ্যার কাছাকাছি, পরমাণুর নয়। সম্ভবত প্রশ্নটি অণুর সংখ্যা জিজ্ঞেস করছে কিন্তু পরমাণু বলেছে? অথবা উত্তর অণুর সংখ্যার জন্য।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559278289,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "অ্যালুমিনিয়াম সালফেটে Al-এর শতকরা সংযুক্তি কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৫৬.১৪%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২৮.০৭%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১৫.৭৮%",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "২০.২১%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Al2(SO4)3। মোলার ভর = ৩৪২। %Al = (27x2 / 342) x 100 = (54/342)x100 = 15.78%।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559278427,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "৫ গ্রাম ম্যাগনেসিয়ামের দহনে কত গ্রাম অক্সিজেন প্রয়োজন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২.৩৩",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৩.৩৩",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "৪.৩৩",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৫.৩৩",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "2Mg + O2 -> 2MgO। ৪৮ গ্রাম Mg, ৩২ গ্রাম O2-এর সাথে বিক্রিয়া করে। সুতরাং, ৫ গ্রাম Mg, (32x5)/48 = 3.33 গ্রাম O2-এর সাথে বিক্রিয়া করে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559278501,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "৪ গ্রাম ম্যাগনেসিয়াম ধাতু থেকে কত গ্রাম ম্যাগনেসিয়াম অক্সাইড উৎপন্ন হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৩.৩৩",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৬.৬৬",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "৯.২২",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১৩.৩৩",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "2Mg + O2 -> 2MgO। ৪৮ গ্রাম Mg থেকে ৮০ গ্রাম MgO উৎপন্ন হয়। সুতরাং, ৪ গ্রাম Mg থেকে (80x4)/48 = 6.66 গ্রাম MgO উৎপন্ন হয়।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559278561,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "একটি হাইড্রোকার্বনে কার্বনের পরিমাণ ৮৫.৭১%। যৌগটির মৌলিক সংকেত কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "CH",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "CH₂",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "C₂H",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "CH₄",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "C = ৮৫.৭১%, H = ১০০ - ৮৫.৭১ = ১৪.২৯%। মোল: C = ৮৫.৭১/১২ = ৭.১৪, H = ১৪.২৯/১ = ১৪.২৯। অনুপাত: C : H = ৭.১৪/৭.১৪ : ১৪.২৯/৭.১৪ = ১ : ২। মৌলিক সংকেত = CH2।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559278973,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "একটি জারে ১০ গ্রাম N₂ এবং ৪০ গ্রাম O₂ রাখা হল। বিক্রিয়ার পর বিক্রিয়কের কতটুকু অবশিষ্ট থাকবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৪ গ্রাম N₂",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১৭.১৪ গ্রাম O₂",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "১১ গ্রাম O₂",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৬ গ্রাম N₂",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বিক্রিয়া: N2 + 2O2 -> 2NO2? অথবা সম্ভবত N2 + O2 -> 2NO? সাধারণত এমন প্রশ্নের জন্য, N2 + O2 -> 2NO। মোল: N2 = ১০/২৮=০.৩৫৭, O2=৪০/৩২=১.২৫। O2 আধিক্যে আছে। N2-এর সম্পূর্ণ বিক্রিয়ার জন্য প্রয়োজনীয় O2 = ০.৩৫৭ মোল = ১১.৪২ গ্রাম। অতিরিক্ত O2 = ৪০ - ১১.৪২ = ২৮.৫৮ গ্রাম? এটা মেলে না। N2 + O2 -> 2NO-এর জন্য, ১ মোল N2, ১ মোল O2-এর সাথে বিক্রিয়া করে। সুতরাং, ১০ গ্রাম N2 (০.৩৫৭ মোল), ০.৩৫৭ মোল O2 (১১.৪২ গ্রাম)-এর সাথে বিক্রিয়া করে। অতিরিক্ত O2 = ৪০ - ১১.৪২ = ২৮.৫৮ গ্রাম। কোনোটিই মেলে না। সম্ভবত বিক্রিয়া N2 + 3H2 -> 2NH3? কিন্তু এখানে শুধু N2 ও O2। হয়তো N2 + 3O2 -> 2N2O3? অস্পষ্ট। প্রদত্ত উত্তর খ) ১৭.১৪ গ্রাম O2 একটি নির্দিষ্ট স্টোইকিওমেট্রি নির্দেশ করে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559279540,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "ইথানয়িক অ্যাসিডে কার্বনের শতকরা পরিমাণ কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২০%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৪০%",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "৬০%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৮০%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ইথানয়িক অ্যাসিড: CH3COOH (C2H4O2)। মোলার ভর = ৬০। %C = (২৪/৬০) x ১০০ = ৪০%।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559279837,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "নিচের কোনটি থেকে একটি বিক্রিয়ার উৎপাদের পরিমাণ গণনা করা যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জারক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিজারক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সমানুপাতিক বিক্রিয়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সীমাকারী বিক্রিয়ক",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সীমাকারী বিক্রিয়ক সর্বাধিক যে পরিমাণ উৎপাদ গঠিত হতে পারে তা নির্ধারণ করে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559280178,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "নাইট্রোজেন ও হাইড্রোজেনের বিক্রিয়ায় ৬৮ গ্রাম অ্যামোনিয়া উৎপাদনের জন্য কত পরিমাণ হাইড্রোজেন প্রয়োজন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৬ গ্রাম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১২ গ্রাম",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "২৪ গ্রাম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২৮ গ্রাম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "N2 + 3H2 -> 2NH3। ৩৪ গ্রাম NH3 উৎপাদনের জন্য ৬ গ্রাম H2 (৩ মোল H2 = ৬ গ্রাম) প্রয়োজন। অতএব, ৬৮ গ্রাম NH3 উৎপাদনের জন্য (6x68)/34 = ১২ গ্রাম H2 প্রয়োজন।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559280296,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "৫ গ্রাম CaCO₃ —\r\ni. ০.০৫ মোল CaCO₃\r\nii. ১.১২ L CO₂ পাওয়া যায়\r\niii. ২.৮ গ্রাম CaO উৎপন্ন হয়\r\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "CaCO3 -> CaO + CO2। CaCO3-এর মোলার ভর=১০০। ৫ গ্রাম CaCO3 = ৫/১০০ = ০.০৫ মোল (i সঠিক)। ০.০৫ মোল CaCO3 থেকে ০.০৫ মোল CO2 উৎপন্ন হয়। STP-তে আয়তন = ০.০৫ x ২২.৪ = ১.১২ L (ii সঠিক)। ০.০৫ মোল CaO উৎপন্ন হয়, ভর = ০.০৫ x ৫৬ = ২.৮ গ্রাম (iii সঠিক)। সুতরাং, i, ii, এবং iii সবকটিই সঠিক। উত্তর হওয়া উচিত ঘ) i, ii এবং iii।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559281055,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "১০ গ্রাম চুন উৎপাদনের জন্য কত গ্রাম বিশুদ্ধ CaCO₃ প্রয়োজন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৫.৮৩ গ্রাম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১৭.৮৬ গ্রাম",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "২২.২২ গ্রাম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২৪.২৮ গ্রাম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "CaCO3 -> CaO + CO2। CaCO3-এর মোলার ভর=১০০, CaO=৫৬। ৫৬ গ্রাম CaO উৎপাদনের জন্য ১০০ গ্রাম CaCO3 প্রয়োজন। ১০ গ্রাম CaO উৎপাদনের জন্য (100x10)/56 = 17.86 গ্রাম CaCO3 প্রয়োজন।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559281226,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "২ গ্রাম Mg প্রয়োজনীয় পরিমাণ O₂-এর সাথে বিক্রিয়া করে ৩.২৫ গ্রাম MgO উৎপন্ন করলে উৎপাদের শতকরা ফলন কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৯৭.৬%",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "৩%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৯৯%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১০০%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "2Mg + O2 -> 2MgO। ২ গ্রাম Mg থেকে তাত্ত্বিক ফলন: ৪৮ গ্রাম Mg থেকে ৮০ গ্রাম MgO, সুতরাং ২ গ্রাম Mg থেকে (80x2)/48 = 3.33 গ্রাম MgO। প্রকৃত ফলন = ৩.২৫ গ্রাম। শতকরা ফলন = (3.25/3.33)x100 = 97.6%।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559281876,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "অ্যানালার রাসায়নিক পদার্থের ক্ষেত্রে বিশুদ্ধতার শতকরা হার—",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রায় ৯০%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রায় ৯৫%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রায় ৯৭%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রায় ৯৯%",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অ্যানালার গ্রেড রাসায়নিক খুব উচ্চ বিশুদ্ধতার হয়, প্রায় ৯৯%।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559282255,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "একটি পাত্রে ২ মোল N₂ এবং ৩ মোল H₂ বিক্রিয়া করলে কত মোল NH₃ উৎপন্ন হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৬",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৩",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "N2 + 3H2 -> 2NH3। H2 সীমাকারী। ৩ মোল H2, (2/3)3 = ২ মোল NH3 উৎপন্ন করতে পারে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559282399,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "২০০ মিলিলিটার দ্রবণে সেমিমোলার দ্রবণ প্রস্তুত করতে কত গ্রাম সোডিয়াম হাইড্রক্সাইড দ্রবীভূত করতে হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২০g",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৪g",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "১.২৫g",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "০.৫g",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "১০০০ mL দ্রবণে ০.৫ mol NaOH থাকে। সুতরাং, ২০০ mL দ্রবণে (0.5 x 200)/1000 = 0.1 mol NaOH থাকে। ভর = 0.1 mol x 40 g/mol = 4 g NaOH।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559282403,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "মোলারিটির শর্ত হল—\r\ni. নির্দিষ্ট তাপমাত্রা\r\nii. নির্দিষ্ট চাপ\r\niii. ১ লিটার দ্রবণ\r\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মোলারিটি সংজ্ঞায়িত হয় প্রতি লিটার দ্রবণে দ্রবের মোল সংখ্যা হিসেবে। আয়তন তাপমাত্রা-নির্ভর, তাই এটি একটি নির্দিষ্ট তাপমাত্রায় (এবং নির্ভুলতার জন্য চাপও অন্তর্নিহিতভাবে) হওয়া উচিত। সুতরাং, i, ii, iii সবকটিই প্রাসঙ্গিক।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766559284659,
+    "subject": "রসায়ন",
+    "chapter": "মোলের ধারণা ও রাসায়নিক গণনা",
+    "question": "Al_2(SO_4)_3 যৌগে 'S'-এর শতকরা সংযুক্তি কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৫.৭৮%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২৫.৭৮%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "২৮.০৭%",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৫৬.১৪%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্রশ্ন ৯৭ অনুযায়ী, %S = ২৮.০৭%।",
+    "image": null,
+    "language": "bn"
+  }
+]

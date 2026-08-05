@@ -1,0 +1,655 @@
+[
+  {
+    "id": 1767587908508,
+    "subject": "Mathematics",
+    "chapter": "Practical Geometry",
+    "question": "Length of two diagonals are given, which can be drawn of the following?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Trapezium",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Rhombus",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Rectangle",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Parallelogram",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "A rhombus is uniquely defined if the lengths of its two diagonals are known. The diagonals of a rhombus are perpendicular bisectors of each other, which allows you to construct the four sides. This is not generally true for trapeziums, rectangles, or parallelograms with only diagonal lengths given.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767587909859,
+    "subject": "Mathematics",
+    "chapter": "Practical Geometry",
+    "question": "How many data needed for constructing a rhombus?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "3",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "4",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "5",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "To construct a unique rhombus, you need 2 independent measurements. For example, the length of one side and one angle, or the lengths of the two diagonals. These two pieces of information are enough to determine all sides and angles of the rhombus.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767587910000,
+    "subject": "Mathematics",
+    "chapter": "Practical Geometry",
+    "question": "If the difference between two acute angles of a right angled triangle is 8°, then what is the value of the largest acute angle?",
+    "options": [
+      {
+        "label": "a",
+        "text": "41°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "42°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "45°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "49°",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "In a right-angled triangle, one angle is 90°. The other two acute angles add up to 90° (because total angles in a triangle = 180°). Let the acute angles be x and y where x > y. We have x + y = 90° and x - y = 8°. Adding these equations: 2x = 98° => x = 49°. Therefore, the largest acute angle is 49°.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767587910143,
+    "subject": "Mathematics",
+    "chapter": "Practical Geometry",
+    "question": "How many independent data are required to construct a parallelogram?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "3",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "4",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "5",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "To construct a unique parallelogram, you generally need 3 independent measurements. For example, the lengths of two adjacent sides and the measure of the angle between them, or the lengths of two adjacent sides and the length of one diagonal.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767587910304,
+    "subject": "Mathematics",
+    "chapter": "Practical Geometry",
+    "question": "The right-angled triangle can be drawn if the length of the three sides are respectively—",
+    "options": [
+      {
+        "label": "a",
+        "text": "8, 15, 18 unit",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "9, 12, 17 unit",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "8, 12, 16 unit",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "9, 12, 15 unit",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "For a triangle to be right-angled, the square of the length of the longest side (hypotenuse) must equal the sum of the squares of the other two sides (Pythagoras theorem). Check option (d): 9² + 12² = 81 + 144 = 225, and 15² = 225. So, 9² + 12² = 15². This satisfies the condition.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767587910446,
+    "subject": "Mathematics",
+    "chapter": "Practical Geometry",
+    "question": "If ∠A of \\(\\triangle ABC\\) is equal to ∠B + ∠C, then what is the value of ∠A?",
+    "options": [
+      {
+        "label": "a",
+        "text": "30°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "45°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "60°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "90°",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "In any triangle, the sum of the three angles ∠A + ∠B + ∠C = 180°. It is given that ∠A = ∠B + ∠C. Substituting this into the sum gives: (∠B + ∠C) + ∠B + ∠C = 180° => 2(∠B + ∠C) = 180° => ∠B + ∠C = 90°. Therefore, ∠A = 90°.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767587910595,
+    "subject": "Mathematics",
+    "chapter": "Practical Geometry",
+    "question": "Which of the following can draw a right-angled triangle if the lengths of the three segments are given?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2 cm, 3 cm, 6 cm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "3 cm, 4 cm, 5 cm",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "4 cm, 5 cm, 6 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "3 cm, 4 cm, 8 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "For a triangle to be right-angled, it must satisfy the Pythagorean theorem: (Longest side)² = (Side1)² + (Side2)². Check option (b): 5² = 25, and 3² + 4² = 9 + 16 = 25. So, 3² + 4² = 5². This set of lengths forms a right-angled triangle.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767587910735,
+    "subject": "Mathematics",
+    "chapter": "Practical Geometry",
+    "question": "How many independent data is needed to draw a certain quadrilateral?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "3",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "4",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "5",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "To construct a unique quadrilateral, you generally need 5 independent measurements. For example, the lengths of all four sides plus the measure of one angle, or the lengths of three sides and the measures of the two angles included between them.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767587910874,
+    "subject": "Mathematics",
+    "chapter": "Practical Geometry",
+    "question": "What is the sum of four angles of a scalene quadrilateral?",
+    "options": [
+      {
+        "label": "a",
+        "text": "180°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "270°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "360°",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "450°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The sum of the interior angles of any quadrilateral (whether scalene - all sides and angles different, or not) is always 360°.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767587911024,
+    "subject": "Mathematics",
+    "chapter": "Practical Geometry",
+    "question": "Which of the following can be drawn if only the perimeter is given?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Rhombus",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Trapezium",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Rectangle",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Square",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "If only the total perimeter is given, a square is the only shape from the list that can be uniquely drawn. Knowing the perimeter of a square allows you to find the length of each side (Side = Perimeter/4), and all angles are 90°, so the square is fixed. For a rhombus, rectangle, or trapezium, knowing just the perimeter is not enough to determine the shape's angles or the relative lengths of its sides.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767587911161,
+    "subject": "Mathematics",
+    "chapter": "Practical Geometry",
+    "question": "What is the value of ∠CBE = ?\n[There is an image]",
+    "options": "[{\"label\":\"a\",\"text\":\"100°\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"80°\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"50°\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"40°\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "(Based on common accompanying diagram) In the given figure, ABCD is a parallelogram. In a parallelogram, adjacent angles are supplementary (add up to 180°). If ∠ABC is given as 130°, then ∠CBE, which is on a straight line with ∠ABC, is 180° - 130° = 50°.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767587911306,
+    "subject": "Mathematics",
+    "chapter": "Practical Geometry",
+    "question": "If the three angles of a triangle are 30°, 60° and 90°, then what type of triangle is it?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Obtuse angled triangle",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Acute angled triangle",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Right angled triangle",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Isosceles triangle",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "A triangle with a 90° angle is called a right-angled triangle.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767587911461,
+    "subject": "Mathematics",
+    "chapter": "Practical Geometry",
+    "question": "By which one of the following pair of angles, an isosceles triangle can be drawn?",
+    "options": [
+      {
+        "label": "a",
+        "text": "70° and 40°",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "36° and 74°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "63° and 34°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "40° and 50°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "In an isosceles triangle, two angles are equal. The sum of all angles is 180°. Check option (a): If the two equal angles are 70° each, the third angle is 180° - (70°+70°) = 40°. This gives angles 70°, 70°, 40°. This is a valid isosceles triangle. The other options do not allow for two equal angles when the third is found using 180°.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767587911601,
+    "subject": "Mathematics",
+    "chapter": "Practical Geometry",
+    "question": "Length of three sides are given. In which case, a right-angled triangle can be drawn?",
+    "options": [
+      {
+        "label": "a",
+        "text": "3 cm, 5 cm, 7 cm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "5 cm, 7 cm, 9 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "4 cm, 5 cm, 8 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "6 cm, 8 cm, 10 cm",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Check using Pythagoras theorem: The square of the longest side must equal the sum of squares of the other two. For option (d): 10² = 100, and 6² + 8² = 36 + 64 = 100. So, 6² + 8² = 10². This satisfies the condition for a right-angled triangle.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767587911737,
+    "subject": "Mathematics",
+    "chapter": "Practical Geometry",
+    "question": "It is possible to draw a certain triangle when —\ni. two angles and their adjacent side given\nii. three angles given\niii. two angles and opposite side of any one angle given",
+    "options": [
+      {
+        "label": "a",
+        "text": "i and ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i and iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii and iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii and iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "(i) Two angles and their adjacent side given (ASA condition): This uniquely determines a triangle. (ii) Three angles given (AAA condition): This determines the shape but not the size, so infinitely many similar triangles can be drawn, not a *certain* one. (iii) Two angles and the opposite side of any one angle given (AAS condition): This also uniquely determines a triangle. Therefore, only (i) and (iii) are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767587911873,
+    "subject": "Mathematics",
+    "chapter": "Practical Geometry",
+    "question": "If the length of a side is given, then it is possible to draw a—\ni. regular triangle\nii. square",
+    "options": [
+      {
+        "label": "a",
+        "text": "i and ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i and iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii and iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii and iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "If only the length of one side is given: (i) A regular triangle (equilateral triangle) can be drawn because all sides are equal and all angles are 60°. (ii) A square can be drawn because all sides are equal and all angles are 90°. Therefore, both (i) and (ii) are possible.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767587912010,
+    "subject": "Mathematics",
+    "chapter": "Practical Geometry",
+    "question": "A rhombus can be drawn if there is given—\ni. length of a side\nii. length of a side and a diagonal\niii. length of a side and an angle",
+    "options": [
+      {
+        "label": "a",
+        "text": "i and ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i and iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii and iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii and iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "To construct a unique rhombus: (i) Only side length is not sufficient to draw a unique rhombus, as the angles can vary, producing infinitely many different rhombuses. (ii) One side and one diagonal uniquely determines the rhombus using triangle construction. (iii) One side and one angle uniquely determines the rhombus. Therefore, (ii) and (iii) are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767587912152,
+    "subject": "Mathematics",
+    "chapter": "Practical Geometry",
+    "question": "The construction of a particular quadrilateral is possible if there is given—\ni. four sides and an angle\nii. three sides and two included angles\niii. two sides and three angles",
+    "options": [
+      {
+        "label": "a",
+        "text": "i",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "To construct a unique quadrilateral: (i) Four sides and one angle is sufficient (e.g., using the given angle between two consecutive sides). (ii) Three sides and two included angles (the angles where the given sides meet) is sufficient. (iii) Two sides and three angles is generally not sufficient, as it may not fix the length of the remaining sides uniquely. Therefore, (i) and (ii) are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767587912307,
+    "subject": "Mathematics",
+    "chapter": "Practical Geometry",
+    "question": "Observe following—\ni. parallelogram inscribed in a circle is a rectangle\nii. only one tangent can be drawn at a point of a circle\niii. the circumcenter of the right angled triangle lies on the hypotenuse",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "(i) True. A cyclic quadrilateral (inscribed in a circle) has opposite angles summing to 180°. A parallelogram has opposite angles equal. For both to be true, each angle must be 90°, making it a rectangle. (ii) True. At any given point on a circle, there is exactly one line that is perpendicular to the radius at that point, which is the tangent. (iii) True. The circumcenter of a triangle is the point where perpendicular bisectors of sides meet. For a right-angled triangle, the circumcenter is the midpoint of the hypotenuse. So all three statements are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767587912446,
+    "subject": "Mathematics",
+    "chapter": "Practical Geometry",
+    "question": "What is the value of x?\n[There is an image]",
+    "options": "[{\"label\":\"a\",\"text\":\"15°\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"23°\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"33°\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"39°\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "In parallelogram ABCD, opposite angles are equal, so ∠ADC = ∠ABC = (3x + 8°). Angles ∠ABC and ∠CBE lie on a straight line, so they are supplementary (add to 180°). Therefore, (3x + 8°) + (2x + 7°) = 180°. Solving: 5x + 15° = 180° => 5x = 165° => x = 33°.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767587912581,
+    "subject": "Mathematics",
+    "chapter": "Practical Geometry",
+    "question": "What is the perimeter of ABCD?\n[There is an image]",
+    "options": "[{\"label\":\"a\",\"text\":\"7\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"11\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"12\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"14\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "In a parallelogram, opposite sides are equal. From the figure (common to these questions), side AB = CD = 4 units and side BC = AD = 3 units. Perimeter = sum of all sides = AB + BC + CD + AD = 4 + 3 + 4 + 3 = 14 units.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767587912718,
+    "subject": "Mathematics",
+    "chapter": "Practical Geometry",
+    "question": "What is the value of y?\n[There is an image]",
+    "options": "[{\"label\":\"a\",\"text\":\"15\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"30\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"33\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"41\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "In parallelogram MNOP, opposite angles are equal, so ∠MOP = ∠PNM = (3y + 8)°. Adjacent angles in a parallelogram are supplementary. ∠PNM and ∠PNR are on a straight line, so ∠PNM + ∠PNR = 180°. Therefore, (3y + 8) + (2y + 7) = 180° => 5y + 15 = 180° => 5y = 165° => y = 33.\n# Corrected Questions - All Documents\n## Previous Documents (1-4) - See earlier corrections",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767587912869,
+    "subject": "Mathematics",
+    "chapter": "Practical Geometry",
+    "question": "What is the perimeter MNPO?\n[There is an image]",
+    "options": "[{\"label\":\"a\",\"text\":\"7\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"8\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"12\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"14\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "In parallelogram MNPO, opposite sides are equal. From the figure, MN = OP = 4 units and NP = MO = 3 units. Perimeter = MN + NP + OP + MO = 4 + 3 + 4 + 3 = 14 units.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767587913007,
+    "subject": "Mathematics",
+    "chapter": "Practical Geometry",
+    "question": "What is the value of x?\n[There is an image]",
+    "options": "[{\"label\":\"a\",\"text\":\"15\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"30\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"33\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"41\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "In parallelogram ABCD, opposite angles are equal, so ∠D = ∠B = (3x + 8°). Angles ∠ABC and ∠CBE are on a straight line, so they add to 180°. Therefore, (3x + 8°) + (2x + 7°) = 180° => 5x + 15° = 180° => 5x = 165° => x = 33°.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767587913146,
+    "subject": "Mathematics",
+    "chapter": "Practical Geometry",
+    "question": "What is the value of larger angle of the parallelogram?\n[There is an image]",
+    "options": "[{\"label\":\"a\",\"text\":\"73°\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"100°\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"107°\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"180°\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "From question 38, x = 33°. The larger angle is ∠D (or ∠B) = 3x + 8° = (3 * 33°) + 8° = 99° + 8° = 107°.",
+    "image": null,
+    "language": "en"
+  }
+]

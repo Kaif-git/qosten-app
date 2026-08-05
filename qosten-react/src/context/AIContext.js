@@ -1,5 +1,6 @@
-import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
+import React, { createContext, useContext, useState, useCallback, useEffect, useRef } from 'react';
 import { aiService } from '../services/aiService';
+import { aiUsageService } from '../services/aiUsageService';
 import { questionApi } from '../services/questionApi';
 import { useQuestions, mapDatabaseToApp } from './QuestionContext';
 import { supabase } from '../services/supabaseClient';
@@ -10,7 +11,7 @@ const AIContext = createContext();
 const generateUniqueId = () => `${Date.now()}-${Math.random().toString(36).substr(2, 9)}-${Math.floor(Math.random() * 1000)}`;
 
 export function AIProvider({ children }) {
-  const { updateQuestion, bulkUpdateQuestions } = useQuestions();
+  const { updateQuestion, bulkUpdateQuestions, questions } = useQuestions();
   
   const [queue, setQueue] = useState(() => {
     const saved = localStorage.getItem('qosten_ai_queue');
@@ -388,6 +389,313 @@ export function AIProvider({ children }) {
     }
   }, [queue, isProcessing, updateQuestion, addLog]);
 
+  // Auto LaTeX Processing
+  const [isAutoProcessing, setIsAutoProcessing] = useState(false);
+  const [autoProcessStats, setAutoProcessStats] = useState({
+    totalProcessed: 0,
+    totalBatches: 0,
+    status: 'idle',
+    lastProcessedAt: null,
+    currentSubject: ''
+  });
+  const [autoSubjectFilter, setAutoSubjectFilter] = useState(() => {
+    const saved = localStorage.getItem('qosten_auto_subject_filter');
+    return saved ? JSON.parse(saved) : [];
+  });
+  const [autoChapterFilter, setAutoChapterFilter] = useState(() => {
+    const saved = localStorage.getItem('qosten_auto_chapter_filter');
+    return saved ? JSON.parse(saved) : [];
+  });
+  const [autoTypeFilter, setAutoTypeFilter] = useState(() => {
+    const saved = localStorage.getItem('qosten_auto_type_filter');
+    return saved ? JSON.parse(saved) : [];
+  });
+  const autoSubjectFilterRef = useRef(autoSubjectFilter);
+  const autoChapterFilterRef = useRef(autoChapterFilter);
+  const autoTypeFilterRef = useRef(autoTypeFilter);
+
+  const autoProcessControlRef = useRef(null);
+  const processedIdsRef = useRef(new Set());
+
+  useEffect(() => {
+    autoSubjectFilterRef.current = autoSubjectFilter;
+    localStorage.setItem('qosten_auto_subject_filter', JSON.stringify(autoSubjectFilter));
+  }, [autoSubjectFilter]);
+
+  useEffect(() => {
+    autoChapterFilterRef.current = autoChapterFilter;
+    localStorage.setItem('qosten_auto_chapter_filter', JSON.stringify(autoChapterFilter));
+  }, [autoChapterFilter]);
+
+  useEffect(() => {
+    autoTypeFilterRef.current = autoTypeFilter;
+    localStorage.setItem('qosten_auto_type_filter', JSON.stringify(autoTypeFilter));
+  }, [autoTypeFilter]);
+
+  const startAutoProcessing = useCallback(async () => {
+    if (isAutoProcessing) return;
+    setIsAutoProcessing(true);
+    autoProcessControlRef.current = { stop: false };
+    setAutoProcessStats(prev => ({ ...prev, status: 'starting' }));
+    addLog('🤖 Auto LaTeX Processing started. Fetching subject hierarchy...', 'start');
+
+    // Fetch hierarchy to get actual subject names from API
+    let subjectNames = [];
+    try {
+      const hierarchy = await questionApi.fetchHierarchy();
+      console.log('📋 [AutoLaTeX] Hierarchy fetched:', hierarchy?.length, 'subjects');
+      if (hierarchy && hierarchy.length > 0) {
+        // Prioritize Bangla subjects (contain 'bangla' or 'বাংলা'), then rest
+        const banglaSubjects = hierarchy.filter(h =>
+          /bangla|বাংলা/i.test(h.name)
+        ).map(h => h.name);
+        const otherSubjects = hierarchy.filter(h =>
+          !/bangla|বাংলা/i.test(h.name)
+        ).map(h => h.name);
+        subjectNames = [...banglaSubjects, ...otherSubjects];
+        console.log('📋 [AutoLaTeX] Subject order:', subjectNames);
+      } else {
+        // Fallback: just use all subjects from questions
+        const response = await questionApi.fetchQuestions({ limit: 1, page: 0 });
+        const sample = Array.isArray(response) ? response : (response.data || []);
+        if (sample.length > 0) {
+          const mapped = sample.map(mapDatabaseToApp);
+          const subjects = [...new Set(mapped.map(q => q.subject).filter(Boolean))];
+          subjectNames = subjects.sort();
+        }
+      }
+    } catch (err) {
+      console.warn('⚠️ [AutoLaTeX] Failed to fetch hierarchy:', err);
+    }
+
+    if (subjectNames.length === 0) {
+      addLog('❌ Could not load subject list. Check API connection.', 'error');
+      setIsAutoProcessing(false);
+      autoProcessControlRef.current = null;
+      return;
+    }
+
+    addLog(`📚 Loaded ${subjectNames.length} subjects. Bangla subjects prioritized.`, 'info');
+
+    const fetchLatexQuestions = async (count = 10) => {
+      const found = [];
+      console.log(`📊 [AutoLaTeX] Scanning ${questions?.length || 0} loaded questions for LaTeX issues...`);
+
+      if (!questions || questions.length === 0) {
+        console.warn('⚠️ [AutoLaTeX] No questions loaded in context. User must load questions first.');
+        return found;
+      }
+
+      // Build subject priority map from hierarchy
+      const subjectPriority = new Map();
+      subjectNames.forEach((name, idx) => subjectPriority.set(name.toLowerCase(), idx));
+
+      // Filter questions with LaTeX issues, sorted by subject priority
+      const candidates = questions.filter(q => {
+        const qId = q.id?.toString();
+        if (!qId || processedIdsRef.current.has(qId)) return false;
+        if (!aiService.hasLatexIssues(q)) return false;
+        
+        // Subject Filter
+        const sFilter = autoSubjectFilterRef.current;
+        if (sFilter.length > 0 && !sFilter.some(s => q.subject?.toLowerCase() === s.toLowerCase())) return false;
+        
+        // Chapter Filter
+        const cFilter = autoChapterFilterRef.current;
+        if (cFilter.length > 0 && !cFilter.some(c => q.chapter?.toLowerCase() === c.toLowerCase())) return false;
+        
+        // Type Filter
+        const tFilter = autoTypeFilterRef.current;
+        if (tFilter.length > 0 && !tFilter.some(t => q.type?.toLowerCase() === t.toLowerCase())) return false;
+        
+        return true;
+      });
+
+      console.log(`🔍 [AutoLaTeX] ${candidates.length} unprocessed questions have LaTeX issues.`);
+
+      // Sort: Bangla subjects first (by hierarchy order), then rest
+      candidates.sort((a, b) => {
+        const pa = subjectPriority.get(a.subject?.toLowerCase()) ?? 999;
+        const pb = subjectPriority.get(b.subject?.toLowerCase()) ?? 999;
+        return pa - pb;
+      });
+
+      for (const q of candidates) {
+        if (found.length >= count || autoProcessControlRef.current?.stop) break;
+        const qId = q.id.toString();
+        found.push(q);
+        processedIdsRef.current.add(qId);
+        setAutoProcessStats(prev => ({ ...prev, currentSubject: q.subject }));
+        console.log(`✅ [AutoLaTeX] Queued Q#${qId} (${q.subject})`);
+      }
+
+      console.log(`📊 [AutoLaTeX] fetchLatexQuestions: found ${found.length} questions.`);
+      return found;
+    };
+
+    try {
+      console.log('🚀 [AutoLaTeX] Entering main processing loop...');
+      while (!autoProcessControlRef.current?.stop) {
+        setAutoProcessStats(prev => ({ ...prev, status: 'fetching' }));
+        addLog('🔍 Fetching questions with LaTeX issues...', 'info');
+        console.log(`📋 [AutoLaTeX] Processed IDs so far: ${processedIdsRef.current.size}`);
+
+        const latexQuestions = await fetchLatexQuestions(10);
+        console.log(`📦 [AutoLaTeX] fetchLatexQuestions returned ${latexQuestions.length} questions`);
+
+        if (latexQuestions.length === 0) {
+          console.log('⏳ [AutoLaTeX] No questions found. Checking processedIds size:', processedIdsRef.current.size);
+          addLog('⏳ No new questions with LaTeX issues found. Waiting 30s...', 'warning');
+          setAutoProcessStats(prev => ({ ...prev, status: 'waiting' }));
+          await new Promise(resolve => setTimeout(resolve, 30000));
+          continue;
+        }
+
+        addLog(`📦 Processing ${latexQuestions.length} questions individually with parallel workers...`, 'info');
+        setAutoProcessStats(prev => ({ ...prev, status: 'processing' }));
+
+        const errors = [];
+        let completedCount = 0;
+
+        // Fetch available API keys for 1:1 task-to-key assignment
+        let availableKeys = [];
+        try {
+          availableKeys = await aiUsageService.getAllAvailableKeys();
+        } catch (err) {
+          console.warn('Failed to fetch available keys, defaulting to concurrency of 1:', err);
+        }
+
+        const effectiveConcurrency = Math.min(
+          availableKeys.length || 1,
+          latexQuestions.length
+        );
+        addLog(`🔑 ${availableKeys.length} API keys available — processing up to ${effectiveConcurrency} in parallel (1 task per key)`, 'info');
+
+        const processOneQuestion = async (q, assignedKey) => {
+          const MAX_LATEX_RETRIES = 3;
+
+          const attemptFix = async (questionData, attempt = 0) => {
+            const qId = questionData.id?.toString();
+            const groupId = `auto-q${qId}`;
+
+            if (attempt === 0) {
+              addLog(`🔄 [Q#${qId}] Starting...`, 'info', groupId);
+            } else {
+              addLog(`🔄 [Q#${qId}] Retry ${attempt + 1}/${MAX_LATEX_RETRIES} — LaTeX issues detected after previous fix...`, 'info', groupId);
+            }
+
+            const sq = { id: questionData.id, type: questionData.type, questionText: questionData.questionText || questionData.question || '' };
+            if (questionData.explanation) sq.explanation = questionData.explanation;
+            if (questionData.answer) sq.answer = questionData.answer;
+            if (questionData.options?.length) sq.options = questionData.options.map(o => ({ ...o }));
+            if (questionData.parts?.length) sq.parts = questionData.parts.map(p => ({ letter: p.letter, text: p.text, answer: p.answer }));
+
+            const instruction = attempt === 0
+              ? 'ONLY fix LaTeX issues. Prioritize fixing LaTeX delimiters, escape sequences, and Bengali LaTeX content. Fix mismatched \\(...\\) delimiters, bare math patterns, and double-backslash leaks.'
+              : `Previous AI fix did NOT fully resolve LaTeX issues. Try harder. Focus on: fixing mismatched \\(...\\) delimiters, wrapping bare math with \\(...\\), removing double-backslash leaks, and fixing display math (\\[...\\] or $$). INSPECT EVERY FIELD. The current content still has LaTeX bugs.`;
+
+            try {
+              const results = [];
+              await aiService.improveQuestions(
+                [sq],
+                'fix_latex',
+                instruction,
+                (delta) => { if (delta.trim()) addLog(delta, 'ai-stream', groupId); },
+                (status) => { addLog(`[Q#${qId}] ${status}`, status.includes('❌') ? 'error' : 'info', groupId); },
+                (result) => { results.push(result); },
+                attempt > 0 ? null : assignedKey
+              );
+
+              const r = results[0] || {};
+              const updatedObj = { ...questionData };
+              if (r.questionText) updatedObj.questionText = r.questionText;
+              if (r.explanation) updatedObj.explanation = r.explanation;
+              if (r.answer) updatedObj.answer = r.answer;
+              if (r.options) {
+                updatedObj.options = (questionData.options || []).map(opt => {
+                  const fixed = r.options.find(fo => fo.label === opt.label);
+                  return fixed ? { ...opt, ...fixed } : opt;
+                });
+              }
+              if (r.parts) {
+                updatedObj.parts = (questionData.parts || []).map(p => {
+                  const fixed = r.parts.find(fp => fp.letter === p.letter);
+                  return fixed ? { ...p, ...fixed } : p;
+                });
+              }
+
+              // Check if LaTeX issues still remain
+              if (aiService.hasLatexIssues(updatedObj) && attempt < MAX_LATEX_RETRIES - 1) {
+                addLog(`⚠️ [Q#${qId}] LaTeX issues persist after AI fix. Re-processing...`, 'warning', groupId);
+                return await attemptFix(updatedObj, attempt + 1);
+              }
+
+              if (aiService.hasLatexIssues(updatedObj)) {
+                addLog(`⚠️ [Q#${qId}] LaTeX issues still present after ${MAX_LATEX_RETRIES} attempts. Saving as-is.`, 'warning', groupId);
+              } else if (attempt > 0) {
+                addLog(`✅ [Q#${qId}] LaTeX resolved after ${attempt + 1} attempts. Saving...`, 'success', groupId);
+              }
+
+              await updateQuestion(updatedObj);
+
+              setHistory(prev => [{
+                id: `auto-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+                timestamp: new Date().toISOString(),
+                task: 'fix_latex (Auto)',
+                questionId: qId,
+                before: q,
+                after: updatedObj
+              }, ...prev].slice(0, 100));
+
+              completedCount++;
+              addLog(`✅ [Q#${qId}] Done (${completedCount}/${latexQuestions.length})${attempt > 0 ? ` after ${attempt + 1} attempts` : ''}`, 'success', groupId);
+              setAutoProcessStats(prev => ({ ...prev, totalProcessed: prev.totalProcessed + 1 }));
+            } catch (aiErr) {
+              addLog(`❌ [Q#${qId}] AI failed: ${aiErr.message}`, 'error', groupId);
+              errors.push(aiErr.message);
+            }
+          };
+
+          await attemptFix(q);
+        };
+
+        // Process in parallel — assign 1 distinct key per question
+        for (let i = 0; i < latexQuestions.length; i += effectiveConcurrency) {
+          if (autoProcessControlRef.current?.stop) break;
+          const chunk = latexQuestions.slice(i, i + effectiveConcurrency);
+          const keysSlice = availableKeys.slice(0, chunk.length);
+          addLog(`⚡ Launching ${chunk.length} parallel workers with 1:1 key assignment...`, 'info');
+          await Promise.all(chunk.map((q, idx) => processOneQuestion(q, keysSlice[idx] || null)));
+        }
+
+        setAutoProcessStats(prev => ({
+          totalProcessed: prev.totalProcessed,
+          totalBatches: prev.totalBatches + 1,
+          status: 'idle',
+          lastProcessedAt: new Date().toISOString(),
+          currentSubject: ''
+        }));
+        addLog(`📊 Batch complete. Errors: ${errors.length}`, errors.length > 0 ? 'warning' : 'success');
+
+        await new Promise(resolve => setTimeout(resolve, 2000));
+      }
+    } catch (err) {
+      addLog(`🚨 Auto-Processing error: ${err.message}`, 'error');
+    } finally {
+      setIsAutoProcessing(false);
+      autoProcessControlRef.current = null;
+      setAutoProcessStats(prev => ({ ...prev, status: 'idle', currentSubject: '' }));
+      addLog('🛑 Auto LaTeX Processing stopped.', 'finish');
+    }
+  }, [isAutoProcessing, addLog, updateQuestion, questions]);
+
+  const stopAutoProcessing = useCallback(() => {
+    if (autoProcessControlRef.current) {
+      autoProcessControlRef.current.stop = true;
+      addLog('🛑 Stopping Auto LaTeX Processing...', 'warning');
+    }
+  }, [addLog]);
+
   const handleApproveFix = useCallback(async (taskId) => {
     const task = queue.find(t => t.id === taskId);
     if (!task || !task.suggestedFix) return;
@@ -418,6 +726,14 @@ export function AIProvider({ children }) {
     queue,
     history,
     isProcessing,
+    isAutoProcessing,
+    autoProcessStats,
+    autoSubjectFilter,
+    setAutoSubjectFilter,
+    autoChapterFilter,
+    setAutoChapterFilter,
+    autoTypeFilter,
+    setAutoTypeFilter,
     realtimeLogs,
     addToQueue,
     removeFromQueue,
@@ -425,7 +741,9 @@ export function AIProvider({ children }) {
     clearHistory,
     processBatch,
     handleApproveFix,
-    addLog
+    addLog,
+    startAutoProcessing,
+    stopAutoProcessing
   };
 
   return (

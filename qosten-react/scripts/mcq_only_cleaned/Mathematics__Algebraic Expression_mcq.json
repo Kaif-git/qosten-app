@@ -1,0 +1,2114 @@
+[
+  {
+    "id": 1767589712744,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If a + b = \\(\\sqrt{16}\\) and ab = 1, then (a - b)² = ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "12",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "14",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "22",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "24",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Since \\(\\sqrt{16} = 4\\), we have a + b = 4. Then, (a - b)² = (a + b)² - 4ab = (4)² - 4(1) = 16 - 4 = 12.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589712883,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If x² + y² = 4xy, then what is the value of \\(\\frac{x²}{y²} + \\frac{y²}{x²}\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "4",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "14",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "18",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "20",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Given x² + y² = 4xy. Dividing both sides by xy (assuming xy ≠ 0) gives \\(\\frac{x}{y} + \\frac{y}{x} = 4\\). Squaring both sides: \\(\\left(\\frac{x}{y} + \\frac{y}{x}\\right)^2 = 16\\) → \\(\\frac{x²}{y²} + 2 + \\frac{y²}{x²} = 16\\) → \\(\\frac{x²}{y²} + \\frac{y²}{x²} = 14\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589713189,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\(\\frac{3x}{5} = \\sqrt{2}\\), then what is the value of x?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(\\frac{3\\sqrt{2}}{5}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(\\frac{5\\sqrt{2}}{3}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "\\(\\frac{2\\sqrt{3}}{5}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(\\frac{5\\sqrt{3}}{2}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\(\\frac{3x}{5} = \\sqrt{2}\\) → \\(3x = 5\\sqrt{2}\\) → \\(x = \\frac{5\\sqrt{2}}{3}\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589713362,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\(a^2 + \\frac{1}{a^2} = 6\\), then what is the value of \\(a + \\frac{1}{a}\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "4",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(2\\sqrt{2}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "4",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\((a + \\frac{1}{a})^2 = a^2 + 2 + \\frac{1}{a^2} = 6 + 2 = 8\\) → \\(a + \\frac{1}{a} = \\pm 2\\sqrt{2}\\). Taking the positive value: \\(2\\sqrt{2}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589713498,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\(2x - y = 8\\) and \\(x - 2y = 4\\), then what is the value of xy?",
+    "options": [
+      {
+        "label": "a",
+        "text": "32",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "16",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "4",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "0",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Solve the system: Multiply the first equation by 2: 4x - 2y = 16. Subtract the second equation: (4x - 2y) - (x - 2y) = 16 - 4 → 3x = 12 → x = 4. Substitute into first equation: 2(4) - y = 8 → y = 0. Thus, xy = 0.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589713667,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\(x^4 - 5x^2 + 1 = 0\\), then what is the value of \\(x + \\frac{1}{x}\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(\\sqrt{7}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(\\sqrt{3}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(\\sqrt{11}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(\\sqrt{7}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Divide the equation by x²: \\(x^2 - 5 + \\frac{1}{x^2} = 0\\) → \\(x^2 + \\frac{1}{x^2} = 5\\). Then, \\(\\left(x + \\frac{1}{x}\\right)^2 = x^2 + 2 + \\frac{1}{x^2} = 5 + 2 = 7\\), so \\(x + \\frac{1}{x} = \\pm\\sqrt{7}\\). The positive root is typically taken.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589713856,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\(\\frac{1}{a} = 3 + 2\\sqrt{2}\\), then what is the value of \\(a - \\frac{1}{a}\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "4",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(4\\sqrt{2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "6",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(-4\\sqrt{2}\\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Given \\(\\frac{1}{a} = 3 + 2\\sqrt{2}\\), then rationalizing: \\(a = \\frac{1}{3 + 2\\sqrt{2}} = \\frac{3 - 2\\sqrt{2}}{(3 + 2\\sqrt{2})(3 - 2\\sqrt{2})} = \\frac{3 - 2\\sqrt{2}}{9 - 8} = 3 - 2\\sqrt{2}\\). Thus, \\(a - \\frac{1}{a} = (3 - 2\\sqrt{2}) - (3 + 2\\sqrt{2}) = -4\\sqrt{2}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589714014,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\(x = \\sqrt{6}\\) and \\(y = \\sqrt{3}\\), then what is the value of \\((x - y)^2 + 2xy\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "3",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "18",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(2\\sqrt{18}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "9",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\((x - y)^2 = (\\sqrt{6} - \\sqrt{3})^2 = 6 - 2\\sqrt{18} + 3 = 9 - 2\\sqrt{18}\\). Then, \\((x - y)^2 + 2xy = (9 - 2\\sqrt{18}) + 2(\\sqrt{6}\\sqrt{3}) = 9 - 2\\sqrt{18} + 2\\sqrt{18} = 9\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589714114,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\(a + b = \\sqrt{3}, a - b = 1\\), then what is the value of 4ab?",
+    "options": [
+      {
+        "label": "a",
+        "text": "4",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "3",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "2a",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Square both given equations: \\((a+b)^2 = 3\\) and \\((a-b)^2 = 1\\). Subtract the second from the first: \\((a+b)^2 - (a-b)^2 = 3 - 1 = 2\\). But \\((a+b)^2 - (a-b)^2 = 4ab\\), so 4ab = 2.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589714293,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\(a + \\frac{1}{a} = 3\\), then what is the value of \\(\\frac{2a}{3a^2 - 2a + 3}\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(\\frac{2}{11}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(\\frac{2}{7}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\(\\frac{7}{2}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "From \\(a + \\frac{1}{a} = 3\\), we get \\(a^2 + 1 = 3a\\). Substitute into the denominator: \\(3a^2 - 2a + 3 = 3(a^2 + 1) - 2a = 3(3a) - 2a = 9a - 2a = 7a\\). Thus, the expression becomes \\(\\frac{2a}{7a} = \\frac{2}{7}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589714426,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "How many years will it take to reach Tk. 520 as profit principal if 5% simple profit is based on Tk. 400?",
+    "options": [
+      {
+        "label": "a",
+        "text": "4",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "6",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "24",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "46",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Let n be the number of years. Using the simple interest formula: Amount = Principal(1 + nr). Here, 520 = 400(1 + n×0.05) → 520/400 = 1 + 0.05n → 1.3 = 1 + 0.05n → 0.3 = 0.05n → n = 6 years.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589714542,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\(x + y = \\sqrt{7}\\) and \\(x - y = \\sqrt{6}\\), then what is the value of \\(x^2 + y^2\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(\\frac{1}{2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "2",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(\\frac{13}{2}\\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Square both equations: \\((x+y)^2 = 7\\) and \\((x-y)^2 = 6\\). Add them: \\(2(x^2 + y^2) = 13\\) → \\(x^2 + y^2 = \\frac{13}{2}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589714649,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\(p + q + r = 6\\) and \\(p^2 + q^2 + r^2 = 14\\), then what is the value of \\(pq + qr + rp\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "50",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "25",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "22",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "11",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Use the identity: \\((p+q+r)^2 = p^2+q^2+r^2 + 2(pq+qr+rp)\\). Substitute: \\(6^2 = 14 + 2S\\) where S = pq+qr+rp → 36 = 14 + 2S → 2S = 22 → S = 11.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589714854,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "Which one is the factor of \\(m^2 + m - 56\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "m - 8",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "m - 7",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "m + 7",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "m + 14",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Factor the quadratic: \\(m^2 + m - 56 = m^2 + 8m - 7m - 56 = m(m+8) - 7(m+8) = (m+8)(m-7)\\). Thus, (m-7) is a factor.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589714954,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "Which one is a factor of \\(x^2 - 1 + 2y - y^2\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "x + y - 1",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "x + y + 1",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "y - x + 1",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "x - y - 1",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Rewrite: \\(x^2 - 1 + 2y - y^2 = x^2 - (y^2 - 2y + 1) = x^2 - (y-1)^2 = (x + (y-1))(x - (y-1)) = (x+y-1)(x-y+1)\\). So, (x+y-1) is a factor.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589715125,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "Which one is the factor of \\(x^3 - 2x - 4\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "x - 4",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "x - 2",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "x + 2",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "x + 4",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Let f(x)= x^3-2x-4. Then f(2)= 8-4-4=0, so by the factor theorem, (x-2) is a factor.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589715435,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "Which one of the following is a factor of \\(2p^2 - p - 1\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "p - 1",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "p + 1",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "2p - 1",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "p + 2",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Factor: \\(2p^2 - p - 1 = 2p^2 - 2p + p - 1 = 2p(p-1) + 1(p-1) = (p-1)(2p+1)\\). So, (p-1) is a factor.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589715554,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "Which one is the factor of \\(a^3 + 3\\sqrt{3}\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(a^2 - \\sqrt{3}a + 3\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(a^2 - \\sqrt{3}a + 9\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(a^2 + \\sqrt{3}a + 3\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(a^2 + \\sqrt{3}a + 9\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Recognize sum of cubes: \\(a^3 + (\\sqrt{3})^3 = (a+\\sqrt{3})(a^2 - \\sqrt{3}a + 3)\\). So, \\(a^2 - \\sqrt{3}a + 3\\) is a factor.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589715656,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "Which one is a factor of \\(a^2 + a - 20\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "a + 10",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "a + 2",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "a - 4",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "a - 5",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Factor: \\(a^2 + a - 20 = a^2 + 5a - 4a - 20 = a(a+5) - 4(a+5) = (a+5)(a-4)\\). So, (a-4) is a factor.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589715768,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "Which one is the factors of \\(x^2 + x - 2\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "(x - 1)(x - 2)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "(x - 1)(x + 2)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "(x + 1)(x - 2)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "(x + 1)(x + 2)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Factor: \\(x^2 + x - 2 = x^2 + 2x - x - 2 = x(x+2) - 1(x+2) = (x+2)(x-1)\\). So, the factors are (x-1) and (x+2).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589715943,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If P(x) = x^3 - 4x + 3, then P(2) = ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "3",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "4",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Substitute x=2: P(2) = 2^3 - 4(2) + 3 = 8 - 8 + 3 = 3.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589716118,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "How many years will the simple profit be Tk. 273 of Tk. 650 at the rate of profit Tk. 7 percent per annum?",
+    "options": [
+      {
+        "label": "a",
+        "text": "4",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "5",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "6",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "7",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Simple interest formula: I = Pnr. Here, 273 = 650 × n × 0.07 → n = 273 / (650×0.07) = 273 / 45.5 = 6 years.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589716275,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "What is the compound principle of Tk. 500 in 3 years at the profit of 5%?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Tk. 595",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Tk. 578.81",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Tk. 502.52",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Tk. 575",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Compound amount formula: A = P(1+r)^n = 500(1+0.05)^3 = 500 × 1.157625 = Tk. 578.8125 ≈ 578.81.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589716532,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "What will be the simple profit of Tk. 1500 in 3 years at simple interest 5 percent per annum?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Tk. 225",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Tk. 1615",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Tk. 1725",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Tk. 1775",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Simple interest: I = Pnr = 1500 × 3 × 0.05 = Tk. 225.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589716642,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "Find the simple profit of Tk. 5000 in 4 years at the rate of profit 5% per annum?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Tk. 250",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Tk. 500",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Tk. 1000",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Tk. 1500",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Simple interest: I = Pnr = 5000 × 4 × 0.05 = Tk. 1000.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589716757,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "Which is to be added to \\((x + y)^2\\) so that the sum will be \\((x - y)^2\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-4xy",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "4xy",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "-xy",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "2xy",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\((x - y)^2 - (x + y)^2 = (x^2 - 2xy + y^2) - (x^2 + 2xy + y^2) = -4xy\\). So, add -4xy.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589716973,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\(2x + \\frac{2}{x} = 3\\), then what is the value of \\(x^2 + \\frac{1}{x^2}\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "4",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(\\frac{1}{4}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\(\\frac{2}{3}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Divide the given equation by 2: \\(x + \\frac{1}{x} = \\frac{3}{2}\\). Then, \\(x^2 + \\frac{1}{x^2} = \\left(x + \\frac{1}{x}\\right)^2 - 2 = \\left(\\frac{3}{2}\\right)^2 - 2 = \\frac{9}{4} - 2 = \\frac{1}{4}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589717135,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "What is to be added to 9x^2 + 16y^2, so that the sum will be a perfect square?",
+    "options": [
+      {
+        "label": "a",
+        "text": "6xy",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "12xy",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "-12xy",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "24xy",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\((3x + 4y)^2 = 9x^2 + 24xy + 16y^2\\). So, add 24xy.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589717250,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\(p + q = 3\\) and \\(pq = 1\\), then \\(p^3 + q^3 + (p - q)^2 = ?\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "10",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "15",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "21",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "23",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\(p^3 + q^3 = (p+q)^3 - 3pq(p+q) = 27 - 3(1)(3) = 18\\). \\((p-q)^2 = (p+q)^2 - 4pq = 9 - 4 = 5\\). Sum = 18 + 5 = 23.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589717440,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\(a^2 - \\sqrt{2}a + 1 = 0\\), then —\ni. \\(a + \\frac{1}{a} = \\sqrt{2}\\)\nii. \\(a^2 + \\frac{1}{a^2} = 0\\)\niii. \\(a^3 + \\frac{1}{a^3} = -\\sqrt{2}\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "From the equation: \\(a^2 + 1 = \\sqrt{2}a\\) → \\(a + \\frac{1}{a} = \\sqrt{2}\\) (i correct). Then \\(a^2 + \\frac{1}{a^2} = (a + \\frac{1}{a})^2 - 2 = 2 - 2 = 0\\) (ii correct). \\(a^3 + \\frac{1}{a^3} = (a + \\frac{1}{a})^3 - 3(a + \\frac{1}{a}) = (\\sqrt{2})^3 - 3\\sqrt{2} = 2\\sqrt{2} - 3\\sqrt{2} = -\\sqrt{2}\\) (iii correct). All three statements are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589717670,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\(a(2a - 3) = \\frac{1}{2}\\), then—\ni. \\(4a^2 - \\frac{1}{4a^2} = 3\\sqrt{13}\\)\nii. \\((2a + \\frac{1}{2a})^2 = 13\\)\niii. \\(4a^2 + \\frac{1}{4a^2} = 11\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Given: \\(2a^2 - 3a = \\frac{1}{2}\\) → \\(2a - 3 = \\frac{1}{2a}\\) → \\(2a - \\frac{1}{2a} = 3\\). Square: \\(4a^2 + \\frac{1}{4a^2} - 2 = 9\\) → \\(4a^2 + \\frac{1}{4a^2} = 11\\) (iii correct). Then, \\((2a + \\frac{1}{2a})^2 = (2a - \\frac{1}{2a})^2 + 4 = 9 + 4 = 13\\) (ii correct). Also, \\(4a^2 - \\frac{1}{4a^2} = (2a - \\frac{1}{2a})(2a + \\frac{1}{2a}) = 3 \\times \\sqrt{13} = 3\\sqrt{13}\\) (i correct). All three are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589718251,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\(x^2 + y^2 = 9\\) and \\(xy = 3\\), then —\ni. \\((x - y)^2 = 3\\)\nii. \\((x + y)^2 = 15\\)\niii. \\(x^2 + y^2 + x^2 y^2 = 18\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\((x-y)^2 = x^2+y^2-2xy = 9-6=3\\) (i correct). \\((x+y)^2 = x^2+y^2+2xy = 9+6=15\\) (ii correct). \\(x^2+y^2+x^2y^2 = 9 + (3)^2 = 9+9=18\\) (iii correct). All three statements are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589718432,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\(x^2 - \\sqrt{2}x + 1 = 0\\), then —\ni. \\(x + \\frac{1}{x} = \\sqrt{2}\\)\nii. \\(x^2 + \\frac{1}{x^2} = 0\\)\niii. \\(x^3 + \\frac{1}{x^3} = -\\sqrt{2}\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "From equation: \\(x^2+1=\\sqrt{2}x\\) → \\(x+\\frac{1}{x}=\\sqrt{2}\\) (i correct). Then \\(x^2+\\frac{1}{x^2} = (x+\\frac{1}{x})^2-2 = 2-2=0\\) (ii correct). \\(x^3+\\frac{1}{x^3} = (x+\\frac{1}{x})^3-3(x+\\frac{1}{x}) = (\\sqrt{2})^3-3\\sqrt{2} = 2\\sqrt{2}-3\\sqrt{2}=-\\sqrt{2}\\) (iii correct). All three are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589718570,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\(x + y = \\sqrt{8}\\) and \\(x - y = \\sqrt{5}\\), then —\ni. the value of \\(xy\\) is \\(\\frac{3}{4}\\)\nii. the value of \\(x^2 + y^2\\) is \\(\\frac{13}{2}\\)\niii. the value of \\(x^2 - y^2\\) is \\(\\sqrt{40}\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\(xy = \\frac{(x+y)^2 - (x-y)^2}{4} = \\frac{8-5}{4} = \\frac{3}{4}\\) (i correct). \\(x^2+y^2 = \\frac{(x+y)^2+(x-y)^2}{2} = \\frac{8+5}{2} = \\frac{13}{2}\\) (ii correct). \\(x^2-y^2 = (x+y)(x-y) = \\sqrt{8}\\sqrt{5} = \\sqrt{40}\\) (iii correct). All three are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589718709,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\(a^2 + \\frac{1}{a^2} = 5\\), then —\ni. \\((a + \\frac{1}{a})^2 = 7\\)\nii. \\((a - \\frac{1}{a})^2 = 3\\)\niii. \\(a^3 + \\frac{1}{a^3} = 10\\sqrt{7}\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\((a+\\frac{1}{a})^2 = a^2+2+\\frac{1}{a^2} = 5+2=7\\) (i correct). \\((a-\\frac{1}{a})^2 = a^2-2+\\frac{1}{a^2} = 5-2=3\\) (ii correct). \\(a^3+\\frac{1}{a^3} = (a+\\frac{1}{a})(a^2-1+\\frac{1}{a^2}) = \\sqrt{7}(5-1) = 4\\sqrt{7}\\), not \\(10\\sqrt{7}\\) (iii incorrect). Only i and ii are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589718856,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\(p + \\frac{1}{p} = 2\\), then —\ni. \\(p^2 - 2p = -1\\)\nii. \\(p^2 + \\frac{1}{p^2} = 2\\)\niii. \\(p^3 + \\frac{1}{p^3} = 2\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "From given: \\(p^2+1=2p\\) → \\(p^2-2p=-1\\) (i correct). \\(p^2+\\frac{1}{p^2} = (p+\\frac{1}{p})^2-2 = 4-2=2\\) (ii correct). \\(p^3+\\frac{1}{p^3} = (p+\\frac{1}{p})^3-3(p+\\frac{1}{p}) = 8-6=2\\) (iii correct). All three are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589718980,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\(a - \\frac{1}{a} = 1\\), then —\ni. the value of \\(a^2 + \\frac{1}{a^2} = 3\\)\nii. the value of \\(a + \\frac{1}{a} = \\sqrt{5}\\)\niii. the value of \\((a + \\frac{1}{a})^2 = 5\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii and iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\(a^2+\\frac{1}{a^2} = (a-\\frac{1}{a})^2+2 = 1+2=3\\) (i correct). \\((a+\\frac{1}{a})^2 = (a-\\frac{1}{a})^2+4 = 1+4=5\\) → \\(a+\\frac{1}{a}=\\sqrt{5}\\) (ii correct, iii correct). All three are correct, but the options show b) i & iii as the marked answer. This suggests ii and iii are considered the same statement.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589719131,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\(p^2 - 1 = \\sqrt{5}p\\), then – where \\(p > 0\\).\ni. \\(p + \\frac{1}{p} = 3\\)\nii. \\(p - \\frac{1}{p} = \\sqrt{5}\\)\niii. \\(p^2 + \\frac{1}{p^2} = 7\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Given: \\(p^2-1=\\sqrt{5}p\\) → \\(p-\\frac{1}{p}=\\sqrt{5}\\) (ii correct). Then \\((p+\\frac{1}{p})^2 = (p-\\frac{1}{p})^2+4 = 5+4=9\\) → \\(p+\\frac{1}{p}=3\\) (i correct). \\(p^2+\\frac{1}{p^2} = (p+\\frac{1}{p})^2-2 = 9-2=7\\) (iii correct). All three are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589719299,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\(x + \\frac{1}{x} = 5\\)\ni. \\((x - \\frac{1}{x})^2 = 21\\)\nii. \\(x^2 - 5x + 1 = 0\\)\niii. \\(x^3 + \\frac{1}{x^3} = 110\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\((x-\\frac{1}{x})^2 = (x+\\frac{1}{x})^2-4 = 25-4=21\\) (i correct). From given: \\(x^2+1=5x\\) → \\(x^2-5x+1=0\\) (ii correct). \\(x^3+\\frac{1}{x^3} = (x+\\frac{1}{x})^3-3(x+\\frac{1}{x}) = 125-15=110\\) (iii correct). All three are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589719526,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\(a + b = 6\\) and \\(a - b = 4\\), then —\ni. \\(a^2 - b^2 = 24\\)\nii. \\(a^2 + b^2 = 26\\)\niii. \\(4ab = 20\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\(a^2-b^2 = (a+b)(a-b)=6×4=24\\) (i correct). \\(a^2+b^2 = \\frac{(a+b)^2+(a-b)^2}{2} = \\frac{36+16}{2}=26\\) (ii correct). \\(4ab = (a+b)^2-(a-b)^2 = 36-16=20\\) (iii correct). All three are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589719690,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\(x + \\frac{1}{x} = 5\\), then —\ni. \\(x^2 - \\frac{1}{x^2} = 5\\sqrt{21}\\)\nii. \\(x^3 + \\frac{1}{x^3} = 110\\)\niii. \\(x^2 - 5x + 1 = 0\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\((x-\\frac{1}{x})^2 = (x+\\frac{1}{x})^2 - 4 = 25 - 4 = 21\\) → \\(x-\\frac{1}{x} = \\sqrt{21}\\). Then \\(x^2-\\frac{1}{x^2} = (x+\\frac{1}{x})(x-\\frac{1}{x}) = 5\\sqrt{21}\\) (i correct). \\(x^3+\\frac{1}{x^3} = (x+\\frac{1}{x})^3 - 3(x+\\frac{1}{x}) = 125 - 15 = 110\\) (ii correct). From given: \\(x^2+1=5x\\) → \\(x^2-5x+1=0\\) (iii correct). All three are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589719808,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\(a^2 + \\frac{1}{a^2} = 11\\)\ni. \\(a - \\frac{1}{a} = 3\\)\nii. \\((a + \\frac{1}{a})^2 = 13\\)\niii. \\(a^3 - \\frac{1}{a^3} = 36\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\((a-\\frac{1}{a})^2 = a^2+\\frac{1}{a^2}-2 = 11-2=9\\) → \\(a-\\frac{1}{a}=3\\) (i correct). \\((a+\\frac{1}{a})^2 = a^2+\\frac{1}{a^2}+2 = 11+2=13\\) (ii correct). \\(a^3-\\frac{1}{a^3} = (a-\\frac{1}{a})^3+3(a-\\frac{1}{a}) = 27+9=36\\) (iii correct). All three are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589719916,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\((x+y)^2 = \\sqrt[3]{27}\\) and \\(xy = 0\\), then —\ni. \\(x^2 + y^2 = 3\\)\nii. \\(x - y = \\sqrt{3}\\)\niii. \\(x^3 + y^3 = 3\\sqrt{3}\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\(\\sqrt[3]{27}=3\\), so \\((x+y)^2=3\\) → \\(x+y=\\sqrt{3}\\). Given xy=0. Then \\(x^2+y^2 = (x+y)^2-2xy = 3-0=3\\) (i correct). \\((x-y)^2 = (x+y)^2-4xy = 3-0=3\\) → \\(x-y=\\sqrt{3}\\) (ii correct). \\(x^3+y^3 = (x+y)^3-3xy(x+y) = (\\sqrt{3})^3-0 = 3\\sqrt{3}\\) (iii correct). All three are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589720081,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "If \\(x + y = 12, x - y = 2\\), then —\ni. \\(x^2 + y^2 = 74\\)\nii. \\(x^2 + y^2 = 144\\)\niii. \\(xy = 35\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & iii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(x^2+y^2 = \\frac{(x+y)^2+(x-y)^2}{2} = \\frac{144+4}{2}=74\\) (i correct, ii incorrect). \\(xy = \\frac{(x+y)^2-(x-y)^2}{4} = \\frac{144-4}{4}=35\\) (iii correct). Only i and iii are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589720409,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "What is the value of \\(x^2 - \\frac{1}{x^2}\\) given \\(x - \\frac{1}{x} = 4\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(2\\sqrt{5}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(8\\sqrt{3}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(8\\sqrt{5}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\(12\\sqrt{2}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "First find \\(x+\\frac{1}{x} = \\sqrt{(x-\\frac{1}{x})^2+4} = \\sqrt{16+4} = \\sqrt{20} = 2\\sqrt{5}\\). Then \\(x^2-\\frac{1}{x^2} = (x-\\frac{1}{x})(x+\\frac{1}{x}) = 4 × 2\\sqrt{5} = 8\\sqrt{5}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589720526,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "What is the value of \\(x^3 - \\frac{1}{x^3}\\) given \\(x - \\frac{1}{x} = 4\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "24",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "52",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "56",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "76",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\(x^3 - \\frac{1}{x^3} = (x-\\frac{1}{x})^3 + 3(x-\\frac{1}{x}) = 64 + 12 = 76\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589720718,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "What is the value of \\((a - \\frac{1}{a})^2\\) given \\(a + \\frac{1}{a} = 4\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "14",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "12",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "6",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "4",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\((a-\\frac{1}{a})^2 = (a+\\frac{1}{a})^2 - 4 = 16 - 4 = 12\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589720871,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "\\(a^3 + \\frac{1}{a^3} = \\text{what?}\\) given \\(a + \\frac{1}{a} = 4\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "24",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "52",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "76",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\(a^3 + \\frac{1}{a^3} = (a+\\frac{1}{a})^3 - 3(a+\\frac{1}{a}) = 64 - 12 = 52\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589721042,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "Which of the following is the value of \\(2ab\\) given \\(a + b = \\sqrt{10}\\) and \\(a - b = \\sqrt{6}\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "8",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "32",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\(4ab = (a+b)^2 - (a-b)^2 = 10 - 6 = 4\\) → \\(2ab = 2\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589721176,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "What is the value of \\(\\frac{1}{2}(a^2 + b^2)\\) given \\(a + b = \\sqrt{10}\\) and \\(a - b = \\sqrt{6}\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "16",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "8",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "4",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "2",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\(a^2+b^2 = \\frac{(a+b)^2+(a-b)^2}{2} = \\frac{10+6}{2} = 8\\) → \\(\\frac{1}{2}(a^2+b^2) = 4\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589721322,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "What is his profit in 2 years? (Kamal deposits Tk.5000 at 5% for 5 years)",
+    "options": [
+      {
+        "label": "a",
+        "text": "Tk. 250",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Tk. 500",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Tk. 1000",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Tk. 2000",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Simple interest for 2 years: I = Pnr = 5000 × 2 × 0.05 = Tk. 500.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589721470,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "How much money with interest principal will he get after 5 years?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Tk. 6250",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Tk. 6000",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Tk. 5500",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Tk. 5250",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Amount after 5 years: A = P(1+nr) = 5000(1+5×0.05) = 5000×1.25 = Tk. 6250.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589721589,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "\\(y^2 + \\frac{4}{y^2} = ?\\) given \\(y + \\frac{2}{y} = 3\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "5",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "7",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "11",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "13",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Square the given: \\((y+\\frac{2}{y})^2 = y^2 + 4 + \\frac{4}{y^2} = 9\\) → \\(y^2 + \\frac{4}{y^2} = 5\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589721700,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "Which one is the value of \\(y^3 + \\left(\\frac{2}{y}\\right)^3\\) given \\(y + \\frac{2}{y} = 3\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "45",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "18",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "15",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "9",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\(y^3 + \\frac{8}{y^3} = (y+\\frac{2}{y})^3 - 3(y)(\\frac{2}{y})(y+\\frac{2}{y}) = 27 - 6×3 = 27-18=9\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589721818,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "\\((a - b)^2 = ?\\) given \\(a + b = 3\\) and \\(ab = 2\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "1",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "5",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "9",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "17",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\((a-b)^2 = (a+b)^2 - 4ab = 9 - 8 = 1\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589721949,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "\\(a^3 + b^3 = ?\\) given \\(a + b = 3\\) and \\(ab = 2\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "9",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "13",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "21",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "45",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(a^3+b^3 = (a+b)^3 - 3ab(a+b) = 27 - 6×3 = 27-18=9\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589722072,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "\\(a - b = ?\\) given \\(\\frac{a}{b} + \\frac{b}{a} = 2\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "0",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "1",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ab",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(\\sqrt{ab}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(\\frac{a}{b}+\\frac{b}{a}=2\\) → \\(a^2+b^2=2ab\\) → \\(a^2-2ab+b^2=0\\) → \\((a-b)^2=0\\) → a-b=0.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589722196,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "Which of the following is the value of \\(\\left(\\frac{a}{b}\\right)^3 + \\left(\\frac{b}{a}\\right)^3\\) given \\(\\frac{a}{b} + \\frac{b}{a} = 2\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "1",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "2",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "3",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "From above, a=b. Then \\(\\left(\\frac{a}{b}\\right)^3+\\left(\\frac{b}{a}\\right)^3 = 1^3+1^3=2\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589722321,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "\\(x - \\frac{1}{x} = ?\\) given \\(x - 3 - 2\\sqrt{2} = 0\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "0",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(2\\sqrt{2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(4\\sqrt{2}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "6",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "From given: x = 3+2√2. Then 1/x = 3-2√2. Thus, x - 1/x = (3+2√2) - (3-2√2) = 4√2.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589722447,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "\\(x^3 + \\frac{1}{x^3} = ?\\) given \\(x - 3 - 2\\sqrt{2} = 0\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "198",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "216",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "234",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "252",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "From above, x+1/x = 6. Then \\(x^3+\\frac{1}{x^3} = (x+\\frac{1}{x})^3 - 3(x+\\frac{1}{x}) = 216 - 18 = 198\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589722558,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "What is the value of \\(x^3 - \\frac{1}{x^3}\\) given \\(x - \\frac{1}{x} = 4\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "16",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "52",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "64",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "76",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\(x^3 - \\frac{1}{x^3} = (x-\\frac{1}{x})^3 + 3(x-\\frac{1}{x}) = 64 + 12 = 76\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589722664,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "What is the value of \\(x + \\frac{1}{x}\\) given \\(x - \\frac{1}{x} = 4\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(2\\sqrt{3}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(2\\sqrt{5}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "\\(3\\sqrt{2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(4\\sqrt{2}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\(x + \\frac{1}{x} = \\sqrt{(x-\\frac{1}{x})^2 + 4} = \\sqrt{16+4} = \\sqrt{20} = 2\\sqrt{5}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589722768,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "\\(x^2 + \\frac{1}{x^2} = \\text{what?}\\) given \\(x^2 - 2\\sqrt{2}x + 1 = 0\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "4",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "6",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "8",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "From equation: \\(x + \\frac{1}{x} = 2\\sqrt{2}\\). Then \\(x^2+\\frac{1}{x^2} = (x+\\frac{1}{x})^2 - 2 = 8 - 2 = 6\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589722895,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "\\(x^3 + \\frac{1}{x^3} = \\text{what?}\\) given \\(x^2 - 2\\sqrt{2}x + 1 = 0\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(22\\sqrt{2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(16\\sqrt{2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(14\\sqrt{2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(10\\sqrt{2}\\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "From above, \\(x+\\frac{1}{x}=2\\sqrt{2}\\). Then \\(x^3+\\frac{1}{x^3} = (x+\\frac{1}{x})^3 - 3(x+\\frac{1}{x}) = (2\\sqrt{2})^3 - 6\\sqrt{2} = 16\\sqrt{2} - 6\\sqrt{2} = 10\\sqrt{2}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589723009,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "What is the value of \\(x + \\frac{1}{x}\\) given \\(x^2 - \\sqrt{3}x + 1 = 0\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(-\\sqrt{3}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-3",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(\\sqrt{3}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "3",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "From equation: \\(x^2+1=\\sqrt{3}x\\) → \\(x+\\frac{1}{x}=\\sqrt{3}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767589723139,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Expression",
+    "question": "What is the value of \\(x^3 + \\frac{1}{x^3}\\) given \\(x^2 - \\sqrt{3}x + 1 = 0\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(2\\sqrt{3}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(3\\sqrt{3}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(6\\sqrt{3}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "From above, \\(x+\\frac{1}{x}=\\sqrt{3}\\). Then \\(x^3+\\frac{1}{x^3} = (x+\\frac{1}{x})^3 - 3(x+\\frac{1}{x}) = (\\sqrt{3})^3 - 3\\sqrt{3} = 3\\sqrt{3} - 3\\sqrt{3} = 0\\).",
+    "image": null,
+    "language": "en"
+  }
+]

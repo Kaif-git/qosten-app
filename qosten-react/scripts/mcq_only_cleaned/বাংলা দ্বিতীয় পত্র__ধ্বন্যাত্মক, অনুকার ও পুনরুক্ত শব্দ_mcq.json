@@ -1,0 +1,866 @@
+[
+  {
+    "id": 1767456366899,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "অভিন্ন বা সামান্য পরিবর্তিত চেহারায় কোনো শব্দ পরপর দুইবার ব্যবহৃত হলে তার নাম—",
+    "options": [
+      {
+        "label": "a",
+        "text": "শব্দ দ্বিত্ব",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ধ্বনি দ্বিত্ব",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শব্দ গঠন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শব্দ প্রয়োগ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456367405,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "পর পর প্রয়োগ হওয়া কাছাকাছি চেহারার শব্দকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অনুকার দ্বিত্ব",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "পুনরাবৃত্ত দ্বিত্ব",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ধ্বন্যাত্মক দ্বিত্ব",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শব্দ দ্বিত্ব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456367557,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "কোন ধরনের দ্বিত্বে বিভক্তি যুক্ত হতে দেখা যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অনুকার দ্বিত্বে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পুনরাবৃত্ত দ্বিত্বে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ধ্বন্যাত্মক দ্বিত্বে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ক ও খ উভয়ই",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456367729,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "কোনটি ধ্বন্যাত্মক দ্বিত্বের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চুপচাপ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সুরে সুরে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চোখে চোখে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "টং টং",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456367891,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "বিভক্তিযুক্ত শব্দদ্বিত্ব কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঝাঁকে ঝাঁকে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "যায় যায়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ধুম ধাম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কত কত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456368052,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "নিচের কোন ধ্বন্যাত্মক দ্বিত্বের মাঝখানে স্বরধ্বনির আগমন ঘটেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "খপাখপ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ঝকঝক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পট পট",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মঝার মঝায়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456368212,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "কোনটি ধ্বন্যাত্মক দ্বিত্বের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চুপচাপ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সুরে সুরে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চোখে চোখে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মচমচ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456368367,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "কোনো বস্তুর ধ্বনির অনুকরণে যেসব শব্দ তৈরি হয় তাকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অনুকার দ্বিত্ব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পুনরাবৃত্ত দ্বিত্ব",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ধ্বন্যাত্মক দ্বিত্ব",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ক ও খ উভয়ই",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456368509,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "কোনটি ধ্বন্যাত্মক দ্বিত্বের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পট পট",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সুরে সুরে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চোখে চোখে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "টং টং",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456368667,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "কোনো প্রাকৃতিক ধ্বনির অনুকরণে যেসব শব্দ তৈরি হয়, সেগুলোকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পুনরাবৃত্ত দ্বিত্ব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ধ্বন্যাত্মক দ্বিত্ব",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "শব্দ দ্বিত্ব",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পদাত্বক দ্বিত্ব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456368823,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "ধ্বন্যাত্মক দ্বিত্বের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চুপচাপ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঝমঝম",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ঝিকিমিকি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সুরে সুরে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456368974,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "ধ্বন্যাত্মক দ্বিত্বের মাঝখানে স্বরধ্বনির আগমন ঘটেছে কোনটিতে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ধকধক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পটপট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "টপাটপ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ফটফট",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456369126,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "নিচের কোনটি ধ্বন্যাত্মক দ্বিত্ব?",
+    "options": [
+      {
+        "label": "a",
+        "text": "লেনদেন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফিটফাট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যায় যায়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "টুনটুন",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456369267,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "ধ্বন্যাত্মক দ্বিত্বের মাঝখানে স্বরধ্বনি যুক্ত হয়ে নতুন শব্দ গঠনের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পটপট",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "এলোমেলো",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বুকে-মুখে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ঝিলমিল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456369415,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "কোনটি ধ্বন্যাত্মক দ্বিত্বের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চুপচাপ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঝমঝম",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "গরম গরম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "টুন টুন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456369569,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "ধ্বন্যাত্মক দ্বিত্বের উদাহরণ হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "টুপটাপ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঝরঝর",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মোটাসোটা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কেক-টেক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456369723,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "কোনটি অনুকার দ্বিত্ব?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঝমঝম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জিলমিল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বকবক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "হাঁকডাক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456369867,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "নিচের কোন ধ্বন্যাত্মক দ্বিত্বে মাঝখানে স্বরধ্বনির আগমন ঘটেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ধকধকে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মলায় মলায়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পটপট",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পটাকপট",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456370269,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "নিচের কোনটি অনুকার দ্বিত্বের উদাহরণ নয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঝিলমিল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ছটফট",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কচর-মচর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "টাট-ফাট",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456370421,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "অনুকার দ্বিত্ব কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঝমঝম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ধুপ ধুপ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "খচর মচর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ঝিলমিল",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456370561,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "কোনটি পুনরাবৃত্ত দ্বিত্ব?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পটাপট",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ঝিকিমিকি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কড়কড়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "খক খক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456370787,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "'হকচক' শব্দটি কোন ধরনের শব্দদ্বিত্ব?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অনুকার দ্বিত্ব",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ধ্বন্যাত্মক দ্বিত্ব",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পুনরাবৃত্ত দ্বিত্ব",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিভক্তিযুক্ত দ্বিত্ব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456370990,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "বিভক্তিযুক্ত পুনরাবৃত্ত দ্বিত্ব কোনগুলো?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ট্রাইব্যুনাল, স্টোরি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঘরে ঘরে, হাতে হাতে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পথে পথে, দুরে দুরে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পটপট, গদগদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456371161,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "নিচের কোনটি 'পুনরাবৃত্ত দ্বিত্ব' শব্দের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কবি কবি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "লুট পুট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চুপচাপ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কেক-টেক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456371315,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "পুনরাবৃত্ত দ্বিত্ব কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হট্টগোল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "খকর খকর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পটপট",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সুরে সুরে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456371485,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "কোন শব্দটি পুনরাবৃত্ত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মচমচ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "খপাখপ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গুটিগুটি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "গরম গরম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456371637,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "ধ্বন্যাত্মক, অনুকার ও পুনরুক্ত শব্দ",
+    "question": "ভাষায় তিন ধরনের শব্দদ্বিত্ব রয়েছে, সেগুলো হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "অনুকার, পদাত্মক, যুগ্ম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শব্দদ্বিত্ব, পদের, দ্বিরুক্ত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অনুকার, ধ্বন্যাত্মক, পুনরাবৃত্ত",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "পুনরাবৃত্ত, শব্দাত্মক, ধ্বন্যাত্মক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  }
+]

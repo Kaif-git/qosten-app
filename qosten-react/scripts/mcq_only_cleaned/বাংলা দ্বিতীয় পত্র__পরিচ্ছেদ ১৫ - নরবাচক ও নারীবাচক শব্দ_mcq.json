@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1779877071362,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৫ - নরবাচক ও নারীবাচক শব্দ",
+    "question": "নিত্য নারীবাচক শব্দের উদাহরণ কোনটি?",
+    "options": "[{\"label\":\"a\",\"text\":\"সুন্দরী\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বেগম\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"বিধবা\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"শিক্ষিকা\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877071484,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৫ - নরবাচক ও নারীবাচক শব্দ",
+    "question": "'বিধবা' শব্দটি কোন জাতীয় নারীবাচক শব্দ?",
+    "options": "[{\"label\":\"a\",\"text\":\"অপত্মীবাচক\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"পত্নীবাচক\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"সাধারণ\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"নিত্য\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877071599,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৫ - নরবাচক ও নারীবাচক শব্দ",
+    "question": "বিশেষ নিয়মে গঠিত নারীবাচক শব্দ কোনটি?",
+    "options": "[{\"label\":\"a\",\"text\":\"নর-নারী\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বালক-বালিকা\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"দুঃখী-দুঃখিনী\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"খান-খানম\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877071719,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৫ - নরবাচক ও নারীবাচক শব্দ",
+    "question": "নিত্য নারীবাচক শব্দ কোনটি?",
+    "options": "[{\"label\":\"a\",\"text\":\"সৎমা\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"অভাগী\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"হুজরাইন\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"চৌধুরীনি\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877071847,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৫ - নরবাচক ও নারীবাচক শব্দ",
+    "question": "'নি' প্রত্যয় যোগে গঠিত নারীবাচক শব্দ কোনটি?",
+    "options": "[{\"label\":\"a\",\"text\":\"কাঙালিনি\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"জেলেনি\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"বাঘিনি\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"বিজয়ীনি\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  }
+]

@@ -1,0 +1,2850 @@
+[
+  {
+    "id": 1766341234814,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which one is the ratio of the frequencies of waves (i) and (ii)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1 : 2",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2 : 3",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "3 : 2",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "3 : 4",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "In case of wave (i), \\(1.5T = 0.6\\) or, \\(T = 0.4\\) : \\(f = \\frac{1}{T} = 2.5\\) Hz\nIn case of wave (ii), \\(2T = 1.2s\\) or, \\(T = 0.6\\) : \\(f = \\frac{1}{T} = \\frac{5}{3}\\) Hz\n\\[\\frac{f_1}{f_2} = \\frac{2.5}{\\frac{5}{3}} = \\frac{3}{2} \\quad f_1 : f_2 = 3 : 2\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341235449,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "What is the velocity of the wave if the time taken from D to D' is 1s?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1 ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "20 ms\\(^{-1}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "\\(\\frac{1}{2}\\) ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "0.02 ms\\(^{-1}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "If the distance between points D and D' represents one wavelength (λ=20m) and the wave travels that distance in time T=1s, then v = λ/T = 20 m/s.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341235784,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "A wave has a frequency of 2Hz, how many waves are produced in 1 minute?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2 x 60",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "60/2",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "2",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "260",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Number of waves = frequency × time = 2 Hz × 60 s = 120 waves.\r\nExplanation: Number of waves = frequency × time = 2 Hz × 60 s = 120 waves.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341235830,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "The distance between how many consecutive wave beats is defined as wavelength?",
+    "options": [
+      {
+        "label": "a",
+        "text": "four",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "three",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "two",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "one",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Wavelength is the distance between two consecutive corresponding points (e.g., crest to crest) on a wave.\r\nExplanation: Wavelength is the distance between two consecutive corresponding points (e.g., crest to crest) on a wave.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341236007,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "If the length of the string of a harmonic oscillator is \\(l\\) and the acceleration due to gravity \\(g\\), what is the time period?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(T^2 g = 4\\pi l\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(T^2 g = 4\\pi^2 l\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(g = \\frac{4\\pi^2 l}{T^2}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\(g = \\frac{4\\pi^2 T^2}{l}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "From \\(T = 2\\pi \\sqrt{\\frac{l}{g}}\\), we can rearrange to get \\(g = \\frac{4\\pi^2 l}{T^2}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341236171,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "What is the frequency of the wave?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.3 Hz",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "3.5 Hz",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "0.4 Hz",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "2.5 Hz",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "From the provided solution: \\( T = 0.4 \\Rightarrow f = \\frac{1}{T} = \\frac{1}{0.4} = 2.5 \\, \\text{Hz} \\)\r\nExplanation: From the provided solution: \\( T = 0.4 \\Rightarrow f = \\frac{1}{T} = \\frac{1}{0.4} = 2.5 \\, \\text{Hz} \\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341236280,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "What type of motion is the motion of the wire of gutter?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Vibratory",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Periodic",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Linear",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Circular",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The wire of a gutter (like a plucked string) moves back and forth around a mean position, which is vibratory motion.\r\nExplanation: The wire of a gutter (like a plucked string) moves back and forth around a mean position, which is vibratory motion.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341236291,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "A man clapped standin on one of the banks of the river. Echo is heard after 1.5s due to the reflection of the sound from another bank. If the velocity of sound at that time is 340ms\\(^{-1}\\), what is the breadth of the river?",
+    "options": [
+      {
+        "label": "a",
+        "text": "225 m",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "235 m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "245 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "255 m",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\( d = \\frac{vt}{2} = \\frac{340 \\times 1.5}{2} = 255 \\, \\text{m}\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341236635,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which is essential for transfer of energy?",
+    "options": [
+      {
+        "label": "a",
+        "text": "weight",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "wave",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "mass",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "force",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "A wave is a disturbance that transfers energy through a medium or space.\r\nExplanation: A wave is a disturbance that transfers energy through a medium or space.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341236678,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "What is the speed of sound in mercury?",
+    "options": [
+      {
+        "label": "a",
+        "text": "330ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "1284ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "1450ms\\(^{-1}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "1493ms\\(^{-1}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The speed of sound in mercury is approximately 1450 m/s.\r\nExplanation: The speed of sound in mercury is approximately 1450 m/s.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341236767,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which type of wave is a water wave?",
+    "options": [
+      {
+        "label": "a",
+        "text": "mechanical wave",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "vibration",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "time period",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "frequency",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Water waves are a type of mechanical wave that require a medium (water) to travel.\r\nExplanation: Water waves are a type of mechanical wave that require a medium (water) to travel.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341236785,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "If the frequency is \\(f\\) and the wavelength \\(\\lambda\\), what is the velocity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "v = \\(\\beta\\lambda\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(f = \\lambda v\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(f = \\frac{\\lambda}{v}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(v = \\frac{f}{\\lambda}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The wave equation is \\(v = f \\lambda\\). Option 'a' uses \\(\\beta\\) which is likely a typo for \\(f\\).\r\nExplanation: The wave equation is \\(v = f \\lambda\\). Option 'a' uses \\(\\beta\\) which is likely a typo for \\(f\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341236828,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "A boat is set into vertical libration by waves of speed 5 ms\\(^{-1}\\) whose crests are 5m apart. The time period of vertical vibration of the boat is —",
+    "options": [
+      {
+        "label": "a",
+        "text": "4 s",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2 s",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "1 s",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "0.5 s",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Wavelength λ = 5 m, wave speed v = 5 m/s. Time period T = λ / v = 5 m / 5 m/s = 1 s.\r\nExplanation: Wavelength λ = 5 m, wave speed v = 5 m/s. Time period T = λ / v = 5 m / 5 m/s = 1 s.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341236935,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which is not a characteristic of melodic sound?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Intensity",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Elasticity of medium",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Pitch",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Timber",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The characteristics of a musical (melodic) sound are loudness (intensity), pitch, and timbre (quality). Elasticity of the medium is a property affecting sound speed, not a characteristic of the sound itself.\r\nExplanation: The characteristics of a musical (melodic) sound are loudness (intensity), pitch, and timbre (quality). Elasticity of the medium is a property affecting sound speed, not a characteristic of the sound itself.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341236990,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "What is the rate of change of displacement of a wave in a particular direction?",
+    "options": [
+      {
+        "label": "a",
+        "text": "wave speed",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "wavelength",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "wave velocity",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "frequency",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Wave velocity is defined as the rate at which the wave disturbance (displacement) propagates in a specific direction.\r\nExplanation: Wave velocity is defined as the rate at which the wave disturbance (displacement) propagates in a specific direction.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341237048,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Through which of the following medium does sound travel faster?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Water",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Mercury",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Iron",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Hydrogen",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Sound travels fastest through solids due to their higher elasticity and density. Among the options, iron is a solid.\r\nExplanation: Sound travels fastest through solids due to their higher elasticity and density. Among the options, iron is a solid.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341237049,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which of the depths of the well is it possible to determine using the echo of sound waves?",
+    "options": [
+      {
+        "label": "a",
+        "text": "AC",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "BC",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "AB",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "2BC",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "[There is an image]. Typically, if a diagram shows a well with points A at top, B at water surface, and C at bottom, the total depth AB can be found using the echo from the bottom C.\r\nExplanation: [There is an image]. Typically, if a diagram shows a well with points A at top, B at water surface, and C at bottom, the total depth AB can be found using the echo from the bottom C.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341237075,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "About how many frequencies can bats make sounds?",
+    "options": [
+      {
+        "label": "a",
+        "text": "100 Hz",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "200 Hz",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "100 kHz",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "200 kHz",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Bats emit ultrasonic sounds for echolocation, typically in the range of 20 kHz to 200 kHz, with common frequencies around 100 kHz.\r\nExplanation: Bats emit ultrasonic sounds for echolocation, typically in the range of 20 kHz to 200 kHz, with common frequencies around 100 kHz.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341237145,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "What is the more popular unit of sound intensity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "decibel",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "centibel",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "kilobel",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "megabel",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The decibel (dB) is the commonly used unit for measuring sound intensity level.\r\nExplanation: The decibel (dB) is the commonly used unit for measuring sound intensity level.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341237209,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which waves are used by elephants to communicate with each other?",
+    "options": [
+      {
+        "label": "a",
+        "text": "light",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "radio",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "infrasound",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ultrasound",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Elephants use infrasound (very low frequency sound, below 20 Hz) for long-distance communication.\r\nExplanation: Elephants use infrasound (very low frequency sound, below 20 Hz) for long-distance communication.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341237222,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Hang a stone of mass 10gm from a string 1m long. What is its time period?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1s",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2s",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "3s",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "4s",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "For a simple pendulum, the time period is independent of mass and given by \\(T = 2\\pi \\sqrt{\\frac{l}{g}}\\). For l=1m and g≈9.8 m/s², T≈2.0 seconds.\r\nExplanation: For a simple pendulum, the time period is independent of mass and given by \\(T = 2\\pi \\sqrt{\\frac{l}{g}}\\). For l=1m and g≈9.8 m/s², T≈2.0 seconds.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341237241,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "How many characteristics do musical sounds have?",
+    "options": [
+      {
+        "label": "a",
+        "text": "3",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "4",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "5",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "6",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The three main characteristics of musical sound are loudness (intensity), pitch (frequency), and timbre (quality).\r\nExplanation: The three main characteristics of musical sound are loudness (intensity), pitch (frequency), and timbre (quality).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341237409,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "What will be the minimum hearing distance of the reflections to hear an echo of sound at 40°C in air?",
+    "options": [
+      {
+        "label": "a",
+        "text": "17.8 m",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "17.6 m",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "17.4 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "16.6 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Here, \\(T_1 = 0^\\circ C = 273 \\, \\text{K}\\)\r\n\\( T_2 = 40^\\circ C = 313 \\, \\text{K} \\)\r\n\\( v_1 = 350 \\, \\text{ms}^{-1}; \\, v_2 = ? \\)\r\nWe know, \\(\\frac{v_2}{v_1} = \\sqrt{\\frac{T_2}{T_1}}\\)\r\n\\(\\Rightarrow v_2 = \\sqrt{\\frac{313}{273}} \\times 330 \\, \\text{ms}^{-1}\\)\r\n\\(\\therefore v_2 = 353.35 \\, \\text{ms}^{-1}\\)\r\nNow, d = \\(\\frac{v_1}{2} = \\frac{353.35 \\times 0.1}{2} = 17.67 \\, \\text{m}\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341237428,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Bat can produce the sound of frequency 100 kHz. What type of sound is it?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Infrasonic",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Dull sound",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Ultrasonic",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Musical sound",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Sounds with frequencies above the human audible range (above 20 kHz) are called ultrasonic sounds.\r\nExplanation: Sounds with frequencies above the human audible range (above 20 kHz) are called ultrasonic sounds.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341237443,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which instrument used to catch the reflecting wave for determine the depth of the ocean?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Geophone",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Radar",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Telescope",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Periscope",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "A geophone is a ground motion sensor used in seismic surveys, including for determining ocean depth by detecting reflected sound waves.\r\nExplanation: A geophone is a ground motion sensor used in seismic surveys, including for determining ocean depth by detecting reflected sound waves.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341237539,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which is propagated with the wave?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Force",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Mass",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Momentum",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Energy",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Waves transfer energy from one point to another without transferring matter.\r\nExplanation: Waves transfer energy from one point to another without transferring matter.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341237714,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which one happens when time period is greater of a particle in a wave?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Decreasing frequency",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Increasing frequency",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Stop frequency",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Frequency unchanged",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Frequency (\\(f\\)) and time period (\\(T\\)) are inversely related (\\(f = 1/T\\)). A greater time period means a lower frequency.\r\nExplanation: Frequency (\\(f\\)) and time period (\\(T\\)) are inversely related (\\(f = 1/T\\)). A greater time period means a lower frequency.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341237836,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "In which one of the following media is the velocity of sound lowest?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Iron",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Water",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Air",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Kerosene",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Sound travels slowest in gases. Among the options, air is a gas, while the others are liquids or solids where sound travels faster.\r\nExplanation: Sound travels slowest in gases. Among the options, air is a gas, while the others are liquids or solids where sound travels faster.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341237837,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which test uses sound?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ultrasonography",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "endoscopy",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "MRI",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "angiography",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Ultrasonography uses high-frequency sound waves (ultrasound) to create images of internal body structures.\r\nExplanation: Ultrasonography uses high-frequency sound waves (ultrasound) to create images of internal body structures.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341237878,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "The sound used in cleaning small instrument is —",
+    "options": [
+      {
+        "label": "a",
+        "text": "Audible sound",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Ultrasonic sound",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Infrasonic sound",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "AII",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Ultrasonic cleaners use high-frequency sound waves to clean delicate instruments.\r\nExplanation: Ultrasonic cleaners use high-frequency sound waves to clean delicate instruments.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341237941,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which musical instrument is based on air flow?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Harmonium",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Violin",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Dhol",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Flute",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "A flute is a woodwind instrument where sound is produced by the flow of air across an opening.\r\nExplanation: A flute is a woodwind instrument where sound is produced by the flow of air across an opening.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341237964,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "If a spring has constant k and mass m then the time period will be —",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(T = 2\\pi \\sqrt{\\frac{k}{m}}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(T = \\sqrt{\\frac{m}{k}}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(T = 2\\pi \\sqrt{\\frac{m}{k}}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\(T = 4\\pi \\sqrt{\\frac{m}{k}}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The time period for a mass-spring system is \\(T = 2\\pi \\sqrt{\\frac{m}{k}}\\).\r\nExplanation: The time period for a mass-spring system is \\(T = 2\\pi \\sqrt{\\frac{m}{k}}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341238002,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which relation is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "F, = -K,",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(\\frac{1}{u} + \\frac{1}{f} = \\frac{1}{v}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "T = 2\\(\\pi\\) \\(\\sqrt{\\frac{g}{l}}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "f = v\\(_h\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\(T = 2\\pi \\sqrt{\\frac{l}{g}}\\) is the formula for the time period of a simple pendulum. Option c appears to be a misprint of this standard formula.\r\nExplanation: \\(T = 2\\pi \\sqrt{\\frac{l}{g}}\\) is the formula for the time period of a simple pendulum. Option c appears to be a misprint of this standard formula.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341238020,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which of the following is a transverse wave?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Wave ray",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Sun ray",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Sound wave",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Wireless wave",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Wireless waves (radio waves) are a type of electromagnetic wave, which are transverse waves.\r\nExplanation: Wireless waves (radio waves) are a type of electromagnetic wave, which are transverse waves.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341238151,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "What causes sound to reverberate?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Refraction",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Contraction",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Reflection",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Diffusion",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Reverberation is caused by the repeated reflection of sound waves from surfaces.\r\nExplanation: Reverberation is caused by the repeated reflection of sound waves from surfaces.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341238210,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which of the following is longitudinal wave?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Radio wave",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Light wave",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Water wave",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Sound wave",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Sound waves are longitudinal waves, where particle vibration is parallel to the direction of wave propagation.\r\nExplanation: Sound waves are longitudinal waves, where particle vibration is parallel to the direction of wave propagation.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341238383,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "A body produces sound only if it is —",
+    "options": [
+      {
+        "label": "a",
+        "text": "Made of glass",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Made of aluminium",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "In vibration",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Made of iron",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Sound is produced by vibrating bodies.\r\nExplanation: Sound is produced by vibrating bodies.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341238618,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "What type of wave is sound?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Transverse wave",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Electromagnetic wave",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Longitudinal wave",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Radio wave",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Sound waves are mechanical longitudinal waves.\r\nExplanation: Sound waves are mechanical longitudinal waves.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341238704,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which device consists of the mechanism of sending and receiving ultrasonic waves?",
+    "options": [
+      {
+        "label": "a",
+        "text": "radar",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "SONAR",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ultra sonogram",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "X-ray",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "SONAR (Sound Navigation and Ranging) uses transmitted and received ultrasonic waves to detect objects underwater.\r\nExplanation: SONAR (Sound Navigation and Ranging) uses transmitted and received ultrasonic waves to detect objects underwater.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341238804,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which of the following will be unchanged during the propagation of wave in different medium?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Wave length",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Wave velocity",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Wave speed",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Frequency",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "When a wave passes from one medium to another, its frequency remains constant. Its speed and wavelength change.\r\nExplanation: When a wave passes from one medium to another, its frequency remains constant. Its speed and wavelength change.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341239018,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "If velocity and wave length of a sound are 340ms\\(^{-1}\\) and 20m respectively then which one will be the time period?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.1s",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "0.85s",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "0.058s",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "0.68s",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\( T = \\frac{\\lambda}{v} = \\frac{20}{340} \\approx 0.0588 \\, \\text{s} \\).\r\nExplanation: \\( T = \\frac{\\lambda}{v} = \\frac{20}{340} \\approx 0.0588 \\, \\text{s} \\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341239019,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "The velocity is more through in which substance?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Hydrogen",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Mercury",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Ice",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Methane",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Sound travels faster in solids and liquids than in gases. Mercury is a liquid, while the others are gases or a solid (ice) but mercury's specific properties allow very high sound speed (~1450 m/s).\r\nExplanation: Sound travels faster in solids and liquids than in gases. Mercury is a liquid, while the others are gases or a solid (ice) but mercury's specific properties allow very high sound speed (~1450 m/s).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341239074,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "The unit of intensity of sound is —",
+    "options": [
+      {
+        "label": "a",
+        "text": "Hz",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "dB",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "\\(\\text{Vm}^{-2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "W-Hz",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The decibel (dB) is the unit used to measure the intensity level of sound.\r\nExplanation: The decibel (dB) is the unit used to measure the intensity level of sound.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341239172,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "For which of the following wave is reaction felt only?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Gravity wave",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Sound wave",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Electro-magnetic wave",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Wave function",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Gravity waves (e.g., in water) transfer energy, and their effect (reaction) can be felt, such as a boat bobbing.\r\nExplanation: Gravity waves (e.g., in water) transfer energy, and their effect (reaction) can be felt, such as a boat bobbing.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341239190,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which one of the following medium the velocity of sound is more?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Plasma",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Gases",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Liquid",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Solid",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Sound travels fastest in solids, then liquids, then gases. Plasma's behavior can vary but generally solids have the highest speed.\r\nExplanation: Sound travels fastest in solids, then liquids, then gases. Plasma's behavior can vary but generally solids have the highest speed.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341239191,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which one is the dimension of intensity of sound?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ML\\(^{2}\\)T\\(^{-3}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ML\\(^{-1}\\)T\\(^{-2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "MT\\(^{-3}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ML\\(^{2}\\)T\\(^{-2}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Intensity is power per unit area. Power has dimensions [ML²T⁻³] and area has [L²]. Therefore, Intensity = [ML²T⁻³]/[L²] = [MT⁻³].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341239239,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "What happens to wave propagation as energy increases?",
+    "options": [
+      {
+        "label": "a",
+        "text": "more",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "less",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "elastic",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "unchangeable",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Generally, increasing the energy input to a wave (e.g., increasing amplitude) results in more vigorous propagation or a stronger wave.\r\nExplanation: Generally, increasing the energy input to a wave (e.g., increasing amplitude) results in more vigorous propagation or a stronger wave.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341239357,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "What is the method by which pictures of the internal structure of the human body are formed?",
+    "options": [
+      {
+        "label": "a",
+        "text": "X-Ray",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "scanning",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ultrasonography",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "physiotherapy",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Ultrasonography is a non-invasive imaging technique that uses ultrasound waves to create pictures of internal body structures.\r\nExplanation: Ultrasonography is a non-invasive imaging technique that uses ultrasound waves to create pictures of internal body structures.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341239565,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "If the time period of a wave transmitting particle increases, what change it will cause to the frequency? It will—",
+    "options": [
+      {
+        "label": "a",
+        "text": "decrease",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "increase",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "be nil",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "remain unchanged",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Frequency is inversely proportional to the time period (\\(f = 1/T\\)). An increase in T causes a decrease in f.\r\nExplanation: Frequency is inversely proportional to the time period (\\(f = 1/T\\)). An increase in T causes a decrease in f.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341239855,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "How is the presence of underground oil or gas determined?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ultrasonography",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "SONAR",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "geophone",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "selsmic survey",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Seismic surveys, which use generated sound waves and detect their reflections, are a primary method for locating underground oil and gas reserves.\r\nExplanation: Seismic surveys, which use generated sound waves and detect their reflections, are a primary method for locating underground oil and gas reserves.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341239872,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which of these properties of sound is used to determine the presence of underground fossil fuels?",
+    "options": [
+      {
+        "label": "a",
+        "text": "superposition",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "reflection",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "refraction",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "diffraction",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The reflection of sound waves (seismic waves) off different underground layers is analyzed to locate fossil fuels.\r\nExplanation: The reflection of sound waves (seismic waves) off different underground layers is analyzed to locate fossil fuels.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341239891,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which law does a spring force obey?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Hooke’s law",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Newton’s laws",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Young’s law",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "law of elasticity",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The restoring force in a spring is given by Hooke's Law: \\(F = -kx\\).\r\nExplanation: The restoring force in a spring is given by Hooke's Law: \\(F = -kx\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341240144,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "What will be the velocity of sound at temperature 40°C?",
+    "options": [
+      {
+        "label": "a",
+        "text": "332 ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "350 ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "353 ms\\(^{-1}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "362 ms\\(^{-1}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The approximate formula for speed of sound in air is \\(v = 331 + 0.6T\\). At 40°C, \\(v = 331 + 0.640 = 331 + 24 = 355 m/s\\), but using precise calculation from given data (as in Q83) gives 353 ms\\(^{-1}\\).\r\nExplanation: The approximate formula for speed of sound in air is \\(v = 331 + 0.6T\\). At 40°C, \\(v = 331 + 0.640 = 331 + 24 = 355 m/s\\), but using precise calculation from given data (as in Q83) gives 353 ms\\(^{-1}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341240398,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "The velocity of sound is 350ms\\(^{-1}\\), what is the minimum distance for hear echo?",
+    "options": [
+      {
+        "label": "a",
+        "text": "15 m",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "16 m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "16.5m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "17.5m",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "We know, s = vt\r\n\\(\\Rightarrow 2d = vt\\)\r\n\\(\\Rightarrow d = \\frac{vt}{2} = \\frac{350 \\times 0.1}{2}\\)\r\n\\(\\therefore d = 17.5 \\, \\text{m}\\)\r\nHere, distance, s = 2d\r\ntime, t = 0.1 s\r\nvelocity of sound,\r\nv = 350 ms\\(^{-1}\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341240865,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "In air a sound wave travels 1750m in 5 sec. Wavelength of the wave is 0.5m, what is the frequency of the wave?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.00143 Hz",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "175 Hz",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "700 Hz",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "3500 Hz",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\(\\nu = \\frac{s}{t} = \\frac{1750}{5} = 350 \\, \\text{ms}^{-1} \\quad t = \\frac{\\nu}{\\lambda} = \\frac{350}{0.5} = 700 \\, \\text{Hz}\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341240994,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which one is the unit of intensity of sound?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Nm\\(^{-2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Hz",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Q Nm\\(^{-2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "dB",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The decibel (dB) is the unit of sound intensity level.\r\nExplanation: The decibel (dB) is the unit of sound intensity level.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341241035,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which is a musical instrument based on air flow?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Harmonium",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Star",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Violin",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Tabla",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "A harmonium produces sound by forcing air through reeds, making it an air-flow-based instrument.\r\nExplanation: A harmonium produces sound by forcing air through reeds, making it an air-flow-based instrument.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341241103,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which of these methods may be used for measuring the depth of a well?",
+    "options": [
+      {
+        "label": "a",
+        "text": "reflection",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "refraction",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "polarisation",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "diffraction",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The depth of a well can be measured using the echo (reflection) of a sound wave.\r\nExplanation: The depth of a well can be measured using the echo (reflection) of a sound wave.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341241406,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which one is not applicable for wave?",
+    "options": [
+      {
+        "label": "a",
+        "text": "full oscillation",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "time period",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "frequency",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "torque",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Torque is a concept related to rotational motion, not a standard parameter describing a wave.\r\nExplanation: Torque is a concept related to rotational motion, not a standard parameter describing a wave.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341241616,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "If the frequency of the wave is 100 Hz its wave velocity will be —",
+    "options": [
+      {
+        "label": "a",
+        "text": "8 ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "10 ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "14 ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "16 ms\\(^{-1}\\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Without the image, the answer is likely derived from v = fλ. Given f=100 Hz and presumably λ read from the image as 0.16 m, v = 16 m/s.\r\nExplanation: Without the image, the answer is likely derived from v = fλ. Given f=100 Hz and presumably λ read from the image as 0.16 m, v = 16 m/s.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341241755,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "What is the range of infrasonic sound?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1 Hz to 20 Hz",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "40 Hz to 4000 Hz",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "20 Hz to 20000 Hz",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "60 Hz to 6000 Hz",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Infrasonic sounds have frequencies below the human audible range, typically below 20 Hz.\r\nExplanation: Infrasonic sounds have frequencies below the human audible range, typically below 20 Hz.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341241819,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "What type of sound is used to remove stone from teeth and kidney?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Infrasonic Sound",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Ultrasonic Sound",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Audible Sound",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Mechanical Sound",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Ultrasonic sound waves are used in medical procedures like lithotripsy to break up kidney stones and dental calculus.\r\nExplanation: Ultrasonic sound waves are used in medical procedures like lithotripsy to break up kidney stones and dental calculus.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341241837,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which property of a wave changes as it travels from one medium to another?",
+    "options": [
+      {
+        "label": "a",
+        "text": "length",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "frequency",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "velocity",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "speed",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "When a wave changes medium, its speed and wavelength change. \"Length\" here refers to wavelength.\r\nExplanation: When a wave changes medium, its speed and wavelength change. \"Length\" here refers to wavelength.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341241900,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which property of a wave remains unchanged as it travels through various media?",
+    "options": [
+      {
+        "label": "a",
+        "text": "wavelength",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "velocity",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "speed",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "time period",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The time period (and hence frequency) of a wave remains constant when it passes from one medium to another.\r\nExplanation: The time period (and hence frequency) of a wave remains constant when it passes from one medium to another.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341242087,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "If energy at A is 100 J, what is the amount of energy at D?",
+    "options": [
+      {
+        "label": "a",
+        "text": "50 J",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "200 J",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "300 J",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "400 J",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Based on the typical context of such questions (e.g., energy dissipation or division in waves), the energy at D is often half or a fraction of that at A. Given the options, 50 J is the most plausible answer indicating energy loss.\r\nExplanation: Based on the typical context of such questions (e.g., energy dissipation or division in waves), the energy at D is often half or a fraction of that at A. Given the options, 50 J is the most plausible answer indicating energy loss.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341242122,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which of these is an example of a transverse wave?",
+    "options": [
+      {
+        "label": "a",
+        "text": "water waves",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "light waves",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "radio eaves",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "all of them",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Water waves have both transverse and longitudinal components, but are often classified as transverse for simplification. Light waves and radio waves are electromagnetic waves, which are transverse. So \"all of them\" can be considered examples of transverse waves in common contexts.\r\nExplanation: Water waves have both transverse and longitudinal components, but are often classified as transverse for simplification. Light waves and radio waves are electromagnetic waves, which are transverse. So \"all of them\" can be considered examples of transverse waves in common contexts.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341242299,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which medium has the greatest speed of sound?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Iron",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Diamonds",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Mercury",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Hydrogen",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Diamond, being a very rigid solid, has one of the highest speeds of sound among known materials.\r\nExplanation: Diamond, being a very rigid solid, has one of the highest speeds of sound among known materials.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341242553,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which of the following sounds is pleasing to our senses?",
+    "options": [
+      {
+        "label": "a",
+        "text": "musicless sound",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "non-musical sounds",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "musical sound",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "periodic vibrations",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Musical sounds are regular, periodic, and pleasing to the ear.\r\nExplanation: Musical sounds are regular, periodic, and pleasing to the ear.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341242610,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "What kind of speed does the heart beat?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Translational motion",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Rotational motion",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Periodic motion",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Circular motion",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The heart beats in a regular, repeating cycle, which is an example of periodic motion.\r\nExplanation: The heart beats in a regular, repeating cycle, which is an example of periodic motion.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341242749,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which particles of the figure have the same phase?",
+    "options": [
+      {
+        "label": "a",
+        "text": "B, C, D",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "C, E, G",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "D, F, H",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "A, E, I",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Points that are at identical positions in their oscillation cycle (e.g., same displacement and velocity direction) are in phase. In a typical wave diagram, points separated by a full wavelength (like A, E, I) are in phase.\r\nExplanation: Points that are at identical positions in their oscillation cycle (e.g., same displacement and velocity direction) are in phase. In a typical wave diagram, points separated by a full wavelength (like A, E, I) are in phase.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341242872,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "If the mass is \\(m\\), the spring constant \\(k\\) and the displacement \\(x\\), then what is the exerted force \\(F\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(F = kx\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(F = -kx\\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "\\(F = kax\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(F = -mkx\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Hooke's Law for a spring states that the restoring force is proportional to displacement and opposite in direction: \\(F = -kx\\).\r\nExplanation: Hooke's Law for a spring states that the restoring force is proportional to displacement and opposite in direction: \\(F = -kx\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341242908,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "How many quality words are produced in speech?",
+    "options": [
+      {
+        "label": "a",
+        "text": "40-60 dB",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "50-60 dB",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "60-80 dB",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "80-90 dB",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Normal conversation or speech typically has a sound intensity level in the range of 60-80 dB.\r\nExplanation: Normal conversation or speech typically has a sound intensity level in the range of 60-80 dB.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341242911,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "If the frequency of sound is increased in a definite medium, which one of the following will decrease?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Wave velocity",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Amplitude",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Time period",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Phase",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "In a given medium, wave speed is constant. Frequency (\\(f\\)) and time period (\\(T\\)) are inversely related, so increasing \\(f\\) decreases \\(T\\).\r\nExplanation: In a given medium, wave speed is constant. Frequency (\\(f\\)) and time period (\\(T\\)) are inversely related, so increasing \\(f\\) decreases \\(T\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341243264,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "For which of the following reasons does a harmonic oscillator not oscillate forever?",
+    "options": [
+      {
+        "label": "a",
+        "text": "due to force",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "kinetic energy",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "potential energy",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "friction",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "In real systems, friction (or damping) dissipates energy, causing oscillations to eventually stop.\r\nExplanation: In real systems, friction (or damping) dissipates energy, causing oscillations to eventually stop.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341243379,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "What is the relation between frequency and time period?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Proportional",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Inversely proportional",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Proportional of square",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Inversely proportional of square",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\(f = 1/T\\), so frequency and time period are inversely proportional.\r\nExplanation: \\(f = 1/T\\), so frequency and time period are inversely proportional.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341243426,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "What is the motion obeyed by Hooke’s law known as?",
+    "options": [
+      {
+        "label": "a",
+        "text": "simple harmonic motion",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "linear motion",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "periodic motion",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "circular motion",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "A system where the restoring force is proportional to displacement (like a mass on a spring) undergoes simple harmonic motion.\r\nExplanation: A system where the restoring force is proportional to displacement (like a mass on a spring) undergoes simple harmonic motion.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341243496,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "By which of the following characteristics can we feel the difference of the sound produced by the musical instruments?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Intensity",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Pitch",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Timber",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Amplitude",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Timbre (or quality) is the characteristic that allows us to distinguish between different musical instruments playing the same note at the same loudness.\r\nExplanation: Timbre (or quality) is the characteristic that allows us to distinguish between different musical instruments playing the same note at the same loudness.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341243499,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "If the speed of sound in air is 340 m/s and the echo time is 1.5s, what is the distance between the source and the reflecting surface?",
+    "options": [
+      {
+        "label": "a",
+        "text": "250m",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "255 m",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "260 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "265 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Distance \\(d = \\frac{v \\times t}{2} = \\frac{340 \\times 1.5}{2} = 255 \\, \\text{m}\\)\r\nExplanation: Distance \\(d = \\frac{v \\times t}{2} = \\frac{340 \\times 1.5}{2} = 255 \\, \\text{m}\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341243610,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "If amplitude of any wave is increased by 3 times, intensity of the wave will —",
+    "options": [
+      {
+        "label": "a",
+        "text": "remain same",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "be decreased by 9 times",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "be increased by 9 times",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "be increased by 3 times",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Intensity is proportional to the square of the amplitude. If amplitude becomes 3A, intensity becomes \\( (3)^2 = 9 \\) times the original.\r\nExplanation: Intensity is proportional to the square of the amplitude. If amplitude becomes 3A, intensity becomes \\( (3)^2 = 9 \\) times the original.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341243653,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "What is the effective length of the second pendulum on Earth’s surface?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1m",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "0.992m",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "2m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "0.5m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "A seconds pendulum has a time period of 2 seconds. Using \\(T = 2\\pi \\sqrt{\\frac{l}{g}}\\) and \\(g = 9.8 m/s^2\\), the calculated length is approximately 0.992 m.\r\nExplanation: A seconds pendulum has a time period of 2 seconds. Using \\(T = 2\\pi \\sqrt{\\frac{l}{g}}\\) and \\(g = 9.8 m/s^2\\), the calculated length is approximately 0.992 m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341243882,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "If the frequency is 300 Hz and the wave lenght of the sound wave is 1.05 m, then what is the velocity of sound wave in the air?",
+    "options": [
+      {
+        "label": "a",
+        "text": "315 ms\\(^{-1}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "450 ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "455 ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "460 ms\\(^{-1}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Velocity v = f × λ = 300 Hz × 1.05 m = 315 m/s.\r\nExplanation: Velocity v = f × λ = 300 Hz × 1.05 m = 315 m/s.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341244100,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "If the spring constant is \\(k\\), mass \\(m\\), then what is the time period?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(T = 2\\pi\\sqrt{\\frac{k}{m}}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(T = 2\\pi\\sqrt{\\frac{m}{k}}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "\\(T^2 = 4\\pi\\frac{k}{m}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(T^2 = 4\\pi\\frac{m}{k}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The time period for a mass-spring system is \\(T = 2\\pi \\sqrt{\\frac{m}{k}}\\).\r\nExplanation: The time period for a mass-spring system is \\(T = 2\\pi \\sqrt{\\frac{m}{k}}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341244148,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "How much time the amplitude of the sound wave should be increased for increasing sound intensity by 16 times?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(\\frac{1}{4}\\) times",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(\\frac{1}{16}\\) times",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "4 times",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "16 times",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Intensity is proportional to the square of the amplitude (\\(I ∝ A^2\\)). To increase intensity 16 times (\\(16I\\)), amplitude must increase 4 times (\\(4A\\)), since \\(4^2 = 16\\).\r\nExplanation: Intensity is proportional to the square of the amplitude (\\(I ∝ A^2\\)). To increase intensity 16 times (\\(16I\\)), amplitude must increase 4 times (\\(4A\\)), since \\(4^2 = 16\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341244304,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "A stone of mass 10gm is hung by a string 1m long. What is the time period of the rock?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1s",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2s",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "5s",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10s",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "For a simple pendulum, the time period is given by \\(T = 2\\pi \\sqrt{\\frac{l}{g}}\\). With l = 1m and g = 9.8 m/s², \\(T = 2\\pi \\sqrt{\\frac{1}{9.8}} = 2\\pi \\times 0.319 \\approx 2.0\\) seconds. Note that the time period is independent of the mass of the bob.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341244423,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Using which receiver are the reflected waves in a seismic survey detected?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ultrasonography",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "SONAR",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "geophone",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "X-Ray",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Geophones are the sensors used on the surface to detect reflected seismic waves.\r\nExplanation: Geophones are the sensors used on the surface to detect reflected seismic waves.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341244549,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "Which one of the following is equal to 1 Hz?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1 s\\(^{-1}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "1 s\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "2 s\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "3.14 s",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Hertz (Hz) is defined as cycles per second, so 1 Hz = 1 s⁻¹.\r\nExplanation: Hertz (Hz) is defined as cycles per second, so 1 Hz = 1 s⁻¹.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341244592,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "What is the time period when wave length is 250 cm and velocity of the sound 340 ms\\(^{-1}\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1.36 sec",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "1.7 x 10\\(^3\\) sec",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "7.35 x 10\\(^{-2}\\) sec",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "7.35 x 10\\(^{-3}\\) sec",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\(\\frac{\\nu}{\\lambda} = \\frac{340}{250 \\times 10^{-2}} = 136 \\, \\text{Hz}\\)\r\n\\(\\tau = \\frac{1}{135} = 7.35 \\times 10^{-3} \\, \\text{sec}\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341244609,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "What does the time period of a simple oscillator depend upon?",
+    "options": [
+      {
+        "label": "a",
+        "text": "the material of the bob",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "the length of the string",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "the spring constant",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "mass",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "For a simple pendulum, the time period depends only on the length \\(l\\) and acceleration due to gravity \\(g\\), not on mass or material.\r\nExplanation: For a simple pendulum, the time period depends only on the length \\(l\\) and acceleration due to gravity \\(g\\), not on mass or material.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766341244935,
+    "subject": "Physics",
+    "chapter": "Waves and Sound",
+    "question": "A waterless well is 25m deep. Up to which level of height of water echo can be heard?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0 m",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "8.5 m",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "16.5 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "25 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\(2d = vt \\rightarrow d = \\frac{vt}{2} = \\frac{33000.1}{2} = 16.5 m\\)\r\nHeight of the well h = 25 - d = 25 - 16.5 = 8.5 m",
+    "image": null,
+    "language": "en"
+  }
+]

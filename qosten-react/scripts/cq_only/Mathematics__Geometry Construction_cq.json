@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1768207842137,
+    "subject": "Mathematics",
+    "chapter": "Geometry Construction",
+    "lesson": "Triangle and Square Construction",
+    "question": null,
+    "parts": "[{\"label\":\"a\",\"letter\":\"a\",\"text\":\"Draw 75° angle by using pencil compass.\",\"marks\":2,\"answer\":\"[Construction steps for 75° angle] – Assume drawn.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827903_9n8qft.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827903_9n8qft.jpeg\"},{\"label\":\"b\",\"letter\":\"b\",\"text\":\"If the perimeter of a triangle is equal to p and ∠x and ∠y are two adjacent angles to the base, construct the triangle.\",\"marks\":4,\"answer\":\"Steps:\\n1. Draw DE = p = 11 cm.\\n2. At D, draw ∠EDL = 60°. At E, draw ∠DEM = 45° on same side.\\n3. Draw bisectors DG and EH of these angles, intersecting at A.\\n4. At A, draw ∠DAB = ∠ADE and ∠EAC = ∠AED.\\n5. AB and AC meet DE at B and C.\\n\\\\(\\\\triangle ABC\\\\) is required triangle.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827903_yl5s2.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827903_yl5s2.jpeg\"},{\"label\":\"c\",\"letter\":\"c\",\"text\":\"If the perimeter of a square is equal to p, construct the circle inscribed drawing the square.\",\"marks\":4,\"answer\":\"Steps:\\n1. Side of square = \\\\(\\\\frac{11}{4}\\\\) cm. Draw AB = this length.\\n2. Construct square ABCD.\\n3. Join AC and BD intersecting at O.\\n4. Draw OG ⊥ CD.\\n5. With center O, radius OG, draw circle EGF. This is the inscribed circle.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827903_tjmuj.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827903_tjmuj.jpeg\"}]",
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768207842734,
+    "subject": "Mathematics",
+    "chapter": "Geometry Construction",
+    "lesson": "Triangle and Tangents Construction",
+    "question": null,
+    "parts": "[{\"label\":\"a\",\"letter\":\"a\",\"text\":\"Construct an equilateral triangle with side equal to the largest side in the stem.\",\"marks\":2,\"answer\":\"[Equilateral triangle of side 4.5 cm] – Assume drawn.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827904_1ynntgl.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827904_1ynntgl.jpeg\"},{\"label\":\"b\",\"letter\":\"b\",\"text\":\"Construct an incircle of the triangle given in the stem.\",\"marks\":4,\"answer\":\"Steps:\\n1. Draw BC = 4.5 cm.\\n2. With B (radius 3.5 cm) and C (radius 4 cm), draw arcs intersecting at A.\\n3. Join AB, AC.\\n4. Draw bisectors of ∠B and ∠C meeting at O.\\n5. Drop OD ⊥ BC.\\n6. With center O, radius OD, draw incircle touching sides.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827904_j6xg9c.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827904_j6xg9c.jpeg\"},{\"label\":\"c\",\"letter\":\"c\",\"text\":\"Draw two tangents to the circle whose radius is the smallest side given in the stem such that, the angle between them is 90°.\",\"marks\":4,\"answer\":\"Steps:\\n1. Draw circle radius 3.5 cm.\\n2. Draw ∠AOB = 90° at center, A and B on circle.\\n3. Draw perpendiculars at A and B meeting at C.\\n4. AC and BC are tangents with included angle 90°.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827904_s33xlx.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827904_s33xlx.jpeg\"}]",
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768207843223,
+    "subject": "Mathematics",
+    "chapter": "Geometry Construction",
+    "lesson": "Triangle and Tangents Construction",
+    "question": null,
+    "parts": "[{\"label\":\"a\",\"letter\":\"a\",\"text\":\"Draw a square whose perimeter is 12 cm.\",\"marks\":2,\"answer\":\"Side = 3 cm. Draw square ABCD with side 3 cm.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827904_r1x9fe.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827904_r1x9fe.jpeg\"},{\"label\":\"b\",\"letter\":\"b\",\"text\":\"If b is the base of a triangle, the base adjacent angle is ∠x and the difference of the two sides is \\\\(\\\\frac{a}{2}\\\\), construct the triangle.\",\"marks\":4,\"answer\":\"Steps:\\n1. Draw BC = 6.5 cm.\\n2. At B, draw ∠CBE = 30°.\\n3. Cut BD = \\\\(\\\\frac{a}{2}\\\\) = 2 cm on BE.\\n4. Join C, D.\\n5. Draw perpendicular bisector of CD to find midpoint.\\n6. At midpoint, draw angle equal to ∠BDC on opposite side, marking point A on BE.\\n\\\\(\\\\triangle ABC\\\\) is required.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827904_jsb6a.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827904_jsb6a.jpeg\"},{\"label\":\"c\",\"letter\":\"c\",\"text\":\"Draw two tangents from an external point to a circle with diameter a such that the angle between them is 2∠x.\",\"marks\":4,\"answer\":\"Circle diameter = 4 cm, radius = 2 cm.\\nAngle between tangents = 2∠x = 2(30°) = 60°.\\nSteps:\\n1. Draw circle with center O, radius 2 cm.\\n2. Draw ∠AOB = 120° at center O (since 180° - 60° = 120°).\\n3. At points A and B on circle, draw perpendiculars to OA and OB respectively.\\n4. These perpendiculars meet at external point C.\\n5. AC and BC are tangents with included angle 60°.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827906_ui93.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827906_ui93.jpeg\"}]",
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768207843450,
+    "subject": "Mathematics",
+    "chapter": "Geometry Construction",
+    "lesson": "Triangle and Tangents Construction",
+    "question": null,
+    "parts": "[{\"label\":\"a\",\"letter\":\"a\",\"text\":\"Draw a square whose length of each side is 4 cm.\",\"marks\":2,\"answer\":\"Draw square of side 4 cm.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827906_4mae8l.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827906_4mae8l.jpeg\"},{\"label\":\"b\",\"letter\":\"b\",\"text\":\"Draw a triangle.\",\"marks\":4,\"answer\":\"Steps:\\n1. Draw BC = 5 cm.\\n2. At B, draw ∠CBE = 45°.\\n3. Cut BD = 2 cm on BE.\\n4. Join C, D.\\n5. At C, draw ∠DCA = ∠EDC.\\n6. CA meets BE at A. \\\\(\\\\triangle ABC\\\\) is required.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827906_a53dg.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827906_a53dg.jpeg\"},{\"label\":\"c\",\"letter\":\"c\",\"text\":\"Draw two tangents of a circle of radius \\\\(\\\\frac{a}{2}\\\\) such that the angle between them is 60°.\",\"marks\":4,\"answer\":\"Radius = 2.5 cm.\\n- Draw central angle 120° (since tangents' included angle 60° corresponds to 180° – 60° = 120° central angle).\\n- Draw perpendiculars at endpoints meeting at external point.\\n- Those are required tangents.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827906_1omt7.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827906_1omt7.jpeg\"}]",
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768207844036,
+    "subject": "Mathematics",
+    "chapter": "Geometry Construction",
+    "lesson": "Triangle and Parallelogram Construction",
+    "question": null,
+    "parts": "[{\"label\":\"a\",\"letter\":\"a\",\"text\":\"Draw a tangent at the point B of circle ABC of radius 2.5 cm.\",\"marks\":2,\"answer\":\"[Tangent at B to circle radius 2.5 cm] – Assume drawn.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_mx583n.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_mx583n.jpeg\"},{\"label\":\"b\",\"letter\":\"b\",\"text\":\"Draw a triangle whose base is p, difference of other two sides is (q – p) and a base adjacent angle ∠x.\",\"marks\":4,\"answer\":\"Steps:\\n1. Draw BC = p = 4 cm.\\n2. At B, draw ∠CBF = ∠x = 45°.\\n3. Cut BD = q – p = 2 cm on BF.\\n4. Join C, D.\\n5. At C, draw ∠DCA = ∠FDC on same side as F.\\n6. CA meets BF at A.\\n\\\\(\\\\triangle ABC\\\\) is required triangle.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_w10trf.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_w10trf.jpeg\"},{\"label\":\"c\",\"letter\":\"c\",\"text\":\"Draw a parallelogram whose two diagonals are p and q and their included angle is ∠x.\",\"marks\":4,\"answer\":\"Steps:\\n1. Draw AC = p = 4 cm, bisect it to find midpoint O.\\n2. At O, draw ∠AOP = ∠x = 45°.\\n3. Extend OP to opposite ray OQ.\\n4. Cut OB = OD = \\\\(\\\\frac{q}{2}\\\\) = 3 cm on OP and OQ.\\n5. Join A, B, C, D.\\nABCD is required parallelogram.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_x4bwk.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_x4bwk.jpeg\"}]",
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768207844265,
+    "subject": "Mathematics",
+    "chapter": "Geometry Construction",
+    "lesson": "Tangent and Circumcircle Construction",
+    "question": null,
+    "parts": "[{\"label\":\"a\",\"letter\":\"a\",\"text\":\"Find the centre of any arc DEF.\",\"marks\":2,\"answer\":\"To find centre of arc DEF:\\n- Take three points D, E, F on arc.\\n- Draw perpendicular bisectors of DE and EF.\\n- Their intersection is centre O.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_1x0io.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_1x0io.jpeg\"},{\"label\":\"b\",\"letter\":\"b\",\"text\":\"Prove that, AP = AQ.\",\"marks\":4,\"answer\":\"Join CP, CQ, CA.\\n- CP ⊥ AP, CQ ⊥ AQ (tangent ⊥ radius).\\n- In right triangles \\\\(\\\\triangle APC\\\\) and \\\\(\\\\triangle AQC\\\\):\\nHypotenuse AC common, CP = CQ (radii).\\nSo, \\\\(\\\\triangle APC \\\\cong \\\\triangle AQC\\\\) (hypotenuse-side).\\nHence, AP = AQ. (Proved)\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_qx90nr.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_qx90nr.jpeg\"},{\"label\":\"c\",\"letter\":\"c\",\"text\":\"Draw a circumcircle of an equilateral triangle whose length of side is a.\",\"marks\":4,\"answer\":\"Steps:\\n1. Draw equilateral \\\\(\\\\triangle ABC\\\\) with side a = 3.5 cm.\\n2. Draw perpendicular bisectors of two sides meeting at O.\\n3. With centre O, radius OA, draw circumcircle.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_efkvur.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_efkvur.jpeg\"}]",
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768207844614,
+    "subject": "Mathematics",
+    "chapter": "Geometry Construction",
+    "lesson": "Triangle and Tangents Construction",
+    "question": null,
+    "parts": "[{\"label\":\"a\",\"letter\":\"a\",\"text\":\"Draw an equilateral triangle of length 3.5 cm.\",\"marks\":2,\"answer\":\"[Equilateral triangle side 3.5 cm] – Assume drawn.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_44ubx.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_44ubx.jpeg\"},{\"label\":\"b\",\"letter\":\"b\",\"text\":\"Construct the triangle according to the stem and draw a circle inscribed of that triangle.\",\"marks\":4,\"answer\":\"Steps:\\n1. Draw BC = 6 cm.\\n2. With B (radius 5 cm) and C (radius 5 cm), draw arcs meeting at A.\\n3. Join AB, AC.\\n4. Draw angle bisectors of ∠B and ∠C meeting at O.\\n5. Drop OD ⊥ BC.\\n6. With centre O, radius OD, draw incircle.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_fglz1.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_fglz1.jpeg\"},{\"label\":\"c\",\"letter\":\"c\",\"text\":\"Draw a circle according to the stem and draw two tangents to the circle such that the included angle between them is 50°.\",\"marks\":4,\"answer\":\"Steps:\\n1. Draw circle radius 4.5 cm, centre O.\\n2. Draw ∠AOB = 130° at centre (since included angle between tangents = 50° ⇒ central angle = 180° – 50° = 130°).\\n3. Draw perpendiculars at A and B meeting at X.\\n4. XA and XB are required tangents.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_0osl4.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_0osl4.jpeg\"}]",
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768207844736,
+    "subject": "Mathematics",
+    "chapter": "Geometry Construction",
+    "lesson": "Circles Touching Externally and Circumcircle",
+    "question": null,
+    "parts": "[{\"label\":\"a\",\"letter\":\"a\",\"text\":\"If DEF is an arc, then find its centre.\",\"marks\":2,\"answer\":\"To find centre of arc DEF:\\n- Take points D, E, F on arc.\\n- Draw perpendicular bisectors of DE and EF.\\n- Intersection is centre O.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_0iafwm.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_0iafwm.jpeg\"},{\"label\":\"b\",\"letter\":\"b\",\"text\":\"If two circles of centre M and N touch each other externally at the point P, then prove that the points M, P and N are collinear.\",\"marks\":4,\"answer\":\"Since circles touch externally at P, they have common tangent at P.\\n- Draw tangent APB.\\n- MP ⊥ AP, NP ⊥ AP (radius ⊥ tangent).\\n- So, ∠MPN = ∠MPA + ∠APN = 90° + 90° = 180°.\\n- Hence, M, P, N are collinear. (Proved)\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_t8sl0g.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_t8sl0g.jpeg\"},{\"label\":\"c\",\"letter\":\"c\",\"text\":\"Draw a circumcircle of the triangle whose sides are a, b and c.\",\"marks\":4,\"answer\":\"Steps:\\n1. Draw BC = a = 4 cm.\\n2. With B (radius c = 5.5 cm) and C (radius b = 4.5 cm), draw arcs meeting at A.\\n3. Join AB, AC.\\n4. Draw perpendicular bisectors of AB and AC meeting at O.\\n5. With centre O, radius OA, draw circumcircle.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_elnrup.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_elnrup.jpeg\"}]",
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768207844956,
+    "subject": "Mathematics",
+    "chapter": "Geometry Construction",
+    "lesson": "Triangle and Parallelogram Construction",
+    "question": null,
+    "parts": "[{\"label\":\"a\",\"letter\":\"a\",\"text\":\"If the perimeter of a circle is 60 cm, determine the area of the circle.\",\"marks\":2,\"answer\":\"Perimeter = circumference = \\\\(2\\\\pi r = 60\\\\) ⇒ \\\\(r = \\\\frac{30}{\\\\pi}\\\\) cm.\\n- Area = \\\\(\\\\pi r^2 = \\\\pi \\\\left(\\\\frac{30}{\\\\pi}\\\\right)^2 = \\\\frac{900}{\\\\pi} \\\\approx 286.48\\\\) sq cm. (Ans.)\\n\",\"image\":null,\"image_url\":null},{\"label\":\"b\",\"letter\":\"b\",\"text\":\"If the base of a triangle is a, the base adjacent angle is x and the difference of two sides is \\\\(\\\\frac{b}{2}\\\\), then construct the triangle.\",\"marks\":4,\"answer\":\"Steps:\\n1. Draw BC = a = 4 cm.\\n2. At B, draw ∠CBE = ∠x = 30°.\\n3. Cut BD = \\\\(\\\\frac{b}{2} = 3\\\\) cm on BE.\\n4. Join C, D.\\n5. At C, draw ∠DCA = ∠EDC.\\n6. CA meets BE at A.\\n\\\\(\\\\triangle ABC\\\\) is required.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_f4iyum.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_f4iyum.jpeg\"},{\"label\":\"c\",\"letter\":\"c\",\"text\":\"If the two diagonals of a parallelogram are a, b, and included angle between them is ∠x, construct the parallelogram.\",\"marks\":4,\"answer\":\"Steps:\\n1. Draw AC = a = 4 cm, find midpoint O.\\n2. At O, draw ∠AOP = ∠x = 30°.\\n3. Extend OP to opposite ray OQ.\\n4. Cut OB = OD = \\\\(\\\\frac{b}{2} = 3\\\\) cm on OP and OQ.\\n5. Join A, B, C, D.\\nABCD is required parallelogram.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_8ric8b.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827907_8ric8b.jpeg\"}]",
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768207845185,
+    "subject": "Mathematics",
+    "chapter": "Geometry Construction",
+    "lesson": "Tangents and Incircle Construction",
+    "question": null,
+    "parts": "[{\"label\":\"a\",\"letter\":\"a\",\"text\":\"Draw a square whose perimeter is 16 cm.\",\"marks\":2,\"answer\":\"Side = 4 cm. Draw square of side 4 cm.\\n\",\"image\":null,\"image_url\":null},{\"label\":\"b\",\"letter\":\"b\",\"text\":\"If F is an external point whose distance is 7 cm from the centre of a circle with diameter BC, then draw two tangents from the point F.\",\"marks\":4,\"answer\":\"Circle diameter BC = 5 cm ⇒ radius = 2.5 cm, centre O.\\nF is 7 cm from O.\\nSteps:\\n1. Draw circle with center O, radius 2.5 cm.\\n2. Mark point F such that OF = 7 cm.\\n3. Join OF, bisect OF at M.\\n4. With centre M, radius MO (= MF), draw circle cutting given circle at A and B.\\n5. Join FA and FB. These are the required tangents.\\n\",\"image\":null,\"image_url\":null},{\"label\":\"c\",\"letter\":\"c\",\"text\":\"Draw a circle inscribed in the triangle BCD.\",\"marks\":4,\"answer\":\"Steps for incircle of right-angled \\\\(\\\\triangle BCD\\\\):\\nSince ∠BCD = 45° and triangle is right-angled, ∠D = 90° (the right angle must be at D since BC and CD form 45° angle at C).\\n1. Draw BC = 5 cm.\\n2. At C, draw ∠BCD = 45°.\\n3. At B, draw ∠DBC such that ray BD is perpendicular to BC, i.e., ∠DBC = 90°.\\n4. BD and CD meet at D, forming right angle at D.\\n5. Draw angle bisectors of any two angles (e.g., ∠B and ∠C) meeting at I.\\n6. Drop perpendicular IE ⊥ BC.\\n7. With centre I, radius IE, draw incircle.\",\"image\":null,\"image_url\":null}]",
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  }
+]

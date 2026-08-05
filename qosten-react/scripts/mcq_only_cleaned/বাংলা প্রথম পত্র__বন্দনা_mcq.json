@@ -1,0 +1,2754 @@
+[
+  {
+    "id": 1768397865858,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "কীসের ভয়ে মা সন্তানকে মাটিতে রাখেননি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঠান্ডা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পিঁপড়া",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পোকা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মশা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মা তাঁর সন্তানকে পিঁপড়ার ভয়ে মাটিতে রাখেননি, বরং বুকে ও কোলে আগলে রেখেছেন [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397866488,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "\"না খাই খাওয়াই পিতা\" — এ চরণে পিতার কোন বৈশিষ্ট্য প্রকাশ পেয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অপত্যস্নেহ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সন্তান বাৎসল্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উদারতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সবকটি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এই চরণের মাধ্যমে সন্তানের প্রতি পিতার গভীর মমতা, উদারতা এবং আত্মত্যাগ প্রকাশ পেয়েছে [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397866722,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "শাহ মুহম্মদ সগীর আনুমানিক কোন শতকের কবি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১১-১২",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১২-১৩",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১৩-১৪",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১৪-১৫",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "শাহ মুহম্মদ সগীর মধ্যযুগের অন্যতম প্রধান কবি এবং তিনি আনুমানিক ১৪-১৫ শতকের কবি হিসেবে পরিচিত [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397866830,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "মুসলমান কবিদের মধ্যে প্রাচীনতম কবি কে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আলাওল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শাহ মুহম্মদ সগীর",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "আবদুল হাকিম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কায়কোবাদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "শাহ মুহম্মদ সগীরকে বাংলা সাহিত্যের প্রাচীনতম মুসলমান কবি হিসেবে বিবেচনা করা হয় [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397866943,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'ইউসুফ জোলেখা' কাব্যটি কে রচনা করেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আলাওল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চণ্ডীদাস",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আবদুল হাকিম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শাহ মুহম্মদ সগীর",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "শাহ মুহম্মদ সগীর তাঁর বিখ্যাত কাব্য 'ইউসুফ জোলেখা'র মাধ্যমে বাংলা সাহিত্যে অমর হয়ে আছেন [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397867062,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "সুলতান গিয়াসউদ্দীন আজম শাহ গৌড়ের সুলতান ছিলেন কোন সময়ে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৩৮০-১৪০৯ খ্রি.",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১৩৮৯-১৪১০ খ্রি.",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "১৩৯০-১৪১১ খ্রি.",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১৩৯২-১৪১২ খ্রি.",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "গিয়াসউদ্দীন আজম শাহ ১৩৮৯-১৪১০ খ্রিষ্টাব্দ পর্যন্ত গৌড়ের সুলতান হিসেবে রাজত্ব করেন [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397867207,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'ইউসুফ জোলেখা' কাব্যটি আনুমানিক কোন সময়ে রচিত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চতুর্দশ শতকে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পঞ্চদশ শতকে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ষোড়শ শতকে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সপ্তদশ শতকে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ঐতিহাসিক তথ্য অনুযায়ী কাব্যটি আনুমানিক পঞ্চদশ শতকের প্রথম দশকে রচিত হয়েছিল [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397867392,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "গিয়াসউদ্দীন আজম শাহ কোন স্থানের সুলতান ছিলেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গৌড়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বরেন্দ্র",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পুণ্ড্র",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মহাস্থানগড়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "তিনি প্রাচীন গৌড় রাজ্যের প্রভাবশালী সুলতান ছিলেন [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397867520,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "কার পৃষ্ঠপোষকতায় শাহ মুহম্মদ সগীর 'ইউসুফ জোলেখা' কাব্য রচনা করেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গিয়াসউদ্দীন আজম শাহ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "শামসুদ্দীন ইলিয়াস শাহ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সিকান্দার ইলিয়াস শাহ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শাহ মাহমুদ আজম শাহ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "গৌড়ের সুলতান গিয়াসউদ্দীন আজম শাহের রাজত্বকালে এবং তাঁর পৃষ্ঠপোষকতায় কবি এই কাব্যটি রচনা করেন [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397867631,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "শাহ মুহম্মদ সগীরের কাব্যে সুলতান গিয়াসউদ্দীন আজম শাহকে কী নামে সম্বোধন করা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মহামতি আজম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মহামতি গৌহ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মহামতি শাহ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মহামতি সেন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কবি তাঁর কাব্যে সুলতানকে 'মহামতি গৌহ' উপাধিতে ভূষিত করেছেন [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397867753,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "কবির কাব্যে কোন অঞ্চলের আঞ্চলিক শব্দের ব্যবহার লক্ষ করা যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঢাকা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রাজশাহী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কুমিল্লা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চট্টগ্রাম",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "শাহ মুহম্মদ সগীরের কাব্যে চট্টগ্রাম অঞ্চলের শব্দের ব্যাপক ব্যবহার দেখা যায় [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397867868,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "কে শাহ মুহম্মদ সগীরকে চট্টগ্রামের অধিবাসী বলে মনে করেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ড. মুহম্মদ শহীদুল্লাহ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মুহম্মদ এনামুল হক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ড. দীনেশ চন্দ্র সেন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আবদুল করিম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ড. মুহম্মদ এনামুল হক চট্টগ্রামের আঞ্চলিক শব্দের ব্যবহারের ভিত্তিতে কবিকে ওই অঞ্চলের অধিবাসী হিসেবে বিবেচনা করেন [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397867992,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'ইউসুফ জোলেখা' মূলত কী ধরনের কাব্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ধর্মীয় উপাখ্যান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সামাজিক উপাখ্যান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মানবিক প্রেমোপাখ্যান",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ঐতিহাসিক কাব্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কাব্যটির পটভূমি ধর্মীয় হলেও কবির লেখনীতে এটি একটি সার্থক মানবিক প্রেমোপাখ্যানে পরিণত হয়েছে [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397868254,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "কবি সৃষ্টিকর্তার পরে কাকে প্রণাম করতে বলেছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গুরুজনদের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মা-বাবাকে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "শিক্ষককে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বয়োজ্যেষ্ঠদের",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বন্দনা কবিতায় কবি স্রষ্টার গুণকীর্তনের পর প্রথমেই তাঁর জন্মদাতা পিতা ও মাতাকে শ্রদ্ধা নিবেদন করেছেন [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397868365,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "কাদের দয়ায় পৃথিবীতে আমাদের জন্ম হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দাদাদাদি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নানানি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চাচাচাচি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মা-বাবা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পিতামাতার দয়ায় ও মমতায় আমরা পৃথিবীতে আলোর মুখ দেখেছি [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397868515,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "কবি তাঁর মা-বাবাকে প্রণাম করতে বলেছেন কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তাঁদের দয়ায় আমরা পৃথিবীতে এসেছি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তাঁদের দয়ায় আমরা বেঁচে আছি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তাঁদের দয়ায় আমরা বড় হয়েছি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উপরের সবগুলো",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সন্তানের অস্তিত্ব, জীবন ও বৃদ্ধির মূলে পিতামাতার অবদান অপরিসীম বলে কবি তাঁদের প্রণাম করতে বলেছেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397868661,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "\"পিঁপড়ার ডরে মা না থুইলা মাটিতে\" — এ চরণের মাধ্যমে মায়ের কোন অনুভূতি প্রকাশ পেয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সতর্কতা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দায়িত্ব",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ভালোবাসা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ভয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সন্তানের প্রতি মায়ের গভীর ভালোবাসা ও অতি-সংবেদনশীল মমতা এই চরণে প্রকাশ পেয়েছে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397868772,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "শৈশবকালে আমরা কেমন ছিলাম?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চঞ্চল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নিস্পাপ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দুর্বল",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "শান্ত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কবি শৈশবকালীন মানুষের অসহায় ও দুর্বল অবস্থার কথা বর্ণনা করেছেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397868898,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "\"তান দয়া হতে হৈল এ ধড় বিশালা\" — চরণে ‘ধড়’ শব্দের অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মা-বাবার দয়ায় জন্ম হয়েছে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মা-বাবার দয়ায় বড় হয়েছি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মা-বাবার যত্নে শরীর বড় হয়েছে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মা-বাবার মাধ্যমে আমরা টিকে আছি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পিতামাতার লালন-পালন ও মমতায় সন্তানের শরীর বৃদ্ধি পেয়ে বিশাল আকার ধারণ করে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397869031,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "কারা নিজেরা না খেয়ে সন্তানকে খাওয়ান?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মা-বাবা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ভাইবোন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দাদাদাদি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নানানি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পিতামাতা নিজেরা কষ্ট স্বীকার করে ক্ষুধার্ত থাকলেও সন্তানের আহার নিশ্চিত করেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397869170,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "কারা নিজেরা না পরে সন্তানকে পোশাক পরান?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ভাইবোন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মা-বাবা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "চাচাচাচি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দাদাদাদি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "এটি পিতামাতার ত্যাগ ও সন্তানদের প্রতি তাঁদের অকৃত্রিম ভালোবাসার নিদর্শন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397869284,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "মা-বাবা আমাদের মানুষ করতে প্রতিটি বছর কীভাবে অতিবাহিত করেছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আশায়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "যন্ত্রণায়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দুঃখে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কষ্টে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সন্তানকে মানুষের মতো মানুষ করতে পিতামাতা প্রতিনিয়ত জীবনভর কৃচ্ছ্রসাধন ও কষ্ট সহ্য করেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397869401,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "\"অশোক আছিনু মুই দুর্বল হবাল\" — চরণে ‘হবাল’ শব্দের অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অনেক ছোট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অসহায় অবস্থা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জন্মগত দুর্বলতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শৈশবের অসহায় পরিস্থিতি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "জন্মলগ্ন থেকে শিশু যে অসহায় ও পরনির্ভরশীল থাকে, তাকেই ‘হবাল’ বা শৈশবের অসহায় অবস্থা বলা হয়েছে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397869511,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "মা-বাবা বছরের পর বছর সুখের দিন অতিবাহিত করেছেন কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সন্তানের সুখের জন্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নিজেদের উন্নতির জন্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সন্তানকে মানুষ করার জন্য",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অর্জিত সম্পদ না থাকার জন্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পিতামাতা তাঁদের জীবন ও সুখ উৎসর্গ করেন শুধুমাত্র সন্তানকে যোগ্য মানুষ হিসেবে গড়ে তোলার জন্য [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397869623,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "সন্তানের মঙ্গলের কামনায় কে জীবন-যৌবন বিসর্জন দিয়েছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাবা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দাদাদাদি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মা-বাবা উভয়ই",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পিতামাতা তাঁদের জীবনের শ্রেষ্ঠ সময় বা যৌবন সন্তানের লালন-পালনে উৎসর্গ করেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397869733,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "\"পিতা হইতে লেউ লিট জীবন যৌবন\" — চরণটিতে কী প্রকাশ পেয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কষ্ট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দায়িত্ব",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আত্মত্যাগ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "উদারতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পিতার সন্তানের জন্য নিজের সমস্ত সামর্থ্য ও জীবন উৎসর্গ করার গভীর ত্যাগ এখানে প্রকাশিত [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397869846,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "পিতার থেকে বেশি সম্মান পাওয়ার যোগ্য কে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পিতামহ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মাতা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ওস্তাদ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মাতামহ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কবি ওস্তাদ বা শিক্ষককে পিতার চেয়েও অধিক সম্মানের আসনে বসিয়েছেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397869961,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "কবি শিক্ষককে পিতার থেকেও বেশি সম্মান করতে বলেছেন কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দ্বিতীয়বার জন্ম দিয়েছেন বলে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "লেখাপড়া শিখিয়েছেন বলে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শিক্ষক শ্রদ্ধেয় বলে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শিক্ষক পিতা থেকেও শিক্ষিত বলে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "শিক্ষক মানুষকে জ্ঞানদানের মাধ্যমে প্রকৃত মানুষ হিসেবে দ্বিতীয় জন্ম দেন, তাই তিনি অধিকতর সম্মানার্হ [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397870084,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "আমাদের দ্বিতীয়বার জন্ম দিয়েছেন কে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ভগবান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রাষ্ট্র",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ওস্তাদ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সমাজ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পিতামাতা আমাদের পৃথিবীতে আলোর মুখ দেখালেও শিক্ষক আমাদের জ্ঞানের দুনিয়ায় প্রবেশ করান [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397870195,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "শিক্ষক কীভাবে আমাদের দ্বিতীয়বার জন্ম দিয়েছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শিক্ষিত করে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মানুষ বানিয়ে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "জ্ঞানদান করে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আলোর পথ দেখিয়ে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "অশিক্ষা ও অজ্ঞানতার অন্ধকার থেকে মুক্ত করে প্রকৃত মানুষ বানানোর মাধ্যমে শিক্ষক দ্বিতীয় জন্ম দান করেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397870314,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "কবির মনের ইচ্ছা কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শিক্ষককে শ্রদ্ধা করা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মা-বাবাকে প্রণাম জানানো",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সবাইকে করজোড়ে প্রণাম জানানো",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "নিজেকে নিরহঙ্কার রাখা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কবি তাঁর বিনয় প্রকাশে সমাজের সকল মানুষকে করজোড়ে শ্রদ্ধা নিবেদন করার ইচ্ছা প্রকাশ করেছেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397870446,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "\"মুহম্মদ সগীর হীন বন্দে পাও ধার\" — চরণে কোন মনোভাব প্রকাশ পেয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিনয়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ভদ্রতা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উদারতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মহত্ত্ব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "মধ্যযুগের কবিরা প্রায়শই নিজেদের 'হীন' বা নগণ্য বলে পরিচয় দিতেন, যা তাঁদের বিনয়েরই বহিঃপ্রকাশ [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397870554,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "কবি কার কাছে দোয়া প্রার্থনা করেছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সমাজের সবার কাছে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সভায় উপস্থিত সবার কাছে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মা-বাবার কাছে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শিক্ষকের কাছে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কবি তাঁর কাব্য রচনার সাফল্য কামনায় সভায় সমবেত গুণীজনদের দোয়া প্রার্থনা করেছেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397870680,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "কবি সবার কাছে বারবার দোয়া প্রার্থনা করেছেন কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কাব্য রচনায় সাফল্য লাভের জন্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "জীবন-যুদ্ধে সাফল্য লাভের জন্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পৃথিবীতে সুনাম অর্জনের জন্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পৃথিবীতে অমরত্ব লাভের জন্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কাব্য রচনার কঠিন কাজে সবার আশীর্বাদ ও সমর্থন লাভের জন্যই কবির এই বিনীত প্রার্থনা [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397870790,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "নিজের পরিচয়ে 'হীন' শব্দ ব্যবহারের মাধ্যমে কবির কোন দিকটি প্রকাশ পেয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সত্যবাদিতা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ভদ্রতা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিনয়",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "উদারতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "এটি কবির নিরহঙ্কার স্বভাব এবং অন্যদের প্রতি তাঁর অপরিসীম শ্রদ্ধার পরিচয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397870915,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "কবি শেষ পর্যন্ত কার ভক্তি-শ্রদ্ধা জানিয়েছেন?\ni. ওস্তাদকে\nii. মাকে\niii. বাবাকে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কবি ওস্তাদ এবং পিতামাতা তিনজনের প্রতিই তাঁর গভীর ভক্তি ও বন্দনা নিবেদন করেছেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397871032,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "দ্বিতীয়বার কবি কাকে প্রণাম করতে বলেছেন?\ni. বাবাকে\nii. মাকে\niii. দাদাকে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বন্দনা কবিতায় দ্বিতীয় স্তরে কবি মা এবং বাবাকে একত্রে প্রণাম করার নির্দেশ দিয়েছেন [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397871161,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'বন্দনা' কবিতায় অনুগত সন্তানের মাঝে যা যা থাকে তা হলো—\ni. পিঁপড়ার ডরে মাটিতে রাখেন না\nii. সবসময় কোলে কোলে রাখেন\niii. সবসময় বুকে দিয়ে আগলে রাখেন",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এগুলো সবই শৈশবে সন্তানের প্রতি পিতামাতার যত্ন ও মমতার বহিঃপ্রকাশ [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397871356,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'বন্দনা' কবিতায় কবি শৈশবকালে ছিলেন—\ni. দুর্বল\nii. অপটু\niii. চঞ্চল",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কবি শৈশবকালীন দুর্বলতা ও অপটু অবস্থার (হবাল) কথা উল্লেখ করেছেন [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397871466,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "\"পিঁপড়ার ডরে মা না থুইলা মাটিতে।\nকোল দিয়া বুক দিয়া জগতে বিদিত।\" — এ চরণে প্রকাশ পেয়েছে—\ni. কৃতজ্ঞতা\nii. মমতা\niii. দায়িত্ব",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "এখানে মায়ের মমতাবোধ ও সন্তানের সুরক্ষায় তাঁর দায়িত্ববোধ প্রকাশ পেয়েছে [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397871582,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "\"অশোক আছিনু মুই দুর্বল হবাল\" — চরণটির তাৎপর্য কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বড় হওয়ার ক্ষেত্রে মা-বাবার গুরুত্ব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শৈশব অবস্থার পরিস্থিতি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ছেলে সন্তান হিসেবে সমাজে অবহেলিত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সন্তানের প্রতি মা-বাবার অবহেলা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "জন্মের পর শিশু যে অত্যন্ত অসহায় থাকে, তা এই চরণের মাধ্যমে কবি তুলে ধরেছেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397871699,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "মা আমাদের জন্মের পর থেকে কত দিন কষ্ট সহ্য করেছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দশ মাস দশ দিন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "যতদিন আমরা বড় না হই",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সারাজীবন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জন্ম থেকে মৃত্যু পর্যন্ত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সন্তান সাবলম্বী বা বড় হওয়ার আগ পর্যন্ত পিতামাতা নিরন্তর কষ্ট সহ্য করেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397871809,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'পিঁপড়ার ডর' বলতে কী বোঝানো হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পিঁপড়ার ভয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সন্তানের কোনো অনিষ্টের ভয়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মা ও সন্তানের মাঝে দূরত্ব",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রাকৃতিক দুর্যোগ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "অত্যন্ত তুচ্ছ পিঁপড়াও যেন সন্তানের কোনো ক্ষতি করতে না পারে, মায়ের সেই সজাগ দৃষ্টিই এখানে মুখ্য [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397871925,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'ধড়' শব্দের অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মাথা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শরীর",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "হাত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কাব্যের বর্ণনা অনুযায়ী পিতামাতার যত্নে সন্তানের 'ধড়' বা শরীর বৃদ্ধি পায় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397872046,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'হিন' শব্দের অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নিচ বা নগণ্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "উন্নত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মহৎ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ধনী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কবি নিজেকে বিনয়বশত 'হিন' বা তুচ্ছ হিসেবে পরিচয় দিয়েছেন [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397872152,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'সুধিব' শব্দের অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জিজ্ঞাসা করব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পরিশোধ করব",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "প্রদান করব",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গ্রহণ করব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সন্তানের পক্ষে পিতামাতার ঋণ 'সুধিব' বা পরিশোধ করা অসম্ভব [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397872260,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'বন্দনা' কবিতার মূল সুরে কী প্রকাশ পেয়েছে?\ni. স্তুতি\nii. কৃতজ্ঞতা\niii. প্রার্থনা",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কবিতাটি মূলত স্রষ্টা, পিতামাতা ও গুরুর প্রতি স্তুতি, কৃতজ্ঞতা ও দোয়ার প্রার্থনা [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397872379,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'পুরবাসী' শব্দের অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাড়ির বাসিন্দা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নগরবাসী",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "গ্রামবাসী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উল্লাসী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পুরবাসী বলতে নগরে বসবাসরত মানুষদের বোঝানো হয়েছে [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397872499,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'নেহায়' শব্দের অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আদর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ভালোবাসা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মমতায়",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "স্নেহে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পিতামাতা তাঁদের 'নেহায়' বা মমতায় সন্তানকে লালন-পালন করেন [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397872616,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'সজাগ' শব্দের অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সচেতন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জাগা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "জাগানো",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সাবধান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কোনো কিছু সম্পর্কে জাগ্রত বা সজাগ থাকাকেই এখানে বোঝানো হয়েছে [৫]।\nFollowing the format you provided, here are the remaining MCQs (51 to 89) from the sources regarding the poem 'Bandana' by Shah Muhammad Sagir.\n***",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397872868,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'বন্দনা' কবিতায় সন্তানের তরে মা যা যা করেন তা হলো—\ni. পিঁপড়ার ডরে মাটিতে রাখেন না\nii. সবসময় কোলে কোলে রাখেন\niii. সবসময় বুকে দিয়ে আগলে রাখেন",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মা তাঁর সন্তানকে অত্যন্ত মমতায় এবং সতর্কতায় লালন-পালন করেন, যাতে সামান্য কোনো অনিষ্টও তাকে স্পর্শ না করে [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397872976,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'বন্দনা' কবিতায় অনুসারে কবি শৈশবকালে ছিলেন—\ni. দুর্বল\nii. অপটু\niii. চঞ্চল",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "শৈশবে মানুষ দৈহিকভাবে অত্যন্ত দুর্বল এবং স্বাবলম্বী হওয়ার ক্ষেত্রে অপটু থাকে, যা কবিতায় 'হবাল' বলা হয়েছে [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397873105,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "\"পিঁপড়ার ডরে মা না থুইলা মাটিতে / কোল দিয়া বুক দিয়া জগতে বিদিত\" — এ চরণে প্রকাশ পেয়েছে—\ni. কৃতজ্ঞতা\nii. মমতা\niii. সত্যবাদিতা",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "মায়ের এই মমত্ববোধ ও অকৃত্রিম ভালোবাসা সারা বিশ্বে পরিচিত এবং সন্তানের কাছে এটি চির কৃতজ্ঞতার বিষয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397873213,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "উপরের চরণে (৫৪ নং) আরও প্রকাশ পেয়েছে—\ni. অপত্যস্নেহ\nii. সন্তান বাৎসল্য\niii. দায়িত্ববোধ",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সন্তানের প্রতি পিতামাতার সহজাত ভালোবাসা, স্নেহ এবং লালন-পালনের গুরুদায়িত্ব এই পঙ্ক্তিতে নিহিত [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397873324,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "\"অশোক আছিনু মুই দুর্বল হবাল / তান দয়া হতে হৈল এ ধড় বিশালা\" — চরণে প্রকাশ পেয়েছে—\ni. কৃতজ্ঞতাবোধ\nii. সবর স্বীকারোক্তি\niii. বাস্তব সত্য",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এটি একটি জীবনের বাস্তব সত্য যে, পিতামাতার দয়ায় ও যত্নে দুর্বল শিশু শক্তিশালী শরীরে বৃদ্ধি পায়, যার প্রতি কবি কৃতজ্ঞতা প্রকাশ করেছেন [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397873442,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'বন্দনা' কবিতায় অনুসারে আমাদের লালন-পালন করতে গিয়ে মা-বাবা—\ni. নিজেরা না খেয়ে আমাদের খাইয়েছেন\nii. নিজেরা পরে আমাদের পরিয়েছেন\niii. নিজেরা না পরে আমাদের পরিয়েছেন",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পিতামাতা নিজেরা কষ্ট করে এবং অভাবের মধ্যেও সন্তানের আহার ও পোশাক নিশ্চিত করেন [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397873557,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "\"পিতায়ে নেহায় লিট জীবন যৌবন / কিসে সুধিব তান ধড় ধারক ভবন\" — চরণে প্রকাশ পেয়েছে—\ni. পিতার ত্যাগের স্বীকৃতি\nii. পিতার ঋণ শোধ করার অভিলাষ\niii. পিতার প্রতি কৃতজ্ঞতা",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পিতা তাঁর পুরো জীবন ও যৌবন সন্তানের জন্য উৎসর্গ করেন, যে ঋণ কোনোভাবেই শোধ করা সম্ভব নয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397874060,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'সদানন্দ' শব্দের অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সতায়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সবার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সবাই",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সরব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কাব্যের প্রেক্ষাপটে 'সদানন্দ' দ্বারা উপস্থিত বা সংশ্লিষ্ট সকলকে (সবাইকে) নির্দেশ করা হয়েছে [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397874170,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'সপুটে' শব্দের অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "করজোড়ে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কপালে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাহুতে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ঘাড়ে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বিনয় ও শ্রদ্ধা প্রকাশের মাধ্যম হিসেবে হাত জোর বা করজোড় করাকে 'সপুটে' বলা হয়েছে [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397874289,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'বিদিত' শব্দের অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জাগা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জানানো",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জানা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "জাগানো",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যা সবার কাছে পরিচিত বা অবগত, তাকেই 'বিদিত' বলা হয় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397874399,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "কোনটি সন্তানের জীবনপথের পাথেয় স্বরূপ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মায়ের মমতাবোধ ও কল্যাণদৃষ্টি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "মায়ের মমতাবোধ ও স্নেহদৃষ্টি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মায়ের সর্বগ্রাসী ভালোবাসা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মায়ের সর্বগ্রাসী আদর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "মায়ের ভালোবাসা ও তাঁর দোয়াই সন্তানের জীবনে চলার পথে শক্তি যোগায় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397874521,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'বন্দনা' কবিতায় কবি মায়ের স্নেহ-মমতা ও কল্যাণদৃষ্টিতে বড় করে তুলতে কোন কথাটির উল্লেখ করেছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অনেক যত্নে সন্তানকে বুক-পিঠে মানুষ করেছেন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নিজে না খেয়ে সন্তানকে খাইয়েছেন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নিজে না পরে সন্তানকে পরিয়েছেন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পিঁপড়ার ডরে মা সন্তানকে মাটিতে রাখেননি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মা সন্তানকে পিঁপড়ার ভয়েও মাটিতে রাখেন না—এই উপমার মাধ্যমে কবির বর্ণনায় মায়ের সর্বোচ্চ মমতা প্রকাশিত হয়েছে [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397874659,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "\"অশোক আছিনু মুই দুর্বল হবাল\" — চরণটিতে কবি তুলে ধরেছেন—",
+    "options": [
+      {
+        "label": "a",
+        "text": "শৈশবকালীন অসহায় অবস্থা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "শৈশবকালীন দুঃসময় অবস্থা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শৈশবকালীন দুঃসহ অবস্থা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শৈশবকালীন চিরন্তন অবস্থা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "জন্মের পর শিশু যে শারীরিক ও মানসিকভাবে অন্যের ওপর নির্ভরশীল ও অসহায় থাকে, কবি সেটিই বুঝিয়েছেন [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397874779,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "কবি তাঁর মায়ের প্রতি শ্রদ্ধা ও কৃতজ্ঞতা প্রকাশ করতে কোন পঙ্ক্তিটি ব্যবহার করেছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পিঁপড়ার ডরে মা না থুইলা মাটিতে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কোল দিয়া বুক দিয়া জগতে বিদিত",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অশোক আছিনু মুই দুর্বল হবাল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তান দয়া হতে হৈল এ ধড় বিশালা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মা সন্তানকে কোল ও বুক দিয়ে আগলে রাখেন, এই সত্যটিই তাঁর প্রতি শ্রদ্ধার মূল কারণ [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397874890,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'বন্দনা' শব্দের অর্থ হলো—\ni. স্তুতি\nii. সুনাম\niii. প্রশংসা",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বন্দনা বলতে মূলত কারো গুণের প্রশংসা করা বা স্তুতি গাওয়া বোঝায় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397875012,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "দুর্বল বোঝাতে ব্যবহার করা যাবে—\ni. অপটু\nii. হবাল\niii. কাহিল",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কবিতায় 'হবাল' এবং 'অশোক' শব্দের মাধ্যমে শৈশবের দুর্বলতাকে নির্দেশ করা হয়েছে [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397875276,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'ধড়' শব্দের সমার্থক শব্দ হিসেবে ব্যবহার করা যাবে—\ni. গাত্রদান করে\nii. অতিবাহিত করে\niii. দেহ",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'ধড়' বলতে শরীর বা দেহকে বোঝায় এবং সময়ের পরিক্রমায় এটি বৃদ্ধি পায় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397875397,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "সন্তানের জীবনে মায়ের মমতাই অপরিহার্য কারণ—\ni. মায়ের স্নেহ-মমতার তুলনা নেই\nii. মায়ের কল্যাণদৃষ্টি সন্তানের জীবনপথের পাথেয় স্বরূপ\niii. মা শিশুকে বহু যত্নে লালন-পালন করেন",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সন্তানের শারীরিক ও মানসিক বিকাশে মায়ের নিঃস্বার্থ মমতা ও দোয়ার কোনো বিকল্প নেই [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397875615,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "\"পিঁপড়ার ডরে মা সন্তানকে মাটিতে রাখেন না\" — এই কথা দ্বারা কবি মায়ের যে মূর্তিকে বড় করে তুলেছেন, তা হলো—\ni. স্নেহ-মমতা\nii. আদর\niii. কল্যাণ",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মায়ের স্নেহের পরশে সন্তান নিরাপদ থাকে এবং অকল্যাণ থেকে দূরে থাকে [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397875725,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'বন্দনা' কবিতায় অনুগত শিশু ধীরে ধীরে পরিণত মানুষ হয়ে ওঠে—\ni. শিক্ষায়\nii. আদর-যত্নে\niii. পরিচর্যায়",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পিতামাতার যত্ন ও পরিচর্যার ফলেই শিশু সুন্দরভাবে বেড়ে ওঠার সুযোগ পায় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397875841,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "\"অশোক আছিনু মুই দুর্বল হবাল\" — পঙ্ক্তিটি কবি ব্যবহার করেছেন তাঁর মায়ের প্রতি—\ni. শ্রদ্ধা প্রকাশের উদ্দেশ্যে\nii. সম্মান প্রকাশের উদ্দেশ্যে\niii. কৃতজ্ঞতা প্রকাশের উদ্দেশ্যে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "নিজের অসহায়ত্বের কথা স্মরণ করে মা-বাবার অবদানের প্রতি কৃতজ্ঞতা প্রকাশ করেছেন কবি [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397875993,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'বন্দনা' কবিতাটি কোন গ্রন্থ থেকে সংকলিত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ইউসুফ জোলেখা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সয়ফুলমুলুক বদিউজ্জামাল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "লায়লী মজনু",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পদ্মাবতী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কবি শাহ মুহম্মদ সগীরের বিশ্ববিখ্যাত 'ইউসুফ জোলেখা' কাব্যের সূচনা অংশ থেকে এই কবিতাটি নেওয়া হয়েছে [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397876117,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'ইউসুফ জোলেখা' কাব্যের কোথায় 'বন্দনা'র অবস্থান?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কাব্যের শেষে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মাঝখানে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শুরুতে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "টীকায়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মধ্যযুগের কাব্য রীতির অনুসরণে কাব্যের শুরুতেই স্রষ্টা ও গুরুজনদের বন্দনা করা হয়েছে [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397876224,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "কবি তাঁর মূল কাব্যের শুরুতে কার প্রশংসা করেছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মা-বাবার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শিক্ষকের",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সৃষ্টিকর্তার",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কাব্য রচনার সহায়তাকারীর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সর্বশক্তিমান আল্লাহ বা সৃষ্টিকর্তার স্তুতির মাধ্যমেই কবি তাঁর কাব্য শুরু করেন [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397876334,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "কবি 'বন্দনা' কবিতায় সবার কাছে কী দোয়া কামনা করেছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কাব্য রচনায় সাফল্য লাভের জন্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ব্যক্তিগত জীবনে উন্নতির জন্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সব ক্ষেত্রে সাফল্য লাভের জন্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অর্থনৈতিক উন্নতির জন্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কবি বিনীতভাবে প্রার্থনা করেছেন যেন তাঁর এই কাব্যগ্রন্থটি সফলভাবে সমাপ্ত হয় [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397876454,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "শাহ মুহম্মদ সগীর তাঁর 'বন্দনা' কবিতায় অকুতোভয় শ্রদ্ধা নিবেদন করেছেন—\ni. পিতার প্রতি\nii. মাতার প্রতি\niii. শিক্ষকের প্রতি",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এই তিন ব্যক্তিই কবির জীবনে মানুষ হিসেবে গড়ে ওঠার পেছনে সবচেয়ে বড় ভূমিকা রেখেছেন [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397876574,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "কবি পিতামাতা ও শিক্ষকের প্রতি অকৃত্রিম শ্রদ্ধা দেখিয়েছেন কারণ—\ni. ব্যক্তিগত স্বার্থসিদ্ধিতে মা-বাবার দান প্রয়োজন\nii. পিতামাতা অশেষ দুঃখকষ্ট স্বীকার করে সন্তানকে বড় করে তোলেন\niii. শিক্ষক জ্ঞানদান করে মানুষ হিসেবে গড়ে তোলেন",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পিতামাতার ত্যাগ এবং শিক্ষকের জ্ঞানদান—উভয়ই একটি সার্থক জীবনের ভিত্তি [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397876695,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'সপুটে' শব্দটির অর্থ হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "করজোড়ে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সজাগ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিনয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মমতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "করজোড়ে বা হাত জোর করে সম্মান প্রদর্শন করাকে 'সপুটে' বলা হয়েছে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397876813,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "কবি কাকে দ্বিতীয়বার জন্মদাতা হিসেবে আখ্যায়িত করেছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পিতা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মাতা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ওস্তাদ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সুলতান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "শিক্ষক বা ওস্তাদ মানুষকে জ্ঞানের আলো দিয়ে নতুন জীবন দান করেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397876926,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'ইউসুফ জোলেখা' কাব্যটি কোন ভাষায় রচিত হয়েছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফারসি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আরবি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাংলা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "উর্দু",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কবি শাহ মুহম্মদ সগীর বাংলা ভাষায় এই বিখ্যাত কাব্যটি রচনা করেন [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397877100,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'লিট' শব্দটির অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "লেখা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নিলাম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নিল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উৎসর্গ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পিতামাতা তাঁদের জীবন-যৌবন সন্তানের জন্য 'লিট' বা উৎসর্গ করেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397877230,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "'বন্দনা' কবিতায় কোনটিকে সর্বশ্রেষ্ঠ ধর্ম বলা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পূজা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নামাজ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিনয়",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "দান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কবির মতে বিনয়ী হওয়া এবং বড়দের শ্রদ্ধা করাই সবচেয়ে বড় গুণ বা ধর্ম [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397877347,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "কবি কার চরণে নিজেকে 'হীন' বলে অভিহিত করেছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সৃষ্টিকর্তার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মা-বাবার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ওস্তাদের",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সকলের",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অত্যন্ত বিনয়ের সাথে কবি সবার দোয়া পেতে নিজেকে ছোট বা 'হীন' বলেছেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397877482,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "\"কোল দিয়া বুক দিয়া জগতে বিদিত\" — এখানে 'জগতে বিদিত' অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সারা বিশ্বে পরিচিত",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সবার কাছে গোপন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কেবল পরিবারের কাছে জানা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অজানার বিষয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সন্তানের প্রতি মায়ের ভালোবাসা কোনো লুকানো বিষয় নয়, এটি বিশ্বজনীন সত্য [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397877616,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "কবি কেন শিক্ষককে পিতার চেয়ে বেশি সম্মান করতে বলেছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শিক্ষক কঠোর বলে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শিক্ষক জ্ঞানদান করেন বলে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "শিক্ষক বেতন পান না বলে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শিক্ষক শাসন করেন বলে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "জ্ঞানদান করে অন্ধকার থেকে আলোর পথে নিয়ে আসেন বলে শিক্ষক অধিকতর শ্রদ্ধেয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768397877737,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "বন্দনা",
+    "question": "মানুষের মনুষ্যত্বের প্রধান ধর্ম কোনটি?\ni. শ্রদ্ধা\nii. কৃতজ্ঞতা\niii. বিনয়",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "শ্রদ্ধা, কৃতজ্ঞতা ও বিনয়—এই তিনটির সমন্বয়েই একজন মানুষ প্রকৃত মনুষ্যত্ব লাভ করে [৬]।",
+    "image": null,
+    "language": "en"
+  }
+]

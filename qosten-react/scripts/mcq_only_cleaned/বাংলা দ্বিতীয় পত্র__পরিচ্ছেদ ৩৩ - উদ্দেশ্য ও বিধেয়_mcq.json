@@ -1,0 +1,145 @@
+[
+  {
+    "id": 1779877119284,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৩ - উদ্দেশ্য ও বিধেয়",
+    "question": "বাক্যের দুই অংশ—",
+    "options": "[{\"label\":\"a\",\"text\":\"উদ্দেশ্য ও কর্তা\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বিধেয় ও কর্ম\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"উদ্দেশ্য ও বিধেয়\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"উদ্দেশ্য ও কর্ম\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877119413,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৩ - উদ্দেশ্য ও বিধেয়",
+    "question": "বাক্যে উদ্দেশ্য সম্পর্কে যা বলা হয় তাকে কী বলে?",
+    "options": "[{\"label\":\"a\",\"text\":\"উদ্দেশ্য\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বিধেয়\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"পূরক\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"প্রসারক\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877119542,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৩ - উদ্দেশ্য ও বিধেয়",
+    "question": "বাক্যে যাকে উদ্দেশ্য করে কিছু বলা হয়, তাকে কী বলে?",
+    "options": "[{\"label\":\"a\",\"text\":\"উদ্দেশ্য\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"বিধেয়\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"পূরক\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"প্রসারক\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877119657,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৩ - উদ্দেশ্য ও বিধেয়",
+    "question": "উদ্দেশ্য ও বিধেয়কে প্রসারিত করা হয় যেসব শব্দ ও বর্গ দিয়ে, তাকে বলে—",
+    "options": "[{\"label\":\"a\",\"text\":\"উদ্দেশ্য\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বিধেয়\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"পূরক\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"প্রসারক\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877119789,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৩ - উদ্দেশ্য ও বিধেয়",
+    "question": "বিধেয় ক্রিয়ার বিশেষ্য অংশকে বলে—",
+    "options": "[{\"label\":\"a\",\"text\":\"উদ্দেশ্য\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বিধেয়\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"পূরক\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"প্রসারক\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877119915,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৩ - উদ্দেশ্য ও বিধেয়",
+    "question": "বাক্যের বিধেয় অংশে সাধারণত কী থাকে?",
+    "options": "[{\"label\":\"a\",\"text\":\"বিশেষ্য\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"সর্বনাম\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"বিশেষণ\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"ক্রিয়া\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877120045,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৩ - উদ্দেশ্য ও বিধেয়",
+    "question": "উদ্দেশ্যের সম্প্রসারক কোথায় বসে?",
+    "options": "[{\"label\":\"a\",\"text\":\"বিধেয়ের পূর্বে\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"উদ্দেশ্য ও বিধেয়ের পূর্বে\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"উদ্দেশ্যের পূর্বে\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"কর্মের পূর্বে\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877120164,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৩ - উদ্দেশ্য ও বিধেয়",
+    "question": "বাক্যের বিধেয় অংশে ক্রিয়া থাকা না-থাকা বিবেচনায় বাক্যকে কত ভাগে ভাগ করা যায়?",
+    "options": "[{\"label\":\"a\",\"text\":\"দুই\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"তিন\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"চার\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"পাঁচ\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877120285,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৩ - উদ্দেশ্য ও বিধেয়",
+    "question": "বাক্যের উদ্দেশ্যে ও বিধেয়কে প্রসারিত করা হয় যেসব শব্দ ও বর্গ দিয়ে, সেগুলোকে বলে—",
+    "options": "[{\"label\":\"a\",\"text\":\"পূরণ\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"প্রসারক\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"পূরক\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"প্রসারণ\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877120412,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৩ - উদ্দেশ্য ও বিধেয়",
+    "question": "নিচের কোন বাক্যে বিধেয় বিশেষণ আছে?",
+    "options": "[{\"label\":\"a\",\"text\":\"লোকটা পাগল\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"খুব ভালো খবর\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"আধা কেজি চাল\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"তৃতীয় প্রজন্ম\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877120534,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৩ - উদ্দেশ্য ও বিধেয়",
+    "question": "বিধেয় বিশেষণ রয়েছে কোন বাক্যে?",
+    "options": "[{\"label\":\"a\",\"text\":\"খুব ভালো খবর।\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"এই পুকুরের পানি ঘোলা।\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"আধা কেজি চাল।\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"গাড়িটা বেশ জোরে চলছে।\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877120646,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৩ - উদ্দেশ্য ও বিধেয়",
+    "question": "'সেলিম সাহেবের ছেলে সুমন গাছতলায় বসে বই পড়ছে।'- বাক্যে বিধেয়ের পূরক হলো—",
+    "options": "[{\"label\":\"a\",\"text\":\"বই\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"পড়ছে\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"গাছতলা\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"ছেলে\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877120769,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৩ - উদ্দেশ্য ও বিধেয়",
+    "question": "বাক্যের কোন অংশে ক্রিয়া থাকে?",
+    "options": "[{\"label\":\"a\",\"text\":\"কর্তা\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"কর্ম\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"উদ্দেশ্য\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"বিধেয়\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1779877116499,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩২ - বাক্যের বর্গ",
+    "question": "বাক্যের মধ্যে একাধিক শব্দ দিয়ে গঠিত বাক্যাংশকে কী বলে?",
+    "options": "[{\"label\":\"a\",\"text\":\"বর্গ\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"উদ্দেশ্য\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"বিধেয়\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"বাক্যাংশ\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877116862,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩২ - বাক্যের বর্গ",
+    "question": "'বর্গ' আসলে—",
+    "options": "[{\"label\":\"a\",\"text\":\"বাক্যের বিন্যাস\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"ধ্বনিগুচ্ছ\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"বর্ণের সমষ্টি\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"শব্দের গুচ্ছ\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877116980,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩২ - বাক্যের বর্গ",
+    "question": "বর্গের নাম হয়—",
+    "options": "[{\"label\":\"a\",\"text\":\"পদ অনুযায়ী\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"বাক্য অনুযায়ী\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"ধ্বনি অনুযায়ী\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"বর্ণ অনুযায়ী\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877117122,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩২ - বাক্যের বর্গ",
+    "question": "বিশেষ্যের আগে এক বা একাধিক বিশেষণ বা সম্বন্ধপদ যুক্ত হয়ে কোন বর্গ তৈরি হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"বিশেষ্যবর্গ\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"বিশেষ্যবর্গ (Option repeated/typo in book)\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"ক্রিয়াবিশেষণ-বর্গ\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"ক্রিয়াবর্গ\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877117241,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩২ - বাক্যের বর্গ",
+    "question": "বিশেষণ জাতীয় শব্দের গুচ্ছকে বলে—",
+    "options": "[{\"label\":\"a\",\"text\":\"বিশেষ্যবর্গ\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বিশেষণবর্গ\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"বিশেষ্যবর্গ (Option repeated)\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"ক্রিয়াবিশেষণ-বর্গ\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877117381,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩২ - বাক্যের বর্গ",
+    "question": "বিধেয় অংশের ক্রিয়া সাধারণত—",
+    "options": "[{\"label\":\"a\",\"text\":\"বিশেষণবর্গ\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"ক্রিয়াবর্গ\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"ক্রিয়াবিশেষণ-বর্গ\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"ক্রিয়াবর্গ (Option repeated)\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877117506,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩২ - বাক্যের বর্গ",
+    "question": "বর্গকে কীসের একক বলা যায়?",
+    "options": "[{\"label\":\"a\",\"text\":\"শব্দের\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বাক্যের\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"অর্থের\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"ভাষার\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877117629,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩২ - বাক্যের বর্গ",
+    "question": "বাক্যের মধ্যে একাধিক শব্দের গুচ্ছকে কী বলে?",
+    "options": "[{\"label\":\"a\",\"text\":\"বর্গ\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"বর্ণ\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"পদ\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"শব্দ\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877117762,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩২ - বাক্যের বর্গ",
+    "question": "যোজক দ্বারা দুটি বিশেষ্য যুক্ত হয়ে কোন বর্গ তৈরি করে?",
+    "options": "[{\"label\":\"a\",\"text\":\"ক্রিয়াবর্গ\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বিশেষ্যবর্গ\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"বিশেষণবর্গ\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"ক্রিয়াবিশেষণ-বর্গ\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877117891,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩২ - বাক্যের বর্গ",
+    "question": "'আমটা দেখতে ভারি সুন্দর।'- বাক্যের কোন বর্গের ব্যবহার রয়েছে?",
+    "options": "[{\"label\":\"a\",\"text\":\"বিশেষ্যবর্গ\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"ক্রিয়াবিশেষণ-বর্গ\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"বিশেষণবর্গ\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"ক্রিয়াবর্গ\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877118019,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩২ - বাক্যের বর্গ",
+    "question": "'বেঁচে থাকার মতো সামান্য কয়টা টাকা বেতন পাই।'- নিম্নরেখ শব্দগুচ্ছ কোন ধরনের বর্গ?",
+    "options": "[{\"label\":\"a\",\"text\":\"বিশেষ্যবর্গ\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বিশেষণবর্গ\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"ক্রিয়াবিশেষণ-বর্গ\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"ক্রিয়াবর্গ\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877118146,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩২ - বাক্যের বর্গ",
+    "question": "কোন বাক্যে বিশেষণবর্গের ব্যবহার হয়েছে?",
+    "options": "[{\"label\":\"a\",\"text\":\"আমার ভাই পড়তে বসেছে।\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"আমি সকাল থেকে বসে আছি।\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"সে লিখছে আর হাসছে।\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"আমটা দেখতে ভারি সুন্দর।\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877118271,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩২ - বাক্যের বর্গ",
+    "question": "'সকাল আটটার সময়ে সে রওয়ানা হলো।'- বাক্যে 'সকাল আটটার সময়ে' কোন বর্গ বিদ্যমান?",
+    "options": "[{\"label\":\"a\",\"text\":\"বিশেষ্যবর্গ\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বিশেষণবর্গ\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"ক্রিয়াবিশেষণ-বর্গ\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"ক্রিয়াবর্গ\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877118406,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩২ - বাক্যের বর্গ",
+    "question": "কোনো একটি বর্গ বাক্যের মধ্যে যে পদের মতো আচরণ করে, সেই পদের নাম অনুযায়ী হয়—",
+    "options": "[{\"label\":\"a\",\"text\":\"ধ্বনির নাম\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"শব্দের নাম\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"বর্গের নাম\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"পদের নাম\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877118536,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩২ - বাক্যের বর্গ",
+    "question": "'তারপর আমরা দশ নম্বর প্ল্যাটফর্মে গিয়ে দাঁড়ালাম।'- বাক্যটি কোন বর্গের?",
+    "options": "[{\"label\":\"a\",\"text\":\"বিশেষ্যবর্গ\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বিশেষণবর্গ\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"ক্রিয়াবিশেষণ-বর্গ\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"ক্রিয়াবর্গ\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877118659,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩২ - বাক্যের বর্গ",
+    "question": "'সে লিখছে আর হাসছে।'- বাক্যে 'লিখছে আর হাসছে' কোন বর্গ?",
+    "options": "[{\"label\":\"a\",\"text\":\"বিশেষ্যবর্গ\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বিশেষণবর্গ\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"ক্রিয়াবিশেষণ-বর্গ\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"ক্রিয়াবর্গ\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877118783,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩২ - বাক্যের বর্গ",
+    "question": "'অস্ত্রসহ সৈন্যদল এগিয়ে চলেছে।'- বাক্যটিতে কোন বর্গ বিদ্যমান?",
+    "options": "[{\"label\":\"a\",\"text\":\"বিশেষ্যবর্গ\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বিশেষণবর্গ\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"ক্রিয়াবিশেষণ-বর্গ\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"ক্রিয়াবর্গ\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877118905,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩২ - বাক্যের বর্গ",
+    "question": "'আমি সকাল থেকে বসে আছি।'- বাক্যে 'সকাল থেকে' কোন বর্গের উদাহরণ?",
+    "options": "[{\"label\":\"a\",\"text\":\"বিশেষ্যবর্গ\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বিশেষণবর্গ\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"ক্রিয়াবিশেষণ-বর্গ\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"ক্রিয়াবর্গ\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877119035,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩২ - বাক্যের বর্গ",
+    "question": "নিচের কোন বাক্যে ক্রিয়াবর্গ আছে?",
+    "options": "[{\"label\":\"a\",\"text\":\"সে খেয়ে ঘুমিয়ে কাটাচ্ছে।\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"সে লিখছে আর হাসছে।\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"আমি সকাল থেকে বসে আছি।\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"আমটা দেখতে ভারি সুন্দর।\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877119161,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩২ - বাক্যের বর্গ",
+    "question": "বাক্যের মধ্যে একাধিক শব্দ দিয়ে গঠিত বাক্যাংশকে কী বলে?",
+    "options": "[{\"label\":\"a\",\"text\":\"বর্গ\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"অনুচ্ছেদ\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"ব্যাসবাক্য\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"লগ্নক\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  }
+]

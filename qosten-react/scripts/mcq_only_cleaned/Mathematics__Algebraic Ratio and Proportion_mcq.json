@@ -1,0 +1,994 @@
+[
+  {
+    "id": 1767590370221,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "The ratio of tea and sugar is 7 : 3, what is the percentage of tea in that mixture?",
+    "options": [
+      {
+        "label": "a",
+        "text": "30%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "40%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "50%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "70%",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The total parts of the mixture are 7 (tea) + 3 (sugar) = 10 parts. The percentage of tea is (tea parts / total parts) × 100% = (7/10) × 100% = 70%.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590370324,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "Which one of the following is the example of proportion?",
+    "options": [
+      {
+        "label": "a",
+        "text": "3 : 4 = 4 : 3",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2 : 3 = 6 : 10",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "3 : 2 = 9 : 6",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "2 : 5 = 4 : 25",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "A proportion exists when two ratios are equal. For option c, 3:2 simplifies to 3/2, and 9:6 simplifies to 9/6 = 3/2. Both ratios are equal (3/2 = 3/2), so it is a correct proportion.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590370428,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "If the ratio of buying cost and selling cost of a product is 5 : 6, then what is the profit in percentage?",
+    "options": [
+      {
+        "label": "a",
+        "text": "20%",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "25%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "30%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "40%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Let the buying cost be 5x and the selling cost be 6x. Profit = Selling Cost - Buying Cost = 6x - 5x = x. Profit percentage = (Profit / Buying Cost) × 100% = (x / 5x) × 100% = (1/5) × 100% = 20%.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590370531,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "The ratio of two numbers 4 : 5 and their L.C.M is 120, what is the greatest number?",
+    "options": [
+      {
+        "label": "a",
+        "text": "24",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "30",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "120",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "[Option not provided in original text]",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Let the two numbers be 4x and 5x. The LCM of 4x and 5x is 20x (since LCM of 4 and 5 is 20, multiplied by x). Given, 20x = 120, so x = 120/20 = 6. The greatest number is 5x = 5 × 6 = 30.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590370755,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "If \\( \\frac{a}{2} = \\frac{b}{3} = \\frac{c}{4} \\), then which of the following is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "a : b : c = 2 : 3 : 4",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "a : b : c = 4 : 3 : 2",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "a : b : c = 8 : 9 : 6",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "a : b : c = 6 : 8 : 9",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Let \\( \\frac{a}{2} = \\frac{b}{3} = \\frac{c}{4} = k \\). Then a = 2k, b = 3k, c = 4k. Therefore, the ratio a : b : c = 2k : 3k : 4k = 2 : 3 : 4.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590370871,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "If the side of square is decreased by 10%, then what is the percentage of decrease of the area of square?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "21%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "19%",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "30%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Let the original side be 100 units. Original area = 100 × 100 = 10000 sq units. After a 10% decrease, new side = 100 - (10% of 100) = 90 units. New area = 90 × 90 = 8100 sq units. Decrease in area = 10000 - 8100 = 1900 sq units. Percentage decrease = (1900 / 10000) × 100% = 19%.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590370973,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "If the length of a rectangle is increased by 10% and the breadth is decreased by 10%, then what is the percentage of increase or decrease of the area of the rectangle?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1% decreased",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "1% increased",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "21% decreased",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "21% increased",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Let original length = 100, original breadth = 100. Original area = 100 × 100 = 10000. New length = 100 + (10% of 100) = 110. New breadth = 100 - (10% of 100) = 90. New area = 110 × 90 = 9900. Change in area = 9900 - 10000 = -100 (decrease). Percentage decrease = (100 / 10000) × 100% = 1%.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590371082,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "If the length of one side of a square is x unit, then what is the ratio of the perimeter and the length of diagonal?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2√2 : 4",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2√2 : 3",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "2√2 : 2",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "2√2 : 1",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Side = x. Perimeter = 4x. Diagonal = x√2. Ratio of Perimeter to Diagonal = 4x : x√2 = 4 : √2. Multiply both terms by √2: = 4√2 : 2 = (4√2/2) : (2/2) = 2√2 : 1.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590371186,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "The perimeter of a parallelogram is 56 cm and the ratio of its adjacent sides is 4 : 3, then what is the difference of the greatest and the smallest sides?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2 cm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "4 cm",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "8 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "14 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Let the adjacent sides be 4x and 3x. In a parallelogram, opposite sides are equal, so perimeter = 2(4x + 3x) = 2(7x) = 14x. Given perimeter = 56 cm, so 14x = 56, which gives x = 4. The sides are 4×4 = 16 cm and 3×4 = 12 cm. Difference = 16 - 12 = 4 cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590371292,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "If the edge of a cube is increased by 30%, by how much is the surface area increased?",
+    "options": [
+      {
+        "label": "a",
+        "text": "30%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "33%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "60%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "69%",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Let original edge = 100. Original surface area = 6 × (100)^2 = 60000. New edge = 100 + (30% of 100) = 130. New surface area = 6 × (130)^2 = 6 × 16900 = 101400. Increase = 101400 - 60000 = 41400. Percentage increase = (41400 / 60000) × 100% = 69%.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590371403,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "How many times is the area of a square in terms of the area of the square on its diagonal?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1/4 times",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "1/2 times",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "2 times",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "4 times",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Let side of first square = a. Its area = a². Its diagonal = a√2. The square on this diagonal has a side = a√2. Its area = (a√2)² = 2a². The area of the first square (a²) is half the area of the square on its diagonal (2a²). So, it is 1/2 times.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590371502,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "If the side of any square is increased by 10%, then how much will the area be increased in percentage?",
+    "options": [
+      {
+        "label": "a",
+        "text": "19%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "20%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "21%",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "22%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Let original side = 100. Original area = 10000. New side = 110. New area = 12100. Increase = 2100. Percentage increase = (2100 / 10000) × 100% = 21%.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590371614,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "If the ratio of two numbers is 7 : 10 and L.C.M. is 910, then what is the difference of the numbers?",
+    "options": [
+      {
+        "label": "a",
+        "text": "39",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "91",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "130",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "221",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Let numbers be 7x and 10x. LCM of 7x and 10x is 70x (since LCM of 7 and 10 is 70). Given, 70x = 910, so x = 910/70 = 13. Numbers are 7×13=91 and 10×13=130. Difference = 130 - 91 = 39.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590371717,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "If the ratio of two numbers is 3:5 and their L.C.M. is 30, then what is the H.C.F. of the numbers?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "3",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "5",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "8",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Let numbers be 3x and 5x. LCM = 15x (LCM of 3 and 5 is 15). Given, 15x = 30, so x = 2. HCF of the numbers (3x and 5x) is x = 2.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590371820,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "If the ratio of the two numbers is 3 : 5 and their H.C.F is 4, then what is the L.C.M. of the numbers?",
+    "options": [
+      {
+        "label": "a",
+        "text": "12",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "15",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "20",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "60",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Let numbers be 3x and 5x. HCF of these numbers is x. Given HCF = 4, so x = 4. Numbers are 12 and 20. LCM = (Product of numbers) / HCF = (12 × 20) / 4 = 240 / 4 = 60.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590371924,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "If a commodity sells at 12.5% loss, then what is the ratio of selling price and buying price?",
+    "options": [
+      {
+        "label": "a",
+        "text": "7 : 8",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "8 : 9",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "9 : 8",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "8 : 7",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Let Buying Price (Cost Price) be 100. Loss = 12.5% of 100 = 12.5. Selling Price = 100 - 12.5 = 87.5. Ratio of Selling Price : Buying Price = 87.5 : 100 = 875 : 1000 = (Divide by 125) = 7 : 8.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590372025,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "If the ratio of two numbers is 3 : 4 and their HCF is 3, then what is L.C.M. of the two numbers?",
+    "options": [
+      {
+        "label": "a",
+        "text": "4",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "9",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "12",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "36",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Let numbers be 3x and 4x. HCF = x. Given HCF = 3, so x = 3. Numbers are 9 and 12. LCM of 9 and 12 is 36. Alternatively, for numbers in ratio 3:4, LCM = (3 × 4 × x) = 12x = 12 × 3 = 36.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590372126,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "If the ratio of two numbers is 5 : 6 and their L.C.M. is 150, then what is the H.C.F?",
+    "options": [
+      {
+        "label": "a",
+        "text": "5",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "6",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "11",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "30",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Let numbers be 5x and 6x. LCM = 30x (LCM of 5 and 6 is 30). Given, 30x = 150, so x = 5. HCF of the numbers (5x and 6x) is x = 5.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590372225,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "If the ratio of three angles of a triangle is 3 : 4 : 5, then what is the smallest angle?",
+    "options": [
+      {
+        "label": "a",
+        "text": "15°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "45°",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "60°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "75°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Let angles be 3k, 4k, 5k. Sum of angles in a triangle = 180°. So, 3k + 4k + 5k = 180° => 12k = 180° => k = 15°. Smallest angle = 3k = 3 × 15° = 45°.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590372331,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "Angles of a triangle is 2 : 5 : 3. What type of triangle is it?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Equilateral",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Obtuse angled",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Acute angled",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Right angled",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Let angles be 2k, 5k, 3k. Sum = 2k+5k+3k=10k=180° => k=18°. Angles are 36°, 90°, 54°. Since one angle is exactly 90°, it is a right-angled triangle.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590372434,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "If a, b, c is the continued proportion, then — i. b² = ac ii. 2b = a + c iii. a + b = b + c Which one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i only",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Continued proportion means a, b, c are in proportion: a/b = b/c. This implies b² = ac (i is correct). Statement ii (2b = a + c) would mean b is the arithmetic mean, which is not necessarily true for geometric proportion. Statement iii (a + b = b + c) simplifies to a = c, which is not generally true. Only statement i is correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590372536,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "If a, b, c, d are continued proportion, then — i. \\(c^2 = bd\\) ii. a : b : c : d iii. ad = bc Which one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "For continued proportion a, b, c, d: a/b = b/c = c/d. From b/c = c/d, we get c² = bd (i is correct). The ratios being equal implies a : b : c : d (ii is correct). From a/b = c/d, we get ad = bc (iii is correct). So all i, ii, and iii are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590372644,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "If p, q and r are continued proportional, then — i. p/q = q/r ii. q² = pr iii. pq = qr Which one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "If p, q, r are in continued proportion, then p/q = q/r (i is correct). From this, cross-multiplying gives q² = pr (ii is correct). Statement iii (pq = qr) would simplify to p = r, which is not generally true. Only i and ii are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590372742,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "If j, k, l and m are ordered proportional, then — i. j/k = l/m ii. j/k = k/l iii. k/l = l/m Which one of the following is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i only",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii and iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "i and iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii and iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Ordered proportion (continued proportion) means j, k, l, m are in continued proportion: j/k = k/l = l/m. Statement i (j/k = l/m) is not directly true from the definition. Statement ii (j/k = k/l) is correct as it's part of the chain. Statement iii (k/l = l/m) is correct as it's part of the chain. So ii and iii are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590372861,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "If the sides of a square with each side 80 meter are increased by 10%, then — i. the length of each side will be 88 meter ii. the area of it is increased by 21% iii. the length of diagonal of it is increased by 10√2 meter Which one of the following is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i and ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i and iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii and iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii and iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Original side = 80 m. 10% increase = 8 m. New side = 88 m (i is correct). Original area = 6400 m². New area = 88² = 7744 m². Increase = 1344 m². Percentage increase = (1344/6400)×100% = 21% (ii is correct). Original diagonal = 80√2 m. New diagonal = 88√2 m. Increase = 8√2 m, not 10√2 m (iii is incorrect). So, i and ii are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590372970,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "What is the sum of square of the two numbers? (Ratio 3:4, HCF=4)",
+    "options": [
+      {
+        "label": "a",
+        "text": "25",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "28",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "49",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "400",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Numbers are 3x and 4x, HCF = x = 4. So numbers are 12 and 16. Sum of their squares = 12² + 16² = 144 + 256 = 400.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590373079,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "What is the L.C.M. of two numbers? (Ratio 3:4, HCF=4)",
+    "options": [
+      {
+        "label": "a",
+        "text": "28",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "48",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "72",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "96",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Numbers are 12 and 16 (from Q48). LCM of 12 and 16 is 48.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590373178,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "What is the value of the largest angle? (Ratio 1:1:2)",
+    "options": [
+      {
+        "label": "a",
+        "text": "60°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "90°",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "100°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "180°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Let angles be k, k, 2k. Sum = k + k + 2k = 4k = 180° => k = 45°. Largest angle = 2k = 90°.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590373286,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "The triangle is — (Ratio 1:1:2)",
+    "options": [
+      {
+        "label": "a",
+        "text": "Equilateral",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Isosceles",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Right angled",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Isosceles right angled",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Angles are 45°, 45°, 90°. It has two equal angles (45°) and a right angle (90°). So it is an Isosceles Right-angled triangle.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590373390,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "What is the H.C.F of the two numbers? (Ratio 6:5, LCM=180)",
+    "options": [
+      {
+        "label": "a",
+        "text": "5",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "6",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "30",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "180",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Let numbers be 6x and 5x. LCM = 30x. Given 30x = 180 => x = 6. HCF of the numbers (6x and 5x) is x = 6.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590373500,
+    "subject": "Mathematics",
+    "chapter": "Algebraic Ratio and Proportion",
+    "question": "What is the sum of the two numbers? (Ratio 6:5, LCM=180)",
+    "options": [
+      {
+        "label": "a",
+        "text": "30",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "36",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "66",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "180",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "From Q52, x=6. Numbers are 6×6=36 and 5×6=30. Sum = 36 + 30 = 66.",
+    "image": null,
+    "language": "en"
+  }
+]

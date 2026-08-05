@@ -1,0 +1,866 @@
+[
+  {
+    "id": 1768036734601,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "\"প্রতীচী\" শব্দের সঠিক বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রতীতি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রতীচা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রাচ্য",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "পাণ্ডাতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'প্রতীচী' শব্দের অর্থ পশ্চিম দিক এবং এর বিপরীত অর্থ প্রকাশকারী শব্দ হলো 'প্রাচ্য', যার অর্থ পূর্ব দিক [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036735209,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "দুটি শব্দের উচ্চারণ এক বা প্রায় এক কিন্তু অর্থ আলাদা, সেগুলোকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বর্ণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রবাদ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শব্দজোড়",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "শব্দতত্ত্ব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যেসব শব্দের উচ্চারণ অভিন্ন বা প্রায় এক কিন্তু তারা ভিন্ন ভিন্ন অর্থ প্রকাশ করে, তাদের শব্দজোড় বলা হয় [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036735320,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "শব্দজোড়ে শব্দের অর্থের পার্থক্য বোঝা যায় কীভাবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রসঙ্গ বিবেচনায়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সমাজ বিবেচনায়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "স্থান বিবেচনায়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কাল বিবেচনায়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "শব্দজোড়ের শব্দগুলোর উচ্চারণ এক হওয়ায় বাক্যে তাদের সঠিক অর্থ বোঝার জন্য প্রসঙ্গের ওপর নির্ভর করতে হয় [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036735456,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "\"অনু\" এবং \"অণু\" — এই শব্দ দুটির মধ্যে তফাত কোন ক্ষেত্রে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বানানে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "উচ্চারণে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অর্থে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বানানে ও অর্থে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "‘অনু’ (পশ্চাৎ) এবং ‘অণু’ (ক্ষুদ্রতম অংশ) শব্দ দুটির বানান এবং অর্থ—উভয় ক্ষেত্রেই ভিন্নতা রয়েছে [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036735564,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "\"নিভৃত\" ও \"নিভৃত\" — শব্দজোড়ের মিল কোথায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "উচ্চারণে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বানানে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অর্থে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শব্দগণিতে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "শব্দজোড়ের অন্যতম প্রধান বৈশিষ্ট্য হলো এদের উচ্চারণে মিল থাকা [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036735673,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "\"শাল\" শব্দের অর্থ হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "পনবিশেষ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দাড়ি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শাশুড়ি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মাছ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "‘শাল’ শব্দটি এখানে একটি বিশেষ প্রজাতির মাছকে নির্দেশ করছে [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036735780,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "\"শিল\" ও \"শীল\" শব্দজোড়ে \"শীল\" শব্দের অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পাথর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চরিত্র",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সুন্দর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পদবিবিশেষ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "‘শীল’ শব্দের অর্থ হলো স্বভাব বা চরিত্র, অন্যদিকে ‘শিল’ মানে পাথর [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036735918,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "\"অসত\" ও \"অসৎ\" শব্দ জোড়ের অর্থ যথাক্রমে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "অন্যায় ও কথিত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অশুভ ও নির্জীব",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কীর্তি ও মনোজ্ঞ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অনবরত ও সুন্দর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "শব্দজোড়ের অর্থগত পার্থক্যে ‘অসত’ মানে অশুভ এবং ‘অসৎ’ মানে নির্জীব বা অসত্য [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036736031,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "\"অণু\" শব্দের অর্থ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পশ্চাৎ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ক্ষুদ্রতম অংশ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ভিতর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "একত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বিজ্ঞান ও ব্যাকরণ অনুযায়ী কোনো পদার্থের ক্ষুদ্রতম অংশকে ‘অণু’ বলা হয় [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036736166,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "\"বাইস\" অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তক্ষক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ধারালো যন্ত্র",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "দাঁত-বিষয়ক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বটের শিকড়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "‘বাইস’ শব্দটি কাঠ কাটার বা ছোলার একটি বিশেষ ধারালো যন্ত্রকে বোঝাতে ব্যবহৃত হয় [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036736273,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "\"দিন\" শব্দের অর্থ \"দিবস\" হলে শব্দজোড় হিসেবে \"দীন\" শব্দের অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ইসলাম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নিয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দরিদ্র",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "রোল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "‘দিন’ মানে দিবস হলেও দীর্ঘ-ঈ কার যুক্ত ‘দীন’ শব্দের অর্থ অভাবী বা দরিদ্র [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036736382,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "শব্দজোড় \"অক্ষত\" ও \"অক্ষত\" এর মধ্যে \"অক্ষত\" শব্দের অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "যা পচা নয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "যা পাওয়া নয়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মেঘ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সন্তান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "শব্দজোড়ের ভিন্ন ভিন্ন প্রয়োগে একটি শব্দের অর্থ 'যা পাওয়া নয়' বা দুষ্প্রাপ্য হতে পারে [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036736491,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "\"তনু\" শব্দের অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দাড়ি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঘড়ি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দেহ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "শুচি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "‘তনু’ শব্দটি শরীর বা দেহ অর্থে ব্যবহৃত হয় [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036736597,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "\"উপাদান\" শব্দটির অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বালিশ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "উপকরণ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "আবরণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মনোযোগ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কোনো কিছু তৈরির জন্য প্রয়োজনীয় কাঁচামাল বা জিনিসকে ‘উপাদান’ বলে [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036736725,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "\"ধাত্রী\" শব্দের অর্থ \"বিধাতা\" হলে, \"ধাত্রী\" শব্দের অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পৃথিবী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ধারণ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উপমাতা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ঘুম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যে নারী শিশুকে পালন করে বা জন্মদানে সাহায্য করে তাকে ‘ধাত্রী’ বা উপমাতা বলা হয় [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036736833,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "\"সুপ্ত\" ও \"সপ্ত\" অর্থ যথাক্রমে কী হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নিদ্রিত ও সাত",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "মৃত ও চূর্ণ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ঘূর্ণন ও জেগে ওঠা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নেশাগ্রস্ত ও চূর্ণ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "‘সুপ্ত’ শব্দের অর্থ ঘুমন্ত বা নিদ্রিত এবং ‘সপ্ত’ অর্থ সংখ্যা সাত [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036736941,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "\"সাক্ষর\" ও \"স্বাক্ষর\" শব্দজোড়ের মধ্যে মিল কোথায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বানানে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "উচ্চারণে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অর্থে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পদ শ্রেণিতে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "‘সাক্ষর’ (শিক্ষিত) এবং ‘স্বাক্ষর’ (দস্তখত) শব্দ দুটির বানান ও অর্থ আলাদা হলেও এদের উচ্চারণ অভিন্ন [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036737049,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "\"সর্গ\" ও \"স্বর্গ\" এই শব্দ দুটির মধ্যে তফাত কোন ক্ষেত্রে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বানানে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "উচ্চারণে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অর্থে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বানান ও অর্থে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "‘সর্গ’ মানে অধ্যায় এবং ‘স্বর্গ’ মানে দেবলোক; এই শব্দ দুটির বানান এবং অর্থ—উভয়ই ভিন্ন [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036737178,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "\"সাদী\" অর্থ যদি হয় আর \"সাধী\" অর্থ—",
+    "options": [
+      {
+        "label": "a",
+        "text": "অশ্বারোহী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অশ্ব",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অশ্বত্থ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ইচ্ছুক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "‘সাদী’ বলতে আরোহী বা সঙ্গী বোঝালেও ‘সাধী’ শব্দটি অশ্ব বা ঘোড়া অর্থে ব্যবহৃত হয় [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036737284,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "\"তত্ত্ব\" ও \"তথ্য\" শব্দজোড়ের অর্থ যথাক্রমে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "পাবন ও কথা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কথা ও পাবন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জ্ঞাতব্য বিষয় ও প্রকৃত বিষয়",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "গূঢ় অর্থ ও জ্ঞাতব্য বিষয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "‘তত্ত্ব’ দ্বারা কোনো বিষয়ের গূঢ় বা গভীর সারকথা এবং ‘তথ্য’ দ্বারা সংবাদ বা ডেটা বোঝানো হয় [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036737427,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "\"তির\" ও \"তীর\" শব্দজোড়ের অর্থ যথাক্রমে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "চূর্ণ ও নেশাগ্রস্ত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ছুরি ও স্বাভাবিক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দীর্ঘ ও হ্রস্ব",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "হ্রস্ব ও দীর্ঘ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "‘তির’ এবং ‘তীর’ এর ক্ষেত্রে যথাক্রমে হ্রস্ব ও দীর্ঘ উচ্চারণের মাধ্যমে এদের মধ্যকার পার্থক্য নির্দেশ করা হয় [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036737550,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "\"বালি\" শব্দটি দ্বারা মারিয়াকে বোঝালে \"বালি\" শব্দটি দ্বারা কী বোঝানো হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঢাকনা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মতাদর্শ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যথার্থ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দেওয়াল",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "উচ্চারণে অভিন্নতা থাকলেও প্রসঙ্গের ওপর ভিত্তি করে একই শব্দ ‘দেওয়াল’ অর্থ প্রকাশ করতে পারে [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036737660,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "\"সন\" অর্থ \"বর্ষ\" কিন্তু \"ষণ\" অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্বর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কথা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শব্দ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বাণী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "‘সন’ মানে বছর বা বর্ষ হলেও ‘ষণ’ শব্দটি শব্দ বা আওয়াজ অর্থে ব্যবহৃত হয় [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036737772,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "\"চুন\" যদি চূর্ণ হয়, তাহলে \"চুর\" অর্থ—",
+    "options": [
+      {
+        "label": "a",
+        "text": "নেশাগ্রস্ত",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ভাঙা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গুঁড়া করা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কলিচুন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "‘চুর’ শব্দটি প্রায়শই নেশায় আচ্ছন্ন বা মাতাল অবস্থা বোঝাতে ব্যবহৃত হয় [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036737893,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "\"বিনা\" ও \"বীণা\" শব্দ দুটির তফাত কোন ক্ষেত্রে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বানানে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "উচ্চারণে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অর্থে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বানান ও অর্থে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "‘বিনা’ (ব্যতীত) এবং ‘বীণা’ (বাদ্যযন্ত্র) এর বানান ও অর্থ উভয়ই আলাদা [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036738007,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "\"বানী\" ও \"বাণী\" শব্দজোড়ের \"বানী\" অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কথা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বাদ্যযন্ত্র",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বড় কলসি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গয়নার মজুরি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "‘বানী’ শব্দের অর্থ হলো অলংকার বা গয়না তৈরির খরচ বা মজুরি [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036738115,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "শব্দজোড়",
+    "question": "\"চির\" শব্দের অর্থ দীর্ঘ হলে, \"চীর\" অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সূর্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সুজলিত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ধূর্ত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ছিন্নবস্ত্র",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "‘চির’ মানে দীর্ঘকাল বা সর্বদা, অন্যদিকে ‘চীর’ মানে হলো পুরনো বা ছেঁড়া কাপড় [৭]।",
+    "image": null,
+    "language": "en"
+  }
+]

@@ -1,0 +1,1090 @@
+[
+  {
+    "id": 1768036779386,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "সাধারণত কতটি শব্দ পরস্পর বিপরীত শব্দ হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "একটি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দুটি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তিনটি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চারটি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সাধারণত দুটি শব্দ যখন একে অপরের উল্টো অর্থ প্রকাশ করে তখন তাদের বিপরীত শব্দ বলে [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036779495,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "বিপরীত শব্দ একে অন্যের কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সমার্থক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পরিপূরক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ভিন্নার্থক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সার্থিক",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "(বি.দ্র. উৎসে ঘ চিহ্নিত থাকলেও বিপরীত শব্দ মানে বিপরীত অর্থ প্রকাশকারী শব্দ।) [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036779604,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"অর্বাচীন\" শব্দের বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রাচীন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "নবীশ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বেশি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অনেক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অর্বাচীন মানে নতুন বা আধুনিক, যার বিপরীত হলো প্রাচীন বা পুরাতন [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036779710,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"উগ্র\" শব্দের বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শান্ত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সৌম্য",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ঋজু",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রূঢ়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "উগ্র বা চড়া মেজাজের বিপরীত হলো সৌম্য বা শান্ত [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036779823,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"মুক্ত\" শব্দের বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ভালো",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "স্বাধীন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বন্দি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "জীয়ন্ত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মুক্ত মানে স্বাধীন বা খোলা, এর বিপরীত হলো বন্দি [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036779933,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"প্রতীচ্য\" শব্দের সঠিক বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রাচ্যতা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রাচ্য",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "প্রতীচী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রতীতি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "প্রতীচ্য মানে পশ্চিম জগত, যার বিপরীত হলো প্রাচ্য বা পূর্ব জগত [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036780048,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"উত্তম\" শব্দের সঠিক বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অধম",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "উত্তম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শ্রেষ্ঠ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বড়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "উত্তম শব্দের বিপরীত হলো অধম [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036780155,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"উড়ো\" শব্দের বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নামা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তেজি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "স্থাবর",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ভারী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "উড়ো বা যা স্থির নয় তার বিপরীত হলো স্থাবর বা যা নির্দিষ্ট জায়গায় থাকে [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036780265,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"চেতন\" শব্দের বিপরীত অর্থ প্রকাশ করছে নিচের কোন শব্দটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সচেত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অচেত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অচেতন",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অসচেতন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যার বোধশক্তি আছে তা হলো চেতন, আর যার নেই তা হলো অচেতন [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036780379,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"প্রাচীন\" শব্দের বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আধুনিক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অর্বাচীন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অগ্রজ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উত্তর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "প্রাচীন মানে বহু পুরাতন, যার বিপরীত শব্দ হলো অর্বাচীন [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036780485,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"সুপ্ত\" শব্দের বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শান্ত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মিষ্ট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জাগ্রত",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ব্যক্ত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সুপ্ত মানে ঘুমন্ত বা লুকায়িত, এর বিপরীত হলো জাগ্রত [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036780593,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"গ্রাহ্য\" শব্দের বিপরীত শব্দ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ত্যাজ্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অগ্রাহ্য",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "প্রতীচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সুধী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যা গ্রহণ করা যায় তা গ্রাহ্য, আর যা গ্রহণ করা হয় না তা অগ্রাহ্য [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036780714,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"সুষ্ঠু\" শব্দের বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মৌন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মন্দ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সময়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সজীব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সুষ্ঠু মানে সুন্দর বা ঠিকঠাক, যার বিপরীত অর্থ হলো মন্দ [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036780835,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"উন্নতি\" শব্দের বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অবনতি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অপমান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অবনত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ঘাটতি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "উপরের দিকে যাওয়া বা বৃদ্ধি পাওয়া হলো উন্নতি, এর বিপরীত হলো অবনতি [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036780969,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"অনুরূপ\" শব্দের বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বৈরী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিরাগ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সরূপ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আনন্দ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "(বি.দ্র. উৎসে খ চিহ্নিত থাকলেও অনুরুপের বিপরীত সাধারণত বিসদৃশ হয়।) [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036781077,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"পরমার্থ\" এর বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পরামর্থ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিষয়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সাহসী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "হঠাৎ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পরমার্থ মানে আধ্যাত্মিক লক্ষ্য, এর বিপরীত হলো পার্থিব বা বিষয় [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036781191,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"ঘাতক\" শব্দটির বিপরীত অর্থ প্রকাশ করে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "পালক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রক্ষক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পালক",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "পালনকারী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যে হত্যা করে সে ঘাতক, আর যে লালন-পালন বা রক্ষা করে সে পালক [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036781296,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"পরমার্থ\" শব্দের বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাগরেদ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অনামত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মত",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মমত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "(বি.দ্র. উৎসে গ চিহ্নিত।) [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036781405,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"ঘাতক\" শব্দের বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মহাজন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অধমর্ণ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উত্তমর্ণ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "নায়ক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "(বি.দ্র. উৎসে ঘ চিহ্নিত হলেও ঘাতকের বিপরীত পালক। উত্তমর্ণ-অধমর্ণ ঋণ সংক্রান্ত বিপরীত শব্দ।) [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036781523,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"হরণ\" শব্দের বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আবরণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অপহরণ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পূরণ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "প্রসারণ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কোনো কিছু কেড়ে নেওয়া হলো হরণ, আর কোনো কিছু ভরে দেওয়া বা পূর্ণ করা হলো পূরণ [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036781631,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"বিদেশ\" শব্দের সঠিক বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মিলন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিগ্রহ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দেশ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "পরিণয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বিদেশ এর বিপরীত শব্দ হলো নিজের দেশ বা সংক্ষেপে দেশ [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036781739,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"সাকার\" শব্দের বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আকার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নিরাকার",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সদর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সরস",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যার আকার আছে তা সাকার, আর যার কোনো আকার নেই তা নিরাকার [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036781853,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"তফাত\" এর বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিপদ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রশংসা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কাছে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ধ্রুব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "তফাত মানে দূরত্ব, যার বিপরীত হলো কাছে বা নৈকট্য [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036781959,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"বন্ধন\" এর বিপরীত শব্দ কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মুক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পুরস্কার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রশংসা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মুক্তি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বন্ধন মানে আটকে রাখা, যার বিপরীত হলো মুক্তি বা ছেড়ে দেওয়া [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036782084,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"সঞ্চয়\" শব্দের বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ব্যয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "লাভ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "লোকসান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অপচয়",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "জমা করা বা সঞ্চয় করার বিপরীত হলো অপচয় করা বা অতিরিক্ত ব্যয় করা [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036782188,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"বিবেচক\" শব্দের বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অবিবেচক",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অদম্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সবিবেচক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সমান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যে চিন্তা করে কাজ করে সে বিবেচক, আর যে তা করে না সে অবিবেচক [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036782307,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"সূক্ষ্ম\" শব্দটির বিপরীতার্থক শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হালকা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "স্থূল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "লঘু",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গুরু",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সূক্ষ্ম মানে খুব ছোট বা মিহি, যার বিপরীত হলো স্থূল বা মোটা [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036782414,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"সংকুচিত\" শব্দের বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সংকুচিত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রসারিত",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বিস্তৃত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিরেট",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সংকুচিত মানে ছোট হয়ে যাওয়া, এর বিপরীত হলো প্রসারিত হওয়া [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036782525,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"উড়ো\" শব্দের বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মুক্ত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিরতি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গতি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "স্থাবর",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "উড়ো বা চলমান বিষয়ের বিপরীত শব্দ হলো স্থাবর [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036782634,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"সুধী\" শব্দের বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সন্ন্যাসী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অশুচি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অশুচি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অশুচি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "(বি.দ্র. উৎসে খ চিহ্নিত।) [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036782742,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"উচ্ছ্বাস\" এর বিপরীত শব্দ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অধ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "উন্নতি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বৃদ্ধি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উদ্ধার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "উচ্ছ্বাস মানে উপরে ওঠা বা প্রবল আবেগ, যার বিপরীত হতে পারে অধ বা পতন [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036782852,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"কৃত্রিম\" শব্দের বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অকৃত্রিম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "স্বাভাবিক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ভেজাল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আসল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কৃত্রিম বা মানুষের তৈরি জিনিসের বিপরীত হলো স্বাভাবিক বা প্রাকৃতিক [৭]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036782955,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"নশ্বর\"—এর বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অনশ্বর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অবিনশ্বর",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অবিনশ্বর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অবিনশ্বর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যা ধ্বংসশীল তা নশ্বর, আর যা কখনো নষ্ট হয় না তা অবিনশ্বর [৭]। (বি.দ্র. উৎসে খ চিহ্নিত)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036783059,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪২: বিপরীত শব্দ",
+    "question": "\"প্রতীচী\" শব্দের বিপরীত শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রতীতি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রতীচা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রাচ্য",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "পাণ্ডাতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্রতীচী মানে পশ্চিম দিক, যার বিপরীত হলো প্রাচ্য বা পূর্ব দিক [৭]।",
+    "image": null,
+    "language": "en"
+  }
+]

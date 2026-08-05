@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import TabContainer from './components/TabContainer/TabContainer';
 import QuestionBank from './components/QuestionBank/QuestionBank';
+import HSCQuestionBank from './components/HSCQuestionBank/HSCQuestionBank';
 import VideosView from './components/VideosView/VideosView';
 import QuestionForm from './components/QuestionForm/QuestionForm';
 import ImportTabs from './components/ImportTabs/ImportTabs';
@@ -18,6 +19,7 @@ import CQMDImport from './components/CQMDImport/CQMDImport';
 import CQTXTImport from './components/CQTXTImport/CQTXTImport';
 import Shop from './components/Shop/Shop';
 import Roadmap from './components/Roadmap/Roadmap';
+import RoadmapView from './components/RoadmapView/RoadmapView';
 import BatchSizeTest from './components/BatchSizeTest/BatchSizeTest';
 import TranslationTest from './components/TranslationTest/TranslationTest';
 import ChapterOverview from './components/ChapterOverview/ChapterOverview';
@@ -31,6 +33,7 @@ import Login from './components/Dev/Login';
 import DataTracker from './components/DataTracker/DataTracker';
 import { AIProvider } from './context/AIContext';
 import AITab from './components/AITab/AITab';
+import { AIDashboard } from './components/AIDashboard/AIDashboard';
 
 function App() {
   return (
@@ -47,6 +50,7 @@ function App() {
                   <Route path="/" element={<Navigate to="/import" replace />} />
                   <Route path="/import" element={<ImportTabs type="mcq" language="en" />} />
                   <Route path="/bank" element={<QuestionBank />} />
+                  <Route path="/hsc-bank" element={<HSCQuestionBank />} />
                   <Route path="/videos" element={<VideosView />} />
                   <Route path="/add" element={<QuestionForm />} />
                   <Route path="/import-cq" element={<ImportTabs type="cq" language="en" />} />
@@ -63,6 +67,7 @@ function App() {
                   <Route path="/prompts" element={<SimplePromptManager />} />
                   <Route path="/shop" element={<Shop />} />
                   <Route path="/roadmap" element={<Roadmap />} />
+                  <Route path="/roadmap-view" element={<RoadmapView />} />
                   <Route path="/batch-test" element={<BatchSizeTest />} />
                   <Route path="/translate-test" element={<TranslationTest />} />
                   <Route path="/overview" element={<ChapterOverview />} />
@@ -73,6 +78,7 @@ function App() {
                   <Route path="/dev" element={<DevView />} />
                   <Route path="/tracker" element={<DataTracker />} />
                   <Route path="/ai" element={<AITab />} />
+                  <Route path="/ai-dashboard" element={<AIDashboard />} />
                   <Route path="/login" element={<Login />} />
                 </Routes>
               </div>

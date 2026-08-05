@@ -1,0 +1,3170 @@
+[
+  {
+    "id": 1768404083558,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'অন্ধবধূ' কবিতায় কেন পাখির চেঁচিয়ে সারা হওয়ার কথা উল্লেখ আছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কাক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চোখ গেল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কোকিল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শালিক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "অন্ধবধূ কবিতায় বধূটি তার স্বামীকে 'চোখ গেল' পাখির ডাক শুনতে বলে, কারণ সেই পাখির ডাকের সাথে তার নিজের অন্ধত্বের করুণ অবস্থার একটি যোগসূত্র আছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404087072,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'মরণ নেওয়ায় নয় কি কিছু ভার' বাক্যটি দিয়ে কী বোঝানো হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মৃত্যুকে বরণ করে নেয়া",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অন্ধত্বের অভিশাপ থেকে মুক্তি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মরণের কষ্ট দূর করা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "স্বামীকে দায়মুক্ত করা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "অন্ধবধূ তার অন্ধত্বের যন্ত্রণাময় জীবন থেকে মুক্তি পেতে মৃত্যুকে ইতিবাচক হিসেবে দেখেছে, যা তাকে এই অভিশাপ থেকে মুক্তি দেবে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404087186,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "যতীন্দ্রমোহন বাগচী কত সালে জন্মগ্রহণ করেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৮৭৬ সালে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১৮৭৭ সালে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১৮৭৮ সালে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "১৮৭৯ সালে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কবি যতীন্দ্রমোহন বাগচী ১৮৭৮ সালে জন্মগ্রহণ করেন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404087328,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "কবি যতীন্দ্রমোহন বাগচীর জন্মস্থান কোন জেলায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নদীয়া",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "পাবনা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ঢাকা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "যশোর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কবি যতীন্দ্রমোহন বাগচী নদীয়া জেলার জমশেরপুর গ্রামে জন্মগ্রহণ করেন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404087467,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "যতীন্দ্রমোহন বাগচীর কবিমানসের প্রধান বৈশিষ্ট্য কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পল্লী-প্রীতি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ঐত্যিহ-প্রীতি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সমাজ-প্রীতি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নগর-প্রীতি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "তার কাব্যে পল্লী-প্রীতি এবং পল্লী প্রকৃতির সাধারণ ছবিগুলো নিপুণভাবে ফুটে উঠেছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404087651,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "যতীন্দ্রমোহন বাগচীর কবিতার অন্যতম বৈশিষ্ট্য কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাস্তবতা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চিত্ররুপময়তা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পুরাণ-নির্ভরতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ইতিহাস-সচেতনতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "তার কবিতার এক বিশেষ গুণ হলো চিত্ররুপময়তা, যা পাঠকদের মনে ছবি এঁকে দেয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404087775,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "কবি যতীন্দ্রমোহন বাগচী কী উন্মোচন করতে প্রয়াসী হয়েছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাংলার রূপ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বাংলার ঐতিহ্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাংলার গ্রাম্য-চিত্রের রূপ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বাংলার বীরত্বগাথা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কবি পল্লী বাংলার সাধারণ রূপ ও প্রকৃতিকে তার কাব্যে উন্মোচন করতে চেয়েছেন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404087895,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "প্রকৃতি প্রেম ও পল্লী জীবনের অতি সাধারণ বিষয় যতীন্দ্রমোহন বাগচীর দৃষ্টিতে কেমন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্বপ্নময়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কদর্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সজীব ও সরস",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "জটিল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "তার সৃষ্টিতে গ্রাম্য জীবন ও প্রকৃতি সজীব ও সরস হয়ে ফুটে উঠেছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404088026,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "নিচের কোনটি যতীন্দ্রমোহন বাগচীর গ্রন্থ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মেঘনাদবধ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তরণী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "লেখা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বসন্ত উৎসব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'লেখা' যতীন্দ্রমোহন বাগচীর অন্যতম কাব্যগ্রন্থ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404088146,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "নিচের কোনটি যতীন্দ্রমোহন বাগচীর রচিত কাব্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অপরাজিতা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বিষাদ সিন্ধু",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অগ্নী-বীণা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সঞ্চয়িতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'অপরাজিতা' কবি যতীন্দ্রমোহন বাগচীর একটি বিখ্যাত কাব্যগ্রন্থ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404088296,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'নাগকেশরী' কোন ধরনের রচনা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "উপন্যাস",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ছোটগল্প",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কাব্য",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "নাটক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'নাগকেশরী' যতীন্দ্রমোহন বাগচী রচিত একটি কাব্যগ্রন্থ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404088438,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'নীহারিকা' কার লেখা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রবীন্দ্রনাথ ঠাকুর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "যতীন্দ্রমোহন বাগচী",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "জীবনানন্দ দাশ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জসীমউদ্দীন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'নীহারিকা' কাব্যগ্রন্থের রচয়িতা হলেন যতীন্দ্রমোহন বাগচী।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404088586,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "যতীন্দ্রমোহন বাগচী মৃত্যুবরণ করেন কবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৯৪৮ সালে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "১৯৫০ সালে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১৯৫২ সালে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১৯৫৫ সালে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কবি ১৯৪৮ সালের ১লা ফেব্রুয়ারি মৃত্যুবরণ করেন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404088835,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'বন্ধুর দান' কোন ধরনের গ্রন্থ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "উপন্যাস",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নাটক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কাব্য",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "প্রবন্ধ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "উৎস অনুযায়ী 'বন্ধুর দান' যতীন্দ্রমোহন বাগচীর একটি কাব্যগ্রন্থ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404088966,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'পা-পিছলিয়ে তলিয়ে যদি যাই, মরণ নেওয়া নয় কি কিছু ভার' - পংক্তিটিতে অন্ধবধূর কোন মনোভাব প্রকাশ পেয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অভিমান",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "রাগ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সংশয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিরক্তি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অন্ধবধূ তার অসহায়ত্বের কারণে অভিমান ভরে মৃত্যুর কথা বলেছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404089121,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "কোকিলের ডাক কিসের ইঙ্গিত বহন করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বসন্তের",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বর্ষার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শরৎকালের",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শীতকালের",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কোকিলের ডাক সাধারণত বসন্তের আগমনের বার্তা দেয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404089269,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'অন্ধবধূ' কবিতায় নারী জীবনের কোন দিকটি ফুটে উঠেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সামাজিক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রাজনৈতিক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মানসিক",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অর্থনৈতিক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কবিতায় একজন দৃষ্টিহীন নারীর মানসিক যন্ত্রণা ও অসহায়ত্বের চিত্র ফুটে উঠেছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404089400,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'অন্ধ গেলে কী আর হবে বলো?' - পংক্তিটিতে অন্ধবধূর কী প্রকাশ পেয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জীবনের প্রতি নিরাসক্তি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কষ্টের বহিঃপ্রকাশ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "স্বামীর প্রতি অনুরাগ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চোখের করুণ অবস্থা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অন্ধ বধূটি তার জীবনের মূল্যহীনতা অনুভব করে নিরাসক্তি প্রকাশ করেছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404089605,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "পুকুরঘাটে বধূটির পায়ের তলায় নরম ঠেকল কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শিউলি ফুল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঝরা-বকুল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কাদা-মাটি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শাওলা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পুকুরঘাটে নামার সময় অন্ধ বধূটির পায়ের তলায় ঝরা-বকুল ফুল নরম অনুভূত হয়েছিল।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404089725,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'জৈষ্ঠ আসতে ক-দিন দেরি ভাই' - এখানে 'ভাই' কে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দাদা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঠাকুরপো",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "দেবর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ছোট ভাই",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কবিতায় বধূটি তার ঠাকুরপোকে 'ভাই' বলে সম্বোধন করেছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404089844,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'অন্ধবধূ' কবিতায় নিবিড় ঘাটে কোনটি জাগে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নতুন সিঁড়ি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শাওলা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কচুরিপানা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নতুন কাঠ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বর্ষাকালে নিবিড় ঘাটে শাওলা জমে যা পিচ্ছিল হয়ে ওঠে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404089985,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "অন্ধবধূ অন্ধ হলেও তার কী সম্পর্কে প্রখর জ্ঞান আছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ইতিহাস সম্পর্কে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জগতের রূপ-রস-গন্ধ সম্পর্কে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সমাজনীতি সম্পর্কে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ধর্মীয় বিধি-বিধান সম্পর্কে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "দৃষ্টিহীন হওয়া সত্ত্বেও তার অন্যান্য ইন্দ্রিয়গুলো প্রখর থাকায় সে রূপ-রস-গন্ধ অনুভব করতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404090095,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'অন্ধ চোখের দ্বন্দ্ব ঢুকে যারা' - এখানে 'দ্বন্দ্ব' অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আশঙ্কা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কষ্ট",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মনোমালিন্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অভিশাপ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "এখানে 'দ্বন্দ্ব' বলতে অন্ধত্বের কারণে সৃষ্ট মানসিক বা শারীরিক কষ্টকে বোঝানো হয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404090217,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "বধূটি কীভাবে জগৎ সম্পর্কে জ্ঞান রাখে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অনুভবের মাধ্যমে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অন্যের সাহায্যে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হাতের স্পর্শে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শ্রবণশক্তির মাধ্যমে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অন্ধবধূ তার অনুভূতি ও অন্যান্য ইন্দ্রিয়ের প্রখরতা দিয়ে চারপাশের জগতকে উপলব্ধি করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404090361,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "দৃষ্টিহীনরা কোনটি দিয়ে প্রতিবন্ধকতা জয় করতে পারে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাদা লাঠি দিয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সকলের সহযোগিতায়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সরকারি পৃষ্ঠপোষকতায়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ইন্দ্রিয়সচেতনতা দিয়ে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ইন্দ্রিয়সচেতনতা ও অনুভবের মাধ্যমে দৃষ্টিহীনরা অনেক প্রতিবন্ধকতা কাটিয়ে উঠতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404090475,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'পায়ের তলায় নরম ঠেকল কী?' - চরণটিতে কার কথা বলা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অন্ধবধূর",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কবির",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ঠাকুরপোর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দাদার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এখানে অন্ধবধূর পুকুরঘাটে নামার সময় তার অনুভবের কথা বলা হয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404090590,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'ঠেকল' কথাটির মানে কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ধাক্কা লাগল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অনুভূত হলো",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "লেগে রইল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাধা দিল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'ঠেকল' বলতে এখানে কোনো কিছুর স্পর্শ অনুভব করা বোঝানো হয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404090745,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'আকাশ-পাতাল - কতই মনে হয়' - এখানে 'আকাশ-পাতাল' মানে কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রচুর ব্যবধান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অসম্ভব কল্পনা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অবান্তর ভাবনা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নানান ভাবনা-অনুভাবনা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অন্ধবধূর মনে যে বিচিত্র সব ভাবনা ও অনুভাবনা উদয় হয়, তাকেই আকাশ-পাতাল বলা হয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404090865,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "অন্ধবধূ কী জানতে চেয়েছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বৈশাখ আসতে কতদিন বাকি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জ্যৈষ্ঠ আসতে কতদিন বাকি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "আষাঢ় আসতে কতদিন বাকি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শ্রাবণ আসতে কতদিন বাকি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "জ্যৈষ্ঠ মাসের ফলের সুগন্ধি অনুভবের প্রত্যাশায় সে জানতে চেয়েছিল জ্যৈষ্ঠ আসতে আর কতদিন বাকি।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404091000,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "কার কাছে মরণ নয় কঠিন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্বামীর কাছে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঠাকুরপোর কাছে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কবির কাছে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিজের কাছে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অন্ধবধূ নিজের অসহায়ত্বের কারণে মৃত্যুকে আর কঠিন বলে মনে করে না।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404091119,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "অন্ধবধূ গভীরভাবে কী অনুভব করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্বামী বিরহের বেদনা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অন্ধত্বের কষ্ট",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মানুষের অবহেলা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিজের রূপ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "অন্ধবধূ তার দৃষ্টিহীনতার কষ্টকে অত্যন্ত গভীরভাবে লালন ও অনুভব করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404091227,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "পুকুরঘাটে অন্ধবধূর সাথে কে ছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্বামী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ননদ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বোন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ভাই",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "উৎস অনুযায়ী পুকুরঘাটে যাওয়ার সময় তার সাথে তার ঠাকুরপো বা ভাই ছিল।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404091341,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'আমের গায়ে বরণ দেখা যায়' - কিসের ইঙ্গিত বহন করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আমের গুটি আসা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আম পাকার লক্ষণ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "আমের বর্ণ পরিবর্তন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আমের বোল ফোটা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "আমের গায়ে রং বা 'বরণ' লাগা মানে আম পাকতে শুরু করেছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404091463,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'সিঁড়ি জাগা' বলতে কী বোঝানো হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নতুন সিঁড়ি তৈরি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সিঁড়ি দৃশ্যমান হওয়া",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সিঁড়ির উদ্বোধন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সিঁড়ির জাগরণ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বর্ষায় জল বাড়লে সিঁড়ি ডুবে যায়, আবার জল কমলে সিঁড়ি দৃশ্যমান বা 'জেগে' ওঠে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404091584,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'নতুন সিঁড়ি' জাগার কারণ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পানি বেড়ে যাওয়া",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পানি কমে যাওয়া",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পানি উপচে পড়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দিঘি ভরাট করে ফেলা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "দিঘির জল শুকিয়ে বা কমে গেলে নতুন ধাপের সিঁড়িগুলো জেগে ওঠে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404091719,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "নতুন সিঁড়িটি কেমন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঝকঝকে তকতকে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শ্যাওলা-পিচ্ছিল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সাদা ধবধবে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নোংরা আবর্জনাপূর্ণ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বর্ষার পর জল কমলে জেগে ওঠা সিঁড়িটি কর্দমাক্ত ও শ্যাওলায় পিচ্ছিল থাকে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404091951,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "অন্ধবধূ কোথায় এসেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পুকুর ঘাটে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বারান্দায়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাগানে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দিঘির ঘাটে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অন্ধবধূটি তার ঠাকুরপোর সাথে স্নান করতে বা জল নিতে দিঘির ঘাটে এসেছিল।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404092188,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "অন্ধবধূ কেন পাখিদের চেঁচাতে বারণ করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ভয় পায় বলে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিরক্তি লাগে বলে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তারা কষ্ট পাচ্ছে ভেবে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিজের অন্ধত্বের কথা মনে পড়ে বলে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পাখিদের কান্নায় বা ডাকের মধ্যে অন্ধবধূ নিজের অন্ধত্বের হাহাকার খুঁজে পায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404092336,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "অন্ধবধূ কখন কোকিলের ডাক শুনেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রভাতে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রাত্রিতে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অনেক আগে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দুপুরে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "অন্ধবধূটি রাতে জেগে থাকা অবস্থায় কোকিলের ডাক শুনেছিল।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404092529,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "অন্ধবধূ কীভাবে জগতকে জানে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঠাকুরপোর মাধ্যমে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শাওলার স্পর্শে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হাতের স্পর্শে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "পা পিছলে পড়ে গিয়ে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "স্পর্শের মাধ্যমে সে জগত ও প্রকৃতির পরিবর্তনগুলো অনুভব করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404092651,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'অন্ধ গেলে কী আর হবে বলো/ বাঁচি তোরা' - এখানে 'তোরা' বলতে কাদের বোঝানো হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পিতৃকুলের লোকজন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চাকর-বাকর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আত্মীয়স্বজন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শ্বশুরবাড়ির লোকজন",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অন্ধবধূ তার মৃত্যু কামনা করে বলে যে সে গেলে শ্বশুরবাড়ির লোকজনেরই সুবিধা হবে বা তারা রেহাই পাবে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404092774,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'অন্ধবধূ' কবিতায় কোন কোন মাসের নাম আছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আষাঢ়-শ্রাবণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জ্যৈষ্ঠ-আষাঢ়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "আষাঢ়-ফাল্গুন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জ্যৈষ্ঠ-চৈত্র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কবিতায় জ্যৈষ্ঠ এবং আষাঢ় মাসের উল্লেখ পাওয়া যায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404092918,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "অন্ধবধূর মতে তার স্বামী আবার কোন মাসে বিয়ে করবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আষাঢ় মাসে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "শ্রাবণ মাসে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ভাদ্র মাসে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আশ্বিন মাসে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অন্ধবধূর আশঙ্কা বা অভিমানে সে বলেছে সে মারা গেলে আষাঢ় মাসেই তার স্বামী আবার বিয়ে করবে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404093067,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'এই আষাঢ়েই আবার বিয়ে হবে' - উক্তিটি কিসের পরিচয় দেয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তৎকালীন সমাজের অবস্থা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "স্বামীর নিষ্ঠুরতা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সামাজিক প্রথা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিমাতা সুলভ আচরণ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "উক্তিটি তৎকালীন সমাজের বাস্তব চিত্র ও নারীর অবস্থানের পরিচয় দেয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404093191,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'চেঁচিয়ে হলো সারা' - কে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অন্ধবধূ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঠাকুরপো",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চোখ গেল পাখি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কোকিল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'চোখ গেল' পাখিটি ডাকতে ডাকতে সারা হচ্ছে বলে অন্ধবধূ উল্লেখ করেছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404093309,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'কাঁদতে পেলে বাঁচত সে যে ভাই' - কে বাঁচত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অন্ধবধূ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঠাকুরপো",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চোখ গেল পাখি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ঠাকুরঝির দাদলা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "অন্ধবধূ তার ঠাকুরপোকে বলছে যে পাখিটি যদি কাঁদতে পারত তবে সে শান্তি পেত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404093435,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'চোখ গেল' - তার ভরসা তবু আছে - এখানে কার কথা বলা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অন্ধবধূর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চোখ গেল পাখির",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ঠাকুরপোর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কোকিলের",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পাখির চোখ গেলেও তার ডানা আছে বা অন্যান্য স্বাধীনতা আছে বলে অন্ধবধূ মনে করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404093628,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'অন্ধবধূ' কবিতায় কার বন্ধ হওয়ার কথা বলা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "উত্তরের হাওয়া",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দক্ষিণের হাওয়া",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পুবের বাতাস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পশ্চিমের বাতাস",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বসন্তের শেষে দক্ষিণা হাওয়া বন্ধ হওয়ার প্রসঙ্গ কবিতায় এসেছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404093754,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'মধু গন্ধের বাসে' বলতে কী বোঝায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফুলের গন্ধে মদমত্ত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আমের গন্ধে মদমত্ত",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মধুর গন্ধে মদমত্ত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মাটির গন্ধে মদমত্ত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "জ্যৈষ্ঠ মাসে পাকা আমের মিষ্টি গন্ধে বাতাস আমোদিত থাকে, যা এখানে বোঝানো হয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404093869,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'মধু গন্ধের বাসে' এখানে 'বাসে' কথাটির অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাসস্থান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বসনে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সুগন্ধে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "যানবাহনে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'বাসে' বলতে এখানে সুগন্ধ বা ঘ্রাণকে বোঝানো হয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404163921,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'অন্ধ গেলে কী আর হবে বলো/ বাঁচি তোরা' — এখানে 'তোরা' বলতে কাদেরকে বোঝানো হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পিতৃগৃহের লোকজন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চাকর-বাকর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আত্মীয়স্বজন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শ্বশুরবাড়ির লোকজন",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অন্ধবধূ তার নিজের জীবনের অসারতা এবং শ্বশুরবাড়ির লোকেদের কাছে তার বোঝা হয়ে থাকার কথা ভেবে অভিমান ভরে এ কথাটি বলেছে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404164232,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "অন্ধবধূর মতে, তার স্বামী আবার কোন মাসে বিয়ে করবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আষাঢ় মাসে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "শ্রাবণ মাসে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ভাদ্র মাসে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আশ্বিন মাসে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অন্ধবধূটি অভিমানে বলেছে যে, সে মারা গেলে তার স্বামী আষাঢ় মাসেই আবার নতুন বিয়ে করবে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404164400,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'এই আষাঢ়েই আবার বিয়ে হবে' — উক্তিটি নিচের কোনটির সাথে সংগতিপূর্ণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তৎকালীন সমাজে প্রচলিত বহুবিবাহ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তৎকালীন সমাজের অত্যাচার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তৎকালীন সমাজের অবস্থা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তৎকালীন নারীর জীবন",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এটি তৎকালীন গ্রামীণ সমাজে নারীর অসহায়ত্ব ও পুরুষের আধিপত্যের চিত্র তুলে ধরে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404164516,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'চেঁচিয়ে হলো সারা' — কে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অন্ধবধূ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঠাকুরঝি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চোখ গেল পাখি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কোকিল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'চোখ গেল' পাখিটি অবিরাম ডেকে বা চেঁচিয়ে ক্লান্ত হয়ে পড়ছে বলে কবি বর্ণনা করেছেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404164639,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'জন্ম লাগি গিয়েছে যার চোখ' — কার ক্ষেত্রে কথাটি বলা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চোখ গেল পাখির",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কোকিলের",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ঠাকুরঝির",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অন্ধবধূর",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অন্ধবধূটি জন্ম থেকেই দৃষ্টিহীন, সে কারণে তার সম্পর্কে এই উক্তি করা হয়েছে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404164752,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'কাঁদার সুখ যে বারণ তাহার' — এখানে 'তাহার' বলতে কাকে বোঝানো হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অন্ধবধূকে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অন্ধবধূর স্বামীকে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চোখ গেল পাখিকে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কোকিলকে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'চোখ গেল' পাখিটির ডাক কান্নার মতো হলেও সে আসলে কাঁদতে পারে না, তাই তাকে এমন বলা হয়েছে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404164889,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'কাঁদতে পেলে বাঁচত সে যে ভাই' — কে বাঁচত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অন্ধবধূ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঠাকুরপো",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চোখ গেল পাখি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ঠাকুরঝির দাদলা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পাখির ডাকার কষ্ট দেখে অন্ধবধূর মনে হয়েছে যে পাখিটি যদি মন খুলে কাঁদতে পারত তবে সে শান্তি পেত [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404165013,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "অন্ধবধূর নিঃসঙ্গতার কারণ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চোখের জ্যোতি হারানো",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "স্বামীর প্রবাস যাপন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "স্বামীর অবহেলা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "স্বামীর কটূক্তি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "স্বামী দীর্ঘ সময় বিদেশে থাকায় অন্ধবধূটি মানসিক ও শারীরিকভাবে অত্যন্ত নিঃসঙ্গ বোধ করত [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404165172,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'কাঁদতে পেলে বাঁচত সে যে ভাই / কতক শুধু কমত যে তার শোক' — বাক্যটিতে কী বোঝানো হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অন্ধত্বের গভীর কষ্ট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অনুভূতির গভীরতা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কান্নার আনন্দ থেকে বঞ্চিত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রিয়জনের দেখা পাওয়া",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মনের দুঃখ কান্নার মাধ্যমে প্রকাশ করতে পারলে শোকের ভার লাঘব হয়, এখানে সেই অনুভূতির প্রকাশ ঘটেছে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404165348,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "অন্ধবধূর শোকে বাধা থাকল কীভাবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্বামীকে কাছে না পেলে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বাবার বাড়ি যেতে পারলে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দেখতে না পেলে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গান শুনতে পারলে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অন্ধবধূর শোকের সময় তার স্বামী পাশে নেই বলে তার দুঃখ বাড়ে এবং কান্নার পথ রুদ্ধ হয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404165532,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'চোখ গেল' — তার ভরসা তবু আছে — এখানে অন্ধবধূর মনের কোন ভাবটি ফুটে উঠেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ক্ষোভ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রাগ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অভিমান",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অনুরাগ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "অন্ধবধূ নিজের সাথে পাখির তুলনা করতে গিয়ে অভিমানী হয়ে এ কথাটি বলেছে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404165704,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'দুটি যেন প্রাণের কথা বলে' — এখানে কেন দুই জনের কথা বলা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঠাকুরঝি ও তার দাদা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অন্ধবধূ ও তার স্বামী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অন্ধবধূ ও ঠাকুরঝি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অন্ধবধূ ও চোখ গেল পাখি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অন্ধবধূ এবং 'চোখ গেল' পাখির কষ্ট একই ধরনের হওয়ায় তাদের প্রাণ মিলেমিশে গেছে বলে মনে হয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404165870,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'পরশ তাহার মায়ের স্নেহের মতো' — এই বাক্যে 'তাহার' বলতে কাকে বোঝানো হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্বামী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দিঘির জল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ঠাকুরঝি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বকুল ফুল",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পুকুর ঘাটে ঝরে থাকা বকুল ফুলের স্পর্শ অন্ধবধূর কাছে মায়ের স্নেহের মতো কোমল মনে হয়েছে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404166086,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'অন্ধবধূ' কবিতায় কী বন্ধ হওয়ার কথা বলা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "উত্তরের হাওয়া",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দক্ষিণের হাওয়া",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পুবের বাতাস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পশ্চিমের বাতাস",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বসন্তকাল শেষ হওয়ায় দক্ষিণের হাওয়া বন্ধ হয়ে গেছে বলে কবি কবিতায় উল্লেখ করেছেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404166266,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "মোসলেম মিঞার সাথে 'অন্ধবধূ' কবিতার মূল মিল কোথায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ওমা, এ যে খরা-বকুল নয়?",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আমের গায়ে বরণ দেখা যায়?",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "এই আষাঢ়েই আবার বিয়ে হবে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কতক শুধু কমত যে তার শোক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "উদ্দীপকের মোসলেম মিঞা এবং কবিতার অন্ধবধূ উভয়েই তাদের অন্ধত্বের কারণে অন্যদের অবজ্ঞা ও ভবিষ্যৎ সম্পর্কে অনিশ্চয়তা বোধ করে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404166467,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "তীবর পরশে কোন বিষয়টি ফুটে উঠেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অনুভূতির তীব্রতা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বিকলতা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মুর্খতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ভীতি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "দৃষ্টিহীন ব্যক্তিরা তাদের স্পর্শ ও অনুভূতির মাধ্যমে বাইরের জগতের পরিবর্তন প্রখরভাবে অনুভব করতে পারে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404166736,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "জুলফার গুণের সাথে কবিতার কোন্ চরিত্রের সাদৃশ্য রয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঠাকুরঝি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অন্ধবধূ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দাদা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চোখ গেল",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "উদ্দীপকের জুলফার মতো 'চোখ গেল' পাখিটিও তার ডাকের মাধ্যমে মনের ভাব ব্যক্ত করে যা অন্যের কাছে অর্থবহ হয়ে ওঠে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404166950,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "রফিকের অবস্থা ও অন্ধবধূর অবস্থার পার্থক্য কোথায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অনুভূতির প্রকাশের ক্ষেত্রে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "মেধা ও মনে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ইন্দ্রিয় সচেতনতায়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রতিবন্ধকতা দূরীকরণে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "রফিক তার মনের ভাব প্রকাশ করতে পারলেও অন্ধবধূর অভিমান ও দুঃখ প্রকাশের পথ ছিল সীমাবদ্ধ [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404167127,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "শফিক মিঞার গুণের সাথে কবিতার কোন চরিত্রের মিল রয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অপু",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঠাকুরঝি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অন্ধবধূ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "হরিহর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "উদ্দীপকের শফিক মিঞা এবং অন্ধবধূ উভয়েই দৃষ্টিহীন হওয়া সত্ত্বেও অত্যন্ত আত্মমর্যাদাশীল ও সংবেদনশীল [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404167302,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "অন্ধবধূর জীবনের সাথে সম্পর্ক রয়েছে কোনটির?",
+    "options": [
+      {
+        "label": "a",
+        "text": "একাকীত্ব",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সুখানন্দ বিস্তার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রতিবাদী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অনুভুতিহীন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অন্ধত্ব এবং স্বামীর অনুপস্থিতি অন্ধবধূর জীবনে চরম একাকীত্ব নিয়ে এসেছিল [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404167579,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "জমিলা ও অন্ধবধূর সাদৃশ্য কিসে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বৃষ্টি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রানার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অন্ধত্ব",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বোধন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "জমিলা ও অন্ধবধূ উভয়েই দৃষ্টিপ্রতিবন্ধী হওয়ায় তাদের যন্ত্রণাময় জীবনের চিত্র একসূত্রে গাঁথা [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404167772,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'অন্ধবধূ' কবিতায় ফুটে উঠেছে—\ni. অন্ধবধূর নিঃসঙ্গতা\nii. অন্ধবধূর বিড়ম্বনা\niii. অন্ধবধূর মনোকষ্ট",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কবিতায় মূলত একজন অন্ধ নারীর দৈনন্দিন জীবনের বিড়ম্বনা এবং তার গভীর মানসিক কষ্টের কথা প্রাধান্য পেয়েছে [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404167951,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'অন্ধবধূ' কবিতায় অন্ধরা যে সমাজে নিগৃহীত সেই কোন্ চরণে ফুটে উঠেছে?\ni. অন্ধ গেলে কী আর হবে বলো?\nii. এই আষাঢ়েই আবার বিয়ে হবে\niii. আমের গায়ে বরণ দেখা যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "প্রথম দুটি চরণে অন্ধবধূর প্রতি সমাজের বা পরিবারের অবজ্ঞা ও অবহেলার ইঙ্গিত রয়েছে [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404168144,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "অন্ধবধূ সম্পর্কে প্রযোজ্য—\ni. অনুভবে জগত মানুষ\nii. তীক্ষ্ণ ইতিহাস বোধ\niii. জীবনের প্রতি গভীর মমত্ববোধসম্পন্ন",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "অন্ধবধূটি দৃষ্টিহীন হলেও অনুভবের মাধ্যমে চারপাশকে চেনে এবং তার জীবনের প্রতি এক প্রকার নিগূঢ় টান রয়েছে [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404168314,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'অন্ধবধূ' কবিতার মূল উদ্দেশ্য হলো—\ni. প্রতিবন্ধীদের কষ্ট তুলে ধরা\nii. অন্ধের কর্মজীবন তুলে ধরা\niii. প্রতিবন্ধীদের জীবন পথটিকে তুলে ধরা",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কবির লক্ষ্য ছিল প্রতিবন্ধীদের মানসিক ও সামাজিক যন্ত্রণার দিকগুলো সমাজের সামনে উন্মোচন করা [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404168507,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "অন্ধবধূ আকাশ-পাতাল ভাবে—\ni. দোয়ার পাশে বসে\nii. রাত্রিবেলা\niii. প্রাতঃকালে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অন্ধবধূ ঘরের দরজার পাশে বসে বা নির্জন রাতে একাকী নানাবিধ ভাবনায় মগ্ন থাকে [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404168719,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'মন্দ নেওয়া নয় কি কিছু তার / অন্ধ চোখের দ্বন্দ্ব ঢুকে যার' — এখানে কী ফুটে উঠেছে?\ni. অভিমান\nii. কষ্টবোধ\niii. অবহেলা",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এই পংক্তিগুলোতে অন্ধবধূর মনের পুঞ্জীভূত কষ্ট, অভিমান এবং চারপাশের মানুষের অবহেলার চিত্র একত্রে ফুটে উঠেছে [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404168885,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "অন্ধবধূর মনের ব্যথা দোলায়—\ni. শীতল জলের পরশ\nii. মরণ ভরা মুখের আলাপন\niii. দাদার প্রত্যাবর্তন",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "অন্ধবধূর মনের বেদনা তার চারপাশের পরিবেশ এবং নিকটজনদের আচরণের দ্বারা প্রভাবিত হয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404169193,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "অন্ধবধূ জ্ঞান রাখে—\ni. জগতের রূপ-রস-গন্ধ সম্পর্কে\nii. অনুভুতিহীন বস্তু সম্পর্কে\niii. পৃথিবীর বিখ্যাত স্থান সম্পর্কে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "দৃষ্টিহীন ব্যক্তি হয়েও সে স্পর্শ ও ঘ্রাণ দিয়ে জগতের প্রকৃতি ও পরিবর্তন সম্পর্কে প্রখর জ্ঞান রাখে [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404169357,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'অন্ধবধূ' কবিতায় যে মাসের কথা উল্লেখ করা হয়েছে—\ni. বৈশাখ\nii. জ্যৈষ্ঠ\niii. আষাঢ়",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কবিতায় জ্যৈষ্ঠ মাসের আমের গন্ধ এবং আষাঢ় মাসের বৃষ্টির সম্ভাবনার কথা বলা হয়েছে [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404169521,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'অন্ধবধূ' কবিতায় যে পাখির কথা উল্লেখ করা হয়েছে—\ni. কোকিল\nii. হুতোম\niii. চোখ গেল",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কবিতায় কোকিলের ডাক এবং 'চোখ গেল' পাখির করুণ আর্তনাদের বর্ণনা দেওয়া হয়েছে [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404169804,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'অন্ধবধূ' কবিতায় নিম্নলিখিত চিত্র পাওয়া যায়—\ni. কোকিলের ডাক\nii. ঝরা-বকুল\niii. গগন পানের ঘ্রাণ",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কবিতায় কোকিলের ডাক এবং পুকুরঘাটে পড়ে থাকা বকুল ফুলের ঝরনা চিত্রের মাধ্যমে পল্লী প্রকৃতির রূপ ফুটিয়ে তোলা হয়েছে [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404170053,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "উদ্দীপকে 'অন্ধবধূ' কবিতার কোন বিপরীত দিক ফুটে উঠেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অতৃপ্তি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পরিতৃপ্তি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "একাকীত্ব",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বেদনাবোধ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "উদ্দীপকের চরিত্রটি জগতের রূপ দেখে পরিতৃপ্ত, কিন্তু অন্ধবধূটি সেই রূপ দেখতে না পেয়ে অতৃপ্ত ও বেদনাক্রান্ত [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404170358,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "উক্ত বিষয়টি (দৃষ্টিশক্তি) অন্ধবধূর জীবনে থাকলে—\ni. কষ্ট থাকত না\nii. প্রতিবন্ধকতা থাকত না\niii. একাকীত্ব থাকত না",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "দৃষ্টিশক্তি থাকলে অন্ধবধূর জীবনের যাবতীয় মানসিক ও সামাজিক প্রতিবন্ধকতা দূর হয়ে যেত [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404170560,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "উদ্দীপকে লিজার মাঝে অন্ধবধূর কোন দিকটি ফুটে উঠেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রতিজ্ঞা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আত্মপ্রত্যয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অভিমান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অসহায়ত্ব",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "লিজা ও অন্ধবধূ উভয়ই তাদের শারীরিক প্রতিবন্ধকতার কারণে অন্যের ওপর নির্ভরশীল ও অসহায় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404170763,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "উদ্দীপকের লিজা ও অন্ধবধূ উভয়ই—\ni. নিজেদের প্রতিবন্ধকতাকে জয় করতে চায়\nii. মানুষের করুণা নয়, সহযোগিতা কামনা করে\niii. পরনির্ভরশীল হয়ে বেঁচে থাকতে চায় না",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "প্রতিবন্ধী ব্যক্তিরা সাধারণত করুণার চেয়ে সমাজের স্বীকৃতি ও সহযোগিতা বেশি প্রত্যাশা করে [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404170937,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "উদ্দীপকের রাশেদের সাথে অন্ধবধূর কোন বিষয়টির সাদৃশ্য রয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাস্তবতাবোধ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অন্তর্দৃষ্টি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অনুভূতিশক্তি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কল্পনাশক্তি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রাশেদ যেমন ফলের গন্ধে গাছ চেনে, অন্ধবধূও তেমনি ঘ্রাণ ও স্পর্শে জগতকে অনুভব করে [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404171147,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "উদ্দীপকটি অন্ধবধূর কবিতার কোন দিকটি তুলে ধরে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শ্রবণেন্দ্রিয় দিয়ে কোন কিছু শনাক্ত করা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিড়ম্বনার মাধ্যমে সবকিছু গ্রহণ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দর্শণেন্দ্রিয় দিয়ে কোন কিছু শনাক্ত করা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ঘ্রাণশক্তি দিয়ে কোন কিছু শনাক্ত করা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "দৃষ্টিহীনদের প্রখর ঘ্রাণশক্তি ও অনুভবের মাধ্যমে প্রকৃতির সাথে সংযোগের বিষয়টি এখানে প্রতিফলিত হয়েছে [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404171354,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "উদ্দীপকটি কোন কবিতার সাথে সাদৃশ্যপূর্ণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নিমগাছ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আমি কোনো আগন্তুক নই",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অন্ধবধূ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "আম-আঁটির ভেঁপু",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "উদ্দীপকের রাত্রি ও কবিতার অন্ধবধূ উভয়েই দৃষ্টিপ্রতিবন্ধী হওয়ার কারণে একে অপরের সাথে সাদৃশ্যপূর্ণ [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404171594,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "এরূপ সাদৃশ্যের কারণ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মৃত্যু কামনা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অসহায়ত্ব",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উদাসীনতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i ও ii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অন্ধত্বের কারণে সৃষ্ট অসহায়ত্ব এবং সেই কষ্ট থেকে মুক্তি পেতে মৃত্যু কামনার বিষয়টি উভয় ক্ষেত্রে সাধারণ [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404171874,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "উদ্দীপকের সাথে 'অন্ধবধূ' কবিতার মিল রয়েছে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রতিবন্ধীত্ব কষ্টে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ননদ-ভাবীর আলোচনায়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাবা-ছেলের আলোচনায়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মামা-ভাগ্নির আলোচনায়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "উদ্দীপকের অন্তরার প্রতিবন্ধীত্বজনিত কষ্ট এবং অন্ধবধূর যন্ত্রণাময় জীবন একই অনুভূতির ধারক [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404172072,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "উদ্দীপক ও 'অন্ধবধূ' কবিতার প্রতিবন্ধী মানুষ দুইজন কোন দিক থেকে এক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অসহায়ত্ব",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "গুরুত্বহীন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অচেতনতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অপদার্থ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "শারীরিক প্রতিবন্ধকতা তাদের উভয়কেই পরিবার ও সমাজের কাছে পরনির্ভরশীল ও অসহায় করে তুলেছে [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404172274,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "এরূপ সাদৃশ্যের কারণ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বীরত্ব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ব্যক্তিত্ব",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মৃত্যু কামনা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সাহসিকতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "অন্ধবধূ ও শাহিন উভয়েই তাদের প্রতিবন্ধকতার কষ্ট সহ্য করতে না পেরে জীবন থেকে বিদায় নিতে চায় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404172575,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "উদ্দীপকের সাথে সাদৃশ্যপূর্ণ পংক্তি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "'চোখ গেল' ওই চেঁচিয়ে হলো সারা।",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অন্ধ চোখের দ্বন্দ্ব ঢুকে যারা।",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কতক শুধু কমত যে তার শোক।",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কাঁদার সুখ যে বারণ তাহার— হায়!",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "নিজের দুঃখ প্রকাশ করতে না পারার যন্ত্রণা উভয় চরিত্রের মধ্যেই প্রকাশ পেয়েছে [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404172844,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'রাত্রিক কাল - মধুমান্দার বাসে' এখানে 'বাসে' কথাটির অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাসভবন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বসনে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সুগন্ধে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "যানবাহনে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'বাসে' বলতে এখানে সুগন্ধ বা ঘ্রাণকে বোঝানো হয়েছে [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404173063,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'ঠাকুরঝি' শব্দের অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্বামীর বোন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "স্বামীর দাদী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "স্বামীর মাসি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "স্বামীর পিসি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ঠাকুরঝি বলতে স্বামীর বোন বা ননদকে বোঝানো হয় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404173177,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'চোখ' শব্দের সমার্থক নয় কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আঁখি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চিকুর",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "নয়ন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নেত্র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "চিকুর অর্থ চুল, বাকিগুলো চোখের সমার্থক শব্দ [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404173406,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'মধুমান্দার বাসে' বলতে কী বোঝায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফুলের গন্ধে মোহময়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "আতরের গন্ধে মোহময়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মধুর গন্ধে মোহময়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তামাকের গন্ধে মোহময়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এটি একটি বিশেষ বুনো ফুলের সুগন্ধকে নির্দেশ করে [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404173522,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "অন্ধবধূ",
+    "question": "'মধুমান্দার' শব্দটি কোন্ অর্থের ব্যঞ্জনা দেয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নান্দনিক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সুগন্ধি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মোহময়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সুতীব্র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মধুমান্দার বলতে এক প্রকার সুগন্ধি ফুলের উল্লেখ করা হয়েছে যা অন্ধবধূ তার ঘ্রাণশক্তির সাহায্যে অনুভব করতে পারে [৫]।",
+    "image": null,
+    "language": "en"
+  }
+]

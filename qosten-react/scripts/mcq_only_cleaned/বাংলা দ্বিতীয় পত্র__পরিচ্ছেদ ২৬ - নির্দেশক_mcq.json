@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1779877098433,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৬ - নির্দেশক",
+    "question": "কোনটি নির্দেশক নয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"-টা\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"-খানা\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"-তম\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"-জন\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877098567,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৬ - নির্দেশক",
+    "question": "-টা/-টি কোন নির্দেশকের রূপান্তর?",
+    "options": "[{\"label\":\"a\",\"text\":\"-টো\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"-টুকু\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"-টা\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"-তে\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877098690,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৬ - নির্দেশক",
+    "question": "কিছুটা বা সামান্য অংশ বা অল্প পরিমাণ বোঝাতে কোন নির্দেশক ব্যবহৃত হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"-টুকু\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"-খানা\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"-টি\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"-খানি\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877098807,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৬ - নির্দেশক",
+    "question": "কোন নির্দেশকটি শব্দের পরে আলাদাভাবে বসে?",
+    "options": "[{\"label\":\"a\",\"text\":\"জন\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"টুকু\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"খানা\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"খানি\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877098930,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৬ - নির্দেশক",
+    "question": "নির্দেশক যুক্ত হয় কোন শব্দের সঙ্গে?",
+    "options": "[{\"label\":\"a\",\"text\":\"বিশেষ্য\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"সর্বনাম\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"বিশেষণ\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"সবগুলোই\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877099059,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৬ - নির্দেশক",
+    "question": "বিশেষ্য, সর্বনাম ও বিশেষণের সঙ্গে কোন নির্দেশকগুলো বসে?",
+    "options": "[{\"label\":\"a\",\"text\":\"-টা, -টি\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"-জন, -টুকু\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"-খানা, -খানি\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"-তা, -টে\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877099183,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৬ - নির্দেশক",
+    "question": "কোন কোন শব্দের সঙ্গে টা, টি নির্দেশক বসে?",
+    "options": "[{\"label\":\"a\",\"text\":\"বিশেষ্য ও সর্বনাম\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বিশেষ্য ও বিশেষণ\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"সর্বনাম ও বিশেষণ\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"বিশেষ্য, সর্বনাম ও বিশেষণ\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877099316,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৬ - নির্দেশক",
+    "question": "যেসব লগ্নক শব্দের সঙ্গে যুক্ত হয়ে নির্দিষ্টতা বোঝায়, সেগুলোকে কী বলে?",
+    "options": "[{\"label\":\"a\",\"text\":\"বচন\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"আবেগ\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"লিঙ্গ\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"নির্দেশক\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877099439,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৬ - নির্দেশক",
+    "question": "কোন নির্দেশকটি শুধু মানুষের বেলায় ব্যবহার করা হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"টা\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"খানা\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"জন\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"টুকু\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877099596,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৬ - নির্দেশক",
+    "question": "নির্দেশক এক ধরনের-",
+    "options": "[{\"label\":\"a\",\"text\":\"উপসর্গ\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"প্রত্যয়\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"লগ্নক\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"শব্দদ্বিত্ব\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877099719,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৬ - নির্দেশক",
+    "question": "যে লগ্নক নির্দিষ্টতা বোঝায় তার নাম কী?",
+    "options": "[{\"label\":\"a\",\"text\":\"সংখ্যা\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"নির্দেশক\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"লিঙ্গ\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"উপসর্গ\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877099841,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৬ - নির্দেশক",
+    "question": "নির্দেশক সর্বনামের পরে টা, টি যুক্ত হলে তা কী হয়ে যায়?",
+    "options": "[{\"label\":\"a\",\"text\":\"নির্দিষ্ট\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"সুনির্দিষ্ট\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"অনির্দিষ্ট\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"নিরর্থক\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877099964,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৬ - নির্দেশক",
+    "question": "'বাড়িটা খুব সুন্দর' - এ বাক্যের নির্দেশকটি কোন পদের সঙ্গে যুক্ত?",
+    "options": "[{\"label\":\"a\",\"text\":\"বিশেষ্য\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"বিশেষণ\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"সর্বনাম\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"ক্রিয়া\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877100091,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৬ - নির্দেশক",
+    "question": "কোনটি নির্দেশক?",
+    "options": "[{\"label\":\"a\",\"text\":\"রা\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"পরি\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"টুক\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"ই\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877100216,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৬ - নির্দেশক",
+    "question": "টাক, টুক, টুকু, টো ইত্যাদি নির্দেশকে কোন অর্থে ব্যবহৃত হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"সুনির্দিষ্ট\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"নির্দিষ্টতা\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"অনির্দিষ্টতা\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"নির্দিষ্টতা ও অনির্দিষ্টতা\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877100337,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৬ - নির্দেশক",
+    "question": "'টুকু' নির্দেশকের রূপভেদ দুটি কী?",
+    "options": "[{\"label\":\"a\",\"text\":\"টাক, টু\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"টাক, টু\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"টু, টুক\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"টে, টুক\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877100462,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৬ - নির্দেশক",
+    "question": "অধিক সংখ্যার বেলায় কোন নির্দেশকটি আলাদাভাবে বসে?",
+    "options": "[{\"label\":\"a\",\"text\":\"খানি\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"জন\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"টুক\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"টা\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877100611,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৬ - নির্দেশক",
+    "question": "কোন নির্দেশকটি বিশেষ্য ও বিশেষণ শব্দের সঙ্গে ব্যবহৃত হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"টা\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"জন\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"টুকু\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"খানা\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877100752,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৬ - নির্দেশক",
+    "question": "মেয়েটি বুদ্ধিমতী-এ বাক্যে নির্দেশক কোন পদের সাথে যুক্ত?",
+    "options": "[{\"label\":\"a\",\"text\":\"বিশেষ্য\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"সর্বনাম\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"বিশেষণ\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"আবেগ\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877100870,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৬ - নির্দেশক",
+    "question": "নিচের কোনগুলো নির্দেশকের উদাহরণ?",
+    "options": "[{\"label\":\"a\",\"text\":\"দ্বারা, দিয়ে\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"খানা-খানি\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"র, এর\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"য়, তে\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  }
+]

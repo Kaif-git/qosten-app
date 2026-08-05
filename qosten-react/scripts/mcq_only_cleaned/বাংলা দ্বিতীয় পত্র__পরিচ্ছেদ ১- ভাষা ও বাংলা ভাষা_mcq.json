@@ -1,0 +1,770 @@
+[
+  {
+    "id": 1767454537342,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১: ভাষা ও বাংলা ভাষা",
+    "question": "বর্ণের সঙ্গে কোন ইন্দ্রিয়ের সরাসরি সম্পর্ক আছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চোখ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নাক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জিভ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বর্ণ হলো ধ্বনির দৃশ্যমান প্রতীক যা চোখের সাহায্যে দেখা বা পড়া হয়। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454537964,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১: ভাষা ও বাংলা ভাষা",
+    "question": "ব্রেইল পদ্ধতি ব্যবহার করে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "শ্রবণ-শক্তিহীনরা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মানসিক-শক্তিহীনরা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দৃষ্টি-শক্তিহীনরা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "শারীরিক-শক্তিহীনরা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "দৃষ্টিপ্রতিবন্ধীদের বোঝানোর জন্য ব্রেইল ভাষা বা পদ্ধতি তৈরি করা হয়েছে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454538089,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১: ভাষা ও বাংলা ভাষা",
+    "question": "বাংলা ভাষায় কথা বলে প্রায়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৫ কোটি লোক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২০ কোটি লোক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "২৫ কোটি লোক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৩০ কোটি লোক",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বর্তমানে বিশ্বে বাংলা ভাষায় কথা বলা মোট জনসংখ্যা প্রায় ৩০ কোটি। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454538222,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১: ভাষা ও বাংলা ভাষা",
+    "question": "মাতৃভাষী জনসংখ্যার দিক দিয়ে বাংলা পৃথিবীর কততম ভাষা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৪র্থ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৫ম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৬ষ্ঠ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৭ম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মাতৃভাষী জনসংখ্যার ভিত্তিতে বাংলা পৃথিবীর ষষ্ঠ বৃহত্তম ভাষা। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454538352,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১: ভাষা ও বাংলা ভাষা",
+    "question": "নিচের কোনটি ভাষা-পরিবারের নাম নয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ইন্দো-ইউরোপীয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আফ্রিকীয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দ্রাবিড়ীয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ইন্দো-ইরানীয়",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ইন্দো-ইউরোপীয়, আফ্রিকীয় এবং দ্রাবিড়ীয় হলো ভাষা-পরিবার; অন্যদিকে ইন্দো-ইরানীয় হলো ইন্দো-ইউরোপীয় পরিবারের একটি শাখা। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454538474,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১: ভাষা ও বাংলা ভাষা",
+    "question": "ধ্রুপদি ভাষা হিসেবে স্বীকৃত—",
+    "options": [
+      {
+        "label": "a",
+        "text": "সংস্কৃত ও পালি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অহমিয়া ও ওড়িয়া",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নেপালি ও সিংহলি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "হিন্দি ও উর্দু",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বাংলা ভাষার গভীর সম্পর্ক রয়েছে ধ্রুপদি ভাষা সংস্কৃত ও পালির সাথে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454538743,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১: ভাষা ও বাংলা ভাষা",
+    "question": "নিচের কোনটি থেকে বাংলা ভাষার জন্ম?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কেন্তুম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সংস্কৃত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পূর্ব ভারতীয় প্রাকৃত",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "দ্রাবিড়ীয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বাংলা ভাষার জন্ম হয়েছে ইন্দো-ইউরোপীয় পরিবারের পূর্ব ভারতীয় প্রাকৃত শাখা থেকে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454538881,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১: ভাষা ও বাংলা ভাষা",
+    "question": "বাংলা ভাষার প্রাচীন নমুনা পাওয়া যায়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "মহাভারতে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চর্যাপদে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বৈষ্ণব পদাবলিতে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মঙ্গলকাব্যে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বাংলা ভাষার প্রাচীন নমুনা হিসেবে চর্যাপদকে চিহ্নিত করা হয়। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454539210,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১: ভাষা ও বাংলা ভাষা",
+    "question": "বাংলা ভাষার নিজস্ব লিপি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ব্রাহ্মী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মনিপুরি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাংলা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কুটিল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বাংলা ভাষার নিজস্ব লিপি হলো বাংলা লিপি। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454539338,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১: ভাষা ও বাংলা ভাষা",
+    "question": "ভারতের কোন প্রদেশের অন্যতম দাপ্তরিক ভাষা বাংলা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কেরালা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ওড়িয়া",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ত্রিপুরা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "হরিয়ানা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ভারতের ত্রিপুরা ও পশ্চিমবঙ্গ রাজ্যের অন্যতম দাপ্তরিক ভাষা হলো বাংলা। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454539470,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১: ভাষা ও বাংলা ভাষা",
+    "question": "আনুমানিক কত বছর আগে বাংলা ভাষার জন্ম হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "এক হাজার",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "দুই হাজার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তিন হাজার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চার হাজার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "প্রায় এক হাজার বছর আগে বাংলা ভাষার জন্ম হয়েছে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454539604,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১: ভাষা ও বাংলা ভাষা",
+    "question": "বাকপ্রতিবন্ধীদের বোঝানোর জন্য কী ভাষা তৈরি করা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ইশারা ভাষা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ইশারা বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ব্রেইল ভাষা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উপজাতি ভাষা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যারা কথা বলতে পারে না বা বাকপ্রতিবন্ধী, তাদের জন্য ইশারা ভাষা বা সংকেত ভাষা ব্যবহৃত হয়। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454539720,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১: ভাষা ও বাংলা ভাষা",
+    "question": "বাংলা ভাষার বিবর্তন কীভাবে হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কালগত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "স্থানগত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পরিবর্তনগত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কালগত ও স্থানগত",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ভাষার বিবর্তন ঘটে কাল ও স্থানের পার্থক্যের কারণে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454539846,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১: ভাষা ও বাংলা ভাষা",
+    "question": "ভাষা ব্যবহারের প্রধান উদ্দেশ্য কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শব্দের অর্থ প্রকাশ করা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ভাষাকে গতিশীল করা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মনের ভাব প্রকাশ করা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "শব্দের অর্থবৈচিত্র্য সৃষ্টি করা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মানুষ তার মনের ভাব অন্যের কাছে প্রকাশ করার জন্যই ভাষা ব্যবহার করে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454540101,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১: ভাষা ও বাংলা ভাষা",
+    "question": "পূর্ব ভারতীয় কোন ভাষা হতে বাংলা ভাষার জন্ম হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পালি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হিন্দি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উড়িয়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রাকৃত",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বাংলা ভাষার জন্ম হয়েছে ইন্দো-ইউরোপীয় পরিবারের শাখা পূর্ব ভারতীয় প্রাকৃত থেকে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454540220,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১: ভাষা ও বাংলা ভাষা",
+    "question": "নিচের কোনটি ভাষা পরিবার নয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আফ্রিকীয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দ্রাবিড়ীয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "এশীয়",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সেমীয়-হেমীয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পৃথিবীর প্রধান ভাষা পরিবারের তালিকায় এশীয় নামে কোনো একক পরিবার নেই। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454540374,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১: ভাষা ও বাংলা ভাষা",
+    "question": "বাংলা ভাষার নিকটতম আত্মীয় ভাষা কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সংস্কৃত ও পালি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সংস্কৃত ও অহমিয়া",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ওড়িয়া ও পালি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অহমিয়া ও ওড়িয়া",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ভৌগোলিক ও ভাষাগত কারণে অহমিয়া ও ওড়িয়া ভাষাকে বাংলার নিকটতম আত্মীয় মনে করা হয়। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454540496,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১: ভাষা ও বাংলা ভাষা",
+    "question": "বাংলা ভাষা ও সাহিত্যের প্রাচীনতম নিদর্শন কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মহাভারত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চর্যাপদ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "রামায়ণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জয়নামা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "চর্যাপদ হলো বাংলা ভাষা ও সাহিত্যের প্রাচীনতম নিদর্শন। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454540632,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১: ভাষা ও বাংলা ভাষা",
+    "question": "বাংলা লিপি কোন লিপির বিবর্তিত রূপ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সংস্কৃত লিপি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ব্রাহ্মী লিপি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আর্য লিপি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কুটিল লিপি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ভারতীয় প্রাচীন ব্রাহ্মী লিপির একটি শাখা কুটিল লিপির বিবর্তনের মাধ্যমে বাংলা লিপি জন্ম নিয়েছে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454540756,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১: ভাষা ও বাংলা ভাষা",
+    "question": "বাংলা লিপি কোন লিপির বিবর্তিত রূপ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাংলা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কুটিল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ব্রাহ্মী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মনিপুরি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কুটিল লিপি থেকেই আধুনিক বাংলা লিপির উদ্ভব হয়েছে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454540875,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১: ভাষা ও বাংলা ভাষা",
+    "question": "বাংলা লিপিতে মূল বর্ণের সংখ্যা কয়টি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১১",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৩৯",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৫০",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৫১",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বাংলা বর্ণমালায় স্বরবর্ণ ১১টি এবং ব্যঞ্জনবর্ণ ৩৯টি মিলে মোট ৫০টি মূল বর্ণ রয়েছে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454541005,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১: ভাষা ও বাংলা ভাষা",
+    "question": "উপমহাদেশে ব্রাহ্মী লিপির জন্ম হয়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রায় দেড় হাজার বছর আগে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রায় আড়াই হাজার বছর আগে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "প্রায় সাড়ে তিন হাজার বছর আগে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রায় সাড়ে চার হাজার বছর আগে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "উপমহাদেশে ব্রাহ্মী লিপির প্রচলন শুরু হয় আনুমানিক আড়াই হাজার বছর আগে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454541126,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১: ভাষা ও বাংলা ভাষা",
+    "question": "ইন্দো-ইউরোপীয় ভাষার পরবর্তী স্তর কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রাকৃত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অস্ট্রো-এশীয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ইন্দো-ইরানীয়",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ভারতীয় আর্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ইন্দো-ইউরোপীয় ভাষা পরিবারের পরবর্তী প্রধান একটি শাখা হলো ইন্দো-ইরানীয়। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454541246,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১: ভাষা ও বাংলা ভাষা",
+    "question": "মানুষের ভাষা কিসের সাহায্যে সৃষ্টি হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কলমের সাহায্যে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঠোঁটের সাহায্যে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অঙ্গপ্রত্যঙ্গের সাহায্যে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাগ্যন্ত্রের সাহায্যে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ফুসফুস থেকে নির্গত বাতাস বাগ্যন্ত্রের বিভিন্ন অংশে বাধা পেয়ে মানুষের ভাষার ধ্বনি বা কথা তৈরি করে। [১]",
+    "image": null,
+    "language": "en"
+  }
+]

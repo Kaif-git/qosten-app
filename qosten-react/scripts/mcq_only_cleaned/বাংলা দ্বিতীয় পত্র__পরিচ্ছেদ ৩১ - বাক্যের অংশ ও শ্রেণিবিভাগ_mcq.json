@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1779877116370,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১ - বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "এক বা একাধিক শব্দ দিয়ে গঠিত পূর্ণ অর্থবোধক ভাষিক একককে কী বলে?",
+    "options": "[{\"label\":\"a\",\"text\":\"বাক্য\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"বাক্যাংশ\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"উদ্দেশ্য\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"বিধেয়\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  }
+]

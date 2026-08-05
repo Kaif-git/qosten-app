@@ -1,0 +1,994 @@
+[
+  {
+    "id": 1768035226237,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "এক বা একাধিক শব্দ দিয়ে গঠিত পূর্ণ অর্থবোধক ভাষিক একককে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাক্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বাক্যাংশ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উদ্দেশ্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিধেয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বাক্য হলো সেই ভাষিক একক যা পূর্ণ অর্থ প্রকাশ করে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035226339,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "বৃত্তের মধ্যে স্থান পাওয়া প্রয়োজনীয় শব্দকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বর্গ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বাক্যাংশ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "খণ্ডবাক্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বাক্যের মধ্যে পদের সমষ্টি বা গুচ্ছকে বর্গ বলা হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035226442,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "বাক্যের মধ্যে একাধিক পদের গুচ্ছকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বর্গ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "খণ্ডবাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শব্দ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "একাধিক পদের সমষ্টি যখন একটি একক হিসেবে কাজ করে, তাকে বর্গ বলে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035226543,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "বাক্যের ক্রিয়াকে যে চালায় তাকে বলে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্তা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কর্ম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উদ্দেশ্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বাক্যে যে ব্যক্তি বা বস্তু কাজটি সম্পন্ন করে বা ক্রিয়াকে পরিচালনা করে, তাকে কর্তা বলে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035226643,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "'সজল স্কুলে যায়'— বাক্যের উদ্দেশ্য—",
+    "options": [
+      {
+        "label": "a",
+        "text": "সজল",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "স্কুলে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যায়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "স্কুলে যায়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বাক্যে যার সম্পর্কে কিছু বলা হয় সে হলো উদ্দেশ্য; এখানে সজল সম্পর্কে বলা হয়েছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035226785,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "একটি মূল বাক্যের অধীনে এক বা একাধিক আশ্রিত বাক্য বা বাক্যাংশ থাকলে তাকে কোন বাক্য বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সরল বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "যৌগিক বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জটিল বাক্য",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সক্রিয় বাক্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্রধান বাক্যের ওপর নির্ভরশীল এক বা একাধিক খণ্ডবাক্য থাকলে তাকে জটিল বাক্য বলে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035226893,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "এক বা একাধিক বাক্য বা বাক্যাংশ যোজকের মাধ্যমে মিলে যে বাক্য হয় তাকে কী বাক্য বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সরল বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "যৌগিক বাক্য",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "জটিল বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আশ্রিত বাক্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যোজক (এবং, ও, কিন্তু ইত্যাদি) দিয়ে যুক্ত স্বাধীন বাক্যসমূহকে যৌগিক বাক্য বলে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035226989,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "বাক্যের বিধেয় অংশে ক্রিয়া না থাকা বা থাকা বিবেচনায় বাক্যকে কতভাগে ভাগ করা যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুই",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "তিন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাঁচ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ক্রিয়া থাকা বা না থাকা অনুসারে বাক্য দুই প্রকার: সক্রিয় ও অক্রিয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035227090,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "কোনো কিছু দোষ বা গুনে অবাক বা বিস্মিত হলে কোন ধরনের বাক্য তৈরি হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নেতিবাচক বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অনুজ্ঞাবাচক বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রশ্নবাচক বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আবেগবাচক বাক্য",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বিস্ময় বা মনের আবেগ প্রকাশকারী বাক্যকে আবেগবাচক বাক্য বলা হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035227189,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "বাক্যের যে অংশ বিশেষ্য সম্পর্কে কিছু বলা হয়, তাকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্তা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কর্ম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ক্রিয়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিধেয়",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "উদ্দেশ্য সম্পর্কে যা বলা হয় তাকেই বিধেয় বলে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035227289,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "যেসব বাক্যের বিধেয় অংশে ক্রিয়া থাকে সেগুলোকে কোন বাক্য বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সক্রিয় বাক্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অক্রিয় বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সরল বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জটিল বাক্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বিধেয় অংশে সমাপিকা ক্রিয়া বর্তমান থাকলে তাকে সক্রিয় বাক্য বলা হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035227390,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "পদকে বাক্যের কী বলা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রাণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "একক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "আশ্রয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মূল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বাক্যের ক্ষুদ্রতম একক হলো পদ বা শব্দ.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035227488,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "সাধারণত বাক্যের কয়টি অংশ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুটি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "তিনটি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চারটি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাঁচটি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "একটি সার্থক বাক্যের দুটি প্রধান অংশ থাকে— উদ্দেশ্য ও বিধেয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035227590,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "গঠনগত দিক দিয়ে বাক্যকে কত ভাগে ভাগ করা যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পাঁচ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তিন",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "দুই",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "গঠন অনুসারে বাক্য তিন প্রকার: সরল, জটিল ও যৌগিক.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035227693,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "কোন বাক্যটি জটিল ক্রিয়ার উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শিমুলটি ফুটপাটে ঘুমাচ্ছে।",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "আমি একটি চিঠি লিখছি।",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মা আমাকে ডাকছেন।",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সে গল্পের বই পড়ছে।",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এখানে 'ঘুমাচ্ছে' সমাপিকা ক্রিয়া হলেও বাক্যের গঠনগত জটিলতার ইঙ্গিত দেওয়া হয়েছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035237784,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "'আমার মা চাকরি করেন'—এটি কোন ধরনের বাক্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সক্রিয় বাক্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অক্রিয় বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জটিল বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "যৌগিক বাক্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যেসব বাক্যের বিধেয় অংশে সমাপিকা ক্রিয়া থাকে, সেগুলোকে সক্রিয় বাক্য বলে [৪].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035237895,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "'বিপদ এবং দুঃখ একসাথে আসে।' — গঠন অনুসারে বাক্যটি কোন প্রকারের?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সরল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জটিল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যৌগিক",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মিশ্র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "এক বা একাধিক বাক্য বা বাক্যাংশ যোজকের মাধ্যমে মিলে যে বাক্য হয় তাকে যৌগিক বাক্য বলে [৪].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035238012,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "'ভালো ছেলেরা শিক্ষকের আদেশ পালন করে।' —এটি কী ধরনের বাক্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জটিল বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অক্রিয় বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যৌগিক বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সরল বাক্য",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "যে বাক্যে একটিমাত্র সমাপিকা ক্রিয়া থাকে তাকে সরল বাক্য বলে [৪].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035238126,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "বাক্যের বিধেয় অংশে ক্রিয়া থাকলে তাকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিধেয় বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বেতিরে বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অক্রিয় বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সক্রিয় বাক্য",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "যেসব বাক্যের বিধেয় অংশে সমাপিকা ক্রিয়া থাকে, তাকে সক্রিয় বাক্য বলে [৪].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035238241,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "'তুমি চেষ্টা না করায় ব্যর্থ হয়েছ।' — এটি কোন প্রকারের বাক্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সরল",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "যৌগিক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জটিল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "খণ্ড",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বাক্যটিতে একটিমাত্র সমাপিকা ক্রিয়া 'হয়েছ' থাকায় এটি সরল বাক্য [৪].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035238350,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "'তার মঙ্গল হোক।' — এটি কোন ধরনের বাক্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিবৃতিমূলক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রশ্নবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আবেগবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অনুজ্ঞাবাচক",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "আদেশ, নিষেধ, অনুরোধ, প্রার্থনা ইত্যাদি প্রকাশিত হয় অনুজ্ঞাবাচক বাক্যে [৪].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035238448,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "নিচের কোনটি সরল বাক্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "যে পরিশ্রম করে, সেই সুখ লাভ করে।",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পুকুরে পদ্মফুল জন্মে।",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তার বয়স হয়েছে, কিন্তু বুদ্ধি হয়নি।",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিপদ এবং দুঃখ এক সময়ে আসে।",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "এই বাক্যে একটিমাত্র সমাপিকা ক্রিয়া থাকায় এটি সরল বাক্য [৪].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035238552,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "'দোষ করেছ, অতএব শাস্তি পাবে।' — এটি কোন জাতীয় বাক্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "যৌগিক বাক্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "জটিল বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মিশ্র বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সরল বাক্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'অতএব' যোজকের মাধ্যমে দুটি বাক্য যুক্ত হওয়ায় এটি যৌগিক বাক্য [৪].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035238656,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "'তিনি ভাত খেয়ে ঘুমিয়ে পড়লেন।' — কোন ধরনের বাক্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সরল বাক্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "জটিল বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মিশ্র বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "যৌগিক বাক্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বাক্যটিতে একটি সমাপিকা ক্রিয়া থাকায় এটি সরল বাক্য [৪].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035238763,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "'তার বয়স হলেও বুদ্ধি হয়নি।' — এটি কোন বাক্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সরল বাক্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "জটিল বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যৌগিক বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মিশ্র বাক্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সমাপিকা ক্রিয়া একটি হওয়ায় এটি গঠনগতভাবে সরল বাক্য [৪].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035238868,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "'যেহেতু তুমি চেষ্টা করোনি, তাই ব্যর্থ হয়েছ।' — এটি কী ধরনের বাক্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিবৃতিমূলক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সরল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যৌগিক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জটিল",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "একটি মূল বাক্যের অধীনে আশ্রিত বাক্য থাকায় এটি জটিল বাক্য [৪].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035238967,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "অক্রিয় বাক্যের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তার মঙ্গল হোক।",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আমার মা চাকরি করেন।",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তিনি বাংলাদেশের নাগরিক।",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "তারা তোমাদের চেনেন।",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যেসব বাক্যের বিধেয় অংশে ক্রিয়া থাকে না, সেগুলোকে অক্রিয় বাক্য বলে [৪].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035239072,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "উদ্দেশ্য ও বিধেয়কে প্রসারিত করা হয় যেসব শব্দ ও বর্গ দিয়ে তাকে বলে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "উদ্দেশ্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিধেয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পূরক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রসারক",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বাক্যের মূল অংশকে বিস্তারিত করার জন্য ব্যবহৃত শব্দ বা বর্গকে প্রসারক বলে [৪].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035239170,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "'ভরা ভাদরে তরী ভরি' — বাক্যটি হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "অনুজ্ঞাবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিবৃতিমূলক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "আবেগবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রশ্নবাচক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সাধারণভাবে কোনো কিছুর বর্ণনা দিলে তাকে বিবৃতিমূলক বাক্য বলে [৪].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035239269,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "'পরীক্ষায় সফল হও।' — এটি কোন ধরনের বাক্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিবৃতিমূলক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আদেশমূলক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিস্ময়সূচক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ইচ্ছাসূচক",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ইচ্ছা বা প্রার্থনা প্রকাশ করলে তাকে ইচ্ছাসূচক বা অনুজ্ঞাবাচক বাক্য বলা হয় [৪].",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035239369,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩১: বাক্যের অংশ ও শ্রেণিবিভাগ",
+    "question": "কোনো কিছু দেখে বা শুনে অবাক বা বিস্মিত হলে কোন ধরনের বাক্য তৈরি হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নেতিবাচক বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অনুজ্ঞাবাচক বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রশ্নবাচক বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আবেগবাচক বাক্য",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বিস্ময় বা মনের তীব্র আবেগ প্রকাশ করলে আবেগবাচক বাক্য তৈরি হয় [৪].",
+    "image": null,
+    "language": "en"
+  }
+]

@@ -1,0 +1,3987 @@
+[
+  {
+    "id": 1768041271701,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "কোনটি দুর্বল অ্যাসিড?",
+    "options": [
+      {
+        "label": "a",
+        "text": "H₂SO₄",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "H₂CO₃",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "HNO₃",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "HCl",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "H₂CO₃ (কার্বনিক অ্যাসিড) একটি দুর্বল অ্যাসিড কারণ এটি পানিতে সম্পূর্ণরূপে আয়নিত হয় না—এর অণুর মাত্র একটি ছোট অংশ হাইড্রোজেন আয়ন (H⁺) এবং কার্বনেট আয়নে (CO₃²⁻) বিচ্ছিন্ন হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041271823,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "কোন অ্যাসিড বাদামি রঙের বোতলে রাখা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "HNO₃",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "HCl",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "H₂SO₄",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "HBr",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "HNO₃ (নাইট্রিক অ্যাসিড) বাদামি বোতলে রাখা হয় কারণ এটি আলোর সংস্পর্শে বাদামি নাইট্রোজেন ডাই-অক্সাইড গ্যাস তৈরি করে; বাদামি বোতল আলো থেকে এটি রক্ষা করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041271950,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "কোনটি উৎসেচকীয় ক্রিয়াকে ত্বরান্বিত করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "NaCl",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "H₂CO₃",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "NaOH",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "H₂O",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "H₂CO₃ (কার্বনিক অ্যাসিড) দেহে pH নিয়ন্ত্রণে সাহায্য করে, যা কিছু উৎসেচকের জন্য অনুকূল পরিবেশ তৈরি করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041272134,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "ধাতব বাইকার্বোনেট যখন জৈব অ্যাসিডের সাথে বিক্রিয়া করে তখন কী উৎপন্ন হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "C₂H₅O₃ জৈব লবণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "CO₂H₅ অজৈব লবণ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অজৈব লবণ, CO₂",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জৈব লবণ, H₂O, CO₂",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ধাতব বাইকার্বোনেট (যেমন NaHCO₃) একটি জৈব অ্যাসিডের (যেমন সাইট্রিক অ্যাসিড) সাথে বিক্রিয়া করে একটি জৈব লবণ, পানি (H₂O) এবং কার্বন ডাই-অক্সাইড গ্যাস (CO₂) তৈরি করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041272285,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "কোনটি ত্বকে ক্ষত সৃষ্টি করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "H₂SO₄",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "H₂CO₃",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "CH₂COOH",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "CH₂CH(OH)COOH",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "H₂SO₄ (সালফিউরিক অ্যাসিড) একটি তীব্র ক্ষয়কারী অ্যাসিড যা ত্বকে গুরুতর পোড়া ও ক্ষত সৃষ্টি করতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041272434,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "কোন অ্যাসিড গলা ব্যথা সৃষ্টি করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "HCl",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "H₂SO₄",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "HNO₃",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "H₂O",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "HCl (হাইড্রোক্লোরিক অ্যাসিড) বাষ্প শ্বাসনালীতে জ্বালা সৃষ্টি করে এবং শ্বাসের সাথে গেলে গলা ব্যথা করতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041272704,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "অতিরিক্ত কার্বন ডাই-অক্সাইড চুনের পানির মধ্য দিয়ে যাওয়ার সময় কোনটি স্বচ্ছ দ্রবণ তৈরি করার জন্য দায়ী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "CaCO₃",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "CaO",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Ca(OH)₂",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Ca(HCO₃)₂",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "যখন অতিরিক্ত CO₂ চুনের পানি (Ca(OH)₂) দিয়ে যায়, তখন অদ্রবণীয় CaCO₃ (যা এটি ঘোলা করে) আরও বিক্রিয়া করে দ্রবণীয় ক্যালসিয়াম বাইকার্বোনেট (Ca(HCO₃)₂) গঠন করে, দ্রবণটি আবার স্বচ্ছ করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041272848,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "কোন ধাতু দুর্বল অ্যাসিডের সাথেও বিক্রিয়া করে বিস্ফোরণ ঘটায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "K",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Ca",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Mg",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Al",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পটাসিয়াম (K) একটি অত্যন্ত প্রতিক্রিয়াশীল ক্ষার ধাতু যা দুর্বল অ্যাসিডের সাথেও তীব্রভাবে বিক্রিয়া করে, হাইড্রোজেন গ্যাস তৈরি করে যা বিস্ফোরিত হতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041272965,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "ভিটামিন-সি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অ্যাসকরবিক অ্যাসিড",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সাইট্রিক অ্যাসিড",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অক্সালিক অ্যাসিড",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "টারটারিক অ্যাসিড",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ভিটামিন সি রাসায়নিকভাবে অ্যাসকরবিক অ্যাসিড নামে পরিচিত, একটি দুর্বল জৈব অ্যাসিড যা লেবু জাতীয় ফলে পাওয়া যায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041273084,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "প্রশমণের পর pH হয়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "০",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১০",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৭",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "১৪",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্রশমণ হলো অ্যাসিড ও ক্ষারের মধ্যকার বিক্রিয়া, যার ফলে লবণ ও পানি উৎপন্ন হয়। প্রশমণ বিন্দুতে pH 7 (নিরপেক্ষ) হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041273205,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "অ্যাসিড সক্রিয় ধাতুর সাথে বিক্রিয়া করে উৎপন্ন করে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "CO₂",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "H₂",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "N₂",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "O₂",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সক্রিয় ধাতু (যেমন দস্তা বা ম্যাগনেসিয়াম) অ্যাসিডের সাথে বিক্রিয়া করে হাইড্রোজেন গ্যাস (H₂) ও একটি লবণ তৈরি করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041273319,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "ধাতব কার্বনেট + দুর্বল অ্যাসিড → লবণ + পানি + Y। Y হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "CO",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "CO₂",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "H₂CO₃",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "CO₂⁺",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যখন একটি ধাতব কার্বনেট অ্যাসিডের সাথে বিক্রিয়া করে, তখন এটি লবণ, পানি এবং কার্বন ডাই-অক্সাইড গ্যাস (CO₂) উৎপন্ন করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041273441,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "কার্বনেট লবণে অ্যাসিড যোগ করলে তৈরি হয়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "CO₂",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "O₂",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "N₂",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "H₂",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অ্যাসিড কার্বনেট লবণের সাথে বিক্রিয়া করে কার্বন ডাই-অক্সাইড গ্যাস (CO₂), পানি ও একটি লবণ তৈরি করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041273556,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "সফট ড্রিংক্সে কোন অ্যাসিড থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাইট্রিক অ্যাসিড",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "এসিটিক অ্যাসিড",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কার্বনিক অ্যাসিড",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "টারটারিক অ্যাসিড",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সফট ড্রিংক্সে কার্বনিক অ্যাসিড (H₂CO₃) থাকে, যা তখন তৈরি হয় যখন CO₂ পানিতে দ্রবীভূত হয়, পানীয়ে ফিজ সৃষ্টি করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041273668,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "নিচের কোনটি চুনের পানি ঘোলা করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "NO₂",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "CO",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "SO₂",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "O₂",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "SO₂ (সালফার ডাই-অক্সাইড) চুনের পানি (Ca(OH)₂) এর সাথে বিক্রিয়া করে ক্যালসিয়াম সালফাইট গঠন করে, একটি সাদা অধঃক্ষেপ যা চুনের পানিকে ঘোলা (আবিল) করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041273791,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "কোন অক্সাইড অ্যাসিডিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Na₂O",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "K₂O",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "MgO",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "NO₂",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "NO₂ (নাইট্রোজেন ডাই-অক্সাইড) একটি অ্যাসিডিক অক্সাইড কারণ এটি পানির সাথে বিক্রিয়া করে একটি অ্যাসিড (নাইট্রিক অ্যাসিড) গঠন করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041273899,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "ভেজা নীল লিটমাস পেপার যদি SO₃ গ্যাসের মধ্য দিয়ে যাওয়ানো হয়, তাহলে রং কী হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সবুজ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "লাল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বর্ণহীন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কমলা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "SO₃ (সালফার ট্রাই-অক্সাইড) অ্যাসিডিক এবং ভেজা নীল লিটমাস পেপারকে লাল করে কারণ এটি আর্দ্রতার সাথে বিক্রিয়া করে সালফিউরিক অ্যাসিড তৈরি করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041274008,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "জারণের সময়, গাঢ় অ্যাসিড কী উৎপন্ন করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ডাইমার হাইড্রোজেন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ডাইমার ক্লোরিন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ডাইমার ফ্লোরিন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ডাইমার অক্সিজেন",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "HNO₃ এর মত গাঢ় অ্যাসিড জারক হিসেবে কাজ করতে পারে এবং কখনও কখনও জারণ বিক্রিয়ার সময় অক্সিজেন ডাইমার (O₂) মুক্ত করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041274122,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "SO₃ + H₂O → Z; Z হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "H₂SO₄",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "H₂SO₃",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "H₂S",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সালফার ট্রাই-অক্সাইড (SO₃) পানি (H₂O) এর সাথে বিক্রিয়া করে সালফিউরিক অ্যাসিড (H₂SO₄) গঠন করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041274232,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "নাইট্রিক অ্যাসিড বিযোজিত হয়ে গঠন করে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "N₂O₅",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "NO₂",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "NO",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "N₂",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "নাইট্রিক অ্যাসিড (HNO₃) আলো বা তাপের সংস্পর্শে এলে বিযোজিত হয়ে নাইট্রোজেন ডাই-অক্সাইড (NO₂), অক্সিজেন ও পানি তৈরি করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041274342,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "পাইরোসালফিউরিক অ্যাসিডের সংকেত হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "H₂SO₄",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "H₂SO₄",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "H₂S₂O₇",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "H₂SO₂",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পাইরোসালফিউরিক অ্যাসিড, যাকে ওলিয়ামও বলা হয়, এর রাসায়নিক সংকেত H₂S₂O₇।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041274482,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "যদি মাটিতে H⁺ এর পরিমাণ বেড়ে যায়, তবে কোনটি প্রয়োগ করা উচিত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "CaCO₃",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "CaCl₂",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "NH₄Cl",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "(NH₄)₂SO₄",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "CaCO₃ (ক্যালসিয়াম কার্বনেট, বা চুন) অম্লীয় মাটিতে প্রয়োগ করা হয় অতিরিক্ত H⁺ আয়ন (অম্লতা) প্রশমিত করতে এবং pH বাড়াতে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041274594,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "দুর্বল ক্ষারের pH মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0–3",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "3–7",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "7–11",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "11–14",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "দুর্বল ক্ষারের pH মান সাধারণত ৭ এর কিছু উপরে হয়, সাধারণত ৭–১১ এর মধ্যে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041274706,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "নিচের কোনটি ভেজা লাল লিটমাসকে নীল করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "SO₂",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "NO₂",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "NH₃",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "HCl",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "NH₃ (অ্যামোনিয়া) একটি ক্ষার এবং ভেজা লাল লিটমাস পেপারকে নীল করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041274818,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "ধাতব অক্সাইড বা হাইড্রোক্সাইডকে আমরা কী বলি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "লবণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ক্ষার",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অ্যাসিড",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ক্ষারক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ধাতব অক্সাইড ও ধাতব হাইড্রোক্সিড সাধারণত ক্ষার হিসাবে শ্রেণীবদ্ধ করা হয় কারণ তারা অ্যাসিড প্রশমিত করতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041274931,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "কোনটি বেশি ক্ষারীয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রক্ত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মূত্র",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অগ্ন্যাশয় রস",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বৃষ্টির পানি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "অগ্ন্যাশয় রসের pH বেশি (প্রায় ৮) এবং এটি রক্ত (pH ~৭.৪), মূত্র (pH ~৬), এবং বৃষ্টির পানি (সামান্য অম্লীয়) এর তুলনায় বেশি ক্ষারীয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041275038,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "নিচের কোন বিকল্পের অক্সাইড ক্ষার নয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "K",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Na",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Ca",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Cu",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কপার অক্সাইড (CuO) একটি শক্তিশালী ক্ষার নয়; এটি কম ক্ষারীয় এবং কিছু অবস্থায় উভয়ধর্মী অক্সাইডের মতো আচরণ করতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041275147,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "টয়লেট ক্লিনারে কী থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ক্ষার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ক্ষারক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অ্যাসিড",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "লবণ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "টয়লেট ক্লিনারে প্রায়ই শক্তিশালী অ্যাসিড (যেমন হাইড্রোক্লোরিক অ্যাসিড) থাকে দাগ ও লাইমস্কেল দূর করতে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041275261,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "গ্লাস ক্লিনারে NH₄OH হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "ক্ষার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ক্ষারক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অ্যাসিড",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "লবণ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "NH₄OH (অ্যামোনিয়াম হাইড্রোক্সাইড) একটি ক্ষারক কারণ এটি পানিতে দ্রবণীয় এবং OH⁻ আয়ন মুক্ত করে, যা তাকে ক্ষারীয় বৈশিষ্ট্য দেয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041275368,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "ক্ষার প্রশমিত হয়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "ক্ষার দ্বারা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ক্ষারক দ্বারা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অ্যাসিড দ্বারা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "লবণ দ্বারা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "একটি ক্ষার অ্যাসিড দ্বারা প্রশমণ বিক্রিয়ায় প্রশমিত হয়, যার ফলে লবণ ও পানি উৎপন্ন হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041275474,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "কোনটি ক্ষার কিন্তু ক্ষারক নয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Ca(OH)₂",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Fe(OH)₂",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "K₂O",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "NaOH",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Fe(OH)₂ (আয়রন(II) হাইড্রোক্সাইড) একটি ক্ষার কিন্তু ক্ষারক নয় কারণ এটি পানিতে অদ্রবণীয় এবং দ্রবীভূত হলে OH⁻ আয়ন মুক্ত করে না।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041275581,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "ক্ষারের স্বাদ কেমন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্বাদহীন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মিষ্টি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "টক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তিক্ত",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ক্ষারের সাধারণত তিক্ত স্বাদ থাকে (তবে গবেষণাগারে রাসায়নিকের স্বাদ নেওয়া বিপজ্জনক এবং সুপারিশকৃত নয়)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041275704,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "নিচের কোনটি লাল লিটমাসকে নীল করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "NaCl",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "KCl",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "H₂SO₄",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "NaOH",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "NaOH (সোডিয়াম হাইড্রোক্সাইড) একটি শক্তিশালী ক্ষার এবং লাল লিটমাস পেপারকে নীল করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041275814,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "নিচের কোনটি তরল দ্রবণে সবচেয়ে কম পরিমাণ হাইড্রোক্সাইড গঠন করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "NaOH",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "KOH",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Ca(OH)₂",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Fe(OH)₂",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Fe(OH)₂ পানিতে অদ্রবণীয়, তাই এটি দ্রবণে NaOH, KOH এবং কিছুটা দ্রবণীয় Ca(OH)₂ এর মতো দ্রবণীয় ক্ষারগুলোর তুলনায় খুব কম OH⁻ আয়ন মুক্ত করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041275924,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "জলবিয়োজিত কপার সালফেটের রং কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাদা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বাদামি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নীল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সবুজ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "জলবিয়োজিত কপার সালফেট (CuSO₄) সাদা; এটি যখন পানি শোষণ করে তখন নীল হয়ে যায় এবং জলযুক্ত লবণ (CuSO₄·5H₂O) গঠন করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041276033,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "শক্তিশালী অ্যাসিড দ্রবণ থেকে আমরা কোন আয়ন পাই?",
+    "options": [
+      {
+        "label": "a",
+        "text": "H⁺",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "OH⁻",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Cl⁻",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Na⁺",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "শক্তিশালী অ্যাসিড পানিতে সম্পূর্ণরূপে বিচ্ছিন্ন হয়, উচ্চ ঘনত্বের হাইড্রোজেন আয়ন (H⁺) মুক্ত করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041276157,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "1g NaOH(s) যদি 100 mL পানিতে রাখা হয়, তবে কত শতাংশ আয়নিত হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "100%",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "90%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "60%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "NaOH একটি শক্তিশালী ক্ষার এবং পানিতে সম্পূর্ণরূপে (100%) আয়নিত হয়, Na⁺ এবং OH⁻ আয়ন গঠন করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041276271,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "নিচের কোনটি মাটির ক্ষারীয়তা নিয়ন্ত্রণ করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "NH₄OH",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "NaHCO₃",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Ca(OH)₂",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "(NH₄)₂SO₄",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "(NH₄)₂SO₄ (অ্যামোনিয়াম সালফেট) ক্ষারীয় মাটিতে যোগ করা হয়; এটি অ্যামোনিয়াম আয়ন মুক্ত করে যা নাইট্রিফিকেশনের মধ্য দিয়ে যায়, H⁺ আয়ন তৈরি করে যা pH কমায় এবং ক্ষারীয়তা হ্রাস করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041276379,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "যখন NH₃ পানিতে শোষিত হয়, তখন এটি গঠন করে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "NH₄O",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "NH₃H₂O",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "NH₄OH",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "NH₃O",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "অ্যামোনিয়া গ্যাস (NH₃) পানিতে দ্রবীভূত হয়ে অ্যামোনিয়াম হাইড্রোক্সাইড (NH₄OH) গঠন করে, যা একটি দুর্বল ক্ষার।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041276486,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "যদি 1g NaOH 100mL পানিতে রাখা হয়, তবে কতটা আয়নিত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "100",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "90",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "32",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "45",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "NaOH একটি শক্তিশালী ক্ষার এবং পানিতে সম্পূর্ণরূপে (100%) আয়নিত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041276598,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "কোনটি ত্বক ও চোখের জন্য ক্ষতিকর?",
+    "options": [
+      {
+        "label": "a",
+        "text": "লবণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ক্ষার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অ্যাসিড",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অ্যালকোহল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "শক্তিশালী অ্যাসিড ক্ষয়কারী এবং ত্বক ও চোখে গুরুতর পোড়া ও ক্ষতি করতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041276725,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "কোনটি পেপটিক আলসার সৃষ্টি করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "H₂CO₃",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "H₂SO₄",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "HCl",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "CH₂COOH",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পাকস্থলীতে অতিরিক্ত হাইড্রোক্লোরিক অ্যাসিড (HCl) পাকস্থলীর আস্তরণ ক্ষতিগ্রস্ত করতে পারে এবং পেপটিক আলসারে অবদান রাখতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041276833,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "শক্তিশালী অ্যাসিডের তরল দ্রবণে থাকে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রচুর হাইড্রোক্সাইড আয়ন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রচুর H⁺ আয়ন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কোন আয়ন নেই",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "NaOH",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "শক্তিশালী অ্যাসিড পানিতে সম্পূর্ণরূপে বিচ্ছিন্ন হয়, উচ্চ ঘনত্বের হাইড্রোজেন আয়ন (H⁺) মুক্ত করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041276942,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "শক্তিশালী অ্যাসিড—",
+    "options": [
+      {
+        "label": "a",
+        "text": "ক্ষতিকর",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "আরামদায়ক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কাপড়ের জন্য ভালো",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ভক্ষণযোগ্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "শক্তিশালী অ্যাসিড ক্ষয়কারী ও ক্ষতিকর; এগুলি ত্বক পুড়িয়ে দিতে পারে, বস্তু ক্ষতিগ্রস্ত করতে পারে এবং খাওয়ার জন্য নিরাপদ নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041277058,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "শক্তিশালী অ্যাসিডের ঘনত্ব নির্ভর করে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "OH⁻ এর উপর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "H⁺ এর উপর",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "M⁺ এর উপর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "H⁺ এর উপর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "একটি অ্যাসিডের শক্তি ও ঘনত্ব দ্রবণে এটি যে পরিমাণ হাইড্রোজেন আয়ন (H⁺) মুক্ত করে তার উপর নির্ভর করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041277167,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "শক্তিশালী ক্ষারের ঘনত্ব নির্ভর করে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "OH⁻ এর উপর",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "H⁺ এর উপর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "M⁺ এর উপর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "H⁺ এর উপর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "একটি ক্ষারের শক্তি ও ঘনত্ব দ্রবণে এটি যে পরিমাণ হাইড্রোক্সাইড আয়ন (OH⁻) মুক্ত করে তার উপর নির্ভর করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041277275,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "রক্তের pH কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৪.৮–৫.৫",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৫.৫–৬.৫",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৭.৩৫–৭.৪৫",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৮.১–৮.৬",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মানুষের রক্ত সামান্য ক্ষারীয়, যার pH সীমা ৭.৩৫ থেকে ৭.৪৫ পর্যন্ত কঠোরভাবে নিয়ন্ত্রিত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041277390,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "আমলকীর রসে যদি ইউনিভার্সাল ইনডিকেটর যোগ করা হয়, তাহলে দ্রবণের রং কী হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "লাল",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "হলুদ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নীল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বেগুনি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "আমলকীর রস অম্লীয়, তাই ইউনিভার্সাল ইনডিকেটর লাল বা লালচে-কমলা হবে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041277501,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "কোন pH মানে চুলের কিউটিকল মসৃণ থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৩ থেকে ৪",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৪ থেকে ৫",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৪ থেকে ৬",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৫ থেকে ৭",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "চুলের কিউটিকল প্রায় ৪ থেকে ৬ এর সামান্য অম্লীয় pH সীমায় সমতল ও মসৃণ থাকে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041277607,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "দুর্বল ক্ষারীয় দ্রবণে ইউনিভার্সাল ইনডিকেটর কী রং দেবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নীল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সবুজ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বেগুনি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "লাল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "একটি দুর্বল ক্ষারীয় দ্রবণ (pH ৭ এর কিছু উপরে) ইউনিভার্সাল ইনডিকেটরকে সবুজ বা নীলচে-সবুজ করবে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041277722,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "মানুষের ত্বকের pH মান কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৪.৮–৫.৫",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "৭.৪৩–৭.৪৫",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৬.০–৮.১",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১.০–৭.০",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "মানুষের ত্বক সামান্য অম্লীয়, সাধারণত pH ৪.৮ থেকে ৫.৫ এর মধ্যে, যা ব্যাকটেরিয়া থেকে রক্ষা করতে সাহায্য করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041277836,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "দুর্বল অ্যাসিডে ইউনিভার্সাল ইনডিকেটরের রং কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হলুদ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "লাল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সবুজ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নীল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "একটি দুর্বল অম্লীয় দ্রবণ (pH প্রায় ৫–৬) ইউনিভার্সাল ইনডিকেটরকে হলুদ বা কমলা-হলুদ করবে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041277950,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "ত্বকের আদর্শ pH কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৫.৫",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "৬.৫",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৭.৪৫",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৮",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "স্বাস্থ্যকর ত্বকের জন্য আদর্শ pH প্রায় ৫.৫, যা সামান্য অম্লীয় এবং ত্বকের প্রতিরক্ষামূলক স্তর বজায় রাখতে সাহায্য করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041278057,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "মূত্রের pH মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৪.৮",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৬",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৮.১",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মূত্রের pH সাধারণত প্রায় ৬ (সামান্য অম্লীয়), তবে এটি খাদ্যাভ্যাস, স্বাস্থ্য ও পানির পরিমাণের উপর ভিত্তি করে পরিবর্তিত হতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041278173,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "০.০১ M HCl দ্রবণের pH কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২.৭",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১.৭",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "HCl এর মত শক্তিশালী অ্যাসিডের জন্য, [H⁺] অ্যাসিডের ঘনত্বের সমান। pH = -log[H⁺] = -log(0.01) = -log(10⁻²) = ২।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041278308,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "অগ্ন্যাশয় রসের pH কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৬.০",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৮.১",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "৭.০",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৭.৪",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "অগ্ন্যাশয় রস ক্ষারীয়, pH প্রায় ৮.১, যা ক্ষুদ্রান্ত্রে পাকস্থলীর অ্যাসিড প্রশমিত করতে সাহায্য করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041278483,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "যদি কোনো দ্রবণের pH মান ৭.১ হয়, তাহলে সেই দ্রবণটি –",
+    "options": [
+      {
+        "label": "a",
+        "text": "শক্তিশালী অ্যাসিড",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দুর্বল অ্যাসিড",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দুর্বল ক্ষার",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "শক্তিশালী ক্ষার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "pH ৭.১ মানে ৭ এর কিছু উপরে, যা একটি দুর্বল ক্ষারীয় দ্রবণ নির্দেশ করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041278689,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "পাকস্থলীতে প্রোটিন পরিপাকের জন্য কী pH মান প্রয়োজন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "৭",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৫.৫",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৬.৫",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পাকস্থলীর উচ্চ অম্লীয় পরিবেশ (pH প্রায় ২) প্রয়োজন পেপসিন উৎসেচকটিকে প্রোটিন ভাঙার জন্য কার্যকরভাবে কাজ করার জন্য।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041278822,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "কোনো দ্রবণে অ্যাসিড যোগ করলে তার pH হয়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "৭ এর কম",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "৭ এর বেশি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৭",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "০",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অ্যাসিড যোগ করলে H⁺ আয়নের ঘনত্ব বাড়ে, যা pH কমিয়ে ৭ এর নিচে করে (এটিকে বেশি অম্লীয় করে)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041278963,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "সোডা অ্যাশ পানিতে সম্পূর্ণ দ্রবীভূত করলে কোন দুটি আয়ন উৎপন্ন হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Na⁺, CO₂⁻",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "H⁺, CO₂⁻",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Na⁺, OH⁻",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "OH⁻, CO₂⁻",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সোডা অ্যাশ হলো সোডিয়াম কার্বনেট (Na₂CO₃)। এটি পানিতে সম্পূর্ণরূপে বিচ্ছিন্ন হয়ে সোডিয়াম আয়ন (Na⁺) এবং কার্বনেট আয়নে (CO₃²⁻) পরিণত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041279092,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "ওয়াশিং সোডা এবং HCl এর মধ্যে কোন ধরনের বিক্রিয়া ঘটে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রেডক্স",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সংযোজন বিক্রিয়া",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রশমণ বিক্রিয়া",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বিক্রিয়া বিক্রিয়া",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ওয়াশিং সোডা (Na₂CO₃) একটি ক্ষার এবং HCl (একটি অ্যাসিড) এর সাথে প্রশমণ বিক্রিয়ায় বিক্রিয়া করে, লবণ, পানি এবং CO₂ উৎপন্ন করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041279201,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "Al₂O₃ এবং NaOH বিক্রিয়ায় কী কী উৎপন্ন হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "NaAlO₃ + NaOH",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "NaAlO₃ + NaOH",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "2NaAlO₃ + H₂O",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "NaAlO₃ + H₂O",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "অ্যালুমিনিয়াম অক্সাইড (Al₂O₃) উভয়ধর্মী। এটি NaOH এর সাথে বিক্রিয়া করে সোডিয়াম অ্যালুমিনেট (2NaAlO₃) এবং পানি (H₂O) গঠন করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041279317,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "নিচের কোনটি অম্লীয় লবণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "FeCl₃",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "NaCl",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Na₂CO₃",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "KCl",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "FeCl₃ (আয়রন(III) ক্লোরাইড) একটি অম্লীয় লবণ কারণ এটি একটি দুর্বল ক্ষার (Fe(OH)₃) এবং একটি শক্তিশালী অ্যাসিড (HCl) থেকে গঠিত, তাই এটি জলবিশ্লেষিত হয়ে একটি অম্লীয় দ্রবণ দেয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041279424,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "বেকিং পাউডার গরম করলে কোনটির উৎপাদন বৃদ্ধি পায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "CO₂",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "H₂O",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "NaO",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "NaOH",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বেকিং পাউডারে সোডিয়াম বাইকার্বোনেট এবং একটি অ্যাসিড থাকে। উত্তপ্ত করলে এটি বিযোজিত হয়ে কার্বন ডাই-অক্সাইড (CO₂) গ্যাস মুক্ত করে, যা বেক করা খাবার ফুলতে সাহায্য করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041279531,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "খালের কাছে কলা গাছ বর্ষাকালে কখনও কখনও ধ্বংস হয়ে যায়। তখন পানিতে কোন উপাদান বৃদ্ধি পায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ক্ষারীয়তা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঘোলাটে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অম্লীয়তা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কাঠিন্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বৃষ্টির পানি অম্লীয় হতে পারে (দ্রবীভূত CO₂ বা অ্যাসিড বৃষ্টির কারণে) এবং খালের পানির অম্লীয়তা বাড়াতে পারে, যা কলা গাছের মতো উদ্ভিদের ক্ষতি করতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041279641,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "অ্যাসিড বৃষ্টির বাতাসে কোন অ্যাসিডগুলো থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "HCl, H₂SO₄",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "HNO₃, H₂PO₄",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "H₂SO₄, HClO₃",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "H₂SO₄, HNO₃, H₂CO₃",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অ্যাসিড বৃষ্টিতে সালফিউরিক অ্যাসিড (H₂SO₄), নাইট্রিক অ্যাসিড (HNO₃), এবং কার্বনিক অ্যাসিড (H₂CO₃) থাকে যা বায়ুদূষক যেমন SO₂, NO₂, এবং CO₂ থেকে তৈরি হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041279752,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "কোন গ্যাস অ্যাসিড বৃষ্টির জন্য দায়ী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Na₂O",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "NO₂",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "SiO₂",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "NH₃",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "NO₂ (নাইট্রোজেন ডাই-অক্সাইড) বৃষ্টির পানিতে দ্রবীভূত হয়ে নাইট্রিক অ্যাসিড গঠন করে, যা অ্যাসিড বৃষ্টির একটি প্রধান উপাদান।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041279867,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "অভ্যন্তরীণ দহন ইঞ্জিনে পেট্রোলিয়াম পোড়ানোর সময় কোন গ্যাস নির্গত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "NO",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "NO₂",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "SO₂",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "SO₃",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ইঞ্জিনে উচ্চ-তাপমাত্রার দহন নাইট্রোজেন অক্সাইড তৈরি করে, প্রাথমিকভাবে NO₂ (নাইট্রোজেন ডাই-অক্সাইড), যা ধোঁয়াশা ও অ্যাসিড বৃষ্টিতে অবদান রাখে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041279981,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "কোন অম্লীয়তা অত্যন্ত ক্ষণস্থায়ী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "HCl",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "HNO₂",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "HNO₃",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "H₂SO₄",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "HNO₂ (নাইট্রাস অ্যাসিড) অত্যন্ত অস্থির এবং ক্ষণস্থায়ী; এটি ঘরের তাপমাত্রায় দ্রুত বিযোজিত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041280095,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "অ্যাসিড বৃষ্টির পর, মাটির pH হয়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "৪",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "৫",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৬",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৭",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অ্যাসিড বৃষ্টি মাটির pH কমায়, প্রায়ই এটিকে বেশি অম্লীয় করে (pH প্রায় ৪ বা তার কম)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041280205,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "অ্যাসিড বৃষ্টির পর, পুকুরের pH হয়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "৪ বা তার কম",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "৫ বা তার কম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৬ বা তার কম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৭ বা তার কম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অ্যাসিড বৃষ্টি পুকুরের pH উল্লেখযোগ্যভাবে কমাতে পারে, কখনও কখনও pH ৪ বা তারও কম করে, জলজ জীবনের ক্ষতি করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041280316,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "নিচের কোনটি পানির স্থায়ী কাঠিন্যের কারণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Ca(HCO₃)₂",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "CaSO₄",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Mg(HCO₃)₂",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Al(NO₃)₃",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "স্থায়ী কাঠিন্য দ্রবীভূত ক্যালসিয়াম সালফেট (CaSO₄) বা ম্যাগনেসিয়াম সালফেটের কারণে হয়, যা ফুটিয়ে দূর করা যায় না।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041280427,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "পানির pH মান ০.১% এর কম হলে কোন মান জীবজগতের জন্য হুমকি হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৪",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৯.৫",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৭.০",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৪.৫",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "pH প্রায় ৪.৫ এর নিচে হলে তা অত্যন্ত অম্লীয় এবং বেশিরভাগ জলজ জীবনের জন্য হুমকি কারণ এটি শারীরবৃত্তীয় প্রক্রিয়া ব্যাহত করে এবং পানিতে বিষাক্ত ধাতু নিঃসৃত করতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041280544,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "Cu(OH)₂ এর রং কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গাঢ় বাদামি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হালকা সবুজ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "লালচে বাদামি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "হালকা নীল",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কপার(II) হাইড্রোক্সাইড (Cu(OH)₂) একটি হালকা নীল বা নীলচে-সবুজ অধঃক্ষেপ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041280651,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "জিপসামের সংকেত কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "MgCO₃·2H₂O",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "MgCO₃·CaCO₃",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "CaSO₄·2H₂O",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "CaSO₄·H₂O",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "জিপসাম হলো ক্যালসিয়াম সালফেট ডাইহাইড্রেট, রাসায়নিক সংকেত CaSO₄·2H₂O।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041280759,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "বিশুদ্ধ পানির pH মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৪",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৫",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৬",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৭",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বিশুদ্ধ পানি নিরপেক্ষ এবং ২৫°C এ এর pH ৭।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041280876,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "পটাশ ফিটকিরিতে পানির অণুর সংখ্যা কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "০",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৫",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "২",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২৪",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পটাশ ফিটকিরি হলো KAl(SO₄)₂·12H₂O, তাই এতে প্রতি সংকেত এককে ১২টি পানির অণু রয়েছে। ২টি সংকেত এককের জন্য (যেমন কখনও কখনও বিবেচনা করা হয়) এটি ২৪টি পানির অণু হবে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041280987,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "ফিটকিরির সংকেত কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Al₂(SO₄)₃·24H₂O",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "K₂SO₄·24H₂O",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Al₂(SO₄)₃·K₂SO₄·24H₂O",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সাধারণ ফিটকিরি (পটাসিয়াম ফিটকিরি) এর সংকেত KAl(SO₄)₂·12H₂O, যা Al₂(SO₄)₃·K₂SO₄·24H₂O হিসাবে লেখা যেতে পারে, যা দ্বৈত লবণকে ২৪টি পানির অণু সহ প্রকাশ করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041281099,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "অস্থায়ী কাঠিন্যে, কোন ধাতব লবণ দ্রবীভূত থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাইকার্বনেট",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সালফেট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কার্বনেট",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ক্লোরাইড",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অস্থায়ী কাঠিন্য দ্রবীভূত ক্যালসিয়াম বা ম্যাগনেসিয়াম বাইকার্বনেট (Ca(HCO₃)₂ বা Mg(HCO₃)₂) এর কারণে হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041281232,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "স্থায়ী কাঠিন্যের পিছনে কারণ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "CaSO₄",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Na₂SO₄",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "K₂SO₄",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "NaOH",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "স্থায়ী কাঠিন্য প্রধানত দ্রবীভূত ক্যালসিয়াম সালফেট (CaSO₄) বা ম্যাগনেসিয়াম সালফেটের কারণে হয়, যা ফুটালে অধঃক্ষিপ্ত হয় না।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041281346,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "কঠিন পানিতে কোন আয়ন থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Na⁺",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Ca²⁺",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "K⁺",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Li⁺",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কঠিন পানিতে উচ্চ ঘনত্বের ক্যালসিয়াম আয়ন (Ca²⁺) এবং ম্যাগনেসিয়াম আয়ন (Mg²⁺) থাকে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041281458,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "বিশুদ্ধ পানিতে থাকে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "অ্যাসিড",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ক্ষার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "লবণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বর্জ্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "উপরের কোনোটিই নয়",
+    "explanation": "বিশুদ্ধ পানিতে শুধুমাত্র H₂O অণু এবং স্ব-আয়নীকরণ থেকে অতি সামান্য, সমপরিমাণ H⁺ এবং OH⁻ আয়ন থাকে। এটি নিরপেক্ষ, অ্যাসিড, ক্ষার, লবণ বা বর্জ্য নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041281570,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "BOD পরিমাপ করতে কী তাপমাত্রা প্রয়োজন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২০°C",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "২৫°C",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৪৫°C",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৪৩°C",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "BOD (বায়োকেমিক্যাল অক্সিজেন ডিমান্ড) সাধারণত ২০°C তাপমাত্রায় ৫ দিন ধরে পরিমাপ করা হয়, কারণ এটি পানি জৈব দূষণ মূল্যায়নের জন্য একটি আদর্শ অবস্থা।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041281681,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "রং অপসারণ করতে কী ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Ca(OCl)Cl",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "CaCO₃",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "CO₂",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "NaHCO₃",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ব্লিচিং পাউডার, Ca(OCl)Cl, একটি সাধারণ রাসায়নিক যা কাপড় ও পানির রং অপসারণ (ব্লিচ) করতে ব্যবহৃত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041281803,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "পানির অস্থায়ী কাঠিন্য কীভাবে দূর করা যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফুটানো",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "পাতন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তাপ দেওয়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কয়েল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অস্থায়ী কাঠিন্য ফুটিয়ে দূর করা হয়, যা বাইকার্বনেট আয়নকে কার্বনেটে বিযোজিত করে, যা পরে কঠিন কার্বনেট স্কেল হিসাবে অধঃক্ষিপ্ত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041281912,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "বৃষ্টির পানির কোন যৌগ পানির কাঠিন্য সৃষ্টি করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "CO₂",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "SO₂",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "NO₂",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "NO",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বৃষ্টির পানি বাতাস থেকে CO₂ দ্রবীভূত করে, দুর্বল কার্বনিক অ্যাসিড তৈরি করে। এই অম্লীয় পানি তারপর মাটি ও শিলা থেকে ক্যালসিয়াম ও ম্যাগনেসিয়াম খনিজ দ্রবীভূত করতে পারে, কাঠিন্য সৃষ্টি করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041282034,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "পানি বিশুদ্ধ করার সহজ উপায় হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "ক্লোরিনেশন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ফুটানো",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পাতন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তাপ দেওয়া",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ক্লোরিনেশন (ক্লোরিন যৌগ যোগ করা) ব্যাকটেরিয়া মেরে বড় আকারে পানি বিশুদ্ধ করার একটি সহজ ও কার্যকর পদ্ধতি।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041282149,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "অধঃক্ষেপ হিসাবে Cu(OH)₂ এর রং কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "লালচে বাদামি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হালকা নীল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "গাঢ় নীল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সাদা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কপার(II) হাইড্রোক্সাইড (Cu(OH)₂) একটি হালকা নীল বা ফ্যাকাশে নীল অধঃক্ষেপ হিসাবে দেখা যায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041282266,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "০.০০৫M H₂SO₄ দ্রবণের pH কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৮",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১০",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১২",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "H₂SO₄ একটি শক্তিশালী ডাইপ্রোটিক অ্যাসিড। ০.০০৫ M H₂SO₄ এর জন্য, [H⁺] = ২ × ০.০০৫ = ০.০১ M। pH = -log(0.01) = ২।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041282383,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "ল্যাকটিক অ্যাসিড কোন যৌগে থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "লেবুর রস",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "টারমেনিটল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দই",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ভিনেগার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ল্যাকটিক অ্যাসিড ব্যাকটেরিয়ার গাঁজন দ্বারা উৎপন্ন হয় এবং দই এর মত টক দুগ্ধজাত দ্রব্যে পাওয়া যায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041282494,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "পাকস্থলীর অ্যাসিড প্রশমিত করতে কোনটি ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "NaOH",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "KOH",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Mg(OH)₂",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Ca(OH)₂",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ম্যাগনেসিয়াম হাইড্রোক্সাইড (Mg(OH)₂) অ্যান্টাসিডে একটি সাধারণ সক্রিয় উপাদান কারণ এটি একটি মৃদু ক্ষার যা অতিরিক্ত পাকস্থলীর অ্যাসিড নিরাপদে প্রশমিত করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041282615,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "SiO₂ কোন ধরনের যৌগ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ক্ষারীয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অম্লীয়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "নিরপেক্ষ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গ্যাস",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সিলিকন ডাই-অক্সাইড (SiO₂) একটি অম্লীয় অক্সাইড কারণ এটি শক্তিশালী ক্ষারের সাথে বিক্রিয়া করে লবণ (সিলিকেট) ও পানি গঠন করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041282725,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "মাটির pH কমাতে ব্যবহৃত পদার্থ হলো —",
+    "options": [
+      {
+        "label": "a",
+        "text": "NaCl",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "CaO",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "NH₂CO-NH₂",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ইউরিয়া (NH₂CO-NH₂) সময়ের সাথে মাটির pH কমাতে পারে কারণ এটি নাইট্রিফিকেশনের মধ্য দিয়ে যায়, H⁺ আয়ন মুক্ত করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041282841,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "১০% ক্ষারীয় দ্রবণে থাকে —\ni. ৯০% ক্ষার\nii. ৯০% পানি\niii. ১০% ক্ষার",
+    "options": [
+      {
+        "label": "a",
+        "text": "i, ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i, iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii, iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii, iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "১০% ক্ষারীয় দ্রবণ মানে দ্রবণের ১০% হল ক্ষার (দ্রব) এবং বাকি ৯০% হল পানি (দ্রাবক)। সুতরাং বিবৃতি ii এবং iii সঠিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041282956,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "ভিটামিন সি পাওয়া যায়—\ni. কমলালেবুতে\nii. লেবুতে\niii. ভিনেগারে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i, ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i, iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii, iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii, iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ভিটামিন সি (অ্যাসকরবিক অ্যাসিড) কমলালেবু এবং লেবুর মত সাইট্রাস ফলে পাওয়া যায়। ভিনেগারে এসিটিক অ্যাসিড থাকে, ভিটামিন সি নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041283083,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "X + H₂O → শিথিলিত চুন এই বিক্রিয়ায় —\ni. X মাটির pH বাড়াতে ব্যবহৃত হয়\nii. কী উৎপন্ন হয়\niii. Ca(OH)₂ উৎপন্ন হয়",
+    "options": [
+      {
+        "label": "a",
+        "text": "i, ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i, iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii, iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "X হলো দ্রুতচুন (CaO)। এটি পানির সাথে বিক্রিয়া করে শিথিলিত চুন (Ca(OH)₂) তৈরি করে, যা মাটির pH বাড়াতে (অম্লীয়তা কমাতে) ব্যবহৃত হয়। সবগুলো বিবৃতি সঠিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041283194,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "HNO₃ এর বৈশিষ্ট্য হলো—\ni. লিটমাস পেপারের রং\nii. স্বাদহীন\niii. দ্রবণে হাইড্রোজেন আয়ন",
+    "options": [
+      {
+        "label": "a",
+        "text": "i, ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i, iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii, iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii, iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "নাইট্রিক অ্যাসিড নীল লিটমাসকে লাল করে (বৈশিষ্ট্য i) এবং দ্রবণে H⁺ আয়ন মুক্ত করে (বৈশিষ্ট্য iii)। এর টক স্বাদ আছে, স্বাদহীন নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041283306,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "নাইট্রোজেন ডাই-অক্সাইড হলো—\ni. বর্ণহীন\nii. তীব্র গন্ধযুক্ত",
+    "options": [
+      {
+        "label": "a",
+        "text": "i, ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i, iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii, iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii, iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "NO₂ একটি লালচে-বাদামি গ্যাস (বর্ণহীন নয়) যার তীব্র, জ্বালাতনকারী গন্ধ আছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041283416,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "৭০% নাইট্রিক অ্যাসিড হলো—\ni. বাদামি বোতলে রাখা হয়\nii. বিযোজিত হয়ে নাইট্রিক অক্সাইড গঠন করে\niii. ক্ষতিকর",
+    "options": [
+      {
+        "label": "a",
+        "text": "i, ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i, iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii, iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii, iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "গাঢ় HNO₃ আলো সংবেদনশীল (বাদামি বোতলে সংরক্ষিত), NO₂ গঠনে বিযোজিত হয় (NO নয়), এবং ক্ষয়কারী ও ক্ষতিকর। বিবৃতি ii কিছুটা অশুদ্ধ, তবে উদ্দেশ্যমূলক সঠিক সেট হলো i এবং iii।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041283530,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "SO₃ এর জন্য—\ni. ৬ জোড়া বন্ধন ইলেকট্রন থাকে।\nii. ৬ জোড়া একাকী ইলেকট্রন থাকে।\niii. অ্যাসিড বৃষ্টি সৃষ্টি করে।",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "SO₃ তে, ৬টি বন্ধন জোড়া (তিনটি দ্বিবন্ধন) থাকে এবং সালফারে কোন একাকী জোড়া থাকে না। SO₃ পানির সাথে বিক্রিয়া করে H₂SO₄ গঠন করে, যা অ্যাসিড বৃষ্টির একটি উপাদান। সুতরাং i এবং iii সঠিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041283769,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "পাকস্থলীর অ্যাসিড প্রশমিত করতে কী ব্যবহৃত হয়?\ni. ম্যাগনেসিয়াম হাইড্রোক্সাইড\nii. ক্যালসিয়াম কার্বনেট\niii. সোডিয়াম হাইড্রোজেন কার্বনেট",
+    "options": [
+      {
+        "label": "a",
+        "text": "i",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i এবং iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সাধারণ অ্যান্টাসিডে Mg(OH)₂ এবং NaHCO₃ থাকে। CaCO₃ ও ব্যবহৃত হয় তবে এখানে কম উল্লেখ করা হয়েছে। বিকল্পগুলোর মধ্যে সেরা মিল হলো i এবং iii।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041283888,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "অ্যাসিড + ক্ষার = A + B এই বিক্রিয়ায়—\ni. অ্যাসিড H⁺ আয়ন উৎপন্ন করে\nii. ক্ষার OH⁻ আয়ন উৎপন্ন করে\niii. অ্যালকোহল উৎপন্ন করে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "প্রশমণ বিক্রিয়ায়, একটি অ্যাসিড H⁺ এবং একটি ক্ষার OH⁻ সরবরাহ করে, পানি ও একটি লবণ গঠন করে। সাধারণত অ্যালকোহল উৎপন্ন হয় না।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041283997,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "৩।** উদ্দীপনা (তাপমাত্রা) \\( \\text{Temperature} \\)\ni. 'A' এবং 'B' দ্রবণের বিক্রিয়া একটি অ-রেডক্স বিক্রিয়া\nii. Cu²⁺ দ্রবণে 'A' দ্রবণ যোগ করলে হালকা নীল অধঃক্ষেপ তৈরি হয়\niii. 'A' এবং 'B' এর বিক্রিয়ায় গঠিত লবণটি অম্লীয়",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সাধারণ নমুনার উপর ভিত্তি করে, 'A' এবং 'B' সম্ভবত একটি অ্যাসিড এবং ক্ষারকে বোঝায় যা একটি লবণ গঠন করে। তাদের বিক্রিয়া প্রশমণ (অ-রেডক্স)। একটি ক্ষার ('A') Cu²⁺ তে যোগ করলে নীল Cu(OH)₂ অধঃক্ষেপ দেয়। শক্তিশালী অ্যাসিড ও শক্তিশালী ক্ষার থেকে গঠিত লবণ নিরপেক্ষ, অম্লীয় নয়। সুতরাং i এবং ii সঠিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041284110,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "X হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "HCl",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "HF",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "HBr",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "HI",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "HCl গ্যাস পানিতে অত্যন্ত দ্রবণীয়, হাইড্রোক্লোরিক অ্যাসিড গঠন করে, এবং ত্বকের জন্য ক্ষয়কারী।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041284220,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "অ্যাসিডটি হলো—\ni. তীব্র গন্ধযুক্ত।\nii. ওজনের অনুপাত ৩৫%।\niii. খনিজ অ্যাসিড",
+    "options": [
+      {
+        "label": "a",
+        "text": "i, ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i, iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii, iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii, iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "HCl দ্রবণের তীব্র গন্ধ আছে এবং এটি একটি খনিজ অ্যাসিড। এর গাঢ় রূপ ওজন অনুসারে প্রায় ৩৫-৩৭%, তবে \"ওজনের অনুপাত ৩৫%\" অস্পষ্ট; সম্ভবত i এবং iii কে সঠিক হিসাবে বোঝানো হয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041284336,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "B কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "HCl",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সাইট্রিক অ্যাসিড",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সালফিউরিক অ্যাসিড",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নাইট্রিক অ্যাসিড",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সাইট্রিক অ্যাসিড একটি দুর্বল অ্যাসিড এবং কম আয়নিত হয়, তাই এটি শক্তিশালী অ্যাসিডের তুলনায় বিদ্যুৎ কম পরিবাহিতা করে, ফলে ম্লান আলো সৃষ্টি করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041284445,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "A হলো—\ni. শক্তিশালী অ্যাসিড\nii. শক্তিশালী ক্ষার",
+    "options": [
+      {
+        "label": "a",
+        "text": "i, ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i, iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii, iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii, iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "উজ্জ্বল আলো উচ্চ পরিবাহিতা নির্দেশ করে, যা সাধারণত শক্তিশালী অ্যাসিড বা শক্তিশালী ক্ষার যা সম্পূর্ণ আয়নিত হয় তাদের বৈশিষ্ট্য। সুতরাং A হতে পারে শক্তিশালী অ্যাসিড বা শক্তিশালী ক্ষার।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041284558,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "Y হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "শক্তিশালী অ্যাসিড",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দুর্বল অ্যাসিড",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দুর্বল ক্ষার।",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শক্তিশালী ক্ষার।",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "pH ১১.৫ মানে দৃঢ়ভাবে ক্ষারীয়, যা নির্দেশ করে Y একটি শক্তিশালী ক্ষার।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041284671,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "X হলো—\ni. HCl\nii. NH₄OH",
+    "options": [
+      {
+        "label": "a",
+        "text": "i, ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i, iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii, iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii, iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "X পরিপাকে সাহায্য করে এবং ইউনিভার্সাল ইনডিকেটর লাল করে, তাই এটি অম্লীয় (পাকস্থলীর অ্যাসিডের মতো, HCl)। NH₄OH একটি দুর্বল ক্ষার এবং ইনডিকেটরকে লাল করবে না।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041284791,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "C এর pH হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "৫",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৭",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "০",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৮",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "লিটমাস পেপারে কোন পরিবর্তন না হলে তা নিরপেক্ষ দ্রবণ নির্দেশ করে, pH = ৭।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041284911,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "৩টি দ্রবণে—\ni. A অম্লীয়\nii. B ক্ষারীয়",
+    "options": [
+      {
+        "label": "a",
+        "text": "i, ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i, iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii, iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii, iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "নীল লিটমাসকে লাল করলে অর্থ A অম্লীয়। লাল লিটমাসকে নীল করলে অর্থ B ক্ষারীয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041285021,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "উদ্দীপকে উল্লিখিত দ্রবণ দিয়ে কত গ্রাম উৎপাদ উৎপন্ন হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৬.৩৩",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২৮.৯৮",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "৩৫.৫",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৪০",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O। মোলার ভর: H₂SO₄=98 g/mol, NaOH=40 g/mol। 20g H₂SO₄ ~0.204 mol, 20g NaOH 0.5 mol। NaOH সীমাবদ্ধ? প্রকৃতপক্ষে, 0.204 mol H₂SO₃ এর জন্য 0.408 mol NaOH প্রয়োজন। NaOH অতিরিক্ত আছে (0.5 mol)। H₂SO₄ থেকে Na₂SO₄ ভর: 0.204 mol × 142 g/mol ≈ ২৮.৯৭ g।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041285141,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "উক্ত দ্রবণে pH পেপার যোগ করলে কী রং দেখাবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "লাল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হলুদ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সবুজ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বেগুনি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "যেহেতু NaOH অতিরিক্ত আছে, চূড়ান্ত দ্রবণ ক্ষারীয়। ক্ষারীয় দ্রবণে pH পেপার বেগুনি বা নীল দেখায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041285282,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "A হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "অ্যাসিড",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ক্ষার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অম্লীয় লবণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিরপেক্ষ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Na₂CO₃ এর সাথে বিক্রিয়া করে CO₂ এবং একটি লবণ উৎপন্ন হলে তা নির্দেশ করে A একটি অ্যাসিড।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041285398,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "বিক্রিয়ায়, A হলো—\ni. একটি লবণ\nii. অ্যাসিড",
+    "options": [
+      {
+        "label": "a",
+        "text": "i, ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i, iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii, iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii, iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "A একটি অ্যাসিড (সম্ভবত HCl) যা কার্বনেটের সাথে বিক্রিয়া করে। এটি একটি লবণ নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041285506,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "A হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "NaOH",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "HCl",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "NaHCO₃",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অ্যাসিড",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বেকিং পাউডারে প্রায়ই সোডিয়াম বাইকার্বোনেট (NaHCO₃) এবং একটি শুষ্ক অ্যাসিড থাকে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041285630,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "যদি C তে পানি যোগ করা হয়, তবে—\ni. প্রশমণ ঘটে।\nii. কার্বন ডাই-অক্সাইড গঠিত হয়\niii. HCl গঠিত হয়",
+    "options": [
+      {
+        "label": "a",
+        "text": "i, ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i, iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii, iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii, iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বেকিং পাউডারে (C) পানি যোগ করলে অ্যাসিড এবং NaHCO₃ কে বিক্রিয়া করতে দেয়, প্রশমণ ঘটায় এবং CO₂ গ্যাস তৈরি করে। সাধারণত HCl গঠিত হয় না।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041285744,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "Y হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "NO₂",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "SO₂",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "CO",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "H₂SO₄",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "SO₂ একটি শ্বাসরোধী, শ্বাসরোধকারী গ্যাস যা অ্যাসিড বৃষ্টিতে অবদান রাখে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041285865,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "X হলো—\ni. NO₂\nii. পানির সাথে বিক্রিয়া করলে নাইট্রিক অ্যাসিড গঠন করে\niii. CO₂",
+    "options": [
+      {
+        "label": "a",
+        "text": "i, ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i, iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii, iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii, iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ইট ভাটা NO₂ নির্গত করে, যা পানির সাথে মিলে নাইট্রিক অ্যাসিড (অ্যাসিড বৃষ্টি) গঠন করে। CO₂ ইটের কারখানা থেকে প্রাথমিক অ্যাসিড বৃষ্টির গ্যাস নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041286109,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "A হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "H₂SO₃",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "H₂SO₄",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "H₂CO₃",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "HNO₂",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যদি XO₂ হয় CO₂, তাহলে A কার্বনিক অ্যাসিড (H₂CO₃)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041286220,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "C এবং D এর বৈশিষ্ট্য হলো—\ni. C একটি অস্থায়ী অ্যাসিড\nii. C জারিত হয়ে D হয়\niii. D অ্যাসিড বৃষ্টি সৃষ্টি করে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i, ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i, iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii, iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii, iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সম্ভবত C হলো H₂SO₃ (সালফারাস অ্যাসিড, অস্থায়ী) এবং D হলো H₂SO₄ (সালফিউরিক অ্যাসিড, অ্যাসিড বৃষ্টি সৃষ্টি করে)। H₂SO₃ জারিত হয়ে H₂SO₄ হয়। সবগুলো বিবৃতি মানানসই।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041286351,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "A হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "অক্সালেট আয়ন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হাইড্রোজেন আয়ন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "স্টিয়ারেট আয়ন",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "হাইড্রোক্সাইড আয়ন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "R-C(O)Na⁺ একটি সোডিয়াম সাবান (যেমন সোডিয়াম স্টিয়ারেট)। পানিতে, এটি হাইড্রোলাইজড হয়ে স্টিয়ারেট আয়ন (A) এবং Na⁺ মুক্ত করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041286458,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "B হলো—\ni. কঠিন পানিতে গঠিত হয়\nii. তরল দ্রবণে অদ্রবণীয়\niii. দুর্বল অ্যাসিড",
+    "options": [
+      {
+        "label": "a",
+        "text": "i, ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i, iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii, iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii, iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "B হলো ক্যালসিয়াম স্টিয়ারেট, \"স্কাম\" যা সাবান কঠিন পানিতে Ca²⁺ এর সাথে বিক্রিয়া করে গঠিত হয়। এটি অদ্রবণীয় এবং অধঃক্ষিপ্ত হয়। এটি একটি লবণ, দুর্বল অ্যাসিড নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041286574,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "X হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "আর্সেনিক",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কার্বন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অক্সিজেন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পানি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "আর্সেনিক বিষক্রিয়া হাত ও পায়ে ত্বকের ক্ষত (ল্যাসারেশন) সৃষ্টি করতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041286681,
+    "subject": "রসায়ন",
+    "chapter": "অ্যাসিড-ক্ষার ভারসাম্য",
+    "question": "Y হলো—\ni. ভারী ধাতু।\nii. একটি শিল্প বর্জ্য\niii. উপকারী",
+    "options": [
+      {
+        "label": "a",
+        "text": "i, ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i, iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii, iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii, iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Y সম্ভবত আরেকটি বিষাক্ত ভারী ধাতু (যেমন সিসা বা ক্যাডমিয়াম) বোঝায় যা শিল্প বর্জ্য থেকে আসে এবং কার্সিনোজেনিক। এই প্রসঙ্গে এটি উপকারী নয়।",
+    "image": null,
+    "language": "en"
+  }
+]

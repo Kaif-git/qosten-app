@@ -39,6 +39,14 @@ jspm_packages/
 # Optional npm cache directory
 .npm
 
+# Question data dumps
+qosten-react/all_questions_dump/
+qosten-react/mcq_processed/
+qosten-react/mcq_to_fix/
+qosten-react/New Format/
+qosten-react/Improved Questios/
+qosten-react/*.txt
+
 # Optional eslint cache
 .eslintcache
 

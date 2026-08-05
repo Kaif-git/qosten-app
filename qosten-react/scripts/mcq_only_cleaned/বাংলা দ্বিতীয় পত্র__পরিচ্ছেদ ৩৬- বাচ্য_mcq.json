@@ -1,0 +1,994 @@
+[
+  {
+    "id": 1768035302461,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "বাচ্য বলতে বোঝায়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাক্যের অর্থ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বাক্যের প্রকাশভঙ্গি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বাক্যের ভাব",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাক্যের প্রয়োগ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বাক্যের বিভিন্ন ধরনের প্রকাশভঙ্গিকে ব্যাকরণে বাচ্য বলা হয় [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035302566,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "বাচ্যের মধ্যে কিসের ভূমিকা বদলে গিয়ে একই বাক্যের প্রকাশভঙ্গি আলাদা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "যোজক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অনুসর্গ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আবেগ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ক্রিয়া",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বাচ্যের পরিবর্তনে ক্রিয়ার রূপের পরিবর্তন ঘটে, যা প্রকাশভঙ্গিকে বদলে দেয় [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035302668,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "বাচ্য কত প্রকার?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তিন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "চার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাঁচ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বাংলা ব্যাকরণ অনুযায়ী বাচ্য তিন প্রকার: কর্তবাচ্য, কর্মবাচ্য ও ভাববাচ্য [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035302770,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "কর্তৃবাচ্যের বাক্যকে কর্মবাচ্যে রূপান্তরিত করতে হলে কোন পদকে নিয়ন্ত্রণ করতে হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিশেষ্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিশেষণ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ক্রিয়া",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ক্রিয়া-বিশেষণ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কর্মবাচ্যে ক্রিয়াপদ কর্মের অনুসারী হয়, তাই ক্রিয়া পদকে নিয়ন্ত্রণ করতে হয় [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035302877,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "'আমাদের কঠোর পরিশ্রম করতে হয়' কর্মবাচ্যের এই বাক্যটি কর্তবাচ্যে কী হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আমরা কঠোর পরিশ্রম করি।",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "আমার দ্বারা কঠোর পরিশ্রম হয়।",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আমাদের পরিশ্রম করা লাগে।",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কঠোর পরিশ্রম আমাদের কাজ।",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কর্তবাচ্যে রূপান্তর করলে ক্রিয়া সরাসরি কর্তার অনুসারী হয়ে 'আমরা কঠোর পরিশ্রম করি' হবে [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035302983,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "'কোথা থেকে আসা হলো?' — কোন বাচ্যের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্ত্রী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ভাব",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কর্ম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কর্মকর্তৃবাচ্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যেখানে ক্রিয়ার অর্থই প্রধানভাবে প্রকাশিত হয়, তাকে ভাববাচ্য বলে [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035303085,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "ক্রিয়ার প্রকাশভঙ্গির ভিন্নতা অনুযায়ী বাচ্য কত প্রকার?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুই প্রকার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তিন প্রকার",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "চার প্রকার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাঁচ প্রকার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ক্রিয়ার প্রকাশভঙ্গি বা বাচ্য মূলত তিন প্রকার [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035303198,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "নিচের কোন বাক্যটি ভাববাচ্যের?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শরতে শিউলি ফোটে।",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চিঠিটা পড়া হয়েছে।",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আমাদের কঠোর পরিশ্রম করতে হবে।",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ওখানে কেন যাওয়া হলো?",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "'ওখানে কেন যাওয়া হলো?' বাক্যটিতে ক্রিয়ার অর্থই প্রধান, তাই এটি ভাববাচ্য [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035303305,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "ভাববাচ্যে ক্রিয়াকে নিয়ন্ত্রণ করে কে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ক্রিয়াবিশেষণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ক্রিয়া-বিধেয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সর্বনাম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ক্রিয়া স্বয়ং",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ভাববাচ্যে ক্রিয়া নিজেই প্রধান থাকে, এটি অন্য কোনো পদের অনুসারী হয় না [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035303415,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "'ফ্যানটি অনেক জোরে ঘুরছে।' — এটি কোন বাচ্যের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্তবাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কর্মবাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ভাববাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কর্মকর্তৃবাচ্য",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "যে বাক্যে কর্মপদই কর্তার মতো আচরণ করে, তাকে কর্মকর্তৃবাচ্য বলে [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035303530,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "কর্তৃবাচ্যের বাক্যে ক্রিয়া কোনটিকে অনুসরণ করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্তাকে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কর্মকে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ভাবকে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অর্থকে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কর্তবাচ্যের বাক্যে ক্রিয়া সবসময় কর্তার অনুসারী হয় [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035303631,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "যে বাক্যের ক্রিয়া-বিশেষ্য ক্রিয়াকে নিয়ন্ত্রণ করে, তাকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্তবাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কর্মবাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ভাববাচ্য",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কোনোটাই নয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ভাববাচ্যে ক্রিয়ার অর্থ বা ক্রিয়া-বিশেষ্যই প্রধান ভূমিকা পালন করে [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035303736,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "'কখন আসা হলো?' — বাক্যটির কর্তবাচ্য হবে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "কখন আসলে?",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কখন এলেন?",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তুমি কখন এলে?",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তুমি কখন আসলে?",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কর্তবাচ্যে রূপান্তরের সময় এটি সরাসরি কর্তার ক্রিয়ার রূপ (এলেন) গ্রহণ করে [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035303838,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "নিচের কোনটি কর্মবাচ্যের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঝরনা ছবি আঁকে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শরতে শিউলি ফোটে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ওখানে কেন যাওয়া হলো",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চিঠিটা পড়া হয়েছে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "'চিঠিটা পড়া হয়েছে' বাক্যে ক্রিয়া কর্মের অনুসারী হওয়ায় এটি কর্মবাচ্য [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035303942,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "নিচের কোনটি ভাববাচ্যের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঝরনা ছবি আঁকে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চিঠিটা পড়া হয়েছে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শরতে শিউলি ফোটে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আমার যাওয়া হলো না",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "'আমার যাওয়া হলো না' বাক্যে ক্রিয়ার ভাব বা অর্থই প্রধান, তাই এটি ভাববাচ্য [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035304041,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "'আমার যাওয়া হলো না' — এটি কোন বাচ্যের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ভাববাচ্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কর্মবাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কর্তবাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সবগুলোই",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ক্রিয়ার অর্থই যেখানে প্রধান হয়ে ওঠে, তাকে ভাববাচ্য বলা হয় [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035304148,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "যে বাচ্যে ক্রিয়া-বিধেয় বা কর্মকে ক্রিয়া নিয়ন্ত্রণ করে, তাকে কী বাচ্য বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্মবাচ্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ভাববাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কর্তবাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কর্মকর্তৃবাচ্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কর্মের অনুসারী ক্রিয়াযুক্ত বাক্যই হলো কর্মবাচ্য [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035304259,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "'ওখানে কেন গেলে?' — বাক্যটি কোন বাচ্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্তবাচ্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ভাববাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কর্মবাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কর্মকর্তৃবাচ্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এখানে ক্রিয়া 'তুমি' (উহ্য) কর্তাকে অনুসরণ করেছে, তাই এটি কর্তবাচ্য [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035304368,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "কোন ধরনের বাচ্য পরিবর্তনে কর্তার সাথে দ্বারা, দিয়ে, কর্তৃক ইত্যাদি অনুসর্গ যোগ করতে হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্তবাচ্য থেকে কর্মবাচ্যে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কর্তবাচ্য থেকে কর্মবাচ্য",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কর্তবাচ্য থেকে ভাববাচ্যে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ভাববাচ্য থেকে কর্তবাচ্যে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কর্মবাচ্যে রূপান্তরের সময় কর্তার সাথে ৩য়া বিভক্তি বা অনুসর্গ (দ্বারা, দিয়া, কর্তৃক) যুক্ত হয় [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035304482,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "কর্মবাচ্যের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চিঠিটা পড়া হয়েছে।",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "শরতে শিউলি ফোটে।",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আমার যাওয়া হলো না।",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "এবার বাঁশিটি বাজাও।",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'চিঠিটা পড়া হয়েছে' বাক্যে কর্মের গুরুত্ব প্রকাশ পাচ্ছে, যা কর্মবাচ্যের লক্ষণ [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035304590,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "'ঝরনা ছবি আঁকে' — বাক্যটি কোন বাচ্যের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্মবাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ভাববাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কর্মকর্তৃবাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কর্তবাচ্য",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "'ঝরনা' এখানে সক্রিয় কর্তা এবং ক্রিয়া তাকে অনুসরণ করছে, তাই এটি কর্তবাচ্য [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035304699,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "নিচের কোন বাক্যটি ভাববাচ্যের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "এবার বাঁশিটি বাজাও।",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তুমি কখন এলে?",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "এখন বাঁশিটি বাজানো হোক।",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "চিঠিটা পড়া হয়েছে।",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'এখন বাঁশিটি বাজানো হোক' দ্বারা ক্রিয়ার ভাব বা অনুরোধ প্রকাশ পাচ্ছে [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035304797,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "'শরৎ শিউলি ফোটে' — এই বাক্যটি কোন বাচ্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ভাববাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কর্তবাচ্য",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কর্মবাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কর্মকর্তৃবাচ্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "এটি একটি সাধারণ বিবৃতিমূলক বাক্য যেখানে কর্তা প্রধান, তাই এটি কর্তবাচ্য [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035304917,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "'কখন আসা হলো?' — এটি কোন বাচ্যের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্তবাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ভাববাচ্য",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কর্মবাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কর্মকর্তৃবাচ্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ক্রিয়ার অর্থই এখানে মুখ্য, তাই এটি ভাববাচ্য [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035305026,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "'শরতে শিউলি ফোটে।' — এটি কোন বাচ্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ভাববাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কর্মবাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কর্তবাচ্য",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কর্তা ও কর্মবাচ্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ক্রিয়া কর্তার অনুসারী হওয়ার কারণে এটি কর্তবাচ্য [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035305130,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "'একটু বাইরে বেরিয়ে আসা যাক' ভাববাচ্যের এই বাক্যটির কর্তবাচ্য কী হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চলো বাইরে বেরিয়ে আসি।",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "একটু বাইরে বেড়াতে যাই।",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "একটু বাইরে বেড়াতে এসো।",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "একটু বাইরে বেরিয়ে আসি।",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কর্তবাচ্যে রূপান্তর করলে এটি 'একটু বাইরে বেরিয়ে আসি' হবে [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035305230,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "'পুলিশ কর্তৃক ডাকাত ধৃত হয়েছে' — এটি কোন বাচ্যের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্তবাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কর্মবাচ্য",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ভাববাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সবগুলোই",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'কর্তৃক' অনুসর্গ এবং কর্মের (ডাকাত) প্রাধান্য থাকায় এটি কর্মবাচ্য [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035305329,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "কর্তবাচ্যের বাক্য কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ছাত্ররা অঙ্ক করছে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "আমার খাওয়া হবে না",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তোমাকে বসতে হবে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "এবার একটি গান গাওয়া হোক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'ছাত্ররা' কর্তার সক্রিয় কাজ প্রকাশ পাওয়ায় এটি কর্তবাচ্য [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035305450,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "'এবার বাঁশিটি বাজানো হোক' — বাক্যটি কোন বাচ্যের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্তবাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কর্মবাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ভাববাচ্য",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কর্মকর্তৃবাচ্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বাক্যে ক্রিয়ার রূপই প্রধান হয়ে উঠেছে, যা ভাববাচ্যের বৈশিষ্ট্য [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035305564,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "কোন বাচ্যের বাক্যকে অন্য বাচ্যে রূপান্তরিত করতে হলে একটি ক্রিয়া-বিশেষ্যকে নিয়ন্ত্রকের ভূমিকায় নিয়ে আসতে হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্মবাচ্যের বাক্যকে কর্তবাচ্যে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কর্তবাচ্যের বাক্যকে কর্মবাচ্যে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কর্তবাচ্যের বাক্যকে ভাববাচ্যে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ভাববাচ্যের বাক্যকে কর্তবাচ্যে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ভাববাচ্যে রূপান্তরের সময় ক্রিয়া-বিধেয় বা ক্রিয়ার ভাবকে প্রাধান্য দেওয়া হয় [৯]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035305669,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৬: বাচ্য",
+    "question": "ভাববাচ্যের ক্রিয়া সর্বদাই কোন পুরুষের হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "উত্তম পুরুষের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মধ্যম পুরুষের",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নাম পুরুষের",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "উত্তম ও মধ্যম পুরুষের",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ভাববাচ্যের ক্রিয়া সব সময় নাম পুরুষ বা ৩য় পক্ষে হয়ে থাকে [৯]।",
+    "image": null,
+    "language": "en"
+  }
+]

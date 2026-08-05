@@ -1,0 +1,200 @@
+[
+  {
+    "id": 1779877002534,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩ - বাংলা ভাষার রীতি ও বিভাজন",
+    "question": "বর্তমানে লেখ্য ভাষার আদর্শ রীতিকে বলে-",
+    "options": "[{\"label\":\"a\",\"text\":\"সাধু রীতি\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"লেখ্য রীতি\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"আঞ্চলিক রীতি\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"প্রমিত রীতি\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877002649,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩ - বাংলা ভাষার রীতি ও বিভাজন",
+    "question": "বাংলা ভাষায় সাধু/গদ্য রীতির সূচনা হয়-",
+    "options": "[{\"label\":\"a\",\"text\":\"প্রাচীন যুগে\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"মধ্যযুগে\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"উনিশ শতকের শুরুতে\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"বিশ শতকের শুরুতে\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877002776,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩ - বাংলা ভাষার রীতি ও বিভাজন",
+    "question": "নিচের কোনটি সাধু রীতির ক্রিয়াপদ?",
+    "options": "[{\"label\":\"a\",\"text\":\"করিল\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"করেছে\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"করত\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"করলাম\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877002904,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩ - বাংলা ভাষার রীতি ও বিভাজন",
+    "question": "সাধু রীতির বৈশিষ্ট্য কোনটি?",
+    "options": "[{\"label\":\"a\",\"text\":\"ক্রিয়ারূপ দীর্ঘ\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"বিশেষ্যের আধিক্য\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"অনুসর্গ হ্রস্বতর\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"সর্বনাম হ্রস্বতর\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877003028,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩ - বাংলা ভাষার রীতি ও বিভাজন",
+    "question": "বাংলাদেশের রংপুর অঞ্চলে কোন উপভাষার ব্যবহার পাওয়া যায়?",
+    "options": "[{\"label\":\"a\",\"text\":\"বরেন্দ্রি\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"রাঢ়ি\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"কামরূপি\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"পূর্বি\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877003145,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩ - বাংলা ভাষার রীতি ও বিভাজন",
+    "question": "ভাষার মূল রূপ বলা হয় কোন ভাষা রীতিকে?",
+    "options": "[{\"label\":\"a\",\"text\":\"কথ্য\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"প্রমিত\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"সাধু\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"চলিত\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877003267,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩ - বাংলা ভাষার রীতি ও বিভাজন",
+    "question": "বাংলা কাব্য রীতি কয় ভাগে বিভক্ত?",
+    "options": "[{\"label\":\"a\",\"text\":\"২ ভাগে\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"৪ ভাগে\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"৩ ভাগে\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"৫ ভাগে\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877003394,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩ - বাংলা ভাষার রীতি ও বিভাজন",
+    "question": "নিচের কোনটি 'চুল' শব্দের সমার্থক?",
+    "options": "[{\"label\":\"a\",\"text\":\"লোচন\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"চিকুর\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"দুম\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"অক্ষি\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877003621,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩ - বাংলা ভাষার রীতি ও বিভাজন",
+    "question": "পশ্চিমবঙ্গে কোন উপভাষার ব্যবহার পাওয়া যায়?",
+    "options": "[{\"label\":\"a\",\"text\":\"বরেন্দ্রি\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"রাঢ়ি\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"কামরূপি\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"পূর্বি\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877003804,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩ - বাংলা ভাষার রীতি ও বিভাজন",
+    "question": "বাংলাদেশের মধ্য ও দক্ষিণ অঞ্চলে কোন উপভাষার ব্যবহার পাওয়া যায়?",
+    "options": "[{\"label\":\"a\",\"text\":\"বাঙালি\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"পূর্বি\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"বরেন্দ্রি\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"রাঢ়ি\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877003935,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩ - বাংলা ভাষার রীতি ও বিভাজন",
+    "question": "'চর্যাপদ' লেখ্য ভাষা রীতির কোন রীতিতে রচিত?",
+    "options": "[{\"label\":\"a\",\"text\":\"প্রমিত রীতি\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"সাধু রীতি\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"কাব্য রীতি\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"গদ্য রীতি\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877004056,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩ - বাংলা ভাষার রীতি ও বিভাজন",
+    "question": "চলিত রীতির নতুন নাম প্রমিত রীতি হয়-",
+    "options": "[{\"label\":\"a\",\"text\":\"বিশ শতকের সূচনায়\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"বিশ শতকের মাঝামাঝি\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"বিশ শতকের শেষে\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"একুশ শতকের সূচনায়\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877004173,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩ - বাংলা ভাষার রীতি ও বিভাজন",
+    "question": "সাধু রীতির বহু সর্বনামে কী যুক্ত থাকে?",
+    "options": "[{\"label\":\"a\",\"text\":\"ক-বর্ণ\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"ত-বর্ণ\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"হ-বর্ণ\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"ম-বর্ণ\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877004291,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩ - বাংলা ভাষার রীতি ও বিভাজন",
+    "question": "কীসের ভেদে ভাষার পার্থক্য ও পরিবর্তন ঘটে থাকে?",
+    "options": "[{\"label\":\"a\",\"text\":\"কাল ও দেশভেদে\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"পরিবেশ ও অঞ্চলভেদে\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"দেশ, কাল ও পরিবেশভেদে\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"কাল ও স্থানভেদে\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877004454,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩ - বাংলা ভাষার রীতি ও বিভাজন",
+    "question": "কোন শতকের সূচনা নাগাদ চলিত রীতির নতুন নাম হয় প্রমিত রীতি?",
+    "options": "[{\"label\":\"a\",\"text\":\"আঠারো\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"উনিশ\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"বিশ\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"একুশ\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877004687,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩ - বাংলা ভাষার রীতি ও বিভাজন",
+    "question": "বাংলা সাহিত্যের বহু অমর কাব্য ভাষার কোন রীতিতে রচিত?",
+    "options": "[{\"label\":\"a\",\"text\":\"গদ্য কাব্য রীতি\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"প্রমিত রীতি\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"সাধু রীতি\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"পদ্য কাব্য রীতি\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877004817,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩ - বাংলা ভাষার রীতি ও বিভাজন",
+    "question": "প্রমিত রীতির শব্দ কোনটি?",
+    "options": "[{\"label\":\"a\",\"text\":\"তুলা\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"শুকনা\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"তুলো\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"পড়িল\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877004942,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩ - বাংলা ভাষার রীতি ও বিভাজন",
+    "question": "প্রতিটি বাঙালি শিশুর মাতৃভাষা বা প্রথম ভাষা হলো তার-",
+    "options": "[{\"label\":\"a\",\"text\":\"আদর্শ কথ্য ভাষা\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"লেখ্য প্রমিত ভাষা\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"আঞ্চলিক ভাষা\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"উপভাষা\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  }
+]

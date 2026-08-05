@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1768036801495,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "প্রবাদ",
+    "question": "‘গুইহীনের অর্থ আস্ফালন’—অর্থটি কোন প্রবাদে প্রকাশ পেয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কানা ছেলের নাম পদ্মলোচন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঘৃত দেখে নাচেন বামন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অসারের তর্জন গর্জন সার",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "আধ কপালে সুখ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যার মধ্যে কোনো সার বা গুণ নেই তার আস্ফালনকেই বলা হয় ‘অসারের তর্জন গর্জন সার’ [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036801608,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "প্রবাদ",
+    "question": "‘অতিশয় গোপনে উদ্দেশ্য অর্জনের প্রচেষ্টা’—কোন প্রবাদের সাহায্যে বোঝানো যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অতি ভক্তি চোরের লক্ষণ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অতি চালাকের গলায় দড়ি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অতি দর্পে হৃত লঙ্কা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অতি লোভে তাঁতি নষ্ট",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অতিরিক্ত ভক্তি দেখালে বুঝতে হবে তার পেছনে কোনো গুপ্ত উদ্দেশ্য রয়েছে [৩]।",
+    "image": null,
+    "language": "en"
+  }
+]

@@ -1,0 +1,2498 @@
+[
+  {
+    "id": 1768400874822,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "নিচের কোনটি সত্যেন্দ্রনাথ দত্ত রচিত কাব্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অপরাজিতা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিসর্জন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বেলা শেষের গান",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ছায়ানট",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সত্যেন্দ্রনাথ দত্তের উল্লেখযোগ্য মৌলিক কাব্যগ্রন্থগুলোর মধ্যে 'বেলা শেষের গান' অন্যতম। [১, ৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400878037,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "বাংলা সাহিত্যে 'ছন্দের জাদুকর' কে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রবীন্দ্রনাথ ঠাকুর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জীবনানন্দ দাশ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সত্যেন্দ্রনাথ দত্ত",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কামিনী রায়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সত্যেন্দ্রনাথ দত্ত বৈচিত্র্যময় ছন্দ নির্মাণে অসাধারণ নৈপুণ্য দেখিয়েছেন বলে তাকে 'ছন্দের জাদুকর' বলা হয়। [২, ৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400878160,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "কবি সত্যেন্দ্রনাথ দত্ত কত বছর বয়সে মারা যান?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাইশ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আটচল্লিশ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আটত্রিশ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চল্লিশ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কবি ১৮৮২ সালে জন্মগ্রহণ করেন এবং ১৯২২ সালে মাত্র ৪০ বছর বয়সে মৃত্যুবরণ করেন। [২, ৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400878280,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "'চপল পায় কেবল ধাই'—এ বক্তব্যে ঝরনার কোন বিষয়টি ফুটে উঠেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সৌন্দর্যপ্রীতি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গতিশীলতা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "চঞ্চলতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নির্ভীকতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ঝরনার নিরন্তর বয়ে চলা বা গতিশীলতাকে বোঝাতে 'চপল পায় কেবল ধাই' চরণটি ব্যবহৃত হয়েছে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400878401,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "'ঝরনার গান' কবিতায় 'পরীর গান' বলতে কী বোঝানো হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নিরবচ্ছিন্ন গতি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অমঙ্গলকর ছবি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নান্দনিক সৌন্দর্য",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "শব্দহীন চিত্ত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কবিতায় 'পরীর গান' বলতে ঝরনার শব্দের নান্দনিক ও মায়াবী সৌন্দর্যকে বোঝানো হয়েছে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400878516,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনা নিজের পায়ে কী বাজায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তাল",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "স্বর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বোল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ঘুঙুর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ঝরনা নিজের চলার ছন্দে বা তালে এগিয়ে চলে, যা তার নিজের পায়ে 'তাল' বাজানো হিসেবে বর্ণিত। [১, ২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400878673,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "'ভর সন্ধ্যায় চোখ পাকায়'—কে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিজন দেশ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঝুম-পাহাড়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পাত কুয়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কাক সার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পাহাড়ের নিস্তব্ধতা বা গম্ভীর রূপকে কবি ঝুম-পাহাড়ের চোখ পাকানোর সঙ্গে তুলনা করেছেন। [২, ৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400878800,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "কোন পঙক্তিতে ঝরনার অপ্রতিরোধ্য গতির প্রকাশ ঘটেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শঙ্কা নাই, সমান যাই",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "চপল পায় কেবল ধাই",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নিজের পায় বাজাই তাল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ধাই লীলায় খিলখিলাই",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বাধা বা ভয়কে তোয়াক্কা না করে সামনের দিকে এগিয়ে যাওয়ার সংকল্পই ঝরনার অপ্রতিরোধ্য গতি প্রকাশ করে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400879026,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "চলার পথে ঝরনা কার বোল সাধে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "টিয়ার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চকোরের",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বুলবুলির",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শালিকের",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ঝরনা চকোর পাখির মতো শব্দের বা সৌন্দর্যের অনুকরণে ছন্দ মিলিয়ে চলে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400879143,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "শালিক শুক বুলায় মুখ—কোথায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নদীর জলে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পুকুরের জলে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "থল-তড়িতে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বরফের স্তূপে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কবিতায় উল্লিখিত হয়েছে যে শালিক ও শুক নামক পাখিরা থল-তড়িতে বা স্থলভাগের জলাশয়ে মুখ ধোয়। [২, ৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400879269,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনার এগিয়ে যাওয়ার মূল উদ্দেশ্য কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নিয়ে নাই, শুনতে পাই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সুন্দরের তৃষ্ণা যার",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "শঙ্কা নাই, সমান যাই",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বেয়াল নাই-রে নাই",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যাদের মনে সৌন্দর্যের তৃষ্ণা আছে, ঝরনা তাদের জন্যই মূলত বয়ে চলে। [২, ৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400879375,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "'আমরা ধাই তার আগেই'—এখানে 'তার' বলতে কাকে বোঝানো হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সৌন্দর্য প্রেমিক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বুলবুলি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ফটিক জল",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "তৃষ্ণার্ত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "চাতক পাখি বা ফটিক জল নামক পাখির ডাকের আগেই ঝরনা এগিয়ে যায়। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400879487,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "কবির বক্তব্য অনুযায়ী কোন পাখি চাঁদের আলো পান করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফটিক জল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কানাকুয়ো",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শালিক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চকোর",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পৌরাণিক বিশ্বাস অনুযায়ী চকোর পাখি চাঁদের সুধা বা জোছনা পান করে তৃপ্ত হয়। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400879605,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "'চকোর চায় চন্দ্রমায় আমরা চাই মুখ চন্দ্রে'—চরণটিতে ঝরনার কোন রূপটি ফুটে উঠেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সৌন্দর্যপ্রীতি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ছন্দময়তা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গতিময়তা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কল্পনা-বিলাসিতা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এখানে ঝরনার কল্পনার প্রকাশ ঘটেছে, যেখানে সে চাঁদের আলোর চেয়েও সুন্দর কিছু পাওয়ার আকাঙ্ক্ষা করে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400879727,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনা ঝিলিক দেয় কোথায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বনে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পাহাড়ে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ঝোপঝাড়ে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাথরের আঘাতে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ঝরনা যখন পাথরের ওপর দিয়ে বয়ে যায়, তখন ঘর্ষণে বা আঘাতে ঝিলিক তৈরি হয়। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400879925,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "'ঝরনার গান' কবিতায় বর্ণিত 'ফটিক জল' কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পানি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পাখি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পরী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নদী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'ফটিক জল' বলতে চাতক পাখিকে বোঝানো হয়েছে, যার ডাককে 'ফটিক জল' শব্দের মতো মনে হয়। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400880062,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনার উজ্জ্বলতা প্রকাশ পায় নিচের কোন চরণে?\ni. কেবল গাই পরীর গান\nii. তার খোলাই বিরাম নেই\niii. ঝিলমিলাই দিগবিদিক",
+    "options": [
+      {
+        "label": "a",
+        "text": "i",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ঝরনার বিরামহীন ছুটে চলা এবং দিগবিদিক ঝিলমিল করার মাধ্যমে তার উজ্জ্বলতা ফুটে ওঠে। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400880174,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনা পায়ে কোন ফুলের নূপুর পরে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কদম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জুঁই",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "টগর",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কেয়া",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কবিতায় ঝরনার পায়ে 'টগর-ফুল-নূপুর' পরার কথা উল্লেখ করা হয়েছে। [৩, ৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400880279,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "সত্যেন্দ্রনাথ দত্তের অনুবাদ সাহিত্য কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তীর্থ-সলিল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফুলের ফসল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তীর্থরেণু",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ক ও গ উভয়ই",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "'তীৰ্থ-সলিল' ও 'তীৰ্থরেণু' সত্যেন্দ্রনাথ দত্তের বিখ্যাত অনুবাদ কাব্যগ্রন্থ। [৪, ৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400880386,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনার মন কেমন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শিথিল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিভোর",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "স্বচ্ছ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দোদুল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ঝরনা নিজের গানে ও চলার ছন্দে সব সময় বিভোর হয়ে থাকে। [৩, ৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400880501,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "'ঝরনার গান' কবিতায় ঝরনা কার আগতে এগিয়ে চলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তৃষ্ণার্তদের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সৌন্দর্য পিয়াসুদের",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কৌতূহলীদের",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাষাণদের",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ঝরনা মূলত সৌন্দর্য পিয়াসু বা সুন্দরের সন্ধানকারীদের জন্য দ্রুত ধাবিত হয়। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400880612,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "'অচল-ঠাঁই' বলতে ঝরনা কাকে নির্দেশ করেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পাহাড়কে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "শিলাকে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মাটিকে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আকাশকে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পাহাড় স্থির বা অচল বলে একে ঝরনা 'অচল-ঠাঁই' হিসেবে সম্বোধন করেছে। [২, ৪, ৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400880730,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনার সারা গায়ে কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পুলক",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "শিলা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ঝিকি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "টগর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ঝরনার চলার আনন্দ ও সজীবতাকে 'পুলক' হিসেবে বর্ণনা করা হয়েছে। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400880843,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "গিরির কাঁসার ললাট ঘেমে কী ঝরছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তপ্ত জল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হিম জল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "নোনা জল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ফটিক জল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পাহাড়ের শরীর বেয়ে শীতল বা হিম জল ঝরে পড়ে, যা ঝরনার সৃষ্টি করে। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400881043,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "শিলার গায়ে কেমন রঙ ধরে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শোলার রং",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ডালিম চিনির রং",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সবুজ রং",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সোনালি রং",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পাহাড়ের ডালিম ফাটার মতো লালচে বা বিশেষ সৌন্দর্যকে 'ডালিম চিনির রং' বলা হয়েছে। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400949103,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "'ঝরনার গান' কবিতায় কোন কোন পাখি তাদের মুখ ধোয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শালিক ও বুলবুলি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বুলবুলি ও টিয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শালিক ও দোয়েল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শালিক ও শুক",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কবিতায় উল্লেখ আছে যে শালিক ও শুক পাখি 'থল-তড়িতে' বা স্থলভাগের জলাশয়ে তাদের মুখ ধোয়। [২, ৪, ৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400949330,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "'ঝরনার গান' কবিতায় ঝরনার এগিয়ে যাওয়ার মূল উদ্দেশ্য কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নিয়ে নাই, শুনতে পাই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সুন্দরের তৃষ্ণা যার",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "শঙ্কা নাই, সমান যাই",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বেয়াল নাই-রে নাই",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ঝরনা সেই সৌন্দর্যপিপাসুদের জন্যই এগিয়ে চলে যাদের মনে সুন্দরের জন্য তৃষ্ণা রয়েছে। [২, ৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400949443,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "'আমরা ধাই তার আগেই'—এখানে 'তার' বলতে কাকে বোঝানো হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সৌন্দর্য প্রেমিক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বুলবুলি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ফটিক জল",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "তৃষ্ণার্ত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "চাতক পাখি বা ফটিক জল নামক পাখির তৃষ্ণার ডাক দেওয়ার আগেই ঝরনা তার গতিপথে এগিয়ে যায়। [২, ৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400949560,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "'ঝরনার গান' কবিতায় কোন পাখির নাম উল্লেখ রয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চাতক",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "গাঙচিল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দোয়েল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কবিতায় 'ফটিক জল' বা চাতক পাখির কথা উল্লেখ করা হয়েছে, যার ডাক শোনার আগেই ঝরনা ছুটে চলে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400949676,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "কবির বক্তব্য অনুযায়ী কোন পাখি চাঁদের আলো পান করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফটিক জল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কানাকুয়ো",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শালিক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চকোর",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পৌরাণিক বিশ্বাস মতে চকোর পাখি জোছনা বা চন্দ্রমায় তৃপ্ত হয়; ঝরনাও তার ছন্দময় চলনে চকোরের বোল সাধে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400949792,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "'চকোর চায় চন্দ্রমায় আমরা চাই মুখ চন্দ্রে'—চরণটিতে ঝরনার কোন রূপ ফুটে উঠেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সৌন্দর্যপ্রিয়তা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ছন্দময়তা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গতিময়তা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কল্পনা-বিলাসিতা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এখানে ঝরনার উচ্চতর সৌন্দর্য আকাঙ্ক্ষা বা কল্পনার জগৎ প্রকাশিত হয়েছে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400949907,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনা ঝিলিক দেয় কোথায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বনে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পাহাড়ে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ঝোপঝাড়ে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাথরের আঘাতে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ঝরনা যখন পাথুরে পথে দ্রুত বেগে প্রবাহিত হয়, তখন পাথরের সঙ্গে সংঘর্ষে বা আঘাতে ঝিলিক সৃষ্টি হয়। [২, ৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400950139,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনা কোন ফুল দিয়ে নূপুর পরে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কদম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জুঁই",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "টগর",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কেয়া",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কবিতার বর্ণনায় ঝরনার পায়ে 'টগর-ফুল-নূপুর' পরার কথা বলা হয়েছে যা তার সৌন্দর্যকে বাড়িয়ে দেয়। [৩, ৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400950374,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "'ঝরনার গান' কবিতায় ঝরনার বৈশিষ্ট্য কোনটি?\ni. গতিশীলতা\nii. চঞ্চলতা\niii. আনন্দময়তা",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ঝরনা একই সাথে চঞ্চল, গতিশীল এবং তার চলার ছন্দে আনন্দময় বা পুলকিত। [৩, ৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400950594,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনার উজ্জ্বলতা প্রকাশ পায় কোন চরণে?\ni. কেবল গাই পরীর গান\nii. তার খোলাই বিরাম নেই\niii. ঝিলমিলাই দিগবিদিক",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ঝরনার বিরামহীন গতি এবং চারদিকে ঝিলমিল করে আলোকচ্ছটা ছড়ানোর মাধ্যমে তার উজ্জ্বলতা প্রকাশ পায়। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400950740,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "অনুচ্ছেদে বর্ণিত 'আলোক পিয়াসী' শিশুদের সাথে ঝরনার কোন গুণের মিল পাওয়া যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সৌন্দর্য পিপাসা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "মুগ্ধতা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গতিময়তা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সৃষ্টির আনন্দ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যারা সুন্দরের সন্ধান করে বা আলোক পিয়াসী, ঝরনা কেবল তাদের জন্যই নিজের সৌন্দর্য বিলিয়ে দেয়। [৩, ৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400950880,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "দুপুরে ঝরনা কার গান শুনতে পায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঝিঁঝির",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "পরীর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বুলবুলির",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শালিকের",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "নির্জন দুপুরে যখন বন ঘুমিয়ে থাকে, তখন ঝরনা ঝিঁঝি পোকার ডাক বা গান শুনতে পায়। [৩, ৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400951003,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "'ঝুম-পাহাড়' কীভাবে ঝরনাকে দেখে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঘাড় উঁচিয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চোখ পাকিয়ে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মুখ বাঁকিয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অনিমেষ নয়নে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পাহাড়ের গম্ভীর ও নিস্তব্ধ রূপকে কবি 'ঝুম-পাহাড়' চোখ পাকিয়ে থাকা হিসেবে কল্পনা করেছেন। [৩, ৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400951222,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "'একলা গাই, একলা ধাই'—এরপরের পঙক্তি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিজন দেশ, কূজন নাই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দিবস রাত, সাঁঝ সকাল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "নিজের পায় বাজাই তাল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কিমায় পথ, ঘুমায় বন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কবিতার ছন্দ অনুযায়ী 'একলা গাই, একলা ধাই / দিবস রাত, সাঁঝ সকাল' চরণটি সার্থক। [৩, ৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400951353,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "'বিজন দেশ' বলতে কবি কী বুঝিয়েছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জনশূন্য এলাকা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "পাহাড়ের ঢাল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গহীন অরণ্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ঝরনার উৎসস্থল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'বিজন দেশ' বলতে যেখানে লোকালয় বা মানুষের কোলাহল নেই এমন নির্জন স্থানকে বোঝানো হয়েছে। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400951547,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "সত্যেন্দ্রনাথ দত্ত কোন পত্রিকার সম্পাদক ছিলেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তত্ত্ত্ববোধিনী",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সবুজপত্র",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ভারতী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কল্লোল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কবি সত্যেন্দ্রনাথ দত্ত বিখ্যাত 'তত্ত্ত্ববোধিনী' পত্রিকার সম্পাদকের দায়িত্ব পালন করেছিলেন। [৪, ৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400951677,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "সত্যেন্দ্রনাথ দত্তের অনুবাদ কাব্য কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সবিতা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সন্ধিক্ষণ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তীর্থরেণু",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বেলা শেষের গান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'তীৰ্থরেণু' এবং 'তীৰ্থ-সলিল' কবির উল্লেখযোগ্য অনুবাদমূলক কাব্যগ্রন্থ। [৪, ৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400951795,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনা কার কাঁসার ললাট ঘেমে ঝরে পড়ে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বনের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পাহাড়ের",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গিরির",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "শিলার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "গিরি বা পাহাড়ের ললাট বা কপাল ঘেমে হিম জল ঝরনার রূপ নেয় বলে কবি বর্ণনা করেছেন। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400951907,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "'ডালিম চিনির রং' বলতে কোনটিকে বোঝানো হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঝরনার জল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শিলার গায়ের রং",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পরীর পোশাক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সন্ধ্যার আকাশ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ঝরনার প্রবাহে শিলা বা পাথরের গায়ে যে বিশেষ আভা বা রঙের সৃষ্টি হয় তাকে 'ডালিম চিনির রং' বলা হয়েছে। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400952025,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনা নিজেকে কার সাথে তুলনা করেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পরীর সাথে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চপল মেয়ের সাথে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মুক্ত জীবনানন্দের সাথে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ভ্রাম্যমাণ পর্যটকের সাথে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ঝরনা নিজেকে 'মুক্ত জীবনানন্দ' বা আনন্দময় প্রাণের সাথে তুলনা করে তার স্বাধীনতার কথা বলেছে। [২, ৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400952137,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনার গান কবিতায় 'অচল-ঠাঁই' বলতে কাকে নির্দেশ করা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পাথর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পাহাড়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মাটি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পাহাড় স্থির এবং নড়াচড়া করতে পারে না বলে ঝরনা তাকে 'অচল-ঠাঁই' হিসেবে ব্যঙ্গ করেছে। [২, ৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400952353,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনার সারা গায়ে কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শিলা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পুলক",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কাদা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ঝরনার চঞ্চল চলন এবং গতির যে আনন্দ, তাকে 'সারা গায়ে পুলক' হিসেবে বর্ণনা করা হয়েছে। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400952565,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "কবি সত্যেন্দ্রনাথ দত্ত কত খ্রিস্টাব্দে জন্মগ্রহণ করেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৮৮০",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১৮৮২",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "১৮৮৪",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১৮৯০",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কবি সত্যেন্দ্রনাথ দত্ত ১৮৮২ খ্রিস্টাব্দে কলকাতার নিমতা গ্রামে জন্মগ্রহণ করেন। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400952684,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "কার 'বোল' ঝরনা সাধতে চায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চকোরের",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "টিয়ার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বুলবুলির",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পরীর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ঝরনা চলার পথে চকোর পাখির ডাক বা শৈলী অনুসরণ করে তার বোল সাধে। [২, ৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401037651,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "সত্যেন্দ্রনাথ দত্তের পিতামহ অক্ষয়কুমার দত্ত কোন পত্রিকা সম্পাদনা করতেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তত্ত্ববোধিনী",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সবুজপত্র",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ভারতী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কল্লোল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কবির পিতামহ অক্ষয়কুমার দত্ত ছিলেন বিখ্যাত **তত্ত্ববোধিনী** পত্রিকার সম্পাদক। [৩, ৪, ৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401037775,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনা চলার পথে দুপুরে কার গান শুনতে পায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঝিঁঝির",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "পরীর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বুলবুলির",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শালিকের",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "নির্জন দুপুরে যখন বন ঘুমিয়ে থাকে, তখন ঝরনা কেবল **ঝিঁঝি পোকার** ডাক বা গান শুনতে পায়। [৩, ৪, ৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401037902,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "সত্যেন্দ্রনাথ দত্ত কোন ক্ষেত্রে অসাধারণ নৈপুণ্য দেখিয়েছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কাব্য বুননে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অনুবাদ সাহিত্যে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিদেশি ভাষা চর্চায়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ছন্দ নির্মাণে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ছন্দের বিচিত্র ও নিপুণ ব্যবহারের কারণে তাকে **ছন্দের জাদুকর** বলা হয়। [১, ৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401038016,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "'একলা গাই, একলা ধাই'—পরবর্তী চরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিজন দেশ কূজন নাই",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "দিবস রাত সাঁঝ সকাল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নিজের পায় বাজাই তাল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কিমায় পথ ঘুমায় বন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কবিতার মূল পাঠে 'একলা গাই, একলা ধাই' চরণের পর **'বিজন দেশ কূজন নাই'** উল্লেখ রয়েছে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401038140,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনা কার সাথে পথ চলতে চায় না?",
+    "options": [
+      {
+        "label": "a",
+        "text": "যার সুন্দরের তৃষ্ণা আছে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "যার জমানোর ইচ্ছে আছে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "যার কোনো ঘর নেই",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "যার অনেক গান আছে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ঝরনা কেবল সুন্দরের পিয়াসীদের জন্য বয়, যারা কেবল **ধন-সম্পদ জমাতে** চায় তাদের প্রতি তার অনীহা। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401038269,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনা কার সাথে কথা বলতে চায় না?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পরীর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শিলা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পাষাণ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "থল-তড়ি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ঝরনা পাহাড়ের স্থির ও নির্জীব **পাষাণ** অংশের সাথে কোনো আলাপ বা সম্পর্ক রাখতে চায় না। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401038390,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "'সুধা পেয়েছে' বলতে 'ফটিক জল' পাখির কোন অবস্থাকে বোঝানো হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পা পেয়েছে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তৃষ্ণা পেয়েছে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মন খারাপ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গান পেয়েছে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "চাতক পাখি বা ফটিক জল যখন বৃষ্টির জলের জন্য **তৃষ্ণার্ত** হয়, তাকেই 'সুধা পেয়েছে' বলা হয়েছে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401038503,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "'অচল-ঠাঁই' বলতে কবি কাকে ব্যঙ্গ করেছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পাহাড়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "টিলা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শিলা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "থল-তড়ি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ঝরনা নিজে গতিশীল কিন্তু **পাহাড়** স্থির বা অচল বলে ঝরনা তাকে 'অচল-ঠাঁই' বলে উপহাস করেছে। [২, ৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401038649,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "সত্যেন্দ্রনাথ দত্তের মৌলিক কাব্যগ্রন্থ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তীর্থ-সলিল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফুলের ফসল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সবিতা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "তীর্থরেণু",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সবিতা**, সন্ধিক্ষণ ও বেণু ও বীণা সত্যেন্দ্রনাথ দত্তের উল্লেখযোগ্য মৌলিক কাব্য। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401038764,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "'বেলা শেষের গান' সত্যেন্দ্রনাথ দত্তের কোন ধরনের রচনা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মৌলিক কাব্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অনুবাদ কাব্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উপন্যাস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রবন্ধ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বেলা শেষের গান** কবির একটি গুরুত্বপূর্ণ মৌলিক কাব্যগ্রন্থ। [১, ৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401038971,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "সত্যেন্দ্রনাথ দত্তের মৃত্যু কত সালে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৯২১",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১৯২২",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "১৯২৩",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১৯২৪",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কবি সত্যেন্দ্রনাথ দত্ত **১৯২২ সালে** মাত্র ৪০ বছর বয়সে মৃত্যুবরণ করেন। [১, ৪, ৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401039084,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনা চপল পায়ে ছুটে চলে কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিরামহীন পথ চলার কারণে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ভয়ের কারণে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পুলক পাওয়ার কারণে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ক্লান্তির কারণে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ঝরনার ধর্মই হলো **বিরামহীনভাবে** চপল পায়ে সামনের দিকে এগিয়ে যাওয়া। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401039217,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনা কার ললাট ঘেমে ঝরে পড়ছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বনের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গিরির",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "শিলার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মেঘের",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পাহাড় বা **গিরির** হিম শীতল কপাল বা ললাট ঘেমে ঝরনা সৃষ্টি হয়ে নিচে নেমে আসে। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401039335,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনা ছুটে চলার সময় বন কী করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গান গায়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঘুমিয়ে থাকে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "নাচ করে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ভয় দেখায়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বন যখন ঝিমিয়ে বা **ঘুমিয়ে থাকে**, ঝরনা তখনো তার গতি বজায় রেখে ছুটে চলে। [৩, ৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401039451,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনার দিকে 'ঝুম-পাহাড়' কী করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঘাড় উঁচিয়ে দেখে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চোখ পাকিয়ে ভয় দেখায়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "হাসে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চোখ বুজে থাকে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "নিস্তব্ধ পাহাড় বা ঝুম-পাহাড় ঝরনার চঞ্চলতার বিপরীতে **চোখ পাকিয়ে** গম্ভীরভাবে তাকিয়ে থাকে। [১, ৩, ৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401039584,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "গিরির কাঁসার ললাট ঘেমে কী ঝরছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তপ্ত জল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হিম জল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "নোনা জল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কাদা জল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পাহাড়ের শরীর থেকে নিঃসৃত শীতল বা **হিম জলই** ঝরনা হিসেবে প্রবাহিত হয়। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401039699,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "শিলার গায়ে কেমন রঙ ধরে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শোলার রঙ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ডালিম চিনির রঙ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সর্ষে ফুলের রঙ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আকাশের রঙ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ঝরনার জলের স্পর্শে পাহাড়ের পাথরের গায়ে **ডালিম চিনির** মতো রক্তিম বা সুন্দর আভা দেখা দেয়। [৪, ৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401039810,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "কার অঙ্গ ঝকমক করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পরীর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পাহাড়ের",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ঝরনার",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "শিলার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ঝরনার টলটলে স্বচ্ছ জল এবং তার গতিময়তা তার পুরো শরীর বা **অঙ্গকে ঝকমকে** করে তোলে। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401039929,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনা কার 'বোল' বা ডাক অনুকরণ করতে চায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বুলবুলির",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চকোরের",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "টিয়ার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ডাহুকের",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ঝরনা তার চলার ছন্দে **চকোর পাখির** ডাক বা বোল সাধার চেষ্টা করে। [২, ৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401040055,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনার সারা গায়ে কী লেগে থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ধুলো",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পুলক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কাদা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শৈবাল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ঝরনার চলার আনন্দ ও সজীবতাকে কবির ভাষায় **'পুলক'** হিসেবে বর্ণনা করা হয়েছে। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401040167,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনা কার গান গায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বনের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পরীর",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "নিজের",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বৃষ্টির",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ঝরনা তার বয়ে চলার সময় যেন এক মায়াবী **পরীর গান** গাইতে গাইতে এগিয়ে যায়। [১, ২, ৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401040301,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "সত্যেন্দ্রনাথ দত্তের অনুবাদ কাব্যগ্রন্থ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তীর্থ-সলিল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মণি-মঞ্জুষা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তীর্থরেণু",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সবকটি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "তীৰ্থ-সলিল**, **তীৰ্থরেণু** এবং **মণি-মঞ্জুষা** সত্যেন্দ্রনাথ দত্তের বিখ্যাত অনুবাদ কাব্যগ্রন্থ। [৪, ৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401040420,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনা কোন শঙ্কার কথা অস্বীকার করেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পথের শঙ্কা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বাঘের ভয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কোনো শঙ্কা নেই",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "পাহাড়ের ভয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ঝরনা স্পষ্টভাবে বলেছে, তার চলার পথে **কোনো শঙ্কা বা ভয় নেই**; সে সমান তালে ধেয়ে চলে। [২, ৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401040576,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনা কার চোখে ঘুম নেই বলে দাবি করেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নিজের",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বনের",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পাহাড়ের",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পরীর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ঝরনা বিরামহীন ছুটে চলে বলে সে দাবি করে যে তার **নিজের চোখে** কোনো ঘুম নেই। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401040682,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনা কোথায় ঝিলিক দেয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দিগিবিদিক",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ঝোপে ঝাড়ে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বালুর চরে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মেঘের আড়ালে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ঝরনা তার উজ্জ্বল জল নিয়ে **দিগিবিদিক** ঝিলমিল করে বা ঝিলিক দিয়ে বয়ে যায়। [২, ৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401040803,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনা কার আগে ধাবিত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চকোরের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফটিক জলের",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বুলবুলির",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সূর্যের",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "চাতক পাখি বা **ফটিক জল** তৃষ্ণার্ত হয়ে ডাক দেওয়ার আগেই ঝরনা তার পথ বেয়ে চলে আসে। [২, ৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401040916,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "ঝরনা কার জন্য তার গান সঞ্চয় করে রাখে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পথিকের জন্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সুন্দরের পিয়াসীদের জন্য",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পাহাড়ের জন্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মেঘের জন্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ঝরনা তার রূপ ও গান কেবল তাদের জন্য বিলিয়ে দেয় যারা **সুন্দরের সন্ধান** করে। [২, ৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401041213,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "'ঝরনার গান' কবিতায় 'বিজন দেশ' বলতে কী বোঝায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিদেশি রাষ্ট্র",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কোলাহলমুক্ত নির্জন স্থান",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পাহাড়ের চূড়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সমুদ্র সৈকত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বিজন দেশ** বলতে এমন জনশূন্য স্থানকে বোঝানো হয়েছে যেখানে মানুষের আনাগোনা বা পাখির কূজন নেই। [৩, ৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401041329,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "ঝরনার গান",
+    "question": "সত্যেন্দ্রনাথ দত্ত কত বছর বয়সে মারা যান?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৩২",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৪০",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "৫০",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৬০",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "১৮৮২ থেকে ১৯২২ সাল পর্যন্ত কবি মাত্র **৪০ বছর** আয়ু পেয়েছিলেন। [১, ২, ৪]",
+    "image": null,
+    "language": "en"
+  }
+]

@@ -1,0 +1,3101 @@
+[
+  {
+    "id": 1768401717758,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মমতাদির বেতন কত টাকা নির্ধারণ করা হয়েছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১০ টাকা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১২ টাকা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১৫ টাকা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "১৮ টাকা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "গল্পের বর্ণনা অনুযায়ী, মমতাদির বেতন মাসিক ১৫ টাকা নির্ধারণ করা হয়েছিল, যদিও তিনি মনে মনে ১২ টাকা আশা করেছিলেন [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401717926,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "চড় খাওয়ার বিষয়টি তিনি কেন গোপন রেখেছিলেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "লজ্জা পেয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আত্মসম্ভ্রমের জন্য",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বিপদের আশঙ্কায়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চাকরি যাওয়ার ভয়ে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মমতাদি একজন অত্যন্ত আত্মমর্যাদাসম্পন্ন নারী ছিলেন, তাই চড় খাওয়ার অপমানজনক বিষয়টি তিনি তাঁর আত্মসম্ভ্রম বা আত্মসম্মান রক্ষার খাতিরে গোপন করেছিলেন [১, ২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401718137,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "যে বিচারে কেষ্টা ও মমতাদি একসূত্রে গাঁথা তা হলো—\ni. দারিদ্র্য\nii. অবহালিত\niii. নিরাশ্রয়",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কেষ্টা ও মমতাদি উভয়েই দারিদ্র্য, সামাজিক অবহেলা এবং নিরাপত্তাহীনতা বা নিরাশ্রয় অবস্থার শিকার ছিলেন [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401718301,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মানিক বন্দ্যোপাধ্যায় কখন জন্মগ্রহণ করেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৮৯৯ সালে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১৯০৪ সালে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১৯০৮ সালে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "১৯০৯ সালে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্রখ্যাত কথাসাহিত্যিক মানিক বন্দ্যোপাধ্যায় ১৯০৮ সালে জন্মগ্রহণ করেন [১, ৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401718471,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মানিক বন্দ্যোপাধ্যায় মাত্র একুশ বছর বয়সে কোন উপন্যাস রচনা করেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শহরতলী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দিবারাত্রির কাব্য",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "জননী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চিহ্ন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মানিক বন্দ্যোপাধ্যায় তাঁর অতি অল্প বয়সে, মাত্র ২১ বছর বয়সে 'দিবারাত্রির কাব্য' উপন্যাসটি রচনা করে বাংলা সাহিত্যে চমক সৃষ্টি করেছিলেন [১, ৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401718686,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'মমতাদি' গল্পে মমতাদির চোখের অবস্থা কেমন ছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নিষ্প্রভ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অনিন্দ্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অশ্রুসজল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিশ্চল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "গল্পে মমতাদির অভাব-অনটন ও জীবনের ক্লান্তিকর লড়াইয়ের প্রতিচ্ছবি হিসেবে তাঁর চোখ দুটিকে 'নিষ্প্রভ' হিসেবে বর্ণনা করা হয়েছে [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401718866,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মমতাদির নিঃসঙ্কোচ আবেদন বলতে কোন আবেদনকে বোঝানো হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্বপ্নমুক্ত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দ্বিধামুক্ত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সংকোচহীন",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সরল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মমতাদি যখন কাজের জন্য আবেদন করেছিলেন, তখন তাঁর মধ্যে কোনো কুণ্ঠা বা দ্বিধা ছিল না; তাই একে সংকোচহীন বা নিঃসঙ্কোচ আবেদন বলা হয়েছে [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401719085,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "রহিমার তার স্বামীর মৃত্যুতে বাধ্য হয়ে শহরের একটি মেসে রান্নার কাজ নেয়। উদ্দীপকের রহিমার সাথে কোন চরিত্রের সাদৃশ্য লক্ষ্য করা যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "লক্ষ্মী বউ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মমতাদি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সর্বজয়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সুভা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "রহিমার মতো মমতাদিও পারিবারিক সংকটে ও স্বামীর কর্মহীনতায় বাধ্য হয়ে অন্যের বাড়িতে গৃহকর্মীর কাজ গ্রহণ করেছিলেন [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401719279,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মমতাদির কত টাকা মাইনে ঠিক হলো?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বারো",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তেরো",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পনেরো",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ষোলো",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মমতাদির কাজের পারিশ্রমিক হিসেবে ১৫ (পনেরো) টাকা নির্ধারিত হয়েছিল [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401719388,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মমতাদি কত টাকা মাইনে আশা করেছিলেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১০ টাকা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১২ টাকা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "১৫ টাকা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১৮ টাকা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মমতাদি যখন কাজের সন্ধানে আসেন, তখন তিনি মনে মনে মাসিক ১২ টাকা মাইনে পাওয়ার আশা করেছিলেন [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401719556,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "রহিমা তার স্বামীর মৃত্যুতে বাধ্য হয়ে শহরের একটি মেসে রান্নার কাজ নেয়। উদ্দীপকের রহিমার সাথে কোন চরিত্রের সাদৃশ্য লক্ষ্য করা যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "লক্ষ্মী বউ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মমতাদি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সর্বজয়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সুভা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "এটি মমতাদির জীবন সংগ্রামের সাথে সাদৃশ্যপূর্ণ, কারণ তিনিও বিপদে পড়ে আত্মসম্মান বজায় রেখে কাজে নেমেছিলেন [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401719676,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'মেঘ না চাইতে জল'—প্রবাদটির ভাবার্থ কোন চরিত্রে লক্ষ্যণীয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সূর্যকান্ত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হরিহর রায়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মমতাদি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কাঙালী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মমতাদি ১২ টাকা আশা করলেও ১৫ টাকা পাওয়ায় তাঁর ক্ষেত্রে এই প্রবাদটি প্রযোজ্য হয়, যার অর্থ প্রত্যাশার চেয়ে বেশি কিছু পাওয়া [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401719856,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "ধরা ছোঁয়ার অতীত শব্দহীন অনুভূতিহীন কে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সুভা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রতাপ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বুধা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মমতাদি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সূত্রের তথ্য অনুযায়ী, 'মমতাদি' গল্পের প্রেক্ষাপটে এই অনুভূতিটি বিশেষ চরিত্রের মাধ্যমে ফুটে উঠেছে [১]।\n*নোট: সূত্রের প্রশ্ন ১৩-এর সঠিক উত্তর হিসেবে 'ঘ' চিহ্নিত থাকলেও ব্যাখ্যায় বুধাকে নির্দেশ করা হয়েছে।*",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401719991,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "আশাতীত বেতন দেওয়ায় মমতাদি কীভাবে কৃতজ্ঞতা প্রকাশ করলেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ধন্যবাদ জানিয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বেশি কাজ করে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কমাললেবু খাইয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কথা না বলে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "নির্ধারিত সময়ের চেয়ে বেশি পরিশ্রম ও নিষ্ঠার সাথে কাজ করে তিনি তাঁর কৃতজ্ঞতা প্রকাশ করেছিলেন [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401720103,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মমতাদির কাজে সকলে খুশি হলেন কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কাজে শৃঙ্খলা ও ক্ষিপ্রতা ছিল",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কাজে পটু ছিল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কাজে আগ্রহ ছিল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কাজে একনিষ্ঠতা ছিল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "মমতাদির কাজের মধ্যে এক ধরণের শৃঙ্খলা ও ক্ষিপ্রতা বা দ্রুত কাজ করার ক্ষমতা ছিল, যা বাড়ির সবাইকে সন্তুষ্ট করেছিল [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401720214,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মমতাদির কোন দিকটি দেখে বাড়ির সবাই খুশি হলেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কাজের শৃঙ্খলা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "মার্জিত আচরণ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "খোকার যত্ন নেওয়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ঘরদোর গুছিয়ে রাখা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "মমতাদির কাজের সুশৃঙ্খল পদ্ধতি বাড়ির সকলের মন জয় করেছিল [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401720321,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "লেখকের মুখে 'বামুন্দি' ডাক শুনে মমতাদি হাসি বন্ধ করলেন কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সংকোচের কারণে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "লজ্জাশীলতার কারণে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আত্মসম্ভ্রমবোধের কারণে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "দারিদ্র্যের কারণে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'বামুন্দি' ডাকটি একজন পাচক বা রাঁধুনিকে নির্দেশ করে, যা মমতাদির আত্মমর্যাদায় আঘাত করেছিল [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401720518,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মমতাদি গালে চড় খাওয়ার মুখে 'বামুন্দি' ডাক শুনে মমতাদি চমকে হাসি বন্ধ করল কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আত্মসম্মানে আঘাত লাগায়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "আশঙ্কায় ডাকা দেওয়ায়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পূর্বকর্মে রত থাকায়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ছেলের কথা মনে পড়ায়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "মমতাদি নিজেকে গৃহকর্মী হিসেবে পরিচয় দিলেও তাঁর মধ্যে প্রবল আত্মসম্মানবোধ ছিল [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401720672,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মমতাদি নিজেকে 'বামুন্দি' ডাকতে নিষেধ করলেন কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আপন হয়ে ওঠার জন্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আত্ম-মর্যাদা প্রতিষ্ঠার জন্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অতিশয় আপ্যায়িত হওয়ায়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আত্মমর্যাদাবোধ থেকে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "তিনি সামাজিক মর্যাদা ও নিজের ব্যক্তিত্ব বজায় রাখতে এই ডাকটি পছন্দ করেননি [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401720784,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'দৈন্য যদি আসে আসুক, লজ্জা কিবা তাতে, মাথা উঁচু রাখিছ'—এ বক্তব্যের প্রতিফলন দেখা যায় কোন চরিত্রের মধ্যে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অভাগী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মমতাদি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "নিরুপমা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সর্বজয়া",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "দারিদ্র্যের মধ্যেও মমতাদি তাঁর মাথা উঁচু করে এবং সম্মান বজায় রেখে জীবন অতিবাহিত করতেন [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401720904,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "ছোটো মেয়ে লিলা গৃহকর্মী পারুলকে ছায়া স্বরূপ অনুকরণ করতে থাকে। পারুল একটু চোখের আড়াল হলেই সে কান্না শুরু করে দেয়। পারুল তাকে অত্যন্ত আদর করে—উদ্দীপকের লিলার সাথে 'মমতাদি' গল্পের কোন চরিত্রের সাদৃশ্য রয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মমতাদি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "খোকা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অবনী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "খোকার মা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "উদ্দীপকের লিলা যেভাবে পারুলের প্রতি আসক্ত, গল্পের খোকাও মমতাদির প্রতি একইভাবে টান অনুভব করত [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401721026,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'আমার গা ধুঁয়ে বসে পড়ল'—কে বসে পড়ল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "খোকা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অভাগী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মমতাদি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কাঙালী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "এটি মমতাদির আত্মসম্মান ও আভিজাত্যবোধের একটি প্রকাশ [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401721140,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'বেশি আকরা হবে না, জ্বালিয়ে মারবে'—'মমতাদি' গল্পে কথাটি দ্বারা কী বোঝানো হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কৃতজ্ঞতা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সতর্কতা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মমতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দায়িত্ব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "অতিরিক্ত স্নেহের ফলে মমতাদি যেন লেখকের বেশি ভক্ত বা অবাধ্য না হয়ে যায়, সেই বিষয়ে সতর্ক করা হয়েছিল [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401721262,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'গৃহকর্মী লালী তারবেণুকে ছোটো ভাইয়ের মতো ভালোবাসে।' লালীর সাথে কার সাদৃশ্য রয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুর্গার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মমতাদির",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ফুলকলির",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রানীর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মমতাদিও বাড়ির ছোট ছেলে খোকাকে নিজের ভাইয়ের মতো বা সন্তানের মতো স্নেহ করতেন [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401721376,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "সোধানদের বাড়িতে একজন মহিলা মহিলা থাকেন। সোধান তার সাথে ভাব করে। মহিলাও সোধানকে নিজ সন্তানের মতো ভালোবাসেন। উদ্দীপকটি নিচের কোন রচনার সাথে সংগতিপূর্ণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মমতাদি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "একাত্তরের দিনগুলি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আম-আঁটির ভেঁপু",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সুভা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "মমতাদি ও লেখকের মধ্যকার স্নেহপূর্ণ সম্পর্কের প্রতিচ্ছবি এই উদ্দীপকে পাওয়া যায় [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401721502,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'মমতাদি' গল্পে মমতার চড় খেয়ে কার গালে আঙুলের দাগ হয়েছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অবনীর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জীবনময়ের",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মমতাদির",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বামুন্দির",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "স্বামীর হাতে চড় খেয়ে মমতাদির নিজের গালেই আঙুলের দাগ বসে গিয়েছিল [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401721630,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "চড় খাওয়ার বিষয়টি তিনি গোপন রেখেছিলেন কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "লজ্জা পেয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চাকরি যাওয়ার ভয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আত্মসম্ভ্রমের জন্য",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বিপদের আশঙ্কায়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মমতাদি তাঁর ব্যক্তিগত জীবনের দুঃখ বা লাঞ্ছনা বাইরের মানুষের কাছে প্রকাশ করতে চাননি তাঁর আত্মসম্মানের কারণে [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401721743,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'তুমি মিথ্যা বলছ দিদি'—মমতাদি গল্পে এ উক্তিটি কার?",
+    "options": [
+      {
+        "label": "a",
+        "text": "লেখকের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ছেলেটির",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মমতাদির",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মমতাদি যখন তাঁর গালের দাগ সম্পর্কে মিথ্যা বলেছিলেন, তখন বাড়ির ছোট ছেলেটি (লেখক) তা ধরে ফেলে এই উক্তিটি করেছিলেন [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401722041,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "আত্মসম্মান বোধ ফুটে উঠেছে মমতাদির কোন কথায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আমায় ছাড়বেন না",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "এত কথা কইতে পারে আপনার ছেলে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সত্যি বলছি না। কে মারবে?",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "তুমি তা দেবে কেন?",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মার খাওয়ার কথা অস্বীকার করার মাধ্যমে মমতাদির আত্মমর্যাদা রক্ষার চেষ্টা প্রকাশ পায় [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401722223,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'মমতাদি' গল্পে মমতাদি তার স্বামীর কতি টাকা চাকরির সংবাদের লেখককে কী খাওয়াতে চেয়েছিলেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাতাসা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সন্দেশ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রসগোল্লা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কমলালুবু",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "স্বামীর চাকরি হওয়ার আনন্দে মমতাদি লেখককে কৃতজ্ঞতাস্বরূপ কমলালেবু খাওয়াতে চেয়েছিলেন [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401722329,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'দৈন্য যদি আসে আসুক, লজ্জা কিবা তাতে মাথা উঁচু করি রাখিছ'—এ কথার প্রতিফলন দেখা যায় কোন চরিত্রের মধ্যে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কাঙালীর মা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সুভার মা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সর্বজয়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মমতাদি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মমতাদি দারিদ্র্যকে মেনে নিলেও নিজের সম্মান ও আভিজাত্য বিসর্জন দেননি [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401722528,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "নোংরা মনে করে ক্ষুদ্র স্থানে অবস্থান করাই নারীর একমাত্র কাজ নয়। সে চায় বৃহত্তর সমাজ জীবনের মধ্যে আত্মমর্যাদা সমুন্নত রেখে আত্মপ্রতিষ্ঠা লাভ করতে। উদ্দীপকের লরার মানসিকতা তোমার পঠিত কোন চরিত্রে দেখা যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মমতাদি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সুভা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আম-আঁটির ভেঁপু",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিয়তি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "মমতাদিও বাড়ির সংকীর্ণ গণ্ডি পেরিয়ে বাইরে কাজ করে নিজের মর্যাদা রক্ষা করতে চেয়েছিলেন [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401722646,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'মমতাদি' গল্পে লেখক দুশ্চিন্তাগ্রস্ত হয়েছিলেন কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মমতাদি কথা না বলায়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মমতাদি কাজ ছেড়ে দেবে বলে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মমতাদির চুরির চাকরির জন্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মমতাদির গালে আঙুলের দাগ দেখে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মমতাদির গালে চড়ের দাগ দেখে লেখক তাঁর প্রতি মমত্ববোধ থেকে চিন্তিত হয়ে পড়েছিলেন [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401722889,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মমতাদি স্বামীর চাকরি সংক্রান্ত মিথ্যা কথা বলেছিলেন কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সম্মান রক্ষার্থে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "স্বভাব দোষে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কাজ হারানোর ভয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গৃহ নিন্দার বাঁচাতে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "স্বামীর বেকারত্বের কথা প্রকাশ করা তাঁর কাছে অসম্মানজনক ছিল, তাই তিনি মিথ্যা বলেছিলেন [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401722997,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'মমতাদি' গল্পে মমতাদির কর্ম ও জীবিকার প্রতি শ্রদ্ধা প্রকাশ পেয়েছে কোন বাক্যে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তোমার কষ্ট দূর হয়েছে তাতে আমরাও খুব সুখী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বেশি আপ্যায়িত দিওনা জ্বালিয়ে মারবে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তুমি চলে গেলে আমাদেরও তা ভালো লাগবে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তুমি ইচ্ছে করলে এ বেলা কাজ ছেড়ে দিতে পারো",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মমতাদি তাঁর নিজের ইচ্ছায় কাজ চালিয়ে যেতে চেয়েছিলেন, যা তাঁর কর্মস্পৃহার পরিচয় দেয় [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401723131,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মমতাদি কয়টি লেবু কিনেছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "একটি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দুটি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তিনটি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চারটি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মমতাদি কৃতজ্ঞতাস্বরূপ দুটি লেবু কিনেছিলেন [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401723236,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'মমতাদি' গল্পে স্কুলপড়ুয়া ছেলেটির কাছে জীবনময়ের গলিটা কেমন ছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্বর্গপুরী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রেতপুরী",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "যমালয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পিরাময়তুল্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "লেখকের কাছে জীবনময়ের গলিটা ছিল অন্ধকার ও অস্বাস্থ্যকর, অনেকটা 'প্রেতপুরী'র মতো [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401723348,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মমতাদির ঘরে বিশৃঙ্খলতার অন্ত নেই কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আলো-বাতাসের দীনতা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সময়ে গুছিয়ে না রাখা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শ্রীহীনতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সংকীর্ণতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ঘরের অস্বাস্থ্যকর পরিবেশ এবং আলো-বাতাসের অভাবেই মমতাদির সংসার বিশৃঙ্খল মনে হতো [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401723455,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'ঘরে আর একটি জিনিস ছিল'—মমতাদি গল্পের এ বাক্যে জিনিসটি হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "ডাইনিং টেবিল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ভাত শোয়ার চৌকি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "শোকেস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আলনা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মমতাদির ঘরে আসবাবপত্র বলতে উল্লেখযোগ্য ছিল কেবল শোয়ার চৌকিটি [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401723569,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "ঘরে ঢুকেই মমতাদি ছেলেকে নিয়ে ব্যস্ত হয়ে পড়েছিল কী কারণে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ছেলেটি অসুস্থ ছিল বলে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ছেলেটি সারা রাত ঘুমায়নি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ছেলেটি ঘরে একা ছিল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ছেলেটিকে কমলালেবু খাওয়াতে বলে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মমতাদি বাড়ির ছেলেটিকে (লেখককে) কমলালেবু খাওয়ানোর জন্য ব্যস্ত হয়ে পড়েছিলেন [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401723705,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "আগাগোড়া বাড়ির বাজেগুলোর জোরে কোনোমতে দাঁড়িয়ে আছে কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাঞ্চট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "টুল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "টেবিল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চৌকি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মমতাদির দারিদ্র্যের চিত্র ফুটে উঠেছে এই ভাঙা টুলের বর্ণনার মাধ্যমে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401723820,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'উনি তো রাগ করে'—মমতাদি গল্পে 'উনি' কে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ছোটকর্তা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গৃহকর্তা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মমতাদির ছেলে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মমতাদির স্বামী",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এখানে মমতাদির কর্মহীন স্বামীর কথা বলা হয়েছে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401723928,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'সবাই যদি তোমার মত ভালোবাসত'—বাক্যটিতে প্রকাশ পেয়েছে মমতাদির—",
+    "options": [
+      {
+        "label": "a",
+        "text": "আকাঙ্ক্ষা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হতাশা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আক্ষেপ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রত্যাশা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এটি মানুষের পারস্পরিক সহমর্মিতা ও ভালোবাসার প্রতি মমতাদির এক ধরণের আকুতি বা প্রত্যাশা [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401724042,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "স্কুলপড়ুয়া ছেলেটির কোন আচরণে মমতাদি কৃতজ্ঞ হয়েছিলেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গালে হাত বুলিয়ে দেওয়ায়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "লেবু খেয়ে নেওয়ায়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বাড়ি যেতে চাওয়ায়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দিদি সম্বোধন করায়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ছেলেটি মমতাদির দেওয়া লেবু সাদরে গ্রহণ করায় তিনি কৃতজ্ঞতা অনুভব করেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401724375,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'মমতাদি' গল্পে গৃহকর্মে নিয়োজিত মানুষের প্রতি আচরণের কোন দিকটি প্রকাশ পেয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সামাজিক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মানবিক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "নিষ্ঠুর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অর্থনৈতিক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "গল্পটি গৃহকর্মীদের প্রতি মানবিক আচরণ করার শিক্ষা দেয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401724487,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'সে যেন ছায়াময়ী মানবী'—মমতাদি সম্পর্কে লেখকের এ মন্তব্যের কারণ হলো, মমতাদির—\ni. মৌনতা\nii. লৌকিকতা\niii. কর্মনিষ্ঠা",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মমতাদির নিভৃতচারী স্বভাব, ভদ্রতা এবং গভীর কর্মনিষ্ঠার কারণেই লেখক তাঁকে 'ছায়াময়ী মানবী' বলেছেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401724597,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'মা যদি বলেন খোকা উঠে আয়—তবে পরদিন থেকে সে আর আসত না'—মমতাদির না আসার কারণ হতে পারত—\ni. চক্ষুশল্লা\nii. অপমানিত বোধ করা\niii. আত্মসম্মানবোধ",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মমতাদি অত্যন্ত আত্মমর্যাদাসম্পন্ন ছিলেন, তাই অপমানিত হওয়ার সামান্য সম্ভাবনা থাকলেও তিনি সেখানে যেতেন না [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401724705,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'এত কথা কইতে পারে আপনার ছেলে!'—মমতাদির এ কথাটির দ্বারা প্রকাশ পেয়েছে—\ni. ব্যাকুলতা\nii. চঞ্চলতা\niii. স্নেহপ্রবণতা",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মমতাদি এই উক্তির মাধ্যমে লেখকের প্রতি তাঁর লুকানো স্নেহ ও মমতা প্রকাশ করেছেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401724858,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'তোমার কষ্ট দূর হয়েছে তাতে আমরাও সুখী'—মায়ের এ উক্তিতে ফুটে উঠেছে—\ni. মমতাদিকে সম্মানিত করা\nii. মমতাদিকে নিজের লোক মনে করা\niii. মমতাদির কাজের প্রতি সন্তুষ্ট থাকা",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মা মমতাদিকে কেবল কাজের লোক নয়, বরং পরিবারের একজন হিসেবে দেখতেন এবং তাঁর সাফল্যে আনন্দিত হতেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401758312,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "\"আমায় ছাড়বেন না। আমার কাল কি ভালো হবে না?\"—উক্তিটিতে প্রকাশ পেয়েছে মমতাদির—",
+    "options": [
+      {
+        "label": "a",
+        "text": "সংশয়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "আনুগত্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দায়িত্ববোধ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কৃতজ্ঞতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "মমতাদির এই আকুতিতে তাঁর অনিশ্চিত ভবিষ্যৎ ও সামাজিক নিরাপত্তার বিষয়ে এক ধরণের গভীর সংশয় প্রকাশ পেয়েছে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401758585,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'মমতাদি' গল্পে মমতাদির চরিত্রে প্রকাশ পেয়েছে—\ni. আত্মমর্যাদাবোধ\nii. দায়িত্বশীলতা\niii. স্নেহপ্রবণতা",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মমতাদির চরিত্রে আত্মসম্মান, কাজের প্রতি নিষ্ঠা এবং ছোটদের প্রতি গভীর মমতা—এই তিনটি গুণই সমভাবে বিদ্যমান ছিল [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401758753,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "উদ্দীপকের কেষ্টার পরিস্থিতির সাথে 'মমতাদি' গল্পের কোন বাক্যের বৈসাদৃশ্য রয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তুমি চলে গেলে আমাদেরও তা ভালো লাগবে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আচ্ছা তুমি কাল থেকে এসো",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বেশি প্রশ্রয় দিও না, জ্বালিয়ে মারবে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "তুমি ইচ্ছে করলে এ বেলা কাজ ছেড়ে দিতে পারো",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "উদ্দীপকের কেষ্টা অবহেলিত হলেও মমতাদিকে লেখক ও তাঁর পরিবার অত্যন্ত স্নেহের চোখে দেখতেন, যা \"বেশি প্রশ্রয় দিও না\" সতর্কবার্তায় প্রকাশ পায় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401758965,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "এই বৈসাদৃশ্যের ভিত্তি হলো—\ni. মর্যাদা প্রদানে\nii. আত্মসম্মান রক্ষায়\niii. উপযুক্ত পারিশ্রমিকে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "মমতাদিকে তাঁর প্রাপ্য সম্মান ও মর্যাদা দেওয়া হয়েছিল, যা উদ্দীপকের নিপীড়িত চরিত্রের সাথে পার্থক্য তৈরি করে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401759156,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মানিক বন্দ্যোপাধ্যায়ের আসল বা প্রকৃত নাম কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সুবোধ কুমার বন্দ্যোপাধ্যায়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নিশান কুমার বন্দ্যোপাধ্যায়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রবোধ কুমার বন্দ্যোপাধ্যায়",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "প্রভাত কুমার বন্দ্যোপাধ্যায়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মানিক বন্দ্যোপাধ্যায়ের প্রকৃত নাম ছিল প্রবোধ কুমার বন্দ্যোপাধ্যায় এবং 'মানিক' ছিল তাঁর ডাকনাম [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401759354,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "রোদে বসে গল্পকথক কী করছিলেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "খেলা করছিলেন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পড়ছিলেন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বাগান করছিলেন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কথা বলছিলেন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "গল্পের শুরুতে দেখা যায়, লেখক (গল্পকথক) রোদে বসে পড়াশোনা করছিলেন যখন মমতাদি প্রথম তাঁদের বাড়িতে আসেন [৩, ৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401759534,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "পনেরো টাকা বেতন ঠিক করায় মমতাদির দুচোখ সজল হয়ে উঠল কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কম বেতন নির্ধারণ করায়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আশাতীত বেতন নির্ধারণ করায়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "এই বেতনে সংসার চালানো কঠিন ভেবে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তার স্বামী কাজ করতে দেবে না ভেবে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মমতাদি মনে মনে ১২ টাকা আশা করলেও ১৫ টাকা নির্ধারণ করায় তিনি কৃতজ্ঞতায় ও আবেগে আপ্লুত হয়ে পড়েছিলেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401759707,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মমতাদির বেতন কত টাকা নির্ধারণ করা হয়েছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দশ টাকা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বারো টাকা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পনেরো টাকা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "আঠারো টাকা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মমতাদির কাজের পারিশ্রমিক হিসেবে মাসিক ১৫ টাকা ধার্য করা হয়েছিল [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401759981,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "আশাতীত বেতন দেওয়ায় মমতাদি কীভাবে কৃতজ্ঞতা প্রকাশ করলেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বেশি কাজ করে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ধন্যবাদ জানিয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রশংসা করে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কথা না বলে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কৃতজ্ঞতার বহিঃপ্রকাশ হিসেবে তিনি নির্ধারিত সময়ের চেয়েও বেশি মনোযোগ দিয়ে ও নিষ্ঠার সাথে কাজ করতে শুরু করেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401760125,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মমতাদির দুচোখ কীসে সজল হয়ে উঠল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কষ্টে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অভিমানে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সম্মানে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কৃতজ্ঞতায়",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "তাঁর অভাবের সময় লেখক ও তাঁর পরিবার তাঁকে সাহায্য করায় তিনি কৃতজ্ঞতায় সজল হয়ে ওঠেন [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401760234,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মমতাদির কোন দিকটি দেখে বাড়ির সকলে খুশি হলেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কাজের শৃঙ্খলা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "মার্জিত আচরণ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "খোকার যত্ন নেওয়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ঘরদোর গুছিয়ে রাখা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "মমতাদির সুশৃঙ্খল কর্মপদ্ধতি বাড়ির সবাইকে মুগ্ধ করেছিল [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401760377,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'মমতাদি' গল্পে ছেলেটির বাড়ির সকলে মমতাদির প্রতি খুশি হলেন কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তাঁর পরিশ্রম দেখে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তাঁর শৃঙ্খলা ও মিত্রতা দেখে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তাঁর ধৈর্য দেখে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তাঁর ব্যবহার দেখে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "তাঁর সুশৃঙ্খল কাজ এবং সবার সাথে আন্তরিক আচরণের কারণে সবাই তাঁর ওপর সন্তুষ্ট ছিল [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401760500,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "\"ধরা ছোঁয়ার অতীত শব্দহীন অনুভূতিহীন নির্বিকার\"—উক্তিটি কার সম্পর্কে বলা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সুভা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কাঙালী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সর্বজয়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মমতাদি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এটি মমতাদির সেই মুহূর্তের বর্ণনা যখন তিনি অত্যন্ত শান্ত ও নির্বিকারভাবে নিজের কাজ করে যাচ্ছিলেন [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401760618,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'মমতাদি' গল্পে লেখকের মমতাদিকে 'ছায়াময়ী মানবী' বলে অভিহিত করার মধ্যে লুকিয়ে আছে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "আত্মমর্যাদা ও কৃতজ্ঞতাবোধ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শ্রদ্ধা ও মমত্ববোধ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অন্তঃপুরের ধীরতা ও প্রবহমানতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিঃশব্দতা ও অন্তর্মুখী আচরণ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মমতাদির নিঃশব্দে কাজ করে যাওয়া এবং তাঁর রহস্যময় ও গম্ভীর আচরণের জন্য লেখক তাঁকে 'ছায়াময়ী মানবী' বলেছেন [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401760739,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "\"আমায় বামুন্দি বোলো না খোকা। শুধু দিদি বোলো।\"—এ উক্তিটির মাধ্যমে মমতাদির চরিত্রের কোন বৈশিষ্ট্য ফুটে উঠেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রেশমিয়তা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সংকুচিত ভাব",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সরলতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আত্মমর্যাদাবোধ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পাচক বা কাজের লোক হিসেবে 'বামুন্দি' সম্বোধন তাঁর আত্মসম্মানে লাগত, তাই তিনি দিদি ডাকার অনুরোধ করেছিলেন [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401760867,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মমতাদি লেখককে কপালে চুম্বন করলেন কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আদর করতে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "স্নেহের আতিশয্যে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "নিজের গর্ব প্রতিষ্ঠার লোভে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "লেখকের অনুরাগে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "লেখকের প্রতি গভীর মমতা ও স্নেহের কারণে মমতাদি আবেগপ্রবণ হয়ে তাঁকে চুম্বন করেছিলেন [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401760998,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মমতাদির দুচোখ দিয়ে ফোঁটা ফোঁটা জল টপ টপ করে পড়ল কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সম্মানে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অপমানে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কৃতজ্ঞতায়",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "তাঁর প্রতি মানবিক আচরণ ও উপকারের কৃতজ্ঞতায় তিনি চোখের জল ধরে রাখতে পারেননি [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401761127,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মমতাদির স্বামীর কোন বৈশিষ্ট্যটি পরিচয় বহন করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অসহিষ্ণু",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অপদার্থতা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দায়িত্বহীনতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিষ্ঠুরতা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মমতাদির গালে আঙুলের দাগ তাঁর স্বামীর নিষ্ঠুর আচরণেরই প্রমাণ দেয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401761245,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'মমতাদি' কয়টি লেবু কিনেছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "একটি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দুটি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তিনটি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চারটি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কৃতজ্ঞতা প্রকাশ করতে মমতাদি দুটি কমলালেবু কিনেছিলেন [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401761355,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "জীবনময়ের গলিটা কী দিয়ে বাঁধানো?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পাথর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সুড়কি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "লোহা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ইট",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মমতাদির বসবাসের গলিটি ছিল সেঁতসেঁতে এবং ইটের তৈরি [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401761468,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মমতাদির ঘরে বিশৃঙ্খলার অন্ত নেই কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আলো-বাতাসের দীনতা আছে বলে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সময়ে গুছিয়ে না রাখা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শ্রীহীনতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সংকীর্ণতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "তাঁর ছোট ঘরে আলো-বাতাস প্রবেশ করতে পারত না, যা ঘরটিকে বিশৃঙ্খল করে রাখত [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401761582,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মমতাদির রেল কটি ছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তিন বছর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চার বছর",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পাঁচ বছর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ছয় বছর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মমতাদির রেল (সম্ভবত জানালার শিক) ছিল চারটি [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401761752,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মমতাদির শোয়ার ঘরকে শোয়ার ঘরের মর্যাদা দেওয়া হয়েছে কীসের জন্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আলো প্রবেশ করে বলে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বাতাস চলাচল করে বলে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "খানিকটা প্রশস্ত বলে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দুটি জানালা আছে বলে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ঘরটিতে দুটি জানালা থাকায় লেখক সেটিকে শোয়ার ঘরের মর্যাদা দিয়েছেন বলে উল্লেখ আছে [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401761925,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'অনাড়ম্বর' শব্দের অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জাকজমকপূর্ণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জাকজমকহীন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বিলাসিতাপূর্ণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিলাসিতাহীন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "আড়ম্বর নেই এমন অবস্থাকে অনাড়ম্বর বলা হয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401762084,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'মমতাদি' গল্পে কোন বিষয়টি প্রাধান্য পেয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শিশুদের আচার-আচরণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গৃহকর্মীদের প্রতি মানবিক আচরণ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "দরিদ্র মানুষের দৈনিক জীবন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাড়িতে আগত নতুন মানুষের প্রতি শিশুর দৃষ্টিভঙ্গি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "গৃহকর্মীদের সম্মান ও মানুষের মতো আচরণ করার বিষয়টিই গল্পের মূল উপজীব্য [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401762240,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "কোন গ্রন্থ থেকে 'মমতাদি' গল্পটি সংকলন করা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সরীসৃপ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "জননী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চিহ্ন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শহরতলী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "মানিক বন্দ্যোপাধ্যায়ের 'সরীসৃপ' নামক গল্পগ্রন্থ থেকে 'মমতাদি' গল্পটি নেওয়া হয়েছে [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401762424,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'দৈন্য যদি আসে আসুক লজ্জা কিবা তাতে, মাথা উঁচু রাখিছ'—কোন চরিত্রের এই বক্তব্যের প্রতিফলন দেখা যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অভাগী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সর্বজয়া",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সুভা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মমতাদি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "শত অভাবের মধ্যেও মমতাদি তাঁর আত্মমর্যাদা বিসর্জন দেননি [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401762754,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'নির্দয় অভাবে কোনো কাল ফেলে রাখে না'—এ থেকে প্রমাণিত হয় মমতাদি—\ni. কর্ম দক্ষ\nii. কর্তব্যপরায়ণ\niii. সুচতুর",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অভাবের তাড়নায় কাজে নামলেও তিনি অত্যন্ত দক্ষ ও কর্তব্যপরায়ণ ছিলেন [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401762904,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'সে যেন ছায়াময়ী মানবী'—মমতাদি সম্পর্কে লেখকের এ মন্তব্যের কারণ হলো মমতাদির—\ni. মৌনতা\nii. লৌকিকতা\niii. কর্মনিষ্ঠা",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মমতাদির নিভৃতচারিতা ও নিরলস কাজের কারণেই তাঁকে এমন মনে হয়েছে [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401763071,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'সে যেন ছায়াময়ী মানবী'—মমতাদি গল্পের এ উক্তিতে প্রকাশ পেয়েছে—\ni. অভিমান\nii. আক্ষেপ\niii. বিদ্রূপ",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এটি তাঁর শান্ত ও গাম্ভীর্যপূর্ণ স্বভাবের বহিঃপ্রকাশ [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401763237,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মমতাদির স্বভাব—\ni. আত্মমর্যাদাসম্পন্ন\nii. অন্তর্মুখী\niii. রহস্যময়ী",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মমতাদি ছিলেন আত্মসম্মানবোধ সম্পন্ন এবং কিছুটা অন্তর্মুখী ও গম্ভীর প্রকৃতির মানুষ [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401763418,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'মমতাদি' গল্পে মমতাদি চরিত্রে প্রকাশ পেয়েছে—\ni. আত্মমর্যাদা বোধ\nii. দায়িত্বশীলতা\niii. স্নেহবাৎসল্য",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মমতাদির চরিত্রে এই তিনটি গুণেরই প্রতিফলন লক্ষ্য করা যায় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401763581,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "উদ্দীপকের সাথি চরিত্রটি 'মমতাদি' গল্পের কোন চরিত্র সমর্থন করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গৃহকর্ত্রী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মমতাদির স্বামী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "স্কুলপড়ুয়া ছেলেটি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মমতাদি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সাথি ও মমতাদি উভয়েই পরিশ্রমী এবং আত্মমর্যাদাসম্পন্ন গৃহকর্মী [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401763774,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "উদ্দীপকের আলোকে 'মমতাদি' গল্পে চিত্রিত হয়েছে—\ni. মমতাদির সংসারের কালচক্রকে আপন করে নেওয়া\nii. মমতাদির কাজের শৃঙ্খলা ও ক্ষিপ্রতা\niii. মমতাদির নীরবে নতুনভাবে কাজ করা",
+    "options": [
+      {
+        "label": "a",
+        "text": "i",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "উদ্দীপক ও গল্পের প্রেক্ষাপটে গৃহকর্মীর জীবন সংগ্রামের এই চিত্রগুলো ফুটে ওঠে [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401763884,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মানিক বন্দ্যোপাধ্যায় কত সালে বি.এস-সি ক্লাসে ভর্তি হন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৯২৬ সালে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১৯২৭ সালে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১৯২৮ সালে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "১৯২৯ সালে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "১৯২৮ সালে মানিক বন্দ্যোপাধ্যায় বি.এস-সি ক্লাসে ভর্তি হয়েছিলেন [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401764000,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মানিক বন্দ্যোপাধ্যায় বন্ধুদের সঙ্গে বাজি ধরে কোন গল্প লিখেছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অতসী মামী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রাগৈতিহাসিক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কুষ্ঠরোগীর বউ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অতসী মামী",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মানিক বন্দ্যোপাধ্যায়ের প্রথম গল্প 'অতসী মামী' তিনি বন্ধুদের সাথে বাজি ধরে লিখেছিলেন [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401764108,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'অতসী মামী' গল্পটি কোন পত্রিকায় প্রকাশিত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিচিত্রা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সানন্দা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ভারতী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কল্লোল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "তাঁর প্রথম গল্প 'অতসী মামী' বিখ্যাত 'বিচিত্রা' পত্রিকায় প্রকাশিত হয়েছিল [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401764215,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "'দিবারাত্রির কাব্য' উপন্যাস রচনার পর পেশা হিসেবে মানিক বন্দ্যোপাধ্যায় কোনটি বেছে নেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গবেষণাকর্মকে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সাংবাদিকতাকে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শিক্ষকতাকে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "লেখালিখিকে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "দিবারাত্রির কাব্য সফল হওয়ার পর তিনি পূর্ণকালীন লেখক হিসেবে আত্মপ্রকাশ করেন [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401764334,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মানিক বন্দ্যোপাধ্যায়ের 'পদ্মা নদীর মাঝি' কী ধরনের রচনা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "উপন্যাস",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ছোটগল্প",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নাটক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রবন্ধ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'পদ্মা নদীর মাঝি' মানিক বন্দ্যোপাধ্যায়ের অন্যতম কালজয়ী সামাজিক উপন্যাস [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401764449,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "কোন উপন্যাসটি লিখে মানিক বন্দ্যোপাধ্যায় কথা-সাহিত্যের সিংহাসনে আরোহণ করেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শহরতলী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অহিংস",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চতুষ্কোণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পুতুলনাচের ইতিকথা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "'পুতুলনাচের ইতিকথা' উপন্যাসটি তাঁকে অনন্য উচ্চতায় নিয়ে যায় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401764570,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মানিক বন্দ্যোপাধ্যায়ের উপন্যাসের সংখ্যা কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চল্লিাশের অধিক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পঞ্চাশের অধিক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ষাটের অধিক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সত্তরটির অধিক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মানিক বন্দ্যোপাধ্যায় পঞ্চাশটিরও বেশি উপন্যাস রচনা করেছিলেন [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401764692,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "গল্পকথকের মা তাঁর কাছে বসে কী কুটেছিলেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিঁধাকপি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "লালশাক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ফুলকপি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "পালংশাক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মমতাদি যখন প্রথম আসেন, তখন লেখকের মা পাশে বসে ফুলকপি কুটছিলেন [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401764839,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "সরু চালের ভাত রান্না করা কোন দিকটি নির্দেশ করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "লজ্জাশীলতা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নিঃসঙ্কোচ আবেদন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কাজের প্রতি একাগ্রতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উচ্চবিত্তের বাহাদুরি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "তৎকালীন সমাজে সরু চালের ভাত আভিজাত্যের প্রতীক হিসেবে দেখা হতো [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401764950,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মমতাদি কেমন ঘরের মেয়ে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ধনিক ঘরের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মধ্যবিত্ত ঘরের",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বামুন ঘরের",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গরিব ঘরের",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মমতাদি মূলত একজন মধ্যবিত্ত পরিবারের মেয়ে ছিলেন, যিনি অভাবের কারণে কাজে নেমেছিলেন [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401765064,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "প্রাণপণে মমতাদি কী জয় করে ফেলেছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সংকোচ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ভয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "স্নেহ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ভালোবাসা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অভাবের তাড়নায় অন্যের বাড়িতে কাজ নিতে আসলেও তিনি তাঁর সংকোচকে জয় করেছিলেন [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401765192,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "লিনা কেন কারখানায় কাজ নিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিলাসিতার জন্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অভাবের কারণে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ভালো চাকরির জন্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "স্বামীর সম্মানে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "উদ্দীপকের লিনা ও গল্পের মমতাদি উভয়ই অভাবের তাড়নায় কাজের সন্ধানে বের হন [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401765314,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মমতাদির পরনের ময়লা শাড়িটি কেমন ছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ছেঁড়াখোঁড়া",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রঙিন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সেলাই করা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জীর্ণশীর্ণ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মমতাদির পোশাক ছিল মলিন ও জীর্ণ, যা তাঁর দারিদ্র্যের পরিচয় দেয় [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768401765425,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "মমতাদি",
+    "question": "মমতাদির চোখ দুটি কেমন দেখাচ্ছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিদগ্ধ উজ্জ্বল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সজল সজল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "স্থির নিশ্চল",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অটুট অবিচল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "তাঁর চোখ ছিল শান্ত ও স্থির, যা তাঁর দৃঢ় ব্যক্তিত্বের পরিচয় দিচ্ছিল [৬]।",
+    "image": null,
+    "language": "en"
+  }
+]

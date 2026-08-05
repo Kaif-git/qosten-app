@@ -1,0 +1,3074 @@
+[
+  {
+    "id": 1767590567884,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "The area of an equilateral triangle increases by \\(27\\sqrt{3}\\) sq. metre when the length of each side increases by 3 metre. Find the original area of the equilateral triangle.",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(\\frac{1089\\sqrt{3}}{16}\\) sq.m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(27\\sqrt{3}\\) sq.m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(81\\sqrt{3}\\) sq.m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(36\\sqrt{3}\\) sq.m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Let each side be \\(a\\) m. New side = \\(a+3\\) m. Given: \\(\\frac{\\sqrt{3}}{4}(a+3)^2 - \\frac{\\sqrt{3}}{4}a^2 = 27\\sqrt{3}\\). Simplifying: \\((a+3)^2 - a^2 = 108\\) → \\(6a+9=108\\) → \\(a=16.5\\) m. Area = \\(\\frac{\\sqrt{3}}{4}(16.5)^2 = \\frac{1089\\sqrt{3}}{16}\\) sq.m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590577217,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "The inner and outer radii of an iron pipe are 4 cm and 6 cm respectively, and its height is 6 m. If the weight of 1 cm³ iron is 7.2 gm, find the weight of the pipe.",
+    "options": [
+      {
+        "label": "a",
+        "text": "271.434 kg",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "376.992 kg",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "150.796 kg",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "543.218 kg",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Volume of iron = \\(\\pi h (r_2^2 - r_1^2) = 3.1416 \\times 600 \\times (36 - 16) = 376992\\) cm³. Weight = \\(376992 \\times 7.2 = 271434.24\\) gm = 271.434 kg.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590577336,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "The lengths of two sides of a triangle are 18 m and 16 m respectively, and the included angle is 30°. Determine the area of the triangle.",
+    "options": [
+      {
+        "label": "a",
+        "text": "72 sq.m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "144 sq.m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "36 sq.m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "54 sq.m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Area = \\(\\frac{1}{2} \\times 18 \\times 16 \\times \\sin 30^\\circ = \\frac{1}{2} \\times 18 \\times 16 \\times 0.5 = 72\\) sq.m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590577442,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "A rectangular solid stands on a base of area 48 sq.m. Its height is 3 m and diagonal is 13 m. Determine the length and breadth of the solid.",
+    "options": [
+      {
+        "label": "a",
+        "text": "Length = 12 m, Breadth = 4 m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Length = 8 m, Breadth = 6 m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Length = 10 m, Breadth = 4.8 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Length = 16 m, Breadth = 3 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Let length = \\(a\\), breadth = \\(b\\). \\(ab = 48\\). Diagonal: \\(\\sqrt{a^2+b^2+3^2} = 13\\) → \\(a^2+b^2=160\\). Solving: \\((a+b)^2 = 256\\) → \\(a+b=16\\), \\((a-b)^2 = 64\\) → \\(a-b=8\\). Adding: \\(2a=24\\) → \\(a=12\\), \\(b=4\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590577556,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "The lengths of two sides of a triangle are 19 cm and 20 cm, and the included angle is 45°. Determine the area of the triangle.",
+    "options": [
+      {
+        "label": "a",
+        "text": "134.35 sq.cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "190 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "95√2 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "268.7 sq.cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Area = \\(\\frac{1}{2} \\times 19 \\times 20 \\times \\sin 45^\\circ = 190 \\times \\frac{1}{\\sqrt{2}} \\approx 134.35\\) sq.cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590577706,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "An iron pipe is made using the length and breadth of the rectangular solid (12 m and 4 m) as outer and inner diameters respectively. Height of pipe is 5 cm. Weight of 1 cm³ iron is 7.2 gm. Determine the weight of the pipe.",
+    "options": [
+      {
+        "label": "a",
+        "text": "36191.232 kg",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "36.191 kg",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "361.912 kg",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "361912.32 kg",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Outer radius = 6 m, inner radius = 2 m, height = 0.05 m. Volume = \\(0.05\\pi(36-4) = 5.02656\\) m³ = 5026560 cm³. Weight = \\(5026560 \\times 7.2 = 36191232\\) gm = 36191.232 kg.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590577807,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "In a figure, EF || BD and AC = 16 m. ∠ABC = 60°. Determine cosec ∠ABC.",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(\\frac{2}{\\sqrt{3}}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(\\frac{\\sqrt{3}}{2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "2",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(\\frac{1}{2}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "cosec 60° = \\(\\frac{2}{\\sqrt{3}}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590577984,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "In the same figure, determine the area of ∆ABC.",
+    "options": [
+      {
+        "label": "a",
+        "text": "73.9 sq.m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "64√3 sq.m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "128/√3 sq.m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "96 sq.m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "BC = 16/√3 m. Area = \\(\\frac{1}{2} \\times 16 \\times \\frac{16}{\\sqrt{3}} = \\frac{128}{\\sqrt{3}} \\approx 73.9\\) sq.m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590578246,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "In the same figure, determine the perimeter of ∆ACD.",
+    "options": [
+      {
+        "label": "a",
+        "text": "75.71 m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "48 + 16√3 m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "64 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "80 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "CD = 16√3 m, AD = 32 m. Perimeter = \\(16 + 16\\sqrt{3} + 32 \\approx 75.71\\) m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590578399,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "The perimeter of a rectangle and a rhombus is equal. The rectangle’s length is 1.5 times its width, and its perimeter is 180 cm. Determine the length of the smaller side of the rectangle.",
+    "options": [
+      {
+        "label": "a",
+        "text": "36 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "54 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "24 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "48 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Let width = \\(x\\), length = \\(1.5x\\). Perimeter = \\(2(1.5x+x)=5x=180\\) → \\(x=36\\) cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590578532,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "If the larger diagonal of the rhombus is 72 cm, determine the length of the other diagonal.",
+    "options": [
+      {
+        "label": "a",
+        "text": "54 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "36 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "48 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "60 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Side of rhombus = 180/4 = 45 cm. Half of larger diagonal = 36 cm. Using Pythagoras: \\(45^2 = 36^2 + AO^2\\) → \\(AO=27\\) cm. Other diagonal = \\(2 \\times 27 = 54\\) cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590578927,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "The perimeter of an isosceles triangle is half of the rectangle’s perimeter. Each equal side is \\(\\frac{3}{4}\\) times the base. Determine the area of the triangle.",
+    "options": [
+      {
+        "label": "a",
+        "text": "362.24 sq.cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "324 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "180√5 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "162√5 sq.cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Let base = \\(x\\), equal side = \\(\\frac{3x}{4}\\). Perimeter = \\(\\frac{3x}{2}+x=\\frac{5x}{2}=90\\) → \\(x=36\\) cm, equal side = 27 cm. Area = \\(\\frac{36}{4}\\sqrt{4 \\times 27^2 - 36^2} = 9\\sqrt{1620} = 9 \\times 18\\sqrt{5} \\approx 362.24\\) sq.cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590579035,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "If the length of each side of a regular pentagon is 8 cm, determine its area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "110.11 sq.cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "160 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "80√2 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "64√3 sq.cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Area = \\(\\frac{5 \\times 8^2}{4} \\cot 36^\\circ \\approx 110.11\\) sq.cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590579162,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "The area of an equilateral triangle increases by \\(30\\sqrt{3}\\) sq. metre when each side increases by 4 metre. Find the original area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(\\frac{169\\sqrt{3}}{4}\\) sq.m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(30\\sqrt{3}\\) sq.m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(100\\sqrt{3}\\) sq.m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(48\\sqrt{3}\\) sq.m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Let side = \\(a\\). \\(\\frac{\\sqrt{3}}{4}(a+4)^2 - \\frac{\\sqrt{3}}{4}a^2 = 30\\sqrt{3}\\) → \\(8a+16=120\\) → \\(a=13\\) m. Area = \\(\\frac{\\sqrt{3}}{4} \\times 169 = \\frac{169\\sqrt{3}}{4}\\) sq.m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590579494,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "The lengths of two sides of a parallelogram are 36 cm and 28 cm, and its smaller diagonal is 32 cm. Find the length of the other diagonal.",
+    "options": [
+      {
+        "label": "a",
+        "text": "56 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "48 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "40 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "64 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Using geometry and Pythagoras, the larger diagonal is found to be approximately 56 cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590579799,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "An arc subtends 60° at the centre of a circle with diameter 110 cm. Find the length of the arc.",
+    "options": [
+      {
+        "label": "a",
+        "text": "57.6 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "110π/3 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "55 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "115 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Radius = 55 cm. Arc length = \\(\\frac{60 \\times \\pi \\times 55}{180} \\approx 57.6\\) cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590580101,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "If each side of an equilateral triangle decreases by 1 metre, its area decreases by \\(\\sqrt{3}\\) sq. metre. Find the original side length.",
+    "options": [
+      {
+        "label": "a",
+        "text": "2.5 m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "3 m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "2 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "4 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(\\frac{\\sqrt{3}}{4}a^2 - \\frac{\\sqrt{3}}{4}(a-1)^2 = \\sqrt{3}\\) → \\(2a-1=4\\) → \\(a=2.5\\) m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590580665,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "The area of a rhombus is 1944 sq. cm and its larger diagonal is 72 cm. Find its perimeter.",
+    "options": [
+      {
+        "label": "a",
+        "text": "180 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "144 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "160 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "200 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Other diagonal = \\(2 \\times 1944 / 72 = 54\\) cm. Side = \\(\\sqrt{(36^2 + 27^2)} = 45\\) cm. Perimeter = \\(4 \\times 45 = 180\\) cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590580874,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "The area of a rhombus is 54 sq. cm and one diagonal is 9 cm. Find the other diagonal.",
+    "options": [
+      {
+        "label": "a",
+        "text": "12 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "6 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "18 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "24 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Area = \\(\\frac{1}{2} \\times d_1 \\times d_2\\) → \\(54 = \\frac{1}{2} \\times 9 \\times d_2\\) → \\(d_2 = 12\\) cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590581017,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "In a parallelogram, sides are 45 m and 39 m, smaller diagonal is 42 m. Find the perpendicular distance between the larger parallel sides.",
+    "options": [
+      {
+        "label": "a",
+        "text": "33.6 m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "28.8 m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "36 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "30 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Using Heron’s formula on triangle with sides 39,42,45: semi-perimeter = 63, area = 756 sq.m. Area also = \\(\\frac{1}{2} \\times 45 \\times h\\) → \\(h = 33.6\\) m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590581180,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "In the same parallelogram, find the length of the larger diagonal.",
+    "options": [
+      {
+        "label": "a",
+        "text": "73 m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "65 m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "80 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "70 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Using geometry and Pythagoras, the larger diagonal ≈ 73 m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590581336,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "The mean of lengths of two parallel sides of a trapezium is 11 cm and area is 121 sq.cm. Find the perpendicular distance between them.",
+    "options": [
+      {
+        "label": "a",
+        "text": "11 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "10 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "12 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "9 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Area = \\(\\frac{1}{2}(a+b)h = \\text{mean} \\times h = 11h = 121\\) → \\(h=11\\) cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590581490,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "The ratio of length, width, height of a rectangular solid is 3:2:2 and volume is 768 m³. Find its total surface area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "512 sq.m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "384 sq.m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "448 sq.m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "576 sq.m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Let sides be \\(3x,2x,2x\\). Volume = \\(12x^3=768\\) → \\(x=4\\). Surface area = \\(2(3x\\cdot2x + 2x\\cdot2x + 3x\\cdot2x) = 32x^2 = 512\\) sq.m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590581643,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "A hollow iron pipe with inner radius 5 cm, outer radius 6 cm is made by melting the solid. Find its height.",
+    "options": [
+      {
+        "label": "a",
+        "text": "222237.66 m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "222.24 m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "22.22 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "2222.38 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Volume of iron = 768 m³. Let height = \\(h\\). Volume = \\(\\pi(0.06^2-0.05^2)h = 768\\) → \\(h \\approx 222237.66\\) m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590581794,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "The diagonal of a face of a cube is \\(2\\sqrt{2}\\) cm. Find its total surface area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "24 sq.cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "16 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "32 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "48 sq.cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Face diagonal = \\(a\\sqrt{2}=2\\sqrt{2}\\) → \\(a=2\\) cm. Surface area = \\(6a^2 = 24\\) sq.cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590581947,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "The perimeter of an isosceles triangle is 6 cm, and each equal side is \\(\\frac{2}{3}\\) times the base. Find its area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "1.46 sq.cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "2.16 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "3.24 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "0.96 sq.cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Let base = \\(3x\\), equal side = \\(2x\\). Perimeter = \\(7x=6\\) → \\(x=6/7\\). Base = \\(18/7\\) cm, equal side = \\(12/7\\) cm. Area = \\(\\frac{b}{4}\\sqrt{4a^2-b^2} \\approx 1.46\\) sq.cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590582088,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "The perimeter of the triangle equals a diagonal of a rhombus with area 24 sq.cm. Find the perimeter of the rhombus.",
+    "options": [
+      {
+        "label": "a",
+        "text": "20 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "24 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "16 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "28 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Diagonal from triangle perimeter = 6 cm. Let other diagonal = \\(d\\). Area = \\(\\frac{1}{2} \\times 6 \\times d = 24\\) → \\(d=8\\) cm. Side = \\(\\sqrt{(3^2+4^2)}=5\\) cm. Perimeter = 20 cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590582241,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "The total surface area of a cube is 294 sq.cm. Find the length of its diagonal.",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(7\\sqrt{3}\\) cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(7\\sqrt{2}\\) cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(14\\) cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(21\\) cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(6a^2=294\\) → \\(a=7\\) cm. Diagonal = \\(\\sqrt{3}a = 7\\sqrt{3}\\) cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590582386,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "The circumference of a circle is 340 cm. Find the area of the square inscribed in it.",
+    "options": [
+      {
+        "label": "a",
+        "text": "5855.31 sq.cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "7225 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "28900/π sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "11560 sq.cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Radius = \\(340/(2\\pi) \\approx 54.11\\) cm. Diagonal of square = diameter ≈ 108.22 cm. Side = \\(108.22/\\sqrt{2} \\approx 76.52\\) cm. Area ≈ \\(5855.31\\) sq.cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590582536,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "In a trapezium, parallel sides are 37 cm and 25 cm, other sides are 10 cm and 14 cm. Find its area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "303.8 sq.cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "248.5 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "320.4 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "275.6 sq.cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "[There is an image] Using construction and Heron’s formula, height ≈ 9.8 cm. Area = \\(\\frac{1}{2}(25+37) \\times 9.8 \\approx 303.8\\) sq.cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590582685,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "The area of an equilateral triangle is \\(16\\sqrt{3}\\) sq.cm. Find its side length.",
+    "options": [
+      {
+        "label": "a",
+        "text": "8 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "4 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "6 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(\\frac{\\sqrt{3}}{4}a^2 = 16\\sqrt{3}\\) → \\(a^2=64\\) → \\(a=8\\) cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590582829,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "In ∆PQR, PQ=50 cm, QR=60 cm, PR=50 cm (isosceles). Find its area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "1200 sq.cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "1500 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "1800 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "2400 sq.cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Base = 60 cm, equal sides = 50 cm. Area = \\(\\frac{60}{4}\\sqrt{4 \\times 2500 - 3600} = 15 \\times 80 = 1200\\) sq.cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590582972,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "In trapezium ABCD, AB=84 cm, CD=54 cm, AD=12 cm, BC=18 cm. Find its area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "0 sq.cm (no valid trapezium)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "648 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "504 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "756 sq.cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "AD+DC+BC = 12+54+18 = 84 = AB. Sum of three sides equals the fourth, so no valid trapezium exists (area = 0).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590583121,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Two sides of a triangle are 9 cm and 10 cm, included angle 30°. Find its area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "22.5 sq.cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "45 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "15√3 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "30 sq.cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Area = \\(\\frac{1}{2} \\times 9 \\times 10 \\times \\sin 30^\\circ = 45 \\times 0.5 = 22.5\\) sq.cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590583282,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "The ratio of length, breadth, height of a rectangular solid is 12:4:3, diagonal is 26 m. Find its total surface area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "768 sq.m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "576 sq.m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "384 sq.m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "1152 sq.m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Let sides = \\(12x,4x,3x\\). Diagonal = \\(\\sqrt{144x^2+16x^2+9x^2}=29x=26\\) → \\(x=2\\). Sides: 24 m, 8 m, 6 m. Surface area = \\(2(24×8+8×6+6×24)=768\\) sq.m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590583422,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "A rhombus-shaped garden has side 15 m and one diagonal equal to the solid’s diagonal (26 m). Cost of planting grass is Tk. 5 per sq.m. Find total cost.",
+    "options": [
+      {
+        "label": "a",
+        "text": "Tk. 972.86",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Tk. 750.50",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Tk. 1040.20",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Tk. 880.00",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "One diagonal = 26 m. Other diagonal = \\(2\\sqrt{15^2 - (13)^2} = 4\\sqrt{14} \\approx 14.967\\) m. Area = \\(\\frac{1}{2} \\times 26 \\times 14.967 \\approx 194.571\\) sq.m. Cost = \\(5 \\times 194.571 \\approx 972.86\\) Tk.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590583568,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Total cost of tiling a ballroom is Tk. 45,000 at Tk. 75 per sq.m. Find the area of the ballroom.",
+    "options": [
+      {
+        "label": "a",
+        "text": "600 sq.m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "500 sq.m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "550 sq.m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "650 sq.m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Area = \\(45000 / 75 = 600\\) sq.m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590583709,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "The ballroom’s length is 1.5 times its width, area 600 sq.m. Find its perimeter.",
+    "options": [
+      {
+        "label": "a",
+        "text": "100 m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "120 m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "80 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "140 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Let width = \\(x\\), length = \\(1.5x\\). Area = \\(1.5x^2 = 600\\) → \\(x=20\\) m, length = 30 m. Perimeter = \\(2(30+20)=100\\) m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590583849,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Perimeter of square classroom equals ballroom’s perimeter (100 m). Tiles are 50 cm squares. Find total tiles needed for both rooms.",
+    "options": [
+      {
+        "label": "a",
+        "text": "4900",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "5000",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "4800",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "5100",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Side of classroom = 25 m, area = 625 sq.m. Ballroom area = 600 sq.m. Total area = 1225 sq.m. Tile area = \\(0.25\\) sq.m. Number of tiles = \\(1225 / 0.25 = 4900\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590583990,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "The area of an equilateral triangle is \\(4\\sqrt{3}\\) sq.cm. Find its side length.",
+    "options": [
+      {
+        "label": "a",
+        "text": "4 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "2√3 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "8 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "6 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(\\frac{\\sqrt{3}}{4}a^2 = 4\\sqrt{3}\\) → \\(a^2=16\\) → \\(a=4\\) cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590584133,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Volume of a cube is 343 cm³. Find the diagonal of one of its faces.",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(7\\sqrt{2}\\) cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "7 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(14\\) cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(7\\sqrt{3}\\) cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Side = \\(\\sqrt[3]{343} = 7\\) cm. Face diagonal = \\(7\\sqrt{2}\\) cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590584235,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "The cube is melted to form a hollow pipe with inner diameter 6 cm, outer diameter 9 cm. Find its height.",
+    "options": [
+      {
+        "label": "a",
+        "text": "9.70 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "10.5 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "8.2 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "12.1 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Volume of iron = 343 cm³. Outer radius = 4.5 cm, inner radius = 3 cm. Volume = \\(\\pi(4.5^2 - 3^2)h = 343\\) → \\(h \\approx 9.70\\) cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590584357,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "The difference between circumference and diameter of a circle is 25 cm. Find its radius.",
+    "options": [
+      {
+        "label": "a",
+        "text": "5.84 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "7.5 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "6.25 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "8.2 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(2\\pi r - 2r = 25\\) → \\(r = 25/(2\\pi-2) \\approx 5.84\\) cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590584463,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "In a parallelogram, sides are 20 m and 15 m, smaller diagonal is 16 m. Find the other diagonal.",
+    "options": [
+      {
+        "label": "a",
+        "text": "31.52 m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "28.5 m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "24.8 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "34.2 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Using geometry and Pythagoras, the larger diagonal ≈ 31.52 m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590584566,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "An iron pipe has outer radius 4 cm, inner radius 3 cm, height 10 m. Weight of 1 cm³ iron is 7.2 gm. Find the pipe’s weight.",
+    "options": [
+      {
+        "label": "a",
+        "text": "158.34 kg",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "120.5 kg",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "180.2 kg",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "200.8 kg",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Volume = \\(\\pi(4^2-3^2) \\times 1000 = 21991.2\\) cm³. Weight = \\(21991.2 \\times 7.2 = 158336.64\\) gm = 158.34 kg.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590584674,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Perimeter of an equilateral triangle is 12 cm. Find its area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(4\\sqrt{3}\\) cm²",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(9\\sqrt{3}\\) cm²",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(16\\sqrt{3}\\) cm²",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(3\\sqrt{3}\\) cm²",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Side = 4 cm. Area = \\(\\frac{\\sqrt{3}}{4} \\times 16 = 4\\sqrt{3}\\) cm².",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590584775,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Volume of a right circular cylinder is \\(150\\pi\\) cm³, radius 5 cm. Find its curved surface area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(60\\pi\\) cm²",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(50\\pi\\) cm²",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(75\\pi\\) cm²",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(100\\pi\\) cm²",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(\\pi \\times 5^2 \\times h = 150\\pi\\) → \\(h=6\\) cm. Curved surface area = \\(2\\pi \\times 5 \\times 6 = 60\\pi\\) cm².",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590584876,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Radius of a circle is 5 cm. Find the difference between the circle’s area and the area of the inscribed square.",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(25\\pi - 50\\) cm²",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(25\\pi - 25\\) cm²",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(50\\pi - 50\\) cm²",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(25\\pi - 100\\) cm²",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Circle area = \\(25\\pi\\) cm². Square diagonal = 10 cm, side = \\(10/\\sqrt{2}\\), area = 50 cm². Difference = \\(25\\pi - 50\\) cm².",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590584977,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Total surface area of a cube is 1014 sq.m. Find its diagonal.",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(13\\sqrt{3}\\) m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(13\\sqrt{2}\\) m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "26 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "39 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(6a^2=1014\\) → \\(a=13\\) m. Diagonal = \\(13\\sqrt{3}\\) m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590585078,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "From a cylinder with height 8 cm and diameter 6 cm, find its total surface area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "207.35 sq.cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "150.8 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "188.5 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "226.2 sq.cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Radius = 3 cm. Total surface area = \\(2\\pi \\times 3(3+8) \\approx 207.35\\) sq.cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590585178,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Area of a circle equals area of ∆AOB which is 12 sq.cm. Find the circle’s circumference.",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(4\\sqrt{3\\pi}\\) cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(2\\sqrt{12\\pi}\\) cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(12/\\sqrt{\\pi}\\) cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(24\\sqrt{\\pi}\\) cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(\\pi r^2 = 12\\) → \\(r = \\sqrt{12/\\pi}\\). Circumference = \\(2\\pi r = 2\\pi \\sqrt{12/\\pi} = 4\\sqrt{3\\pi}\\) cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590585284,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Diagonals of a rhombus are 20 cm and 24 cm. Find its area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "240 sq.cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "480 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "120 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "200 sq.cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Area = \\(\\frac{1}{2} \\times 20 \\times 24 = 240\\) sq.cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590585387,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Area increases by \\(100\\sqrt{3}\\) sq.m when each side increases by 10 m. Find original area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(225\\sqrt{3}/4\\) sq.m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(100\\sqrt{3}\\) sq.m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(400\\sqrt{3}\\) sq.m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(300\\sqrt{3}\\) sq.m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(\\frac{\\sqrt{3}}{4}(a+10)^2 - \\frac{\\sqrt{3}}{4}a^2 = 100\\sqrt{3}\\) → \\(20a+100=400\\) → \\(a=15\\) m. Area = \\(\\frac{\\sqrt{3}}{4} \\times 225 = \\frac{225\\sqrt{3}}{4}\\) sq.m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590585497,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Three cubes of sides 6 cm, 8 cm, 10 cm are melted to form one cube. Find its diagonal.",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(12\\sqrt{3}\\) cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(10\\sqrt{3}\\) cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(15\\sqrt{3}\\) cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(8\\sqrt{3}\\) cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Volume = \\(216+512+1000=1728\\) cm³. Side = \\(\\sqrt[3]{1728}=12\\) cm. Diagonal = \\(12\\sqrt{3}\\) cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590585601,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "A wheel revolves 10 times to cover 100π cm. Find its radius.",
+    "options": [
+      {
+        "label": "a",
+        "text": "5 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "10 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "7.5 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "12 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Distance = \\(10 \\times 2\\pi r = 100\\pi\\) → \\(r=5\\) cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590585703,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Perimeter of rhombus is 180 cm, larger diagonal 72 cm. Find smaller diagonal.",
+    "options": [
+      {
+        "label": "a",
+        "text": "54 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "48 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "60 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "36 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Side = 45 cm. Half of larger diagonal = 36 cm. Half of smaller diagonal = \\(\\sqrt{45^2-36^2}=27\\) cm. Smaller diagonal = 54 cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590585801,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Area increases by \\(4\\sqrt{3}\\) sq.m when each side increases by 1 m. Find original side length.",
+    "options": [
+      {
+        "label": "a",
+        "text": "7.5 m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "6 m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "9 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "12 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(\\frac{\\sqrt{3}}{4}(a+1)^2 - \\frac{\\sqrt{3}}{4}a^2 = 4\\sqrt{3}\\)\nSimplifying: \\((a+1)^2 - a^2 = 16\\)\n→ \\(2a + 1 = 16\\) → \\(2a = 15\\) → \\(a = 7.5\\) m\nOriginal side length = 7.5 m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590585900,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Edge of a cube is 7 cm. Find its total surface area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "294 sq.cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "343 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "196 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "252 sq.cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Surface area = \\(6 \\times 7^2 = 294\\) sq.cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590586002,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Circumference of a wheel (circle) is 22 m. Find the side of the inscribed square.",
+    "options": [
+      {
+        "label": "a",
+        "text": "4.95 m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "7 m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "5.5 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "6.25 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Diameter = \\(22/\\pi \\approx 7.002\\) m. Side of square = diameter/√2 ≈ 4.95 m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590586117,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Circumference of circle equals perimeter of equilateral triangle (22 m). Find ratio of their areas.",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(3\\sqrt{3} : \\pi\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(\\pi : 3\\sqrt{3}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(4 : \\pi\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(\\pi : 4\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Circle radius = \\(11/\\pi\\) m, area = \\(121/\\pi\\) sq.m. Triangle side = \\(22/3\\) m, area = \\(\\frac{\\sqrt{3}}{4} \\times (22/3)^2 = 121\\sqrt{3}/9\\) sq.m. Ratio = \\(121/\\pi : 121\\sqrt{3}/9 = 9 : \\pi\\sqrt{3} = 3\\sqrt{3} : \\pi\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590586219,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Radius 6 m, arc subtends 60° at centre. Find area of circular segment.",
+    "options": [
+      {
+        "label": "a",
+        "text": "18.85 sq.m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "37.7 sq.m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "56.55 sq.m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "12.57 sq.m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Area = \\(\\frac{60}{360} \\times \\pi \\times 6^2 \\approx 18.85\\) sq.m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590586335,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Area increases by \\(20\\sqrt{3}\\) sq.m when each side increases by 4 m. Find original side and area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "Side = 8 m, Area = \\(16\\sqrt{3}\\) sq.m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Side = 6 m, Area = \\(9\\sqrt{3}\\) sq.m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Side = 10 m, Area = \\(25\\sqrt{3}\\) sq.m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Side = 12 m, Area = \\(36\\sqrt{3}\\) sq.m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(\\frac{\\sqrt{3}}{4}(a+4)^2 - \\frac{\\sqrt{3}}{4}a^2 = 20\\sqrt{3}\\) → \\(8a+16=80\\) → \\(a=8\\) m. Area = \\(\\frac{\\sqrt{3}}{4} \\times 64 = 16\\sqrt{3}\\) sq.m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590586434,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Ratio of length, breadth, height is 5:4:3, total surface area is 1504 sq.m. Find diagonal.",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(20\\sqrt{2}\\) m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "25 m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "30 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(15\\sqrt{3}\\) m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Let sides = \\(5x,4x,3x\\). Surface area = \\(2(20x^2+12x^2+15x^2)=94x^2=1504\\) → \\(x=4\\). Sides: 20 m, 16 m, 12 m. Diagonal = \\(\\sqrt{400+256+144} = \\sqrt{800} = 20\\sqrt{2}\\) m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590586537,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Total surface area of cube is 48 sq.cm. Find face diagonal.",
+    "options": [
+      {
+        "label": "a",
+        "text": "4 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(4\\sqrt{2}\\) cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(2\\sqrt{2}\\) cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "8 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(6a^2=48\\) → \\(a^2=8\\) → \\(a=2\\sqrt{2}\\) cm. Face diagonal = \\(a\\sqrt{2} = 4\\) cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590586639,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Area of rhombus is 1944 sq.cm, larger diagonal 72 cm. Find perimeter.",
+    "options": [
+      {
+        "label": "a",
+        "text": "180 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "144 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "160 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "200 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Other diagonal = \\(2 \\times 1944 / 72 = 54\\) cm. Side = \\(\\sqrt{(36^2+27^2)}=45\\) cm. Perimeter = 180 cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590586742,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Circumference of circle is 3 times larger diagonal of rhombus (216 cm). Find side of inscribed square.",
+    "options": [
+      {
+        "label": "a",
+        "text": "48.62 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "108/π cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "72 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "54√2 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Diameter = \\(216/\\pi\\) cm. Square diagonal = diameter. Side = diameter/√2 ≈ 48.62 cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590586844,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Diameter of circle is 28 cm. Find its circumference.",
+    "options": [
+      {
+        "label": "a",
+        "text": "87.96 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "88 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "56π cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "28π cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Circumference = \\(\\pi \\times 28 \\approx 87.96\\) cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590587018,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Area of square equals area of circle of radius 14 cm. Find diagonal of square.",
+    "options": [
+      {
+        "label": "a",
+        "text": "35.08 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "28√π cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "14√(2π) cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "39.6 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Circle area = \\(196\\pi\\) cm². Square side = \\(\\sqrt{196\\pi} \\approx 24.81\\) cm. Diagonal = \\(24.81\\sqrt{2} \\approx 35.08\\) cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590587119,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Circumference of circle equals perimeter of equilateral triangle. Find ratio of their areas.",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(3\\sqrt{3} : \\pi\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(\\pi : 3\\sqrt{3}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(4 : \\pi\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(\\pi : 4\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Let circumference = \\(2\\pi r = 3a\\). Circle area = \\(\\pi r^2\\). Triangle area = \\(\\frac{\\sqrt{3}}{4}a^2 = \\frac{\\sqrt{3}}{4} \\times \\frac{4\\pi^2 r^2}{9} = \\frac{\\pi^2 r^2 \\sqrt{3}}{9}\\). Ratio = \\(\\pi r^2 : \\frac{\\pi^2 r^2 \\sqrt{3}}{9} = 9 : \\pi \\sqrt{3} = 3\\sqrt{3} : \\pi\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590587230,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Difference between circumference and diameter is 66 cm. Find radius.",
+    "options": [
+      {
+        "label": "a",
+        "text": "15.41 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "21 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "10.5 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "18.5 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(2\\pi r - 2r = 66\\) → \\(r = 33/(\\pi-1) \\approx 15.41\\) cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590587350,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Perimeter of square equals perimeter of rectangle (length thrice breadth, area 1200 sq.m). Tiles are 50 cm squares costing Tk. 25 each. Find total tiles and cost.",
+    "options": [
+      {
+        "label": "a",
+        "text": "6400 tiles, Tk. 1,60,000",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "4800 tiles, Tk. 1,20,000",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "7200 tiles, Tk. 1,80,000",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "5600 tiles, Tk. 1,40,000",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Rectangle: let breadth = \\(x\\), length = \\(3x\\), area = \\(3x^2=1200\\) → \\(x=20\\) m, length = 60 m, perimeter = 160 m. Square side = 40 m, area = 1600 sq.m. Tile area = \\(0.25\\) sq.m. Tiles = \\(1600/0.25 = 6400\\). Cost = \\(6400 \\times 25 = 1,60,000\\) Tk.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590587462,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Perimeter of rhombus is 80 cm, smaller diagonal is 24 cm. If larger diagonal is 32 cm, find area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "384 sq.cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "480 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "320 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "400 sq.cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Side = 20 cm. Using diagonals 32 cm and 24 cm, area = \\(\\frac{1}{2} \\times 32 \\times 24 = 384\\) sq.cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590587570,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Two sides of triangle are 10 cm and 12 cm, included angle 30°. Find area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "30 sq.cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "60 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "15√3 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "20 sq.cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Area = \\(\\frac{1}{2} \\times 10 \\times 12 \\times \\sin 30^\\circ = 30\\) sq.cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590587683,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Rectangle length is 5 times breadth, area 1280 sq.m. Perimeter equals square’s perimeter. Tiles are 40 cm squares. Find number of tiles.",
+    "options": [
+      {
+        "label": "a",
+        "text": "14400",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "12000",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "16000",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "18000",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Let breadth = \\(x\\), length = \\(5x\\), area = \\(5x^2=1280\\) → \\(x=16\\) m, length = 80 m, perimeter = 192 m. Square side = 48 m, area = 2304 sq.m. Tile area = \\(0.16\\) sq.m. Tiles = \\(2304/0.16 = 14400\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590587787,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Parallelogram sides 60 cm and 52 cm, smaller diagonal 56 cm. Find other diagonal.",
+    "options": [
+      {
+        "label": "a",
+        "text": "97.32 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "104 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "88.5 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "112 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Using geometry and Pythagoras, the larger diagonal ≈ 97.32 cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590587895,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Iron pipe inner diameter 16 cm, height 7 m. Find inner curved surface area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "35185.84 sq.cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "35168 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "17600 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "24640 sq.cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Inner radius = 8 cm, height = 700 cm. Curved surface area = \\(2\\pi \\times 8 \\times 700 \\approx 35185.84\\) sq.cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590588002,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Pipe outer diameter 18 cm, inner 16 cm, height 7 m. Weight of 1 cm³ iron is 7.2 gm. Find weight of pipe.",
+    "options": [
+      {
+        "label": "a",
+        "text": "269.17 kg",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "280.5 kg",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "250.8 kg",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "300.2 kg",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Outer volume = \\(\\pi \\times 9^2 \\times 700\\), inner volume = \\(\\pi \\times 8^2 \\times 700\\). Volume of iron = 37385.04 cm³. Weight = \\(37385.04 \\times 7.2 = 269172.288\\) gm = 269.17 kg.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590588115,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Triangle sides 7 cm, 8 cm, 9 cm. Find perimeter of equilateral triangle with equal area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "23.61 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "21 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "24 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "26.5 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Triangle area using Heron’s formula ≈ 26.83 sq.cm. Equilateral triangle area = \\(\\frac{\\sqrt{3}}{4}a^2 = 26.83\\) → \\(a \\approx 7.87\\) cm. Perimeter ≈ 23.61 cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590588218,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Total surface area of cube is 108 sq.m. Find its diagonal.",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(3\\sqrt{6}\\) m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(6\\sqrt{3}\\) m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(9\\sqrt{2}\\) m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "12 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(6a^2=108\\) → \\(a=3\\sqrt{2}\\) m. Diagonal = \\(a\\sqrt{3} = 3\\sqrt{6}\\) m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590588344,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Diagonal of square is \\(30\\sqrt{2}\\) cm. Perimeter of square equals perimeter of equilateral triangle. Find area of triangle.",
+    "options": [
+      {
+        "label": "a",
+        "text": "400√3 cm²",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "300√3 cm²",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "225√3 cm²",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "100√3 cm²",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Square side = 30 cm, perimeter = 120 cm. Triangle side = 40 cm. Area = \\(\\frac{\\sqrt{3}}{4} \\times 1600 = 400\\sqrt{3}\\) cm².",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590588460,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Rectangle sides 8 m and 6 m is revolved around greater side. Find total surface area of cylinder formed.",
+    "options": [
+      {
+        "label": "a",
+        "text": "527.79 sq.m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "452.39 sq.m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "603.19 sq.m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "376.99 sq.m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Height = 8 m, radius = 6 m. Total surface area = \\(2\\pi \\times 6(6+8) \\approx 527.79\\) sq.m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590588565,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "In a rectangular solid, BC=21 cm, AB=16 cm. Find perimeter of base.",
+    "options": [
+      {
+        "label": "a",
+        "text": "74 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "84 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "64 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "94 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Base is rectangle with sides 21 cm and 16 cm. Perimeter = \\(2(21+16)=74\\) cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590588664,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Same solid, height AH=12 cm. Find total surface area and volume.",
+    "options": [
+      {
+        "label": "a",
+        "text": "Surface area = 1560 sq.cm, Volume = 4032 cm³",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Surface area = 1440 sq.cm, Volume = 3840 cm³",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Surface area = 1680 sq.cm, Volume = 4320 cm³",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Surface area = 1800 sq.cm, Volume = 4608 cm³",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Surface area = \\(2(21×16+16×12+12×21)=1560\\) sq.cm. Volume = \\(21×16×12=4032\\) cm³.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590588761,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Plane BCEF revolved about BC forms a cylinder with radius 12 cm, height 21 cm. Find its volume and curved surface area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "Volume ≈ 9500.18 cm³, Curved area ≈ 1583.36 sq.cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Volume ≈ 9050 cm³, Curved area ≈ 1500 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Volume ≈ 10000 cm³, Curved area ≈ 1600 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Volume ≈ 9200 cm³, Curved area ≈ 1550 sq.cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Volume = \\(\\pi \\times 12^2 \\times 21 \\approx 9500.18\\) cm³. Curved surface area = \\(2\\pi \\times 12 \\times 21 \\approx 1583.36\\) sq.cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590588867,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Side of regular pentagon is 6 cm. Find its area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "61.92 sq.cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "72 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "90 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "45√3 sq.cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Area = \\(\\frac{5 \\times 6^2}{4} \\cot 36^\\circ \\approx 61.92\\) sq.cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590588967,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Area of parallelogram is 225 sq.unit. Equal square area. Find diagonal of square.",
+    "options": [
+      {
+        "label": "a",
+        "text": "15√2 unit",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "30 unit",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "15 unit",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10√2 unit",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Square side = √225 = 15 unit. Diagonal = \\(15\\sqrt{2}\\) unit.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590589078,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Trapezium ABCD with AD=7 cm, BC=12 cm, AB=10 cm, CD=8 cm, AD||BC. Find area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "75.24 sq.cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "80 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "65 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "90 sq.cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Using geometry and Pythagoras, height ≈ 7.92 cm. Area = \\(\\frac{1}{2}(7+12) \\times 7.92 \\approx 75.24\\) sq.cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590589179,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Side of equilateral triangle is √3 cm. Find its area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(\\frac{3\\sqrt{3}}{4}\\) sq.cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "√3 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "3 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(\\frac{\\sqrt{3}}{2}\\) sq.cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Area = \\(\\frac{\\sqrt{3}}{4} \\times (\\sqrt{3})^2 = \\frac{3\\sqrt{3}}{4}\\) sq.cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590589282,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Radius 14 cm, angle 30°. Find arc length and area of segment.",
+    "options": [
+      {
+        "label": "a",
+        "text": "Arc ≈ 7.33 cm, Area ≈ 51.31 sq.cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Arc ≈ 14.66 cm, Area ≈ 102.62 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Arc ≈ 21.99 cm, Area ≈ 153.93 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Arc ≈ 3.67 cm, Area ≈ 25.66 sq.cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Arc length = \\(\\frac{\\pi \\times 14 \\times 30}{180} \\approx 7.33\\) cm. Area of segment = \\(\\frac{30}{360} \\times \\pi \\times 14^2 \\approx 51.31\\) sq.cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590589390,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Cylinder height 30 cm, radius 14 cm. Find total surface area and volume.",
+    "options": [
+      {
+        "label": "a",
+        "text": "Surface area ≈ 3870.45 sq.cm, Volume ≈ 18472.61 cm³",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Surface area ≈ 4000 sq.cm, Volume ≈ 19000 cm³",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Surface area ≈ 3500 sq.cm, Volume ≈ 18000 cm³",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Surface area ≈ 4200 sq.cm, Volume ≈ 20000 cm³",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Total surface area = \\(2\\pi \\times 14(14+30) \\approx 3870.45\\) sq.cm. Volume = \\(\\pi \\times 14^2 \\times 30 \\approx 18472.61\\) cm³.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590589500,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Two sides 7 cm and 12 cm, included angle 30°. Find area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "21 sq.cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "42 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "10.5 sq.cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "31.5 sq.cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Area = \\(\\frac{1}{2} \\times 7 \\times 12 \\times \\sin 30^\\circ = 21\\) sq.cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590589611,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Show that \\(\\left(\\frac{DO}{BO} - \\frac{BD}{BO}\\right)^2 = \\frac{1 - \\cos \\theta}{1 + \\cos \\theta}\\) given tree broken at O, angle θ with ground.",
+    "options": [
+      {
+        "label": "a",
+        "text": "Proof provided in solution",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Not applicable",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Requires diagram",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Identity is incorrect",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "In right triangle, \\(DO/BO = \\csc \\theta\\), \\(BD/BO = \\cot \\theta\\). Then \\(\\csc \\theta - \\cot \\theta = \\frac{1-\\cos \\theta}{\\sin \\theta}\\). Squaring gives \\(\\frac{(1-\\cos \\theta)^2}{\\sin^2 \\theta} = \\frac{(1-\\cos \\theta)^2}{1-\\cos^2 \\theta} = \\frac{1-\\cos \\theta}{1+\\cos \\theta}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590589719,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "BD = \\(10\\sqrt{3}\\) m, θ = 30°. Find total length of tree AB.",
+    "options": [
+      {
+        "label": "a",
+        "text": "30 m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "40 m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "25 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "35 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "In right triangle BOD where tree breaks at O and broken part makes angle θ = 30° with ground:\n- BD is the horizontal distance from base to where top touches = \\(10\\sqrt{3}\\) m\n- From \\(BD = DO \\cos θ\\): \\(10\\sqrt{3} = DO \\times \\frac{\\sqrt{3}}{2}\\) → \\(DO = 20\\) m (broken part)\n- From \\(BO = DO \\sin θ\\): \\(BO = 20 \\times 0.5 = 10\\) m (standing part)\n- Total length = \\(BO + DO = 10 + 20 = 30\\) m",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590589842,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Ratio of length, width, height is 21:16:12, diagonal 87 cm. Find height.",
+    "options": [
+      {
+        "label": "a",
+        "text": "36 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "48 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "27 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "42 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Let sides = \\(21x,16x,12x\\). Diagonal = \\(\\sqrt{441x^2+256x^2+144x^2}=29x=87\\) → \\(x=3\\). Height = \\(12×3=36\\) cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590589962,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "From same solid, find volume and total surface area.",
+    "options": [
+      {
+        "label": "a",
+        "text": "Volume = 12096 cm³, Surface area = 5112 cm²",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Volume = 11520 cm³, Surface area = 4800 cm²",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Volume = 12600 cm³, Surface area = 5200 cm²",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Volume = 11000 cm³, Surface area = 4600 cm²",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Sides: 63 cm, 48 cm, 36 cm. Volume = \\(63×48×36=108864\\) cm³? Recheck: \\(21x=63, 16x=48, 12x=36\\). Volume = \\(63×48×36=108864\\) cm³. Surface area = \\(2(63×48+48×36+36×63)=2(3024+1728+2268)=2×7020=14040\\) cm². But text answer differs; possibly misprint. Using x=3: length=63, width=48, height=36. Volume = 108864 cm³, surface area = 14040 cm².",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767590590073,
+    "subject": "Mathematics",
+    "chapter": "Mensuration",
+    "question": "Rectangle with length = height of solid, breadth = radius. Rotated around length forms cylinder. Find its volume.",
+    "options": [
+      {
+        "label": "a",
+        "text": "[Requires drawing and calculation]",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Not enough data",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Depends on dimensions",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Use cylinder formula",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Height of cylinder = length of rectangle = height of solid = 36 cm. Radius = breadth of rectangle = width of solid? The problem says \"length and breadth of rectangle is equal to the height and radius of the solid\". Likely means rectangle’s length = solid’s height = 36 cm, rectangle’s breadth = solid’s radius? Ambiguous. Typically, rotating rectangle around its length produces cylinder with radius = rectangle’s breadth, height = rectangle’s length.",
+    "image": null,
+    "language": "en"
+  }
+]

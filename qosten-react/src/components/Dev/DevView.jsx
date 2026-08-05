@@ -5,7 +5,7 @@ import './DevView.css';
 
 export default function DevView() {
   const navigate = useNavigate();
-  const [activeTab, setActiveTab] = useState('reports'); // 'reports', 'chats', 'users', 'flagged', 'metrics', 'activity', 'incomplete'
+  const [activeTab, setActiveTab] = useState('reports'); // 'reports', 'chats', 'users', 'flagged', 'metrics', 'activity', 'incomplete', 'ai'
   const [reports, setReports] = useState([]);
   const [chats, setChats] = useState([]);
   const [users, setUsers] = useState([]);
@@ -25,6 +25,14 @@ export default function DevView() {
   const [activityPage, setActivityPage] = useState(0);
   const [activityLoading, setActivityLoading] = useState(false);
   const [hasMoreActivity, setHasMoreActivity] = useState(true);
+
+  // AI Usage state
+  const [aiUsageData, setAiUsageData] = useState(null);
+  const [aiConversations, setAiConversations] = useState([]);
+  const [aiConversationsTotal, setAiConversationsTotal] = useState(0);
+  const [aiConversationPage, setAiConversationPage] = useState(0);
+  const [aiLoading, setAiLoading] = useState(false);
+  const [allAIMetrics, setAllAIMetrics] = useState(null);
   
   // Search/Filter states
   const [searchTerm, setSearchTerm] = useState(''); // Generic search for Users
@@ -134,14 +142,59 @@ export default function DevView() {
     if (!userId) return;
     setMetricsLoading(true);
     try {
-      const metrics = await reportApi.fetchUserMetrics(userId, !forceRefresh);
+      const [metrics, aiUsage] = await Promise.all([
+        reportApi.fetchUserMetrics(userId, !forceRefresh),
+        reportApi.fetchUserAIUsage(userId),
+      ]);
       setUserMetrics(metrics);
+      setAiUsageData(aiUsage);
       setSelectedUserId(userId);
     } catch (err) {
       alert('Failed to load metrics: ' + err.message);
     } finally {
       setMetricsLoading(false);
     }
+  };
+
+  const loadUserAIConversations = async (userId, reset = false) => {
+    if (!userId) return;
+    const page = reset ? 0 : aiConversationPage;
+    setAiLoading(true);
+    try {
+      const result = await reportApi.fetchUserAIConversations(userId, page);
+      if (reset) {
+        setAiConversations(result.conversations);
+        setAiConversationPage(1);
+      } else {
+        setAiConversations(prev => [...prev, ...result.conversations]);
+        setAiConversationPage(prev => prev + 1);
+      }
+      setAiConversationsTotal(result.total);
+    } catch (err) {
+      console.error('Failed to load AI conversations:', err);
+    } finally {
+      setAiLoading(false);
+    }
+  };
+
+  const loadAllAIMetrics = async () => {
+    try {
+      const data = await reportApi.fetchAllAIMetrics();
+      setAllAIMetrics(data);
+    } catch (err) {
+      console.error('Failed to load AI metrics:', err);
+    }
+  };
+
+  const handleViewAI = (userId) => {
+    setActiveTab('ai');
+    setSelectedUserId(userId);
+    setAiUsageData(null);
+    setAiConversations([]);
+    setAiConversationPage(0);
+    loadUserMetrics(userId, true);
+    loadUserAIConversations(userId, true);
+    loadAllAIMetrics();
   };
 
   const handleViewMetrics = (userId) => {
@@ -763,6 +816,9 @@ export default function DevView() {
         <button className={`sub-tab ${activeTab === 'flagged' ? 'active' : ''}`} onClick={() => setActiveTab('flagged')}>
           🚩 Flagged ({flagged.subtopics.length + flagged.questions.length + flagged.labs.length})
         </button>
+        <button className={`sub-tab ${activeTab === 'ai' ? 'active' : ''}`} onClick={() => { if (selectedUserId) handleViewAI(selectedUserId); else setActiveTab('ai'); }}>
+          🤖 AI Usage
+        </button>
       </div>
 
       {error && <div className="error-message">Error: {error}</div>}
@@ -955,46 +1011,52 @@ export default function DevView() {
                  </div>
                </div>
 
-               <div className="metrics-section">
-                 <h4>📅 Daily Activity Timeline</h4>
-                 <div className="timeline-container">
-                   <table className="reports-table">
-                     <thead>
-                       <tr>
-                         <th>Date</th>
-                         <th>Attempts</th>
-                         <th>Correct</th>
-                         <th>Accuracy</th>
-                         <th>MCQ</th>
-                         <th>SQ</th>
-                         <th>CQ</th>
-                         <th>Subtopics</th>
-                       </tr>
-                     </thead>
-                     <tbody>
-                       {userMetrics.daily.length === 0 ? (
-                         <tr><td colSpan="8" className="no-data">No daily data available.</td></tr>
-                       ) : (
-                         userMetrics.daily.map(day => {
-                           const acc = day.attempts_count > 0 ? Math.round((day.correct_attempts / day.attempts_count) * 100) : 0;
-                           return (
-                             <tr key={day.date}>
-                               <td>{day.date}</td>
-                               <td>{day.attempts_count || 0}</td>
-                               <td>{day.correct_attempts || 0}</td>
-                               <td>{acc}%</td>
-                               <td>{day.mcq_attempts || 0}</td>
-                               <td>{day.sq_attempts || 0}</td>
-                               <td>{day.cq_attempts || 0}</td>
-                               <td>{day.subtopics_learned || 0}</td>
-                             </tr>
-                           );
-                         })
-                       )}
-                     </tbody>
-                   </table>
-                 </div>
-               </div>
+                <div className="metrics-section">
+                  <h4>📅 Daily Activity Timeline</h4>
+                  <div className="timeline-container">
+                    <table className="reports-table">
+                      <thead>
+                        <tr>
+                          <th>Date</th>
+                          <th>Attempts</th>
+                          <th>Correct</th>
+                          <th>Accuracy</th>
+                          <th>MCQ</th>
+                          <th>SQ</th>
+                          <th>CQ</th>
+                          <th>Subtopics</th>
+                          <th>AI Requests</th>
+                          <th>AI Tokens</th>
+                          <th>AI Conv</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {userMetrics.daily.length === 0 ? (
+                          <tr><td colSpan="11" className="no-data">No daily data available.</td></tr>
+                        ) : (
+                          userMetrics.daily.map(day => {
+                            const acc = day.attempts_count > 0 ? Math.round((day.correct_attempts / day.attempts_count) * 100) : 0;
+                            return (
+                              <tr key={day.date}>
+                                <td>{day.date}</td>
+                                <td>{day.attempts_count || 0}</td>
+                                <td>{day.correct_attempts || 0}</td>
+                                <td>{acc}%</td>
+                                <td>{day.mcq_attempts || 0}</td>
+                                <td>{day.sq_attempts || 0}</td>
+                                <td>{day.cq_attempts || 0}</td>
+                                <td>{day.subtopics_learned || 0}</td>
+                                <td>{day.ai_requests || 0}</td>
+                                <td>{day.ai_tokens_estimated ? `${(day.ai_tokens_estimated / 1000).toFixed(1)}k` : '—'}</td>
+                                <td>{day.ai_conversations || 0}</td>
+                              </tr>
+                            );
+                          })
+                        )}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
              </div>
            ) : (
              <div className="no-data">No metrics data found for this user.</div>
@@ -1002,12 +1064,200 @@ export default function DevView() {
          </div>
        )}
 
-       {activeTab === 'activity' && (
+        {activeTab === 'ai' && (
+          <div className="metrics-view-container">
+            {!selectedUserId ? (
+              <div className="no-user-selected">
+                <h3>Select a user from the Users tab, then click the 🤖 button to view AI usage.</h3>
+                {allAIMetrics && (
+                  <div className="metrics-grid" style={{ marginTop: 20 }}>
+                    <div className="metrics-card">
+                      <h4>📊 Today's AI Requests</h4>
+                      <div className="metric-value">
+                        <span className="main-val">{allAIMetrics.totalRequestsToday}</span>
+                      </div>
+                    </div>
+                    <div className="metrics-card">
+                      <h4>📋 Quota Snapshots</h4>
+                      <div className="metric-value">
+                        <span className="main-val">{allAIMetrics.quotaSnapshots.length}</span>
+                        <span className="sub-val">users have quota rows today</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ) : aiLoading && !aiUsageData ? (
+              <div className="loading">Loading AI usage data...</div>
+            ) : aiUsageData ? (
+              <div className="user-metrics-dashboard">
+                <div className="metrics-header">
+                  <h3>🤖 AI Usage for: {selectedUserId}</h3>
+                  <button className="refresh-btn" onClick={() => handleViewAI(selectedUserId)}>Refresh AI Data</button>
+                </div>
+
+                <div className="metrics-grid">
+                  <div className="metrics-card" style={{ borderColor: '#8B5CF6' }}>
+                    <h4>📨 AI Requests Today</h4>
+                    <div className="metric-value">
+                      <span className="main-val">{aiUsageData.daily.requests}</span>
+                      <span className="sub-val">
+                        {aiUsageData.daily.quota ? `/ ${aiUsageData.daily.quota.requests_limit} limit` : 'no quota set'}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="metrics-card">
+                    <h4>🔤 Tokens Today</h4>
+                    <div className="metric-value">
+                      <span className="main-val">{(aiUsageData.daily.tokens / 1000).toFixed(1)}k</span>
+                      <span className="sub-val">{aiUsageData.daily.tokens.toLocaleString()} total</span>
+                    </div>
+                  </div>
+                  <div className="metrics-card">
+                    <h4>🛠️ Tool Calls</h4>
+                    <div className="metric-value">
+                      <span className="main-val">{aiUsageData.daily.toolCalls}</span>
+                    </div>
+                  </div>
+                  <div className="metrics-card">
+                    <h4>💾 Cache Hits</h4>
+                    <div className="metric-value">
+                      <span className="main-val">{aiUsageData.daily.cacheHits}</span>
+                      <span className="sub-val">
+                        {aiUsageData.daily.requests > 0
+                          ? `${Math.round((aiUsageData.daily.cacheHits / aiUsageData.daily.requests) * 100)}% hit rate`
+                          : ''}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="metrics-card">
+                    <h4>💬 Conversations</h4>
+                    <div className="metric-value">
+                      <span className="main-val">{aiUsageData.totalConversations}</span>
+                      <span className="sub-val">{(aiUsageData.totalTokensAllTime / 1000).toFixed(0)}k tokens all-time</span>
+                    </div>
+                  </div>
+                  <div className="metrics-card">
+                    <h4>📈 Daily Quota</h4>
+                    <div className="metric-value">
+                      <span className="main-val">
+                        {aiUsageData.daily.quota
+                          ? `${aiUsageData.daily.quota.requests_used} / ${aiUsageData.daily.quota.requests_limit}`
+                          : 'No quota row'}
+                      </span>
+                      <span className="sub-val">
+                        {aiUsageData.daily.quota
+                          ? `${aiUsageData.daily.quota.requests_limit - aiUsageData.daily.quota.requests_used} remaining`
+                          : ''}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="metrics-section">
+                  <h4>📝 Daily AI Usage Logs</h4>
+                  <div className="timeline-container" style={{ maxHeight: 300, overflowY: 'auto' }}>
+                    {aiUsageData.daily.logs.length === 0 ? (
+                      <p className="no-data">No AI usage today.</p>
+                    ) : (
+                      <table className="reports-table" style={{ fontSize: 12 }}>
+                        <thead>
+                          <tr>
+                            <th>Time</th>
+                            <th>Type</th>
+                            <th>Model</th>
+                            <th>Tokens</th>
+                            <th>Latency</th>
+                            <th>Cache</th>
+                            <th>Conv ID</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {aiUsageData.daily.logs.slice(0, 100).map((log, i) => (
+                            <tr key={log.id || i}>
+                              <td>{new Date(log.created_at).toLocaleTimeString()}</td>
+                              <td>{log.response_type}</td>
+                              <td style={{ fontSize: 10 }}>{log.model || '—'}</td>
+                              <td>{log.tokens_total || 0}</td>
+                              <td>{log.latency_ms ? `${log.latency_ms}ms` : '—'}</td>
+                              <td>{log.cache_hit ? '✅' : '—'}</td>
+                              <td style={{ fontSize: 10, maxWidth: 80, overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                                {log.conversation_id?.slice(0, 8)}..
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    )}
+                  </div>
+                </div>
+
+                <div className="metrics-section">
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <h4>💬 Conversations ({aiConversationsTotal})</h4>
+                    <button
+                      className="refresh-btn"
+                      onClick={() => loadUserAIConversations(selectedUserId, true)}
+                      disabled={aiLoading}
+                    >
+                      {aiLoading ? '...' : '🔄 Refresh'}
+                    </button>
+                  </div>
+                  <div className="timeline-container" style={{ maxHeight: 400, overflowY: 'auto' }}>
+                    {aiConversations.length === 0 ? (
+                      <p className="no-data">No conversations found.</p>
+                    ) : (
+                      <table className="reports-table" style={{ fontSize: 12 }}>
+                        <thead>
+                          <tr>
+                            <th>Conversation ID</th>
+                            <th>Messages</th>
+                            <th>Tool Calls</th>
+                            <th>Tokens</th>
+                            <th>Cache Hits</th>
+                            <th>Last Active</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {aiConversations.map((conv, i) => (
+                            <tr key={conv.id || i}>
+                              <td style={{ fontSize: 10, maxWidth: 120, overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                                {conv.conversation_id?.slice(0, 12)}..
+                              </td>
+                              <td>{conv.message_count}</td>
+                              <td>{conv.total_tool_calls}</td>
+                              <td>{conv.total_tokens?.toLocaleString()}</td>
+                              <td>{conv.cache_hits}</td>
+                              <td>{new Date(conv.last_message_at).toLocaleString()}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    )}
+                    {aiConversations.length < aiConversationsTotal && (
+                      <button
+                        className="refresh-btn"
+                        style={{ width: '100%', marginTop: 8 }}
+                        onClick={() => loadUserAIConversations(selectedUserId)}
+                        disabled={aiLoading}
+                      >
+                        {aiLoading ? 'Loading...' : `Load More (${aiConversations.length}/${aiConversationsTotal})`}
+                      </button>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="no-data">No AI data found for this user.</div>
+            )}
+          </div>
+        )}
+
+        {activeTab === 'activity' && (
           <div className="activity-view-container">
             {/* ... activity content ... */}
           </div>
         )}
-       )}
        {activeTab === 'incomplete' && (
          <div className="users-table-container">
            <h3>Incomplete Sign-ups</h3>
@@ -1274,6 +1524,14 @@ export default function DevView() {
                                         onClick={() => handleViewMetrics(user.user_id)}
                                       >
                                         📈
+                                      </button>
+                                      <button 
+                                        className="metrics-btn" 
+                                        style={{ background: '#8B5CF6', color: 'white' }}
+                                        title="View AI Usage"
+                                        onClick={() => handleViewAI(user.user_id)}
+                                      >
+                                        🤖
                                       </button>
                                     </div>
                                   </div>

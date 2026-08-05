@@ -1,0 +1,4481 @@
+[
+  {
+    "id": 1767622686516,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "কার বাস্তবায়নের মাধ্যমে ডকুমেন্ট আকর্ষণীয়ভাবে উপস্থাপন করা যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ওয়ার্ড আর্ট যোগ করে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ছবি ও টেবিল যোগ করে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পাতায় সংখ্যা যোগ করে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "হেডার ও ফুটার যোগ করে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ওয়ার্ড আর্ট (সাজানো লেখার জন্য), ছবি ও টেবিল (ভিজ্যুয়াল কনটেন্টের জন্য), এবং হেডার ও ফুটার (সামঞ্জস্যপূর্ণ পাতা নকশার জন্য) ব্যবহার করে ডকুমেন্ট আকর্ষণীয় করা যায়। শুধু পৃষ্ঠা সংখ্যা যোগ করলে ডকুমেন্ট মূলত আকর্ষণীয় হয় না।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622688720,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "এয়ারলাইন্স সংরক্ষণে কোনটি ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ওয়ার্ড প্রসেসর সফটওয়্যার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পাওয়ার পয়েন্ট সফটওয়্যার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "স্প্রেডশীট সফটওয়্যার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ডাটাবেজ সফটওয়্যার",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এয়ারলাইন রিজার্ভেশন সিস্টেমগুলো ডাটাবেজ সফটওয়্যার ব্যবহার করে যাত্রী ও ফ্লাইটের বিপুল পরিমাণ ডেটা দক্ষতার সাথে সংরক্ষণ, ব্যবস্থাপনা এবং পুনরুদ্ধার করতে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622688848,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "কোন উপায়ে সময় সাশ্রয় করা যায় যদি আমরা আমাদের দরকারি ডকুমেন্ট বারবার ওয়ার্ড প্রসেসরে সংরক্ষণ করি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পিডিএফ আকারে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ছবি আকারে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ওয়ার্ড আকারে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "টেমপ্লেট আকারে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "একটি ডকুমেন্টকে টেমপ্লেট হিসেবে সংরক্ষণ করলে আপনি ভবিষ্যতের ডকুমেন্টের জন্য এর লেআউট ও ফরম্যাটিং পুনরায় ব্যবহার করতে পারেন, প্রতিবার এটি নতুন করে তৈরির সময় বাঁচে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622688966,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "নিচের কোন কমান্ডটি একটি একক ডকুমেন্টকে বিভিন্ন নামে সংরক্ষণ করতে ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সেভ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সেভ অ্যাজ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ক্লোজ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কপি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\"সেভ অ্যাজ\" কমান্ড আপনাকে বর্তমান ডকুমেন্টটি নতুন নামে বা অন্য লোকে সংরক্ষণ করতে দেয়, মূল ফাইলটি অপরিবর্তিত রাখে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622689199,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "'হোম' ট্যাবের কোন গ্রুপে 'বুলেট' ও 'নম্বর' কমান্ডের আইকন পাওয়া যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ইলাস্ট্রেশন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফন্ট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ক্লিপবোর্ড",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্যারাগ্রাফ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বুলেট ও নম্বর আইকন হোম ট্যাবের প্যারাগ্রাফ গ্রুপে অবস্থিত, যা ডকুমেন্টে তালিকা তৈরি করতে ব্যবহৃত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622689325,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "গুণ করার ক্ষেত্রে, A1 সেলকে B1 সেল দ্বারা গুণ করার জন্য ফলাফল সেলে নিচের কোন সূত্রটি ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "=A1 × B1",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "A1 *B1",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "=A1 * B1",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "A1 × B1",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "এক্সেলের মতো স্প্রেডশীট প্রোগ্রামে সূত্র অবশ্যই সমান চিহ্ন (=) দিয়ে শুরু করতে হয়। গুণের জন্য এ্যস্টেরিস্ক (*) অপারেটর হিসেবে ব্যবহৃত হয়, তাই সঠিক সূত্র হল =A1 * B1।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622689447,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ডকুমেন্টে লেখার মার্জিন ঠিক করতে রিবনের কোন ট্যাব ক্লিক করতে হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পেজ লেআউট ট্যাব",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ইন্সার্ট ট্যাব",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হোম ট্যাব",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মেইলিং ট্যাব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পেজ লেআউট ট্যাবে পৃষ্ঠার মার্জিন, ওরিয়েন্টেশন, সাইজ এবং অন্যান্য লেআউট সেটিংস সামঞ্জস্য করার অপশন থাকে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622689579,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "অফিস বাটন ক্লিক করলে কোন অপশনগুলো দেখায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হোম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ইন্সার্ট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সেভ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ফন্ট",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "অফিস বাটন (এমএস ওয়ার্ড ২০০৭-এ) ক্লিক করলে সেভ, ওপেন, নিউ, প্রিন্ট এবং ক্লোজের মতো ফাইল-সম্পর্কিত অপশনগুলোর একটি মেনু খোলে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622689703,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "একটি বড় ডকুমেন্টে একটি শব্দ খুঁজে বের করতে কোন কমান্ড ব্যবহার করা যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফাইন্ড-টেমপ্লেট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফাইন্ড-ওয়ার্ড",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ফাইন্ড-রিপ্লেস",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ফাইন্ড-গ্রাফ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ফাইন্ড অ্যান্ড রিপ্লেস কমান্ড (Ctrl+F) একটি ডকুমেন্টে নির্দিষ্ট শব্দ বা বাক্যাংশ খুঁজতে এবং প্রয়োজন হলে প্রতিস্থাপন করতে দেয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622689826,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ডকুমেন্টে ছবি যোগ করার উদ্দেশ্যে রিবনের কোন ট্যাব ব্যবহার করতে হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হোম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফাইল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ভিউ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ইন্সার্ট",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ইন্সার্ট ট্যাবে ছবি যোগ করার জন্য পিকচার্স অপশন (ইলাস্ট্রেশন গ্রুপে) থাকে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622689942,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "স্প্রেডশীটে রেঞ্জ বোঝায় কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "A1 × A2",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "A1 × B1",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "A1 + B1",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "স্প্রেডশীটে একটি রেঞ্জ হলো কোষের একটি দল, যা সাধারণত উপরে-বাম ও নিচে-ডান কোষ দ্বারা নির্দিষ্ট করা হয় (যেমন: A1:A2 বা A1:B1)। অপশনগুলো গুণ চিহ্ন দেখালেও কোষের রেঞ্জ বোঝায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622690072,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "পরীক্ষার ফলাফল তৈরিতে কোন সফটওয়্যার ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্প্রেডশীট প্রোগ্রাম",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "প্রেজেন্টেশন প্রোগ্রাম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ওয়ার্ড প্রসেসর প্রোগ্রাম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ভিজুয়াল বেসিক প্রোগ্রাম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এক্সেলের মতো স্প্রেডশীট প্রোগ্রাম সাধারণত গণনা, সংগঠিত এবং চার্টের মাধ্যমে পরীক্ষার ফলাফল উপস্থাপন করতে ব্যবহৃত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622690231,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "যদি A2= ক্রয়মূল্য, B2=২০% লাভ এবং C2= বিক্রয়মূল্য হয়, তাহলে C2 গণনার সূত্র কোনটি হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "=A2*B2%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "=A2 + A2*B2",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "=A2 + A2*B1",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বিক্রয়মূল্য = ক্রয়মূল্য + লাভ। লাভ হল ক্রয়মূল্যের ২০%, তাই সূত্র: =A2 + (A2 * B2)। যদি B2, ২০% হয় তবে এটি =A2 + A2*B2 হিসেবে লেখা উচিত (ধরে নিলাম B2 হল ০.২০)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622690340,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "১০০ পাতার একটি ডকুমেন্টে 'Suggestion' বানান ভুলবশত 'Suggestion' লেখা হয়েছে। কোন কমান্ড ব্যবহার করে এই বানান দ্রুত সংশোধন করা সম্ভব?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ইন্সার্ট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফাইন্ড-আপডেট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ফাইন্ড-চেঞ্জ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ফাইন্ড অ্যান্ড রিপ্লেস (বা ফাইন্ড-চেঞ্জ) কমান্ড দ্রুত সমস্ত \"Suggestion\" কে \"Suggestion\" দিয়ে প্রতিস্থাপন করতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622690462,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "স্প্রেডশীটে 'B1' কি নির্দেশ করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সারি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কলাম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সেল",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সূত্র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "B1 একটি স্প্রেডশীটের B কলাম ও 1 সারির সংযোগস্থলে অবস্থিত একটি নির্দিষ্ট সেলকে নির্দেশ করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622690572,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ডকুমেন্টের শিরোনাম প্রতিটি পাতার শীর্ষে স্বয়ংক্রিয়ভাবে লিখতে ইন্সার্ট ট্যাব থেকে কোনটি ব্যবহার করবেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হেডার",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ফুটার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পেজ নম্বর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বুকমার্ক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "হেডার হলো প্রতিটি পাতার শীর্ষের একটি অংশ যেখানে আপনি লেখা (যেমন ডকুমেন্ট শিরোনাম) সন্নিবেশ করতে পারেন যা প্রতি পাতায় পুনরাবৃত্তি হবে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622690685,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "বুলেট ও নম্বরিং কোন মেনুতে পাওয়া যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হোম",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ইন্সার্ট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ভিউ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ফাইল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বুলেট ও নম্বরিং কমান্ড হোম ট্যাবের প্যারাগ্রাফ গ্রুপে অবস্থিত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622690800,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ওয়ার্ড ২০০৭ শুরু করার পর, উইন্ডোর উপরের বাম কোণে আইকনটি হল—",
+    "options": [
+      {
+        "label": "a",
+        "text": "ডকুমেন্ট আইকন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সেভ আইকন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অফিস বাটন",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "হোম বাটন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মাইক্রোসফট ওয়ার্ড ২০০৭-এ, অফিস বাটন উপরে-বাম কোণে অবস্থিত, যা সেভ, ওপেন, এবং প্রিন্টের মতো ফাইল অপারেশনে প্রবেশ দেয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622690906,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "= B1 + B2 + B3 + B4 + C5 সূত্রটির কাজ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "=SUM (B1: B4, C5)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "SUM = (B1: B4, C5)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "=SUM (B1: B4 : C5)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "=SUM (B1: B4 : C5)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "SUM ফাংশন মানগুলো যোগ করে। =SUM(B1:B4, C5) মানে B1 থেকে B4 পর্যন্ত সেল এবং C5 সেল যোগ করুন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622691016,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "A12 সেলকে B13 সেল দ্বারা ভাগ করলে ফলাফল দেখাতে কোন সূত্র লেখা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "=A12/B13",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "=A12\\B13",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "=A12-B13",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "স্প্রেডশীটে, ভাগের জন্য ফরওয়ার্ড স্ল্যাশ (/) ব্যবহৃত হয়। =A12/B13 সূত্রটি A12-এর মানকে B13 দ্বারা ভাগ করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622691130,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ডকুমেন্টকে টেমপ্লেট হিসেবে কেন সংরক্ষণ করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নান্দনিকতার জন্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পুনরায় ব্যবহারের জন্য",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পুনঃবিন্যাসের জন্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কপির জন্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "একটি ডকুমেন্টকে টেমপ্লেট (.dotx) হিসেবে সংরক্ষণ করলে আপনি নতুন ডকুমেন্টের জন্য এর ফরম্যাট ও বিষয়বস্তু পুনরায় ব্যবহার করতে পারেন, সময় বাঁচায় এবং সামঞ্জস্যতা নিশ্চিত করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622691243,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "কোন গ্রুপে ক্লিপ আর্ট যোগ করার সুবিধা রয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ইলাস্ট্রেশন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "প্যারাগ্রাফ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "টেক্সট",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ফুটার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ইন্সার্ট ট্যাবের ইলাস্ট্রেশন গ্রুপে ক্লিপ আর্ট, ছবি, শেপ, স্মার্টআর্ট এবং চার্ট যোগ করার অপশন থাকে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622691350,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "নিচের কোন ট্যাবে ওয়ার্ড-২০০৭-এ মার্জিন আইকন আছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সেভ অ্যাজ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ইন্সার্ট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "টেবিল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পেজ লেআউট",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পেজ লেআউট ট্যাবে মার্জিনস অপশন থাকে যা পৃষ্ঠার মার্জিন সামঞ্জস্য করতে ব্যবহৃত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622691467,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ডকুমেন্টে 'ওয়ার্ড আর্ট' যোগ করতে কোন মেনুর সাহায্য নিতে হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হোম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ইন্সার্ট",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পেজ লেআউট",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রেফারেন্স",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ওয়ার্ড আর্ট ইন্সার্ট ট্যাব ব্যবহার করে, বিশেষভাবে টেক্সট গ্রুপ থেকে সন্নিবেশ করা হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622691590,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "স্প্রেডশীটে গুণের জন্য ফলাফল সেলে কোন চিহ্ন দিয়ে শুরু করতে হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "=",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "×",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "+",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "*",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "একটি সূত্র অবশ্যই সমান চিহ্ন (=) দিয়ে শুরু করতে হয়। সূত্রের মধ্যে গুণের অপারেটর হিসেবে এ্যস্টেরিস্ক (*) ব্যবহৃত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622691709,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ডকুমেন্টকে টেমপ্লেট হিসেবে কেন সংরক্ষণ করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ডিভাইসে কম জায়গা লাগে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সময় বাঁচে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সহজে খোলা যায়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সহজে সম্পাদনা করা যায়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "টেমপ্লেট সময় বাঁচায় কারণ আপনি একটি পূর্ব-নকশাকৃত ফরম্যাট একাধিক ডকুমেন্টের জন্য পুনরায় ব্যবহার করতে পারেন, প্রতিবার শুরু থেকে তৈরি করার দরকার নেই।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622691823,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "A2 সেলে ক্রয়মূল্য এবং B2 সেলে লাভের শতাংশ দেওয়া থাকলে, ফলাফল সেলে মোট লাভ নির্ধারণের জন্য কোন সূত্র লেখা উচিত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "= A2 × B2%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "= A2 + B2%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "= A2 * B2%",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "= A2, B2%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মোট লাভ = ক্রয়মূল্য × লাভের শতাংশ। এক্সেলে, =A2 * B2% ব্যবহার করুন (যেখানে B2% মানে B2 কে ১০০ দ্বারা ভাগ)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622691943,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "কীবোর্ডে বর্ণ সাজানোর সবচেয়ে সহজ নমুনা কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "qewty",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "asdfg",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "zcxvb",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ghjkl",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\"asdfg\" একটি আদর্শ QWERTY কীবোর্ডের হোম রো কি-গুলিকে প্রতিনিধিত্ব করে, যা টাইপিংয়ের জন্য ডিফল্ট হ্যান্ড অবস্থান।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622692063,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "শীটটি পর্যবেক্ষণ করে প্রশ্নের উত্তর দিন।\n[সারণী: ক্রয়মূল্য ১৫০০, লাভ% ১৬, বিক্রয়মূল্য ?]\n(?) স্থানে কোন সূত্রটি লিখতে হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "= B2 + A2 * B2%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "= A2 * B2%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "= A2 * B2% + A2",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "= A2 - A2 * B2%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বিক্রয়মূল্য = ক্রয়মূল্য + (ক্রয়মূল্য × লাভ%)। তাই সূত্র: =A2 + (A2 * B2%) অথবা =A2 * B2% + A2।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622692178,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "কোন গ্রুপে, লাইন স্পেসিং অপশন অবস্থিত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "টেক্সট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হোম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্যারাগ্রাফ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ভিউ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "লাইন স্পেসিং অপশন প্যারাগ্রাফ গ্রুপে পাওয়া যায়, সাধারণত হোম ট্যাবে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622692306,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "কোন সফটওয়্যারে, ছবি, চার্ট, গ্রাফ ইত্যাদি যোগ করে আকর্ষণীয় করা যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অফিস সফটওয়্যার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পাওয়ার পয়েন্ট",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "স্প্রেডশীট",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ওয়ার্ড প্রসেসর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পাওয়ার পয়েন্ট বিশেষভাবে ছবি, চার্ট, গ্রাফ, এবং মাল্টিমিডিয়া সহ আকর্ষণীয় প্রেজেন্টেশন তৈরি করতে ডিজাইন করা হয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622692423,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "স্প্রেডশীটে গুণের চিহ্ন কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "x",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "/",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "#",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "@",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "ঙ",
+    "explanation": "স্প্রেডশীট সূত্রে গুণের অপারেটর হিসেবে এ্যস্টেরিস্ক (*) ব্যবহৃত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622692543,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "এমএস ওয়ার্ড ২০০৭-এ অফিস বাটন কোথায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "উপরের বাম দিকে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "উপরের ডান দিকে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নিচের বাম দিকে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিচের ডান দিকে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এমএস ওয়ার্ড ২০০৭-এ, অফিস বাটন উইন্ডোর শীর্ষ-বাম কোণে অবস্থিত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622692661,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "প্যারাগ্রাফের নির্বাচিত অংশকে বোল্ড করতে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "হোম → ফন্ট → B",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "হোম → প্যারাগ্রাফ → B",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ইন্সার্ট → পেজেস → B",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "হোম → ক্লিপবোর্ড → B",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বোল্ড (B) কমান্ড হোম ট্যাবের ফন্ট গ্রুপে অবস্থিত, যা নির্বাচিত লেখাকে গাঢ় করতে ব্যবহৃত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622692775,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ওয়ার্ড ২০০৭-এর কোন ট্যাবে হেডার ও ফুটার গ্রুপ থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হোম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ইন্সার্ট",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পেজ লেআউট",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ভিউ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "হেডার ও ফুটার গ্রুপ ওয়ার্ড ২০০৭-এর ইন্সার্ট ট্যাবে অবস্থিত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622692892,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ডকুমেন্টের প্রতিটি পাতায় নম্বর দিতে রিবনের কোন ট্যাবে যেতে হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হোম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পেজ লেআউট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ইন্সার্ট",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মেইলিং",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পেজ নম্বর ইন্সার্ট ট্যাব ব্যবহার করে, হেডার ও ফুটার গ্রুপ থেকে সন্নিবেশ করা হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622693004,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "\"সেভ অ্যাজ\" কমান্ড ব্যবহার করে কোনটি করা যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ডকুমেন্ট সংরক্ষণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "একটি নতুন ডকুমেন্ট খোলা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "একই ডকুমেন্টকে ভিন্ন নামে সংরক্ষণ করা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "খোলা ডকুমেন্ট বন্ধ করা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\"সেভ অ্যাজ\" আপনাকে বর্তমান ডকুমেন্টটি নতুন নামে সংরক্ষণ করতে দেয়, একটি কপি তৈরি করে যখন মূলটি অপরিবর্তিত থাকে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622693117,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "বাংলা টাইপ করার জন্য আমরা কোন ফন্ট নির্বাচন করব?",
+    "options": [
+      {
+        "label": "a",
+        "text": "এরিয়াল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "টাইমস নিউ রোমান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মালতি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অটোমি এমজে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অটোমি এমজে মাইক্রোসফট ওয়ার্ডে বাংলা (বাঙালা) টেক্সট টাইপ করার জন্য বহুল ব্যবহৃত একটি ইউনিকোড ফন্ট।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622693238,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ডকুমেন্ট সংরক্ষণের কীবোর্ড কমান্ড কি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ctrl+P",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ctrl+S",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ctrl+U",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ctrl+X",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Ctrl+S হল বেশিরভাগ অ্যাপ্লিকেশনে একটি ডকুমেন্ট সংরক্ষণের সার্বজনীন কীবোর্ড শর্টকাট।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622693363,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "কোন ট্যাবের প্যারাগ্রাফ গ্রুপে বুলেট ও নম্বর আইকন থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফন্ট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ইলাস্ট্রেশন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হোম",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ক্লিপবোর্ড",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বুলেট ও নম্বরিং আইকন হোম ট্যাবের প্যারাগ্রাফ গ্রুপে অবস্থিত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622693475,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ওয়ার্ড ডকুমেন্টে টেবিল সন্নিবেশ করতে কোন কমান্ড ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ইন্সার্ট → টেবিল → ইন্সার্ট টেবিল",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ইন্সার্ট → টেবিল → কলাম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ইন্সার্ট → ইন্সার্ট টেবিল → টেবিল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ইন্সার্ট → টেবিল → সারি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "একটি টেবিল সন্নিবেশ করতে, ইন্সার্ট ট্যাবে যান, টেবিল ক্লিক করুন এবং তারপর সারি ও কলাম নির্দিষ্ট করতে ইন্সার্ট টেবিল চয়ন করুন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622693601,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "একটি নতুন প্যারাগ্রাফ তৈরি করতে কীবোর্ডের কোন কী চাপতে হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Shift key",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Ctrl key",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Enter key",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Down arrow key",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "এন্টার কী চাপলে একটি ওয়ার্ড প্রসেসরে একটি নতুন প্যারাগ্রাফ (লাইন ব্রেক) তৈরি হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622693714,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "পেজ নম্বর সন্নিবেশ করতে কোন কমান্ড ব্যবহার করতে হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ইন্সার্ট → হেডার ফুটার",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "হোম → হেডার ফুটার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পেজ লেআউট → হেডার ফুটার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ভিউ → হেডার ফুটার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পেজ নম্বর ইন্সার্ট ট্যাবের মাধ্যমে, হেডার ও ফুটার গ্রুপের অধীনে সন্নিবেশ করা হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622693828,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "স্প্রেডশীটে গুণফলের সূত্র কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "A) B1",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "A) B1",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "A) B1",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "A) B1",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "[পাঠ্যে স্পষ্টভাবে উল্লেখ নেই; সাধারণত =PRODUCT(A1,B1) বা =A1*B1]",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622693947,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "টাইপিং এর জন্য কোন সফটওয়্যার ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্প্রেডশীট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ওয়ার্ড প্রসেসিং",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ফটোশপ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ডাটাবেজ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ওয়ার্ড প্রসেসিং সফটওয়্যার (যেমন মাইক্রোসফট ওয়ার্ড) টেক্সট ডকুমেন্ট টাইপিং, সম্পাদনা এবং ফরমেটিংয়ের জন্য ডিজাইন করা হয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622694078,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ওয়ার্ড প্রসেসর প্রোগ্রামে লেখার সাজসজ্জার ধারাবাহিকতা বজায় রাখতে ব্যবহৃত হয়—\ni. স্টাইল\nii. সিম্বল\niii. নম্বর\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "স্টাইল (সামঞ্জস্যপূর্ণ ফরমেটিংয়ের জন্য) এবং সিম্বল (যেমন বুলেট বা আইকন) একটি ডকুমেন্টে সাজসজ্জার ধারাবাহিকতা বজায় রাখতে সাহায্য করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622694198,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "প্যারাগ্রাফ গ্রুপের ইন্ডেন্ট অপশনে থাকে—\ni. বাম\nii. ডান\niii. মধ্য\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ইন্ডেন্ট অপশনে সাধারণত বাম ও ডান মার্জিন থেকে প্যারাগ্রাফের মার্জিন সামঞ্জস্য করতে বাম ইন্ডেন্ট ও ডান ইন্ডেন্ট অন্তর্ভুক্ত থাকে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622694330,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "স্প্রেডশীট ব্যবহার করে, আমরা করতে পারি—\ni. প্রেজেন্টেশন\nii. গুণ\niii. যোগফল\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "স্প্রেডশীট গুণ ও যোগফলের মতো গণনার জন্য ব্যবহৃত হয়, তবে সাধারণত প্রেজেন্টেশন তৈরি করার জন্য নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622694509,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ইন্সার্ট ট্যাবে রয়েছে—\ni. টেক্সট\nii. টেবিল\niii. হেডার ও ফুটার\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ইন্সার্ট ট্যাবে টেক্সট (যেমন ওয়ার্ডআর্ট), টেবিল এবং হেডার ও ফুটার সন্নিবেশের অপশন অন্তর্ভুক্ত রয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622694617,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ওয়ার্ড ২০০৭-এর অফিস বাটন ক্লিক করলে কোনটি পাওয়া যায়?\ni. ডিলিট\nii. সেভ\niii. ওপেন\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "অফিস বাটন ক্লিক করলে সেভ এবং ওপেন (এবং নিউ, প্রিন্টের মতো অন্যান্য) অপশন দেখায়, কিন্তু ডিলিট নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622694735,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "স্প্রেডশীট বিশ্লেষণ ব্যবহার করে—\ni. একটি টেক্সট প্রস্তুত করা সহজ\nii. একটি তত্ত্ব প্রয়োগ করা যায়\niii. ডেটা সাজানো যায়\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "স্প্রেডশীট সূত্র প্রয়োগ (তত্ত্ব) এবং ডেটা সাজানো/সংগঠিত করতে ব্যবহৃত হয়, তবে বিশেষভাবে টেক্সট প্রস্তুত করার জন্য নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622694850,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "অফিস বাটন অপশনে, রয়েছে —\ni. নিউ\nii. ক্লোজ\niii. ইন্সার্ট\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অফিস বাটন মেনুতে নিউ (একটি ডকুমেন্ট তৈরি করতে) এবং ক্লোজ (ডকুমেন্ট বন্ধ করতে) অন্তর্ভুক্ত রয়েছে, কিন্তু ইন্সার্ট (যা একটি আলাদা ট্যাব) নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622694958,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "স্প্রেডশীট প্রোগ্রামের প্রয়োগ ক্ষেত্র হল—\ni. ল্যাব রিপোর্ট প্রস্তুত করা\nii. এয়ারলাইনের টিকিট সংরক্ষণ করা\niii. খেলোয়াড়ের ক্রীড়ানৈতিকতা মূল্যায়ন করা\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "স্প্রেডশীট ল্যাব রিপোর্ট প্রস্তুত করতে (ডেটার জন্য) এবং সংরক্ষণ ব্যবস্থাপনা করতে (যেমন এয়ারলাইন টিকিট) ব্যবহার করা যেতে পারে, তবে সাধারণত ক্রীড়ানৈতিকতা মূল্যায়নের জন্য নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622695070,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "\"??\" এর সেল অ্যাড্রেস কোনটি?\n[সারণী: ক্রয়মূল্য ৩০০, লাভের হার ৫, বিক্রয়মূল্য ?]",
+    "options": [
+      {
+        "label": "a",
+        "text": "B1",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "B2",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "C1",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "C2",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\"?\" যুক্ত সেলটি C কলাম (বিক্রয়মূল্য) এবং 2 সারির (ডেটা সারি) সংযোগস্থলে অবস্থিত, তাই এর অ্যাড্রেস C2।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622695177,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "উপরে উল্লিখিত সেলের জন্য সঠিক সূত্র কি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "A2*B2% + A2",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "A2*B2% + A2",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "A2*B2 + A2",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বিক্রয়মূল্য = ক্রয়মূল্য + (ক্রয়মূল্য × লাভ%)। সূত্র: =A2 + (A2 * B2%) অথবা =A2*B2% + A2।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622695289,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "\"??\" এর সেল অ্যাড্রেস কোনটি?\n[সারণী: পণ্যের নাম তেল, মূল্য ১১০, পরিমাণ ৭০, মোট ?]",
+    "options": [
+      {
+        "label": "a",
+        "text": "A2",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "B2",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "C2",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "D2",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\"?\" মোট কলামের (D) অধীনে এবং তেলের সারিতে (সারি ২) অবস্থিত, তাই সেল অ্যাড্রেস D2।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622695409,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "উপরে উল্লিখিত সেলের জন্য সঠিক সূত্র কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "PRODUCT (A1:C1)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "=PRODUCT (B2:C2)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "=PRODUCT (B1:D1)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "=PRODUCT (A2:D2)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মোট = মূল্য × পরিমাণ। মূল্য B2-এ, পরিমাণ C2-এ। সুতরাং সূত্র: =PRODUCT(B2:C2) বা =B2*C2।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622695547,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "চিহ্নিত সেল \"?\" এর অ্যাড্রেস কি?\n[সারণী: ক্রয়মূল্য ১৫০০, লাভ% ১৫, বিক্রয়মূল্য ?]",
+    "options": [
+      {
+        "label": "a",
+        "text": "C3",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "C2",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "C3C",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "C2C",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\"?\" বিক্রয়মূল্য কলামে (C) এবং ডেটা সারিতে (সারি ২) অবস্থিত, তাই অ্যাড্রেস C2।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622695659,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "বিক্রয়মূল্য বের করতে কোন সূত্র ব্যবহার করতে হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "A2*B2% + B2*A2",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "A2*B2% + A2",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বিক্রয়মূল্য = ক্রয়মূল্য + (ক্রয়মূল্য × লাভ%)। সূত্র: =A2 + (A2 * B2%) অথবা =A2*B2% + A2।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622695779,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "চিহ্নিত সেল, \"?\" এর সেল অ্যাড্রেস কি?\n[সারণী: নাম X, বাংলা ৭৫, ইংরেজি ৮২, গণিত ৯৫, মোট ?, গড় ?]",
+    "options": [
+      {
+        "label": "a",
+        "text": "F2",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "E4",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "F4",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "C5",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "X-এর মোটের জন্য \"?\" কলাম E-তে? আসলে, সাধারণ লেআউট অনুসারে: মোট কলাম E, গড় কলাম F। X-এর মোটের জন্য E2, কিন্তু অপশনে E2 নেই। ধরে নিলাম \"?\" গড়ের জন্য, তাহলে এটি F2-তে। প্রশ্নটি অস্পষ্ট; সম্ভবত গড়ের জন্য F2।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622695900,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "X-এর মোট গণনার সূত্র কি হবে?\ni. = B2 + C2 + D2/3\nii. SUM (B2 + C2 + D2)\niii. SUM (B2 : D2)\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মোট = B2, C2, D2-এর যোগফল। সঠিক সূত্র: =B2+C2+D2 বা =SUM(B2:D2)। অপশন ii ভুল কারণ SUM ফাংশন হওয়া উচিত =SUM(B2:D2), SUM(B2+C2+D2) নয়। অপশন i D2 কে 3 দ্বারা ভাগ করে, যা ভুল।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622696023,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "নিচের কোন সূত্রটি চালের মোট ক্রয়মূল্য বের করার জন্য সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "(PRODUCT B2 : C2)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "(PRODUCT (B2 : C2))",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "= (PRODUCT B2 : C2)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "= PRODUCT (B2 : C2)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "PRODUCT ফাংশনের জন্য সঠিক সিনট্যাক্স হল =PRODUCT(B2:C2) যা B2 এবং C2 কে গুণ করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622696136,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "৫% লাভ সহ গমের বিক্রয়মূল্য গণনার সূত্র কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "=D35%+D3",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "=D35%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "=D35%+D3",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "=D35%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বিক্রয়মূল্য = মোট ক্রয়মূল্য + ৫% লাভ। সূত্র: =D3 + (D3 * 5%) অথবা =D3*5% + D3। নোট: অপশন ক এবং গ অভিন্ন মনে হচ্ছে; সম্ভবত টাইপো।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622696253,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "উল্লিখিত কাজটি সম্পন্ন করতে (প্রতিটি শীটে পেজ নম্বর যোগ) আপনি কোনটি ব্যবহার করবেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্টাইল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হেডার",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ফুটার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "লেআউট",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পেজ নম্বর হেডার (শীর্ষ) বা ফুটার (নিচে) উভয়তেই সন্নিবেশ করা যেতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622696371,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "শিক্ষক কোনটি ব্যবহার করবেন? (সজ্জা, শিল্প ও মার্জিন সম্পর্কিত কাজের জন্য)",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্লাইড শো",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অটো রান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সেভ অ্যাজ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ফরমেটিং টেক্সট",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ফরমেটিং টেক্সট-এ একটি ডকুমেন্টে সজ্জা, শৈল্পিক উপাদান (যেমন ফন্ট, রং) এবং মার্জিন সামঞ্জস্য করা অন্তর্ভুক্ত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622696483,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "সারণীটি কোন সফটওয়্যার নির্দেশ করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ওয়ার্ড প্রসেসর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "স্প্রেডশীট",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পাওয়ার পয়েন্ট",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ডাটাবেজ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "A3, B3, C3 এর মতো সেলযুক্ত সারণীটি এক্সেলের মতো একটি স্প্রেডশীট প্রোগ্রাম নির্দেশ করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622696589,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "বিক্রয়মূল্য C3 নির্ধারণের জন্য কোন সূত্র প্রযোজ্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "=A3+B3% + A3",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "=A3+B3+A3%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "=A3+B3+A3%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বিক্রয়মূল্য = ক্রয়মূল্য + (ক্রয়মূল্য × লাভ%)। সূত্র: =A3 + (A3 * B3%) অথবা =A3+B3% + A3।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622696715,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "কোন গ্রুপে বুলেট ও নম্বর আইকন কমান্ড পাওয়া যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফন্ট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ক্লিপবোর্ড",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ক্লিপআর্ট",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্যারাগ্রাফ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বুলেট ও নম্বরিং আইকন হোম ট্যাবের প্যারাগ্রাফ গ্রুপে অবস্থিত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622696864,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "Product(A2:D2), এটি কিভাবে কাজ করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সূত্র",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ফলাফল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রতিবেদন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "PRODUCT(A2:D2) হল একটি সূত্র যা A2 থেকে D2 পর্যন্ত সেলের মানগুলিকে গুণ করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622696975,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "নাসিমের মোট কলাম পূরণের পদ্ধতি হল:\n[সারণী: নাম নাসিম, বেসিক ৫০০০, হাউস রেন্ট ৫০০, মোট ?]",
+    "options": [
+      {
+        "label": "a",
+        "text": "=B1+C1",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "=B2+C2",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "=B3+C3",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "=B4+C4",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "নাসিমের ডেটা সারি ২-এ। মোট = বেসিক + হাউস রেন্ট, তাই D2-এ সূত্র হওয়া উচিত =B2+C2।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622697091,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ওয়ার্ড প্রসেসরের প্রয়োজনীয় ডকুমেন্ট বারবার ব্যবহারের জন্য কিভাবে সংরক্ষণ করবেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পিডিএফ হিসেবে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ছবি হিসেবে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "টেমপ্লেট হিসেবে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ফাইল হিসেবে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "টেমপ্লেট (.dotx) হিসেবে সংরক্ষণ করলে আপনি ডকুমেন্টের ফরম্যাট ও বিষয়বস্তু নতুন ডকুমেন্টের জন্য পুনরায় ব্যবহার করতে পারেন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622697207,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "একটি ডকুমেন্টে পেজ নম্বর দিতে রিবনের ইন্সার্ট ট্যাবের কোন গ্রুপ ক্লিক করতে হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কমেন্টস",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হেডার ও ফুটার",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অ্যাড-ইনস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পেজেস",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ইন্সার্ট ট্যাবের হেডার ও ফুটার গ্রুপে পেজ নম্বর অপশন থাকে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622697324,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ডকুমেন্টকে টেমপ্লেট হিসেবে কেন সংরক্ষণ করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঘনঘন ব্যবহারের জন্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "নান্দনিকতার জন্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পুনঃবিন্যাসের জন্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কপি তৈরি করার সুবিধার জন্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "টেমপ্লেট ঘনঘন পুনরায় ব্যবহারের জন্য সংরক্ষণ করা হয়, সময় বাঁচায় এবং ডকুমেন্ট জুড়ে সামঞ্জস্যতা নিশ্চিত করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622697456,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "এক্সেলের কলাম ও সারির উপাদানকে কী বলা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শীট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সেল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ফিল্ড",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রেকর্ড",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "একটি কলাম ও সারির সংযোগস্থলকে সেল বলা হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622697571,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "কোন গ্রুপে ছবি সন্নিবেশ অপশন থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হোম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ইন্সার্ট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ইলাস্ট্রেশন",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "টেবিল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ছবি সন্নিবেশ অপশন ইন্সার্ট ট্যাবের ইলাস্ট্রেশন গ্রুপে থাকে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622697686,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "\"এমএস ওয়ার্ডের ইলাস্ট্রেশন গ্রুপ\"-এ কোনটি পাওয়া যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "টেবিল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ওয়ার্ড আর্ট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ক্লিপ আর্ট",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ফন্ট",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ক্লিপ আর্ট ইন্সার্ট ট্যাবের ইলাস্ট্রেশন গ্রুপের অংশ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622697800,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "কোনটিতে পেজ নম্বর অপশন থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রিভিউ মেনু",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ইন্সার্ট মেনু",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পেজ লেআউট মেনু",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ভিউ মেনু",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পেজ নম্বর অপশন ইন্সার্ট মেনু (ট্যাব) এ অবস্থিত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622697910,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "লাইনের আগে ও পরে স্পেসের পরিমাণ নির্বাচন করতে কোন অপশন ব্যবহার করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্পেসিং",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "স্পেস বাটন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মার্জিনস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "লাইন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "লাইন স্পেসিং অপশন একটি প্যারাগ্রাফের লাইনের আগে ও পরের স্থান নিয়ন্ত্রণ করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622698040,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "কোন গ্রুপে পেজ নম্বর অপশন থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্যারাগ্রাফ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "লিঙ্কস",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হেডার ও ফুটার",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অ্যারেঞ্জ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পেজ নম্বর অপশন ইন্সার্ট ট্যাবের হেডার ও ফুটার গ্রুপের মধ্যে অবস্থিত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622698157,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "চার্ট আইকন কোথায় অবস্থিত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ইলাস্ট্রেশন গ্রুপে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "পেজ সেট আপ গ্রুপে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ক্লিপবোর্ডে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্যারাগ্রাফ গ্রুপে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "চার্ট আইকন ইন্সার্ট ট্যাবের ইলাস্ট্রেশন গ্রুপে অবস্থিত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622698273,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "হেডার ও ফুটার কোথায় অবস্থিত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হোম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ইন্সার্ট",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ভিউ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পেজ লেআউট",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "হেডার ও ফুটার কমান্ড ইন্সার্ট ট্যাবে অবস্থিত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622698388,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "রিবনের কোন ট্যাবে পেজ ব্রেক আছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ইন্সার্ট",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "রিভিউ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হোম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অ্যাড ইনস",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পেজ ব্রেক অপশন ইন্সার্ট ট্যাবের পেজেস গ্রুপে পাওয়া যায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622698493,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "লাইনের মধ্যবর্তী স্থানকে বলা হয় —",
+    "options": [
+      {
+        "label": "a",
+        "text": "লিডিং",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "পাথ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "লেআউট",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "স্ট্রোক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "টাইপোগ্রাফিতে, লেখার লাইনের মধ্যবর্তী উল্লম্ব স্থানকে লিডিং বলা হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622698602,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "কোন ফাংশনটি ভুল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "=SUM(A3:F3)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "=PRODUCT(A3:F3)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "=SUM(A4+F4)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "=AVG(A2:F2)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "গড়ের জন্য সঠিক ফাংশন হল AVERAGE, AVG নয়। তাই =AVG(A2:F2) ভুল।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622698708,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "কোন ডেটা টাইপ নির্বাচন করে যোগ, বিয়োগ, গুণ, ভাগ ইত্যাদি গাণিতিক কাজ ডাটাবেজে করা যায় না?",
+    "options": [
+      {
+        "label": "a",
+        "text": "টেক্সট",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "নাম্বার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তারিখ/সময়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কারেন্সি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "টেক্সট ডেটা টাইপ বর্ণ ও সংখ্যাসূচক অক্ষর সংরক্ষণ করে এবং গাণিতিক গণনা সমর্থন করে না।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622698817,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "কোনটি পেস্ট কমান্ড?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ctrl+c",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ctrl+s",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ctrl+v",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ctrl+p",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Ctrl+V হল পেস্ট করার কীবোর্ড শর্টকাট।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622698926,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "বড় ডকুমেন্টে দ্রুত কোন কমান্ড দিয়ে খোঁজা ও প্রতিস্থাপন করা যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ইন্সার্ট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফাইন্ড-রিপ্লেস",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "এডিট",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ভিউ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ফাইন্ড অ্যান্ড রিপ্লেস কমান্ড একটি বড় ডকুমেন্টে দ্রুত টেক্সট খুঁজতে ও প্রতিস্থাপন করতে দেয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622699036,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ওয়ার্ড প্রসেসরে বিভিন্ন স্টাইলকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ট্যাব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফন্ট",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "স্পেল চেকার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ফাইন্ড",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ফন্ট লেখা অক্ষরের বিভিন্ন শৈলীকে বোঝায় (যেমন, এরিয়াল, টাইমস নিউ রোমান)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622699151,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "এমএস-ওয়ার্ডে বুলেট ও নম্বরিং পাওয়া যাবে —",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফাইল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ইন্সার্ট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্যারাগ্রাফ গ্রুপ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ভিউ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বুলেট ও নম্বরিং হোম ট্যাবের প্যারাগ্রাফ গ্রুপে অবস্থিত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622699269,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ওয়ার্ডে বিভিন্ন তালিকা লেখার সামঞ্জস্যতা বজায় রাখতে কী ব্যবহার করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বুলেট ও নম্বর",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ফন্ট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "টেবিল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ইলাস্ট্রেশন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বুলেট ও নম্বর একটি ডকুমেন্টে সামঞ্জস্যপূর্ণ, সংগঠিত তালিকা তৈরি করতে সাহায্য করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622699380,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "নিচের কোন সফটওয়্যারটি বানান সংশোধন করতে সহায়তা করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অ্যানালাইসিস",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফোরট্রান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সি++",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "এমএস ওয়ার্ড",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এমএস ওয়ার্ডে বানান ত্রুটি চিহ্নিত ও সংশোধন করার জন্য স্পেল-চেক বৈশিষ্ট্য রয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622699486,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "টেক্সট নির্বাচন মানে, নির্বাচন —",
+    "options": [
+      {
+        "label": "a",
+        "text": "একটি শব্দ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "একটি সম্পূর্ণ বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পুরো ডকুমেন্ট",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উপরোক্ত যেকোনোটি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "টেক্সট নির্বাচন একটি শব্দ, বাক্য, প্যারাগ্রাফ, বা পুরো ডকুমেন্ট জুড়ে হতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622699590,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "এমএস ওয়ার্ড দিয়ে কী করা যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নির্ভুল লেখালেখি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কোনো কিছুর নকশা করা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বেতনের শিট প্রস্তুত করা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ইমেল পাঠানো",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এমএস ওয়ার্ড নির্ভুল লেখালেখি (টাইপিং), ডকুমেন্ট নকশা করা এবং শিট (যেমন বেতনের শিট) প্রস্তুত করতে ব্যবহৃত হয়, তবে সাধারণত ইমেল পাঠানোর জন্য নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622699710,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "রিবনের কোন মেনুতে, রিপ্লেস আইকন পাওয়া যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ক্রিয়েট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হোম",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ভিউ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অ্যাড-ইনস",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "রিপ্লেস আইকন (ফাইন্ড ও রিপ্লেসের অংশ) হোম ট্যাবের এডিটিং গ্রুপে অবস্থিত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622699829,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "কোন অপশনটি এমএস ওয়ার্ড ২০০৭-এ ফাইল মেনু ধারণ করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রিন্ট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ক্লোজ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নিউ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সবগুলি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ওয়ার্ড ২০০৭-এর ফাইল মেনু (অফিস বাটন) এ নিউ, ওপেন, সেভ, প্রিন্ট এবং ক্লোজের মতো অপশন অন্তর্ভুক্ত রয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622699948,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ওয়ার্ড প্রসেসরে লেখার জন্য ব্যবহৃত বিভিন্ন স্টাইলের বর্ণকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফন্ট",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "স্মার্ট আর্ট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শেপ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "টেক্সট",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "একটি ফন্ট হল একটি নির্দিষ্ট শৈলী ও আকারের অক্ষরের একটি সেট (যেমন, এরিয়াল, টাইমস নিউ রোমান)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622700060,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "কোন বাটনে ওয়ার্ড প্রসেসরে \"সেভ\" এবং \"সেভ অ্যাজ\" অপশন থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ক্লিপবোর্ড",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "এডিট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উইন্ডোজ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অফিস বাটন",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অফিস বাটন (বা পরবর্তী সংস্করণে ফাইল ট্যাব) সেভ ও সেভ অ্যাজ অপশন ধারণ করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622700173,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ফন্ট মানে কি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিভিন্ন ধরনের তালিকা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বর্ণের বিভিন্ন শৈলী",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বিভিন্ন ধরনের শব্দ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিভিন্ন ধরনের আইকন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ফন্ট লেখা অক্ষরের শৈলী ও চেহারাকে বোঝায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622700388,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "একটি ফাইল সংরক্ষণ করতে নিচের কোনটি প্রয়োজন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "এডিট মেনু",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "টুল মেনু",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অফিস বাটন",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কোনটিই নয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "একটি ফাইল সংরক্ষণ করতে, আপনি সাধারণত সেভ বা সেভ অ্যাজে প্রবেশের জন্য অফিস বাটন (বা ফাইল ট্যাব) ব্যবহার করেন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622700501,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "লেখাকে বোল্ড করার কীবোর্ড কমান্ড কি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Ctrl+A",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Ctrl+B",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Ctrl+C",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Ctrl+D",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Ctrl+B হল নির্বাচিত লেখায় বোল্ড ফরমেটিং প্রয়োগ করার কীবোর্ড শর্টকাট।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622700686,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "বাংলাদেশে কোন বাংলা ফন্ট সর্বাধিক ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অটোমি এমজে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সুমন এমজে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সুটননিএমজে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বহুব্রীহিএমজে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অটোমি এমজে বাংলাদেশে বাংলা টাইপ করার জন্য বহুল ব্যবহৃত একটি ইউনিকোড ফন্ট।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622700802,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ক্রম বজায় রাখাকে বলা হয়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "বুলেট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নিউমেরিক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "লাইন স্পেসিং",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ফন্ট",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "নম্বরিং (সংখ্যাসূচক তালিকা) একটি ডকুমেন্টে ক্রম বা সিরিয়াল অর্ডার বজায় রাখতে ব্যবহৃত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622700919,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "এর নাম কি? (সম্ভবত লাইন স্পেসিং আইকন বোঝাচ্ছে)",
+    "options": [
+      {
+        "label": "a",
+        "text": "নম্বরিং",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "লাইন স্পেসিং",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "এলাইনমেন্ট",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্যারাগ্রাফ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "লাইনের মধ্যকার স্থান সামঞ্জস্য করার আইকনকে লাইন স্পেসিং বলা হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622701033,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ডকুমেন্টে ক্লিপআর্ট যোগ করতে রিবনের কোন ট্যাব ব্যবহার করতে হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ভিউ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রিভিউ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ইন্সার্ট",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "হোম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ক্লিপ আর্ট ইন্সার্ট ট্যাব ব্যবহার করে, ইলাস্ট্রেশন গ্রুপে সন্নিবেশ করা হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622701149,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ডকুমেন্টের ওয়ার্ড আর্ট সন্নিবেশ করতে রিবনের কোন ট্যাব ব্যবহার করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হোম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ইন্সার্ট",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পেজ লেআউট",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ক্রিয়েট",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ওয়ার্ড আর্ট ইন্সার্ট ট্যাবের মাধ্যমে, টেক্সট গ্রুপে সন্নিবেশ করা হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622701270,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "দুই লাইনের মধ্যবর্তী স্থান নির্ধারণ করাকে বলা হয়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "বুলেট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নম্বর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "লাইন স্পেসিং",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ফন্ট",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "লাইন স্পেসিং লেখার লাইনের মধ্যবর্তী উল্লম্ব দূরত্ব নিয়ন্ত্রণ করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622701396,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "কোন ট্যাবে প্যারাগ্রাফ গ্রুপ আছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ইন্সার্ট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পেজ লেআউট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হোম",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ভিউ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্যারাগ্রাফ গ্রুপ হোম ট্যাবে অবস্থিত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622701519,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ডকুমেন্ট এডিটিং এর প্রথম ধাপ কি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মার্জিন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বানান সংশোধন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "এলাইনমেন্ট",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পেজ লেআউট",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "এডিটিং-এর প্রথম ধাপ প্রায়ই বানান ত্রুটি পরীক্ষা ও সংশোধন করা।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622701639,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "অ্যাকাউন্টিং এর জন্য কোন সফটওয়্যার ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ওয়ার্ড",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অ্যাক্সেস",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "এক্সেল",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "পাওয়ার পয়েন্ট",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "এক্সেল (স্প্রেডশীট সফটওয়্যার) সাধারণত গণনা ও আর্থিক প্রতিবেদনের মতো অ্যাকাউন্টিং কাজের জন্য ব্যবহৃত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622701763,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "কোনটির সাথে স্প্রেডশীট প্রোগ্রাম করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ওয়ার্ড প্রসেসিং",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ছবির ব্যবস্থাপনা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তথ্যের ব্যবস্থাপনা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অ্যাকাউন্টস",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "স্প্রেডশীট প্রোগ্রাম তথ্য (ডেটা) ব্যবস্থাপনা এবং অ্যাকাউন্টিং কাজ সম্পাদনের জন্য ব্যবহৃত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622701876,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "এক্সেল-২০০৭ ওয়ার্কশীটে কতগুলি কলাম আছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১,০৪৮,৫৭৬",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১৬,৩৮৪",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "১০২৪",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২৫৬",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "এক্সেল ২০০৭-এ ১৬,৩৮৪টি কলাম আছে (A থেকে XFD পর্যন্ত)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622701994,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "যদি আপনি এমএস ওয়ার্ডে পেজ নম্বর দিতে চান, তাহলে প্রথমে কোন ট্যাব নির্বাচন করবেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ইন্সার্ট ট্যাব",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "পেজ লেআউট ট্যাব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পেজ নম্বর ইন্সার্ট ট্যাবের মাধ্যমে সন্নিবেশ করা হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622702105,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "প্রতিটি পাতায় স্বয়ংক্রিয়ভাবে ডকুমেন্টের শিরোনাম প্রদর্শন করতে কোনটি ব্যবহার করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্মার্ট আর্ট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বুকমার্ক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ফুটার",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ড্রপ ক্যাপ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ফুটার (বা হেডার) প্রতি পাতায় পাঠ্য (যেমন একটি ডকুমেন্ট শিরোনাম) সন্নিবেশ করতে ব্যবহার করা যেতে পারে যা প্রতিটি পাতায় প্রদর্শিত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622702224,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "মিস সোনিয়ার মাসিক বেতন ২০,০০০ টাকা। তার সাপ্তাহিক আয় বের করতে নিচের কোন সূত্রটি লেখা উচিত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "=2000*7",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "=20000/30*7%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "=20000/30*7",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সাপ্তাহিক আয় = (মাসিক বেতন / ৩০ দিন) * ৭ দিন। সূত্র: =20000/30*7।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622702341,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ওয়ার্ড প্রসেসরে ডকুমেন্ট এডিটিং এর সুবিধা হল—\ni. বানান সংশোধন\nii. টেক্সট মুছুন\niii. টেক্সট সংরক্ষণ\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ওয়ার্ড প্রসেসর বানান সংশোধন, টেক্সট মুছা এবং সংরক্ষণের ক্ষমতা প্রদান করে, যা সবই সম্পাদনার সুবিধা।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622702474,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "G3 এবং G4 সেল থেকে ডেটা গুণ করার সূত্র হল—\ni. = (G3^G4)\nii. = (G3^G4)\niii. = Product (G3^G4)\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "গুণ সূত্র =G3*G4 বা ফাংশন =PRODUCT(G3,G4) দিয়ে করা যেতে পারে। ক্যারেট (^) সূচকের জন্য, গুণের জন্য নয়। অপশনগুলো সদৃশ মনে হচ্ছে; সম্ভবত =G3*G4 এবং =PRODUCT(G3,G4) সঠিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622702610,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "একটি স্প্রেডশীটে ব্যবহার করে গুণ করা যেতে পারে—\ni. কীবোর্ড\nii. সূত্র\niii. ফাংশন\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "গুণ সরাসরি সংখ্যা টাইপ করে (কীবোর্ড), সূত্র ব্যবহার করে (যেমন, =A1*B1), বা ফাংশন ব্যবহার করে (যেমন, =PRODUCT(A1,B1)) করা যেতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622702719,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ওয়ার্ড প্রসেসরের সুবিধা—\ni. একাধিক ডকুমেন্ট নিয়ে একই সাথে কাজ করা যায়।\nii. ছবি, গ্রাফ, টেবিল ইত্যাদি অন্তর্ভুক্ত করা যায়।\niii. বানান সংশোধন করা যায়।\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ওয়ার্ড প্রসেসর একাধিক ডকুমেন্ট, অবজেক্ট সন্নিবেশ (ছবি, গ্রাফ, টেবিল), এবং বানান পরীক্ষার অনুমতি দেয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622702828,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "হোম রিবন ধারণ করে—\ni. ফন্ট গ্রুপ\nii. প্যারাগ্রাফ গ্রুপ\niii. টেবিল\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "হোম ট্যাবে ফন্ট ও প্যারাগ্রাফ গ্রুপ অন্তর্ভুক্ত থাকে, তবে টেবিল সাধারণত ইন্সার্ট ট্যাবে থাকে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622702942,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "এমএস অফিসে, হোম রিবন ধারণ করে—\ni. ফন্ট গ্রুপ\nii. প্যারাগ্রাফ গ্রুপ\niii. টেবিল গ্রুপ\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "হোম ট্যাবে ফন্ট ও প্যারাগ্রাফ গ্রুপ ধারণ করে, তবে টেবিল গ্রুপ নয় (যা ইন্সার্ট ট্যাবে থাকে)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622703058,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "অফিস বাটনে, রয়েছে—\ni. নিউ\nii. ওপেন\niii. সেভ\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অফিস বাটনে নিউ, ওপেন, সেভ এবং অন্যান্য ফাইল-সম্পর্কিত কমান্ড অন্তর্ভুক্ত রয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622703167,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "এমএস অফিস-২০০৭-এ প্যারাগ্রাফ গ্রুপ ধারণ করে—\ni. বুলেট\nii. টেক্সট বক্স\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "প্যারাগ্রাফ গ্রুপে বুলেট ও নম্বরিং অন্তর্ভুক্ত থাকে, তবে টেক্সট বক্স ইন্সার্ট ট্যাবের টেক্সট গ্রুপে থাকে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622703296,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "এমএস ওয়ার্ডের ইন্সার্ট মেনু ধারণ করে—\ni. পেজেস গ্রুপ\nii. লিঙ্কস গ্রুপ\niii. নাম্বার গ্রুপ\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ইন্সার্ট ট্যাবে পেজেস গ্রুপ (কভার পেজ, ব্ল্যাঙ্ক পেজের জন্য) এবং লিঙ্কস গ্রুপ (হাইপারলিঙ্কের জন্য) অন্তর্ভুক্ত রয়েছে, তবে নাম্বার গ্রুপ নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622703409,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ওয়ার্ড প্রসেসরের একটি ডকুমেন্টে, রিবনের ইন্সার্ট ট্যাবের মাধ্যমে সন্নিবেশ করা যেতে পারে, যেমন—\ni. টেবিল\nii. ছবি\niii. ওয়ার্ড আর্ট\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ইন্সার্ট ট্যাব টেবিল, ছবি এবং ওয়ার্ড আর্ট সন্নিবেশের অনুমতি দেয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622703531,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ইন্সার্ট ট্যাব ব্যবহার করে—\ni. টেবিল যোগ করা হয়\nii. মার্জিন ক্লিক করা হয়\niii. ওয়ার্ড আর্ট ক্লিক করা হয়\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ইন্সার্ট ট্যাব টেবিল ও ওয়ার্ড আর্ট যোগ করতে ব্যবহৃত হয়, তবে মার্জিন পেজ লেআউট ট্যাবে সামঞ্জস্য করা হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622703680,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "স্প্রেডশীট প্রোগ্রামের বৈশিষ্ট্য হল—\ni. সূত্র সম্পর্কিত কাজ করা\nii. ছবি সম্পাদনা\niii. গ্রাফ সম্পর্কিত কাজ করা\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "স্প্রেডশীট সূত্র ও গ্রাফ তৈরির জন্য ব্যবহৃত হয়, তবে সাধারণত ছবি সম্পাদনার জন্য নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622703799,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "স্প্রেডশীট বিশ্লেষণ ব্যবহার করে—\ni. একটি টেক্সট প্রস্তুত করা সহজ\nii. একটি তত্ত্ব প্রয়োগ করা যায়\niii. ডেটা সাজানো যায়\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "স্প্রেডশীট বিশ্লেষণে সূত্র প্রয়োগ (তত্ত্ব) এবং ডেটা সাজানো জড়িত, তবে বিশেষভাবে টেক্সট প্রস্তুত করার জন্য নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622703928,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "একটি স্প্রেডশীটের ব্যবহার—\ni. বাজেট প্রস্তুত করা\nii. পরিষেবার জন্য সংরক্ষণ তৈরি করা\niii. নির্বাচনে ভোট গণনা করা\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "স্প্রেডশীট বাজেটিং, সংরক্ষণ ব্যবস্থাপনা (যেমন এয়ারলাইনে) এবং ভোট গণনা (ডেটা ট্যালি) করার জন্য ব্যবহার করা যেতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622704048,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "A3 থেকে B3 পর্যন্ত স্প্রেডশীট দিয়ে গুণের নিয়ম হল —\ni. =(A3*B3)\nii. =Product (A3:B3)\niii. =(A3xB3)\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "গুণ সূত্র =A3*B3 বা ফাংশন =PRODUCT(A3:B3) দিয়ে করা যেতে পারে। \"x\" চিহ্নটি এক্সেল সূত্রে ব্যবহৃত হয় না।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622704172,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "একটি স্প্রেডশীটে, ব্যবহার করে গুণ করা যেতে পারে —\ni. সূত্র\nii. সরাসরি\niii. ফাংশন\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "গুণ সরাসরি সংখ্যা টাইপ করে (সরাসরি), সূত্র ব্যবহার করে (যেমন, =A1*B1), বা ফাংশন ব্যবহার করে (যেমন, =PRODUCT(A1,B1)) করা যেতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622704300,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "E3 সেলের মান ১০০০০ হলে F3 সেলের মান কত হবে?\n[সারণী: বেসিক স্যালারি ১০০০০, অ্যালাউন্স ১৫%, মোট স্যালারি ?]",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৫০০",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "১০৫০",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "২২০০",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২২৫০",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অ্যালাউন্স = বেসিক স্যালারি × অ্যালাউন্স % = ১০০০০ × ১৫% = ১৫০০।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622704419,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "G2 সেলের মান নির্ধারণের জন্য নিচের কোন সূত্রটি সঠিক?\n[সারণী: বেসিক ২০০০০, অ্যালাউন্স ২০%, মোট স্যালারি ?]",
+    "options": [
+      {
+        "label": "a",
+        "text": "= E2 * F2% + E2",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "E2 * F2% + F2",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "= E2 * 20 + E2",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "E2* 20+E2%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "মোট স্যালারি = বেসিক + (বেসিক × অ্যালাউন্স %)। সূত্র: =E2 + (E2 * F2%) অথবা =E2*F2% + E2।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622704537,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "নিচের কোনটি ফাংশন?\ni. =sum ( )\nii. =avg ( )\niii. =product ( )\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "SUM, AVERAGE, এবং PRODUCT সবই স্প্রেডশীট সফটওয়্যারের অন্তর্নির্মিত ফাংশন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622704653,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "ডেটা শ্রেণীবিভাগ কোনটির কারণে সহজ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গাণিতিক গণনা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সেল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সারি ও কলাম",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "টেবিল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "একটি স্প্রেডশীটের সারি ও কলাম ডেটা সংগঠিত ও শ্রেণীবিভাগ করা সহজ করে তোলে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622704760,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "মি. 'ডব্লিউ' কোন প্রোগ্রাম ব্যবহার করবেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "এমএস এক্সেল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "এমএস অ্যাক্সেস",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "এমএস ওয়ার্ড",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "এমএস পাওয়ার পয়েন্ট",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "এমএস অ্যাক্সেস একটি ডাটাবেজ প্রোগ্রাম যা নিরাপত্তা বৈশিষ্ট্য ও নকল ডেটা এড়ানোর সাথে লাইব্রেরি ডেটা ব্যবস্থাপনার জন্য উপযুক্ত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622704874,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "লাইব্রেরি ব্যবস্থাপনা প্রোগ্রাম ব্যবহার করে মি. 'ডব্লিউ' আরও সুবিধা পাবেন, যেমন—\ni. ছবি সম্পাদনা\nii. ম্যাক্রো তৈরি\niii. ক্যোয়ারী তৈরি\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "অ্যাক্সেসের মতো ডাটাবেজ প্রোগ্রাম ম্যাক্রো (স্বয়ংক্রিয় কাজ) ও ক্যোয়ারী (ডেটা পুনরুদ্ধার) তৈরি করার অনুমতি দেয়, তবে ছবি সম্পাদনা করার নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622704987,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "প্যারাগ্রাফ এলাইনমেন্ট সেট করতে কোন নম্বরযুক্ত কমান্ড ব্যবহার করা হয়?\n[ছবির রেফারেন্স: সম্ভবত এলাইনমেন্ট আইকন]",
+    "options": [
+      {
+        "label": "a",
+        "text": "1",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "3",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "4",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "[ছবি ছাড়া নির্ধারণ করা যাবে না; সাধারণত এলাইনমেন্ট আইকন প্যারাগ্রাফ গ্রুপে থাকে]",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622705101,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "এই কমান্ডগুলোর সাথে —\ni. ফন্ট সাইজ পরিবর্তন করা যেতে পারে\nii. স্বয়ংক্রিয় তালিকা তৈরি করা যেতে পারে\niii. লাইন স্পেসিং নির্দিষ্ট করা যেতে পারে\nনিচের কোনটি সত্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ফন্ট সাইজ, বুলেট/নম্বর তালিকা (স্বয়ংক্রিয় তালিকা) এবং লাইন স্পেসিং সবই ফন্ট ও প্যারাগ্রাফ গ্রুপে সামঞ্জস্য করা যায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622705225,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "শিরোনাম সহ সেই টেবিলে কতগুলি সারি থাকবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "11",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "12",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "13",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "10 জন শিক্ষার্থী + 1 টি শিরোনাম সারি = 11 টি সারি।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622705345,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "উপরোক্ত কাজের অপশনগুলোর জন্য ব্যবহৃত ড্রপ ডাউন তালিকা—\ni. Insert Table\nii. Draw table\niii. Quick table\nনিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সবই ওয়ার্ডে টেবিল সন্নিবেশ করার পদ্ধতি: Insert Table (সারি/কলাম নির্দিষ্ট করুন), Draw Table (ম্যানুয়ালি আঁকুন), Quick Table (পূর্ব-নকশাকৃত টেমপ্লেট)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622705473,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "মি. রহিম লেখার জন্য কোন প্রোগ্রাম ব্যবহার করেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফটোশপ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ওয়ার্ড স্টার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ওয়ার্ডবুক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মাইক্রোসফট ওয়ার্ড",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মাইক্রোসফট ওয়ার্ড লেখার জন্য ব্যবহৃত একটি সাধারণ ওয়ার্ড প্রসেসিং সফটওয়্যার।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767622705588,
+    "subject": "তথ্য ও যোগাযোগ প্রযুক্তি",
+    "chapter": "স্প্রেডশীট সফটওয়্যার",
+    "question": "লেখায় একটি ভিন্ন স্টাইল যোগ করতে মি. রহিমের কোন ট্যাব ব্যবহার করা উচিত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ইলাস্ট্রেশন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ইন্সার্ট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "স্টাইল",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "রিবন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "স্টাইলস গ্রুপ (হোম ট্যাবে) সামঞ্জস্যপূর্ণ ফরমেটিংয়ের জন্য পূর্বসংজ্ঞায়িত টেক্সট স্টাইল প্রদান করে।",
+    "image": null,
+    "language": "en"
+  }
+]

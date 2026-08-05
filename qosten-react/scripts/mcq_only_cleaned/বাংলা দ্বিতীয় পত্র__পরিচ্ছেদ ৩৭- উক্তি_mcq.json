@@ -1,0 +1,770 @@
+[
+  {
+    "id": 1768035305783,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৭: উক্তি",
+    "question": "বক্তার কথা উপস্থাপনের ধরনকে বলা হয়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "উক্তি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "প্রকাশভঙ্গি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাক্যের ভাব",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাক্যের প্রয়োগ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বক্তা যা বলেন, তার বর্ণনার বা উপস্থাপনের রীতিকে উক্তি বলে [১০]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035305890,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৭: উক্তি",
+    "question": "উক্তি — দুই প্রকার।",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রত্যক্ষ ও পরোক্ষ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সাধারণ ও জটিল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সরল ও মিশ্র",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সক্রিয় ও অক্রিয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বক্তার কথা উপস্থাপনের ভিত্তিতে উক্তি মূলত দুই প্রকার: প্রত্যক্ষ ও পরোক্ষ [১০]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035305993,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৭: উক্তি",
+    "question": "বক্তার কথা সরাসরি উদ্ধৃত হলে তাকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পরোক্ষ উক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রত্যক্ষ উক্তি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ভাব উক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রূপ উক্তি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বক্তার মুখনিসৃত কথা কোনো পরিবর্তন ছাড়াই তুলে ধরাকে প্রত্যক্ষ উক্তি বলে [১০]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035306103,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৭: উক্তি",
+    "question": "বক্তার কথা অন্যের দ্বারা বর্ণিত হলে তাকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পরোক্ষ উক্তি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "প্রত্যক্ষ উক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ভাব উক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গৌণ উক্তি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বক্তার কথা যখন অন্যের ভাষায় পরিবর্তিত হয়ে প্রকাশিত হয়, তাকে পরোক্ষ উক্তি বলে [১০]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035306205,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৭: উক্তি",
+    "question": "প্রত্যক্ষ উক্তিকে পরোক্ষ উক্তিতে পরিবর্তনের সময় কোন পদের পরিবর্তন হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিশেষ্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সর্বনাম",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বিশেষণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অব্যয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "উক্তি পরিবর্তনের সময় বাক্যের পক্ষ বা সর্বনাম পদের পরিবর্তন আবশ্যক [১০]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035306314,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৭: উক্তি",
+    "question": "প্রত্যক্ষ উক্তিকে পরোক্ষ উক্তিতে পরিবর্তনের সময় কী ধরনের শব্দের বদল হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কালবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "স্থানবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ভাববাচক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কালবাচক ও স্থানবাচক",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "উক্তি পরিবর্তনের সময় কালবাচক (সময়) ও স্থানবাচক শব্দ পরিবর্তিত হয় (যেমন: আজ -> সেদিন) [১০]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035306416,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৭: উক্তি",
+    "question": "প্রত্যক্ষ উক্তিতে কোন যতিচিহ্ন দিয়ে উক্তিকে আরম্ভ করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সেমিকোলন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কোলন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ড্যাশ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উদ্ধৃতিচিহ্ন",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "প্রত্যক্ষ উক্তিতে বক্তার বক্তব্যকে উদ্ধৃতিচিহ্নের (\" \") মাধ্যমে প্রকাশ করা হয় [১০]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035306519,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৭: উক্তি",
+    "question": "অর্থের সংগতি রক্ষার জন্য উক্তি পরিবর্তনের সময়ে কোন পদের পরিবর্তন প্রয়োজন হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সর্বনাম",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বিশেষ্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিশেষণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অনুসর্গ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "উক্তি পরিবর্তনের সময় অর্থের মিল বজায় রাখতে সর্বনামের রূপ পরিবর্তন করতে হয় [১০]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035306623,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৭: উক্তি",
+    "question": "প্রত্যক্ষ উক্তিতে চিরন্তন সত্যের উল্লেখ থাকলে পরোক্ষ উক্তিতে পরিবর্তন হয় না —",
+    "options": [
+      {
+        "label": "a",
+        "text": "উদ্ধৃতিচিহ্নের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ক্রিয়ার কালের",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ভাব বিশেষ্যের",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নামবিধেয়র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "চিরন্তন সত্য বাক্যের ক্ষেত্রে পরোক্ষ উক্তিতে ক্রিয়ার কাল পরিবর্তন করা হয় না [১০]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035306724,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৭: উক্তি",
+    "question": "পরোক্ষ উক্তিতে ক্রিয়ারূপের পরিবর্তন হয় কী অনুযায়ী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্তা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কর্ম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উদ্দেশ্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিধেয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পরোক্ষ উক্তি করার সময় ক্রিয়াপদ পরিবর্তিত কর্তার অনুসারী হয়ে থাকে [১০]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035306927,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৭: উক্তি",
+    "question": "পরোক্ষ উক্তিতে ক্রিয়ার কাল অনুযায়ী কী পরিবর্তন করতে হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সর্বনাম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ক্রিয়া",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কাল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "স্থান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "উক্তি পরিবর্তনের সময় মূল ক্রিয়ার রূপ বা কাল অনুযায়ী ক্রিয়া পরিবর্তিত হয় [১০]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035307037,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৭: উক্তি",
+    "question": "বক্তার কথা উপস্থাপনের ধরনকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বচন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ধাতু",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উক্তি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বক্তার বক্তব্য উপস্থাপনের শৈলীকেই উক্তি বলা হয় [১০]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035307140,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৭: উক্তি",
+    "question": "ছেলেটি বলেছিল, 'আজ আমি অনেক পড়েছি'। — বাক্যটির পরোক্ষ উক্তি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ছেলেটি বলেছিল যে, আজ সে অনেক পড়েছে।",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ছেলেটি বলেছিল যে, ওইদিন সে অনেক পড়েছে।",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ছেলেটি বলেছিল যে, সেদিন সে অনেক পড়েছে।",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ছেলেটি বলেছিল যে, ওইদিন আমি অনেক পড়েছি।",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'আজ' পরিবর্তিত হয়ে 'সেদিন' এবং 'আমি' পরিবর্তিত হয়ে 'সে' হয়েছে [১০]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035308053,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৭: উক্তি",
+    "question": "পরোক্ষ উক্তিতে কোন চিহ্ন লোপ পায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "উদ্ধৃতিচিহ্ন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কমা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উদাহরণ চিহ্ন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কোলন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পরোক্ষ উক্তিতে কোনো উদ্ধৃতিচিহ্ন ব্যবহৃত হয় না [১০]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035308246,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৭: উক্তি",
+    "question": "প্রত্যক্ষ উক্তিতে কোন ধরনের উদ্ধৃতি থাকলে পরোক্ষ উক্তিতে কালের কোনো পরিবর্তন হয় না?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চিরন্তন সত্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অনুজ্ঞাসূচক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রশ্নবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আবেগসূচক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "চিরন্তন সত্যের ক্ষেত্রে পরোক্ষ উক্তিতে ক্রিয়ার কালের কোনো পরিবর্তন ঘটে না [১০]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035308356,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৭: উক্তি",
+    "question": "উক্তি পরিবর্তনের অর্থের সংগতি রাখার জন্য কোন পদের পরিবর্তন হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিশেষ্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সর্বনাম",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বিশেষণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অব্যয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বক্তার সাথে সম্পর্কের পরিবর্তন অনুযায়ী সর্বনামের পরিবর্তন আবশ্যক [১০]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035308915,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৭: উক্তি",
+    "question": "'আমি এখনই বের হচ্ছি' — এর পরোক্ষ উক্তি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আমি তখনই বের হচ্ছি।",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সে তখনই বের হচ্ছিল।",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সে এখনই বের হচ্ছে।",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আমি এখনই বের হচ্ছি।",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'আমি' পরিবর্তিত হয়ে 'সে' এবং 'এখনই' পরিবর্তিত হয়ে 'তখনই' হয়েছে [১০]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035309039,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৭: উক্তি",
+    "question": "'তিনি বললেন যে বইটা তার দরকার' — বাক্যটি কীসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রত্যক্ষ উক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কর্মবাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পরোক্ষ উক্তি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "পরোক্ষ উক্তি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "অন্যের ভাষায় বক্তার কথা বর্ণিত হওয়ায় এটি পরোক্ষ উক্তি [১০]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035309148,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৭: উক্তি",
+    "question": "বাবু বললেন 'বুকের ওপর এ জমি লিখে দিবো না' — কোন উক্তি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পরোক্ষ উক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "স্বগতোক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রত্যক্ষ উক্তি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "নিভৃত উক্তি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বক্তার কথা সরাসরি উদ্ধৃতিচিহ্নের মধ্যে থাকায় এটি প্রত্যক্ষ উক্তি [১০]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035309252,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৭: উক্তি",
+    "question": "প্রত্যক্ষ উক্তির 'গতকাল' পরোক্ষ উক্তিতে কী হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আগের দিন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পূর্বদিন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সেদিন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পরদিন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "উক্তি পরিবর্তনের নিয়মানুসারে 'গতকাল' পরিবর্তিত হয়ে 'পূর্বদিন' বা 'আগের দিন' হয় [১০]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035309373,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৭: উক্তি",
+    "question": "উক্তি কত প্রকার?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুই প্রকার",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "তিন প্রকার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চার প্রকার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাঁচ প্রকার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "উক্তি মূলত দুই প্রকার: প্রত্যক্ষ ও পরোক্ষ [১০]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035309471,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৭: উক্তি",
+    "question": "কোনো কথকের বাক্ কর্মের নাম কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাচ্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বাগ্বিধি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উক্তি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "প্রবাদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বক্তার কথন বা বক্তব্য প্রকাশের কাজই হলো উক্তি [১০]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035309595,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৭: উক্তি",
+    "question": "শিক্ষক বললেন, 'তোমরা কি ছুটি চাও?' — এর পরোক্ষ উক্তি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আমাদের ছুটি চাই কি না, শিক্ষক তা জিজ্ঞাসা করলেন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আমরা যে ছুটি চাইছি শিক্ষক তাহা জানতে চাইলেন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আমরা ছুটি চাই কি না, শিক্ষক তা জিজ্ঞাসা করলেন",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "আমাদের ছুটির দরকার কি না, — শিক্ষক জানতে চাইলেন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্রশ্নবোধক প্রত্যক্ষ উক্তিকে পরোক্ষ করার সময় 'জিজ্ঞাসা করলেন' বা 'জানতে চাইলেন' ব্যবহৃত হয় [১০]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035309699,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৭: উক্তি",
+    "question": "রহমান বলল, 'আমি এখনই আসছি।' — এটি পরোক্ষ উক্তিতে কী হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রহমান বলল যে, আমি তখনই যাচ্ছি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রহমান বলল যে, সে তখনই আসছে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "রহমান বলল যে, সে এখনই যাচ্ছে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রহমান বলল যে, আমি এখনই যাচ্ছি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'আমি' পরিবর্তিত হয়ে 'সে' এবং 'আসছি' পরিবর্তিত হয়ে 'আসছে' বা 'যাচ্ছে' হয়েছে [১০]।",
+    "image": null,
+    "language": "en"
+  }
+]

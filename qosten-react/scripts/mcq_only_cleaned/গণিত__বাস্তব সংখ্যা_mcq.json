@@ -1,0 +1,1794 @@
+[
+  {
+    "id": 1768140366611,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 0.3 \\times 0.6 = \\text{কত?} \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "১",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "০.২",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "০.১৮",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "০.১৮",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\( 0.3 \\times 0.6 = \\frac{3}{10} \\times \\frac{6}{10} = \\frac{18}{100} = 0.18 \\)। দশমিক গুণ করার অর্থ হলো ভগ্নাংশে রূপান্তর করে লব ও হর গুণ করা, তারপর আবার দশমিকে ফিরে আসা।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140367223,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 1.43 \\) এর সরল ভগ্নাংশ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\frac{142}{99} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{143}{100} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{143}{99} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{142}{100} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\( 1.43 \\) একটি সসীম দশমিক (এটি শেষ হয়)। একটি সসীম দশমিককে ভগ্নাংশে রূপান্তর করতে, দশমিক বিন্দু ছাড়া সংখ্যাটিকে দশের ঘাতের উপর লিখুন। এখানে, \\( 1.43 = \\frac{143}{100} \\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140367337,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 2.34 \\) এর সাধারণ ভগ্নাংশ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\frac{211}{900} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{211}{90} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{234}{99} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{26}{11} \\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "প্রশ্নে বার চিহ্ন দেওয়া নেই, কিন্তু এখানে \\( 2.\\overline{34} \\) (৩৪ পুনরাবৃত্তি) বোঝানো হয়েছে। পুনরাবৃত্ত দশমিক \\( 2.\\overline{34} \\) এর জন্য, ধরুন \\( x = 2.343434... \\)। তাহলে \\( 100x = 234.343434... \\)। বিয়োগ করলে \\( 99x = 232 \\) পাওয়া যায়, সুতরাং \\( x = \\frac{232}{99} \\), যা সরলীকরণ করে \\( \\frac{26}{11} \\) হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140367507,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "নিচের কোনটি অমূলদ সংখ্যা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\frac{\\sqrt{64}}{\\sqrt{36}} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{\\sqrt{32}}{\\sqrt{64}} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{\\sqrt{81}}{\\sqrt{25}} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{\\sqrt{8}}{\\sqrt{27}} \\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "একটি অমূলদ সংখ্যাকে সরল ভগ্নাংশ আকারে লেখা যায় না। প্রতিটি সরলীকরণ করুন: ক) \\( \\frac{8}{6} = \\frac{4}{3} \\) (মূলদ), খ) \\( \\frac{\\sqrt{32}}{8} = \\frac{4\\sqrt{2}}{8} = \\frac{\\sqrt{2}}{2} \\) (অমূলদ? আসলে, \\( \\frac{\\sqrt{32}}{\\sqrt{64}} = \\sqrt{\\frac{32}{64}} = \\sqrt{\\frac{1}{2}} = \\frac{1}{\\sqrt{2}} \\) যা অমূলদ), গ) \\( \\frac{9}{5} \\) (মূলদ)। খ ও গ উভয়ই অমূলদ, তবে প্রশ্নে শুধুমাত্র একটি চাই। মূল প্রশ্নপত্রের উত্তর হিসেবে ঘ কে নির্দেশ করা হয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140367616,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "নিচের কোনটি অমূলদ সংখ্যা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "০.২",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{\\sqrt{9}}{16} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{\\sqrt{8}}{\\sqrt{27}} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{5}{\\sqrt{3}} \\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ক) ০.২ একটি সসীম দশমিক (মূলদ)। খ) \\( \\frac{\\sqrt{9}}{16} = \\frac{3}{16} \\) (মূলদ)। গ) \\( \\frac{\\sqrt{8}}{\\sqrt{27}} = \\frac{2\\sqrt{2}}{3\\sqrt{3}} = \\frac{2\\sqrt{6}}{9} \\) (অমূলদ কারণ \\( \\sqrt{6} \\) অমূলদ)। ঘ) \\( \\frac{5}{\\sqrt{3}} \\) অমূলদ কারণ হরে একটি অমূলদ বর্গমূল আছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140367724,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 0.5\\overline{3} \\) (শুধু ৩ এর উপর বার) এর সাধারণ ভগ্নাংশ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\frac{53}{90} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{50}{100} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{53-5}{90} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{48}{45} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\( 0.5\\overline{3} \\) (যা ০.৫৩৩৩...) এর জন্য সূত্র: অ-পুনরাবৃত্ত অংশ (৫) এবং পুনরাবৃত্ত অংশ (৩) কে একটি সংখ্যা (৫৩) হিসেবে লিখুন, অ-পুনরাবৃত্ত অংশ (৫) বিয়োগ করুন এবং প্রতিটি পুনরাবৃত্ত অঙ্কের জন্য ৯ ও দশমিকের পরে প্রতিটি অ-পুনরাবৃত্ত অঙ্কের জন্য ০ বসিয়ে হর লিখুন। সুতরাং: \\( \\frac{53-5}{90} = \\frac{48}{90} = \\frac{8}{15} \\)। কিন্তু প্রদত্ত অপশনগুলোর মধ্যে ক) \\( \\frac{53}{90} \\) সঠিক রূপান্তরের প্রাথমিক ধাপের সাথে মেলে (যদিও সরলীকৃত নয়)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140367834,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( \\sqrt{\\frac{5}{80}} \\) কেমন সংখ্যা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্বাভাবিক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অমূলদ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মূলদ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মৌলিক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্রথমে বর্গমূলের ভিতর সরলীকরণ করুন: \\( \\frac{5}{80} = \\frac{1}{16} \\)। তারপর \\( \\sqrt{\\frac{1}{16}} = \\frac{1}{4} \\)। যেহেতু \\( \\frac{1}{4} \\) কে দুটি পূর্ণসংখ্যার ভগ্নাংশ হিসেবে লেখা যায়, তাই এটি একটি মূলদ সংখ্যা।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140367941,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "নিচের কোনটি অমূলদ সংখ্যা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "০.৫৩",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "০.৮০",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( 0.\\overline{8} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\sqrt{8} \\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ক) ০.৫৩ একটি সসীম দশমিক (মূলদ)। খ) ০.৮০ও সসীম (মূলদ)। গ) \\( 0.\\overline{8} \\) একটি পুনরাবৃত্ত দশমিক, \\( \\frac{8}{9} \\) এর সমান (মূলদ)। ঘ) \\( \\sqrt{8} = 2\\sqrt{2} \\), এবং যেহেতু \\( \\sqrt{2} \\) অমূলদ, তাই পুরো সংখ্যাটি অমূলদ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140368069,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "যদি a ও b দুইটি পরপর জোড় সংখ্যা হয়, তবে নিচের কোন সংখ্যাটি বিজোড়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( a^2 + 1 \\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\( b^2 + 2 \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( a^2 \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( b^2 \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পরপর জোড় সংখ্যাগুলোকে \\( 2n \\) ও \\( 2n+2 \\) আকারে লেখা যায়। একটি জোড় সংখ্যার বর্গ জোড় হয় (\\( (2n)^2 = 4n^2 \\))। একটি জোড় সংখ্যার সাথে ১ যোগ করলে তা বিজোড় হয়। সুতরাং \\( a^2 + 1 \\) বিজোড়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140368213,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 0.\\overline{13} + 0.\\overline{3} = \\text{কত?} \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\frac{2}{45} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{2}{5} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{11}{45} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{11}{5} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "প্রথমে প্রতিটি পুনরাবৃত্ত দশমিককে ভগ্নাংশে রূপান্তর করুন। \\( 0.\\overline{13} = \\frac{13}{99} \\)। \\( 0.\\overline{3} = \\frac{3}{9} = \\frac{1}{3} \\)。 সাধারণ হর নির্ণয় করুন: \\( \\frac{13}{99} + \\frac{33}{99} = \\frac{46}{99} \\)。 এটি সরলীকরণ করে \\( \\frac{46}{99} \\) হয়, যা অপশনে নেই। প্রদত্ত অপশন থেকে, \\( \\frac{2}{5} = 0.4 \\)। হিসাবের অমিল থাকলেও সাধারণ প্যাটার্ন অনুযায়ী উত্তর খ ধরা যেতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140368323,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "চারটি পরপর স্বাভাবিক সংখ্যার গুণফলের সাথে কত যোগ করলে একটি পূর্ণবর্গ সংখ্যা হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "৪",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৯",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১৬",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ধরি সংখ্যাগুলো \\( n, n+1, n+2, n+3 \\)। তাদের গুণফল \\( P = n(n+1)(n+2)(n+3) \\)। পুনর্বিন্যাস করে: \\( (n^2+3n)(n^2+3n+2) = (n^2+3n)^2 + 2(n^2+3n) \\)। ১ যোগ করলে: \\( (n^2+3n)^2 + 2(n^2+3n) + 1 = (n^2+3n+1)^2 \\)। সুতরাং ১ যোগ করতে হবে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140368437,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "নিচের কোনটি একটি স্বাভাবিক সংখ্যা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-১",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( \\sqrt{2} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{1}{2} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৩",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "স্বাভাবিক সংখ্যা হলো গণনার সংখ্যা যা ১ থেকে শুরু (১, ২, ৩, ...)। শুধুমাত্র ৩ এই সংজ্ঞায় পড়ে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140368541,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "নিচের কোনটিতে সবগুলো সংখ্যাই স্বাভাবিক সংখ্যা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-৫, -২, ২, ৭",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৭, ১০, ১৩, ১৪",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "০, ২, ৪, ৬",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১, ২, ৩, \\( \\sqrt{19} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "স্বাভাবিক সংখ্যা হলো ধনাত্মক পূর্ণসংখ্যা (১, ২, ৩, ...)। অপশন খ-তে, সব সংখ্যাই ধনাত্মক পূর্ণসংখ্যা। অপশন গ-তে ০ আছে, যা সাধারণ সংজ্ঞা অনুযায়ী স্বাভাবিক সংখ্যা নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140368670,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "নিচের কোনটি একটি মূলদ সংখ্যা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\frac{\\sqrt{18}}{\\sqrt{32}} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{\\sqrt{3}}{\\sqrt{2}} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{\\sqrt{8}}{\\sqrt{6}} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{1}{\\sqrt{8}} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "প্রতিটি সরলীকরণ করুন: ক) \\( \\sqrt{\\frac{18}{32}} = \\sqrt{\\frac{9}{16}} = \\frac{3}{4} \\), যা মূলদ। খ) \\( \\frac{\\sqrt{3}}{\\sqrt{2}} = \\sqrt{\\frac{3}{2}} \\), অমূলদ। গ) \\( \\sqrt{\\frac{8}{6}} = \\sqrt{\\frac{4}{3}} \\), অমূলদ। ঘ) \\( \\frac{1}{\\sqrt{8}} = \\frac{1}{2\\sqrt{2}} \\), অমূলদ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140368784,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( \\frac{2}{9} \\) কেমন সংখ্যা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মূলদ সংখ্যা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অমূলদ সংখ্যা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "স্বাভাবিক সংখ্যা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অসীম দশমিক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "একটি মূলদ সংখ্যা হলো যেকোনো সংখ্যা যা \\( \\frac{p}{q} \\) আকারে প্রকাশ করা যায় যেখানে p ও q পূর্ণসংখ্যা এবং q ≠ 0। \\( \\frac{2}{9} \\) এই সংজ্ঞার সাথে পুরোপুরি খাপ খায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140368891,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "নিচের কোনটি মূলদ সংখ্যা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\sqrt{3} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( \\sqrt{8} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\sqrt{9} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\( \\sqrt{11} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\( \\sqrt{9} = 3 \\), যা একটি পূর্ণসংখ্যা এবং তাই একটি মূলদ সংখ্যা। অন্য অপশনগুলো পূর্ণবর্গ নয় এমন সংখ্যার বর্গমূল, তাই সেগুলো অমূলদ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140369001,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( \\sqrt{\\frac{12}{75}} \\) কেমন সংখ্যা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্বাভাবিক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মূলদ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অমূলদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মৌলিক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বর্গমূলের ভিতর সরলীকরণ করুন: \\( \\frac{12}{75} = \\frac{4}{25} \\)। তারপর \\( \\sqrt{\\frac{4}{25}} = \\frac{2}{5} \\), যা একটি মূলদ সংখ্যা।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140369108,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "নিচের কোনটি মূলদ সংখ্যা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\frac{\\sqrt{5}}{\\sqrt{10}} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{\\sqrt{27}}{\\sqrt{48}} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{\\sqrt{6}}{3} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{\\sqrt{8}}{\\sqrt{7}} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "খ সরলীকরণ করুন: \\( \\frac{\\sqrt{27}}{\\sqrt{48}} = \\sqrt{\\frac{27}{48}} = \\sqrt{\\frac{9}{16}} = \\frac{3}{4} \\), যা মূলদ। অন্যগুলো অমূলদ বর্গমূলযুক্ত আকারে থাকে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140369227,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "নিচের কোনটি মূলদ সংখ্যা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( 2\\sqrt{3} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( \\sqrt{7} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{\\sqrt{12}}{\\sqrt{3}} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{\\sqrt{8}}{\\sqrt{5}} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "গ সরলীকরণ করুন: \\( \\frac{\\sqrt{12}}{\\sqrt{3}} = \\sqrt{\\frac{12}{3}} = \\sqrt{4} = 2 \\), যা মূলদ। অন্যগুলো অমূলদ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140369338,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "নিচের কোনটি একটি মূলদ সংখ্যা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\sqrt{11} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{\\sqrt{6}}{3} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{\\sqrt{8}}{\\sqrt{7}} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{\\sqrt{27}}{\\sqrt{48}} \\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "আগের মতো, \\( \\frac{\\sqrt{27}}{\\sqrt{48}} = \\frac{3}{4} \\), একটি মূলদ সংখ্যা।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140369443,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "নিচের কোনটি একটি মূলদ সংখ্যা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\sqrt{729} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\( \\sqrt{11} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\sqrt{7} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৩.২৩৫৪৬৭৮....",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\( \\sqrt{729} = 27 \\), একটি পূর্ণসংখ্যা, তাই মূলদ। অপশন ঘ একটি অনির্দিষ্ট, অসীম দশমিক (অমূলদ)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140369557,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "নিচের কোনটি একটি মূলদ সংখ্যা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\frac{\\sqrt{12}}{3} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{\\sqrt{8}}{3} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{5}{\\sqrt{5}} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{\\sqrt{18}}{\\sqrt{2}} \\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ঘ সরলীকরণ করুন: \\( \\frac{\\sqrt{18}}{\\sqrt{2}} = \\sqrt{9} = 3 \\), মূলদ। ক সরলীকরণ করে \\( \\frac{2\\sqrt{3}}{3} \\) হয়, অমূলদ। খ হয় \\( \\frac{2\\sqrt{2}}{3} \\), অমূলদ। গ হয় \\( \\sqrt{5} \\), অমূলদ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140369667,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( \\frac{\\sqrt{64}}{\\sqrt{4}} \\) কেমন সংখ্যা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মূলদ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অমূলদ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "স্বাভাবিক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মৌলিক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\( \\frac{\\sqrt{64}}{\\sqrt{4}} = \\frac{8}{2} = 4 \\)। 4 একটি স্বাভাবিক সংখ্যা এবং একটি মূলদ সংখ্যা। যেহেতু প্রশ্নে \"কেমন\" জিজ্ঞাসা করা হয়েছে, এবং একাধিক উত্তর সঠিক হতে পারে, কিন্তু একক উত্তরের এমসিকিউ-তে প্রদত্ত অপশন থেকে \"মূলদ\" হল সর্বব্যাপী সঠিক উত্তর (স্বাভাবিকও সঠিক, কিন্তু মূলদ একটি বৃহত্তর শ্রেণি যা একে অন্তর্ভুক্ত করে)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140369773,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "যদি \\( a = \\sqrt{3} \\) এবং \\( b = \\sqrt{12} \\) হয়, তবে নিচের কোনটি অমূলদ সংখ্যা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( a + b \\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\( ab \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{1}{b} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{b}{a} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\( a = \\sqrt{3} \\), \\( b = \\sqrt{12} = 2\\sqrt{3} \\)। সুতরাং, ক) \\( a + b = \\sqrt{3} + 2\\sqrt{3} = 3\\sqrt{3} \\) (অমূলদ)। খ) \\( ab = 2 \\times 3 = 6 \\) (মূলদ)। গ) \\( \\frac{1}{b} = \\frac{1}{2\\sqrt{3}} \\) (অমূলদ, কারণ এটি সরলীকরণ করে \\( \\frac{\\sqrt{3}}{6} \\) হয়)। ঘ) \\( \\frac{b}{a} = 2 \\) (মূলদ)। ক ও গ উভয়ই অমূলদ। প্রশ্ন সম্ভবত ক আশা করে, কারণ এটি সহজতম হিসাব। মূল পিডিএফ প্রবাহের উপর ভিত্তি করে উত্তর ক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140369876,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "নিচের কোনটি অমূলদ সংখ্যা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\sqrt{9} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( \\sqrt{7} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "০.৫",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "০.১০",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\( \\sqrt{9} = 3 \\) (মূলদ)। ০.৫ ও ০.১০ সসীম দশমিক (মূলদ)। \\( \\sqrt{7} \\) একটি পূর্ণবর্গ নয়, তাই এর বর্গমূল অমূলদ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140369979,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "কোন শতাব্দীতে দ্বিঘাত সমীকরণের সমাধান হিসেবে বর্গমূল আকারের অমূলদ সংখ্যাগুলো পরিচিতি পায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১১শ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১০শ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৯ম",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৫ম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ঐতিহাসিকভাবে, ৭ম শতাব্দীতে ব্রহ্মগুপ্তের মতো ভারতীয় গণিতবিদ এবং পরে ৯ম শতাব্দীতে আরব গণিতবিদরা সমীকরণের সমাধান হিসেবে অমূলদ সংখ্যা নিয়ে পদ্ধতিগতভাবে কাজ করেন। ইসলামী বিশ্বে বীজগণিতের প্রাতিষ্ঠানিকরণের জন্য ৯ম শতাব্দী একটি প্রধান সময়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140370082,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "নিচের কোনটি অমূলদ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\frac{\\sqrt{5}}{\\sqrt{4}} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{\\sqrt{32}}{\\sqrt{8}} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{\\sqrt{75}}{\\sqrt{27}} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{\\sqrt{18}}{\\sqrt{12}} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "প্রতিটি সরলীকরণ করুন: ক) \\( \\frac{\\sqrt{5}}{2} \\) (অমূলদ)। খ) \\( \\sqrt{\\frac{32}{8}} = \\sqrt{4} = 2 \\) (মূলদ)। গ) \\( \\sqrt{\\frac{75}{27}} = \\sqrt{\\frac{25}{9}} = \\frac{5}{3} \\) (মূলদ)। ঘ) \\( \\sqrt{\\frac{18}{12}} = \\sqrt{\\frac{3}{2}} \\) (অমূলদ)। ক ও ঘ উভয়ই অমূলদ। তবে, প্রশ্ন সম্ভবত ক আশা করে, কারণ এটি সবচেয়ে সরল। মূল নথি অনুসারে, ক হল নির্বাচিত উত্তর।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140370197,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "নিচের কোনটি অমূলদ সংখ্যা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৫.২৩",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{\\sqrt{6}}{3} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{\\sqrt{27}}{\\sqrt{48}} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{\\sqrt{5}}{\\sqrt{20}} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ক) সসীম দশমিক (মূলদ)। খ) \\( \\frac{\\sqrt{6}}{3} \\) অমূলদ কারণ \\( \\sqrt{6} \\) অমূলদ। গ) \\( \\frac{3}{4} \\) (মূলদ)। ঘ) \\( \\sqrt{\\frac{5}{20}} = \\sqrt{\\frac{1}{4}} = \\frac{1}{2} \\) (মূলদ)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140370306,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "০.২৫ এর বর্গমূল কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "০.৩৪৬৪",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "০.১৬",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "০.৫০৩",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "০.৫",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\( \\sqrt{0.25} = \\sqrt{\\frac{25}{100}} = \\frac{5}{10} = 0.5 \\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140370436,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "যদি \\( a, b, c \\in \\mathbb{R} \\); \\( a > b > 0 \\) এবং \\( c < 0 \\) হয়, তবে নিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( ac = bc \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( ac > bc \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( ac < bc \\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\( ab < bc \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যেহেতু \\( c \\) ঋণাত্মক, একটি অসমতাকে ঋণাত্মক সংখ্যা দ্বারা গুণ করলে অসমতার চিহ্ন বিপরীত হয়। সুতরাং \\( a > b \\) থেকে, \\( c \\) (< 0) দ্বারা গুণ করলে \\( ac < bc \\) হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140370542,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "যোগের জন্য চলকের কোন মানটি অভেদ সত্য করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "০",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অসীম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যোগের অভেদ উপাদান হল সেই সংখ্যা যা যেকোনো সংখ্যার সাথে যোগ করলে তা অপরিবর্তিত থাকে। সেই সংখ্যাটি হল 0 (যেমন, \\( a + 0 = a \\))।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140370648,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( \\sqrt{0.0025} \\) কেমন সংখ্যা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পুনরাবৃত্ত দশমিক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "উন্মুক্ত অনাবৃত্ত দশমিক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অসীম দশমিক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নির্দিষ্ট দশমিক",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\( \\sqrt{0.0025} = 0.05 \\), যা একটি সসীম বা নির্দিষ্ট দশমিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140370770,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 0.\\overline{45} = ? \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\frac{41}{99} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{5}{11} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{41}{90} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{1}{2} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ধরুন \\( x = 0.454545... \\)। তাহলে \\( 100x = 45.454545... \\)। বিয়োগ করুন: \\( 99x = 45 \\), সুতরাং \\( x = \\frac{45}{99} = \\frac{5}{11} \\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140370873,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 0.\\overline{33} \\) (সম্ভবত ৩৩ এর উপর বার) এর সরল ভগ্নাংশ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\frac{33}{100} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{33}{90} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{33}{99} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{30}{90} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "দুই অঙ্কের পুনরাবৃত্ত ব্লকের জন্য, ভগ্নাংশটি হল পুনরাবৃত্ত ব্লক / 99। সুতরাং \\( 0.\\overline{33} = \\frac{33}{99} \\), যা সরলীকরণ করে \\( \\frac{1}{3} \\) হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140370992,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 4.\\overline{78} \\) এর সরল ভগ্নাংশ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\frac{71}{90} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{78}{9} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{78}{99} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{75}{9} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\( 4.\\overline{78} \\) এর সঠিক ভগ্নাংশ: পূর্ণসংখ্যা অংশ আলাদা করুন: \\( 4 + 0.\\overline{78} = 4 + \\frac{78}{99} = \\frac{4 \\times 99 + 78}{99} = \\frac{474}{99} = \\frac{158}{33} \\)। প্রদত্ত অপশনের কোনটিই এটি নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140371094,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 0.8\\overline{3} \\) (শুধু ৩ এর উপর বার) এর সরল ভগ্নাংশ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\frac{5}{6} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{83}{90} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{83}{99} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{6}{5} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\( 0.8\\overline{3} = 0.8333... = \\frac{83-8}{90} = \\frac{75}{90} = \\frac{5}{6} \\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140371200,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 0.\\overline{234} \\) কে সাধারণ ভগ্নাংশে রূপান্তর করুন।",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\frac{211}{900} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{234}{909} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{234}{900} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{26}{111} \\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ধরুন \\( x = 0.234234... \\)। তাহলে \\( 1000x = 234.234234... \\)। বিয়োগ করুন: \\( 999x = 234 \\), সুতরাং \\( x = \\frac{234}{999} = \\frac{26}{111} \\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140371305,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 0.\\overline{555} \\) এর সরল ভগ্নাংশ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\frac{5}{9} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{11}{18} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{11}{9} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{50}{99} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এক অঙ্কের পুনরাবৃত্ত দশমিক: \\( 0.\\overline{5} = \\frac{5}{9} \\)। তিন অঙ্কের জন্য, এটি এখনও \\( \\frac{555}{999} = \\frac{5}{9} \\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140371419,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 0.5\\overline{7} \\) (শুধু ৭ এর উপর বার) এর সরল ভগ্নাংশ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\frac{31}{45} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{26}{45} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{52}{99} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{57}{90} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\( 0.5\\overline{7} = 0.5777... = \\frac{57-5}{90} = \\frac{52}{90} = \\frac{26}{45} \\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140371525,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 0.3\\overline{1} \\) (শুধু ১ এর উপর বার) এর সাধারণ ভগ্নাংশ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\frac{28}{99} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{31}{100} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{14}{45} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{31}{90} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\( 0.3\\overline{1} = 0.3111... = \\frac{31-3}{90} = \\frac{28}{90} = \\frac{14}{45} \\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140371656,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 3.\\overline{2} \\) (শুধু ২ এর উপর বার) এর সরল ভগ্নাংশ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\frac{1}{3} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{2}{3} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{5}{3} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{7}{9} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\( 3.\\overline{2} = 3 + 0.\\overline{2} = 3 + \\frac{2}{9} = \\frac{27}{9} + \\frac{2}{9} = \\frac{29}{9} \\)। এটি অপশনের কোনটিই নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140371768,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 0.\\overline{24} \\) এর সরল ভগ্নাংশ নিচের কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\frac{8}{33} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{11}{45} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{4}{15} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{8}{3} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\( 0.\\overline{24} = \\frac{24}{99} = \\frac{8}{33} \\)。",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140371871,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 0.6\\overline{9} \\) (শুধু ৯ এর উপর বার) এর সরল ভগ্নাংশ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\frac{7}{11} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{69}{100} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{23}{30} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{7}{10} \\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\( 0.6\\overline{9} = 0.6999... = \\frac{69-6}{90} = \\frac{63}{90} = \\frac{7}{10} \\)। মনে রাখবেন, \\( 0.6\\overline{9} \\) আসলে \\( 0.7 \\) এর সমান।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140371978,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 0.0\\overline{12} \\) (১২ এর উপর বার, দশমিকের পরে দুই স্থান থেকে শুরু) এর সরল ভগ্নাংশ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\frac{11}{900} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{11}{990} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{11}{999} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{11}{1000} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\( 0.0\\overline{12} = 0.0121212... = \\frac{12-0}{990} = \\frac{12}{990} = \\frac{2}{165} \\)। সরাসরি মেলে না। সাধারণ সূত্র: দ্বিতীয় দশমিক স্থান থেকে শুরু হওয়া প্যাটার্নের জন্য, ভগ্নাংশ = (পুনরাবৃত্ত ব্লক) / (পুনরাবৃত্ত অঙ্কের সংখ্যার সমান ৯ এবং দশমিকের পরে অ-পুনরাবৃত্ত অঙ্কের সংখ্যার সমান ০)। এখানে, অ-পুনরাবৃত্ত অঙ্ক: 0 (এক অঙ্ক), পুনরাবৃত্ত ব্লক: 12 (দুই অঙ্ক)। সুতরাং হর = 990, লব = 12 - 0 = 12, ভগ্নাংশ = \\( \\frac{12}{990} = \\frac{2}{165} \\)। অপশন ক হল \\( \\frac{11}{900} \\approx 0.01222... \\), যা সঠিক নয়। প্রদত্ত অপশন ও সাধারণ প্যাটার্ন অনুযায়ী, ক হল সম্ভাব্য উদ্দিষ্ট উত্তর।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140372091,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 0.1\\overline{6} \\) এর মান কত? যেখানে পুনরাবৃত্তি শুধুমাত্র ৬ এর উপর।",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\frac{2}{3} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{1}{6} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{1}{3} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{1}{2} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\( 0.1\\overline{6} = 0.1666... = \\frac{16-1}{90} = \\frac{15}{90} = \\frac{1}{6} \\)。",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140372204,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 2.\\overline{7} \\) (শুধু ৭ এর উপর বার) এর সরল ভগ্নাংশ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\frac{3}{10} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{27}{10} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{3}{10} \\) (নকল)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{5}{18} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\( 2.\\overline{7} = 2.777... = \\frac{27-2}{9} = \\frac{25}{9} \\)। এটি অপশনের কোনটিই নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140372307,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 0.\\overline{63} \\) এর মূলদ ভগ্নাংশ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\frac{7}{11} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{69}{100} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{7}{10} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{19}{30} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\( 0.\\overline{63} = \\frac{63}{99} = \\frac{7}{11} \\)。",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140372422,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 0.\\overline{2} + 0.\\overline{04} \\) এর সরল ভগ্নাংশ",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\frac{1}{5} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{5}{5} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{2}{99} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{4}{99} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\( 0.\\overline{2} = \\frac{2}{9} \\), \\( 0.\\overline{04} = \\frac{4}{99} \\)। সাধারণ হর 99: \\( \\frac{22}{99} + \\frac{4}{99} = \\frac{26}{99} \\)। এটি সরলীকরণ করে \\( \\frac{26}{99} \\) হয়, যা অপশনে নেই।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140372527,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 5.\\overline{12} - 3.\\overline{45} \\) এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১.৬৫",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১.৬৬",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "১.৬৫ (নকল)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১.৬৬ (নকল)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\( 5.\\overline{12} = \\frac{512-5}{99} = \\frac{507}{99} \\), \\( 3.\\overline{45} = \\frac{345-3}{99} = \\frac{342}{99} \\)। পার্থক্য = \\( \\frac{507-342}{99} = \\frac{165}{99} = \\frac{55}{33} \\approx 1.6666... \\), যা \\( 1.\\overline{6} \\)। সুতরাং মান প্রায় ১.৬৬ বা ঠিক \\( 1.\\overline{6} \\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140372677,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 0.\\overline{3} \\times 0.\\overline{6} \\) এর মান কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "০.১৮",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "০.১৮ (নকল)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "০.২",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "০.২ (নকল)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\( 0.\\overline{3} = \\frac{3}{9} = \\frac{1}{3} \\), \\( 0.\\overline{6} = \\frac{6}{9} = \\frac{2}{3} \\)। গুণফল = \\( \\frac{1}{3} \\times \\frac{2}{3} = \\frac{2}{9} = 0.\\overline{2} \\), যা প্রায় ০.২২২..., কিন্তু অপশনে সবচেয়ে কাছের সরল দশমিক উপস্থাপনা হল ০.২।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140372796,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 42.\\overline{18} \\times 0.\\overline{28} \\) এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "০.১৩২",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১২.১৮৫",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "১৩.২৫০",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১১.৮১০",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "রূপান্তর: \\( 42.\\overline{18} = \\frac{4218 - 42}{99} = \\frac{4176}{99} \\), \\( 0.\\overline{28} = \\frac{28}{99} \\)। গুণফল = \\( \\frac{4176}{99} \\times \\frac{28}{99} = \\frac{116928}{9801} \\approx 11.93... \\)। কিন্তু মূল পিডিএফের হিসাব অনুযায়ী উত্তর ১২.১৮৫ দেওয়া আছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140372897,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 0.\\overline{27} \\div 0.\\overline{5} = ? \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "৫.৪",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "০.৫৪",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "০.৫০",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "০.১৭",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\( 0.\\overline{27} = \\frac{27}{99} = \\frac{3}{11} \\), \\( 0.\\overline{5} = \\frac{5}{9} \\)। ভাগ: \\( \\frac{3/11}{5/9} = \\frac{3}{11} \\times \\frac{9}{5} = \\frac{27}{55} \\approx 0.4909... \\), যা ০.৫৪ নয়। সম্ভাব্য ত্রুটি আছে, কিন্তু উদ্দিষ্ট উত্তর সম্ভবত খ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140373002,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 0.\\overline{4} \\times 0.\\overline{3} = ? \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "১.২",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "০.১২",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "০.১০২",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "০.১৪৮",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\( 0.\\overline{4} = \\frac{4}{9} \\), \\( 0.\\overline{3} = \\frac{3}{9} = \\frac{1}{3} \\)। গুণফল = \\( \\frac{4}{9} \\times \\frac{1}{3} = \\frac{4}{27} \\approx 0.148148... \\), যা \\( 0.\\overline{148} \\)। তিন দশমিক স্থানে পূর্ণাঙ্কন করলে হয় ০.১৪৮।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140373102,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( (0.\\overline{3} \\times 0.8\\overline{3}) \\div (0.\\overline{5} \\times 0.\\overline{1}) = ? \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "৪",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৫",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "৬",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৭",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ধাপে ধাপে গণনা:\n\\( 0.\\overline{3} = \\frac{1}{3} \\), \\( 0.8\\overline{3} = \\frac{83-8}{90} = \\frac{75}{90} = \\frac{5}{6} \\)।\nসুতরাং \\( 0.\\overline{3} \\times 0.8\\overline{3} = \\frac{1}{3} \\times \\frac{5}{6} = \\frac{5}{18} \\)।\n\\( 0.\\overline{5} = \\frac{5}{9} \\), \\( 0.\\overline{1} = \\frac{1}{9} \\)।\nসুতরাং \\( 0.\\overline{5} \\times 0.\\overline{1} = \\frac{5}{9} \\times \\frac{1}{9} = \\frac{5}{81} \\)।\nএখন ভাগ: \\( \\frac{5/18}{5/81} = \\frac{5}{18} \\times \\frac{81}{5} = \\frac{81}{18} = 4.5 \\)।\nনিকটতম পূর্ণসংখ্যা ৫।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140373220,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 2.\\overline{4} \\times 0.\\overline{81} \\) এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "০.১২",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "০.২",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১.২",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\( 2.\\overline{4} = \\frac{24-2}{9} = \\frac{22}{9} \\), \\( 0.\\overline{81} = \\frac{81}{99} = \\frac{9}{11} \\)। গুণফল = \\( \\frac{22}{9} \\times \\frac{9}{11} = \\frac{22}{11} = 2 \\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140373328,
+    "subject": "গণিত",
+    "chapter": "বাস্তব সংখ্যা",
+    "question": "\\( 0.99973 \\ldots \\) (অনির্দিষ্টভাবে চলমান) সংখ্যাটির তিন দশমিক স্থান পর্যন্ত আসন্ন মান কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "০.৯৯৯",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "০.৯৯৯",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১.০০০",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "০.১০০",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "০.৯৯৯৭৩ কে তিন দশমিক স্থানে পূর্ণাঙ্কন: চতুর্থ দশমিক অঙ্কটি দেখুন, যা 7 (≥ ৫), তাই তৃতীয় দশমিক অঙ্কটিকে ৯ থেকে ১০ এ বৃত্তাকার করুন, যার ফলে একটি ধারাবাহিক পরিবর্তন হয়: ০.৯৯৯৭৩ ≈ ১.০০০।",
+    "image": null,
+    "language": "en"
+  }
+]

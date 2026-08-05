@@ -1,0 +1,1186 @@
+[
+  {
+    "id": 1768036775030,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"প্রতীশব্দ কী?\"",
+    "options": [
+      {
+        "label": "a",
+        "text": "অভিন্ন শব্দ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ভিন্ন শব্দ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিপরীত শব্দ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিপরীত পদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "একই অর্থ প্রকাশ করে এমন শব্দকে প্রতীশব্দ বা সমার্থক শব্দ বলে [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036775142,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"আইন\" শব্দের সঠিক রূপ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কানুন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "নিয়ম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিধান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শশী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "আইন শব্দের অন্যতম সমার্থক বা প্রতীশব্দ হলো কানুন [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036775249,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"একটি শব্দের অনুরূপ, অবিকল ও নিকটবর্তী অর্থ প্রকাশকে কী বলে?\"",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রতীশব্দ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বিপরীত শব্দ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সমোচ্চারিত শব্দ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ভিন্ন শব্দ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কোনো শব্দের সমজাতীয় অর্থ প্রকাশকারী অন্য শব্দকে প্রতীশব্দ বলা হয় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036775366,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"অরণ্য\" শব্দটির সঠিক প্রতীশব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অটবি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "তপন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পানি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সাগর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বন বা জঙ্গল এর প্রতীশব্দ হলো অরণ্য, যার একটি রূপ অটবি [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036775477,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"ধরণী\" এর সঠিক প্রতীশব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাগর",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সৈকত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নীরদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জলধি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "(বি.দ্র. উৎসে ক চিহ্নিত থাকলেও ধরণী মানে পৃথিবী। সাগর মানে সমুদ্র।) [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036775594,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"চাঁদ\" শব্দের সমার্থক শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ভানু",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সুধাকর",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "নিশাকর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সুধাংশু",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "চাঁদের অনেক প্রতীশব্দের মধ্যে সুধাকর একটি প্রধান নাম [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036775710,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"নিচের কোনটি সূর্য শব্দের প্রতীশব্দ নয়?\"",
+    "options": [
+      {
+        "label": "a",
+        "text": "নয়ন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অলক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ধর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাড়ি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "নয়ন শব্দের অর্থ চোখ, এটি সূর্য এর প্রতীশব্দ নয় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036775926,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "আদিত্য, সবিতা, রবি, দিবাকর ইত্যাদি কোন শব্দের প্রতীশব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সূর্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অর্ক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সুধ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গিরি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এগুলো সবই সূর্যের বিভিন্ন নাম বা প্রতীশব্দ [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036776042,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "প্রতীশব্দের ব্যবহার নির্ভর করে কিসের ওপর?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অর্থের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বক্তব্যের",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বৈশিষ্ট্যের",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রসঙ্গের",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বাক্যের প্রসঙ্গের ওপর ভিত্তি করে সঠিক প্রতীশব্দ নির্বাচন করা হয় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036776155,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"সূর্য\" শব্দটির সমার্থক শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মিহির",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হিমাংশু",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "নিশাকর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সবিতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "(বি.দ্র. উৎসে খ চিহ্নিত থাকলেও মিহির ও সবিতা সূর্যের সমার্থক।) [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036776273,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"নন্দিনী\"-এর সঠিক প্রতীশব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তনয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তনয়া",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তটিনী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দুহিতা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "নন্দিনী মানে কন্যা, যার অন্য একটি নাম দুহিতা [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036776440,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"ইচ্ছা\" শব্দের সঠিক প্রতীশব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আকাঙ্ক্ষা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "হর্ষ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পিপাসা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কৃপা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কোনো কিছু পাওয়ার আগ্রহ বা অভিলাষকে প্রতীশব্দে আকাঙ্ক্ষা বলা হয় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036776547,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"দীঘি\" শব্দের সমার্থক কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "উপযুক্ত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কূয়া",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "হিল্লোল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উজ্বল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "দীঘি বা বড় পুকুরের সমার্থক শব্দ হিসেবে কূয়া নির্দেশ করা হয়েছে [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036776654,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"নভ\" শব্দের প্রতীশব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রাজীব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মৃগাঙ্ক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সোম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পুলক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "(বি.দ্র. উৎসে খ চিহ্নিত থাকলেও নভ মানে আকাশ।) [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036776763,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"বৃক্ষ\" শব্দের সঠিক প্রতীশব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মহিরুহ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মহীরুহ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মহি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মাতলা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "গাছ বা তরুর সমার্থক হলো মহীরুহ [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036776871,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"সমুদ্র\" শব্দের প্রতীশব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অর্ণব",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বিভা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মেদিনী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ফণী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সাগর বা সিন্ধু এর সমার্থক শব্দ হলো অর্ণব [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036776992,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "কোনটি \"পর্বত\" শব্দের প্রতীশব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ধরণী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চিকুর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তিমির",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অদ্রি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পাহাড় বা গিরির প্রতীশব্দ হলো অদ্রি [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036777099,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"আকাশ\" শব্দের প্রতীশব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গগন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অম্বুর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অমর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিশাকর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "আকাশ বা অম্বর এর অন্যতম সমার্থক শব্দ হলো গগন [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036777207,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"পাবক\"—এর প্রতীশব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিভাবরী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মীমাংসা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বহ্নি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অনল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পাবক মানে আগুন, যার সমার্থক শব্দ হলো বহ্নি [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036777319,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"সূর্য\" শব্দের সঠিক প্রতীশব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কানন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কুন্তল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কনক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সবিতা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সবিতা সূর্যের একটি সুপরিচিত প্রতীশব্দ [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036777429,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"আগুন\" শব্দের প্রতীশব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হুতাশন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "তপন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অম্বর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পবন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অনল বা বহ্নির সমার্থক শব্দ হলো হুতাশন [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036777541,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"পারাবার\" শব্দের সমার্থক শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "খোলা মাঠ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সমুদ্র",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "খোলা প্রান্তর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আকাশ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পারাবার বলতে মহাসমুদ্র বা সাগরকে বোঝানো হয় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036777658,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"পাখি\" শব্দের সঠিক প্রতীশব্দ নয় কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিহগ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কুন্তল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "শকুন্ত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "খগ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বিহগ, শকুন্ত ও খগ পাখির নাম হলেও কুন্তল মানে চুল [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036777784,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "কোনটি \"কিরণ\" শব্দের প্রতীশব্দ নয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অংশু",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিভা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কান্তি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "অংশু, বিভা ও কর কিরণ বা আলোর সমার্থক হলেও কান্তি মানে লাবণ্য [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036777895,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"হাতি\" শব্দের সঠিক প্রতীশব্দ নয় কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গজ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দন্তী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মাতঙ্গ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অশ্ব",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "গজ, দন্তী ও মাতঙ্গ হাতি বোঝালেও অশ্ব মানে ঘোড়া [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036778015,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"আগুন\" শব্দের সমার্থক শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিভাবরী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বহ্নি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অনল",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কনক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "আগুন বা বহ্নির সমার্থক শব্দ হিসেবে অনল বহুল ব্যবহৃত [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036778125,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"আদিত্য\" শব্দটির সমার্থক শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সূর্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "শশী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সাগর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পৃথিবী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সূর্যকে প্রতীশব্দে আদিত্য বলা হয় [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036778235,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"হাতি\" শব্দের সমার্থক শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অশ্ব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পবন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দ্বীপ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গজ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "হাতির একটি সমার্থক শব্দ হলো গজ [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036778350,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"সলিল\" শব্দের সঠিক প্রতীশব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পানি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সিন্ধু",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সমুদ্র",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অবনী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পানি বা জল এর অন্যতম প্রতীশব্দ হলো সলিল [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036778480,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"ভন\" এর সঠিক প্রতীশব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কৃপা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "উত্তর",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "লহরী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সদন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "(বি.দ্র. উৎসে খ চিহ্নিত থাকলেও ভন মানে কথা বলা।) [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036778588,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"মেহ\" শব্দের সমার্থক শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বৃষ্টি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বাড়ি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মেঘ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বারিবাহ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মেঘ বা জলধর এর সমার্থক হলো মেহ [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036778708,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"সমীরণ\", \"অনিল\", \"মরুত\" ইত্যাদি কোন শব্দের প্রতীশব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাতাস",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "মেঘ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রাত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সমুদ্র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এগুলো সবই বায়ু বা বাতাসের সমার্থক শব্দ [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036778823,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"কুল\" এর সমার্থক কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কুতল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অটবি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কপোত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তট",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "নদীর তীর বা পাড়কে সমার্থক শব্দে কুল বা তট বলা হয় [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036778929,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"বাতাস\" শব্দটির সঠিক প্রতীশব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চাঁদ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ভানু",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অনিল",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "তপন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "অনিল বাতাসের একটি সুপরিচিত প্রতীশব্দ [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036779057,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"ইক্ষু\" কোন শব্দের প্রতীশব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আখ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "শর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ইঁদুর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ইঁদুর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "আখের সমার্থক শব্দ হলো ইক্ষু [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036779165,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"হাতি\" শব্দের সঠিক প্রতীশব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দ্বীপ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দ্বিপ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "দ্বিপ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মার্তণ্ড",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "হাতিকে সমার্থক শব্দে দ্বিপ বলা হয় [৬]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036779276,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪১: প্রতিশব্দ",
+    "question": "\"হাতি\" শব্দের সঠিক প্রতীশব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মেঘ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অটবি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বারণ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কুঞ্জর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "হাতির অনেকগুলো প্রতীশব্দের মধ্যে বারণ একটি [৬]।",
+    "image": null,
+    "language": "en"
+  }
+]

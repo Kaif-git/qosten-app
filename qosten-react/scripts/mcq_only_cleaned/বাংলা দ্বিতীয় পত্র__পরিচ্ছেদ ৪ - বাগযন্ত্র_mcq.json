@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1779877005259,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪ - বাগযন্ত্র",
+    "question": "কোনটি বাগ্যন্ত্র?",
+    "options": "[{\"label\":\"a\",\"text\":\"পাকস্থলী\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"ফুসফুস\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"পিত্তকোষ\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"যকৃৎ\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877005399,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪ - বাগযন্ত্র",
+    "question": "ফুসফুস থেকে তৈরি বাতাস কিসের মাধ্যমে বের হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"নাসারন্ধ্র\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"মুখবিবর\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"তালু\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"ক ও খ উভয়ই\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877005525,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪ - বাগযন্ত্র",
+    "question": "বাষ্প্রত্যঙ্গের সবচেয়ে বাইরের অংশের নাম-",
+    "options": "[{\"label\":\"a\",\"text\":\"তালু\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"মূর্ধা\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"দন্ত\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"ওষ্ঠ\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877005641,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪ - বাগযন্ত্র",
+    "question": "বাগ্যন্ত্রের মধ্যে সবচেয়ে সচল ও সক্রিয় প্রত্যঙ্গ কোনটি?",
+    "options": "[{\"label\":\"a\",\"text\":\"দাঁত\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"মূর্ধা\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"দন্তমূল\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"জিভ\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877005760,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪ - বাগযন্ত্র",
+    "question": "মুখ-গহ্বরের কোন অংশে তালুর অবস্থান?",
+    "options": "[{\"label\":\"a\",\"text\":\"সামনে\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"পিছনে\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"উপরে\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"নিচে\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877006203,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪ - বাগযন্ত্র",
+    "question": "নাসিক্য ধ্বনি তৈরি হয় কীভাবে?",
+    "options": "[{\"label\":\"a\",\"text\":\"আলজিভ নিচে নেমে এলে\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"জিভ তালুতে স্পর্শ করলে\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"ঠোঁটের ফাঁকা কম-বেশি হলে\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"জিভ মূর্ধায় স্পর্শ করলে\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877006337,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪ - বাগযন্ত্র",
+    "question": "তালুর অংশ কয়টি?",
+    "options": "[{\"label\":\"a\",\"text\":\"দুইটি\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"তিনটি\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"চারটি\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"পাঁচটি\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877006741,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪ - বাগযন্ত্র",
+    "question": "কোনটি বাগ্যন্ত্র?",
+    "options": "[{\"label\":\"a\",\"text\":\"নাক\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"কান\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"গলা\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"মাথা\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1779877007213,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪ - বাগযন্ত্র",
+    "question": "মুখ-গহ্বরের কোমল তালুর পিছনে ঝুলন্ত মাংসপিন্ডের নাম কী?",
+    "options": "[{\"label\":\"a\",\"text\":\"জিভ\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"মূর্ধা\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"আলজিভ\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"স্বরযন্ত্র\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  }
+]

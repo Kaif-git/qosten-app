@@ -126,9 +126,13 @@ async function main() {
   const filePath = process.argv[2];
   const mode = process.argv[3] === '--upload' ? 'upload' : 'dry-run';
   const includeOrphans = process.argv.includes('--include-orphans');
+  const subjectOverride = (() => {
+    const idx = process.argv.indexOf('--subject');
+    return idx >= 0 && idx + 1 < process.argv.length ? process.argv[idx + 1] : null;
+  })();
 
   if (!filePath) {
-    console.error('Usage: node scripts/process_mcq_chapter.mjs <path-to-txt-file> [--dry-run | --upload] [--include-orphans]');
+    console.error('Usage: node scripts/process_mcq_chapter.mjs <path-to-txt-file> [--dry-run | --upload] [--include-orphans] [--subject "Subject Name"]');
     process.exit(1);
   }
 
@@ -139,6 +143,7 @@ async function main() {
   console.log(`\n╔═══════════════════════════════════════════════════════════════╗`);
   console.log(`║  MCQ PROCESSOR: ${baseName.padEnd(47)}║`);
   console.log(`║  Mode: ${mode.padEnd(55)}║`);
+  if (subjectOverride) console.log(`║  Subject: ${subjectOverride.padEnd(51)}║`);
   console.log(`╚═══════════════════════════════════════════════════════════════╝`);
   console.log(`📂 ${filePath}`);
   console.log(`📄 ${text.length} chars\n`);
@@ -172,9 +177,9 @@ async function main() {
     if (q.chapter) chapterCounts[q.chapter] = (chapterCounts[q.chapter] || 0) + 1;
   });
 
-  const defaultSubject = 'বাংলা প্রথম পত্র';
+  const defaultSubject = subjectOverride || 'বাংলা প্রথম পত্র';
   const defaultChapter = Object.entries(chapterCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || 'ফুলের বিবাহ';
-
+  if (subjectOverride) console.log(`   🔶 Subject overridden by --subject flag`);
   console.log(`   Default Subject: ${defaultSubject}`);
   console.log(`   Default Chapter: ${defaultChapter}`);
 

@@ -1,0 +1,1250 @@
+[
+  {
+    "id": 1768035216771,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "কেবল কোন কোন পদের বচনভেদ হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিশেষ্য ও সর্বনাম",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বিশেষ্য ও বিশেষণ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিশেষণ ও সর্বনাম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সর্বনাম ও অব্যয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সাধারণত বিশেষ্য ও সর্বনাম পদের বচনভেদ হয়ে থাকে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035217366,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "নিচের কোন বাক্যে লগ্নক ব্যবহৃত না হয়েও বহুবচন বুঝাচ্ছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাজারে লোক কম",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ছাত্ররা এসে জড়ো হয়েছে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শিক্ষক ক্লাসে এসেছে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "এ নিয়ে আমাদের বলার কিছু নেই",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'বাজারে লোক কম' বাক্যে 'লোক' শব্দটির সাথে কোনো লগ্নক যুক্ত না থাকলেও এটি অনেক মানুষকে বা বহুবচন বোঝাচ্ছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035217474,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "নিচের কোনটিতে লগ্নক ব্যবহৃত না হয়েও বহুবচন হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাজারে লোক কম",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "হাড়িতে চাল নেই",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কমলাগুলোর দাম অনেক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বইটা হারিয়ে গেল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বিভক্তি বা অন্য লগ্নক ছাড়াই 'লোক' শব্দটি এখানে সমষ্টি বা বহুবচন নির্দেশ করছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035217604,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "প্রাণিবাচক ও অপ্রাণিবাচক শব্দের বহুবচনে কোন শব্দগুলো ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গণ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বর্গ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সব, মণ্ডলী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রা, এরা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'গণ' শব্দটি প্রাণিবাচক ও অপ্রাণিবাচক উভয় ক্ষেত্রে বহুবচন হিসেবে ব্যবহৃত হতে পারে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035217712,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "কোন শব্দগুচ্ছ প্রাণিবাচক ও অপ্রাণিবাচক শব্দের বহুবচনে ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গণ, বৃন্দ, কুল, সকল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বর্ণ, সব, সমূহ, কুল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কুল, সকল, সব, সমূহ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "রা, দের, গুলো, গুলি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কুল, সকল, সব, সমূহ— এই লগ্নকগুলো প্রাণিবাচক ও অপ্রাণিবাচক উভয় শব্দের শেষে বসে বহুবচন গঠন করে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035217815,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "বচন অর্থ হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "সংখ্যার ধারণা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "গণনার ধারণা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ক্রমের ধারণা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পরিমাপের ধারণা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ব্যাকরণে বচন বলতে সংখ্যার ধারণাকে বোঝানো হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035217924,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "ব্যাকরণের কোন কোন পদের সংখ্যাগত ধারণা প্রকাশের উপায়কে বচন বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিশেষ্য ও সর্বনাম পদ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বিশেষ্য ও বিশেষণ পদ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সর্বনাম ও ক্রিয়াপদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সর্বনাম ও বিশেষণ পদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বিশেষ্য ও সর্বনাম পদের সংখ্যাগত ধারণা প্রকাশের উপায়ই হলো বচন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035218028,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "কেবল উন্নত প্রাণিবাচক শব্দের সঙ্গে কোন বিভক্তির ব্যবহার পাওয়া যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গুলা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গুলি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "গুলো",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'রা' বিভক্তিটি কেবল উন্নত প্রাণিবাচক বা মানুষের ক্ষেত্রে বহুবচনে ব্যবহৃত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035218132,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "কেবল অপ্রাণিবাচক বহুবচনের প্রত্যয় কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কুল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মালা/রাজি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সমাজ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মণ্ডল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মালা বা রাজি প্রত্যয়গুলো সাধারণত অপ্রাণিবাচক শব্দের বহুবচনে ব্যবহৃত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035218285,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "‘পর্বত’ শব্দের বহুবচন—",
+    "options": [
+      {
+        "label": "a",
+        "text": "পর্বতপুঞ্জ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পর্বতমালা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পর্বতশৃঙ্গ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পর্বতসমূহ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পর্বত শব্দের সাথে 'মালা' লগ্নক যুক্ত হয়ে পর্বতমালা বহুবচন গঠিত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035218397,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "বচন যুক্ত হয়ে কাঠামোগত পরিবর্তন ঘটে কোন পদের?",
+    "options": [
+      {
+        "label": "a",
+        "text": "লোক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তারা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ছাত্ররা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মন্ত্রীগণ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'তারা' সর্বনাম পদটির কাঠামো বচনভেদে পরিবর্তিত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035218505,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "কোন বহুবচনের কাঠামোগত দিক পরিবর্তিত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আপনি-আপনার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তিনি-তারা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সে-তাঁরা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আমি-আমরা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "একবচনে 'আমি' থেকে বহুবচনে 'আমরা' হওয়ার ফলে শব্দের কাঠামোগত পরিবর্তন ঘটেছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035218612,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "বাক্যের মধ্যে অন্য শব্দের সাথে সম্পর্ক বোঝাতে কোন কোন পদের সঙ্গে অর্থহীন কিছু লগ্নক যুক্ত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিশেষ্য, সর্বনাম",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বিশেষণ, ক্রিয়া",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অব্যয়, ক্রিয়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সর্বনাম, অব্যয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বিশেষ্য ও সর্বনাম পদের সাথে সম্পর্ক স্থাপনের জন্য বিভক্তি বা লগ্নক যুক্ত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035218735,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "নিচের কোন লগ্নকটি মানী লোকের বেলায় বহুবচনে ব্যবহৃত হয় না?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সব",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "গণ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বৃন্দ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বৃন্দ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'সব' লগ্নকটি সাধারণত তুচ্ছার্থে বা সাধারণ ক্ষেত্রে ব্যবহৃত হয়, মানী লোকের বেলায় নয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035218839,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "মানী পক্ষের বহুবচন করার সময়ে নিচের কোন লগ্নক ব্যবহার করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সব, আবলি, মালা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রা, এরা, গুলি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সমূহ, গুলো, মণ্ডলী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গণ, বৃন্দ, বর্গ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মান্য বা উন্নত প্রাণিবাচক শব্দের বহুবচনে গণ, বৃন্দ, বর্গ লগ্নকগুলো বসে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035218941,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "‘রচনা’ শব্দকে বহুবচন করতে কোন লগ্নকটি ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মালা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সব",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আবলি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "গুলা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "অপ্রাণিবাচক শব্দ 'রচনা'-র বহুবচন হিসেবে 'রচনাবলি' বা 'রচনাবলি' ব্যবহৃত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035219042,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "‘লোকে কিনা বলে’ - বাক্যের লোক শব্দের সংগে কোন বিভক্তি যুক্ত আছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-এ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-তে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "-এ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "-রে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'লোকে' শব্দে মূল শব্দ 'লোক' এর সাথে 'এ' বিভক্তি যুক্ত হয়েছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035219145,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "সাধারণত ক্রিয়ার কাল, স্থান ও ভাব বোঝাতে কোন বিভক্তি যুক্ত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-কে, -রে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-র, -এর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "-এ, -তে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "-এ, -য়ের",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ক্রিয়ার স্থান, কাল ও ভাব প্রকাশে এ, -তে, -য় বিভক্তি ব্যবহৃত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035219246,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "শব্দের শেষে ই-কার ও উ-কার থাকলে এ-বিভক্তির রূপভেদ হয় —",
+    "options": [
+      {
+        "label": "a",
+        "text": "-এ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-তে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "-রে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-য়ে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ই-কারান্ত ও উ-কারান্ত শব্দের শেষে বিভক্তি হিসেবে '-তে' যুক্ত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035219349,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "আ-কারান্ত শব্দের শেষে -এ বিভক্তির রূপভেদ—",
+    "options": [
+      {
+        "label": "a",
+        "text": "-এ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-রে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "-তে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-য়",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "আ-কারান্ত শব্দের শেষে বিভক্তি হিসেবে সাধারণত '-য়' বসে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035219461,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "শব্দের শেষে দ্বিস্বর থাকলে -এ বিভক্তির রূপভেদ হয়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "-এ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-তে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "-রে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-য়ে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "শব্দের শেষে যদি দ্বিস্বর থাকে, তবে '-এ' বিভক্তিটি '-য়ে' তে রূপান্তরিত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035219562,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "বাক্যে গৌণ কর্মের সঙ্গে কোন বিভক্তির প্রয়োগ হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-রে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "-র",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "-কে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-এ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "গৌণ কর্মের সঙ্গে সাধারণত কে বা -রে বিভক্তি যুক্ত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035219666,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "বাক্যের মধ্যে পরবর্তী শব্দের সাথে সম্বন্ধ বোঝাতে কোন বিভক্তি হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-র",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "-এ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "-তে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-রে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সম্বন্ধ পদ বোঝাতে পূর্ববর্তী শব্দের সঙ্গে '-র' বা '-এর' বিভক্তি যুক্ত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035219769,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "আ-কারান্ত শব্দের শেষে কোন বিভক্তি বসে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "য়ে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "আ-কারান্ত শব্দের শেষে অনেক সময় '-য়ে' বিভক্তির প্রয়োগ দেখা যায়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035219878,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "বাক্যের মধ্যে অন্য শব্দের সাথে সম্পর্ক বোঝাতে বিশেষ্য ও সর্বনামের সঙ্গে যুক্ত অর্থহীন শব্দাংশগুলোকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বচন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নির্দেশক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "লিঙ্গ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিভক্তি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বিভক্তি হলো সেই অর্থহীন শব্দাংশ যা বাক্যের পদের মধ্যে সম্পর্ক স্থাপন করে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035220082,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "বিভক্তিগুলোকে কতভাগে বিভক্ত করা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তিন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "চার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাঁচ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বিভক্তি মূলত তিন প্রকার— এ, -তে, -য় (বা সাধারণ বিভক্তি শ্রেণিবিভাগ অনুযায়ী).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035220182,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "যেসব শব্দের শেষে কারচিহ্ন নেই, সেসব শব্দের সঙ্গে কোন বিভক্তি যুক্ত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-এ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-কে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "-এ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "-রে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কারচিহ্নহীন শব্দের শেষে সাধারণত 'এ' বিভক্তি যুক্ত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035220285,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "যেসব শব্দের শেষে কারচিহ্ন নেই, সেসব শব্দের শেষে কোন বিভক্তির প্রয়োগ হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-এ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "-তে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "-য়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-য়ের",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অ-কারান্ত বা কারচিহ্নহীন শব্দের শেষে 'এ' বিভক্তি বসে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035220395,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "‘সারা রাত বৃষ্টি হয়েছে।’ এখানে ‘সারা রাত’ কোন বিভক্তি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শূন্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "২য়া",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৩য়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৭মী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এখানে 'সারা রাত' শব্দটির সাথে কোনো প্রকাশ্য বিভক্তি নেই, তাই এটি শূন্য বিভক্তি.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035220503,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "ই-কারান্ত শব্দের শেষে কোন বিভক্তি যুক্ত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "এ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "য়ে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "এর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ই-কারান্ত শব্দের পর বিভক্তি হিসেবে '-তে' ব্যবহৃত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035220607,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "ই-কারান্ত শব্দের শেষে ‘তে’ বিভক্তি ব্যবহারের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "খুকিতে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হাসিতে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হাড়িতে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাড়িতে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "'বাড়ি' একটি ই-কারান্ত শব্দ, এর সাথে '-তে' যুক্ত হয়ে 'বাড়িতে' হয়েছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035220711,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "-এ, -তে, -য়, -য়ে ইত্যাদি বিভক্তি কখনো বাক্যের কিসের সংগে বসে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্তার",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কর্মের",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ভাববাচক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "লেখকের",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এই বিভক্তিগুলো বাক্যের কর্তার সাথে যুক্ত হয়ে বিভিন্ন অর্থ প্রকাশ করে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035220824,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "সাধারণত ক্রিয়ার কাল, স্থান ও ভাব বোঝাতে কোন বিভক্তি যুক্ত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "এ, তে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "র, এর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কে, রে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "এ, য়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ক্রিয়ার কাল ও স্থান নির্দেশ করতে সাধারণত এ এবং তে বিভক্তি ব্যবহৃত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035220938,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "যেসব শব্দের শেষে 'এ' বিভক্তি যুক্ত হয়, সেসব শব্দের কারচিহ্ন কী নেই?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জ্যামিতিক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফলাচিহ্ন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কারচিহ্ন",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বর্ণ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "অ-কারান্ত বা কারচিহ্নহীন শব্দের শেষে সাধারণত 'এ' বিভক্তি বসে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035221043,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "শব্দের শেষে দ্বিস্বর থাকলে কোন বিভক্তি যুক্ত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-এ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-তে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "-রে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-য়ে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "দ্বিস্বরযুক্ত শব্দের শেষে বিভক্তি হিসেবে '-য়ে' যুক্ত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035221152,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "কোন বাক্যে কর্তায় 'এ' বিভক্তির উদাহরণ দেওয়া হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পাগলে কি না বলে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বনে বাঘ থাকে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ফুলে ফুলে বাগান ভরেছে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অন্ধজনে দেহ আলো",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'পাগলে' শব্দে কর্তার সাথে 'এ' বিভক্তি যুক্ত হয়েছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035221260,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "ভাববাচ্যের কর্তায় কোন বিভক্তি হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রথমা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চতুর্থী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ষষ্ঠী",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "পঞ্চমী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ভাববাচ্যের কর্তায় সাধারণত ষষ্ঠী বিভক্তি (-র, -এর) যুক্ত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035221363,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "কারকবাচ্যে কর্মকারকে কোন বিভক্তি যুক্ত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-য়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-এ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "-তে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-কে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কর্মকারকে সাধারণত '-কে' বিভক্তি যুক্ত হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768035221464,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ২৮: বিভক্তি",
+    "question": "পরবর্তী শব্দের সঙ্গে সম্বন্ধ বোঝাতে পূর্ববর্তী শব্দের সঙ্গে কোন বিভক্তি যুক্ত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-কে, -রে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-র, -এর",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "-এ, -তে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-এ, -এর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সম্বন্ধ বোঝাতে পূর্ববর্তী পদের সাথে -র বা -এর বিভক্তি যুক্ত হয়.",
+    "image": null,
+    "language": "en"
+  }
+]

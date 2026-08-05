@@ -1,0 +1,2626 @@
+[
+  {
+    "id": 1768402301538,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "রোকেয়া সাখাওয়াত হোসেনের স্বামীর নাম কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মির্জা সাখাওয়াত হোসেন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সৈয়দ সাখাওয়াত হোসেন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মীর সাখাওয়াত হোসেন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শেখ সাখাওয়াত হোসেন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সৈয়দ সাখাওয়াত হোসেন ছিলেন রোকেয়া সাখাওয়াত হোসেনের স্বামী, যাঁর নামানুসারে তিনি নারী শিক্ষার প্রসারে সাখাওয়াত মেমোরিয়াল গার্লস স্কুল প্রতিষ্ঠা করেছিলেন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402302712,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "রোকেয়া সাখাওয়াত হোসেন কিসের বিরুদ্ধে লেখনী ধারণ করেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রাষ্ট্রের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জমিদারি প্রথার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ইংরেজদের",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কুসংস্কার",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "রোকেয়া সাখাওয়াত হোসেন তাঁর সাহিত্যকর্মের মাধ্যমে তৎকালীন মুসলিম সমাজের অন্ধ কুসংস্কার এবং ধর্মীয় গোঁড়ামির বিরুদ্ধে কঠোর অবস্থান নিয়েছিলেন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402302862,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "কোনটি রোকেয়া সাখাওয়াত হোসেনের গ্রন্থ নয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পদ্মরাগ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পথের",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মতিচূর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সুলতানার স্বপ্ন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'পদ্মরাগ', 'মতিচূর' এবং 'সুলতানার স্বপ্ন' রোকেয়া সাখাওয়াত হোসেনের কালজয়ী রচনা হলেও 'পথের' তাঁর কোনো গ্রন্থ নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402303055,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "কোনটি রোকেয়া সাখাওয়াত হোসেনের গ্রন্থ নয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সুলতানার স্বপ্ন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিদ্যাসুন্দর",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মতিচূর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "যুগবাণী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'বিদ্যাসুন্দর' মধ্যযুগের কবি ভারতচন্দ্র রায়গুণাকরের কাব্য, এটি বেগম রোকেয়ার কোনো রচনা নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402303209,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "রোকেয়া সাখাওয়াত হোসেনের উল্লেখযোগ্য গ্রন্থ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কপালকুণ্ডলা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শ্রীকান্ত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বহ্নিশিখা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পদ্মরাগ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "'পদ্মরাগ' রোকেয়া সাখাওয়াত হোসেন রচিত একটি অন্যতম প্রধান উপন্যাস যেখানে নারী স্বাধীনতার প্রেক্ষাপট বর্ণিত হয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402303364,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "মুসলিম নারী জাগরণে অগ্রণী ভূমিকা অবতীর্ণ হন কে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জাহানারা ইমাম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সুফিয়া কামাল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সেলিনা হোসেন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রোকেয়া সাখাওয়াত হোসেন",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বেগম রোকেয়া সাখাওয়াত হোসেনকে বাঙালি মুসলিম নারীদের অন্ধকার থেকে আলোর পথে নিয়ে আসার প্রধান অগ্রদূত হিসেবে গণ্য করা হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402303519,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "রোকেয়া সাখাওয়াত হোসেনের প্রতিষ্ঠিত প্রতিষ্ঠানটির নাম কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মেহেরের স্কুল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নারী চিকিৎসালয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নারী উন্নয়ন সংস্থা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আঞ্জুমান-ই-খাওয়াতিন-ই-ইসলাম",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "রোকেয়া সাখাওয়াত হোসেন ১৯১৬ সালে বাঙালি মুসলিম নারীদের কল্যাণে এবং আত্মনির্ভরশীল করার লক্ষ্যে 'আঞ্জুমান-ই-খাওয়াতিন-ই-ইসলাম' প্রতিষ্ঠা করেন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402303678,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "রোকেয়া সাখাওয়াত হোসেন মৃত্যুবরণ করেন কবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৭ই ডিসেম্বর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৮ই ডিসেম্বর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৯ই ডিসেম্বর",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "১০ই ডিসেম্বর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "১৯৩২ সালের ৯ই ডিসেম্বর মহীয়সী এই নারী কলকাতায় মৃত্যুবরণ করেন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402303833,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "কোন সাহিত্যিকের জন্ম ও মৃত্যু একই তারিখে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জীবনানন্দ দাশ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "যতীন্দ্রমোহন বাগচী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রোকেয়া সাখাওয়াত হোসেন",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "জাহানারা ইমাম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বেগম রোকেয়া সাখাওয়াত হোসেন ১৮৮০ সালের ৯ই ডিসেম্বর জন্মগ্রহণ করেন এবং ১৯৩২ সালের ৯ই ডিসেম্বর মৃত্যুবরণ করেন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402303982,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "রোকেয়া সাখাওয়াত হোসেনের মতে 'বাঙালি' শব্দ প্রকাশ পায়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্কশ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কাঠিন্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সরসতা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "তীক্ষ্ণতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "লেখিকা তাঁর প্রবন্ধে 'বাঙালি' শব্দটি উচ্চারণের মধ্য দিয়ে এক ধরণের সরসতা ও কোমলতার ইঙ্গিত দিয়েছেন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402304130,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "রোকেয়া সাখাওয়াত হোসেনের মতে, আমরা কী রকম বাঙালি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ভীরু কাপুরুষ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দুর্বল নিরীহ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অসভ্য বর্বর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রবঞ্চক ঠগ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "লেখিকার মতে, বাঙালিরা স্বভাবগতভাবে নিরীহ এবং মানসিক বা শারীরিক দিক থেকে কিছুটা দুর্বল হিসেবে পরিচিত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402304475,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'আমরা দুর্বল নিরীহ বাঙালি'—এখানে দুর্বল বলতে কী বোঝানো হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শারীরিকভাবে দুর্বল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অর্থনৈতিকভাবে দুর্বল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মানসিকভাবে দুর্বল",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সামাজিকভাবে দুর্বল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "এখানে বাঙালিদের মানসিক দৃঢ়তার অভাব এবং সংগ্রামবিমুখ মানসিকতাকে 'দুর্বল' হিসেবে চিহ্নিত করা হয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402304646,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'নিরীহ বাঙালি' প্রবন্ধে লেখক 'বাঙালি' নামটিকে কী রকম বলেছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শ্রুতিমধুর",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "মুক্তিকামী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "থিতু",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জটিল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বাঙালি নামটি অত্যন্ত কোমল এবং শুনতে শ্রুতিমধুর বলে লেখিকা তাঁর প্রবন্ধে উল্লেখ করেছেন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402304804,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "লেখকের মতে, বাঙালি মূর্তিমতী—",
+    "options": [
+      {
+        "label": "a",
+        "text": "গল্প",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রসন্ন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "নাটক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কবিতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "লেখিকার বর্ণনায় বাঙালি জাতি যেন প্রসন্নতা বা তুষ্ট থাকার এক মূর্তিমতী রূপ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402305010,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'নিরীহ বাঙালি' প্রবন্ধে বাঙালির ক্রিয়াকলাপকে কেমন বলা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কটু ও তীক্ষ্ণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কঠিন ও জটিল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রুক্ষ ও ভয়ঙ্কর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সহজ ও সরল",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "প্রবন্ধ অনুযায়ী, বাঙালির সব ধরণের কাজ বা কর্মকাণ্ড সহজ ও সরলতার প্রতীক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402305318,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "লেখকের বক্তব্য অনুসরণ করা হলে, শূন্যস্থানে কী বসবে? (কুসুম -> সৌকুমার্য; মধু -> মাধুরী; বাঙালি -> ?)",
+    "options": [
+      {
+        "label": "a",
+        "text": "জড়তা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অস্থিরতা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সৌরভ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নীরবতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কুসুমের নির্যাস যেমন সৌকুমার্য, মধুর তেমন মাধুরী, তেমনি বাঙালির মূল বৈশিষ্ট্য বা নির্যাস হিসেবে লেখিকা 'জড়তা'কে নির্দেশ করেছেন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402305513,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "লেখক ভারতবর্ষকে ইংরেজি ধরনের অট্টালিকা মনে করলে বাঙালি সেখানে কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বৈঠকখানা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সাজসজ্জা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রাচীর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মূর্তি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "লেখিকা ভারতকে একটি অট্টালিকা হিসেবে কল্পনা করলে বাঙালিকে সেই প্রাসাদের একটি জড় মূর্তির সাথে তুলনা করেছেন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402305669,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "রোকেয়া সাখাওয়াত হোসেনের মতে, ভারতবর্ষ সরোবর হলে বাঙালি সেখানে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "চন্দ্র মল্লিকা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গোলাপ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পদ্মিনী",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "শাপলা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ভারতবর্ষকে যদি বিশাল একটি সরোবর মনে করা হয়, তবে বাঙালি সেখানে পদ্মিনী সমতুল্য।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402305844,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "ভারত বৈঠকখানা হলে বাঙালি কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গোলা পায়রা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সাজসজ্জা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "প্রসাধনী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রাধামাধব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "প্রবন্ধ অনুসারে, ভারতবর্ষকে বৈঠকখানা ভাবলে বাঙালিকে সেই ঘরের সৌন্দর্যবর্ধক সাজসজ্জা হিসেবে বিবেচনা করা যায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402306019,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'নিরীহ বাঙালি' প্রবন্ধে ভারতবর্ষকে উপন্যাস হলে বাঙালি কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পাঠক-পাঠিকা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নায়িকা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "গায়ক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পার্শ্বচরিত্র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "লেখিকা ভারতবর্ষকে একটি উপন্যাসের সাথে তুলনা করলে বাঙালিকে তার প্রধান নায়িকা হিসেবে উপস্থাপন করেছেন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402306201,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "\"যদি ভারতবর্ষকে একখানা উপন্যাস মনে করেন, তবে বাঙালি তাহার নায়িকা\"—এখানে লেখক কী বোঝাতে চেয়েছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাঙালির কোমলতা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বাঙালির নিষ্ক্রিয়তা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাঙালির বীরত্ব",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাঙালির দুর্বলতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "উপন্যাসের নায়িকার যেমন কোমল ও নমনীয় স্বভাব থাকে, বাঙালির স্বভাবকেও তেমন কোমল হিসেবে রূপকভাবে বোঝানো হয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402306384,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'নিরীহ বাঙালি' প্রবন্ধ অনুযায়ী ভারতে পূর্ণিমা সমাগমে বাঙালি কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পৃথ্বীমা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বীর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তৃতীয় লিঙ্গ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বধু",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পূর্ণিমা রাতে ভারতের রূপ যেমন উজ্জ্বল হয়, বাঙালি সেখানে যেন ধরিত্রীর মতো স্থির ও শান্ত অর্থাৎ 'পৃথ্বীমা'।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402306588,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "লেখকের মতে বাঙালির জীবিত থাকা অধিক কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "উত্তরাধিকার সূত্রে প্রাপ্ত বলে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মায়েরা শিক্ষিত বলে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "খাদ্যদ্রব্যের বৈশিষ্ট্যের জন্য",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কর্মস্পৃহার অভাবহেতু",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "লেখিকা মনে করেন, বাঙালির খাদ্যাভ্যাস ও সহজলভ্য খাদ্যদ্রব্যের কারণেই তারা পরিশ্রমবিমুখ হয়েও বেশিদিন জীবিত থাকে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402306782,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'নিরীহ বাঙালি' প্রবন্ধে বাঙালির পরিচয় দেওয়া—",
+    "options": [
+      {
+        "label": "a",
+        "text": "মূর্তিমতী কাব্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বিমূর্ত মেঘমালা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দুর্গম পাহাড়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অদৃশ্য বাতাস",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "লেখিকার মতে বাঙালির স্বভাব ও চরিত্র একটি জীবন্ত কাব্যের মতো শান্ত ও ধীর।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402306932,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "বাঙালির কোন খাদ্যদ্রব্যকে লেখক অতিশয় সরস বলেছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সজিনা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "দুগ্ধ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "লালশাক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ইলিশ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "প্রবন্ধে সজিনা ডাঁটাকে অত্যন্ত রসালো এবং বাঙালির অন্যতম প্রিয় খাদ্য হিসেবে উল্লেখ করা হয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402307180,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'নিরীহ বাঙালি' প্রবন্ধে কোনটিকে সুস্বাদু বলা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নবনীত",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "লড়িক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পান্তা ভাত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বাঙালিরা যেসকল নরম ও মিষ্টান্নজাতীয় খাবার পছন্দ করে, তার মধ্যে নবনীতকে সুস্বাদু বলা হয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402307355,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'নিরীহ বাঙালি' প্রবন্ধে কোনটিকে বাঙালির প্রধান ফল বলা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আম",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "জাম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কলা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "লিচু",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "লেখিকা আমকে বাঙালির সবচেয়ে জনপ্রিয় এবং প্রধান ফল হিসেবে প্রবন্ধে উল্লেখ করেছেন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402307541,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'নিরীহ বাঙালি' প্রবন্ধে কোন ফলকে রসাল ও মধুর বলা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কাঁঠাল",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "জাম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কলা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পেঁপে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কাঁঠালকে এর মিষ্টি রস ও সুস্বাদু স্বাদের কারণে লেখিকা রসাল ও মধুর ফল হিসেবে বর্ণনা করেছেন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402307737,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'নিরীহ বাঙালি' প্রবন্ধে কোনটিকে ত্রিগুণাত্মক বলা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাঙালি আচরণকে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বাঙালির খাদ্যসামগ্রীকে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বাঙালি পুরুষদেরকে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাঙালি নারীদেরকে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সরস, সুস্বাদু ও মধুর—এই তিন গুণের সমাহার থাকায় বাঙালির খাদ্যসামগ্রীকে ত্রিগুণাত্মক বলা হয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402307929,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'খাদ্যের গুণ অনুসারে শরীরের পুষ্টি হয়'—এখানে কোন পুষ্টির কথা বলা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শরীরের স্থূলতা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বাঙালির অলসতা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শারীরিক ও মানসিক বিকাশ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কর্মবিমুখতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "গৃহীত খাদ্যের মাধ্যমেই শরীরের গঠনের পাশাপাশি মানুষের মেধা ও মনন তথা মানসিক বিকাশ ঘটে থাকে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402308092,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'নিরীহ বাঙালি' প্রবন্ধে কোনটিকে বীজবহুল বলা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সজিনা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পুঁইশাক",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কাঁঠাল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্রবন্ধ অনুযায়ী পুঁইশাক একটি বীজবহুল সবজি যা বাঙালির খাদ তালিকায় বিশেষ স্থান পায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402308255,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'নিরীহ বাঙালি' প্রবন্ধে কোখায় অধিক খাদ্য রয়েছে কোনটিকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ক্ষীর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সন্দেশ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রসগোল্লা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "নবনী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বাঙালির পছন্দের মিষ্টান্নগুলোর মধ্যে রসগোল্লাকে খাদ্যগুণ সম্পন্ন এবং অধিক জনপ্রিয় হিসেবে উল্লেখ করা হয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402308415,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'নিরীহ বাঙালি' প্রবন্ধে স্থূল ভুঁড়ি বলতে বাঙালির কোন বিষয়টিকে নির্দেশ করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অলসতা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কাপুরুষতা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হীনম্মন্যতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সরসতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বাঙালির অলস জীবনযাপন এবং কায়িক পরিশ্রমের অভাবের ফলে যে দৈহিক স্থূলতা আসে, তাকেই এখানে ব্যঙ্গ করা হয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402308577,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "বাঙালির স্বভাব ভীতু কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "খাদ্যদ্রব্যের কোমলতার কারণে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অলসতার কারণে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শারীরিক দুর্বলতার কারণে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পান-বিড়ি কারণে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "লেখিকা মনে করেন, নরম ও সরস খাদ্য গ্রহণের ফলে বাঙালির শরীরের গঠন এবং স্বভাব দুই-ই নরম ও ভীতু প্রকৃতির হয়ে পড়ে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402308742,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'নিরীহ বাঙালি' অনুযায়ী কোনটি অতি সূক্ষ্ম?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ধুতি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "লুঙ্গি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শাড়ি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাঞ্জাবি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বাঙালির ঐতিহ্যবাহী পোশাক ধুতির গঠন ও বয়ন অতি সূক্ষ্ম হয়ে থাকে বলে প্রবন্ধে উল্লেখ আছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402308968,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "লেখক নিরীহ শব্দটি কোথায় খুঁজে পাওয়ার কথা উল্লেখ করেছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিলেতের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পাঞ্জাবের",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সিমলার",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কলকাতার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ভারতের হিমাচল প্রদেশের সিমলা নামক স্থানে অবস্থানকালে লেখিকা বাঙালির জন্য 'নিরীহ' বিশেষণটির যথার্থতা খুঁজে পান।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402309508,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'নিরীহ বাঙালি' প্রবন্ধে বাঙালি সময় সময় কয়টি কোট ব্যবহার করে থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নিজেদের প্রয়োজনে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বাছবিচার না করে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যুগের সাথে তাল মিলিয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বড়ো বলে জাহির করতে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বাঙালি অনেক সময় নিজেদের আভিজাত্য বা বড়ত্ব জাহির করার উদ্দেশ্যে একাধিক কোট বা পোশাক পরিধান করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402309678,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'নিরীহ বাঙালি' প্রবন্ধে বাঙালি নারীদের কী শাড়ির কথা বলা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জামদানি শাড়ি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সুতার শাড়ি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পশমের শাড়ি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "থয়দার শাড়ি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বাঙালি নারীদের পরিধানের জন্য অত্যন্ত সূক্ষ্ম ও মিহি 'থয়দার শাড়ি'র উল্লেখ এই প্রবন্ধে রয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402309841,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "ইংরেজ মহলে আমাদের পোশাককে 'নির্জল্লা' বলা হয়েছে কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ধর্মীয় অনুশাসন নেই বলে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তাতে শীত মানে না বলে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জুতো পরার অভ্যাস নেই বলে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "নগ্নতার নামান্তর বলে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ইংরেজদের মতে, দামী পোশাক পরার পরও পায়ে জুতো না রাখা বাঙালির এক ধরণের অসামঞ্জস্যতা বা 'নির্জল্লা' ভাব প্রকাশ করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402310090,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "বাঙালি ললনাদের পরিধেয় 'থয়দার শাড়ি'র বৈশিষ্ট্য কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রঙীন ও কারুকার্যময়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অতি মসৃণ ও সূক্ষ্ম",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বায়ু চলাচলের উপযোগী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অতি দীর্ঘ ও প্রশস্ত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "থয়দার শাড়ি অত্যন্ত পাতলা, মসৃণ এবং সূক্ষ্ম কারুকার্যের জন্য পরিচিত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402310250,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'নিরীহ বাঙালি' প্রবন্ধে বাঙালির সব বড়কে কী রূপ বলা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কালো",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "স্বচ্ছ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দুর্ভেদ্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জটিল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "লেখিকার মতে, বাঙালির ক্ষেত্রে অনেক বড় বিষয়কেও তুচ্ছ বা অন্ধকারাচ্ছন্ন অর্থে 'কালো' বলে অভিহিত করা হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402310399,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'নিরীহ বাঙালি' প্রবন্ধ অনুযায়ী বাঙালির কোন দিকটি লিখতে গেলে অন্য মসী, কাগজ ও আহার লেখকের আবশ্যক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পোশাক-পরিচ্ছদ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "খাদ্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গুণ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ধনসম্পদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বাঙালির গুণাবলি এতই বিস্তৃত যে তা লিখতে গেলে লেখকের আরও বেশি সরঞ্জাম ও সময়ের প্রয়োজন হবে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402310559,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'নিরীহ বাঙালি' প্রবন্ধে ধনবৃদ্ধির কটি উপায়ের কথা বলা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "একটি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দুটি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তিনটি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চারটি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "লেখিকা প্রবন্ধে ধন সম্পদ বৃদ্ধির জন্য প্রধানত দুটি উপায়ের কথা বর্ণনা করেছেন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402310719,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "আমরা কোনটিকে খরচাসাপেক্ষ মনে করেছি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিজ্ঞানকে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বাণিজ্যকে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অর্থোপার্জনকে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কৃষিকাজকে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কায়িক পরিশ্রম ও মূলধনের অভাবে বাঙালি বাণিজ্য করাকে অত্যন্ত ব্যয়বহুল ও ঝুঁকিপূর্ণ মনে করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402310882,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'নিরীহ বাঙালি' প্রবন্ধ অনুযায়ী বাঙালির প্রধান ব্যবসায় কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাণিজ্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "দোকানদারি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শিক্ষকতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আড়তদারি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যদিও বাঙালি বাণিজ্যে বিমুখ, তবুও প্রবন্ধে বাণিজ্যকেই প্রধান ব্যবসায়িক মাধ্যম হিসেবে গুরুত্ব দেওয়া হয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402311041,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "লেখকের মতে, কোন ব্যবসায় পরিশ্রম আবশ্যক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আমদানি-রপ্তানির",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ধান-চালের",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রাসায়নিক বস্তুর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রসাধন সামগ্রীর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বৈদেশিক বাণিজ্যে বা আমদানি-রপ্তানি ব্যবসায় প্রচুর কায়িক ও মানসিক পরিশ্রমের প্রয়োজন হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402311226,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "আমরা ধান-তুষের ব্যবসায় করি না কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পরিশ্রমের ভয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অভিজাত জাতি বলে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "লোকসানের ভয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উৎপাদন কম বলে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বাঙালি নিজেকে অনেক সময় আভিজাত্যপূর্ণ মনে করায় সাধারণ ধান-চালের ছোট ব্যবসায় করতে কুন্ঠাবোধ করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402311400,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'নিরীহ বাঙালি' প্রবন্ধে বাঙালিরা খাঁটি সোনা, রুপা ও জহরত রাখে না কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কৃপণতার কারণে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চুরির ভয়ে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ঠান্ডার প্রভাবে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ডাকাতের ভয়ে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "নিজেদের ধন-সম্পদ অন্যের হাতে চলে যাওয়ার বা চুরির আতঙ্কে বাঙালিরা স্বর্ণালঙ্কার সঞ্চয় করতে ভয় পায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402311560,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'নিরীহ বাঙালি' প্রবন্ধে খুনীদের সঙ্গে কী বিক্রয় হওয়ার কথা বলা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কেরোসিন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সুগন্ধি আতর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তৈজসপত্র",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিলাসদ্রব্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "প্রবন্ধে রূপক অর্থে ব্যবসায়িক অসাধুতা বোঝাতে খুনীদের সাথে কেরোসিন বিক্রির প্রসঙ্গ এসেছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402311741,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'নিরীহ বাঙালি' প্রবন্ধ অনুযায়ী বাঙালির কেন ধান চালের ব্যবসায় অনীহা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পরিশ্রম করতে হয় না বলে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অর্থের অভাবে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অহংকারের কারণে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কৃপণতার কারণে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বাঙালিরা মনে করে ধান-তুষের ব্যবসায় করা তাদের বংশীয় মর্যাদা বা অহংকারের সাথে মানানসই নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402888390,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "\"নিরীহ বাঙালি\" প্রবন্ধ অনুযায়ী বাঙালি কীভাবে 'পাপ বিক্রয়' করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হকারি করে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চালের ব্যবসায় ক্ষেত্রে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "যৌতুক গ্রহণ করে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দোকানদারি করে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "প্রবন্ধে চালের ব্যবসায়ীদের অসাধুতা এবং ভেজাল মেশানোর প্রবণতাকে ব্যঙ্গ করে 'পাপ বিক্রয়' বলা হয়েছে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402889069,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "\"নিরীহ বাঙালি\" অনুযায়ী কে 'পাশ' বিক্রয় করে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "বর",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বউ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শ্বশুর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাবা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "তৎকালীন সমাজে বরের শিক্ষাগত যোগ্যতা বা পরীক্ষায় 'পাশ' করাকে যৌতুকের বাজারে একটি পণ্য হিসেবে দেখা হতো। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402889286,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "\"নিরীহ বাঙালি\" প্রবন্ধে 'পাপ ক্রেতা' বলা হয়েছে কাকে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "বর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বউ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শ্বশুর",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বাবা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বর পক্ষ যখন যৌতুক দাবি করে, তখন কনের পিতা বা শ্বশুর সেই 'পাপ' বা অন্যায় শর্ত মেনে নিয়ে তা কেনেন বলে তাকে 'পাপ ক্রেতা' বলা হয়েছে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402889514,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "\"নিরীহ বাঙালি\" প্রবন্ধে 'একেকটি পাপের মূল্য' বলতে বোঝানো হয়েছে—**",
+    "options": [
+      {
+        "label": "a",
+        "text": "কনে পক্ষের ছায়া যৌতুককে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বর পক্ষের চাওয়া যৌতুককে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিয়ে বাবল খরচকে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পরীক্ষায় পাশ করার খরচকে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ছাত্রাবস্থায় পরীক্ষায় পাশ করতে যে খরচ হয়, বিয়ের বাজারে যৌতুকের মাধ্যমে সেই অর্থ উসুল করাকেই 'পাপের মূল্য' বলা হয়েছে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402889737,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "এম.এ পাসের মূল্য হিসেবে সমুদয় রাজত্ব লাভ করা যায়। এখানে 'সমুদয় রাজত্ব' বলতে কী বোঝানো হয়েছে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "বেশি বেতনের চাকরি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শ্বশুরের সহায়সম্পত্তি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "চেয়ারম্যানের পদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিদেশে পাড়ি জমানোর সুযোগ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "উচ্চশিক্ষিত বরেরা বিয়ের মাধ্যমে শ্বশুরের সমস্ত সম্পত্তি বা অঢেল ঐশ্বর্য লাভ করার প্রত্যাশা করে, যা রাজত্ব লাভের সমতুল্য। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402889862,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "রোকেয়া সাখাওয়াত হোসেন 'মস্তিষ্ক উর্বর' বলতে কী বুঝিয়েছেন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুশ্চিন্তায় পারদর্শী হওয়া",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গায়ে মাথায় কাজ করা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সৃষ্টিশীল কাজে নিয়োজিত হওয়া",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অন্যের কাজে মাথা না ঘামানো",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্রবন্ধকার নতুন কিছু উদ্ভাবন বা বুদ্ধিবৃত্তিক সৃজনশীল কাজে মস্তিষ্ককে কাজে লাগানোকে 'মস্তিষ্ক উর্বর' হিসেবে চিহ্নিত করেছেন। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402889980,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "লেখকের মতে, মস্তিষ্ক উর্বর হলে কোনটি করা সবচেয়ে সহজ?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "রাজ বাহাদুর উপাধি লাভ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মুখস্থ বিদ্যায় জোর দেওয়া",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ব্যবসায় করে অর্থ উৎপাদন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শ্বশুরের টাকায় স্বাবলম্বী হওয়া",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "প্রকৃত জ্ঞান অর্জনের চেয়ে কেবল পরীক্ষা পাশের জন্য মুখস্থ বিদ্যা আয়ত্ত করাকে লেখক সহজ ও অর্থহীন প্রচেষ্টা হিসেবে দেখেছেন। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402890121,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "লেখকের মতে, স্বশরীরে পরিশ্রম করে মুদ্রা লাভ করার চেয়ে কোনটি সহজ?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "নকল হীরা বিক্রি করে লাভবান হওয়া",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঘৃতের মাধ্যমে চাকরিতে বড়ো পদ লাভ করা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শ্বশুরের সহায়সম্পত্তির মালিক হয়ে যাওয়া",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ধান-চালে ব্যবসায় করা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পরিশ্রমহীনভাবে সম্পদ লাভের সহজ উপায় হিসেবে বাঙালিরা যৌতুক বা উত্তরাধিকার সূত্রে পাওয়া সম্পত্তিকে বেছে নেয়। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402890258,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'নিরীহ বাঙালি' প্রবন্ধ অনুযায়ী কার যথাসর্বস্ব লুণ্ঠন করা সহজ?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "বরের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বউয়ের",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শ্বশুরের",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বাবার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যৌতুকের মাধ্যমে কনের পিতার (শ্বশুরের) সারাজীবনের সঞ্চয় বা সহায়-সম্পত্তি হাতিয়ে নেওয়াকে লুণ্ঠনের সাথে তুলনা করা হয়েছে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402890423,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "আরাম কেদারায় বসে কী করা সহজ?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুতিন সংখ্যা পাঠ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সংবাদপত্রের পাঠ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উপন্যাস পাঠ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আইনের বই পাঠ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কোনো গভীর জ্ঞান বা পরিশ্রম ছাড়াই অলসভাবে কোনো হালকা লেখা বা সংখ্যার পাঠ করা সহজসাধ্য কাজ। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402890547,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "\"নিরীহ বাঙালি\" প্রবন্ধ অনুসারে কৃষি দ্বারা কী বৃদ্ধি হতে পারে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "সম্পদ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অন্ন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কৃষকের উন্নয়ন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সমাজের খ্যাতি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কৃষি কাজ হলো অন্ন বা খাদ্য উৎপাদনের মূল মাধ্যম। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402890662,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "\"নিরীহ বাঙালি\" প্রবন্ধ অনুযায়ী কৃষিকাজে পারদর্শিতা দেখানোর চেয়ে কী পাস করা সহজ?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "M.R.B.C",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "M.R.A.C",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "M.R.C.C",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "M.R.D.C",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মাঠে কাজ করার পরিশ্রমের চেয়ে তাত্ত্বিক কোনো উপাধি (যেমন M.R.A.C) অর্জন করা বাঙালিদের কাছে সহজ মনে হয়। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402890813,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "রোকেয়ার বক্তব্য অনুযায়ী কোনটি অপেক্ষা বি.এসসি পাস করা সহজ?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "পাঠ্যবই পড়াশুনা করা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শিল্পকার্যে পারদর্শী হওয়া",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অন্ন উৎপাদনের ব্রতী হওয়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দুর্ভিক্ষ নিবারণে কাজ করা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "হাতে-কলমে কারিগরি বা শিল্পকর্ম শেখার চেয়ে কেবল ডিগ্রি অর্জন করা বাঙালিদের জন্য সহজতর। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402890943,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'নিরীহ বাঙালি' প্রবন্ধে আইন চর্চা অপেক্ষা কোন বিষয়ে জ্ঞানচর্চা কঠিন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাংলা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ইংরেজি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিজ্ঞান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কৃষি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "প্রবন্ধকারের মতে, পুঁথিগত আইনের মারপ্যাঁচ শেখার চেয়ে প্রকৃত কৃষিবিদ্যা বা উৎপাদনমুখী জ্ঞান অর্জন করা বেশি কঠিন ও শ্রমসাধ্য। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402891257,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "দুর্ভিক্ষ নিবারণের ইংরেজি প্রতিশব্দ কোনটি?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "Famine Report",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Famine Info",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Famine Letter",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Famine Thesis",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ইংরেজি আমলে খাদ্যাভাব বা দুর্ভিক্ষ পরিস্থিতি ব্যাখ্যা করতে 'Famine Report' ব্যবহৃত হতো। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402891379,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "\"নিরীহ বাঙালি\" প্রবন্ধ অনুযায়ী বাঙালিদের পক্ষে কোন কাজটি সহজ?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "রাজ্য স্থাপন করা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শিল্পকার্যে পারদর্শী হওয়া",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ধান উৎপাদনের জন্য পরিশ্রম করা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রাজ উপাধি লাভ করা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পরিশ্রম করে কোনো বড় অর্জন করার চেয়ে তোষামোদির মাধ্যমে ব্রিটিশদের কাছ থেকে 'রাজ' বা 'রায় বাহাদুর' উপাধি নেওয়া বাঙালির জন্য সহজ ছিল। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402891562,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "রোকেয়া সাখাওয়াত হোসেনের মতে বাঙালি কার নিকট আঘাত পাওয়াকেও সৌভাগ্য মনে করে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রতিবাদ করা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চুপ করে থাকা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মানহানির মামলা করা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অহংকার দেখানো",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "অন্যায়ের প্রতিবাদ না করে মুখ বুজে সহ্য করা বা চুপ থাকাকেই বাঙালিরা নিরাপদ বা শান্তি মনে করে। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402891679,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "\"নিরীহ বাঙালি\" প্রবন্ধ অনুযায়ী স্বাস্থ্যের বারোটা বাজায় কী করলে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "খাদ্যের প্রতি যত্ন নিলে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ডাক্তারের কাছে নিজেকে সমর্পণ করলে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "স্বাস্থ্যবিধি মেনে চললে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উদাসীন থাকলে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "নিজের স্বাস্থ্য সম্পর্কে সচেতন না হয়ে সবটুকু নির্ভরতা চিকিৎসকের ওপর ছেড়ে দেওয়াকে লেখিকা নেতিবাচকভাবে দেখেছেন। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402891803,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'নিরীহ বাঙালি' প্রবন্ধ অনুযায়ী বাঙালির চরিত্রে কোনটি প্রকট?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "বীররস",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কাপুরুষতা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "জীবনবোধ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রকৃতিপ্রেম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "অধিকার আদায়ে অনীহা এবং ভীরু স্বভাবের কারণে বাঙালিদের 'কাপুরুষ' হিসেবে ব্যঙ্গ করা হয়েছে। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402892008,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'আমরা মূর্তিমতী আলস্য'—এখানে 'আমরা' বলতে কাদের বোঝানো হয়েছে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাঙালি নারীদের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বাঙালি বরদের",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাঙালি পুরুষদের",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ভারতবরষীয় পুরুষদের",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "লেখিকা সামগ্রিকভাবে ভারতবর্ষের পুরুষদের কর্মবিমুখতা ও অলসতাকে নির্দেশ করতে এই উক্তিটি করেছেন। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402892131,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "\"নিরীহ বাঙালি\" প্রবন্ধে লেখক বাঙালির কোন দিকটি তুলে ধরেছেন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "বৈশিষ্ট্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "গুণাবলি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দৃষ্টিভঙ্গি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অসহায়ত্ব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পুরো প্রবন্ধ জুড়ে বাঙালির স্বভাবজাত বিভিন্ন বৈশিষ্ট্যকে শ্লেষের মাধ্যমে তুলে ধরা হয়েছে। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402892275,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "\"নিরীহ বাঙালি\" প্রবন্ধে লেখক বাঙালিদের—**",
+    "options": [
+      {
+        "label": "a",
+        "text": "ভর্ৎসনা করেছেন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রশংসা করেছেন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ঘৃণা করেছেন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উপহাস করেছেন",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বাঙালির অলসতা ও দুর্বলতাকে সংশোধন করার লক্ষ্যে লেখিকা হাস্যরসের মাধ্যমে তাদের উপহাস করেছেন। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402892407,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'সৌকুমার্য' শব্দের অর্থ কী?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "সুকুমার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "যৌবন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কোমলতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সৌন্দর্য",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "প্রবন্ধের প্রাসঙ্গিকতায় সৌকুমার্য বলতে কুসুমের কমনীয় সৌন্দর্যকে বোঝানো হয়েছে। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402892524,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'বহ্ন্যাবর্ত' শব্দের অর্থ কী?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঝড়ের বাতাস",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ঝড়ের বেগ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আগুনের শিখা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আগুনের আবর্ত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'বহ্ন্যাবর্ত' শব্দটির আক্ষরিক অর্থ হলো ঝোড়ো হাওয়া বা ঝড়ের বাতাস। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402892654,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'কুসীন' শব্দের অর্থ কী?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "কেশ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কেশ তেল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কান দুল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "তৎকালে ব্যবহৃত এক ধরণের সুগন্ধি মাথার তেলের নাম হলো কুসীন। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402892765,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'নিরীহ বাঙালি' প্রবন্ধে উল্লিখিত কুসীন, কেনলিন কীসের নাম?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "চুলে দেওয়ার তেলের",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "গায়ে মাখার সাবানের",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কাপড় ধোয়ার সাবানের",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রান্না করার তেলের",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এগুলো তৎকালীন শৌখিন বাঙালির ব্যবহৃত মাথার তেলের বিভিন্ন ব্র্যান্ডের নাম। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402892890,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'থয়দার শাড়ি' বলতে কী বোঝায়?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "সুক্ষ্ম সূতার শাড়ি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "মোটা পাড়ের শাড়ি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কাঁচ বসানো শাড়ি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পুঁথির কাজ করা শাড়ি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অত্যন্ত মিহি ও মসৃণ কারুকার্যময় শাড়িকে থয়দার শাড়ি বলা হয়। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402893026,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "'তণ্ডুল' শব্দের অর্থ কী?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "ধান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চাল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ডাল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চিনি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "তণ্ডুল শব্দের আভিধানিক অর্থ হলো চাল। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402893148,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "\"নিরীহ বাঙালি\" প্রবন্ধটি লেখক কীভাবে বর্ণনা করেছেন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "হাস্য-রসাত্মকভাবে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "গম্ভীরভাবে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জটিল বাক্যে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সরল বাক্যে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সামাজিক ত্রুটিগুলোকে হাস্যরসের মাধ্যমে প্রকাশ করা হয়েছে যেন পাঠক সহজে বুঝতে পারে। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402893270,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "\"নিরীহ বাঙালি\" প্রবন্ধে নারীরা নিজেদের কী প্রমাণ করতে চায়?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাহসী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রূপসী",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অবলা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ধনী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "তৎকালীন বাঙালি সমাজব্যবস্থায় নারীদের গুণের চেয়ে বাহ্যিক রূপ-সজ্জার ওপর বেশি গুরুত্ব দেওয়া হতো। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402893796,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "\"নিরীহ বাঙালি\" প্রবন্ধটি কীসের ওপর ভিত্তি করে রচিত?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "গণ্ডিমূর্তির",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিষয়বস্তুর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হাস্যরসের",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জাতীয় জীবনচরণের",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বাঙালির দৈনন্দিন জীবন যাপন এবং জাতীয় স্বভাবের ওপর ভিত্তি করে এটি রচিত। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768402893917,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "নিরীহ বাঙালি",
+    "question": "\"নিরীহ বাঙালি\" প্রবন্ধটি কীসের প্রতীক?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাঙালির পরিশ্রমের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বাঙালির বিলাসিতার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাঙালির জীবনব্যবস্থা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাঙালির হীন মানসিকতার",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সংগ্রামবিমুখতা ও পরনির্ভরশীলতার যে মানসিকতা বাঙালির মধ্যে বিদ্যমান, তারই রূপক এটি। [৫]",
+    "image": null,
+    "language": "en"
+  }
+]

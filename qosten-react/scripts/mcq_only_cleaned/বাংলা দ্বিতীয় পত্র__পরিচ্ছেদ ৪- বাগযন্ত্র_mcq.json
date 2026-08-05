@@ -1,0 +1,642 @@
+[
+  {
+    "id": 1767454645822,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪: বাগযন্ত্র",
+    "question": "কোনটি বাগ্যন্ত্র?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পাকস্থলী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফুসফুস",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পিত্তকোষ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "যকৃৎ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ফুসফুস হলো শ্বাসকার্যের প্রধান অঙ্গ এবং এটি বাগ্যন্ত্রের একটি গুরুত্বপূর্ণ অংশ। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454645971,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪: বাগযন্ত্র",
+    "question": "ফুসফুস থেকে তৈরি বাতাস কিসের মাধ্যমে বের হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নাসারন্ধ্র",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মুখবিবর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ক ও খ উভয়ই",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ফুসফুস থেকে নির্গত বাতাস মুখবিবর ও নাসারন্ধ্র উভয় পথেই বের হতে পারে। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454646095,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪: বাগযন্ত্র",
+    "question": "বাগপ্রত্যঙ্গের সবচেয়ে বাইরের অংশের নাম—",
+    "options": [
+      {
+        "label": "a",
+        "text": "তালু",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মূর্ধা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দন্ত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ওষ্ঠ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ওষ্ঠ বা ঠোঁট হলো বাগপ্রত্যঙ্গের সবচাইতে বাইরের অংশ। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454646233,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪: বাগযন্ত্র",
+    "question": "বাগযন্ত্রের মধ্যে সবচেয়ে সচল ও সক্রিয় প্রত্যঙ্গ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দাঁত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দন্তমূল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জিহ্বা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জিভ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বাগযন্ত্রের মধ্যে জিভ সবচেয়ে সচল প্রত্যঙ্গ হিসেবে বিবেচিত। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454646355,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪: বাগযন্ত্র",
+    "question": "মুখ-গহ্বরের কোন অংশে তালুর অবস্থান?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সামনে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পেছনে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উপরে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "নিচে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "তালু মুখ-গহ্বরের উপরের অংশে অবস্থিত। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454646472,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪: বাগযন্ত্র",
+    "question": "নাসিক্য ধ্বনি তৈরি হয় কীভাবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আলজিভ নিচে নেমে এলে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "জিভ তালুকে স্পর্শ করলে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ঠোঁটের ফাঁকা কম-বেশি হলে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জিভ মূর্ধায় স্পর্শ করলে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "আলজিভ নিচে নেমে এলে বাতাস নাক দিয়ে বের হয় এবং নাসিক্য ধ্বনি তৈরি হয়। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454646594,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪: বাগযন্ত্র",
+    "question": "তালুর অংশ কয়টি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুইটি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "তিনটি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চারটি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাঁচটি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "তালুর দুটি অংশ থাকে: শক্ত তালু এবং কোমল তালু। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454646735,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪: বাগযন্ত্র",
+    "question": "কোনটি বাগ্যন্ত্র?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নাক",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গলা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মাথা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "নাক হলো বাগ্যন্ত্রের একটি গুরুত্বপূর্ণ অংশ। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454646858,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪: বাগযন্ত্র",
+    "question": "মুখ-গহ্বরের কোমল তালুর পিছনে ঝুলন্ত মাংসপিণ্ডের নাম কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জিভ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মূর্ধা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আলজিভ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "স্বরযন্ত্র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কোমল তালুর পিছনে ঝুলে থাকা ছোট মাংসপিণ্ডকে আলজিভ বলে। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454646986,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪: বাগযন্ত্র",
+    "question": "দন্তমূল এবং তালুর মাঝখানে যে উঁচু অংশ থাকে তাকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আলজিভ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মূর্ধা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অভিজিভ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দন্তমূল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "দন্তমূল ও তালুর মধ্যবর্তী উঁচু অংশটি মূর্ধা নামে পরিচিত। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454647108,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪: বাগযন্ত্র",
+    "question": "নিচের কোনটি স্বরযন্ত্রের অংশ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অভিজিভ, তালু",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অভিজিভ, স্বররতন্ত্র",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তালু, মূর্ধা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দন্তমূল, ওষ্ঠ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "স্বরযন্ত্রের মূল উপাদান হলো অভিজিভ ও স্বররতন্ত্র। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454647230,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪: বাগযন্ত্র",
+    "question": "'অভিজিভ' কোন বাগ্যন্ত্রের অংশ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্বররতন্ত্র",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "আলজিভ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ফুসফুস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ধ্বনিদ্বার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অভিজিভ বা এপিগ্লটিস স্বরযন্ত্রের একটি অংশ। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454647346,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪: বাগযন্ত্র",
+    "question": "কোনটি বাগ্যন্ত্র নয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পাকস্থলী",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ফুসফুস",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দাঁত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ওষ্ঠ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পাকস্থলী পরিপাকতন্ত্রের অংশ, বাগ্যন্ত্রের নয়। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454647466,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪: বাগযন্ত্র",
+    "question": "অনুনাসিক স্বরধ্বনি উচ্চারণে কোনটি নিচে নেমে আসে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ওষ্ঠ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আলজিভ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মূর্ধা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কোমল তালু",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অনুনাসিক স্বরধ্বনি উচ্চারণে কোমল তালু নিচে নেমে আসে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454647586,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪: বাগযন্ত্র",
+    "question": "ধ্বনি উৎপাদনের ক্ষেত্রে মুখবিবরে উচ্চারণের মূল উপকরণ বা উচ্চারণক হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফুসফুস ও ওষ্ঠ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দাঁত ও আলজিভ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জিহ্বা ও ওষ্ঠ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "নরম তালু ও জিহ্বা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "জিহ্বা ও ওষ্ঠ হলো মুখবিবরের প্রধান উচ্চারণক। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454647718,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪: বাগযন্ত্র",
+    "question": "মুখবিবরের ছাদকে বলা হয়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "মূর্ধা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মূল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তালু",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "আলজিভ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মুখবিবরের উপরের অংশ বা ছাদকে তালু বলা হয়। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454647836,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪: বাগযন্ত্র",
+    "question": "শক্ত তালু ও উপরের পাটির দাঁতের মধ্যবর্তী উত্তল অংশকে বলে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "কোমল তালু",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দন্তমূল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "আলজিভ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শ্বাসনাালি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "শক্ত তালু ও উপরের দাঁতের মাঝখানের উঁচু অংশকে দন্তমূল বলে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454647955,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪: বাগযন্ত্র",
+    "question": "ধ্বনি সৃষ্টিকারী বাগ্যন্ত্রের উৎস কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফুসফুস",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "শ্বাসনাালি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "স্বরযন্ত্র",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নাসিকা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ফুসফুস হলো সব ধ্বনি ও শ্বাসবায়ুর মূল উৎস। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454648090,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪: বাগযন্ত্র",
+    "question": "দন্তমূল এবং তালুর মাঝখানে যে উঁচু অংশ থাকে তার নাম কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শক্ততালু",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দাঁতের পাটি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মূর্ধা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ধনিদ্বার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "দন্তমূল ও তালুর সংযোগস্থলের উঁচু অংশকে মূর্ধা বলে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454648214,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪: বাগযন্ত্র",
+    "question": "স্বরযন্ত্রের অংশ নিচের কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কোমল তালু",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ধ্বনিদ্বার",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ফুসফুস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নাসারন্ধ্র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ধ্বনিদ্বার বা গ্লটিস স্বরযন্ত্রের একটি অংশ। [৪]",
+    "image": null,
+    "language": "en"
+  }
+]

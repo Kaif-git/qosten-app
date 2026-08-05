@@ -17,6 +17,7 @@ export default function TabContainer() {
     <div className="tab-container" style={{display:'flex', marginBottom:15, overflowX:'auto', whiteSpace:'nowrap', paddingBottom:5}}>
       <NavLink to="/import" style={({isActive}) => ({...tabStyle, background: isActive ? '#4CAF50' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>Import Questions</NavLink>
       <NavLink to="/bank" style={({isActive}) => ({...tabStyle, background: isActive ? '#4CAF50' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>Question Bank</NavLink>
+      <NavLink to="/hsc-bank" style={({isActive}) => ({...tabStyle, background: isActive ? '#16a085' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>🎓 HSC Bank</NavLink>
       <NavLink to="/videos" style={({isActive}) => ({...tabStyle, background: isActive ? '#6f42c1' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>📺 Videos</NavLink>
       <NavLink to="/add" style={({isActive}) => ({...tabStyle, background: isActive ? '#4CAF50' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>Add New Question</NavLink>
       <NavLink to="/import-math" style={({isActive}) => ({...tabStyle, background: isActive ? '#e67e22' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>📐 Math Questions</NavLink>
@@ -38,6 +39,8 @@ export default function TabContainer() {
       <NavLink to="/translate-test" style={({isActive}) => ({...tabStyle, background: isActive ? '#28a745' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>🌐 Translation Test</NavLink>
       <NavLink to="/tracker" style={({isActive}) => ({...tabStyle, background: isActive ? '#f39c12' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>📊 Data Tracker</NavLink>
       <NavLink to="/ai" style={({isActive}) => ({...tabStyle, background: isActive ? '#6f42c1' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>🤖 AI Hub</NavLink>
+      <NavLink to="/ai-dashboard" style={({isActive}) => ({...tabStyle, background: isActive ? '#e74c3c' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>📈 AI Dashboard</NavLink>
+      <NavLink to="/roadmap-view" style={({isActive}) => ({...tabStyle, background: isActive ? '#16a085' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>🗺️ Roadmaps</NavLink>
       <NavLink to="/dev" style={({isActive}) => ({...tabStyle, background: isActive ? '#d32f2f' : '#e0e0e0', color: isActive ? '#fff' : '#000'})}>🛠️ Dev Tab</NavLink>
     </div>
   );

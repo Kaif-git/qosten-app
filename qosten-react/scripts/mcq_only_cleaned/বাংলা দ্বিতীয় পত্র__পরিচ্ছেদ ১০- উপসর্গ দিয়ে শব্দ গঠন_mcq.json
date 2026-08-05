@@ -1,0 +1,1250 @@
+[
+  {
+    "id": 1767454763371,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটি উপসর্গ যোগে গঠিত শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রবীণ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ভিখারি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাঘিনী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সলাট",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'প্র' উপসর্গটি 'বীণ' শব্দের আগে যুক্ত হয়ে 'প্রবীণ' শব্দটি গঠন করেছে। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454763491,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "নিচের কোন শব্দে অপূর্ণ অর্থে 'না' উপসর্গ ব্যবহৃত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নাবালক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নাখোশ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নালায়েক",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "নানাবিধ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'লায়েক' বা যোগ্য নয় এমন অর্থে বা অপূর্ণ অর্থে 'না' উপসর্গ যুক্ত হয়ে 'নালায়েক' হয়েছে। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454763623,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "ঈষৎ অর্থ প্রকাশ করছে কোন উপসর্গ যুক্ত শব্দটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আধাখাওয়া",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "উপকূল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আরক্ত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আরক্ত",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "'রক্ত' শব্দের আগে 'আ' উপসর্গ যুক্ত হয়ে 'আরক্ত' শব্দটি ঈষৎ লাল বা লালচে অর্থ প্রকাশ করে। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454763748,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটি উপসর্গ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গুলো",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "উপ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "টা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ও",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'উপ' একটি তৎসম উপসর্গ যা শব্দের আগে বসে নতুন শব্দ গঠন করে। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454763872,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "'পাতি' উপসর্গটি কোন অর্থে ব্যবহার করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ছোটো",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বিপরীত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ভিন্ন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শূন্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'পাতি' উপসর্গটি সাধারণত ক্ষুদ্র বা ছোট অর্থে ব্যবহৃত হয়, যেমন— পাতিহাঁস। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454763995,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "'নিমখুন' শব্দে 'নিম' উপসর্গটি কী অর্থে ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রায়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তূল্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অর্ধেক",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অল্প",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'নিম' উপসর্গটি ফারসি ভাষা থেকে আগত এবং এটি অর্ধেক বা আধা অর্থে ব্যবহৃত হয়। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454764116,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "'পাতিহাঁস' শব্দের 'পাতি' কোন অর্থে ব্যবহৃত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সম্পূর্ণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিরুদ্ধ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ছোটো",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "প্রকৃষ্ট",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "হাঁসের চেয়ে ছোট আকৃতি বোঝাতে 'পাতি' উপসর্গটি ব্যবহৃত হয়েছে। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454764236,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "বাংলা ভাষায় কতগুলো উপসর্গ রয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কয়েকটি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অজস্র",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অর্ধশতাধিক",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "শতাধিক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বাংলা ভাষায় বর্তমানে অর্ধশতাধিক (তৎসম ২০টি এবং বাকিগুলো বাংলা ও বিদেশি) উপসর্গ প্রচলিত। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454764359,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "'গৌণ' অর্থ প্রকাশ করছে কোন উপসর্গযুক্ত শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিদেশি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফলবেল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অবিরাম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিমরাজি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "'নিমরাজি' বলতে পুরোপুরি রাজি নয় বা সামান্য রাজি বোঝায়, যেখানে 'নিম' গৌণ অর্থে কাজ করেছে। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454764494,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "উপসর্গের কী নেই?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অস্তিত্ব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অর্থ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বৈচিত্র্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অর্থদ্যোতনা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "উপসর্গের নিজস্ব কোনো অর্থবাচকতা বা স্বাধীন অর্থ নেই। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454764648,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "উপসর্গের কী আছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অর্থ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "স্বাধীন ব্যবহার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অর্থের দ্যোতনা তৈরির ক্ষমতা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "উপসর্গের নিজস্ব অর্থ না থাকলেও অন্য শব্দের আগে বসে নতুন অর্থ তৈরির বা দ্যোতনা সৃষ্টির ক্ষমতা রয়েছে। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454764785,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "ধাতুর পরে যেসব প্রত্যয় যুক্ত হয় তাদের কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কৃৎপ্রত্যয়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "তদ্ধিত প্রত্যয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কৃদন্ত পদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তদ্ধিতান্ত পদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ধাতুর পরে যে প্রত্যয় যুক্ত হয় তাকে কৃৎপ্রত্যয় বলে। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454764910,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "'নালায়েক' শব্দে 'না' উপসর্গটি কী অর্থে ব্যবহৃত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অপূর্ণ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বিপরীত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মন্দ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সদৃশ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'নালায়েক' শব্দে 'না' উপসর্গটি অপূর্ণ বা নেতিবাচক যোগ্যতা অর্থে ব্যবহৃত। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454765035,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "যেসব অর্থহীন শব্দাংশ অন্য শব্দের শুরুতে বসে নতুন শব্দ গঠন করে, সেগুলোকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রত্যয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সমাস",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সন্ধি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উপসর্গ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "উপসর্গ শব্দের শুরুতে যুক্ত হয়ে অর্থের পরিবর্তন বা নতুন শব্দ গঠন করে। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454765163,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "'উগ্র' অর্থ প্রকাশ করছে কোন উপসর্গযুক্ত শব্দটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অজ্ঞাত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আধাখাওয়া",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বদমেজাজ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "নালায়েক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'মেজাজ' এর আগে 'বদ' উপসর্গ যুক্ত হয়ে উগ্রতা বা মন্দ মেজাজ প্রকাশ করছে। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454765283,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "'বিুঁই' শব্দে 'বি' উপসর্গটি কী অর্থে ব্যবহৃত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিপরীত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তূল্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সামান্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ভিন্ন",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "'বিুঁই' শব্দে 'বি' উপসর্গটি ভিন্ন বা বিশেষ অর্থ প্রকাশে ব্যবহৃত হয়েছে। [৯]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454765404,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "'আরক্ত' শব্দে 'আ' উপসর্গটি কোন অর্থে ব্যবহৃত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অপূর্ণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঈষৎ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অভাব",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিপরীত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'আরক্ত' মানে ঈষৎ রক্তবর্ণ বা লালচে। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454765524,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "'গৌণ' অর্থ প্রকাশ করছে কোন উপসর্গযুক্ত শব্দটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হাতাত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফলবেল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নিমরাজি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "গরমিল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'নিম' উপসর্গটি এখানে গৌণ বা সামান্য সম্মতি অর্থে ব্যবহৃত হয়েছে। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454765655,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "উপসর্গের কাজ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অর্থ সংক্ষেপণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নতুন শব্দ গঠন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ভাবের পার্থক্য নিরূপণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "যতি সংশোধন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "উপসর্গের প্রধান কাজ হলো শব্দের আগে বসে নতুন অর্থবোধক শব্দ তৈরি করা। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454765788,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "শব্দের আগে বসে কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অনুসর্গ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "উপসর্গ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "প্রত্যয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিভক্তি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "উপসর্গ সর্বদা মূল শব্দের বা ধাতুর শুরুতে যুক্ত হয়। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454765910,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "অর্থ নেই কিন্তু অর্থের দ্যোতনা তৈরি করে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "অনুসর্গ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "উপসর্গ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বিভক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রত্যয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "উপসর্গের নিজস্ব অর্থ না থাকলেও এটি শব্দের অর্থের প্রসারণ বা পরিবর্তন ঘটাতে পারে। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454766048,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "'উদ্বাস্তু' শব্দটিতে কোন অর্থে উপসর্গ যুক্ত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঊর্ধ্ব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বহির্গত",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "নিকট",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিশেষ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'উদ্বাস্তু' শব্দে 'উৎ' বা 'উদ্' উপসর্গটি বাসস্থান থেকে বিচ্যুত বা বহির্গত অর্থ প্রকাশ করে। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454766187,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "'অপ' উপসর্গ যোগে গঠিত 'অপকর্ম' শব্দটি কী অর্থ প্রকাশ করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মন্দ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "তুল্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাজে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পিছন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'অপ' উপসর্গটি এখানে নিন্দনীয় বা মন্দ কাজ বোঝাতে ব্যবহৃত হয়েছে। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454766311,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "'গরঠিকানা' শব্দে 'গর' উপসর্গ কী অর্থ প্রকাশ করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ভিন্ন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিপরীত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মন্দ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অভাব",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "'ঠিকানা'র অভাব বোঝাতে 'গর' উপসর্গটি ব্যবহৃত হয়েছে। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454766441,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "'অভাব' অর্থ প্রকাশ করেছে কোন উপসর্গযুক্ত শব্দটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রগতি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পরাজয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আরক্ত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "হাপাত",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "'ভাত' এর অভাব অর্থে 'হা' উপসর্গ যুক্ত হয়ে 'হাপাত' (হাভাতে) শব্দটি গঠিত হয়েছে। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454766564,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "'নি' উপসর্গযোগে 'নিদান' কোন অর্থে ব্যবহৃত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গতি অর্থে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "উত্তম অর্থে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নিশ্চয় অর্থে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "নেই এমন অর্থে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'নিদান' শব্দে 'নি' উপসর্গটি চূড়ান্ত বা নিশ্চয়তা অর্থে ব্যবহৃত। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454766693,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "ভিন্ন অর্থ প্রকাশ করছে নিচের কোন উপসর্গযুক্ত শব্দটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আধাখাওয়া",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ভিতরলা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ফলবেল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিুঁই",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অন্যগুলোর তুলনায় 'বিুঁই' শব্দটি ভিন্নতর অর্থ দ্যোতনা প্রকাশ করে। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454766813,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "'অপসংস্কৃতি' শব্দে 'অপ' উপসর্গটি কোন অর্থে ব্যবহৃত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মন্দ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অতিরিক্ত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নিন্দনীয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিকৃত",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সংস্কৃতির বিকৃত রূপ বোঝাতে 'অপসংস্কৃতি' শব্দে 'অপ' ব্যবহৃত হয়েছে। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454767071,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "'নজর' শব্দের সাথে 'সু' উপসর্গ যুক্ত হলে শব্দের অর্থের কী ধরনের পরিবর্তন ঘটবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সম্প্রসারণ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বিপরীতার্থক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিয়োজন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সংকোচন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'নজর' এর আগে 'সু' যুক্ত হয়ে 'সুনজর' হয় যা অর্থের উৎকর্ষ বা সম্প্রসারণ ঘটায়। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454767197,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "'উপভোগ' — এখানে 'উপ' উপসর্গটি কী অর্থে ব্যবহৃত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সম্যক",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ছোটো",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মন্দ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অভাব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'ভোগ' এর বিশেষ বা সম্যক রূপ বোঝাতে 'উপ' উপসর্গটি ব্যবহৃত হয়েছে। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454767321,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "কোন শব্দে বিপরীত অর্থে উপসর্গ ব্যবহৃত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফলবেল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পরাজয়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "উপভোগ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিমরাজি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'জয়' এর বিপরীত 'পরাজয়' বোঝাতে 'পরা' উপসর্গটি ব্যবহৃত হয়েছে। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454767441,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "নিচের কোনটি উপসর্গ যোগে গঠিত শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রগতি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "নীলিমা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বেলেল্লা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নাতিন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'গতি' শব্দের আগে 'প্র' উপসর্গ যুক্ত হয়ে 'প্রগতি' শব্দটি গঠিত হয়েছে। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454767563,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "'পরিত্যাগ' শব্দে 'পরি' উপসর্গটি কী অর্থে ব্যবহৃত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ছোটো",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সম্যক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অর্ধেক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সম্পূর্ণ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পুরোপুরি ত্যাগ করা অর্থে এখানে 'পরি' উপসর্গটি ব্যবহৃত। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454767751,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "'আরক্ত' শব্দে 'আ' উপসর্গটি কোন অর্থে ব্যবহৃত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সদৃশ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঈষৎ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পূর্ণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সম্যক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'আ' উপসর্গটি এখানে লালচে বা ঈষৎ লাল অর্থ প্রকাশ করছে। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454767870,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "'ভোরবেলা' শব্দটিতে 'ভর' উপসর্গটি কী অর্থে ব্যবহৃত হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পূর্ণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চূড়ান্ত",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "একর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সম্পূর্ণ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'ভোরবেলা'য় 'ভর' উপসর্গটি সময়ের পূর্ণতা বা চূড়ান্ত অবস্থাকে নির্দেশ করে। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454768002,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "উপসর্গ শব্দের কোথায় বসে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আগে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "পরে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মাঝে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শেষে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "উপসর্গ সবসময় মূল শব্দ বা ধাতুর আগে যুক্ত হয়ে কাজ করে। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454768129,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "কোনটির নিজস্ব কোনো অর্থবাচকতা নেই?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শব্দ-বিভক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ক্রিয়া-বিভক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উপসর্গ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অনুসর্গ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "উপসর্গের নিজস্ব কোনো অর্থ নেই, কেবল অন্য শব্দের সাথে যুক্ত হয়ে অর্থ দ্যোতনা সৃষ্টি করতে পারে। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454768251,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "'অপসংস্কৃতি' শব্দের 'অপ' উপসর্গটি কী অর্থে ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিকৃত",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "মন্দ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "খারাপ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তূল্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সংস্কৃতির নেতিবাচক বা বিকৃত রূপকে 'অপসংস্কৃতি' বলা হয়। [১০]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454768377,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১০: উপসর্গ দিয়ে শব্দ গঠন",
+    "question": "উপসর্গ যুক্ত কোন শব্দটিতে 'অতিশয়' অর্থ প্রকাশ করছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অত্যাচার",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "পরাজয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উপভোগ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ফলবেল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'আচার' এর সীমা ছাড়িয়ে যাওয়া বা অতিশয় মন্দ আচরণকে 'অত্যাচার' বলে। [১০]",
+    "image": null,
+    "language": "en"
+  }
+]

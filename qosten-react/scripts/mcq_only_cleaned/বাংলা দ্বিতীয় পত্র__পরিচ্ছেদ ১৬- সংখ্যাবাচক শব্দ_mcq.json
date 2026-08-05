@@ -1,0 +1,834 @@
+[
+  {
+    "id": 1767455494343,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৬: সংখ্যাবাচক শব্দ",
+    "question": "নিচের কোনটি সংখ্যাবর্ণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৫",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৩",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "আড়াই",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৪ঠা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'৩' হলো সংখ্যার একটি বর্ণরূপ। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455494504,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৬: সংখ্যাবাচক শব্দ",
+    "question": "নিচের কোনটি সংখ্যাশব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বারো",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২০০",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দুশো",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "একাকী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "'দুশো' হলো সংখ্যার শব্দরূপ। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455494672,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৬: সংখ্যাবাচক শব্দ",
+    "question": "একের পর এক যে সংখ্যাগুলো আসে সেগুলোকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ক্রমবাচক",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "পূরণবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সংখ্যাবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তারিখবাচক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ধারাবাহিকভাবে আসা সংখ্যাগুলোকে ক্রমবাচক বলা হয়। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455494823,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৬: সংখ্যাবাচক শব্দ",
+    "question": "নিচের কোনটি পূরণবাচক সংখ্যাশব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পহেলা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সাত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সতেরো",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দ্বি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পহেলা একটি তারিখবাচক তথা পূরণবাচক শব্দ। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455494990,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৬: সংখ্যাবাচক শব্দ",
+    "question": "নিচের কোনটি পূরণবাচক সংখ্যাশব্দ নয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "উনিশে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আড়াই",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আশি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তেহাই",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "তেহাই হলো ভগ্নাংশবাচক শব্দ। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455495151,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৬: সংখ্যাবাচক শব্দ",
+    "question": "সাধারণ পূরণবাচকের নারীবাচক রূপের ব্যবহার আছে কোনটিতে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দশমী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ষোড়শ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আটাশে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ষোলই",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "উৎসে ১৮০ নম্বর প্রশ্নের সঠিক উত্তর হিসেবে 'ঘ' অপশনটি চিহ্নিত করা হয়েছে। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455495320,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৬: সংখ্যাবাচক শব্দ",
+    "question": "পূর্ণসংখ্যার থেকে খানিকটা কম বা বেশি বোঝালে কী ধরনের পূরণবাচক হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গুণিতক পূরণবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ভগ্নাংশ পূরণবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তারিখ পূরণবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সাধারণ পূরণবাচক",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "উৎসে ১৮১ নম্বর প্রশ্নের সঠিক উত্তর হিসেবে 'ঘ' অপশনটি চিহ্নিত করা হয়েছে। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455495490,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৬: সংখ্যাবাচক শব্দ",
+    "question": "নিচের কোনটি ভগ্নাংশ পূরণবাচক শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ষোলই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তেহাই",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সপ্তমী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চতুর্দশ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "তেহাই তিন ভাগের এক ভাগ বোঝায় বিধায় এটি ভগ্নাংশ। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455495617,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৬: সংখ্যাবাচক শব্দ",
+    "question": "নিচের কোনটি পূরণবাচক শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১০",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দশ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দশম",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "দশই",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "দশম হলো একটি সাধারণ পূরণবাচক শব্দ। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455495745,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৬: সংখ্যাবাচক শব্দ",
+    "question": "কোন পূর্ণ পূরণবাচক সংখ্যাটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২৪তম = চব্বিশতম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২১তম = একুশতম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৮০তম = অশীতিতম",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৯৯তম = নিরানব্বইতম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "অশীতিতম রূপটি ব্যাকরণিক ভাবে সঠিক। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455495873,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৬: সংখ্যাবাচক শব্দ",
+    "question": "পূর্ণসংখ্যার থেকে খানিকটা বেশি বোঝালে কী বলা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আধা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পোয়া",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "দেড়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চৌথা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পূর্ণের সাথে চার ভাগের এক ভাগ যুক্ত থাকলে তাকে পোয়া বলা হয়। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455496002,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৬: সংখ্যাবাচক শব্দ",
+    "question": "পূরণবাচক শব্দ 'অশীতিম'-এর অপর নাম কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অশীতিতম",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অষ্টাদশী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নবতীতম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নববিংশতিতম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অশীতিম এবং অশীতিতম একই অর্থ প্রকাশ করে। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455496129,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৬: সংখ্যাবাচক শব্দ",
+    "question": "বাংলা ভাষায় সংখ্যা নির্দেশের জন্য কয়টি সংখ্যাবর্ণ রয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৭",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৮",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৯",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১০",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "শূন্য থেকে নয় পর্যন্ত মোট ১০টি সংখ্যাবর্ণ আছে। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455496244,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৬: সংখ্যাবাচক শব্দ",
+    "question": "পূরণবাচক সংখ্যাশব্দ কত প্রকার?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তিন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "চার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাঁচ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সাধারণ, ভগ্নাংশ ও তারিখ— এই তিন প্রকার। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455496384,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৬: সংখ্যাবাচক শব্দ",
+    "question": "নিচের কোনটি ক্রমবাচক সংখ্যাশব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১১তম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২য়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পঞ্চমী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২০",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "২০ হলো একটি ক্রমবাচক সংখ্যাশব্দ। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455496544,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৬: সংখ্যাবাচক শব্দ",
+    "question": "কোনটি ক্রমবাচক সংখ্যাশব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "একাদশ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সপ্তমী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চৌঠা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চার",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "চার হলো সাধারণ বা ক্রমবাচক সংখ্যা। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455496665,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৬: সংখ্যাবাচক শব্দ",
+    "question": "নারীবাচক রূপের ব্যবহার আছে কোন ধরনের সংখ্যাশব্দে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পূরণবাচক",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "তারিখবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ক্রমবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ভগ্নাংশবাচক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সাধারণ পূরণবাচক শব্দের নারীবাচক রূপ হয়। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455496780,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৬: সংখ্যাবাচক শব্দ",
+    "question": "'সপ্তদশী' শব্দটি কোন সংখ্যাবাচক শব্দের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তারিখবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পূরণবাচক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ভগ্নাংশবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সাধারণ পূরণবাচক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "এটি সাধারণ পূরণবাচকের স্ত্রীলিঙ্গ রূপ। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455496892,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৬: সংখ্যাবাচক শব্দ",
+    "question": "সংখ্যাবাচক শব্দ কয় প্রকার?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চার প্রকার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তিন প্রকার",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পাঁচ প্রকার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দুই প্রকার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "আধুনিক ব্যাকরণ মতে সংখ্যাবাচক শব্দ তিন প্রকার। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455497016,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৬: সংখ্যাবাচক শব্দ",
+    "question": "১৮-এর সাধারণ পূরণবাচক সংখ্যা কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ষোলো",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ষোড়শ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ষোলাই",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অষ্টাদশ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "১৮-এর পূরণবাচক হলো অষ্টাদশ। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455497123,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৬: সংখ্যাবাচক শব্দ",
+    "question": "'তেহাই' কোন প্রকারের সংখ্যাবাচক শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাধারণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ভগ্নাংশ পূরণবাচক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তারিখ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ক্রমবাচক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "এটি একটি ভগ্নাংশকে নির্দেশ করে। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455497242,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৬: সংখ্যাবাচক শব্দ",
+    "question": "সাধারণ পূরণবাচক শব্দের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আড়াই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পঞ্চাশ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "একুশ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিংশ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বিংশ (২০) একটি সাধারণ পূরণবাচক শব্দ। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455497777,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৬: সংখ্যাবাচক শব্দ",
+    "question": "'নব্বই' কোন সংখ্যাবাচক শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তারিখ পূরণবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পূরণবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ক্রমবাচক",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ভগ্নাংশ পূরণবাচক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "নব্বই একটি ক্রমবাচক সংখ্যাশব্দ। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455497924,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৬: সংখ্যাবাচক শব্দ",
+    "question": "কোনটি তারিখবাচক শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পহেলা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "প্রথম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "এক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "মাসের প্রথম দিনকে পহেলা বলা হয় যা একটি তারিখবাচক শব্দ। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455498168,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৬: সংখ্যাবাচক শব্দ",
+    "question": "তারিখবাচক শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নবম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১১",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "একুশে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "উনিশ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "একুশে হলো একটি তারিখবাচক সংখ্যা। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455498280,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৬: সংখ্যাবাচক শব্দ",
+    "question": "কোনটি তারিখবাচক শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চৌঠা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "চতুর্থ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৪",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "চৌঠা তারিখ নির্দেশক শব্দ। [৮]",
+    "image": null,
+    "language": "en"
+  }
+]

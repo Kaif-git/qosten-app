@@ -288,7 +288,7 @@ export const parseCQQuestions = (text, lang = 'en') => {
         }
 
         // Handle Answer section header (Answer:, উত্তর:, সমাধান:, উঃ, etc.) - can be anywhere in the line
-        const answerHeaderRegex = /(?:(?:answer)(?!s)|উত্তরপত্র|(?:উত্তর)(?!ের)|সমাধান(?=\s*[:=ঃ])|উঃ|\bans\b)\s*[:=ঃ]?/i;
+        const answerHeaderRegex = /(?:(?:answer)(?!s)|উত্তরপত্র|উত্তর(?=\s*[:=ঃ])(?!ের)|সমাধান(?=\s*[:=ঃ])|উঃ|\bans\b)\s*[:=ঃ]?/i;
         const answerMatch = line.match(answerHeaderRegex);
         
         if (answerMatch && !state.inAnswerSection) {

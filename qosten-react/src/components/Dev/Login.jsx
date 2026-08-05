@@ -12,7 +12,6 @@ export default function Login() {
   const [error, setError] = useState(null);
   const [message, setMessage] = useState(null);
 
-  // Form states
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [displayName, setDisplayName] = useState('');

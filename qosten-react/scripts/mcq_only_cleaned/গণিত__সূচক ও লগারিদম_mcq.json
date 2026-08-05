@@ -1,0 +1,1388 @@
+[
+  {
+    "id": 1768139839945,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "যদি \\(\\frac{1}{4^x} = 64\\) হয়, তবে \\(x = ?\\)",
+    "options": "[{\"label\":\"a\",\"text\":\"৬\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"৩\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"-১২\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"-৩\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "উভয় পক্ষকে একই ভিত্তিতে (৪) প্রকাশ করি:\n\\(64 = 4^3\\) এবং \\(\\frac{1}{4^x} = 4^{-x}\\)\nসমীকরণটি দাঁড়ায়:\n\\(4^{-x} = 4^3\\)\nযেহেতু ভিত্তি সমান, তাই সূচকগুলোও সমান হবে:\n\\(-x = 3\\)\n\\(x = -3\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139840057,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "\\(\\log_{2\\sqrt{2}} 64\\) এর মান কত?",
+    "options": "[{\"label\":\"a\",\"text\":\"১\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"২\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"৪\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"৮\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "ভিত্তি এবং সংখ্যা উভয়কে ২ এর ঘাত আকারে প্রকাশ করি:\n\\(2\\sqrt{2} = 2 \\times 2^{1/2} = 2^{3/2}\\)\n\\(64 = 2^6\\)\nলগারিদমের সংজ্ঞা অনুযায়ী, ধরি \\(\\log_{2^{3/2}} 2^6 = y\\)\nসূচকীয় রূপে লিখলে:\n\\((2^{3/2})^y = 2^6\\)\n\\(2^{(3y/2)} = 2^6\\)\nসূচক সমান করি:\n\\(\\frac{3y}{2} = 6\\)\n\\(3y = 12\\)\n\\(y = 4\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139840174,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "ভিত্তি \\(2\\sqrt{3}\\) এ ১৪৪ এর লগ কত?",
+    "options": "[{\"label\":\"a\",\"text\":\"\\\\(\\\\sqrt{3}\\\\)\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"২\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"\\\\(2\\\\sqrt{3}\\\\)\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"৪\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "১৪৪ কে ভিত্তির ঘাত আকারে প্রকাশ করি:\n\\((2\\sqrt{3})^2 = 4 \\times 3 = 12\\)\n\\(12^2 = 144\\)\nসুতরাং \\((2\\sqrt{3})^4 = 144\\)\nলগারিদমের সংজ্ঞা অনুযায়ী:\n\\(\\log_{2\\sqrt{3}} (2\\sqrt{3})^4 = 4\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139840289,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "\\(x^0 = 1\\) কোন শর্তে সত্য?",
+    "options": "[{\"label\":\"a\",\"text\":\"\\\\(x \\\\neq 0\\\\)\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"\\\\(x = 0\\\\)\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"\\\\(x > 0\\\\)\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"\\\\(x < 0\\\\)\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "সূচকের নিয়ম অনুযায়ী যেকোনো অশূন্য সংখ্যার সূচক শূন্য হলে তার মান ১ হয়। শূন্যের ঘাত শূন্য (\\(0^0\\)) অনির্দিষ্ট হিসেবে বিবেচিত হয়। তাই শর্তটি হলো:\n\\(x \\neq 0\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139840459,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "\\(\\log_3 3\\) এর মান কত?",
+    "options": "[{\"label\":\"a\",\"text\":\"০\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"১\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"২\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"৩\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "লগারিদমের মৌলিক নিয়ম: যেকোনো বৈধ ভিত্তি \\(b\\) এর জন্য \\(\\log_b b = 1\\)।\nএখানে ভিত্তি এবং সংখ্যা উভয়ই ৩, তাই:\n\\(\\log_3 3 = 1\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139840570,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "\\(\\log_3 (\\sqrt[3]{3} \\cdot \\sqrt{3})\\) এর মান কত?",
+    "options": "[{\"label\":\"a\",\"text\":\"\\\\(\\\\frac{1}{6}\\\\)\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"\\\\(\\\\frac{1}{5}\\\\)\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"\\\\(\\\\frac{5}{6}\\\\)\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"\\\\(\\\\frac{6}{5}\\\\)\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "প্রথমে ভিতরের রাশিটিকে ৩ এর ঘাত আকারে লিখি:\n\\(\\sqrt[3]{3} = 3^{1/3}\\)\n\\(\\sqrt{3} = 3^{1/2}\\)\nগুণফল হবে:\n\\(3^{1/3} \\times 3^{1/2} = 3^{(1/3 + 1/2)}\\)\n\\(\\frac{1}{3} + \\frac{1}{2} = \\frac{2+3}{6} = \\frac{5}{6}\\)\nসুতরাং রাশিটি দাঁড়ায় \\(3^{5/6}\\)।\nএখন লগারিদম প্রয়োগ করি:\n\\(\\log_3 (3^{5/6}) = \\frac{5}{6}\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139840688,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "০.০০০০০৫৩৫৮ এর সাধারণ লগের ক্যারেক্টেরিস্টিক (characteristic) কত?",
+    "options": "[{\"label\":\"a\",\"text\":\"৬\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"৫\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"-৬\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"-৫\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "১ এর চেয়ে ছোট সংখ্যার লগের ক্যারেক্টেরিস্টিক ঋণাত্মক হয়। এটি বের করতে দশমিকের পর প্রথম অশূন্য অঙ্কের আগ পর্যন্ত শূন্যের সংখ্যা গণনা করে ১ যোগ করি এবং ঋণাত্মক চিহ্ন দিই।\n\\(0.000005358\\) এ দশমিকের পর ৫টি শূন্য আছে।\nশূন্যের সংখ্যা \\(+ 1 = 6\\)\nযেহেতু সংখ্যাটি ১ এর চেয়ে ছোট, তাই ক্যারেক্টেরিস্টিক হবে \\(-6\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139840821,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "০.০৩০৫৭ এর সাধারণ লগের ক্যারেক্টেরিস্টিক কত?",
+    "options": "[{\"label\":\"a\",\"text\":\"-৩\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"-১\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"-২\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"১\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "সংখ্যাটিকে বৈজ্ঞানিক রূপে লিখি:\n\\(0.03057 = 3.057 \\times 10^{-2}\\)\n১০ এর সূচকই হলো ক্যারেক্টেরিস্টিক।\nসুতরাং ক্যারেক্টেরিস্টিক \\(= -2\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139841013,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "\\(\\log 625 - 2 \\log 5 = \\text{কত}?\\)",
+    "options": "[{\"label\":\"a\",\"text\":\"\\\\(\\\\log 600\\\\)\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"\\\\(\\\\log 125\\\\)\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"\\\\(\\\\log 25\\\\)\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"\\\\(\\\\log 5\\\\)\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "লগারিদমের নিয়ম প্রয়োগ করি: \\(n \\log a = \\log (a^n)\\)।\n\\(2 \\log 5 = \\log (5^2) = \\log 25\\)\nএখন বিয়োগফল বের করি:\n\\(\\log 625 - \\log 25\\)\nলগ বিয়োগের নিয়ম: \\(\\log m - \\log n = \\log (\\frac{m}{n})\\)।\n\\(\\log \\left(\\frac{625}{25}\\right) = \\log 25\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139841131,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "০.০০০৫৬৭ এর সাধারণ লগের ক্যারেক্টেরিস্টিক কত?",
+    "options": "[{\"label\":\"a\",\"text\":\"-৪\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"-৩\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"-৬\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"-৭\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "সংখ্যাটিকে বৈজ্ঞানিক রূপে প্রকাশ করি:\n\\(0.000567 = 5.67 \\times 10^{-4}\\)\n১০ এর সূচক হলো \\(-4\\)। সুতরাং ক্যারেক্টেরিস্টিক \\(-4\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139841242,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "\\((3^{-1} + 9^{-1})^{-1}\\) এর মান কত?",
+    "options": "[{\"label\":\"a\",\"text\":\"\\\\(\\\\frac{3}{2}\\\\)\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"৩\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"\\\\(\\\\frac{9}{4}\\\\)\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"\\\\(\\\\frac{1}{3}\\\\)\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "প্রথমে ভিতরের রাশি সরলীকরণ করি:\n\\(3^{-1} = \\frac{1}{3}\\)\n\\(9^{-1} = \\frac{1}{9}\\)\nযোগফল:\n\\(\\frac{1}{3} + \\frac{1}{9} = \\frac{3+1}{9} = \\frac{4}{9}\\)\nএখন বাইরের সূচক \\(-1\\) প্রয়োগ করি (বিপরীত মান নিই):\n\\(\\left(\\frac{4}{9}\\right)^{-1} = \\frac{9}{4}\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139841353,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "যদি \\(\\frac{64}{(64)^x} = 16\\) হয়, তবে \\(x\\) এর মান কত?",
+    "options": "[{\"label\":\"a\",\"text\":\"৪\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"\\\\(\\\\frac{1}{3}\\\\)\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"\\\\(-\\\\frac{1}{3}\\\\)\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"-৪\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "উভয় পক্ষকে ৪ এর ঘাত আকারে প্রকাশ করি:\n\\(64 = 4^3\\), \\(16 = 4^2\\)\nসমীকরণ দাঁড়ায়:\n\\(\\frac{4^3}{(4^3)^x} = 4^2\\)\n\\(\\frac{4^3}{4^{3x}} = 4^2\\)\nসূচক নিয়ম অনুযায়ী হর থেকে লবে আনলে সূচক বিয়োগ হয়:\n\\(4^{3 - 3x} = 4^2\\)\nভিত্তি সমান, তাই সূচক সমান করি:\n\\(3 - 3x = 2\\)\n\\(-3x = -1\\)\n\\(x = \\frac{1}{3}\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139841464,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "\\(\\frac{5 \\cdot 3^{x+1} - 14 \\cdot 3^x}{3^x}\\) এর মান কত?",
+    "options": "[{\"label\":\"a\",\"text\":\"২\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"১\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"-১\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"-২\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "লব থেকে \\(3^x\\) কমন নিই:\n\\(5 \\cdot 3^{x+1} = 5 \\cdot 3^x \\cdot 3\\)\nলব \\(= 3^x (5 \\times 3 - 14)\\)\n\\(= 3^x (15 - 14)\\)\n\\(= 3^x \\times 1\\)\nএখন পুরো রাশিটি দাঁড়ায়:\n\\(\\frac{3^x \\times 1}{3^x} = 1\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139841579,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "যদি \\(\\log_x 16 = 2\\) হয়, তবে \\(x\\) এর মান কত?",
+    "options": "[{\"label\":\"a\",\"text\":\"২\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"৪\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"৮\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"১৬\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "লগারিদমিক সমীকরণকে সূচকীয় রূপে রূপান্তর করি:\n\\(\\log_x 16 = 2 \\Rightarrow x^2 = 16\\)\n\\(x = \\sqrt{16}\\)\n\\(x = 4\\) (ভিত্তি সর্বদা ধনাত্মক হয়)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139841692,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "যদি \\(\\frac{1}{5^{x+1}} = 625\\) হয়, তবে \\(x\\) এর মান কত?",
+    "options": "[{\"label\":\"a\",\"text\":\"৩\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"৪\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"-৪\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"-৫\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "৬২৫ কে ৫ এর ঘাত আকারে লিখি:\n\\(625 = 5^4\\)\nসমীকরণ দাঁড়ায়:\n\\(\\frac{1}{5^{x+1}} = 5^4\\)\n\\(5^{-(x+1)} = 5^4\\)\nসূচক সমান করি:\n\\(-(x+1) = 4\\)\n\\(-x - 1 = 4\\)\n\\(-x = 5\\)\n\\(x = -5\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139841802,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "যদি \\(\\log_x 64 = -6\\) হয়, তবে \\(x\\) এর মান কত?",
+    "options": "[{\"label\":\"a\",\"text\":\"-২\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"\\\\(\\\\frac{1}{2}\\\\)\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"\\\\(-\\\\frac{1}{2}\\\\)\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"২\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "সূচকীয় রূপে রূপান্তর করি:\n\\(x^{-6} = 64\\)\n\\(64 = 2^6\\), তাই:\n\\(x^{-6} = 2^6\\)\nউভয় পক্ষের \\(-1\\) ঘাত নিই (বা reciprocal নিই):\n\\(x^6 = 2^{-6}\\)\nউভয় পক্ষের ষষ্ঠ মূল নিলে:\n\\(x = 2^{-1} = \\frac{1}{2}\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139841922,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "০.০০০৪৫৭ এর সাধারণ লগের ক্যারেক্টেরিস্টিক কত?",
+    "options": "[{\"label\":\"a\",\"text\":\"-৪\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"-৩\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"-৬\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"-৫\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "সংখ্যাটিকে বৈজ্ঞানিক রূপে লিখি:\n\\(0.000457 = 4.57 \\times 10^{-4}\\)\nক্যারেক্টেরিস্টিক হলো ১০ এর সূচক:\n\\(-4\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139842031,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "০.০০২৩৪২ এর লগের ম্যান্টিসা (mantissa) কত?",
+    "options": "[{\"label\":\"a\",\"text\":\"-২.৬৩০৮\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"২.৬৩০৮\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"০.৩৬৯২\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"০.৬৩০৮\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "যেকোনো সংখ্যার লগ = ক্যারেক্টেরিস্টিক + ম্যান্টিসা।\n\\(0.002342 = 2.342 \\times 10^{-3}\\)\nক্যারেক্টেরিস্টিক \\(= -3\\)।\nসম্পূর্ণ লগের মান ঋণাত্মক হলে ম্যান্টিসা সর্বদা ধনাত্মক ভগ্নাংশ হয়।\n\\(\\log(0.002342) \\approx -2.6308\\)\nএকে \\(-3 + 0.3692\\) আকারে লেখা যায়।\nসুতরাং ম্যান্টিসা \\(= 0.3692\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139842142,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "যদি \\(3^x = 2187\\) হয়, তবে \\(x\\) এর মান কত?",
+    "options": "[{\"label\":\"a\",\"text\":\"৯\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"৫\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"৩\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"৭\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "২১৮৭ কে ৩ এর ঘাত আকারে প্রকাশ করি:\n\\(3^1 = 3, 3^2 = 9, 3^3 = 27, 3^4 = 81, 3^5 = 243, 3^6 = 729, 3^7 = 2187\\)\nসুতরাং:\n\\(3^x = 3^7\\)\n\\(x = 7\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139842250,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "০.০০৩৭৭ এর সাধারণ লগের ক্যারেক্টেরিস্টিক কত?",
+    "options": "[{\"label\":\"a\",\"text\":\"-৩\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"-২\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"২\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"৩\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "বৈজ্ঞানিক রূপে প্রকাশ করি:\n\\(0.00377 = 3.77 \\times 10^{-3}\\)\nক্যারেক্টেরিস্টিক \\(= -3\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139842365,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "\\(\\frac{4^n - 1}{2^n + 1}\\) এর মান নিচের কোনটি?",
+    "options": "[{\"label\":\"a\",\"text\":\"\\\\(2^{n+1}\\\\)\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"\\\\(2^{n-1}\\\\)\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"\\\\(2^n - 1\\\\)\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"\\\\(2^n + 1\\\\)\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "লবকে বর্গের সূত্র অনুযায়ী উৎপাদকে বিশ্লেষণ করি:\n\\(4^n - 1 = (2^2)^n - 1^2 = (2^n)^2 - 1^2\\)\n\\(= (2^n - 1)(2^n + 1)\\)\nএখন রাশিটিতে বসিয়ে পাই:\n\\(\\frac{(2^n - 1)(2^n + 1)}{2^n + 1} = 2^n - 1\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139842476,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "যদি \\((\\sqrt{5})^{x+3} = (\\sqrt{5})^{2(x-1)}\\) হয়, তবে \\(x\\) এর মান কত?",
+    "options": "[{\"label\":\"a\",\"text\":\"\\\\(\\\\frac{1}{7}\\\\)\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"\\\\(\\\\frac{5}{3}\\\\)\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"৪\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"৫\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "ভিত্তি সমান, তাই সূচকগুলো সমান হবে:\n\\(x + 3 = 2(x - 1)\\)\n\\(x + 3 = 2x - 2\\)\n\\(3 + 2 = 2x - x\\)\n\\(5 = x\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139842588,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "\\(\\log_{49} 7 + \\log_{\\sqrt{7}} 7\\) এর মান কত?",
+    "options": "[{\"label\":\"a\",\"text\":\"\\\\(\\\\frac{1}{2}\\\\)\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"\\\\(\\\\frac{3}{2}\\\\)\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"\\\\(\\\\frac{5}{2}\\\\)\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"\\\\(\\\\frac{7}{2}\\\\)\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "প্রথম পদ:\n\\(\\log_{49} 7 = \\log_{7^2} 7^1 = \\frac{1}{2}\\)\nদ্বিতীয় পদ:\n\\(\\log_{\\sqrt{7}} 7 = \\log_{7^{1/2}} 7^1 = \\frac{1}{1/2} = 2\\)\nযোগফল:\n\\(\\frac{1}{2} + 2 = \\frac{5}{2}\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139842702,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "যদি \\(\\log_x 27 = -3\\) হয়, তবে \\(x\\) এর মান কত?",
+    "options": "[{\"label\":\"a\",\"text\":\"-৯\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"-৩\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"\\\\(\\\\frac{1}{3}\\\\)\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"৯\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "সূচকীয় রূপে রূপান্তর করি:\n\\(x^{-3} = 27\\)\n\\(27 = 3^3\\), তাই:\n\\(x^{-3} = 3^3\\)\nবিপরীত নিলে:\n\\(x^3 = 3^{-3}\\)\n\\(x = \\frac{1}{3}\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139842813,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "যদি \\(\\sqrt[3]{m} = 3\\) হয়, তবে \\(m = ?\\)",
+    "options": "[{\"label\":\"a\",\"text\":\"\\\\(\\\\sqrt[3]{3}\\\\)\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"\\\\(\\\\sqrt{3}\\\\)\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"২৭\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"৯\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "ঘনমূল অপসারণ করতে উভয় পক্ষকে ঘন করি:\n\\((\\sqrt[3]{m})^3 = 3^3\\)\n\\(m = 27\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139842921,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "ভিত্তি \\(\\sqrt{5}\\) এ \\(\\sqrt[3]{5}\\) এর লগ কত?",
+    "options": "[{\"label\":\"a\",\"text\":\"৩\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"\\\\(\\\\frac{1}{3}\\\\)\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"\\\\(\\\\frac{2}{3}\\\\)\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"\\\\(\\\\frac{3}{2}\\\\)\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "উভয়কে ৫ এর ঘাত আকারে লিখি:\nভিত্তি \\(\\sqrt{5} = 5^{1/2}\\)\nসংখ্যা \\(\\sqrt[3]{5} = 5^{1/3}\\)\nলগারিদমের সূচক পরিবর্তনের নিয়ম অনুযায়ী:\n\\(\\log_{5^{1/2}} 5^{1/3} = \\frac{1/3}{1/2}\\)\n\\(= \\frac{1}{3} \\times \\frac{2}{1} = \\frac{2}{3}\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139843043,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "যদি \\(p = 25q\\) হয়, তবে \\(\\log_5 p - \\log_5 q\\) এর মান কত?",
+    "options": "[{\"label\":\"a\",\"text\":\"১\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"২\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"৫\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"২৫\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "লগারিদমের বিয়োগ সূত্র ব্যবহার করি:\n\\(\\log_5 p - \\log_5 q = \\log_5 \\left(\\frac{p}{q}\\right)\\)\n\\(p = 25q\\) বসিয়ে পাই:\n\\(\\log_5 \\left(\\frac{25q}{q}\\right) = \\log_5 25\\)\n\\(25 = 5^2\\), তাই:\n\\(\\log_5 5^2 = 2\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139843161,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "ভিত্তি \\(\\sqrt{3}\\) এ ৮১ এর লগ কত?",
+    "options": "[{\"label\":\"a\",\"text\":\"৮\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"৪\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"৬\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"২\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "সংখ্যাটিকে ভিত্তির ঘাত আকারে প্রকাশ করি:\n\\(81 = 3^4\\)\nভিত্তি \\(\\sqrt{3} = 3^{1/2}\\)\nধরি \\(\\log_{3^{1/2}} 3^4 = y\\)\nসূচকীয় রূপ:\n\\((3^{1/2})^y = 3^4\\)\n\\(3^{y/2} = 3^4\\)\nসূচক সমান করি:\n\\(\\frac{y}{2} = 4\\)\n\\(y = 8\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139843272,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "যদি \\((\\sqrt{7})^x = 49\\) হয়, তবে \\(x = ?\\)",
+    "options": "[{\"label\":\"a\",\"text\":\"৯\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"৫\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"৪\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"২\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "উভয় পক্ষকে ৭ এর ঘাত আকারে লিখি:\n\\(\\sqrt{7} = 7^{1/2}\\), \\(49 = 7^2\\)\nসমীকরণ দাঁড়ায়:\n\\((7^{1/2})^x = 7^2\\)\n\\(7^{x/2} = 7^2\\)\nসূচক সমান করি:\n\\(\\frac{x}{2} = 2\\)\n\\(x = 4\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139843392,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "০.০৩৩২২ সংখ্যাটির বৈজ্ঞানিক রূপ নিচের কোনটি?",
+    "options": "[{\"label\":\"a\",\"text\":\"\\\\(332 \\\\times 10^{-3}\\\\)\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"\\\\(3.32 \\\\times 10^{-2}\\\\)\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"\\\\(33.2 \\\\times 10^{-3}\\\\)\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"\\\\(0.332 \\\\times 10^{-1}\\\\)\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "বৈজ্ঞানিক রূপে সংখ্যাটিকে \\(a \\times 10^n\\) আকারে লেখা হয়, যেখানে \\(1 \\leq a < 10\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139843502,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "যদি \\(4^{x+2} = 16\\) হয়, তবে \\(x\\) এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৪",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "০",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "-২",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\(16 = 4^2\\)। সুতরাং \\(4^{x+2} = 4^2\\), তাহলে \\(x+2 = 2\\), সুতরাং \\(x = 0\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139843616,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "\\(\\sqrt[4]{16^2}\\) এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৪",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "৬",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৮",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\(\\sqrt[4]{16^2} = (16^2)^{1/4} = 16^{2/4} = 16^{1/2} = \\sqrt{16} = 4\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139843731,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "০.০০০২২৫ এর সাধারণ লগের ক্যারেক্টেরিস্টিক কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-৪",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "-৩",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৩",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৪",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(0.000225 = 2.25 \\times 10^{-4}\\)। ক্যারেক্টেরিস্টিক হলো \\(-4\\) (সাধারণত \\(\\bar{4}\\) হিসেবে লেখা হয়)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139843840,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "০.০০০০৬২৫ এর বৈজ্ঞানিক রূপ নিচের কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(6.25 \\times 10^4\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(6.25 \\times 10^{-4}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(6.25 \\times 10^{-5}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\(6.25 \\times 10^{-6}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\(0.0000625 = 6.25 \\times 10^{-5}\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139843985,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "০.০০০৭৬ এর বৈজ্ঞানিক রূপ নিচের কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(0.76 \\times 10^{-3}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(7.6 \\times 10^{-3}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(7.6 \\times 10^{-4}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\(76 \\times 10^{-5}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\(0.00076 = 7.6 \\times 10^{-4}\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139844097,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "যদি \\(\\log_a x = 3\\) এবং \\(\\log_x y = 2\\) হয়, তবে \\(\\log_a y\\) এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৫",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৬",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৮",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "শৃঙ্খল নিয়ম ব্যবহার করি: \\(\\log_a y = \\log_a x \\cdot \\log_x y = 3 \\times 2 = 6\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139844206,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "যদি \\(2^{3x+1} = 8\\) হয়, তবে \\(x\\) এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(\\frac{3}{2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(\\frac{4}{3}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(\\frac{2}{3}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\(\\frac{3}{4}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\(8 = 2^3\\)। সুতরাং \\(2^{3x+1} = 2^3\\), তাহলে \\(3x+1 = 3\\), \\(3x = 2\\), \\(x = \\frac{2}{3}\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139844317,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "\\(\\left(16^{\\frac{3}{2}}\\right)^{\\frac{2}{3}} = ?\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৬",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "১২",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৮",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৪",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(\\left(16^{3/2}\\right)^{2/3} = 16^{(3/2) \\cdot (2/3)} = 16^{1} = 16\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139844428,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "যদি \\(m = 2n\\) হয়, তবে \\(a^{m-n} \\times a^{m+n}\\) এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(a\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(a^{2n}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(a^{4n}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\(a^{2m}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\(a^{m-n} \\times a^{m+n} = a^{(m-n)+(m+n)} = a^{2m}\\)। যেহেতু \\(m=2n\\), সুতরাং \\(2m = 4n\\)। সুতরাং এটি \\(a^{4n}\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139844540,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "যদি \\(25^x = 125\\) হয়, তবে \\(x\\) এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৩",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(\\frac{3}{2}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "১",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(\\frac{1}{2}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "৫ ভিত্তিতে লিখি: \\(25 = 5^2\\), \\(125 = 5^3\\)। সুতরাং \\((5^2)^x = 5^3\\) -> \\(5^{2x} = 5^3\\)। সূচক সমান করি: \\(2x = 3\\), সুতরাং \\(x = \\frac{3}{2}\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139844670,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "যদি \\((\\sqrt{3})^{x+2} = 27\\) হয়, তবে \\(x\\) এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৬",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৪",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "৩",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\(\\sqrt{3} = 3^{1/2}\\), \\(27 = 3^3\\)। সুতরাং \\((3^{1/2})^{x+2} = 3^3\\) -> \\(3^{(x+2)/2} = 3^3\\)। সূচক সমান করি: \\((x+2)/2 = 3\\) -> x+2=6 -> x=4।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139844803,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "যদি \\(\\frac{5}{5^m} = 1\\) হয়, তবে \\(m = ?\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "-১",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "০",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৫",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\(\\frac{5}{5^m} = 5^{1-m} = 1 = 5^0\\)। সুতরাং \\(1-m = 0\\), অর্থাৎ \\(m = 1\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139844922,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "\\(\\frac{16^n - 1}{4^n - 1}\\) এর সরলীকৃত মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(2^n - 1\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(2^{2n} - 1\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(2^{2n} + 1\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\(2^n + 1\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\(16^n = (4^2)^n = 4^{2n}\\)। সুতরাং \\(\\frac{4^{2n} - 1}{4^n - 1}\\)। লবকে বর্গের সূত্রে উৎপাদকে বিশ্লেষণ করি: \\((4^n - 1)(4^n + 1)\\)। \\(4^n - 1\\) কাটাকাটি করলে থাকে \\(4^n + 1 = (2^2)^n + 1 = 2^{2n} + 1\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139845049,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "\\(a^{n+1} \\cdot a^{-n} = ?\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(a\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(a^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(a^2\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(a^0\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(a^{n+1} \\cdot a^{-n} = a^{(n+1) + (-n)} = a^1 = a\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139845161,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "\\(\\frac{7 \\cdot 2^{x+1} - 13 \\cdot 2^x}{2^x} = ?\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "-২",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-১",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "২",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "লব থেকে \\(2^x\\) কমন নিই: \\(\\frac{2^x (7 \\cdot 2 - 13)}{2^x} = \\frac{2^x (14 - 13)}{2^x} = 1\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139845273,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "\\(a^3 \\times a^{-5} = ?\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(a^2\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(a^{-2}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "\\(a^8\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(a^{-8}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\(a^3 \\times a^{-5} = a^{3-5} = a^{-2}\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139845433,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "যদি \\((\\sqrt{3})^{2x+1} = (\\sqrt[3]{3})^{x-1}\\) হয়, তবে \\(x\\) এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(-\\frac{5}{4}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(-\\frac{4}{5}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(\\frac{4}{5}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(\\frac{5}{4}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "৩ ভিত্তিতে লিখি: \\(\\sqrt{3} = 3^{1/2}\\), \\(\\sqrt[3]{3} = 3^{1/3}\\)। সুতরাং \\((3^{1/2})^{2x+1} = (3^{1/3})^{x-1}\\) -> \\(3^{(2x+1)/2} = 3^{(x-1)/3}\\)। সূচক সমান করি: \\(\\frac{2x+1}{2} = \\frac{x-1}{3}\\)। আড়গুণন করি: \\(3(2x+1) = 2(x-1)\\) -> \\(6x+3 = 2x-2\\) -> \\(4x = -5\\) -> \\(x = -\\frac{5}{4}\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139845612,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "০.০৬২৫ এর সাধারণ লগের ক্যারেক্টেরিস্টিক কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(\\bar{2}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "১",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "২",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-১",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(0.0625 = 6.25 \\times 10^{-2}\\)। ক্যারেক্টেরিস্টিক হলো \\(-2\\), যা \\(\\bar{2}\\) হিসেবে লেখা হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139845760,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "০.০০০০৪৫৭ সংখ্যার লগের ক্যারেক্টেরিস্টিক কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(\\bar{5}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "৪",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "-৪",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-৫",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(0.0000457 = 4.57 \\times 10^{-5}\\)। ক্যারেক্টেরিস্টিক হলো \\(-5\\), যা \\(\\bar{5}\\) হিসেবে লেখা হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139845898,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "যদি \\(\\frac{32}{64^x} = 8\\) হয়, তবে \\(x\\) এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-৪",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(-\\frac{1}{3}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(\\frac{1}{3}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৪",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "২ ভিত্তিতে প্রকাশ করি: \\(32=2^5, 64=2^6, 8=2^3\\)। সুতরাং \\(\\frac{2^5}{(2^6)^x} = 2^3\\) -> \\(\\frac{2^5}{2^{6x}} = 2^3\\) -> \\(2^{5-6x} = 2^3\\)। সুতরাং \\(5-6x=3\\) -> \\(-6x=-2\\) -> \\(x=\\frac{1}{3}\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139846081,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "\\(\\log_8 4\\) এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(\\frac{1}{2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(\\frac{1}{3}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(\\frac{2}{3}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\(\\frac{3}{2}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ধরি \\(\\log_8 4 = y\\)। তাহলে \\(8^y = 4\\)। ২ ভিত্তিতে লিখি: \\((2^3)^y = 2^2\\) -> \\(2^{3y} = 2^2\\) -> \\(3y=2\\) -> \\(y=\\frac{2}{3}\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139846199,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "যদি \\(\\log_x 324 = 4\\) হয়, তবে \\(x = ?\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(3\\sqrt{2}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(2\\sqrt{3}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(4\\sqrt{3}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(3\\sqrt{3}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(\\log_x 324 = 4\\) অর্থ \\(x^4 = 324\\)। \\(324 = 4 \\times 81 = 2^2 \\times 3^4\\)। \\(324^{1/4} = (324^{1/2})^{1/2} = 18^{1/2} = \\sqrt{18} = 3\\sqrt{2}\\)। সুতরাং \\(x = 3\\sqrt{2}\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139846308,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "\\((2m^{-2}\\sqrt{m})^{-2}\\) এর সরলীকৃত রূপ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(\\frac{m^5}{4}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(\\frac{m^5}{16}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(\\frac{m^3}{4}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(\\frac{m^6}{32}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "প্রথমে ভিতর সরল করি: \\(\\sqrt{m} = m^{1/2}\\)। সুতরাং \\(2m^{-2} \\cdot m^{1/2} = 2m^{-2+1/2} = 2m^{-3/2}\\)।\nতারপর \\(-2\\) ঘাতে উন্নীত করি: \\((2m^{-3/2})^{-2} = 2^{-2} \\cdot m^{(-3/2)(-2)} = \\frac{1}{4} \\cdot m^{3} = \\frac{m^3}{4}\\)।\nকিন্তু যদি মূল রাশি \\((4m^{-2}\\sqrt{m})^{-2}\\) হয় তাহলে:\n\\((4m^{-3/2})^{-2} = 4^{-2} \\cdot m^3 = \\frac{m^3}{16}\\)।\nঅথবা যদি \\((2m^{-1}\\sqrt{m})^{-2}\\) হয়:\n\\((2m^{-1/2})^{-2} = 4^{-1}m = \\frac{m}{4}\\)।\nঅথবা যদি মূল রাশি ভিন্ন হয় যা \\(\\frac{m^5}{4}\\) দেয়, তাহলে সেটি হবে \\((2m^{-5/2})^{-2} = \\frac{m^5}{4}\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139846418,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "১২৫ সংখ্যাটির জন্য—\ni. সাধারণ লগের ক্যারেক্টেরিস্টিক ২\nii. সাধারণ লগের ম্যান্টিসা ০.০৯৬৯১\niii. ভিত্তি ৫ এ লগ ৩",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "১২৫ এর জন্য:\ni. ক্যারেক্টেরিস্টিক: \\(125 = 1.25 \\times 10^2\\), সুতরাং ক্যারেক্টেরিস্টিক ২। সত্য।\nii. ম্যান্টিসা: log 125 = log(1.25 × 10^2) = 2 + log 1.25। log 1.25 ≈ 0.09691, সুতরাং ম্যান্টিসা 0.09691। সত্য।\niii. \\(\\log_5 125 = \\log_5 5^3 = 3\\)। সত্য।\nসুতরাং i, ii, iii সবই সঠিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139846528,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "একটি হাইড্রোজেন পরমাণুর ব্যাসার্ধ \\(0.0000000037 \\, \\text{সেমি}\\)। সংখ্যাটির জন্য—\ni. আদর্শ রূপ = \\(3.7 \\times 10^{-9}\\)\nii. সাধারণ লগের ক্যারেক্টেরিস্টিক = \\(\\bar{9}\\)\niii. সাধারণ লগের ম্যান্টিসা = ০.৫৬৮২",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "i. \\(0.0000000037 = 3.7 \\times 10^{-9}\\)। সঠিক।\nii. ক্যারেক্টেরিস্টিক হলো -9 (লিখিত \\(\\bar{9}\\))। সঠিক।\niii. ম্যান্টিসা: log(3.7) ≈ 0.5682। সঠিক।\nসুতরাং সবগুলো সঠিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139846633,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "ভিত্তি ১০ লগের ক্ষেত্রে—\ni. log 0 = 1\nii. log 1 = 0\niii. log 100 = 2",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "i. log 0 অসংজ্ঞায়িত, 1 নয়। মিথ্যা।\nii. log 1 = 0। সত্য।\niii. log 100 = log 10^2 = 2। সত্য।\nসুতরাং ii ও iii সঠিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139846752,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "সূচক ও লগারিদমের ক্ষেত্রে—\ni. \\(a^{-n} = \\frac{1}{a^n}\\), যেখানে \\(a \\neq 0\\), \\(n \\in \\mathbb{N}\\)\nii. \\(\\frac{a^m}{a^n} = \\frac{1}{a^{n-m}}\\), যখন \\(n > m\\)\niii. log (3×4) = log3 – log4",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "i. সঠিক, ঋণাত্মক সূচকের সংজ্ঞা।\nii. \\(\\frac{a^m}{a^n} = a^{m-n}\\)। যদি n > m হয়, তবে m-n ঋণাত্মক, সুতরাং \\(a^{m-n} = \\frac{1}{a^{n-m}}\\)। সঠিক।\niii. log(3×4) = log 3 + log 4, বিয়োগ নয়। মিথ্যা।\nসুতরাং i ও ii সঠিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139846858,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "যদি \\(\\log_a N = P\\) হয়, তবে—\ni. N > 0\nii. a > 0, \\(a \\neq 1\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i শুধুমাত্র",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii শুধুমাত্র",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কোনোটিই নয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(\\log_a N\\) সংজ্ঞায়িত হওয়ার জন্য: সংখ্যা N ধনাত্মক হতে হবে (N>0), ভিত্তি a ধনাত্মক এবং ১ এর সমান হতে পারবে না (a>0, a≠1)। সুতরাং i ও ii উভয়ই সঠিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139846962,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "i. \\(\\log_4 2 = \\frac{1}{2}\\)\nii. যদি \\(4^{2x+1} = 2\\) হয়, তবে \\(x = -\\frac{1}{4}\\)\niii. \\((3^{-1} + 6^{-1})^{-1} = 2\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "i. \\(\\log_4 2 = \\frac{1}{2}\\) কারণ \\(4^{1/2} = 2\\)। সত্য।\nii. \\(4^{2x+1} = 2\\) -> \\((2^2)^{2x+1} = 2^1\\) -> \\(2^{4x+2} = 2^1\\) -> 4x+2=1 -> 4x=-1 -> x=-1/4। সত্য।\niii. \\((3^{-1}+6^{-1})^{-1} = (\\frac{1}{3}+\\frac{1}{6})^{-1} = (\\frac{2}{6}+\\frac{1}{6})^{-1} = (\\frac{3}{6})^{-1} = (\\frac{1}{2})^{-1} = 2\\)। সত্য।\nসুতরাং i, ii ও iii সবগুলো সঠিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139847069,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "যদি \\(a = b\\) হয়, তবে \\(x = ?\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "-২",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-১",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "০",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "১",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\(a = b\\) -> \\(3^x = 9^{-x}\\) -> \\(3^x = (3^2)^{-x} = 3^{-2x}\\)। সুতরাং \\(x = -2x\\) -> \\(3x = 0\\) -> \\(x=0\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139847178,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "নিচের কোন সম্পর্কটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(ab^2 = 1\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(\\frac{a}{b^2} = 1\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(a^2b = 1\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\(\\frac{a^2}{b} = 1\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\(a = 3^x\\), \\(b = 9^{-x} = 3^{-2x}\\)। তাহলে \\(a^2b = (3^x)^2 \\cdot 3^{-2x} = 3^{2x} \\cdot 3^{-2x} = 3^0 = 1\\)। সুতরাং \\(a^2b = 1\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139847291,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "\\(\\log_2 (xy)\\) এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৫",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৮",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "১৫",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\(\\log_2 (xy) = \\log_2 x + \\log_2 y = 5 + 3 = 8\\)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768139847399,
+    "subject": "গণিত",
+    "chapter": "সূচক ও লগারিদম",
+    "question": "\\(\\log_2 (\\frac{x}{y})\\) এর মান কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(\\frac{3}{5}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(\\frac{5}{3}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "২",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৮",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\(\\log_2 (\\frac{x}{y}) = \\log_2 x - \\log_2 y = 5 - 3 = 2\\)।",
+    "image": null,
+    "language": "en"
+  }
+]

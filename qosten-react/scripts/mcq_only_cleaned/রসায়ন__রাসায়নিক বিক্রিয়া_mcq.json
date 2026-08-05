@@ -1,0 +1,1934 @@
+[
+  {
+    "id": 1766492838388,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "CuSO₄ + Na → Cu + Na₂SO₄; এটি কী ধরনের বিক্রিয়া?",
+    "options": [
+      {
+        "text": "প্রশমন বিক্রিয়া",
+        "label": "a"
+      },
+      {
+        "text": "দ্বিমেরু বিক্রিয়া",
+        "label": "b"
+      },
+      {
+        "text": "প্রতিস্থাপন বিক্রিয়া",
+        "label": "c"
+      },
+      {
+        "text": "সংযোজন বিক্রিয়া",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সোডিয়াম CuSO₄ থেকে কপারকে প্রতিস্থাপিত করে, তাই এটি একটি প্রতিস্থাপন (একক স্থানচ্যুতি) বিক্রিয়া।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492838559,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "নিচের কোনটি একটি রেডক্স বিক্রিয়া?",
+    "options": [
+      {
+        "text": "প্রশমন",
+        "label": "a"
+      },
+      {
+        "text": "সমাণুকরণ",
+        "label": "b"
+      },
+      {
+        "text": "বহুলীকরণ",
+        "label": "c"
+      },
+      {
+        "text": "দহন",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "দহনে ইলেকট্রন স্থানান্তর ঘটে (জ্বালানির জারণ, অক্সিজেনের বিজারণ), তাই এটি একটি রেডক্স বিক্রিয়া।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492839303,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "কোন বিক্রিয়ায় চাপের প্রভাব বিদ্যমান?",
+    "options": [
+      {
+        "text": "NH₄CNO → H₂N-CO-NH₂",
+        "label": "a"
+      },
+      {
+        "text": "N₂O₃ + O₂(g) ⇌ 2NO(g)",
+        "label": "b"
+      },
+      {
+        "text": "3NO₂(g) + H₂O(g) ⇌ 2HNO₃(g) + NO(g)",
+        "label": "c"
+      },
+      {
+        "text": "H₂(g) + Cl₂(g) ⇌ 2HCl(g)",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "চাপ গ্যাসীয় সম্যাবস্থাকে প্রভাবিত করে যখন গ্যাসের মোল সংখ্যায় পরিবর্তন হয়; এখানে N₂O₃ + O₂ ⇌ 2NO-তে গ্যাসের মোল সংখ্যা পরিবর্তিত হয়।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492839713,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "জলযোজিত ফেরিক অক্সাইডকে কী বলে?",
+    "options": [
+      {
+        "text": "প্যারাফিন",
+        "label": "a"
+      },
+      {
+        "text": "মোম",
+        "label": "b"
+      },
+      {
+        "text": "লবণ",
+        "label": "c"
+      },
+      {
+        "text": "মরিচা",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "জলযোজিত ফেরিক অক্সাইড (Fe₂O₃·xH₂O) সাধারণত মরিচা নামে পরিচিত।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492839901,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "HClO₃-এ Cl-এর জারণ সংখ্যা কত?",
+    "options": [
+      {
+        "text": "+1",
+        "label": "a"
+      },
+      {
+        "text": "+3",
+        "label": "b"
+      },
+      {
+        "text": "+5",
+        "label": "c"
+      },
+      {
+        "text": "+7",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "HClO₃-এ, H = +1, O = -2; ধরি Cl = x: +1 + x + 3(-2) = 0 → x = +5।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492841180,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "প্রশমন বিক্রিয়ার উৎপাদ কী কী?",
+    "options": [
+      {
+        "text": "NaOH এবং H₂O",
+        "label": "a"
+      },
+      {
+        "text": "NaCl এবং H₂O",
+        "label": "b"
+      },
+      {
+        "text": "Na₂SO₄ এবং H₂SO₄",
+        "label": "c"
+      },
+      {
+        "text": "NaOH এবং H₂SO₄",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "একটি অ্যাসিড (HCl) ও একটি ক্ষারক (NaOH)-এর প্রশমনে লবণ (NaCl) ও পানি (H₂O) উৎপন্ন হয়।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492841681,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "নিচের কোনটি বিজারণ বিক্রিয়ার উদাহরণ?",
+    "options": [
+      {
+        "text": "SnCl₂ + Cl₂ → SnCl₄",
+        "label": "a"
+      },
+      {
+        "text": "2KI + H₂O₂ → I₂ + 2KOH",
+        "label": "b"
+      },
+      {
+        "text": "H₂S + Cl₂ → S + 2HCl",
+        "label": "c"
+      },
+      {
+        "text": "CuO + H₂ → Cu + H₂O",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "CuO + H₂ → Cu + H₂O-এ Cu-এর বিজারণ ঘটে (+2 থেকে 0)।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492841992,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "HgCl₂ + Hg → Hg₂Cl₂; এ বিক্রিয়ার বিজারক কোনটি?",
+    "options": [
+      {
+        "text": "Cl",
+        "label": "a"
+      },
+      {
+        "text": "Hg",
+        "label": "b"
+      },
+      {
+        "text": "Cl⁻",
+        "label": "c"
+      },
+      {
+        "text": "Hg²⁺",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Hg, HgCl₂-তে Hg-কে Hg₂Cl₂-তে বিজারিত করে, তাই এটি বিজারক হিসেবে কাজ করে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492842230,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "নিচের কোনটি একটি জারক?",
+    "options": [
+      {
+        "text": "O₂",
+        "label": "a"
+      },
+      {
+        "text": "H₂",
+        "label": "b"
+      },
+      {
+        "text": "H₂S",
+        "label": "c"
+      },
+      {
+        "text": "CO",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "O₂ বিক্রিয়ায় ইলেকট্রন গ্রহণ করে, তাই এটি জারক হিসেবে কাজ করে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492842235,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "SiCl₄-এর জলবিশ্লেষণে কী উৎপন্ন হয়?",
+    "options": [
+      {
+        "text": "Si(OH)₃",
+        "label": "a"
+      },
+      {
+        "text": "Si(OH)₄",
+        "label": "b"
+      },
+      {
+        "text": "SiCl₂",
+        "label": "c"
+      },
+      {
+        "text": "SiO₂",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "SiCl₄ + 4H₂O → Si(OH)₄ + 4HCl; সিলিকন টেট্রাক্লোরাইড জলবিশ্লেষিত হয়ে সিলিসিক অ্যাসিড, Si(OH)₄ উৎপন্ন করে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492842486,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "কোন বিক্রিয়ায় পানি অন্যান্য যৌগের সাথে বিক্রিয়া করে নতুন যৌগ সৃষ্টি করে?",
+    "options": [
+      {
+        "text": "প্রশমন বিক্রিয়া",
+        "label": "a"
+      },
+      {
+        "text": "জলবিশ্লেষণ",
+        "label": "b"
+      },
+      {
+        "text": "বিযোজন",
+        "label": "c"
+      },
+      {
+        "text": "অধঃক্ষেপণ",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "জলবিশ্লেষণ হলো এমন একটি বিক্রিয়া যেখানে পানি একটি যৌগের সাথে বিক্রিয়া করে নতুন পদার্থ উৎপন্ন করে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492842735,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "নিচের কোনটি ইলেকট্রন গ্রহণ করবে?",
+    "options": [
+      {
+        "text": "Na",
+        "label": "a"
+      },
+      {
+        "text": "Ca",
+        "label": "b"
+      },
+      {
+        "text": "Cl",
+        "label": "c"
+      },
+      {
+        "text": "Cs",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ক্লোরিন (Cl) একটি হ্যালোজেন যা স্থির অষ্টক লাভের জন্য ইলেকট্রন গ্রহণে আগ্রহী।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492843541,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "KMnO₄-এ Mn-এর জারণ সংখ্যা কত?",
+    "options": [
+      {
+        "text": "0",
+        "label": "a"
+      },
+      {
+        "text": "+1",
+        "label": "b"
+      },
+      {
+        "text": "+2",
+        "label": "c"
+      },
+      {
+        "text": "+3",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "+7",
+    "explanation": "KMnO₄-এ Mn-এর জারণ সংখ্যা +7।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492843555,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "নিচের কোনটি একটি রেডক্স বিক্রিয়া? [1766492843555]",
+    "options": [
+      {
+        "text": "প্রশমন বিক্রিয়া",
+        "label": "a"
+      },
+      {
+        "text": "প্রতিস্থাপন বিক্রিয়া",
+        "label": "b"
+      },
+      {
+        "text": "সমাণুকরণ বিক্রিয়া",
+        "label": "c"
+      },
+      {
+        "text": "বহুলীকরণ বিক্রিয়া",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "প্রতিস্থাপন বিক্রিয়ায় প্রায়ই ইলেকট্রন স্থানান্তর ঘটে, তাই সেগুলো রেডক্স বিক্রিয়া।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492843573,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "টলেন বিকারকের বিক্রিয়া কোন ধরনের?",
+    "options": [
+      {
+        "text": "অধঃক্ষেপণ",
+        "label": "a"
+      },
+      {
+        "text": "রেডক্স",
+        "label": "b"
+      },
+      {
+        "text": "দ্বিমেরু",
+        "label": "c"
+      },
+      {
+        "text": "জলযোজন",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "টলেন বিকারক (Ag(NH₃)₂⁺) অ্যালডিহাইডকে কার্বক্সিলিক অ্যাসিডে জারিত করে এবং নিজে ধাতব রূপায় বিজারিত হয়, এটি একটি রেডক্স বিক্রিয়া।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492843608,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "যৌগ LiAlH₄-এ হাইড্রোজেনের জারণ সংখ্যা কত?",
+    "options": [
+      {
+        "text": "+1",
+        "label": "a"
+      },
+      {
+        "text": "-1",
+        "label": "b"
+      },
+      {
+        "text": "0",
+        "label": "c"
+      },
+      {
+        "text": "1",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "LiAlH₄-এ হাইড্রোজেনের জারণ সংখ্যা -1।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492843756,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "AgNO₃(l) + NaCl(l) → NaNO₃(l) + AgCl(s)। এখানে দর্শক আয়ন কোনটি?",
+    "options": [
+      {
+        "text": "Na⁺, Cl⁻",
+        "label": "a"
+      },
+      {
+        "text": "Na⁺, OH⁻",
+        "label": "b"
+      },
+      {
+        "text": "Na⁺, NO₃⁻",
+        "label": "c"
+      },
+      {
+        "text": "Ag⁺, Cl⁻",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Na⁺ ও NO₃⁻ দর্শক আয়ন, কারণ তারা অধঃক্ষেপ গঠনে অংশগ্রহণ করে না।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492844039,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "অ্যান্টাসিডে কোনটি থাকে?",
+    "options": [
+      {
+        "text": "Mg(OH)₂",
+        "label": "a"
+      },
+      {
+        "text": "HCl",
+        "label": "b"
+      },
+      {
+        "text": "Ca(OH)₂",
+        "label": "c"
+      },
+      {
+        "text": "NaOH",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অ্যান্টাসিডে ক্ষারক যেমন Mg(OH)₂ থাকে যা অতিরিক্ত পাকস্থলীর অ্যাসিড প্রশমিত করে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492844072,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "H₃PO₄-এ P-এর জারণ সংখ্যা কত?",
+    "options": [
+      {
+        "text": "+5",
+        "label": "a"
+      },
+      {
+        "text": "-5",
+        "label": "b"
+      },
+      {
+        "text": "+4",
+        "label": "c"
+      },
+      {
+        "text": "-4",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "H₃PO₄-এ, H = +1, O = -2; ধরি P = x: 3(+1) + x + 4(-2) = 0 → x = +5।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492844234,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "নিচের কোনটি সংযোজন বিক্রিয়ার উদাহরণ?",
+    "options": [
+      {
+        "text": "2H₂O → 2H₂ + O₂",
+        "label": "a"
+      },
+      {
+        "text": "Zn + CuSO₄ → ZnSO₄ + Cu",
+        "label": "b"
+      },
+      {
+        "text": "H₂ + Cl₂ → 2HCl",
+        "label": "c"
+      },
+      {
+        "text": "CH₄ + 2O₂ → CO₂ + 2H₂O",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "H₂ + Cl₂ → 2HCl-এ দুটি বিকারক মিলে একটি একক উৎপাদ গঠন করে, এটি একটি সংযোজন বিক্রিয়া।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492844256,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "N₂O₅-এ N-এর জারণ সংখ্যা কত?",
+    "options": [
+      {
+        "text": "+4",
+        "label": "a"
+      },
+      {
+        "text": "-4",
+        "label": "b"
+      },
+      {
+        "text": "+5",
+        "label": "c"
+      },
+      {
+        "text": "+2",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "N₂O₅-এ, O = -2; ধরি N = x: 2x + 5(-2) = 0 → x = +5।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492844296,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "নিচের কোনটি একটি প্রাকৃতিক বহুযোগী?",
+    "options": [
+      {
+        "text": "PVC",
+        "label": "a"
+      },
+      {
+        "text": "নাইলন",
+        "label": "b"
+      },
+      {
+        "text": "সেলুলোজ",
+        "label": "c"
+      },
+      {
+        "text": "টেফলন",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সেলুলোজ উদ্ভিদ কোষ প্রাচীতে পাওয়া একটি প্রাকৃতিক বহুযোগী।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492844909,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "Zn + CuSO₄ → ZnSO₄ + Cu; এটি কী ধরনের বিক্রিয়া?",
+    "options": [
+      {
+        "text": "প্রশমন বিক্রিয়া",
+        "label": "a"
+      },
+      {
+        "text": "অধঃক্ষেপণ বিক্রিয়া",
+        "label": "b"
+      },
+      {
+        "text": "সংযোজন বিক্রিয়া",
+        "label": "c"
+      },
+      {
+        "text": "রেডক্স বিক্রিয়া",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Zn জারিত হয় (0 থেকে +2) এবং Cu²⁺ বিজারিত হয় (+2 থেকে 0), তাই এটি একটি রেডক্স বিক্রিয়া।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492844930,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "নিচের কোনটি একটি অ-রেডক্স বিক্রিয়া?",
+    "options": [
+      {
+        "text": "HCl + NaOH → NaCl + H₂O",
+        "label": "a"
+      },
+      {
+        "text": "S + O₂ → SO₂",
+        "label": "b"
+      },
+      {
+        "text": "2FeCl₂ + Cl₂ → 2FeCl₃",
+        "label": "c"
+      },
+      {
+        "text": "Zn + 2HCl → ZnCl₂ + H₂",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "HCl + NaOH → NaCl + H₂O একটি প্রশমন বিক্রিয়া যাতে জারণ সংখ্যার কোনো পরিবর্তন হয় না।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492845056,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "গ্যালভানাইজিং কোন ধাতুর সাহায্যে করা হয়?",
+    "options": [
+      {
+        "text": "দস্তা (Zn)",
+        "label": "a"
+      },
+      {
+        "text": "তামা (Cu)",
+        "label": "b"
+      },
+      {
+        "text": "রূপা (Ag)",
+        "label": "c"
+      },
+      {
+        "text": "টিন (Sn)",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "গ্যালভানাইজিং হলো লোহা বা ইস্পাতকে মরিচা প্রতিরোধের জন্য দস্তা দিয়ে প্রলেপ দেওয়ার প্রক্রিয়া।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492845171,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "ওষুধ হিসেবে অ্যান্টাসিড সেবন করলে কোন ধরনের বিক্রিয়া ঘটে?",
+    "options": [
+      {
+        "text": "সংযোজন",
+        "label": "a"
+      },
+      {
+        "text": "প্রশমন",
+        "label": "b"
+      },
+      {
+        "text": "দহন",
+        "label": "c"
+      },
+      {
+        "text": "প্রতিস্থাপন",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "অ্যান্টাসিড অতিরিক্ত পাকস্থলীর অ্যাসিড (HCl) কে প্রশমিত করে একটি প্রশমন বিক্রিয়া ঘটায়।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492845311,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "Cu₂Cl₂ + Cl₂ → 2CuCl₂; এটি কোন ধরনের বিক্রিয়া?",
+    "options": [
+      {
+        "text": "সংযোজন",
+        "label": "a"
+      },
+      {
+        "text": "সংশ্লেষণ",
+        "label": "b"
+      },
+      {
+        "text": "বিযোজন",
+        "label": "c"
+      },
+      {
+        "text": "অ-রেডক্স",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Cl₂, Cu₂Cl₂-এ যুক্ত হয়ে 2CuCl₂ গঠন করে, এটি একটি সংযোজন বিক্রিয়া।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492845680,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "VO²⁺ এবং VO₂⁺-এর জারণ সংখ্যা কী কী?",
+    "options": [
+      {
+        "text": "+3, +2",
+        "label": "a"
+      },
+      {
+        "text": "+4, +5",
+        "label": "b"
+      },
+      {
+        "text": "+5, +3",
+        "label": "c"
+      },
+      {
+        "text": "+5, +5",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "VO²⁺ হলো ভ্যানাডিল(IV) আয়ন (V = +4), VO₂⁺ হলো ভ্যানাডিল(V) আয়ন (V = +5)।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492846285,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "CO₂ + C → 2CO: এ বিক্রিয়ায় বিজারক কতটি ইলেকট্রন দান করে?",
+    "options": [
+      {
+        "text": "1",
+        "label": "a"
+      },
+      {
+        "text": "2",
+        "label": "b"
+      },
+      {
+        "text": "3",
+        "label": "c"
+      },
+      {
+        "text": "4",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "C, 0 থেকে +2 এ জারিত হয়ে CO গঠন করে, প্রতি পরমাণু 2টি ইলেকট্রন হারায়; সুতরাং বিজারক 2টি ইলেকট্রন দান করে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492846328,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "কোনটি একটি রেডক্স বিক্রিয়া?",
+    "options": [
+      {
+        "text": "Cu²⁺ + 4NH₃ → [Cu(NH₃)₄]²⁺",
+        "label": "a"
+      },
+      {
+        "text": "Ca + F₂ → CaF₂",
+        "label": "b"
+      },
+      {
+        "text": "NH₃ + H⁺ → NH₄⁺",
+        "label": "c"
+      },
+      {
+        "text": "Ca²⁺ + 2F⁻ → CaF₂",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Ca + F₂-এ Ca-এর জারণ (0 থেকে +2) এবং F₂-এর বিজারণ (0 থেকে -1) ঘটে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492846339,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "গন্ধক (সালফার) দহন বিক্রিয়ায় কী উৎপন্ন করে?",
+    "options": [
+      {
+        "text": "H₂S",
+        "label": "a"
+      },
+      {
+        "text": "SO₂",
+        "label": "b"
+      },
+      {
+        "text": "SO₄²⁻",
+        "label": "c"
+      },
+      {
+        "text": "H₂SO₄",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "গন্ধক অক্সিজেনে পুড়ে সালফার ডাই-অক্সাইড (SO₂) গঠন করে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492846670,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "তামা ও টিন গলিয়ে কোন মিশ্রধাতু তৈরি করা হয়?",
+    "options": [
+      {
+        "text": "ইস্পাত",
+        "label": "a"
+      },
+      {
+        "text": "পিতল",
+        "label": "b"
+      },
+      {
+        "text": "ডুরালুমিন",
+        "label": "c"
+      },
+      {
+        "text": "ব্রোঞ্জ",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ব্রোঞ্জ হলো তামা ও টিন গলিয়ে তৈরি একটি মিশ্রধাতু।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492847429,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "Mg(NO₃)₂ → MgO + A + O₂ বিক্রিয়ায় 'A'-এর সংকেত কী?",
+    "options": [
+      {
+        "text": "NO₂",
+        "label": "a"
+      },
+      {
+        "text": "N₂O₃",
+        "label": "b"
+      },
+      {
+        "text": "NO",
+        "label": "c"
+      },
+      {
+        "text": "N₂",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সমতাপূর্ণ বিযোজন হলো: 2Mg(NO₃)₂ → 2MgO + 4NO₂ + O₂, সুতরাং 'A' হলো NO₂।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492847490,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "মরিচার একটি বৈশিষ্ট্য কী?",
+    "options": [
+      {
+        "text": "লোহার মত শক্ত",
+        "label": "a"
+      },
+      {
+        "text": "পানিতে দ্রবণীয়",
+        "label": "b"
+      },
+      {
+        "text": "চৌম্বক আকর্ষণ নেই",
+        "label": "c"
+      },
+      {
+        "text": "লোহার সমাণু",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মরিচা ভঙ্গুর, ছিদ্রযুক্ত এবং সাধারণত অ-চৌম্বকীয়।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492847551,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "CH₃CH₂OH + CH₃COOH → A; এ বিক্রিয়ায় 'A' কী?",
+    "options": [
+      {
+        "text": "CH₃CH₂COCH₃",
+        "label": "a"
+      },
+      {
+        "text": "CH₃CH₂CHOHCH₃",
+        "label": "b"
+      },
+      {
+        "text": "CH₃CHOCH₃",
+        "label": "c"
+      },
+      {
+        "text": "CH₃COOCH₂CH₃",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ইথানল ও অ্যাসিটিক অ্যাসিড এস্টারীকরণ বিক্রিয়ায় ইথাইল অ্যাসিটেট, CH₃COOCH₂CH₃ গঠন করে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492847669,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "বিক্রিয়া হারের একক কোনটি?",
+    "options": [
+      {
+        "text": "মোল",
+        "label": "a"
+      },
+      {
+        "text": "মোল/লিটার",
+        "label": "b"
+      },
+      {
+        "text": "মোল/সময়",
+        "label": "c"
+      },
+      {
+        "text": "মোল/(লিটার·সময়)",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বিক্রিয়া হার সাধারণত একক সময়ে ঘনমাত্রার পরিবর্তন হিসেবে প্রকাশিত হয়: mol L⁻¹ s⁻১ বা অনুরূপ।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492847697,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "কোন উপাদানের উপস্থিতিতে লোহার মরিচা ধরে?",
+    "options": [
+      {
+        "text": "অক্সিজেন",
+        "label": "a"
+      },
+      {
+        "text": "হাইড্রোজেন",
+        "label": "b"
+      },
+      {
+        "text": "নাইট্রোজেন",
+        "label": "c"
+      },
+      {
+        "text": "জলীয় বাষ্প",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "মরিচা ধরার জন্য অক্সিজেন ও পানি (বা জলীয় বাষ্প) উভয়ই প্রয়োজন।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492848393,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "একটি বিপরীতমুখী বিক্রিয়ার সাম্যাবস্থা কী নিয়ন্ত্রণ করে?",
+    "options": [
+      {
+        "text": "প্লবতা",
+        "label": "a"
+      },
+      {
+        "text": "বিক্রিয়া হার",
+        "label": "b"
+      },
+      {
+        "text": "জারণ সংখ্যা",
+        "label": "c"
+      },
+      {
+        "text": "বিকারকের ঘনমাত্রা",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সাম্যাবস্থার অবস্থান বিকারক ও উৎপাদের ঘনমাত্রা (এবং চাপ, উষ্ণতা) দ্বারা প্রভাবিত হয়।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492848440,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "NH₄Cl + H₂O → NH₄OH + HCl; উপরোক্ত বিক্রিয়াকে কী বলে?",
+    "options": [
+      {
+        "text": "প্রশমন",
+        "label": "a"
+      },
+      {
+        "text": "জলবিশ্লেষণ",
+        "label": "b"
+      },
+      {
+        "text": "জলযোজন",
+        "label": "c"
+      },
+      {
+        "text": "সংযোজন",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "NH₄Cl পানি সাথে বিক্রিয়া করে NH₄OH ও HCl উৎপন্ন করে, এটি একটি জলবিশ্লেষণ বিক্রিয়া।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492848594,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "N₂(g) + 3H₂(g) ⇌ 2NH₃(g) + 92 kJ। উপরোক্ত বিক্রিয়ায় তাপ প্রয়োগ করলে কী ঘটবে?",
+    "options": [
+      {
+        "text": "উৎপাদন হ্রাস পাবে",
+        "label": "a"
+      },
+      {
+        "text": "উৎপাদন বৃদ্ধি পাবে",
+        "label": "b"
+      },
+      {
+        "text": "বিক্রিয়া অগ্রমুখী দিকে অগ্রসর হবে",
+        "label": "c"
+      },
+      {
+        "text": "উৎপন্ন তাপের পরিমাণ বৃদ্ধি পাবে",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অগ্রগামী বিক্রিয়া তাপাক্রিয়াক (92 kJ তাপ নির্গত হয়)। তাপ যোগ করলে তাপগ্রাহী বিপরীত বিক্রিয়া পছন্দনীয় হয়, ফলে NH₃ উৎপাদন হ্রাস পায়।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492849045,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "নিচের কোনটি একটি অ-রেডক্স বিক্রিয়া? [1766492849045]",
+    "options": [
+      {
+        "text": "Zn(s) + H₂SO₄(l) → ZnSO₄(aq) + H₂(g)",
+        "label": "a"
+      },
+      {
+        "text": "2FeCl₂(aq) + Cl₂(g) → 2FeCl₃(aq)",
+        "label": "b"
+      },
+      {
+        "text": "Mg(s) + O₂(g) → 2MgO(g)",
+        "label": "c"
+      },
+      {
+        "text": "NaCl(aq) + AgNO₃(aq) → AgCl(s) + NaNO₃(aq)",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "NaCl + AgNO₃ → AgCl + NaNO₃ একটি দ্বৈত স্থানচ্যুতি অধঃক্ষেপণ বিক্রিয়া, এতে জারণ সংখ্যার কোনো পরিবর্তন হয় না।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492849083,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "অ্যান্টাসিড কোন ধরনের পদার্থ?",
+    "options": [
+      {
+        "text": "অম্লীয়",
+        "label": "a"
+      },
+      {
+        "text": "ক্ষারীয়",
+        "label": "b"
+      },
+      {
+        "text": "প্রশমনকারী",
+        "label": "c"
+      },
+      {
+        "text": "নিরপেক্ষ",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "অ্যান্টাসিড হলো ক্ষারীয় পদার্থ যা পাকস্থলীর অ্যাসিড প্রশমিত করে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492849205,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "ইথিলিন থেকে পলিথিন তৈরি করা কোন ধরনের বিক্রিয়া?",
+    "options": [
+      {
+        "text": "জলযোজন",
+        "label": "a"
+      },
+      {
+        "text": "সংশ্লেষণ",
+        "label": "b"
+      },
+      {
+        "text": "সংযোজন",
+        "label": "c"
+      },
+      {
+        "text": "বহুলীকরণ",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ইথিলিন মনোমারগুলো যুক্ত হয়ে পলিইথিলিন গঠন করে, এটি একটি বহুলীকরণ বিক্রিয়া।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492849686,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "(CH₂=CHCl)-এর বহুলীকরণে কোনটি উৎপন্ন হয়?",
+    "options": [
+      {
+        "text": "বেকেলাইট",
+        "label": "a"
+      },
+      {
+        "text": "টেফলন",
+        "label": "b"
+      },
+      {
+        "text": "PVC",
+        "label": "c"
+      },
+      {
+        "text": "ডোলোমাইট",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ভিনাইল ক্লোরাইড (CH₂=CHCl) বহুলীকরণে পলিভিনাইল ক্লোরাইড (PVC) গঠন করে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492849842,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "অ্যামোনিয়াম সায়ানেট তাপ দিলে ইউরিয়া উৎপন্ন হয়, এটি কোন বিক্রিয়া?",
+    "options": [
+      {
+        "text": "বহুলীকরণ",
+        "label": "a"
+      },
+      {
+        "text": "সমাণুকরণ",
+        "label": "b"
+      },
+      {
+        "text": "প্রতিস্থাপন",
+        "label": "c"
+      },
+      {
+        "text": "প্রশমন",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "NH₄CNO → H₂NCONH₂-তে পরমাণুর পুনর্বিন্যাস ঘটে, আণবিক সংকেত অপরিবর্তিত থাকে, তাই এটি একটি সমাণুকরণ বিক্রিয়া।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492850009,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "জলযোজিত ফেরিক অক্সাইডকে আমরা কী বলি?",
+    "options": [
+      {
+        "text": "মরিচা",
+        "label": "a"
+      },
+      {
+        "text": "লবণ",
+        "label": "b"
+      },
+      {
+        "text": "প্যারাফিন",
+        "label": "c"
+      },
+      {
+        "text": "মোম",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "জলযোজিত ফেরিক অক্সাইড সাধারণভাবে মরিচা নামে পরিচিত।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492850138,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "কোন যৌগটি পানিতে দ্রবণীয়? [1766492850138]",
+    "options": [
+      {
+        "text": "PbI₂",
+        "label": "a"
+      },
+      {
+        "text": "BaCl₂",
+        "label": "b"
+      },
+      {
+        "text": "MgCl₂",
+        "label": "c"
+      },
+      {
+        "text": "AgI",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "MgCl₂ পানিতে অত্যন্ত দ্রবণীয়, অপরদিকে PbI₂ ও AgI অদ্রবণীয়, এবং BaCl₂ দ্রবণীয় তবে এমন তালিকায় কম সাধারণ।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492850392,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "শুকনো CuSO₄-এর রং কী?",
+    "options": [
+      {
+        "text": "নীল",
+        "label": "a"
+      },
+      {
+        "text": "সবুজ",
+        "label": "b"
+      },
+      {
+        "text": "সাদা",
+        "label": "c"
+      },
+      {
+        "text": "বাদামি",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "অজলীয় কপার(II) সালফেট (শুকনো CuSO₄) সাদা রঙের হয়।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492850546,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "কোনটির উপর চাপের প্রভাব আছে?",
+    "options": [
+      {
+        "text": "H₂(g) + I₂(g) ⇌ 2HI(g)",
+        "label": "a"
+      },
+      {
+        "text": "N₂O₄(g) ⇌ 2NO₂(g)",
+        "label": "b"
+      },
+      {
+        "text": "AgNO₃(l) + NaCl(l) → NaNO₃(l) + AgCl(s)",
+        "label": "c"
+      },
+      {
+        "text": "C(s) + O₂(g) → CO₂(g)",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "N₂O₄ ⇌ 2NO₂-তে গ্যাসের মোল সংখ্যা পরিবর্তন ঘটে (1 → 2), তাই চাপ সাম্যাবস্থাকে প্রভাবিত করে।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492850635,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "CH₄(g) + 2O₂ ⇌ CO₂(g) + 2H₂O; ΔH = -890 kJ mol⁻¹। লা শাতলিয়ের নীতিমত চাপ বৃদ্ধি করলে সাম্যাবস্থা—",
+    "options": [
+      {
+        "text": "ডান দিকে সরে যাবে",
+        "label": "a"
+      },
+      {
+        "text": "বাম দিকে সরে যাবে",
+        "label": "b"
+      },
+      {
+        "text": "সাম্যাবস্থার উপর কোন প্রভাব ফেলবে না",
+        "label": "c"
+      },
+      {
+        "text": "তাপ হ্রাস পাবে",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "উভয় পাশে গ্যাসের মোল সংখ্যা সমান (প্রতিটি পাশে 3 মোল), তাই চাপ পরিবর্তনের কোন প্রভাব নেই।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492850746,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "গ্লুকোজ অণুর সংকেত কী?",
+    "options": [
+      {
+        "text": "C₁₂H₂₂O₁₁",
+        "label": "a"
+      },
+      {
+        "text": "C₁₂H₂₄O₁₂",
+        "label": "b"
+      },
+      {
+        "text": "C₆H₁₂O₆",
+        "label": "c"
+      },
+      {
+        "text": "C₆H₁₀O₅",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "গ্লুকোজের আণবিক সংকেত C₆H₁₂O₆।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492850919,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "বিপরীতমুখী বিক্রিয়ার সাম্যাবস্থায় উৎপাদের পরিমাণ বর্ণনা করে কোন সূত্র?",
+    "options": [
+      {
+        "text": "ফাজানের নীতি",
+        "label": "a"
+      },
+      {
+        "text": "সাম্যাবস্থার নীতি",
+        "label": "b"
+      },
+      {
+        "text": "লা শাতলিয়ের নীতি",
+        "label": "c"
+      },
+      {
+        "text": "থম্পসনের নীতি",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "লা শাতলিয়ের নীতি পূর্বাভাস দেয় যে অবস্থার পরিবর্তনে সাম্যাবস্থা কীভাবে সরে যায়।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492851576,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "মানবদেহে সংঘটিত বিক্রিয়াটির নাম কী?",
+    "options": [
+      {
+        "text": "সালোকসংশ্লেষণ",
+        "label": "a"
+      },
+      {
+        "text": "শ্বসন",
+        "label": "b"
+      },
+      {
+        "text": "দহন",
+        "label": "c"
+      },
+      {
+        "text": "প্রশমন",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "শ্বসন হলো জীবকোষে সংঘটিত একটি বিপাকীয় বিক্রিয়া।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492851613,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "শ্বসন প্রক্রিয়ার বিক্রিয়া কোনটি?",
+    "options": [
+      {
+        "text": "C₁₂H₂₂O₁₁ + O₂ → CO₂ + H₂O + O₂ + শক্তি",
+        "label": "a"
+      },
+      {
+        "text": "C₆H₁₂O₆ + O₂ → CO₂ + H₂O₂ + শক্তি",
+        "label": "b"
+      },
+      {
+        "text": "C₆H₁₂O₆ + O₂ → CO₂ + H₂O + শক্তি",
+        "label": "c"
+      },
+      {
+        "text": "C₆H₁₀O₅ + O₂ → CO₂ + H₂O + শক্তি",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কোষীয় শ্বসন: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + শক্তি।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492852917,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "কোন বিক্রিয়ায় ইলেকট্রন স্থানান্তরিত হয়?",
+    "options": [
+      {
+        "text": "Ca + 2HCl → CaCl₂ + H₂",
+        "label": "a"
+      },
+      {
+        "text": "KOH + HCl → KCl + H₂O",
+        "label": "b"
+      },
+      {
+        "text": "KCl + AgNO₃ → AgCl + KNO₃",
+        "label": "c"
+      },
+      {
+        "text": "MgCl₂ + 7H₂O → MgCl₂·7H₂O",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Ca + 2HCl-এ Ca-এর জারণ (0 থেকে +2) এবং H⁺-এর বিজারণ (+1 থেকে 0) ঘটে, তাই ইলেকট্রন স্থানান্তরিত হয়।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492853444,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "তড়িৎ প্রলেপনের উদ্দেশ্য কী?",
+    "options": [
+      {
+        "text": "মরিচা প্রতিরোধ বা ধাতু সংরক্ষণ",
+        "label": "a"
+      },
+      {
+        "text": "বিক্রিয়া প্রতিরোধ",
+        "label": "b"
+      },
+      {
+        "text": "কোমলতা বৃদ্ধি",
+        "label": "c"
+      },
+      {
+        "text": "স্থিতিস্থাপকতা বৃদ্ধি",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "তড়িৎ প্রলেপন প্রাথমিকভাবে ক্ষয় রোধ ও ভিত্তি ধাতু সংরক্ষণের জন্য ব্যবহৃত হয়।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492853500,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "নীল তুতির সংকেত কী?",
+    "options": [
+      {
+        "text": "FeSO₄·7H₂O",
+        "label": "a"
+      },
+      {
+        "text": "ZnSO₄·7H₂O",
+        "label": "b"
+      },
+      {
+        "text": "MgCl₂·7H₂O",
+        "label": "c"
+      },
+      {
+        "text": "CuSO₄·5H₂O",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "নীল তুতি হলো কপার(II) সালফেট পেন্টাহাইড্রেট, CuSO₄·5H₂O।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492853697,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "নিচের কোনটি একটি তাপাক্রিয়াক বিক্রিয়া?",
+    "options": [
+      {
+        "text": "SO₂(g) → S(s) + O₂(g)",
+        "label": "a"
+      },
+      {
+        "text": "H₂O(g) → H₂(g) + O₂(g)",
+        "label": "b"
+      },
+      {
+        "text": "N₂(g) + H₂(g) → NO(g)",
+        "label": "c"
+      },
+      {
+        "text": "N₂(g) + H₂(g) → NH₃(g)",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "N₂ + 3H₂ → 2NH₃ তাপাক্রিয়াক (তাপ নির্গত করে)।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492853808,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "NO(g) + ½O₂(g) ⇌ NO₂(g)। সাম্যাবস্থায় চাপ প্রয়োগ করলে কী ঘটবে?",
+    "options": [
+      {
+        "text": "বিক্রিয়া বন্ধ হয়ে যাবে",
+        "label": "a"
+      },
+      {
+        "text": "বিক্রিয়া বিপরীত দিকে সরে যাবে",
+        "label": "b"
+      },
+      {
+        "text": "বিক্রিয়া অগ্রগামী দিকে সরে যাবে",
+        "label": "c"
+      },
+      {
+        "text": "চাপ বৃদ্ধির বিক্রিয়ার উপর কোন প্রভাব পড়বে না",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "চাপ বৃদ্ধি কম গ্যাস মোল বিশিষ্ট দিককে (1.5 → 1) পছন্দ করে, তাই অগ্রগামী বিক্রিয়া পছন্দনীয় হয়।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492853954,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "Ca + Cl₂ → CaCl₂—এ বিক্রিয়ায় কোনটি জারিত হয়?",
+    "options": [
+      {
+        "text": "Cl₂",
+        "label": "a"
+      },
+      {
+        "text": "Ca",
+        "label": "b"
+      },
+      {
+        "text": "Ca²⁺",
+        "label": "c"
+      },
+      {
+        "text": "Cl⁻",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Ca, 0 থেকে +2 তে জারিত হয়।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492854043,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "কোনো ধাতুকে দস্তা দিয়ে প্রলেপ দেওয়ার প্রক্রিয়াকে কী বলে?",
+    "options": [
+      {
+        "text": "গ্যালভানাইজিং",
+        "label": "a"
+      },
+      {
+        "text": "ভালকানাইজিং",
+        "label": "b"
+      },
+      {
+        "text": "টিন প্রলেপন",
+        "label": "c"
+      },
+      {
+        "text": "জিঙ্ক প্রলেপন",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "গ্যালভানাইজিং হলো লোহা বা ইস্পাতকে দস্তা প্রলেপ দেওয়ার প্রক্রিয়া।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492854094,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "উষ্ণতা বৃদ্ধি করলে কী ঘটবে?",
+    "options": [
+      {
+        "text": "বিক্রিয়া হার বৃদ্ধি পাবে",
+        "label": "a"
+      },
+      {
+        "text": "বিক্রিয়া হার হ্রাস পাবে",
+        "label": "b"
+      },
+      {
+        "text": "বিক্রিয়া হার অপরিবর্তিত থাকবে",
+        "label": "c"
+      },
+      {
+        "text": "অন্য ধরনের বিক্রিয়া ঘটবে",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "উষ্ণতা বৃদ্ধি সাধারণত অণুর গতিশক্তি বৃদ্ধি করে বিক্রিয়া হার বাড়ায়।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492854127,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "কপার সালফেটে সালফারের জারণ সংখ্যা কত?",
+    "options": [
+      {
+        "text": "+2",
+        "label": "a"
+      },
+      {
+        "text": "+4",
+        "label": "b"
+      },
+      {
+        "text": "+6",
+        "label": "c"
+      },
+      {
+        "text": "+8",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "CuSO₄-এ: +2 + x + 4(-2) = 0 → x - 6 = 0 → x = +6।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492854324,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "নিচের কোন বিক্রিয়ায় চাপের কোন প্রভাব নেই?",
+    "options": [
+      {
+        "text": "2NO₂(g) ⇌ N₂O₄(g)",
+        "label": "a"
+      },
+      {
+        "text": "H₂(g) + I₂(g) ⇌ 2HI(g)",
+        "label": "b"
+      },
+      {
+        "text": "CaO(s) + CO₂(g) ⇌ CaCO₃(s)",
+        "label": "c"
+      },
+      {
+        "text": "N₂(g) + 3H₂(g) ⇌ 2NH₃(g)",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "H₂ + I₂ ⇌ 2HI-তে উভয় পাশে গ্যাসের মোল সংখ্যা সমান, তাই চাপ পরিবর্তনে সাম্যাবস্থার কোনো পরিবর্তন হয় না।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492854349,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "ওলিয়ামে সালফারের জারণ সংখ্যা কত?",
+    "options": [
+      {
+        "text": "+6",
+        "label": "a"
+      },
+      {
+        "text": "+4",
+        "label": "b"
+      },
+      {
+        "text": "+2",
+        "label": "c"
+      },
+      {
+        "text": "0",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ওলিয়াম হলো H₂S₂O₇ বা অনুরূপ; এতে সালফারের জারণ সংখ্যা +6।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492854915,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "মরিচার রাসায়নিক সংকেত কী?",
+    "options": [
+      {
+        "text": "Fe₃O₄·xH₂O",
+        "label": "a"
+      },
+      {
+        "text": "FeO·xH₂O",
+        "label": "b"
+      },
+      {
+        "text": "Fe₂O₃·xH₂O",
+        "label": "c"
+      },
+      {
+        "text": "FeS·xH₂O",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মরিচা হলো জলযোজিত ফেরিক অক্সাইড, Fe₂O₃·xH₂O।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492854947,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "KO₂ যৌগে অক্সিজেনের জারণ সংখ্যা কত?",
+    "options": [
+      {
+        "text": "½",
+        "label": "a"
+      },
+      {
+        "text": "-1",
+        "label": "b"
+      },
+      {
+        "text": "-2",
+        "label": "c"
+      },
+      {
+        "text": "+½",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "KO₂ (পটাসিয়াম সুপারঅক্সাইড)-এ অক্সিজেন O₂⁻ আকারে থাকে, তাই জারণ অবস্থা -1।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492858118,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "প্রবল অ্যাসিড ও প্রবল ক্ষারকের প্রশমন তাপের মান কত?",
+    "options": [
+      {
+        "text": "ΔH = -57.23 kJ",
+        "label": "a"
+      },
+      {
+        "text": "ΔH = -58.78 kJ",
+        "label": "b"
+      },
+      {
+        "text": "ΔH = -57.28 kJ",
+        "label": "c"
+      },
+      {
+        "text": "ΔH = -57.34 kJ",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্রবল অ্যাসিড ও প্রবল ক্ষারকের জন্য আদর্শ প্রশমন তাপ প্রায় -57.28 kJ/mol।",
+    "image": null,
+    "language": "bn"
+  },
+  {
+    "id": 1766492859429,
+    "subject": "রসায়ন",
+    "chapter": "রাসায়নিক বিক্রিয়া",
+    "question": "সোডিয়াম থায়োসালফেটে সালফারের জারণ সংখ্যা কত?",
+    "options": [
+      {
+        "text": "+2",
+        "label": "a"
+      },
+      {
+        "text": "+4",
+        "label": "b"
+      },
+      {
+        "text": "+6",
+        "label": "c"
+      },
+      {
+        "text": "+8",
+        "label": "d"
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Na₂S₂O₃-এর জন্য: 2(+1) + 2x + 3(-2) = 0 → 2 + 2x - 6 = 0 → 2x = 4 → x = +2।",
+    "image": null,
+    "language": "bn"
+  }
+]

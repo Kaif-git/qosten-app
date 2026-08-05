@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1768140872295,
+    "subject": "Mathematics",
+    "chapter": "Geometry",
+    "lesson": "Theorems on Triangles and Parallelograms",
+    "question": null,
+    "parts": "[{\"label\":\"a\",\"letter\":\"a\",\"text\":\"Prove that, AD is the bisector of ∠A.\",\"marks\":2,\"answer\":\"In ∆ABD and ∆ACD:\\n- AB = AC (sides of equilateral triangle)\\n- BD = DC (AD is median)\\n- AD is common side\\n∴ ∆ABD ≅ ∆ACD (SSS)\\n∴ ∠BAD = ∠CAD\\n∴ AD bisects ∠A.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140871319_nru53.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140871319_nru53.jpeg\"},{\"label\":\"b\",\"letter\":\"b\",\"text\":\"Prove that, AB + AC > 2AD.\",\"marks\":4,\"answer\":\"Extend AD to E such that DE = AD. Join C, E.\\nIn ∆ABD and ∆ECD:\\n- BD = DC (D is midpoint)\\n- AD = DE (construction)\\n- ∠ADB = ∠EDC (vertically opposite)\\n∴ ∆ABD ≅ ∆ECD (SAS)\\n∴ AB = CE\\nIn ∆AEC: AC + CE > AE (triangle inequality)\\n⇒ AC + AB > AD + DE\\n⇒ AB + AC > AD + AD\\n∴ AB + AC > 2AD.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140871320_nqd3ljh.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140871320_nqd3ljh.jpeg\"},{\"label\":\"c\",\"letter\":\"c\",\"text\":\"Prove that, \\\\( 4AD^2 = 3AB^2 \\\\).\",\"marks\":4,\"answer\":\"In equilateral ∆ABC, AD is median ⇒ AD ⊥ BC.\\nIn right ∆ABD:\\n\\\\[\\nAB^2 = AD^2 + BD^2\\n\\\\]\\nBut BD = \\\\(\\\\frac{BC}{2} = \\\\frac{AB}{2}\\\\)\\n\\\\[\\nAB^2 = AD^2 + \\\\left(\\\\frac{AB}{2}\\\\right)^2\\n\\\\]\\n\\\\[\\nAB^2 = AD^2 + \\\\frac{AB^2}{4}\\n\\\\]\\n\\\\[\\nAB^2 - \\\\frac{AB^2}{4} = AD^2\\n\\\\]\\n\\\\[\\n\\\\frac{3AB^2}{4} = AD^2\\n\\\\]\\n\\\\[\\n4AD^2 = 3AB^2\\n\\\\]\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140871320_ou3a2l.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140871320_ou3a2l.jpeg\"}]",
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768140872919,
+    "subject": "Mathematics",
+    "chapter": "Geometry",
+    "lesson": "Midpoint Theorem and Pythagoras",
+    "question": null,
+    "parts": "[{\"label\":\"a\",\"letter\":\"a\",\"text\":\"The perimeter of an equilateral triangle is 15 cm. Find the area of the triangle.\",\"marks\":2,\"answer\":\"Perimeter = 15 cm ⇒ side = 5 cm.\\nArea = \\\\(\\\\frac{\\\\sqrt{3}}{4} \\\\times 5^2 = \\\\frac{25\\\\sqrt{3}}{4}\\\\) cm².\\n\",\"image\":null,\"image_url\":null},{\"label\":\"b\",\"letter\":\"b\",\"text\":\"Prove that, \\\\( DB^2 + DC^2 = 2AD^2 \\\\).\",\"marks\":4,\"answer\":\"Let ABC be an isosceles right triangle with AB = AC, ∠A = 90°.\\nDraw DE ⟂ AB, DF ⟂ AC.\\nIn right ∆DEB: DB² = DE² + BE²\\nIn right ∆DFC: DC² = DF² + FC²\\nAdding: DB² + DC² = DE² + BE² + DF² + FC²\\nSince AEDF is a rectangle (∠A = 90°, DE ⟂ AB, DF ⟂ AC):\\nDE = AF and DF = AE\\n∴ DB² + DC² = AF² + BE² + AE² + FC²\\n= AE² + (AB − AE)² + AF² + (AC − AF)²\\n= AE² + AB² − 2·AB·AE + AE² + AF² + AC² − 2·AC·AF + AF²\\nSince AB = AC and using the rectangle property:\\nDB² + DC² = 2(AE² + AF²) = 2AD².\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140871320_a2b0w.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140871320_a2b0w.jpeg\"},{\"label\":\"c\",\"letter\":\"c\",\"text\":\"Prove that, MN || QR and MN = \\\\(\\\\frac{1}{2}\\\\) QR.\",\"marks\":4,\"answer\":\"Extend MN to F such that NF = MN. Join R, F.\\nIn ∆PMN and ∆RNF:\\n- PN = NR (N is midpoint)\\n- MN = NF (construction)\\n- ∠PNM = ∠RNF (vertically opposite)\\n∴ ∆PMN ≅ ∆RNF (SAS)\\n⇒ PM = RF and ∠PMN = ∠RFN ⇒ PM || RF\\nSince M is midpoint, QM = PM = RF and QM || RF\\n∴ QMFR is a parallelogram ⇒ MF || QR ⇒ MN || QR\\nAlso MF = QR ⇒ MN + NF = QR ⇒ 2MN = QR ⇒ MN = \\\\(\\\\frac{1}{2}\\\\) QR.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140871320_p2igan.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140871320_p2igan.jpeg\"}]",
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768140873037,
+    "subject": "Mathematics",
+    "chapter": "Geometry",
+    "lesson": "Midpoint Theorem and Right Triangle Properties",
+    "question": null,
+    "parts": "[{\"label\":\"a\",\"letter\":\"a\",\"text\":\"Draw two triangles in the light of the stem.\",\"marks\":2,\"answer\":\"[Draw ∆PQR with B as midpoint of PQ and C as midpoint of PR, and draw isosceles right ∆DEF with ∠D = 90° and A on hypotenuse EF]\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140871321_o936hh.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140871321_o936hh.jpeg\"},{\"label\":\"b\",\"letter\":\"b\",\"text\":\"Prove that, BC || QR and BC = \\\\(\\\\frac{1}{2}\\\\) QR.\",\"marks\":4,\"answer\":\"Extend BC to F such that CF = BC. Join R, F.\\nIn ∆PBC and ∆RCF:\\n- PC = CR (C is midpoint)\\n- BC = CF (construction)\\n- ∠PCB = ∠RCF (vertically opposite)\\n∴ ∆PBC ≅ ∆RCF (SAS)\\n⇒ PB = RF and ∠PBC = ∠RFC ⇒ PB || RF\\nSince B is midpoint, QB = PB = RF and QB || RF\\n∴ QBFR is a parallelogram ⇒ BF || QR ⇒ BC || QR\\nAlso BF = QR ⇒ BC + CF = QR ⇒ 2BC = QR ⇒ BC = \\\\(\\\\frac{1}{2}\\\\) QR.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140871321_uifau.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140871321_uifau.jpeg\"},{\"label\":\"c\",\"letter\":\"c\",\"text\":\"Prove that, AE² + AF² = 2AD².\",\"marks\":4,\"answer\":\"In isosceles right ∆DEF, DE = DF, ∠D = 90°.\\nDraw AW ⟂ DE extended, AX ⟂ DF extended.\\nSince ∠D = 90°, DWAX is a rectangle, so AW = DX and AX = DW.\\nIn right ∆AEW: AE² = EW² + AW²\\nIn right ∆AXF: AF² = AX² + FX²\\nAdding: AE² + AF² = EW² + AW² + AX² + FX²\\nFrom the isosceles right triangle properties and rectangle DWAX:\\nIn right ∆ADW: AD² = DW² + AW² = AX² + AW²\\nSimilarly in right ∆ADX: AD² = DX² + AX² = AW² + AX²\\nUsing the properties of the configuration:\\nAE² + AF² = 2(AW² + AX²) = 2AD².\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140871321_j217c.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140871321_j217c.jpeg\"}]",
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768140873147,
+    "subject": "Mathematics",
+    "chapter": "Geometry",
+    "lesson": "Acute Angles in Right Triangle and Median Theorem",
+    "question": null,
+    "parts": "[{\"label\":\"a\",\"letter\":\"a\",\"text\":\"Prove that, two acute angles of a right-angled triangle are complementary to each other.\",\"marks\":2,\"answer\":\"In ∆ABC, ∠B = 90°.\\n∠A + ∠B + ∠C = 180°\\n⇒ ∠A + 90° + ∠C = 180°\\n⇒ ∠A + ∠C = 90°\\n∴ Acute angles are complementary.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140872910_q3udg.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140872910_q3udg.jpeg\"},{\"label\":\"b\",\"letter\":\"b\",\"text\":\"Prove that, MN || QR and MN = \\\\(\\\\frac{1}{2}\\\\) QR.\",\"marks\":4,\"answer\":\"Same as Q2(c).\\n\",\"image\":null,\"image_url\":null},{\"label\":\"c\",\"letter\":\"c\",\"text\":\"Prove that, PQ² + PR² = 2(PS² + QS²).\",\"marks\":4,\"answer\":\"Draw PM ⟂ QR.\\nIn ∆PMS: PS² = PM² + MS²\\nIn ∆PMQ: PQ² = PM² + MQ² = PM² + (QS + MS)²\\n⇒ PQ² = PM² + QS² + 2⋅QS⋅MS + MS²\\n⇒ PQ² = (PM² + MS²) + QS² + 2⋅QS⋅MS\\n⇒ PQ² = PS² + QS² + 2⋅QS⋅MS … (i)\\nIn ∆PMR: PR² = PM² + MR² = PM² + (SR − MS)²\\n⇒ PR² = PM² + SR² − 2⋅SR⋅MS + MS²\\n⇒ PR² = (PM² + MS²) + SR² − 2⋅SR⋅MS\\n⇒ PR² = PS² + QS² − 2⋅QS⋅MS … (ii) (since SR = QS)\\nAdding (i) and (ii):\\nPQ² + PR² = 2PS² + 2QS² = 2(PS² + QS²).\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140872911_31kvjx.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140872911_31kvjx.jpeg\"}]",
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140871321_ud3wbk.jpeg"
+  },
+  {
+    "id": 1768140873270,
+    "subject": "Mathematics",
+    "chapter": "Geometry",
+    "lesson": "Isosceles Right Triangle Properties",
+    "question": null,
+    "parts": "[{\"label\":\"a\",\"letter\":\"a\",\"text\":\"Find smaller angle of a right-angled triangle whose other angles are \\\\(4x^0\\\\) and \\\\(2x^0\\\\) respectively except right angle.\",\"marks\":2,\"answer\":\"\\\\(4x + 2x = 90°\\\\) ⇒ \\\\(6x = 90°\\\\) ⇒ \\\\(x = 15°\\\\)\\nSmaller angle = \\\\(2x = 30°\\\\).\\n\",\"image\":null,\"image_url\":null},{\"label\":\"b\",\"letter\":\"b\",\"text\":\"Prove that, MN² = NL² + ML².\",\"marks\":4,\"answer\":\"By Pythagoras theorem in right ∆MLN:\\nMN² = ML² + NL².\\n\",\"image\":null,\"image_url\":null},{\"label\":\"c\",\"letter\":\"c\",\"text\":\"If Q is any point on MN, then prove that, \\\\(\\\\frac{1}{2}(QM² + QN²) = QL²\\\\).\",\"marks\":4,\"answer\":\"Draw QE ⟂ ML, QD ⟂ NL.\\nIn ∆QDN: QN² = QD² + ND² = 2QD² (since ND = QD)\\nIn ∆QME: QM² = QE² + ME² = 2QE² (since ME = QE)\\nAdding: QM² + QN² = 2(QD² + QE²)\\nIn rectangle QELD: QE = LD\\n∴ QM² + QN² = 2(QD² + LD²)\\nBut in right ∆QLD: QL² = QD² + LD²\\n∴ QM² + QN² = 2QL²\\n⇒ \\\\(\\\\frac{1}{2}(QM² + QN²) = QL²\\\\).\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140871321_paaurq.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140871321_paaurq.jpeg\"}]",
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768140873380,
+    "subject": "Mathematics",
+    "chapter": "Geometry",
+    "lesson": "Equilateral Triangle and Right Triangle",
+    "question": null,
+    "parts": "[{\"label\":\"a\",\"letter\":\"a\",\"text\":\"Show that, BD = CD.\",\"marks\":2,\"answer\":\"In ∆ABD and ∆ADC:\\n- AB = AC (equilateral)\\n- AD common\\n- ∠ADB = ∠ADC = 90°\\n∴ ∆ABD ≅ ∆ADC (RHS)\\n∴ BD = CD.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140871321_hfje9i.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140871321_hfje9i.jpeg\"},{\"label\":\"b\",\"letter\":\"b\",\"text\":\"Prove that, PR² = PQ² + QR².\",\"marks\":4,\"answer\":\"Pythagoras theorem in right ∆PQR: PR² = PQ² + QR².\\n\",\"image\":null,\"image_url\":null},{\"label\":\"c\",\"letter\":\"c\",\"text\":\"Prove that, \\\\(4AD² = 3AB²\\\\).\",\"marks\":4,\"answer\":\"Same as Q1(c).\\n\",\"image\":null,\"image_url\":null}]",
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768140873490,
+    "subject": "Mathematics",
+    "chapter": "Geometry",
+    "lesson": "Converse of Pythagoras Theorem",
+    "question": null,
+    "parts": "[{\"label\":\"a\",\"letter\":\"a\",\"text\":\"Write down the Pythagoras theorem.\",\"marks\":2,\"answer\":\"In a right triangle, square of hypotenuse = sum of squares of other two sides.\\n\",\"image\":null,\"image_url\":null},{\"label\":\"b\",\"letter\":\"b\",\"text\":\"If in ∆ABC, AC² = AB² + BC², prove that ∠B = 1 right angle.\",\"marks\":4,\"answer\":\"Construct ∆DEF with ∠E = 90°, DE = AB, EF = BC.\\nIn ∆DEF: DF² = DE² + EF² = AB² + BC²\\nGiven AC² = AB² + BC² ⇒ AC = DF\\nIn ∆ABC and ∆DEF: AB = DE, BC = EF, AC = DF\\n∴ ∆ABC ≅ ∆DEF (SSS) ⇒ ∠B = ∠E = 90°.\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140871321_12nbef.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140871321_12nbef.jpeg\"},{\"label\":\"c\",\"letter\":\"c\",\"text\":\"If AB = BC and P is a point on AC, then prove that, PA² + PC² = 2PB².\",\"marks\":4,\"answer\":\"Draw BL ⟂ AC. Since AB = BC, ∆ABC is isosceles right ⇒ AL = LC = BL.\\nPA² = (AL − PL)² = AL² − 2⋅AL⋅PL + PL²\\nPC² = (LC + PL)² = AL² + 2⋅AL⋅PL + PL²\\nAdding: PA² + PC² = 2AL² + 2PL²\\nBut PB² = BL² + PL² = AL² + PL²\\n∴ PA² + PC² = 2(AL² + PL²) = 2PB².\\n\",\"image\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140871321_oc1o7r.jpeg\",\"image_url\":\"https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768140871321_oc1o7r.jpeg\"}]",
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768207843110,
+    "subject": "Mathematics",
+    "chapter": "Geometry",
+    "lesson": "Triangle and Chord Properties",
+    "question": null,
+    "parts": "[{\"label\":\"a\",\"letter\":\"a\",\"text\":\"Prove that, the diameter is the greatest chord of a circle.\",\"marks\":2,\"answer\":\"Let O be the center of a circle, AB be a diameter and CD be any chord.\\nDraw OP ⟂ CD.\\nIn ∆OPC: OC > PC (hypotenuse > side)\\n⇒ 2·OC > 2·PC\\n⇒ OC + OC > PC + PC\\n⇒ OA + OB > CD (since OA = OB = OC and PC + PC = CD when P is midpoint)\\n⇒ AB > CD.\\nTherefore, the diameter is the greatest chord.\\n\",\"image\":null,\"image_url\":null},{\"label\":\"b\",\"letter\":\"b\",\"text\":\"If L is the mid point of the side MQ, then prove that, \\\\(\\\\frac{1}{2} QR = LP\\\\).\",\"marks\":4,\"answer\":\"Extend LP to S such that LP = PS. Join S, R.\\nIn ∆MLP and ∆QPS:\\n- ML = QL (L is midpoint)\\n- LP = PS (construction)\\n- ∠MLP = ∠QPS (vertically opposite)\\n∴ ∆MLP ≅ ∆QPS (SAS)\\n⇒ PM = QS and ∠LMP = ∠PQS ⇒ PM || QS\\nSince PM = PR (given), we have QS = PR and QS || PM\\nAlso ∠PQS = ∠LMP means MQ || SR\\n∴ QRSP is a parallelogram ⇒ QR = PS\\nBut PS = 2·LP\\n∴ QR = 2·LP ⇒ \\\\(\\\\frac{1}{2}\\\\) QR = LP.\\n\",\"image\":null,\"image_url\":null},{\"label\":\"c\",\"letter\":\"c\",\"text\":\"If PQ = PR, then prove that, \\\\(\\\\angle MQR = 90^\\\\circ\\\\).\",\"marks\":4,\"answer\":\"Given PM = PR and PQ = PR\\n⇒ PM = PQ = PR\\n⇒ P is equidistant from M, Q, and R\\nIn ∆MQR, since PM = PQ:\\n∠PMQ = ∠PQM\\nSince PQ = PR:\\n∠PQR = ∠PRQ\\nSince PM = PR:\\n∠PMR = ∠PRM\\nIn ∆MQR: ∠QMR + ∠MQR + ∠MRQ = 180°\\nFrom the equal sides PM = PQ = PR, if we consider the angles:\\n∠MQR = ∠MQP + ∠PQR\\nSince PM = PQ = PR forms specific angle relationships:\\nUsing the property that when PM = PQ = PR, point P is the circumcenter of ∆MQR\\nAnd when two sides are equal from P, the angle at Q subtended by MR is 90°\\n∴ ∠MQR = 90°.\",\"image\":null,\"image_url\":null}]",
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768207827904_rr1mxj.jpeg"
+  }
+]

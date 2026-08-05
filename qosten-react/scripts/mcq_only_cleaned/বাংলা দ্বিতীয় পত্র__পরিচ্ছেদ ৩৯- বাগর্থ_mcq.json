@@ -1,0 +1,642 @@
+[
+  {
+    "id": 1768036794549,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৯: বাগর্থ",
+    "question": "একটি শব্দ শোনার সাথে সাথে আমাদের মনে যে ছবি বা বোধ জেগে ওঠে তাকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শব্দার্থ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "লক্ষ্যার্থ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাচ্যার্থ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বাগর্থ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কোনো শব্দের আভিধানিক বা সোজা অর্থ যা আমাদের মনে সরাসরি আসে, তাকে বাচ্যার্থ বলা হয় [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036794655,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৯: বাগর্থ",
+    "question": "‘বাচ্যার্থ’ শব্দের কোন ধরনের অর্থ প্রকাশ করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মুখ্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "গৌণ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রত্যক্ষ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পরোক্ষ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অভিধানে প্রধানত শব্দের মুখ্য বা বাচ্যার্থ দেওয়া থাকে [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036794793,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৯: বাগর্থ",
+    "question": "বক্তার উদ্দেশ্য অনুযায়ী বাচ্যার্থকে উপেক্ষা করে শব্দের আলাদা অর্থ তৈরি করলে, তা হয়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "মুখ্যার্থ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আভিধানিক অর্থ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গৌণার্থ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "পারিভাষিক অর্থ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যখন বাচ্যার্থ উপেক্ষা করে বক্তার বিশেষ কোনো অর্থ বোঝানো হয়, তাকে গৌণার্থ বা লক্ষ্যার্থ বলে [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036794904,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৯: বাগর্থ",
+    "question": "‘অকাল পক্ষ’ শব্দটির বাচ্যার্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অকালপক্ব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অকালকুষ্মাণ্ড",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অসময়ে পাকা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অকেজো",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "‘অকাল পক্ষ’ শব্দটির সাধারণ বা আভিধানিক অর্থ হলো যা অসময়ে পেকেছে [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036795112,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৯: বাগর্থ",
+    "question": "মূলতাত্বিকভাবে শব্দের অর্থ পরিবর্তনকে কয়ভাগে ভাগ করা যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তিন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "চার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাঁচ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সময়ের সাথে শব্দের অর্থের পরিবর্তনকে সাধারণত তিনটি ধারায় ভাগ করা হয় [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036795221,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৯: বাগর্থ",
+    "question": "শব্দের অর্থ সংকীর্ণ হয়ে বর্তমান ‘মৃগ’ শব্দটির অর্থ দাঁড়িয়েছে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "হরিণ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "হাতি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বানর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সিংহ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এককালে ‘মৃগ’ বলতে সব বন্য পশুকে বোঝাত, কিন্তু বর্তমানে এর অর্থ কেবল হরিণ [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036795333,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৯: বাগর্থ",
+    "question": "শব্দের অর্থ উন্নততর হওয়াকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অর্থবিস্তার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অর্থসংকোচ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অর্থের উন্নতি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অর্থের অবনতি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "শব্দের অর্থ যদি পূর্বের চেয়ে ভালো বা উন্নত কোনো অর্থ প্রকাশ করে তবে তাকে অর্থের উন্নতি বলে [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036795458,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৯: বাগর্থ",
+    "question": "‘গবাক’ শব্দের বুৎপত্তিগত অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গোরুর চোখ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "জানালা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দরজা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গোরু সম্পর্কিত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "‘গবাক’ শব্দটির মূল বুৎপত্তিগত অর্থ গোরুর চোখ হলেও বর্তমানে এর অর্থ জানালা [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036795565,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৯: বাগর্থ",
+    "question": "অর্থসংকোচ ঘটেছে কোন শব্দে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অন্ন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মৃগ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "জ্যামিতি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সায়ব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "‘মৃগ’ শব্দের অর্থ ব্যাপক পশু থেকে কেবল হরিণে সীমাবদ্ধ হওয়ায় এটি অর্থসংকোচ [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036795672,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৯: বাগর্থ",
+    "question": "নিচের কোন শব্দটিতে শব্দের অর্থ বদলেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অন্ন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "লেটামি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মৃগ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গবাক",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "‘গবাক’ শব্দটির অর্থ গোরুর চোখ থেকে জানালা হওয়ার মাধ্যমে অর্থের বদল বা রূপান্তর ঘটেছে [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036795780,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৯: বাগর্থ",
+    "question": "‘অন্ন’ শব্দ দ্বারা ‘ভাত’ বোঝালে অর্থের কী ধরনের পরিবর্তন হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অর্থের উন্নতি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অর্থ-বদল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অর্থ সংকোচন",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অর্থ প্রসার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "আগে ‘অন্ন’ বলতে সকল খাদ্যদ্রব্যকে বোঝাত, এখন কেবল ভাত বোঝায় বলে এটি অর্থ সংকোচন [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036795891,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৯: বাগর্থ",
+    "question": "ইতিবাচক অর্থ যখন নেতিবাচক অর্থে ব্যবহৃত হওয়াকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অর্থ-বদল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অর্থের অবনতি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অর্থের উন্নতি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অর্থসংকোচ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কোনো শব্দের অর্থ সম্মানজনক থেকে অসম্মানজনক বা খারাপ অর্থে পরিবর্তিত হলে তাকে অর্থের অবনতি বলে [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036795993,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৯: বাগর্থ",
+    "question": "ইতিবাচক অর্থের শব্দ নেতিবাচক অর্থে ব্যবহৃত হয়েছে কোনটিতে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অনুরূপ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গবাক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জ্যাঠামি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "পটল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "‘জ্যাঠামি’ শব্দটি মূলত বয়োজ্যেষ্ঠের আচরণ বোঝালেও এটি এখন নেতিবাচক বা পাকা কথা অর্থে ব্যবহৃত হয় [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036796101,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৯: বাগর্থ",
+    "question": "‘পাষণ্ড’ শব্দের অর্থ কী ছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ধর্মত্যাগী উপাসক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নিষ্ঠুর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পিশাচ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ধর্মসম্প্রদায়",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "‘পাষণ্ড’ শব্দের আদি অর্থ ছিল একটি বিশেষ ধর্মসম্প্রদায়, কিন্তু বর্তমানে এর অর্থ অত্যন্ত নিষ্ঠুর [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036796219,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৯: বাগর্থ",
+    "question": "নিচের কোন বাক্যে ‘মাথা’ শব্দটি লক্ষ্যার্থে ব্যবহৃত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তিনি মাথায় আঘাত পেয়েছেন।",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আমার খুব মাথাব্যথা করছে।",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সে মাথায় পাগড়ি বেঁধেছে।",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রফিক সাহেব গ্রামের মাথা।",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এখানে মাথা বলতে শরীরের অংশ না বুঝিয়ে গ্রামের প্রধান বা মাতব্বর বোঝানো হয়েছে, যা শব্দের লক্ষ্যার্থ [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036796339,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৯: বাগর্থ",
+    "question": "‘গবাক’ শব্দটি ‘গোরুর চোখ’ না বুঝিয়ে ‘জানালা’ বোঝালে অর্থের কী ধরনের পরিবর্তন হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অর্থপ্রসার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অর্থসংকোচ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অর্থ-বদল",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অর্থের উন্নতি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "অর্থের বদল বা রূপান্তর ঘটে যখন একটি শব্দের আদি অর্থের সাথে বর্তমান অর্থের কোনো মিল থাকে না [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036796445,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৯: বাগর্থ",
+    "question": "অভিধানে থাকে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "লক্ষ্যার্থ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "লাক্ষণিক অর্থ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গৌণার্থ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাচ্যার্থ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অভিধান প্রধানত শব্দের আভিধানিক বা সোজা অর্থ (বাচ্যার্থ) প্রদান করে [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036796546,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৯: বাগর্থ",
+    "question": "‘লক্ষ্যার্থ’ শব্দের কোন ধরনের অর্থ প্রকাশ করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মুখ্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গৌণ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "প্রত্যক্ষ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পরোক্ষ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "লক্ষ্যার্থ বা গৌণার্থ হলো শব্দের সেই অর্থ যা বক্তা বিশেষ উদ্দেশ্যে প্রয়োগ করেন [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036796648,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৯: বাগর্থ",
+    "question": "অভিধানে শব্দের অর্থ গ্রহণের বেলায় কোনটিকে প্রাধান্য দেওয়া হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "লক্ষ্যার্থ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বাচ্যার্থ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "গৌণার্থ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাগার্র্থ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "অভিধানে শব্দের বাচ্যার্থকে সবচেয়ে বেশি প্রাধান্য দেওয়া হয় [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036796754,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৯: বাগর্থ",
+    "question": "‘জ্যাঠামি’ শব্দের অর্থ ‘পাকামি’ বোঝালে অর্থের কী ধরনের পরিবর্তন হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অর্থসংকোচ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অর্থের উন্নতি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অর্থের অবনতি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অর্থ-বদল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যখন কোনো শব্দের অর্থ ইতিবাচক থেকে খারাপ বা নেতিবাচক দিকে যায়, তখন তাকে অর্থের অবনতি বলে [২]।",
+    "image": null,
+    "language": "en"
+  }
+]

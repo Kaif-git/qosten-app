@@ -1,0 +1,3170 @@
+[
+  {
+    "id": 1768404784853,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "আধুনিক শিক্ষার কর্মনাশা স্রোতে অতল গর্ভে তলিয়ে যাচ্ছে কী?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "রূপকথা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "প্রবাদ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ছড়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পল্লিগান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "আধুনিক শিক্ষার প্রসারের ফলে আমাদের অতীতের ঐতিহ্যবাহী রূপকথাগুলো বিলুপ্তির পথে চলে যাচ্ছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404785673,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "'কিন্তু যারা এ কাজের জন্য স্বেচ্ছাসেবক দল কই?'— মুহম্মদ শহীদুল্লাহর এ হতাশা দূর হতে পারে কীভাবে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্বেচ্ছাসেবক দল গঠন করে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সভা-সমিতিতে যথাযথ উপস্থাপন করে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ফোকলোর সোসাইটি স্থাপন করে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "জনসাধারনকে সচেতন করে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ফোকলোর সোসাইটি স্থাপনের মাধ্যমে পল্লীসাহিত্যের উপাদান সংগ্রহ ও সংরক্ষণ করে লেখকের এই হতাশা দূর করা সম্ভব.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404785801,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "উদ্দীপকটির ধরন হলো—**",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রবাদ প্রবচন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "খনার বচন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ডাকের কথা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "লোকগাথা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "উদ্দীপকে উল্লিখিত বর্ণনাটি লোকগাথার অন্তর্ভুক্ত, যা পল্লীসাহিত্যের একটি গুরুত্বপূর্ণ অংশ.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404785946,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "আধুনিক শিক্ষার কর্মনাশা স্রোতে বিস্মৃতির অতল গর্ভে তলিয়ে যাচ্ছে কোনটি?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "ছড়া",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "প্রবাদ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রূপকথা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পল্লিগান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "আধুনিক শিক্ষায় শিক্ষিত সমাজ দেশীয় ছড়ার পরিবর্তে বিদেশী উপকথার দিকে ঝুঁকে পড়ায় ছড়াগুলো হারিয়ে যাচ্ছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404786059,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘আইল বাইল লানের দেশে / মাইকেল জ্যাকসন আইলো রে / আমার সাধের দোতরা কান্দে রে’— এ চরণের ভাবার্থে ‘পল্লীসাহিত্য’ প্রবন্ধের লেখকের কোন অনুভূতি প্রকাশ পেয়েছে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "হতাশা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ক্ষোভ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অনুশোচনা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উদ্বিগ্নতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পল্লীসাহিত্যের বদলে বিজাতীয় সংস্কৃতির অনুপ্রবেশে লেখকের মনের ক্ষোভ এখানে প্রকাশ পেয়েছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404786279,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘ধরি মাছ না ছুঁই পানি’— এটি কী?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "খনার বচন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "প্রবাদ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ছড়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "খেলার গান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এটি একটি জনপ্রিয় খনার বচন যা লোকসমাজে যুগ যুগ ধরে প্রচলিত.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404786395,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘ধরি মাছ না ছুঁই পানি’— এ কথাটির সাথে সাদৃশ্যপূর্ণ লাইনটি হলো—**",
+    "options": [
+      {
+        "label": "a",
+        "text": "আপনি বাঁচলে বাপের নাম",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "দাঁত থাকতে দাঁতের মর্যাদা নেই",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পরের তস্তু নর্মের যম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সাগর মরলে হাঁড়িতে বাঁচবে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "উভয় বাক্যই মানুষের স্বার্থপরতা বা আত্মরক্ষার চিরন্তন প্রবাদের উদাহরণ হিসেবে ব্যবহৃত হয়েছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404786510,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘দিনের মেঘে ধান, রাতের মেঘে বান’— কথাটির সাথে সাদৃশ্যপূর্ণ ‘পল্লীসাহিত্য’ প্রবন্ধের কোন উপাদান?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রবাদ বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ডাকের কথা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "খনার বচন",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ছড়া গান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "এটি আবহাওয়া ও কৃষি সংক্রান্ত একটি জনপ্রিয় খনার বচন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404786624,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘পল্লীসাহিত্য’ প্রবন্ধে নিচের কোনটিতে ইউরোপের পরিপক্ব ফল সঞ্চিত থাকার কথা বলা আছে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "ডাক ও খনার বচন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "‘ঠাকুরমার ঝুলি’ প্রবন্ধ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পল্লি বিচিত্র গানে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পল্লী ছড়া ও উপকথায়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ডাক ও খনার বচনের মধ্যে দীর্ঘকালের অভিজ্ঞতার নির্যাস বা 'পরিপক্ব ফল' সঞ্চিত রয়েছে বলে প্রবন্ধকার মনে করেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404786737,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘পল্লীসাহিত্য’ প্রবন্ধে খোকা-খুকির ছড়াকে সরল-প্রাণের জীবন্ত উৎস বলা হয়েছে কেন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রাণের উচ্ছ্বাস আছে বলে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রাচীনকাল থেকে প্রচলিত হওয়ায়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জাতির পুরোনো ইতিহাসের গোপন কথা খুঁজে পাওয়া যায় বলে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মন থেকে উৎসারিত হওয়ায়",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পল্লীর শিশুদের মুখে মুখে প্রচলিত এই ছড়াগুলো কৃত্রিমতা বর্জিত এবং সরাসরি মন থেকে আসে বলে একে জীবন্ত উৎস বলা হয়েছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404786992,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘পল্লীসাহিত্য’ প্রবন্ধে ‘সরল প্রাণের জীবন্ত উৎস’ বলা হয়েছে কোন সাহিত্যকে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "রূপকথাকে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "খোকা-খুকির ছড়াকে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পল্লীগানকে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "খনার বচনকে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "খোকা-খুকির ছড়াগুলোকে লেখক পল্লীসাহিত্যের প্রাণ ও জীবন্ত উৎস হিসেবে অভিহিত করেছেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404787105,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘পিঁড়েয় বসে পেঁড়োর খবর’— এটা কী?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "খনার বচন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ডাক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রবাদ বাক্য",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "উপকথা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "এটি একটি জনপ্রিয় প্রবাদ বাক্য যা লোকমুখে প্রচলিত অভিজ্ঞতার প্রকাশ.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404787224,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "জাতির পুরোনো ইতিহাসের অনেক গোপন কথা খুঁজে পাওয়া যায় নিচের কোন বাক্যে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "কলা রুয়ে না কেটো পাত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পিঁড়েয় বসে পেঁড়োর খবর",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "রোদ হচ্ছে পানি হচ্ছে, খেঁকশিয়ালীর বিয়ে হচ্ছে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "এক হাত বোল বারো হাত শিং",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "প্রবাদ-প্রবচনের আড়ালে জাতির প্রাচীন ইতিহাস ও সমাজ ব্যবস্থার অনেক তথ্য লুকিয়ে থাকে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404787363,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "সরল প্রাণের জীবন্ত উৎস কোনগুলো?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রবাদ ও প্রবচন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ছড়া ও কবিতা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রূপকথা ও উপকথা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ছড়া ও গান",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পল্লীর সহজ-সরল মানুষের প্রাণের আবেগ মিশ্রিত থাকে তাদের ছড়া ও গানে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404787479,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘পল্লীসাহিত্য’ সম্পদের মধ্যে কোনটি অমূল্য রত্নবিশেষ?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "ছড়া",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রবাদ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পল্লীগান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উপকথা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "উপকথাগুলোকে লেখক পল্লীসাহিত্যের ভাণ্ডারে অমূল্য সম্পদ বা রত্ন হিসেবে গণ্য করেছেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404787608,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘তাতে কত প্রেম, কত আনন্দ, কত সৌন্দর্য, কত তত্ত্বজ্ঞান ওতপ্রোতভাবে জড়িয়ে আছে!’— কিসে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "পল্লীগান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ছড়া",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রবাদ-প্রবচন",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "খনার বচন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্রবাদ-প্রবচনের ক্ষুদ্র বাক্যের ভেতরে মানুষের জীবনের গভীর অভিজ্ঞতা ও তত্ত্বজ্ঞান লুকিয়ে থাকে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404787738,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "পল্লীসাহিত্য অনাদৃত হয়ে ধ্বংসের পথে দাঁড়িয়েছে, এর মূল কারণ—**",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিদেশি সাহিত্যের প্রচলন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফোকলোর সোসাইটির অভাব",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "স্বেচ্ছাসেবক ও সংরক্ষণের অভাব",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সময় ও রুচির পরিবর্তন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "উপযুক্ত সংগ্রাহক ও সংরক্ষণের উদ্যোগের অভাবেই পল্লীসাহিত্য আজ বিলীন হয়ে যাচ্ছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404787859,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘পল্লীসাহিত্য’ প্রবন্ধে বর্ণিত আরব্য দেশে সংঘটিত গল্প কোনটি?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "আলাউদ্দিনের আশ্চর্য প্রদীপ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "আলী বাবা চল্লিশ চোর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রাখালের পিঠা গাছের কথা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রাজপুরীর ঘুমন্ত রাজকন্যা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "আরব্য রজনীর বিখ্যাত গল্প 'আলাউদ্দিনের আশ্চর্য প্রদীপ'-এর কথা প্রবন্ধে উল্লেখ করা হয়েছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404787987,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "ফোকলোর সোসাইটির কাজ কী?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "খেলাধুলার উপাদান সংগ্রহ ও প্রচার",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "পল্লীজীবনকে তুলে ধরা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পল্লীর প্রাচীন ইতিহাস সংগ্রহ করা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পল্লীজীবন অবলম্বনে সাহিত্য রচনা করা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ফোকলোর সোসাইটি লোকশিল্প, গান, উৎসব ও খেলাধুলার উপাদান সংগ্রহ ও প্রসারের কাজ করে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404788110,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘ফোকলোর’ কথাটির উদ্ভাবক কে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "মনসুর বয়াতী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দীনেশচন্দ্র সেন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রোঁমা রোঁলা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উইলিয়াম থমস",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "১৮৪৬ সালে উইলিয়াম থমস সর্বপ্রথম 'ফোকলোর' শব্দটি ব্যবহার করেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404788276,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "Proletariat সাহিত্য হলো—**",
+    "options": [
+      {
+        "label": "a",
+        "text": "গ্রামীণ মানুষের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শহরের অধিবাসীদের",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শ্রমজীবী দুঃখিনীদের",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "চাষাভুষাদের",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সমাজের অবহেলিত ও মেহনতি মানুষের জীবন নিয়ে রচিত সাহিত্যকে প্রোলেতারিয়েট সাহিত্য বলা হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404788400,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "ময়ূর পাঙ্ক্ষী কী?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "গাজীপুরের গীতিকার একটি পালা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ময়মনসিংহ গীতিকার একটি পালা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "একটি নৌকার নাম",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "একটি উপন্যাসের নাম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পল্লী উপকথায় বর্ণিত অপূর্ব কারুকার্যখচিত নৌকার নাম ময়ূর পাঙ্ক্ষী.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404788542,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "আধুনিক শিক্ষার সর্বনাশা স্রোতে বিস্মৃতির অতল গর্ভে তলিয়ে যাচ্ছে কোনটি?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "ছড়া",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রবাদ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "উপকথা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পল্লীগান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "আধুনিক শিক্ষার প্রভাবে লোকজ প্রবাদগুলোর ব্যবহার কমছে এবং সেগুলো বিলুপ্ত হচ্ছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404788983,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘আলাউদ্দিনের আশ্চর্য প্রদীপ’— গল্পটির ঘটনস্থল কোন দেশে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "ইরান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চীন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আরব",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সিরিয়া",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "এটি বিখ্যাত আরব্য উপন্যাসের একটি জনপ্রিয় গল্প.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404789109,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘ধরি মাছ না ছুঁই পানি’— এটি কী?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "খনার বচন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "প্রবাদ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ছড়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উপকথা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এটি পল্লীসাহিত্যের একটি অন্যতম উপাদান যা খনার বচন নামে পরিচিত.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404789426,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘পল্লীসাহিত্য’ প্রবন্ধে লেখক সার্বিক প্রদানবকে ফুটিয়ে তুলেছেন কেন বিষয়টির মাধ্যমে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "ধরি মাছ, না ছুঁই পানি।",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "নাই নাই টাকা নাই",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "খাই খাই, ভাত খাই।",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রোদ হচ্ছে পানি হচ্ছে খেঁকশিয়ালীর বিয়ে হচ্ছে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "লেখক কৌশলী ও বুদ্ধিবৃত্তিক আচরণের উদাহরণ হিসেবে এই প্রবাদটি ব্যবহার করেছেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404789555,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "ইউরোপীয়দের পরিপক্ক ফল কোথায় সঞ্চিত হয়ে আছে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "ডাক ও খনার বচনে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "খোকা-খুকির ছড়ায়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পল্লিগানে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মারফতি গানে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্রবন্ধ অনুযায়ী ইউরোপীয় লোকসাহিত্যের সমৃদ্ধ উপাদানগুলো তাদের লোকগীতি বা পল্লিগানে পাওয়া যায়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404789694,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘ঊন বর্ষায় দুনো শীত’ এটি কী ধরনের বাক্য?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রবাদ বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "খনার বচন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "উপকথা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ডাক ও খনার বচন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "এটি কৃষি ও জলবায়ু বিষয়ক একটি খনার বচন যা আবহাওয়ার পূর্বাভাস দেয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404789812,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "প্রবাদ বাক্যের বৈশিষ্ট্য কোনটি?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "সরল প্রাণের জীবন্ত উৎস",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অমূল্য রত্নবিশেষ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তত্ত্বজ্ঞান সমৃদ্ধ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ইউরোপীয়দের পরিপক্ক ফল সঞ্চিত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্রবাদ বাক্যের মূল বৈশিষ্ট্য হলো এর সংক্ষিপ্ততার মধ্যে গভীর জীবনদর্শন ও তত্ত্বজ্ঞান থাকা.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404789989,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "জাতির পুরোনো ইতিহাসের অনেক গোপন কথা খুঁজে পাওয়া যায় কোনটিতে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "উপকথা ও রূপকথায়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পল্লীগানে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ছড়া কবি গানে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রবাদ বাক্য, ডাক ও খনার বচনে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এই লোকজ উপাদানগুলোর মধ্য দিয়ে একটি জাতির প্রাচীন সমাজব্যবস্থা ও ইতিহাসের ইঙ্গিত পাওয়া যায়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404790105,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘রোদ হচ্ছে, পানি হচ্ছে, খেঁকশিয়ালীর বিয়ে হচ্ছে’— এটি কীসের উদাহরণ?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "গানের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "খনার বচন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ধাঁধার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ছড়ার",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এটি শিশুদের মধ্যে বহুল প্রচলিত একটি প্রাকৃতিক ও কাল্পনিক ছড়া.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404790224,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘পল্লীসাহিত্য’ প্রবন্ধে কোনটিকে সরল প্রাণের জীবন্ত উৎস বলা হয়েছে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাঁধা বুলি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রূপকথা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মারফতি গান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পল্লি উপকথা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "রূপকথাগুলো পল্লীর সহজ-সরল মানুষের কল্পনাপ্রসূত এবং প্রাণের স্পন্দনযুক্ত বলে লেখক একে জীবন্ত উৎস বলেছেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404790471,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "Proletariat সাহিত্য বলতে লেখক কোন ধরনের সাহিত্যকে বোঝাতে চেয়েছেন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "এক ধরনের লোকগাথা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আবহমান পল্লীবাসীর জীবন কথা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শ্রমজীবী মানুষের দুঃখগাথা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বিজাতীয় বিরোধী সাহিত্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "নিম্নবিত্ত ও খেটে খাওয়া মানুষের জীবনসংগ্রাম ও দুঃখের কাহিনী সম্বলিত সাহিত্যকে লেখক প্রলেতারিয়েত সাহিত্য বলেছেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404790595,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "পল্লীসাহিত্যের কোন ধারায় তত্ত্বজ্ঞান ওতপ্রোতভাবে জড়িয়ে থাকে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "পল্লীগীতি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রবাদ-প্রবচন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ময়মনসিংহ গীতিকা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "খনার বচন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "প্রবাদ-প্রবচনের ক্ষুদ্রাতিক্ষুদ্র অংশেও গভীর তত্ত্বকথা নিহিত থাকে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404790817,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "পল্লীসাহিত্য সম্পদের মধ্যে কোনটি অমূল্য রত্নবিশেষ?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "উপকথা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ছড়া",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রবাদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পল্লীগান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বিশ্বের লোকসাহিত্যে উপকথা বা ফেইরি টেলস একটি গুরুত্বপূর্ণ স্থান দখল করে আছে, যাকে লেখক রত্নবিশেষ বলেছেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404790944,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "'মন মাঝি তোর বৈঠা নে রে / আমি আর বাইতে পারলাম না'— এটি একটি—**",
+    "options": [
+      {
+        "label": "a",
+        "text": "ভাটিয়ালি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মারফতি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মুর্শিদি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রাখালি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "এটি একটি আধ্যাত্মিক ভাবধারার মারফতি গান.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404791071,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "'পল্লীসাহিত্যে' পিজিননির হিন্দু-মুসলমানদের অবিচ্ছেদ্য বন্ধন লেখক ফুটিয়ে তুলেছেন কোন বিষয়টির মাধ্যমে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "সমান অধিকার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অধিকার সমান নয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সাংস্কৃতিক বন্ধন",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অসম অধিকার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পল্লীসাহিত্যের গান ও ছড়ায় সাম্প্রদায়িকতার ঊর্ধ্বে একটি মিলিত সাংস্কৃতিক ঐতিহ্য লক্ষ্য করা যায়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404791234,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘আমাদের ঐতিহ্য তো মীর মদন ও মোহন লালের, তিতুমীর ও মঙ্গল পাণ্ডের, গোবিন্দ দেব ও মুনীর চৌধুরীর।’ এই উক্তিতে আমাদের কোন ঐতিহ্য চেতনার কথা বলা হয়েছে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "রাজনৈতিক চেতনা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ধর্মীয় চেতনা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ধর্মনিরপেক্ষ চেতনা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অসাম্প্রদায়িক চেতনা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "লেখক এখানে হিন্দু-মুসলিম নির্বিশেষে দেশের সকল বিপ্লবীর কথা উল্লেখ করে অসাম্প্রদায়িক দেশপ্রেমকে তুলে ধরেছেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404791357,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘কেবলি ভূয়া, কেবলি ফক্কিকার’— কোনটি?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাহিত্য-বিষয়ক আলোচনা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "উত্তম ব্যতীত লোকসাহিত্য-বিষয়ক আলোচনা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "লোকসাহিত্যের পরিচিতি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "লোকসাহিত্যের মূল্যায়ন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "লেখক মনে করেন মানহীন লোকসাহিত্য আলোচনা কোনো কাজের নয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404791476,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "পল্লীগ্রামে বুড়োবুড়ির সাথে সন্ধ্যাবেলায় যে কথা শোনা যেত তা ছিল—**\ni. খুবই মনোরম\nii. খুবই চমৎকার\niii. খুবই রসালো",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পল্লীর বৃদ্ধ-বৃদ্ধাদের মুখে শোনা রূপকথাগুলো অত্যন্ত আনন্দদায়ক ও আকর্ষণীয় ছিল.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404792451,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "প্রচুর দর্শন ও প্রলম্বিত অভিজ্ঞতার ফল হলো—**\ni. প্রবাদ বাক্য\nii. ডাকের বচন\niii. খনার বচন",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এই তিনটি লোকজ উপাদানই শত শত বছরের অভিজ্ঞতার সারাংশ হিসেবে বিবেচিত.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404792572,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "বর্বরের চাষার গান বলে কোনগুলো ভস্মাধারে বিকায় না?**\ni. জারিগান\nii. রাখালি গান\niii. ভাটিয়ালি ও মারফতি গান",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "লেখক ক্ষোভের সাথে জানিয়েছেন যে, আধুনিক শিক্ষিত সমাজ লোকগীতিগুলোকে অবজ্ঞার চোখে দেখে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404792791,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "পল্লীসাহিত্য প্রবন্ধ অনুসারে উদ্দীপকটি ধরন হলো—**",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রবাদ প্রবচন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "খনার বচন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ডাকের কথা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "লোকগাথা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "উদ্দীপকে উল্লিখিত কাহিনীটি একটি লোকগাথার উদাহরণ.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404792905,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "মুহম্মদ শহীদুল্লাহ কত সালে জন্মগ্রহণ করেন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৮৮২ সালের ১০ জুলাই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১৮৮৫ সালের ১০ জুলাই",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "১৮৮৫ সালের ১২ জুলাই",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১৮৮৮ সালের ১২ জুলাই",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মুহম্মদ শহীদুল্লাহ ১৮৮৫ সালের ১০ জুলাই পশ্চিমবঙ্গের চব্বিশ পরগণা জেলায় জন্মগ্রহণ করেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404793021,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "মুহম্মদ শহীদুল্লাহ পশ্চিমবঙ্গের কোন জেলায় জন্মগ্রহণ করেন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "চব্বিশ পরগণা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বর্ধমান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মেদিনীপুর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাঁকুড়া",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "তিনি চব্বিশ পরগণা জেলার বশিরহাট মহকুমার পেয়ারা গ্রামে জন্মগ্রহণ করেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404793222,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "কেন লেখক কোলকাতা সিটি কলেজ থেকে বি.এ অনার্স পাশ করেন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাহিত্য পড়ার জন্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দর্শন পড়ার জন্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ইতিহাস পড়ার জন্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সংস্কৃত পড়ার জন্য",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "তৎকালীন কলকাতা বিশ্ববিদ্যালয়ে মুসলিম ছাত্রদের সংস্কৃত পড়ার সুযোগ না থাকায় তিনি সিটি কলেজ থেকে এটি সম্পন্ন করেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404793340,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "মুহম্মদ শহীদুল্লাহ কলকাতা বিশ্ববিদ্যালয় থেকে কোন বিষয়ে এম.এ. ডিগ্রি লাভ করেন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "ইংরেজি সাহিত্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বাংলা সাহিত্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সংস্কৃত সাহিত্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তুলনামূলক ভাষাতত্ত্ব",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "তিনি তুলনামূলক ভাষাতত্ত্বের (Comparative Philology) ছাত্র ছিলেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404793474,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "মুহম্মদ শহীদুল্লাহ্ কোন বিশ্ববিদ্যালয়ের অধ্যাপক ছিলেন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঢাকা বিশ্ববিদ্যালয়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কলকাতা বিশ্ববিদ্যালয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রাজশাহী বিশ্ববিদ্যালয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জাহাঙ্গীরনগর বিশ্ববিদ্যালয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "তিনি ঢাকা বিশ্ববিদ্যালয়ের বাংলা ও সংস্কৃত বিভাগের অধ্যাপক ছিলেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404793601,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘বাংলাদেশের আঞ্চলিক ভাষার অভিধান’ গ্রন্থটি কে সম্পাদনা করেন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "মুহম্মদ শহীদুল্লাহ্",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "মুনীর চৌধুরী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আনিসুজ্জামান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আবুল মনসুর আহমদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এটি ড. মুহম্মদ শহীদুল্লাহর অমর কীর্তিগুলোর মধ্যে অন্যতম.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404891676,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "ভাষাবিদ ও পণ্ডিত মুহম্মদ শহীদুল্লাহ্ কত সালে জন্মগ্রহণ করেন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৮৮২ সালের ১২ জুলাই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১৮৮৫ সালের ১০ জুলাই",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "১৮৮৫ সালের ১২ জুলাই",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১৮৮৯ সালের ১২ জুলাই",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মুহম্মদ শহীদুল্লাহ্ ১৮৮৫ সালের ১০ জুলাই জন্মগ্রহণ করেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404894139,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "মুহম্মদ শহীদুল্লাহ্ পশ্চিমবঙ্গের কোন জেলায় জন্মগ্রহণ করেন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "চব্বিশ পরগণা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বর্ধমান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মেদিনীপুর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাঁকুড়া",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "তিনি পশ্চিমবঙ্গের চব্বিশ পরগণা জেলার বশিরহাট মহকুমার পেয়ারা গ্রামে জন্মগ্রহণ করেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404894270,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "কোন কলেজ থেকে তিনি বি.এ. (অনার্স) পাস করেন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রেসিডেন্সি কলেজ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সিটি কলেজ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "রিপন কলেজ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "স্কটিশ চার্চ কলেজ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "তিনি ১৯১০ সালে কলকাতা সিটি কলেজ থেকে সংস্কৃতে বি.এ. অনার্স পাস করেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404894435,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "মুহম্মদ শহীদুল্লাহ্ কলকাতা বিশ্ববিদ্যালয় থেকে কোন বিষয়ে এম.এ. ডিগ্রি লাভ করেন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "ইংরেজি সাহিত্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বাংলা সাহিত্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তুলনামূলক ভাষাতত্ত্ব",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সংস্কৃত সাহিত্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "তিনি ১৯১২ সালে কলকাতা বিশ্ববিদ্যালয় থেকে তুলনামূলক ভাষাতত্ত্বে (Comparative Philology) এম.এ. ডিগ্রি লাভ করেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404894594,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "মুহম্মদ শহীদুল্লাহ্ ভাষাতত্ত্বে ডিপ্লোমা ও ডি.লিট ডিগ্রি অর্জন করেন কোন বিশ্ববিদ্যালয় থেকে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "লন্ডন বিশ্ববিদ্যালয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অক্সফোর্ড বিশ্ববিদ্যালয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্যারিসের সোরবোন বিশ্ববিদ্যালয়",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "হার্ভার্ড বিশ্ববিদ্যালয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "তিনি ফ্রান্সের প্যারিসস্থ সোরবোন বিশ্ববিদ্যালয় থেকে ভাষাতত্ত্বে উচ্চতর ডিগ্রি লাভ করেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404894783,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "মুহম্মদ শহীদুল্লাহ্ কোন বিভাগের অধ্যাপক ছিলেন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "ইতিহাস বিভাগ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বাংলা ও সংস্কৃত বিভাগ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ইংরেজি বিভাগ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দর্শন বিভাগ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "তিনি ঢাকা ও রাজশাহী বিশ্ববিদ্যালয়ে বাংলা ও সংস্কৃত বিভাগে দীর্ঘ ৩০ বছর অধ্যাপনা করেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404895074,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "মুহম্মদ শহীদুল্লাহ্ তাঁর কোন গবেষণার মাধ্যমে প্রাচীন ভারতের পরিচয় তুলে ধরেন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রাচীন সমাজ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রাচীন মুদ্রা ও শিলালিপি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রাচীন ভাষা ও সাহিত্য",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "প্রাচীন ধর্মতত্ত্ব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্রাচীন ভাষা ও সাহিত্যের ইতিহাস পুনর্গঠনে তাঁর অসামান্য পাণ্ডিত্য সর্বজনস্বীকৃত.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404895228,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘বাংলাদেশের আঞ্চলিক ভাষার অভিধান’ গ্রন্থটির সম্পাদক কে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "মুনীর চৌধুরী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মুহম্মদ শহীদুল্লাহ্",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "হুমায়ুন আজাদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আনিসুজ্জামান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বাংলা ভাষার গবেষণায় তাঁর শ্রেষ্ঠ অবদানগুলোর মধ্যে এই অভিধানটি অন্যতম.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404895602,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "মুহম্মদ শহীদুল্লাহ্ সম্পাদিত শিশু পত্রিকার নাম কী?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "আঙুর",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সবুজ পত্র",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কল্লোল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সওগাত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "‘আঙুর’ মুহম্মদ শহীদুল্লাহ্ সম্পাদিত একটি জনপ্রিয় শিশু পত্রিকা.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404895893,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "মুহম্মদ শহীদুল্লাহ্ কবে মৃত্যুবরণ করেন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৯৬৮ সালের ১৩ জুলাই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১৯৬৯ সালের ১৩ জুলাই",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "১৯৭০ সালের ১০ জুলাই",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১৯৭১ সালের ১৩ জুলাই",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ঢাকা বিশ্ববিদ্যালয় চত্বরে সমাহিত এই মহান পণ্ডিত ১৯৬৯ সালের ১৩ জুলাই মৃত্যুবরণ করেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404896175,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "বাংলার পল্লীসাহিত্য সংরক্ষণের বিষয়ে পথিকৃৎ বলা হয় কাকে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "দক্ষিণারঞ্জন মিত্র মজুমদার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মুহম্মদ শহীদুল্লাহ্",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দীনেশচন্দ্র সেন",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মনসুর বয়াতি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ড. দীনেশচন্দ্র সেন বাংলার পল্লীসাহিত্য বা লোকগাথা সংগ্রহের ক্ষেত্রে প্রধান গবেষক ও পথিকৃৎ.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404896456,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "ময়মনসিংহ গীতিকার কোন চরিত্রের সৌন্দর্যে ফরাসি সাহিত্যিক ‘রোঁমা রোঁলা’ মুগ্ধ হয়েছিলেন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "কাজল রেখা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মহুয়া",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মদিনা বিবি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মলুয়া",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মদিনা বিবির সতীত্ব ও চরিত্রের সৌন্দর্যে মুগ্ধ হয়ে রোঁমা রোঁলা উচ্চ প্রশংসা করেছিলেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404896577,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘পল্লীসাহিত্য’ প্রবন্ধে লেখকের আক্ষেপের কারণ কী?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "পল্লীসাহিত্য অনাদৃত হচ্ছে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "পল্লীসাহিত্য হারিয়ে যাচ্ছে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ফোকলোর সোসাইটি গঠিত হচ্ছে না",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "লোকসাহিত্যের প্রাচুর্য নেই",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "লেখক আক্ষেপ করেছেন যে, বর্তমান আধুনিক সমাজে আমাদের নিজস্ব পল্লীসাহিত্য চরম অনাদৃত অবস্থায় ধ্বংসের পথে রয়েছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404896714,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "আমাদের পল্লিপ্রকৃতির মনোহর এবং চমৎকার দিক কোনটি?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "উপকথা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পল্লীগান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রবাদ-প্রবচন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ছড়া",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পল্লীর সহজ ছড়াগুলো প্রকৃতির মতোই মনোহর ও আকর্ষণীয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404896836,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "আরব্য উপন্যাসের কাহিনিগুলো কোন ধরনের সাহিত্যকে নির্দেশ করে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রবন্ধ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নাটক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উপন্যাস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গল্প",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "আরব্য রজনীর কাহিনিগুলো মূলত লোকজ গল্পের অন্তর্ভুক্ত.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404896958,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "প্রবন্ধিক আধুনিক শিক্ষার কর্মনাশা স্রোতে কী তলিয়ে যাওয়ার কথা উল্লেখ করেছেন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "পল্লী সংস্কৃতি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রাচীন কাব্যসাহিত্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রাচীন উপকথাগুলো",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "প্রাচীন প্রবাদবাক্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "লেখক মনে করেন আধুনিকতার প্রভাবে আমাদের ঐতিহ্যবাহী প্রাচীন উপকথাগুলো বিলুপ্ত হয়ে যাচ্ছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404897070,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "আধুনিক শিক্ষিত মায়েরা তাঁদের সন্তানদের রূপকথা শোনান না কেন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "সেগুলো সেকেলে বলে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তাতে আনন্দের উপাদান অপ্রতুল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রুচি ও দৃষ্টিভঙ্গির পরিবর্তনের কারণে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অবাস্তব ও কাল্পনিক কাহিনি বলে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রুচি ও দৃষ্টিভঙ্গির পরিবর্তনের কারণে এখনকার মায়েরা সন্তানদের দেশীয় রূপকথার বদলে বিদেশি রূপকথা শোনান.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404897185,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "লেখক পল্লীসাহিত্যের কোন উপকরণকে সমৃদ্ধ অতীতের সাক্ষী স্বরূপ গণ্য করেছেন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "পল্লীগান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "উপকথা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "প্রবাদ-প্রবচন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "খনার বচন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "উপকথাগুলোর মাধ্যমে একটি জাতির অতীতের সমৃদ্ধি ও জীবনযাপনের চিত্র ফুটে ওঠে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404897304,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "\"চাঁদ মামা\" দেখিয়ে ছোটদের ভাত খাওয়ানো কোন ধরনের মায়ের কাজ?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "শিক্ষিত জননী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দরিদ্র জননী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সচেতন জননী",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কুসংস্কারাচ্ছন্ন জননী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পল্লীর মায়েদের এই সহজ-সরল বাৎসল্যকে লেখক সচেতনের পরিচয় হিসেবে উল্লেখ করেছেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404897425,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "আধুনিক শিক্ষার কর্মনাশা স্রোত আমাদের কী করেছে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "অতীতের সাথে সম্বন্ধ লোপ করে দিচ্ছে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "পল্লীগান থেকে দূরে রাখছে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উপকথাগুলো ধ্বংস করছে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রবাদ বাক্য ভুলিয়ে দিচ্ছে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "আধুনিক শিক্ষা আমাদের অতীতের গৌরবময় সাহিত্যের সাথে বিচ্ছেদ ঘটাচ্ছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404897589,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "কেন আমাদের দেশে রূপকথা মরে গেছে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "সংগ্রাহকের অভাবে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিদেশি রূপকথার অনুপ্রবেশে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "আধুনিক মানুষের অবজ্ঞায়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শিশুদের অরুচিতে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "আরব্য রজনী বা বিদেশি উপকথার প্রভাবে দেশীয় রূপকথাগুলো তার স্থান হারিয়েছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404897714,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘Folklore Society’-এর কাজ কী?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "পুরাতন সমাজ সংস্কার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিধান দান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "লোকসাহিত্য সংগ্রহ ও গবেষণা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "রাজনৈতিক প্রচারণা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ফোকলোর সোসাইটি লোকসাহিত্যের উপাদান সংগ্রহ ও সংরক্ষণের কাজ করে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404897936,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "বড় বড় বিদ্বানরা সভা করে কোথায় ‘Folklore Society’ গড়ে তুলেছেন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "এশিয়া ও আফ্রিকায়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ইউরোপ ও আমেরিকায়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "চীন ও জাপানে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ভারত ও বাংলাদেশে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ইউরোপ ও আমেরিকার বিদগ্ধ সমাজ লোকসাহিত্য সংরক্ষণে অগ্রণী ভূমিকা নিয়েছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404898210,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "বাংলাদেশের লোকজ উপকথাগুলো সংগ্রহ করলে কী হবে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিদেশের কাছে পরিচিত হবে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অমূল্য রত্ন হিসেবে প্রমাণিত হবে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বিস্মৃতির অতল গর্ভে তলিয়ে যাবে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ধ্বংস হয়ে যাবে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বাংলাদেশের উপকথাগুলো বৈশ্বিক লোকসাহিত্যের ভাণ্ডারে একেকটি অমূল্য রত্ন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404898374,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘বরের ঘরে মাসি আর কন্যের ঘরে পিসি’— এটি কিসের উপাদান?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "খনার বচন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রবাদ বাক্য",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "রূপকথা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "লোকগাথা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "এটি একটি জনপ্রিয় প্রবাদ বাক্য যা গ্রামীণ মানুষের অভিজ্ঞতার প্রকাশ.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404898512,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘আপনি বাঁচলে বাপের নাম’— এটি কী?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রবাদ বাক্য",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "খনার বচন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রূপকথা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ছড়া গান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এটি একটি অভিজ্ঞতালব্ধ প্রবাদ বাক্য.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404898682,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘পিঁড়েয় বসে পেঁড়োর খবর’— কথাটির অর্থ কী?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "এক হাতে তালি বাজে না",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নিজ অবস্থানে থেকে দূরবর্তী খবর রাখা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "নিজের চরকায় তেল দাও",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "যার কাজ তারে সাজে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ক্ষুদ্র অবস্থানে থেকেও বৃহৎ খবরাখবর রাখার দক্ষতা বা অহমিকাকে এটি নির্দেশ করে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404898807,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘পল্লীসাহিত্য’ প্রবন্ধে উল্লিখিত আরব্য রজনীর গল্পের নাম কী?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "আলিবাবা ও চল্লিশ চোর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সিন্দবাদ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আলাউদ্দিনের আশ্চর্য প্রদীপ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "হাতেম তাই",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্রবন্ধে আলাউদ্দিনের আশ্চর্য প্রদীপের কথা বিশেষভাবে উল্লেখ করা হয়েছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404899028,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "লেখক কোনটিকে সরল প্রাণের জীবন্ত উৎস বলেছেন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রবাদ বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "খনার বচন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পল্লীগান",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "রূপকথা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পল্লীগান অকৃত্রিম আবেগ বহন করে বলে লেখক একে জীবন্ত উৎস বলেছেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404899303,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘বৃষ্টি পড়ে টাপুর টুপুর’— এটি কী ধরনের সাহিত্য?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "পল্লীগান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ছড়া",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "খনার বচন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মারফতি গান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "এটি শিশুদের মধ্যে বহুল প্রচলিত একটি ছড়া.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404899594,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "পল্লীসাহিত্যের কোন উপাদানকে অমূল্য রত্নবিশেষ বলা হয়?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "পল্লীগান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "উপকথা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "খনার বচন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রবাদ বাক্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "উপকথাগুলোকে লেখক অত্যন্ত মূল্যবান সম্পদ হিসেবে গণ্য করেছেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404899866,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "সাহিত্যের মূল্যায়ন করতে নতুন উপকরণ হিসেবে কী ব্যবহৃত হতে পারে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "লোকসংস্কৃতি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "উপকথা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রবাদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ফোকলোর",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "আধুনিক সাহিত্য বিচারে ফোকলোর বা লোকসংস্কৃতি এক নতুন ও অপরিহার্য মাত্রা যোগ করেছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404900069,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘ঘুমপাড়ানি মাসিপিসি’— এটি পল্লীসাহিত্যের কোন ধারার অন্তর্ভুক্ত?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "ছড়া",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "গান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রবাদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উপকথা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "এটি একটি জনপ্রিয় ঘুমপাড়ানি ছড়া.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404900447,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "মাঝিদের গাওয়া জনপ্রিয় গানের নাম কী?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "মারফতি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জারিগান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ভাটিয়ালি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সারিগান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ভাটিয়ালি গান মূলত নদীমাতৃক বাংলার মাঝিদের মনের আবেগ ও সুরের প্রকাশ.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404900652,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "গানের অন্তরে বা মূল শক্তি কোথায় নিহিত থাকে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "তাল ও লয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সুর ও কথায়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বাদ্যযন্ত্রে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গায়কের কণ্ঠে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "গানের সার্থকতা নির্ভর করে এর সুরের গভীরতা ও কথার বাণীর ওপর.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404900788,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘এক হাত বোল বারো হাত শিং’— এটি কী?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "ধাঁধা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "খনার বচন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রবাদ বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাঁধা বুলি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এটি পল্লীসমাজে প্রচলিত একটি চাতুর্যপূর্ণ বা প্রবাদপ্রতিম কথা.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404900924,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "মানুষের আত্মিক মুক্তি বা ক্ষুধা নিবৃত্তির কথা কোথায় বলা হয়েছে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিজ্ঞানের আবিষ্কারে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আধুনিক শিক্ষায়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পল্লীসাহিত্যের গভীর তত্ত্বজ্ঞানে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "নাগরিক সভ্যতায়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পল্লীসাহিত্যের ভেতরেই মানুষের জীবনের শান্তি ও মুক্তির পথ নির্দেশিত থাকে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404901048,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘পল্লীসাহিত্যের অন্তরের দৃষ্টি’ বলতে লেখক কী বুঝিয়েছেন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "দূরদর্শিতা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গভীর উপলব্ধি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সাহিত্যের ইতিহাস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "লৌকিকতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পল্লীসাহিত্যের মূল রস অনুভব করতে হলে আন্তরিক উপলব্ধি প্রয়োজন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404901185,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘Proletariat’ সাহিত্য বলতে কোন শ্রেণির জীবনকথা বোঝায়?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "ধনিক শ্রেণি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মধ্যবিত্ত শ্রেণি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শ্রমজীবী দুঃখী শ্রেণি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "জমিদার শ্রেণি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সমাজে যারা খেটে খাওয়া মেহনতি মানুষ, তাদের জীবনের দুঃখ-সুখের সাহিত্যই হলো প্রোলেতারিয়েট সাহিত্য.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404901327,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "ইউরোপে প্রলেতারিয়েট সাহিত্যের স্থান হলেও আমাদের দেশে এখনও আসেনি কেন?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "আমাদের সাহিত্য নেই বলে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আমাদের রুচি ও দৃষ্টির ভিন্নতার কারণে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অর্থের অভাবে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আধুনিকতার অভাবে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "আমাদের দেশে শিক্ষিত সমাজ এখনও গ্রামীণ শ্রমজীবীদের সাহিত্যকে সম্মানের চোখে দেখেনি.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404901528,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "কিসের পরিবর্তনের ফলে পল্লীসাহিত্য আজ বিলুপ্তির পথে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "রাজনীতি ও অর্থনীতির",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "যুগ ও মানুষের রুচির",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ভাষা ও ধর্মের",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জলবায়ুর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "রুচি ও সময় পরিবর্তনের কারণে মানুষ লোকসাহিত্য থেকে দূরে সরে যাচ্ছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404901710,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘কেবলি ভুয়া, কেবলি ফক্কিকার’— বলতে কী বোঝানো হয়েছে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "নিরর্থক কাজ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিজাতীয় সাহিত্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মূল্যহীন আলোচনা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "লোকসাহিত্যের প্রতি অবজ্ঞা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "উপযুক্ত মূল্যায়ন ছাড়া সাহিত্যের গালগল্পকে লেখক ফক্কিকার বলেছেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404901932,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "পল্লীসাহিত্য ধ্বংসের জন্য দায়ী করা হয়েছে কোনটিকে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফোকলোর সোসাইটির অভাব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আধুনিক শিক্ষার বিকৃতি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বিজাতীয় সাহিত্যের প্রভাব",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সরকারি উদাসীনতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "আধুনিক শিক্ষার ভুল প্রয়োগে মানুষ নিজ সংস্কৃতি ভুলে যাচ্ছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404902169,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "\"আমরা সবুজের দেশে বনের পাখির মতো\"— এই উক্তিতে কী প্রকাশিত হয়েছে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "পাখির প্রতি ভালোবাসা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পল্লীপ্রকৃতির সাথে একাত্মতা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বনের জীবন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "স্বাধীনতার তৃষ্ণা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পল্লীর মানুষের সাথে প্রকৃতির নিবিড় সম্পর্কের কথা এখানে বলা হয়েছে.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404902386,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "লোকসাহিত্যের চর্চা না থাকলে একটি জাতির ওপর কী প্রভাব পড়ে?**",
+    "options": [
+      {
+        "label": "a",
+        "text": "জাতি শিক্ষিত হতে পারে না",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জাতির ঐতিহ্যের শিকড় আলগা হয়ে যায়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অর্থনৈতিক ক্ষতি হয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রাজনৈতিক সংকট তৈরি হয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "লোকসাহিত্য একটি জাতির আত্মপরিচয়ের ভিত্তি; এর অভাবে জাতি তার শেকড় হারায়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404902658,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘ফোকলোর সোসাইটির’ কাজ হলো—**\ni. লোকসাহিত্য সংগ্রহ ও গবেষণা\nii. মেলা ও লোকজ অনুষ্ঠানের আয়োজন করা\niii. গ্রামীন মানুষের জীবনমান উন্নয়ন",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সোসাইটির প্রধান লক্ষ্য হলো লোকজ সংস্কৃতির উপাদান সংগ্রহ ও সংরক্ষণ.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404902918,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "‘পল্লীর উপকথা’ সম্পর্কে লেখকের ধারণা হলো—**\ni. এটি সরল প্রাণের জীবন্ত উৎস\nii. এটি অমূল্য রত্নবিশেষ\niii. এটি কেবল শিশুদের মনোরঞ্জনের মাধ্যম",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "লেখক উপকথাকে কেবল শিশুদের খেলনা মনে না করে একে ঐতিহ্যের ভাণ্ডার মনে করেন.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404903072,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "ইউরোপে ‘প্রলেতারিয়েট’ সাহিত্য আদরের আসন পেয়েছে, কারণ—**\ni. সেখানে শ্রমজীবীদের মর্যাদা আছে\nii. সেখানে লোকসাহিত্যের গুরুত্ব মানুষ বোঝে\niii. সেখানে শিক্ষিত মানুষের অভাব নেই",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ইউরোপীয় সমাজে লোকজ ও শ্রমজীবী মানুষের সাহিত্যকে উচ্চমূল্য দেওয়া হয়.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404903213,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "পল্লীসাহিত্য ধ্বংসের হাত থেকে রক্ষা করতে প্রয়োজন—**\ni. পল্লীসাহিত্য ব্যবহারের ওপর জোর দেওয়া\nii. ফোকলোর সোসাইটি গঠন করা\niii. উচ্চ শিক্ষিত সমাজকে এগিয়ে আসা",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সম্মিলিত প্রচেষ্টার মাধ্যমেই পল্লীসাহিত্যকে বিলুপ্তি থেকে বাঁচানো সম্ভব.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768404903377,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "পল্লীসাহিত্য",
+    "question": "পল্লীর গানগুলোর মধ্যে বাঙালির যে সংস্কৃতি ফুটে ওঠে—**\ni. জারি ও সারিগান\nii. ভাটিয়ালি ও মারফতি গান\niii. পপ ও রক গান",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "জারি, সারি, ভাটিয়ালি ও মারফতি হলো বাংলার চিরায়ত লোকজ গানের ধারা.",
+    "image": null,
+    "language": "en"
+  }
+]

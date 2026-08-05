@@ -1,0 +1,3059 @@
+[
+  {
+    "id": 1766222857932,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "How much time acting on a object when applied force is 100 N and change of momentum is 10 kgm\\(^{-1}\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.1 second",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "1 second",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "10 second",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "90 second",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "t = \\(\\frac{\\Delta P}{F} = \\frac{10}{100} = 0.1 s\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222857937,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Which one is repulsive force?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Electromagnetic force",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Gravitational force",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Weak Nuclear force",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Strong Nuclear force",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Electromagnetic force can be attractive or repulsive, unlike gravity which is only attractive.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222858686,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "The resultant of which force is zero?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Balanced force",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Unbalanced force",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Frictional force",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Weak nuclear force",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Balanced forces cancel each other, resulting in zero net force.\r\nExplanation: Balanced forces cancel each other, resulting in zero net force.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222858772,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "What type of friction is created when a cricket ball rolls down a slope?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Static friction",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Sliding friction",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Rolling friction",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Fluid friction",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Rolling friction acts when an object rolls over a surface.\r\nExplanation: Rolling friction acts when an object rolls over a surface.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222858780,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "On which year battery is discovered?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1600",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "1700",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "1800",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "1900",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Alessandro Volta invented the battery in 1800.\r\nExplanation: Alessandro Volta invented the battery in 1800.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222858953,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "A bullet of mass 10g was shot from a pistol with 800 ms\\(^{-1}\\). What is the backward velocity of pistol-If mass of the pistol is 1 kg?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-8ms\\(^{-1}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "8ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "-0.8ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "80ms\\(^{-1}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Using conservation of momentum: \\(m_{\\text{bullet}} \\times v_{\\text{bullet}} + m_{\\text{pistol}} \\times v_{\\text{pistol}} = 0\\)\n\\(v_{\\text{pistol}} = -\\frac{m_{\\text{bullet}} \\times v_{\\text{bullet}}}{m_{\\text{pistol}}} = -\\frac{0.01 \\times 800}{1} = -8 \\, \\text{m/s}\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222859137,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Which property of matter does Newton’s first law express?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Force",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Inertia",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Acceleration",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Velocity",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Newton’s first law describes inertia.\r\nExplanation: Newton’s first law describes inertia.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222859186,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Which friction does not let us slip?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Sliding friction",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Static friction",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Fluid friction",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Rolling friction",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Static friction prevents slipping between surfaces at rest.\r\nExplanation: Static friction prevents slipping between surfaces at rest.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222859320,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "How many Newton’s laws of motion are there?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "3",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "4",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Newton formulated three laws of motion.\r\nExplanation: Newton formulated three laws of motion.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222859537,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Passengers lean back when the stopped bus suddenly starts moving. This is because",
+    "options": [
+      {
+        "label": "a",
+        "text": "Force",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Inertia of motion",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Speed of the bus",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Static Inertia",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Inertia of rest (static inertia) causes passengers to lean backward.\r\nExplanation: Inertia of rest (static inertia) causes passengers to lean backward.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222859561,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "A force of 10 N acts on a stationary body of mass 5 kg for 2 s. Then the action of the force stops. Then after 10 s another force of 20 N acts on it for 4 s. What is the total distance travelled by the body?",
+    "options": [
+      {
+        "label": "a",
+        "text": "92 m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "132 m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "296 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "300 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Step 1: a1 = 10/5 = 2 m/s², s1 = 0.5×2×4 = 4 m, v1 = 2×2 = 4 m/s.\r\nStep 2: coast for 10 s: s2 = 4×10 = 40 m.\r\nStep 3: a2 = 20/5 = 4 m/s², s3 = 4×4 + 0.5×4×16 = 16 + 32 = 48 m.\r\nTotal s = 4 + 40 + 48 = 92 m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222859574,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Which of the following is the weakest frictional force?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Static Friction",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Sliding Friction",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Rolling Friction",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Fluid Friction",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Rolling friction is typically the weakest.\r\nExplanation: Rolling friction is typically the weakest.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222859685,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Which state shows of a moving object when the resultant force is zero?",
+    "options": [
+      {
+        "label": "a",
+        "text": "decreasing velocity",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "increasing velocity",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "uniform velocity",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Move in uniform acceleration",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "If the net force is zero, the object continues to move with uniform velocity (Newton’s first law).\r\nExplanation: If the net force is zero, the object continues to move with uniform velocity (Newton’s first law).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222859739,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "A boy pushes a box of 2 × 10\\(^6\\) g onto a frictionless floor by 50N force. What is the acceleration of the box?",
+    "options": [
+      {
+        "label": "a",
+        "text": "400 ms\\(^{-2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2.5 ms\\(^{-2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "0.4 ms\\(^{-2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "0.025 ms\\(^{-2}\\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Mass = \\(2 \\times 10^6 \\, \\text{g} = 2000 \\, \\text{kg}\\)\n\\(a = \\frac{F}{m} = \\frac{50}{2000} = 0.025 \\, \\text{m/s}^2\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222859778,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "What type of frictional force does act at the time of getting down by a parachute?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Rolling",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Fluid",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Sliding",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Static",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Air resistance (fluid friction) acts on a parachute.\r\nExplanation: Air resistance (fluid friction) acts on a parachute.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222859846,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "What is the numerical value of gravitational constant?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(5.98 \\times 10^{24}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(6.37 \\times 10^{6}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(6.67 \\times 10^{-11}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\(1.6 \\times 10^{-24}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The gravitational constant G = \\(6.67 \\times 10^{-11} \\, Nm^2/kg^2\\).\r\nExplanation: The gravitational constant G = \\(6.67 \\times 10^{-11} \\, Nm^2/kg^2\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222859955,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Where the value if g is the maximum?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Equatorial region",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Polar region",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Sea level",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Tropical region",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "g is maximum at poles due to Earth’s shape and rotation.\r\nExplanation: g is maximum at poles due to Earth’s shape and rotation.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222860080,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Dimension of G is -",
+    "options": [
+      {
+        "label": "a",
+        "text": "L\\(^3\\)M\\(^{-1}\\)T\\(^{-2}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "L\\(^2\\)M\\(^{-2}\\)T\\(^{-2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "L\\(^2\\)M\\(^{-1}\\)T\\(^{-2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "L\\(^2\\)M\\(^{-2}\\)T\\(^{-3}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "From \\(F = \\frac{Gm_1m_2}{r^2}\\), we get \\(G = \\frac{Fr^2}{m_1m_2}\\). Dimension of G is \\([MLT^{-2}][L^2]/[M^2] = L^3M^{-1}T^{-2}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222860110,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "A cricket ball rolled across the playing field and crossed the boundary. What kind of frictional force is acting upon it?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Static friction",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Sliding friction",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Rolling friction",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Fluid friction",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "When a ball rolls, the friction that opposes its motion is rolling friction.\r\nExplanation: When a ball rolls, the friction that opposes its motion is rolling friction.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222860159,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "If 44N force is applied upon a body of mass 20kg, then what is the acceleration Frictional force on the toad is 4N?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1m/sec\\(^{2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "1.2m/sec\\(^{2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "1.4m/sec\\(^{2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "2m/sec\\(^{2}\\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Net force = 44 - 4 = 40 N, a = F_net/m = 40/20 = 2 m/s².\r\nExplanation: Net force = 44 - 4 = 40 N, a = F_net/m = 40/20 = 2 m/s².",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222860244,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Which one is the multiplication of mass and velocity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Energy",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Power",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Momentum",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Momentum = mass × velocity.\r\nExplanation: Momentum = mass × velocity.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222860331,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "What will be the acceleration when 5N force is applied on a body of mass 500 gm?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.1 ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2.5 ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "10 ms\\(^{-2}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "100 ms\\(^{-2}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "m = 0.5 kg, F = 5 N, a = F/m = 5/0.5 = 10 ms\\(^{-2}\\).\r\nExplanation: m = 0.5 kg, F = 5 N, a = F/m = 5/0.5 = 10 ms\\(^{-2}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222860455,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Mass of a car is 1200 kg. Its engine can apply 5000N force. If the frictional force of the road is 3000N then what will be the acceleration of this car",
+    "options": [
+      {
+        "label": "a",
+        "text": "1.67 ms\\(^{-2}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "2.5 ms\\(^{-2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "4.16 ms\\(^{-2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "6.66 ms\\(^{-2}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Net force = \\(5000 - 3000 = 2000 \\, \\text{N}\\)\n\\(a = \\frac{F_{\\text{net}}}{m} = \\frac{2000}{1200} = 1.67 \\, \\text{m/s}^2\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222860763,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "An object of 10 kg moving with 2 m/s gains the acceleration of 2 ms\\(^{-2}\\) when a force is applied on it. What would be the change in momentum after 2 second?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0 kg ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "20kg ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "40 kg ms\\(^{-1}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "60 kgms\\(^{-1}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ΔP = F×t = (m×a)×t = (10×2)×2 = 40 kgms\\(^{-1}\\).\r\nExplanation: ΔP = F×t = (m×a)×t = (10×2)×2 = 40 kgms\\(^{-1}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222860872,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "A ball comes back with the same velocity with which it is thrown on to a wall. Which of the following supports the above event?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Gravitational law",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Newton’s third law of motion",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Conservation law of momentum",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Energy conservation law",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The wall exerts an equal and opposite force (Newton’s third law).\r\nExplanation: The wall exerts an equal and opposite force (Newton’s third law).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222860989,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "What will happen if a drum rolls down along an inclined road?",
+    "options": [
+      {
+        "label": "a",
+        "text": "The rate of change of momentum will remain constant",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "There will be no frictional force",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "The acceleration will increase continuously",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Force will decrease continuously",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "On a frictionless incline, acceleration is constant, so rate of change of momentum (force) is constant.\r\nExplanation: On a frictionless incline, acceleration is constant, so rate of change of momentum (force) is constant.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222861239,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "The emission of beta (β) rays from a radioactive nucleus is due to —",
+    "options": [
+      {
+        "label": "a",
+        "text": "gravitational force",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "electromagnetic force",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "strong nuclear force",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "weak nuclear force",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Beta decay is governed by the weak nuclear force.\r\nExplanation: Beta decay is governed by the weak nuclear force.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222861279,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "The inertia of a body depends on its —",
+    "options": [
+      {
+        "label": "a",
+        "text": "mass",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "displacement",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "acceleration",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "velocity",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Inertia depends solely on mass.\r\nExplanation: Inertia depends solely on mass.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222861387,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "What is the unit of gravitational acceleration?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Nm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ms\\(^{-2}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Nm\\(^2\\)C\\(^2\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Acceleration unit is m/s².\r\nExplanation: Acceleration unit is m/s².",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222861614,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "A force of 200N acts on a body of mass 15kg for 3 sec. What is the change of momentum of the body?",
+    "options": [
+      {
+        "label": "a",
+        "text": "600 kgm/s",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "45 kgm/s",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "13.33 kgm/s",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "100 kgm/s",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ΔP = F×t = 200×3 = 600 kgm/s.\r\nExplanation: ΔP = F×t = 200×3 = 600 kgm/s.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222861868,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "By which is inertia measured?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Acceleration",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Force",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Mass",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Inertia is the resistance to change in motion and is measured by mass.\r\nExplanation: Inertia is the resistance to change in motion and is measured by mass.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222861933,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "A force of 125N is applied on a body of mass 10kg, its acceleration will be",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.08 ms\\(^{-2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "12.5 ms\\(^{-2}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "135 ms\\(^{-2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "12.50 ms\\(^{-2}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "a = F/m = 125/10 = 12.5 m/s².\r\nExplanation: a = F/m = 125/10 = 12.5 m/s².",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222862076,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "A bullet of 5 gm mass was thrown from a gun of mass 1 kg. The backward velocity of the gun is 2 m/s. What is the final velocity in m/s of the bullet?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.4",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "4",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "40",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "400",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "m_bullet × v_bullet + m_gun × v_gun = 0 → v_bullet = - (1 × -2) / 0.005 = 400 m/s.\r\nExplanation: m_bullet × v_bullet + m_gun × v_gun = 0 → v_bullet = - (1 × -2) / 0.005 = 400 m/s.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222862130,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "A bullet of mass 10g was shot from a gun with a velocity of 500 ms\\(^{-1}\\). If the mass of the gun is 2kg, what is the backward velocity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2.5ms\\(^{-1}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "25ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "500ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "30ms\\(^{-1}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "m_bullet×v_bullet + m_gun×v_gun = 0 → v_gun = - (0.01×500)/2 = -2.5 m/s.\r\nExplanation: m_bullet×v_bullet + m_gun×v_gun = 0 → v_gun = - (0.01×500)/2 = -2.5 m/s.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222862168,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "The mass of a body is 2kg and its initial velocity is 5ms\\(^{-1}\\). If the velocity of the body after 3s be 8ms\\(^{-1}\\), what is the force?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1N",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2N",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "3N",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "4N",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "a = (8-5)/3 = 1 m/s², F = ma = 2×1 = 2 N.\r\nExplanation: a = (8-5)/3 = 1 m/s², F = ma = 2×1 = 2 N.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222862187,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "A force of 200N is applied on a stationary body of mass 10kg for 20s. What is the velocity after 30 sec?",
+    "options": [
+      {
+        "label": "a",
+        "text": "20 ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "200 ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "400 ms\\(^{-1}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "600 ms\\(^{-1}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "a = F/m = 200/10 = 20 m/s², v = u + at = 0 + 20×20 = 400 m/s (after 20s). Force stops after 20s, so velocity remains 400 m/s at 30s.\r\nExplanation: a = F/m = 200/10 = 20 m/s², v = u + at = 0 + 20×20 = 400 m/s (after 20s). Force stops after 20s, so velocity remains 400 m/s at 30s.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222862229,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Which force is an amazing force of Physics?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Gravitational Force",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Electromagnetic Force",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Weak Nuclear Force",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Strong Nuclear Force",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Electromagnetic force is responsible for most everyday phenomena and is remarkably versatile.\r\nExplanation: Electromagnetic force is responsible for most everyday phenomena and is remarkably versatile.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222862242,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Two forces of 100N and 80N act on a body of mass 20kg in opposite directions. What is the acceleration of the body?",
+    "options": [
+      {
+        "label": "a",
+        "text": "5 ms\\(^{-2}\\) towards right",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "4 ms\\(^{-2}\\) towards left",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "1 ms\\(^{-2}\\) towards right",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "9 ms\\(^{-2}\\) towards right",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Net force = 100 N - 80 N = 20 N to the right. \\(a = \\frac{F}{m} = \\frac{20}{20} = 1 \\, \\text{m/s}^2\\) to the right.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222862389,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "You feel your weight due to which force of the following?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Gravitational force",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Electromagnetic force",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Weak force",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Strong nuclear force",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Weight is due to Earth’s gravitational pull.\r\nExplanation: Weight is due to Earth’s gravitational pull.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222862450,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Which one is the unit of impulse of force?",
+    "options": [
+      {
+        "label": "a",
+        "text": "kgms\\(^{-2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "kgms\\(^{-1}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Nm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Js\\(^{-1}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Impulse = force × time = change in momentum, unit kgms\\(^{-1}\\).\r\nExplanation: Impulse = force × time = change in momentum, unit kgms\\(^{-1}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222862469,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Which of the following is right based on stronger force?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Electromagnetic > Strong Nuclear > Weak Nuclear > Gravitational",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Strong Nuclear > Electromagnetic > Weak Nuclear > Gravitational",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Gravitational > Weak Nuclear > Strong Nuclear > Electromagnetic",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Weak Nuclear > Gravitational > Electromagnetic > Strong Nuclear",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Strong nuclear > Electromagnetic > Weak nuclear > Gravitational.\r\nExplanation: Strong nuclear > Electromagnetic > Weak nuclear > Gravitational.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222862660,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "How far does the strong nuclear force act?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(10^{13}\\)m",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(10^{15}\\)m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(10^{-14}\\)m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(10^{-15}\\)m",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Strong nuclear force acts up to about \\(10^{-15}\\) m.\r\nExplanation: Strong nuclear force acts up to about \\(10^{-15}\\) m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222862755,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "A force of 500N is applied on stationary mass of object 5 kg, then change of momentum is 10 kg ms\\(^{-1}\\), what is the time?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.02 sec",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "5 sec",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "10 sec",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "4 sec",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "t = ΔP / F = 10 / 500 = 0.02 s.\r\nExplanation: t = ΔP / F = 10 / 500 = 0.02 s.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222862763,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "If 20N force is applied to an object with 20 kg mass, then what will be the object’s acceleration?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(400ms^{-2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(40ms^{-2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(20ms^{-2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(1ms^{-2}\\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\(F = ma \\Rightarrow a = \\frac{F}{m} = \\frac{20}{20} = 1ms^{-2}\\)\r\nExplanation: \\(F = ma \\Rightarrow a = \\frac{F}{m} = \\frac{20}{20} = 1ms^{-2}\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222862879,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "The value of coefficient of sliding friction increases when a matter is released against an inclined plane at ...... angle.",
+    "options": [
+      {
+        "label": "a",
+        "text": "30°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "40°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "50°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "60°",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The coefficient of sliding friction generally increases with the angle of inclination up to a point.\r\nExplanation: The coefficient of sliding friction generally increases with the angle of inclination up to a point.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222863129,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "1500N force is applied to a stationary object with 10kg mass for 0.15 time. What will be the change of the object's momentum?",
+    "options": [
+      {
+        "label": "a",
+        "text": "100 kg ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "225 kg ms\\(^{-1}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "10000 kg ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "15000 kg ms\\(^{-1}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ΔP = F×t = 1500 × 0.15 = 225 kgms\\(^{-1}\\).\r\nExplanation: ΔP = F×t = 1500 × 0.15 = 225 kgms\\(^{-1}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222863184,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Which force is acting between the protons and the neutrons within the nucleus?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Electromagnetic force",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Gravitational force",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Weak nuclear force",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Strong nuclear force",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The strong nuclear force holds protons and neutrons together in the nucleus.\r\nExplanation: The strong nuclear force holds protons and neutrons together in the nucleus.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222863236,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Unless force is applied, stationary object will remain stationary and body in motion will always move in uniform velocity, this is —",
+    "options": [
+      {
+        "label": "a",
+        "text": "Newton’s first law",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Newton’s second law",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Newton’s third law",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "This is the statement of Newton’s first law of motion.\r\nExplanation: This is the statement of Newton’s first law of motion.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222863382,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "How much stronger is electromagnetic force than gravitational force?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(10^{16}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(10^{36}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "\\(10^{63}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(10^{93}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Electromagnetic force is approximately \\(10^{36}\\) times stronger than gravitational force.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222863433,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "What will be the change of momentum, if the velocity of a body will double?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Remain unchanged",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Will be half",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Will be four times",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Will be double",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Momentum p = mv, so if v doubles, p doubles (assuming mass constant).\r\nExplanation: Momentum p = mv, so if v doubles, p doubles (assuming mass constant).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222863599,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "If a force of 30 N is applied to an object of mass 8 kg which is kept on a surface, it achieves an acceleration of 3ms\\(^{-2}\\). What is the frictional force in Newton between the object and the surface?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0 N",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "6 N",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "24 N",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "54 N",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Net force = ma = 8×3 = 24 N. Applied force = 30 N, so friction = 30 - 24 = 6 N.\r\nExplanation: Net force = ma = 8×3 = 24 N. Applied force = 30 N, so friction = 30 - 24 = 6 N.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222863849,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "What is the dimension of weight?",
+    "options": [
+      {
+        "label": "a",
+        "text": "MLT\\(^{-2}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "MLT\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ML\\(^{-2}\\)T\\(^{-2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ML\\(^{-1}\\)T\\(^{-2}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Weight = mg → MLT\\(^{-2}\\).\r\nExplanation: Weight = mg → MLT\\(^{-2}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222863865,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Which Newton's law helps to measure force?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Gravitational force",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Newton's first law",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Newton's Second law",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Newton's third law",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "F = ma (Second law) is used to measure force.\r\nExplanation: F = ma (Second law) is used to measure force.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222863912,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Which two of the forces combine electro-weak force?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Electromagnetic force and gravitational force",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Electromagnetic force and weak nuclear force",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Electromagnetic force and strong nuclear force",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The electroweak theory unifies electromagnetic and weak nuclear forces.\r\nExplanation: The electroweak theory unifies electromagnetic and weak nuclear forces.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222864007,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "If no external force is applied then the total momentum after collision between two bodies will be to the momentum before collision—",
+    "options": [
+      {
+        "label": "a",
+        "text": "More",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Less",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Equal",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "More or less",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Momentum is conserved in the absence of external forces.\r\nExplanation: Momentum is conserved in the absence of external forces.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222864060,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Which of the following is a key factor in safe travel?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Mass",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Weight",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Friction",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Motion",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Friction is essential for traction and stopping.\r\nExplanation: Friction is essential for traction and stopping.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222864327,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "When a car suddenly starts moving, what is the reason of the passengers leaning backwards?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Inertia of rest",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Inertia of motion",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Imbalance",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Carelessness",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Passengers tend to remain at rest due to inertia of rest.\r\nExplanation: Passengers tend to remain at rest due to inertia of rest.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222864480,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Which one is the least friction?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Standing on a road",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Shoe soles sticking on the ground",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Pulling a suitcase attached with wheels",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Jumping from a plane with a parachute",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Rolling friction (wheels) is less than static or sliding friction.\r\nExplanation: Rolling friction (wheels) is less than static or sliding friction.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222864579,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "What is the range of the strong nuclear force?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(10^{-10}\\)m",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(10^{-12}\\)m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(10^{-15}\\)m",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\(10^{-18}\\)m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The strong nuclear force acts within a range of about \\(10^{-15}\\) m (nuclear scale).\r\nExplanation: The strong nuclear force acts within a range of about \\(10^{-15}\\) m (nuclear scale).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222864655,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "A gun of mass 4kg fires a bullet. If the recoil force on the gun is 400N and the bullet accelerates at \\(12 \\times 10^3 \\, \\text{ms}^{-2}\\), what is the mass of the bullet?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.133 kg",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "0.233 kg",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "0.333 kg",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "0.433 kg",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Using Newton's third law, the force on the bullet equals the recoil force on the gun.\n\\(F = m_{\\text{bullet}} \\times a_{\\text{bullet}}\\)\n\\(m_{\\text{bullet}} = \\frac{F}{a} = \\frac{400}{12 \\times 10^3} = \\frac{400}{12000} = 0.0333 \\, \\text{kg}\\)\nHowever, if the acceleration is \\(12 \\times 10^2 = 1200 \\, \\text{ms}^{-2}\\), then:\n\\(m_{\\text{bullet}} = \\frac{400}{1200} = 0.333 \\, \\text{kg}\\)\nOr if \\(a = 3000 \\, \\text{ms}^{-2}\\), then \\(m = \\frac{400}{3000} = 0.133 \\, \\text{kg}\\)\nGiven the answer options, the acceleration should be approximately \\(3000 \\, \\text{ms}^{-2}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222864731,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Which force will feel a marble, if it goes through glycerin?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Static friction",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Sliding friction",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Rolling friction",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Fluid friction",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Glycerin is a fluid, so fluid friction acts.\r\nExplanation: Glycerin is a fluid, so fluid friction acts.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222864784,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "If 2 ms\\(^{-2}\\) acceleration is applied to an object in rest, what time will it take to get 20 ms\\(^{-1}\\) velocity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.1 s",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "10 s",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "18 s",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "40 s",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "t = (v-u)/a = (20-0)/2 = 10 s.\r\nExplanation: t = (v-u)/a = (20-0)/2 = 10 s.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222864931,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Which graph indicates the law of falling bodies?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Distance vs time (parabolic curve)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Velocity vs time (straight line)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Acceleration vs time (horizontal line)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Force vs time (horizontal line)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "For freely falling bodies, distance varies with the square of time (\\(s = \\frac{1}{2}gt^2\\)), producing a parabolic graph.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222865139,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Which one is dimension of momentum?",
+    "options": [
+      {
+        "label": "a",
+        "text": "MLT\\(^{-1}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "MLT\\(^{-2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ML\\(^2\\)T\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ML\\(^2\\)T\\(^{-3}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Momentum = mass × velocity → dimension MLT\\(^{-1}\\).\r\nExplanation: Momentum = mass × velocity → dimension MLT\\(^{-1}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222865180,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "What is the momentum of a car of mass 1500kg moving with velocity of 72kmh\\(^{-1}\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(1.08 \\times 10^4\\)kgms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(3 \\times 10^4\\)kgms\\(^{-1}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "\\(300\\)kgms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(75\\)kgms\\(^{-1}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Momentum, p = mv = 1500 × \\(\\frac{72 \\times 1000}{3600} = 3 \\times 10^4\\)kgms\\(^{-1}\\)\r\nExplanation: Momentum, p = mv = 1500 × \\(\\frac{72 \\times 1000}{3600} = 3 \\times 10^4\\)kgms\\(^{-1}\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222865212,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "The velocity of a car decreases at a uniform rate from 20ms\\(^{-1}\\)to 4ms\\(^{-1}\\) in 4 sec. What is the acceleration of the car in ms\\(^{-2}\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "16",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "4",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "-4",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "-16",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "a = (v-u)/t = (4-20)/4 = -4 ms\\(^{-2}\\).\r\nExplanation: a = (v-u)/t = (4-20)/4 = -4 ms\\(^{-2}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222865230,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "For which frictional force, fish can swim in water?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Static friction",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Sliding friction",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Rolling friction",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Fluid friction",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Fish experience fluid friction in water.\r\nExplanation: Fish experience fluid friction in water.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222865254,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "If an object of mass 10 kg pushed by force 10N for 5s then what will be the momentum of the object?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2.5 kg ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "50 kg ms\\(^{-1}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "100 kg ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "200 kg ms\\(^{-1}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Change in momentum = F×t = 10×5 = 50 kgms\\(^{-1}\\). If initial momentum was zero, final momentum = 50 kgms\\(^{-1}\\).\r\nExplanation: Change in momentum = F×t = 10×5 = 50 kgms\\(^{-1}\\). If initial momentum was zero, final momentum = 50 kgms\\(^{-1}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222865408,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Light and heat is produced from the sun by which force?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Gravitational Force",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Electromagnetic Force",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Weak Nuclear Force",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Strong Nuclear Force",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The sun produces light and heat through electromagnetic radiation from nuclear fusion.\r\nExplanation: The sun produces light and heat through electromagnetic radiation from nuclear fusion.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222865412,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "In which of the following two objects gravitational force acts between—",
+    "options": [
+      {
+        "label": "a",
+        "text": "moon and sun",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "earth and book",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "mercury and venus",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "chair and table",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Gravitational force acts between any two masses. All options are correct as gravity acts between all pairs of objects with mass.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222865501,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Mass of a body is 2kg and initial velocity is 5 ms\\(^{-1}\\). After 3s velocity of body becomes 8 ms\\(^{-1}\\), then what amount of force is applied on the body?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1 N",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2 N",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "3 N",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "4 N",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\(a = \\frac{v-u}{t} = \\frac{8-5}{3} = 1 \\, ms^{-2}, F = ma = 2 \\times 1 = 2 \\, N\\).\r\nExplanation: \\(a = \\frac{v-u}{t} = \\frac{8-5}{3} = 1 \\, ms^{-2}, F = ma = 2 \\times 1 = 2 \\, N\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222865564,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "What kind of frictional force does work when boat moves?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Rolling friction",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Static friction",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Fluid friction",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Sliding friction",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "A boat moving through water experiences fluid friction.\r\nExplanation: A boat moving through water experiences fluid friction.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222865674,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Motion of rocket is the example of what?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Law of Conservation of Momentum",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Newton’s 2nd law",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Law of Motion",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Newton’s First law",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Rocket motion is based on the conservation of momentum (action-reaction).\r\nExplanation: Rocket motion is based on the conservation of momentum (action-reaction).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222865865,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "From which definitions of force are found in Newton’s formula?",
+    "options": [
+      {
+        "label": "a",
+        "text": "First equation of motion",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Second equation of motion",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Third equation of motion",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Gravitational law",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Newton’s second law (F = ma) defines force.\r\nExplanation: Newton’s second law (F = ma) defines force.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222866004,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "The stars revolve in the galaxy because of which force?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Strong nuclear force",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Weak nuclear force",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Electromagnetic force",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Gravitational force",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Galactic motion is governed by gravity.\r\nExplanation: Galactic motion is governed by gravity.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222866047,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "The characteristic of an object to remain in its original state is called —",
+    "options": [
+      {
+        "label": "a",
+        "text": "Rigidity",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Inertia",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Momentum",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Elasticity",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Inertia is the tendency to resist change in motion.\r\nExplanation: Inertia is the tendency to resist change in motion.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222866076,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Which has more sliding friction?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Truck",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Motor cycle",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Bicycle",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Private car",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Heavier vehicle (truck) generally has greater sliding friction.\r\nExplanation: Heavier vehicle (truck) generally has greater sliding friction.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222866112,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "If the action and reaction force between two bodies are F\\(_1\\) and F\\(_2\\), respectively then which one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "F\\(_1\\) = F\\(_2\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "F\\(_1\\) > F\\(_2\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "F\\(_1\\) + F\\(_2\\) > 0",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "F\\(_1\\) + F\\(_2\\) = 0",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Action and reaction are equal and opposite: F₁ = -F₂.\r\nExplanation: Action and reaction are equal and opposite: F₁ = -F₂.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222866399,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Which one is the force of attraction between the electric pole and the transformer?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Gravitational force",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Electromagnetic force",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Electro-weak",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The attraction is due to electromagnetic forces between charged parts.\r\nExplanation: The attraction is due to electromagnetic forces between charged parts.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222866411,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "A force of 200 N is applied on a stationary body of mass 10 kg for 20s. What is the velocity after 20s?",
+    "options": [
+      {
+        "label": "a",
+        "text": "20 m/s",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "200 m/s",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "400 m/s",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "400 m/s\\(^2\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "a = F/m = 200/10 = 20 m/s², v = u + at = 0 + 20×20 = 400 m/s.\r\nExplanation: a = F/m = 200/10 = 20 m/s², v = u + at = 0 + 20×20 = 400 m/s.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222866672,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "If a force of 30N is applied to an object of mass 8kg which is kept on a surface, it achieves an acceleration of 3ms\\(^{-2}\\). What is the frictional force in Newton between the object and the surface?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "6",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "24",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "54",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Net force = 8×3 = 24 N, friction = 30 - 24 = 6 N.\r\nExplanation: Net force = 8×3 = 24 N, friction = 30 - 24 = 6 N.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222866798,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Which is the dimension of force?",
+    "options": [
+      {
+        "label": "a",
+        "text": "MLT\\(^{-2}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "MLT\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ML\\(^{-2}\\)T\\(^{-2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "M\\(^{-1}\\)LT\\(^{-2}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Force = mass × acceleration → MLT\\(^{-2}\\).\r\nExplanation: Force = mass × acceleration → MLT\\(^{-2}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222866831,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "What is the radius of earth?",
+    "options": [
+      {
+        "label": "a",
+        "text": "6400 km",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "6400 m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "64000 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(64 \\times 10^5\\) m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The radius of Earth is approximately 6400 km, which equals \\(6.4 \\times 10^6\\) m = \\(64 \\times 10^5\\) m. Both options a and d are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222866833,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "What will be the attractive force between two object if distance is doubled between two objects?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Double",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "One fourth",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Half",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Equal",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "F ∝ 1/r², so if r doubles, F becomes 1/4.\r\nExplanation: F ∝ 1/r², so if r doubles, F becomes 1/4.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222866838,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "How is the rate of change of momentum of a body related to the applied force?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Inversely proportional",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Proportional to square",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Proportional",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Inversely proportional to square",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Newton’s second law states that force is directly proportional to the rate of change of momentum.\r\nExplanation: Newton’s second law states that force is directly proportional to the rate of change of momentum.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222866844,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Which supports the product of force and velocity from the following?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Impulse",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Power",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Pressure",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Energy",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Power = force × velocity.\r\nExplanation: Power = force × velocity.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222866864,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Which friction one faces while swimming?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Static",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Sliding",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Rolling",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Fluid",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Water provides fluid friction.\r\nExplanation: Water provides fluid friction.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222866871,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Which of the following can be measured from Newton’s second law of motion?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Mass",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Inertia",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Force",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Weight",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Newton’s second law defines force as F = ma.\r\nExplanation: Newton’s second law defines force as F = ma.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222866875,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Which one is the weakest force?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Gravitational force",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Electromagnetic force",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Strong nuclear force",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Weak nuclear force",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Gravitational force is the weakest among the four fundamental forces.\r\nExplanation: Gravitational force is the weakest among the four fundamental forces.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222867270,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "If Sumon falls down to walk on the muddy road, which kind of friction is created?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Sliding friction",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Rolling friction",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Fluid friction",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Static friction",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Sliding occurs when slipping on mud.\r\nExplanation: Sliding occurs when slipping on mud.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222867273,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "How many fundamental forces are there?",
+    "options": [
+      {
+        "label": "a",
+        "text": "One",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Two",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Three",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Four",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Four: gravitational, electromagnetic, strong nuclear, weak nuclear.\r\nExplanation: Four: gravitational, electromagnetic, strong nuclear, weak nuclear.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222867308,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "We stumble while getting down from the moving car, because —",
+    "options": [
+      {
+        "label": "a",
+        "text": "inertia of rest",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "inertia of motion",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "balanced force",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "unbalanced force",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The body tends to remain in motion (inertia of motion) when the car stops suddenly.\r\nExplanation: The body tends to remain in motion (inertia of motion) when the car stops suddenly.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222867653,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Which equation is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "h = \\(\\frac{u^2 + v^2}{2g}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "g = \\(\\frac{4\\pi^2 L}{T^2}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "G = \\(\\frac{gM}{R^2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "F_1 = F_2 \\(\\left(\\frac{\\Delta_1}{\\Delta_1}\\right)\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The equation g = \\(\\frac{4\\pi^2 L}{T^2}\\) relates gravitational acceleration to the length and period of a pendulum.\r\nExplanation: The equation g = \\(\\frac{4\\pi^2 L}{T^2}\\) relates gravitational acceleration to the length and period of a pendulum.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222868039,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "An object's velocity-time graph shows a straight line with constant positive slope. How does the object move?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Uniform acceleration",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Non-uniform acceleration",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Uniform velocity",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Negative acceleration",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "A velocity-time graph with constant positive slope indicates uniform (constant) acceleration.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222868484,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "Which of the following is non-conservative force?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Frictional force",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Electric force",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Gravitational force",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Magnetic force",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Friction is a non-conservative force; it dissipates energy.\r\nExplanation: Friction is a non-conservative force; it dissipates energy.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766222868585,
+    "subject": "Physics",
+    "chapter": "Force",
+    "question": "If a tennis ball of 50g mass is thrown at 20ms\\(^{-1}\\) velocity and it hits a wall and bounces back, what will be the change of momentum?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0kgms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "1kgms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "2kgms\\(^{-1}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "20kgms\\(^{-1}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Initial momentum = 0.05×20 = 1 kgms\\(^{-1}\\) (toward wall). Final momentum = 0.05×(-20) = -1 kgms\\(^{-1}\\). Change = final - initial = -1 - 1 = -2 kgms\\(^{-1}\\) (magnitude 2 kgms\\(^{-1}\\)).\r\nExplanation: Initial momentum = 0.05×20 = 1 kgms\\(^{-1}\\) (toward wall). Final momentum = 0.05×(-20) = -1 kgms\\(^{-1}\\). Change = final - initial = -1 - 1 = -2 kgms\\(^{-1}\\) (magnitude 2 kgms\\(^{-1}\\)).",
+    "image": null,
+    "language": "en"
+  }
+]

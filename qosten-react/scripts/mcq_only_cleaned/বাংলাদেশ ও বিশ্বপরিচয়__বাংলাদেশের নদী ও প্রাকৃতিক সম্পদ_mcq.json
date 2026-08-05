@@ -1,0 +1,834 @@
+[
+  {
+    "id": 1768317289111,
+    "subject": "বাংলাদেশ ও বিশ্বপরিচয়",
+    "chapter": "বাংলাদেশের নদী ও প্রাকৃতিক সম্পদ",
+    "question": "জামুনা নদীর সৃষ্টির কারণ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হিমবাহ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জলোচ্ছ্বাস",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বন্যা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ভূমিকম্প",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "১৭৮৭ সালে, ব্রহ্মপুত্র নদীর তলদেশ ভূমিকম্পের কারণে উত্থিত হয়, এর পানি ধারণ করার ক্ষমতা হারায় এবং একটি নতুন ধারা সৃষ্টি হয় যা জামুনা নামে পরিচিত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768317290672,
+    "subject": "বাংলাদেশ ও বিশ্বপরিচয়",
+    "chapter": "বাংলাদেশের নদী ও প্রাকৃতিক সম্পদ",
+    "question": "মিনান তার গ্রামে সুন্দরভাবে বাস করতে চায়। তার গ্রামে উল্লিখিত পরিবেশ তৈরি করতে কীসের ব্যবস্থাপনা করা খুবই গুরুত্বপূর্ণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পানি ব্যবস্থা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "খেলাধুলা ব্যবস্থা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সঠিক নিকাশী ব্যবস্থা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "পরিবহন ব্যবস্থা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "একটি গ্রামে সঠিক বসবাসের পরিবেশের জন্য, একটি সঠিক নিকাশী ব্যবস্থা ব্যবস্থাপনা করা খুবই গুরুত্বপূর্ণ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768317290917,
+    "subject": "বাংলাদেশ ও বিশ্বপরিচয়",
+    "chapter": "বাংলাদেশের নদী ও প্রাকৃতিক সম্পদ",
+    "question": "কৃষি কীসের উপর নির্ভরশীল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রকৃতি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সমাজ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রাষ্ট্র",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পরিবার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কৃষি প্রকৃতির উপর নির্ভরশীল (জলবায়ু, মাটি, পানি ইত্যাদি ফ্যাক্টর)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768317291081,
+    "subject": "বাংলাদেশ ও বিশ্বপরিচয়",
+    "chapter": "বাংলাদেশের নদী ও প্রাকৃতিক সম্পদ",
+    "question": "কোন নদী বাংলাদেশ ও মিয়ানমারের সীমান্তে অবস্থিত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মাতামুহুরী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সাঙ্গু",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ফেনী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নাফ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "নাফ নদী বাংলাদেশ-মিয়ানমার সীমান্তে অবস্থিত। এর দৈর্ঘ্য ৫৬ কিমি।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768317291254,
+    "subject": "বাংলাদেশ ও বিশ্বপরিচয়",
+    "chapter": "বাংলাদেশের নদী ও প্রাকৃতিক সম্পদ",
+    "question": "গঙ্গা নদী বাংলাদেশে কোন জেলার মধ্য দিয়ে প্রবেশ করেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বগুড়া",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রাজশাহী",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "দিনাজপুর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রংপুর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "গঙ্গা (পদ্মা) নদী রাজশাহী জেলার মধ্য দিয়ে বাংলাদেশে প্রবেশ করেছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768317291562,
+    "subject": "বাংলাদেশ ও বিশ্বপরিচয়",
+    "chapter": "বাংলাদেশের নদী ও প্রাকৃতিক সম্পদ",
+    "question": "ফেনী নদীর উৎপত্তিস্থল কোথায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আরাকানের পাহাড়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "লুসাই পাহাড়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ত্রিপুরার পাহাড়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আসামের পাহাড়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ফেনী নদীর উৎপত্তিস্থল আরাকানের পাহাড়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768317291674,
+    "subject": "বাংলাদেশ ও বিশ্বপরিচয়",
+    "chapter": "বাংলাদেশের নদী ও প্রাকৃতিক সম্পদ",
+    "question": "সুরমা ও কুশিয়ারা নদীর সঙ্গমস্থল আজমিরিগঞ্জের কাছে কোন নামে প্রবাহিত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বুড়িগঙ্গা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মেঘনা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ব্রহ্মপুত্র",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পদ্মা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সুরমা ও কুশিয়ারার সঙ্গমের পর, নদীটি আজমিরিগঞ্জের কাছে মেঘনা নামে প্রবাহিত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768317291788,
+    "subject": "বাংলাদেশ ও বিশ্বপরিচয়",
+    "chapter": "বাংলাদেশের নদী ও প্রাকৃতিক সম্পদ",
+    "question": "সুজন নৌকায় করে একটি ভ্রমণে গিয়েছিল। তারা যে নদীতে ভ্রমণ করেছিল তা সিলেট জেলায় কুশিয়ারা ও সুরমা নদীর সংযোগস্থলে সৃষ্টি হয়। নদীটি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্ণফুলী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ব্রহ্মপুত্র",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মেঘনা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "পদ্মা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সিলেটে কুশিয়ারা ও সুরমার সঙ্গমস্থলে যে নদী সৃষ্টি হয় তা হল মেঘনা।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768317291907,
+    "subject": "বাংলাদেশ ও বিশ্বপরিচয়",
+    "chapter": "বাংলাদেশের নদী ও প্রাকৃতিক সম্পদ",
+    "question": "বাংলাদেশের প্রধান সমুদ্রবন্দর কোন নদীর তীরে অবস্থিত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্ণফুলী",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "পশুর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সাঙ্গু",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রূপসা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বাংলাদেশের প্রধান সমুদ্রবন্দর, চট্টগ্রাম বন্দর, কর্ণফুলী নদীর তীরে অবস্থিত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768317292027,
+    "subject": "বাংলাদেশ ও বিশ্বপরিচয়",
+    "chapter": "বাংলাদেশের নদী ও প্রাকৃতিক সম্পদ",
+    "question": "নিচের কোনটি ব্রহ্মপুত্রের উপনদী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "করতোয়া ও আত্রাই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ধরলা ও তিস্তা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "করতোয়া ও তিস্তা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ধরলা ও আত্রাই",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "করতোয়া ও তিস্তা ব্রহ্মপুত্র নদীর উপনদী।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768317292147,
+    "subject": "বাংলাদেশ ও বিশ্বপরিচয়",
+    "chapter": "বাংলাদেশের নদী ও প্রাকৃতিক সম্পদ",
+    "question": "নারায়ণগঞ্জ শহর কোন নদীর তীরে গড়ে উঠেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নাফ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শীতলক্ষ্যা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বুড়িগঙ্গা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গোমতী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "নারায়ণগঞ্জ শহর শীতলক্ষ্যা নদীর তীরে গড়ে উঠেছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768317292264,
+    "subject": "বাংলাদেশ ও বিশ্বপরিচয়",
+    "chapter": "বাংলাদেশের নদী ও প্রাকৃতিক সম্পদ",
+    "question": "পানি সম্পদ ব্যবস্থাপনা কেন নিশ্চিত করতে হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সারা বছর পানি প্রাপ্যতা নিশ্চিত করতে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "মানুষের মৌলিক চাহিদা পূরণ করতে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যাতে সবাই পানি পায়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "'সবার জন্য পানি' স্লোগানকে সফল করতে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পানি সম্পদ ব্যবস্থাপনা বিভিন্ন ব্যবহারের জন্য সারা বছর পানি প্রাপ্যতা নিশ্চিত করতে হবে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768317292380,
+    "subject": "বাংলাদেশ ও বিশ্বপরিচয়",
+    "chapter": "বাংলাদেশের নদী ও প্রাকৃতিক সম্পদ",
+    "question": "গঙ্গা-কাপ্তাক্ষী প্রকল্পের কারণে কোন অঞ্চলের মানুষ কৃষি উৎপাদনে লাভবান হচ্ছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দিনাজপুর",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কুমিল্লা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যশোর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বগুড়া",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "গঙ্গা-কাপ্তাক্ষী প্রকল্প দিনাজপুর অঞ্চলের কৃষিতে উপকার করেছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768317292495,
+    "subject": "বাংলাদেশ ও বিশ্বপরিচয়",
+    "chapter": "বাংলাদেশের নদী ও প্রাকৃতিক সম্পদ",
+    "question": "একটি নদী রাজশাহী জেলার মধ্য দিয়ে বাংলাদেশে প্রবেশ করেছে। নদীটি ভারত ও বাংলাদেশে ভিন্ন নামে পরিচিত। নদীটির নাম কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "যমুনা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তিস্তা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মেঘনা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পদ্মা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "যে নদীটি রাজশাহীর মধ্য দিয়ে প্রবেশ করেছে তা গঙ্গা, যা বাংলাদেশে পদ্মা নামে পরিচিত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768317292642,
+    "subject": "বাংলাদেশ ও বিশ্বপরিচয়",
+    "chapter": "বাংলাদেশের নদী ও প্রাকৃতিক সম্পদ",
+    "question": "কোন নদীর শাখা বেশি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্ণফুলী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ব্রহ্মপুত্র",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পদ্মা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "যমুনা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ব্রহ্মপুত্র নদীর তালিকাভুক্ত অন্যগুলোর তুলনায় বেশি শাখা (বিতরণিকা) রয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768317292782,
+    "subject": "বাংলাদেশ ও বিশ্বপরিচয়",
+    "chapter": "বাংলাদেশের নদী ও প্রাকৃতিক সম্পদ",
+    "question": "সুরমা নদী কোন শহরের পাশ দিয়ে বয়ে গেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কুমিল্লা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফেনী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মৌলভীবাজার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সিলেট",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সুরমা নদী সিলেট শহরের পাশ দিয়ে বয়ে গেছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768317292935,
+    "subject": "বাংলাদেশ ও বিশ্বপরিচয়",
+    "chapter": "বাংলাদেশের নদী ও প্রাকৃতিক সম্পদ",
+    "question": "বাংলাদেশে বাণিজ্যিক পণ্যের কত শতাংশ অভ্যন্তরীণ নৌপথে পরিবহন করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৭০%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৭৫%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৮০%",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৮৭%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বাংলাদেশে প্রায় ৮০% বাণিজ্যিক পণ্য অভ্যন্তরীণ নৌপথে পরিবহন করা হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768317293049,
+    "subject": "বাংলাদেশ ও বিশ্বপরিচয়",
+    "chapter": "বাংলাদেশের নদী ও প্রাকৃতিক সম্পদ",
+    "question": "বাংলাদেশে জলবিদ্যুৎ উৎপাদনের সুযোগ কম হওয়ার কারণ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রযুক্তিতে জ্ঞানের অভাব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "উৎপাদন খরচ বেশি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "স্রোতযুক্ত নদীর অভাব",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "উপযুক্ত ভূ-প্রকৃতির অভাব (পার্বত্য অঞ্চলে দ্রুত প্রবাহিত নদী)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "জলবিদ্যুৎ উৎপাদনের সুযোগ কম হওয়ার কারণ স্রোতযুক্ত নদী (জলবিদ্যুৎ বাঁধের জন্য প্রয়োজনীয় পর্যাপ্ত ঢালযুক্ত দ্রুত প্রবাহিত নদী) এর অভাব।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768317293167,
+    "subject": "বাংলাদেশ ও বিশ্বপরিচয়",
+    "chapter": "বাংলাদেশের নদী ও প্রাকৃতিক সম্পদ",
+    "question": "মিন তার পরিবারের সাথে চট্টগ্রামের পার্বত্য অঞ্চল ভ্রমণ করেছে। সেখানে সে দেখতে পেয়েছে যে ঐ এলাকার একটি প্রধান নদীতে বাঁধ দিয়ে একটি শক্তি সম্পদ উৎপাদন করা হচ্ছে। নদীর কোন ভূমিকা মিন দেখেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাণিজ্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "খনিজ সম্পদ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যোগাযোগ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জলবিদ্যুৎ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "নদীর উপর নির্মিত বাঁধটি জলবিদ্যুৎ উৎপাদনের জন্য ব্যবহৃত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768317293298,
+    "subject": "বাংলাদেশ ও বিশ্বপরিচয়",
+    "chapter": "বাংলাদেশের নদী ও প্রাকৃতিক সম্পদ",
+    "question": "তিস্তা নদীর বর্তমান দৈর্ঘ্য কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৩২০ কিমি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১৭৭ কিমি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "১৪২ কিমি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১২০ কিমি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "তিস্তা নদীর বর্তমান দৈর্ঘ্য (বাংলাদেশের মধ্যে) ১৭৭ কিমি।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768317293562,
+    "subject": "বাংলাদেশ ও বিশ্বপরিচয়",
+    "chapter": "বাংলাদেশের নদী ও প্রাকৃতিক সম্পদ",
+    "question": "মেঘনা নদীর শাখাগুলো কী কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ধরলা, মনু, হলদা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পশুর, গোমতী, তিতাস",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাউলাই, গোমতী, তিতাস",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বাউলাই, গোমতী, ধরলা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মেঘনা নদীর শাখাগুলোর মধ্যে রয়েছে বাউলাই, গোমতী এবং তিতাস।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768317293672,
+    "subject": "বাংলাদেশ ও বিশ্বপরিচয়",
+    "chapter": "বাংলাদেশের নদী ও প্রাকৃতিক সম্পদ",
+    "question": "১৭৮৭ সালের ভূমিকম্পের কারণে ব্রহ্মপুত্রের একটি শাখার সৃষ্টি হয়। নদীটির নাম কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "যমুনা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "তিস্তা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ধরলা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আত্রাই",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "১৭৮৭ সালের ভূমিকম্পের পর সৃষ্ট নতুন শাখাটি হল যমুনা নদী।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768317293786,
+    "subject": "বাংলাদেশ ও বিশ্বপরিচয়",
+    "chapter": "বাংলাদেশের নদী ও প্রাকৃতিক সম্পদ",
+    "question": "নিচের কোন নদীটি দীর্ঘতম?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মাতামুহুরী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সাঙ্গু",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তিস্তা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কর্ণফুলী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্রদত্ত অপশনগুলোর মধ্যে, তিস্তা নদীটি দীর্ঘতম।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768317293916,
+    "subject": "বাংলাদেশ ও বিশ্বপরিচয়",
+    "chapter": "বাংলাদেশের নদী ও প্রাকৃতিক সম্পদ",
+    "question": "নদী শুকিয়ে গেলে কী প্রভাব পড়বে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নৌপথে পরিবহন ব্যাহত হবে।",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কৃষি উৎপাদন বৃদ্ধি পাবে।",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জলবিদ্যুৎ উৎপাদন হবে।",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রাকৃতিক সৌন্দর্য বৃদ্ধি পাবে।",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অভ্যন্তরীণ নৌপরিবহনের জন্য নদী অত্যন্ত গুরুত্বপূর্ণ। নদী শুকিয়ে গেলে, নৌপথে পরিবহন মারাত্মকভাবে ব্যাহত হবে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768317294107,
+    "subject": "বাংলাদেশ ও বিশ্বপরিচয়",
+    "chapter": "বাংলাদেশের নদী ও প্রাকৃতিক সম্পদ",
+    "question": "কোন নদীটি মেঘনার বিতরণিকা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বুড়িগঙ্গা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মধুমতি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চিত্রা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাউলাই",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বাউলাই মেঘনার একটি বিতরণিকা (প্রধান নদী থেকে বিচ্ছিন্ন হয়ে প্রবাহিত হওয়া একটি শাখা)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768317294241,
+    "subject": "বাংলাদেশ ও বিশ্বপরিচয়",
+    "chapter": "বাংলাদেশের নদী ও প্রাকৃতিক সম্পদ",
+    "question": "তিস্তা ব্যারেজ গুরুত্বপূর্ণ ভূমিকা রাখে—\ni. কৃষিতে\nii. পানি নিষ্কাশনে\niii. বন্যা প্রতিরোধে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "তিস্তা ব্যারেজ সেচ (কৃষি), পানি নিষ্কাশন ব্যবস্থাপনা এবং বন্যা নিয়ন্ত্রণে সাহায্য করার জন্য গুরুত্বপূর্ণ।",
+    "image": null,
+    "language": "en"
+  }
+]

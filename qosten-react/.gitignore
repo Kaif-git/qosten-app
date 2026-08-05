@@ -23,3 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 .vercel
+
+# Gemini settings (may contain secrets)
+qosten-react/.gemini/

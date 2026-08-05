@@ -1,0 +1,3234 @@
+[
+  {
+    "id": 1767455513399,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "কোন বহুব্রীহি সমাসে পারস্পরিক ক্রিয়া কোনো অবস্থা তৈরি হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সমানাধিকরণ বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ব্যতিহার বহুব্রীহি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ব্যাধিকরণ বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অলুক বহুব্রীহি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ব্যতিহার বহুব্রীহি সমাসে পারস্পরিক ক্রিয়া বা অবস্থার প্রকাশ ঘটে, যেমন— কানাকানি। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455530038,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "কোনটি সমাসে অনুসর্গ লোপ পাওয়া তৎপুরুষ সমাস?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিজয়পাকা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গাছপাকা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বহুব্রীহি সমাস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তেলিভাজা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "তেল দিয়ে ভাজা = তেলিভাজা; এখানে 'দিয়ে' অনুসর্গটি লোপ পেয়েছে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455530224,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "'চতুর্ভুজ' শব্দটি কোন সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দ্বিগু সমাস",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তৎপুরুষ সমাস",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দ্বন্দ্ব সমাস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বহুব্রীহি সমাস",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "চতুর্ভুজ বহুব্রীহি সমাসের একটি উদাহরণ কারণ এটি নির্দিষ্ট কোনো অর্থকে নির্দেশ করে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455530607,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "'ত্রিফলা' কোন সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মধ্যপদলোপী কর্মধারয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দ্বিগু কর্মধারয়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "উপমান কর্মধারয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উপমিত কর্মধারয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "তিন ফলের সমাহার = ত্রিফলা; সংখ্যাবাচক শব্দ পূর্বে থাকায় এটি দ্বিগু কর্মধারয়। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455531451,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "ব্যতিহার বহুব্রীহি সমাসের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হাতঘড়ি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গায়েপড়া",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কানাকানি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ঘরজামাই",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কানে কানে যে কথা = কানাকানি, এটি পারস্পরিক ক্রিয়া প্রকাশ করে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455531784,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "'কানে কানে যে কথা = কানাকানি' — এখানে 'কানাকানি' কোন সমাস?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দ্বন্দ্ব সমাস",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কর্মধারয় সমাস",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তৎপুরুষ সমাস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বহুব্রীহি সমাস",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কানাকানি শব্দটি ব্যতিহার বহুব্রীহি সমাসের উদাহরণ। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455532009,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "কোন সমাসে পূর্বপদ বা পরপদ কোনোটির অর্থ না বুঝিয়ে অন্যকিছু বোঝায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দ্বন্দ্ব সমাস",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কর্মধারয় সমাস",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দ্বন্দ্ব সমাস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বহুব্রীহি সমাস",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বহুব্রীহি সমাসে সমস্তপদটি নতুন কোনো অর্থ প্রকাশ করে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455532154,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "পূর্বপদ বিশেষণ ও পরপদ বিশেষ্য হলে তাকে কোন ধরনের বহুব্রীহি সমাস বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সমানাধিকরণ বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ব্যাধিকরণ বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পদলোপী বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সমানাধিকরণ বহুব্রীহি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "উৎসে ৫৭ নম্বর প্রশ্নের সঠিক উত্তর হিসেবে 'ঘ' অপশনটি চিহ্নিত করা হয়েছে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455532384,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "মধ্যপদলোপী কর্মধারয় সমাসের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চৌরাস্তা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঘৃতাত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চালকুমড়ো",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "টাকমাথা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "চালে ধরে যে কুমড়ো = চালকুমড়ো, এখানে ব্যাসবাক্যের মধ্যপদ লোপ পেয়েছে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455532507,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "নিচের কোনটি উপমান কর্মধারয় সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কাজলকালো",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "চন্দ্রমুখ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মনমাঝি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পদ্মআঁখি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কাজলের ন্যায় কালো = কাজলকালো, এটি উপমান কর্মধারয় সমাস। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455532634,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "নিচের কোনটি রূপক কর্মধারয় সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মনমরা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মনমাঝি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মনগড়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পদ্মআঁখি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মন রূপ মাঝি = মনমাঝি, এখানে উপমেয় ও উপমান পদের অভেদ কল্পনা করা হয়েছে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455532762,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "কোন কর্মধারয় সমাসে উপমেয় পদের সাথে উপমান পদের অভেদ কল্পনা করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রূপক কর্মধারয়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "উপমিত কর্মধারয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মধ্যপদলোপী কর্মধারয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিধু কর্মধারয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "রূপক কর্মধারয় সমাসে উপমেয় ও উপমানকে অভিন্ন মনে করা হয়। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455532944,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "উপমিত কর্মধারয় সমাস কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মনমাঝি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চন্দ্রমুখ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ঘরজামাই",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কাজলকালো",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মুখ চন্দ্রের ন্যায় = চন্দ্রমুখ, এটি উপমিত কর্মধারয় সমাস। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455533068,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "বিভক্তি লোপ হয়নি কোনটিতে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তেলিভাজা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গরুরগাড়ি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গাছপাকা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "হাতে কাটা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "হাতে কাটা শব্দটিতে বিভক্তি লোপ পায় নি, এটি অলুক তৎপুরুষের উদাহরণ। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455533193,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "রূপক কর্মধারয় সমাসের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মনমাঝি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সাহিত্যসভা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মনমাঝি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মহাজন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "মন রূপ মাঝি = মনমাঝি। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455533308,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "'রাজপথ' কোন সমাস?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তৎপুরুষ সমাস",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কর্মধারয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তৎপুরুষ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বহুব্রীহি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পথের রাজা = রাজপথ, এটি তৎপুরুষ সমাস। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455533434,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "নিচের কোনটি নিত্য সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "উপাদিতে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আরক্তিম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পরিপর্ণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গ্রামান্তর",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অন্য গ্রাম = গ্রামান্তর, এটি নিত্য সমাসের উদাহরণ। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455533550,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "'চতুর্ভুজ' শব্দটি কোন সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ব্যাধিকরণ বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সংখ্যাবাচক বহুব্রীহি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ব্যতিহার বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মধ্যপদলোপী বহুব্রীহি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সংখ্যাবাচক শব্দ দিয়ে গঠিত বহুব্রীহি সমাসকে সংখ্যাবাচক বহুব্রীহি বলে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455533793,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "'সেতার' কোন সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সংখ্যাবাচক বহুব্রীহি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সমানাধিকরণ বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অলুক বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ব্যতিহার বহুব্রীহি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সে (তিন) তার আছে যার = সেতার। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455533911,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "'গোঁফখেজুরে' কোন সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তৎপুরুষ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বহুব্রীহি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কর্মধারয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দ্বন্দ্ব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "গোঁফে খেজুর যার = গোঁফখেজুরে, এটি বহুব্রীহি সমাস। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455534025,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "'হাতাহাতি' কোন সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তৎপুরুষ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কর্মধারয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তৎপুরুষ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বহুব্রীহি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "হাতে হাতে যে যুদ্ধ = হাতাহাতি, এটি ব্যতিহার বহুব্রীহি সমাস। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455534138,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "নিচের কোনটি বহুব্রীহি সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রাজপথ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সেতার",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "দ্বিজাত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তেলিভাজা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সেতার শব্দটি বহুব্রীহি সমাসের উদাহরণ। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455534260,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "সংখ্যাবাচক বহুব্রীহি উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দোতলা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হাতাহাতি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তেপায়া",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ত্রিনয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "তিন পায়া আছে যার = তেপায়া। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455534378,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "সমস্যমান পদটির নাম কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ব্যাসবাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিগ্রহবাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সমস্যমান পদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সমস্তপদ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সমাসবদ্ধ পদটিকে সমস্তপদ বলা হয়। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455534494,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "সমাস মূলত কত প্রকার?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ছয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পাঁচ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চার",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "তিন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বাংলা ব্যাকরণ অনুসারে সমাস মূলত চার প্রকার। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455534614,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "কোনটি পরপদ প্রধান সমাস?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্মধারয়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অব্যয়ীভাব",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দ্বন্দ্ব",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বহুব্রীহি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কর্মধারয় সমাসে পরপদের অর্থের প্রাধান্য থাকে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455534740,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "উপমিত কর্মধারয় সমাসের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চন্দ্রমুখ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "দুর্বদণ্ড",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কাঁচামিঠা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মনমাঝি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "মুখ চন্দ্রের ন্যায় = চন্দ্রমুখ। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455534856,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "নিচের কোনটি বহুব্রীহি সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সিংহপুরুষ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চালাকচতুর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রাজপথ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গায়েপড়া",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "গায়েপড়া শব্দটি অলুক বহুব্রীহি সমাসের উদাহরণ। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455574812,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "সমাসের মাধ্যমে গঠিত হয়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "নতুন শব্দ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "নতুন বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নতুন বর্ণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নতুন ধ্বনি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সমাস প্রক্রিয়ায় একাধিক পদ এক পদে পরিণত হয়ে নতুন শব্দ তৈরি করে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455574929,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "সমাসবদ্ধ পদকে বলে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "সমস্তপদ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সমস্যমান পদ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পূর্বপদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পরপদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সমাস হওয়ার পর যে নতুন শব্দটি তৈরি হয় তাকে সমস্তপদ বলে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455575045,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "ব্যাসবাক্য কাকে ব্যাখ্যা করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পূর্বপদ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পরপদ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সমস্তপদ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সমস্যমান পদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সমস্তপদকে ভেঙে যে বাক্যাংশ পাওয়া যায় তাকে ব্যাসবাক্য বলে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455575165,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "\"পরীক্ষায় নিয়ন্ত্রক পরীক্ষার **সময়সূচি** স্কুল-কলেজে পাঠানোর নির্দেশ দিয়েছেন।\"— এই বাক্যে সমস্তপদ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সময়সূচি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সমস্যমান পদ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পূর্বপদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পরপদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সময়সূচি শব্দটি সময়ের সূচি অর্থে সমাসবদ্ধ পদ বা সমস্তপদ। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455575285,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "অর্থের প্রাধান্যর ভিত্তিতে বাংলা সমাস কত প্রকার?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তিন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চার",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "পাঁচ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "উৎস অনুসারে বাংলা সমাসকে চার ভাগে ভাগ করা হয়েছে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455575391,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "নিচের কোনটি **দ্বন্দ্ব সমাসের** উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নয়-ছয়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "খাসজমি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কনকচাঁপা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "হিমালয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যে সমাসে উভয় পদের অর্থ প্রধান থাকে তাকে দ্বন্দ্ব সমাস বলে, যেমন নয় ও ছয় = নয়-ছয়। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455575503,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "নিচের কোনটি **কর্মধারয় সমাসের** উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হাতঘড়ি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "চোখে-মুখে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সেতার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তেলিভাজা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "হাতে পরার ঘড়ি = হাতঘড়ি, এটি মধ্যপদলোপী কর্মধারয় সমাস। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455575612,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "নিচের কোনটির ব্যাসবাক্যে **'যে'** যোজক রয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বেগুনভাজা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ত্রিফলা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ঘরজামাই",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "হাতঘড়ি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ভাজা যে বেগুন = বেগুনভাজা, এর ব্যাসবাক্যে 'যে' যোজক ব্যবহৃত হয়। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455575726,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "**মধ্যপদলোপী কর্মধারয়** সমাসের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চৌরাস্তা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঘৃতাত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চালকুমড়ো",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "টাকমাথা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "চালে ধরে যে কুমড়ো = চালকুমড়ো, এখানে ব্যাসবাক্যের মধ্যপদ লোপ পেয়েছে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455575846,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "**উপমিত কর্মধারয়** সমাসের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চাঁদমুখ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "শশব্যস্ত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হাতঘড়ি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিষাদসিন্ধু",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "মুখ চাঁদের ন্যায় = চাঁদমুখ, এটি উপমিত কর্মধারয় সমাস। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455575985,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "নিচের কোনটিতে উপমেয় পদের সাথে উপমান পদের **অভেদ কল্পনা** করা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কাজলকালো",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মনমাঝি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তুষারশুভ্র",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চৌরাস্তা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মন রূপ মাঝি = মনমাঝি, এখানে উপমেয় (মন) ও উপমান (মাঝি) এর মধ্যে অভেদ কল্পনা করা হয়েছে (রূপক কর্মধারয়)। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455576112,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "**বিভক্তি লোপ** পাওয়া তৎপুরুষ সমাসের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ছেলে-ভুলানো",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তেলিভাজা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "গোড়াগাড়ি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "হাতে কাটা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "তেল দিয়ে ভাজা = তেলিভাজা, এখানে বিভক্তি লোপ পেয়েছে। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455576231,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "নিচের কোনটি **অলুক তৎপুরুষ** সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গ্রামছাড়া",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গাছপাকা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ঘানখেত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গরুরগাড়ি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "গরুর গাড়ি = গরুরগাড়ি, এখানে পূর্বপদের বিভক্তি (র) লোপ পায়নি। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455576337,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "কোন সমাসে পূর্বপদ ও পরপদের কোনটির অর্থ না বুঝিয়ে **অন্য কিছু** বোঝায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দ্বিগুণ সমাস",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তৎপুরুষ সমাস",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বহুব্রীহি সমাস",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কর্মধারয় সমাস",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বহুব্রীহি সমাসে সমস্তপদটি পূর্বপদ বা পরপদ কোনোটির অর্থ না বুঝিয়ে তৃতীয় কোনো অর্থকে বোঝায়। [২]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455576449,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "যে বহুব্রীহি সমাসে সমস্তপদে পূর্বপদের **বিভক্তি অক্ষুণ্ণ** থাকে তাকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সংখ্যাবাচক বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ব্যতিহার বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রত্যয়ান্ত বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অলুক বহুব্রীহি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অলুক বহুব্রীহি সমাসে সমস্তপদে বিভক্তি লোপ পায় না। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455576566,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "**'চালকুমড়া'** কোন সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দ্বন্দ্ব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কর্মধারয়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তৎপুরুষ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বহুব্রীহি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "চালে ধরে যে কুমড়ো = চালকুমড়ো, এটি কর্মধারয় সমাস। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455576677,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "নিচের কোন সমস্তপদটি **উপমান কর্মধারয়** সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মুখচন্দ্র",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শশব্যস্ত",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বিষাদসিন্ধু",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সিংহপুরুষ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "শশকের ন্যায় ব্যস্ত = শশব্যস্ত, এটি উপমান কর্মধারয় সমাস। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455576844,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "যার সাথে তুলনা করা হয় তাকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "উপমান",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "উপমেয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রূপক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অনুলত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সমাসে যার সাথে তুলনা করা হয় তাকে উপমান বলা হয়। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455577234,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "**'আশুবিনাশ'** কোন সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্মধারয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তৎপুরুষ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অব্যয়ীভাব",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বহুব্রীহি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "আশুবিনাশ বহুব্রীহি সমাসের উদাহরণ হিসেবে উৎস অনুসারে চিহ্নিত। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455577343,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "নিচের কোনটি **তৎপুরুষ সমাসের** উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অকালমৃত্যু",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অল্পশিক্ষিত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গোলাপফুল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সেতার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অকালে মৃত্যু = অকালমৃত্যু, এটি বিভক্তি লোপ পাওয়া তৎপুরুষ সমাস। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455577460,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "নিচের কোনটি **উপমিত কর্মধারয়** সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চন্দ্রমুখ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "শশব্যস্ত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কাজলকালো",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তুষারশুভ্র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "মুখ চন্দ্রের ন্যায় = চন্দ্রমুখ, এটি উপমিত কর্মধারয়। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455577579,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "নিচের কোনটিতে উপমেয় পদের সাথে উপমান পদের **অভেদ কল্পনা** করা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চৌরাস্তা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিষাদসিন্ধু",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "চাঁদমুখ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নদনদী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বিষাদ রূপ সিন্ধু = বিষাদসিন্ধু, এখানে অভেদ কল্পনা বা রূপক প্রকাশ পেয়েছে। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455577779,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "বিভক্তি লোপ পাওয়া তৎপুরুষ সমাসের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ছেলে-ভুলানো",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তেলিভাজা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "গোড়াগাড়ি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "হাতে কাটা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পূর্বপদের বিভক্তি লোপ পেলে তাকে তৎপুরুষ সমাস বলে। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455578009,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "নিচের কোনটি **দ্বিগু কর্মধারয়** সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঘরজামাই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শশব্যস্ত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিষাদসিন্ধু",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ত্রিফলা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "তিন ফলের সমাহার = ত্রিফলা, সংখ্যাবাচক শব্দ পূর্বে থাকায় এটি দ্বিগু কর্মধারয়। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455578369,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "**ব্যতিহার বহুব্রীহি** সমাসের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কানেখাটো",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কানাকানি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "গোঁফখেজুরে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "লাঠালাঠি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কানে কানে যে কথা = কানাকানি, এটি পারস্পরিক ক্রিয়া বা ব্যতিহার বহুব্রীহি। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455578494,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "**'বিজয়-পতাকা'** কোন কর্মধারয় সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মধ্যপদলোপী কর্মধারয়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "উপমান কর্মধারয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উপমিত কর্মধারয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রূপক কর্মধারয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বিজয় সূচক পতাকা = বিজয়-পতাকা, মধ্যপদ লোপ পেয়েছে। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455578605,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "সমাসবদ্ধ পদের **পরবর্তী অংশকে** কী বলা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পূর্বপদ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দক্ষিণ পদ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পরপদ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "প্রধান পদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সমাসের পরের পদটিকে পরপদ বা উত্তরপদ বলে। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455578716,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "নিচের কোনটি **'যে'** যোজক রয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বেগুনভাজা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ত্রিফলা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ঘরজামাই",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "হাতঘড়ি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ভাজা যে বেগুন = বেগুনভাজা। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455578829,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "কোন সমাসে পূর্বপদ ও পরপদ উভয়টিরই **সমান প্রাধান্য** থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কর্মধারয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তৎপুরুষ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দ্বন্দ্ব",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "দ্বন্দ্ব সমাসে উভয় পদের অর্থ প্রাধান্য পায়। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455578957,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "কোনটি **কর্মধারয় সমাস**?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হাতেকলমে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গোল্লাভরা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পঞ্চবটি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "লাল পেরে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "উৎস অনুসারে 'লাল পেরে' কর্মধারয় সমাসের উদাহরণ। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455579104,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "**'গোলাপফুল'** সমাসবদ্ধ পদের ব্যাসবাক্য কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গোলাপ যে ফুল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গোলাপ রঙের ফুল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গোলাপ নামের ফুল",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "গোলাপি ফুল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "গোলাপ নামের ফুল = গোলাপফুল। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455579244,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "দ্বিগু কর্মধারয় সমাসের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সেতার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চৌরাস্তা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ত্রিফলা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সাহেব-বিবি-গোলাম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "চার রাস্তার সমাহার = চৌরাস্তা। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455579475,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "নিচের কোনটি **অলুক দ্বন্দ্ব** সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হীরে-জহরত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ছেলে-মেয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গায়ে পড়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চলনে-বলনে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "চলনে ও বলনে = চলনে-বলনে, বিভক্তি লোপ না পাওয়ায় এটি অলুক দ্বন্দ্ব। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455579648,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "অনুসর্গ লোপ পেয়ে গঠিত **তৎপুরুষ সমাসের** উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আগাগোড়া",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অকালমৃত্যু",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তেলিভাজা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "গোঁফখেজুরে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "তেল দিয়ে ভাজা = তেলিভাজা, 'দিয়ে' অনুসর্গটি লোপ পেয়েছে। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455580381,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "কোন ধরনের কর্মধারয় সমাসে উপমেয় পদের সাথে উপমান পদের **অভেদ কল্পনা** করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রূপক",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "মধ্যপদলোপী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উপমান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উপমিত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "রূপক কর্মধারয় সমাসে উপমেয় ও উপমান অভিন্ন ভাবা হয়। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455583722,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "**'গরুরগাড়ি'** কোন সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অলুক দ্বন্দ্ব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রূপক কর্মধারয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অলুক তৎপুরুষ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ব্যতিহার বহুব্রীহি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বিভক্তি লোপ না পাওয়ায় এটি অলুক তৎপুরুষ। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455583884,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "**'জায়া'** শব্দটি বহুব্রীহি সমাসে হয়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "দম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জানি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "যুবতি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পত্নী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বহুব্রীহি সমাসে জায়া স্থানে 'জানি' হয়। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455584108,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "**সংখ্যাবাচক বহুব্রীহি** সমাসের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ত্রিফলা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চৌরাস্তা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ঊনত্রিশ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সেতার",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সে (তিন) তার আছে যার = সেতার। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455584221,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "সমাসের **উদ্দেশ্য** কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাক্য গঠন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শব্দ গঠন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাক্যকে সংক্ষিপ্ত করা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সংক্ষেপণ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সমাসের মূল উদ্দেশ্য হলো পদের সংক্ষেপণ। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455584342,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "**'গায়েপড়া'** কোন সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অলুক দ্বন্দ্ব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অলুক তৎপুরুষ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অলুক বহুব্রীহি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মধ্যপদলোপী কর্মধারয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "উৎসে ৪৩ নম্বর প্রশ্নের সঠিক উত্তর হিসেবে 'গ' অপশনটি চিহ্নিত করা হয়েছে। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455584451,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "**'মহাজন'-এর** সঠিক ব্যাসবাক্য কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মহান যে জন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "মহা যে জ্ঞান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মহৎ যে জ্ঞান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মহতী যে জ্ঞান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "মহান যে জন = মহাজন। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455584585,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "**'চন্দ্রমুখ'** কোন কর্মধারয় সমাসের উদাহরণ? বা, **'মুখ চন্দ্রের ন্যায়'**— কোন কর্মধারয় সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "উপমান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "উপমিত",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "রূপক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মধ্যপদলোপী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "চন্দ্রমুখ হলো উপমিত কর্মধারয় সমাস। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455584711,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "**'চন্দ্রমুখ'** শব্দের ব্যাসবাক্য কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চন্দ্রের ন্যায় মুখ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চন্দ্রে রূপ মুখ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মুখ চন্দ্রের ন্যায়",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মুখ ও চন্দ্র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মুখ চন্দ্রের ন্যায় = চন্দ্রমুখ। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455584835,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "**উপমিত কর্মধারয়** সমাসের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চন্দ্রমুখ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কাজলকালো",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শশব্যস্ত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তুষারশুভ্র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "উপমিত কর্মধারয়ে সাধারণ গুণের উল্লেখ থাকে না। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455584966,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "নিচের কোনটি **দ্বিগু কর্মধারয়** সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শশব্যস্ত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চৌরাস্তা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "আশুবিনাশ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মনমাঝি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সংখ্যাবাচক শব্দ পূর্বে থাকায় এটি দ্বিগু কর্মধারয়। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455585083,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "নিচের কোনটি **বহুব্রীহি সমাসের** উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রাজপথ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সেতার",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মনমাঝি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কড়কড়ি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সেতার একটি বহুব্রীহি সমাসবদ্ধ শব্দ। [৪]\n[বাকি প্রশ্নগুলো পরবর্তী ক্রমানুসারে পাওয়া যাবে।]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456354785,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "'মহাজ্ঞান'-এর সঠিক ব্যাসবাক্য কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মহান যে জ্ঞান",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "মহৎ যে জ্ঞান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মহতী যে জ্ঞান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মহৎ যে জ্ঞান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456355509,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "'চন্দ্রমুখ' শব্দের ব্যাসবাক্য কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চন্দ্রের ন্যায় মুখ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চন্দ্র রূপ মুখ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মুখ চন্দ্রের ন্যায়",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মুখ ও চন্দ্র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456355615,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "উপমিত কর্মধারয় সমাসের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চন্দ্রমুখ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বিষাদসিন্ধু",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কাজলকালো",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তুষারশুভ্র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456355723,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "নিচের কোনটি দ্বিগু কর্মধারয় সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শশব্যস্ত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চৌরাস্তা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "আলুসিদ্ধ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মনমাঝি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456355842,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "নিচের কোনটি বহুব্রীহি সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঘৃতান্ন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সেতার",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মনমাঝি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জজবুড়ো",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456355993,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "কোন বহুব্রীহি সমাসে পারস্পরিক ক্রিয়ার কোনো অবস্থা তৈরি হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সমানাধিকরণ বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ব্যাধিকরণ বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ব্যতিহার বহুব্রীহি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অলুক বহুব্রীহি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456356145,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "কোনটি সমিতিতে অনুসর্গ লোপ পাওয়া তৎপুরুষ সমাস?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিপন্নপাল্লা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গাছপাকা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রাজপথ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "তেলেনভাজা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456356300,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "'চতুর্ভুজ' শব্দটি কোন সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মধ্যপদলোপী কর্মধারয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তৎপুরুষ সমাস",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "দ্বন্দ্ব সমাস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কর্মধারয় সমাস",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456356561,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "ব্যতিহার বহুব্রীহি সমাসের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হাতাহাতি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "গায়েপড়া",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ঘরবাড়ি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কানাকানি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456356711,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "'কানে কানে যে কথা = কানাকানি'— এখানে 'কানাকানি' কোন সমাস?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দ্বন্দ্ব সমাস",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কর্মধারয় সমাস",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তৎপুরুষ সমাস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বহুব্রীহি সমাস",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456356853,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "কোন সমাসে পূর্বপদ বা পরপদ কোনোটির অর্থ না বুঝিয়ে অন্য কিছু বোঝায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বহুব্রীহি সমাস",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কর্মধারয় সমাস",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দ্বন্দ্ব সমাস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তৎপুরুষ সমাস",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456357021,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "পূর্বপদ বিশেষণ ও পরপদ বিশেষ্য হলে তাকে কোন ধরনের বহুব্রীহি সমাস বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ব্যতিহার বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ব্যাধিকরণ বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পদলোপী বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সমানাধিকরণ বহুব্রীহি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456357136,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "মধ্যপদলোপী কর্মধারয় সমাসের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চৌরাস্তা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঘৃতান্ন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "চালাকচতুর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "টাকমাথা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456357638,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "কোন কর্মধারয় সমাসে উপমেয় পদের সাথে উপমান পদের অভেদ কল্পনা করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রূপক কর্মধারয়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "উপমান কর্মধারয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মধ্যপদলোপী কর্মধারয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দ্বিগু কর্মধারয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456357850,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "বিভক্তি লোপ পায়নি কোনটিতে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তেলেভাজা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ঠাকুরদাদা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কানাকানি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চিঠিপত্র",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456358009,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "রূপক কর্মধারয় সমাসের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মনমাঝি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সাহিত্যসভা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মনমরা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মহরাজ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456358148,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "'রাজপথ' কোন সমাস?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তৎপুরুষ সমাস",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কর্মধারয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উপমান কর্মধারয়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বহুব্রীহি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456358295,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "নিচের কোনটি তৎপুরুষ সমাস?",
+    "options": [
+      {
+        "label": "a",
+        "text": "উপরিচর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আরক্তিম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পরিপূর্ণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গ্রামান্তর",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456358432,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "'চতুর্ভুজ' শব্দটি কোন সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ব্যাধিকরণ বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সংখ্যাবাচক বহুব্রীহি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ব্যতিহার বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মধ্যপদলোপী বহুব্রীহি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456358592,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "'সেতার' কোন সমাসের সমাসবদ্ধ পদ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সংখ্যাবাচক বহুব্রীহি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সমানাধিকরণ বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অলুক বহুব্রীহি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ব্যতিহার বহুব্রীহি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456358882,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "'হাতাহাতি' কোন সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তৎপুরুষ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কর্মধারয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উপপদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বহুব্রীহি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456359125,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "নিচের কোনটি বহুব্রীহি সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রাজপথ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সেতার",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "দ্বিভাজ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তেলেভাজা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456359273,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "সংখ্যাবাচক বহুব্রীহি উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দোনালা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "হাতাহাতি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তেপায়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ত্রিস্তর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456359431,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "সমাসনিষ্পন্ন পদটির নাম কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ব্যাসবাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিগ্রহবাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সমস্যমান পদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সমস্তপদ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456359581,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "সমাস মূলত কয় প্রকার?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ছয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পাঁচ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চার",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "তিন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456359898,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "উপমিত কর্মধারয় সমাসের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চন্দ্রমুখ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "মুখপদ্ম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কাঁচামিঠা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মনমাঝি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767456360104,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১২: সমাস প্রক্রিয়ায় শব্দ গঠন",
+    "question": "নিচের কোনটি বহুব্রীহি সমাসের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সিংহপুরুষ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চালাকচতুর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রাজপথ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গায়েপড়া",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  }
+]

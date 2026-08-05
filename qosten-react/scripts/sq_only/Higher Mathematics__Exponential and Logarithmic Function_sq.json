@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1767523392278,
+    "subject": "Higher Mathematics",
+    "chapter": "Exponential and Logarithmic Function",
+    "lesson": "Logarithmic Properties",
+    "question": "If \\( m, n, x > 0 \\) and \\( m \\neq 1, n \\neq 1 \\), then —\ni) \\( 2\\log \\sqrt{m} + 3\\log \\sqrt{n} = 5 \\)\nii) \\( \\log m + \\log n - \\log x = \\log \\frac{mn}{x} \\)\niii) \\( m^2 = \\sqrt[3]{m^2} \\), where \\( x = \\frac{2}{3} \\)\nCorrect: ii only",
+    "parts": "[]",
+    "options": "[]",
+    "correct_answer": null,
+    "explanation": "(i) Simplifies to \\( \\log m + \\frac{3}{2} \\log n \\), not necessarily 5. (ii) True by logarithm rules. (iii) Simplifies to \\( m^2 = m^{2/3} \\Rightarrow m^{4/3}=1 \\Rightarrow m=1 \\), but \\( m \\neq 1 \\), so false.\n---",
+    "image": null
+  },
+  {
+    "id": 1767523392442,
+    "subject": "Higher Mathematics",
+    "chapter": "Exponential and Logarithmic Function",
+    "lesson": "Logarithmic Identities",
+    "question": "For logarithm—\ni) \\( \\log_2 7 = \\frac{\\log_{10} 7}{\\log_{10} 2} \\)\nii) \\( \\log_6 64 = 4 \\)\niii) \\( \\log_2 \\left( \\frac{128}{32} \\right) = 2 \\)\nCorrect: i and iii",
+    "parts": "[]",
+    "options": "[]",
+    "correct_answer": null,
+    "explanation": "(i) True by change of base formula. (ii) False, since \\( 6^4 = 1296 \\neq 64 \\). (iii) True, \\( \\log_2 (128/32) = \\log_2 4 = 2 \\).\n---",
+    "image": null
+  }
+]

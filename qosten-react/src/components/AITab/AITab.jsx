@@ -3,6 +3,7 @@ import { useSearchParams, useNavigate } from 'react-router-dom';
 import { useAI } from '../../context/AIContext';
 import { useQuestions } from '../../context/QuestionContext';
 import { aiService } from '../../services/aiService';
+import { questionApi } from '../../services/questionApi';
 import FullQuestionContent from '../FullQuestionContent/FullQuestionContent';
 import './AITab.css';
 
@@ -12,22 +13,78 @@ export default function AITab() {
     queue, 
     history, 
     isProcessing, 
+    isAutoProcessing,
+    autoProcessStats,
+    autoSubjectFilter,
+    setAutoSubjectFilter,
+    autoChapterFilter,
+    setAutoChapterFilter,
+    autoTypeFilter,
+    setAutoTypeFilter,
     realtimeLogs, 
     processBatch, 
     removeFromQueue, 
     clearQueue, 
     clearHistory,
     handleApproveFix,
-    addToQueue 
+    addToQueue,
+    startAutoProcessing,
+    stopAutoProcessing
   } = useAI();
-  const { deleteQuestion } = useQuestions();
+  const { questions, deleteQuestion } = useQuestions();
   const [selectedTasks, setSelectedTasks] = useState(new Set());
   const [expandedHistory, setExpandedHistory] = useState(new Set());
   const [selectedHistory, setSelectedHistory] = useState(new Set());
   const [lastHistoryIdx, setLastHistoryIdx] = useState(null);
   const [latexIssues, setLatexIssues] = useState(new Set());
+  const [allSubjects, setAllSubjects] = useState([]);
+  const [availableChapters, setAvailableChapters] = useState([]);
   const logEndRef = useRef(null);
   const chatWindowRef = useRef(null);
+
+  // Build subject and chapter lists from loaded questions
+  useEffect(() => {
+    if (questions && questions.length > 0) {
+      // 1. All available subjects
+      const uniqueSubjects = [...new Set(questions.map(q => q.subject).filter(Boolean))].sort();
+      setAllSubjects(uniqueSubjects);
+
+      // 2. Chapters filtered by selected subjects
+      const filteredQuestions = autoSubjectFilter.length === 0 
+        ? questions 
+        : questions.filter(q => autoSubjectFilter.some(s => s.toLowerCase() === q.subject?.toLowerCase()));
+      
+      const uniqueChapters = [...new Set(filteredQuestions.map(q => q.chapter).filter(Boolean))].sort();
+      setAvailableChapters(uniqueChapters);
+    } else {
+      setAllSubjects([]);
+      setAvailableChapters([]);
+    }
+  }, [questions, autoSubjectFilter]);
+
+  const toggleSubjectFilter = (subject) => {
+    setAutoSubjectFilter(prev => {
+      const exists = prev.some(s => s.toLowerCase() === subject.toLowerCase());
+      if (exists) return prev.filter(s => s.toLowerCase() !== subject.toLowerCase());
+      return [...prev, subject];
+    });
+  };
+
+  const toggleChapterFilter = (chapter) => {
+    setAutoChapterFilter(prev => {
+      const exists = prev.some(c => c.toLowerCase() === chapter.toLowerCase());
+      if (exists) return prev.filter(c => c.toLowerCase() !== chapter.toLowerCase());
+      return [...prev, chapter];
+    });
+  };
+
+  const toggleTypeFilter = (type) => {
+    setAutoTypeFilter(prev => {
+      const exists = prev.some(t => t.toLowerCase() === type.toLowerCase());
+      if (exists) return prev.filter(t => t.toLowerCase() !== type.toLowerCase());
+      return [...prev, type];
+    });
+  };
 
   // Smart Auto-scroll for logs
   useEffect(() => {
@@ -38,7 +95,7 @@ export default function AITab() {
     const isNearBottom = scrollHeight - scrollTop - clientHeight < 150;
     
     if (isNearBottom) {
-      logEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+      logEndRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
   }, [realtimeLogs]);
 
@@ -273,6 +330,144 @@ export default function AITab() {
                     </div>
                   </div>
                 ))
+              )}
+            </div>
+          </div>
+
+          {/* Auto LaTeX Processing Section */}
+          <div className="ai-section auto-latex">
+            <div className="section-header">
+              <h3>⚡ Auto LaTeX Processing</h3>
+              <div className="header-actions">
+                {!isAutoProcessing ? (
+                  <button className="primary" onClick={startAutoProcessing} disabled={isProcessing}>
+                    Start Auto-Processing
+                  </button>
+                ) : (
+                  <button className="danger" onClick={stopAutoProcessing}>
+                    ⏹ Stop
+                  </button>
+                )}
+              </div>
+            </div>
+            
+            <div className="auto-latex-filters">
+              {/* Subject Filter */}
+              <div className="auto-latex-filter-group">
+                <div className="filter-header">
+                  <span className="filter-label">
+                    {autoSubjectFilter.length === 0 ? '✓ All subjects' : `${autoSubjectFilter.length} subject(s)`}
+                  </span>
+                  <button className="secondary small" onClick={() => setAutoSubjectFilter([])}>Reset</button>
+                </div>
+                <div className="subject-chips">
+                  {allSubjects.map(sub => {
+                    const isSelected = autoSubjectFilter.length === 0 || autoSubjectFilter.some(s => s.toLowerCase() === sub.toLowerCase());
+                    return (
+                      <span key={sub} className={`subject-chip ${isSelected ? 'selected' : ''}`}
+                        onClick={() => toggleSubjectFilter(sub)}>
+                        {sub}
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Type Filter */}
+              <div className="auto-latex-filter-group">
+                <div className="filter-header">
+                  <span className="filter-label">
+                    {autoTypeFilter.length === 0 ? '✓ All types' : `${autoTypeFilter.length} type(s)`}
+                  </span>
+                  <button className="secondary small" onClick={() => setAutoTypeFilter([])}>Reset</button>
+                </div>
+                <div className="subject-chips">
+                  {['mcq', 'cq', 'sq'].map(type => {
+                    const isSelected = autoTypeFilter.length === 0 || autoTypeFilter.some(t => t.toLowerCase() === type.toLowerCase());
+                    return (
+                      <span key={type} className={`subject-chip ${isSelected ? 'selected' : ''}`}
+                        onClick={() => toggleTypeFilter(type)}>
+                        {type.toUpperCase()}
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Chapter Filter */}
+              {availableChapters.length > 0 && (
+                <div className="auto-latex-filter-group">
+                  <div className="filter-header">
+                    <span className="filter-label">
+                      {autoChapterFilter.length === 0 ? '✓ All chapters' : `${autoChapterFilter.length} chapter(s)`}
+                    </span>
+                    <button className="secondary small" onClick={() => setAutoChapterFilter([])}>Reset</button>
+                  </div>
+                  <div className="subject-chips chapters">
+                    {availableChapters.map(chap => {
+                      const isSelected = autoChapterFilter.length === 0 || autoChapterFilter.some(c => c.toLowerCase() === chap.toLowerCase());
+                      return (
+                        <span key={chap} className={`subject-chip ${isSelected ? 'selected' : ''}`}
+                          onClick={() => toggleChapterFilter(chap)}>
+                          {chap}
+                        </span>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <div className="auto-latex-stats">
+              {isAutoProcessing ? (
+                <div className="auto-latex-status active">
+                  <div className="status-row">
+                    <span className={`status-badge ${autoProcessStats.status}`}>
+                      {autoProcessStats.status === 'fetching' && '🔍 Fetching'}
+                      {autoProcessStats.status === 'processing' && '🤖 Processing'}
+                      {autoProcessStats.status === 'waiting' && '⏳ Waiting'}
+                      {autoProcessStats.status === 'starting' && '🚀 Starting'}
+                      {autoProcessStats.status === 'idle' && '⏸ Idle'}
+                    </span>
+                    {autoProcessStats.currentSubject && (
+                      <span className="subject-badge">{autoProcessStats.currentSubject}</span>
+                    )}
+                  </div>
+                  <div className="stats-grid">
+                    <div className="stat-item">
+                      <span className="stat-value">{autoProcessStats.totalBatches}</span>
+                      <span className="stat-label">Batches</span>
+                    </div>
+                    <div className="stat-item">
+                      <span className="stat-value">{autoProcessStats.totalProcessed}</span>
+                      <span className="stat-label">Fixed</span>
+                    </div>
+                    {autoProcessStats.lastProcessedAt && (
+                      <div className="stat-item">
+                        <span className="stat-value">{new Date(autoProcessStats.lastProcessedAt).toLocaleTimeString()}</span>
+                        <span className="stat-label">Last</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ) : (
+                <div className="auto-latex-status idle">
+                  <p className="auto-latex-hint">
+                    Automatically fetches 10 questions with LaTeX issues (Bangla first), processes them via AI, then loops.
+                  </p>
+                  {autoProcessStats.totalProcessed > 0 && (
+                    <div className="stats-grid">
+                      <div className="stat-item">
+                        <span className="stat-value">{autoProcessStats.totalBatches}</span>
+                        <span className="stat-label">Batches</span>
+                      </div>
+                      <div className="stat-item">
+                        <span className="stat-value">{autoProcessStats.totalProcessed}</span>
+                        <span className="stat-label">Fixed</span>
+                      </div>
+                    </div>
+                  )}
+                </div>
               )}
             </div>
           </div>

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1768213069906,
+    "subject": "Higher Mathematics",
+    "chapter": "Inequality",
+    "lesson": "Solving Inequalities and Systems",
+    "question": "Given:\n(i) \\( y^x = 9, \\; y^2 = 3^x \\)\n(ii) \\( P = a(x + 4) \\)",
+    "parts": "[{\"label\":\"A\",\"letter\":\"A\",\"text\":\"Find the solution set of \\\\( \\\\sqrt{7x + 1} + 10 = 2 \\\\).\",\"marks\":2,\"answer\":\"Given:\\n\\\\[\\n\\\\sqrt{7x + 1} + 10 = 2\\n\\\\]\\n\\\\[\\n\\\\sqrt{7x + 1} = -8\\n\\\\]\\nSince the square root of a real number cannot be negative, this equation has no solution.\\nDesired Solution: \\\\( \\\\emptyset \\\\) (empty set)\"},{\"label\":\"B\",\"letter\":\"B\",\"text\":\"Find the solution of the pair of equations given in (i) in the stem.\",\"marks\":4,\"answer\":\"Given:\\n\\\\[\\ny^x = 9 \\\\quad \\\\text{(1)}\\n\\\\]\\n\\\\[\\ny^2 = 3^x \\\\quad \\\\text{(2)}\\n\\\\]\\nFrom (1): \\\\( y^x = 9 = 3^2 \\\\)\\nSquaring both sides of (1): \\\\( (y^x)^2 = 81 \\\\), so \\\\( y^{2x} = 81 = 3^4 \\\\)\\nFrom (2): \\\\( y^2 = 3^x \\\\)\\nRaising both sides to power \\\\( x \\\\): \\\\( (y^2)^x = (3^x)^x \\\\), so \\\\( y^{2x} = 3^{x^2} \\\\)\\nTherefore:\\n\\\\[\\n3^4 = 3^{x^2}\\n\\\\]\\n\\\\[\\nx^2 = 4\\n\\\\]\\n\\\\[\\nx = \\\\pm 2\\n\\\\]\\nIf \\\\( x = 2 \\\\), from (1): \\\\( y^2 = 9 \\\\) ⇒ \\\\( y = \\\\pm 3 \\\\)\\nCheck in (2): \\\\( y^2 = 3^2 = 9 \\\\) ✓\\nIf \\\\( x = -2 \\\\), from (1): \\\\( y^{-2} = 9 \\\\) ⇒ \\\\( \\\\frac{1}{y^2} = 9 \\\\) ⇒ \\\\( y^2 = \\\\frac{1}{9} \\\\) ⇒ \\\\( y = \\\\pm \\\\frac{1}{3} \\\\)\\nCheck in (2): \\\\( y^2 = 3^{-2} = \\\\frac{1}{9} \\\\) ✓\\nRequired solutions:\\n\\\\[\\n(x, y) = (2, 3), \\\\; (2, -3), \\\\; \\\\left(-2, \\\\frac{1}{3}\\\\right), \\\\; \\\\left(-2, -\\\\frac{1}{3}\\\\right)\\n\\\\]\"},{\"label\":\"C\",\"letter\":\"C\",\"text\":\"Determine the solution of the inequality \\\\( P > d, \\\\; a \\\\neq 0 \\\\).\",\"marks\":4,\"answer\":\"Given:\\n\\\\[\\nP = a(x + 4), \\\\quad P > d, \\\\; a \\\\neq 0\\n\\\\]\\nSubstituting:\\n\\\\[\\na(x + 4) > d\\n\\\\]\\nCase 1: If \\\\( a > 0 \\\\)\\n\\\\[\\nx + 4 > \\\\frac{d}{a}\\n\\\\]\\n\\\\[\\nx > \\\\frac{d}{a} - 4 \\\\quad \\\\text{or} \\\\quad x > \\\\frac{d - 4a}{a}\\n\\\\]\\nCase 2: If \\\\( a < 0 \\\\)\\nDividing by \\\\( a \\\\) (negative reverses inequality):\\n\\\\[\\nx + 4 < \\\\frac{d}{a}\\n\\\\]\\n\\\\[\\nx < \\\\frac{d}{a} - 4 \\\\quad \\\\text{or} \\\\quad x < \\\\frac{d - 4a}{a}\\n\\\\]\\nDesired Solution:\\n\\\\[\\n\\\\text{(i) } x > \\\\frac{d - 4a}{a}, \\\\text{ when } a > 0\\n\\\\]\\n\\\\[\\n\\\\text{(ii) } x < \\\\frac{d - 4a}{a}, \\\\text{ when } a < 0\\n\\\\]\\n---\"}]",
+    "options": "[]",
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768213070049,
+    "subject": "Higher Mathematics",
+    "chapter": "Inequality",
+    "lesson": "Solving Inequalities and Systems",
+    "question": "Observe the inequality \\( a(y + b) < c \\). Here, \\( a, b, c \\) are any numbers and \\( a \\neq 0 \\).",
+    "parts": "[{\"label\":\"A\",\"letter\":\"A\",\"text\":\"For what kind of value of \\\\( c \\\\), would the statement \\\\( 0 \\\\cdot (y + b) < c \\\\) be true?\",\"marks\":2,\"answer\":\"\\\\( 0 \\\\cdot (y +\"},{\"label\":\"B\",\"letter\":\"B\",\"text\":\"Solve the inequality \\\\( a(y + b) < c \\\\), where \\\\( a \\\\neq 0 \\\\).\",\"marks\":4,\"answer\":\"< c, \\\\; a \\\\neq 0 \\\\)\\nCase 1: If \\\\( a > 0 \\\\), divide by \\\\( a \\\\):\\n\\\\[\\ny + b < \\\\frac{c}{a}\\n\\\\]\\n\\\\[\\ny < \\\\frac{c}{a} - b \\\\quad \\\\text{or} \\\\quad y < \\\\frac{c - ab}{a}\\n\\\\]\\nCase 2: If \\\\( a < 0 \\\\), divide by \\\\( a \\\\) (reverse inequality):\\n\\\\[\\ny + b > \\\\frac{c}{a}\\n\\\\]\\n\\\\[\\ny > \\\\frac{c}{a} - b \\\\quad \\\\text{or} \\\\quad y > \\\\frac{c - ab}{a}\\n\\\\]\\nRequired solution:\\n\\\\[\\n\\\\text{(i) } y < \\\\frac{c - ab}{a}, \\\\text{ if } a > 0\\n\\\\]\\n\\\\[\\n\\\\text{(ii) } y > \\\\frac{c - ab}{a}, \\\\text{ if } a < 0\\n\\\\]\"},{\"label\":\"C\",\"letter\":\"C\",\"text\":\"If values of \\\\( a, b, c \\\\) are respectively \\\\( 1, 2, 3 \\\\) and \\\\( -1, 2, 3 \\\\), find the solution of the inequality. Express the obtained two inequalities in the form of a combined inequality and show on a number line.\",\"marks\":4,\"answer\":\"For \\\\( a = 1, b = 2, c = 3 \\\\): \\\\( a > 0 \\\\)\\nFrom (i):\\n\\\\[\\ny < \\\\frac{3 - 1(2)}{1} = \\\\frac{3 - 2}{1} = 1\\n\\\\]\\n\\\\[\\ny < 1\\n\\\\]\\nFor \\\\( a = -1, b = 2, c = 3 \\\\): \\\\( a < 0 \\\\)\\nFrom (ii):\\n\\\\[\\ny > \\\\frac{3 - (-1)(2)}{-1} = \\\\frac{3 + 2}{-1} = \\\\frac{5}{-1} = -5\\n\\\\]\\n\\\\[\\ny > -5\\n\\\\]\\nCombined inequality:\\n\\\\[\\n-5 < y < 1\\n\\\\]\\nNumber line representation:\\n\\\\[\\n\\\\begin{array}{ccccccccccccc}\\n& & & \\\\circ & & & & & & & \\\\circ & & \\\\\\\\\\n\\\\hline\\n-6 & & -5 & & -4 & & -3 & & -2 & & -1 & & 0 & & 1 & & 2\\n\\\\end{array}\\n\\\\]\\nOpen circles at -5 and 1, shaded region between them.\\n---\"}]",
+    "options": "[]",
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768213070170,
+    "subject": "Higher Mathematics",
+    "chapter": "Inequality",
+    "lesson": "Solving Inequalities and Systems",
+    "question": "\\( x \\) is any negative integer. If twice the number is subtracted from 2, then the result will be less than 8.",
+    "parts": "[{\"label\":\"A\",\"letter\":\"A\",\"text\":\"Express the problem of the stem in the form of inequality.\",\"marks\":2,\"answer\":\"Let the number be \\\\( x \\\\).\\nTwice of \\\\( x = 2x \\\\).\\nAccording to the statement:\\n\\\\[\\n2 - 2x < 8\\n\\\\]\"},{\"label\":\"B\",\"letter\":\"B\",\"text\":\"Solve the inequality and show the solution set on a number line.\",\"marks\":4,\"answer\":\"Solve:\\n\\\\[\\n2 - 2x < 8\\n\\\\]\\n\\\\[\\n-2x < 6\\n\\\\]\\n\\\\[\\nx > -3 \\\\quad \\\\text{(dividing by -2 reverses inequality)}\\n\\\\]\\nAlso, \\\\( x \\\\) is a negative integer ⇒ \\\\( x < 0 \\\\).\\nCombined:\\n\\\\[\\n-3 < x < 0\\n\\\\]\\nSince \\\\( x \\\\) is a negative integer:\\n\\\\[\\nx \\\\in \\\\{-2, -1\\\\}\\n\\\\]\\nSolution set for negative integers:\\n\\\\[\\nS = \\\\{-2, -1\\\\}\\n\\\\]\\nOr for all real numbers:\\n\\\\[\\nS = \\\\{ x \\\\in \\\\mathbb{R} : -3 < x < 0 \\\\}\\n\\\\]\\nNumber line (for real numbers):\\n\\\\[\\n\\\\begin{array}{ccccccc}\\n& \\\\circ & & & & \\\\circ & \\\\\\\\\\n\\\\hline\\n-4 & & -3 & & -2 & & -1 & & 0 & & 1\\n\\\\end{array}\\n\\\\]\\nOpen circles at -3 and 0, shaded region between them.\"},{\"label\":\"C\",\"letter\":\"C\",\"text\":\"If \\\\( A \\\\) is the set of all possible values of \\\\( x \\\\), then determine the set \\\\( A \\\\). If the difference of the stem is greater than or equal to 4, then find the new set \\\\( B \\\\) for all possible values of \\\\( x \\\\).\",\"marks\":4,\"answer\":\"From part b:\\n\\\\[\\n-3 < x < 0\\n\\\\]\\nNegative integers in this range: \\\\( -2, -1 \\\\)\\n\\\\[\\nA = \\\\{-2, -1\\\\}\\n\\\\]\\nNew condition: \\\\( 2 - 2x \\\\geq 4 \\\\)\\n\\\\[\\n-2x \\\\geq 2\\n\\\\]\\n\\\\[\\nx \\\\leq -1\\n\\\\]\\nSince \\\\( x \\\\) is a negative integer:\\n\\\\[\\nB = \\\\{ \\\\dots, -4, -3, -2, -1 \\\\}\\n\\\\]\\nOr in set-builder notation:\\n\\\\[\\nB = \\\\{ x \\\\in \\\\mathbb{Z} : x \\\\leq -1 \\\\}\\n\\\\]\\n---\"}]",
+    "options": "[]",
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768213070312,
+    "subject": "Higher Mathematics",
+    "chapter": "Inequality",
+    "lesson": "Solving Inequalities and Systems",
+    "question": "The air distance from Dhaka to Jeddah is 5000 km. The maximum speed of a jet plane is 900 km/hour. On the way from Dhaka to Jeddah, it faces air flowing at 100 km/hour from the opposite direction.",
+    "parts": "[{\"label\":\"A\",\"letter\":\"A\",\"text\":\"Express the speed of the plane against the wind in inequality.\",\"marks\":2,\"answer\":\"Speed of plane ≤ 900 km/h\\nSpeed of opposing wind = 100 km/h\\nEffective speed against wind ≤ \\\\( 900 - 100 = 800 \\\\) km/h\"},{\"label\":\"B\",\"letter\":\"B\",\"text\":\"Express the time required for the flight from Dhaka to Jeddah in terms of inequality.\",\"marks\":4,\"answer\":\"Let time from Dhaka to Jeddah be \\\\( t_1 \\\\) hours.\\nSpeed = \\\\( \\\\frac{5000}{t_1} \\\\) km/h\\n\\\\[\\n\\\\frac{5000}{t_1} \\\\leq 800\\n\\\\]\\n\\\\[\\n5000 \\\\leq 800 t_1\\n\\\\]\\n\\\\[\\nt_1 \\\\geq \\\\frac{5000}{800} = \\\\frac{25}{4} = 6\\\\frac{1}{4} \\\\text{ hours}\\n\\\\]\\nInequality:\\n\\\\[\\nt_1 \\\\geq 6\\\\frac{1}{4}\\n\\\\]\"},{\"label\":\"C\",\"letter\":\"C\",\"text\":\"Express the time required for the non-stop flight from Dhaka to Jeddah and again Jeddah to Dhaka in terms of inequality.\",\"marks\":4,\"answer\":\"For return journey (Jeddah to Dhaka), wind is from behind.\\nEffective speed with wind ≤ \\\\( 900 + 100 = 1000 \\\\) km/h\\nLet time be \\\\( t_2 \\\\) hours.\\n\\\\[\\n\\\\frac{5000}{t_2} \\\\leq 1000\\n\\\\]\\n\\\\[\\n5000 \\\\leq 1000 t_2\\n\\\\]\\n\\\\[\\nt_2 \\\\geq 5 \\\\text{ hours}\\n\\\\]\\nTotal time \\\\( t_1 + t_2 \\\\):\\n\\\\[\\nt_1 + t_2 \\\\geq \\\\frac{25}{4} + 5 = \\\\frac{25}{4} + \\\\frac{20}{4} = \\\\frac{45}{4} \\\\text{ hours}\\n\\\\]\\n---\"}]",
+    "options": "[]",
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768213070419,
+    "subject": "Higher Mathematics",
+    "chapter": "Inequality",
+    "lesson": "Solving Inequalities and Systems",
+    "question": "Two numbers \\( x, y \\) are related to each other in such a way that, the difference between twice of \\( x \\) and thrice of \\( y \\) is at minimum 8, and the sum of twice of \\( x \\) and thrice of \\( y \\) is less than -4.",
+    "parts": "[{\"label\":\"A\",\"letter\":\"A\",\"text\":\"Express the information in inequality.\",\"marks\":2,\"answer\":\"Difference between twice of \\\\( x \\\\) and thrice of \\\\( y \\\\) is at minimum 8:\\n\\\\[\\n2x - 3y \\\\geq 8\\n\\\\]\\nSum of twice of \\\\( x \\\\) and thrice of \\\\( y \\\\) is less than -4:\\n\\\\[\\n2x + 3y < -4\\n\\\\]\"},{\"label\":\"B\",\"letter\":\"B\",\"text\":\"By considering the inequalities as straight lines determine the common point.\",\"marks\":4,\"answer\":\"Treat as equations:\\n\\\\[\\n2x - 3y = 8 \\\\quad \\\\text{(i)}\\n\\\\]\\n\\\\[\\n2x + 3y = -4 \\\\quad \\\\text{(ii)}\\n\\\\]\\nAdd (i) and (ii):\\n\\\\[\\n4x = 4 \\\\Rightarrow x = 1\\n\\\\]\\nSubstitute \\\\( x = 1 \\\\) in (ii):\\n\\\\[\\n2(1) + 3y = -4\\n\\\\]\\n\\\\[\\n3y = -6 \\\\Rightarrow y = -2\\n\\\\]\\nCommon point: \\\\( (1, -2) \\\\)\"},{\"label\":\"C\",\"letter\":\"C\",\"text\":\"From the graph of the inequalities mark the simultaneous solution.\",\"marks\":4,\"answer\":\"For \\\\( 2x - 3y = 8 \\\\):\\nRearrange: \\\\( y = \\\\frac{2x - 8}{3} \\\\)\\nTable of values:\\n\\\\[\\n\\\\begin{array}{c|c}\\nx & y \\\\\\\\\\n\\\\hline\\n-2 & -4 \\\\\\\\\\n1 & -2 \\\\\\\\\\n4 & 0\\n\\\\end{array}\\n\\\\]\\nFor \\\\( 2x + 3y = -4 \\\\):\\nRearrange: \\\\( y = \\\\frac{-2x - 4}{3} \\\\)\\nTable of values:\\n\\\\[\\n\\\\begin{array}{c|c}\\nx & y \\\\\\\\\\n\\\\hline\\n-5 & 2 \\\\\\\\\\n-2 & 0 \\\\\\\\\\n1 & -2\\n\\\\end{array}\\n\\\\]\\nGraphing procedure:\\n1. Plot both lines on a coordinate plane\\n2. For \\\\( 2x - 3y \\\\geq 8 \\\\): Test point (0,0): \\\\( 0 - 0 \\\\geq 8 \\\\) is FALSE, so shade the region NOT containing the origin (below the line)\\n3. For \\\\( 2x + 3y < -4 \\\\): Test point (0,0): \\\\( 0 + 0 < -4 \\\\) is FALSE, so shade the region NOT containing the origin (below the line)\\n4. The overlapping shaded region is the simultaneous solution\\n5. Note: The boundary line \\\\( 2x - 3y = 8 \\\\) is solid (included), while \\\\( 2x + 3y = -4 \\\\) is dashed (not included)\"}]",
+    "options": "[]",
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  }
+]

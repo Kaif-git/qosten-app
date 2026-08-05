@@ -1,0 +1,1602 @@
+[
+  {
+    "id": 1768407062641,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "‘কালোর খাম’ বলতে কবি কী বোঝাতে চেয়েছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কালো রঙের খাম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কাজপাগল আচরণ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "লোকচক্ষুর অগোচর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অন্ধকারাচ্ছন্ন রাত",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "রানারের জীবনের সব না-বলা দুঃখ এবং তাঁর কষ্টকর অস্তিত্ব অন্ধকারের মধ্যেই সীমাবদ্ধ থাকে বলে একে ‘কালো রাত্রির খাম’ বলা হয়েছে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407064384,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "রানারকে পিছে ফেলে এগিয়ে যাওয়া আকাশ কীসের আহ্বান জানাচ্ছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ভীরুতা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অসম্মতি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সাহসিকতা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "স্বাধীনতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রানার যখন অবিরাম ছুটে চলে, তখন আকাশ তাকে সাহসী হতে এবং প্রতিকূলতা জয় করার আহ্বান জানায়। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407064571,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "কবি রানারকে কী দেখার আহ্বান জানিয়েছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাফল্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রভাত",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অগ্রগতি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "স্বাধীনতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কবি রানারকে অন্ধকারের অবসান ঘটিয়ে নতুন সূর্য বা নতুন প্রভাতের আগমনের দিকে তাকাতে বলেছেন। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407064836,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "‘সকালের আভাস’ বোঝাতে কবি কোন শব্দটি ব্যবহার করেছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পিছে সরে যায় বন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আকাশ হয়েছে লাল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অবাক রাতের তারা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সহানুভূতির চিঠি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "আকাশে লাল আভা দেখা দেওয়া মানেই হলো সকালের আগমন বার্তা, যা রানারের কষ্টের রাতের সমাপ্তি নির্দেশ করে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407065031,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "রানারের চলার সাথে ঘণ্টা বাজার সম্পর্ক—\ni. রানার ঘণ্টা বাজিয়ে পথ চলে\nii. ঘণ্টাধ্বনি রানারের উপস্থিতির পরিচয় দেয়\niii. ঘণ্টা রানারের নিরাপদ জ্ঞাপক",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "রানার তার হাতের লাঠিতে বাঁধা ঘণ্টা বাজিয়ে বনের নির্জন পথে নিজের উপস্থিতির জানান দিয়ে দ্রুতপদে এগিয়ে চলে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407065202,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "‘কোনো নিষেধ জানে না মানার’ বলতে কবি কী বোঝাতে চেয়েছেন?\ni. একরোখা স্বভাব\nii. দায়িত্ব সচেতনতা\niii. কর্তব্যপরায়ণতা",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রানার তার দায়িত্ব পালনে এতই অবিচল যে আবহাওয়া বা বনের ভয় তাকে কোনোভাবেই বাধা দিতে পারে না। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407065349,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "চলমান রানারকে হরিণের সাথে তুলনা করার কারণ—\ni. চঞ্চল গতির কারণে\nii. দ্রুত গতির জন্য\niii. ক্ষিপ্রতার কারণে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রানারের ক্ষিপ্র গতি এবং দ্রুত পায়ে চলার দক্ষতার কারণে কবি তাকে বনের হরিণের গতির সাথে তুলনা করেছেন। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407065508,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "রানারকে ‘বোঝাই জাহাজ’ বলার কারণ—\ni. জাহাজের মতো চলে বলে\nii. বিচিত্র বস্তু বহন করে\niii. নির্দিষ্ট গন্তব্যে এগিয়ে চলে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রানার তাঁর পিঠের থলিতে মানুষের জীবনের আনন্দ-বেদনার নানা খবর বা পণ্য বহন করে জাহাজের মতো গন্তব্যের দিকে ছোটেন। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407065664,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "একজন ছাত্রের জন্য রানারের জীবন থেকে শিক্ষণীয় বিষয় হলো—\ni. কাজের প্রতি নিষ্ঠাবান হওয়া\nii. দায়িত্বশীল হওয়া\niii. ঝুঁকিপূর্ণ কাজে অংশ নেওয়া",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "রানারের কঠোর পরিশ্রম ও তাঁর কাজের প্রতি পরম নিষ্ঠা যে কোনো শিক্ষার্থীর জন্য আদর্শ হতে পারে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407065825,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "রানারের চরিত্রে বিবেচনা করা যায়—\ni. সেবাদানকারী কর্মীদের\nii. ডাক পিওনকে\niii. ডাক্তারবাবুকে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "রানার একজন নিবেদিত সেবাদানকারী ডাক কর্মী বা হরকরা হিসেবে কাজ করেন। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407066004,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "ঝড় হোক, বাদল হোক, বড় কোনো দুর্যোগই হোক রানার কখনো স্কুল কামাই করে না। রানার ও আবদুল্লাহর মধ্যে বর্তমান—\ni. সহানুভুতিশীলতা\nii. শ্রমনিষ্ঠা\niii. কর্তব্যনিষ্ঠা",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রানার এবং উদ্দীপকের আবদুল্লাহ উভয়ের মধ্যেই শ্রমের প্রতি নিষ্ঠা এবং দায়িত্ব পালনে অবিচলতা প্রকাশ পেয়েছে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407066154,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "রানারের ক্ষেত্রে প্রযোজ্য—\ni. বোঝাই জাহাজ, ঘরেতে অভাব\nii. দুরন্ত পথিক, বোঝাই জাহাজ\niii. বোঝাই জাহাজ, পৃথিবীর বোঝাবাহী",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "রানার তাঁর পিঠে মানুষের খবরের বিশাল দায়িত্ব বয়ে বেড়ান, যদিও তাঁর নিজ ঘরে সীমাহীন দারিদ্র্য বিরাজমান। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407066312,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "‘রানার’ শব্দটি কোন ভাষা থেকে এসেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ইংরেজি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ফরাসি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পর্তুগিজ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ওলন্দাজ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "‘রানার’ একটি ইংরেজি শব্দ যা বাংলা সাহিত্যে ডাক হরকরা অর্থে ব্যবহৃত হয়। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407066468,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "‘রানার’ কবিতায় রানার বলতে কী বোঝানো হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ডাকবাহক",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সাংবাদিক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বার্তাবাহক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সংবাদ পাঠক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কবিতায় রানার বলতে সেই ডাক হরকরাকে বোঝানো হয়েছে যিনি এক স্থান থেকে অন্য স্থানে মানুষের চিঠিপত্র বয়ে নিয়ে যান। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407066643,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "‘রানার’ শব্দের প্রতিশব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ডাক হরকরা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "মালী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কামিন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "খানসামা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "রানারের বাংলা প্রতিশব্দ হলো ডাক হরকরা। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407066800,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "কাকে ‘নতুন খবরের বাহক’ বলা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অশ্ববন্ধু",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পরিজন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রানার",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "আগন্তুক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রানার প্রতিনিয়ত দেশ-বিদেশের নতুন নতুন সংবাদ মানুষের কাছে পৌঁছে দেয় বলে তাঁকে নতুন খবরের বাহক বলা হয়। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407066958,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "‘যাকে নিবারণ করা যায় না’—এক কথায় কী বলা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুর্নিবার",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "দুর্ধর্ষ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নির্ধারণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দুর্ভেদ্য",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "রানারের পথ চলাকে কোনো বাধা দিয়ে আটকানো যায় না, তাই তাঁকে ‘দুর্নিবার’ বলা হয়। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407067120,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "‘রানার’ কবিতায় রানারের ছুটে চলার উপমা কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাতাসের মতো যায়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হরিণের মতো যায়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ট্রেনের মতো যায়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চিতার মতো যায়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "রানার বনের ভেতর দিয়ে এতই দ্রুত চলে যে কবি তাকে হরিণের গতির সাথে তুলনা করেছেন। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407067310,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "কোন চরণে উপমার ব্যবহার আছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দিগন্ত থেকে দিগন্তে ছোটে রানার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রানার চলেছে খবরের বোঝা হাতে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রানার চলেছে হরিণের মতো যায়",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কালোর নিভৃতে এ নতুন খবর আনার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "এই চরণে রানারের গতির উপমা হিসেবে হরিণকে ব্যবহার করা হয়েছে। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407067474,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "‘লণ্ঠন’ শব্দের অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "লাঠি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হ্যারিকেন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বর্শা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ছাতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "লণ্ঠন হলো অন্ধকারে পথ চলার জন্য হাতে বহনযোগ্য তেলের বাতি বা হ্যারিকেন। [৫, ৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407067758,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "‘তোর তো হয়েছে আকাশ লাল’—প্রতীকটি কী বোঝায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জরাজীর্ণ সময় শেষ হয়েছে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নতুন সূর্য শেষে সুখ এসেছে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কালের যাত্রায় সময় হয়েছে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দুঃখের দিন শেষ হয়েছে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "আকাশের লাল আভা রানারের কষ্টের রাতের অবসান এবং সুদিনের আগমনের প্রতীক। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407067928,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "লডু ও মুডু ঝুমঝুম শব্দকে এক কথায় কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঝুমঝুম",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "গগম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "টুংটুং",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ঠুকঠাক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "রানারের লাঠিতে বাঁধা ঘণ্টার শব্দকে ‘ঝুমঝুম’ শব্দ হিসেবে বর্ণনা করা হয়েছে। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407068112,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "কোন কবি ‘রানার’ কবিতাটি রচনা করেছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শামসুর রাহমান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আহসান হাবীব",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সুকান্ত ভট্টাচার্য",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সত্যেন্দ্রনাথ দত্ত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কিশোর কবি সুকান্ত ভট্টাচার্য তাঁর ‘ছাড়পত্র’ কাব্যগ্রন্থে ‘রানার’ কবিতাটি রচনা করেছেন। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407068272,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "রানারকে কী হিসেবে উপস্থাপন করা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নতুন সমাজ বিনির্মাণের বার্তাবাহক হিসেবে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কঠোর পরিশ্রমের প্রতীক হিসেবে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নির্ভীক কর্মবীরের প্রতীক হিসেবে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "খেটে খাওয়া সাধারণ মানুষের প্রতিনিধি হিসেবে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "রানার কবিতায় রানার মূলত শ্রমজীবী ও বঞ্চিত মানুষের প্রতিনিধি হিসেবে উপস্থাপিত হয়েছে। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407068693,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "কবিতাটির নামকরণ করা হয়েছে কিসের ওপর ভিত্তি করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রধান চরিত্র",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বিষয়বস্তু",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উদ্দেশ্য",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ঘটনাবলি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কবিতাটি এর প্রধান চরিত্র ‘রানার’ বা ডাক হরকরার নামানুসারে নামকরণ করা হয়েছে। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407068839,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "‘রানার’ কবিতাটি কোন শ্রেণির মানুষদের নিয়ে লেখা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্মজীবী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পেশাজীবী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শ্রমজীবী",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বুদ্ধিজীবী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রানার কবিতাটি সমাজের অবহেলিত শ্রমজীবী মানুষের ত্যাগ ও সংগ্রামের ওপর ভিত্তি করে রচিত। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407068997,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "কোনটি রানারের কাজ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শুধু চিঠি গ্রহণ করা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পরিবারের খোঁজখবর নেওয়া",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাড়ি বাড়ি গিয়ে চিঠি সংগ্রহ করা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "যথাসময়ে ডাক পৌঁছে দেওয়া",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সময়মতো গন্তব্যে মানুষের ডাক বা চিঠিপত্র পৌঁছে দেওয়া রানারের প্রধান দায়িত্ব। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407069156,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "‘ফুটবে তো সূর্যোদয়’—কথাটি কাদের ক্ষেত্রে প্রযোজ্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "খাটুনি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "যোদ্ধাদের",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রানারদের",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "খেলোয়াড়দের",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রানারদের নিরন্তর সংগ্রামের শেষে এক সময় মুক্তির সূর্য উঠবে—এই আশাবাদ ব্যক্ত করা হয়েছে। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407069331,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "কোনো কিছু রানারকে থামিয়ে রাখতে পারে না কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সে অত্যন্ত সাহসী বলে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তার হাতে লাঠি থাকে বলে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সে দায়িত্বশীল বলে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সবাই তাকে বিশ্বাস করে বলে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "তাঁর অদম্য দায়িত্ববোধের কারণেই কোনো প্রতিকূলতা বা ভয় তাকে পথ চলা থেকে বিরত করতে পারে না। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407069488,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "রানারকে কেন বাধা দেওয়া যাবে না?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সে বেপরোয়া",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সে অসম সাহসী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ভীতি ও ক্লান্তি তাকে দমাতে পারে না",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সময় পেরিয়ে গেলে সে চলা থামায় না",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রানারের লক্ষ্য স্থির এবং তাঁর মধ্যে ক্লান্তি বা ভয় নেই, তাই তাকে কেউ বাধা দিতে পারে না। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407069657,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "রানার চরিত্রে কোনটি ফুটে উঠেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দায়িত্বশীলতা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কঠোর পরিশ্রম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পবিত্রতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কর্মক্ষম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "রানারের পুরো চরিত্রে তাঁর পেশার প্রতি যে নিষ্ঠা ও দায়িত্বশীলতা রয়েছে, তা-ই প্রধান হয়ে উঠেছে। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407069809,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "রানার কবিতা থেকে আমরা পেতে পারি—",
+    "options": [
+      {
+        "label": "a",
+        "text": "দায়িত্বশীল হওয়ার অনুপ্রেরণা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কাজের প্রতি আন্তরিকতা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শ্রমজীবীদের প্রতি সহমর্মিতা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সময়ানুবর্তিতার শিক্ষা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "এই কবিতা পাঠের মাধ্যমে আমরা সমাজের অবহেলিত শ্রমজীবী মানুষের প্রতি শ্রদ্ধাশীল ও সহানুভূতিশীল হওয়ার প্রেরণা পাই। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407069967,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "রানারের নেই—\ni. শ্রান্তি বা অবকাশ যাপনের সময়\nii. বসবাসের উপযুক্ত বাসস্থান\niii. রোগ-ব্যাধির যথাযথ চিকিৎসা",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "রানারের জীবন অত্যন্ত অভাবগ্রস্ত; তাঁর না আছে বিশ্রাম, না আছে ভালো থাকার ঘর বা চিকিৎসার সুযোগ। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407070099,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "‘রানার’ কবিতার কবির লক্ষ্য কোনটির প্রতি নিবদ্ধ হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বৈষম্যের বিরুদ্ধে প্রতিবাদ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শ্রমজীবী মানুষের প্রতি দয়া",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গণমানুষের প্রতি মমত্ব",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ধনিক শ্রেণির প্রতি ঘৃণা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কবি সুকান্ত ভট্টাচার্য সর্বদা নিপীড়িত গণমানুষের স্বার্থ ও তাঁদের জীবনের প্রতি মমত্ববোধ প্রকাশ করেছেন। [৬]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407070248,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "চলার সংকেত দেওয়ার জন্য রানারের হাতে ঝুমঝুম ঘণ্টার সাথে কী বাধা থাকত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "লণ্ঠন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বর্শা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "লাঠি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ছাতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "রানার আত্মরক্ষার জন্য হাতে একটি বর্শা বা বল্লম রাখতেন, যার মাথায় ঘণ্টা বাঁধা থাকত। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407070390,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "রানারের ঝুলিকে কীসের সাথে তুলনা করা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পাল তোলা নৌকা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পিঠের জাহাজ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "খবরের বোঝা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মালবাহী গাড়ি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রানারের পিঠের বিশাল থলিকে খবরের বোঝার বা তথ্যের আধার হিসেবে দেখা হয়েছে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407070598,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "রানারের বিশাল ঝুলি দেখে কী মনে হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "একটি নৌকা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "একটি জাহাজ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "একটি মালগাড়ি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "একটি বড় ঘর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পিঠের বিশাল বোঝা নিয়ে রানার যখন চলেন, তখন তাঁকে যেন এক ‘বোঝাই জাহাজ’ বলে মনে হয়। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407070733,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "আকাশের তারারা কার চলার গতি দেখে অবাক হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ট্রেনের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পশুর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রানারের",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বাতাসের",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "গভীর রাতে নির্জন পথে রানারের অবিরাম ও দ্রুত দৌড় দেখে আকাশের তারারা বিস্ময়ে তাকিয়ে থাকে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407070851,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "‘রানার’ কবিতায় ‘মাঠের’ শব্দ দ্বারা কী বোঝানো হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ভয় নেই",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ক্লান্ত নেই",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাধা নেই",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শেষ নেই",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "রানার মাঠের পর মাঠ অতিক্রম করেন কোনো ভয় বা শঙ্কা ছাড়াই। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407070990,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "রানারের জীবনের সব রাত্রিকে কত মূল্যে কিনে নেওয়ার কথা বলা হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আকাশছোঁয়া মূল্যে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নামমাত্র মূল্যে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অনেক মূল্যে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিনামূল্যে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "শ্রমজীবী মানুষের জীবনের আরাম ও রাতের ঘুম বিত্তশালীরা সামান্য বা নামমাত্র পারিশ্রমিকের বিনিময়ে কিনে নিয়েছে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407071109,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "‘মেল’ বা ট্রেন ধরতে না পারলে রানারকে কী দিতে হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জবাবদিহি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জরিমানা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মাশুল",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "চাকরি থেকে বিদায়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "নির্দিষ্ট সময়ে মেলে বা স্টেশনে পৌঁছাতে না পারলে তাকে ব্যক্তিগত ও পেশাগতভাবে চড়া মূল্য বা মাশুল দিতে হতে পারে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407071226,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "রানার ‘কালো রাত্রির খামে’র উপমার মধ্য দিয়ে কী প্রকাশ করেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আনন্দ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হতাশা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অবহেলা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সাহসিকতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "এই উপমাটির মাধ্যমে রানারের জীবনের না-বলা দীর্ঘকালীন দুঃখ ও বঞ্চনার হতাশা ফুটে উঠেছে। [১]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407071362,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "উদ্দীপকের রানারের সাথে রানার কবিতার মিল কোথায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গতিশীলতা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কর্মনিষ্ঠা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সেবাপরায়ণতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সততা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "উদ্দীপক এবং মূল কবিতা উভয় ক্ষেত্রেই রানারের তাঁর পেশা বা কাজের প্রতি যে গভীর নিষ্ঠা, তা স্পষ্টভাবে ফুটে উঠেছে। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407071487,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "কত বছর বয়সে সুকান্ত ভট্টাচার্য মৃত্যুবরণ করেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২১ বছর",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "২২ বছর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "২৩ বছর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২৪ বছর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কিশোর কবি সুকান্ত ভট্টাচার্য মাত্র ২১ বছর বয়সে পরলোকগমন করেন। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407071619,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "রানারের জীবনের দুঃখ কে জানবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শহরবাসী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গ্রামের লোক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পথের ঘাস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কেবল পথ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "রানার যে পথে সারা রাত দৌড়ান, সেই পথই তাঁর কষ্টের নীরব সঙ্গী এবং তাঁর কান্নার সাক্ষী। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407071753,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "‘রানার’ কবিতার রানার দস্যুর চেয়েও ভয় পায় কাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রাতকে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সূর্য ওঠাকে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বাঘকে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পুলিশকে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ডাক সময়মতো পৌঁছানো জরুরি, তাই সকাল হয়ে গেলে দেরি হয়ে যাবে—এই ভয়ে রানার সূর্য ওঠাকে বেশি ভয় পায়। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407071907,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "‘তোর চেয়ে দ্রুত সূর্য উঠবে তবে’—সূর্য ওঠাকে রানার ভয় পাওয়ার কারণ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্তব্যনিষ্ঠা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সাহসিকতা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সময়ানুবর্তিতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অধ্যবসায়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "রানার অত্যন্ত কর্তব্যনিষ্ঠ। সূর্য ওঠার আগেই তাকে গন্তব্যে পৌঁছাতে হবে, নতুবা তার দায়িত্ব পালনে ত্রুটি ঘটবে। [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407072038,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "‘দণ্ড’ শব্দের অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শাস্তি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সময়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "লাঠি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বাঁশ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কবিতায় ‘দণ্ড’ বলতে রানারের হাতের সেই লাঠিকে বোঝানো হয়েছে যাতে ঘণ্টা বাঁধা থাকে। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407072194,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "অন্ধকার দূর করার জন্য তেলের বাতিকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "টর্চ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হ্যারিকেন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "লণ্ঠন",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মোমবাতি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "লণ্ঠন হলো অন্ধকারে আলো দেওয়ার জন্য তেলের সলতে ব্যবহার করা বাতি, যা রানারের সঙ্গী। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407072584,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": " রানার",
+    "question": "‘হরিণের মতো যায়’—এটির একটি উপমা। এটি কী প্রকাশ করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সতর্কতা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দ্রুতবেগ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ভীতি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চঞ্চলতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "হরিণের মতো দ্রুতগামী পশুর সাথে রানারকে তুলনা করে তার অবিশ্বাস্য গতির বর্ণনা দেওয়া হয়েছে। [৫]",
+    "image": null,
+    "language": "en"
+  }
+]

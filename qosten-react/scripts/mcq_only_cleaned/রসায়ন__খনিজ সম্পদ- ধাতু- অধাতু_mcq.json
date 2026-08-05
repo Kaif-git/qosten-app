@@ -1,0 +1,2963 @@
+[
+  {
+    "id": 1768041413350,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "পৃথিবীর ভূত্বকে \"Na\" এর শতকরা পরিমাণ কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৫%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৪%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৩%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২%",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পৃথিবীর ভূত্বকে সোডিয়াম (Na) এর শতকরা পরিমাণ আনুমানিক ২.৬-২.৮%। প্রদত্ত অপশনগুলোর মধ্যে ২% সবচেয়ে কাছাকাছি।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041413517,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "মরিচার সূত্র কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "FeO₂·H₂O",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Fe₂O₃·H₂O",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "FeO·H₂O",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Fe₃O₄·H₂O",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মরিচার রাসায়নিক সূত্র হল Fe₂O₃·xH₂O (জলযুক্ত আয়রন(III) অক্সাইড)। এটি তখনই তৈরি হয় যখন লোহা অক্সিজেন ও পানির সাথে বিক্রিয়া করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041413669,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "ইউরোপে মোট অ্যালুমিনিয়াম ব্যবহারের কত শতাংশ পুনর্ব্যবহার প্রক্রিয়া থেকে আসে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২১%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২৮%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৬০%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৭৪%",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ইউরোপে ব্যবহৃত অ্যালুমিনিয়ামের একটি খুব বড় শতাংশ আসে পুরানো অ্যালুমিনিয়াম পণ্য পুনর্ব্যবহার করে, শক্তি ও সম্পদ সাশ্রয়ের জন্য। সঠিক পরিসংখ্যানটি প্রায় ৭৪%।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041413819,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "পৃথিবীর ভূত্বকে কোন মৌলের শতকরা পরিমাণ সবচেয়ে বেশি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সিলিকন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অক্সিজেন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অ্যালুমিনিয়াম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পটাশিয়াম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "অক্সিজেন পৃথিবীর ভূত্বকের সবচেয়ে প্রাচুর্য্যময় মৌল, ওজনের দিক থেকে প্রায় ৪৬.৬% গঠন করে। এটি পানি, খনিজ ও শিলায় পাওয়া যায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041413990,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "পৃথিবীর পৃষ্ঠে কোন ধাতুর পরিমাণ বেশি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Ca",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Al",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Fe",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পৃথিবীর ভূত্বকে পাওয়া ধাতু ক্যালসিয়াম (Ca), অ্যালুমিনিয়াম (Al) এবং আয়রন (Fe) এর মধ্যে অ্যালুমিনিয়াম সবচেয়ে প্রাচুর্য্যময় (প্রায় ৮.১%), তারপর আয়রন (৫.০%) এবং তারপর ক্যালসিয়াম (৩.৬%)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041414188,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "পৃথিবীর ভূত্বকে আয়রনের শতকরা পরিমাণ কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৩%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৪%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৫%",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৮%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "আয়রন পৃথিবীর ভূত্বকের ওজনের প্রায় ৫% গঠন করে, এটিকে সবচেয়ে সাধারণ ধাতুর মধ্যে একটি করে তোলে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041414375,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "পৃথিবীর পৃষ্ঠের মৌলগুলিতে অক্সিজেনের শতকরা পরিমাণ কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৮.৪%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২৭%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৪৬%",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৪৮%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "অক্সিজেন পৃথিবীর ভূত্বকের ভরের প্রায় ৪৬.৬% গঠন করে, এটিকে এককভাবে সবচেয়ে প্রাচুর্য্যময় মৌল করে তোলে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041414541,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "অপরিষ্কার তামার তড়িৎ বিশ্লেষণে কোনটি তড়িৎবিশ্লেষ্য হিসেবে ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "লবণাক্ত পানি (ব্রাইন)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "লাইম ওয়াটার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কস্টিক সোডার দ্রবণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ব্লু ভিট্রিয়লের দ্রবণ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "তামার তড়িৎ বিশ্লেষণী পরিশোধনে, কপার সালফেট (CuSO₄) এর দ্রবণ, যা সাধারণত ব্লু ভিট্রিয়ল নামে পরিচিত, তড়িৎবিশ্লেষ্য হিসেবে ব্যবহৃত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041414693,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "প্রাকৃতিকভাবে প্রাপ্ত মৌল কতটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৯২",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "৯৬",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১০৫",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১১০",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পৃথিবীতে প্রাকৃতিকভাবে ৯২টি মৌল পাওয়া যায়। ৯২ এর চেয়ে বেশি পারমাণবিক সংখ্যার মৌলগুলো (যেমন প্লুটোনিয়াম) সাধারণত কৃত্রিম, গবেষণাগারে তৈরি।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041414850,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোনটি একটি তরল খনিজ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Ag",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Hg",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Mg",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পারদ (Hg) হল একমাত্র ধাতু যা ঘরের তাপমাত্রায় তরল অবস্থায় থাকে, এটিকে একটি তরল খনিজ করে তোলে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041414997,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "তরল খনিজের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সয়াবিন তেল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পেট্রোলিয়াম",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "প্রাকৃতিক গ্যাস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ফ্যাটি অ্যাসিড",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পেট্রোলিয়াম হল একটি প্রাকৃতিকভাবে সৃষ্ট, তরল জীবাশ্ম জ্বালানি যা পৃথিবীর পৃষ্ঠের নিচের ভূতাত্ত্বিক গঠনে পাওয়া যায়, এটিকে একটি তরল খনিজ করে তোলে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041415295,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কালি কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কার্বন কণা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কাঠ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কয়লা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কার্বন ডাই-অক্সাইড",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ঐতিহ্যগত কালো কালি প্রাথমিকভাবে সূক্ষ্ম কার্বন কণা (ছাই বা ল্যাম্পব্ল্যাক) থেকে তৈরি যা তরলে নিক্ষিপ্ত থাকে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041415451,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোন ধাতু প্রকৃতিতে বিশুদ্ধ অবস্থায় পাওয়া যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Al",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "As",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Cu",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কিছু ধাতু যেমন তামা (Cu), রূপা (Ag) এবং সোনা (Au) প্রকৃতিতে তাদের নেটিভ (বিশুদ্ধ) অবস্থায় পাওয়া যায় কারণ তারা অক্রিয়াশীল। অ্যালুমিনিয়াম (Al) খুবই সক্রিয় এবং সর্বদা অন্যান্য মৌলের সাথে যুক্ত অবস্থায় পাওয়া যায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041415603,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোনটি কঠিন খনিজ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আয়রন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "পারদ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মিথেন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "খনিজ তেল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "আয়রন আকরিক হল পৃথিবী থেকে নিষ্কাশিত একটি কঠিন খনিজ। পারদ তরল, মিথেন গ্যাসীয় এবং খনিজ তেল তরল।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041415758,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "প্রাকৃতিক মৌলের কত অংশ ধাতু দ্বারা গঠিত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১/৪",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২/৪",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৩/৪",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৩.৫/৪",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্রায় ৯২টি প্রাকৃতিকভাবে সৃষ্ট মৌলের মধ্যে, প্রায় তিন-চতুর্থাংশ (প্রায় ৭০টি) হল ধাতু।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041415916,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোনটি কার্বন বিজারণ প্রক্রিয়া দ্বারা নিষ্কাশিত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Ca",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Zn",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Na",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Al",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "জিঙ্ক (Zn) এর আকরিক (যেমন জিঙ্ক অক্সাইড) থেকে কার্বন (কোক) এর সাথে গরম করে নিষ্কাশন করা হয়। কার্বন ধাতব অক্সাইডকে বিশুদ্ধ ধাতুতে বিজারিত করে। Na, Ca, Al এর মতো ধাতুগুলো খুব সক্রিয় এবং তড়িৎবিশ্লেষণ দ্বারা নিষ্কাশিত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041416067,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোনটি তামার স্ল্যাগের সূত্র?",
+    "options": [
+      {
+        "label": "a",
+        "text": "CuCO₃·Cu(OH)₂",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Cu(NO₃)₂·Cu(OH)₂",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "CuCl₂·CuCO₃",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "CuSO₄·CuCO₃",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "তামা নিষ্কাশনে, স্ল্যাগে প্রায়ই ক্ষারীয় কপার কার্বনেটের মতো যৌগ থাকে, যা CuCO₃·Cu(OH)₂ (ম্যালাকাইট) হিসাবে উপস্থাপন করা যেতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041416187,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোনটি খনিজ অপদ্রব্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "CaSiO₃",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ZnCO₃",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Fe₃O₄",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "CuFeS₂",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ধাতু নিষ্কাশনের সময়, অনাকাঙ্খিত পাথুরে পদার্থকে গ্যাঙ্গু বলা হয়। ক্যালসিয়াম সিলিকেট (CaSiO₃) একটি সাধারণ অপদ্রব্য (গ্যাঙ্গু) যা অম্লীয় অপদ্রব্য দূর করতে সিলিকা (SiO₂) যোগ করলে তৈরি হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041416306,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোনটি তেল ফোম ফ্লোটেশন পদ্ধতি দ্বারা পরিশোধিত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Al₂O₃·2H₂O",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "PbS",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Fe₂O₃",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ZnCO₃",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ফ্রোথ ফ্লোটেশন পদ্ধতি বিশেষভাবে সালফাইড আকরিক ঘনীভবনের জন্য ব্যবহৃত হয়। লেড সালফাইড (PbS, গ্যালেনা) একটি সালফাইড আকরিক, তাই এটি এই পদ্ধতি ব্যবহার করে পরিশোধিত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041416418,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "ক্রোমাইটের সূত্র কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "TiO₂",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "FeWO₄",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Cr₂Na₂AlF₆",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "FeO·Cr₂O₃",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ক্রোমাইট হল ক্রোমিয়ামের প্রধান আকরিক। এর রাসায়নিক সূত্র হল FeCr₂O₄ বা FeO·Cr₂O₃।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041416540,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোনটি গলনকারক (smelting agent) হিসেবে ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "CO₂",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "H₂CO₃",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "SO₂",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "SiO₂",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "গলনের সময়, অপদ্রব্য দূর করার জন্য ফ্লাক্স নামক একটি পদার্থ যোগ করা হয়। সিলিকা (SiO₂) একটি অম্লীয় ফ্লাক্স যা ক্ষারীয় অপদ্রব্য দূর করে স্ল্যাগ গঠনের জন্য ব্যবহৃত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041416664,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "বিশুদ্ধ অ্যালুমিনা পেতে অ্যালুমিনিয়াম হাইড্রক্সাইডকে কত তাপমাত্রায় গরম করতে হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৮০০°C",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১০০০°C",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১১০০°C",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "২০৫০°C",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বেয়ার প্রক্রিয়ায়, অ্যালুমিনিয়াম হাইড্রক্সাইড (Al(OH)₃) কে প্রায় ১১০০°C তে গরম করা হয় যাতে এটি বিশুদ্ধ, নিরুদ অ্যালুমিনিয়াম অক্সাইড (Al₂O₃) এ রূপান্তরিত হয়, যা পরে তড়িৎবিশ্লেষণে ব্যবহৃত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041416775,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কত প্রকারের শিলা আছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৩",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৪",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "শিলাকে কিভাবে গঠিত হয় তার উপর ভিত্তি করে তিনটি প্রধান প্রকারে শ্রেণীবদ্ধ করা হয়: আগ্নেয়, পাললিক ও রূপান্তরিত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041416886,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "গ্রানাইট —",
+    "options": [
+      {
+        "label": "a",
+        "text": "রূপান্তরিত শিলা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পাললিক শিলা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আগ্নেয় শিলা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "আকরিক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "গ্রানাইট একটি আগ্নেয় শিলা। এটি পৃথিবীর পৃষ্ঠের নিচে ম্যাগমা (গলিত শিলা) এর ধীর শীতলকরণ ও কঠিনীভবন থেকে গঠিত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041416991,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "নিচের কোনটি একটি আগ্নেয় শিলা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ডোলোমাইট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বালু পাথর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কোয়ার্টজ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "চুনাপাথর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কোয়ার্টজ একটি খনিজ যা সাধারণত গ্রানাইটের মতো আগ্নেয় শিলায় পাওয়া যায়। ডোলোমাইট, বালু পাথর ও চুনাপাথর সবই পাললিক শিলা।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041417102,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "বালু পাথর কী ধরনের শিলা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আগ্নেয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পাললিক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "রূপান্তরিত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অভ্যন্তরীণ আগ্নেয় শিলা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বালু পাথর হল পাললিক শিলার একটি ক্লাসিক উদাহরণ। এটি সংকুচিত ও সিমেন্টেড বালুকণা থেকে গঠিত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041417213,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "২১ ক্যারেট সোনাতে সোনার শতকরা পরিমাণ কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৮৩.৩৩%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৮৭.৫%",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "৯১.৬৭%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৯৫.১৩%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ক্যারেট সোনার বিশুদ্ধতা নির্দেশ করে। খাঁটি সোনা হল ২৪ ক্যারেট। সুতরাং, ২১ ক্যারেট সোনা মানে ২৪ ভাগের মধ্যে ২১ ভাগ সোনা। (২১/২৪)*১০০ = ৮৭.৫%।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041417326,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "SO₂(g) + O₂(g) → 2 SO₃(g) উপরের বিক্রিয়ায় কোন অনুঘটক ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "H₂O₂",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "V₂O₅",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Ni",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Al₂O₃",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সালফিউরিক অ্যাসিড তৈরির কন্ট্যাক্ট প্রক্রিয়ায়, সালফার ডাই-অক্সাইড (SO₂) কে সালফার ট্রাই-অক্সাইড (SO₃) এ রূপান্তর করতে ভ্যানাডিয়াম(V) অক্সাইড (V₂O₅) অনুঘটক হিসেবে ব্যবহৃত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041417455,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোনটি রুটাইলের সূত্র?",
+    "options": [
+      {
+        "label": "a",
+        "text": "FeO·Cr₂O₃",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "FeWO₄",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Fe₂O₃·Cr₂O₃",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "TiO₂",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "রুটাইল হল টাইটেনিয়ামের একটি সাধারণ আকরিক, এবং এর রাসায়নিক সূত্র হল টাইটেনিয়াম ডাই-অক্সাইড (TiO₂)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041417608,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোনটি সীসার আকরিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "লিমোনাইট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হেমাটাইট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মেগানাইট",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গ্যালেনা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "গ্যালেনা (লেড সালফাইড, PbS) হল সেই প্রাথমিক আকরিক যেখান থেকে সীসা নিষ্কাশিত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041417737,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোনটি জিঙ্ক ধাতুর আকরিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গ্যালেনা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সিনাবার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ক্যালামাইন",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সেলকোসাইট",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ক্যালামাইন হল জিঙ্ক কার্বনেট (ZnCO₃), যা জিঙ্কের একটি আকরিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041417912,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "নিচের কোন আকরিকটি সিনাবার?",
+    "options": [
+      {
+        "label": "a",
+        "text": "HgS",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "PbS",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ZnS",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Cu₂S",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সিনাবার হল পারদ সালফাইড (HgS), পারদের প্রধান আকরিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041418062,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "অ্যালুমিনার সূত্র কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Al₂O₃·H₂O",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Al₂O₃·nH₂O",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Al₂O₃·3H₂O",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Al₂O₃",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অ্যালুমিনা হল বিশুদ্ধ, নিরুদ অ্যালুমিনিয়াম অক্সাইডের সাধারণ নাম, যার সূত্র Al₂O₃। এটি সেই যৌগ যা তড়িৎবিশ্লেষিত হয়ে অ্যালুমিনিয়াম ধাতু উৎপন্ন করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041418300,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোনটি সেলকোসাইটের সূত্র?",
+    "options": [
+      {
+        "label": "a",
+        "text": "PbS",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Cu₂S",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "HgS",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "GeS",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সেলকোসাইট (বা ক্যালকোসাইট) তামার একটি গুরুত্বপূর্ণ আকরিক, এবং এর সূত্র হল কপার(I) সালফাইড (Cu₂S)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041418424,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "নিচের কোনটি আগ্নেয় শিলা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পাথর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গ্রানাইট",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কয়লা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চুন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "গ্রানাইট একটি আগ্নেয় শিলা। কয়লা একটি পাললিক শিলা যা উদ্ভিদের অবশেষ থেকে গঠিত। 'পাথর' একটি সাধারণ শব্দ, এবং 'চুন' সাধারণত একটি যৌগ (ক্যালসিয়াম অক্সাইড) বোঝায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041418536,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "ক্যালামাইনের সূত্র কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "CaCO₃",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ZnS",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "HgS",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ZnCO₃",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ক্যালামাইন হল জিঙ্কের একটি আকরিক, এবং এটি রাসায়নিকভাবে জিঙ্ক কার্বনেট (ZnCO₃)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041418661,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোনটি গ্যালেনা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ZnO",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ZnS",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "PbS",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ZnCO₃",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "গ্যালেনা হল সীসার প্রাথমিক আকরিক, রাসায়নিক সূত্র লেড(II) সালফাইড (PbS)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041418770,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "নিষ্কাশনের জন্য চুল্লির নাম কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রিটার্ট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কনভার্টার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "লিবিগ কনডেন্সার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ব্লাস্ট ফারনেস",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ব্লাস্ট ফারনেস হল একটি বড়, টাওয়ারের মতো চুল্লি যা ধাতু, বিশেষ করে আয়রন, তাদের আকরিক থেকে নিষ্কাশনের জন্য ব্যবহৃত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041418875,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "মানব সভ্যতার শুরুতে কোন ধাতু ব্যবহার করা হত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জিঙ্ক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তামা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সীসা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ব্রোঞ্জ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "তামা যুগ মানব সভ্যতায় ধাতুবিদ্যার সূচনা চিহ্নিত করে, যেখানে তামা ছিল প্রথম দিকে ব্যাপকভাবে ব্যবহার করা ধাতুগুলির মধ্যে একটি যন্ত্র ও অস্ত্রের জন্য।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041419064,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোনটি তামার আকরিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হেমাটাইট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সেলকোসাইট",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ক্যালামাইন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বক্সাইট",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সেলকোসাইট (ক্যালকোসাইট, Cu₂S) তামার একটি গুরুত্বপূর্ণ আকরিক। হেমাটাইট আয়রন আকরিক, ক্যালামাইন জিঙ্ক আকরিক, এবং বক্সাইট অ্যালুমিনিয়াম আকরিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041419173,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোন অঞ্চল থেকে খনিজ সংগ্রহ করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আকরিক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "খনিজ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "খনি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "জলাধার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "খনি হল সেই স্থান (একটি গর্ত বা সুড়ঙ্গ) যেখান থেকে পৃথিবী থেকে খনিজ ও আকরিক নিষ্কাশন করা হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041419281,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "বালিতে আয়রনের উপস্থিতি কোন উদাহরণ নির্দেশ করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আকরিক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "খনি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "খনিজ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "উৎস",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "খনিজ হল একটি প্রাকৃতিকভাবে সৃষ্ট কঠিন পদার্থ যার একটি নির্দিষ্ট রাসায়নিক গঠন। বালিতে উপস্থিত আয়রন (চৌম্বকাইট দানার মতো) খনিজের একটি উদাহরণ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041419392,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "বাংলাদেশে সাদা মাটির পাহাড় কোথায় দেখা যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সিলেট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চট্টগ্রাম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মধুপুর",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "নেত্রকোণা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বাংলাদেশের মধুপুর অঞ্চল সাদা মাটি (কাওলিন) এর জন্য পরিচিত, যা সিরামিক্সে ব্যবহার করা হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041419504,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোনটির জন্য তাপ বিজারণ প্রযোজ্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Cu",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Fe",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Ca",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Mg",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সক্রিয়তা শ্রেণীর নিচের দিকের ধাতুগুলি (যেমন তামা, Cu) শুধুমাত্র তাদের অক্সাইড গরম করে (তাপ বিজারণ) নিষ্কাশন করা যেতে পারে। Fe, Ca, Mg এর মতো ধাতুগুলি আরও সক্রিয় এবং কার্বন বিজারণ বা তড়িৎবিশ্লেষণের মতো শক্তিশালী পদ্ধতির প্রয়োজন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041419615,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোন আকরিক তেল ফোম ফ্লোটেশন পদ্ধতি ব্যবহার করে ঘনীভূত করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কার্বনেট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সালফেট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সালফাইট",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সালফাইড",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ফ্রোথ ফ্লোটেশন পদ্ধতি সালফাইড আকরিক (সালফার সমৃদ্ধ আকরিক, যেমন PbS, ZnS, CuFeS₂) ঘনীভবনের জন্য সবচেয়ে কার্যকর।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041419729,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "তামার স্ল্যাগ কোথায় সংরক্ষিত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ব্রোঞ্জের ওপরে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ডুরালুমিনে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ইস্পাতে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "স্টেইনলেস স্টিলে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ডুরালুমিন হল অ্যালুমিনিয়াম, তামা, ম্যাগনেশিয়াম ও ম্যাঙ্গানিজের একটি খাদ। স্ল্যাগ প্রসঙ্গে উল্লিখিত তামা সম্ভবত এই খাদে একটি উপাদান হিসাবে তামাকে বোঝায়। শব্দবিন্যাস অস্বাভাবিক, কিন্তু অপশনগুলোর মধ্যে, ডুরালুমিনে তামা থাকে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041419836,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "যদি নতুন তামার ধাতু দীর্ঘ সময় খোলা বাতাসে রাখা হয়, তাহলে এর রঙ পরিবর্তিত হয়ে হয় —",
+    "options": [
+      {
+        "label": "a",
+        "text": "গাঢ় বাদামি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "লাল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গোলাপি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাদামি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "নতুন তামা লালচে-গোলাপি হয়। দীর্ঘ সময় বাতাসের সংস্পর্শে আসলে এটি অক্সিজেন, আর্দ্রতা ও কার্বন ডাই-অক্সাইডের সাথে বিক্রিয়া করে একটি সবুজাভ স্তর (প্যাটিনা) বা গাঢ় যৌগ গঠন করে, সময়ের সাথে সাথে গাঢ় বাদামি রঙ ধারণ করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041419953,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "নিচের কোনটি অ্যালুমিনিয়ামের আকরিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হেমাটাইট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ম্যাগনেটাইট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বক্সাইট",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সেলকোসাইট",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বক্সাইট (Al₂O₃·nH₂O এর একটি মিশ্রণ) হল অ্যালুমিনিয়ামের প্রাথমিক বাণিজ্যিক আকরিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041420072,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "সবচেয়ে বিশুদ্ধ রাসায়নিক পদার্থকে কী বলা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "এনালার",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অ্যামালগাম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অ্যালুমিনা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গ্যাম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'এনালার' হল খুব উচ্চ বিশ্লেষণাত্মক বিশুদ্ধতার রাসায়নিকগুলির জন্য একটি ঐতিহাসিক ট্রেডমার্ক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041420549,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোনটি সক্রিয়তার সঠিক ক্রম?",
+    "options": [
+      {
+        "label": "a",
+        "text": "K > Na > Al",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Zn > Al > Ca",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Cu > Fe > Pb",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Mg > Na > Al",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পটাশিয়াম (K) এগুলোর মধ্যে সবচেয়ে সক্রিয়, তারপর সোডিয়াম (Na), এবং তারপর অ্যালুমিনিয়াম (Al)। এটি আদর্শ সক্রিয়তা শ্রেণী অনুসরণ করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041420663,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "সোনার কোন নমুনাটি সবচেয়ে শক্ত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৮ ক্যারেট",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "২১ ক্যারেট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "২২ ক্যারেট",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২৪ ক্যারেট",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "খাঁটি সোনা (২৪ ক্যারেট) খুব নরম। খাদগুলি শক্ত হয়। ১৮ ক্যারেট সোনায় ১৮ অংশ সোনা ও ৬ অংশ অন্যান্য ধাতু (যেমন তামা বা রূপা) থাকে, এটিকে প্রদত্ত অপশনগুলির মধ্যে সবচেয়ে শক্ত করে তোলে কারণ খাদ ধাতুর অনুপাত সবচেয়ে বেশি।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041420783,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোনটিকে তড়িৎবিশ্লেষণ দ্বারা নিষ্কাশন করতে হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "K",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Cu",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Fe",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Zn",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পটাশিয়াম (K) একটি খুব সক্রিয় ধাতু (সক্রিয়তা শ্রেণীর শীর্ষে)। এই ধরনের সক্রিয় ধাতুগুলিকে কার্বন দ্বারা বিজারণ বা শুধু তাপ দ্বারা নিষ্কাশন করা যাবে না এবং তাদের গলিত যৌগের তড়িৎবিশ্লেষণের শক্তিশালী পদ্ধতি দ্বারা নিষ্কাশন করতে হবে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041420904,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "নিচের কোনটি একটি আকরিক ঘনীভবন পদ্ধতি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফ্র্যাস্ক পদ্ধতি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ভৌত পদ্ধতি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ক্রাশ পদ্ধতি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ফ্রোথ ফ্লোটেশন পদ্ধতি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ফ্রোথ ফ্লোটেশন হল একটি ভৌত পদ্ধতি যা বিশেষভাবে গ্যাঙ্গু থেকে মূল্যবান খনিজ আলাদা করে আকরিক ঘনীভবনের (বা ঘনীভূত) জন্য ব্যবহৃত হয়, তাদের পৃষ্ঠের বৈশিষ্ট্যের পার্থক্যের ভিত্তিতে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041421022,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোন মৌল স্ব-বিজারণ প্রক্রিয়া দ্বারা নিষ্কাশিত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অ্যালুমিনিয়াম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সীসা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জিঙ্ক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তামা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "স্ব-বিজারণে, সালফাইড আকরিক নিজেই ধাতব অক্সাইড বিজারণের জন্য প্রয়োজনীয় সালফার সরবরাহ করে। তামা সালফাইড আকরিক (যেমন Cu₂S) থেকে একটি কনভার্টারে স্ব-বিজারণ জড়িত একটি প্রক্রিয়ার মাধ্যমে নিষ্কাশিত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041421127,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোনটি বিশুদ্ধ অবস্থায় পাওয়া যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Fe",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Pb",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Pt",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Cu",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্লাটিনাম (Pt) একটি মহৎ ধাতু, যার অর্থ এটি খুব অক্রিয়াশীল। তাই, এটি প্রায়শই প্রকৃতিতে তার বিশুদ্ধ, নেটিভ অবস্থায় পাওয়া যায়। আয়রন (Fe), সীসা (Pb) এবং তামা (Cu) বেশি সক্রিয় এবং সাধারণত আকরিক (যৌগ) হিসাবে পাওয়া যায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041421236,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোন আকরিকে সালফার থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কপার পাইরাইট",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "হেমাটাইট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ক্যালামাইন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "লিমোনাইট",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কপার পাইরাইট (ক্যালকোপাইরাইট, CuFeS₂) একটি সালফাইড আকরিক, যার অর্থ এতে সালফার থাকে। হেমাটাইট (Fe₂O₃), ক্যালামাইন (ZnCO₃), এবং লিমোনাইট (FeO(OH)·nH₂O) হল অক্সাইড বা কার্বনেট আকরিক।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041421347,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোনটি পরিবর্তিত হয়ে মরিচা গঠন করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Fe₂O₃",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Fe(OH)₂",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Fe(OH)₃",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "FeCO₃",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "লোহার ক্ষয়ের সময়, প্রাথমিকভাবে ফেরিক হাইড্রক্সাইড (Fe(OH)₃) গঠিত হয়। এটি তারপর নিঃজলিত হয়ে (পানি হারিয়ে) মরিচা গঠন করে, যা হল জলযুক্ত ফেরিক অক্সাইড (Fe₂O₃·xH₂O)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041421456,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "অ্যালুমিনিয়াম নিষ্কাশনে প্রয়োজনীয় জ্বালানির কত শতাংশ অ্যালুমিনিয়াম পুনর্ব্যবহার করতে ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৫%",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "১০%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "২০%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৫০%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "অ্যালুমিনিয়াম পুনর্ব্যবহার করতে এর আকরিক (বক্সাইট) থেকে নিষ্কাশনের জন্য প্রয়োজনীয় শক্তির মাত্র প্রায় ৫% প্রয়োজন, এটিকে অত্যন্ত শক্তি-দক্ষ করে তোলে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041421577,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "ট্যাবলেট স্ট্রিপে কোনটি ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Sn",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Al",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Mg",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Zn",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ট্যাবলেট প্যাকেজিংয়ের জন্য ব্যবহৃত ব্লিস্টার প্যাক বা স্ট্রিপগুলি প্রায়ই অ্যালুমিনিয়াম ফয়েল দিয়ে তৈরি করা হয় কারণ এটি নমনীয়, অ বিষাক্ত এবং আর্দ্রতা ও আলোর জন্য একটি ভাল প্রতিবন্ধক সরবরাহ করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041421695,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "নিচের কোন অ্যাসিডটি শিল্পে সবচেয়ে ব্যাপকভাবে ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "H₂CO₃",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "HNO₃",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "H₂SO₄",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "H₂PO₄",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সালফিউরিক অ্যাসিড (H₂SO₄) প্রায়ই \"রাসায়নিকের রাজা\" বলা হয় কারণ সারের উৎপাদন, রাসায়নিক সংশ্লেষণ, পেট্রোলিয়াম শোধন এবং আরও অনেক শিল্পে এর ব্যাপক সংখ্যক ব্যবহারের জন্য।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041421803,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "C₁₂H₂₂O₁₁ + H₂SO₄ → 12C + 11H₂O + H₂SO₄ এই বিক্রিয়ায় কোন পদার্থটি নিঃজলীকারক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "H₂SO₄",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "C₁₂H₂₂O₁₁",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "H₂O",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "C",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ঘনীভূত সালফিউরিক অ্যাসিড (H₂SO₄) এই বিক্রিয়ায় একটি নিঃজলীকারক হিসাবে কাজ করে। এটি চিনির অণু (C₁₂H₂₂O₁₁) থেকে জল (H এবং OH) সরিয়ে দেয়, কার্বন পিছনে রেখে যায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041421915,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোনটি ওলিয়ামের সূত্র?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Na₂AlF₆",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "H₂S₂O₇",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Ca(OCl)Cl",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "CaCO₃",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ওলিয়াম, বা ফিউমিং সালফিউরিক অ্যাসিড, হল ঘনীভূত সালফিউরিক অ্যাসিড (H₂SO₄) এ সালফার ট্রাই-অক্সাইড (SO₃) এর একটি দ্রবণ। এটি প্রায়ই H₂S₂O₇ (পাইরোসালফিউরিক অ্যাসিড) সূত্র দ্বারা উপস্থাপন করা হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041422026,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোন গ্যাসটি অত্যন্ত বিষাক্ত এবং তীব্র গন্ধযুক্ত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "CO",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "CO₂",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "SO₂",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "SO₃",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সালফার ডাই-অক্সাইড (SO₂) একটি বিষাক্ত গ্যাস যার তীক্ষ্ণ, বিরক্তিকর, তীব্র গন্ধ আছে। এটি একটি প্রধান বায়ু দূষণকারী।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041422135,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "সালফিউরিক অ্যাসিড উৎপাদনের জন্য কোন প্রক্রিয়া ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অস্টওয়াল্ড",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কন্ট্যাক্ট",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "হেবার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রোস্টিং",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সালফিউরিক অ্যাসিড উৎপাদনের আধুনিক শিল্প পদ্ধতিকে কন্ট্যাক্ট প্রক্রিয়া বলে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041422248,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোনটি নিঃজলীকারক পদার্থ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "HNO₃ (মিশ্রিত)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "H₂SO₄ (ঘন)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "H₂SO₄ (মিশ্রিত)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "HCl (ঘন)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ঘনীভূত সালফিউরিক অ্যাসিড (H₂SO₄) একটি শক্তিশালী নিঃজলীকারক পদার্থ, যার অর্থ এটি অন্যান্য পদার্থ থেকে জল সরাতে পারে। মিশ্রিত অ্যাসিডের এই বৈশিষ্ট্য নেই।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041422357,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "সালফারের রঙ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাদা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "লাল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নীল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "হলুদ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ঘরের তাপমাত্রায় সালফারের সবচেয়ে সাধারণ এবং স্থিতিশীল রূপ হল উজ্জ্বল হলুদ কঠিন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041422469,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "ফ্র্যাস্ক পদ্ধতি ব্যবহার করা হয় — এর নিষ্কাশনের জন্য",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাদা ফসফরাস",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সিলিকন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ম্যাঙ্গানিজ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সালফার",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ফ্রাস্ক প্রক্রিয়া হল ভূগর্ভস্থ আমানত থেকে অতি উত্তপ্ত জল ও বায়ু ব্যবহার করে সালফার নিষ্কাশনের একটি পদ্ধতি।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041422579,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "ফ্র্যাস্কে ব্যবহৃত বাষ্পের তাপমাত্রা কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১১৯°C",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১৩০°C",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১৫০°C",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "১৮০°C",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ফ্রাস্ক প্রক্রিয়ায়, অতি উত্তপ্ত জল (প্রায় ১৫০°C বা তার বেশি) ভূগর্ভে পাম্প করে সালফার গলানো হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041422688,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "সার তৈরির কাঁচামাল হিসাবে বিশ্বব্যাপী প্রতি বছর কত পরিমাণ H₂SO₄ ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১.৫%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৩%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৫.৫%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১৯%",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বিশ্বব্যাপী উৎপাদিত সালফিউরিক অ্যাসিডের একটি খুব বড় অংশ (প্রায় ৬০-৭০%) ফসফেট সার তৈরি করতে ব্যবহৃত হয়। কাঁচামাল হিসেবে এর ব্যবহারের জন্য প্রায়শই উদ্ধৃত পরিসংখ্যানটি মোট উৎপাদনের প্রায় ১৯%।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041422803,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "সালফারের গলনাঙ্ক কত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৬০°C",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২৬০°C",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১১৫°C",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "১২৫°C",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সালফার তুলনামূলকভাবে কম তাপমাত্রায় প্রায় ১১৫°C এ গলে একটি হলুদ তরল গঠন করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041422927,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোনটি হলুদ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আয়রন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ম্যাঙ্গানিজ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সালফার",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কার্বন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সালফার স্বভাবতই হলুদ। আয়রন রূপালী-ধূসর, ম্যাঙ্গানিজ রূপালী-ধূসর এবং কার্বন (গ্রাফাইট/কয়লা হিসাবে) কালো।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041423055,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "নিচের কোনটির প্রতি জলের দিকে সবচেয়ে শক্তিশালী আকর্ষণ আছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "H₂SO₄",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Al₂O₃",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Na₂CO₃",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "H₂CO₃",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ঘনীভূত সালফিউরিক অ্যাসিড (H₂SO₄) অত্যন্ত হাইগ্রোস্কোপিক, যার অর্থ এটি বাতাস থেকে জলীয় বাষ্প শোষণ করার প্রবণতা খুবই শক্তিশালী।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041423167,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "রাসায়নিক বিক্রিয়া গঠনের জন্য কোন যৌগটি সবচেয়ে বেশি ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "H₂SO₄",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "H₂O",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "HCl",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Na₂CO₃",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সালফিউরিক অ্যাসিড (H₂SO₄) শিল্পে একটি মৌলিক রাসায়নিক। এটি শুধু একটি অ্যাসিড হিসাবে নয়, বিপুল সংখ্যক রাসায়নিক বিক্রিয়ায় একটি নিঃজলীকারক পদার্থ এবং অনুঘটক হিসাবেও ব্যবহৃত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041423304,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "ফিউমিং H₂SO₄ তে সালফিউরিক অ্যাসিডের শতকরা পরিমাণ কত থাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৯৬%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৯৮%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৯৯%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১০০%",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ফিউমিং সালফিউরিক অ্যাসিড (ওলিয়াম) এ ১০০% সালফিউরিক অ্যাসিড (H₂SO₄) তে অতিরিক্ত সালফার ট্রাই-অক্সাইড (SO₃) দ্রবীভূত থাকে। আপনি এর জল-সংমিশ্রণ ক্ষমতা বিবেচনা করলে এটি ভর দ্বারা ১০০% H₂SO₄ এর চেয়ে বেশি।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041423419,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "রাবার ভালকানাইজেশনে কোনটি ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কার্বন মনোক্সাইড",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শুষ্ক বরফ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সালফার",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কপার পাইরাইটস",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "ভালকানাইজেশন হল প্রাকৃতিক রাবারকে সালফার (এবং কখনও কখনও ত্বরক) সহ গরম করার প্রক্রিয়া। এটি রাবার পলিমার শৃঙ্খলগুলির মধ্যে ক্রস-লিঙ্ক গঠন করে, রাবারটিকে শক্তিশালী, আরও স্থিতিস্থাপক এবং তাপ-প্রতিরোধী করে তোলে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041423572,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "H₂SO₄ প্রস্তুতিতে কোনটি অনুঘটক হিসাবে ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Ni",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Fe",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Pt",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Pd",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সালফিউরিক অ্যাসিডের কন্ট্যাক্ট প্রক্রিয়ায়, প্ল্যাটিনাম (Pt) মূলত অনুঘটক হিসাবে ব্যবহৃত হত। এখন, খরচের কারণে ভ্যানাডিয়াম(V) অক্সাইড (V₂O₅) আরও সাধারণভাবে ব্যবহৃত হয়, তবে ঐতিহাসিকভাবে Pt এখনও একটি বৈধ উত্তর।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041423686,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "মিশ্রিত সালফিউরিক অ্যাসিড বলা হতে হলে কত শতাংশ H₂SO₄ উপস্থিত থাকা উচিত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৫",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১০",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "১৫",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২০",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "একটি মিশ্রিত অ্যাসিডে সাধারণত অ্যাসিডের ঘনত্ব কম থাকে। সালফিউরিক অ্যাসিডের জন্য, প্রায় ১০% বা তার কম ঘনত্বকে সাধারণত মিশ্রিত হিসাবে বিবেচনা করা হয়। ঘনীভূত H₂SO₄ প্রায় ৯৮%।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041423803,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোনটি ৯৮% H₂SO₄ এর সাথে শোষিত হয়ে ফিউমিং সালফিউরিক অ্যাসিড উৎপন্ন করতে পারে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "S",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "SO₂",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "SO₃",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "H₂SO₃",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কন্ট্যাক্ট প্রক্রিয়ায়, সালফার ট্রাই-অক্সাইড (SO₃) গ্যাস সরাসরি জলে দ্রবীভূত করা হয় না (এটি একটি কুয়াশা গঠন করে)। পরিবর্তে, এটি ওলিয়াম (ফিউমিং সালফিউরিক অ্যাসিড, H₂S₂O₇) গঠনের জন্য ৯৮% সালফিউরিক অ্যাসিডে শোষিত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041423908,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "সালফারাস অ্যাসিডের সূত্র কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "H₂SO₄",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "H₂S₂O₇",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "H₂SO₃",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "H₂S",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সালফারাস অ্যাসিড তৈরি হয় যখন সালফার ডাই-অক্সাইড জলে দ্রবীভূত হয়, এবং এর সূত্র হল H₂SO₃।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041424016,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "রং প্রস্তুত করতে H₂SO₄ এর শতকরা আয়তন কত প্রয়োজন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৭%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২৬%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "২৭%",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "২৮%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কিছু শিল্প রং তৈরির প্রক্রিয়ায়, একটি নির্দিষ্ট ঘনত্বের সালফিউরিক অ্যাসিডের (আয়তন অনুসারে প্রায় ২৭%) প্রয়োজন হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041424128,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "বিশ্বব্যাপী উৎপাদিত H₂SO₄ এর কত শতাংশ ইস্পাত উৎপাদনে ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১.৫%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "২%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "২.৫%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৪%",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সালফিউরিক অ্যাসিড ইস্পাত উৎপাদনে \"পিকলিং\"-এর জন্য ব্যবহৃত হয় – মরিচা এবং আঁশ সরিয়ে লোহা ও ইস্পাত পৃষ্ঠ পরিষ্কার করা। এটি বিশ্বব্যাপী এর ব্যবহারের একটি উল্লেখযোগ্য অংশ (প্রায় ৪%) হিসাব করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041424235,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "নিচের কোন ধাতু কার্বন বিজারণ পদ্ধতি দ্বারা নিষ্কাশিত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Zn",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Ca",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Mg",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Al",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "জিঙ্ক (Zn) এর অক্সাইড আকরিক থেকে কার্বন (কোক) এর সাথে গরম করে নিষ্কাশন করা হয়। Ca, Mg, Al এর মতো ধাতু খুব সক্রিয় এবং তড়িৎবিশ্লেষণ দ্বারা নিষ্কাশিত হয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041424380,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "নিচের কোনটি জিঙ্কের আকরিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গ্যালেনা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ক্যালামাইন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বক্সাইট",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ব্রাইন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ক্যালামাইন (ZnCO₃) জিঙ্কের একটি আকরিক। গ্যালেনা সীসা আকরিক, বক্সাইট অ্যালুমিনিয়াম আকরিক এবং ব্রাইন হল লবণের দ্রবণ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041424493,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কোন আকরিক থেকে স্ব-বিজারণ প্রক্রিয়া দ্বারা ধাতু নিষ্কাশিত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "PbS",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ZnS",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "FeS₂",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "HgS",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সীসা (Pb) এর সালফাইড আকরিক (গ্যালেনা, PbS) থেকে একটি প্রক্রিয়ার মাধ্যমে নিষ্কাশন করা হয় যাতে স্ব-বিজারণ জড়িত থাকে, যেখানে সালফাইড আকরিকের অংশ বিজারক হিসাবে কাজ করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041424601,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "ধাতু পরিশোধনে, কেন SiO₂ ব্যবহার করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ক্ষারীয় অপদ্রব্য দূর করতে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অম্লীয় অপদ্রব্য দূর করতে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নিরপেক্ষ অপদ্রব্য দূর করতে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "এর কোনোটিই নয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সিলিকা (SiO₂) একটি অম্লীয় ফ্লাক্স। গলনের সময় ক্ষারীয় অপদ্রব্য (যেমন CaO, MgO) দূর করতে এটিকে যোগ করা হয় যাতে এটি স্ল্যাগ (যেমন, ক্যালসিয়াম সিলিকেট, CaSiO₃) গঠন করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041424742,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "সক্রিয়তা শ্রেণীর শীর্ষে থাকা ধাতু যেমন সোডিয়াম ও পটাশিয়াম নিষ্কাশনের জন্য কোন প্রক্রিয়া ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রোস্টিং",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তড়িৎবিশ্লেষণ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কার্বন দ্বারা বিজারণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ফ্রোথ ফ্লোটেশন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "অত্যন্ত সক্রিয় ধাতুগুলি (যেমন Na, K, Ca, Mg, Al) কার্বন বা শুধু তাপ দ্বারা বিজারিত হতে পারে না। এগুলি সবচেয়ে শক্তিশালী পদ্ধতি দ্বারা নিষ্কাশিত হয়: তাদের গলিত লবণের তড়িৎবিশ্লেষণ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041424852,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "সেলকোসাইটের সূত্র কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Cu₂S",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "CuS",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "HgS",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "CuFeS₂",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সেলকোসাইট (ক্যালকোসাইট) হল কপার(I) সালফাইড, Cu₂S। CuFeS₂ হল ক্যালকোপাইরাইট (কপার পাইরাইট)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041424963,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "প্রাকৃতিক গ্যাসের খনিজ ব্যবহার করা হয় —\ni. বিদ্যুৎ উৎপাদনে ব্যবহৃত হয়\nii. বিভিন্ন শিল্পের কাঁচামাল হিসাবে\niii. মোটর বাইকে ব্যবহার করা হয়",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "প্রাকৃতিক গ্যাস বিদ্যুৎ কেন্দ্রের জন্য একটি প্রধান জ্বালানি (i), সার এবং প্লাস্টিকের মতো রাসায়নিক তৈরি করার জন্য একটি কাঁচামাল (ii), এবং যানবাহন (iii) সহ মোটরসাইকেল চালানোর জন্য সংকুচিত প্রাকৃতিক গ্যাস (CNG) হিসাবে ব্যবহার করা যেতে পারে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041425075,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কেউলিন যৌগটি হল —\ni. এক ধরনের মাটি\nii. সিরামিক শিল্পে ব্যবহৃত হয়\niii. চায়না ক্লে নামে পরিচিত",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কাওলিন (বা কেউলিন) হল এক ধরনের সূক্ষ্ম সাদা মাটি (i)। এটি সিরামিক, চীনামাটির বাসন এবং কাগজ তৈরিতে ব্যাপকভাবে ব্যবহৃত হয় (ii)। এটি সাধারণত চায়না ক্লে নামেও পরিচিত (iii)।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041425184,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "ZnO + C → Zn + CO₂, এই বিক্রিয়া—\ni. স্ব-বিজারণ প্রক্রিয়া\nii. এতে 'C' বিজারক হিসাবে কাজ করে\niii. ZnO বিজারিত হয়",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii এবং iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "এই বিক্রিয়ায়, কার্বন (C) বিজারক পদার্থ (ii), এবং জিঙ্ক অক্সাইড (ZnO) জিঙ্ক (Zn) এ বিজারিত হয় (iii)। এটি একটি স্ব-বিজারণ (স্ব-বিজারণ) প্রক্রিয়া নয়; স্ব-বিজারণে সালফাইড আকরিক নিজেই বিজারক সরবরাহ করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041425296,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "Na ধাতু নিষ্কাশিত হয়—\ni. ক্লোরাইড আকরিক থেকে\nii. তড়িৎবিশ্লেষণ প্রক্রিয়া দ্বারা\niii. কার্বন বিজারণ প্রক্রিয়া দ্বারা",
+    "options": [
+      {
+        "label": "a",
+        "text": "শুধুমাত্র i",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শুধুমাত্র ii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i এবং ii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সোডিয়াম (Na) গলিত সোডিয়াম ক্লোরাইড (সাধারণ লবণ, যা একটি ক্লোরাইড আকরিক) (i) এর তড়িৎবিশ্লেষণ (ii) দ্বারা নিষ্কাশন করা হয়। এটি কার্বন বিজারণ (iii) দ্বারা নিষ্কাশন করা হয় না কারণ এটি খুব সক্রিয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041425409,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "শিলা —\ni. দুই প্রকারের হয়\nii. বিভিন্ন খনিজের মিলনে গঠিত হয়\niii. এর গলিত রূপকে ম্যাগমা বলে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "(ii) শিলা হল এক বা একাধিক খনিজের সমষ্টি। (iii) যখন শিলা ভূগর্ভে গলে যায়, তখন গলিত পদার্থকে ম্যাগমা বলে। (i) ভুল কারণ শিলা তিন প্রকারের (আগ্নেয়, পাললিক, রূপান্তরিত), দুই প্রকারের নয়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768041425524,
+    "subject": "রসায়ন",
+    "chapter": "খনিজ সম্পদ: ধাতু- অধাতু",
+    "question": "কক্সবাজার সমুদ্র সৈকতে পাওয়া যায় —\ni. জিরকন, জিরকনিয়ামের আকরিক\nii. বক্সাইট পাওয়া যায়\niii. মোনাজাইট পাওয়া যায়",
+    "options": [
+      {
+        "label": "a",
+        "text": "i এবং ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i এবং iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii এবং iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii এবং iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বাংলাদেশের কক্সবাজারের বালি ভারী খনিজ যেমন জিরকন (ZrSiO₄, জিরকনিয়ামের একটি আকরিক) (i) এবং মোনাজাইট (বিরল মৃত্তিকা উপাদান এবং থোরিয়ামের উৎস) (iii) ধারণ করে বলে পরিচিত। বক্সাইট (অ্যালুমিনিয়াম আকরিক) সাধারণত সেখানে সমুদ্র সৈকতের বালিতে পাওয়া যায় না (ii)।",
+    "image": null,
+    "language": "en"
+  }
+]

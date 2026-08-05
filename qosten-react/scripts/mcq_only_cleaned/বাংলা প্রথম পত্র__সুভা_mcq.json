@@ -1,0 +1,3075 @@
+[
+  {
+    "id": 1768407891750,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "ছিপ ফেলে মাছ ধরা কার প্রধান শখ ছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সুভাশিনীর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বাণীকণ্ঠের",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সুকেশিনীর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রতাপের",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "প্রতাপের প্রধান শখ ছিল ছিপ ফেলে মাছ ধরা, কারণ এতে সময় সহজে কাটানো যায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407892424,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "বাণীকণ্ঠের শুষ্ক কপালে অশ্রু গড়িয়ে পড়েছিল কেন?\ni. সুভাকে বিয়ে দেবেন বলে\nii. সুভা কথা বলতে পারে না বলে\niii. মেয়ের ভবিষ্যৎ ভেবে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বাকপ্রতিবন্ধী কন্যা সুভার ভবিষ্যৎ নিয়ে দুশ্চিন্তার কারণে তার পিতামাতার মনে সর্বদা কষ্ট ছিল।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407892569,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "উদ্দীপকের মার্জার (বিড়াল) মূর্তির যে বৈশিষ্ট্য লক্ষিত হয়, তা হলো—",
+    "options": [
+      {
+        "label": "a",
+        "text": "ইতর প্রাণীর প্রতি আনুগত্য প্রকাশ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "একাকিত্বের সাথী ইতর প্রাণী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ইতর প্রাণীর প্রতি মমত্ববোধ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সবার থেকে নিজেকে আড়ালে রাখা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সুভা বাকপ্রতিবন্ধী হওয়ায় বোবা প্রাণীদের প্রতি তার গভীর মমত্ববোধ ছিল এবং তারাও সুভাকে আপন ভাবত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407892695,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "উদ্দীপকের মূলত 'সুভা' গল্পের কোন বাক্যটি প্রতিফলিত হয়েছে?\ni. দিনে তিনবার গোয়ালঘরে যাওয়া\nii. দুই বাহু দ্বারা গলা জড়িয়ে ধরা\niii. মাঝে মাঝে তাদের ভর্ৎসনা করা",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সুভা নিয়মিত গোয়ালঘরে যেত এবং গাভী দুটির গলা জড়িয়ে ধরে মনের ভাব প্রকাশ করত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407893264,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "'সুভা' গল্পে সুভা কোন ধরনের প্রতিবন্ধী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বুদ্ধি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বাক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "দৃষ্টি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শ্রবণ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সুভা কথা বলতে পারত না, তাই সে একজন বাকপ্রতিবন্ধী কিশোরী।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407893704,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "ছোট মেয়েটির নাম সুভাশিনী রাখা হয়েছে কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সখীদের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রতাপ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নীলমণি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাণীকণ্ঠ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সুভার বড় দুই বোনের নাম সুকেশিনী ও সুহাসিনী হওয়ার কারণে তাদের সাথে মিল রেখে বাবা বাণীকণ্ঠ তার নাম রাখেন সুভাশিনী।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407895719,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "শিশুকাল থেকেই সুভা নিজেকে বিধাতার অভিশাপ ভেবেছে কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সমবয়সীদের আচরণে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কথা বলতে পারে না বলে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সকলের দুশ্চিন্তা প্রকাশে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মায়ের বিরক্তি প্রদর্শনে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পিতামাতার মনে সুভাকে নিয়ে যে সবসময় দুশ্চিন্তা কাজ করত, তা দেখেই সে নিজেকে অভিশাপ মনে করত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407904165,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "'পিতামাতার নীরব হৃদয়ভার' বলতে 'সুভা' গল্পে মা-বাবার হৃদয়ের কোনটিকে বোঝানো হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মমতা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ভালোবাসা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ব্যাকুলতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দুশ্চিন্তা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বাকপ্রতিবন্ধী কন্যার বিয়ে না হওয়া এবং তার ভবিষ্যৎ অনিশ্চয়তা নিয়ে বাবা-মায়ের যে গভীর উদ্বেগ, তাকেই নীরব হৃদয়ভার বলা হয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407904284,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভা সাধারণের দৃষ্টিপথ থেকে নিজেকে গোপন রাখতে সচেষ্ট ছিল কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পিতামাতার নীরব হৃদয়ভার দেখে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিধাতার অভিশাপস্বরূপ মনে করে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তাদেরকে একঘরে করার ভয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সে মায়ের গর্ভকলঙ্ক— এ কথা মনে করে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সুভা মনে করত সে সৃষ্টিকর্তার একটি অভিশাপ, তাই সে মানুষের আড়ালে থাকতে চাইত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407904414,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "'পিতামাতার মনে সে সর্বদাই জাগরূক ছিল'— কে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মমতাদি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অভাগী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দুর্গা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সুভা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সুভা কথা বলতে পারত না বলে তার বাবা-মা সবসময় তাকে নিয়ে উদ্বিগ্ন থাকতেন, তাই সে তাদের মনে সর্বদা জাগ্রত ছিল।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407904592,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভাকে তার মা গর্ভের কলঙ্ক মনে করেন কেন? কারণ সুভা—",
+    "options": [
+      {
+        "label": "a",
+        "text": "কর্মে অনাগ্রহী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বাকপ্রতিবন্ধী",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সংসার বিবাগী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শব্দহীন-সঙ্গীহীন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সুভার মা মেয়েকে নিজের ত্রুটিস্বরূপ দেখতেন এবং সে কথা বলতে পারে না বলে তাকে গর্ভের কলঙ্ক মনে করতেন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407904748,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভার চোখের ভাষা কেমন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সুবিস্তৃত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ইতিবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অসীম উদার",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বিষাদ শান্ত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সুভার কথা বলার ক্ষমতা না থাকলেও তার চোখের ভাষা ছিল অত্যন্ত গভীর এবং অসীম উদার।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407904888,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভা মুক্তির আনন্দ কোথায় খুঁজে পায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মহাকাশের সৌন্দর্যে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিপুল নিস্তব্ধ প্রকৃতিতে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সর্বশী ও পাঙ্গুলির স্পর্শে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রতাপের সঙ্গে সময় কাটিয়ে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "প্রকৃতির বিশালতা ও নিস্তব্ধতার মাঝে সুভা নিজের একাকিত্ব ভুলে মুক্তির আনন্দ খুঁজে পেত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407905027,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "'সুভা' গল্পের কোন বাক্যটির মাধ্যমে সুভার মনের ভাব চোখের ভাষার মর্মার্থ প্রকাশ পেয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তাহার সুদীর্ঘ পল্লববিশিষ্ট বড় দুটি চোখ ছিল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কালো চোখকে কিছু তর্জমা করতে হয় না",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "যাহার ভাষা নেই তাহার চোখের ভাষা অসীম",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মন আপনি তাহার ওপর ছায়া ফেলে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সুভার মত যারা বাকহীন, তাদের মনের আকুলতা চোখের ভাষায় অসীম গভীরতায় প্রকাশ পায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407905183,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভার ভাষার অভাব পূরণ করে দেয়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "তন্বী মর্মর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গোয়ালঘরের গাভী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গোঁসাইদের ছেলে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিশাল প্রকৃতি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মানুষের ভাষার অভাব সুভার জীবনে প্রকৃতিই পূরণ করে দিত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407905304,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "'সুভা' গল্পে চির নিঃশব্দ হৃদয় উপকূল বলতে কী বোঝানো হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শান্ত হৃদয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কূলের অদৃশ্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হৃদয়ের কিনার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সুভার মন",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সুভার নির্বাক ও গভীর মনের অবস্থাকে লেখক চির নিঃশব্দ হৃদয় উপকূলের সঙ্গে তুলনা করেছেন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407905437,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "কে সুভার পা চাটত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ছাগল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিড়াল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পাঙ্গুলি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সর্বশী",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "গোয়ালঘরের গাভী সর্বশী সুভাকে খুব পছন্দ করত এবং সে আদর করে সুভার পা চাটত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407905570,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভার সখীদের মধ্যে ভাষাবিহীন জীব বলা হয়েছে কাকে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সর্বশী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পাঙ্গুলি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "প্রতাপ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাণীকণ্ঠ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সর্বশী ও পাঙ্গুলি ছিল সুভার প্রাণের সখা, যারা ছিল বাকহীন প্রাণী।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407905691,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "প্রতাপের প্রধান শখ কী ছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ছিপ ফেলে মাছ ধরা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "তেঁতুলতলায় বসে থাকা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সুভার সাথে গল্প করা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অকর্মণ্য হয়ে বসে থাকা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "প্রতাপ অলস প্রকৃতির ছিল এবং ছিপ ফেলে মাছ ধরা ছিল তার প্রধান নেশা।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407905826,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "'সুভা' গল্পে প্রতাপ সুভার মর্যাদা বুঝত কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাকপ্রতিবন্ধীর প্রতি সহানুভূতি দেখানোর কারণে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রতিদিন পান সাজিয়ে আনত বলে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিশেষ কাজে সাহায্য করার কারণে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মাছ ধরার সময় নীরবে সঙ্গ দিত বলে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "মাছ ধরার সময় প্রতাপের নীরব সঙ্গীর প্রয়োজন ছিল, যা সুভা খুব ভালোভাবে পূরণ করত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407905954,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "'সুভা' গল্পে উল্লিখিত 'গম্ভীর নিস্তব্ধ পাতালপুরী' কেমন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঝিল্লিরাবপূর্ণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "রহস্যমান",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মহিমান্বিত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিষাদশান্ত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সুভা কল্পনা করত একটি রহস্যময় নিস্তব্ধ জগতের, যাকে পাতালপুরী বলা হয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407906090,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভা আপনাকে আপনি দেখিতেছে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "বয়ঃসন্ধিকালে উপনীত বলে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অতর্কিত কৌতূহলর জন্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সজীবহীন থাকায়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জোয়ারে নিজেকে দেখতে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পূর্ণিমার জোয়ারের সময় সুভা নিজেকে প্রকৃতির বিশালতার মাঝে নতুনভাবে আবিষ্কার করত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407906278,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "'সে আপনাকে আপনি দেখিতেছে, ভাবিতেছে, প্রশ্ন করিতেছে এবং বুঝিতে পারিতেছে না'— এর কারণ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শারীরিক প্রতিবন্ধকতা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নবযৌবনে পদার্পণ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সুনিশ্চল স্বভাব",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আত্মসম্মানের অভাব",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বয়সের পরিবর্তনের সাথে সাথে সুভার মনে যে নতুন অনুভূতির উদয় হচ্ছিল, সে কথাই এখানে বলা হয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407906391,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "\"কী রে, সু, তোর নাকি বর পাওয়া গেছে, তুই বিয়ে করতে যাচ্ছিস?\"— উক্তিটিতে প্রকাশ পেয়েছে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "আদর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সহমর্মিতা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ঘৃণা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তিরস্কার",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "প্রতাপের এই কথাটির মাধ্যমে সুভার প্রতি এক ধরণের উপহাস বা তিরস্কার ফুটে উঠেছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407906513,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "ডাগর চোখ মেলে সুভা কার মুখের দিকে চেয়ে থাকত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সর্বশী-পাঙ্গুলির",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বাবা-মায়ের",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বিড়াল শাবকের",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রতাপের",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সুভা তার বড় দুই চোখ মেলে বাবা-মায়ের মুখের দিকে তাকিয়ে তাদের মনের অবস্থা বোঝার চেষ্টা করত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407906623,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভা নিজের বিজয়ের সংবাদ প্রথম কার কাছে পেয়েছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাণীকণ্ঠের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তার মায়ের",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রতাপের",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "প্রতিবেশীর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্রতাপের মাধ্যমেই সুভা প্রথম জানতে পেরেছিল যে তার বিয়ের কথা চলছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407906871,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভা কার পায়ের কাছে বসে মুখের দিকে চেয়ে কাঁদতে লাগল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মায়ের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বাবার",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সর্বশীর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাঙ্গুলির",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "গ্রাম ছেড়ে যাওয়ার আগে সুভা তার বাবার প্রতি গভীর ভালোবাসা ও আকুলতা প্রকাশ করে তার পায়ের কাছে বসেছিল।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407907020,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "বাণীকণ্ঠের কান্নার কারণ কী ছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গতানুগতিক কষ্ট",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সুভাকে পছন্দ করা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পিতৃস্নেহের কাতরতা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সুভার দুরবস্থা কল্পনা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "আদরের মেয়ে সুভাকে ছেড়ে যাওয়ার বেদনায় বাণীকণ্ঠ পিতৃস্নেহে কাতর হয়ে কেঁদেছিলেন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407907154,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভা কখন বের হয়ে চিরপরিচিত নদীতটে লুটিয়ে পড়ল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কৃষ্ণাদ্বাদশীর রাতে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পূর্ণিমা রাতে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শুক্লাদ্বাদশীর রাতে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অন্ধকার রাতে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "গ্রাম ছেড়ে যাওয়ার আগের রাতে সুভা অন্ধকারে নদীতটে গিয়ে নিজের জন্মভূমির প্রতি বিদায় সম্ভাষণ জানায়।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407907284,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সবশেষে অসহায় সুভা আত্মসমর্পণ করে কার কাছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ধরণীর কাছে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "গাভী দুটির কাছে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মায়ের কাছে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাণী কণ্ঠের কাছে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সুভা শেষ পর্যন্ত পৃথিবীর (ধরণীর) কোলেই আশ্রয় প্রার্থনা করে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407907411,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "'আমার মতো দুটি বাহু বাড়াইয়া তুমিও আমাকে ধরিয়া রাখো'— সুভা কথাটি কাকে বলেছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তার মাকে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রকৃতিকে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নদীতটকে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বাণীকণ্ঠকে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সুভা নদীতীরকে তার চিরস্থায়ী আপন ভেবে সেখানেই থেকে যেতে চেয়েছিল।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407907544,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "'তুমি আমাকে যাইতে দিও না, মা!'— সুভার এ কথায় কী প্রকাশ পেয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আকুলতা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অস্থিরতা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রার্থনা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চপলতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "জন্মভূমি ও পরিচিত পরিবেশ ছেড়ে যাওয়ার কষ্টে সুভার মনের গভীর আকুলতা এখানে প্রকাশ পেয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407907666,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "'কপাল' শব্দের অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কপাল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গাল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ঠোঁট",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নাক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'সুভা' গল্পে কপাল বলতে গাল-এর সৌন্দর্যকে নির্দেশ করা হয়েছে।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407907911,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "বিপুল নিস্তব্ধ প্রকৃতির কাছে সুভা কী পায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মুক্তির স্বাদ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মুক্তির আনন্দ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মুক্তির সনদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অকৃত্রিম ভালোবাসা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "প্রকৃতি সুভার সাথে কথা না বললেও তাকে একধরণের স্বাধীনতার অনুভূতি দিত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407908051,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "'আমাকে সবাই ভুলিলে বাঁচি'— সুভার এ উক্তিতে প্রকাশ পেয়েছে—\ni. হতাশা\nii. প্রত্যাশা\niii. বেদনা",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সুভা মনে করত সবাই তাকে ভুলে গেলে সে মুক্তি পাবে, কারণ সে সবার কাছে দুশ্চিন্তার কারণ ছিল।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407908179,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "'পিতামাতার মনে সে সর্বদাই জাগরূক ছিল'— কথাটির দ্বারা বোঝানো হয়েছে—\ni. সুভার প্রতি পিতামাতার অপত্য স্নেহ\nii. সুভার ভবিষ্যৎ নিয়ে পিতামাতার দুশ্চিন্তা\niii. সুভার বাকপ্রতিবন্ধিতায় পিতামাতার উদ্বেগ",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "প্রতিবন্ধী মেয়ের ভবিষ্যৎ চিন্তা পিতামাতাকে সবসময় ব্যস্ত রাখত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407908301,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "কালো চোখকে কিছু তর্জমা করতে হয় না কারণ—\ni. মনের কথা চোখের ওপর ছায়া ফেলে\nii. তার নিজ থেকে এসে চোখে ধরা দেয়\niii. চোখ অতলস্পর্শী গভীর বলে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "চোখের ভাষা সরাসরি মনের অবস্থার প্রতিফলন ঘটায়, তাই একে ব্যাখ্যা করার প্রয়োজন হয় না।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407908428,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুবল গোঁসাইয়ের ছেলে প্রতাপকে আশ্চর্য করার চেষ্টা করতে চাইত কারণ—\ni. নিজের গুরুত্ব প্রকাশের আশায়\nii. নিছক আনন্দ দেওয়ার অভিপ্রায়ে\niii. তার মনে একটু জায়গা করে নেওয়ার লোভে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "প্রতাপের মনোযোগ আকর্ষণ করতে পারাটা সুভার কাছে ছিল একটি বড় প্রাপ্তি।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407908559,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভা বিধাতার কাছে অলৌকিক ক্ষমতা প্রার্থনা করত—\ni. প্রতাপের মনোযোগ আকর্ষণ করার জন্য\nii. মায়ের বিরক্তি দূর করার জন্য\niii. বাণীকণ্ঠের বিড়ম্বনা ঘুচানোর জন্য",
+    "options": [
+      {
+        "label": "a",
+        "text": "i",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "প্রতাপকে অবাক করে দিতে পারলে সুভা আনন্দ পেত, তাই সে এই প্রার্থনা করত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407908678,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "বাণীকণ্ঠের বিদেশ যাওয়ার কারণ—\ni. বাণীকণ্ঠের সচ্ছল অবস্থা\nii. কারও কাছে সম্পত্তি বিক্রি করবে না\niii. দুই বেলা তারা মাঝ-ভাত খায়",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বাণীকণ্ঠের পরিবার সচ্ছল হলেও সুভার ভবিষ্যতের চিন্তায় তারা দেশ ছাড়ার সিদ্ধান্ত নেন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407908940,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "'তুমি আমাকে যাইতে দিও না, মা!'— এ কথার মধ্য দিয়ে সুভার কোন অভিব্যক্তিটি প্রকাশ পেয়েছে?\ni. চিরচেনা জগতকে আঁকড়ে ধরা\nii. পরিবেশ ও প্রকৃতিতে থাকতে ইচ্ছা\niii. মাকে ছেড়ে না যাওয়া",
+    "options": [
+      {
+        "label": "a",
+        "text": "i",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সুভা তার পরিচিত পরিবেশ এবং সম্পর্কের মায়ায় জড়িয়ে ছিল।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407909152,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভার নাম সুভাশিনী রেখেছিলেন কে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সুভার মা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সুভার বাবা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সুভার বড় বোন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দাদি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সুভার মা বড় দুই মেয়ের সাথে মিল রেখে তার নাম রাখেন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407909310,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভা কার মনে সর্বদা জাগরূক ছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পিতামাতার",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "প্রতিবেশীর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বোনদের",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আত্মীয়স্বজনদের",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "প্রতিবন্ধী হওয়ার কারণে সুভা সবসময় তার বাবা-মায়ের চিন্তায় থাকত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407909429,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভাকে নিজের ত্রুটিস্বরূপ দেখতেন কে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বাবা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মামা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ভাই",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সুভার মা তাকে নিজের গর্ভের কলঙ্ক এবং ত্রুটি বলে মনে করতেন।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407909629,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভাদের গ্রামের নাম কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মনিপুর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চণ্ডীপুর",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ভবানীপুর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মনোহরপুর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সুভাদের গ্রামের নাম ছিল চণ্ডীপুর।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407909763,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভার পিতার নাম কী ছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অবনীকান্ত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বাণীকণ্ঠ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "নীলকণ্ঠ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শশাঙ্কনাথ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সুভার বাবার নাম ছিল বাণীকণ্ঠ।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407909893,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "বোবা মেয়ে সুভা কোথায় চুপচাপ বসে থাকত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নদীর ধারে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বিলের পাড়ে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বৃক্ষ তলে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বনের ধারে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সুভা একাকী নদীর ধারে বসে থাকতে পছন্দ করত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407910085,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভা নদীতীরে এসে বসে, যখন—",
+    "options": [
+      {
+        "label": "a",
+        "text": "লোকেরা কোলাহল করে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রতাপ মাছ ধরে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অবসর পায়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাখির ডাক শোনে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "প্রকৃতি যখন শান্ত থাকে, তখন সুভা নদীতীরে গিয়ে প্রকৃতির শব্দ শুনত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407910210,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "ত্রিভুবনদৃষ্টিতে সুভাকে নিরীক্ষণ করত—",
+    "options": [
+      {
+        "label": "a",
+        "text": "সর্বশী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পাঙ্গুলি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ছাগল ছানা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিড়াল শাবক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সুভার প্রিয় গাভী পাঙ্গুলি তাকে খুব মনোযোগ দিয়ে দেখত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768407910353,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভা দিনে কতবার গোয়াল ঘরে যেত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৩",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "৪",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৫",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সুভা প্রতিদিন নিয়মিত তিনবার তার প্রিয় গাভীদের দেখতে গোয়াল ঘরে যেত।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408107584,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভার কোলে কে সুখ নিদ্রার আয়োজন করত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সর্বশী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পাঙ্গুলি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ছাগলছানা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিড়াল শাবক",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সুভা যখন নির্জনে বসে থাকত, তখন একটি বিড়াল শাবক এসে তার কোলে আশ্রয় নিয়ে ঘুমাত [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408111218,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "'সুভা' গল্পে প্রতাপকে অকর্মণ্য লোক বলা হয়েছে কেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কোনো কাজ করে না বলে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কাজ করে কিন্তু মনোযোগ নেই",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মাছ ধরাই তার প্রধান কাজ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কোনো সামাজিক কর্মে অনাগ্রহী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "প্রতাপ কোনো কাজকর্ম করত না বলে সাধারণ লোক তাকে অকর্মণ্য বলে গণ্য করত [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408111381,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "'সুভা' গল্পে অকর্মণ্য লোকরা সরকারি সম্পত্তি হওয়ার কারণ—",
+    "options": [
+      {
+        "label": "a",
+        "text": "সে সকলের বোঝা বলে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হাতের কাছে পাওয়া যায় বলে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অবকাশে আসে বলে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অলস প্রকৃতির বলে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "অকর্মণ্য ব্যক্তিদের নিজস্ব কোনো কাজ না থাকায় প্রয়োজন অনুযায়ী তাদের সহজেই অন্য কাজে ব্যবহার করা যায় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408111564,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভা জলকুমারী হলে কী করত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পুকুর চরে হীরা রাখত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পুকুর চরে মাছ ধরত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "একটি মণি প্রতাপের জন্য ঘাটে রেখে দিত",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "প্রতাপের নৌকার জন্য পান নিয়ে আসত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সুভা কল্পনা করত যে সে যদি জলকুমারী হতো, তবে একটি মহামূল্যবান মণি ঘাটে রেখে প্রতাপকে অবাক করে দিত [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408111765,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "\"কী রে সু, তোর নাকি বর পাওয়া গেছে?\"— প্রতাপের এই কথার মধ্য দিয়ে কী প্রকাশ পেয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অবজ্ঞা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিদ্রূপ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বিচ্ছেদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রতারণা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "প্রতাপের এই কথাটি ছিল সুভার বিয়ের খবর নিয়ে এক ধরণের হালকা উপহাস বা রসিকতা [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408111888,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভা প্রতাপের দিকে কেমন করে তাকাল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চঞ্চল চোখে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "করুণ চোখে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "হরিণের মতো করে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাখির মতো করে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বিয়ের খবর শুনে সুভা অত্যন্ত ব্যথিত হয়েছিল এবং প্রতাপের দিকে অত্যন্ত করুনভাবে তাকিয়ে ছিল [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408112002,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভা রাতে ঘর থেকে বের হয়ে নদীতটে লুটিয়ে পড়েছিল তখন কী ছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শুক্লা দ্বাদশী রাত্রি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "শুক্লা ত্রয়োদশী রাত্রি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অমাবস্যার রাত্রি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সাধারণ রাত্রি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সুভা গ্রাম ছেড়ে যাওয়ার আগের দিন শুক্লা দ্বাদশী তিথিতে নদীতটে গিয়ে কান্নায় ভেঙে পড়েছিল [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408112183,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভার বড় দুই বোনের বিয়ে দেওয়া হয়েছিল কীভাবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অনেক খোঁজাখুঁজি করে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অনেক অর্থ ব্যয় করে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অনেক অর্থ ও কষ্ট স্বীকার করে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সহজ উপায়ে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সুভার বড় দুই বোন সুকেশিনী ও সুহাসিনীর বিয়ে দিতে বাণীকণ্ঠকে অনেক কষ্ট এবং অর্থ ব্যয় করতে হয়েছিল [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408112301,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভা নিজেকে বিধাতার অভিশাপ মনে করে কেন?\ni. অশিক্ষিত বলে\nii. পরিবারের বোঝা বলে\niii. বাকপ্রতিবন্ধী বলে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সুভা কথা বলতে পারত না এবং তার কারণে মা-বাবা চিন্তিত থাকতেন বলেই সে নিজেকে অভিশাপ ভাবত [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408112434,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভা স্বাচ্ছন্দ্য বোধ করে—\ni. প্রকৃতির মাঝে\nii. বোবা প্রাণীদের কাছে\niii. গৃহস্থালির কাজকর্মে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সুভা মানুষের চেয়ে প্রকৃতি ও মূক প্রাণীদের সঙ্গেই বেশি সহজ ও সাবলীল থাকত [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408112589,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভার বন্ধু কয়টি ছিল?\ni. সর্বশী\nii. প্রতাপ\niii. পাঙ্গুলি",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সর্বশী ও পাঙ্গুলি নামের দুটি গাভীই ছিল সুভার সবচেয়ে ঘনিষ্ঠ বন্ধু [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408112823,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "বাণীকণ্ঠের শুষ্ক কপালে অশ্রু গড়িয়ে পড়েছিল কেন?\ni. সুভাকে বিয়ে দেবেন বলে\nii. সুভা কথা বলতে পারে না বলে\niii. মেয়েটির ভবিষ্যৎ ভেবে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সুভার বিয়ে এবং তার ভবিষ্যৎ দুশ্চিন্তায় বাণীকণ্ঠের চোখে জল এসেছিল [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408112945,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "উদ্দীপকের রবির সাথে সুভার সাদৃশ্য কোনটিতে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সে নির্জন প্রিয়ত্বের মধ্যে শব্দহীন ও সঙ্গীহীন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সুভার যে ভাষা নেই তার চোখের ভাষা অসীম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাকহীন মানুষের মধ্যে বৃহৎ প্রকৃতির মতো একটি বিজন মহত্ত্ব আছে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "একটি বোবা প্রকৃতি ও একটি বোবা মেয়ে মুখোমুখি চুপ করিয়া বসিয়া থাকিত",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "উদ্দীপকের রবি সুভার মতোই প্রকৃতি ও মৌনতার মাঝে নিজের জগৎ খুঁজে পেত [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408113114,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "রবীন্দ্রনাথ ঠাকুরের জন্ম তারিখ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২৫শে বৈশাখ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "২২শে শ্রাবণ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "২৬শে বৈশাখ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৩০শে বৈশাখ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "রবীন্দ্রনাথ ঠাকুর ১২৬৮ বঙ্গাব্দের ২৫শে বৈশাখ জন্মগ্রহণ করেন [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408113229,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "রবীন্দ্রনাথ ঠাকুর কোথায় জন্মগ্রহণ করেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জোড়াসাঁকোর ঠাকুর পরিবারে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কুষ্টিয়ার শিলাইদহ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শাহজাদপুর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শান্তিনিকেতন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "রবীন্দ্রনাথ ঠাকুর কলকাতার বিখ্যাত জোড়াসাঁকোর ঠাকুর পরিবারে জন্মগ্রহণ করেন [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408113432,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "রবীন্দ্রনাথ ঠাকুরের পিতা কে ছিলেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রিন্স দ্বারকানাথ ঠাকুর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মহর্ষি দেবেন্দ্রনাথ ঠাকুর",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "শ্রী অবনীন্দ্রনাথ ঠাকুর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আচার্য রাধানাথ ঠাকুর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "রবীন্দ্রনাথ ঠাকুরের পিতা ছিলেন মহর্ষি দেবেন্দ্রনাথ ঠাকুর [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408113550,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "রবীন্দ্রনাথের পিতামহের নাম কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অবনীন্দ্রনাথ ঠাকুর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দেবেন্দ্রনাথ ঠাকুর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রিন্স দ্বারকানাথ ঠাকুর",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "দ্বিজেন্দ্রনাথ ঠাকুর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রবীন্দ্রনাথ ঠাকুরের পিতামহ ছিলেন প্রিন্স দ্বারকানাথ ঠাকুর [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408113675,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "রবীন্দ্রনাথের কত বছর বয়সে প্রথম কাব্য প্রকাশিত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১২ বছর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১৫ বছর",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "১৮ বছর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "২০ বছর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মাত্র ১৫ বছর বয়সে রবীন্দ্রনাথের প্রথম কাব্যগ্রন্থ 'বনফুল' প্রকাশিত হয় [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408113967,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "রবীন্দ্রনাথ ঠাকুরের প্রথম কাব্যগ্রন্থের নাম কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মানসী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বনফুল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "গীতাঞ্জলি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চিত্রা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'বনফুল' হলো রবীন্দ্রনাথ ঠাকুরের প্রকাশিত প্রথম কাব্যগ্রন্থ [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408114082,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "রবীন্দ্রনাথ কত খ্রিস্টাব্দে নোবেল পুরস্কার লাভ করেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "১৯১০",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "১৯১৩",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "১৯১৫",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১৯১৭",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "১৯১৩ সালে রবীন্দ্রনাথ ঠাকুর সাহিত্যে নোবেল পুরস্কার অর্জন করেন [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408114196,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "এশীয়দের মধ্যে কে প্রথম নোবেল পুরস্কার লাভ করেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সি. ভি. রমন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ড. মুহাম্মদ ইউনুস",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রবীন্দ্রনাথ ঠাকুর",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ইয়াসুনারি কাওয়াবাতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রবীন্দ্রনাথ ঠাকুরই প্রথম এশীয় ব্যক্তি যিনি সাহিত্যে নোবেল পুরস্কার পান [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408114330,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "রবীন্দ্রনাথ ঠাকুর কত তারিখে মৃত্যুবরণ করেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "২২শে শ্রাবণ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "২৫শে বৈশাখ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৭ই আগস্ট",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১লা সেপ্টেম্বর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "১৩৪৮ বঙ্গাব্দের ২২শে শ্রাবণ রবীন্দ্রনাথ ঠাকুর পরলোকগমন করেন [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408114465,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "রবীন্দ্রনাথ ঠাকুরের ইংরেজি মৃত্যু তারিখ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৭ই আগস্ট",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "২২শে জুন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৫ই আগস্ট",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "৭ই মে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ইংরেজি ক্যালেন্ডার অনুযায়ী রবীন্দ্রনাথ ঠাকুর ৭ই আগস্ট ১৯৪১ সালে মৃত্যুবরণ করেন [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408114729,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "'সুভা' গল্পের কেন্দ্রীয় চরিত্রের পুরো নাম কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সুহাসিনী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সুভাষিণী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সুভাশিনী",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "সুকামিনী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "গল্পের কেন্দ্রীয় চরিত্রের নাম সুভাশিনী, সংক্ষেপে সুভা [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408115054,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুকেশিনী ও সুহাসিনী সুভার কী হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বড় বোন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সখী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ছোট বোন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সহপাঠী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সুকেশিনী ও সুহাসিনী ছিল সুভার বড় দুই বোন [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408115172,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "'মিনু' গল্পের কেন্দ্রীয় চরিত্রের সাথে সুভার মিল কোথায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বুদ্ধিতে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বাকপ্রতিবন্ধিতায়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সাহসিকতায়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সৌন্দর্যে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সুভা ও মিনু উভয়ই বাকপ্রতিবন্ধী কিশোরী ছিল [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408115353,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভার মাঝে নিচের কোন বিষয়টি লক্ষ করা যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাচালতা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বাকহীনতা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "চপলতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অহংকার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সুভা কথা বলতে পারত না বলে তার প্রধান বৈশিষ্ট্য ছিল বাকহীনতা [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408115480,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "'সে আপনাকে আপনি দেখিতেছে'— এর কারণ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শারীরিক পরিবর্তন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নবযৌবনে পদার্পণ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "নির্জনতা প্রিয় হওয়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "একাকী থাকা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কৈশোর পেরিয়ে যৌবনে পদার্পণের ফলে সুভার মধ্যে আত্মসচেতনতা তৈরি হয়েছিল [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408115699,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "কৈশোর পেরিয়ে যৌবনে পদার্পণ সুভার ক্ষেত্রে কী নির্দেশ করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নতুন বন্ধুর অভাব",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মানসিক ও শারীরিক পরিবর্তন",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "পরিবেশের সাথে মানিয়ে নেওয়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিজেকে লুকানোর চেষ্টা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বয়সের স্বাভাবিক পরিবর্তনের কারণে সুভার মনে নতুন নতুন ভাবনা ও কৌতূহল দেখা দিয়েছিল [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408115832,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভা ছোটবেলা থেকেই কী বুঝে নিয়েছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সে সবার খুব আদরের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সে পরিবারের বোঝা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সে বড় হয়ে কথা বলবে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তাকে নিয়ে কেউ চিন্তিত নয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পরিবার ও প্রতিবেশীদের আচরণে সুভা শৈশব থেকেই বুঝেছিল সে সবার জন্য একটি বোঝা [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408115951,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভা নিজেকে বিধাতার কী মনে করত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "উপহার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অভিশাপ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সৃষ্টি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "আশীর্বাদ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "প্রতিবন্ধকতার কারণে সুভা নিজেকে স্রষ্টার একটি অভিশাপ মনে করত [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408116063,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "বাণীকণ্ঠের চরিত্রে সুভার প্রতি কোন মনোভাবটি ফুটে ওঠে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঘৃণা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অবজ্ঞা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অপত্য স্নেহ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "উদাসীনতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বাণীকণ্ঠ তার বাকপ্রতিবন্ধী কন্যা সুভাকে অন্য সন্তানদের চেয়ে একটু বেশিই ভালোবাসতেন [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408116220,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভাদের গোয়ালে কয়টি গাভী ছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "একটি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দুইটি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তিনটি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চারটি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সুভাদের গোয়ালে সর্বশী ও পাঙ্গুলি নামে দুইটি গাভী ছিল [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408116655,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সাধারণের দৃষ্টিপথ থেকে নিজেকে গোপন করে রাখতে চাইত কে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সুহাসিনী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সুকেশিনী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সুভা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "প্রতাপ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "লোকে তাকে নিয়ে কানাঘুষা করে বলে সুভা নিজেকে লুকিয়ে রাখতে চাইত [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408116783,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সর্বশী ও পাঙ্গুলি কীসের নাম?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নদীর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পলের",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গাভীর",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "পাখির",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সর্বশী ও পাঙ্গুলি হলো সুভার প্রিয় দুইটি গাভীর নাম [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408116939,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভার ভাষাহীন সঙ্গী বা বন্ধু কারা ছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রতাপ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সর্বশী ও পাঙ্গুলি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "গ্রামবাসী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সহপাঠীরা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "মানুষের মধ্যে কোনো বন্ধু না থাকলেও গাভী দুটি ছিল সুভার অকৃত্রিম বন্ধু [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408117265,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "কাজকর্মে অবসর পেলে সুভা কোথায় বসে থাকত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গাছের তলায়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নদীতীরে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "খেলার মাঠে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বারান্দায়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সুভা অবসরে তার গ্রাম চণ্ডীপুরের নদীর ধারে গিয়ে নির্জনে বসে থাকত [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408117507,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "গোঁসাইদের ছোট ছেলেটির নাম কী ছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রতাপ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সুবল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কানাই",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মদন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "গোঁসাইদের ছোট ছেলের নাম ছিল প্রতাপ [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408117672,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "প্রতাপ সুভাকে কী বলে ডাকত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সুভাষিনী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সু",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সখী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বোবা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "প্রতাপ সুভাকে একটু ছোট করে এবং আদুরে সুরে 'সু' বলে ডাকত [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408117880,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভা কার মনোযোগ আকর্ষণ করার চেষ্টা করত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মায়ের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রতাপের",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "গাভীর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিড়াল শাবকের",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সুভা চাইত প্রতাপ যেন তাকে বিশেষ কেউ মনে করে, তাই সে প্রতাপের দৃষ্টি আকর্ষণের চেষ্টা করত [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408118007,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভা কর্তৃক প্রতাপের জন্য কী বরাদ্দ ছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "একটি পান",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "একটি ছিপ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "একটি মাছ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "একটি মালা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "প্রতাপ যখন মাছ ধরত, সুভা তার জন্য প্রতিদিন নিজ হাতে পান সাজিয়ে নিয়ে যেত [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408118145,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভা কল্পনা করত সে কোন পুরীর রাজকন্যা?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আকাশপুরী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পাতালপুরী",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মেঘপুরী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "স্বপ্নপুরী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সুভা নিজেকে নিস্তব্ধ গভীর পাতালপুরীর একমাত্র রাজকন্যা হিসেবে কল্পনা করত [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408118288,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভার পরিবারের অর্থনৈতিক অবস্থা কেমন ছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অতি দরিদ্র",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মধ্যবিত্ত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সচ্ছল",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ঋণগ্রস্ত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বাণীকণ্ঠের অবস্থা সচ্ছল ছিল, তারা দুই বেলা মাছ-ভাত খেতেন [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408118454,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "বাণীকণ্ঠ দুই বেলা কী খেয়ে জীবনধারণ করত?",
+    "options": "[{\"label\":\"a\",\"text\":\"শাক-সবজি\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"মাছ-ভাত\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"ফলমূল\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"দুধ-রুটি\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "বাণীকণ্ঠের আর্থিক স্বচ্ছলতা বোঝাতে লেখক 'দুই বেলা মাছ-ভাত' খাওয়ার কথা উল্লেখ করেছেন [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408118596,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভা কখন নদীতটে গিয়ে আছড়ে পড়েছিল?",
+    "options": "[{\"label\":\"a\",\"text\":\"পূর্ণিমা রাতে\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"শুক্লা দ্বাদশীর রাতে\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"অমাবস্যার রাতে\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"বর্ষার দুপুরে\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "দেশ ছাড়ার দুঃখে সুভা শুক্লা দ্বাদশী তিথিতে রাতে নদীর পাড়ে গিয়ে আশ্রয় নিয়েছিল [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408118877,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভার শারীরিক বর্ণনায় কোনটি পাওয়া যায়?",
+    "options": "[{\"label\":\"a\",\"text\":\"ডাগর কালো চোখ\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"খুব ফর্সা গায়ের রঙ\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"ছোট নাক\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"চঞ্চল পা\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "সুভার অন্যতম প্রধান বৈশিষ্ট্য ছিল তার বড় বড় পল্লববিশিষ্ট কালো ডাগর চোখ [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408119014,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "'সুহাসিনী' নাম সত্ত্বেও সে সুভার বিপরীত অংশ— এটি কী নির্দেশ করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বিধির বিড়ম্বনা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "প্রকৃতির পরিহাস",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নামের সার্থকতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ভাগ্যের উন্নয়ন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সুভার নাম সুভাষিণী বা সুহাসিনী হলেও সে কথা বলতে পারত না, যা ভাগ্যের একটি বিড়ম্বনা মাত্র [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768408119140,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "সুভা",
+    "question": "সুভার চোখের ভাষা কেমন ছিল?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অগভীর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ছলছলে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অতলস্পর্শী গভীর",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "রূঢ়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সুভার চোখের ভাষা ছিল অত্যন্ত গভীর এবং ব্যঞ্জনাময় [৫]।",
+    "image": null,
+    "language": "en"
+  }
+]

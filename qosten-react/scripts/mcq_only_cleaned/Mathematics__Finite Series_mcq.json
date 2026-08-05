@@ -1,0 +1,1890 @@
+[
+  {
+    "id": 1768139809620,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "For the series -1 + 3 - 9 + ...\ni. common ratio is -3\nii. nth term is (-3)^(n-1)\niii. sum of first 6 terms is 182",
+    "options": [
+      {
+        "label": "a",
+        "text": "i and ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i and iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii and iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii and iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "i. r = 3/(-1) = -3 ✓\nii. nth term = (-1) × (-3)^(n-1) = (-1)(-3)^(n-1)\nFor this to equal (-3)^(n-1), we need n=1 to give -1, but (-3)^0 = 1, not -1.\nActually: -1, 3, -9, 27, ... = (-1)(-3)^0, (-1)(-3)^1, (-1)(-3)^2,...\nSo nth term = (-1)(-3)^(n-1) ≠ (-3)^(n-1) for n=1.\nStatement ii is FALSE ✗\niii. S₆ = (-1)(1-(-3)^6)/(1-(-3)) = (-1)(1-729)/4 = (-1)(-728)/4 = 182 ✓\nSo i and iii are correct, answer should be b) i and iii.\n# Corrected Questions\n## Question 19:",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143963453,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the 8th term of the series 64 + 32 + 16 + 8 + ......?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(\\frac{1}{2}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "\\(\\frac{1}{4}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "2",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "This is a geometric series. The first term \\(a = 64\\). The common ratio \\(r = \\frac{32}{64} = \\frac{1}{2}\\). The 8th term is found using the formula \\(ar^{n-1}\\):\n\\[\n8\\text{th term} = 64 \\times \\left(\\frac{1}{2}\\right)^{7} = 64 \\times \\frac{1}{128} = \\frac{1}{2}.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143963611,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the sum of the 1st 10 terms of the series \\(2x - 2x + 2x - 2x + 2x - ......\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "20x",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "4x",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "2x",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "0",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The series alternates between \\(+2x\\) and \\(-2x\\). For an even number of terms (like 10), the pairs \\((2x - 2x)\\) cancel out, so the total sum is 0.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143963760,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "How much is the 8th term of the series 6 + 12 + 24 + ......?",
+    "options": [
+      {
+        "label": "a",
+        "text": "84",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "252",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "768",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "1536",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "First term \\(a = 6\\), common ratio \\(r = \\frac{12}{6} = 2\\).\n\\[\n8\\text{th term} = 6 \\times 2^{7} = 6 \\times 128 = 768.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143963919,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "Which is the fourth term of the geometric series 2 + x + y + z + 162?",
+    "options": [
+      {
+        "label": "a",
+        "text": "18",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "27",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "54",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "81",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The series is geometric. First term \\(a = 2\\), fifth term = 162. Using \\(a r^{4} = 162\\):\n\\[\n2 \\times r^{4} = 162 \\implies r^{4} = 81 \\implies r = 3.\n\\]\nFourth term = \\(a r^{3} = 2 \\times 27 = 54\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143964036,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the number of terms of the series 6 + 12 + 24 + 48 + ...... + 384?",
+    "options": [
+      {
+        "label": "a",
+        "text": "64",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "32",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "7",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "6",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "First term \\(a = 6\\), common ratio \\(r = 2\\).\n\\[\n6 \\times 2^{n-1} = 384 \\implies 2^{n-1} = 64 \\implies 2^{n-1} = 2^{6} \\implies n-1=6 \\implies n=7.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143964161,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "Which is the common term of the sequence 1, \\(\\frac{1}{3}\\), \\(\\frac{1}{7}\\), \\(\\frac{1}{15}\\), ...?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(\\frac{1}{2^n - 1}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(\\frac{1}{2^n + 1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(\\frac{1}{2^n}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(\\frac{1}{n^2 - 1}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The denominators are 1, 3, 7, 15, ... which match \\(2^n - 1\\):\n\\(2^1-1=1\\), \\(2^2-1=3\\), \\(2^3-1=7\\), \\(2^4-1=15\\). So the nth term is \\(\\frac{1}{2^n - 1}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143964288,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "Which term of the series 128 + 64 + 32 + ...... is \\(\\frac{1}{2}\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "9th",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "8th",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "7th",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "6th",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(a = 128\\), \\(r = \\frac{1}{2}\\).\n\\[\n128 \\times \\left(\\frac{1}{2}\\right)^{n-1} = \\frac{1}{2} \\implies \\left(\\frac{1}{2}\\right)^{n-1} = \\frac{1}{256} \\implies \\left(\\frac{1}{2}\\right)^{n-1} = \\left(\\frac{1}{2}\\right)^8 \\implies n-1=8 \\implies n=9.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143964469,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "If 2 + a + b + c + 162 is a geometric series, then what is the common ratio?",
+    "options": [
+      {
+        "label": "a",
+        "text": "6",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "3",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "\\(\\frac{1}{3}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(\\frac{1}{6}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "First term \\(a = 2\\), fifth term = 162.\n\\[\n2 \\times r^{4} = 162 \\implies r^{4} = 81 \\implies r = 3.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143964704,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "\\(1^2 + 2^2 + 3^2 + ...... + 50^2 = ?\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "1275",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "42925",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "1625625",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "54587",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Sum of squares of first \\(n\\) natural numbers: \\(\\frac{n(n+1)(2n+1)}{6}\\).\n\\[\n\\text{Sum} = \\frac{50 \\times 51 \\times 101}{6} = 42925.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143964819,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "Which one is the common term of the series 4 + 8 + 16 + ......?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(2^{n+1}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(2^{n+2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(2^{n-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(2^{n-2}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "First term \\(a = 4 = 2^2\\), common ratio \\(r = 2\\).\n\\[\nn\\text{th term} = 4 \\times 2^{n-1} = 2^2 \\times 2^{n-1} = 2^{n+1}.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143964948,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the summation of the first \\(n\\) terms of the series 3 + 5 + 7 + ......?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(n(n+2)\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(n(n+3)\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(\\frac{n(n+2)}{2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(\\frac{n(n+3)}{2}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "First term \\(a = 3\\), common difference \\(d = 2\\).\n\\[\nS_n = \\frac{n}{2}[2a + (n-1)d] = \\frac{n}{2}[6 + 2n - 2] = \\frac{n}{2}(2n+4) = n(n+2).\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143965059,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the number of terms of the series 3 + 6 + 12 + 24 + ...... + 384?",
+    "options": [
+      {
+        "label": "a",
+        "text": "7",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "8",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "127",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "128",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\(a = 3\\), \\(r = 2\\).\n\\[\n3 \\times 2^{n-1} = 384 \\implies 2^{n-1} = 128 \\implies 2^{n-1} = 2^7 \\implies n-1=7 \\implies n=8.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143965179,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the sum of the first 12 terms of the series 3 - 6 - 9 - 12 - ...?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-234",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-162",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "162",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "234",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The series is arithmetic with first term a = 3. Looking at the pattern, this is 3, -6, -9, -12, meaning d = -9 (from 3 to -6).\nActually, if written as 3 - 6 - 9 - 12, this could mean: 3, (3-6), (3-6-9), ... which is not standard.\nMost likely interpretation: 3, -6, -9, -12, ... with first term a = 3, second term = -6, so d = -9.\nS₁₂ = (12/2)[2(3) + (11)(-9)] = 6[6 - 99] = 6(-93) = -558\nHowever, if the series is meant to be 3 + (-6) + (-9) + (-12) with a = 3, d = -3:\nS₁₂ = (12/2)[2(3) + (11)(-3)] = 6[6 - 33] = 6(-27) = -162 ✓",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143965302,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the 25th term of the series \\(a - a + a - a + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "a",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "-a",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "0",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "1",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Odd-numbered terms are \\(+a\\), even-numbered terms are \\(-a\\). The 25th term is odd, so it is \\(a\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143965417,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the common ratio of the series \\(\\frac{1}{\\sqrt{3}} - 1 + \\sqrt{3} - \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(\\frac{1}{\\sqrt{3}}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(\\sqrt{3}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(-\\sqrt{3}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\(-\\frac{1}{\\sqrt{3}}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Common ratio \\(r = \\frac{\\text{second term}}{\\text{first term}} = \\frac{-1}{1/\\sqrt{3}} = -\\sqrt{3}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143965564,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "Which one is the 62nd term of the series \\(3 + 5 + 7 + 9 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "123",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "125",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "127",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "129",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\(a = 3\\), \\(d = 2\\).\n\\[\n62\\text{nd term} = 3 + (62-1) \\times 2 = 3 + 122 = 125.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143965674,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "Which one is the summation of the first 20 terms of the series \\(5 - 5 + 5 - 5 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "5",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-5",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "0",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "10",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "For an even number of terms (20), the pairs \\((5 - 5)\\) cancel out, so sum = 0.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143965793,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the common ratio of the sequence \\(-1, \\frac{1}{\\sqrt{3}}, -\\frac{1}{3}, \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(\\sqrt{3}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(-\\sqrt{3}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(-\\frac{1}{\\sqrt{3}}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\(\\frac{1}{3}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\(r = \\frac{1/\\sqrt{3}}{-1} = -\\frac{1}{\\sqrt{3}}\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143965921,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the sum of the squares of the first ten natural numbers?",
+    "options": [
+      {
+        "label": "a",
+        "text": "55",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "100",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "285",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "385",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\(\\frac{10 \\times 11 \\times 21}{6} = 385\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143966041,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the sum of the first 100 terms of the series \\(-5 + 5 - 5 + 5 - \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-5",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "5",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "0",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "100",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Pairs \\(-5 + 5 = 0\\). For 100 terms (even), sum = 0.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143966315,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the nth term of the series \\(1 + 4 + 7 + 10 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(2n - 1\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(3n - 2\\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "\\(4n - 3\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(n + 3\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\(a = 1\\), \\(d = 3\\).\n\\[\nn\\text{th term} = 1 + (n-1) \\times 3 = 3n - 2.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143966438,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the common ratio of the series \\(-2 + 2 - 2 + 2 - \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-1",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "2",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-2",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\(r = \\frac{2}{-2} = -1\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143966549,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "Which one is the 10th term of the series \\(6 + 8 + 10 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "22",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "24",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "26",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "28",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\(a = 6\\), \\(d = 2\\).\n\\[\n10\\text{th term} = 6 + (10-1) \\times 2 = 6 + 18 = 24.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143966758,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the value of \\(x\\) in the series \\(3 + 6 + x + 24 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "9",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "12",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "15",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "18",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "This is a geometric series: \\(a = 3\\), \\(r = \\frac{6}{3} = 2\\).\n\\[\nx = 3 \\times 2^{2} = 12.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143966903,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the sum of the 1st 6 terms of the series \\(1 + 2 + 4 + 8 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "64",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "63",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "65",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "62",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\(a = 1\\), \\(r = 2\\).\n\\[\nS_6 = \\frac{1(2^6 - 1)}{2 - 1} = 64 - 1 = 63.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143967021,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the general term of the series \\(3 + 9 + 27 + 81 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(3^n\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(3^{n-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(3^{n+1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(n^3\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "First term \\(a = 3\\), common ratio \\(r = 3\\).\n\\[\nn\\text{th term} = 3 \\times 3^{n-1} = 3^n.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143967127,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the 15th term of the series \\(-8 - 3 + 2 + 7 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "62",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "67",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "78",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "83",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(a = -8\\), \\(d = 5\\).\n\\[\n15\\text{th term} = -8 + (15-1) \\times 5 = -8 + 70 = 62.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143967243,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the sum of the first 27 natural numbers?",
+    "options": [
+      {
+        "label": "a",
+        "text": "256",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "378",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "512",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "729",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\[\nS = \\frac{27 \\times 28}{2} = 378.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143967354,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the sum of the first \\(n\\) terms of the series \\(1 + 3 + 5 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(n^2\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(\\frac{n(n+1)}{2}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(n(n+1)\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(\\frac{n}{2}(2n-1)\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "This is an arithmetic series with \\(a = 1\\), \\(d = 2\\).\n\\[\nS_n = \\frac{n}{2}[2 \\times 1 + (n-1) \\times 2] = \\frac{n}{2}(2n) = n^2.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143967482,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the common ratio of the series \\(\\frac{1}{\\sqrt{7}} - 1 + \\sqrt{7} - \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(\\frac{1}{\\sqrt{7}}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(\\sqrt{7}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(-\\sqrt{7}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\(-\\frac{1}{\\sqrt{7}}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\[\nr = \\frac{-1}{1/\\sqrt{7}} = -\\sqrt{7}.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143967626,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "The first and 7th terms of a geometric series are 1/√3 and 9√3 respectively. What is the common ratio?",
+    "options": [
+      {
+        "label": "a",
+        "text": "√3",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "3",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "1/√3",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "1/3",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "ar^6 = 9√3 and a = 1/√3\n(1/√3)r^6 = 9√3\nr^6 = 9√3 × √3 = 9 × 3 = 27\nr^6 = 27 = (√3)^6\nr = √3",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143967752,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "If \\(7 + x + y + 56 + \\ldots\\) is a geometric series, what is the value of \\(y\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "14",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "28",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "56",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\(a = 7\\), fourth term = 56.\n\\[\n7r^3 = 56 \\implies r^3 = 8 \\implies r = 2.\n\\]\nThird term \\(y = ar^2 = 7 \\times 4 = 28\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143967874,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the nth term of the series \\(ar + ar^3 + ar^5 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(ar^{2n-1}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(ar^{2n}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(ar^{n-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(ar^{n+1}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "First term = \\(ar\\), common ratio \\(q = r^2\\).\n\\[\nn\\text{th term} = ar \\cdot (r^2)^{n-1} = ar \\cdot r^{2n-2} = ar^{2n-1}.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143967998,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "Which term of the series \\(32 + 16 + 8 + \\ldots\\) is \\(\\frac{1}{4}\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "6",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "7",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "8",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "9",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\(a = 32\\), \\(r = \\frac{1}{2}\\).\n\\[\n32 \\times \\left(\\frac{1}{2}\\right)^{n-1} = \\frac{1}{4} \\implies \\left(\\frac{1}{2}\\right)^{n-1} = \\frac{1}{128} \\implies n-1 = 7 \\implies n = 8.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143968119,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the sum of the first \\(2(n+1)\\) terms of the series \\(4 - 4 + 4 - 4 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "8",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "4",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "0",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "2",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\(2(n+1)\\) is even. Pairs \\((4 - 4)\\) cancel out, so sum = 0.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143968248,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the sum of the first \\(2n\\) terms of the series \\(1 - 1 + 1 - 1 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "1",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "2",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "2n",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(2n\\) is even. Pairs \\((1 - 1)\\) cancel out, so sum = 0.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143968355,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the sum of the first 10 terms of the series \\(\\log 3 + \\log 9 + \\log 27 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(35 \\log 3\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(50 \\log 3\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(55 \\log 3\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\(60 \\log 3\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The series is \\(\\log 3 + 2\\log 3 + 3\\log 3 + \\ldots\\) (arithmetic in coefficients).\n\\[\nS_{10} = \\log 3 \\times (1 + 2 + \\ldots + 10) = \\log 3 \\times \\frac{10 \\times 11}{2} = 55 \\log 3.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143968509,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "Which one is the nth term of the series \\(4 + 8 + 16 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(2^{n+1}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "\\(2^{n-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(4^n\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(8^{n-1}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(a = 4 = 2^2\\), \\(r = 2\\).\n\\[\nn\\text{th term} = 4 \\times 2^{n-1} = 2^{n+1}.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143968691,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the sum of the first 100 natural numbers?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1000",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "5000",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "5050",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "5100",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\[\nS = \\frac{100 \\times 101}{2} = 5050.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143968811,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "Which term of the series 1/√2 - 1 + √2 - ... is 8√2?",
+    "options": [
+      {
+        "label": "a",
+        "text": "7th",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "4th",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "9th",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "10th",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "a = 1/√2, r = -√2.\n(1/√2) × (-√2)^(n-1) = 8√2\n(-√2)^(n-1) = 8√2 × √2 = 16\nFor n-1 = 8 (even power makes it positive): (-√2)^8 = (√2)^8 = 16\nTherefore n = 9.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143968938,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the sum of the first 15 terms of the series \\(3 + 6 + 9 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "296",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "325",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "360",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "460",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\(a = 3\\), \\(d = 3\\).\n\\[\nS_{15} = \\frac{15}{2}[2 \\times 3 + 14 \\times 3] = \\frac{15}{2} \\times 48 = 360.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143969080,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the 20th term of the series \\(3 - 3 + 3 - 3 \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "6",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-6",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "3",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-3",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Even-numbered terms are \\(-3\\). 20th term is even, so \\(-3\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143969223,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "Which term of the series 256 + 128 + 64 + ... is 1/4?",
+    "options": [
+      {
+        "label": "a",
+        "text": "6th",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "10th",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "11th",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "12th",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "a = 256, r = 1/2.\n256 × (1/2)^(n-1) = 1/4\n(1/2)^(n-1) = 1/1024 = (1/2)^10\nn-1 = 10\nn = 11",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143969342,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "The series \\(-1 + 3 + 7 + \\ldots + 43\\)\ni. number of terms is 12\nii. 5th term is 15\niii. sum of the first 8 terms is 120",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\(a = -1\\), \\(d = 4\\).\ni. \\(-1 + (n-1) \\times 4 = 43 \\implies 4n - 4 = 44 \\implies n = 12\\) ✓\nii. 5th term = \\(-1 + 4 \\times 4 = 15\\) ✓\niii. Sum of first 8 terms: \\(S_8 = \\frac{8}{2}[2(-1) + 7 \\times 4] = 4[-2+28] = 104\\), not 120 ✗\nSo i & ii are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143969463,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the sum of the first 10 terms of the series \\(24 + 22 + 20 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "330",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "150",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "120",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "0",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\(a = 24\\), \\(d = -2\\).\n\\[\nS_{10} = \\frac{10}{2}[48 + 9(-2)] = 5[48 - 18] = 150.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143969578,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the 4th term of the series \\(-1 + 3 - 9 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-24",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-12",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "12",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "27",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\(a = -1\\), \\(r = -3\\).\n\\[\n4\\text{th term} = -1 \\times (-3)^3 = 27.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143969962,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the number of terms of the series \\(25 + 21 + 17 + \\ldots - 19\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "13",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "12",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "11",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\(a = 25\\), \\(d = -4\\).\n\\[\n25 + (n-1)(-4) = -19 \\implies -4n + 4 = -44 \\implies n = 12.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143970082,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the sum of the first ten terms of the series \\(25 + 21 + 17 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "70",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "140",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "305",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "430",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\[\nS_{10} = \\frac{10}{2}[50 + 9(-4)] = 5[50 - 36] = 70.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143970265,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the general term of the series \\(-2 + 1 + 4 + 7 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(3n - 1\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(3n + 1\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(3n - 5\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\(3n + 5\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\(a = -2\\), \\(d = 3\\).\n\\[\nn\\text{th term} = -2 + (n-1) \\times 3 = 3n - 5.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143970382,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the sum of the first 10 terms of the series \\(-2 + 1 + 4 + 7 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "115",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "125",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "145",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "155",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\\[\nS_{10} = \\frac{10}{2}[2(-2) + 9 \\times 3] = 5[-4 + 27] = 115.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143970498,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "Which one is the rth term of the series \\(1 + 3 + 5 + 7 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(2r - 3\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(2r - 1\\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "\\(2r + 1\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(2r + 3\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\(a = 1\\), \\(d = 2\\).\n\\[\nr\\text{th term} = 1 + (r-1) \\times 2 = 2r - 1.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143970630,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the sum of the first nine terms of the series \\(1 + 3 + 5 + 7 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "17",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "81",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "256",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "511",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\[\nS_9 = \\frac{9}{2}[2 \\times 1 + 8 \\times 2] = \\frac{9}{2} \\times 18 = 81.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143970745,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "Which one is the 20th term of the series \\(7 + 13 + 19 + 25 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "26",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "121",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "133",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "139",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\(a = 7\\), \\(d = 6\\).\n\\[\n20\\text{th term} = 7 + 19 \\times 6 = 121.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143970870,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the summation of the first 30 terms of the series \\(7 + 13 + 19 + 25 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "3225",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "3000",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "2820",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "188",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\[\nS_{30} = \\frac{30}{2}[14 + 29 \\times 6] = 15 \\times 188 = 2820.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143970980,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "Find the value of \\(p\\) in the geometric series \\(5 + 15 + p + q + 405\\).",
+    "options": [
+      {
+        "label": "a",
+        "text": "15",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "20",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "35",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "45",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\(a = 5\\), \\(r = \\frac{15}{5} = 3\\).\n\\[\np = ar^2 = 5 \\times 9 = 45.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143971095,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "What is the sum of the first 4 terms of the geometric series \\(5 + 15 + 45 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "80",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "100",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "120",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "200",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\[\nS_4 = \\frac{5(3^4 - 1)}{3 - 1} = \\frac{5 \\times 80}{2} = 200.\n\\]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143971223,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "Which one is the common difference of the series \\(\\log 2 + \\log 4 + \\log 8 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "4",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(\\log 2\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\(2 \\log 2\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The series is \\(\\log 2 + 2\\log 2 + 3\\log 2 + \\ldots\\), an arithmetic series in coefficients with common difference \\(\\log 2\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768143971336,
+    "subject": "Mathematics",
+    "chapter": "Finite Series",
+    "question": "Which one is the 7th term of the series \\(\\log 2 + \\log 4 + \\log 8 + \\ldots\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(\\log 32\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(\\log 64\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(\\log 128\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\(\\log 256\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "This is an arithmetic series: \\(a = \\log 2\\), \\(d = \\log 2\\).\n\\[\n7\\text{th term} = \\log 2 + 6\\log 2 = 7\\log 2 = \\log 2^7 = \\log 128.\n\\]",
+    "image": null,
+    "language": "en"
+  }
+]

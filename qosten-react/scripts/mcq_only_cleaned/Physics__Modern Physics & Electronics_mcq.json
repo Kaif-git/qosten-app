@@ -1,0 +1,3554 @@
+[
+  {
+    "id": 1768896295087,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Internal network within different network is known as-",
+    "options": [
+      {
+        "label": "a",
+        "text": "LAN",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "MAN",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "WLAN",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Internet",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "A LAN (Local Area Network) is a network that connects computers within a limited area like a home, school, or office building.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896308411,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Which one does the opposite function of microphone?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Speaker",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Diode",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Transistor",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Amplifier",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "A speaker converts electrical energy back into sound energy, which is the opposite of a microphone's function.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896308559,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Approximately how many vacuum tubes were used to make the first computer named ENIAC?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1,600",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "17,000",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "18,000",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "19,000",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The ENIAC (Electronic Numerical Integrator and Computer), the first general-purpose electronic digital computer, used approximately 17,468 vacuum tubes. Among the given options, 17,000 is the closest approximation.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896308669,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "An isotope of uranium turns into an isotope of thorium by radiating which ray?",
+    "options": [
+      {
+        "label": "a",
+        "text": "X-ray",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Beta",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Alpha",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Gamma",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "When a uranium nucleus emits an alpha particle (which is 2 protons and 2 neutrons), its atomic number decreases by 2, turning it into an isotope of thorium.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896308773,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "What is the process of inserting billions of transistors into a tiny semiconductor chip?",
+    "options": [
+      {
+        "label": "a",
+        "text": "CCD",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "BTS",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "VLSI",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "LAN",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "VLSI stands for Very Large Scale Integration. It is the process of creating an integrated circuit (IC) by combining millions or billions of transistors onto a single semiconductor chip.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896308894,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "How far away from the computer screen to reduce health risk?",
+    "options": [
+      {
+        "label": "a",
+        "text": "(20-30) cm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "(30-40) cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "(40-50) cm",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "(50-60) cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Maintaining a distance of about 40-50 cm (or an arm's length) from the computer screen helps reduce eye strain and other health risks.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896309004,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "In which machine A.C can be converted to D.C?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Transistor",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Semiconductor",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Transformer",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Diode",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "A diode allows current to flow in only one direction. A set of diodes arranged in a circuit called a rectifier can convert Alternating Current (AC) to Direct Current (DC).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896309109,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Which of the following is correct about connecting multiple computers to a switch?",
+    "options": [
+      {
+        "label": "a",
+        "text": "LAN",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "NAL",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "BTS",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Internet",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "A switch is a networking device used to connect multiple devices, such as computers, within a Local Area Network (LAN).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896309213,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "The number of components in Telephone-",
+    "options": [
+      {
+        "label": "a",
+        "text": "3",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "4",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "5",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "6",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "A basic telephone has four main components: a microphone (transmitter), a speaker (receiver), a ringer, and a dialing mechanism (keypad or rotary dial).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896309315,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "What is the number of Carbon isotope?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "3",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "4",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "5",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Carbon has three naturally occurring isotopes: Carbon-12, Carbon-13, and Carbon-14.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896309417,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "What highest number of neutrons may a carbon atom have?",
+    "options": [
+      {
+        "label": "a",
+        "text": "6",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "7",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "8",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "9",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Carbon-14, the heaviest stable isotope, has 6 protons and 8 neutrons.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896309522,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "By how many times is the radius of the nucleus smaller than the radius of atom?",
+    "options": [
+      {
+        "label": "a",
+        "text": "hundredths",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "thousandths",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "lakh times",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "crore times",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The radius of a nucleus is about 10^-5 times (or one lakhth) the radius of the atom. The nucleus is extremely small compared to the whole atom.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896309632,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Which of the following is chargeless and massless particle?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Alpha",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Beta",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Gamma",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Positron",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Gamma rays are electromagnetic radiation (like light). They have no electric charge and no rest mass.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896309743,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "What is the nature of motion path of alpha particle in the air?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Spiral",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Linear",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Zigzag",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Circular",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Alpha particles are heavy and positively charged. They travel in nearly straight (linear) paths through air because they have high kinetic energy and ionize atoms along their path, losing energy gradually without significant deflection until they stop.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896309861,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Which scientist invented the radio-activity of uranium?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Max Planck",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Becquerel",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Albert Einstein",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Neill Bohr's",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Henri Becquerel discovered radioactivity in 1896 when he found that uranium salts emitted rays that could darken a photographic plate.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896309978,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "The mass of which of the following equal to the mass of an atom?",
+    "options": [
+      {
+        "label": "a",
+        "text": "electrons",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "protons",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "neutrons",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "nucleus",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The nucleus contains nearly all the mass of an atom because protons and neutrons are much heavier than electrons. The mass of the electrons is negligible in comparison.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896310120,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "How many main radioactive rays emits from the nucleus?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "3",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "4",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "5",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "There are three main types of radiation emitted from an unstable nucleus: alpha particles, beta particles, and gamma rays.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896310230,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Which ray is not discharged from the nucleus?",
+    "options": [
+      {
+        "label": "a",
+        "text": "alpha",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "beta",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "gamma",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "X-ray",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Alpha, beta, and gamma rays are emitted from the nucleus during radioactive decay. X-rays are typically produced outside the nucleus, such as when high-energy electrons hit a metal target.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896310340,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "What is the protons number of uranium 235?",
+    "options": [
+      {
+        "label": "a",
+        "text": "90",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "91",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "92",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "93",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "All uranium isotopes have 92 protons. Uranium-235 is an isotope with 92 protons and 143 neutrons (92+143=235).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896310454,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "What type of transistor is shown in the diagram (with arrow pointing inward on emitter)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "NPN transistor",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "PNP transistor",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "N-channel FET",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "P-channel FET",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The standard symbol for a PNP transistor shows the emitter with an arrow pointing inward (toward the base), indicating conventional current flow into the transistor.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896310571,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "What is a silicon chip called if millions of circuits are added to it?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Parallel circuit",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Semiconductor resistor",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Integrated circuit",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Semiconductor diode",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "An Integrated Circuit (IC) or microchip is a set of electronic circuits on a small flat piece of semiconductor material, usually silicon, that can contain millions of components.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896310687,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "The drum of photocopy machine is initially charged with-",
+    "options": [
+      {
+        "label": "a",
+        "text": "positive ions",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "negative ions",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "positive and negative ions",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "no charge",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "In a photocopier, the drum is initially given a uniform positive charge. When light from the document being copied hits the drum, it discharges the illuminated areas. The dark areas (the image) remain positively charged. Negatively charged toner particles then stick to these positively charged areas to form the image.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896310799,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Which one of the following properties of gamma rays?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Electromagnetic wave and massless",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Made of two protons and two neutrons",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Its wavelength is very low and can be influenced by magnetic field",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "The existence of this ray is not understood and its velocity is equal to the velocity of light",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Gamma rays are a type of high-energy electromagnetic radiation. Like all electromagnetic waves (e.g., light, radio waves), they have no mass and travel at the speed of light in a vacuum.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896310911,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "When an alpha particles comes out of a nucleus its energy is",
+    "options": [
+      {
+        "label": "a",
+        "text": "few me V",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "few ke V",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "few je V",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "few Me V",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Alpha particles are emitted with high energies, typically in the range of a few million electron volts (MeV).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896311017,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "The proton of which is converted for the emission of beta particle?",
+    "options": [
+      {
+        "label": "a",
+        "text": "electron",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "neutron",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "neutrino",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "anti-neutrino",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "During beta decay, a neutron inside the nucleus is converted into a proton, while emitting an electron (beta particle) and an antineutrino.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896311122,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "What is the function of a rectifier?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Magnify the voltage",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "turn the current in one direction",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Decrease electric current",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Magnify the electric current",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "A rectifier's function is to convert Alternating Current (AC), which flows in both directions, into Direct Current (DC), which flows in only one direction.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896311247,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "What is n in p-n-p transistor?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Collector",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Base",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Emitter",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Transistor",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "In a PNP transistor, the middle layer is the 'n-type' semiconductor, which is the Base. The other two 'p-type' layers are the Emitter and Collector.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896311362,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "The speed of which ray of the following is \\(3\\times 10^{8}\\mathrm{ms}^{-1}\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Alpha",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Beta",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Gamma",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "X-ray",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Both gamma rays and X-rays are forms of electromagnetic radiation. All electromagnetic waves travel at the speed of light in a vacuum, which is \\(3 \\times 10^8\\) m/s. Gamma rays originate from the nucleus, while X-rays typically originate from electron transitions, but both travel at the same speed. Both c and d are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896311481,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "The half life of any radioactive element is 100 years. How much time will required to remain unchanged \\(\\frac{1}{2}\\) part of that element?",
+    "options": [
+      {
+        "label": "a",
+        "text": "50 years",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "100 years",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "200 years",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "300 years",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The half-life is defined as the time it takes for half of the radioactive atoms in a sample to decay. If the half-life is 100 years, then after 100 years, exactly half (1/2) of the original amount will remain unchanged.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896311616,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "What is the time in which half of the nucleus of any substance disintegrates from the total amount of atoms called?",
+    "options": [
+      {
+        "label": "a",
+        "text": "life",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "mean life",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "half life",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "life span",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The term \"half-life\" specifically refers to the time required for half the atoms in a radioactive sample to decay.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896311760,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "The half-life of a radioactive substance of mass one kg is 100 years. What will be its mass after 200 years?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1 kg",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "0.75 kg",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "0.5 kg",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "0.25 kg",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "After one half-life (100 years), half decays: 1 kg → 0.5 kg. After another half-life (200 years total), half of the remaining decays: 0.5 kg → 0.25 kg.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896311889,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Which has been used successfully in diagnosing diseases?",
+    "options": [
+      {
+        "label": "a",
+        "text": "PN-junction",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "magnetism",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "tungsten metal",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "radioactive sample",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Radioactive tracers (radioactive samples) are used in medicine for diagnosis, such as in PET scans or thyroid tests, because they can be tracked inside the body.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896312001,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Radium metal transactions into which of the following through radioactive disintegration step by step?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Aluminium",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Lead",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Silver",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Iron",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Radium (Ra) is part of the uranium decay series. Through a series of alpha and beta decays, it eventually transforms into stable lead (Pb).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896312120,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Half life of a 1 kg radioactive object is100 years. What would be its mass after300 years?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1 kg",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "0.5 kg",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "0.25 kg",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "0.125 kg",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "After 100 years: 1 kg → 0.5 kg. After 200 years: 0.5 kg → 0.25 kg. After 300 years: 0.25 kg → 0.125 kg.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896312230,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "A radioactive substance containing 800000 atoms have a half life of 3 hr. After how long would it take for it to be left with200000 atoms?",
+    "options": [
+      {
+        "label": "a",
+        "text": "3 hr",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "6 hr",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "9 hr",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "12 hr",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Start: 800,000 atoms. Half-life is 3 hours.\nAfter 3 hrs: 400,000 atoms remain.\nAfter 6 hrs: 200,000 atoms remain. So, it takes 6 hours.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896312334,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "For determining the age of ancient fossils, we use",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(C_{12}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(C_{13}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\(C_{14}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\(N_{14}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Carbon-14 (\\(C_{14}\\)) is a radioactive isotope of carbon. Living organisms absorb it. When they die, the \\(C_{14}\\) decays at a known rate. By measuring the remaining \\(C_{14}\\) in a fossil, scientists can estimate its age.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896312441,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Which scientist died from radiation-related illness due to their work with radioactive elements?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Marie Curie",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Pierre Curie",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Irène Joliot-Curie",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Henri Becquerel",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Marie Curie died in 1934 from aplastic anemia, which is believed to have been caused by her long-term exposure to radiation during her pioneering research on radioactivity. She worked extensively with radioactive materials without proper protection, as the dangers of radiation were not fully understood at the time.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896312548,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Which is the use of radioactive isotope in medical field?",
+    "options": [
+      {
+        "label": "a",
+        "text": "detecting thyroid problems",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "detecting eye diseases",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "as a diuretic",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "in neutralizing the acidity of stomach",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Iodine-131, a radioactive isotope, is used to diagnose and treat thyroid problems because the thyroid gland naturally absorbs iodine.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896312659,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Which of the following does not have free electrons?",
+    "options": [
+      {
+        "label": "a",
+        "text": "p-type semiconductor",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "n-type semiconductor",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "n-p-n transistor",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "p-n-p transistor",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "In a p-type semiconductor, charge carriers are primarily \"holes\" (absence of electrons), which act as positive charge carriers. It has very few free electrons compared to an n-type semiconductor.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896312803,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Who invented of vacuum tube first?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Edison",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Fleming",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Marconi",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "De Forest",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "John Ambrose Fleming invented the first vacuum tube, known as the Fleming valve or diode, in 1904.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896312933,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "For what is beta decay occurred?",
+    "options": [
+      {
+        "label": "a",
+        "text": "strong nuclear force",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "gravity",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "weak nuclear force",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "electromagnetic force",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Beta decay is governed by the weak nuclear force, which is responsible for certain types of radioactive decay where a neutron changes into a proton or vice-versa.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896313035,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "What is the phenomenon of conducting electricity from light bulb's filament to a metal plate through vacuum called?",
+    "options": [
+      {
+        "label": "a",
+        "text": "hall effect",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Edison effect",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Thomson effect",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Tesla",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The Edison effect is the flow of electricity (electrons) from a heated filament to a separate metal plate inside an evacuated bulb, which Thomas Edison observed. This was the foundation for vacuum tubes.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896313136,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "What is the complete circuit made by creating a diode, resistor and a capacitor on a wafer along with a transistor called?",
+    "options": [
+      {
+        "label": "a",
+        "text": "motherboard",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ram",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "processor",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "IC",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "An Integrated Circuit (IC) is a complete electronic circuit containing many components like transistors, diodes, resistors, and capacitors, all fabricated on a single chip of semiconductor material.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896313243,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "What is npn?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Diode",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Triode",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Transistor",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Resistor",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "NPN is a type of bipolar junction transistor (BJT) where a layer of p-type semiconductor is sandwiched between two layers of n-type semiconductor.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896313343,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Which one of the following is mixed with thorium so that the hands of watch glitter in the dark?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Ferus sulfide",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Zinc sulfide",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Cupus sulfide",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Sodium sulfide",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Zinc sulfide (ZnS), when mixed with a radioactive material like thorium, produces visible light (fluorescence or phosphorescence) when struck by alpha particles, making watch hands glow in the dark.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896313461,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "If a signal is expressed in the form of sine wave what is it called?",
+    "options": [
+      {
+        "label": "a",
+        "text": "analog",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "digital",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "mixed",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "complex",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "An analog signal is continuous and can take any value within a range. It is often represented by a smooth, continuous wave like a sine wave.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896313584,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Which is an analog signal?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Audio voltage",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "AC voltage",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "DC voltage",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Digital voltage",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "AC (Alternating Current) voltage is a fundamental example of an analog signal because it varies continuously with time in a sinusoidal pattern. While audio signals are also analog, AC voltage is the more general and fundamental answer. DC voltage is constant, and digital voltage switches between discrete levels.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896313693,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Electronics number are expressed by",
+    "options": [
+      {
+        "label": "a",
+        "text": "decimal",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "binary",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "octal",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "hexadecimal",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "At the most fundamental level, electronic circuits and computers process information using binary numbers, which have only two digits: 0 and 1 (representing \"off\" and \"on\" states).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896313804,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Which of the following two digits are used as digital signal?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1,2",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2,3",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "0,1",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "0,2",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Digital signals represent information using discrete values, most commonly the binary digits 0 and 1.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896313908,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "What is the biggest contribution of electronics?",
+    "options": [
+      {
+        "label": "a",
+        "text": "computer",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "radar",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "telescope",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "radio",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "While all are important, the computer is often considered the most transformative contribution of electronics due to its pervasive impact on nearly every aspect of modern life, science, and industry.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896314014,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "What is the process of separating the desired waves from the carrier wave called?",
+    "options": [
+      {
+        "label": "a",
+        "text": "modulation",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "demodulation",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "carrier wave",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "audio signal",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Demodulation (or detection) is the process of extracting the original information-bearing signal (e.g., sound) from the modulated carrier wave at the receiver's end.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896314134,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "The receiver device of the radio receives the radio wave where the loud speaker converts it into",
+    "options": [
+      {
+        "label": "a",
+        "text": "electric current",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "light wave",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "sound",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "modulated wave",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The speaker's final job is to convert the electrical audio signal (after demodulation and amplification) back into sound waves that we can hear.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896314248,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Which of the following arrives at the receiver device?",
+    "options": [
+      {
+        "label": "a",
+        "text": "sky wave",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ground wave",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "water wave",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "carrier wave",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The receiver antenna picks up the modulated carrier wave that was transmitted. \"Sky wave\" and \"ground wave\" refer to propagation paths, not the signal itself.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896314361,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "The process of increasing or decreasing the amplitude of the receiver wave is called",
+    "options": [
+      {
+        "label": "a",
+        "text": "AM",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "FM",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "AFM",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "FAM",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "AM stands for Amplitude Modulation. It is the process of varying the amplitude (strength) of the carrier wave in proportion to the instantaneous amplitude of the audio signal being sent.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896314461,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Which scientist was able to send moving pictures through a television first?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Newton",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Marconi",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Richter",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Logie Baird",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "John Logie Baird is credited with demonstrating the first working television system that transmitted live moving images with gradations of light and shade in the 1920s.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896314574,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Logie Baird's technique was",
+    "options": [
+      {
+        "label": "a",
+        "text": "mechanical",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "electrical",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "electronics",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "telescopic",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "John Logie Baird's early television system used a mechanical scanning method, involving a spinning disc with holes (Nipkow disc).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896314690,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "What is merged with the electrical signal of television to transmit it to its surrounding?",
+    "options": [
+      {
+        "label": "a",
+        "text": "High frequency carrier wave",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Low frequency carrier wave",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "High frequency receiver wave",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Low frequency receiver wave",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Just like in radio, the TV video and audio signals are used to modulate a high-frequency carrier wave so that they can be transmitted efficiently through the air as radio waves.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896314805,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Through which electrical signal is send and transmitted to its surrounding?",
+    "options": [
+      {
+        "label": "a",
+        "text": "antenna",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "speaker",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "coil",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "sky wave",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The antenna is the device that converts the electrical signals from the transmitter into electromagnetic waves (radio waves) that radiate into the surrounding space.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896314922,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Which is used by a television to separate carrier wave to obtain the main signal?",
+    "options": [
+      {
+        "label": "a",
+        "text": "antenna",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "rectifier",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "speaker",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "microphone",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The television's receiving antenna captures the radio waves from the air and converts them back into electrical signals. These signals are then processed (demodulated) to separate the audio and video information from the carrier wave.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896315025,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "What is the other name of the cathode ray tube of television?",
+    "options": [
+      {
+        "label": "a",
+        "text": "electron gun",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "lens",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "receiver antenna",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "picture tube",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The main display component in older televisions is the Cathode Ray Tube (CRT), which is commonly called the picture tube or TV tube.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896315140,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Which was used previously, to project three images of three colors on the screen of picture tubes?",
+    "options": [
+      {
+        "label": "a",
+        "text": "proton gun",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "antenna",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "electron gun",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "cathode ray",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "In color CRT televisions, three separate electron guns (for red, green, and blue) were used to excite corresponding phosphor dots on the screen to create a full-color image.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896315271,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "With the help of which signal is sent to cable TV?",
+    "options": [
+      {
+        "label": "a",
+        "text": "antenna",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "receiver",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "coaxial cable",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "monoaical cable",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Cable TV delivers signals to homes via coaxial cables, which are shielded wires that can carry the television signal with less loss and interference than over-the-air broadcast.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896315383,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "With the help of which of the following, programs are transmitted to the earth directly from the satellite placed in space?",
+    "options": [
+      {
+        "label": "a",
+        "text": "LED TV",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "LCD TV",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "cable TV",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "satellite TV",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Satellite TV systems use a dish antenna to receive television signals broadcast directly from communication satellites in space.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896315502,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Which one is correct for the transformation of energy in case of hearing the speech over telephone?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Electrical energy to sound energy",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Heat energy to electrical energy",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Magnetic energy to sound energy",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Sound energy to magnetic energy",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "In the earpiece (receiver) of a telephone, the varying electrical signal from the line causes a diaphragm to vibrate, converting electrical energy back into sound energy that you can hear.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896315638,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "With the help of which we can communicate in any corner of the world?",
+    "options": [
+      {
+        "label": "a",
+        "text": "radio",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "television",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "telephone",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "fax",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The global telephone network (including landlines and mobile phones) allows voice communication with almost any part of the world in real-time.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896315752,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "In which year was telephone invented?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1875",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "1877",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "1775",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "1780",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Alexander Graham Bell was awarded the first US patent for the telephone in 1876, and the Bell Telephone Company was formed in 1877, marking the practical invention and commercialization.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896315867,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Who invented the telephone?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Alexander Flemming",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Alexander Graham Bell",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Samuel Morse",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Marconi",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Alexander Graham Bell is credited with inventing and patenting the first practical telephone.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896315968,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "How many main functional components does a basic telephone have?",
+    "options": [
+      {
+        "label": "a",
+        "text": "4",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "5",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "6",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "7",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "A basic traditional telephone has four main functional components:",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896316074,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Through which of the following does a mobile connect with switching center?",
+    "options": [
+      {
+        "label": "a",
+        "text": "BTS",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "MSC",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "BSC",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "SBT",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "A mobile phone connects wirelessly to a Base Transceiver Station (BTS), which is the cell tower antenna. The BTS then connects to the rest of the network.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896316189,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Through which of the following a sender is connected with a receiver?",
+    "options": [
+      {
+        "label": "a",
+        "text": "MSC",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "BSC",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "MBBS",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "BSS",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The Mobile Switching Center (MSC) is the central component of a cellular network. It routes calls and messages, handles connections between callers, and manages handoffs between different BTS towers.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896316300,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "The word 'fax' is the short form of which word?",
+    "options": [
+      {
+        "label": "a",
+        "text": "facsimile",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "bacsimile",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "famicsile",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "faxar",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "\"Fax\" is short for \"facsimile,\" which means an exact copy. A fax machine transmits exact copies of documents over telephone lines.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896316418,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Which component of the telephone lets one dial to another?",
+    "options": [
+      {
+        "label": "a",
+        "text": "switch",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "key-pad",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "mouse-pad",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "speaker",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The keypad (or the older rotary dial) is the component used to input the telephone number you wish to call.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896316549,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Which component of the telephone converts our voice into electrical signal?",
+    "options": [
+      {
+        "label": "a",
+        "text": "speaker",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "switch",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "microphone",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ringer",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The microphone (or transmitter) in the handset converts the sound waves of your voice into a varying electrical current.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896316658,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "The range of cell phone",
+    "options": [
+      {
+        "label": "a",
+        "text": "1 to 20 km",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "10 to 30 km",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "20 to 40 km",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "30 to 50 km",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The practical communication range between a mobile phone and its cell tower (BTS) is typically between 10 to 30 kilometers, depending on terrain and tower power.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896316763,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "What does every cell have?",
+    "options": [
+      {
+        "label": "a",
+        "text": "SIM station",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "base station",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "cell station",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "receiver station",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "In a cellular network, the geographical area is divided into \"cells.\" Each cell has a Base Station (a tower with antennas and equipment) to communicate with mobile phones within that area.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896316866,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "The fax machine is basically a",
+    "options": [
+      {
+        "label": "a",
+        "text": "printer",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "scanner",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "electrical optic machine",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "downloder",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "A fax machine combines the functions of a scanner (to read the document), a modem (to send the data over phone lines), and a printer (to print received documents). \"Electrical optic machine\" broadly describes this combination of electronic and optical functions.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896316979,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "What type of paper is used in most fax machine?",
+    "options": [
+      {
+        "label": "a",
+        "text": "thermal",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "normal",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "carbon",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "tracing",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Many fax machines, especially older and simpler models, use thermal paper. This paper darkens when heated, allowing the machine to print without ink or toner.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896317083,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Which of the following in an address of rahim43@yahoo.com?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Fax address",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Internet address",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "E-mail address",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "G-mail address",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "An address in the format \"username@domain.com\" is an email address. It is used for sending electronic mail over the internet.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896317190,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "What is the short form of Local Area Network?",
+    "options": [
+      {
+        "label": "a",
+        "text": "LAN",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "NAL",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "AND",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "NAND",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "LAN is the universally accepted abbreviation for Local Area Network.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896317296,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "What is the process of interconnecting all the computers of an organization called?",
+    "options": [
+      {
+        "label": "a",
+        "text": "LAN",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "WLAN",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "MAN",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Router",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Connecting computers within a single organization, like in an office or school building, typically creates a Local Area Network (LAN).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896317401,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Radioactive elements discharges\ni. alpha ray\nii. beta ray\niii. gamma ray",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Unstable radioactive nuclei can emit three main types of radiation: alpha particles, beta particles, and gamma rays. A single decaying nucleus may emit one or a combination of these.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896317512,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Gamma ray\ni. its wavelength is very low\nii. it is an electromagnetic wave\niii. has weak ionization power",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "All statements are correct. Gamma rays have very short wavelengths (high frequency), are a type of electromagnetic wave (like light but more energetic), and because they have no charge, they interact weakly with matter, giving them low ionizing power but high penetrating power.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896317614,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Properties of Alpha particle\ni. these particles are influenced by both the magnetic and electric field\nii. its mass is \\(9.11 \\times 10^{- 23}\\) kg\niii. these particles create fluorescence on zinc sulphide screen",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "i is correct: Alpha particles are positively charged, so they are deflected by electric and magnetic fields. ii is incorrect: The mass of an alpha particle (helium nucleus) is about \\(6.64 \\times 10^{-27}\\) kg. The given mass is close to that of an electron. iii is correct: Alpha particles cause zinc sulfide screens to flash or fluoresce, which was how they were first detected.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896317736,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Inventor of radio\ni. Marconi\nii. Jagadish Chandra Bose\niii. Lee De Forest",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "All contributed significantly. Guglielmo Marconi is credited with developing the first practical radio telegraph system. Jagadish Chandra Bose pioneered microwave and radio frequency research. Lee De Forest invented the Audion (triode vacuum tube), which made radio amplification possible. The invention was a cumulative effort.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896317850,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Triode\ni. controls current flow\nii. works as an amplifier\niii. works as a detector",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "A triode vacuum tube can perform all these functions. Its grid controls the flow of current from cathode to anode (i). This allows it to amplify weak signals (ii). It can also be used to detect (demodulate) radio signals (iii).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896317960,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Different types of specialized vacuum were used during the first and second world war as\ni. radar\nii. navigation\niii. computer",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Vacuum tubes were crucial technology in WWII for radar systems (i), electronic navigation aids (ii), and early electronic computers like the Colossus and ENIAC (iii).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896318071,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Due to the use of analog signals\ni. noise increases\nii. signals can be changed\niii. there is a possibility of losing the signal",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "All are disadvantages of analog signals. They are susceptible to noise (unwanted additions to the signal) during transmission (i). The continuous nature makes them easy to alter or distort (ii). Noise and distortion can degrade the signal so much that the original information is lost (iii).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896318174,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "In the twentieth century, revolutionary changes were brought in the field of communication by\ni. radio\nii. television\niii. cellphone",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Radio (early 1900s), television (mid-1900s), and the cellphone (late 1900s) were all revolutionary communication technologies that defined the 20th century.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896318278,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "After the twentieth century, the most contribution in the field of communication was through\ni. computer\nii. internet\niii. radio",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "In the 21st century (after the 20th), the combination of computers and the internet has had the most transformative impact on global communication, far surpassing the continued role of radio.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896318389,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Communication influenced the human activity the most during\ni. the beginning of the twentieth century\nii. the beginning of the seventeenth century\niii. the beginning of the twenty-first century",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Both periods saw massive shifts. The early 20th century brought radio, telephones, and mass media. The early 21st century brought the internet, mobile phones, and social media to a global scale, profoundly affecting daily life.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896318512,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "In the modulation process\ni. sound is mixed with carrier wave\nii. carrier wave is usually of low frequency\niii. carrier wave is usually of high frequency",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "i is correct: Modulation is the process of impressing information (like sound) onto a carrier wave. iii is correct: The carrier wave needs to be a high-frequency radio wave for efficient long-distance transmission through the air. ii is incorrect.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896318635,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Microphone played a significant role in\ni. telephone\nii. radio broadcasting\niii. television",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The microphone is the primary device for converting sound into electrical signals in telephones (i), radio studios (ii), and television production (iii).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896318755,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "In case of modulated wave\ni. changed through amplifier\nii. transmitted around through antenna\niii. is send to speaker for hearing",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "This describes the transmission chain. The modulated wave is amplified (i) to increase its power, then sent to the antenna (ii) to be radiated as radio waves. At the receiver, after processing, it is finally sent to the speaker (iii) to be heard.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896318895,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Modern form of telephone\ni. cordless\nii. cellular\niii. mobile",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "All are modern forms. Cordless phones work within a limited range of a base station. Cellular/mobile phones work over a wide area using a network of cells. \"Mobile\" and \"cellular\" are often used interchangeably.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896318996,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "The fundamental colors of colored television are\ni. red\nii. blue\niii. green",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "All color television and display systems are based on the additive mixing of the three primary colors of light: Red, Green, and Blue (RGB).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896319099,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "In case of LED TV\ni. pictures are created on the screen with the help of electron guns\nii. current flows through tiny LEDs of red, green and blue color to create images\niii. brightness of picture is more and its qualitative value is also better",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "i is incorrect: Electron guns are used in older CRT TVs, not in LED TVs. ii is correct: An LED TV screen has an array of tiny Light Emitting Diodes (LEDs) for backlighting (in LCD-LED TVs) or as individual pixels (in OLED TVs) to create images. iii is correct: LED TVs generally offer higher brightness, better contrast, and better picture quality compared to older technologies.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896319211,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Through mobile phone we can\ni. use internet\nii. download music\niii. cash payment",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Modern smartphones (mobile phones) are multifunctional devices that can connect to the internet (i), download music and other media (ii), and be used for mobile payments and banking (iii).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896319308,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "In every mobile telephone\ni. a radio transmitter\nii. a radio receiver\niii. an audio transmitter",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "A mobile phone is essentially a sophisticated two-way radio. It contains both a radio transmitter (to send signals to the tower) and a radio receiver (to receive signals from the tower) [i & ii]. The \"audio transmitter\" is part of the microphone, but the core wireless communication function is based on radio transceivers (transmitter+receiver).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896319453,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Through Internet\ni. data can be exchanged\nii. different types of services are provided\niii. video communication can be done",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The internet enables the exchange of all types of data (i), provides countless services like email, cloud storage, streaming (ii), and supports real-time video communication via apps like Skype or Zoom (iii).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896319663,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Internet contains\ni. different types of websites\nii. electronic mail\niii. social network",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The internet is the infrastructure. The World Wide Web (websites), email services, and social networking platforms are all applications and services that run on top of the internet.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896319778,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "The following has left fax technology far behind\ni. computer\nii. internet\niii. telephone",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The combination of computers and the internet (email, cloud sharing, scanners) has largely replaced the need for standalone fax machines for document transmission. The telephone line is what fax machines use, so it didn't leave it behind; it was part of it.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896319886,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Fax is a electronics system which can be used to send\ni. picture\nii. diagram\niii. any data",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "A fax machine scans a document page, converting it into an image. It can send pictures, diagrams, text, or any data that can be printed on a page (i, ii, iii).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896319998,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Fax machine\ni. uses thermal papers\nii. copies documents\niii. prints documents",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Many fax machines use thermal paper (i). They can function as a copier by scanning and then printing a document locally (ii). They print documents received from another fax machine (iii).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896320160,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "E-mail service\ni. Gmail\nii. Yahoo\niii. Hotmail",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Gmail, Yahoo Mail, and Outlook (formerly Hotmail) are all examples of popular email service providers.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896320280,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "For sending an E-mail, we require\ni. the sender's address\nii. the receiver's address\niii. the receiver's acquaintance's address",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "To send an email, you need your own email address (i) and the email address of the person you are sending it to (ii). The receiver's acquaintance's address (iii) is not necessary.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896320448,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "The following organs feel excess stress or pressure for working on computers for a long time\ni. veins of hands, wrist, arms\nii. nerves, shoulders and necks\niii. feet, palm of feet",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Prolonged computer use commonly leads to Repetitive Strain Injuries (RSI) affecting the hands, wrists, and arms (i) and musculoskeletal problems in the neck, shoulders, and back (ii). Stress on feet is less directly associated with typical computer desk work.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896320552,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Read the stimulus: Among three different radiations, the first has intense ionization power. The second is influenced by electric and magnetic field. The third is massless.\nThe first radiation is",
+    "options": [
+      {
+        "label": "a",
+        "text": "α- ray",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "β- ray",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "γ- ray",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "X- ray",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Alpha particles are heavy and doubly charged, so they interact strongly with matter, causing intense ionization (knocking electrons out of atoms).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896320656,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "In case of the above radiation\ni. The third is not deviated by electric or magnetic field\nii. The first contains two protons and two neutrons\niii. The second can create fluorescence on zinc sulphide screen",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "From the stimulus: 1st (alpha), 2nd (beta), 3rd (gamma). i is correct: Gamma rays (3rd) are uncharged, so they are not deflected. ii is correct: Alpha particles (1st) are helium nuclei (2p+2n). iii is correct: Beta particles (2nd) can also cause zinc sulfide to fluoresce, though alphas are more effective.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896320763,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "Observe the equation given below and answer the question no. 163 and 164:\n\\( U^{238} \\rightarrow X + Y \\)\nThe X marked element is",
+    "options": [
+      {
+        "label": "a",
+        "text": "Th",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Rb",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "S",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "P",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "This represents alpha decay of Uranium-238. When U-238 emits an alpha particle (He-4 nucleus), its atomic number decreases by 2 and mass number by 4, forming Thorium-234 (Th).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896320865,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "In the equation \\( U^{238} \\rightarrow X + Y \\), the Y marked element is:\ni. alpha particle\nii. Helium nucleus\niii. has high penetrating power through air",
+    "options": [
+      {
+        "label": "a",
+        "text": "i and ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i and iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii and iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii and iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "In the equation, Y is the emitted alpha particle. An alpha particle is identical to a helium-4 nucleus (2 protons, 2 neutrons) [i & ii correct]. Statement iii is incorrect: Alpha particles have LOW penetrating power - they can be stopped by a few centimeters of air or a sheet of paper. They travel in relatively straight lines but don't penetrate well.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768896321019,
+    "subject": "Physics",
+    "chapter": "Modern Physics & Electronics",
+    "question": "A and B are two radioactive elements whose half-life are 100 years and 200 years respectively. After 400 years—",
+    "options": [
+      {
+        "label": "a",
+        "text": "element A and B are left \\(6.25\\%\\) and \\(25\\%\\) respectively",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "element A and B are left \\(25\\%\\) and \\(6.25\\%\\) respectively",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "element A and B are left \\(12.5\\%\\) and \\(25\\%\\) respectively",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "element A and B are left \\(25\\%\\) and \\(12.5\\%\\) respectively",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "For A (Half-life=100yrs): 400 yrs = 4 half-lives. Remaining fraction = \\((1/2)^4 = 1/16 = 6.25\\%\\). For B (Half-life=200yrs): 400 yrs = 2 half-lives. Remaining fraction = \\((1/2)^2 = 1/4 = 25\\%\\).\n(Note: Questions 166-169 and parts of 170-182 from the scanned pages are incomplete, contain unclear references to figures (Fig-A, Fig-B, Fig-C), or have text that is cut off, making it impossible to provide accurate and complete formatted questions and answers for them. The provided content ends abruptly.)",
+    "image": null,
+    "language": "en"
+  }
+]

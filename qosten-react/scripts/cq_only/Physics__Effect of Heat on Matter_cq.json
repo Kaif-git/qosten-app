@@ -1,0 +1,1240 @@
+[
+  {
+    "id": 1768747420616,
+    "subject": "Physics",
+    "chapter": "Effect of Heat on Matter",
+    "lesson": "Calorimetry and Thermal Expansion",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is thermocouple?",
+        "marks": 0,
+        "answer": "A thermocouple is a temperature sensor that generates a voltage proportional to the temperature difference between its junctions.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "\"The mass of any body is the energy,\" Explain.",
+        "marks": 0,
+        "answer": "According to Einstein’s theory of relativity, mass and energy are equivalent. The relation is given by \\(E = mc^2\\), where \\(c\\) is the speed of light. A small amount of mass can be converted into a huge amount of energy because \\(c^2\\) is a very large number.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "How much ice will be melted by the hot metal piece? Calculate.",
+        "marks": 0,
+        "answer": "\\[\nQ_{\\text{released}} = m s \\Delta\\theta = 1.67 \\times 400 \\times (1000 - 0) = 668000 \\text{ J}\n\\]\n\\[\nQ_{\\text{absorbed}} = m_{\\text{ice}} L = m_{\\text{ice}} \\times 334 \\times 10^3\n\\]\n\\[\n668000 = m_{\\text{ice}} \\times 334000\n\\]\n\\[\nm_{\\text{ice}} = \\frac{668000}{334000} = 2 \\text{ kg}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "If same amount of ice (obtained from 'C') is kept in the hot metal container. What would be the final temperature of the container and ice mixture? Show mathematically.",
+        "marks": 0,
+        "answer": "Let final temperature be \\(\\theta\\).\nHeat lost by container:\n\\[\nQ_1 = m s (1000 - \\theta) = 2 \\times 400 \\times (1000 - \\theta)\n\\]\nHeat gained by ice to melt and warm to \\(\\theta\\):\n\\[\nQ_2 = m_{\\text{ice}} L + m_{\\text{ice}} s_w (\\theta - 0) = 2 \\times 334000 + 2 \\times 4200 \\times \\theta\n\\]\n\\[\n800(1000 - \\theta) = 668000 + 8400\\theta\n\\]\n\\[\n800000 - 800\\theta = 668000 + 8400\\theta\n\\]\n\\[\n132000 = 9200\\theta\n\\]\n\\[\n\\theta \\approx 14.35^{\\circ}C\n\\]\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768747421326,
+    "subject": "Physics",
+    "chapter": "Effect of Heat on Matter",
+    "lesson": "Thermal Expansion",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "Give the definition of heat capacity.",
+        "marks": 0,
+        "answer": "Heat capacity is the amount of heat required to raise the temperature of a body by \\(1\\mathrm{K}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Write differences between heat and temperature.",
+        "marks": 0,
+        "answer": "- Heat is energy transferred due to temperature difference. Temperature is a measure of hotness or coldness.\n- SI unit of heat is Joule (J). SI unit of temperature is Kelvin (K).\n- Heat depends on mass and material; temperature does not.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the linear expansion of the rod.",
+        "marks": 0,
+        "answer": "\\[\n\\Delta L = L_0 \\alpha \\Delta\\theta = 2 \\times 16.7\\times 10^{-6} \\times (100 - 30) = 2.338\\times 10^{-3} \\text{ m} = 0.234 \\text{ cm}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Comparatively analyze the expansion of the substances A and B due to application of heat.",
+        "marks": 0,
+        "answer": "'A' is a solid, 'B' is a liquid. Solids expand less than liquids for the same temperature rise because intermolecular forces are stronger in solids, restricting movement. Liquids have weaker forces and expand more. Also, liquid expansion measured is often apparent expansion (including container expansion).\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768747421496,
+    "subject": "Physics",
+    "chapter": "Effect of Heat on Matter",
+    "lesson": "Calorimetry",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is specific heat?",
+        "marks": 0,
+        "answer": "Specific heat is the amount of heat required to raise the temperature of \\(1\\mathrm{kg}\\) of a substance by \\(1\\mathrm{K}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "If pressure is applied to ice, its melting point reduces but in case of gas melting point increases why does it happen?",
+        "marks": 0,
+        "answer": "For ice, pressure reduces intermolecular distance, weakening bonds and lowering melting point. For gases, pressure increases intermolecular attraction, raising melting point.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Calculate gained heat of water in scenario- 1.",
+        "marks": 0,
+        "answer": "\\[\nQ = m s \\Delta\\theta = 0.2625 \\times 4200 \\times (50 - 30) = 22050 \\text{ J}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Mathematically analyze the material of which the two objects of scenario- 1 and scenario- 2 are made of.",
+        "marks": 0,
+        "answer": "For scenario-1:\nHeat lost by object = Heat gained by water\n\\[\n0.7 \\times s \\times (200 - 50) = 0.2625 \\times 4200 \\times 20\n\\]\n\\[\n105 s = 22050\n\\]\n\\[\ns = 210 \\text{ Jkg}^{-1}\\mathrm{K}^{-1} \\quad\\text{(Tin)}\n\\]\nFor scenario-2:\n\\[\nQ = m s \\Delta\\theta\n\\]\n\\[\n18000 = 0.5 \\times s \\times 80\n\\]\n\\[\ns = 450 \\text{ Jkg}^{-1}\\mathrm{K}^{-1} \\quad\\text{(Iron)}\n\\]\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768747421656,
+    "subject": "Physics",
+    "chapter": "Effect of Heat on Matter",
+    "lesson": "Calorimetry and Latent Heat",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is coefficient of volume expansion?",
+        "marks": 0,
+        "answer": "The coefficient of volume expansion is the fractional increase in volume per degree rise in temperature.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why is wet cloth spread widely for drying?",
+        "marks": 0,
+        "answer": "Spreading increases surface area, speeding up evaporation.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Calculate specific heat of tin.",
+        "marks": 0,
+        "answer": "\\[\ns = \\frac{Q}{m\\Delta\\theta} = \\frac{1680}{0.1 \\times (100 - 20)} = 210 \\text{ Jkg}^{-1}\\mathrm{K}^{-1}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Analyze whether or not it is possible to melt the tin having temperature of \\(20^{\\circ}\\mathrm{C}\\) by gradual application of \\(10.4\\mathrm{kJ}\\) heat.",
+        "marks": 0,
+        "answer": "Heat needed to melt tin from \\(20^{\\circ}C\\):\n\\[\nQ = m s \\Delta\\theta + m L = 0.1 \\times 210 \\times (232 - 20) + 0.1 \\times 58800 = 10332 \\text{ J} = 10.332 \\text{ kJ}\n\\]\nSince \\(10.4 \\text{ kJ} > 10.332 \\text{ kJ}\\), melting is possible.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768747421824,
+    "subject": "Physics",
+    "chapter": "Effect of Heat on Matter",
+    "lesson": "Calorimetry",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is real expansion?",
+        "marks": 0,
+        "answer": "Real expansion of a liquid is the expansion that would occur if it could be heated without a container.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why do we feel comfort when we enter an AC room from tremendous heat?",
+        "marks": 0,
+        "answer": "AC reduces humidity; evaporation from skin increases, cooling the body.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the temperature gained by water in stem-1.",
+        "marks": 0,
+        "answer": "Water loses heat (cools down from \\(120^{\\circ}\\mathrm{C}\\) to \\(50^{\\circ}\\mathrm{C}\\)):\n\\[\nQ = m s \\Delta\\theta = 0.2625 \\times 4200 \\times (120 - 50) = 77175 \\text{ J}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "The objects in stem-1 and stem-2 are made of which elements? Explain mathematically.",
+        "marks": 0,
+        "answer": "For stem-1:\nHeat gained by solid = Heat lost by water\n\\[\n0.7 \\times s \\times (50 - 0) = 0.2625 \\times 4200 \\times (120 - 50)\n\\]\n\\[\n35 s = 77175\n\\]\n\\[\ns = 2205 \\text{ Jkg}^{-1}\\mathrm{K}^{-1} \\quad\\text{(Aluminum)}\n\\]\nFor stem-2:\n\\[\n18000 = 0.5 \\times s \\times 80\n\\]\n\\[\ns = 450 \\text{ Jkg}^{-1}\\mathrm{K}^{-1} \\quad\\text{(Iron)}\n\\]\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768747421991,
+    "subject": "Physics",
+    "chapter": "Effect of Heat on Matter",
+    "lesson": "Calorimetry with Phase Change",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is real expansion?",
+        "marks": 0,
+        "answer": "Real expansion is the actual expansion of a liquid if heated without a container.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why does temperature remain constant during change of state of matter? Explain it.",
+        "marks": 0,
+        "answer": "During phase change, heat supplied is used to overcome intermolecular forces, not to increase kinetic energy, so temperature stays constant.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the maximum temperature of the mixture.",
+        "marks": 0,
+        "answer": "Assume final temperature \\(T\\).\nHeat lost by water = Heat gained by ice to warm, melt, and warm as water:\n\\[\n4 \\times 4200 \\times (30 - T) = 0.5 \\times 2100 \\times 5 + 0.5 \\times 334000 + 0.5 \\times 4200 \\times (T - 0)\n\\]\n\\[\n504000 - 16800T = 5250 + 167000 + 2100T\n\\]\n\\[\n504000 - 16800T = 172250 + 2100T\n\\]\n\\[\n331750 = 18900T\n\\]\n\\[\nT \\approx 17.55^{\\circ}C\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "What is the maximum amount of ice that water will be able to melt according to stem? Show the mathematical analysis.",
+        "marks": 0,
+        "answer": "Heat needed to melt all ice:\n\\[\nQ_1 = 0.5 \\times 2100 \\times 5 + 0.5 \\times 334000 = 172250 \\text{ J}\n\\]\nHeat available from water cooling to \\(0^{\\circ}C\\):\n\\[\nQ_2 = 4 \\times 4200 \\times 30 = 504000 \\text{ J}\n\\]\nSince \\(Q_2 > Q_1\\), all ice melts.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768747422178,
+    "subject": "Physics",
+    "chapter": "Effect of Heat on Matter",
+    "lesson": "Thermal Expansion",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called the specific heat?",
+        "marks": 0,
+        "answer": "Specific heat is the heat required to raise the temperature of \\(1\\mathrm{kg}\\) of a substance by \\(1\\mathrm{K}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why does water remain colder in earthen jar rather than brass jar? Explain.",
+        "marks": 0,
+        "answer": "Earthen jars are porous; water seeps out and evaporates, cooling the jar. Brass conducts heat inward, warming water.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the increased temperature in Fahrenheit scale.",
+        "marks": 0,
+        "answer": "\\[\n\\Delta F = \\frac{9}{5} \\times 12 = 21.6^{\\circ}F\n\\]\nSo new temperature in Fahrenheit increases by \\(21.6^{\\circ}F\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Give mathematical analysis whether the train movement is safe in increased temperature.",
+        "marks": 0,
+        "answer": "\\[\n\\Delta L = L \\alpha \\Delta T = 18 \\times 11.6\\times 10^{-6} \\times 12 = 0.0025056 \\text{ m} = 0.251 \\text{ cm}\n\\]\nSince \\(0.251 \\text{ cm} < 3 \\text{ cm}\\), movement is safe.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768747422350,
+    "subject": "Physics",
+    "chapter": "Effect of Heat on Matter",
+    "lesson": "Calorimetry with Phase Change",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is the co- efficient of linear expansion?",
+        "marks": 0,
+        "answer": "Coefficient of linear expansion is the change in length per unit length per degree temperature change.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Where the water is rapidly evaporated when the same amount of water is placed inside a glass and a bucket?",
+        "marks": 0,
+        "answer": "In the bucket, due to larger surface area, evaporation is faster.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the ratio of velocity of water and beverage.",
+        "marks": 0,
+        "answer": "Velocity of sound in a medium \\(\\propto \\sqrt{T}\\).\n\\[\n\\frac{V_w}{V_b} = \\sqrt{\\frac{T_w}{T_b}} = \\sqrt{\\frac{308}{288}} \\approx 1.034\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Whether the ice is fully melting or not when the man mixed \\(6\\mathrm{kg}\\) ice for making beverage where the mixture temperature is fixed. Analyze mathematically.",
+        "marks": 0,
+        "answer": "Let \\(m\\) ice melt to give final \\(15^{\\circ}C\\):\n\\[\nm \\times 336000 + m \\times 4200 \\times 15 = 20 \\times 4200 \\times (35 - 15)\n\\]\n\\[\n336000m + 63000m = 1680000\n\\]\n\\[\n399000m = 1680000\n\\]\n\\[\nm \\approx 4.21 \\text{ kg}\n\\]\nSince only \\(4.21 \\text{ kg}\\) ice needed, but \\(6 \\text{ kg}\\) is added, not all ice melts.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768747422512,
+    "subject": "Physics",
+    "chapter": "Effect of Heat on Matter",
+    "lesson": "Calorimetry with Phase Change",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called heat capacity?",
+        "marks": 0,
+        "answer": "Heat capacity is the amount of heat required to raise the temperature of a body by \\(1\\mathrm{K}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Explain why temperature of a fevering body is decreased when a band of wet cloth is used.",
+        "marks": 0,
+        "answer": "Wet cloth absorbs body heat for evaporation, cooling the body.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find out the temperature of the piece of ice in Fahrenheit scale.",
+        "marks": 0,
+        "answer": "Ice temperature = \\(-5^{\\circ}C\\):\n\\[\n\\frac{C}{5} = \\frac{F - 32}{9} \\Rightarrow \\frac{-5}{5} = \\frac{F - 32}{9} \\Rightarrow F = 23^{\\circ}F\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "If the object B is released in the liquid of container, A what will be the final state of the mixture? Put your opinion with mathematical analysis.",
+        "marks": 0,
+        "answer": "Assume ice mass = 120 g = 0.12 kg, water mass = 250 g = 0.25 kg at \\(10^{\\circ}C\\).\nHeat to melt ice completely:\n\\[\nQ_{\\text{needed}} = 0.12 \\times 2100 \\times 5 + 0.12 \\times 336000 = 41580 \\text{ J}\n\\]\nHeat available from water cooling to \\(0^{\\circ}C\\):\n\\[\nQ_{\\text{available}} = 0.25 \\times 4200 \\times 10 = 10500 \\text{ J}\n\\]\nSince \\(Q_{\\text{available}} < Q_{\\text{needed}}\\), not all ice melts.\nLet \\(x\\) kg ice melt:\n\\[\n0.12 \\times 2100 \\times 5 + x \\times 336000 = 10500\n\\]\n\\[\n1260 + 336000x = 10500\n\\]\n\\[\nx \\approx 0.0275 \\text{ kg} = 27.5 \\text{ g}\n\\]\nSo \\(92.5 \\text{ g}\\) ice remains.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "[There is a picture]"
+  },
+  {
+    "id": 1768747422683,
+    "subject": "Physics",
+    "chapter": "Effect of Heat on Matter",
+    "lesson": "Thermal Expansion",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called melting point?",
+        "marks": 0,
+        "answer": "Melting point is the temperature at which a solid begins to melt.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why is air of fan felt cold in the wet body? Explain.",
+        "marks": 0,
+        "answer": "Fan air increases evaporation from wet skin, absorbing latent heat and cooling the body.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Calculate the increased temperature of the sphere in Fahrenheit scale.",
+        "marks": 0,
+        "answer": "\\[\n\\Delta F = \\frac{9}{5} \\times 50 = 90^{\\circ}F\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "From the stem establish a relation between the coefficient of volume expansion and the co-efficient of area expansion.",
+        "marks": 0,
+        "answer": "Initial volume \\(V_i = \\frac{4}{3}\\pi (1)^3 = 4.1888 \\text{ cm}^3\\)\n\\[\n\\Delta V = 4.1993 - 4.1888 = 0.0105 \\text{ cm}^3\n\\]\n\\[\n\\gamma = \\frac{\\Delta V}{V_i \\Delta T} = \\frac{0.0105}{4.1888 \\times 50} = 5.01 \\times 10^{-5} \\mathrm{K}^{-1}\n\\]\nInitial area \\(A_i = 4\\pi (1)^2 = 12.5664 \\text{ cm}^2\\)\n\\[\n\\Delta A = 12.5874 - 12.5664 = 0.021 \\text{ cm}^2\n\\]\n\\[\n\\beta = \\frac{\\Delta A}{A_i \\Delta T} = \\frac{0.021}{12.5664 \\times 50} = 3.34 \\times 10^{-5} \\mathrm{K}^{-1}\n\\]\n\\[\n\\frac{\\gamma}{\\beta} \\approx 1.5 \\quad \\Rightarrow \\quad \\gamma = 1.5 \\beta\n\\]\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768747422860,
+    "subject": "Physics",
+    "chapter": "Effect of Heat on Matter",
+    "lesson": "Thermal Expansion",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "Define specific heat?",
+        "marks": 0,
+        "answer": "Specific heat is the heat required to raise the temperature of \\(1\\mathrm{kg}\\) of substance by \\(1\\mathrm{K}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why is cooking done faster in a pressure cooker?",
+        "marks": 0,
+        "answer": "Pressure increases boiling point of water, so food cooks at higher temperature, faster.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Calculate the co-efficient of volume expansion of the steel.",
+        "marks": 0,
+        "answer": "\\[\n\\beta = \\frac{\\Delta A}{A_i \\Delta T} = \\frac{0.668}{200 \\times 100} = 3.34 \\times 10^{-5} \\mathrm{K}^{-1}\n\\]\n\\[\n\\gamma = \\frac{3}{2} \\beta = 5.01 \\times 10^{-5} \\mathrm{K}^{-1}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "If the heated steel is put in water of \\(40^{\\circ}\\mathrm{C}\\) placed in a aluminium pot, what will happen? Analyze with the help of \"Fundamental principle of calorimetry\".",
+        "marks": 0,
+        "answer": "Heat will flow from steel to water and pot until thermal equilibrium. Temperature of water and pot will rise, steel temperature will drop.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768747423109,
+    "subject": "Physics",
+    "chapter": "Effect of Heat on Matter",
+    "lesson": "Thermal Expansion",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called specific heat?",
+        "marks": 0,
+        "answer": "Specific heat is the heat required to raise the temperature of \\(1\\mathrm{kg}\\) of substance by \\(1\\mathrm{K}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "What type of work will be done for the falling of mango from tree? Explain.",
+        "marks": 0,
+        "answer": "Positive work; force (gravity) and displacement are in same direction.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the expansion of length of iron plate.",
+        "marks": 0,
+        "answer": "\\[\n\\Delta L = L \\alpha \\Delta T = 100 \\times 1.15 \\times 10^{-5} \\times 20 = 0.023 \\text{ m} = 2.3 \\text{ cm}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "What will be the condition of rail line if increase of temperature is \\(40^{\\circ}\\mathrm{C}\\)? Explain.",
+        "marks": 0,
+        "answer": "\\[\n\\Delta L = 100 \\times 1.15 \\times 10^{-5} \\times 40 = 0.046 \\text{ m} = 4.6 \\text{ cm}\n\\]\nSince \\(4.6 \\text{ cm} > 4 \\text{ cm}\\) gap, rail line will bend.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768747423281,
+    "subject": "Physics",
+    "chapter": "Effect of Heat on Matter",
+    "lesson": "Thermal Expansion and Calorimetry",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "Define heat capacity?",
+        "marks": 0,
+        "answer": "Heat capacity is the amount of heat required to raise the temperature of a body by \\(1\\mathrm{K}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why there is no difference between apparent expansion and real expansion of vapour? Explain.",
+        "marks": 0,
+        "answer": "- B to",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Calculate the co-efficient of linear expansion of the bar.",
+        "marks": 0,
+        "answer": "- C to",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "According to fig-2 draw a \"Temperature Vs time\" graph and explain its different parts.",
+        "marks": 0,
+        "answer": "Water warms from \\(0^{\\circ}\\mathrm{C}\\) to \\(100^{\\circ}\\mathrm{C}\\) (linear rise)\n- D to E: Water boils at constant \\(100^{\\circ}\\mathrm{C}\\) (horizontal line)\n- E to F: Steam warms from \\(100^{\\circ}\\mathrm{C}\\) to \\(110^{\\circ}\\mathrm{C}\\) (linear rise)\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "[There is a picture]"
+  },
+  {
+    "id": 1768747423425,
+    "subject": "Physics",
+    "chapter": "Effect of Heat on Matter",
+    "lesson": "Thermal Expansion and Fluids",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called solidification?",
+        "marks": 0,
+        "answer": "Solidification is the process of a liquid turning into a solid.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "On which factors does heat capacity of an object depend?",
+        "marks": 0,
+        "answer": "Heat capacity depends on mass and material of the object.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the final length of the rod if temperature of the rod is raised to \\(50^{\\circ}C\\) in scenario-2.",
+        "marks": 0,
+        "answer": "\\[\nL_f = L_i [1 + \\alpha \\Delta T] = 2 \\times [1 + 22\\times 10^{-6} \\times 50] = 2.0022 \\text{ m}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Which one is suitable between A and B to construct a barometer in scenario-1? Express your opinion through analysis.",
+        "marks": 0,
+        "answer": "B (mercury) is suitable for barometer because its high density (\\(13600 \\text{ kg/m}^3\\)) gives a manageable column height. Water (A) would need 13.6 times taller column.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768747423604,
+    "subject": "Physics",
+    "chapter": "Effect of Heat on Matter",
+    "lesson": "Thermal Expansion",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called specific heat?",
+        "marks": 0,
+        "answer": "Specific heat is the heat required to raise the temperature of \\(1\\mathrm{kg}\\) of substance by \\(1\\mathrm{K}\\).",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why does take shorter time to cook in the pressure cooker?",
+        "marks": 0,
+        "answer": "Higher pressure raises boiling point, so cooking occurs at higher temperature, faster.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the length of the iron rod due to changes of temperature mentioned in the stem.",
+        "marks": 0,
+        "answer": "\\[\nL_f = 60 + 60 \\times 12\\times 10^{-6} \\times 80 = 60.0576 \\text{ cm}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Is it correct, the observation of the student? Analyze mathematically.",
+        "marks": 0,
+        "answer": "\\[\n\\gamma = 3\\alpha = 36 \\times 10^{-6} \\mathrm{K}^{-1}\n\\]\n\\[\n\\frac{V_f}{V_i} = 1 + \\gamma \\Delta T = 1 + 36\\times 10^{-6} \\times 80 = 1.00288\n\\]\n\\[\n\\rho_f = \\frac{\\rho_i}{V_f/V_i} = \\frac{7800}{1.00288} \\approx 7777.6 \\text{ kg/m}^3\n\\]\nSo observation is correct.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768747423776,
+    "subject": "Physics",
+    "chapter": "Effect of Heat on Matter",
+    "lesson": "Calorimetry and Expansion",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is regulation?",
+        "marks": 0,
+        "answer": "Regelation is melting of ice under pressure and refreezing when pressure is removed.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Temperatures of two objects are same but amount of heat may not be same.- Explain.",
+        "marks": 0,
+        "answer": "Heat content depends on mass and specific heat; two objects at same temperature can have different heat contents.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find out the amount of heat gained by copper sphere.",
+        "marks": 0,
+        "answer": "\\[\nQ = m s \\Delta T = 0.25 \\times 400 \\times 80 = 8000 \\text{ J}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "If there is no loss of heat energy, will the heated copper sphere go through the metal ring of the stem? Analyze with logic.",
+        "marks": 0,
+        "answer": "Sphere radius from volume:\n\\[\nV = \\frac{4}{3} \\pi R^3 = 32 \\Rightarrow R \\approx 1.969 \\text{ m}\n\\]\nRing radius from area:\n\\[\nA = \\pi r^2 = 11.34 \\Rightarrow r \\approx 1.899 \\text{ m}\n\\]\nSphere diameter \\(= 3.938 \\text{ m}\\), ring diameter \\(= 3.798 \\text{ m}\\). Sphere will not fit.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768747423918,
+    "subject": "Physics",
+    "chapter": "Effect of Heat on Matter",
+    "lesson": "Thermal Expansion",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called fixed point?",
+        "marks": 0,
+        "answer": "Fixed points are reference temperatures (e.g., ice and steam points) used to define a temperature scale.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "The velocity of the sound in air depends on temperature-Explain.",
+        "marks": 0,
+        "answer": "Speed of sound in air \\(v \\propto \\sqrt{T}\\); higher temperature means faster molecular motion, higher speed.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the length of the steel plate in \\(38^{\\circ}\\mathrm{C}\\) temperature.",
+        "marks": 0,
+        "answer": "\\[\n\\alpha = \\frac{\\gamma}{3} = 11 \\times 10^{-6} \\mathrm{K}^{-1}\n\\]\n\\[\nL_f = 144 + 144 \\times 11\\times 10^{-6} \\times (38 - 30) = 144.0127 \\text{ m}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "The expansion of A,B and C are different by applying heat-Analyze.",
+        "marks": 0,
+        "answer": "A (solid) expands least, B (liquid) more, C (gas) most due to increasing molecular freedom and decreasing intermolecular forces.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "[There is a picture]"
+  },
+  {
+    "id": 1768747424052,
+    "subject": "Physics",
+    "chapter": "Effect of Heat on Matter",
+    "lesson": "Regelation",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "Explain why a student could join two pieces of ice at \\(-1^{\\circ}C\\) by pressing but failed to join pieces at \\(-2^{\\circ}C\\).",
+        "marks": 0,
+        "answer": "Pressing ice lowers melting point. At \\(-1^{\\circ}C\\), pressure can lower melting point below \\(-1^{\\circ}C\\), causing melting at contact; on release, water refreezes, joining ice. At \\(-2^{\\circ}C\\), pressure may not lower melting point below \\(-2^{\\circ}C\\), so no melting occurs.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "[There is a picture]"
+  },
+  {
+    "id": 1768747424179,
+    "subject": "Physics",
+    "chapter": "Effect of Heat on Matter",
+    "lesson": "Sound and Thermal Expansion",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called pitch of sound?",
+        "marks": 0,
+        "answer": "Pitch is the characteristic of sound determined by frequency.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why the velocity of sound is more in sea water than pure water?",
+        "marks": 0,
+        "answer": "Sea water has higher elasticity (bulk modulus) relative to density increase, so speed of sound is higher.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "What amount of heat will be needed to increase the temperature \\(10^{\\circ}C\\) of a No.- 01 wire?",
+        "marks": 0,
+        "answer": "\\[\nQ = m s \\Delta T = 0.002 \\times 400 \\times 10 = 8 \\text{ J}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Will the linear expansion be equal if the temperature increases up to \\(20^{\\circ}C\\) of two wires? Analyze it.",
+        "marks": 0,
+        "answer": "\\[\n\\alpha = \\frac{\\beta}{2} = 16.7 \\times 10^{-6} \\mathrm{K}^{-1}\n\\]\nExpansion \\(\\Delta L = \\alpha L \\Delta T\\). For different initial lengths, expansion different.\n\\[\n\\frac{\\Delta L_1}{\\Delta L_2} = \\frac{L_1}{L_2} = \\frac{3}{5}\n\\]\nSo not equal.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768747424405,
+    "subject": "Physics",
+    "chapter": "Effect of Heat on Matter",
+    "lesson": "Thermal Expansion",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is freezing point?",
+        "marks": 0,
+        "answer": "Freezing point is the temperature at which a liquid solidifies.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "How do bats travel using the ultrasonic sound? Explain.",
+        "marks": 0,
+        "answer": "Bats emit ultrasonic waves that reflect off obstacles; they detect echoes to navigate.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "How much heat energy is given up by the copper wire in winter season?",
+        "marks": 0,
+        "answer": "\\[\nQ = m s \\Delta T = 30 \\times 400 \\times (5 - 30) = -300000 \\text{ J} \\quad (3\\times 10^5 \\text{ J released})\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "In winter, is there any kind of possibility of tearing of the Copper wire? Analyze mathematically.",
+        "marks": 0,
+        "answer": "\\[\nL_{\\text{winter}} = 50.033 \\times [1 + 16.7\\times 10^{-6} \\times (5 - 30)] \\approx 50.0121 \\text{ m}\n\\]\nSince \\(50.0121 \\text{ m} > 50 \\text{ m}\\), wire sags but doesn’t break.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768747424527,
+    "subject": "Physics",
+    "chapter": "Effect of Heat on Matter",
+    "lesson": "Calorimetry and Expansion",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is latent heat?",
+        "marks": 0,
+        "answer": "Latent heat is heat absorbed or released during phase change at constant temperature.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why is a fan turned on to dry a wet floor? Explain.",
+        "marks": 0,
+        "answer": "Fan increases air flow, speeding up evaporation by removing saturated air.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find the final temperature of the mixture?",
+        "marks": 0,
+        "answer": "Let \\(T\\) be final temperature:\nHeat gained by sphere = Heat lost by water + container\n\\[\n0.5 \\times 200 \\times (T - 30) = 0.4 \\times 400 \\times (90 - T) + 0.5 \\times 4200 \\times (90 - T)\n\\]\n\\[\n100T - 3000 = 160(90 - T) + 2100(90 - T)\n\\]\n\\[\n100T - 3000 = 2260(90 - T)\n\\]\n\\[\n100T - 3000 = 203400 - 2260T\n\\]\n\\[\n2360T = 206400\n\\]\n\\[\nT \\approx 87.46^{\\circ}C\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Is it possible to enter the sphere at final temperature of the mixture through a ring of radius \\(100.5\\mathrm{mm}\\)? Analyze it.",
+        "marks": 0,
+        "answer": "\\[\n\\gamma = 3\\alpha = 57 \\times 10^{-5} \\mathrm{K}^{-1}\n\\]\n\\[\nd_f = 100 \\times \\sqrt[3]{1 + 57\\times 10^{-5} \\times (87.46 - 30)} \\approx 101.08 \\text{ mm}\n\\]\nSince \\(101.08 \\text{ mm} > 100.5 \\text{ mm}\\), sphere will not pass.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768747424674,
+    "subject": "Physics",
+    "chapter": "Effect of Heat on Matter",
+    "lesson": "Thermal Expansion",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called vaporization?",
+        "marks": 0,
+        "answer": "Vaporization is conversion of liquid to vapour.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Explain the cause of floating and sinking of an object in water.",
+        "marks": 0,
+        "answer": "Floating or sinking depends on density relative to water: if object density < water density, it floats; if greater, it sinks.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the area expansion of the steel plate.",
+        "marks": 0,
+        "answer": "\\[\nL_f = 40 \\times [1 + 11\\times 10^{-6} \\times 20] = 40.0088 \\text{ m}\n\\]\n\\[\nB_f = 20 \\times [1 + 11\\times 10^{-6} \\times 20] = 20.0044 \\text{ m}\n\\]\n\\[\nA_f = 40.0088 \\times 20.0044 \\approx 800.352 \\text{ m}^2\n\\]\n\\[\n\\Delta A = 0.352 \\text{ m}^2\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Will the area of the steel increased by \\(2\\%\\) if the body is heated at \\(750\\mathrm{K}\\) temperature? Analyze mathematically.",
+        "marks": 0,
+        "answer": "At \\(750\\mathrm{K}\\):\n\\[\n\\Delta T = 450 \\mathrm{K}\n\\]\n\\[\nL_f = 40 \\times [1 + 11\\times 10^{-6} \\times 450] = 40.198 \\text{ m}\n\\]\n\\[\nB_f = 20 \\times [1 + 11\\times 10^{-6} \\times 450] = 20.099 \\text{ m}\n\\]\n\\[\nA_f \\approx 807.94 \\text{ m}^2\n\\]\n% increase = \\(\\frac{807.94 - 800}{800} \\times 100 \\approx 0.99\\%\\), not \\(2\\%\\).\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768747424804,
+    "subject": "Physics",
+    "chapter": "Effect of Heat on Matter",
+    "lesson": "Thermal Expansion",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is electric potential?",
+        "marks": 0,
+        "answer": "Electric potential is work done to bring a unit positive charge from infinity to a point.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Explain the cause for using fuse in electric circuit.",
+        "marks": 0,
+        "answer": "Fuse protects circuit by melting when current exceeds safe limit, breaking circuit.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "What will be the value of stated temperature in Fahrenheit scale?",
+        "marks": 0,
+        "answer": "\\[\n\\Delta F = \\frac{9}{5} \\times 20 = 36^{\\circ}F\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Will the elongation be same if the rod would be made of copper instead of iron rod. Explain with mathematical analysis.",
+        "marks": 0,
+        "answer": "Iron:\n\\[\n\\Delta L = 2.5 \\times 11.6\\times 10^{-6} \\times 20 = 5.8\\times 10^{-4} \\text{ m}\n\\]\nCopper:\n\\[\n\\Delta L = 2.5 \\times 16.7\\times 10^{-6} \\times 20 = 8.35\\times 10^{-4} \\text{ m}\n\\]\nCopper expands more.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768747424922,
+    "subject": "Physics",
+    "chapter": "Effect of Heat on Matter",
+    "lesson": "Calorimetry and Expansion",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "Why is it easier to swim in sea water than river water?",
+        "marks": 0,
+        "answer": "Sea water is denser than river water, providing greater buoyant force, making it easier to swim.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Find final temperature of mixture.",
+        "marks": 0,
+        "answer": "Let \\(T\\) be final temperature:\nHeat gained by sphere = Heat lost by container + Heat lost by water\n\\[\n0.5 \\times 400 \\times (T - 25) = 0.6 \\times 400 \\times (80 - T) + 0.5 \\times 4200 \\times (80 - T)\n\\]\n\\[\n200(T - 25) = 240(80 - T) + 2100(80 - T)\n\\]\n\\[\n200T - 5000 = 2340(80 - T)\n\\]\n\\[\n200T - 5000 = 187200 - 2340T\n\\]\n\\[\n2540T = 192200\n\\]\n\\[\nT \\approx 75.67^{\\circ}\\mathrm{C}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Can sphere enter ring?",
+        "marks": 0,
+        "answer": "Coefficient of volume expansion:\n\\[\n\\gamma = 3\\alpha = 3 \\times 19 \\times 10^{-5} = 57 \\times 10^{-5} \\mathrm{K}^{-1}\n\\]\nFor spherical volume expansion, diameter changes as:\n\\[\nd_f = d_i [1 + \\alpha \\Delta T] = 100 \\times [1 + 19\\times 10^{-5} \\times (75.67 - 25)]\n\\]\n\\[\nd_f = 100 \\times [1 + 19\\times 10^{-5} \\times 50.67] = 100 \\times 1.00963 = 100.963 \\text{ mm}\n\\]\nSince \\(100.963 \\text{ mm} > 100.5 \\text{ mm}\\), the heated sphere cannot pass through the ring.",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "[There is a picture]"
+  },
+  {
+    "id": 1768747425070,
+    "subject": "Physics",
+    "chapter": "Effect of Heat on Matter",
+    "lesson": "Thermal Expansion",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called electric field?",
+        "marks": 0,
+        "answer": "Electric field is a region where a charge experiences force.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why electric field and electric intensity are not same? Explain.",
+        "marks": 0,
+        "answer": "Electric field is a vector field; electric intensity is magnitude of electric field at a point.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the coefficient of linear expansion of the brass.",
+        "marks": 0,
+        "answer": "Brass expansion = \\(0.00102 + 0.000102 = 0.001122 \\text{ m}\\)\n\\[\n\\alpha_{\\text{brass}} = \\frac{0.001122}{2 \\times 30} = 18.7 \\times 10^{-6} \\mathrm{K}^{-1}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "How many times expansion coefficient of copper is more compared with the coefficient of iron? Determine mathematically.",
+        "marks": 0,
+        "answer": "Copper:\n\\[\n\\alpha_{\\text{Cu}} = \\frac{0.00102}{2 \\times 30} = 17 \\times 10^{-6} \\mathrm{K}^{-1}\n\\]\nIron expansion = \\(0.00102 - 0.000324 = 0.000696 \\text{ m}\\)\n\\[\n\\alpha_{\\text{Fe}} = \\frac{0.000696}{2 \\times 30} = 11.6 \\times 10^{-6} \\mathrm{K}^{-1}\n\\]\n\\[\n\\frac{\\alpha_{\\text{Cu}}}{\\alpha_{\\text{Fe}}} = \\frac{17}{11.6} \\approx 1.47\n\\]\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  },
+  {
+    "id": 1768747425186,
+    "subject": "Physics",
+    "chapter": "Effect of Heat on Matter",
+    "lesson": "Calorimetry and Expansion",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is the apparent expansion of liquid?",
+        "marks": 0,
+        "answer": "Apparent expansion is expansion of liquid ignoring container expansion.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why does the air of fan feel cold on the sweaty body? Explain.",
+        "marks": 0,
+        "answer": "Fan increases evaporation from sweat, absorbing latent heat, cooling skin.",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the change in temperature of copper sphere in Kelvin scale.",
+        "marks": 0,
+        "answer": "\\[\n\\Delta T = 120 - 25 = 95^{\\circ}C = 95 \\text{ K}\n\\]",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Whether the hot copper sphere can be inserted through the metal ring if there is no loss of thermal energy- analyse mathematically.",
+        "marks": 0,
+        "answer": "\\[\n\\alpha = 1.7 \\times 10^{-5} \\mathrm{K}^{-1}, \\quad \\gamma = 3\\alpha = 5.1 \\times 10^{-5} \\mathrm{K}^{-1}\n\\]\n\\[\nV_f = 35 \\times [1 + 5.1\\times 10^{-5} \\times 95] \\approx 35.17 \\text{ m}^3\n\\]\nRadius from volume:\n\\[\n\\frac{4}{3} \\pi r^3 = 35.17 \\Rightarrow r \\approx 2.03 \\text{ m}\n\\]\nDiameter \\(= 4.06 \\text{ m}\\)\nRing radius from area:\n\\[\n\\pi r^2 = 11.34 \\Rightarrow r \\approx 1.90 \\text{ m}, \\quad \\text{diameter} = 3.8 \\text{ m}\n\\]\nSince sphere diameter \\(4.06 \\text{ m} > 3.8 \\text{ m}\\), it will not pass.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": null
+  }
+]

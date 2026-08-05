@@ -1,0 +1,394 @@
+[
+  {
+    "id": 1768748116447,
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "lesson": "Electric Current, Resistance, and Circuits",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is image?",
+        "marks": 0,
+        "answer": "If the ray of light emitted from a point, after being reflected or refracted on a surface, converges at a second point or seems to be emitted from a second point, then that second point is called the image of the first point.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "If water vapor exists in air, the accumulated charge gets lost quickly. Why?",
+        "marks": 0,
+        "answer": "If water vapor exists in the air, the accumulated charge gets lost quickly because water vapor conducts electricity.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find the flow of current through the \\(1\\Omega\\) resistor.",
+        "marks": 0,
+        "answer": "- Voltage at point",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748113308_60p0t4.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748113308_60p0t4.jpeg"
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "If the potential of the circuit be \\(240~\\mathrm{V}\\) will the voltage drop of point C, D and E be same or not? Explain mathematically.",
+        "marks": 0,
+        "answer": "\\(V_D = V_C - V_{CD} = 100 - 40 = 60\\mathrm{V}\\)\n- Since \\(V_C > V_D > V_E\\), the voltage drops at points C, D, and E are not the same.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748113308_g5s63.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748113308_g5s63.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111781_o8blh5.jpeg"
+  },
+  {
+    "id": 1768748117726,
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "lesson": "Capacitors and Power in Circuits",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is a circuit?",
+        "marks": 0,
+        "answer": "The complete path through which current flows is called a circuit.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why is a capacitor used in an electric fan?",
+        "marks": 0,
+        "answer": "A capacitor is used in an electric fan to create a phase difference in the current flowing through the motor windings. This phase difference creates a rotating magnetic field, which provides the starting torque needed to make the fan start rotating. The capacitor temporarily stores and releases charge, creating the necessary phase shift for the motor to function.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Find the equivalent resistance of the circuit in the stem.",
+        "marks": 0,
+        "answer": "- \\(R_2\\) and \\(R_3\\) in series: \\(R_{23} = 10 + 10 = 20\\Omega\\)\n- \\(R_2\\), \\(R_3\\), and \\(R_5\\) in parallel:\n\\[\n\\frac{1}{R_p} = \\frac{1}{10} + \\frac{1}{10} + \\frac{1}{20} = \\frac{2+2+1}{20} = \\frac{5}{20} = \\frac{1}{4}\n\\]\n\\[\nR_p = 4\\Omega\n\\]\n- \\(R_1\\) and \\(R_p\\) in series:\n\\[\nR_{eq} = 6 + 4 = 10\\Omega\n\\]\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748113297_0wa5rk.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748113297_0wa5rk.jpeg"
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Analyse mathematically if the power of the resistance \\(R_3\\) and \\(R_5\\) is equal.",
+        "marks": 0,
+        "answer": "- Current:\n\\[\nI = \\frac{20}{10} = 2\\mathrm{A}\n\\]\n- Voltage across BD: \\(V_{BD} = I \\times R_p = 2 \\times 4 = 8\\mathrm{V}\\)\n- Power of \\(R_3\\):\n\\[\nP_3 = \\frac{V_{BD}^2}{R_3} = \\frac{8^2}{10} = 6.4\\mathrm{W}\n\\]\n- Power of \\(R_5\\):\n\\[\nP_5 = \\frac{V_{BD}^2}{R_5} = \\frac{8^2}{20} = 3.2\\mathrm{W}\n\\]\n- Since \\(P_3 \\neq P_5\\), the powers are not equal.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111796_qbkc7.jpeg"
+  },
+  {
+    "id": 1768748118021,
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "lesson": "Capacitance and Energy Consumption",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called capacitor?",
+        "marks": 0,
+        "answer": "A mechanical system of storing energy in the form of an electric charge by placing an insulating material between two closely spaced conductors is called capacitor.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "What do you mean by the specific resistance of copper is 1.68×10⁻⁸ Ω m?",
+        "marks": 0,
+        "answer": "The resistance of a conductor of unit length and unit cross-sectional area at a given temperature is called the specific resistance of its material at that temperature. The specific resistance of copper is 1.68×10⁻⁸ Ω m means that a piece of copper of length 1 m and cross-sectional area 1 m² will have a resistance of 1.68×10⁻⁸ Ω.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the electric current of the circuit according to stem-1.",
+        "marks": 0,
+        "answer": "- 2Ω and 3Ω in series: Rs1 = 2 + 3 = 5Ω\n- Rs1 and 4Ω in parallel:\n\\[\n\\frac{1}{R_p} = \\frac{1}{5} + \\frac{1}{4} = \\frac{9}{20} \\quad \\Rightarrow \\quad R_p = \\frac{20}{9}\\Omega\n\\]\n- Rp and 2Ω in series:\n\\[\nR_{eq} = \\frac{20}{9} + 2 = \\frac{38}{9} \\approx 4.22\\Omega\n\\]\n- Current:\n\\[\nI = \\frac{12}{4.22} \\approx 2.84\\mathrm{A}\n\\]\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "If Rimi's family gets 325.31 taka electric bill in October, determine the accuracy of the bill according to stem-2.",
+        "marks": 0,
+        "answer": "- Energy used by 1 bulb of 60 W for 5 hours:\n\\[\nW_1 = \\frac{60 \\times 5}{1000} = 0.3 \\text{ kWh}\n\\]\n- Energy used by 3 bulbs of 40 W for 6 hours:\n\\[\nW_2 = \\frac{3 \\times 40 \\times 6}{1000} = 0.72 \\text{ kWh}\n\\]\n- Energy used by 1 fan of 80 W for 12 hours:\n\\[\nW_3 = \\frac{80 \\times 12}{1000} = 0.96 \\text{ kWh}\n\\]\n- Total per day: W = 0.3 + 0.72 + 0.96 = 1.98 kWh\n- October has 31 days:\n\\[\nW_{total} = 1.98 \\times 31 = 61.38 \\text{ kWh}\n\\]\n- Cost at 5.30 taka per unit:\n\\[\n\\text{Bill} = 61.38 \\times 5.30 = 325.314 \\text{ taka}\n\\]\n- The bill of 325.31 taka is accurate.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111796_9qiy5.jpeg"
+  },
+  {
+    "id": 1768748118955,
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "lesson": "Ohm's Law and Energy Transmission",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "State Ohm's law.",
+        "marks": 0,
+        "answer": "The current passing through a conductor at constant temperature is directly proportional to the potential difference between the two ends of the conductor.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why voltage should be changed during transmitting electricity to a distant place?",
+        "marks": 0,
+        "answer": "Voltage is changed during transmitting electricity to a distant place in order to reduce wastage of energy. Every electrical conductor has a particular resistance. If more current flows through it, then energy gets wasted according to this equation:\n\\[\nP = I^2R\n\\]\nIf voltage is increased, flow of electricity gets reduced. It results in less energy wastage. So, voltage is changed in order to reduce wastage.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the equivalent resistance of the circuit.",
+        "marks": 0,
+        "answer": "- \\(R_2\\) and \\(R_3\\) in parallel:\n\\[\n\\frac{1}{R_p} = \\frac{1}{6} + \\frac{1}{12} = \\frac{1}{4} \\quad \\Rightarrow \\quad R_p = 4\\Omega\n\\]\n- \\(R_1\\), \\(R_p\\), and \\(R_4\\) in series:\n\\[\nR_{eq} = 5 + 4 + 1 = 10\\Omega\n\\]\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Justify mathematically if the sum of flow of current across \\(R_2\\) and \\(R_3\\) is equal to that of \\(R_4\\).",
+        "marks": 0,
+        "answer": "- Current:\n\\[\nI = \\frac{12}{10} = 1.2\\mathrm{A}\n\\]\n- Voltage across \\(R_p\\): \\(V_p = I \\times R_p = 1.2 \\times 4 = 4.8\\mathrm{V}\\)\n- Current through \\(R_2\\):\n\\[\nI_2 = \\frac{V_p}{R_2} = \\frac{4.8}{6} = 0.8\\mathrm{A}\n\\]\n- Current through \\(R_3\\):\n\\[\nI_3 = \\frac{V_p}{R_3} = \\frac{4.8}{12} = 0.4\\mathrm{A}\n\\]\n- Sum: \\(I_2 + I_3 = 0.8 + 0.4 = 1.2\\mathrm{A}\\)\n- Current through \\(R_4 = I = 1.2\\mathrm{A}\\)\nThus, the sum equals the current through \\(R_4\\).\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111797_337ies.jpeg"
+  },
+  {
+    "id": 1768748119107,
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "lesson": "Semiconductors and Thick vs Thin Wires",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "Define semiconductor.",
+        "marks": 0,
+        "answer": "The materials having conductivity lower than conductors and higher than insulators are known as semiconductors.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Why does electricity flow more in thick wire than in thin wire? Explain.",
+        "marks": 0,
+        "answer": "The resistance of a thick wire is less than the thin wire therefore more current can flow through the thick wire. According to the Ohm's law, we know that, current \\(I = \\frac{V}{R}\\). In other words, current is inversely proportional to the resistance. Again, resistance \\(R = \\frac{\\rho L}{A}\\), that means, resistance is inversely proportional to the cross-sectional area of the wire. So, the resistance of the wire decreases if the cross-sectional area of the wire is more and therefore flow of current increases. Again, the resistance of the wire increases if the cross-sectional area of the wire is less and thus flow of current decreases. Thus, more current flows through the thick wire than the thin wire.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Calculate the potential energy between the points 'B' and 'C' according to fig-2.",
+        "marks": 0,
+        "answer": "- \\(R_1 = 2\\Omega\\), \\(R_2 = 1\\Omega\\) in series: \\(R_{eq} = 2 + 1 = 3\\Omega\\)\n- Current:\n\\[\nI = \\frac{6}{3} = 2\\mathrm{A}\n\\]\n- Potential difference between B and C:\n\\[\nV_{BC} = I \\times R_2 = 2 \\times 1 = 2\\mathrm{V}\n\\]\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Which resistance will radiate more powerful light among resistor, \\(R_1\\) and \\(R_3\\)? Give mathematical analyzation to support your opinion.",
+        "marks": 0,
+        "answer": "- \\(R_1 = 100\\Omega\\), \\(R_2 = 150\\Omega\\), \\(R_3 = 100\\Omega\\)\n- \\(R_2\\) and \\(R_3\\) in parallel:\n\\[\n\\frac{1}{R_p} = \\frac{1}{150} + \\frac{1}{100} = \\frac{1}{60} \\quad \\Rightarrow \\quad R_p = 60\\Omega\n\\]\n- Total resistance: \\(R_{eq} = 100 + 60 = 160\\Omega\\)\n- Current:\n\\[\nI = \\frac{10}{160} = 0.0625\\mathrm{A}\n\\]\n- Power of \\(R_1\\):\n\\[\nP_1 = I^2 \\times R_1 = (0.0625)^2 \\times 100 = 0.39\\mathrm{W}\n\\]\n- Voltage across \\(R_2\\) and \\(R_3\\):\n\\[\nV_{AB} = I \\times R_p = 0.0625 \\times 60 = 3.75\\mathrm{V}\n\\]\n- Power of \\(R_3\\):\n\\[\nP_3 = \\frac{V_{AB}^2}{R_3} = \\frac{3.75^2}{100} = 0.141\\mathrm{W}\n\\]\n- Since \\(P_1 > P_3\\), \\(R_1\\) will radiate more light.",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748113254_zih47u.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748113254_zih47u.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111797_ilytx.jpeg"
+  },
+  {
+    "id": 1768748119874,
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "lesson": "Circuit Breaker and Power Difference",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is called circuit breaker?",
+        "marks": 0,
+        "answer": "Circuit breaker is a protective system that prevents electricity overflow in a circuit.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Explain the change in resistance if the conducting wire is doubled by tension, its cross-sectional area is halved.",
+        "marks": 0,
+        "answer": "We know that, the resistance of the conductor, R = ρL/A; where ρ is the specific resistance, L is the length of the conductor, and A is the cross-sectional area of the conductor. If a wire is stretched twice as long of the previous length, its cross-sectional area becomes half. But the total volume remains the same. If the cross-sectional area is A' after the wire is stretched two times of its previous length, then A' = A/2. So, resistance:\n\\[\nR' = \\rho \\frac{2L}{A/2} = 4 \\rho \\frac{L}{A} = 4R\n\\]\nSo, the resistance will become 4 times the previous value, which is an increase of 3R.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the equivalent resistance of the circuit.",
+        "marks": 0,
+        "answer": "- R₂ and R₃ in parallel:\n\\[\n\\frac{1}{R_p} = \\frac{1}{3} + \\frac{1}{6} = \\frac{1}{2} \\quad \\Rightarrow \\quad R_p = 2\\Omega\n\\]\n- R₁, Rp, and R₄ in series:\n\\[\nR_{eq} = 5 + 2 + 3 = 10\\Omega\n\\]\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748114645_fnybq5.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748114645_fnybq5.jpeg"
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "The electric power of R₂ and R₄ are different though the value of R₂ and R₄ are same—Analyze mathematically.",
+        "marks": 0,
+        "answer": "- Current:\n\\[\nI = \\frac{20}{10} = 2\\mathrm{A}\n\\]\n- Power of R₄:\n\\[\nP_4 = I^2 \\times R_4 = 4 \\times 3 = 12\\mathrm{W}\n\\]\n- Voltage across Rp: Vp = I × Rp = 2 × 2 = 4V\n- Power of R₂:\n\\[\nP_2 = \\frac{V_p^2}{R_2} = \\frac{16}{3} \\approx 5.33\\mathrm{W}\n\\]\n- Since P₂ ≠ P₄, the powers are different even though resistances are equal.\n",
+        "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748114645_c03ixj.jpeg",
+        "image_url": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748114645_c03ixj.jpeg"
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111798_u10t2p.jpeg"
+  },
+  {
+    "id": 1768748120281,
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "lesson": "Variable Resistance and Switching",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is variable resistance?",
+        "marks": 0,
+        "answer": "Variable resistance is a type of resistor whose resistance value can be changed as required within a certain limit.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Write down two differences between direct current and alternating current.",
+        "marks": 0,
+        "answer": "- In direct current, the voltage is always constant, and the electricity flows in a certain direction.\n- In alternating current, the voltage periodically changes from positive to negative and from negative to positive, and the direction of the current also periodically changes accordingly.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the equivalent resistance of the circuit mentioned in the stem when both of two switches is in on state.",
+        "marks": 0,
+        "answer": "- R₁, R₂, R₃ in parallel:\n\\[\n\\frac{1}{R_p} = \\frac{1}{4} + \\frac{1}{12} + \\frac{1}{6} = \\frac{3+1+2}{12} = \\frac{1}{2} \\quad \\Rightarrow \\quad R_p = 2\\Omega\n\\]\n- With R₄ in series:\n\\[\nR_{eq} = 2 + 2 = 4\\Omega\n\\]\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Whenever the electric current of R₁ when two switches are in on state is equal to the current of R₂ when K₂ switch is in off state? Analyze mathematically.",
+        "marks": 0,
+        "answer": "- Both switches on: total current:\n\\[\nI = \\frac{8}{4} = 2\\mathrm{A}\n\\]\n- Voltage across parallel combination: V = I × Rp = 2 × 2 = 4V\n- Current through R₁:\n\\[\nI_1 = \\frac{V}{R_1} = \\frac{4}{4} = 1\\mathrm{A}\n\\]\n- K₂ off: only R₁ and R₂ in parallel:\n\\[\n\\frac{1}{R_p'} = \\frac{1}{4} + \\frac{1}{12} = \\frac{1}{3} \\quad \\Rightarrow \\quad R_p' = 3\\Omega\n\\]\n- Total resistance: R'eq = 3 + 2 = 5Ω\n- Current:\n\\[\nI' = \\frac{8}{5} = 1.6\\mathrm{A}\n\\]\n- Voltage across parallel combination: V' = I' × R'p = 1.6 × 3 = 4.8V\n- Current through R₂:\n\\[\nI_2 = \\frac{V'}{R_2} = \\frac{4.8}{12} = 0.4\\mathrm{A}\n\\]\n- Since I₁ = 1A and I₂ = 0.4A, they are not equal.\n",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111798_6lf2bg.jpeg"
+  },
+  {
+    "id": 1768748121169,
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "lesson": "Electrical Power and Bulb Replacement",
+    "question": null,
+    "parts": [
+      {
+        "label": "a",
+        "letter": "a",
+        "text": "What is electrical power?",
+        "marks": 0,
+        "answer": "The amount of electrical energy converted to other forms of energy by a machine per unit time is known as its electric power.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "b",
+        "letter": "b",
+        "text": "Explain the reason why several cells are connected in a series in TV remote.",
+        "marks": 0,
+        "answer": "Since most remote controls operate at around 3 volts and AAA and AA batteries operate at around 1.5 volts, they are connected in series to achieve 3 volts. In other words, appropriate operating voltage required for the remote is obtained by connecting several cells in series.\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "c",
+        "letter": "c",
+        "text": "Determine the equivalent resistance of the circuit.",
+        "marks": 0,
+        "answer": "- R₂, R₃, R₄ in series: R₂₃₄ = 10 + 15 + 5 = 30Ω\n- R₂₃₄ and R₅ in parallel:\n\\[\n\\frac{1}{R_c} = \\frac{1}{30} + \\frac{1}{6} = \\frac{6}{30} = \\frac{1}{5} \\quad \\Rightarrow \\quad R_c = 5\\Omega\n\\]\n- With R₁ in series:\n\\[\nR_{eq} = 10 + 5 = 15\\Omega\n\\]\n",
+        "image": null,
+        "image_url": null
+      },
+      {
+        "label": "d",
+        "letter": "d",
+        "text": "Can a 10 W bulb be used in place of the resistances without changing the main current of the circuit? Explain mathematically.",
+        "marks": 0,
+        "answer": "- Resistance for 10 W bulb at 12 V:\n\\[\nR_b = \\frac{12^2}{10} = 14.4\\Omega\n\\]\n- Current with bulb:\n\\[\nI_b = \\frac{12}{14.4} \\approx 0.83\\mathrm{A}\n\\]\n- Current with original circuit:\n\\[\nI = \\frac{12}{15} = 0.8\\mathrm{A}\n\\]\n- Since Ib ≈ I, the main current does not change significantly. So, a 10W bulb can be used without changing the main current significantly.",
+        "image": null,
+        "image_url": null
+      }
+    ],
+    "options": [],
+    "correct_answer": null,
+    "explanation": "",
+    "image": "https://idgogbisqacywbfnhdzy.supabase.co/storage/v1/object/public/question-images/1768748111798_wher4y.jpeg"
+  }
+]

@@ -1,0 +1,1589 @@
+[
+  {
+    "id": 1768140599858,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "What is the supplementary angle of \\(\\angle BOC\\)?",
+    "options": "[{\"label\":\"a\",\"text\":\"[There is an image]\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"[There is an image]\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"[There is an image]\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"[There is an image]\",\"is_correct\":false}]",
+    "correctAnswer": "(Answer not provided in text, but based on common geometry, the supplementary angle of any angle is 180° minus that angle.)",
+    "explanation": "The supplementary angle of an angle is the angle that, when added to it, equals 180 degrees. So, if \\(\\angle BOC = x\\), its supplementary angle is \\(180^\\circ - x\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140600044,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "In figure, bisectors of \\(\\angle P\\) and \\(\\angle Q\\) intersect at point \\(O\\) and \\(\\angle R = 40^\\circ\\), then \\(\\angle POQ = \\text{what}\\)?",
+    "options": "[{\"label\":\"a\",\"text\":\"[There is an image]\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"[There is an image]\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"[There is an image]\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"[There is an image]\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "In \\(\\triangle PQR\\), the sum of angles is 180°. So, \\(\\angle P + \\angle Q = 180^\\circ - 40^\\circ = 140^\\circ\\). Their bisectors give \\(\\frac{1}{2} \\angle P + \\frac{1}{2} \\angle Q = 70^\\circ\\). In \\(\\triangle POQ\\), \\(\\frac{1}{2} \\angle P + \\frac{1}{2} \\angle Q + \\angle POQ = 180^\\circ\\), so \\(70^\\circ + \\angle POQ = 180^\\circ\\), hence \\(\\angle POQ = 110^\\circ\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140600160,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "Two bisectors of the angles \\(\\angle Q\\) and \\(\\angle R\\) of triangle \\(\\triangle PQR\\) intersect at point \\(O\\) if \\(\\angle P = 50^\\circ\\), then \\(\\angle QOR = ?\\)",
+    "options": "[{\"label\":\"a\",\"text\":\"[There is an image]\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"[There is an image]\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"[There is an image]\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"[There is an image]\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "In \\(\\triangle PQR\\), \\(\\angle Q + \\angle R = 180^\\circ - 50^\\circ = 130^\\circ\\). Their bisectors give \\(\\frac{1}{2} \\angle Q + \\frac{1}{2} \\angle R = 65^\\circ\\). In \\(\\triangle QOR\\), \\(\\frac{1}{2} \\angle Q + \\frac{1}{2} \\angle R + \\angle QOR = 180^\\circ\\), so \\(65^\\circ + \\angle QOR = 180^\\circ\\), hence \\(\\angle QOR = 115^\\circ\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140600269,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "If one side of an equilateral triangle is produced to both sides, then what is the sum of the generated exterior two angles?",
+    "options": "[{\"label\":\"a\",\"text\":\"[There is an image]\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"[There is an image]\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"[There is an image]\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"[There is an image]\",\"is_correct\":false}]",
+    "correctAnswer": "(Answer not provided, but by geometry: Each interior angle of an equilateral triangle is 60°. Exterior angle = 180° - 60° = 120°. Sum of two such exterior angles = 240°.)",
+    "explanation": "Producing a side creates two linear pairs at that vertex. Each exterior angle is 180° minus the interior angle (60°), so each is 120°. Their sum is 240°.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140600411,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "In the figure what is the value of \\(\\angle CAD\\)?",
+    "options": "[{\"label\":\"a\",\"text\":\"[There is an image]\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"[There is an image]\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"[There is an image]\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"[There is an image]\",\"is_correct\":false}]",
+    "correctAnswer": "90°",
+    "explanation": "According to figure, \\(\\angle BAC = 180^\\circ - 60^\\circ - 30^\\circ = 90^\\circ\\). Since \\(\\angle CAD\\) and \\(\\angle BAC\\) are on a straight line, \\(\\angle CAD = 180^\\circ - \\angle BAC = 180^\\circ - 90^\\circ = 90^\\circ\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140600538,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "The lengths of the two sides of a triangle are 3 cm and 8 cm respectively, then what is the length of third side?",
+    "options": [
+      {
+        "label": "a",
+        "text": "6 cm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "4 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "3 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "11 cm",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "By the triangle inequality theorem, the third side must be less than the sum (3+8=11 cm) and greater than the difference (8-3=5 cm). Among the options, only 6 cm satisfies this (5 < 6 < 11).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140600659,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "Which one of the following is regarded as existence of zero dimension?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Straight line",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Surface",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Angle",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Point",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "A point has no length, width, or height—it has zero dimensions. A line has one dimension, a surface has two, and an angle is a measure, not a shape.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140600780,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "If AB = AC of AABC, \\(\\frac{1}{2} \\angle ACD = what (in degree)?\\)",
+    "options": "[{\"label\":\"a\",\"text\":\"[There is an image]\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"[There is an image]\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"[There is an image]\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"[There is an image]\",\"is_correct\":false}]",
+    "correctAnswer": "(Answer not provided, but if triangle ABC is isosceles with AB=AC, then ∠B = ∠C. ∠ACD is exterior at C, equal to ∠A + ∠B. More info needed for exact value.)",
+    "explanation": "The exterior angle \\(\\angle ACD\\) equals the sum of the two opposite interior angles, \\(\\angle A + \\angle B\\). Since AB = AC, \\(\\angle B = \\angle C\\). Without specific angles, a numerical answer can't be determined from the given text.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140600886,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "How many dimensions does a plane have?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Zero",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "One",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Two",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Three",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "A plane is a flat, two-dimensional surface that extends infinitely. It has length and width but no thickness.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140600998,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "Which of the following is three dimensional object?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Ray",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Line segment",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Plane",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Sphere",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "A sphere is a solid, three-dimensional object (like a ball). Ray, line segment, and plane are one- or two-dimensional.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140601193,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "The edges of a surface are —",
+    "options": [
+      {
+        "label": "a",
+        "text": "point",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "line",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "angle",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "triangle",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "A surface (like a face of a 3D shape) is bounded by edges, and edges are line segments.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140601312,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "How many endpoints does a ray have?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "1",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "0",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Infinite",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "A ray starts at an endpoint and extends infinitely in one direction. So it has exactly one endpoint.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140601431,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "How many rays can be drawn from a point?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "0",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "4",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Infinite",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "From a single point, you can draw rays in infinitely many directions.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140601555,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "What is called the angle of which greater than two right angle but less than four right angle?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Obtuse angle",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Supplementary angle",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Complementary angle",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Reflex angle",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "A reflex angle is greater than 180° (two right angles) and less than 360° (four right angles).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140601680,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "What is the value of \\(\\angle ABE?\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "60°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "90°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "120°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "150°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "(Answer not provided. Depends on figure. Often, if lines are parallel, corresponding or alternate angles are equal.)",
+    "explanation": "(Cannot determine without the specific figure showing angles and parallel lines.)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140601797,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "In the figure, if AB || CD and EF is their intersector, then what is the value of the complementary angle of the \\(\\angle CQF\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "150°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "120°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "60°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "30°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "(Answer not provided. Complementary angle means two angles adding to 90°. Need \\(\\angle CQF\\) value first.)",
+    "explanation": "(Cannot determine without the figure showing the measure of \\(\\angle CQF\\).)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140601916,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "Two bisectors of the angles \\(\\angle Q\\) and \\(\\angle R\\) of a triangle PQR intersect at the point O. If \\(\\angle P = 50^\\circ\\), then \\(\\angle QOR = ?\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "40°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "65°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "115°",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "130°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Same as question 3. In \\(\\triangle PQR\\), \\(\\angle Q + \\angle R = 130^\\circ\\). Half-sum is 65°. In \\(\\triangle QOR\\), \\(\\angle QOR = 180^\\circ - 65^\\circ = 115^\\circ\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140602028,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "Which is the half of the supplementary angle of 60°?",
+    "options": [
+      {
+        "label": "a",
+        "text": "30°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "60°",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "90°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "120°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Supplementary angle of 60° is 180° - 60° = 120°. Half of 120° is 60°.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140602177,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "Which is the straight angle?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "90°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "120°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "180°",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "A straight angle is exactly 180°, forming a straight line.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140602319,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "In the figure, if AB || CD, \\(\\angle BEP = what?\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "30°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "40°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "60°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "120°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "(Answer not provided. Depends on figure and given angles.)",
+    "explanation": "(Cannot determine without the specific figure and angle relationships.)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140602440,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "In AABC, E and F are the middle point of AB and AC respectively. What is the length of BC in cm?",
+    "options": [
+      {
+        "label": "a",
+        "text": "4 cm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "8 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "14 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "28 cm",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "By the midpoint theorem, EF || BC and EF = \\(\\frac{1}{2}\\) BC. Given EF = 3x + 5 and BC = 12x - 8. Setting \\(\\frac{1}{2}(12x - 8) = 3x + 5\\) gives 6x - 4 = 3x + 5, so 3x = 9, x = 3. Then BC = 12(3) - 8 = 28 cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140602560,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "In figure, what is the value of \\(\\angle P\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "37°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "65°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "78°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "115°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "(Answer not provided. Requires figure showing angles.)",
+    "explanation": "(Cannot determine without the figure showing triangle angles or exterior angles.)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140602668,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "In figure, if DE || BC, what is the value of \\(\\angle ADE\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "50°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "64°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "66°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "114°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "(Answer not provided. If DE || BC, then \\(\\angle ADE = \\angle ABC\\) (corresponding angles). Need \\(\\angle ABC\\) value.)",
+    "explanation": "(Cannot determine without the figure showing \\(\\angle ABC\\).)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140602781,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "If figure, what is the value of \\(\\angle R\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "25°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "35°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "45°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "75°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "(Answer not provided. Requires figure showing triangle angles.)",
+    "explanation": "(Cannot determine without the figure.)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140602894,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "In figure, what is the value of \\(\\angle LCD7\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "50°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "60°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "70°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "130°",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The text states \\(\\angle LCD = 70^\\circ + 60^\\circ = 130^\\circ\\). This uses the exterior angle theorem: the exterior angle (\\(\\angle LCD\\)) equals the sum of the two opposite interior angles.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140603026,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "Conducting the figure \\(\\angle 2 = \\text{what?}\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "30°",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "60°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "90°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "120°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The text solves: x + 2x + 3x = 180°, so 6x=180°, x=30°. Then for angle y (presumably \\(\\angle 2\\)), 5x + y = 180°, so 150° + y = 180°, hence y = 30°.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140603150,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "In figure, QR = what until?",
+    "options": [
+      {
+        "label": "a",
+        "text": "3",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "9",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "16",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "20",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "(Answer not provided. Likely uses Pythagorean theorem if triangle is right-angled.)",
+    "explanation": "(Cannot determine without the figure and side lengths.)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140603270,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "The two angles of a right angled triangle are given below. Which one is the following combination allows constructing triangle.",
+    "options": [
+      {
+        "label": "a",
+        "text": "63°, 36°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "39°, 70°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "40°, 50°",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "80°, 120°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "In a right triangle, one angle is 90°. The other two must sum to 90° (since 180° - 90° = 90°). Only 40° + 50° = 90°.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140603392,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "In the figure, OQBIS and ONIQUE_ZOQR + \\(\\angle RSM\\) = 1 (Fig.2.10).",
+    "options": [
+      {
+        "label": "a",
+        "text": "110°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "125°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "140°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "180°",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "(Question text is unclear. Possibly \\(\\angle OQR + \\angle RSM = 180°\\) if lines are parallel.)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140603501,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "Sum of the three angles of a triangle is:",
+    "options": [
+      {
+        "label": "a",
+        "text": "One right angle",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Two right angles",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Three right angles",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Four right angles",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The sum of the three interior angles of any triangle is always 180°, which equals two right angles (since 1 right angle = 90°, so 2 right angles = 180°).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140603620,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "Any side of an equilateral triangle is extended which makes an external angle. What is the measurement of this angle?",
+    "options": [
+      {
+        "label": "a",
+        "text": "90°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "120°",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "(Option not shown fully)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Each interior angle of an equilateral triangle is 60°. The exterior angle is the supplementary angle: 180° - 60° = 120°.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140603742,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "In figure, what is the value of \\(\\angle CART\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "40°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "90°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "110°",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "130°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The text states \\(\\angle CART = \\angle ABC + \\angle LCD = 70^\\circ + 40^\\circ = 110^\\circ\\). This uses the exterior angle theorem.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140603868,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "Which one of the following is the complementary angle of \\(90^\\circ - x\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "90°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "180°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "x",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "90° + x",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Complementary angles sum to 90°. So the complement of \\((90^\\circ - x)\\) is \\(90^\\circ - (90^\\circ - x) = x\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140603974,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "Which one of the following is true for \\(\\triangle ABC\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "All + ACC + BC",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "AB + AC + BC",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "(Text incomplete. Likely about AB + AC > BC, which is the triangle inequality.)",
+    "explanation": "In any triangle, the sum of any two sides is greater than the third side. So AB + AC > BC, AB + BC > AC, and AC + BC > AB are all true.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140604081,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "If in the figure PQ | BS —\ni. \\(\\angle ACQ = \\text{corresponding } \\angle CDS\\)\nii. \\(\\angle ACQ = \\text{alternae } \\angle CDS\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "i and ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i and iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii and iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i and iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "(Text incomplete. If PQ || BS, then corresponding angles are equal, and alternate interior angles are equal.)",
+    "explanation": "When two lines are parallel, corresponding angles are equal, and alternate interior angles are equal. Both statements i and ii describe equality of angles, so they could both be true depending on the figure.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140604193,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "In figure, two angles \\(\\angle ZDOT\\) and \\(\\angle ZTX\\) are to each other —\ni. Supplementary\nii. Adjacent\niii. Complementary",
+    "options": [
+      {
+        "label": "a",
+        "text": "I and ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "I and iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "II and iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "II and iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "(Cannot determine without the figure showing how the angles are positioned.)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140604301,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "If in the figure PQ | BS —\n\\(\\angle ACQ = \\text{corresponding } \\angle CDS\\)\n\\(\\angle ACQ = \\text{alternae } \\angle CDS\\)\nWhich one of the following is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "I and ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "I and iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "II and iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "II and iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "(Repetition of Q35. Explanation same: both can be true if lines are parallel.)",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140604502,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "In figure, how does \\(\\angle ZDOT\\) and \\(\\angle ZTX\\) be to each other —\nSupplementary\niii. Adjacent",
+    "options": [
+      {
+        "label": "a",
+        "text": "I and ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "I and iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "II and iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "II and iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "(Repetition of Q36. Cannot determine without figure.)",
+    "explanation": "",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140604734,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "What is the value of \\(\\angle YOZ?\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "55°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "110°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "125°",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "140°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "From Q39, \\(\\angle Y = \\angle Z = 55^\\circ\\). Their bisectors give \\(\\frac{1}{2}\\angle Y = \\frac{1}{2}\\angle Z = 27.5^\\circ\\). In triangle YOZ, \\(\\angle YOZ = 180^\\circ - 27.5^\\circ - 27.5^\\circ = 125^\\circ\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140604849,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "\\( \\angle BDE = ? \\) (Figure: DE || BC and BD || CF)",
+    "options": [
+      {
+        "label": "a",
+        "text": "70°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "100°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "110°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "120°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "(Answer not provided. Depends on given angles in figure.)",
+    "explanation": "(Cannot determine without the specific angle measures in the figure.)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140604970,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "\\(\\angle ABC + \\angle ACB = ?\\) (Based on same figure as Q41)",
+    "options": [
+      {
+        "label": "a",
+        "text": "100°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "120°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "240°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "[Text unclear]",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "(Answer not provided. In any triangle, \\(\\angle ABC + \\angle ACB = 180^\\circ - \\angle BAC\\).)",
+    "explanation": "(Cannot determine without knowing \\(\\angle BAC\\).)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140605083,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "The supplementary angle of \\(\\angle AOD\\) is —\ni. \\(\\angle BOD\\)\nii. \\(\\angle AOC\\)\niii. 145°",
+    "options": [
+      {
+        "label": "a",
+        "text": "i, ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i, ii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii, iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii, iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "(Text incomplete. Supplementary angle of \\(\\angle AOD\\) is \\(180^\\circ - \\angle AOD\\). Need the figure to see which angle equals that.)",
+    "explanation": "(Cannot determine without the figure and measure of \\(\\angle AOD\\).)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140605192,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "What is the sum of complementary angle of \\(\\angle BOC\\) and the reflex angle shown in figure?",
+    "options": [
+      {
+        "label": "a",
+        "text": "380°",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "270°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "215°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "180°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The text states: Reflex angle = \\(360^\\circ - 35^\\circ = 325^\\circ\\). Complementary angle of \\(\\angle BOC\\) (which is 35°) = \\(90^\\circ - 35^\\circ = 55^\\circ\\). Sum = \\(325^\\circ + 55^\\circ = 380^\\circ\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140605307,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "\\(\\angle PDE = ?\\) (Given DE || QR, QR = 6.5 cm)",
+    "options": [
+      {
+        "label": "a",
+        "text": "55°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "60°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "65°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "70°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "(Answer not provided. \\(\\angle PDE\\) corresponds to \\(\\angle PQR\\) if DE || QR. Need \\(\\angle PQR\\) measure.)",
+    "explanation": "(Cannot determine without the measure of \\(\\angle PQR\\).)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140605427,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "DE = ? (Given DE || QR, QR = 6.5 cm, and D and E are midpoints of PQ and PR respectively)",
+    "options": [
+      {
+        "label": "a",
+        "text": "1.6 cm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2 cm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "2.6 cm",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "3.25 cm",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "By the midpoint theorem, if D and E are the midpoints of sides PQ and PR of triangle PQR, then DE || QR and DE = \\(\\frac{1}{2}\\) QR = \\(\\frac{1}{2} \\times 6.5 = 3.25\\) cm.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140605540,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "What is the value of \\(\\angle ACE\\) if BA || CE?",
+    "options": [
+      {
+        "label": "a",
+        "text": "50°",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "60°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "70°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "80°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "If BA || CE, then \\(\\angle ACE\\) and \\(\\angle BAC\\) are alternate interior angles, so they are equal. Given \\(\\angle BAC = 50^\\circ\\), so \\(\\angle ACE = 50^\\circ\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140605662,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "WBAE is the area of \\(\\triangle ABC\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\(6\\sqrt{3}\\) sq. cm.",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "12 sq. cm.",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "24 sq. cm.",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\(12\\sqrt{3}\\) sq. cm.",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "(Text says \"WBAE is the area\" – likely typo for \"What is the area\". Not enough info provided in text to calculate area.)",
+    "explanation": "(Cannot determine without base and height or other dimensions.)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140605766,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "What is the supplementary angle of \\(\\angle BAC\\)? (ABC is equilateral, BC extended to D)",
+    "options": [
+      {
+        "label": "a",
+        "text": "120°",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "90°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "60°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "30°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "In an equilateral triangle, each interior angle is 60°. The supplementary angle of \\(\\angle BAC\\) (60°) is \\(180^\\circ - 60^\\circ = 120^\\circ\\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140605909,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "What is the value of \\(\\angle ABC + \\angle ACD\\)? (ABC equilateral, BC extended to D)",
+    "options": [
+      {
+        "label": "a",
+        "text": "60°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "120°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "150°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "180°",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\(\\angle ABC = 60^\\circ\\). \\(\\angle ACD\\) is the exterior angle at C. For an equilateral triangle, the exterior angle is \\(180^\\circ - 60^\\circ = 120^\\circ\\). Sum = \\(60^\\circ + 120^\\circ = 180^\\circ\\). Alternatively, \\(\\angle ACD = \\angle ABC + \\angle BAC = 60^\\circ+60^\\circ=120^\\circ\\), sum with \\(\\angle ABC\\) is 180°.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140606020,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "\\(\\angle BDE = ?\\) (Given DE || BC and BD || CF)",
+    "options": [
+      {
+        "label": "a",
+        "text": "70°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "100°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "110°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "120°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "(Answer not provided. Same as Q41, depends on figure.)",
+    "explanation": "(Cannot determine without figure.)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140606138,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "\\(\\angle ABC + \\angle ACB = what?\\) (Same figure as Q51)",
+    "options": [
+      {
+        "label": "a",
+        "text": "90°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "100°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "110°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "120°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "(Answer not provided. In any triangle, sum of two angles depends on the third.)",
+    "explanation": "(Cannot determine without knowing \\(\\angle BAC\\).)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140606252,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "If \\(AB = AC\\), what type of triangle is \\(\\triangle ABC\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Isoscales",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Scalene",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Equilateral",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Obtuse angled",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "A triangle with two equal sides (AB = AC) is an isosceles triangle.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140606478,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "If \\(x = 45^\\circ\\) and \\(y = 35^\\circ\\), then \\(\\angle A + \\angle B = ?\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "80°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "105°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "110°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "145°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "(Answer not provided. Need figure to know what x and y represent.)",
+    "explanation": "(Cannot determine without the figure showing which angles are x and y.)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768140606594,
+    "subject": "Mathematics",
+    "chapter": "Lines, Angles and Triangles",
+    "question": "In triangle ABC, if \\(\\angle A = 120^\\circ\\) and \\(\\angle B = 25^\\circ\\), then measurement of exterior angle \\(\\angle ACD = ?\\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "150°",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "155°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "160°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "145°",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "By the exterior angle theorem, the exterior angle \\(\\angle ACD\\) at vertex C equals the sum of the two non-adjacent interior angles: \\(\\angle ACD = \\angle A + \\angle B = 120^\\circ + 25^\\circ = 145^\\circ\\).",
+    "image": null,
+    "language": "en"
+  }
+]

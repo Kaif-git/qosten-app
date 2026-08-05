@@ -1,0 +1,1688 @@
+[
+  {
+    "id": 1768895803711,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "In an electrical motor, the commutator is divided in how many parts?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "3",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "4",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "5",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The commutator is split into two halves, which allows it to reverse the current direction at just the right moment to keep the motor spinning.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895804048,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "Half of the commutator is connected with the electronic source via",
+    "options": [
+      {
+        "label": "a",
+        "text": "Armature",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Brush",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Slip ring",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Magnetic field",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The brushes are the stationary contacts (often made of carbon) that press against the rotating commutator, connecting it to the external power source.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895804151,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "Which work the rectifier will do?",
+    "options": [
+      {
+        "label": "a",
+        "text": "To increase electric current",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "To decrease electric current",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "To increase potential difference",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "To make the electric current unidirectional",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "A rectifier converts alternating current (AC), which flows back and forth, into direct current (DC), which flows in one direction only.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895804258,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "What is the commutator produced by?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Aluminium",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Copper",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Steel",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Iron",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Commutators are usually made of copper because copper is an excellent conductor of electricity, which is necessary for the motor to work efficiently.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895804383,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "In an electrical motor, what kind of wires are used?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Straight wires",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Coiled wires",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Circled, single wire",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Pulled wire",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The wires in an electric motor are coiled (wound into loops) to create a stronger magnetic field when current passes through them, which produces more turning force (torque).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895804489,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "Which flowing device is produced periodic flow from mechanical energy?",
+    "options": [
+      {
+        "label": "a",
+        "text": "AC generator",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Electric motor",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Step up transformer",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Step down transformer",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "An AC generator (or alternator) converts mechanical energy (like from a turbine) into electrical energy, specifically alternating current (AC), which changes direction periodically.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895804591,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "Which diagram correctly shows the direction of induced current when a magnet moves toward a coil?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Current flows clockwise when north pole approaches",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Current flows counterclockwise when north pole approaches",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Current flows clockwise when south pole approaches",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "No current flows when magnet is stationary",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "According to Lenz's law, when the north pole of a magnet approaches a coil, the induced current flows in a direction that creates a magnetic field opposing the approaching north pole. By the right-hand rule, this results in a counterclockwise current (when viewed from the magnet's side).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895804697,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "Temporary voltage created in a closed circuit is called",
+    "options": [
+      {
+        "label": "a",
+        "text": "Induced Current",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Induced Voltage",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Induced Resistance",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Relative Density",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "When a magnet moves near a coil (or vice versa), it creates a temporary voltage in the circuit. This is called induced voltage. If the circuit is closed, this voltage will cause an induced current to flow.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895804816,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "If the relative speed is more, what will happen to the dispersion rate?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Decreases",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Increases",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Does not change",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Increases first then decreases later",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\"Dispersion rate\" likely refers to the rate at which magnetic field lines are cut. A higher relative speed between the magnet and the coil means the magnetic field is changing faster, which increases the induced voltage and current.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895805009,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "The number of turns in the primary coil of a transformer is 50 and the number of turns in the secondary coil is 500, 12V AC is applied in the primary coil, what is the voltage in the secondary coil?",
+    "options": [
+      {
+        "label": "a",
+        "text": "6000V",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "600V",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "120V",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "1.2V",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Using the transformer equation: (Secondary Voltage / Primary Voltage) = (Secondary Turns / Primary Turns). So, Secondary Voltage = (500 / 50) * 12V = 10 * 12V = 120V. This is a step-up transformer.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895805113,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "In a transformer, the voltage of primary coil is 10V and flow of current is 6A. If the voltage of the secondary coil is 20V, then how much current flowing through the secondary coil?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1.4A",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "0.3A",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "2A",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "3A",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "For an ideal transformer (assuming no power loss), Input Power = Output Power. So, (Vp * Ip) = (Vs * Is). Therefore, Is = (Vp * Ip) / Vs = (10V * 6A) / 20V = 60VA / 20V = 3A.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895805225,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "In a transformer diagram, n₁ = 10 turns (primary), n₂ = 50 turns (secondary), and E₂ = 60V (secondary voltage). What is the value of E₁ (primary voltage)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0 volt",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "12 volt",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "50 volt",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "60 volt",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Using the transformer equation: E₁/E₂ = n₁/n₂\nE₁ = E₂ × (n₁/n₂) = 60V × (10/50) = 60V × 0.2 = 12V",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895805335,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "Which one is correct in case of a step-up transformer?",
+    "options": [
+      {
+        "label": "a",
+        "text": "V₁ > V₂",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "n₁ > n₂",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "n₂ > n₁",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "P₁ > P₂",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "In a step-up transformer:\n- Secondary turns (n₂) > Primary turns (n₁)\n- Secondary voltage (V₂) > Primary voltage (V₁)\n- Primary current (I₁) > Secondary current (I₂)\n- Power remains approximately constant (P₁ ≈ P₂) in ideal transformer\nTherefore, n₂ > n₁ is the correct characteristic.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895805457,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "The number of turns of primary and secondary coil of a transformer are 10 and 75 respectively. If the current of primary coil is 5A then what will be the current of secondary coil in the ampere?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.67",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "0.69",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "0.73",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "37.5",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "For an ideal transformer, (Ip / Is) = (Ns / Np). So, Is = Ip * (Np / Ns) = 5A * (10 / 75) = 5A * 0.1333 = 0.666... A ≈ 0.67 A.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895805576,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "In a transformer with fixed primary voltage, if the secondary current is made 3 times larger, what will be the change in the number of turns of primary coil needed?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Half",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2 times",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "3 times",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "6 times",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "For a transformer with fixed primary voltage and power: If secondary current increases 3 times while keeping power constant, the secondary voltage must decrease to 1/3 (since P = VI). Using V_s/V_p = N_s/N_p, if V_s becomes 1/3, then N_s must become 1/3 of its original value relative to N_p. To maintain the same secondary voltage-to-current ratio, the primary turns must increase 3 times.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895805677,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "[there is an image] E1 = 220 V, I1 = 10 A, E2 = 22 V, I2 = ?",
+    "options": "[{\"label\":\"a\",\"text\":\"100A\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"10A\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"1A\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"0.1A\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "Assuming an ideal transformer (power input = power output): P_primary = P_secondary. So, V1 * I1 = V2 * I2. Therefore, I2 = (V1 * I1) / V2 = (220V * 10A) / 22V = 2200 VA / 22 V = 100 A.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895805782,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "The number of turns of the primary and secondary coil of a transformer are 30 and 150 respectively. If the electric current in the secondary coil is 2A what is the electric current in the primary coil?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.1A",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "0.4A",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "2.5A",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10A",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "For an ideal transformer, (Ip / Is) = (Ns / Np). So, Ip = Is * (Ns / Np) = 2A * (150 / 30) = 2A * 5 = 10A.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895805880,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "The number of turns in the primary coil of a transformer is 50 and that of the electric current is 5A. If the number of turns in the secondary coil is 500, what is the current in the secondary coil?",
+    "options": [
+      {
+        "label": "a",
+        "text": "5000A",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "50A",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "2A",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "0.5A",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "For an ideal transformer, (Ip / Is) = (Ns / Np). So, Is = Ip * (Np / Ns) = 5A * (50 / 500) = 5A * 0.1 = 0.5 A.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895805987,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "[there is an image] How much ampere of electricity will flow through the load (R) of the transformer?",
+    "options": "[{\"label\":\"a\",\"text\":\"12\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"24\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"48\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"120\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "The text provides the calculation: Secondary voltage E2 = (n2/n1) * E1 = (25/50) * 240V = 120V. Then, using Ohm's law (I = V/R), the current through the load I2 = E2 / R = 120V / 10Ω = 12A.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895806087,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "In a transformer the voltage of a primary coil is 24V and current 2A. The current of secondary coil is 6A. What is secondary voltage?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.0139 V",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "0.125 V",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "8 V",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "72 V",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "For an ideal transformer, Input Power = Output Power. So, Vp * Ip = Vs * Is. Therefore, Vs = (Vp * Ip) / Is = (24V * 2A) / 6A = 48 VA / 6 A = 8V.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895806210,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "The number of turns in the primary coil of a transformer is 18 and the number of turns in the secondary coil is 90. The current flow in the secondary coil is 0.5A. What is the current flow in the primary coil?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.1A",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "0.5A",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "2A",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "2.5A",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "For an ideal transformer, (Ip / Is) = (Ns / Np). So, Ip = Is * (Ns / Np) = 0.5A * (90 / 18) = 0.5A * 5 = 2.5A.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895806330,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "No. of turns in primary coil is 50 and voltage 210V in a transformer. For no. of turns in the secondary will as 100 the voltage will be",
+    "options": [
+      {
+        "label": "a",
+        "text": "210V",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "105V",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "325V",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "420V",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Using the transformer equation: Vs / Vp = Ns / Np. So, Vs = Vp * (Ns / Np) = 210V * (100 / 50) = 210V * 2 = 420V. This is a step-up transformer.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895806437,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "Based on which of the following is transformer built?",
+    "options": [
+      {
+        "label": "a",
+        "text": "electromagnetic induction",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "viscosity",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "potential difference",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "relative humidity",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "A transformer works on the principle of electromagnetic induction. A changing current in the primary coil creates a changing magnetic field, which induces a voltage in the secondary coil.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895806548,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "In a transformer, the coil in which AC voltage is applied is called",
+    "options": [
+      {
+        "label": "a",
+        "text": "Primary coil",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Secondary coil",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "AC coil",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Tesla coil",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The primary coil is the input coil where the alternating current (AC) voltage source is connected.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895806648,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "In a transformer, the coil from which the electricity is returned is called",
+    "options": [
+      {
+        "label": "a",
+        "text": "Primary Coil",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Secondary Coil",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Tesla Coil",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "AC coil",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The secondary coil is the output coil from which the transformed (stepped-up or stepped-down) electricity is taken for use.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895806764,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "What changes occur in power because of the use of transformers?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Stays constant",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Increases",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Decreases",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Drastically Decreases",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "In an ideal transformer (with 100% efficiency), the power output is equal to the power input. In real transformers, a small amount of power is lost as heat, but the primary function is to change voltage and current, not to change the total power significantly.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895806882,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "In a transformer, the voltage of primary coil is 10V and current 6 A. If the voltage of secondary coil is 20 V; calculate the current of secondary coil?",
+    "options": [
+      {
+        "label": "a",
+        "text": "3A",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "4A",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "5A",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "6A",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "For an ideal transformer, Input Power = Output Power. So, Vp * Ip = Vs * Is. Therefore, Is = (Vp * Ip) / Vs = (10V * 6A) / 20V = 60 VA / 20 V = 3A.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895806983,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "The insulated coils of a transformer are layered with",
+    "options": [
+      {
+        "label": "a",
+        "text": "Some other insulated material",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Half-insulated material",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Good conductor",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Bad conductor",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Transformer coils are insulated with materials like paper, varnish, or enamel to prevent short circuits between the turns of the wire.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895807090,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "The process of exchanging electricity from one coil to another without an electric connection is called",
+    "options": [
+      {
+        "label": "a",
+        "text": "Generator",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Transformer",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Electric motor",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Transistor",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "A transformer transfers electrical energy from one circuit to another through electromagnetic induction, without any direct electrical connection between the two coils.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895807199,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "A square core is used in which one of the machines below?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Transformer",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Generator",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Motor",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Turbine",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Many transformers use a square or rectangular core (often made of laminated iron) to provide a good path for the magnetic field and reduce energy losses.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895807305,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "If a non-insulating wire is not present on a transformer, there is a risk of",
+    "options": [
+      {
+        "label": "a",
+        "text": "Open Circuit",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Close Circuit",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Short Circuit",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Shock Circuit",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "If the wires in the transformer coils are not properly insulated, adjacent turns can touch each other, creating a short circuit. This allows current to flow along an unintended path, which can damage the transformer.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895807428,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "Step-up transformer is used in",
+    "options": [
+      {
+        "label": "a",
+        "text": "Rolling mills",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Radios",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Walkman",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "VCPs",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Step-up transformers are used to increase voltage for efficient long-distance power transmission. Rolling mills (industrial plants) would receive high-voltage power from transmission lines. Devices like radios and Walkmans use low voltage, requiring step-down transformers.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895807546,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "Among the components given below, which is used inside a tape-recorder?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Step-up transformer",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Step-down transformer",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Dynamo",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Generator",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "A tape-recorder (like most household electronics) runs on low-voltage DC. It uses a step-down transformer in its power supply to convert the high-voltage AC from the wall outlet to a lower, safer voltage.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895807648,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "What will be the induced current if the turns of coil is increased?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Zero",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Current will reduce",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Remain constant",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Current will increase",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "More turns in the coil mean there are more loops of wire to cut the magnetic field lines. This results in a greater total induced voltage (Faraday's Law), and if the circuit resistance stays the same, a larger induced current will flow.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895807750,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "What will happen for induce current when number of turns in the coil increases?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Decreasing current flow",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Increasing current flow",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Value of current flow is zero",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Value of current flow will remain unchanged",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Increasing the number of turns in a coil increases the amount of voltage induced (because each turn contributes to the total). A higher induced voltage, with the same circuit resistance, leads to a higher induced current.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895807859,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "The lines of force of cylindrical shaped coil wire is similar to—",
+    "options": [
+      {
+        "label": "a",
+        "text": "U shape magnet",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Ceramic magnet",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Bar magnet",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Horse leg shape magnet",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "A cylindrical coil of wire carrying current (a solenoid) produces a magnetic field pattern very similar to that of a bar magnet, with a distinct north and south pole.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895807963,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "The incident of generating electric current in a circuit by changing magnetic field is called—",
+    "options": [
+      {
+        "label": "a",
+        "text": "Electric induction",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Electromagnetic induction",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Magnetic induction",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Magnetic intensity",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The process of generating an electric current in a closed circuit when the magnetic field passing through the circuit changes is known as electromagnetic induction.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895808165,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "Electricity flows in circular coil, what would be the shape of magnetic field in the center?",
+    "options": [
+      {
+        "label": "a",
+        "text": "tangential",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "linear",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "half circular",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "full circular",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "At the very center of a circular loop carrying current, the magnetic field lines are straight and perpendicular to the plane of the loop. This is often described as linear.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895808263,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "When current is flowed through a coiled cable, the produced magnetic field's direction can be identified by using—",
+    "options": [
+      {
+        "label": "a",
+        "text": "Right hand rule",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Left hand rule",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Thumb rule",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Fist rule",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The Right-Hand Grip Rule (a type of right-hand rule) is used: if you curl the fingers of your right hand in the direction of the conventional current flow around the coil, your thumb will point in the direction of the magnetic field inside the coil (towards the North pole).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895808365,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "Which can be considered a cluster of random small magnets?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Aluminum",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Nickel",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Bronze",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Plastic",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Nickel is a ferromagnetic material. In its unmagnetized state, the magnetic domains (tiny regions that act like small magnets) are aligned randomly. When magnetized, these domains align to create a strong overall magnetic field.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895808483,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "The semi circular copper strips used in D.C. dynamo is called—",
+    "options": [
+      {
+        "label": "a",
+        "text": "Field magnet",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "brush",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "commutator",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "armature",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "In a DC dynamo or motor, the commutator is made of copper and is split into segments (like semi-circular strips). Its job is to convert the alternating current generated in the armature into direct current at the output.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895808622,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "Which of the following is a different quantity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Force",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Work",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Mass",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Power",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Force, work, and power are all derived quantities (they are defined in terms of base quantities). Mass is a fundamental base quantity in physics.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895808734,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "The primary coil of a transformer has number of turns 50, voltage 210V. If the number of turns of the secondary coil is 100, what is the voltage?",
+    "options": [
+      {
+        "label": "a",
+        "text": "210V",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "105V",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "325V",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "420V",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Using the transformer equation: Vs = Vp * (Ns / Np) = 210V * (100 / 50) = 210V * 2 = 420V.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895808842,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "Who made the transistor?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Edison",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Bell",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "John Bardeen",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Fleming",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The transistor was invented in 1947 by John Bardeen, Walter Brattain, and William Shockley at Bell Labs. John Bardeen is one of the key inventors listed.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895808956,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "Which one is correct for step-up transformers?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Increasing voltage",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Increasing current",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Decreasing electrical energy",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Increasing electrical power",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The defining characteristic of a step-up transformer is that it increases the voltage from the primary side to the secondary side.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895809058,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "In a step-up transformer, if the resistance of the primary coil is 2Ω and current is 10A, what is the power loss in the primary coil?",
+    "options": [
+      {
+        "label": "a",
+        "text": "20 W",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "100 W",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "200 W",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "400 W",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Power loss in a resistor is given by P = I²R\nP = (10A)² × 2Ω = 100 × 2 = 200W",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895809158,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "For a step up transformer- i. V_s > V_p ii. n_s > n_p iii. I_s > I_p Which one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i and ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i and iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii and iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii and iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "In a step-up transformer:\n- Statement i is correct: Secondary voltage (V_s) is greater than primary voltage (V_p)\n- Statement ii is correct: Secondary turns (n_s) is greater than primary turns (n_p)\n- Statement iii is incorrect: Secondary current (I_s) is LESS than primary current (I_p) because power is conserved and voltage increases",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895809274,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "Magnets - i. Magnets of like polarity repulse each other ii. Magnets of opposite polarity attract each other iii. Poles can be separated Which of the following is true?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i and ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i and iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii and iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii and iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "- Statement i is correct: Like poles (N-N or S-S) repel each other\n- Statement ii is correct: Opposite poles (N-S) attract each other\n- Statement iii is incorrect: Magnetic poles cannot be separated; if you break a magnet, each piece becomes a new magnet with both north and south poles",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895809389,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "With electricity, one can produce i. Nuclear energy ii. Magnet iii. Heat Which one of the following is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i and ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i and iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii and iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii and iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "- Statement i is incorrect: Nuclear energy comes from nuclear reactions (fission/fusion), not from electricity\n- Statement ii is correct: Electricity flowing through a coil can create an electromagnet\n- Statement iii is correct: Electricity produces heat when flowing through a resistor (Joule heating)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895809494,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "Induced voltage or induced current can be increased in the following way- i. Increasing the number of coil ii. Moving the magnet or the coil quickly towards or away from electric circuit iii. Increasing the polar power of magnet Which one of the following is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i only",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i and ii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i and iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii and iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "- Statement i is correct: More coil turns means more induced voltage (Faraday's law)\n- Statement ii is correct: Faster relative motion means the magnetic field changes more rapidly, inducing greater voltage\n- Statement iii is correct: A stronger magnet (greater magnetic field strength) produces greater induced voltage",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895809594,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "In case of magnetic lines of force- i. they never intersect each other ii. its number increases the magnetic energy iii. its direction can be indicated by using left handed rule Which of the following is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i only",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i and ii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii and iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii and iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "- Statement i is correct: Magnetic field lines never intersect because at any point there can only be one direction of the magnetic field\n- Statement ii is correct: The density of magnetic field lines indicates the strength of the magnetic field; more lines mean stronger field\n- Statement iii is incorrect: The right-hand rule (not left-hand rule) is used to determine the direction of magnetic field lines",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895810983,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "In a transformer diagram with N_p = 500 turns (primary), N_s = 200 turns (secondary), V_p = 240V (primary voltage), and I_p = 6A (primary current), which statements are correct?\ni. I_s = 15A\nii. N_p = 500\niii. Voltage decreases",
+    "options": [
+      {
+        "label": "a",
+        "text": "i and ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i and iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii and iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii and iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "- Statement i: Using I_s = I_p × (N_p/N_s) = 6A × (500/200) = 6A × 2.5 = 15A ✓\n- Statement ii: Given that N_p = 500 turns ✓\n- Statement iii: Since N_s < N_p, this is a step-down transformer, so voltage decreases (V_s < V_p) ✓\nAll three statements are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895811094,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "Observe the following stem and answer the question no.92 and 93 No. of turns of the primary coil of a transformer is 550. No of turns in secondary coil is 125. Provide 220 V AC in primary coil. How much voltage produce in secondary coil?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.02 V",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "50 V",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "312.50 V",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "968 V",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Using the transformer equation: V_s = V_p * (N_s / N_p) = 220V * (125 / 550) = 220V * (0.22727...) = 50V.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768895811201,
+    "subject": "Physics",
+    "chapter": "Magnetic Effects of Current",
+    "question": "How much maximum current flows in secondary coil when maximum 5A current flows in primary coil?",
+    "options": [
+      {
+        "label": "a",
+        "text": "55 A",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "50 A",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "22 A",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "0.02 A",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Assuming an ideal transformer and maximum currents: I_s(max) = I_p(max) * (N_p / N_s) = 5A * (550 / 125) = 5A * 4.4 = 22A.",
+    "image": null,
+    "language": "en"
+  }
+]

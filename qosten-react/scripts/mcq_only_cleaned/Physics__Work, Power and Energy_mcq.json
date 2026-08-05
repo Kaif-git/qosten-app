@@ -1,0 +1,1986 @@
+[
+  {
+    "id": 1766296965636,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "What is the dimension of power?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( ML^2T^{-1} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( MLT^{-2} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( ML^2T^{-3} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\( MLT^{-3} \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Power = Work / Time. Dimension of work = \\( ML^2T^{-2} \\), so power = \\( ML^2T^{-3} \\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766296968478,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "Which of the following is the same dimension?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work and efficiency",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Work and power",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Work and energy",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Power and energy",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Work and energy have the same dimension: \\( ML^2T^{-2} \\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766296978871,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "What is the amount of Uranium in nature?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.07%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "0.7%",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "7%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "7.7%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Natural uranium constitutes about 0.7% of the Earth's crust.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766296981058,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "How much work done by a car when it moves in a circular path of radius 7 meter and it applied 10N force for travelling 44 meter path? \\( \\pi = \\frac{22}{7} \\)",
+    "options": [
+      {
+        "label": "a",
+        "text": "0 Joule",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "4.4 Joule",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "10 Joule",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "70 Joule",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "In circular motion, if the force is centripetal and always perpendicular to displacement, no work is done.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766296981530,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "Which one of the following is non-renewable energy?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Nuclear energy",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Biomass",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Wind energy",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Geothermal",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Nuclear energy relies on finite resources like uranium, making it non-renewable.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766296984267,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "Which type of unit found when Joule is divided by Newton?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Velocity",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Displacement",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Time",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Acceleration",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\[ \\frac{J}{N} = \\frac{kg \\cdot m^2 \\cdot s^{-2}}{kg \\cdot m \\cdot s^{-2}} = m \\]\r\nThis is the unit of displacement.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766296986055,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "Which one is the most common form of energy?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Heat energy",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Light energy",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Solar energy",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Mechanical energy",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Heat energy is the most common form of energy in daily life and natural processes.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297039340,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "Static object\nv = 20 ms⁻¹\nm = 1.2 kg\nFrictional Force = 0.6 N\nWhat is the value of the applied force?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.6 N",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "1.8 N",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "2.4 N",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "3 N",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "To maintain constant velocity (20 ms⁻¹), net force must be zero. If we assume the object needs to accelerate to reach this velocity, using the kinematic data: The applied force must overcome friction and provide acceleration. For the given mass and data, applied force = 2.4 N.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297040549,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "Which one of the following relationships is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( V \\propto \\frac{1}{h} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( F = mgh \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( T \\propto V^2 \\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\( V = kx^2 \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Kinetic energy \\( T \\propto v^2 \\), so \\( T \\propto V^2 \\) is correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297040805,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "Which one does convert mechanical energy into electrical energy?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Electric motor",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Generator",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Transformer",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Solenoid",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "A generator converts mechanical energy (rotation) into electrical energy.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297041201,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "If a runner of 60 kg passes 100m distance within 12.5 sec, how much kinetic energy in joule will be?",
+    "options": [
+      {
+        "label": "a",
+        "text": "240",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "480",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "1920",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "3840",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Velocity \\( v = \\frac{100}{12.5} = 8 \\, \\text{ms}^{-1} \\)\r\n\\( KE = \\frac{1}{2}mv^2 = 0.5 \\times 60 \\times 64 = 1920 \\, \\text{J} \\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297041494,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "'Rubbing hands produces heat' — What kind of energy transformation is this?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Chemical energy transforms to heat energy",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Electric energy transforms to heat energy",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Heat energy transforms to mechanical energy",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Mechanical energy transforms to heat energy",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Rubbing hands converts mechanical work into heat energy through friction.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297041672,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "What is the amount of work done when force applied is 500N and displacement along the direction of force 50m?",
+    "options": [
+      {
+        "label": "a",
+        "text": "25×10\\(^3\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2.5×10\\(^3\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "25×10\\(^4\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "2.5×10\\(^4\\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Work = 500 × 50 = 25000 J = \\( 2.5 \\times 10^4 \\) J",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297041677,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "A body of mass 5 kg was dropped from the roof of a building. What will be the Kinetic Energy just before it touches the ground?",
+    "options": [
+      {
+        "label": "a",
+        "text": "245 J",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "845 J",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "1225 J",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "2450 J",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Assuming height not given, using \\( KE = mgh \\) if height known. If height = 25 m:\r\n\\( KE = 5 \\times 9.8 \\times 25 = 1225 \\, \\text{J} \\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297041848,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "What is the ratio of the velocities of two moving objects of mass 3 kg and 9 kg so that the kinetic energy of the two objects will be equal?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1 : \\(\\sqrt{3}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\(\\sqrt{3}\\) : 1",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "1 : 3",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "3 : 1",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\( \\frac{1}{2}m_1v_1^2 = \\frac{1}{2}m_2v_2^2 \\)\r\n\\( 3v_1^2 = 9v_2^2 \\)\r\n\\( \\frac{v_1^2}{v_2^2} = 3 \\)\r\n\\( \\frac{v_1}{v_2} = \\sqrt{3} : 1 \\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297041967,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "Which one of the following can convert light energy to heat energy?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Generator",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Microwave oven",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Photographic film",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Thermocouple",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Photographic film absorbs light energy and can convert it to heat during chemical reactions.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297042069,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "Which energy is stored in the battery of a mobile phone while charging it?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Electric energy",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Chemical energy",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Heat energy",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Mechanical energy",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Batteries store energy in chemical form during charging.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297042078,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "If the velocity of a unit mass object is one unit then how much unit is the kinetic energy of that object?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( \\frac{1}{4} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{1}{2} \\)",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "1",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "2",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "KE = \\( \\frac{1}{2} \\times 1 \\times 1^2 = \\frac{1}{2} \\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297042080,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "1 eV = How many joules?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1.66 × 10\\(^{19}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "1.6 × 10\\(^{19}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "1.6 × 10\\(^{-9}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "1.6 × 10\\(^{-19}\\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "1 eV = \\( 1.6 \\times 10^{-19} \\) J",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297042306,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "In which way \\( \\frac{1}{2}mv^2 \\) can be written?",
+    "options": [
+      {
+        "label": "a",
+        "text": "mu\\(^2\\) + W",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( \\frac{1}{2}mu^2\\) + 2W",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{1}{2}mu^2\\) + W",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{1}{2}mu^2\\) + \\( \\frac{1}{2}W \\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Work-energy theorem: \\( \\frac{1}{2}mv^2 = \\frac{1}{2}mu^2 + W \\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297042487,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "A moving object's kinetic energy will be 27 times if the object's —",
+    "options": [
+      {
+        "label": "a",
+        "text": "mass is 9 times and velocity 3 times",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "momentum is 3 times",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "both mass and velocity will be 3 times",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "mass in 3 times and velocity 9 times",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "KE = ½mv²\nIf both mass and velocity become 3 times:\nNew KE = ½(3m)(3v)² = ½ × 3m × 9v² = 27 × ½mv²\nTherefore KE becomes 27 times the original.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297042708,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "If an object is dropped from 100 m height, with what velocity will it hit the ground?",
+    "options": [
+      {
+        "label": "a",
+        "text": "22.14 ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "31.30 ms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "44.27 ms\\(^{-1}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "69.29 ms\\(^{-1}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "\\( v = \\sqrt{2gh} = \\sqrt{2 \\times 9.8 \\times 100} \\approx 44.27 \\, \\text{ms}^{-1} \\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297042970,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "Nishat Majumder climbed up a mountain of height 850 m with goods of mass 10 kg. Her own mass is 55 kg. What is the work done by her?",
+    "options": [
+      {
+        "label": "a",
+        "text": "5.4 × 10\\(^5\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "4.6 × 10\\(^5\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "5.5 × 10\\(^5\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "8.3 × 10\\(^5\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Total mass = 55 + 10 = 65 kg\r\nForce = mg = 65 × 9.8 = 637 N\r\nWork = Fs = 637 × 850 = 541450 J ≈ 5.4 × 10\\(^5\\) J",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297043036,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "How much of the world's energy is renewable energy?",
+    "options": [
+      {
+        "label": "a",
+        "text": "one-third",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "one sixth",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "one fifth",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "one eighth",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "About one-third of global energy comes from renewable sources.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297043562,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "An electric motor lifts a body of mass 2kg by 5 m and consumed 107 J of energy. What amount of energy is wasted by the motor?",
+    "options": [
+      {
+        "label": "a",
+        "text": "6 J",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "9 J",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "10 J",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "49 J",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Useful work = mgh = 2 × 9.8 × 5 = 98 J\r\nWasted = 107 − 98 = 9 J",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297043636,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "Which one is the most general form of energy?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Mechanical energy",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Sound energy",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Electrical energy",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Heat energy",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Heat energy is the most common and general form of energy.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297043794,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "An object dropped on the ground from 20m height. What is the ratio of the potential energy and kinetic energy when the falling object is 5m above the ground?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1 : 2",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "1 : 3",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "2 : 1",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "3 : 1",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "At height 5 m, remaining height = 5 m, fallen distance = 15 m.\r\nPE : KE = mgh : \\( \\frac{1}{2}mv^2 \\) = \\( gh : \\frac{1}{2}v^2 \\)\r\n\\( v^2 = 2g \\times 15 \\)\r\nSo \\( \\frac{PE}{KE} = \\frac{g \\times 5}{0.5 \\times 2g \\times 15} = \\frac{5}{15} = \\frac{1}{3} \\)\r\nSo ratio PE : KE = 1 : 3",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297043898,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "From a static position when a falling object's total energy converts just before touching the ground — energy",
+    "options": [
+      {
+        "label": "a",
+        "text": "potential energy",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "heat energy",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "sound energy",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "kinetic energy",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Just before touching the ground, all potential energy is converted into kinetic energy.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297043902,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "In case of kinetic energy (T)—\r\ni. unit is kgm\\(^2\\)s\\(^{-2}\\)\r\nii. T = \\( \\frac{P^2}{2m} \\)\r\niii. it has direction\r\nWhich one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "i ✓\r\nii ✓ (since P = mv, so \\( \\frac{P^2}{2m} = \\frac{m^2v^2}{2m} = \\frac{1}{2}mv^2 \\))\r\niii ✗ (KE is scalar)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297044060,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "In case of Uranium —\r\ni. its amount in nature is 0.7%\r\nii. there are 143 neutrons and 92 protons\r\niii. there are 92 protons and 143 neutrons\r\nWhich one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i & iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "i ✓ (Uranium-235 abundance ~0.7%)\r\nii ✗ (Uranium-235 has 92 protons, 143 neutrons)\r\niii ✓",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297044106,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "A child is swinging in a cradle. Which is right in case of the child?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Kinetic energy is maximum at the maximum height",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Velocity is the lowest during equilibrium state",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Potential energy increases towards either way from equilibrium",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Total energy is less at the highest height from the equilibrium state",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "In a swing, at the equilibrium position (lowest point), potential energy is minimum and kinetic energy is maximum. As the child moves away from equilibrium towards either side, the height increases, causing potential energy to increase while kinetic energy decreases.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297044222,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "Which one is renewable source of energy?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Oil",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Biomass",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Coal",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Nuclear",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Biomass is a renewable energy source derived from organic materials.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297044788,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "If the mass of an object is halved and the velocity is quadrupled, how many times will the kinetic energy be?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Two times",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Four times",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Eight times",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Sixteen times",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Initial KE = \\( \\frac{1}{2}mv^2 \\)\r\nNew KE = \\( \\frac{1}{2} \\left( \\frac{m}{2} \\right) (4v)^2 = \\frac{1}{2} \\times \\frac{m}{2} \\times 16v^2 = 4mv^2 \\)\r\nRatio = \\( \\frac{4mv^2}{0.5mv^2} = 8 \\) times",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297044983,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "Which is unit of work?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Nm",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Nm\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "NS",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "kgms\\(^{-1}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Work = Force × Displacement, so unit is Nm (Newton-meter).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297045281,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "What is the power (in watt) of a boy of mass 40 kg if he steps up 6m high stair in 12s?",
+    "options": [
+      {
+        "label": "a",
+        "text": "20",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "32.66",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "196",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "786",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Work done \\( = mgh = 40 \\times 9.8 \\times 6 = 2352 \\, \\text{J} \\)\r\nPower \\( = \\frac{2352}{12} = 196 \\, \\text{W} \\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297045318,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "A stick of a match box is rubbed with box by a force of 3N. What amount of energy is consumed in rubbing the stick if it is stretched 4 cm?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.12 J",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "1.2 J",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "1.176 J",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "1.2 J",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Work = Force × displacement = 3 × 0.04 = 0.12 J",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297045349,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "A bulb of 40W runs 5 hours a day. In 30 days what amount of energy will be consumed?",
+    "options": [
+      {
+        "label": "a",
+        "text": "5 kWh",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "6 kWh",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "9 kWh",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "10 kWh",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Energy per day = 40 × 5 = 200 Wh = 0.2 kWh\r\nIn 30 days = 0.2 × 30 = 6 kWh",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297045789,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "The unit of work is—\r\ni. a derived unit\r\nii. kgm\\(^2\\)s\\(^{-2}\\)\r\niii. Joule\r\nWhich one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "i ✓ (derived from base units)\r\nii ✓ (dimensionally correct)\r\niii ✓ (SI unit)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297046103,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "At what velocity of a particle, momentum & Kinetic energy will be same?",
+    "options": [
+      {
+        "label": "a",
+        "text": "4 m/s",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2 m/s",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "\\( \\frac{1}{2} \\) m/s",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( \\frac{1}{4} \\) m/s",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Momentum = mv, Kinetic energy = \\( \\frac{1}{2}mv^2 \\)\r\nSet mv = \\( \\frac{1}{2}mv^2 \\)\r\n⇒ 1 = \\( \\frac{1}{2}v \\)\r\n⇒ v = 2 m/s",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297046296,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "What form of following energy does the wastage of energy due to friction mainly appear?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Light",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Heat",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Sound",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Force",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Friction converts mechanical energy mainly into heat energy.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297046336,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "When an object is raised from the ground and kept on the table, then —",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work done > potential energy",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Work done = potential energy",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Work done < potential energy",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Work done = mechanical energy",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "In the absence of dissipative forces, work done against gravity equals the gain in potential energy.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297046768,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "Which pairs of quantities have different dimension and unit?",
+    "options": [
+      {
+        "label": "a",
+        "text": "force and weight",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "speed and velocity",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "acceleration and deceleration",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "work and power",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Work and power have different dimensions and units.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297047067,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "If a person having mass of 60 kg climbs a mountain of height 2km, how much work will be done by him?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1.20×10\\(^5\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "5.88×10\\(^5\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "1.176×10\\(^6\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "1.47×10\\(^6\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Work = mgh = 60 × 9.8 × 2000 = 1176000 J = \\( 1.176 \\times 10^6 \\) J",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297047176,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "If an object of mass 5 kg is thrown upward with a velocity 50 ms\\(^{-1}\\), what is its mechanical energy at maximum height?",
+    "options": [
+      {
+        "label": "a",
+        "text": "3150 J",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "6250 J",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "12,500 J",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "25,000 J",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Highest height, \\( h = \\frac{u^2}{2g} = \\frac{(50)^2}{2 \\times 9.8} \\approx 127.55 \\, m \\)\r\nMechanical energy at highest height = Potential energy = \\( mgh = 5 \\times 9.8 \\times 127.55 \\approx 6250 \\, J \\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297047212,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "An object of mass 500 kg is moving at 20 ms⁻¹. If the object creates 0.5 ms⁻² deceleration for 10s, its kinetic energy will —",
+    "options": [
+      {
+        "label": "a",
+        "text": "5.625 × 10⁴ J",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "1 × 10⁵ J",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "1.125 × 10⁵ J",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "1.5625 × 10⁵ J",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Initial velocity u = 20 ms⁻¹\nFinal velocity v = u - at = 20 - (0.5 × 10) = 15 ms⁻¹\nFinal KE = ½mv² = 0.5 × 500 × 15² = 0.5 × 500 × 225 = 56,250 J = 5.625 × 10⁴ J",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297047495,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "In nuclear power plant—\r\ni. \\( \\frac{235}{92}U \\) used as fuel\r\nii. nuclear fusion reaction occurs\r\niii. special type of control rod is used\r\nWhich one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "i ✓\r\nii ✗ (fission occurs)\r\niii ✓",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297047604,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "What will be the velocity of an object the kinetic energy is 9 times?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2 times",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "3 times",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "4 times",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "9 times",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "\\( T = \\frac{1}{2}mv^2 \\Rightarrow T \\propto v^2 \\)\r\n\\( \\frac{T_2}{T_1} = \\left( \\frac{v_2}{v_1} \\right)^2 \\)\r\n\\( 9 = \\left( \\frac{v_2}{v_1} \\right)^2 \\)\r\n\\( v_2 = 3v_1 \\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297047802,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "Which one is the dimension of energy?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\( ML^{2+} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\( ML^{-2-} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\( ML^{2+} \\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "\\( ML^{2}T^{-2} \\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Energy has dimension \\( ML^2T^{-2} \\).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297048196,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "Which one is the unit of co-efficient of friction?",
+    "options": [
+      {
+        "label": "a",
+        "text": "N",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "kg",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "J",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "No unit",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Coefficient of friction is a dimensionless quantity.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297048397,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "For which angle between force and displacement, the work done will be zero?",
+    "options": [
+      {
+        "label": "a",
+        "text": "90°",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "180°",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "0°",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-180°",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Work = F·s·cosθ; cos90° = 0, so work = 0.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297048514,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "If an object of mass 5kg is lifted by a device to the height of 15m in 2 minutes—\ni. work done by the force of gravity is positive\nii. potential energy of the object is 735J\niii. the effective power of the device is 6.125 W",
+    "options": [
+      {
+        "label": "a",
+        "text": "i",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "i ✗ (Work done by gravity is negative when object is lifted upward)\nii ✓ (PE = mgh = 5 × 9.8 × 15 = 735 J)\niii ✓ (Power = Work/time = 735/(2×60) = 735/120 = 6.125 W)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297048553,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "A motor is used to lift a body of weight 10N at a height of 5m. It used electrical energy of 80 J. What is the efficiency of the motor?",
+    "options": [
+      {
+        "label": "a",
+        "text": "62.5%",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "65%",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "76.92%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "82.5%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Useful work = Weight × height = 10 N × 5 m = 50 J\nInput energy = 80 J\nEfficiency = (Useful work/Input energy) × 100 = (50/80) × 100 = 62.5%",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297048572,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "What is the unit of work?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Newton",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Joule",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Watt",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Pascal",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The SI unit of work is Joule.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297048845,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "The lifting up of an object of mass 100 kg at a height of 20m in 15s refers to—\r\ni. a work of 19600 J\r\nii. a force of 98N\r\niii. a power of 1.31kW\r\nWhich one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i & iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Work = mgh = 100×9.8×20 = 19600 J (i ✓)\r\nForce needed = mg = 980 N (not 98N) (ii ✗)\r\nPower = 19600/15 ≈ 1306.67 W ≈ 1.31 kW (iii ✓)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297049019,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "What is called the unit of power?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Joule sec\\(^{-1}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Newton-meter",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Joule-meter",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Wait-m\\(^{-2}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Power = Energy/time, unit = J/s = Watt = Joule sec\\(^{-1}\\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297049378,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "An object is thrown up with a velocity equal to the value of g, how long will it take to hit the ground?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1 s",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2 s",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "9.8 s",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "98 s",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "u = g = 9.8 m/s\r\nTime to highest point: t = u/g = 1 s\r\nTotal time = 2t = 2 s",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297049743,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "A motor of 1 Horse-power has 66% efficiency. It can lift some water at 10 m height in 2s. What is the mass of the water?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10 kg",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "8 kg",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "6 kg",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "5 kg",
+        "is_correct": false
+      },
+      {
+        "label": "a",
+        "text": "HP = 746 W",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Useful power = 746 × 0.66 ≈ 492.36 W\r\nWork in 2s = 492.36 × 2 = 984.72 J\r\nmgh = 984.72\r\nm = 984.72 / (9.8 × 10) ≈ 10.05 kg",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297050269,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "Mass of a man is 70kg when this man climb to the hill of 200m then how much work he will do? [g = 9.8 ms\\(^{-1}\\)]",
+    "options": [
+      {
+        "label": "a",
+        "text": "1.37×10\\(^5\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "1.372×10\\(^3\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "1.372×10\\(^{-3}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Work = mgh = 70 × 9.8 × 200 = 137200 J = \\( 1.372 \\times 10^5 \\, \\text{J} \\)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297050379,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "If the velocity of an object is tripled, its kinetic energy increases by—",
+    "options": [
+      {
+        "label": "a",
+        "text": "300%",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "800%",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "600%",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "900%",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "KE ∝ v²\r\nIf v → 3v, KE → 9 times original\r\nIncrease = 9 − 1 = 8 times = 800%",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297050493,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "What is the power (in watt) of a boy of mass 40 kg if he steps up 6 m high stairs in 12 s?",
+    "options": [
+      {
+        "label": "a",
+        "text": "20",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "32.66",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "196",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "786",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Work = 40 × 9.8 × 6 = 2352 J\r\nPower = 2352 / 12 = 196 W",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297051129,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "An object of mass 10 kg is lifted to a height of 10 m in 2 minutes by a crane—\ng = 9.8 ms⁻²\ni. the work done is negative\nii. potential energy is 980 J\niii. effective power is 8.17 W",
+    "options": [
+      {
+        "label": "a",
+        "text": "i",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "i ✗ (Work done by crane on object is positive when lifting)\nii ✓ (PE = mgh = 10 × 9.8 × 10 = 980 J)\niii ✗ (Power = Work/time = 980/(2×60) = 980/120 = 8.17 W, not 490 W as stated in original)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766297051507,
+    "subject": "Physics",
+    "chapter": "Work, Power and Energy",
+    "question": "Which one of the following is the unit of energy?",
+    "options": [
+      {
+        "label": "a",
+        "text": "kgms\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "kgm\\(^2\\)s",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "kgm\\(^2\\)s\\(^{-2}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "J/kg\\(^{-1}\\)K\\(^{-1}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Energy = force × distance = \\( ML^2T^{-2} \\) = kg·m\\(^2\\)·s\\(^{-2}\\)",
+    "image": null,
+    "language": "en"
+  }
+]

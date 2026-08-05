@@ -1,0 +1,2025 @@
+[
+  {
+    "id": 1765638605605,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "Velocity of a car is 18 ms^{-1}. It starts getting a retardation of 2 ms^{-2} after its break being pressed. What would be its velocity after 3 seconds?",
+    "options": [
+      {
+        "label": "a",
+        "text": "27 ms^{-1}",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "12 ms^{-1}",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "v = u - at = 18 - (2 \\times 3) = 18 - 6 = 12 \\text{ ms}^{-1}",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638606425,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "What kind of motion of the wheel of a bicycle running at a uniform velocity is?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Linear",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Periodic",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The wheel rotates repeatedly in a cyclic manner, so it is periodic motion.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638607624,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "If a moving fan is switched off, what will be the type of motion of the blades of the fan?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Circular",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Periodic",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Translational",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Harmonic",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The blades slow down and stop, but while moving, their motion is periodic (rotational).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638607727,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "What type of motion do the wheels of a moving car with uniform acceleration have?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Circular",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Translational",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The wheels rotate about their axis, so they undergo circular motion.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638607873,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "What will be the displacement of a person if he moves 2.5 times around a circular field of radius 100m?",
+    "options": [
+      {
+        "label": "a",
+        "text": "200 m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "628 m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "1571 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "100 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Displacement is the shortest distance between start and end points. After 2.5 rounds, the person is at the opposite end of the diameter. Displacement = Diameter = 2 × 100 = 200 m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638607874,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "A player throws a ball up with the velocity 72 kmh^{-1} vertically. What will be the maximum height the ball will travel?",
+    "options": [
+      {
+        "label": "a",
+        "text": "40.81 m",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "20.41 m",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "14.69 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "7.34 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "u = 72 \\text{ km/h} = 20 \\text{ ms}^{-1}, \\quad g = 9.8 \\text{ ms}^{-2} v^2 = u^2 - 2gh \\implies 0 = 20^2 - 2 \\times 9.8 \\times h h = \\frac{400}{19.6} \\approx 20.41 \\text{ m}",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638608179,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "Velocity of a body moving with uniform acceleration from rest is —",
+    "options": [
+      {
+        "label": "a",
+        "text": "proportional to the square root of time",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "proportional to the square root of displacement",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "proportional to the square of time",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "proportional to the square of displacement",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "From  v^2 = 2as ,  v \\propto \\sqrt{s}  when  u = 0 .",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638608476,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "Which of the following are vector quantities?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Acceleration, speed",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Mass, time",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Displacement, velocity",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Pressure, luminous intensity",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Displacement and velocity have both magnitude and direction, so they are vector quantities.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638608902,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "Which of the following is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "h \\propto t^2",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "h \\propto t",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "For a freely falling body from rest,  h = \\frac{1}{2}gt^2 , so  h \\propto t^2 .",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638608972,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "If a freely falling body travels 50 m in 5 sec then how much time in second will need to travel the distance of 72 meter?",
+    "options": [
+      {
+        "label": "a",
+        "text": "6",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "7.2",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "9.5",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "12",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "From h = ½gt², g = 2h/t² = (2 × 50)/5² = 4 ms⁻². For h = 72 m: 72 = ½ × 4 × t² ⇒ t² = 36 ⇒ t = 6 s.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638608977,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "A car moving at 36 km/h is stopped in 50 seconds. What is the depreciation of the car?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-0.2 ms⁻²",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "0.2 ms⁻²",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "0.72 ms⁻²",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-0.72 ms⁻²",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "u = 36 km/h = 10 ms⁻¹, v = 0, t = 50 s. a = (v-u)/t = (0-10)/50 = -0.2 ms⁻².",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638610640,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "What is called the rate of change of distance?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Displacement",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Velocity",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Speed",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Acceleration",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Speed = Distance/Time.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638610936,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "What is the maximum height that an object will reach if it is thrown upwards with initial velocity u ms^{-1}?",
+    "options": [
+      {
+        "label": "a",
+        "text": "\\frac{u}{2g} \\text{ m}",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "\\frac{2g}{u} \\text{ m}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "\\frac{u^2}{2g} \\text{ m}",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "\\frac{2u}{g} \\text{ m}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "From  v^2 = u^2 - 2gH  and  v = 0  at max height: H = \\frac{u^2}{2g}",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638611040,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "The velocity of a car increases from rest and becomes 90 km/hour in 2 minutes. What is the acceleration of the car?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.108 ms⁻²",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "0.128 ms⁻²",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "0.208 ms⁻²",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "0.228 ms⁻²",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "u = 0, v = 90 km/h = (90 × 1000)/3600 = 25 ms⁻¹, t = 2 min = 120 s. a = (v-u)/t = (25 - 0)/120 = 0.2083 ≈ 0.208 ms⁻².",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638611134,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "The motion of an object hanging from a spring is—",
+    "options": [
+      {
+        "label": "a",
+        "text": "Translational motion",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Circular motion",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Linear motion",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Oscillatory motion",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "An object hanging from a spring moves back and forth about a mean position, which is oscillatory motion.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638611217,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "What the diagram show?",
+    "options": [
+      {
+        "label": "a",
+        "text": "In uniform deceleration",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "In uniform acceleration",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "In uniform velocity",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "In non-uniform acceleration",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The graph (not shown) likely shows a straight line with positive slope on a velocity-time graph, indicating uniform acceleration.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638611469,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "In case of a freely falling object from rest-",
+    "options": [
+      {
+        "label": "a",
+        "text": "velocity is proportional to the square of the travelled distance",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "the travelled distance is proportional to the square root of velocity",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "the travelled distance is proportional to the square root of time",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "velocity is proportional to the time",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "For free fall from rest:  v = gt , so  v \\propto t .",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638611814,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "What will be the velocity of an object moving with an acceleration of 0.2 ms^{-2} from rest after it has travelled a distance of 2000 cm?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2.82 ms^{-1}",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "8 ms^{-1}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "28.28 ms^{-1}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "800 ms^{-1}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "s = 2000 \\text{ cm} = 20 \\text{ m}, \\quad u = 0, \\quad a = 0.2 \\text{ ms}^{-2} v^2 = u^2 + 2as = 0 + 2 \\times 0.2 \\times 20 = 8 v = \\sqrt{8} = 2.828 \\approx 2.82 \\text{ ms}^{-1}",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638611869,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "How much distance will be covered in 5th sec by a free falling body?",
+    "options": [
+      {
+        "label": "a",
+        "text": "122.5 m",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "78.4 m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "44.1 m",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "25 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Distance in nth second:  s_n = u + \\frac{g}{2}(2n-1) . For free fall from rest,  u = 0, n = 5, g = 9.8 \\text{ ms}^{-2} : s_5 = 0 + \\frac{9.8}{2} (2 \\times 5 - 1) = 4.9 \\times 9 = 44.1 \\text{ m}",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638611910,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "If an object is thrown vertically upward with a velocity 100 ms^{-1}, at what maximum height will it reach?",
+    "options": [
+      {
+        "label": "a",
+        "text": "510 m",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "410 m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "210 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "110 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "v^2 = u^2 - 2gH \\implies 0 = 100^2 - 2 \\times 9.81 \\times H H = \\frac{10000}{19.62} \\approx 509.7 \\approx 510 \\text{ m}",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638612196,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "What type of motion is the vibration of heart?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Harmonic motion",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Translational motion",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Circular motion",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Periodic motion",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The heart vibrates (beats) at regular intervals, making it periodic motion.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638612421,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "72 km/h = What ms⁻¹?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10 ms⁻¹",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "15 ms⁻¹",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "20 ms⁻¹",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "72 ms⁻¹",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "72 km/h = (72 × 1000)/3600 = 20 ms⁻¹.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638612468,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "What distance will be covered if a circular path of radius 5 m is travelled 2.5 times?",
+    "options": [
+      {
+        "label": "a",
+        "text": "5\\pi \\text{ m}",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "10\\pi \\text{ m}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "20\\pi \\text{ m}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "25\\pi \\text{ m}",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "\\text{Distance} = 2.5 \\times (2\\pi r) = 2.5 \\times 2\\pi \\times 5 = 25\\pi \\text{ m}",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638612470,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "Correct equation for moving body in uniform acceleration from rest is—",
+    "options": [
+      {
+        "label": "a",
+        "text": "v \\propto t^2",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "v \\propto \\sqrt{s}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "s \\propto \\sqrt{t}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "s \\propto t^2",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "For a body starting from rest with uniform acceleration,  s = \\frac{1}{2}at^2 , so  s \\propto t^2 .",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638612546,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "From which graph can acceleration be calculated?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Distance-time",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Velocity-time",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Position-time",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Speed-distance",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Acceleration is the slope of the velocity-time graph.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638612555,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "If an object is dropped from 100 m height in what velocity it will hit the ground?",
+    "options": [
+      {
+        "label": "a",
+        "text": "44.27 ms^{-1}",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "43.27 ms^{-1}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "42.27 ms^{-1}",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "41.27 ms^{-1}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "v^2 = u^2 + 2gh = 0 + 2 \\times 9.8 \\times 100 = 1960 v = \\sqrt{1960} \\approx 44.27 \\text{ ms}^{-1}",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638613393,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "Which one is the dimension of acceleration?",
+    "options": [
+      {
+        "label": "a",
+        "text": "LT⁻²",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "LT⁻¹",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "L²T⁻²",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "LT",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Acceleration = Velocity/Time = (LT⁻¹)/T = LT⁻².",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638613667,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "A train started to move with a uniform acceleration of 20 ms^{-2} from rest position. What will be the velocity while crossing a post at a distance of 250 m?",
+    "options": [
+      {
+        "label": "a",
+        "text": "25 ms^{-1}",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "100 ms^{-2}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "100 ms^{-1}",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "10000 ms^{-2}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "u = 0, \\quad a = 20 \\text{ ms}^{-2}, \\quad s = 250 \\text{ m} v^2 = u^2 + 2as = 0 + 2 \\times 20 \\times 250 = 10000 v = 100 \\text{ ms}^{-1}",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638613930,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "What type of motion is the contraction and expansion of the heart?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Linear motion",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Translational motion",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Periodic motion",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Oscillatory motion",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The heart's contraction and expansion repeat at regular intervals, so it is periodic motion.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638613936,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "Which one is correct for average velocity in uniform acceleration?",
+    "options": [
+      {
+        "label": "a",
+        "text": "V = (u + v)/2",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "V = u + ½at²",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "V = ut + ½at",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "V = u + ½at",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Average velocity in uniform acceleration is V = (u + v)/2, where u is initial velocity and v is final velocity.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638614550,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "How much time will it take for an object thrown vertically to fall with a velocity equal of  g ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.5 s",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "1 s",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "1.5 s",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "2 s",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "If thrown upward with velocity  u = g , time to reach top:  t_1 = \\frac{u}{g} = 1 \\text{ s} . Time to return:  t_2 = \\frac{u}{g} = 1 \\text{ s} . Total time:  t = t_1 + t_2 = 2 \\text{ s} .",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638614953,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "Which pair is scalar quantity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Work, Power",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Velocity, Momentum",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Displacement, Force",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Acceleration, Buoyancy",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Work and power have only magnitude, no direction; they are scalar quantities.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638615170,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "If 140° of the circumference is traversed through a curved path of 10 m diameter, what is the displacement?",
+    "options": [
+      {
+        "label": "a",
+        "text": "7.854 m",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "7.071 m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "9.397 m",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "2.5 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Radius r = 5 m. Chord length for 140° = 2r sin(θ/2) = 2 × 5 × sin(70°) = 10 × 0.9397 ≈ 9.397 m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638615352,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "What is the second law of falling body?",
+    "options": [
+      {
+        "label": "a",
+        "text": "v \\propto t",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "v \\propto g",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "h \\propto t",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "h \\propto t^2",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Galileo's second law:  h \\propto t^2  for a freely falling body from rest.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638615863,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "What the diagram shows?",
+    "options": [
+      {
+        "label": "a",
+        "text": "In uniform acceleration",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "In uniform acceleration",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "In uniform velocity",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "In non-uniform acceleration",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The diagram (not shown here) likely shows a straight line on a velocity-time graph, indicating uniform velocity.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638616278,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "What is the acceleration of an object if its velocity increases from 5 ms⁻¹ to 19 ms⁻¹ within 7 s?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.5 ms⁻²",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "0.71 ms⁻²",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "2 ms⁻²",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "2.71 ms⁻²",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "a = (v-u)/t = (19-5)/7 = 14/7 = 2 ms⁻².",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638623023,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "If a car moving at 60 km/h accelerates 5 ms⁻² for 2s—\ni. The average speed of the car is\nii. Distance covered\niii. The change in velocity is 10 ms⁻¹",
+    "options": [
+      {
+        "label": "21",
+        "text": "67 ms⁻¹",
+        "is_correct": false
+      },
+      {
+        "label": "43",
+        "text": "34 m",
+        "is_correct": false
+      },
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "u = 60 km/h = 16.67 ms⁻¹, a = 5 ms⁻², t = 2 s. v = u + at = 16.67 + 10 = 26.67 ms⁻¹. Average speed = (16.67 + 26.67)/2 = 21.67 ms⁻¹ (i true). s = ut + ½at² = 16.67×2 + ½×5×4 = 33.34 + 10 = 43.34 m (ii false). Change in velocity = 10 ms⁻¹ (iii true).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638624823,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "A person starts his journey from A and reaches at C through B in 5 seconds. His -\r\ni. displacement 3m\r\nii. speed 1.8 ms^{-1}\r\niii. velocity 5 ms^{-1}\r\nWhich one is correct in the light of above information?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "From given data: AC = 3 m (displacement) Total distance = 4 + 5 = 9 m Speed = 9/5 = 1.8 ms^{-1} Velocity = 3/5 = 0.6 ms^{-1} So i and ii are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638624987,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "A stone is tied with a thread and rolled over the head -\r\ni. will change the direction continuously\r\nii. acceleration will occur\r\niii. will continue with a constant velocity\r\nWhich one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "In circular motion, direction changes continuously (i) and centripetal acceleration exists (ii). Velocity is not constant because direction changes (iii false).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638625054,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "A baby is playing with a swing. Its motion -\ni. rotational motion\nii. periodic motion\niii. oscillatory motion",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "A swing oscillates back and forth (iii) and repeats at regular intervals (ii), but is not rotational (i false).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638625303,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "A passenger of a running bus is —\r\ni. in rest relative to the bus\r\nii. in rest relative to a lamp post\r\niii. in rest relative to the other passengers\r\nNow which of the following is right?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Passenger is at rest relative to bus (i) and other passengers (iii), but moving relative to lamp post (ii false).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638625549,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "In the above figure —\r\ni. In the part of OA uniform acceleration are existed\r\nii. In the part of AB travelled distance is 50 m\r\niii. In the part of OA, the car is in uniform velocity\r\nWhich one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "From graph (not shown): OA is straight line sloping up (uniform acceleration, i true), AB is horizontal (constant velocity), distance in AB = area = 50 m (ii true), OA is not uniform velocity (iii false).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638625788,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "In case of bullet—\r\ni. value of x is 180 ms^{-1}\r\nii. P and Q face same resistance\r\niii. P and Q will stop at the same time\r\nWhich one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "For P: s = 40.5 mm, a = 4×10⁵ ms⁻² u = √(2as) = √(2×4×10⁵×40.5×10⁻³) = √(32400) = 180 ms⁻¹ (i true) Same retardation ⇒ same resistance (ii true) Stopping times differ: t = u/a, so t_P = 180/(4×10⁵) = 4.5×10⁻⁴ s, t_Q = 200/(4×10⁵)=5×10⁻⁴ s (iii false).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638625795,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "An object is launched vertically upward with a velocity 9.2 ms^{-1}. Its —\r\ni. time of flight is 1.88 s\r\nii. maximum height is 4.32 m\r\niii. motion is towards the gravitation\r\nWhich one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "u = 9.2 ms^{-1}, g = 9.8 ms^{-2} Time of flight = 2u/g = 18.4/9.8 ≈ 1.88 s (i true) Max height = u²/(2g) = 84.64/19.6 ≈ 4.32 m (ii true) Motion is against gravity initially (iii false).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638625907,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "Motion of the piston inside a cylinder is -\r\ni. translational\r\nii. periodic\r\niii. vibrational\r\nWhich of the following is true?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Piston motion is back-and-forth (translational) and repeats (periodic), but not vibrational in the oscillatory sense.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638626358,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "How much distance is travelled by the car in uniform velocity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "50 meter",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "60 meter",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "120 meter",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "300 meter",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Uniform velocity = 60 ms⁻¹, time = 5 s Distance = 60 × 5 = 300 m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638626448,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "Change of acceleration —\r\ni. when change of values\r\nii. when change of direction\r\niii. when change of values and direction\r\nWhich one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Acceleration changes if its magnitude changes, its direction changes, or both change.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638626947,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "In case of a falling object —\r\ni. Kinetic energy keeps increasing continuously\r\nii. Acceleration keeps increasing continuously\r\niii. Potential energy keeps decreasing continuously\r\nWhich one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i & iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "For free fall: KE increases (i), acceleration is constant (ii false), PE decreases (iii true).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638627350,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "What is nature of velocity in AB part in the figure?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Uniform acceleration",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Uniform velocity",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Uniform deceleration",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Non-uniform acceleration",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "AB is straight line with positive slope ⇒ uniform acceleration.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638627709,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "What is distance the car will travel in the 4th second?",
+    "options": [
+      {
+        "label": "a",
+        "text": "50 m",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "45 m",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "40 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "20 m",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "At 4th second, velocity = 20 ms⁻¹ (from graph) Distance in 1 s = v×t = 20×1 = 20 m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638627965,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "The car of the stem moves with—\r\ni. non uniform velocity\r\nii. uniform acceleration\r\niii. velocity is proportional to the square root of distance travel\r\nWhich one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "From graph: velocity increases linearly ⇒ uniform acceleration (ii true), velocity not constant (i true). For u=0, v∝√s only if v²=2as, but here v∝t, so iii false.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638628084,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "For free falling body —\ni. v₁²/v₂² = h₁/h₂\nii. v₁/v₂ = √(h₁/h₂)\niii. h₁/h₂ = t₁²/t₂²",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "For free fall from rest, v² = 2gh, so v₁²/v₂² = h₁/h₂ (i true) and v₁/v₂ = √(h₁/h₂) (ii true). Also h = ½gt², so h₁/h₂ = t₁²/t₂² (iii true).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638628127,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "Motion of the vibration of an atom -\r\ni. linear motion\r\nii. periodic motion\r\niii. harmonic motion\r\nWhich one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Atomic vibration is periodic (ii) and often harmonic (iii), but not purely linear (i false).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638629067,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "A bullet with velocity 200 ms⁻¹ penetrates 50 mm into a wall before stopping. What is the retardation?",
+    "options": [
+      {
+        "label": "a",
+        "text": "4 × 10⁵ ms⁻²",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "4 × 10⁴ ms⁻²",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "2 × 10⁵ ms⁻²",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "2 × 10⁴ ms⁻²",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "s = 50 mm = 50×10⁻³ m = 0.05 m, u = 200 ms⁻¹, v = 0. v² = u² - 2as ⇒ 0 = 200² - 2a(0.05) ⇒ a = 200²/(2×0.05) = 40000/0.1 = 4 × 10⁵ ms⁻².",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638629603,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "In the graph—\r\ni. BC part velocity is unchanged\r\nii. AB part acceleration is 2 ms^{-2}\r\niii. in first 20 second total travels distance is 200 m\r\nWhich one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "BC is horizontal ⇒ constant velocity (i true) AB: slope = (20-0)/10 = 2 ms⁻² (ii true) Area under graph: AB = ½×10×20 = 100 m BC = 20×10 = 200 m Total = 300 m (iii false).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638629927,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "What will be the distance travel at 30th sec of the car?",
+    "options": [
+      {
+        "label": "a",
+        "text": "145 m",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "147.5 m",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "148.75 m",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "150 m",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "u = 0, a = (150-0)/30 = 5 ms⁻² Distance in nth second: s_n = u + ½a(2n-1) s₃₀ = 0 + ½×5×(59) = 2.5×59 = 147.5 m.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638630622,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "All the motions of the universe is -\r\ni. rotational motion\r\nii. relative motion\r\niii. periodic motion\r\nWhich one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "All motions in the universe can be classified as rotational, relative, or periodic in some context, making all three statements generally true.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638630875,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "What is the retardation of Q?",
+    "options": [
+      {
+        "label": "a",
+        "text": "4 × 10⁵ ms⁻²",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "4 × 10⁷ ms⁻²",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "-4 × 10⁵ ms⁻²",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "-4 × 10⁷ ms⁻²",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "s = 50 mm = 50×10⁻³ m, u = 200 ms⁻¹, v = 0. v² = u² - 2as ⇒ 0 = 200² - 2a(0.05) ⇒ a = 200²/(0.1) = 4 × 10⁵ ms⁻².",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638631480,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "The average velocity of the car between 1s and 3s is—\ni. the car will move in non-uniform velocity in the first 3 seconds\nii. the average velocity between 1 s and 3s is\niii. the car will always move in non-uniform velocity",
+    "options": [
+      {
+        "label": "12",
+        "text": "5 ms⁻¹",
+        "is_correct": false
+      },
+      {
+        "label": "a",
+        "text": "i",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "From a linearly increasing velocity graph: v at 1s = 5 ms⁻¹, v at 3s = 20 ms⁻¹. The car moves with non-uniform velocity (i true). Average velocity = (5+20)/2 = 12.5 ms⁻¹ (ii true). After some time velocity may become constant (iii false).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638631522,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "For translational motion -\ni. all particles move parallel to each other\nii. all particles have the same velocity\niii. the path can be linear or curved",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "In translational motion, all particles move in parallel paths with the same velocity and direction at any instant, and the path can be either linear or curved.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638632548,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "In the case of car, —\r\ni. first 15 second it moves in uniform acceleration\r\nii. acceleration and deceleration are equal during motion\r\niii. acceleration 6 ms^{-2}\r\nWhich one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "From table: Acceleration = (20-0)/5 = 4 ms⁻² (constant for 0–15 s) ⇒ i true, iii false Deceleration = (40-60)/(25-20) = -4 ms⁻² ⇒ magnitude same as acceleration ⇒ ii true.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638632603,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "Which one of following conditions do the laws of falling bodies of Galileo follow?\r\ni. All bodies fall from rest\r\nii. All bodies fall from same height\r\niii. All bodies fall freely\r\nWhich one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Galileo’s laws assume free fall (iii) and starting from rest (i), not necessarily same height (ii false).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638632869,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "In above figure—\r\ni. the uniform acceleration of the vehicle exists at OP and OQ\r\nii. the change of velocity at P and R is equal\r\niii. distance PQ = 50 m\r\nWhich one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "OP: acceleration present, OQ: deceleration present ⇒ i false Change in velocity at P = 5 ms⁻¹, at R = -5 ms⁻¹ ⇒ magnitude equal ⇒ ii true PQ area = rectangle = 10×5 = 50 m ⇒ iii true.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1765638632964,
+    "subject": "Physics",
+    "chapter": "Motion",
+    "question": "What is the distance of OP in meter?",
+    "options": [
+      {
+        "label": "a",
+        "text": "100",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "50",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "25",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "4",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Area of triangle OP = ½ × base × height = ½ × 10 × 5 = 25 m.",
+    "image": null,
+    "language": "en"
+  }
+]

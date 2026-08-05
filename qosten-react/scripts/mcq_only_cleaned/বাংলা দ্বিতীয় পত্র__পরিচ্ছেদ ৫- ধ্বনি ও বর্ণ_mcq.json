@@ -1,0 +1,706 @@
+[
+  {
+    "id": 1767454648341,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৫: ধ্বনি ও বর্ণ",
+    "question": "বাংলায় মৌলিক স্বরধ্বনি কয়টি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৬",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৭",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "৯",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১১",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বাংলা ভাষায় মৌলিক স্বরধ্বনির সংখ্যা মোট ৭টি। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454648469,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৫: ধ্বনি ও বর্ণ",
+    "question": "কোন ধ্বনিগুলো উচ্চারণের সময়ে মুখগহ্বরের কোথাও বাধা পায় না?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্বরধ্বনি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ব্যঞ্জনধ্বনি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মৌখিকধ্বনি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অনুনাসিক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "স্বরধ্বনি উচ্চারণে বাতাস মুখগহ্বরের কোথাও বাধা পায় না। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454648590,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৫: ধ্বনি ও বর্ণ",
+    "question": "ধ্বনির প্রতীককে বলা হয়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাক্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বর্ণ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ভাষা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উপভাষা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ধ্বনির দৃশ্যমান বা লিখিত রূপকে বর্ণ বলা হয়। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454648719,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৫: ধ্বনি ও বর্ণ",
+    "question": "ব্যঞ্জনের সঙ্গে কারবর্ণ বা হাসচিহ্ন না থাকলে কোন ধ্বনি আছে বলে ধরে নেওয়া হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "[আ]",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "[অ]",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "[ই]",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "[উ]",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ব্যঞ্জনের সঙ্গে কোনো চিহ্ন না থাকলে স্বয়ংক্রিয়ভাবে 'অ' ধ্বনি উচ্চারিত হয়। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454648840,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৫: ধ্বনি ও বর্ণ",
+    "question": "'ষ্ণ' যুক্তবর্ণটি কোন কোন বর্ণ দিয়ে তৈরি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "'ষ' ও 'ণ'",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "'ষ' ও 'ন'",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "'ষ' ও 'ঞ'",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "'স' ও 'ন'",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'ষ্ণ' যুক্তবর্ণটি মূর্ধন্য-ষ এবং মূর্ধন্য-ণ এর সমন্বয়ে গঠিত। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454648960,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৫: ধ্বনি ও বর্ণ",
+    "question": "স্বরবর্ণের সংক্ষিপ্ত রূপকে বলা হয়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "কারবর্ণ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অনুবর্ণ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ফলা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রেফ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "স্বরবর্ণ যখন ব্যঞ্জনবর্ণের সাথে যুক্ত হয়, তখন তার সংক্ষিপ্ত রূপকে 'কার' বলে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454649089,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৫: ধ্বনি ও বর্ণ",
+    "question": "ব্যঞ্জনবর্ণের বিকল্প রূপের নাম—",
+    "options": [
+      {
+        "label": "a",
+        "text": "কারবর্ণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অনুবর্ণ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ফলা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "রেফ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ব্যঞ্জনবর্ণের বিকল্প রূপকে অনুবর্ণ (ফলা, রেফ) বলা হয়। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454649232,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৫: ধ্বনি ও বর্ণ",
+    "question": "নিচের কোনটি জোড়াটি যুক্তবর্ণের রূপভেদকে প্রকাশ করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্বচ্ছ ও অস্বচ্ছ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কার ও ফলা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হ্রস্ব ও দীর্ঘ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অজস্র ও উদ্ভূত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যুক্তবর্ণের দুটি প্রধান রূপ হলো স্বচ্ছ ও অস্বচ্ছ। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454649388,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৫: ধ্বনি ও বর্ণ",
+    "question": "বাংলা কারবর্ণের সংখ্যা—",
+    "options": [
+      {
+        "label": "a",
+        "text": "৮",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৯",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "১০",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "১২",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বাংলা বর্ণমালায় কারবর্ণের সংখ্যা ১০টি। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454649512,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৫: ধ্বনি ও বর্ণ",
+    "question": "বাংলা সংখ্যাবর্ণ কয়টি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৭",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৮",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৯",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১০",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "শূন্য থেকে নয় পর্যন্ত মোট ১০টি সংখ্যাবর্ণ ব্যবহৃত হয়। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454649628,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৫: ধ্বনি ও বর্ণ",
+    "question": "নিচের কোন জোড়াটি যুক্তবর্ণের রূপভেদকে প্রকাশ করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্বচ্ছ ও অস্বচ্ছ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কার ও ফলা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হ্রস্ব ও দীর্ঘ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অজস্র ও উদ্ভূত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যুক্তবর্ণের প্রকারভেদ হিসেবে স্বচ্ছ ও অস্বচ্ছ ব্যবহৃত হয়। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454649747,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৫: ধ্বনি ও বর্ণ",
+    "question": "কোনো ভাষার বাক্যপ্রবাহকে সূক্ষ্মভাবে বিশ্লেষণ করলে আমরা কতগুলো কী পাই?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বর্ণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ধ্বনি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মৌলিক ধ্বনি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মৌলিক বর্ণ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কোনো ভাষার নিরবচ্ছিন্ন প্রবাহকে ভাঙলে আমরা ক্ষুদ্রতম একক হিসেবে ধ্বনি পাই। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454649868,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৫: ধ্বনি ও বর্ণ",
+    "question": "বাংলা ভাষায় মৌলিক ব্যঞ্জনধ্বনি কয়টি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৩৭টি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৩৯টি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৩০টি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "৫০টি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বাংলায় মৌলিক ব্যঞ্জনধ্বনির সংখ্যা ৩০টি। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454649989,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৫: ধ্বনি ও বর্ণ",
+    "question": "নিচের কোনটি সঠিক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ষ্ণ = ষ + ঞ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ক্ষ = ক + ষ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "জ্ঞ = জ + ম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ফ = ক + স",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "'ক্ষ' বর্ণটি মূলত 'ক' এবং 'ষ' এর যুক্ত রূপ। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454650106,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৫: ধ্বনি ও বর্ণ",
+    "question": "স্বরবর্ণের মোট কয়টি সংক্ষিপ্ত রূপ রয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "৭টি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "৮টি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "৯টি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "১০টি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বাংলা বর্ণমালায় স্বরবর্ণ ১১টি হলেও এর সংক্ষিপ্ত রূপ বা কারবর্ণ ১০টি। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454650221,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৫: ধ্বনি ও বর্ণ",
+    "question": "নিচের কোনটি মৌলিক স্বরধ্বনি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ঐ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ঔ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ঈ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'আ' একটি মৌলিক স্বরধ্বনি। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454650340,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৫: ধ্বনি ও বর্ণ",
+    "question": "নিচের কোন যুক্তবর্ণটি স্বচ্ছ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ষ্ণ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ক্ষ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জ্ঞ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ন্দ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "যে যুক্তবর্ণের উপাদানগুলো আলাদাভাবে চেনা যায়, তাকে স্বচ্ছ যুক্তবর্ণ বলে। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454650459,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৫: ধ্বনি ও বর্ণ",
+    "question": "অসহজ যুক্তবর্ণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ক্ষ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ন্ধ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ল্প",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ন্ত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'ক্ষ' একটি অস্বচ্ছ বা অসহজ যুক্তবর্ণ কারণ এতে উপাদানগুলো সরাসরি চেনা যায় না। [৪]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454675803,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৫: ধ্বনি ও বর্ণ",
+    "question": "কোনটি স্বচ্ছ যুক্তবর্ণের উদাহরণ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "স্থ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ক্ষ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হ্ম",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অঞ্জ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'স্থ' যুক্তবর্ণের উপাদানগুলো (স ও থ) স্পষ্টভাবে চেনা যায় বলে এটি একটি স্বচ্ছ যুক্তবর্ণ। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454677734,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৫: ধ্বনি ও বর্ণ",
+    "question": "‘ষ্ণ’ যুক্তবর্ণটি কোন কোন বর্ণ দিয়ে তৈরি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ষ + ণ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ষ + ঞ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ন + ষ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ঞ + ষ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "মূর্ধন্য-ষ এবং মূর্ধন্য-ণ মিলে 'ষ্ণ' যুক্তবর্ণটি গঠিত হয়। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454677861,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৫: ধ্বনি ও বর্ণ",
+    "question": "ধ্বনি নির্দেশক চিহ্নকে কী বলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অক্ষর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বর্ণ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বর্ণমালা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চিহ্ন",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কোনো ভাষার ধ্বনিগুলোকে লিখে প্রকাশ করার জন্য যে প্রতীক বা চিহ্ন ব্যবহৃত হয়, তাকে বর্ণ বলে। [৫]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767454677984,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৫: ধ্বনি ও বর্ণ",
+    "question": "সঠিক সংস্কৃত বর্ণ বিশ্লেষণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জ + ঞ = জ্ঞ",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "জ + ঞ = জ্ঞ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জ + ঞ = জ্ঞ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "জ + ঞ = জ্ঞ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "'জ্ঞ' বর্ণটি মূলত 'জ' এবং 'ঞ' বর্ণের সমন্বয়ে গঠিত। [৫]",
+    "image": null,
+    "language": "en"
+  }
+]

@@ -88,6 +88,9 @@ const DataTracker = () => {
         user.totalCorrect = user.entries.reduce((sum, e) => sum + (e.correct_attempts || 0), 0);
         user.totalMastered = user.entries.reduce((sum, e) => sum + (e.sq_cq_mastered || 0) + (e.flashcards_mastered || 0), 0);
         user.totalSubtopicsUnderstood = user.entries.reduce((sum, e) => sum + (e.subtopics_understood || 0), 0);
+        user.totalAIRequests = user.entries.reduce((sum, e) => sum + (e.ai_requests || 0), 0);
+        user.totalAIConversations = user.entries.reduce((sum, e) => sum + (e.ai_conversations || 0), 0);
+        user.totalAITokens = user.entries.reduce((sum, e) => sum + (e.ai_tokens_estimated || 0), 0);
         user.overallAccuracy = user.totalAttempts > 0 
           ? Math.round((user.totalCorrect / user.totalAttempts) * 100) 
           : null;
@@ -251,6 +254,16 @@ const DataTracker = () => {
                   <span className="stat-value">{user.totalMastered}</span>
                 </div>
 
+                <div className="stat-col">
+                  <span className="stat-label">AI Requests</span>
+                  <span className="stat-value">{user.totalAIRequests}</span>
+                </div>
+
+                <div className="stat-col">
+                  <span className="stat-label">AI Conversations</span>
+                  <span className="stat-value">{user.totalAIConversations}</span>
+                </div>
+
                 <div className="expand-icon">▼</div>
               </div>
 
@@ -282,6 +295,8 @@ const DataTracker = () => {
                           <th>Attempts (MCQ/SQ/CQ)</th>
                           <th>SQ/CQ Mastery</th>
                           <th>Accuracy</th>
+                          <th>AI Requests</th>
+                          <th>AI Tokens</th>
                           <th>Status</th>
                         </tr>
                       </thead>
@@ -342,6 +357,14 @@ const DataTracker = () => {
                               ) : (
                                 <span style={{color:'#a0aec0', fontSize:'12px'}}>—</span>
                               )}
+                            </td>
+                            <td>
+                              <span style={{fontSize:'13px'}}>{entry.ai_requests || 0}</span>
+                            </td>
+                            <td>
+                              <span style={{fontSize:'13px', color:'#a0aec0'}}>
+                                {entry.ai_tokens_estimated ? `${(entry.ai_tokens_estimated / 1000).toFixed(1)}k` : '—'}
+                              </span>
                             </td>
                             <td>
                               {entry.daily_goals_completed ? (

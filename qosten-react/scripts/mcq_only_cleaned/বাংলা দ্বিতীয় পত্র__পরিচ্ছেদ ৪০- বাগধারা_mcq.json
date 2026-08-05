@@ -1,0 +1,1346 @@
+[
+  {
+    "id": 1768036796860,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "বাক্যের অর্থ যখন বাচ্যার্থকে ছাড়িয়ে বিশেষ অর্থ প্রকাশ করে তখন তাকে বলে—",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রত্যয়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বাগধারা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সমাস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কারক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বাগধারা এমন কিছু শব্দগুচ্ছ যা সাধারণ অর্থ প্রকাশ না করে বিশেষ কোনো ভাবগত অর্থ প্রকাশ করে [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036796966,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "কী প্রয়োগের মাধ্যমে ভাষা প্রাণবন্ত ও বাক্য অধিক ব্যঞ্জনা সৃষ্টি করতে পারে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাগধারা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "প্রত্যয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কারক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সমাস",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বাগধারার ব্যবহারে ভাষা আরও শক্তিশালী ও ব্যঞ্জনাধর্মী হয়ে ওঠে [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036797070,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "বাগধারা ব্যবহারের সময়ে ভাষা ব্যবহারকারীকে কোন বিষয়ে সর্তক থাকতে হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শব্দ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অর্থ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রয়োগ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বর্গ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বাগধারা একটি নির্দিষ্ট কাঠামোতে থাকে, তাই এর যথেচ্ছ প্রয়োগ ভাষার সৌন্দর্য নষ্ট করতে পারে [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036797177,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "বাগধারা অতীত কালের কোন ঘটনার স্মারক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সামাজিক-অর্থনৈতিক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সামাজিক-রাজনৈতিক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সামাজিক-মানসিক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সামাজিক-সাংস্কৃতিক",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অনেক বাগধারা আমাদের অতীত দিনের সামাজিক ও সাংস্কৃতিক জীবনের স্মৃতি বহন করে [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036797277,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "নিচের কোনটি ‘অন্ধের যষ্টি’ অর্থ প্রকাশ করছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ভাগ্যের খেলা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দুর্লভ বস্তু",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অসম্ভব কল্পনা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "একমাত্র অবলম্বন",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "‘অন্ধের যষ্টি’ বাগধারাটির অর্থ হলো কোনো অসহায় ব্যক্তির একমাত্র ভরসা বা অবলম্বন [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036797384,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘দুধে ভাতে’ অর্থ কোন বাগধারার মধ্যে রয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "একচোখা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "এক কথার মানুষ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উড়নচণ্ডী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কংশ মামা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "সাধারণত সুখের জীবন বোঝাতে ‘দুধে ভাতে’ প্রবাদের ভাবার্থ ব্যবহার হয়, তবে এখানে বিকল্পগুলো ভিন্ন অর্থ নির্দেশ করছে [২]। (বি.দ্র. উৎসে ঘ চিহ্নিত)",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036797494,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "নিচের কোন অর্থটি ‘বৈ মাত্রেয়’ প্রাণ বাগধারার সঠিক অর্থ প্রকাশ করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সংকীর্ণমনা লোক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "খুব অলস",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "খুব চালাক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "যা সহজে মরে না",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "‘বৈ মাত্রেয় প্রাণ’ বলতে সেই প্রাণকে বোঝায় যা অনেক কষ্টে বা প্রতিকূলতাতেও টিকে থাকে [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036797603,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘তৈল দেওয়া’-এর সমার্থক বাগধারা কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আণ্ডা পাওয়া",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "তালকানা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "তুষ মারা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "ডুমুরের ফুল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "‘তৈল দেওয়া’ এবং ‘তুষ মারা’ উভয়ই তোষামোদ করা অর্থে ব্যবহৃত হয় [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036797709,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "বাগধারা প্রয়োগে ভাষা কী হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অর্বোধক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আকর্ষণীয়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "প্রাণবন্ত",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "চটুল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বাগধারা ভাষার শক্তি বৃদ্ধি করে এবং বাক্যকে প্রাণবন্ত করে তোলে [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036797813,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "বাগধারা নিয়ে আলোচনা করা হয়—",
+    "options": [
+      {
+        "label": "a",
+        "text": "অর্থতত্ত্বে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ধ্বনিতত্ত্বে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রূপতত্ত্বে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাক্যতত্ত্বে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "বাগধারা বাক্যের বিশেষ প্রয়োগরীতি বিধায় এটি ব্যাকরণের বাক্যতত্ত্বে আলোচিত হয় [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036797922,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "কোন বাগধারাটি ‘ভূমিকা না রাখা’ অর্থ প্রকাশ করছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চোখ বুজে থাকা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গোঁফ খেজুরে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জগদ্দল পাথর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গাছে তুলে মই কেড়ে নেওয়া",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কোনো কাজ শুরু করে মাঝপথে ছেড়ে দেওয়া বা সাহায্য বন্ধ করা বোঝাতে এই বাগধারা ব্যবহৃত হয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036798026,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘চুনোপুঁটি’ বাগধারাটির অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ক্ষমতাশালী ব্যক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নগণ্য ব্যক্তি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "সামান্য ব্যক্তি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "প্রভাবশলী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সমাজে যাদের গুরুত্ব বা শক্তি খুব কম, তাদের ‘চুনোপুঁটি’ বলা হয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036798134,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘বজ্র আঁটুনি’ বাগধারাটির অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শক্ত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অসম্ভব বস্তু",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "নির্বোধ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিরর্থক কাজ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বজ্র আঁটুনি ফস্কা গেরো—এই বাগধারার অর্থ হলো বাইরে কঠোর নিয়ম কিন্তু ভেতরে ঢিলেঢালা বা অসম্ভব পরিস্থিতি [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036798242,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘কুলপাথর’ অর্থের নিচের কোন বাগধারাটি ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কাছাতলা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কান খাড়া করা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "কান ভাঙানো",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কানকাটা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "‘কান খাড়া করা’ মানে সতর্ক হওয়া বা মনোযোগী হওয়া [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036798346,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘গোড়ায় গলদ’ বাগধারাটির অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বড় ধরনের ভুল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিশৃঙ্খলা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শুরুতে ভুল",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "হ য ব র ল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কোনো কাজের শুরুতেই যদি বড় কোনো ভুল থেকে যায়, তাকে ‘গোড়ায় গলদ’ বলে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036798453,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘ভণ্ড’ অর্থে কোন বাগধারাটি প্রযোজ্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তাসের ঘর",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বর্ণচোরা",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "তালকানা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তিল তুলসী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যার প্রকৃত রূপ ঢাকা থাকে এবং যে ধূর্ত তাকে ‘বর্ণচোরা’ বলা হয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036798564,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘গোঁফ খেজুরে’—কোন অর্থে প্রয়োগ করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "খুব চৌকস",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "খুব অলস",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বড় গোঁফ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চাটুকার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "অত্যন্ত অলস ব্যক্তিকে ‘গোঁফ খেজুরে’ বাগধারা দিয়ে বোঝানো হয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036798669,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘ইতর বিশেষ’ বাগধারাটির অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তালগোল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পার্থক্য",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গুরুত্বহীন",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পার্থক্য",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কোনো জিনিসের মধ্যে পার্থক্য বা ভেদাভেদ বোঝাতে ‘ইতর বিশেষ’ ব্যবহৃত হয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036798778,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘কুপমণ্ডুক’ বাগধারাটির অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কাজ না করে ঘরে বসে থাকা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "একটা খাটুনি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কালে কালে বদল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ক্ষুদ্র মনের মানুষ বা সীমাবদ্ধ জ্ঞান",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "যার জ্ঞান খুব সীমিত এবং যে বাইরের জগত সম্পর্কে জানে না, তাকে ‘কুপমণ্ডুক’ বলে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036798889,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "নিচের কোন বাগধারাটির অর্থ ‘গুণবান’?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কান ভাঙানো",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চোখের আড়াল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "উলু খাগড়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কানি কাটা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "(বি.দ্র. উৎসে খ চিহ্নিত থাকলেও সাধারণ অর্থে চোখের আড়াল মানে অদর্শন। পাঠ্যপুস্তক অনুযায়ী গুণবান অর্থে ভিন্ন বাগধারা হতে পারে।) [৩]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036798990,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘বেহায়া’ অর্থটি নিচের কোন বাগধারা দিয়ে প্রকাশ করা হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঠোঁট কাটা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "চুন মারা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "টনক নড়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চিন চিনে লোক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যে ব্যক্তির লজ্জা-শরম নেই তাকে ‘ঠোঁট কাটা’ বা বেহায়া বলা হয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036799092,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘গভীর জলের মাছ’ বাগধারাটির অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "খুব চালাক",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "খুব অলস",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বেহায়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চটুল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "যে ব্যক্তি নিজের বুদ্ধি বা মতলব গোপনে রেখে কাজ হাসিল করে তাকে ‘গভীর জলের মাছ’ বলা হয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036799204,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘ঠোঁট কাটা’ বাগধারাটি কী অর্থে ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নির্লজ্জ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বেহায়া",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "স্পষ্টভাষী",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "অনমনীয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যে ব্যক্তি মুখে যা আসে সরাসরি বলে দেয়, তাকে স্পষ্টভাষী বা ‘ঠোঁট কাটা’ বলা হয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036799312,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "নিচের কোন বাগধারাটি ‘পার্থক্য’ অর্থে ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আকাশ কুসুম",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "দা-কুমড়া সম্পর্ক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চিনে জোঁক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ইতর বিশেষ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "‘ইতর বিশেষ’ মানে হলো পার্থক্য বা ভেদাভেদ [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036799422,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘ভাগ্যের খেলা’ অর্থ কোন বাগধারার মধ্যে রয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ভরাডুবি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কপাল ফেরা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অমাবস্যার চাঁদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অদৃষ্টের পরিহাস",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কপালের লিখন বা ভাগ্যের কারণে যা ঘটে তাকে ‘অদৃষ্টের পরিহাস’ বলা হয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036799536,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘চাটুকার’ অর্থ কোন বাগধারার মধ্যে রয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঠোঁট কাটা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "খয়ের খাঁ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গোঁফ খেজুরে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "খয়ের খাঁ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "যারা কেবল অন্যের তোষামোদ বা গুণগান করে ফায়দা লোটে তাদের ‘খয়ের খাঁ’ বলা হয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036799646,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘কাকতালীয়’ বাগধারাটির অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বেহায়া",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অনিয়ম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আকস্মিক যোগাযোগ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কান ভাঙানো",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কোনো কারণ ছাড়াই হঠাৎ করে মিলে যাওয়া কোনো ঘটনাকে ‘কাকতালীয়’ বলা হয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036799752,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘মানিক জোড়’ এর বিপরীতার্থক বাগধারা নিচের কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "আদা কাঁচকলা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ইঁদুর কপালে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আঠারো মাসে বছর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ইতরবিশেষ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "‘মানিক জোড়’ মানে গভীর বন্ধুত্ব, আর ‘আদা কাঁচকলা’ মানে চরম শত্রুতা [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036799858,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘উড়নচণ্ডী’ বাগধারাটির অর্থ—",
+    "options": [
+      {
+        "label": "a",
+        "text": "উশৃঙ্খল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অমিতব্যয়ী",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "অলস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কুঁড়ে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যে ব্যক্তি হিসাব ছাড়া বা মাত্রাতিরিক্ত খরচ করে তাকে ‘উড়নচণ্ডী’ বলা হয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036799992,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘মণিকাঞ্চন যোগ’-এর সমার্থক বাগধারা কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সোনায় সোহাগা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "কুলপাথর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চাটুকার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শিবের গুণগান",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "দুই উপযুক্ত ব্যক্তি বা বস্তুর মিলনকে ‘মণিকাঞ্চন যোগ’ বা ‘সোনায় সোহাগা’ বলা হয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036800111,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "নিচের কোন অর্থটি ‘বৈ মাত্রেয়’ প্রাণ বাগধারার সঠিক অর্থ প্রকাশ করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ছোট মন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "খুব চালাক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চাটুকার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "যা সহজে মরে না",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অনেক কষ্ট সহ্যের ক্ষমতা রাখে এমন প্রাণকে ‘বৈ মাত্রেয় প্রাণ’ বলা হয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036800218,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘অল্প অনুকরণ’ এর বাগধারা কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গোঁড়াপণ্ডিত্য",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গড্ডলিকা প্রবাহ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "চর্বিত চর্বণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চণ্ডীপাঠ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যুক্তি ছাড়া অন্ধভাবে কাউকে অনুসরণ করাকে ‘গড্ডলিকা প্রবাহ’ বলা হয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036800336,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘উপযুক্ত মিলন’ বোঝাতে কোন বাগধারাটি প্রযোজ্য?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাপে বরে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চাঁদের হাট",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মণিকঞ্চন যোগ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কুঁড়ে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কোনো অত্যন্ত উপযুক্ত সমন্বয় বা মিলনকে ‘মণিকঞ্চন যোগ’ বলে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036800438,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "নিচের কোন বাগধারাটির অর্থ ‘বিশৃঙ্খলা’?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কাঠখড় পোড়ানো",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অগস্ত্য যাত্রা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জগাখিচুড়ি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "হ য ব র ল",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এলোমেলো বা বিশৃঙ্খল অবস্থাকে ‘হ য ব র ল’ বাগধারা দিয়ে বোঝানো হয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036800544,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘তাসের ঘর’ বাগধারাটির অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ক্ষণস্থায়ী বস্তু",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "তাস খেলার ঘর",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পাহারাদার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মজবুত",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "খুব সহজেই যা ভেঙে যায় বা নষ্ট হয়ে যায় এমন কিছুকে ‘তাসের ঘর’ বলা হয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036800669,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘সুসময়ের বন্ধু’ কথাটি নিচের কোন বাগধারাকে সমর্থন করে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মণিকঞ্চন যোগ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "যকের ধন",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "অমাবস্যার চাঁদ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সুখের পায়রা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "যারা কেবল সুখে বা ভালো সময়ে সাথে থাকে কিন্তু বিপদে পালিয়ে যায়, তাদের ‘সুখের পায়রা’ বলে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036800784,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘সুযোগ সন্ধানী’ অর্থে কোন বাগধারাটি ব্যবহৃত হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "তীর্থের কাক",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ভিজে বিড়াল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গভীর জলের মাছ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "এক ঢিলে দুই পাখি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "প্রতীক্ষা করে থাকা বা সুযোগের অপেক্ষায় থাকাকে ‘তীর্থের কাক’ বলা হয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036800890,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘গোঁয়ার গোবিন্দ’—বাগধারাটির অর্থ কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অলস",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নির্বোধ অথচ জেদি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "হঠকারী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কাজের মানুষ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যে ব্যক্তি খুব বেশি একগুঁয়ে বা জেদি তাকে ‘গোঁয়ার গোবিন্দ’ বলা হয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036800996,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘গাম্ভীর্য’ অর্থে কোন বাগধারাটি রয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "একচোখা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "অত্যন্ত চালাক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ইতর বিশেষ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গভীর জলের মাছ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "গম্ভীর ও নিভৃত স্বভাবের চালাক মানুষকে ‘গভীর জলের মাছ’ বলা হয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036801117,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘বাইরে পরিপাটি’ অর্থ কোন বাগধারার মধ্যে রয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সপ্তম চড়া",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গভীর জলের মাছ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "লেফাফাদুরস্ত",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "চটুল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বাইরে থেকে পরিপাটি কিন্তু ভেতরে ফাঁপা বা রিক্ত অবস্থাকে ‘লেফাফাদুরস্ত’ বলা হয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036801226,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘নদীর পুতুল’ বাগধারার অর্থ নিচের কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নদী দিয়ে তৈরি পুতুল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কপট ব্যক্তি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ঘরকুনো",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শ্রমবিমুখ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "যার নিজের কোনো স্বাধীন ইচ্ছা নেই, অন্যের নির্দেশে চলে তাকে ‘নদীর পুতুল’ বলা হয় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036801378,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৪০: বাগধারা",
+    "question": "‘সোনায় সোহাগা’ এর সমার্থক বাগধারা কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মণের মুডুক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মণিকঞ্চন যোগ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ডুমুরের ফুল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "তাসের ঘর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "অত্যন্ত সুন্দর বা সার্থক মিল বোঝাতে ‘সোনায় সোহাগা’ ও ‘মণিকঞ্চন যোগ’ ব্যবহৃত হয় [৩]।",
+    "image": null,
+    "language": "en"
+  }
+]

@@ -1,0 +1,578 @@
+[
+  {
+    "id": 1767455491453,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৫: নরবাচক ও নারীবাচক শব্দ",
+    "question": "বিশেষ্য ও বিশেষণের নারী ও নরভেদের নাম কী?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বচন",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নির্দেশক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বলক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "লিঙ্গ",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ব্যাকরণিক ভাবে নর বা নারীকে আলাদা করার প্রক্রিয়া হলো লিঙ্গ। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455491573,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৫: নরবাচক ও নারীবাচক শব্দ",
+    "question": "নিচের কোন শব্দটি উভলিঙ্গবাচক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সন্তান",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ভেড়ি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ছাত্র",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ঘর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সন্তান বলতে ছেলে বা মেয়ে উভয়কেই বোঝায়। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455491718,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৫: নরবাচক ও নারীবাচক শব্দ",
+    "question": "'ক্লীব লিঙ্গ' শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গাড়ি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঘড়ি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মানুষ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাখি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "অচেতন পদার্থ হিসেবে ঘড়ি ক্লীব লিঙ্গ। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455491843,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৫: নরবাচক ও নারীবাচক শব্দ",
+    "question": "কোন শব্দটি পত্নীবাচক?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মাতা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "দাদি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "চাচি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "শিক্ষিকা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "উৎসে ১৫৯ নম্বর প্রশ্নের সঠিক উত্তর হিসেবে 'ক' অপশনটি চিহ্নিত করা হয়েছে। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455491963,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৫: নরবাচক ও নারীবাচক শব্দ",
+    "question": "নিচের কোনটি নিত্য নরবাচক শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কৃতদার",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ছেলে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নেতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বাবা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কৃতদার শব্দের কোনো নারীবাচক রূপ হয় না। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455492100,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৫: নরবাচক ও নারীবাচক শব্দ",
+    "question": "নিচের কোনটি নিত্য নারীবাচক শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শিক্ষিকা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সতী",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "জেলেনি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মেয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "সতী শব্দের কোনো পুরুষবাচক রূপ নেই। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455492225,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৫: নরবাচক ও নারীবাচক শব্দ",
+    "question": "'-অক' প্রত্যয় দিয়ে গঠিত নরবাচক শব্দকে নারীবাচক করার সময়ে 'অক' এর জায়গায় কী হয়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "-একা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "-ওকা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "-ইকা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "-আকা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "যেমন: পাঠক (অক) > পাঠিকা (ইকা)। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455492395,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৫: নরবাচক ও নারীবাচক শব্দ",
+    "question": "নিচের কোন নারীবাচক শব্দের সঙ্গে নরবাচক শব্দের গঠনের মিল নেই?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বেগম",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ভাইঝি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ছেলে বউ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "গায়িকা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বেগম শব্দের গঠনগত বিপরীত নরবাচক শব্দ নেই। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455492732,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৫: নরবাচক ও নারীবাচক শব্দ",
+    "question": "কোনটি পত্নী অর্থে নারীবাচক শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দাদি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "জেলেনি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আয়া",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "সামা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "দাদি পারিবারিক সম্পর্কের পত্নী অর্থ প্রকাশ করে। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455492847,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৫: নরবাচক ও নারীবাচক শব্দ",
+    "question": "নিত্য পুরুষবাচক শব্দের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বুদ্ধিমান",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শ্রীমান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ধীমান",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "অকৃতদার",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "অকৃতদার শব্দের কোনো স্ত্রীবাচক রূপ নেই। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455493009,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৫: নরবাচক ও নারীবাচক শব্দ",
+    "question": "বিশেষ নিয়মে সাধিত নারীবাচক শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "যোগিনী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গীতিকা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নেত্রী",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বৈষ্ণবী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "নেতা > নেত্রী; এটি একটি বিশেষ নিয়মে সাধিত শব্দ। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455493177,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৫: নরবাচক ও নারীবাচক শব্দ",
+    "question": "কোনটি নিত্য নারীবাচক বাংলা শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সতিন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "সধবা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সতী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিমাতা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সতিন শব্দের কোনো পুরুষবাচক শব্দ বাংলা ভাষায় নেই। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455493335,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৫: নরবাচক ও নারীবাচক শব্দ",
+    "question": "সাধারণ অর্থে স্ত্রীবাচক শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "চাচি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "জেলেনি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ছাত্রী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ভাবি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "জেলেনি একটি সাধারণ স্ত্রীবাচক শব্দ যা পেশা বা পরিচয় নির্দেশ করে। [৭]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455493496,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৫: নরবাচক ও নারীবাচক শব্দ",
+    "question": "নিত্য নারীবাচক শব্দের উদাহরণ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সুন্দরী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বেগম",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বিধবা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "শিক্ষিকা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বিধবা শব্দের কোনো পুরুষবাচক শব্দ নেই। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455493677,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৫: নরবাচক ও নারীবাচক শব্দ",
+    "question": "'বিধবা' শব্দটি কোন জাতীয় নারীবাচক শব্দ?",
+    "options": [
+      {
+        "label": "a",
+        "text": "অপত্নীবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পত্নীবাচক",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সাধারণ",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "নিত্য",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "এটি সর্বদা স্ত্রীলিঙ্গ হিসেবে ব্যবহৃত হয়। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455493851,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৫: নরবাচক ও নারীবাচক শব্দ",
+    "question": "বিশেষ নিয়মে গঠিত নারীবাচক শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "নর-নারী",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "বালক-বালিকা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সুধী-সুধীমণী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "খান-খানম",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "নর ও নারী বিশেষ নিয়মে লিঙ্গান্তরিত হয়েছে। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455494007,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৫: নরবাচক ও নারীবাচক শব্দ",
+    "question": "নিত্য নারীবাচক শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সধবা",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "অভাগী",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দুয়োরানি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চৌধুরানি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "সধবা একটি নিত্য নারীবাচক শব্দ। [৮]",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1767455494180,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ১৫: নরবাচক ও নারীবাচক শব্দ",
+    "question": "'নি' প্রত্যয় যোগে গঠিত নারীবাচক শব্দ কোনটি?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কাঙালিনি",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "জেলেনি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বাঘিনী",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিড়ালিনি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কাঙাল + ইনি/নি = কাঙালিনি। [৮]",
+    "image": null,
+    "language": "en"
+  }
+]

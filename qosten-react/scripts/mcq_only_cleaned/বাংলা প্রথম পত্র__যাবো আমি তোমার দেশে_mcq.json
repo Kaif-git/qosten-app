@@ -1,0 +1,1767 @@
+[
+  {
+    "id": 1768400314320,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "'যাব আমি তোমার দেশে' কবিতার রচয়িতা কে?",
+    "options": "[{\"label\":\"a\",\"text\":\"বন্দে আলী মিয়া\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"জসীমউদ্দীন\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"মধুসূদন দত্ত\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"কাজী নজরুল ইসলাম\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "'যাব আমি তোমার দেশে' কবিতাটি বিখ্যাত কবি **জসীমউদ্দীনের** একটি অনবদ্য সৃষ্টি [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400314975,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "পল্লীকবি জসীমউদ্দীন কত সালে জন্মগ্রহণ করেন?",
+    "options": "[{\"label\":\"a\",\"text\":\"১৯০১\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"১৯০২\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"১৯০৩\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"১৯০৪\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "কবি জসীমউদ্দীন **১৯০৩ সালে** ফরিদপুর জেলার তাম্বুলখানা গ্রামে জন্মগ্রহণ করেন [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400315114,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কবি জসীমউদ্দীন কোথায় যাবার ইচ্ছা প্রকাশ করেছেন?",
+    "options": "[{\"label\":\"a\",\"text\":\"নিঝুম গ্রামে\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বিদেশে\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"পল্লীগ্রামে\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"পরি-দুলের দেশে\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "কবিতার চরণে কবি তাঁর অন্তরের আকাঙ্ক্ষা ব্যক্ত করতে গিয়ে **'পরি-দুলের দেশে'** যাওয়ার কথা উল্লেখ করেছেন [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400315322,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কবি কাদের সাথে দল বেঁধে খেলার ইচ্ছা পোষণ করেছেন?",
+    "options": "[{\"label\":\"a\",\"text\":\"চাষির ছেলেদের\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"দস্যি ছেলেদের\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"রাখাল ছেলেদের\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"খেলার সাথিদের\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "কবি পল্লী প্রকৃতির চিরচেনা পরিবেশে গ্রামীণ **দস্যি ছেলেদের** সাথে দল বেঁধে খেলার অভিপ্রায় ব্যক্ত করেছেন [১], [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400315511,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "জসীমউদ্দীন তাঁর কোন কবিতাটির মাধ্যমে ছাত্রাবস্থায় খ্যাতি অর্জন করেন?",
+    "options": "[{\"label\":\"a\",\"text\":\"কবর\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"যাব আমি তোমার দেশে\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"আসমানী\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"প্রতিদান\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "কলকাতা বিশ্ববিদ্যালয়ে অধ্যায়নকালেই জসীমউদ্দীন তাঁর জগদ্বিখ্যাত **'কবর'** কবিতাটি লিখে সাহিত্যজগতে বিশেষ পরিচিতি ও খ্যাতি লাভ করেন [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400315628,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কবি 'নিধি' থেকে কী তুলে আনবেন বলে উল্লেখ করেছেন?",
+    "options": "[{\"label\":\"a\",\"text\":\"রক্তজবা\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"পদ্মফুল\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"রক্ত-কমল\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"কচুরিপানা\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "কবি কবিতার বর্ণনায় নিধি থেকে **'রক্ত-কমল'** বা লাল পদ্ম তুলে আনার কথা বলেছেন [১], [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400315740,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কবি কোথায় সাঁতার কাটবেন বলে কবিতায় বর্ণনা করেছেন?",
+    "options": "[{\"label\":\"a\",\"text\":\"কালো দিঘিতে\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"ঢেউয়ের মাঝে\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"মনা-দীঘিতে\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"ধান-খেতে\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "পল্লী প্রকৃতির স্নিগ্ধতা উপভোগের উদ্দেশ্যে কবি গ্রামের **মনা-দীঘির** টলটলে জলে সাঁতার কাটার ইচ্ছা পোষণ করেছেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400315870,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "'যাব আমি তোমার দেশে' কবিতাটি জসীমউদ্দীনের কোন কাব্যগ্রন্থ থেকে সংকলিত?",
+    "options": "[{\"label\":\"a\",\"text\":\"ধানক্ষেত\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"রাখালী\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"সোজন বাদিয়ার ঘাট\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"নকশী-কাঁথার মাঠ\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "কবিতাটি কবির অন্যতম শ্রেষ্ঠ কাব্যগ্রন্থ **'ধানক্ষেত'** থেকে সংকলন করা হয়েছে [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400316089,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "জসীমউদ্দীন বাংলা সাহিত্যে কী নামে সমধিক পরিচিত?",
+    "options": "[{\"label\":\"a\",\"text\":\"পল্লীকবি\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"মরমি কবি\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"চারণ কবি\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"আধুনিক কবি\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "পল্লী বাংলার মাটি, মানুষ ও প্রকৃতির সহজ-সরল রূপ তাঁর কবিতায় নিখুঁতভাবে ফুটে ওঠায় তাঁকে **'পল্লীকবি'** উপাধিতে ভূষিত করা হয় [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400316209,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "'বেসোস' শব্দটির অর্থ নিচের কোনটি?",
+    "options": "[{\"label\":\"a\",\"text\":\"বাতাস\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বেতোয়া বা বেতগাছ\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"পরি-দুলাল\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"ঘাস\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "উৎস অনুযায়ী কবিতার শব্দার্থ ও টীকায় **'বেসোস'** বলতে এক প্রকার বেতগাছ বা বেতোয়াকে নির্দেশ করা হয়েছে [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400316351,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কবি জসীমউদ্দীন কত তারিখে মৃত্যুবরণ করেন?",
+    "options": "[{\"label\":\"a\",\"text\":\"১২ জানুয়ারি\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"১৪ মার্চ\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"১৫ মে\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"১৬ ডিসেম্বর\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "কবি জসীমউদ্দীন ১৯৭৬ সালের **১৪ মার্চ** ঢাকায় মৃত্যুবরণ করেন [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400316464,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "'পরি-দুলাল' বলতে কবিতায় কাকে বোঝানো হয়েছে?",
+    "options": "[{\"label\":\"a\",\"text\":\"দস্যি ছেলে\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"গ্রামের কিশোর বা যুবক\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"রাজকুমার\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"পরিদের সন্তান\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "কবিতায় **'পরি-দুলাল'** বলতে গ্রামের প্রাণচঞ্চল কিশোর বা পল্লী মায়ের আদরের সন্তানকে বোঝানো হয়েছে [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400316691,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "'উত্তরী' বলতে কবিতায় কী বোঝানো হয়েছে?",
+    "options": "[{\"label\":\"a\",\"text\":\"চাদর বা গায়ের কাপড়\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"উত্তর দিক\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"পাগড়ি\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"উত্তরোত্তর বৃদ্ধি\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "কবিতার ভাষায় **'উত্তরী'** হলো এক ধরনের চাদর যা শরীরের উপরের অংশে বা কাঁধে পরিধান করা হয় [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400316803,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কবি কোন বিভাগ বা দপ্তরে চাকরি করতেন?",
+    "options": "[{\"label\":\"a\",\"text\":\"শিক্ষা বিভাগ\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"কৃষি বিভাগ\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"প্রচার ও জনসংযোগ বিভাগ\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"বিদেশ বিভাগ\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "পেশাগত জীবনে জসীমউদ্দীন সরকারের **তথ্য ও প্রচার বিভাগের** উচ্চপদস্থ কর্মকর্তা হিসেবে দায়িত্ব পালন করেছেন [১], [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400316942,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "হিজল-ঝরা জলের দীঘির পাড়ের রঙ কেমন ছিল?",
+    "options": "[{\"label\":\"a\",\"text\":\"রঙিন\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"নীল\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"কালো\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"সাদা\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "হিজল ফুল ঝরে পড়ার কারণে দীঘির পাড় ও চারপাশ **রঙিন** হয়ে উঠেছিল বলে কবি বর্ণনা করেছেন [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400341364,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কবি পরি-দুলালকে কী বলে সম্বোধন করেছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ভাই",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বন্ধু",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সখা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "প্রিয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কবিতায় কবি পল্লীর প্রাণচঞ্চল কিশোর বা পরি-দুলালদের 'সখা' বা সাথী হিসেবে সম্বোধন করেছেন [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400341503,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "বনের শীর্ষে কী রয়েছে বলে কবি বর্ণনা করেছেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পাখি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "আকাশ",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বাতাস",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বিজলী",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "পল্লী প্রকৃতির বর্ণনায় কবি উল্লেখ করেছেন যে বনের মাথার উপরে নীল আকাশ বিস্তৃত রয়েছে [২], [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400341658,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "দিক-হারা মাঠ কোথায় অবস্থিত?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গাঁ ঘেষে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বন ঘেষে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আকাশ-ঘেষে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চরণ শেষে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কবি তাঁর চরণে বা চলার পথের প্রান্তে দিগন্ত বিস্তৃত দিক-হারা মাঠের কথা উল্লেখ করেছেন [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400341779,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "মেঘ-কন্যারা মাথায় কী নিয়ে যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফুল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ডালপালা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "জলের ঝারি",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মালা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রূপক অর্থে কবি বর্ণনা করেছেন যে মেঘ-কন্যারা তাদের মাথায় করে জলের কলস বা ঝারি বহন করে নিয়ে যায় [২], [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400341896,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "বেসোস কঞ্চির বনে কে আসন্ন মাতায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঘুঘু",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ভাদুক মেয়ে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "যাবা মেয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পরিবালা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কবিতার পঙক্তি অনুযায়ী, বেতগাছ বা বেসোস কঞ্চির বনে ভাদুক মেয়ে বা ভাদর মাসের কিশোরী চঞ্চলতা সৃষ্টি করে [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400342026,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "পরি-দুলালদের দেশের পথখানি কেমন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দীর্ঘ",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রশস্ত",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মেঠো",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দিঘল বাঁকা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "পল্লীগ্রামের মেঠো পথগুলো অত্যন্ত আঁকাবাঁকা এবং দীর্ঘ বা দিঘল হয় বলে কবি বর্ণনা করেছেন [২], [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400342146,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "সরু পথ কোথায় সুতোর আঁচড় টানে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বনে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গাজন-তলির মাঠে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শিমুলতলা বনে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ধান-কাউনের খেতে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "ধান ও কাউনের ক্ষেতের মাঝখান দিয়ে চলে যাওয়া চিকন পথগুলো সুতোর টানের মতো দেখায় [১], [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400342274,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "পথখানি কার সিঁথির মতো এলানো?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দুধের মতো",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পায়ের মতো",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "সিঁথির মতো",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "চুলের মতো",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "গ্রামীণ আঁকাবাঁকা পথগুলোকে কবি গ্রাম্য কিশোরী বা মেয়ের মাথার সিঁথির সাথে তুলনা করেছেন [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400342388,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "'গ্রাম্য মেয়ের এলানো মাথার সিঁথির মতো' বলতে কী বোঝানো হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "গ্রাম্য মেয়ের সরলতা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "সোজা পথ",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আঁকাবাঁকা পথ",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কর্দমাক্ত পথ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "এই উপমাটি দিয়ে কবি মূলত গ্রামের মেঠো পথের বাঁক ও লাবণ্যময় রূপকে বুঝিয়েছেন [২], [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400342504,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কার পায়ের রেখায় পথ তৈরি হয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পরি-দুলালদের",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "থাবা মেয়ের",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গরুর",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কদম-কলির",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পরি-দুলালদের নিয়মিত যাতায়াতের ফলে পায়ের চাপে মেঠো পথে চলার রেখা বা পথ তৈরি হয়েছে [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400342619,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "গাজন-তলির মাঠ পেরিয়ে কোনটি রয়েছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শিমুলতলা বন",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ফুলের বাগান",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ধান-কাউনের খেত",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দিকহারা মাঠ",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কবি বর্ণনা করেছেন যে গাজন-তলির বিশাল মাঠ পার হলেই শিমুলতলার নিবিড় বনের দেখা পাওয়া যায় [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400342734,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "গাঁয়ের পথখানি কীভাবে ঘুমিয়ে আছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রোদে পুড়ে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "গাছের ছায়ে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "জলে ভিজে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "লেপমুড়ি দিয়ে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "গ্রাম্য পথটি ঘন গাছের শীতল ছায়ায় শান্তভাবে অবস্থান করছে, যা কবির ভাষায় 'ঘুমিয়ে থাকা' [২]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400342849,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কমল-কলি ছড়িয়ে দিয়ে কে চলে যায়?",
+    "options": [
+      {
+        "label": "a",
+        "text": "থাবা মেয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ভাদর মেয়ে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মেঘ-মেয়ে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পরিবালা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "ভাদর মাসের কিশোরী বা ভাদর মেয়ে তার চলার পথে লাল পদ্মের কলি বা কমল-কলি ছড়িয়ে দিয়ে যায় [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400342973,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "নাম-না জানা ফুলের সুবাস কীভাবে ভেসে আসবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বাতাসে",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "দিঘির জলে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গায়ের পথে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বনের ধারে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কবি কল্পনা করেছেন যে বনের অচেনা সব ফুলের সুগন্ধ বাতাসের দোলায় ভেসে আসবে [৩], [৫]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400343089,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কবি কাদের সাথে দল বাঁধবেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মেয়েদের সাথে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পরি-দুলালদের সাথে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দস্যি ছেলেদের সাথে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "পাখিদের সাথে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "গ্রামীণ শৈশবের চঞ্চলতা উপভোগের জন্য কবি দুরন্ত বা দস্যি ছেলেদের সাথে দল বাঁধার কথা বলেছেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400343211,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কবি কোথায় সাঁতার কাটবেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কালো দিঘিতে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মনা-দীঘিতে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ঢেউয়ের মাঝে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ধান-নিধিতে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কবি পল্লীর টলটলে জলের মনা-দীঘিতে সাঁতার কেটে শরীর জুড়ানোর অভিপ্রায় ব্যক্ত করেছেন [১], [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400343337,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কবি নিধি (জলরাশি) থেকে কী তুলে আনবেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রক্তজবা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শাপলা লতায়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "রক্ত-কমল",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কচুরিপানা",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "নিধি বা জলাশয় থেকে কবি লাল পদ্ম বা রক্ত-কমল সংগ্রহ করবেন বলে উল্লেখ করেছেন [১], [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400343445,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কবি কীভাবে চরণে দোল খাবেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "সাজানো তরী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শিমুল ডালে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হিজল তলায়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ঢেউয়ের সাথে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "দিঘির জলের ঢেউয়ের ছন্দে কবি দোল খেতে চেয়েছেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400343739,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কবি কার সাথে দোল খাবেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঢেউয়ের সাথে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিয়ের কনের সাথে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পরি-দুলালদের সাথে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "পাখির সাথে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কবি তাঁর খেলার সাথী বা পরি-দুলালদের সাথে একত্রে আনন্দ ও দোল খাওয়ার ইচ্ছা প্রকাশ করেছেন [৩]。",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400343867,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কোন জলের ছিঁটায় গায়ের বরণ রঙিন হবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "দিঘির জল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "হিজল-ঝরা জল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "রঙিন জল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ঢল-নিধির জল",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "হিজল ফুল ঝরে পড়া রঙিন জলের ছোঁয়ায় কবির শরীরের রঙ রঙিন হয়ে উঠবে [১], [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400344068,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "পল্লীগ্রামে চলতে গেলে চরণে কিসের পরশ লাগবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মাটির",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "প্রকৃতির",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ঘাসের",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "পথ-পাথর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "মেঠো পথের নরম ঘাসের স্পর্শ কবির পায়ে বা চরণে লাগবে বলে তিনি বর্ণনা করেছেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400344188,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কবি কার ডাকে ডাকবেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পাখির",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ফুলের",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গাঁয়ের",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পরিবালার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কবি প্রকৃতির সাথে একাত্ম হয়ে পাখির মতো ডাক দিতে চেয়েছেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400344315,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কবি কার সাথে ভাব করবেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পাখির সাথে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শিমুলের সাথে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "শাপলার সাথে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "মেঘের সাথে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "আকাশের ভাসমান মেঘের সাথে কবি সখ্যতা বা ভাব করার কথা বলেছেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400344425,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কবি অজানা ফুলকে কী মনে করবেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "খেলার সাথী",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "বিয়ের কনে",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "বনের রানি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ছায়া মেয়ে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বনের ফুটে থাকা সুন্দরী ও অজানা ফুলকে কবির কাছে নতুন বিয়ের কনের মতো মনে হয় [৩], [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400344535,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "চলার পথে কোন কাঁটায় উত্তরীয় জড়িয়ে যাবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বুনো কাঁটায়",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শিমুল কাঁটায়",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মনা-কাঁটায়",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "খেজুর কাঁটায়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "পল্লীর ঝোপঝাড়ের মনা-কাঁটায় কবির পরিহিত চাদর বা উত্তরীয় আটকে যাবে [১], [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400344646,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "মাটিতে হোঁচট লেগে কোথা থেকে ফুল ছড়িয়ে পড়বে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "হাত",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মাথা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "মনা-কাঁটা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ডালা",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "চলার পথে হোঁচট খেলে কবির হাতের ডালিতে থাকা বনফুলগুলো মাটিতে ছড়িয়ে পড়বে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400344934,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কবি পরি-দুলালদের কাঁধে হাত রেখে কীভাবে ফিরবেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "প্রফুল্লচিত্তে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "চোখ বুজে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "উদাস বেশে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "মনমরা হয়ে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "দিনশেষে ক্লান্তিহীন এক উদাসীনতা বা শান্তি নিয়ে কবি পরি-দুলালদের সাথে ঘরে ফিরবেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400345063,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "'যাব আমি তোমার দেশে' কবিতায় অনুজ্জ্বল সাঁঝ-বাগানে কত রঙের ফুল ফুটেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শত রঙের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "লক্ষ রঙের",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "হাজার রঙের",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কোটি রঙের",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সন্ধ্যার বাগানে অগণিত বা হাজার হাজার রঙের ফুল ফোটার দৃশ্য কবি ফুটিয়ে তুলেছেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400345197,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কীসের নিবিড় টানে হাজার রঙের ফুল ফুটেছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মেঘ-তূলিকার",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "প্রকৃতির",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "বন-তূলিকার",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ভাদুক পাখির",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "আকাশ ও মেঘের রঙের বিচিত্র খেলার টানেই যেন বাগানের ফুলগুলো নানা রঙে বিকশিত হয়েছে [৩], [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400345309,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কবি গাছের শাখা দুলিয়ে কী পড়বেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ফুল",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মনা কাঁটা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চাদর",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "বনের গাছের ডাল নাড়িয়ে কবি ঝরঝর করে ফুল পড়ার দৃশ্য বর্ণনা করেছেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400345425,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "উত্তরীয় জড়িয়ে কে দাঁড়িয়ে থাকবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "কবি",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পরি-দুলাল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কনে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "দস্যি ছেলে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "রূপক অর্থে বিয়ের কনে বা অজানা ফুলটি উত্তরীয় বা ওড়না জড়িয়ে দাঁড়িয়ে থাকার কথা বলা হয়েছে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400345622,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কে ঘাটে কলস ভরবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পরি-দুলাল",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কবি",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পরিবালা",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কনে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "গ্রামের ঘাটে পরিবালা বা পল্লীবালা জল ভরার জন্য আসবে বলে কবি উল্লেখ করেছেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400345759,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কবি ঘাটের এক ধারে কী রেখে আসবেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ফুলের মালা",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কলসি",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "শিমুলের ডাল",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "উত্তরীয়",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কবি ঘাটের নির্জনতায় তাঁর কলসিটি রেখে আসার কথা বলেছেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400346278,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "পরিবালা কোথায় মালা পরবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মাথায়",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "হাতে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "গলায়",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "কোমরে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "পরিবালা বা গ্রামীণ বালিকাটি তার মাথায় ফুলের মালা পরিধান করবে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400346400,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "আমরা দুজন থাকব বসে কার কোলে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "মায়ের কোলে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "মেঘের কোলে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দিঘির কোলে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "নদীর কোলে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কবি এবং তাঁর সখা দিঘির তীরে বা দিঘির কোলে শান্ত হয়ে বসে থাকবেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400346516,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "বনের সারিতে কী এলিয়ে আছে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "শাখার কুন্তল-ভার",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ঘুঘুর বাসা",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "পদ্মপাতা",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "দিনের দিঘি",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "বনের গাছের ডালপালা বা শাখার কুন্তল-ভার সারিবদ্ধভাবে এলিয়ে আছে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400346634,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কবি কোন জলের ঢেউ গুনবেন?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পুকুর জলের",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "নদীর জলের",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "দিঘির জলের",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "বৃষ্টি-জলের",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "কবি দিঘির জলের মৃদু ঢেউ গুনার অলস ও মধুর সময় কাটাবেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400346745,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "বনের সারি কোন ফুলের গন্ধ সইবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "পদ্ম পাতার",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "শিমুল পাতার",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কদম পাতার",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "কেয়া পাতার",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "বনের মধ্য দিয়ে বয়ে আসা কদম ফুলের সুগন্ধ বনভূমিকে সুরভিত করবে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400346856,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "বনের মাঝে কোন পাখি ডাকবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ঘুঘু",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ভাদুক",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "শালিক",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "বক",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "কবি বর্ণনা করেছেন যে বনের গহীনে ভাদুক পাখি তার আপন সুরে ডাকবে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400346961,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কে আপন নিবাসে ফিরবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ভাদুক",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "পরি-দুলাল",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "কবি",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "পাখি",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "দিনের শেষে পাখিরা যেমন তাদের বাসায় ফেরে, কবিও তেমন এক শান্ত ফেরার কথা বলেছেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400347076,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "দিনের প্রদীপ কী করবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "জ্বলবে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কাঁপবে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "নিভবে",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "দুলবে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "সন্ধ্যার আগমনে দিনের আলো বা দিনের প্রদীপ নিভে যাওয়ার মধ্য দিয়ে সময়ের পরিবর্তন বোঝানো হয়েছে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400347192,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "রাতের আঁধার কোথায় রেখা বাঁধবে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "বনের ধারে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ঘরে",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "আকাশে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "চাঁদরের ভাঁজপুড়ে",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কবি কল্পনা করেছেন যে রাতের অন্ধকার যেন চাদরের ভাঁজে ভাঁজে রেখা তৈরি করবে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400347314,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "নিধির জল কোথায় ঘেরা পড়বে?",
+    "options": [
+      {
+        "label": "a",
+        "text": "রাতের আঁধারে",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "কুহেলী কানায়",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "মায়ের আঁচলে",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "ঝোপের ধারে",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "নিধি বা দিঘির জল কুয়াশার বা কুহেলীর কিনারে ঘেরা পড়ে এক মায়াবী রূপ ধারণ করবে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400347422,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কবি যেখানে যাবেন—\ni. পরি-দুলালদের দেশে\nii. পল্লীগ্রামে\niii. শহরে",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কবিতার মূল উপজীব্য হলো পল্লীগ্রাম ও পরি-দুলালদের দেশ, শহরের কথা এখানে আসেনি [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400347663,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "মেঘ-কন্যের বৈশিষ্ট্য হলো—\ni. তারা সুর দেশীয়\nii. তারা অপরূপ সুন্দরী\niii. তারা মাথার জলের ঝারি নিয়ে যায়",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কবিতায় মেঘ-কন্যাদের সুর-দেশীয় ও রূপবতী হিসেবে বর্ণনা করা হয়েছে যারা জলের কলস বহন করে [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400347768,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "পরি-দুলালদের গ্রামের রাস্তাখানি—\ni. সরু\nii. গ্রাম্য মেয়ের সিঁথির মতো\niii. আঁকাবাঁকা",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "গ্রামের পথটি ছিল সরু, আঁকাবাঁকা এবং তা গ্রাম্য মেয়ের মাথার সিঁথির সাথে তুলনীয় [২], [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400347888,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "পরি-দুলালদের গ্রামে রাস্তায় পাওয়া যায়—\ni. কমল-কলি\nii. বনের পাতা\niii. শাপলা ফুল",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "রাস্তায় কমল-কলি বা লাল পদ্মের কুঁড়ি এবং ঝরা বনের পাতা ছড়িয়ে থাকে বলে কবি বর্ণনা করেছেন [৩]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400348002,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "কবি পাড়ার দস্যি ছেলেদের সাথে যা যা করবেন—\ni. দল বাঁধবেন\nii. সাঁতার কাটবেন\niii. রক্ত-কমল তুলবেন",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কবি দস্যি ছেলেদের সাথে নিয়ে দল বেঁধে দিঘিতে সাঁতার কাটা ও ফুল তোলার ইচ্ছা প্রকাশ করেছেন [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400348115,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "পল্লী-দুলালের দেশের পথে যেতে যেতে কবি যা করবেন—\ni. পাখির সাথে ডাকবেন\nii. পাখির সাথে ভাব করবেন\niii. পাখির সাথে গান গাইবেন",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "কবি পাখির ভাষায় ডাক দেওয়া এবং তাদের সাথে সখ্যতা গড়ার কথা বললেও আলাদা করে গান গাওয়ার কথা উল্লেখ করেননি [৪]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768400348246,
+    "subject": "বাংলা প্রথম পত্র",
+    "chapter": "যাবো আমি তোমার দেশে",
+    "question": "'অজান ফুলের রূপ দেখিয়া মানবো তারে বিয়ের কনে'— এখানে 'বিয়ের কনে' বলতে বোঝানো হয়েছে—\ni. বিয়ের পাত্রী\nii. ফুলের শোভা\niii. প্রাকৃতিক সৌন্দর্য",
+    "options": [
+      {
+        "label": "a",
+        "text": "i ও ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii ও iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii ও iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "কবি রূপক অর্থে বনের ফুলের সৌন্দর্যকে নতুন বিয়ের কনের সাথে তুলনা করেছেন যা প্রাকৃতিক রূপেরই প্রকাশ [৪]।",
+    "image": null,
+    "language": "en"
+  }
+]

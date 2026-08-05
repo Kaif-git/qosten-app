@@ -1,0 +1,2870 @@
+[
+  {
+    "id": 1766424020962,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Which one is the unit of coulomb constant k?",
+    "options": [
+      {
+        "label": "a",
+        "text": "N⁻¹ m² C⁻²",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "N m² C⁻²",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "N m⁻² C²",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "N⁻¹ m⁻² C⁻²",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Coulomb's constant k = 1/(4πε₀). From F = k q₁q₂/r², k = F r²/(q₁q₂). Therefore, its SI unit is N m² C⁻².",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424021385,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "When a rod of plastic is rubbed with flannel, which type of charge does the ebonite rod get?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Positive",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Negative",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Neutral",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "No charge is produced",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Plastic (like ebonite) has a higher electron affinity than flannel. When rubbed, electrons transfer from flannel to the plastic rod, making the rod negatively charged.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424022993,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "When a glass rod is rubbed with silk what charge is induced by the silk?",
+    "options": [
+      {
+        "label": "a",
+        "text": "positive",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "negative",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "zero",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "neutral",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "When a glass rod is rubbed with silk, electrons are transferred from the glass to the silk. The silk gains excess electrons and becomes negatively charged.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424023052,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "What are called the charges which accumulated in a conductor in electric induction process?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Inducing charge",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Induced charge",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Electric induction",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Free charge",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The charges that appear on a conductor due to the presence of a nearby charged body, without direct contact, are called induced charges.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424023489,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "What is the container cork of glass electrolytic machine made of?",
+    "options": [
+      {
+        "label": "a",
+        "text": "conductive",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "non conductive",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "super conductive",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "half conductive",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The cork or stopper of an electroscope is made of an insulating material (non-conductive) to prevent charge from leaking.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424023946,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "If the distance between two charged bodies q₁ and q₂ is made 1.5 times, then what will be the change in force between them?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Decreases by",
+        "is_correct": false
+      },
+      {
+        "label": "a",
+        "text": "5 times",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Decreases by",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "25 times",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Increases by",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "25 times",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Increases by",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "5 times",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "According to Coulomb's Law, force is inversely proportional to the square of the distance. If distance increases by a factor of 1.5, force decreases by a factor of (1.5)² = 2.25.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424024010,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Which of the following can determine the nature of charge?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Ammeter",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Galvanometer",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Electroscope",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Voltmeter",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "An electroscope can detect the presence and determine the nature (positive or negative) of a charge.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424024439,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "What is the charge which is created on a body due to electrostatic induction known as?",
+    "options": [
+      {
+        "label": "a",
+        "text": "free charge",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "bound charge",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "induced charge",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "obsessive charge",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The charge that appears on a conductor due to the influence of a nearby charged object, without contact, is called induced charge.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424024632,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Which machine helps to detect the nature of charge?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Ammeter",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Galvanometer",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Electroscope",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Voltmeter",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "An electroscope can detect the presence and type (positive or negative) of an electric charge.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424025322,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Which one has free electrons?",
+    "options": [
+      {
+        "label": "a",
+        "text": "glass",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "plastic",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "rubber",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Aluminum",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Metals like aluminum have many free electrons that can move easily, making them good conductors. Glass, plastic, and rubber are insulators.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424025739,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "How much force is experienced by a body of charge 15 C when it is placed in a electric field of electric intensity 20 NC\\(^{-1}\\)?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.75 N",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "1.33 N",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "5 N",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "300 N",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "F = qE = 15 C  20 N/C = 300 N.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424025771,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Which one of the following is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "E = F/q",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "F = qE",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "F/q = E",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "q = F/E",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The fundamental relation between force, charge, and electric field is F = qE. All options except b are rearrangements, but b is the standard form.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424025887,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "What is called the process of charging an uncharged body bringing near a charged body?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Charged",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Electric induction",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Conduction",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Friction",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The process of charging an uncharged conductor by bringing it near a charged body without physical contact is called electrostatic induction.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424026177,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Electron volt (eV) is unit of what?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Charge",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Energy",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Intensity",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Potential",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The electron volt (eV) is a unit of energy or work, defined as the amount of kinetic energy gained by an electron when accelerated through an electric potential difference of one volt.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424026388,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "If two like point charges are separated by 1m and the repulsion force between them is \\(9.0 \\times 10^9 \\, \\text{N}\\), what is the magnitude of each charge?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1 Coulomb",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "9.0 \\times 10^9 Coulomb",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "0",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "2 Coulombs",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Given F = 9×10⁹ N, d=1 m, k=9×10⁹ Nm²/C², and q₁=q₂=q. F = k q²/d² => q² = F d²/k = (9×10⁹  1) / (9×10⁹) = 1 => q = 1 C.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424026847,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Which one of the following is correct, when the separation between two charges q₁ and q₂ is \"d\"?",
+    "options": [
+      {
+        "label": "a",
+        "text": "F = cq₁q₂/d",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "F = cq₁q₂/d²",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "F ∝ q₁q₂/d",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "F ∝ d²/(q₁q₂)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The correct Coulomb's law is F = k q₁ q₂ / d², where k (or c in this notation) is Coulomb's constant.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424027257,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Which of these is the unit of electric potential?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Coulomb",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Ampere",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Farad",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Volt",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The SI unit of electric potential is the volt (V).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424027258,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "How much force is experienced by a body of charge 10 C when it is placed in a electric field of electric intensity 30 NC⁻¹?",
+    "options": [
+      {
+        "label": "a",
+        "text": "3 N",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "20 N",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "300 N",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "0.33 N",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "F = qE = 10 C × 30 N/C = 300 N.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424027367,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "What is the Coulomb's constant in vacuum?",
+    "options": [
+      {
+        "label": "a",
+        "text": "9 × 10⁹ Nm²C⁻²",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "9 × 10⁸ Nm²C⁻²",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "9 × 10⁷ Nm²C⁻²",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "9 × 10⁶ Nm²C⁻²",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Coulomb's constant in vacuum is approximately 9 × 10⁹ N m² C⁻².",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424027732,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Which of the following is the correct equation for electric field intensity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "E = k q/r",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "E = k q²/r²",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "E = k q/r²",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "E = k r²/q",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The electric field intensity due to a point charge q at a distance r is E = k q / r².",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424027870,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "The Coulomb is the unit of which of the following quantities?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Electric charge",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Electric current",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Electric potential",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Electric field",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The coulomb (C) is the SI unit of electric charge.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424028049,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "What is the force on a 15 C charged body in an electric field with an intensity of 20 NC⁻¹?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.75 N",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "1.33 N",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "100 N",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "300 N",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Force F = qE = 15 C × 20 N/C = 300 N.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424028322,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Coulomb's law can be compared to which physical law?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Newton's law of motion",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Newton's law of universal gravitation",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Kepler's law",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Ohm's law",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Coulomb's law for electrostatic force has a similar mathematical form to Newton's law of universal gravitation (both are inverse-square laws).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424028536,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "What is the unit of potential difference?",
+    "options": [
+      {
+        "label": "a",
+        "text": "ampere",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "volt",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "coulomb",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "oersted",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The SI unit of potential difference is the volt (V).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424028613,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "What gets separated when the clouds slide over each other?",
+    "options": [
+      {
+        "label": "a",
+        "text": "charges",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "mass",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "energy",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "potential",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Friction between clouds or within a cloud separates positive and negative charges, leading to charge accumulation and lightning.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424028630,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "How can you find out the magnitude of charge?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Dividing force by electric intensity",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Dividing electric intensity by force",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Multiplying force by electric intensity",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Multiplying electric intensity by the square root of force",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "From F = qE, the charge q = F / E.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424028658,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Which law may be used to measure the value of the attractive or repulsive force between two charges?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Newton’s law",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Coulomb’s law",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Einstein’s law",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Lenz’s law",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Coulomb's law gives the magnitude of the electrostatic force between two point charges.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424028994,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Which type of charge is used to define electric field intensity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "negative",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "neutral",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "positive",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "zero",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Electric field intensity at a point is defined as the force experienced per unit positive test charge placed at that point.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424029008,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "When glass is rubbed with silk cloth what starts to move?",
+    "options": [
+      {
+        "label": "a",
+        "text": "electrons",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "protons",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "neutrons",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "nucleus",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "During rubbing, electrons are transferred from one material to another. Protons and neutrons remain within the nucleus.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424029653,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "2eV = how many joules?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1.6 × 10^{-19}",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "1.66 × 10^{-19}",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "3.2 × 10^{-19}",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "4.6 × 10^{-19}",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "1 eV = 1.6 × 10^{-19} J. Therefore, 2 eV = 2 × 1.6 × 10^{-19} J = 3.2 × 10^{-19} J.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424029677,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "If body of charge 10 C is placed at a point in an electric field then it gains electric intensity of 20 NC\\(^{-1}\\). Find the force of that point.",
+    "options": [
+      {
+        "label": "a",
+        "text": "200 N",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "20 N",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "2 N",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "0.5 N",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "F = qE = 10 C  20 N/C = 200 N.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424029717,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Which of these is the correct relationship between electric potential and work done?",
+    "options": [
+      {
+        "label": "a",
+        "text": "V = W^2 q",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "V = \\frac{W}{q}",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "V = W q",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "[Option missing]",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Electric potential at a point is defined as the work done per unit positive charge in bringing it from infinity to that point: V = W / q.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424029748,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Two charges of value +4 μC and +6 μC are placed 10 cm away from each other. What is the repulsive force between them?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2.16 × 10⁻¹ N",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "2.25 × 10⁻¹ N",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "21.6 N",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "22.5 N",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Using Coulomb's Law: F = k q₁q₂/r² = (9×10⁹ Nm²/C²) × (4×10⁻⁶ C × 6×10⁻⁶ C) / (0.1 m)²\n= (9×10⁹ × 24×10⁻¹²) / 0.01 = 216×10⁻³ / 0.01 = 21.6 N",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424029819,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Which one is not correct for electric field intensity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "It is a vector quantity",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "the force per unit charge by another charge",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "It does not vary with electric potential",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "It can vary with distance between charges",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Electric field intensity is defined as force per unit positive charge. It is a vector quantity and varies with distance. It is related to electric potential (E = -dV/dr), so it does vary with electric potential.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424029841,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "When a polythene rod and flannel are rubbed together what charge is induced on the flannel?",
+    "options": [
+      {
+        "label": "a",
+        "text": "positive",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "negative",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "zero",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "neutral",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "When polythene is rubbed with flannel, electrons are transferred from the flannel to the polythene. The flannel loses electrons and becomes positively charged.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424029906,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "The electric field will be more if the potential—",
+    "options": [
+      {
+        "label": "a",
+        "text": "is more",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "is less",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "difference is more",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "difference is less",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The electric field strength is related to the potential gradient. A greater potential difference over a given distance implies a stronger electric field.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424030044,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "NC\\(^{-1}\\) is the unit of which of the following?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Electric power",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Intensity of sound",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Pitch of sound",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Electric Intensity",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The unit of electric field intensity is newton per coulomb (N/C or N C⁻¹).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424030417,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "When a glass rod is rubbed with silk what charge is induced by the glass rod?",
+    "options": [
+      {
+        "label": "a",
+        "text": "positive",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "negative",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "uncharged",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "neutral",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "When a glass rod is rubbed with silk, electrons are transferred from the glass to the silk. The glass loses electrons and becomes positively charged.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424030629,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "How is the relation between electric field lines and electric intensity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "inversely proportional",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "inversely proportional to the square",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "directly proportional",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "equal",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The electric field intensity at a point is directly proportional to the number of electric field lines per unit area (line density) at that point.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424030637,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "What is the colour of the paper used in a photocopy machine on which the ink is printed?",
+    "options": [
+      {
+        "label": "a",
+        "text": "yellow",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "white",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "blue",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "brown",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The paper used in photocopiers is typically white.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424030693,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "What type of material is the stopper on the glass plate in an electroscope made of?",
+    "options": [
+      {
+        "label": "a",
+        "text": "reflecting",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "conducting",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "insulating",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "dispersing",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The stopper is made of an insulating material (like rubber or cork) to prevent charge from leaking from the metal rod.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424030769,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "If two point charges x₁ and x₂ are separated by a distance 's' and attract each other by a force F, then what is the magnitude of the ratio F s²/(x₁ x₂) in vacuum?",
+    "options": [
+      {
+        "label": "a",
+        "text": "3 × 10⁸ Nm²C⁻²",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "9 × 10⁹ Nm²C⁻²",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "1.6 × 10⁻¹⁹ Nm²C⁻²",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "6.67 × 10⁻¹¹ Nm²C⁻²",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "From Coulomb's law, F = k x₁ x₂ / s². Therefore, F s² / (x₁ x₂) = k = 9 × 10⁹ N m² C⁻².",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424030776,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "What is the colour which can be observed during a flash of lightning?",
+    "options": [
+      {
+        "label": "a",
+        "text": "dark blue",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "red and white",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "bluish white",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "purple",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Lightning often appears as a bright bluish-white flash.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424030777,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Which one of the following figures shows correct electric field lines?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Field lines crossing each other",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Field lines starting from positive and ending at negative charge",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "Field lines forming closed loops",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Field lines starting from negative charge",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Electric field lines always start from positive charges and end at negative charges. They never cross each other or form closed loops.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424030794,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Which of these is the units of electric field intensity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Ohm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Volts/Ohm",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Ohm/Faraday",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Newton/Coulomb",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The SI unit of electric field intensity is newton per coulomb (N/C).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424030966,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Which property of a liquid is electric potential equivalent to?",
+    "options": [
+      {
+        "label": "a",
+        "text": "relative gravity",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "density",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "height",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "[Option missing]",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Electric potential is analogous to height (gravitational potential) in a gravitational field. Both are scalar potentials defining potential energy per unit mass/charge.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424031260,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "If a body of charge 5C is placed at a point in an electric field then it gains a force of 200 N. Which one is the magnitude of electric intensity of that point?",
+    "options": [
+      {
+        "label": "a",
+        "text": "10 NC\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "20 NC\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "30 NC\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "40 NC\\(^{-1}\\)",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "E = F/q = 200 N / 5 C = 40 N/C.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424031405,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Which of the following is used in a Van de Graaff generator to produce high potentials?",
+    "options": [
+      {
+        "label": "a",
+        "text": "static electricity",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "current electricity",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "heat",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "shockwaves",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "A Van de Graaff generator uses a moving belt to accumulate static electric charge on a hollow metal sphere, creating high voltages.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424031528,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "When flannel wool rubbed against a polythene rod —\r\ni. the polythene becomes positively charged\r\nii. the polythene becomes negatively charged\r\niii. the flannel becomes positively charged\r\nWhich of these is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Polythene gains electrons from flannel, becoming negatively charged (ii). Flannel loses electrons, becoming positively charged (iii). i is false.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424031562,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Which scientist derived an equation to measure the value of the attractive or repulsive force between two charges?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Coulomb",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Newton",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Einstein",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Faraday",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Charles-Augustin de Coulomb formulated Coulomb's law, which quantifies the electric force between two point charges.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424031678,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "How many colorful laks are used for color printing?",
+    "options": [
+      {
+        "label": "a",
+        "text": "2",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "3",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "4",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "5",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Color printing typically uses four primary colors: Cyan, Magenta, Yellow, and Black (CMYK).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424031779,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "In electric field at 40C charge is placed it gained 160N. At that point if 50C charge is placed which force is gained?",
+    "options": [
+      {
+        "label": "a",
+        "text": "12.5 N",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "150 N",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "200 N",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "[Option missing]",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "First find E: E = F/q = 160 N / 40 C = 4 N/C. Then force on 50 C: F' = q'E = 50 C  4 N/C = 200 N.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424031816,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "An electric field cannot be seen but which of the following may be used to describe it?",
+    "options": [
+      {
+        "label": "a",
+        "text": "electric field lines",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "electric potential lines",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "electric circuit",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "curved lines",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "Electric field lines (or lines of force) are a visual tool used to represent the direction and strength of an electric field.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424031907,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "[There is an image showing conductor AB near charged body PQ]\nIf end A is closer to positive charge P, which statement is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "The end A is negatively charged",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Net charge of AB will be zero if A is connected with earth",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Net charge of AB will be zero if B is connected with earth",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "AB remains charged if PQ is removed",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "When positive charge P is brought near conductor AB, negative charges are attracted to end A (closer to P), making A negatively charged.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424032008,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Who first introduced electric field lines?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Ohm",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Maxwell",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Michael Faraday",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Max Planck",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Michael Faraday introduced the concept of electric field lines (lines of force) to visualize electric and magnetic fields.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424032082,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "What is the work done to bring a unit positive charge from infinity to a point in an electric field called?",
+    "options": [
+      {
+        "label": "a",
+        "text": "electric density",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "electric field line",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "electric energy",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "electric potential",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The work done to bring a unit positive charge from infinity to a point is the electric potential at that point.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424032362,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "What is the work done to bring a unit positive charge from one point to another in an electric field?",
+    "options": [
+      {
+        "label": "a",
+        "text": "electric field",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "potential difference",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "electric density",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "resistance",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The work done per unit charge in moving a charge between two points is the potential difference between those points.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424032435,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "What is the value of force when 10 C charge put at any point the field of electric intensity 1 N/C?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0.1 N",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "10 N",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "1 N",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "20 N",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "F = qE = 10 C  1 N/C = 10 N.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424032736,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "What is the relation between electric lines of force and electric intensity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Inversely proportional",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Proportional to square",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Directly proportional",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Equal",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The electric field intensity at a point is directly proportional to the number of electric field lines per unit area (line density) at that point.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424032877,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "A charge of 5C is feeling a force of 15N. What is the electric field?",
+    "options": [
+      {
+        "label": "a",
+        "text": "20 N/C",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "10 N/C",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "3 N/C",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "0.33 N/C",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "E = F/q = 15 N / 5 C = 3 N/C.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424033062,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "What is the focus of the reflected light in the photocopier machine?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Drum",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Toner",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Glass",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "None of these",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "The reflected light from the document is focused onto the photosensitive drum.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424033215,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "What is placed under slabs in electrolytic machine in order to understand presence of charge?",
+    "options": [
+      {
+        "label": "a",
+        "text": "sphere",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "bar",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "fragments",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "metallic container",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "In an electrophorus or similar electrostatic machine, a metallic container (like a pan) is placed under the slab to collect or indicate induced charge.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424033745,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "In the case of Coulomb’s law and Newton’s law of gravitation —\r\ni. force is inversely proportional to the square of separation\r\nii. the constant is denoted as a universal constant\r\niii. gravitational force is always attractive but the Coulomb force may be attractive or repulsive\r\nWhich of these is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "All are true: Both are inverse-square laws (i). Both have universal constants (G and k) (ii). Gravity is always attractive; electric force can be attractive or repulsive (iii).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424033924,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Which of these is a vector quantity?",
+    "options": [
+      {
+        "label": "a",
+        "text": "electric charge",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "electric potential",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "electric current",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "electric field intensity",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "Electric field intensity has both magnitude and direction, making it a vector quantity. Charge, potential, and current (conventional) are scalars.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424034392,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "The reason for assuming zero potential on the Earth —\r\ni. a reference body is required to calculate potential difference\r\nii. the Earth is a universal source of free charges\r\niii. the potential of the Earth’s surface changes\r\nWhich of these is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "i. True, Earth provides a common reference point (zero potential). ii. True, Earth can accept or supply electrons effectively. iii. False, Earth's potential is taken as constant (zero) for practical purposes.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424034640,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Small particles of ink of a inkjet printer are—\r\ni. positively charged\r\nii. attracted by positive plate\r\niii. moving throw two plates\r\nWhich one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i & iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "In an inkjet printer, ink droplets are given a charge (can be positive or negative depending on design). They are deflected by electric fields between plates. They are attracted to a plate with opposite charge, not necessarily positive (ii is not always true). So i and iii are generally true.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424034703,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "What is the potential at a point 100 m from a +10 C charge?",
+    "options": [
+      {
+        "label": "a",
+        "text": "9 × 10⁸ V",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "9 × 10⁷ V",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "9 × 10⁶ V",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "4.5 × 10⁸ V",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "V = k q / r = (9×10⁹ Nm²/C²) × (10 C) / (100 m) = 9×10⁸ V.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424035115,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "For a charged conducting sphere —\ni. the potential inside it is constant\nii. the potential at the surface is constant\niii. the potential at its surface is maximum (compared to outside)",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "For a charged conductor: potential is constant throughout the interior and on the surface (i and ii). The potential at the surface is the maximum value for points outside the sphere (iii).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424035512,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "On which part of photo copier machine the reflected light ray converges, which incidents from the white part of the machine?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Drum",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "Toner",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Glass",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Carbon powder",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "In a photocopier, light reflected from the document strikes a photosensitive drum, creating an electrostatic image.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424035701,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "How much volt is the potential of earth?",
+    "options": [
+      {
+        "label": "a",
+        "text": "Zero",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "440",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "33000",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "Infinity",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "By convention, the potential of the Earth is taken as zero reference.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424035903,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Due to electrostatic induction —\ni. no new charges are formed\nii. an equal number of opposite charges separate and move to opposite sides\niii. the total charge of the conductor remains unchanged",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "i. True, induction redistributes existing charges, doesn't create new ones. ii. True, opposite charges separate to opposite sides of the conductor. iii. True, total charge is conserved.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424036027,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Given F = qE, if q is constant, then which is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "F ∝ E",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "F ∝ 1/E",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "F ∝ E²",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "F is independent of E",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "From F = qE, if charge q is constant, force F is directly proportional to electric field E.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424036374,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "To what temperature does the air rise during a lightning flash?",
+    "options": [
+      {
+        "label": "a",
+        "text": "5,000-10,000°C",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "10,000-15,000°C",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "15,000-20,000°C",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "20,000-30,000°C",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "The temperature of the air in a lightning channel can reach 20,000°C to 30,000°C.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424037149,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "The charges during lightning-\r\ni. huge amount are discharged from earth\r\nii. ionized the air to pass through it\r\niii. increase the temperature of air\r\nWhich of the following is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "All are true: Lightning involves a huge discharge between cloud and earth, ionizes air along its path, and greatly increases air temperature.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424037336,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "What is the charge of the carbon powder which is used in a photocopy machine?",
+    "options": [
+      {
+        "label": "a",
+        "text": "positive",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "negative",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "uncharged",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "zero",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "The toner (carbon powder) is given a negative charge so it is attracted to the positively charged areas on the drum.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424037385,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Two bodies A and B are repelling each other. This happens due to —\r\ni. A is negative and B is positive\r\nii. both A and B are negative\r\niii. both A and B are positive\r\nWhich of these is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Repulsion occurs only between like charges. So both negative (ii) or both positive (iii) will repel. i describes opposite charges which would attract.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424037565,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Touch an electrical object-\r\ni. can lose electrons.\r\nii. can only gain negative charge.\r\niii. can be shocks.\r\nWhich can be so correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Touching a charged object can cause electron transfer (loss or gain) and potentially an electric shock. Statement ii is false because one can gain positive charge by losing electrons.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424037626,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "If 1 J of work is done to bring 1 C positive charge from infinity to a point in an electric field, what is the voltage at that point?",
+    "options": [
+      {
+        "label": "a",
+        "text": "1 V",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "1 ampere",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "1 Tesla",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "1 Coulomb",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "If 1 joule of work is done to bring 1 coulomb of charge, the potential is V = W/q = 1 J / 1 C = 1 V.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424037784,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "What will be the magnitude of intensity at a point P if A charged body is connected with the earth?",
+    "options": [
+      {
+        "label": "a",
+        "text": "0 NC\\(^{-1}\\)",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "0.8 NC\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "1.25 NC\\(^{-1}\\)",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "80 NC\\(^{-1}\\)",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "When a charged conductor is connected to earth, its potential becomes zero. If the conductor is spherical and isolated, the electric field inside and on the surface becomes zero when earthed.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424037970,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "In case of charges —\ni. their unit is Coulomb\nii. the Coulomb is a derived unit\niii. Coulomb = ampere × second",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "i. True. ii. True, Coulomb is a derived unit. iii. True: 1 C = 1 A × 1 s.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424037972,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "At the time of crawling of babies on a carpet —\r\ni. same type charges accumulates in his body\r\nii. hairs become straightened\r\niii. each hair attracts each other\r\nWhich of the following is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "i. True, friction can transfer charge, often leaving the body with a net charge (e.g., negative). ii. True, like charges on hairs repel, making them stand up. iii. False, like charges repel, not attract.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424038844,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "What is the relation between electric lines of force and electric intensity? [1766424038844]",
+    "options": [
+      {
+        "label": "a",
+        "text": "Inversely proportional",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "Proportional to square",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "Directly proportional",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "Equal",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "The density of electric field lines (number per unit area) at a point is directly proportional to the magnitude of the electric field intensity at that point.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424039037,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Small particles of ink of an inkjet printer are—\r\ni. positively charged\r\nii. attracted by positive plate\r\niii. moving through two plates\r\nWhich one is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "i. Generally true (can be positively charged in some designs). ii. Not always true; they are attracted to the plate with opposite charge. iii. True, they move between deflection plates.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424039439,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "Due to charging by friction —\r\ni. pieces of paper are attracted by a plastic comb\r\nii. in cold countries children’s hair stands upright\r\niii. lightning occurs in the atmosphere\r\nWhich of these is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "All are examples of electrostatic effects due to friction: comb attracts paper (static charge), hair stands up (like charges repel), lightning (charge separation in clouds).",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424040651,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "When field lines are drawn —\r\ni. they start at the positive charge and end in the negative charge\r\nii. the number of field lines increases with a greater number of charges\r\niii. the lines can overlap with each other\r\nWhich is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": true
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "a",
+    "explanation": "i. True, by convention. ii. True, more charges generally mean more field lines. iii. False, electric field lines never cross or overlap.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424041422,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "[There is an image showing two charged spheres A and B]\nIf sphere A has higher potential than B, and they are connected by a conducting wire, which statement is correct?\ni. electrons will flow from B to A\nii. the force between them will change\niii. potential of A will decrease",
+    "options": [
+      {
+        "label": "a",
+        "text": "i",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "i. True: electrons flow from lower to higher potential (B to A). ii. True: charge redistribution changes the force. iii. True: A's potential decreases as it shares charge with B.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424042200,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "If we touch any charged object —\r\ni. electrons are lost\r\nii. only negative charges maybe gained\r\niii. we may be charged\r\nWhich of these is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "i & iii",
+        "is_correct": true
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "c",
+    "explanation": "i. True, we can lose electrons (become positively charged) or gain them. ii. False, we can gain positive charge by losing electrons. iii. True, we can become charged.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424043164,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "The electric force between two charges —\ni. depends on the nature of the charges\nii. if each of the charges is multiplied by 2, the electric force will be multiplied by 4\niii. if the distance between the charges is halved, the electric force will be multiplied by 4",
+    "options": [
+      {
+        "label": "a",
+        "text": "i",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "c",
+        "text": "ii & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": true
+      }
+    ],
+    "correctAnswer": "d",
+    "explanation": "i. True, force is attractive for opposite charges, repulsive for like charges. ii. True, if each charge doubles, force becomes 4 times (2×2=4). iii. True, if distance halved, force increases by (1/0.5)²=4 times. All are correct.",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1766424043443,
+    "subject": "Physics",
+    "chapter": "Static Electricity",
+    "question": "If the potential at any point is positive —\r\ni. a positive charge will gain energy if it approaches that point\r\nii. work must be done to bring a positive charge near the point\r\niii. a repulsive force will act between a positive charge and that point\r\nWhich is correct?",
+    "options": [
+      {
+        "label": "a",
+        "text": "i & ii",
+        "is_correct": false
+      },
+      {
+        "label": "b",
+        "text": "ii & iii",
+        "is_correct": true
+      },
+      {
+        "label": "c",
+        "text": "i & iii",
+        "is_correct": false
+      },
+      {
+        "label": "d",
+        "text": "i, ii & iii",
+        "is_correct": false
+      }
+    ],
+    "correctAnswer": "b",
+    "explanation": "i. False: A positive charge will lose potential energy as it moves towards a positive point (like charges repel). ii. True: Work must be done against the repulsive force to bring a positive charge near a positive point. iii. True: Positive point repels positive charge.",
+    "image": null,
+    "language": "en"
+  }
+]

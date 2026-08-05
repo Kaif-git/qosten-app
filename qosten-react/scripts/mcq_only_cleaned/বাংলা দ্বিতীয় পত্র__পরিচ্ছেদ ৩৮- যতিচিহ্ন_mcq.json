@@ -1,0 +1,233 @@
+[
+  {
+    "id": 1768036791297,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮: যতিচিহ্ন",
+    "question": "যতিচিহ্নের অপর নাম কী?",
+    "options": "[{\"label\":\"a\",\"text\":\"বিরামচিহ্ন\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বিরতিচিহ্ন\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"বিশ্রামচিহ্ন\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"ক ও খ উভয়ই\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "মানুষের মনের ভাব লিখিত রূপ দেওয়ার ক্ষেত্রে বিরাম বোঝাতে যতিচিহ্ন ব্যবহৃত হয়, যার অন্য নাম বিরামচিহ্ন বা বিরতিচিহ্ন [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036791413,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮: যতিচিহ্ন",
+    "question": "বাক্যের পূর্ণ সমাপ্তি বা পূর্ণ বিরতি নির্দেশ করতে কোন বিরামচিহ্ন ব্যবহৃত হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"কমা\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"সেমিকোলন\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"বিসর্গচিহ্ন\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"দাড়ি\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "বাক্যের সমাপ্তি বা পূর্ণ বিরতি বোঝাতে দাড়ি যতিচিহ্ন ব্যবহার করা হয় [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036792081,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮: যতিচিহ্ন",
+    "question": "শব্দ, বর্গ ও অধীন বাক্যকে আলাদা করতে ব্যবহৃত হয়—",
+    "options": "[{\"label\":\"a\",\"text\":\"দাড়ি\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"কমা\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"সেমিকোলন\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"কোলন\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "বাক্যের অন্তর্গত শব্দ, বর্গ ও অধীন বাক্যকে আলাদা করার জন্য কমা ব্যবহৃত হয় [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036792430,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮: যতিচিহ্ন",
+    "question": "দুটি অধীন বাক্যের মধ্যে অর্থের ঘনিষ্ঠতা নির্দেশ করতে কোন যতিচিহ্ন ব্যবহৃত হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"কমা\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"কোলন\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"সেমিকোলন\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"বিকল্পচিহ্ন\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "কমার চেয়ে বেশি বিরতির প্রয়োজন হলে এবং দুটি অধীন বাক্যের মধ্যে অর্থের ঘনিষ্ঠতা থাকলে সেমিকোলন ব্যবহৃত হয় [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036792566,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮: যতিচিহ্ন",
+    "question": "প্রশ্ন বোঝাতে কোন যতিচিহ্নের ব্যবহার হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"প্রশ্নচিহ্ন\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"বিস্ময়চিহ্ন\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"দাড়ি\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"উদ্ধৃতিচিহ্ন\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "বক্তার মনে কোনো জিজ্ঞাসা থাকলে বা প্রশ্ন বোঝাতে প্রশ্নচিহ্ন ব্যবহার করা হয় [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036792766,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮: যতিচিহ্ন",
+    "question": "শব্দসংক্ষেপ ও ক্রম নির্দেশ করতে কোন যতিচিহ্ন ব্যবহৃত হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"বিন্দু\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"ত্রিবিন্দু\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"বিকল্পচিহ্ন\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"কোলন\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "কোনো শব্দের সংক্ষিপ্ত রূপ বা পদের ক্রম নির্দেশ করার ক্ষেত্রে বিন্দু ব্যবহৃত হয় [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036792889,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮: যতিচিহ্ন",
+    "question": "লেখার সময়ে কোনো কথা অব্যক্ত রাখতে চাইলে কোন বিরামচিহ্ন ব্যবহার করা হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"বিন্দু\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"ত্রিবিন্দু\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"কমা\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"কোলন\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "কোনো কিছু বাদ দিতে চাইলে বা অব্যক্ত রাখতে চাইলে ত্রিবিন্দু (...) ব্যবহৃত হয় [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036792995,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮: যতিচিহ্ন",
+    "question": "যতিচিহ্নে ‘বিন্দু’ (.)-এর কাজ কী?",
+    "options": "[{\"label\":\"a\",\"text\":\"কোনো অংশ বাদ\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বাক্যের মধ্যকার একাধিক পদকে সংযুক্ত\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"ক্রমনির্দেশ\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"কালনির্দেশ\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "যতিচিহ্নের মধ্যে ‘বিন্দু’ সাধারণত শব্দসংক্ষেপ ও ক্রম নির্দেশ করার জন্য ব্যবহৃত হয় [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036793106,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮: যতিচিহ্ন",
+    "question": "অতিরিক্ত তথ্য উপস্থাপনের প্রয়োজন হলে বাক্যে কোন যতিচিহ্ন ব্যবহার করা হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"হাইফেন\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"ড্যাশ\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"কোলন\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"বন্ধনী\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "বাক্যের মূল বিষয়ের বাইরে অতিরিক্ত তথ্য যোগ করার প্রয়োজন হলে বন্ধনী চিহ্ন ব্যবহার করা হয় [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036793209,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮: যতিচিহ্ন",
+    "question": "বাক্যের মধ্যকার একাধিক পদকে সংযুক্ত করতে কোন যতিচিহ্নের ব্যবহার হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"কমা\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"কোলন\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"ড্যাশ\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"হাইফেন\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "বাক্যের মধ্যকার একাধিক পদকে এক করে বা সংযুক্ত করে দেখানোর জন্য হাইফেন ব্যবহৃত হয় [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036793317,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮: যতিচিহ্ন",
+    "question": "একটির বদলে অন্যটির সম্ভাবনা বোঝাতে যে যতিচিহ্ন ব্যবহার করা হয় তাকে বলে—",
+    "options": "[{\"label\":\"a\",\"text\":\"ইলেক্\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"ত্রিবিন্দু\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"বিকল্প\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"বিকল্পচিহ্ন\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "একটি পদের বদলে অন্যটি হওয়ার সম্ভাবনা বা বিকল্প নির্দেশ করতে বিকল্পচিহ্ন ব্যবহৃত হয় [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036793424,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮: যতিচিহ্ন",
+    "question": "কোন চিহ্নটি বিশেষ ব্যাখ্যামূলক অর্থে সাহিত্য ব্যবহৃত হতে থাকে?",
+    "options": "[{\"label\":\"a\",\"text\":\"()\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"||\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"[]\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"{}\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "থার্ড ব্র্যাকেট বা বন্ধনী সাধারণত বিশেষ ব্যাখ্যামূলক অর্থে বা উদ্ধৃতির ভেতরে কিছু পরিষ্কার করার জন্য ব্যবহৃত হয় [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036793542,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮: যতিচিহ্ন",
+    "question": "কোনো অংশ বাদ দিতে চাইলে সেখানে কোন বিরামচিহ্নের ব্যবহার হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"বন্ধনী\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বিন্দু\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"ত্রিবিন্দু\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"বিকল্পচিহ্ন\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "যখন কোনো পাঠ্যের মধ্য থেকে কোনো অংশ বাদ দেওয়ার প্রয়োজন হয়, তখন সেখানে ত্রিবিন্দু ব্যবহার করা হয় [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036793652,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮: যতিচিহ্ন",
+    "question": "অতিরিক্ত তথ্য উপস্থাপন ও কাল নির্দেশের ক্ষেত্রে কোন যতিচিহ্নের ব্যবহার করা হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"হাইফেন\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"বন্ধনী\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"ত্রিবিন্দু\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"কোলন\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "বন্ধনী যতিচিহ্নটি অতিরিক্ত তথ্য ও কাল (যেমন জন্ম-মৃত্যু সাল) নির্দেশের কাজে ব্যবহৃত হয় [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036793757,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮: যতিচিহ্ন",
+    "question": "বাড়ি বা রাস্তার নম্বরের পরে কোন চিহ্ন বসে?",
+    "options": "[{\"label\":\"a\",\"text\":\"হাইফেন\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"কমা\",\"is_correct\":true},{\"label\":\"c\",\"text\":\"দাড়ি\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"লোপচিহ্ন\",\"is_correct\":false}]",
+    "correctAnswer": "b",
+    "explanation": "ঠিকানায় বাড়ি বা রাস্তার নাম বা নম্বরের পরে সাধারণত কমা বসানো হয় [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036793886,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮: যতিচিহ্ন",
+    "question": "বাক্যের প্রথম অংশের কোন উক্তিকে দ্বিতীয় অংশে ব্যাখ্যা করার জন্য কোন যতিচিহ্ন ব্যবহার করা হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"ড্যাশ\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"কমা\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"হাইফেন\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"সেমিকোলন\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "বাক্যের প্রথম অংশের কথাকে দ্বিতীয় অংশে ব্যাখ্যা করার ক্ষেত্রে ড্যাশ চিহ্ন ব্যবহার করা হয় [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036794010,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮: যতিচিহ্ন",
+    "question": "বাক্যে পরিসমাপ্তি বোঝাতে কোন চিহ্ন ব্যবহৃত হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"কমা\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"কোলন\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"সেমিকোলন\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"দাড়ি বা পূর্ণচ্ছেদ\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "বাক্যের বক্তব্য শেষ হলে বা সম্পূর্ণ বিরতি বোঝাতে দাড়ি বা পূর্ণচ্ছেদ চিহ্ন ব্যবহার করতে হয় [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036794120,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮: যতিচিহ্ন",
+    "question": "বাংলা ভাষায় প্রচলিত যতিচিহ্ন কয়টি?",
+    "options": "[{\"label\":\"a\",\"text\":\"১০\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"১১\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"১২\",\"is_correct\":true},{\"label\":\"d\",\"text\":\"১৩\",\"is_correct\":false}]",
+    "correctAnswer": "c",
+    "explanation": "আধুনিক বাংলা ব্যাকরণ অনুযায়ী প্রচলিত প্রধান যতিচিহ্নের সংখ্যা ১২টি [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036794227,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮: যতিচিহ্ন",
+    "question": "লেখার সময়ে কোনো অংশ বাদ দিতে চাইলে কোন বিরামচিহ্ন ব্যবহার করা হয়?",
+    "options": "[{\"label\":\"a\",\"text\":\"বিন্দু\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"ড্যাশ\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"কোলন\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"ত্রিবিন্দু\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "ত্রিবিন্দু ব্যবহার করা হয় যখন কোনো বাক্যের বা উদ্ধৃতির কিছু অংশ বাদ দিয়ে বাকিটুকু লেখা হয় [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036794337,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮: যতিচিহ্ন",
+    "question": "বাক্যে সামান্য বিরতি নির্দেশ করে কোনটি?",
+    "options": "[{\"label\":\"a\",\"text\":\"দাঁড়ি\",\"is_correct\":false},{\"label\":\"b\",\"text\":\"সেমিকোলন\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"কোলন\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"কমা\",\"is_correct\":true}]",
+    "correctAnswer": "d",
+    "explanation": "বাক্যের ভেতরে খুব সামান্য বিরতি দেওয়ার প্রয়োজন হলে কমা ব্যবহৃত হয় [১]।",
+    "image": null,
+    "language": "en"
+  },
+  {
+    "id": 1768036794442,
+    "subject": "বাংলা দ্বিতীয় পত্র",
+    "chapter": "পরিচ্ছেদ ৩৮: যতিচিহ্ন",
+    "question": "উদ্ধৃতিচিহ্ন কয় রকম?",
+    "options": "[{\"label\":\"a\",\"text\":\"দুই\",\"is_correct\":true},{\"label\":\"b\",\"text\":\"তিন\",\"is_correct\":false},{\"label\":\"c\",\"text\":\"চার\",\"is_correct\":false},{\"label\":\"d\",\"text\":\"পাঁচ\",\"is_correct\":false}]",
+    "correctAnswer": "a",
+    "explanation": "উদ্ধৃতিচিহ্ন সাধারণত দুই প্রকার: একক উদ্ধৃতিচিহ্ন ও দ্বৈত উদ্ধৃতিচিহ্ন [১]।",
+    "image": null,
+    "language": "en"
+  }
+]

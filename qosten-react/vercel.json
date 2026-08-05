@@ -1,5 +1,8 @@
 {
-  "buildCommand": "npm install --legacy-peer-deps && npx react-scripts build",
+  "buildCommand": "npm install --legacy-peer-deps && CI=false npx react-scripts build",
+  "env": {
+    "CI": "false"
+  },
   "outputDirectory": "build",
   "rewrites": [
     {
